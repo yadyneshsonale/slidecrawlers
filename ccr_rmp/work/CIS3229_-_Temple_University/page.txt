@@ -1,0 +1,340 @@
+3329 Syllabus
+3329 Home
+Syllabus
+Announcements
+Textbooks
+Required
+Kurose and Ross,
+Computer Networking: A Top Down Approach
+, Seventh Edition. Prentice Hall. 2017. The 6th edition is also fine.
+Grading
+Your final grade for the course will be based on the following weights:
+45% Homeworks and Lab Assignments
+10% Class Participation
+15% Midterm Exam, TBD
+30% Final Exam, TBD
+Topics
+2 weeks networks intro: ch.1
+2 weeks application layer: ch.2
+3.5 weeks transport layer: ch.3
+midterm
+3.5 weeks network layer: ch.4 - 5
+2 weeks link layer: ch.6
+1 week software-defined networking (maybe): advanced materials
+final exam
+Schedule
+Lecture
+Date
+Topics
+Notes
+Readings
+Overview
+1
+Tue 08/28
+Course overview; The Internet overview, network edge
+[
+pdf
+] [
+ppt
+]
+No lab session today
+Chapter 1.1 - 1.2;
+Quiz1-1
+2
+Thu 08/30
+The Internet overview, the network edge, and the network core
+[
+pdf
+] [
+ppt
+]
+Chapter 1.2 - 1.3;
+Quiz1-2
+Tue 09/04
+Lab 1: conversion problems
+Lab1 Assignment
+3
+Tue 09/04
+The network core; delay, loss, throughput;
+[
+pdf
+] [
+ppt
+]
+Chapter 1.4 - 1.5;
+Quiz1-3
+4
+Thu 09/06
+Layered service model; Security; Historical review;
+[
+pdf
+] [
+ppt
+]
+Homework 1 due 09/11, hand in to TA during the lab session.
+Chapter 1.5 - 1.7;
+Quiz1-4
+,
+Homework 1
+Network applications, socket programming
+Tue 09/11
+Lab 2: practice with some tools
+5
+Tue 09/11
+Principles of network applications; Example network applications: Web and HTTP
+[
+pdf
+] [
+ppt
+]
+Chapter 2.1 - 2.2
+Quiz2-1
+6
+Thu 09/13
+Example network applications: Web and HTTP, Email
+[
+pdf
+] [
+ppt
+]
+Chapter 2.2, 2.3
+Quiz2-2
+Tue 09/18
+Lab 3: Wireshark and HTTP
+7
+Tue 09/18
+Example network applications: DNS
+[
+pdf
+] [
+ppt
+]
+Chapter 2.4
+Quiz2-3
+8
+Thu 09/20
+P2P principles; P2P example: bit-torrent; Socket programming (UDP)
+[
+pdf
+] [
+ppt
+]
+Homework 2 due 09/25, hand in to TA during the lab session.
+Chapter 2.5, 2.7
+Quiz2-4
+,
+Homework 2
+Transport layer
+Tue 09/25
+Lab 4: A simple dynamic web server
+9
+Tue 09/25
+Transport layer services; Multiplexing and Demultiplexing; UDP, Principles of reliable data transfer
+[
+pdf
+] [
+ppt
+]
+Chapter 3.1-3.3
+Quiz3-1
+10
+Thu 09/27
+Principles of reliable data transfer
+[
+pdf
+] [
+ppt
+]
+Chapter 3.4
+Quiz3-2
+Tue 10/02
+Midterm review
+11
+Tue 10/02
+Principles of reliable data transfer
+[
+pdf
+] [
+ppt
+]
+Chapter 3.4
+Quiz3-3
+12
+Thu 10/04
+TCP: reliable data transfer, flow control
+[
+pdf
+] [
+ppt
+]
+Chapter 3.5
+Quiz3-4
+,
+Homework 3
+Tue 10/09
+Midterm review
+13
+Tue 10/09
+TCP connection management; Principles of Congestion Control
+[
+pdf
+] [
+ppt
+]
+Chapter 3.5 - 3.6
+Quiz3-5
+14
+Thu 10/11
+TCP Congestion Control
+[
+pdf
+] [
+ppt
+]
+Chapter 3.7
+Quiz3-6
+Network core --- the network layer data plane
+Tue 10/16
+Discussion of Homework 3, no late homework will be accepted
+Homework 3 due
+15
+Tue 10/16
+Network layer overview; Forwarding
+[
+pdf
+] [
+ppt
+]
+Chapter 4.1 - 4.2
+Quiz4-1
+Thu 10/18
+Midterm; Close book; Chapter 1-3, everything covered in class
+16
+Tue 10/23
+Forwarding; IP Protocol
+[
+pdf
+] [
+ppt
+]
+Chapter 4.2 - 4.3
+Quiz4-2
+17
+Thu 10/25
+IP Protocol; Software-defined networking (SDN)
+[
+pdf
+] [
+ppt
+]
+Chapter 4.3 - 4.4
+Quiz4-3
+18
+Tue 10/30
+IP6; Software-defined networking (SDN)
+[
+pdf
+] [
+ppt
+]
+Chapter 43 - 4.4
+Quiz4-4
+Network core --- the network layer control plane
+19
+Thu 11/01
+Introduction; Routing protocol (Dijkstra algorithm)
+[
+pdf
+] [
+pptx
+]
+Chapter 5.1 - 5.2
+Quiz5-1
+20
+Tue 11/06
+Routing protocols (Distance vector) ; Intra-AS routing
+[
+pdf
+] [
+pptx
+]
+Chapter 5.2 - 5.3
+Quiz5-2
+21
+Thu 11/08
+Inter-domain routing --- long lived BGP
+[
+pdf
+] [
+pptx
+]
+Chapter 5.4
+Quiz5-3
+22
+Tue 11/13
+BGP and SDN
+[
+pdf
+] [
+pptx
+]
+Chapter 5.4 - 5.5
+Thu 11/15
+2nd midterm, in class, close book
+Tue 11/20
+Fall Break
+Thu 11/22
+Happy Thanksgiving!
+Link layer
+23
+Tue 11/27
+Link layer overview, error detection, MAC protocols
+[
+pdf
+] [
+pptx
+]
+Chapter 6.1 - 6.2
+Quiz6-1
+24
+Thu 11/29
+MAC protocols
+[
+pdf
+] [
+pptx
+]
+Chapter 6.3
+Quiz6-2
+25
+Tue 12/04
+LAN
+[
+pdf
+] [
+pptx
+]
+Chapter 6.4
+26
+Thu 12/06
+LAN, link virtualization
+[
+pdf
+] [
+pptx
+]
+Chapter 6.4 - 6.5
+Homework 5
+Tue 12/11
+Study Days
+Tue 12/18
+Final Exam
+(Fall 2018 Examination Schedules)
+10:30am - 12:30am, TTL 305A
+This schedule and syllabus is
+preliminary and subject to change
+.
+Last updated: 2018-12-06 21:16:12 -0500
+[
+validate xhtml
+]

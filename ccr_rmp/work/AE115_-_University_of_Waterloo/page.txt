@@ -1,0 +1,415 @@
+ECE 150
+Fundamentals of Programming
+Skip to the content of the web site.
+ECE Home
+ECE 150
+Lecture materials
+Lecture materials
+Author: Douglas Wilhelm Harder, Prof. Hiren Patel, and Prof. Werner Dietl
+To view the previous slides and topic material, please see the
+2018-19
+directory.
+Many of the examples of programs shown in the lectures are
+also made available on
+replit.com
+.
+This web site provides an on-line editor and file-storage
+system together with a C++ compiler. If you create an account at
+this web site and start developing your own code, be sure sure
+to choose C++11 as your language. Please see
+this site
+for additional information
+about using replit.com in ECE 150.
+All exercises marked with an asterisks (
+*
+) should be attempted
+within a day or two of the topic covered.
+Course welcome
+(
+PPTX
+)
+Programming fundamentals
+Addresses and pointers
+Algorithms
+Classes
+Linked lists
+Inheritance and polymorphism
+1. Programming fundamentals
+Topic
+Video
+Time
+PDF
+Week
+Recommended exercises
+1
+Hello world!
+YouTube
+20:11
+PDF
+PPTX
+1
+Using replit.com in this course
+Hello world
+Finding a bug A
+*
+Finding a bug B
+Finding a bug C
+*
+Finding a bug D
+Finding a bug E
+*
+Finding a bug F
+Printing without IO Streams
+(optional—not on final)
+2
+Anatomy of a program
+YouTube
+19:00
+PDF
+PPTX
+1
+n/a
+3
+Literal data
+YouTube
+20:00
+PDF
+PPTX
+1
+Literal data
+*
+Exercise at finding a bug
+*
+4
+Identifiers
+YouTube
+11:25
+PDF
+PPTX
+1
+Exercise at finding a bug
+5
+Local variables
+YouTube
+9:33
+PDF
+PPTX
+1
+n/a
+6
+Initialization and assignment
+YouTube
+8:16
+PDF
+PPTX
+1
+Uninitialized local variables
+*
+Default values
+*
+Initializing local variables
+*
+Assigning to local variables
+*
+7
+Arithmetic operators
+YouTube
+24:43
+PDF
+PPTX
+1
+Order of operations
+Evaluating a polynomial
+*
+Properties of a sphere
+Approximating the square root
+Integer division and remainder
+*
+Integer division and rounding up
+Rational division
+*
+Exercise at finding a bug
+Exercise at finding a bug
+8
+Conditional statements and comparison operators
+YouTube
+18:14
+PDF
+lecture
+PPTX
+1
+Absolute value
+Maximum of two values
+Is a value even or odd?
+*
+Calculating commission
+Price based on the amount sold
+*
+A simple arithmetic test
+Rounding to the closest kilometer
+*
+Is a value positive, zero or negative?
+Clipping a value
+The tent function
+The square wave
+A fast Euclidean distance calculator
+Calculating income tax
+Finding the second-largest of four (hard)
+Printing a complex number
+A simple calculator
+A rational calculator
+A complex number calculator
+Unit names
+The shortest distance between two points
+Exercise at finding a bug
+9
+Logical operators
+YouTube
+28:49
+PDF
+lecture
+PPTX
+1
+Unit pulse function
+*
+Eligibility to vote
+Calculating a difference of years
+*
+Maximum of three
+Short-circuit evaluation
+*
+Conditions for passing a course
+Do two intervals overlap?
+Leap years
+Past a specified date
+Exercise at finding a bug
+*
+Exercise at finding a bug
+Exercise at finding a bug
+Week 1 Assignment
+10
+Assignment operators
+YouTube
+12:11
+PDF
+lecture
+PPTX
+2
+Swapping two local variables
+*
+Automatic assignment
+Rational division (continued)
+*
+Exercise at finding a bug
+11
+For-loops
+YouTube
+37:28
+PDF
+lecture
+PPTX
+2
+A simple for loop
+*
+Summing n integers
+A for loop: 1
+*
+A for loop: 2
+A for loop: 3
+A for loop: 4
+A for loop: 5
+Calculating integer powers of a number
+Calculating a factorial
+*
+Calculating a double factorial
+Summing a range of numbers
+Finding the greatest common factor
+Finding the least common multiple
+Is
+n
+prime?
+*
+A better is
+n
+prime?
+Verifying a mathematical formula
+Is a Social Insurance Number valid?
+Finding the maximum of a quadratic polynomial on a range
+Selling stock options
+Loops within loops: 1
+*
+Loops within loops: 2
+Loops within loops: 3
+Loops within loops: 4
+Loops within loops: 5
+Loops within loops: 6
+Stars in the canton
+Plotting an inequality
+Integer solutions of an equation
+Patterns for for-loops
+Problem solving 1.11a
+Problem solving 1.11b
+12
+Scope of local variables
+YouTube
+17:02
+PDF
+lecture
+PPTX
+2
+Scope of a loop variable
+*
+Scope of local variable exercise
+*
+Exercise at finding a bug
+*
+Exercise at finding a bug
+13
+Break statements
+YouTube
+22:58
+PDF
+lecture
+PPTX
+2
+Enter an increasing sequence
+*
+Finding the integer square root
+*
+Finding a sum of squares
+Exercise at finding a bug
+*
+Exercise at finding a bug
+14
+While loops
+YouTube
+45:55
+PDF
+PPTX
+2
+Entering a bounded integer
+*
+Guess a number game
+Factoring an integer
+*
+Counting digits in an integer
+The Collatz conjecture
+Calculating the greatest common divisor
+*
+Writing a number backwards
+Writing significant powers of 10
+Rational division (continued)
+Calculating the floor and ceiling of a base-2 logarithm
+15
+The structured programming theorem
+YouTube
+17:07
+PDF
+PPTX
+2
+Taylor series in C++
+*
+Taylor series in C
+*
+Taylor series in Scheme
+Taylor series in Python
+*
+Taylor series in Ruby
+Taylor series in Kotlin
+Taylor series in Rust
+Taylor series in C#
+Taylor series in Java
+Taylor series in JavaScript
+Taylor series in Haskell
+(to be written)
+16
+The call stack
+YouTube
+13:07
+PDF
+PPTX
+lecture
+2
+Example at pythontutor.com
+*
+17
+Libraries and calling functions
+YouTube
+31:21
+PDF
+lecture
+PPTX
+3
+Properties of a sphere
+*
+Mathematical constants
+*
+18
+Writing functions
+YouTube
+42:16
+PDF
+lecture
+PPTX
+3
+The sine function
+*
+The absolute value function
+A cubic spline function
+*
+Maximum and minimum function
+The factorial function
+*
+Calculating integer powers of a number
+Root finding
+Calculating the sum of divisors
+Problem solving #1
+*
+Problem solving #2
+18a
+Functions tutorial
+YouTube
+58:01
+PDF
+PPTX
+-
+When to write a function (printing time)
+*
+When to write a function (printing significant digits)
+*
+When to write a function (factoring integer polynomials)
+*
+18b
+Compiler errors
+YouTube
+PDF
+PPTX
+-
+n/a
+19
+Assertions
+YouTube
+16:08
+PDF
+PPTX
+3
+The factorial function with assertions
+*
+Sine approximations with splines
+*
+Alternative blocks with assertions
+*
+Weierstrass functions
+Blancmange curve
+20
+Code development strategies
+YouTube
+15:50
+PDF
+PPTX
+3
+21
+Writing tests
+YouTube
+22:47
+PDF

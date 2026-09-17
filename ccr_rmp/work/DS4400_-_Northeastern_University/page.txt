@@ -1,0 +1,97 @@
+Home
+MCADS Lab
+Research
+Publications
+Activities
+Codes
+Data
+Teaching
+DS 4400: Machine Learning and Data Mining 1
+GENERAL INFORMATION
+Instructor:
+Prof. Ehsan Elhamifar
+Instructor Office Hours: Fridays, 5:00pm—6:00pm, Online, By Appointment
+Class: Tuesdays and Fridays 9:50am—11:30am, Shillman Hall 305
+TAs: Sabbir Ahmad (ahmad.sab@northeastern.edu), Nasim Shafiee (shafiee.n@northeastern.edu), Office Hours: TBA
+Discussions, Lectures, Homeworks on
+Piazza
+DESCRIPTION
+This course covers practical algorithms for supervised machine learning from a variety of perspectives. Topics include generative/discriminative learning, parametric/non-parametric learning, deep neural networks, support vector machines, decision trees, learning theory and ethics/fairness in machine learning. The course will also discuss recent applications of machine learning, such as computer vision, data mining, natural language processing, speech recognition and robotics.
+SYLLABUS
+Linear regression, Overfitting, Regularization, Sparsity
+Maximum likelihood estimation
+Logistic regression
+Naive Bayes
+Perceptron
+Convex optimization, SGD
+SVM and kernels
+Neural networks and deep learning: DNNs, CNNs
+Decision trees
+Hidden Markov Models
+Bayesian learning
+Ethics and Fairness in Machine Learning
+GRADING
+Homeworks are due at the beginning of the class on the specified dates. No late homeworks or projects will be accepted.
+Homeworks: 5 HWs (40%)
+Project (20%)
+Two Midterm Exams (40%)
+Homework consist of both analytical questions and programming assignments. Programming assignments must be done via Python. Both codes and results of running codes on data must be submitted.
+The exam consist of analytical questions from topics covered in the class. Students are allowed to bring a single cheat sheet to the exam.
+TEXTBOOKS
+[JW] G. James, D. Witten, Trevor Hastie, R. Tibshirani, An Introduction to Statistical Learning. [Optional]
+[CB] Christopher Bishop, Pattern recognition and machine learning. [Optional]
+READINGS
+Lecture 1: Introduction to ML, Linear Algebra Review
+Chapter 1 from CB book.
+Review of Linear Algebra (by Zico Kolter)
+Lecture 2: Linear Algebra Review, Introduction to Regression
+Chapter 3 from CB book.
+Lecture 3: Linear Regression: Convexity, Closed-form Solution, Gradient Descent
+Chapter 3 from CB book.
+Lecture 4: Robust Regression, Overfitting, Regularization
+Chapter 3 from CB book.
+Lecture 5: Basis Function Expansion, Hyper-parameter Tuning, Cross Validation, Probability Review
+Chapter 2 and 3 from CB book.
+Review of Probability and Statistics (by David Blei)
+Lecture 6: Maximum Likelihood Estimation
+Chapter 2 from CB book.
+Lecture 7: Bayesian Learning, Maximum A Posteriori (MAP) Estimation, Classification
+Chapter 3 and 4.3 from CB book.
+Lecture 8: Logistic Regression, Parameter Learning via Maximum Likelihood, Overfitting
+Chapter 4.3 from CB book.
+Lecture 9: Softmax Regression, Discriminate vs Generative Modeling, Generative Classification
+Chapter 4.2 from CB book.
+Lecture 10: Generative Classification, Naive Bayes
+Chapter 4.2 from CB book.
+Lecture 11: Generative Classification, Naive Bayes
+Chapter 4.2 from CB book.
+Lecture 12: Convex Optimization, Lagrangian Function, KKT Conditions
+See lecture notes on piazza.
+Lecture 13: Suport Vector Machines
+Chapter 7 from CB book.
+Lecture 14: Suport Vector Machines: Vanilla SVM, Dual SVM
+Chapter 7 from CB book.
+Lecture 15: Suport Vector Machines: Soft-Margin SVM, Kernel SVM, Multi-Class SVM
+Chapter 7 from CB book.
+Lecture 16: Neural Networks
+Chapter 5 from CB book.
+Lecture 17: Neural Networks: Training, Forward and Back Propagation
+Chapter 5 from CB book.
+Lecture 18: Convolutional Neural Network
+See slides on piazza.
+Lecture 19: Ethics and Fairness in ML
+See slides on piazza.
+Lecture 20: Ethics and Fairness in ML
+See slides on piazza.
+ADDITIONAL RESOURCES
+Probability Review
+Review of Probability and Statistics (by David Blei)
+Another Good Review of Probability Theory (by Arian Maleki)
+Linear Algebra Review
+Review of Linear Algebra (by Zico Kolter)
+Another Good Review of Linear Algebra (by Chaouki Abdallah) — Caution: There are some minor typos in the examples.
+Matrix Cookbook (collection of useful operations on matrices, by Petersen and Pedersen)
+ETHICS
+All students in the course are subject to the Northeastern University's
+Academic Integrity Policy
+. Any submitted report/homework/project by a student in this course for academic credit should be the student's own work. Collaborations are only allowed if explicitly permitted. Per CCIS policy, violations of the rules, including cheating, fabrication and plagiarism, will be reported to the Office of Student Conduct and Conflict Resolution (OSCCR). This may result in deferred suspension, suspension, or expulsion from the university.

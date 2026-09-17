@@ -1,0 +1,238 @@
+Syllabus for CS4787/5777
+Principles of Large-Scale Machine Learning — Fall 2025
+Term
+Fall 2025
+Instructor
+Christopher De Sa
+Course website
+www.cs.cornell.edu/courses/cs4787/2025fa/
+E-mail
+cmd353@cornell.edu
+Schedule
+MW 7:30–8:45PM
+Office hours
+Wednesdays 2–3PM
+Room
+Kimball B11
+Office
+Gates 426
+[
+Canvas
+] [
+Discussion
+]
+Description:
+CS4787 explores the principles behind scalable machine learning systems. The course will cover the algorithmic and the implementation principles that power the current generation of machine learning on big data. We will cover training and inference for both traditional ML algorithms such as linear and logistic regression, as well as deep models such as transformers. Topics will include: estimating statistics of data quickly with subsampling, stochastic gradient descent and other scalable optimization methods, mini-batch training, accelerated methods, adaptive learning rates, methods for scalable deep learning, hyperparameter optimization, parallel and distributed training, quantization and model compression, and efficient inference.
+Prerequisites:
+CS3780 or equivalent, CS 2110 or equivalent
+Format:
+Lectures during the scheduled lecture period will cover the course content. Problem sets will be used to encourage familiarity with the content and develop competence with the more mathematical aspects of the course. Programming assignments will help build intuition and familiarity with how machine learning algorithms run. There will be one midterm exam and one final exam, each of which will test both theoretical knowledge and programmming implementation of concepts.
+Material:
+The course is based on books, papers, and other texts in machine learning, scalable optimization, and systems. Texts will be provided ahead of time on the website on a per-lecture basis. You aren't expected to necessarily read the texts, but they will provide useful background for the material we are discussing.
+Grading:
+Students taking CS4787 will be evaluated on the following basis.
+15%
+Problem sets
+35%
+Programming assignments
+20%
+Prelim Exam
+30%
+Final Exam
+CS5777 has an additional paper-reading component, and students taking CS5777 will be evaluated as follows.
+10%
+Problem sets
+30%
+Programming assignments
+10%
+Paper reading
+20%
+Prelim Exam
+30%
+Final Exam
+Inclusiveness:
+You should expect and demand to be treated by your classmates and the course staff with respect. You belong here, and we are here to help you learn—and enjoy—this course. If any incident occurs that challenges this commitment to a supportive and inclusive environment, please let the instructor know so that we can address the issue. We are personally committed to this, and subscribe to the
+Computer Science Department's Values of Inclusion
+.
+AI Use Policy:
+It is an academic integrity violation to represent the output of a generative AI tool as your own work. You may not submit any work produced by generative AI as part of the solution of problem sets, programming assignments, or paper reading assignments. It is an academic integrity violation to use any sort of generative AI to assist you during an exam.
+Beyond this, you may use AI as you like to assist your own learning in the course, including by asking the AI about course content, asking it to document functions, asking it for the name of a function that does something, asking it to explain an error message, etc.
+Course calendar may be subject to change.
+Course Calendar Plan
+Monday, August 25
+Aug
+24
+Aug
+25
+Aug
+26
+Aug
+27
+Aug
+28
+Aug
+29
+Aug
+30
+Monday, August 25
+Lecture 1.
+Introduction and course overview.
+[Notes PDF]
+Problem Set 1 Released.
+[Notebook]
+[HTML]
+Wednesday, August 27
+Aug
+24
+Aug
+25
+Aug
+26
+Aug
+27
+Aug
+28
+Aug
+29
+Aug
+30
+Wednesday, August 27
+Lecture 2.
+Linear algebra done efficiently: Mapping mathematics to numpy. ML via efficient kernels linked together in python.
+[Notebook]
+[HTML]
+Background reading material:
+NumPy tutorials:
+https://numpy.org/numpy-tutorials/
+.
+Monday, September 1
+Aug
+31
+Sep
+1
+Sep
+2
+Sep
+3
+Sep
+4
+Sep
+5
+Sep
+6
+Monday, September 1
+Labor Day. No Lecture.
+Wednesday, September 3
+Aug
+31
+Sep
+1
+Sep
+2
+Sep
+3
+Sep
+4
+Sep
+5
+Sep
+6
+Wednesday, September 3
+Lecture 3.
+Software for learning with gradients. Numerical differentiation, symbolic differentiation, and automatic differentiation. Efficient gradients with backpropagation.
+[Notebook]
+[HTML]
+Background reading material:
+On backpropagation: Chapter 20.6 of
+Understanding Machine Learning: From Theory to Algorithms
+More on backpropagation: Chapter 6.5 of
+The Deep Learning textbook
+Programming Assignment 1 Released.
+[Instructions]
+[Starter Code]
+Monday, September 8
+Sep
+7
+Sep
+8
+Sep
+9
+Sep
+10
+Sep
+11
+Sep
+12
+Sep
+13
+Monday, September 8
+Lecture 4.
+Machine learning frameworks.
+[Notebook]
+[HTML]
+Background reading material:
+Introduction to PyTorch:
+https://pytorch.org/tutorials/
+.
+Introduction to TensorFlow:
+https://www.tensorflow.org/tutorials
+.
+Introduction to MxNet:
+https://mxnet.apache.org/versions/master/tutorials/
+.
+Problem Set 1 Due.
+Wednesday, September 10
+Sep
+7
+Sep
+8
+Sep
+9
+Sep
+10
+Sep
+11
+Sep
+12
+Sep
+13
+Wednesday, September 10
+Lecture 5.
+Scaling to complex models by learning with optimization algorithms. Learning in the underparameterized regime. Gradient descent, convex optimization and conditioning. Stochastic gradient descent.
+[Notebook]
+[HTML]
+Background reading material:
+On convexity and gradient descent: Chapters 12 and 14.1 of
+Understanding Machine Learning: From Theory to Algorithms
+.
+On optimization methods: Chapter 3 of
+Optimization Methods for Large-Scale Machine Learning
+.
+More on optimization: Chapter 3.2 of
+Convex Optimization: Algorithms and Complexity
+.
+On stochastic gradient descent: Chapter 14.3 of
+Understanding Machine Learning: From Theory to Algorithms
+.
+On SGD: Chapters 3 and 4 of
+Optimization Methods for Large-Scale Machine Learning
+.
+More on SGD: Chapter 6 of
+Convex Optimization: Algorithms and Complexity
+.
+Problem Set 2 Released.
+[PDF]
+Monday, September 15
+Sep
+14
+Sep
+15
+Sep
+16
+Sep
+17
+Sep
+18
+Sep
+19
+Sep

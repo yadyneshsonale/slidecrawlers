@@ -1,0 +1,158 @@
+Skip to main content
+Electrical and Computer Engineering
+Eric Rotenberg
+About Me
+Teaching
+Research
+Post-Silicon Microarchitecture
+Slipstream Processors 2.0
+New Branch Architectures
+Publications
+Talks
+Students
+About Me
+Teaching
+Research
+Research
+Post-Silicon Microarchitecture
+Slipstream Processors 2.0
+New Branch Architectures
+Publications
+Talks
+Students
+ECE 463/563 Fall 2018 Microprocessor Architecture
+Schedule
+Date
+Topics
+Notes
+Reading Assignment
+Thurs., Aug. 23
+Introduction: Overview of class topics, pipelining techniques, defining computer architecture
+pptx
+§ 1.1 – 1.4
+Tues., Aug. 28
+Introduction:
+continued
+(see Aug. 23 notes)
+Thurs., Aug. 30
+Performance: CPU time equation, benchmarks, summarizing performance, speedup, Amdahl’s Law
+pptx
+§ 1.8 – 1.9
+Tues., Sep. 4
+Performance: Moore’s Law, costs: chip area and power, power metrics
+(see Aug. 30 notes)
+§ 1.8 – 1.9, 1.5 – 1.6
+Thurs., Sep. 6
+Caches: Processor-memory perf. gap, temporal and spatial locality, memory hierarchy
+pptx
+§ 2.1  (also recommended: § 2.2)
+Tues., Sep. 11
+Caches: Cache organization and operation, direct-mapped vs. set-associative vs. fully-associative caches
+Part A:
+pptx
+Part B:
+pptx
+§ B.1
+Thurs., Sep. 13
+Caches: Modeling caches generically, replacement policies, LRU, write policies (WBWA, WTNA), victim caches
+pptx
+§ B.1
+Tues., Sep. 18
+Caches: Average access time (AAT) equation, optimize three factors affecting AAT, 3C’s model of misses
+pptx
+§ B.2 – B.3, § 2.1 – 2.3
+Thurs., Sep. 20
+Caches: Techniques for reducing miss rate: block size, size, assoc; hardware and software prefetching; program transformations
+pptx
+§ B.3, § 2.1 – 2.3
+Tues., Sep. 25
+Caches: Techniques for reducing miss penalty: L2 cache, victim cache, write buffer, early restart + critical word first
+pptx
+§ B.3, § 2.1 – 2.3
+Thurs., Sep. 27
+Caches: Virtual memory, translation lookaside buffer (TLB), constraints for parallel cache/TLB access
+pptx
+§ B.3 – B.4
+Tues., Oct. 2
+overflow lecture
+Thurs., Oct. 4
+Fall Break
+Tues., Oct. 9
+overflow lecture
+Thurs., Oct. 11
+Midterm Exam
+Tues., Oct. 16
+Pipelining: Work out the steps for executing instructions, design unpipelined datapath, pipelined datapath
+pptx
+Appendix C
+Thurs., Oct. 18
+Pipelining: Critical path, cycle time and CPI with/without pipelining, pipeline hazards, structural hazards, control hazards
+pptx
+Appendix C
+Tues., Oct. 23
+Pipelining: Dynamic branch prediction, branch target buffer (BTB), separate BTB+BHT, 1-bit counter, 2-bit counter, global branch history, gselect and gshare predictors, local branch history, Yeh/Patt predictor, hybrid predictors
+pptx
+also:
+ppt
+Appendix C
+Thurs., Oct. 25
+Pipelining: Dynamic branch prediction (cont.)
+(see Oct. 23 notes)
+Appendix C
+Tues., Oct. 30
+Pipelining: Dynamic branch prediction (cont.)
+(see Oct. 23 notes)
+Appendix C
+Thurs., Nov. 1
+Pipelining: Static branch prediction, delayed branches, data hazards, RAW hazards, eliminating or minimizing stalls due to RAW hazards through data forwarding, load-use stall, WAR and WAW hazards, techniques for mitigating WAR and WAW hazards, data dependencies (true, anti, and output)
+pptx
+pptx
+Appendix C
+Tues., Nov. 6
+ILP: From in-order to out-of-order: the Issue Queue (IQ); speculation and register renaming: the Reorder Buffer (ROB)
+pptx
+§ 3.1, § 3.4
+Thurs., Nov. 8
+ILP: (cont.)
+Tues., Nov. 13
+ILP: (cont.)
+Thurs., Nov. 15
+ILP: (cont.)
+Tues., Nov. 20
+ILP: Precise interrupts, immediate branch misprediction recovery, handling memory dependencies, superscalar complexity
+pptx
+Thurs., Nov. 22
+Thanksgiving Holiday
+Tues., Nov. 27
+ILP: (Nov. 20 topics, cont.)
+Thurs., Nov. 29
+ILP: (Nov. 20 topics, cont.)
+Tues., Dec. 4
+ILP: (Nov. 20 topics, cont.)
+Thurs., Dec. 6
+ILP: VLIW
+ISA: What is ISA, impact of ISA choices: CISC vs. RISC, alignment, endian-ness, expressing parallelism in ISA
+pptx
+Appendix A (
+all
+sections)
+Electrical and Computer Engineering
+Home
+2004D Engineering Building II (EB2)
+919.513.2822
+© 2026 NC State University. All rights reserved.
+Accessibility
+Privacy
+Resources
+Close smart search
+Find NC State websites, locations and people
+Search all of ncsu.edu
+TOP LINKS
+MyPack Portal
+Access vital records, resources and information for students, families, faculty and staff.
+University Libraries
+Our campus libraries are your destinations for studying, research and expanding your mind.
+Academic Calendar
+Look up important dates and university holidays for the upcoming academic year and beyond.
+Majors and Careers
+Explore our 100-plus degree programs and see where an NC State education can take you.

@@ -1,0 +1,264 @@
+CSE 150 Foundations of Computer Science - Honors
+Fall 2025
+Course Description
+Grading
+Instructor/TA
+Texts
+Lectures
+Special needs
+Welcome to CSE 150! Public, mostly static information will be hosted on this
+page. We will
+use
+Brightspace
+for
+homeworks, and
+Piazza
+for
+discussions.
+Course Description
+This course introduces Computer Science Honors students to the logical and
+mathematical foundations of computer science. From time to time, we will also
+discuss problem solving strategies and techniques.
+The main topics covered in this course will be:
+Logic, Sets and Relations
+Sets
+Propositional Logic
+Predicate Logic
+Relations and Functions
+Cardinality of infinite sets
+Structures
+Trees
+Graphs
+Directed graphs and properties of relations
+Counting
+Series and Summations
+Recurrences
+Counting techniques
+Probability
+Events and probability spaces
+Conditional probability
+Induction and Recursion
+Mathematical induction
+Recursion
+Intro to functional programming
+This course will begin where your high school algebra left off, in
+particular, the topics listed
+here
+.
+You are
+strongly encouraged to brush up on these topics now
+, say, by taking one or
+more of the sample
+NYS
+Regents Algebra II tests
+, and reading up on your own to address weaknesses.
+Unless you have a clear understanding of these concepts, you are unlikely to
+be able to follow classroom lectures, or do well in this course.
+DML:
+To reinforce the concepts we learn in this course, we will use
+DML, a programming language custom-designed for this course. Most concepts
+introduced in this course are directly expressible in DML. As a result, you not
+only learn to write mathematical formulas but also "execute" them in many cases.
+This will enable you to "debug" your formulas and definitions, and deepen your
+understanding of the mathematical foundations of CS. Towards the end of the
+semester, we will use DML to introduce programming --- specifically, functional
+programming. You can access DML from your browser
+here
+. DML language documentation is
+available
+here
+in PDF.
+Required Text:
+Eric Lehman, F Thomson Leighton and Albert R Meyer, Mathematics for Computer Science
+Lecture Slides and Recordings:
+Videos from a previous offering of this course are available. However,
+the material covered in the video won't always be an exact match for the
+material we are teaching in class this year.
+#
+Topics and Slides
+Recordings
+1
+Introduction
+2
+Sets
+46 mins
+7 mins
+3
+Propositional Logic
+71 mins
+18 mins
+Proof techniques (
+47 mins
+,
+12mins
+)
+4
+DML Overview
+5
+Predicates and Quantifiers
+45 mins
+34 mins
+6
+Series and Summations
+Intro to Summations
+27 mins
+Perturbation method
+35 mins
+Summing by integration
+34 mins
+Computing products
+12 mins
+Harmonic series
+23 mins
+7
+Recursion, Recurrences and Algorithmic Complexity
+Intro to recursion and recurrences
+32 mins
+Solving recurrences: Plug-and-chug
+15 mins
+Homogeneous Linear Recurrences
+20 mins
+5 mins
+Asymptotic Complexity
+11 mins
+Master Theorem
+17 mins
+8
+Proof Techniques
+Induction proofs
+38 mins
+31 mins
+9
+Functions and Relations
+Functions
+29 mins
+Intro to Relations
+32 mins
+Relation Types
+31 mins
+10
+Counting
+Basic counting techniques
+55 mins
+Counting using binary strings
+12 mins
+Counting using bijections
+20 mins
+Sequences of subsets
+7 mins
+Word permutations
+4 mins
+Poker hands
+50 mins
+Pigeonhole principle
+26 mins
+Inclusion-Exclusion Principle
+15 mins
+More examples
+54 mins
+11
+Probability
+Monty Hall Problem
+29 mins
+Strange Dice
+43 mins
+Birthday paradox
+23 mins
+Probability and Set Theory
+12 mins
+15 mins
+Infinite probability spaces
+9 mins
+Conditional probability
+36 mins
+Rules for conditional probability
+7 mins
+Medical testing
+11 mins
+6 mins
+12
+Relations and Graphs
+Relational composition and inversion
+6 mins
+Intro to Graphs
+15 mins
+Examples of Composition
+25 mins
+Graphs
+15 mins
+Walks and Paths
+15 mins
+Euler and Hamiltonian Circuits
+12 mins
+Walks and Paths II
+9 mins
+Euler's Tour
+15 mins
+Hamiltonian Tour
+10 mins
+Graphs and Composition
+10 mins
+Reflexive/Symmetric/Transitive Relations
+11 mins
+Closure operations
+10 mins
+Partial orders
+8 mins
+Closure operations II
+17 mins
+Partial Orders and DAGs
+25 mins
+13
+Infinite Cardinality
+Infinite Sets
+38 mins
+Countable Sets
+31 mins
+40 mins
+Uncountable Sets
+40 mins
+Recap: Uncountability of infinite binary strings
+15 mins
+Cantor's theorem and proof
+42 mins
+14
+Review Session
+Course summary
+55 mins
+Grading
+Homeworks (30%)
+There will be about one homework every other week, excluding the
+ethics homework that will be due in the first week of classes. Each homework
+will be worth between 3% and 5% of the final grade.
+Ethics homework: 1%
+Homework 1: 3.5%
+Homework 2: 5.5%
+Homework 3: 5%
+Homework 4: 5%
+Homework 5: 5.5%
+Homework 6: 4.5%
+DML Extra Credit in HW 1: 1%
+DML Extra Credit in HW 4: 3%
+DML Extra Credit in HW 6: 4%
+Note that if you do all of the extra credit work and score 100% on them, and you score 100% on all you written homeworks, then you will achieve a score of
+38 out of 30 on your homework. On top of it, if you score 100% on all
+the exams, you will have a total score of 108 out of a maximum of 100.
+Don't try to Google or use AI for solving problems.  It is against
+the course policies. More importantly, it is detrimental to your learning
+in an introductory course like this.
+You can discuss homework problems in broad terms in groups. But when
+you get into the details, you should work on it by yourself. This is the only
+way to ensure that you learn the material. If you rely on other's help for
+homeworks, you will find that you will end up performing poorly in exams ---
+note that exams have more than twice the weighting of homeworks.
+Exams (70%)
+There will be two midterms, each worth 16% to 20% of the course grade,
+and a final exam that is worth 30% to 35%. The tentative detailed breakdown
+is as follows:
+Algebra test: 1%
+Midterm I: 20%
+Midterm II: 17%
+Final: 32%
+Any form of copying in the course, and all forms of academic dishonesty,
+are considered serious offenses, and will be prosecuted to the maximum extent
+p

@@ -1,0 +1,189 @@
+SEG3101 - Course Notes
+- - under construction
+Note:
+The numbering of the topics is taken from the Syllabus. Some topics are presented in a different order  to provide the background for certain lab and assignment activities.
+1 - Basics of requirements engineering
+Book readings: Bray chap. 1 and 2 (or Wiegert chap. 1 and 3 or Lamsweerde chap. 1)
+SEG3101-ch1-1 - Basics - purpose and nature of requirements
+(
+PDF
+)
+SEG3101-ch1-2 - Basics - the RE process
+(
+PDF
+)
+Supplementary Material
+Bashar A. Nuseibeh and Steve M. Easterbrook,
+Requirements Engineering: A Roadmap.
+In A. C. W. Finkelstein (ed) The Future of Software Engineering, ACM Press, 2000
+Simson Garfinkel (Wired News):
+History's Worst Software Bugs
+3.2 - Writing high-quality requirements
+Book readings:
+On document structure: Bray section 5.4 (or Wiegert chap. 10 or Alexander "Writing better requirements" chap. 5)
+On how to express requirements: Bray chap. 14 (or Wiegert chap. 10, section "Guidelines..." or Alexander "Writing better requirements" chap. 7)
+SEG3101-ch3-2 - Requirements documentation standards - IEEE-830
+(
+PDF
+)
+SEG3101-ch3-3 - Writing Better Requirements
+(
+PDF
+)
+Supplementary Material
+Example of the IEEE830 template in use
+2 - Requirements inception and elicitation
+Book readings: Bray chap. 3 and 9 (or Wiegert chap. 2 and 5 through 9)
+SEG3101-ch2-1 - Inception
+(
+PDF
+)
+SEG3101-ch2-2 - IntroductionToElicitation
+(
+PDF
+)
+SEG3101-ch2-3 - ElicitationTechniques
+(
+PDF
+)
+Supplementary Material
+Karl E. Wiegers:
+Vision and Scope Template
+Karl E. Wiegers:
+Example of Vision and Scope Document
+Daniel M. Berry:
+Requirements Engineering Lessons from House Building
+Stephen Ferg:
+What's Wrong with Use Cases
+3 - Requirements analysis and specification - modeling techniques
+Introduction to analysis and requirements specification
+Book readings: Bray chap. 4 and 5
+SEG3101-ch3-1 - Intro to Analysis and Specification
+(
+PDF
+)
+Non-functional requirements
+Book readings: Wiegers chap. 12
+SEG3101-ch3-4 - Non-Functional Requirements - Qualities
+(
+PDF
+)
+Goal-oriented modeling
+Book readings: Lamsweerde chap.7 (and maybe some of chap. 8); a tutorial on URN (see below)
+SEG3101-ch3-5 - Goal modeling - GRL
+(
+PDF
+)
+SEG3101-ch3-5-bis - URN overview and tool
+(
+PDF
+)
+Functional modeling
+Book readings: Bray chap. 4.3 through 4.5; chap. 10, 12 (or Lamsweerde chap. 13 for sequence and state diagram modeling)
+SEG3101-ch3-6-a - Functional Modeling - Requirement patterns
+(
+PDF
+)
+SEG3101-ch3-6-b - Structural Modeling
+(
+PDF
+)
+SEG3101-ch3-6-c - Behavioral Modeling
+- Part 1 (
+PDF
+)
+SEG3101-ch3-6-d - Behavioral Modeling
+- Part 2 (
+Use Case Maps
+) (
+PDF
+)
+Supplementary Material
+on UML
+UML Standard (OMG):
+General information page
+-
+UML Specification
+(in this context, we are interested in the "superstructure", not so much the "infrastructure")
+Bran Selic:
+UML 2.0 Tutorial
+Tutorials  (see also
+General information page
+) :
+Borland UML  tutorial
+(link does not work),
+UML Introduction
+,
+UML 2.1 tutorial
+Supplementary Material
+on URN
+(that is, GRL and UCM)
+URN Standard (ITU):
+General information page
+- Specification:
+URN Standard (ITU-T Recommendation Z.151)
+(available via
+Virtual Campus
+)
+Tutorials:
+Daniel Amyot and Gunter Mussbacher,
+Development of Telecommunications Standards and Services with the User Requirements Notation
+, Joint ITU-T and SDL Forum Society Workshop on ITU System Design Languages, Geneva, Switzerland, September 2008
+Weiss and Amyot, Designing and Evolving Business Models with URN,
+MCeTech'05
+4 - Requirements verification, and validation
+We go back to the theme of elicitation:
+Requirements Triage and Negotiation
+Book readings: Wiegers chap. 14
+SEG3101-ch2-4 - Requirements Triage and Negotiation
+(
+PDF
+)
+Supplementary Material : Karl E. Wiegers:
+Requirements Prioritization Worksheet
+Requirements verification, and validation
+Book readings: Wiegers chap. 15
+SEG3101-ch4-1 - Verification and Valildation
+(
+PDF
+)
+Supplementary Material : Karl E. Wiegers:
+Inspection Checklist
+5 - Requirements management
+Book readings: A detailed discussion of these issues is in Wiegers chap. 18 through 21. There is also the chapter 9 in the book by Hull et al. on the topic of "DOORS - a Tool to Manage Requirements"
+SEG3101-ch5 - Management
+(
+PDF
+)
+Supplementary Material
+Stephen D. Hendrick, Kathleen E. Hendrick, and Richard V. Heiman,
+Achieving ROI with Rational Requirements Management Tools
+. An IDC White Paper Sponsored by Rational Software
+Jean-Louis Vignaud and Dominic Tavassoli,
+Managing Change - From Customer Request to Implementation
+. Telelogic User Group Conference 2005.
+These kinds of considerations do not only apply in the area software development, but in many other contexts where complex systems are considered. Here is an example related to
+Ecosystem Sustainability and Health. Recently, I attended a
+talk
+about this topic at the
+IDRC
+. The speaker spoke about his experience with development projects in different parts of the world. He has initiated an international
+Network for
+Ecosystem Sustainability and Health
+and proposed a
+process/methodology
+for
+development projects that has many similarities with  software requirements management and the software development process.
+6 - Examples of requirements approaches in typical development processes
+Book readings: Wiegers chap. 22 is partly related to this topic
+SEG3101-ch6 - RE Processes
+(
+PDF
+)
+Supplementary Material
+Alan M. Davis,
+Just Enough Requirements Managemen
+t, 2004 (there is also a book by Davis with the same title and some Powerpoint slides from 2006 on the
+Virtual Campus
+)
+Created: Sept. 5, 2010; revised: Dec. 2

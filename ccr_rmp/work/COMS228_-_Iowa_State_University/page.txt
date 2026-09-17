@@ -1,0 +1,132 @@
+Introduction to Data Structures (Com S 228)
+This page gives access to information about
+an old course offerings of ``Introduction to Data Structures,''
+as taught (in Spring 1995) by
+Gary T. Leavens
+for the
+Department of Computer Science
+at
+Iowa State University
+.
+Information is available under the following headings.
+Old Overview
+Old Course Description
+Old Administrative Information
+Old Prerequisites
+Old Objectives
+Old Textbooks
+Old Syllabus
+Also available are the following.
+Fabric-painted T-shirts I used in this course
+.
+Old homeworks
+.
+Old examples directory
+,
+old include directory
+,
+and
+old library skeleton
+.
+Old exams
+(in postscript form)
+Detailed information about the old course
+Outlines for the old lecture meetings
+(organized in files by units; see the file
+Outline-units.txt
+for the order of the units).
+Old lecture notes
+.
+Detailed (but now old) information about the operating system and using it to run C++
+Overview
+Computer Science 228 is an introduction to data structures,
+with emphasis on data abstraction and information hiding.
+(For the planning of Iowa State's introductory sequence,
+see Albert L. Baker, David Fernandez-Baca, and Gary T. Leavens
+``Course Specifications for New Introductory Courses:
+Computer Science 228X and 228X,''
+Department of Computer Science, Iowa State University,
+TR #92-09
+, April 1992.)
+The following information reflects the Spring 1995 offering.
+Previous and subsequent offerings were taught by
+Albert L. Baker
+.
+Course Description
+This class is designed to give you essential programming tools and knowledge.
+You will learn how to model data in a computer,
+how to specify and use standard ADTs, and how to implement such ADTs with
+standard data structures.
+You will learn how efficient or expensive various combinations of data
+structures and algorithms are.  Along the way, you will develop
+skills in imperative programming.
+You will learn some of design principles and ideas for managing small
+(up to 500 line) programs.  Finally we hope to share our sense of the
+satisfaction that comes from crafting an elegant, correct and efficient
+solution to a programming problem.
+The ISU catalog description of the course is as follows:
+An object-oriented approach to data structures and algorithms
+using [the] C++ language.  Object-oriented programming.
+Program correctness.  Stacks, queues, trees, searching, sorting,
+analysis of algorithms, graphs, and file processing.
+Emphasis on writing and running programs.
+This course is designed for majors.  (4 credits).
+Object-oriented programming involves the use of abstract data types
+(C++ classes are an implementation technique for ADTs),
+message passing (the C++ term is virtual function calls),
+and inheritance (the C++ term is class derivation).
+Technically, this class will not use object-oriented programming,
+but instead will use mainly object-based programming;
+this means using ADTs, but not message passing or inheritance.
+Sorry, but the catalog description is inaccurate.
+A data structure is a representation (in a computer) for a collection of
+related information.  Examples from Scheme are lists and vectors.
+A data structure can be used to implement an ADT, which can be thought of
+as a useful interface to several related data structures.
+The main ones ADTs discussed in the course are listed in the
+catalog description: stacks, queues, trees.  (We will not cover graphs.)
+(The distinction between an ADT and a data structure is that a particular
+data structure implies particular space and time resource usage,
+whereas such details are usually suppressed in the specification of an ADT.)
+An algorithm is a method for performing some computational task.
+For example, a Scheme procedure embodies an algorithm,
+provided it always terminates when called.
+Many algorithms, such as varieties of searching and sorting algorithms,
+work with specific ADTs, and thus are best studied together
+with them and the data structures that implement the corresponding ADTs.
+A program is correct when its possible execution sequences are a subset
+of those given by its specification.  It is thus impossible to discuss
+program correctness without having a specification for the program.
+Informal specifications will be discussed in the course,
+as will informal techniques for developing correct programs.
+Analysis of algorithms means deriving some measure or measures of the
+resource usage of a program.  A computer scientist would probably phrase
+it as ``estimating the efficiency of an algorithm.''  The efficiency of
+an algorithm is often expressed using asymptotic notation
+(e.g., heap-sort is an O(n log n) time algorithm).
+Graphs will not be discussed in this offering of 228.
+File processing will only be a minor part of the course.
+To clarify a common misconception---this is not a course about C++.
+We will use C++, and you will learn about C++, but C++ is not the focus
+of the course.  The focus is on data structures, and C++ is a good vehicle
+for that.
+Administrative Information
+Com S 228, ``Introduction to Programming,'' is usually taken by freshman
+and sophomores.
+The class has a ``lecture'' that meets 4 times a week, for 50 minutes a time.
+It also has a discussion section that meets once a week (for 50 minutes) with a
+teaching assistant.
+There are usually 58 or 59 lecture meetings in a semester.
+The course carries 4 credit hours.
+Prerequisites
+The formal prerequisite for Com S 228 in the ISU catalog is
+``[Com S] 227, [and] credit or enrollment in Math 165.''
+One reason for the math corequisite is that both programming and math
+involve problem solving.  You won't get the maximum benefit from Com S 228
+if you haven't done enough problem solving.
+Another reason is that there are various mathematical subjects
+(e.g., algorithm analysis, logic) that are used in the textbook.
+Finally, Math 165 is a prerequisite for subsequent courses in the theoretical
+part of the Computer Science curriculum (e.g., Com S 330).
+You should have the following skills from Com S 227:
+ability to us

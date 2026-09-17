@@ -1,0 +1,123 @@
+-- STAGE 1 — fetch ---------------------------------------------------------------------
+  courses to fetch    117
+  [  1/117] CSE259     html   ok
+  [  2/117] CSE325     ppt    ok
+  [  3/117] CSE512     html   ok
+  [  4/117] CSE539     html   ok
+  [  5/117] COMP2710   html   ok
+  [  6/117] COMP3220   html   ok
+  [  7/117] COMP7500   html   ok
+  [  8/117] MIS3690    -      error
+  [  9/117] CIS3550    html   ok
+  [ 10/117] CIS9002    html   ok
+  [ 11/117] STAT2000   html   ok
+  [ 12/117] CSI1430    html   ok
+  [ 13/117] MIS1305    ppt    ok
+  [ 14/117] CS605      pdf    ok
+  [ 15/117] CS240      html   ok
+  [ 16/117] CS402      pdf    ok
+  [ 17/117] CS550      -      error
+  [ 18/117] CS132      html   ok
+  [ 19/117] CS566      html   ok
+  [ 20/117] CS611      pdf    ok
+  [ 21/117] DS110      html   ok
+  [ 22/117] 1JC3       html   ok
+  [ 23/117] 2DM3       html   ok
+  [ 24/117] 2GA3       html   ok
+  [ 25/117] 4HC3       html   ok
+  [ 26/117] CIS15      html   ok
+  [ 27/117] CIS52      html   ok
+  [ 28/117] CISC1050   html   ok
+  [ 29/117] CISC1115   html   ok
+  [ 30/117] CISC1600   html   ok
+  [ 31/117] CISC2210   html   ok
+  [ 32/117] CISC3130   html   ok
+  [ 33/117] CISC3171   html   ok
+  [ 34/117] CS0015     -      error
+  [ 35/117] CS141      -      error
+  [ 36/117] CSC134     pdf    ok
+  [ 37/117] CSC139     html   ok
+  [ 38/117] CSC28      html   ok
+  [ 39/117] CS208      html   ok
+  [ 40/117] CS150      html   ok
+  [ 41/117] CS15110    html   ok
+  [ 42/117] CS15281    html   ok
+  [ 43/117] CS213      html   ok
+  [ 44/117] CPSC1010   ppt    ok
+  [ 45/117] CPSC102    ppt    ok
+  [ 46/117] CS303      html   ok
+  [ 47/117] CSCI304    html   ok
+  [ 48/117] CSCI403    -      error
+  [ 49/117] COMS4995   html   ok
+  [ 50/117] EECS6893   -      error
+  [ 51/117] CS102      html   ok
+  [ 52/117] ECE160     html   ok
+  [ 53/117] CS100M     html   ok
+  [ 54/117] CS1110     html   ok
+  [ 55/117] CS2110     html   ok
+  [ 56/117] CS2800     html   ok
+  [ 57/117] CS4320     html   ok
+  [ 58/117] CS4780     html   ok
+  [ 59/117] CS4820     html   ok
+  [ 60/117] CSC222     -      error
+  [ 61/117] CSCI1106   html   ok
+  [ 62/117] CSCI1170   html   ok
+  [ 63/117] CSCI2132   pdf    ok
+  [ 64/117] CSCI2140   pdf    ok
+  [ 65/117] CSCI2141   html   ok
+  [ 66/117] CSCI3120   ppt    ok
+  [ 67/117] CSCI3130   html   ok
+  [ 68/117] CSCI3151   html   ok
+  [ 69/117] CSCI3171   html   ok
+  [ 70/117] CSC241     html   ok
+  [ 71/117] CSC243     html   ok
+  [ 72/117] ECT250     ppt    ok
+  [ 73/117] IT130      html   ok
+  [ 74/117] IT230      html   ok
+  [ 75/117] SE433      html   ok
+  [ 76/117] CS065      html   ok
+  [ 77/117] CS167      html   ok
+  [ 78/117] CS164      -      error
+  [ 79/117] COMPS101L  pdf    ok
+  [ 80/117] CPS100     html   ok
+  [ 81/117] CPS108     pdf    ok
+  [ 82/117] CS203      pdf    ok
+  [ 83/117] CS330      html   ok
+  [ 84/117] CS371      html   ok
+  [ 85/117] ECE250     pdf    ok
+  [ 86/117] ECE350     html   ok
+  [ 87/117] CS600      html   ok
+  [ 88/117] CSCI1010   html   ok
+  [ 89/117] CSCI2540   html   ok
+  [ 90/117] CIS335     html   ok
+  [ 91/117] CSC121     html   ok
+  [ 92/117] CS171      html   ok
+  [ 93/117] CGS1100    pdf    ok
+  [ 94/117] CEN4010    html   ok
+  [ 95/117] COP4338    html   ok
+  [ 96/117] EGN1002    -      error
+  [ 97/117] CS1301     html   ok
+  [ 98/117] CS1315     html   ok
+  [ 99/117] CS3001     html   ok
+  [100/117] CS4470     html   ok
+  [101/117] CS6750     html   ok
+  [102/117] CSE6740    html   ok
+  [103/117] ECE2020    html   ok
+  [104/117] ECE6100    html   ok
+  [105/117] ECE6254    html   ok
+  [106/117] CS7637     ppt    ok
+  [107/117] ECE7750    html   ok
+  [108/117] CS109      html   ok
+  [109/117] CS50X      html   ok
+  [110/117] CSC005     html   ok
+  [111/117] CSC161     html   ok
+  [112/117] CSCI300    html   ok
+  [113/117] COMS207    ppt    ok
+  [114/117] CPRE416    ppt    ok
+  [115/117] CIS200     html   ok
+  [116/117] CSCI2820   -      error
+  [117/117] CSCI3022   -      error
+
+-- SUMMARY -----------------------------------------------------------------------------
+  by kind     {'html': 86, 'ppt': 9, None: 11, 'pdf': 11}
+  by status   {'ok': 106, 'error': 11}

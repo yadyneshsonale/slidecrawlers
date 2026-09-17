@@ -1,0 +1,294 @@
+Toggle navigation
+CS4278/5278 Principles of Software Engineering
+Lectures
+Assignments
+HW0 — Dev Setup
+HW1 — Test Coverage
+HW2 — Test Automation
+HW3 — Mutation Testing
+HW4 — Defect Detection
+HW5 — Debugging Automation
+HW6 — Contribution
+Assignment Notes
+Piazza
+autograder
+Brightspace
+Date
+Topic and Notes
+Assignments
+Reading For
+This
+Class
+W 01/19/22
+What is Software Engineering?
+[overview]
+Some homeworks are posted. Start early!
+HW0 Specification
+.  HW0 is optional, but students have reported in previous semesters that they have to create a Virtual Machine anyway for HW1 through HW5.  HW0 walks you through it. HW0 also contains a video tutorial on terminals/bash.
+HW1 Specification
+.
+HW6 Specification
+is worth reading early (trust me, you will regret if you don't read it early).
+(none; first day of class)
+M 01/24/22
+Process, Risk and Scheduling
+[overview]
+Wikipedia's
+Software Development Process
+Buse and Zimmermann's
+Information Needs for Software Development
+Analytics
+(if you are low on time, read only Sections I-V)
+[Microsoft]
+HW1 Specification
+Optional: "How well do real companies plan and
+estimate effort?"
+Find out in:
+Anda et
+al.'s
+Variability and Reproducibility in Software
+Engineering: A Study of Four Companies
+that Developed the Same System
+[Simula]
+W 01/26/21
+Measurement
+[overview]
+HW0 due
+Begel and Zimmermann's
+Analyze This! 145 Questions for
+Data Scientists in Software Engineering
+[Microsoft]
+Optional: "How does measurement bias relate to
+software?" Find
+out in:
+Mytkowicz et
+al.'s
+Producing Wrong Data Without Doing Anything Obviously
+Wrong!"
+[IBM]
+Optional: Don't want to read the Mytkowicz paper?
+Watch
+the video
+instead!
+M 01/31/22
+Quality Assurance and Testing
+[qa]
+HW1a due
+Sections 2.0 to 2.5 of
+Henderson's
+Software Engineering
+at Google
+[Google]
+Wikipedia's
+Quality Assurance
+Wikipedia's
+Software Testing
+Optional:
+"How does Google test each change to all of its software?"
+Find out in:
+Memon et al.'s
+Taming Google-Scale Continuous Testing
+[Google]
+W 02/02/22
+Test Suite Quality Metrics
+[qa]
+Wikipedia's
+Code Coverage
+Wikipedia's
+Mutation Testing
+Optional: "How did mutation testing improve code
+review feedback by over
+60% for over 10,000 code authors at Google?"
+Find out in:
+Petrovic and
+Ivankovic's
+State of Mutation Testing at
+Google
+[Google]
+Optional: "Do coverage metrics really help with
+critical projects?"
+Find out in:
+Dupuy and
+Leveson's
+An Empirical Evaluation of the MC/DC
+Coverage Criterion on
+the HETE-2 Satellite Software
+[Alcatel]
+M 02/07/22
+Test Inputs, Oracles and Generation
+[qa]
+HW1b,c,d due
+Wikipedia's
+Test Data Generation
+Read up to, but not including, "Program Specific Checkers"
+in
+Zeller's
+Fuzzing: Breaking Things with Random Inputs
+Tillmann and de Halleux's
+Pex — White Box Test Generation for .NET
+[Microsoft]
+Optional: "What's the state of the art in test
+oracles?"
+Find out in:
+Barr et
+al.'s
+The Oracle Problem in Software Testing: A
+Survey
+Optional: "Can fuzz testing find security
+bugs?" Find out
+in:
+Godefroid et
+al.'s
+Automated Whitebox Fuzz Testing
+[Microsoft]
+W 02/09/22
+Code Inspection and Review
+[qa]
+Wikipedia's
+Code Review
+Bacchelli and Bird's
+Expectations, outcomes, and challenges of modern code
+review
+[Microsoft]
+HW2 Specification
+Optional: "How does gender relate to GitHub pull
+requests?"
+Find out in:
+Terrell et
+al.'s
+Gender differences and bias in open
+source: pull request acceptance of women
+versus men
+Optional: "Where do invariants come from?" Find
+out
+in:
+Ernst et
+al.'s
+The Daikon system for dynamic detection of likely
+invariants
+M 02/14/22
+Dynamic Analysis Tools
+[qa]
+Wikipedia's
+Dynamic Program Analysis
+Musuvathi et al.'s
+Finding and Reproducing Heisenbugs in Concurrent
+Programs
+[Microsoft]
+Optional: "How can we detect locking bugs?" Find
+out in:
+Savage et al.'s
+Eraser: A
+Dynamic Data Race Detector for Multithreaded
+Programs
+[Digital]
+W 02/16/22
+Pair Programming and Skill Interviews
+[coding]
+Wikipedia's
+Pair Programming
+Cockburn and
+Williams'
+The Costs and Benefits of Pair Programming
+Dean Jackson's
+The Google Technical Interview
+[Google]
+Section 4.1 of
+Henderson's
+Software Engineering
+at Google
+[Google]
+Optional: "What did a survey of over 46,000
+comments find
+out about modern technical interviews?"
+Find
+out in:
+Behroozi
+et al.'s
+Hiring is Broken: What Do Developers SayAbout
+Technical Interviews?
+[Microsoft]
+Optional: "What can go wrong in pair
+programming?"
+Find
+out in:
+Lewis
+and Shah's
+How Equity and Inequity Can Emerge in Pair
+Programming
+02/20/22
+(None; this is a sunday)
+HW2 due
+M 02/21/22
+Static & Dataflow Analysis (1/2)
+[qa]
+HW3 is due after Exam1. However, leaving much work of HW3 until after the exam typically works poorly for students!
+Wikipedia's
+Static Program Analysis
+Ayewah et al.'s
+Experiences Using Static Analysis to Find Bugs
+[Google]
+HW3 Specification
+Optional: "How does Microsoft find bugs in
+critical device drivers?" Find out in:
+Ball et al.'s
+A Decade of
+Software Model Checking with SLAM
+[Microsoft]
+Optional: "What are deployment challenges for
+static analysis?"
+Find out in:
+Bessey
+et al.'s
+A Few Billion Lines of Code Later: Using
+Static Analysis to
+Find Bugs in the Real World
+[Coverity]
+W 02/23/22
+Static & Dataflow Analysis (2/2)
+[qa]
+Wikipedia's
+Basic Block
+Wikipedia's
+Data-flow Analysis
+M 02/28/22
+Defect Reporting and Triage
+[bugs]
+Wikipedia's
+Bug tracking system
+Bettenburg et al.'s
+What Makes a Good Bug Report?
+[Apache, Eclipse, Mozilla]
+Optional: "Are testers more neurotic than
+developers?" Find out in
+Smith et al.'s
+Beliefs,
+Practices, and
+Personalities of Software Engineers: A Survey in a
+Large Software
+Company
+[Microsoft]
+W 03/02/22
+Exam 1.
+Exam Example,
+Key for Exam Example
+03/06/22
+(None; this is a Sunday)
+HW3 due
+03/07/22
+Spring Break
+03/09/22
+Spring Break
+M 03/14/22
+Fault Localization and Profiling
+[bugs]
+Wikipedia's
+Profiling
+Parnin and Orso's
+Are Automated Debugging Techniques Actually Helping
+Programmers?
+Graham et al.'s
+gprof: a Call Graph Execution Profiler
+HW4 Specification
+Optional: "How can we collect per-path
+i

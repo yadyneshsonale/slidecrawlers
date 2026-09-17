@@ -1,0 +1,284 @@
+CSCI 2510: Principles of Computer Systems - Class Page
+Spring 2024
+Instructor
+David Ferry
+,
+Homepage
+Course Web Site
+https://dferry.github.io/csci2510/
+Course meeting times
+Section 1: Monday, Wednesday, & Friday from 9:00 am - 9:50 am, Ritter Hall 115
+Section 2: Monday, Wednesday, & Friday from 10:00 am - 10:50 am, Ritter Hall 115
+Midterm exam
+March 1st, During Class
+Final exam
+9:00 am Section: Wednesday, May. 8th, 8:00 am - 9:50 am
+10:00 am Section: Wednesday, May. 8th, 12:00 - 1:50 pm
+Office hours
+See
+my schedule
+Contact
+You may contact me in person during office hours or during class time, or you may email me at
+dferry@slu.edu
+. I am also available to meet by appointment, see
+my schedule
+.
+Contents
+Course Description
+Prerequisites
+Lecture
+Studios
+Labs
+Course Schedule
+Git Repository
+Textbooks and Other Resources
+Grading
+Attendance
+Course Description
+Modern software architects and engineers care every bit as much about
+where
+and
+how
+software executes as they do about
+what
+the software does. Modern systems are expected to be
+performant
+,
+scalable
+,
+efficient
+,
+maintainable
+,
+secure
+,
+and more. These are
+challenging problems, because they are less concerned with
+what
+the
+system does, and much more concerned about
+how
+a system does it.
+Most requirements for software systems are written as a set of of
+functional constraints
+in the sense of a mathematical function. A
+program is seen as a tool for transforming inputs into outputs, and the program
+is the function that accomplishes that transformation. However, the challenges
+listed above are
+non-functional constraints
+and cannot be expressed in
+such a manner. If they were, our life would be easier! We could simply write
+the bit of code that ensures our system is scalable, and then we'd be done.
+Instead, verifying that a system is scalable requires checking that the
+entire system is scalable- which is not only a global qualification, but
+an entirely non-obvious one at that.
+Course "Big Questions"
+What does a modern, medium-scale software system look like?
+What tools does an engineer have at their disposal to manage
+how
+and
+where
+code executes?
+What is concurrency and concurrent programming, and how can it be used?
+What is parallel programming, and how can it be used?
+At the low technical level, how are medium-scale systems composed out of
+collections of components?
+The four elements of this course are lectures, studios, labs,
+and exams.
+Studios are short assignments intended to be completed primarily within class
+time and to augment lecture topics.
+Labs are longer assignments that will ask students to apply and analyze
+system mechanisms. Expect a lab assignment approximately every two weeks.
+Topical outline:
+C programming
+User programs, processes, threads, and processor sharing
+Parallel programming
+Analysis of parallel algorithms
+Race conditions, locks, mutual exclusion
+Deadlock
+Sockets programming
+7-layer OSI networking model
+Course Activities
+Studios-
+Computer Science is an eminently
+practical
+discipline, and studios are daily assignments intended to complement and
+reinforce class material with daily practice.
+Labs-
+A major experiential learning component of
+this course is for each student to do substantial programming activities
+themselves. A technical understanding of how distributed medium-scale
+systems are implemented will show students for themselves how such systems
+really work at a technical level.
+Catalog Description:
+An exploration of computing systems with a strong emphasis on how systems interact with each other. Topics will include concurrent and parallel programming, network communication, and computer security. In addition to foundational knowledge, the course includes simulating, benchmarking, and testing such systems.
+Prerequisites
+(CSCI 2500 - Computer Organization and Systems, with a grade of C- or
+higher) OR (ECE 2205, ECE 3217, and ECE 3225)
+A basic knowledge of Linux programming and the Linux command line
+Please see the instructor if you're uncertain
+about your preparation for this course.
+Course Schedule
+A tentative course schedule is below.
+Note that this schedule may change
+over the course of the semester.
+When changes occur, students will be
+given enough advance notice so that readings and
+other preparation may be accommodated.
+Date
+Day
+Topic
+Readings
+Studios
+Labs
+Jan 17
+Wed
+Introduction
+Make sure you can login for next time
+Jan 19
+Fri
+Intro to Systems Programming in C
+Studio 01
+Jan 22
+Mon
+Snow Day
+Jan 24
+Wed
+Intro to C
+hello.c
+Studio 02
+Jan 26
+Fri
+Git, Github, Lab 1 Discussion
+Studio 03
+Lab 1 - File Compression
+Jan 29
+Mon
+Continuing with C, Lab 1 Discussion
+Studio 04
+Studio 1 Due
+Jan 31
+Wed
+System Calls
+Studio 2 Due
+Feb 2
+Fri
+Processes
+Studio 3 Due
+Feb 5
+Mon
+fork(), exec(), wait(),
+Process Creation
+Studio 4 Due
+Lab 1 Due (moved)
+Feb 7
+Wed
+Lab 2 Discussion
+Studio 5
+Studio 6
+Lab 1 Due
+Lab 2 -
+SLU Shell
+Feb 9
+Fri
+Wellness Day - No Class
+Feb 12
+Mon
+Lab 2 Discussion
+fork_strtok_demo.c
+Studio 7
+Feb 14
+Wed
+Pipes,
+stdin
+,
+stdout
+pipe_demo.c
+Studio 8
+Studio 5 Due
+Studio 6 Due
+Feb 16
+Fri
+File descriptors,
+dup2()
+dup2_demo.c
+Studio 7 Due
+Feb 19
+Mon
+Threads, Concurrent Programming
+Studio 9
+Studio 8 Due
+Feb 21
+Wed
+Pthreads Interface
+thread_demo.c
+Lab 2 Due
+Feb 23
+Fri
+Lab 3 Discussion
+crypt_demo.c
+Lab 3 - Brute Force Password Cracking
+Feb 26
+Mon
+Race Conditions
+Studio 10
+Feb 28
+Wed
+Locks, Mutexes, Atomicity
+Studio 9 Due
+Studio 11
+Mar 1
+Fri
+Mar 4
+Mon
+Studio 10 Due
+Lab 3 Due
+Mar 6
+Wed
+Exam Review
+Studio 11 Due
+Mar 8
+Fri
+Midterm Exam
+Mar 11
+Mon
+Spring Break - No Class
+Mar 13
+Wed
+Spring Break - No Class
+Mar 15
+Fri
+Spring Break - No Class
+Mar 18
+Mon
+Deadlock, Deadlock Detection
+Lab 4 - Deadlock Detection
+Mar 20
+Wed
+Lab 4 Discussion
+Mar 22
+Fri
+Parallel Algorithms,
+Work and Critical Path
+Mar 25
+Mon
+Parallel Matrix-Multiply
+Parallel Array-Sum
+(Associative Reduce)
+Mar 27
+Wed
+C++ Threads and Atomics,
+OpenMP
+Lab 4 Due
+Mar 29
+Fri
+Easter Break - No Class
+Apr 1
+Mon
+Easter Break - No Class
+Apr 3
+Wed
+OSI Model of Networking
+Apr 5
+Fri
+Physical and

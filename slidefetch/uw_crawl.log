@@ -1,0 +1,1673 @@
+parsed 195 course(s) into uw_catalog.db
+   11  Introductory/Pre-Major
+   90  Undergraduate Major
+    9  Undergraduate Non-Major
+    6  B.S./M.S.
+   52  Graduate (Ph.D)
+   27  Professional Master’s Program (PMP)
+
+==== crawling 195 course(s) (max-offerings=3, download=yes) ====
+
+### CSE120  Computer Science Principles   [Introductory/Pre-Major]
+  10 offering(s) found
+    = 20wi     already crawled (skip)
+    = 19wi     already crawled (skip)
+    = 18wi     already crawled (skip)
+
+### CSE121  Introduction to Computer Programming I   [Introductory/Pre-Major]
+  16 offering(s) found
+    = 26su     already crawled (skip)
+    = 26sp     already crawled (skip)
+    = 26wi     already crawled (skip)
+
+### CSE122  Introduction to Computer Programming II   [Introductory/Pre-Major]
+  16 offering(s) found
+    > 26su     Summer, 2026   [Lim, Wang]
+      found 2 slide link(s)
+      downloaded 2  skipped 0  dup 0  failed 0  ->  downloads/uw/cse122/26su
+    > 26sp     Spring, 2026   [Garza]
+      found 40 slide link(s)
+      downloaded 40  skipped 0  dup 0  failed 0  ->  downloads/uw/cse122/26sp
+    > 26wi     Winter, 2026   [Salguero]
+      found 40 slide link(s)
+      downloaded 40  skipped 0  dup 0  failed 0  ->  downloads/uw/cse122/26wi
+
+### CSE123  Introduction to Computer Programming III   [Introductory/Pre-Major]
+  15 offering(s) found
+    > 26su     Summer, 2026   [Vuong]
+      found 2 slide link(s)
+      downloaded 2  skipped 0  dup 0  failed 0  ->  downloads/uw/cse123/26su
+    > 26sp     Spring, 2026   [Natsuhara]
+      found 38 slide link(s)
+      downloaded 38  skipped 0  dup 0  failed 0  ->  downloads/uw/cse123/26sp
+    > 26wi     Winter, 2026   [Wortzman]
+      found 38 slide link(s)
+      downloaded 38  skipped 0  dup 0  failed 0  ->  downloads/uw/cse123/26wi
+
+### CSE142  Computer Programming I   [Introductory/Pre-Major]
+  5 offering(s) found
+    > 22su     Summer, 2022   [Jojic]
+      found 62 slide link(s)
+      downloaded 60  skipped 0  dup 0  failed 2  ->  downloads/uw/cse142/22su
+    > 22sp     Spring, 2022   [Reges]
+      found 50 slide link(s)
+      downloaded 49  skipped 0  dup 0  failed 1  ->  downloads/uw/cse142/22sp
+    > 22wi     Winter, 2022   [Wortzman, Champion]
+      found 45 slide link(s)
+      downloaded 41  skipped 0  dup 0  failed 4  ->  downloads/uw/cse142/22wi
+
+### CSE143  Computer Programming II   [Introductory/Pre-Major]
+  5 offering(s) found
+    > 25au     Autumn, 2025   [Reges]
+      found 3 slide link(s)
+      downloaded 3  skipped 0  dup 0  failed 0  ->  downloads/uw/cse143/25au
+    > 24au     Autumn, 2024   [Reges]
+      found 0 slide link(s)
+    > 24sp     Spring, 2024   [Reges]
+      found 3 slide link(s)
+      downloaded 3  skipped 0  dup 0  failed 0  ->  downloads/uw/cse143/24sp
+
+### CSE143X  Accelerated Computer Programming I/II   [Introductory/Pre-Major]
+  14 offering(s) found
+    > 25au     Autumn, 2025   [Reges]
+/home/b-ysonale/slidefetch/slidefetch/extract.py:199: MarkupResemblesLocatorWarning: The input looks more like a filename than markup. You may want to open this file and pass the filehandle into Beautiful Soup.
+  soup = BeautifulSoup(html, "lxml")
+/home/b-ysonale/slidefetch/slidefetch/extract.py:210: MarkupResemblesLocatorWarning: The input looks more like a filename than markup. You may want to open this file and pass the filehandle into Beautiful Soup.
+  soup = BeautifulSoup(html, "lxml")
+      found 7 slide link(s)
+      downloaded 7  skipped 0  dup 0  failed 0  ->  downloads/uw/cse143x/25au
+    > 25wi     Winter, 2025   [Reges]
+      found 7 slide link(s)
+      downloaded 7  skipped 0  dup 0  failed 0  ->  downloads/uw/cse143x/25wi
+    > 24au     Autumn, 2024   [Reges]
+      found 19 slide link(s)
+      downloaded 19  skipped 0  dup 0  failed 0  ->  downloads/uw/cse143x/24au
+
+### CSE154  Web Programming   [Introductory/Pre-Major]
+  9 offering(s) found
+    > 25au     Autumn, 2025   [Wolman]
+      found 0 slide link(s)
+    > 24au     Autumn, 2024   [Wolman]
+      found 0 slide link(s)
+    > 24su     Summer, 2024   [Wolman]
+      found 0 slide link(s)
+
+### CSE160  Data Programming   [Introductory/Pre-Major]
+  27 offering(s) found
+    > 26su     Summer, 2026   [Salguero]
+      found 4 slide link(s)
+      downloaded 4  skipped 0  dup 0  failed 0  ->  downloads/uw/cse160/26su
+    > 26sp     Spring, 2026   [Lin]
+      found 0 slide link(s)
+    > 26wi     Winter, 2026   [Anderson, Weichert]
+      found 0 slide link(s)
+
+### CSE163  Intermediate Data Programming   [Introductory/Pre-Major]
+  23 offering(s) found
+    > 26su     Summer, 2026   [Kapoor]
+      found 0 slide link(s)
+    > 26sp     Spring, 2026   [Salguero]
+      found 54 slide link(s)
+      downloaded 54  skipped 0  dup 0  failed 0  ->  downloads/uw/cse163/26sp
+    > 26wi     Winter, 2026   [Choi]
+      found 0 slide link(s)
+
+### CSE180  Introduction to Data Science   [Introductory/Pre-Major]
+  8 offering(s) found
+    > 26sp     Spring, 2026   [Maas]
+      found 0 slide link(s)
+    > 25sp     Spring, 2025   [Maas]
+      found 0 slide link(s)
+    > 24sp     Spring, 2024   [Maas]
+      found 0 slide link(s)
+
+### CSE190B  Freshman Direct-Admit Seminar   [Undergraduate Major]
+  4 offering(s) found
+    > 25au     Autumn, 2025   [Grossman]
+      found 0 slide link(s)
+    > 24au     Autumn, 2024   [Grossman]
+      found 0 slide link(s)
+    > 23au     Autumn, 2023   [Grossman]
+      found 0 slide link(s)
+
+### CSE195  Allen Scholars Bridge Program   [Undergraduate Major]
+  1 offering(s) found
+    > 25au     Autumn, 2025   [Bricker, Ikeda]
+      found 0 slide link(s)
+
+### CSE196  Allen Scholars Seminar   [Undergraduate Major]
+  3 offering(s) found
+    > 26sp     Spring, 2026   [Ikeda]
+      found 0 slide link(s)
+    > 26wi     Winter, 2026   [-]
+      [fetch] skip https://courses.cs.washington.edu/courses/cse196/26wi/ (HTTP Error 404: Not Found)
+      found 0 slide link(s)
+    > 25au     Autumn, 2025   [Ikeda]
+      found 0 slide link(s)
+
+### CSE197  Problem Solving for Computer Science and Engineering   [Undergraduate Major]
+  1 offering(s) found
+    > 26sp     Spring, 2026   [-]
+      [fetch] skip https://courses.cs.washington.edu/courses/cse197/26sp/ (HTTP Error 404: Not Found)
+      found 0 slide link(s)
+
+### CSE197W  Problem Solving for Computer Science and Engineering (ASSP 121)   [Undergraduate Major]
+  1 offering(s) found
+    > 25au     Autumn, 2025   [Wang]
+      found 0 slide link(s)
+
+### CSE197X  Problem Solving for Computer Science and Engineering (ASSP 122)   [Undergraduate Major]
+  3 offering(s) found
+    > 26sp     Spring, 2026   [Hickmon, Wang]
+      found 0 slide link(s)
+    > 26wi     Winter, 2026   [Wang]
+      found 0 slide link(s)
+    > 25au     Autumn, 2025   [Salguero]
+      found 0 slide link(s)
+
+### CSE197Y  Problem Solving for Computer Science and Engineering (ASSP 123)   [Undergraduate Major]
+  3 offering(s) found
+    > 26sp     Spring, 2026   [Hickmon]
+      found 0 slide link(s)
+    > 26wi     Winter, 2026   [Hickmon]
+      found 0 slide link(s)
+    > 25au     Autumn, 2025   [Hickmon]
+      found 0 slide link(s)
+
+### CSE197Z  Problem Solving for Computer Science and Engineering (STARS)   [Undergraduate Major]
+  3 offering(s) found
+    > 26sp     Spring, 2026   [Wang]
+      found 0 slide link(s)
+    > 26wi     Winter, 2026   [Wang]
+      found 0 slide link(s)
+    > 25au     Autumn, 2025   [Wang]
+      found 0 slide link(s)
+
+### CSE311  Foundations of Computing I   [Undergraduate Major]
+  13 offering(s) found
+    > 26su     Summer, 2026   [Elkin]
+      found 0 slide link(s)
+    > 26sp     Spring, 2026   [Zatloukal]
+      found 14 slide link(s)
+      downloaded 14  skipped 0  dup 0  failed 0  ->  downloads/uw/cse311/26sp
+    > 26wi     Winter, 2026   [Zatloukal]
+      found 14 slide link(s)
+      downloaded 14  skipped 0  dup 0  failed 0  ->  downloads/uw/cse311/26wi
+
+### CSE312  Foundations of Computing II   [Undergraduate Major]
+  9 offering(s) found
+    > 26su     Summer, 2026   [Zhou]
+      found 6 slide link(s)
+      downloaded 6  skipped 0  dup 0  failed 0  ->  downloads/uw/cse312/26su
+    > 26sp     Spring, 2026   [Karlin]
+      found 76 slide link(s)
+      downloaded 0  skipped 0  dup 0  failed 76  ->  downloads/uw/cse312/26sp
+    > 26wi     Winter, 2026   [Weber]
+      found 0 slide link(s)
+
+### CSE331  Software Design and Implementation   [Undergraduate Major]
+  11 offering(s) found
+    > 26su     Summer, 2026   [Wilcox]
+      found 0 slide link(s)
+    > 26sp     Spring, 2026   [Wilcox]
+      found 7 slide link(s)
+      downloaded 7  skipped 0  dup 0  failed 0  ->  downloads/uw/cse331/26sp
+    > 26wi     Winter, 2026   [Wilcox]
+      found 19 slide link(s)
+      downloaded 19  skipped 0  dup 0  failed 0  ->  downloads/uw/cse331/26wi
+
+### CSE332  Data Structures and Parallelism   [Undergraduate Major]
+  11 offering(s) found
+    > 26su     Summer, 2026   [Whitmeyer]
+      found 5 slide link(s)
+      downloaded 5  skipped 0  dup 0  failed 0  ->  downloads/uw/cse332/26su
+    > 26sp     Spring, 2026   [Brunelle]
+      found 54 slide link(s)
+      downloaded 54  skipped 0  dup 0  failed 0  ->  downloads/uw/cse332/26sp
+    > 26wi     Winter, 2026   [Brunelle]
+      found 80 slide link(s)
+      downloaded 80  skipped 0  dup 0  failed 0  ->  downloads/uw/cse332/26wi
+
+### CSE333  Systems Programming   [Undergraduate Major]
+  13 offering(s) found
+    > 26su     Summer, 2026   [Pardeshi]
+      found 3 slide link(s)
+      downloaded 3  skipped 0  dup 0  failed 0  ->  downloads/uw/cse333/26su
+    > 26sp     Spring, 2026   [Alterman]
+/home/b-ysonale/slidefetch/slidefetch/extract.py:199: MarkupResemblesLocatorWarning: The input looks more like a filename than markup. You may want to open this file and pass the filehandle into Beautiful Soup.
+  soup = BeautifulSoup(html, "lxml")
+/home/b-ysonale/slidefetch/slidefetch/extract.py:210: MarkupResemblesLocatorWarning: The input looks more like a filename than markup. You may want to open this file and pass the filehandle into Beautiful Soup.
+  soup = BeautifulSoup(html, "lxml")
+      found 55 slide link(s)
+      downloaded 54  skipped 0  dup 0  failed 1  ->  downloads/uw/cse333/26sp
+    > 26wi     Winter, 2026   [Hu, Hsia]
+      found 56 slide link(s)
+      downloaded 54  skipped 0  dup 0  failed 2  ->  downloads/uw/cse333/26wi
+
+### CSE340  Interaction Programming   [Undergraduate Major]
+  11 offering(s) found
+    > 26sp     Spring, 2026   [Wolman]
+      found 0 slide link(s)
+    > 25au     Autumn, 2025   [Shapiro]
+      found 0 slide link(s)
+    > 25sp     Spring, 2025   [Bricker]
+      found 0 slide link(s)
+
+### CSE341  Programming Languages   [Undergraduate Major]
+  85 offering(s) found
+    > 26su     Summer, 2026   [Wortzman]
+      found 0 slide link(s)
+    > 26sp     Spring, 2026   [Reges]
+      found 3 slide link(s)
+      downloaded 3  skipped 0  dup 0  failed 0  ->  downloads/uw/cse341/26sp
+    > 26wi     Winter, 2026   [Reges]
+      found 2 slide link(s)
+      downloaded 2  skipped 0  dup 0  failed 0  ->  downloads/uw/cse341/26wi
+
+### CSE344  Introduction to Data Management   [Undergraduate Major]
+  13 offering(s) found
+    > 26su     Summer, 2026   [Kuznetsova]
+      found 0 slide link(s)
+    > 26sp     Spring, 2026   [Suciu]
+      found 27 slide link(s)
+      downloaded 27  skipped 0  dup 0  failed 0  ->  downloads/uw/cse344/26sp
+    > 26wi     Winter, 2026   [Tang]
+      found 22 slide link(s)
+      downloaded 22  skipped 0  dup 0  failed 0  ->  downloads/uw/cse344/26wi
+
+### CSE351  The Hardware/Software Interface   [Undergraduate Major]
+  17 offering(s) found
+    > 26su     Summer, 2026   [Amiel]
+      found 0 slide link(s)
+    > 26sp     Spring, 2026   [Anderson]
+      found 0 slide link(s)
+    > 26wi     Winter, 2026   [Garza]
+      found 0 slide link(s)
+
+### CSE369  Introduction to Digital Design   [Undergraduate Major]
+  24 offering(s) found
+    > 26sp     Spring, 2026   [Alterman]
+      found 27 slide link(s)
+      downloaded 27  skipped 0  dup 0  failed 0  ->  downloads/uw/cse369/26sp
+    > 26wi     Winter, 2026   [Alterman]
+      found 24 slide link(s)
+      downloaded 24  skipped 0  dup 0  failed 0  ->  downloads/uw/cse369/26wi
+    > 25wi     Winter, 2025   [Thachuk]
+      found 26 slide link(s)
+      downloaded 26  skipped 0  dup 0  failed 0  ->  downloads/uw/cse369/25wi
+
+### CSE371  Design of Digital Circuits and Systems   [Undergraduate Major]
+  15 offering(s) found
+    > 26sp     Spring, 2026   [Hsia]
+      found 36 slide link(s)
+      downloaded 36  skipped 0  dup 0  failed 0  ->  downloads/uw/cse371/26sp
+    > 25sp     Spring, 2025   [Iyer]
+      found 33 slide link(s)
+      downloaded 33  skipped 0  dup 0  failed 0  ->  downloads/uw/cse371/25sp
+    > 24sp     Spring, 2024   [Hsia]
+      found 36 slide link(s)
+      downloaded 36  skipped 0  dup 0  failed 0  ->  downloads/uw/cse371/24sp
+
+### CSE390Z  Mathematics for Computation Workshop   [Undergraduate Major]
+  5 offering(s) found
+    > 26sp     Spring, 2026   [Weber]
+      found 0 slide link(s)
+    > 26wi     Winter, 2026   [Elkin, Weber]
+      found 0 slide link(s)
+    > 25au     Autumn, 2025   [Elkin]
+      found 1 slide link(s)
+      downloaded 1  skipped 0  dup 0  failed 0  ->  downloads/uw/cse390z/25au
+
+### CSE391  System and Software Tools   [Undergraduate Major]
+  11 offering(s) found
+    > 26su     Summer, 2026   [Weichert]
+      found 0 slide link(s)
+    > 26sp     Spring, 2026   [Weichert]
+      found 0 slide link(s)
+    > 26wi     Winter, 2026   [Anderson]
+      found 0 slide link(s)
+
+### CSE394  Introduction to Research in Computer Science and Engineering   [Undergraduate Major]
+  1 offering(s) found
+    > 25au     Autumn, 2025   [Battle]
+      found 0 slide link(s)
+
+### CSE401  Introduction to Compiler Construction   [Undergraduate Major]
+  11 offering(s) found
+    > 26sp     Spring, 2026   [Bernstein]
+      found 0 slide link(s)
+    > 25au     Autumn, 2025   [Perkins]
+      found 0 slide link(s)
+    > 25sp     Spring, 2025   [Bernstein]
+      found 0 slide link(s)
+
+### CSE402  Design and Implementation of Domain-Specific Languages   [Undergraduate Major]
+  2 offering(s) found
+    > 20wi     Winter, 2020   [Bodik]
+      found 0 slide link(s)
+    > 19sp     Spring, 2019   [Bodik]
+      found 0 slide link(s)
+
+### CSE403  Software Engineering   [Undergraduate Major]
+  11 offering(s) found
+    > 26wi     Winter, 2026   [Alverson]
+      found 16 slide link(s)
+      downloaded 16  skipped 0  dup 0  failed 0  ->  downloads/uw/cse403/26wi
+    > 25au     Autumn, 2025   [Ernst]
+      found 17 slide link(s)
+      downloaded 17  skipped 0  dup 0  failed 0  ->  downloads/uw/cse403/25au
+    > 25sp     Spring, 2025   [Just]
+      found 0 slide link(s)
+
+### CSE421  Introduction to Algorithms   [Undergraduate Major]
+  11 offering(s) found
+    > 26sp     Spring, 2026   [Weber]
+      found 0 slide link(s)
+    > 26wi     Winter, 2026   [Nirkhe]
+      found 27 slide link(s)
+      downloaded 27  skipped 0  dup 0  failed 0  ->  downloads/uw/cse421/26wi
+    > 25au     Autumn, 2025   [Coladangelo]
+      found 0 slide link(s)
+
+### CSE422  Advanced Toolkit for Modern Algorithms   [Undergraduate Major]
+  6 offering(s) found
+    > 26wi     Winter, 2026   [Li]
+      found 0 slide link(s)
+    > 25wi     Winter, 2025   [Li]
+      found 0 slide link(s)
+    > 24wi     Winter, 2024   [Lee]
+      found 0 slide link(s)
+
+### CSE426  Cryptography   [Undergraduate Major]
+  3 offering(s) found
+    > 25au     Autumn, 2025   [Tessaro]
+      found 0 slide link(s)
+    > 25wi     Winter, 2025   [Lin]
+      found 0 slide link(s)
+    > 23au     Autumn, 2023   [Tessaro]
+      found 0 slide link(s)
+
+### CSE427  Computational Biology   [Undergraduate Major]
+  11 offering(s) found
+    > 25au     Autumn, 2025   [Wang]
+      found 5 slide link(s)
+      downloaded 0  skipped 0  dup 0  failed 5  ->  downloads/uw/cse427/25au
+    > 24au     Autumn, 2024   [Wang]
+      found 7 slide link(s)
+      downloaded 0  skipped 0  dup 0  failed 7  ->  downloads/uw/cse427/24au
+    > 24wi     Winter, 2024   [Wang]
+      found 9 slide link(s)
+      downloaded 0  skipped 0  dup 0  failed 9  ->  downloads/uw/cse427/24wi
+
+### CSE428  Computational Biology Capstone   [Undergraduate Major]
+  12 offering(s) found
+    > 26sp     Spring, 2026   [Wang]
+      found 1 slide link(s)
+      downloaded 0  skipped 0  dup 0  failed 1  ->  downloads/uw/cse428/26sp
+    > 25sp     Spring, 2025   [Wang]
+      found 1 slide link(s)
+      downloaded 0  skipped 0  dup 0  failed 1  ->  downloads/uw/cse428/25sp
+    > 24sp     Spring, 2024   [Wang]
+      found 0 slide link(s)
+
+### CSE431  Introduction to Theory of Computation   [Undergraduate Major]
+  13 offering(s) found
+    > 25au     Autumn, 2025   [Bafna]
+      found 0 slide link(s)
+    > 25wi     Winter, 2025   [Beame]
+      found 0 slide link(s)
+    > 24sp     Spring, 2024   [Rao]
+      found 0 slide link(s)
+
+### CSE434  Introduction to Quantum Computation   [Undergraduate Major]
+  2 offering(s) found
+    > 26sp     Spring, 2026   [Coladangelo]
+      found 0 slide link(s)
+    > 25sp     Spring, 2025   [Coladangelo]
+      found 0 slide link(s)
+
+### CSE438  Computational Neuroscience   [Undergraduate Major]
+  1 offering(s) found
+    > 26sp     Spring, 2026   [Rao]
+      found 0 slide link(s)
+
+### CSE440  Introduction to HCI: User Interface Design, Prototyping, and Evaluation   [Undergraduate Major]
+  11 offering(s) found
+    > 26sp     Spring, 2026   [Zhang]
+      found 0 slide link(s)
+    > 26wi     Winter, 2026   [Zhang]
+      found 0 slide link(s)
+    > 25au     Autumn, 2025   [Fogarty]
+      found 0 slide link(s)
+
+### CSE441  Advanced HCI: Advanced User Interface Design, Prototyping, and Evaluation   [Undergraduate Major]
+  7 offering(s) found
+    > 20sp     Spring, 2020   [Reinecke]
+      found 0 slide link(s)
+    > 19sp     Spring, 2019   [Reinecke]
+      found 0 slide link(s)
+    > 18sp     Spring, 2018   [Reinecke]
+      found 0 slide link(s)
+
+### CSE442  Data Visualization   [Undergraduate Major]
+  15 offering(s) found
+    > 26wi     Winter, 2026   [Heer]
+      found 20 slide link(s)
+      downloaded 18  skipped 0  dup 0  failed 2  ->  downloads/uw/cse442/26wi
+    > 25au     Autumn, 2025   [Heer]
+      found 18 slide link(s)
+      downloaded 16  skipped 0  dup 0  failed 2  ->  downloads/uw/cse442/25au
+    > 25wi     Winter, 2025   [Battle]
+      found 19 slide link(s)
+      downloaded 16  skipped 0  dup 0  failed 3  ->  downloads/uw/cse442/25wi
+
+### CSE443  Digital Accessibility   [Undergraduate Major]
+  1 offering(s) found
+    > 26wi     Winter, 2026   [Mankoff]
+      found 1 slide link(s)
+      downloaded 1  skipped 0  dup 0  failed 0  ->  downloads/uw/cse443/26wi
+
+### CSE444  Database Systems Internals   [Undergraduate Major]
+  11 offering(s) found
+    > 26sp     Spring, 2026   [Maas]
+      found 25 slide link(s)
+      downloaded 25  skipped 0  dup 0  failed 0  ->  downloads/uw/cse444/26sp
+    > 26wi     Winter, 2026   [Maas]
+      found 0 slide link(s)
+    > 25sp     Spring, 2025   [Maas]
+      found 0 slide link(s)
+
+### CSE446  Machine Learning   [Undergraduate Major]
+  13 offering(s) found
+    > 26sp     Spring, 2026   [Jaques]
+      found 0 slide link(s)
+    > 26wi     Winter, 2026   [Golub]
+      found 0 slide link(s)
+    > 25au     Autumn, 2025   [Koh, Oh]
+      found 0 slide link(s)
+
+### CSE447  Natural Language Processing   [Undergraduate Major]
+  13 offering(s) found
+    > 26wi     Winter, 2026   [Minneker]
+      found 20 slide link(s)
+      downloaded 0  skipped 0  dup 0  failed 20  ->  downloads/uw/cse447/26wi
+    > 25au     Autumn, 2025   [Tsvetkov]
+      found 22 slide link(s)
+      downloaded 0  skipped 0  dup 0  failed 22  ->  downloads/uw/cse447/25au
+    > 25wi     Winter, 2025   [Smith]
+      found 0 slide link(s)
+
+### CSE451  Introduction to Operating Systems   [Undergraduate Major]
+  11 offering(s) found
+    > 26sp     Spring, 2026   [Kasikci]
+      found 0 slide link(s)
+    > 26wi     Winter, 2026   [Kimura]
+      found 28 slide link(s)
+      downloaded 28  skipped 0  dup 0  failed 0  ->  downloads/uw/cse451/26wi
+    > 25sp     Spring, 2025   [Wilcox]
+      found 0 slide link(s)
+
+### CSE452  Distributed Systems   [Undergraduate Major]
+  23 offering(s) found
+    > 26sp     Spring, 2026   [Wilcox]
+      found 18 slide link(s)
+      downloaded 18  skipped 0  dup 0  failed 0  ->  downloads/uw/cse452/26sp
+    > 26wi     Winter, 2026   [Wang]
+      [fetch] skip https://courses.cs.washington.edu/courses/cse452/26wi/lecture/ (HTTP Error 404: Not Found)
+      [fetch] skip https://courses.cs.washington.edu/courses/cse452/26wi/schedule/ (HTTP Error 404: Not Found)
+      found 33 slide link(s)
+      downloaded 1  skipped 0  dup 0  failed 32  ->  downloads/uw/cse452/26wi
+    > 25au     Autumn, 2025   [Krishnamurthy]
+      [fetch] skip https://courses.cs.washington.edu/courses/cse452/25au/lecture/ (HTTP Error 404: Not Found)
+      [fetch] skip https://courses.cs.washington.edu/courses/cse452/25au/schedule/ (HTTP Error 404: Not Found)
+      found 27 slide link(s)
+      downloaded 1  skipped 0  dup 0  failed 26  ->  downloads/uw/cse452/25au
+
+### CSE453  Data Center Systems   [Undergraduate Major]
+  4 offering(s) found
+    > 25au     Autumn, 2025   [Peter]
+      found 33 slide link(s)
+      downloaded 0  skipped 0  dup 0  failed 33  ->  downloads/uw/cse453/25au
+    > 23au     Autumn, 2023   [Peter]
+      found 29 slide link(s)
+      downloaded 0  skipped 0  dup 0  failed 29  ->  downloads/uw/cse453/23au
+    > 22au     Autumn, 2022   [Peter]
+      found 32 slide link(s)
+      downloaded 0  skipped 0  dup 0  failed 32  ->  downloads/uw/cse453/22au
+
+### CSE455  Computer Vision   [Undergraduate Major]
+  9 offering(s) found
+    > 26sp     Spring, 2026   [PopoviÄ]
+      found 18 slide link(s)
+      downloaded 0  skipped 0  dup 0  failed 18  ->  downloads/uw/cse455/26sp
+    > 25au     Autumn, 2025   [Shapiro]
+      found 25 slide link(s)
+      downloaded 0  skipped 0  dup 0  failed 25  ->  downloads/uw/cse455/25au
+    > 25sp     Spring, 2025   [Desai, Li]
+      found 26 slide link(s)
+      downloaded 0  skipped 0  dup 0  failed 26  ->  downloads/uw/cse455/25sp
+
+### CSE456  Story Design for Computer Animation   [Undergraduate Major]
+  11 offering(s) found
+    > 26su     Summer, 2026   [Mones]
+      found 0 slide link(s)
+    > 25su     Summer, 2025   [Mones]
+      found 0 slide link(s)
+    > 24su     Summer, 2024   [Mones]
+      found 0 slide link(s)
+
+### CSE457  Computer Graphics   [Undergraduate Major]
+  9 offering(s) found
+    > 26sp     Spring, 2026   [Seitz]
+      found 0 slide link(s)
+    > 26wi     Winter, 2026   [Curless]
+      found 0 slide link(s)
+    > 25au     Autumn, 2025   [PopoviÄ]
+      found 9 slide link(s)
+      downloaded 9  skipped 0  dup 0  failed 0  ->  downloads/uw/cse457/25au
+
+### CSE458  Computer Animation   [Undergraduate Major]
+  28 offering(s) found
+    > 25au     Autumn, 2025   [Mones]
+      found 0 slide link(s)
+    > 24au     Autumn, 2024   [Mones]
+      found 0 slide link(s)
+    > 23au     Autumn, 2023   [Mones]
+      found 0 slide link(s)
+
+### CSE459  Animation Pre-Production   [Undergraduate Major]
+  22 offering(s) found
+    > 22au     Autumn, 2022   [Mones]
+      found 0 slide link(s)
+    > 21au     Autumn, 2021   [Mones]
+      found 0 slide link(s)
+    > 20au     Autumn, 2020   [Mones]
+      found 0 slide link(s)
+
+### CSE460  Animation Capstone   [Undergraduate Major]
+  23 offering(s) found
+    > 26wi     Winter, 2026   [Duer, Mones]
+      found 0 slide link(s)
+    > 25wi     Winter, 2025   [Mones]
+      found 0 slide link(s)
+    > 24wi     Winter, 2024   [Mones]
+      found 0 slide link(s)
+
+### CSE461  Introduction to Computer Communication Networks   [Undergraduate Major]
+  11 offering(s) found
+    > 26wi     Winter, 2026   [Gollakota]
+      found 9 slide link(s)
+      downloaded 9  skipped 0  dup 0  failed 0  ->  downloads/uw/cse461/26wi
+    > 25au     Autumn, 2025   [Gollakota]
+      found 9 slide link(s)
+      downloaded 9  skipped 0  dup 0  failed 0  ->  downloads/uw/cse461/25au
+    > 25sp     Spring, 2025   [Heimerl]
+      found 22 slide link(s)
+      downloaded 11  skipped 0  dup 0  failed 11  ->  downloads/uw/cse461/25sp
+
+### CSE462  Wireless Communication   [Undergraduate Major]
+  2 offering(s) found
+    > 26sp     Spring, 2026   [Smith]
+      found 0 slide link(s)
+    > 25sp     Spring, 2025   [Smith]
+      found 0 slide link(s)
+
+### CSE464  Advanced Topics in Digital Animation   [Undergraduate Major]
+  11 offering(s) found
+    > 21sp     Spring, 2021   [Mones]
+      found 0 slide link(s)
+    > 15au     Autumn, 2015   [Mones]
+      found 0 slide link(s)
+    > 15su     Summer, 2015   [Mones, Forsberg]
+      found 0 slide link(s)
+
+### CSE469  Computer Architecture I   [Undergraduate Major]
+  14 offering(s) found
+    > 26wi     Winter, 2026   [Oskin]
+      found 0 slide link(s)
+    > 25wi     Winter, 2025   [Oskin]
+      found 0 slide link(s)
+    > 24wi     Winter, 2024   [Oskin]
+      found 0 slide link(s)
+
+### CSE470  Computer Architecture II   [Undergraduate Major]
+  11 offering(s) found
+    > 26sp     Spring, 2026   [Oskin]
+      found 0 slide link(s)
+    > 25sp     Spring, 2025   [Oskin]
+      found 0 slide link(s)
+    > 24sp     Spring, 2024   [Oskin]
+      found 0 slide link(s)
+
+### CSE473  Artificial Intelligence   [Undergraduate Major]
+  13 offering(s) found
+    > 26su     Summer, 2026   [Weichert]
+      found 4 slide link(s)
+      downloaded 4  skipped 0  dup 0  failed 0  ->  downloads/uw/cse473/26su
+    > 26sp     Spring, 2026   [Nivala]
+      found 0 slide link(s)
+    > 26wi     Winter, 2026   [Kessler Faulkner]
+      found 0 slide link(s)
+
+### CSE474  Introduction to Embedded Systems   [Undergraduate Major]
+  11 offering(s) found
+    > 26wi     Winter, 2026   [Iyer]
+      found 0 slide link(s)
+    > 24au     Autumn, 2024   [Iyer]
+      found 0 slide link(s)
+    > 24sp     Spring, 2024   [Iyer]
+      found 0 slide link(s)
+
+### CSE475  Embedded Systems Capstone   [Undergraduate Major]
+  15 offering(s) found
+    > 25au     Autumn, 2025   [Patel]
+      found 0 slide link(s)
+    > 25sp     Spring, 2025   [Patel]
+      found 0 slide link(s)
+    > 24au     Autumn, 2024   [Li]
+      found 0 slide link(s)
+
+### CSE478  Autonomous Robotics   [Undergraduate Major]
+  11 offering(s) found
+    > 26sp     Spring, 2026   [Srinivasa]
+      found 18 slide link(s)
+      downloaded 18  skipped 0  dup 0  failed 0  ->  downloads/uw/cse478/26sp
+    > 26wi     Winter, 2026   [Gupta]
+      found 19 slide link(s)
+      downloaded 19  skipped 0  dup 0  failed 0  ->  downloads/uw/cse478/26wi
+    > 25sp     Spring, 2025   [Srinivasa]
+      found 0 slide link(s)
+
+### CSE480  Computer Ethics Seminar   [Undergraduate Major]
+  14 offering(s) found
+    > 26sp     Spring, 2026   [Weichert]
+      found 4 slide link(s)
+      downloaded 0  skipped 0  dup 0  failed 4  ->  downloads/uw/cse480/26sp
+    > 26wi     Winter, 2026   [Weichert]
+      found 5 slide link(s)
+      downloaded 0  skipped 0  dup 0  failed 5  ->  downloads/uw/cse480/26wi
+    > 25au     Autumn, 2025   [Grossman]
+      found 7 slide link(s)
+      downloaded 0  skipped 0  dup 0  failed 7  ->  downloads/uw/cse480/25au
+
+### CSE481  Capstone Software   [Undergraduate Major]
+  0 offering(s) found
+
+### CSE481A  Capstone: OS   [Undergraduate Major]
+  18 offering(s) found
+    > 26sp     Spring, 2026   [Peter]
+      found 1 slide link(s)
+      downloaded 0  skipped 0  dup 0  failed 1  ->  downloads/uw/cse481a/26sp
+    > 25sp     Spring, 2025   [Peter]
+      found 1 slide link(s)
+      downloaded 0  skipped 0  dup 0  failed 1  ->  downloads/uw/cse481a/25sp
+    > 24sp     Spring, 2024   [Peter]
+      found 1 slide link(s)
+      downloaded 0  skipped 0  dup 0  failed 1  ->  downloads/uw/cse481a/24sp
+
+### CSE481C  Capstone: Robotics   [Undergraduate Major]
+  17 offering(s) found
+    > 26sp     Spring, 2026   [Cakmak]
+      found 0 slide link(s)
+    > 25sp     Spring, 2025   [Cakmak]
+      found 0 slide link(s)
+    > 24wi     Winter, 2024   [Cakmak]
+      found 0 slide link(s)
+
+### CSE481D  Capstone:  Games   [Undergraduate Major]
+  26 offering(s) found
+    > 26wi     Winter, 2026   [PopoviÄ]
+      found 0 slide link(s)
+    > 25sp     Spring, 2025   [PopoviÄ]
+      found 0 slide link(s)
+    > 25wi     Winter, 2025   [PopoviÄ]
+      found 0 slide link(s)
+
+### CSE481DS  Capstone: Data Science   [Undergraduate Major]
+  6 offering(s) found
+    > 25au     Autumn, 2025   [Althoff]
+      found 7 slide link(s)
+      downloaded 7  skipped 0  dup 0  failed 0  ->  downloads/uw/cse481ds/25au
+    > 24au     Autumn, 2024   [Althoff]
+      found 9 slide link(s)
+      downloaded 9  skipped 0  dup 0  failed 0  ->  downloads/uw/cse481ds/24au
+    > 23au     Autumn, 2023   [Althoff]
+      found 9 slide link(s)
+      downloaded 9  skipped 0  dup 0  failed 0  ->  downloads/uw/cse481ds/23au
+
+### CSE481L  (unknown)   [Undergraduate Major]
+  7 offering(s) found
+    > 26sp     Spring, 2026   [Gollakota]
+      found 0 slide link(s)
+    > 26wi     Winter, 2026   [Fogarty]
+      found 3 slide link(s)
+      downloaded 3  skipped 0  dup 0  failed 0  ->  downloads/uw/cse481l/26wi
+    > 25sp     Spring, 2025   [Fogarty]
+      found 3 slide link(s)
+      downloaded 3  skipped 0  dup 0  failed 0  ->  downloads/uw/cse481l/25sp
+
+### CSE481N  Capstone: Natural Language Processing   [Undergraduate Major]
+  8 offering(s) found
+    > 24sp     Spring, 2024   [Smith]
+      found 0 slide link(s)
+    > 23sp     Spring, 2023   [Smith]
+      found 0 slide link(s)
+    > 22sp     Spring, 2022   [Smith]
+      found 0 slide link(s)
+
+### CSE481NE  Capstone: Neural Engineering   [Undergraduate Major]
+  1 offering(s) found
+    > 21sp     Spring, 2021   [Rao]
+      found 0 slide link(s)
+
+### CSE481P  Capstone: Social Computing   [Undergraduate Major]
+  4 offering(s) found
+    > 24wi     Winter, 2024   [Zhang]
+      found 0 slide link(s)
+    > 23sp     Spring, 2023   [Zhang]
+      found 0 slide link(s)
+    > 22wi     Winter, 2022   [Zhang]
+      found 0 slide link(s)
+
+### CSE481S  Capstone: Security   [Undergraduate Major]
+  9 offering(s) found
+    > 26sp     Spring, 2026   [Radka]
+      found 0 slide link(s)
+    > 25sp     Spring, 2025   [Roesner]
+      found 0 slide link(s)
+    > 24sp     Spring, 2024   [Kohno]
+      found 0 slide link(s)
+
+### CSE481V  Capstone: AR/VR   [Undergraduate Major]
+  10 offering(s) found
+    > 26wi     Winter, 2026   [Kemelmacher]
+      found 0 slide link(s)
+    > 25sp     Spring, 2025   [Kemelmacher]
+      found 0 slide link(s)
+    > 24sp     Spring, 2024   [Kemelmacher]
+      found 0 slide link(s)
+
+### CSE482B  Capstone Software Design to Empower Underserved Populations (Tech for Resource-Constrained Env.)   [Undergraduate Major]
+  5 offering(s) found
+    > 24sp     Spring, 2024   [Anderson]
+      found 4 slide link(s)
+      downloaded 4  skipped 0  dup 0  failed 0  ->  downloads/uw/cse482b/24sp
+    > 23sp     Spring, 2023   [Anderson]
+      found 6 slide link(s)
+      downloaded 6  skipped 0  dup 0  failed 0  ->  downloads/uw/cse482b/23sp
+    > 22wi     Winter, 2022   [Anderson]
+      found 6 slide link(s)
+      downloaded 6  skipped 0  dup 0  failed 0  ->  downloads/uw/cse482b/22wi
+
+### CSE484  Computer Security   [Undergraduate Major]
+  38 offering(s) found
+    > 26sp     Spring, 2026   [Kohlbrenner]
+      found 0 slide link(s)
+    > 26wi     Winter, 2026   [Radka]
+      found 0 slide link(s)
+    > 25au     Autumn, 2025   [Tyagi]
+      found 0 slide link(s)
+
+### CSE490A2  AI-Assisted Software Development   [Undergraduate Major]
+  1 offering(s) found
+    > 25au     25au/          [-]
+      found 0 slide link(s)
+
+### CSE492B  Tech-Industry Business Fundamentals   [Undergraduate Major]
+  1 offering(s) found
+    > 26sp     Spring, 2026   [Sackler]
+      [fetch] skip https://courses.cs.washington.edu/courses/cse492b/26sp/subscribe.html (HTTP Error 404: Not Found)
+      found 0 slide link(s)
+
+### CSE492C  Seminar: Navigating Early-Career Challenges   [Undergraduate Major]
+  4 offering(s) found
+    > 24sp     Spring, 2024   [Fetsch]
+      found 0 slide link(s)
+    > 24wi     Winter, 2024   [Fetsch]
+      found 0 slide link(s)
+    > 23au     Autumn, 2023   [Fetsch]
+      found 0 slide link(s)
+
+### CSE492J  Career Seminar   [Undergraduate Major]
+  16 offering(s) found
+    > 26wi     Winter, 2026   [Champion, Nguyen]
+      found 0 slide link(s)
+    > 25sp     Spring, 2025   [Champion, Nguyen]
+      found 0 slide link(s)
+    > 25wi     Winter, 2025   [Champion, Nguyen]
+      found 0 slide link(s)
+
+### CSE492L  CSE Leadership Seminar Series   [Undergraduate Major]
+  6 offering(s) found
+    > 21wi     21wi/          [-]
+      found 0 slide link(s)
+    > 22wi     22wi/          [-]
+      found 1 slide link(s)
+      downloaded 0  skipped 0  dup 0  failed 1  ->  downloads/uw/cse492l/22wi
+    > 23wi     23wi/          [-]
+      found 1 slide link(s)
+      downloaded 0  skipped 0  dup 0  failed 1  ->  downloads/uw/cse492l/23wi
+
+### CSE492P1  Seminar: Patterns for Career Success   [Undergraduate Major]
+  3 offering(s) found
+    > 24sp     Spring, 2024   [Su]
+      found 0 slide link(s)
+    > 20au     Autumn, 2020   [Su]
+      found 0 slide link(s)
+    > 19au     Autumn, 2019   [Su]
+      found 0 slide link(s)
+
+### CSE493C  Advanced Special Topics:  Molecular Computation   [Undergraduate Major]
+  2 offering(s) found
+    > 26wi     Winter, 2026   [Thachuk]
+      found 16 slide link(s)
+      downloaded 0  skipped 0  dup 0  failed 16  ->  downloads/uw/cse493c/26wi
+    > 24wi     Winter, 2024   [Thachuk]
+      found 0 slide link(s)
+
+### CSE493E  Advanced Special Topics: Accessibility   [Undergraduate Major]
+  2 offering(s) found
+    > 24au     Autumn, 2024   [Mankoff]
+      found 6 slide link(s)
+      downloaded 4  skipped 0  dup 0  failed 2  ->  downloads/uw/cse493e/24au
+    > 23au     Autumn, 2023   [Mankoff]
+      found 10 slide link(s)
+      downloaded 6  skipped 0  dup 0  failed 4  ->  downloads/uw/cse493e/23au
+
+### CSE493F  Advanced Special Topics: Physical Computing   [Undergraduate Major]
+  2 offering(s) found
+    > 26sp     Spring, 2026   [Froehlich]
+      found 0 slide link(s)
+    > 24sp     Spring, 2024   [Froehlich]
+      found 0 slide link(s)
+
+### CSE493G1  Advanced Special Topics: Introduction to Deep Learning   [Undergraduate Major]
+  7 offering(s) found
+    > 26sp     Spring, 2026   [Krishna]
+      found 33 slide link(s)
+      downloaded 0  skipped 0  dup 0  failed 33  ->  downloads/uw/cse493g1/26sp
+    > 26wi     Winter, 2026   [Farhadi, Pratt]
+      [fetch] skip https://courses.cs.washington.edu/courses/cse493g1/26wi/ (Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://courses.cs.washington.edu/courses/cse493g1/26wi/", waiting until "domcontentloaded"
+)
+      found 0 slide link(s)
+    > 25sp     Spring, 2025   [Krishna]
+      [fetch] skip https://courses.cs.washington.edu/courses/cse493g1/25sp/ (Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://courses.cs.washington.edu/courses/cse493g1/25sp/", waiting until "domcontentloaded"
+)
+      found 0 slide link(s)
+
+### CSE493H  Advanced Special Topics: Computational Design and Fabrication   [Undergraduate Major]
+  ! failed to load course page: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://courses.cs.washington.edu/courses/cse493h", waiting until "domcontentloaded"
+
+
+### CSE493L  Special Topics: Concurrency, Parallelism, and Rust   [Undergraduate Major]
+  ! failed to load course page: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://courses.cs.washington.edu/courses/cse493l", waiting until "domcontentloaded"
+
+
+### CSE493Q  Advanced Special Topics: Quantum Computing   [Undergraduate Major]
+  ! failed to load course page: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://courses.cs.washington.edu/courses/cse493q", waiting until "domcontentloaded"
+
+
+### CSE493S  Advanced Maching Learning   [Undergraduate Major]
+  ! failed to load course page: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://courses.cs.washington.edu/courses/cse493s", waiting until "domcontentloaded"
+
+
+### CSE493V  Advanced Special Topics: Virtual Reality Systems   [Undergraduate Major]
+  ! failed to load course page: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://courses.cs.washington.edu/courses/cse493v", waiting until "domcontentloaded"
+
+
+### CSE493W  Advanced Special Topics: Wireless Communication   [Undergraduate Major]
+  ! failed to load course page: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://courses.cs.washington.edu/courses/cse493w", waiting until "domcontentloaded"
+
+
+### CSE493X  Advanced Special Topics: Web Browser Engineering   [Undergraduate Major]
+  ! failed to load course page: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://courses.cs.washington.edu/courses/cse493x", waiting until "domcontentloaded"
+
+
+### CSE494  Guided Research in Computer Science and Engineering   [Undergraduate Major]
+  ! failed to load course page: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://courses.cs.washington.edu/courses/cse494", waiting until "domcontentloaded"
+
+
+### CSE373  Data Structures and Algorithms   [Undergraduate Non-Major]
+  ! failed to load course page: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://courses.cs.washington.edu/courses/cse373", waiting until "domcontentloaded"
+
+
+### CSE374  Intermediate Programming Concepts and Tools   [Undergraduate Non-Major]
+  ! failed to load course page: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://courses.cs.washington.edu/courses/cse374", waiting until "domcontentloaded"
+
+
+### CSE410  Computer Systems   [Undergraduate Non-Major]
+  ! failed to load course page: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://courses.cs.washington.edu/courses/cse410", waiting until "domcontentloaded"
+
+
+### CSE412  Introduction to Data Visualization (for non-CSE Majors)   [Undergraduate Non-Major]
+  ! failed to load course page: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://courses.cs.washington.edu/courses/cse412", waiting until "domcontentloaded"
+
+
+### CSE413  Programming Languages & Implementation (for non-CSE Majors)   [Undergraduate Non-Major]
+  ! failed to load course page: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://courses.cs.washington.edu/courses/cse413", waiting until "domcontentloaded"
+
+
+### CSE414  Introduction to Database Systems (for non-CSE Majors)   [Undergraduate Non-Major]
+  ! failed to load course page: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://courses.cs.washington.edu/courses/cse414", waiting until "domcontentloaded"
+
+
+### CSE415  Introduction to Artificial Intelligence   [Undergraduate Non-Major]
+  ! failed to load course page: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://courses.cs.washington.edu/courses/cse415", waiting until "domcontentloaded"
+
+
+### CSE416  Introduction to Machine Learning   [Undergraduate Non-Major]
+  ! failed to load course page: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://courses.cs.washington.edu/courses/cse416", waiting until "domcontentloaded"
+
+
+### CSE417  Algorithms and Computational Complexity   [Undergraduate Non-Major]
+  ! failed to load course page: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://courses.cs.washington.edu/courses/cse417", waiting until "domcontentloaded"
+
+
+### CSEM501  Introduction to Compiler Construction   [B.S./M.S.]
+  ! failed to load course page: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://courses.cs.washington.edu/courses/csem501", waiting until "domcontentloaded"
+
+
+### CSEM544  Database Systems   [B.S./M.S.]
+  ! failed to load course page: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://courses.cs.washington.edu/courses/csem544", waiting until "domcontentloaded"
+
+
+### CSEM547  Natural Language Processing   [B.S./M.S.]
+  ! failed to load course page: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://courses.cs.washington.edu/courses/csem547", waiting until "domcontentloaded"
+
+
+### CSEM552  Introduction to Distributed Systems   [B.S./M.S.]
+  ! failed to load course page: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://courses.cs.washington.edu/courses/csem552", waiting until "domcontentloaded"
+
+
+### CSEM553  Datacenter Systems   [B.S./M.S.]
+  ! failed to load course page: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://courses.cs.washington.edu/courses/csem553", waiting until "domcontentloaded"
+
+
+### CSEM584  Computer Security   [B.S./M.S.]
+  ! failed to load course page: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://courses.cs.washington.edu/courses/csem584", waiting until "domcontentloaded"
+
+
+### CSE501  Implementation of Programming Languages   [Graduate (Ph.D)]
+  ! failed to load course page: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://courses.cs.washington.edu/courses/cse501", waiting until "domcontentloaded"
+
+
+### CSE503  Software Engineering   [Graduate (Ph.D)]
+  ! failed to load course page: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://courses.cs.washington.edu/courses/cse503", waiting until "domcontentloaded"
+
+
+### CSE505  Concepts of Programming Languages   [Graduate (Ph.D)]
+  ! failed to load course page: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://courses.cs.washington.edu/courses/cse505", waiting until "domcontentloaded"
+
+
+### CSE507  Computer-Aided Reasoning for Software Engineering   [Graduate (Ph.D)]
+  ! failed to load course page: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://courses.cs.washington.edu/courses/cse507", waiting until "domcontentloaded"
+
+
+### CSE510  Advanced Topics in Human Computer Interaction   [Graduate (Ph.D)]
+  ! failed to load course page: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://courses.cs.washington.edu/courses/cse510", waiting until "domcontentloaded"
+
+
+### CSE512  Data Visualization   [Graduate (Ph.D)]
+  ! failed to load course page: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://courses.cs.washington.edu/courses/cse512", waiting until "domcontentloaded"
+
+
+### CSE513  Disability Inclusion for Technologists   [Graduate (Ph.D)]
+  ! failed to load course page: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://courses.cs.washington.edu/courses/cse513", waiting until "domcontentloaded"
+
+
+### CSE515  Statistical Methods in Computer Science   [Graduate (Ph.D)]
+  ! failed to load course page: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://courses.cs.washington.edu/courses/cse515", waiting until "domcontentloaded"
+
+
+### CSE517  Natural Language Processing   [Graduate (Ph.D)]
+  ! failed to load course page: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://courses.cs.washington.edu/courses/cse517", waiting until "domcontentloaded"
+
+
+### CSE521  Design and Analysis of Algorithms I   [Graduate (Ph.D)]
+  ! failed to load course page: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://courses.cs.washington.edu/courses/cse521", waiting until "domcontentloaded"
+
+
+### CSE522  Design and Analysis of Algorithms II   [Graduate (Ph.D)]
+  ! failed to load course page: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://courses.cs.washington.edu/courses/cse522", waiting until "domcontentloaded"
+
+
+### CSE525  Randomized Algorithms and Probabilistic Analysis   [Graduate (Ph.D)]
+  ! failed to load course page: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://courses.cs.washington.edu/courses/cse525", waiting until "domcontentloaded"
+
+
+### CSE526  Cryptography   [Graduate (Ph.D)]
+  ! failed to load course page: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://courses.cs.washington.edu/courses/cse526", waiting until "domcontentloaded"
+
+
+### CSE527  Computational Biology   [Graduate (Ph.D)]
+  ! failed to load course page: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://courses.cs.washington.edu/courses/cse527", waiting until "domcontentloaded"
+
+
+### CSE528  Computational Neuroscience   [Graduate (Ph.D)]
+  ! failed to load course page: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://courses.cs.washington.edu/courses/cse528", waiting until "domcontentloaded"
+
+
+### CSE529  Computational Genomics   [Graduate (Ph.D)]
+  ! failed to load course page: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://courses.cs.washington.edu/courses/cse529", waiting until "domcontentloaded"
+
+
+### CSE531  Computational Complexity I   [Graduate (Ph.D)]
+  ! failed to load course page: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://courses.cs.washington.edu/courses/cse531", waiting until "domcontentloaded"
+
+
+### CSE532  Computational Complexity II   [Graduate (Ph.D)]
+  ! failed to load course page: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://courses.cs.washington.edu/courses/cse532", waiting until "domcontentloaded"
+
+
+### CSE533  Advanced Topics in Complexity Theory   [Graduate (Ph.D)]
+  ! failed to load course page: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://courses.cs.washington.edu/courses/cse533", waiting until "domcontentloaded"
+
+
+### CSE534  Quantum Information and Computation   [Graduate (Ph.D)]
+  ! failed to load course page: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://courses.cs.washington.edu/courses/cse534", waiting until "domcontentloaded"
+
+
+### CSE535  Theory of Optimization and Continuous Algorithms   [Graduate (Ph.D)]
+  ! failed to load course page: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://courses.cs.washington.edu/courses/cse535", waiting until "domcontentloaded"
+
+
+### CSE541  Interactive Learning   [Graduate (Ph.D)]
+  ! failed to load course page: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://courses.cs.washington.edu/courses/cse541", waiting until "domcontentloaded"
+
+
+### CSE542  Reinforcement Learning   [Graduate (Ph.D)]
+  ! failed to load course page: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://courses.cs.washington.edu/courses/cse542", waiting until "domcontentloaded"
+
+
+### CSE543  Deep Learning   [Graduate (Ph.D)]
+  ! failed to load course page: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://courses.cs.washington.edu/courses/cse543", waiting until "domcontentloaded"
+
+
+### CSE544  Principles of DBMS   [Graduate (Ph.D)]
+  ! failed to load course page: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://courses.cs.washington.edu/courses/cse544", waiting until "domcontentloaded"
+
+
+### CSE546  Machine Learning   [Graduate (Ph.D)]
+  ! failed to load course page: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://courses.cs.washington.edu/courses/cse546", waiting until "domcontentloaded"
+
+
+### CSE547  Machine Learning for Big Data   [Graduate (Ph.D)]
+  ! failed to load course page: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://courses.cs.washington.edu/courses/cse547", waiting until "domcontentloaded"
+
+
+### CSE548  Computer Systems Architecture   [Graduate (Ph.D)]
+  ! failed to load course page: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://courses.cs.washington.edu/courses/cse548", waiting until "domcontentloaded"
+
+
+### CSE549  High-Performance Computer Architecture   [Graduate (Ph.D)]
+  ! failed to load course page: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://courses.cs.washington.edu/courses/cse549", waiting until "domcontentloaded"
+
+
+### CSE550  Computer Systems   [Graduate (Ph.D)]
+  ! failed to load course page: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://courses.cs.washington.edu/courses/cse550", waiting until "domcontentloaded"
+
+
+### CSE551  Operating Systems   [Graduate (Ph.D)]
+  ! failed to load course page: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://courses.cs.washington.edu/courses/cse551", waiting until "domcontentloaded"
+
+
+### CSE552  Distributed and Parallel Systems   [Graduate (Ph.D)]
+  ! failed to load course page: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://courses.cs.washington.edu/courses/cse552", waiting until "domcontentloaded"
+
+
+### CSE554  Systems for Machine Learning   [Graduate (Ph.D)]
+  1 offering(s) found
+    > 26wi     Winter, 2026   [Kasikci]
+      found 0 slide link(s)
+
+### CSE556  Computational Fabrication   [Graduate (Ph.D)]
+  5 offering(s) found
+    > 25wi     Winter, 2025   [Schulz]
+      found 0 slide link(s)
+    > 23wi     Winter, 2023   [Schulz]
+      found 0 slide link(s)
+    > 22wi     Winter, 2022   [Schulz]
+      found 0 slide link(s)
+
+### CSE557  Computer Graphics   [Graduate (Ph.D)]
+  20 offering(s) found
+    > 25au     Autumn, 2025   [Bernstein]
+      found 0 slide link(s)
+    > 24au     Autumn, 2024   [Bernstein]
+      found 0 slide link(s)
+    > 23sp     Spring, 2023   [Bernstein]
+      found 0 slide link(s)
+
+### CSE558  Special Topics in Computer Graphics   [Graduate (Ph.D)]
+  9 offering(s) found
+    > 11wi     Winter, 2011   [Lefohn]
+      found 0 slide link(s)
+    > 07sp     Spring, 2007   [PopoviÄ]
+      found 0 slide link(s)
+    > 06sp     Spring, 2006   [Goesele]
+      found 0 slide link(s)
+
+### CSE561  Computer Communication and Networks   [Graduate (Ph.D)]
+  14 offering(s) found
+    > 21wi     Winter, 2021   [Mahajan]
+      found 15 slide link(s)
+      downloaded 15  skipped 0  dup 0  failed 0  ->  downloads/uw/cse561/21wi
+    > 18wi     Winter, 2018   [Gollakota]
+      found 0 slide link(s)
+    > 16sp     Spring, 2016   [Gollakota]
+      found 0 slide link(s)
+
+### CSE562  Mobile Systems & Applications  (offered as CSE 599L – 25sp)   [Graduate (Ph.D)]
+  5 offering(s) found
+    > 25sp     Spring, 2025   [Gollakota]
+      found 4 slide link(s)
+      downloaded 4  skipped 0  dup 0  failed 0  ->  downloads/uw/cse562/25sp
+    > 24sp     Spring, 2024   [Gollakota]
+      found 0 slide link(s)
+    > 22sp     Spring, 2022   [Gollakota]
+      found 8 slide link(s)
+      downloaded 8  skipped 0  dup 0  failed 0  ->  downloads/uw/cse562/22sp
+
+### CSE564  Computer Security and Privacy   [Graduate (Ph.D)]
+  12 offering(s) found
+    > 26wi     Winter, 2026   [Kohlbrenner]
+      found 0 slide link(s)
+    > 25wi     Winter, 2025   [Kohno]
+      found 0 slide link(s)
+    > 24wi     Winter, 2024   [Roesner]
+      found 0 slide link(s)
+
+### CSE567  Digital Systems Design   [Graduate (Ph.D)]
+  16 offering(s) found
+    > 25wi     Winter, 2025   [Taylor]
+      found 0 slide link(s)
+    > 24wi     Winter, 2024   [Lustig]
+      found 0 slide link(s)
+    > 23wi     Winter, 2023   [Taylor]
+      found 0 slide link(s)
+
+### CSE571  Probabilistic Robotics   [Graduate (Ph.D)]
+  14 offering(s) found
+    > 26wi     Winter, 2026   [Fox]
+      found 18 slide link(s)
+      downloaded 17  skipped 0  dup 0  failed 1  ->  downloads/uw/cse571/26wi
+    > 25sp     Spring, 2025   [Fox]
+      found 18 slide link(s)
+      downloaded 17  skipped 0  dup 0  failed 1  ->  downloads/uw/cse571/25sp
+    > 24sp     Spring, 2024   [Fox]
+      found 16 slide link(s)
+      downloaded 15  skipped 0  dup 0  failed 1  ->  downloads/uw/cse571/24sp
+
+### CSE573  Artificial Intelligence   [Graduate (Ph.D)]
+  13 offering(s) found
+    > 24au     Autumn, 2024   [Zettlemoyer]
+      found 13 slide link(s)
+      downloaded 13  skipped 0  dup 0  failed 0  ->  downloads/uw/cse573/24au
+    > 23wi     Winter, 2023   [Hajishirzi]
+      found 13 slide link(s)
+      downloaded 13  skipped 0  dup 0  failed 0  ->  downloads/uw/cse573/23wi
+    > 22sp     Spring, 2022   [Hajishirzi]
+      found 20 slide link(s)
+      downloaded 20  skipped 0  dup 0  failed 0  ->  downloads/uw/cse573/22sp
+
+### CSE574  Explainable Artificial Intelligence   [Graduate (Ph.D)]
+  2 offering(s) found
+    > 26sp     Spring, 2026   [Lee]
+      found 0 slide link(s)
+    > 25sp     Spring, 2025   [Lee]
+      found 0 slide link(s)
+
+### CSE576  Computer Vision   [Graduate (Ph.D)]
+  29 offering(s) found
+    > 26sp     Spring, 2026   [Shapiro]
+      found 0 slide link(s)
+    > 24sp     Spring, 2024   [Shapiro]
+      found 0 slide link(s)
+    > 23sp     Spring, 2023   [Shapiro]
+      found 0 slide link(s)
+
+### CSE577  Special Topics in Computer Vision   [Graduate (Ph.D)]
+  5 offering(s) found
+    > 21au     Autumn, 2021   [Shapiro]
+      found 0 slide link(s)
+    > 17au     Autumn, 2017   [Shapiro]
+      found 0 slide link(s)
+    > 11au     Autumn, 2011   [Shapiro]
+      found 0 slide link(s)
+
+### CSE579  Intelligent Control through Learning and Optimization   [Graduate (Ph.D)]
+  5 offering(s) found
+    > 26sp     Spring, 2026   [Gupta]
+      found 14 slide link(s)
+      downloaded 14  skipped 0  dup 0  failed 0  ->  downloads/uw/cse579/26sp
+    > 24au     Autumn, 2024   [Gupta]
+      found 15 slide link(s)
+      downloaded 15  skipped 0  dup 0  failed 0  ->  downloads/uw/cse579/24au
+    > 22au     Autumn, 2022   [Boots]
+      found 5 slide link(s)
+      downloaded 3  skipped 0  dup 0  failed 2  ->  downloads/uw/cse579/22au
+
+### CSE580  Computing For Social Good   [Graduate (Ph.D)]
+  3 offering(s) found
+    > 24au     Autumn, 2024   [Heimerl]
+      found 0 slide link(s)
+    > 23sp     Spring, 2023   [Heimerl]
+      found 0 slide link(s)
+    > 21sp     Spring, 2021   [Heimerl]
+      found 0 slide link(s)
+
+### CSE581  Computer Ethics   [Graduate (Ph.D)]
+  3 offering(s) found
+    > 26wi     Winter, 2026   [Reinecke]
+      found 3 slide link(s)
+      downloaded 3  skipped 0  dup 0  failed 0  ->  downloads/uw/cse581/26wi
+    > 25sp     Spring, 2025   [Reinecke]
+      found 1 slide link(s)
+      downloaded 1  skipped 0  dup 0  failed 0  ->  downloads/uw/cse581/25sp
+    > 24wi     Winter, 2024   [Reinecke]
+      found 1 slide link(s)
+      downloaded 1  skipped 0  dup 0  failed 0  ->  downloads/uw/cse581/24wi
+
+### CSE582  Ethics in Artificial Intelligence   [Graduate (Ph.D)]
+  3 offering(s) found
+    > 25wi     Winter, 2025   [Tsvetkov]
+      found 10 slide link(s)
+      downloaded 0  skipped 0  dup 0  failed 10  ->  downloads/uw/cse582/25wi
+    > 24sp     Spring, 2024   [Tsvetkov]
+      found 8 slide link(s)
+      downloaded 0  skipped 0  dup 0  failed 8  ->  downloads/uw/cse582/24sp
+    > 23sp     Spring, 2023   [Tsvetkov]
+      found 7 slide link(s)
+      downloaded 7  skipped 0  dup 0  failed 0  ->  downloads/uw/cse582/23sp
+
+### CSE583  Software Development for Data Scientists   [Graduate (Ph.D)]
+  11 offering(s) found
+    > 25au     Autumn, 2025   [Beck]
+      found 0 slide link(s)
+    > 24au     Autumn, 2024   [Beck]
+      found 0 slide link(s)
+    > 23au     Autumn, 2023   [Beck]
+      found 0 slide link(s)
+
+### CSE586  Introduction to Synthetic Biology   [Graduate (Ph.D)]
+  8 offering(s) found
+    > 17au     Autumn, 2017   [Seelig]
+      found 0 slide link(s)
+    > 14au     Autumn, 2014   [Seelig]
+      found 0 slide link(s)
+    > 12au     Autumn, 2012   [Klavins]
+      found 0 slide link(s)
+
+### CSE589  Software Entrepreneurship   [Graduate (Ph.D)]
+  6 offering(s) found
+    > 26wi     Winter, 2026   [Lazowska, Gottesman]
+      found 2 slide link(s)
+      downloaded 0  skipped 0  dup 0  failed 2  ->  downloads/uw/cse589/26wi
+    > 25wi     Winter, 2025   [Lazowska, Gottesman]
+      found 5 slide link(s)
+      downloaded 0  skipped 0  dup 0  failed 5  ->  downloads/uw/cse589/25wi
+    > 24wi     Winter, 2024   [Lazowska, Gottesman]
+      found 6 slide link(s)
+      downloaded 0  skipped 0  dup 0  failed 6  ->  downloads/uw/cse589/24wi
+
+### CSED501  Modern Artificial Intelligence and Machine Learning   [Professional Master’s Program (PMP)]
+  1 offering(s) found
+    > 25au     Autumn, 2025   [Kessler Faulkner]
+      found 0 slide link(s)
+
+### CSED502  Computer Vision and Deep Learning   [Professional Master’s Program (PMP)]
+  1 offering(s) found
+    > 26wi     Winter, 2026   [Krishna]
+      found 19 slide link(s)
+      downloaded 0  skipped 0  dup 0  failed 19  ->  downloads/uw/csed502/26wi
+
+### CSED503  Natural Language Processing and Language Models   [Professional Master’s Program (PMP)]
+  1 offering(s) found
+    > 26sp     Spring, 2026   [Zettlemoyer]
+      found 16 slide link(s)
+      downloaded 16  skipped 0  dup 0  failed 0  ->  downloads/uw/csed503/26sp
+
+### CSED504  Practical Design and Implementation of Artificial Intelligence   [Professional Master’s Program (PMP)]
+  1 offering(s) found
+    > 26su     Summer, 2026   [Hazen]
+      found 0 slide link(s)
+
+### CSEP501  Compiler Construction   [Professional Master’s Program (PMP)]
+  13 offering(s) found
+    > 25au     Autumn, 2025   [Perkins]
+      found 0 slide link(s)
+    > 23au     Autumn, 2023   [Perkins]
+      found 0 slide link(s)
+    > 21au     Autumn, 2021   [Perkins]
+      found 0 slide link(s)
+
+### CSEP503  Software Engineering   [Professional Master’s Program (PMP)]
+  8 offering(s) found
+    > 19wi     Winter, 2019   [Miller, Skoteiniotis]
+      found 0 slide link(s)
+    > 14au     Autumn, 2014   [McMaster]
+      found 0 slide link(s)
+    > 12wi     Winter, 2012   [Notkin]
+      found 0 slide link(s)
+
+### CSEP504  Advanced Topics in Software Systems   [Professional Master’s Program (PMP)]
+  4 offering(s) found
+    > 24sp     Spring, 2024   [Ernst]
+      found 14 slide link(s)
+      downloaded 14  skipped 0  dup 0  failed 0  ->  downloads/uw/csep504/24sp
+    > 22au     Autumn, 2022   [Just]
+      found 0 slide link(s)
+    > 18wi     Winter, 2018   [Bodik]
+      found 0 slide link(s)
+
+### CSEP505  Programming Languages   [Professional Master’s Program (PMP)]
+  11 offering(s) found
+    > 25sp     Spring, 2025   [Wilcox, Tatlock]
+      found 0 slide link(s)
+    > 23wi     Winter, 2023   [Wilcox]
+      found 0 slide link(s)
+    > 21sp     Spring, 2021   [Wilcox]
+      found 0 slide link(s)
+
+### CSEP506  Advanced Topics in Programming Languages   [Professional Master’s Program (PMP)]
+  1 offering(s) found
+    > 11sp     Spring, 2011   [Musuvathi]
+      found 0 slide link(s)
+
+### CSEP510  Human Computer Interaction   [Professional Master’s Program (PMP)]
+  9 offering(s) found
+    > 25au     Autumn, 2025   [Reinecke]
+      found 0 slide link(s)
+    > 24sp     Spring, 2024   [Reinecke]
+      found 0 slide link(s)
+    > 17wi     Winter, 2017   [Cakmak]
+      found 0 slide link(s)
+
+### CSEP517  Natural Language Processing   [Professional Master’s Program (PMP)]
+  7 offering(s) found
+    > 25sp     Spring, 2025   [Smith]
+      found 0 slide link(s)
+    > 21wi     Winter, 2021   [Choi]
+      found 9 slide link(s)
+      downloaded 9  skipped 0  dup 0  failed 0  ->  downloads/uw/csep517/21wi
+    > 20wi     Winter, 2020   [Zettlemoyer]
+      found 15 slide link(s)
+      downloaded 15  skipped 0  dup 0  failed 0  ->  downloads/uw/csep517/20wi
+
+### CSEP521  Applied Algorithms   [Professional Master’s Program (PMP)]
+  11 offering(s) found
+    > 22au     Autumn, 2022   [Rao]
+      found 0 slide link(s)
+    > 21wi     Winter, 2021   [Anderson]
+      found 60 slide link(s)
+      downloaded 60  skipped 0  dup 0  failed 0  ->  downloads/uw/csep521/21wi
+    > 19wi     Winter, 2019   [Karlin]
+      found 0 slide link(s)
+
+### CSEP524  Parallel Computation   [Professional Master’s Program (PMP)]
+  9 offering(s) found
+    > 22wi     Winter, 2022   [Lumsdaine]
+      found 0 slide link(s)
+    > 18au     Autumn, 2018   [Lumsdaine]
+      found 0 slide link(s)
+    > 16au     Autumn, 2016   [Oskin]
+      found 0 slide link(s)
+
+### CSEP527  Computational Biology   [Professional Master’s Program (PMP)]
+  4 offering(s) found
+    > 20au     Autumn, 2020   [Ruzzo]
+      found 9 slide link(s)
+      downloaded 9  skipped 0  dup 0  failed 0  ->  downloads/uw/csep527/20au
+    > 19au     Autumn, 2019   [Seelig]
+      found 0 slide link(s)
+    > 18wi     Winter, 2018   [Ruzzo]
+      found 0 slide link(s)
+
+### CSEP531  Computability and Complexity Theory   [Professional Master’s Program (PMP)]
+  4 offering(s) found
+    > 23au     Autumn, 2023   [Rao]
+      found 0 slide link(s)
+    > 22wi     Winter, 2022   [Rao]
+      found 0 slide link(s)
+    > 16sp     Spring, 2016   [Lee]
+      found 0 slide link(s)
+
+### CSEP544  Database Management Systems   [Professional Master’s Program (PMP)]
+  10 offering(s) found
+    > 25wi     Winter, 2025   [Suciu]
+      found 10 slide link(s)
+      downloaded 9  skipped 0  dup 0  failed 1  ->  downloads/uw/csep544/25wi
+    > 21sp     Spring, 2021   [Suciu]
+      found 17 slide link(s)
+      downloaded 16  skipped 0  dup 0  failed 1  ->  downloads/uw/csep544/21sp
+    > 17au     Autumn, 2017   [Cheung]
+      found 0 slide link(s)
+
+### CSEP546  Machine Learning   [Professional Master’s Program (PMP)]
+  17 offering(s) found
+    > 26sp     Spring, 2026   [Morgenstern]
+      found 9 slide link(s)
+      downloaded 8  skipped 0  dup 0  failed 1  ->  downloads/uw/csep546/26sp
+    > 25wi     Winter, 2025   [Jamieson]
+      found 0 slide link(s)
+    > 24sp     Spring, 2024   [Ammar]
+      found 0 slide link(s)
+
+### CSEP548  Computer Architecture   [Professional Master’s Program (PMP)]
+  9 offering(s) found
+    > 20wi     Winter, 2020   [Ceze]
+      found 23 slide link(s)
+      downloaded 0  skipped 0  dup 0  failed 23  ->  downloads/uw/csep548/20wi
+    > 17au     Autumn, 2017   [Ceze]
+      found 0 slide link(s)
+    > 15au     Autumn, 2015   [Ceze]
+      found 0 slide link(s)
+
+### CSEP551  Computer Operating Systems   [Professional Master’s Program (PMP)]
+  8 offering(s) found
+    > 19au     Autumn, 2019   [Wang]
+      found 0 slide link(s)
+    > 17wi     Winter, 2017   [Anderson]
+      found 0 slide link(s)
+    > 14au     Autumn, 2014   [Peter]
+      found 0 slide link(s)
+
+### CSEP552  Distributed Systems   [Professional Master’s Program (PMP)]
+  6 offering(s) found
+    > 24wi     Winter, 2024   [Wilcox]
+      found 1 slide link(s)
+      downloaded 0  skipped 0  dup 0  failed 1  ->  downloads/uw/csep552/24wi
+    > 21wi     Winter, 2021   [Anderson, Berger]
+      found 33 slide link(s)
+      downloaded 1  skipped 0  dup 0  failed 32  ->  downloads/uw/csep552/21wi
+    > 18wi     Winter, 2018   [Krishnamurthy]
+      found 0 slide link(s)
+
+### CSEP557  Trends in Computer Graphics   [Professional Master’s Program (PMP)]
+  14 offering(s) found
+    > 24au     Autumn, 2024   [PopoviÄ]
+      found 9 slide link(s)
+      downloaded 9  skipped 0  dup 0  failed 0  ->  downloads/uw/csep557/24au
+    > 23wi     Winter, 2023   [PopoviÄ]
+      found 9 slide link(s)
+      downloaded 9  skipped 0  dup 0  failed 0  ->  downloads/uw/csep557/23wi
+    > 19sp     Spring, 2019   [Curless]
+      found 0 slide link(s)
+
+### CSEP561  Network Systems   [Professional Master’s Program (PMP)]
+  11 offering(s) found
+    > 26wi     Winter, 2026   [Heimerl]
+      found 9 slide link(s)
+      downloaded 0  skipped 0  dup 0  failed 9  ->  downloads/uw/csep561/26wi
+    > 22sp     Spring, 2022   [Johnson]
+      found 10 slide link(s)
+      downloaded 0  skipped 0  dup 0  failed 10  ->  downloads/uw/csep561/22sp
+    > 20wi     Winter, 2020   [Heimerl]
+      found 5 slide link(s)
+      downloaded 5  skipped 0  dup 0  failed 0  ->  downloads/uw/csep561/20wi
+
+### CSEP564  Computer Security   [Professional Master’s Program (PMP)]
+  6 offering(s) found
+    > 24au     Autumn, 2024   [Kohlbrenner]
+      found 10 slide link(s)
+      downloaded 10  skipped 0  dup 0  failed 0  ->  downloads/uw/csep564/24au
+    > 22au     Autumn, 2022   [Kohlbrenner]
+      found 0 slide link(s)
+    > 20au     Autumn, 2020   [Koscher]
+      found 0 slide link(s)
+
+### CSEP567  Design & Implementation of Digital Systems   [Professional Master’s Program (PMP)]
+  4 offering(s) found
+    > 12sp     Spring, 2012   [Ebeling]
+      found 0 slide link(s)
+    > 10wi     Winter, 2010   [Ebeling]
+      found 0 slide link(s)
+    > 05au     Autumn, 2005   [Hemingway]
+      found 0 slide link(s)
+
+### CSEP573  Artificial Intelligence   [Professional Master’s Program (PMP)]
+  14 offering(s) found
+    > 25au     Autumn, 2025   [Hajishirzi]
+      found 13 slide link(s)
+      downloaded 13  skipped 0  dup 0  failed 0  ->  downloads/uw/csep573/25au
+    > 24wi     Winter, 2024   [Zettlemoyer]
+      found 13 slide link(s)
+      downloaded 13  skipped 0  dup 0  failed 0  ->  downloads/uw/csep573/24wi
+    > 22wi     Winter, 2022   [Hajishirzi]
+      found 23 slide link(s)
+      downloaded 23  skipped 0  dup 0  failed 0  ->  downloads/uw/csep573/22wi
+
+### CSEP576  Computer Vision   [Professional Master’s Program (PMP)]
+  8 offering(s) found
+    > 21au     Autumn, 2021   [Ablavsky]
+      found 21 slide link(s)
+      downloaded 21  skipped 0  dup 0  failed 0  ->  downloads/uw/csep576/21au
+    > 20sp     Spring, 2020   [Brown]
+      found 21 slide link(s)
+      downloaded 21  skipped 0  dup 0  failed 0  ->  downloads/uw/csep576/20sp
+    > 18sp     Spring, 2018   [Newcombe, Brown]
+      found 0 slide link(s)
+
+### CSEP589  Software Entrepreneurship   [Professional Master’s Program (PMP)]
+  2 offering(s) found
+    > 25wi     Winter, 2025   [Lazowska, Gottesman]
+      found 0 slide link(s)
+    > 24wi     Winter, 2024   [Lazowska, Gottesman]
+      found 0 slide link(s)
+
+done. metadata DB: uw_catalog.db
+slides under: downloads/uw/

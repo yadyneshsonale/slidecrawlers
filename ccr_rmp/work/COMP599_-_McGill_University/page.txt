@@ -1,0 +1,153 @@
+COMP 599-02 Topics in AI for Robotics and Intelligent Systems
+Overview
+This new course explores selected topics at the intersection of AI and  Robotics, and especially intelligent
+exploration and information acquisition, and how large langaige models (AKA foundation models) can be used to make
+robotics more flexible and effective.  The course does nto presume the student has substantial exposure to robotics, but a
+comfort with basic AI-relevant algorthms (such as A-star search) is expected.  About half the course will be deveoted to
+tarntional lecture-style presentations, and about half will be devoted to the discussion of recent papers
+from the research literature.  Due to the seminar-style format, student involvement will be important and for students
+who are uncomforatble speaking up some coaching will be included.
+Since this course is open to both undergraduate and graduate students,
+some key aspects of course structure will only be finalized during the first week when the class composition can be observed.
+Lecture location: McConnell Engineeing MC103, Moday and Wednesday 10:00-11:30am
+Teaching Staff
+Instructor: Professor Gregory Dudek (gregory.dudek@mcgill.ca)
+MC103
+Office Hours: Monday/Wednesday 11:30-12:30 (not offered on days when there is a guest lecturer)
+Teaching Assistant(s): TDB
+Office Hours and location: TBD.
+Zoom link
+http://mcgill.zoom.us/my/gdudek
+by arrangement
+Textbook
+The primary textbook is
+Computational Principles of Mobile Robotics
+3rd edition, by Dudek and Jenkin. Cambridge University Press, 2024.
+Note we will be using the third edition, which is longer and more timely than the older second (or first) edition.
+Available at
+Amazon.ca
+or
+Indigo online
+Selected readings from the research literature.
+Supplementary materials (these excellent books may not get used in this course)
+Planning Algorithms, by Steven Lavalle, Cambridge University Press, 2006.
+Robotics, Vision, and Control, by Corke
+Refresher
+notes on probabiity and stats
+(from Stanford undergrad TAs)
+Build LLM Applications
+a very pragmatic guide to using LLMs (only tangentially related to this course).
+A nice
+book on robotic manipulation
+from the most-excellent Russ Tedrake at MIT.
+Great book covering the mehcnical side, such as dynamics:
+Introduction to Robotics: Mechanics and Control, by Craig
+The handbook of robotics
+from Springer
+Detailed Lecture Schedule
+To be finalized after the first lecture and before the end of the first week.
+The following table is incomplete and not finalized.
+#
+Date
+Lecture
+Topics
+Suplements
+References
+Slides
+Introduction
+Motivation, logistics, scope of the field and the course, sense-plan-act paradigm.
+Dudek & Jenkin Ch. 1
+Aggressive UAV flight
+Examples of manipulators from
+Tedrake book
+Slides:
+Intro (part 1 of 2)
+[history] (part 2 of 2)
+The diversity of robotics and how LLMs change the game
+Hard and easy problems in robotics. Analytic and ML based alternatives.
+Dudek & Jenkin Ch. 1
+Aggressive UAV flight
+Examples of manipulators from
+Tedrake book
+Intro to Planning
+Properties, definitions, deterministic methods.
+Planning part 1
+and
+Probabilistic planning and RRT
+Planning 2
+Planning algorithms and procedures.
+Lavalle Ch. 4
+Dudek & Jenkin Ch. 6
+Planning part 1
+and
+Probabilistic planning and RRT
+Configuration space and topology
+Nature and topology of C-space classes
+Configuration space and topology (2)
+Homotopy classes and compleity
+Report from marine (sea) trials. Introduction to classical robot control
+State space, PID control and Kalman filters
+Deep learning and transformers.
+Chris Manning on Backprop and Neural Networks
+Backprop and Neural Networks
+How to fine-tune a pretrained model
+Large Language Models meet robotics
+Introduction to foundation models. Also: how to give presentations.
+Reinforcement learning 1
+Chapter from Jurafsky on Markov models
+Reinforcement learning 2
+Student presentations and paper discussions, group 1.
+Student presentations and paper discussions, group 1.
+Student presentations and paper discussions, group 1.
+Multi-modality in foundation models.
+Introduction to classical robot control part 2
+State space, PID control and Kalman filters
+Mid-term exam
+Student presentations and paper discussions, group 2.
+Student presentations and paper discussions.
+Student presentations and paper discussions.
+Student presentations and paper discussions.
+Student presentations and paper discussions.
+Student presentations and paper discussions.
+Deployent on physical robots.  Ethical issues. New developments in the field.
+Final project presentations
+Course recap and conclusion
+Assignments and course evaulation(s)
+To be finalized after the first lecture and before the end of the first week.
+The tentative plans is as follows:
+Two assignments.
+Course Project.
+Possible final exam (potentially an oral exam, pending discussion during lecture one
+Syllabus for Fall 2023
+Note that the lecture timing and sequence may drift slightly as the terms progresses as a function of student interests,
+emerging issues and other factors.
+Discussion papers
+Group 1 papers
+A group of papers on interesting and influantial aspects of robot activity modulation from a pragmatic point of view.
+Edwin first
+Task Planning for Long-Horizon Cooking Tasks Based on Large Language Models
+web link, may require McGill VPN
+Quinn Cao (Feb 19)
+ChatGPT for Robotics: Design Principles and Model Abilities
+web link
+PhotoBot: Reference-Guided Interactive Photography via Natural Language
+web link
+Novak Feb 19
+ANSEL Photobot: A Robot Event Photographer with Semantic Intelligence
+web link
+Emma
+ChatMap: A Wearable Platform Based on the Multi-modal Foundation Model to Augment Spatial Cognition for People with Blindness and Low Vision
+web link, may require McGill VPN
+SocialED: A Python Library for Social Event Detection
+web link
+Adam
+Alfred and Alfworld
+Alfred came first"
+and
+Alfword
+builds on it.
+Habitat 3.0: A Co-Habitat for Humans, Avatars and Robots
+web link
+Group 2 papers
+A broad group of cool and exciting papers.
+Reinforcement l

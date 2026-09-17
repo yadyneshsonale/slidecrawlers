@@ -1,0 +1,287 @@
+CSCI 467: Introduction to Machine Learning
+Spring 2024, Tuesdays and Thursdays at 3:30-4:50pm in
+DMC 100
+Section: Fridays at 3:00-3:50pm in
+DMC 102
+Instructor: Robin Jia
+Source:
+xkcd
+Quick Links:
+Lecture Notes
+Final Project information
+News:
+We have released two practice final exams: Final 1 (
+problems
+,
+solutions
+) and Final 2 (
+problems
+,
+solutions
+).
+We have released two practice midterm exams: Midterm 1 (
+problems
+,
+solutions
+) and Midterm 2 (
+problems
+,
+solutions
+).
+Homework 4 has been released (
+pdf
+,
+code
+). It is due
+Thursday, April 25
+.
+If you want to review prerequisite material for this class, I have a list of recommended
+resources
+below.
+Some problems in computer science admit precise algorithmic solutions.
+Checking if someone is in a national park is, in some sense, straightforward:
+get the user’s location,
+get the boundaries of all national parks,
+and check if the user location lies within any of those boundaries.
+Other problems are less straightforward.
+Suppose you want your computer to determine if an image contains a bird.
+To your computer, an image is just a matrix of red, green, and blue pixels.
+How do you even begin to write the function
+is_bird(image)
+?
+For problems like this, we turn to a powerful family of methods known as
+machine learning.
+The zen of machine learning is the following:
+I don’t know how to solve my problem.
+But I can obtain a
+dataset
+that describes what I want my computer to do.
+So, I will write a program that
+learns the desired behavior from the data.
+This class will provide a broad introduction to machine learning.
+We will start with
+supervised learning,
+where our goal is to learn an input-to-output mapping given a set of correct input-output pairs.
+Next, we will study
+unsupervised learning,
+which seeks to identify hidden structure in data.
+Finally, we will cover
+reinforcement learning,
+in which an agent (e.g., a robot) learns from observations it makes as it explores the world.
+Course Staff
+Robin Jia
+Instructor
+Ameya Godbole
+Teaching Assistant
+Soumya Sanyal
+Teaching Assistant
+Vishesh Agrawal
+Course Producer
+Ryan Wang
+Course Producer
+Lorena Yan
+Course Producer
+Wenyang Zhang
+Course Producer
+Logistics
+Office hours and drop-in peer mentoring
+: See the calendar below or
+here
+.
+The instructor and TA’s will have regular office hours every week.
+Course producers will have drop-in peer mentoring sessions before each assignment is due.
+Assignments
+: Assignments should be submitted through
+Gradescope
+. Feedback will also be provided on Gradescope. All enrolled students should be in Gradescope automatically–let me know if you are not!
+You should submit both your PDF writeup and your code on Gradescope; there will be separate assignments for each.
+Discussions
+: We will be using Piazza for general course-related questions and announcements.
+All enrolled students were added at the beginning of the semester; you can also use this
+sign-up link
+.
+If you have an individual matter to discuss, email me directly (please put “CSCI 467” in the subject line) or come to my office hours. For grading questions, go to the office hours of the person who graded the problem in question.
+Prerequisites
+Algorithms: CSCI 270
+Linear Algebra: MATH 225
+Probability: EE 364 or MATH 407 or BUAD 310
+This class will also use some basic multivariate calculus (taking partial derivatives and gradients).
+However, knowledge of single-variable calculus is sufficient as we will introduce the required material during class and section.
+All programming assignments will be in Python.
+Basics of Python will be covered in discussion sections.
+Students who are not familiar with Python may need to spend some time becoming more familiar with it as needed.
+Schedule
+All assignments are due by
+11:59pm
+on the indicated date.
+Date
+Topic
+Related Readings
+Assignments
+Tue Jan 9
+Introduction (
+slides
+)
+PML 1
+Homework 0 released (
+pdf
+,
+code
+)
+Thu Jan 11
+Linear Regression (
+lecture
+,
+demo
+)
+PML 7.8, 8.2
+Fri Jan 12
+Section (Robin): Review of Probability & Linear Algebra (
+notes
+,
+section
+)
+Tue Jan 16
+Featurization, Convexity, Maximum Likelihood Estimation (
+lecture
+)
+PML 2.6.3, 4.2, 8.1
+Thu Jan 18
+Logistic Regression, Softmax Regression (
+lecture
+)
+PML 10.1-10.3
+Homework 0 due
+Fri Jan 19
+Section (Ameya): Python & numpy tutorial (
+demo
+)
+Tue Jan 23
+Overfitting, Regularization (
+lecture
+)
+PML 4.5, 4.7, 11.3-11.4
+Thu Jan 25
+Bias and Variance, Normal Equations (
+lecture
+)
+PML 11.2
+Homework 1 released (
+pdf
+,
+code
+)
+Fri Jan 26
+Section (Soumya): Calculus and Gradients (
+section
+)
+Tue Jan 30
+Generative Classifiers, Naive Bayes (
+slides
+)
+PML 9.3-9.4
+Thu Feb 1
+Nearest Neighbors, start of Kernels; Project discussion (
+lecture
+)
+PML 16.1, 16.3
+Fri Feb 2
+Section (Ameya): Cross-Validation, Evaluation Metrics (
+section
+)
+Tue Feb 6
+Kernel methods continued (
+lecture
+)
+PML 4.3, 17.1, 17.3
+Homework 1 due
+Thu Feb 8
+Introduction to Neural Networks (
+lecture
+)
+PML 13.1-13.2
+Homework 2 released (
+pdf
+,
+code
+)
+Fri Feb 9
+Section (Ameya): Review of linear methods (
+section
+)
+Tue Feb 13
+Backpropagation (
+lecture
+, demo
+part 1
+,
+part 2
+,
+part 3
+)
+PML 13.3
+Project Proposal due
+Thu Feb 15
+Neural Network Optimizers, Dropout, Early Stoppin (
+slides
+)
+PML 8.4, 13.4-13.5
+Fri Feb 16
+Section (Soumya): Pytorch tutorial (
+colab
+)
+Tue Feb 20
+Convolutional Neural Networks (
+slides
+)
+PML 14.1-14.2
+Thu Feb 22
+Embedding models, Word Vectors (
+slides
+)
+PML 20.5
+Fri Feb 23
+Section (Soumya): Sci-kit Learn tutorial (
+colab
+)
+Tue Feb 27
+Recurrent Neural Networks (
+slides
+)
+PML 15.1-15.2
+Thu Feb 29
+Sequence-to-sequence, Attention (
+slides
+)
+PML 15.4
+Homework 2 due
+Fri Mar 1
+Section (Soumya): Midterm preparation (
+slides
+)
+Tue Mar 5
+Decision Trees, ensembles (
+slides
+)
+PML 18.1-18.5
+Thu Mar 7
+In-class Midterm Exam
+Mar 8-15
+No class or section (Spring break)
+Tue Mar 19
+Transformers I (
+slides
+)
+PML 15.5-15.6
+Homework 3 released (
+pdf
+,
+code
+)
+Thu Mar 21
+Transformers II, Pretraining (
+slides
+)
+PML 15.7
+Fri Mar 22
+Section (Soumya): RNNs and backpropagation in pytor

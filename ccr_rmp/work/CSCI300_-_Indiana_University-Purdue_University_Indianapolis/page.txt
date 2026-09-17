@@ -1,0 +1,544 @@
+CSCI 0300
+: Fundamentals of Computer Systems
+Home
+Schedule
+Assignments
+Project 1: Snake
+Project 2: DMalloc
+Project 3: Caching I/O
+Project 4: WeensyOS
+Project 5A: Concurrent Store
+Project 5B: Distributed Store
+Lab 0: Getting set up
+Lab 1: C programming and Build Tools
+Lab 2: Debugging
+Lab 3: Assembly
+Lab 4: Intro to WeensyOS
+Lab 5: Processes
+Lab 6: Threads
+SRC Project: Time Machine
+Midterm Quiz
+Final Quiz
+Sections
+About Sections
+Section 1: Pointers and Debugging
+Section 2: Arrays and More Pointers
+Section 3: Working with Sanitizers
+Section 6: Virtual Memory and Page Tables
+Section 7: Pipes
+Section 8: Multithreading
+Section 9 (optional): Rust
+Resources
+C/C++ Primers
+Docker Issues
+Textbooks
+Syllabus
+FAQs
+Exercises: Computer Systems Basics
+Exercises: Operating Systems
+Exercises: Concurrency
+Exercises: Distributed Systems
+GDB Debugger Guide
+GDB Debugger FAQ
+x86-64 Assembly cheat sheet
+Staff
+Office Hours
+Spring 2026
+Here is the tentative schedule of lectures and due dates. The lecture
+material for future lectures may change.
+While the notes and videos published here may help you remember the
+material discussed, they are not a replacement for attending lectures.
+Videos for each lecture will be published shortly after the lecture
+ends; if you do not see a link yet, check
+this page
+(Brown login required).
+About deadlines
+: Assignments are generally due according to this schedule:
+Projects
+are generally due on Fridays at
+8pm
+Labs
+are generally due on Tuesdays at
+8pm
+❓ Post-Lecture Quizzes (PLQs)
+are due the day before the next
+lecture at
+11:59pm
+Code from the lectures is available at
+github.com/csci0300/cs300-lectures
+. See
+the notes for each lecture for more info.
+Monday
+Tuesday
+Wednesday
+Thursday
+Friday
+jan 19
+Martin Luther King Jr. Day
+jan 20
+jan 21
+First day of classes
+Block 1: Computer Systems Basics
+jan 22
+LEC 1
+:
+Course Overview and Machine Organization
+📄
+Notes
+🎥
+Video
+❓
+PLQ
+🎥
+Spring 2024 video (boards visible)
+Assigned
+:
+Lab 0 (Setup)
+Assigned
+:
+Project 1: Snake
+No section this week
+jan 23
+jan 26
+jan 27
+LEC 2
+:
+Introduction to C
+📄
+Notes
+🎥
+Video
+❓
+PLQ
+DUE
+:
+Lab 0 (Setup)
+Assigned
+:
+Lab 1 (C Programming & Build Tools)
+jan 28
+jan 29
+LEC 3
+:
+Pointers and Strings
+📄
+Notes
+🎥
+Video
+❓
+PLQ
+Section week 1: Pointers and Debugging
+jan 30
+DUE
+:
+Project 1: Snake (checkin)
+feb 2
+feb 3
+LEC 4
+:
+Memory Representation and Memory Allocation
+📄
+Notes
+🎥
+Video
+❓
+PLQ
+DUE
+:
+Lab 1 (C Programming & Build Tools)
+Assigned
+:
+Lab 2 (Debugging)
+feb 4
+feb 5
+LEC 5
+:
+Dynamic Memory and Arrays
+📄
+Notes
+🎥
+Video
+❓
+PLQ
+Section week 2: Arrays and More Pointers
+feb 6
+DUE
+:
+Project 1: Snake (parts 1 and 2)
+feb 9
+feb 10
+LEC 6
+:
+Structures, Alignment
+📄
+Notes
+🎥
+Video
+❓
+PLQ
+feb 11
+DUE
+:
+Lab 2 (Debugging)
+feb 12
+LEC 7
+:
+Alignment, Collection Rules, and Signed Integers
+📄
+Notes
+🎥
+Video
+❓
+PLQ
+🎥
+Spring 2024 video
+No section this week
+feb 13
+DUE
+:
+Project 1: Snake (everything)
+Assigned
+:
+Project 2: DMalloc
+feb 16
+Long Weekend
+feb 17
+Long Weekend
+feb 18
+feb 19
+LEC 8
+:
+Storage hierarchy, Caching
+📄
+Notes
+🎥
+Video
+❓
+PLQ
+Section week 3: Sanitizers
+feb 20
+feb 23
+feb 24
+LEC 9
+:
+Caching, File I/O
+📄
+Notes
+🎥
+Video
+❓
+PLQ
+Assigned
+:
+Lab 3 (Assembly)
+feb 25
+feb 26
+LEC 10
+:
+Assembly Language
+📋
+Handout
+📄
+Notes
+🎥
+Video
+❓
+PLQ
+Section week 4: Assembly
+feb 27
+DUE
+:
+Project 2: DMalloc
+Assigned
+:
+Project 3: Caching I/O
+mar 2
+mar 3
+LEC 11
+:
+Assembly Control Flow
+📄
+Notes
+🎥
+Video
+❓
+PLQ
+mar 4
+mar 5
+LEC 12
+:
+Stack
+📄
+Notes
+🎥
+Video
+❓
+PLQ
+Section week 5: Caching I/O prep
+mar 6
+DUE
+:
+Project 3: Caching I/O (design review, due during section)
+mar 9
+mar 10
+LEC 13
+:
+Stack, Buffer Overflow
+📄
+Notes
+🎥
+Video
+❓
+PLQ
+mar 11
+Block 2: Fundamentals of Operating Systems
+DUE
+:
+Lab 3 (Assembly)
+mar 12
+LEC 14
+:
+Operating Systems Intro
+📄
+Notes
+🎥
+Video
+❓
+PLQ
+Assigned
+:
+Lab 4 (Intro to WeensyOS)
+No section this week
+mar 13
+DUE
+:
+Project 3: Caching I/O
+Assigned
+:
+Project 4: WeensyOS
+Assigned
+:
+SRC: Time Machine
+mar 16
+mar 17
+LEC 15
+:
+Privilege Separation, Memory Protection
+📄
+Notes
+🎥
+Video
+❓
+PLQ
+mar 18
+Midterm Quiz (evening, 7-9pm)
+Materials
+: open laptop, compiler, limited Internet. NO communication, web search, or AI use; see Edstem for details.
+mar 19
+LEC 16
+:
+Virtual Memory
+📄
+Notes
+🎥
+Video
+❓
+PLQ
+No section this week
+mar 20
+mar 23
+Spring recess
+mar 24
+Spring recess
+mar 25
+Spring recess
+mar 26
+Spring recess
+mar 27
+Spring recess
+mar 30
+mar 31
+LEC 17
+:
+Page Tables, Address Translation
+📄
+Notes
+🎥
+Video
+❓
+PLQ
+DUE
+:
+Lab 4 (Intro to WeensyOS)
+apr 1
+apr 2
+LEC 18
+:
+Address Translation, Process Creation
+📄
+Notes
+🎥
+Video
+❓
+PLQ
+Section week 6: Page table practice
+apr 3
+DUE
+:
+Project 4: WeensyOS (steps 1-4)
+apr 6
+apr 7
+LEC 19
+:
+Process Creation (Fork and Exec)
+📄
+Notes
+🎥
+Video
+❓
+PLQ
+Assigned
+:
+Lab 5 (Processes)
+apr 8
+apr 9
+LEC 20
+:
+Inter-Process Communication, Pipes
+📄
+Notes
+🎥
+Video
+❓
+PLQ
+Section week 7: Pipes
+apr 10
+DUE
+:
+Project 4: WeensyOS (everything)
+DUE
+:
+SRC: Time Machine (part 1)
+Assigned
+:
+Project 5A: Concurrent Store
+apr 13
+apr 14
+LEC 21
+:
+Pipes, Threads
+📄
+Notes
+🎥
+Video
+❓
+PLQ
+apr 15
+Block 3: Concurrency and Parallel Programming
+apr 16
+LEC 22
+:
+Threads, Race Conditions
+📄
+Notes
+🎥
+Video
+❓
+PLQ
+Section week 8: Multithreading
+apr 17
+DUE
+:
+SRC: Time Machine (all parts)
+apr 20
+apr 21
+LEC 23
+:
+Synchronization, Atomics, Deadlock
+📄
+Notes
+🎥
+Video
+❓
+PLQ
+DUE
+:
+Lab 5 (Processes)
+Assigned
+:
+Lab 6 (Threads)
+apr 22
+apr 23
+LEC 24
+:
+Deadlock, Bounded Buffer, Condition Variables
+📄
+Notes
+🎥
+Video
+❓
+PLQ
+No section this week
+apr 24
+DUE
+:
+Project 5A: Concurrent Store
+(except Tweeter part)
+Assigned
+:
+Project 5B: Distributed Store
+apr 27
+apr 28
+LEC 25
+:
+Distributed Systems, Sharding
+📄
+Notes
+🎥
+Video
+❓
+PLQ
+DUE
+:
+Lab 6 (Threads)
+apr 29
+Block 4: Distributed Systems
+apr 30
+LEC 26
+:
+Sharding, Networking
+📄
+Notes
+🎥
+Video
+❓
+PLQ
+Section week 9: Rust (optional)
+may 1
+may 4
+may 5
+LEC 27
+:
+Networking, Replication, Summary, and Outlook
+📄
+Notes
+🎥
+Video
+❓
+PLQ
+Last day of classes
+may 6
+may 7
+No section this week
+may 8
+DUE
+:
+Project 5B: Distributed Store
++ Tweeter part of Project 5A
+may 11
+may 12
+may 13
+may 14
+No section this week
+may 15
+Final

@@ -1,0 +1,116 @@
+-- STAGE 2 — instructor extraction -----------------------------------------------------
+  courses to process  111
+  [  1/111] CSC476     NULL                         no_instructor
+  [  2/111] CIS541     NULL                         no_instructor
+  [  3/111] CS310      Mudassir Shabbir             found
+  [  4/111] CSE220     NULL                         no_instructor
+  [  5/111] CSE240     Javier Gonzalez-Sanchez      found
+  [  6/111] CSE259     NULL                         no_instructor
+  [  7/111] CSE325     NULL                         no_instructor
+  [  8/111] CSE512     Jeffrey Heer                 found
+  [  9/111] CSE539     Jed Crandall                 found
+  [ 10/111] COMP2710   Xiao Qin                     found
+  [ 11/111] COMP3220   Zhitao Gong                  found
+  [ 12/111] COMP7500   Xiao Qin                     found
+  [ 13/111] CIS3550    Michael Whiteman             found
+  [ 14/111] CIS9002    NULL                         no_instructor
+  [ 15/111] STAT2000   Glen Livingston Jr           found
+  [ 16/111] CSI1430    William Booth                found
+  [ 17/111] MIS1305    Gina Green                   found
+  [ 18/111] CS605      NULL                         no_instructor
+  [ 19/111] CS240      NULL                         no_instructor
+  [ 20/111] CS402      Shin Yoo                     found
+  [ 21/111] CS132      Nathan Mull                  found
+  [ 22/111] CS566      Tanya Zlateva                found
+  [ 23/111] CS611      NULL                         no_instructor
+  [ 24/111] DS110      NULL                         no_instructor
+  [ 25/111] 1JC3       NULL                         no_instructor
+  [ 26/111] 2DM3       NULL                         no_instructor
+  [ 27/111] 2GA3       NULL                         no_instructor
+  [ 28/111] 4HC3       NULL                         no_instructor
+  [ 29/111] CIS15      Hui Chen                     found
+  [ 30/111] CIS52      NULL                         no_instructor
+  [ 31/111] CISC1050   NULL                         no_instructor
+  [ 32/111] CISC1115   Hui Chen                     found
+  [ 33/111] CISC1600   Matthew Meyer                found
+  [ 34/111] CISC2210   Miriam Briskman              found
+  [ 35/111] CISC3130   Katherine Chuang             found
+  [ 36/111] CISC3171   Hui Chen                     found
+  [ 37/111] CSC134     Ying Jin                     found
+  [ 38/111] CSC139     Du Zhang                     found
+  [ 39/111] CSC28      NULL                         no_instructor
+  [ 40/111] CS208      NULL                         no_instructor
+  [ 41/111] CS150      NULL                         no_instructor
+  [ 42/111] CS15110    NULL                         no_instructor
+  [ 43/111] CS15281    Tuomas Sandholm              found
+  [ 44/111] CS213      NULL                         no_instructor
+  [ 45/111] CPSC1010   NULL                         no_instructor
+  [ 46/111] CPSC102    NULL                         no_instructor
+  [ 47/111] CS303      NULL                         no_instructor
+  [ 48/111] CSCI304    NULL                         no_instructor
+  [ 49/111] COMS4995   Andreas C. Müller            found
+  [ 50/111] CS102      Christopher Hong             found
+  [ 51/111] ECE160     NULL                         no_instructor
+  [ 52/111] CS100M     David Smith                  found
+  [ 53/111] CS1110     NULL                         no_instructor
+  [ 54/111] CS2110     NULL                         no_instructor
+  [ 55/111] CS2800     NULL                         no_instructor
+  [ 56/111] CS4320     Immanuel Trummer             found
+  [ 57/111] CS4780     Christopher De Sa            found
+  [ 58/111] CS4820     NULL                         no_instructor
+  [ 59/111] CSCI1106   Thomas Trappenberg           found
+  [ 60/111] CSCI1170   NULL                         no_instructor
+  [ 61/111] CSCI2132   Vlado Keselj                 found
+  [ 62/111] CSCI2140   Sayed Sibai Raza Abidi       found
+  [ 63/111] CSCI2141   Kirstie Hawkey               found
+  [ 64/111] CSCI3120   Kirstie Hawkey               found
+  [ 65/111] CSCI3130   Andrew Rau-Chaplin           found
+  [ 66/111] CSCI3151   NULL                         no_instructor
+  [ 67/111] CSCI3171   Evangelos Milios             found
+  [ 68/111] CSC241     Luka Perkovic                found
+  [ 69/111] CSC243     Luka Perkovic                found
+  [ 70/111] ECT250     Amber Settle                 found
+  [ 71/111] IT130      NULL                         no_instructor
+  [ 72/111] IT230      NULL                         no_instructor
+  [ 73/111] SE433      Dennis Mumaugh               found
+  [ 74/111] CS065      NULL                         no_instructor
+  [ 75/111] CS167      NULL                         no_instructor
+  [ 76/111] COMPS101L  NULL                         error
+  [ 77/111] CPS100     Jeff Forbes                  found
+  [ 78/111] CPS108     NULL                         no_instructor
+  [ 79/111] CS203      R. Inkulu                    found
+  [ 80/111] CS330      NULL                         no_instructor
+  [ 81/111] CS371      NULL                         no_instructor
+  [ 82/111] ECE250     NULL                         error
+  [ 83/111] ECE350     NULL                         no_instructor
+  [ 84/111] CS600      Shusen Wang                  found
+  [ 85/111] CSCI1010   NULL                         no_instructor
+  [ 86/111] CSCI2540   NULL                         no_instructor
+  [ 87/111] CIS335     Rahat Ibn Rafiq              found
+  [ 88/111] CSC121     NULL                         no_instructor
+  [ 89/111] CS171      NULL                         no_instructor
+  [ 90/111] CGS1100    Martin Hepp                  found
+  [ 91/111] CEN4010    Peter Clarke                 found
+  [ 92/111] COP4338    NULL                         no_instructor
+  [ 93/111] CS1301     Bill Leahy                   found
+  [ 94/111] CS1315     Bill Leahy                   found
+  [ 95/111] CS3001     Munmun De Choudhury          found
+  [ 96/111] CS4470     Blair MacIntyre              found
+  [ 97/111] CS6750     Keith Edwards                found
+  [ 98/111] CSE6740    Zsolt Kira                   found
+  [ 99/111] ECE2020    Samuel Talkington            found
+  [100/111] ECE6100    NULL                         no_instructor
+  [101/111] ECE6254    NULL                         no_instructor
+  [102/111] CS7637     NULL                         no_instructor
+  [103/111] ECE7750    Vidya Muthukumar             found
+  [104/111] CS109      NULL                         no_instructor
+  [105/111] CS50X      David J. Malan               found
+  [106/111] CSC005     Vinnie Costa                 found
+  [107/111] CSC161     Charlie Curtsinger           found
+  [108/111] CSCI300    NULL                         no_instructor
+  [109/111] COMS207    Alexander Stoytchev          found
+  [110/111] CPRE416    NULL                         no_instructor
+  [111/111] CIS200     Julie Thornton               found
+
+-- SUMMARY -----------------------------------------------------------------------------
+  by status   {'no_instructor': 51, 'found': 58, 'error': 2}

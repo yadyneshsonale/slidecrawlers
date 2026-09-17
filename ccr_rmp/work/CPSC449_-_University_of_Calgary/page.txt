@@ -1,0 +1,231 @@
+CPSC449:   Programming languages paradigms
+(Winter  2025, Monday/Wednesday/Friday 11:00-11:50,
+on-line)
+Instructor: Robin Cockett (ICT 652)
+(Office hours: immediately after class Wednesday or by
+appointment)
+COURSE OUTLINE:
+Introduction to Haskell and Prolog.
+Functional programming in Haskell:
+Functional syntax, pattern matching,
+Evaluating a program by hand, lazy evaluation
+Lists and list comprehension
+Datatypes and higher-order programming
+Structural induction
+Classes and monads
+Relation to \lambda-calculus
+Logic programming in Prolog:
+Predicates, rules, variables
+Satisfying goals, unification
+Evaluation of rules by hand, cuts
+Unification
+Relation to theorem proving
+Why should you take this course?
+This is a required course ... why?
+The course introduces two programming paradigms "logic programming"
+and "functional programming" which you might otherwise not
+meet.  Constructs from these paradigms have and continue to
+"leak" into other programming paradigms (such as declarative and
+object oriented etc.).  The functional paradigm particularly is
+seen as a major player in future programming language design.
+This is for many reasons:
+its type inference is one of the most successful applications
+of formal methods,
+its pattern recognition and guard syntax is very expressive,
+it treats functions as first-class citizens
+referential transparency
+it has mathematical foundations: the lambda calculus, type
+theory, and category theory
+it has algebraic datatypes
+it introduces monads and type classes
+.....
+LECTURE NOTES
+(as they become available)
+:
+Weaving to programming (James Burke
+here
+and
+here
+a biased history!)
+Fibonacci fun (
+here
+)
+Scott's bottom and lazy evaluation (
+here
+)
+Hand evaluating a Haskell program (
+here
+)
+We LOVE lists! (
+here
+) [Part I]
+We really LOVE list! (
+here
+)
+[Part II]
+OK lists are not so great! (
+here
+)
+We don't love trees yet ... (
+here
+)
+[Part I]
+OK we still don't love trees ...  (
+here
+) [Part II]
+Structural induction (
+here
+)
+Matching on steroids! (
+here
+)
+[Part III]
+Collected notes on unification (
+here
+)
+This is an unlucky number ....
+Exceptions with monads (
+here
+)
+Monads here, monads there, and monads everywhere (
+here
+)
+The state monad and monadic I/0 (
+here
+)
+Hand evaluating a prolog program (
+here
+)
+Reversing and permutating (
+here
+)
+A puzzler (
+here
+)
+Lets go a searching (
+here
+)
+Introduction to definite clause grammars (
+here)
+Folds in Prolog ... (
+here
+)
+EXERCISES (32%)
+(Due 24th January) Starting exercise in Haskell
+here
+.  Use this template
+file
+for your solution (with
+this
+supporting file). You may submit it to gradescope.ca -- as many
+times as you wish before the deadline -- gradescope will
+automatically run test cases on your submission) (8%)
+(Due 14th February) Second exercise in Haskell
+here
+. Use this template
+file
+for your solution, as for
+exercise 1 (with this supporting
+file
+) (12%)
+( Due  11th April) Exercises in Prolog
+here
+. Use this template
+file
+for your solution (12%).
+ASSIGNMENT (13% + bonus):
+New due date 7th March (old due date 28th February):
+Checkers in Haskell (
+here
+)
+legal moves and applying moves (8%) the AI will be due 21st March
+(5%) and is required in order to enter the checkers tournament
+(TBA on-line).
+Note:
+to get an A/A+ in the course you must participate in
+this tournament.  The best programs from the tutorials then
+move into the class tournament.  There is a 5% bonus for
+reaching the class tournament: winning or running up in the class
+tournament is rewarded with another 5% bonus.
+EXAMS (55%):
+March 14th:
+Midterm
+(on-line).  Some sample questions
+here
+. (20%)
+April:
+Final
+(on-line).  Some example questions for revision are
+here
+. (35%)
+LAB. NOTES:
+Please find the tutorial notes here ....
+Melika Norouzbeygi
+Saina Daneshmandjahromi
+PREREQUISITES:
+You are assumed to be a competent
+programmer, well-versed in both procedural and object-oriented
+programming (CPSC 219/233/235 or equivalents), having a firm
+grasp of fundamental data structures (CPSC 319/331), and
+possessing the mathematical maturity required for proving
+elementary mathematical assertions (PHIL 279/377 also useful are
+CPSC 313/351).
+GRADE SCHEME:
+Each component of the
+course will be given a percentage grade. The Final Grade will be
+obtained by computing the weighted average of those percentages
+and then converting the weighted average to a final letter grade
+using roughly the conversion scheme below (the instructor reserves
+the right to curve the grading scheme!):
+95-100%
+A+
+80-84%
+B+
+65-69%
+C+
+50-54%
+D+
+90-94%
+A
+75-79%
+B
+60-64%
+C
+40-49%
+D
+85-89%
+A-
+70-74%
+B-
+55-59%
+C-
+0-39%
+F
+GRADESCOPE AND D2L:
+The exams, lab. exams, exercise, and assignments will be marked
+using gradescope.  To submit your work you will need an
+account in gradscope.ca: to create one, if you do not have one go
+to "gradescope.ca" and press the "sign up" button (the course
+entry code is on the D2L "content" tab). Please use your ucalgary
+email to sign up.  If you are enrolled in the course
+gradescope will automatically identify you as being in the
+course.  If you have problems contact your TA.
+D2L will be used only for recording your marks: this webpage and
+gradescope will be used for setting up exercise, tests, and
+assignments.
+POLICIES:
+Late policy:
+exercises are generally due on Fridays but
+submissions will continue to be accepted until the Monday
+morning.  However, these submissions are recorded as a "late
+submission".  When assessing your final grade in the whole
+course, if you are on a grade boundary, this submission history
+will be considered.  After Monday morning the maximum mark
+achievable will be reduced by 33.33% for each day. (Note: any
+updated time-lines, if required, will be announced in lectures and
+indicated on this page).
+Academic integrity:
+My main concern is that you should be learning in this class: if
+you are cheating you are not learning!  Furthermore, you may
+be setting an unfortunate trend for your future work habits. I
+regard it as an integral part of my job, as a teacher, to

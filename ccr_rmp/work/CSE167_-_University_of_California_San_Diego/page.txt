@@ -1,0 +1,191 @@
+UCSD CSE 167 Computer Graphics
+2D Graphics
+Transparency
+3D Graphics
+OpenGL
+Lighting
+3D modeling in Blender
+Boids animation
+❮
+❯
+Course Description
+Computer graphics is a field about processing ``visual data'', including images, videos, 2D and 3D shapes, light and reflection, motion, physical properties, and many more. Throughout the course, we will learn about:
+Modeling
+: How to describe and edit 2D and 3D shapes.
+Rendering
+: How to turn 2D and 3D shapes into images algorithmically, and how to make it fast using domain-specific hardware.
+Animation
+: How to create motion.
+You can take a look at previous CSE 167 web pages (either
+Albert Chern's version
+or
+Ravi Ramamoorthi's version
+) to have a better sense of what the course is about. This course is also offered on MOOC and UCSD Online by Ravi Ramamoorthi. You are free to look at Ravi's lectures, but my lecturing style would be slightly different. While I will cover most contents covered by Albert and Ravi, the order and details might be different.
+This course is only the tip of an iceburg of a fascinating field. If you are interested in computer graphics, you should look the more advanced materials in CSE 168 for rendering (either
+my version
+or
+Ravi's version
+),
+CSE 169
+for animation,
+CSE 191 B
+: for virtual reality and
+CSE 165
+for user interaction.
+For graduate students,
+CSE 272
+,
+CSE 273
+,
+CSE 274: Sampling and Reconstruction of Visual Appearance
+,
+CSE 274: Discrete Differential Geometry
+,
+CSE 275
+, and
+CSE 291
+are all relevant and super cool courses.
+UCSD has one of the largest faculty on graphics!
+Prerequisites
+(Modern) C++. Matrices and vectors.
+Logistics
+Instructor
+:
+Tzu-Mao Li
+TA
+:
+Trevor Hedstrom
+(tjhedstr-at-ucsd.edu),
+Randal Dong
+(rudong-at-ucsd.edu), and
+Baichuan (Peter) Wu
+(bwu-at-ucsd.edu)
+Lectures
+: Monday/Wednesday/Friday 11:00am-11:50pm Pacific time. Location: PCYNH 109.
+Dicussion
+: Friday noon-12:50pm Pacific time. Location: PCYNH 109.
+Instructor office hour
+: Friday 3pm-4pm. Location: CSE 4116.
+TA office hour
+: B275 Mon 3-4pm (Trevor), B275 Fri 4-5pm (Randal), B270A Thu 1-2pm (Baichuan).
+We will do most of the online discussions on
+Piazza
+.
+Course recording
+: We will record the class if the equipment is available. However, the class will be very interactive and you might be missing a lot of context if you are not in the classroom yourself. Please try to join us in person and let's have fun together!
+Grading, Homeworks and Projects
+There will be 5 programming homeworks (each 20%).
+The homeworks involve quite a bit of programming and can be tough for inexperienced. Start early and ask questions!
+Late penalty
+: score * clamp(1 - (seconds passed after midnight of the deadline day) / 86400, 0, 1)
+(this means that after 1 day your score becomes 0! start early! no negotiation unless you get a letter from the dean.)
+We will use the time on Canvas to determine how many seconds have passed.
+Homeworks 1-4 will be based on the
+balboa
+codebase.
+Homework 1
+(20%):
+2D Graphics
+(due 10/16)
+Homework 2
+(20%):
+3D Software Rendering
+(due 11/1)
+Homework 3
+(20%):
+3D OpenGL Rendering
+(due 11/17)
+Homework 4
+(20%):
+3D Modeling
+(due 11/29)
+Homework 5
+(20%):
+Boids Animation
+(due 12/12)
+Collaboration policy:
+You are expected to do the homeworks alone (feel free to discuss between peers!).
+ChatGPT/Co-pilot/machine generated text/code policy:
+We do not encourage or discourage you for using ChatGPT or Co-pilot or other similar software. Pick the way you feel is the best for learning computer graphics.
+Readings
+All of these are optional.
+CMU 15-462/662
+: a very nice (but intense) computer graphics course from Keenan Crane.
+Immersive Linear Algebra
+: linear algebra tutorials with interactive figures.
+Essence of Linear Algebra
+: video tutorials of linear algebra from 3Blue1Brown
+Fundamentals of Computer Graphics
+from Steve Marschner and Peter Shirley is the standard textbook.
+Computer Graphics: Principles and Practice
+from John Hughes, Andy van Dam, Morgan McGuire, David Sklar, James Foley, Steven Feiner, and Kurt Akeley is another standard textbook.
+Physically-based Rendering: from Theory to Implementation
+contains a comprehensive reference to many topics we talk about. It might be a dense read though.
+Ke-Sen's webpage
+is where you find all the (recent) cool graphics papers!
+Schedule (tentative)
+9/29/2023 (Fri): Introduction. (HW 1 out) [
+slides
+]
+Why computer graphics? Course overview.
+10/2/2023 (Mon): Vector graphics. [
+slides
+]
+Rasterizing 2D graphics. Antialiasing. Transparency. Bezier curves.
+10/4/2023 (Wed): Linear transformation. [
+slides
+]
+Basic linear algebra. 2D linear transformation. Affine transformation.
+10/6/2023 (Fri): Cameras. [
+slides
+]
+Pinhole cameras. Field of view vs focal length. Perspective and orthographic projection.
+10/9/2023 (Mon): Rasterization. [
+slides
+]
+Triangle meshes. Depth interpolation. Z buffer. Perspective-corrected interpolation. Frustrum culling. Occlusion culling.
+10/11/2023 (Wed): Ray tracing vs rasterization. [
+slides
+]
+Z culling vs acceleration structures.
+10/13/2023 (Fri): 3D transformation. [
+slides
+]
+Homogeneous coordinates. Scene graphs.
+10/16/2023 (Mon): 3D rotation. (HW1 due, HW2 out) [
+slides
+]
+Euler angles. Axis-angle representation. Quaternion/Rotors.
+10/18/2023 (Wed): Programmable graphics pipelines. [
+slides
+]
+GPU architecture. Fixed-function pipeline. Vertex shaders. Fragment shaders.
+10/20/2023 (Fri): Textures. [
+slides
+]
+Image textures. Procedural textures. UV mapping. Mipmapping.
+10/23/2023 (Mon): Lighting. [
+slides
+]
+Ambient/diffuse/specular lighting. Shading normals. Gouraud/Phong/Deferred.
+10/25/2023 (Wed): Materials. [
+slides
+]
+Measured BRDFs. Blinn-Phong. Microfacet BRDFs.
+10/27/2023 (Fri): Colors. [
+slides
+]
+Color spaces. Gamma.
+10/30/2023 (Mon): Global illumination. [
+slides
+]
+Path tracing. Radiosity.
+11/1/2023 (Wed): Shadow mapping and shadow volume. (HW2 due, HW3 out) [
+slides
+]
+11/3/2023 (Fri): Antialiasing. [
+slides
+]
+MSAA. FXAA. TAA.
+11/6/2023 (Mon): Non-photorealistic rendering. [
+slide

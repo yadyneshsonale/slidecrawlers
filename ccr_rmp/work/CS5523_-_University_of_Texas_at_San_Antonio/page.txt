@@ -1,0 +1,227 @@
+Quick Links
+Instructor
+TA
+Grading
+Online materials
+CS 5523.001 - Operating Systems
+Spring 2017
+http://www.cs.utsa.edu/~korkmaz/teaching/cs5523
+Catalog   Description
+5523 Operating Systems
+(3-0) 3 hours credit. Prerequisites: CS 3733 and CS 3853.
+Operating systems concepts with an emphasis on distributed systems.
+Topics include process management and threads, inter-process communication,
+distributed objects and remote invocation, distributed naming and directory services,
+distributed file systems, middleware such as CORBA, access control and security.
+Objectives
+Enhance the understanding for the key operating system concepts
+(such as process, thread and memory management);
+Develop an understanding of distributed systems and the
+important issues in their design;
+Develop a working knowledge of the infrastructure required to
+support distributed systems (inter-process communication and
+internetworking);
+Understand how applications are evolving to use distributed
+system support;
+Improve system-development and technical writing skills;
+Learn and/or improve team work and oral discussion skills;
+Prerequisites
+CS 3733 or equivalent: 			Undergraduate operating systems
+CS 3853 or equivalent: 			Undergraduate architecture
+Programming experience in C/C++ or Java, and 	working knowledge of Unix/Linux
+Graduate standing
+Time and Location
+MW 6:00pm - 7:15pm
+MH 2.01.04
+Instructor
+Dr. Turgay Korkmaz
+Office: SB 4.01.13
+Email: korkmaz at cs.utsa.edu
+Phone: (210) 458-7346
+Fax: (210) 458-4437
+Office Hours
+TR 11:30am-1:30pm (or by appointment)
+Blackboard Learn
+We will be using
+Blackboard Learn
+system for important notices, posting/submiting assignments etc. So get
+used to Blackboard system and Change your email on Blackboard to your
+favorite email so you can hear from the instructor!
+TA
+TBD
+Required  Textbook
+[
+SGG
+]
+Operating
+System Concepts
+,
+by Avi Silberschatz, Peter
+Baer Galvin, and Greg Gagne
+(I use
+the 8th edition with Java
+,
+but other editions would be OK, too).
+Student Companion Site
+[
+TS
+]
+Distributed Systems: Principles and
+Paradigms
+,
+2nd edition, by Andrew S. Tanenbaum and Maarten Van
+Steen
+Reference books
+(highly recommended)
+[
+CDKB
+]
+Distributed
+Systems: Concepts and Design
+,
+5th ed. by George Coulouris,
+Jean Dollimore and Tim Kindberg, Gordon
+Blair
+(
+the
+4th edition
+[CDK]
+is OK, too).
+[
+RR
+]
+UNIX Systems Programming
+, by
+Kay A. Robbins and Steven Robbins
+Grading
+5%
+Attendance
+,
+Reading
+†
+, and
+Quizzes
+25%
+Midterm
+or Project          (close books/notes)
+(
+Wed,
+March 1, 6:00pm - 7:15pm
+)
+25%
+Assignments
+(problem solving + programming)
+! NO LATE SUMBISSION !
+10%
+Term Project
+(Research advance
+topics like TS
+chapters 11, 12, 13, presentation and report)
+35%
+Final Exam
+(comprehensive and close
+books/notes)
+:
+Mon, May 08, 06:00 pm - 08:30 pm
+Final letter grade:
+A-, A          :  >= 90%
+B -, B, B+  :  >= 80%
+C -, C, C+  :  >= 70%
+D                 :  >= 60%
+F                 :  < 60%
+†
+You are expected to read each
+chapter before it is covered in class and take hand written notes while
+studying. You will submit your hand written notes before
+each class. Keep the copies of your notes which can help you a lot when
+studying for the exams. Click this link for the
+tentative reading schedule
+Note 2
+: Zero tolerance on cheating
+Note 3
+: No make-up exams will be given except for university
+sanctioned excused absences. If you must miss an exam (for a good
+reason), it is your responsibility to contact me before the exam by
+sending an email.
+Note 4
+: Filling out the course evaluations for CS 3733 is a
+requirement for this course; Dates for the online course evaluations
+will be in April 2017; Students who do not fill out the evaluations are
+subject to a loss of one full letter grade.
+Attendance Policies
+Attendance for all lectures and recitations is
+required
+.
+Quizzes may be given at the start of class periods. There may also
+be take-home quizzes.
+Instructor initiated drop: A student
+who misses, without prior approval by the instructor, half or more
+of the lectures/recitations during the first two weeks will be
+dropped from the course. !!!
+Assignments
+We will have 3-4 Problem solving assignments and 4 Programming assignments
+:
+Officially they will be posted and submitted through the BB (BlackBoard)
+LEARN
+!!!! NO LATE HOMEWORK  WILL BE ACCEPTED !!!
+Course Topics
+This course covers the principles of operating systems theory and practice as
+well as distributed operating systems. Fundamental concepts such as processes and threads,
+synchronization and concurrency, communication,  remote method invocation, security,
+distributed file systems and name services will be presented. The principles and implementation of
+the software necessary to manage system resources in a distributed environment will also be addressed.
+A core knowledge of basic operating systems concepts, such as process/IPC,  virtual memory and I/O, are
+assumed and will be reviewed very quickly. You will be programming in C/C++ and/or Java.
+Part I (Basic Operating System Concepts)
+Introduction to OS
+SGG Chapters 1 and 2
+Process management
+SGG Chapter 3
+Threads and implementation
+SGG Chapter 4
+CPU Scheduling
+SGG Chapter 5
+Concurrency and synchronization
+SGG Chapter 6
+Deadlocks
+SGG Chapter 7
+Memory management
+SGG Chapter 8
+Virtual Memory
+SGG Chapter 9
+Part II (Distributed Systems)
+Distributed System Models
+TS Chapters 1 and 2
+Processes and Threads
+TS Chapter 3
+Networks and Communication
+TS Chapter 4 (CDK 3 and 4)
+Distributed Objects, RMI
+TS Chapter 10 (CDK 5)
+Naming
+TS Chapter 5
+Synchronization
+TS Chapter 6
+Consistency
+TS Chapter 7
+Fault Tolerance
+TS Chapter 8
+Security
+TS Chapter 9
+Distributed System Examples (if time permits)
+Like TS Chapters 11, 12 and 13
+Student Presentation Advanced Dist and OS Topics
+Online materials and
+Class Notes
+Accessible from
+utsa.edu
+computers
+or you need to know the user name and password
+given in class
+Slides
+tentative schedule and reading schedule
+sample exams  etc.
+:
+class assignments
+(check BlackBoard Learn)
+programs from the

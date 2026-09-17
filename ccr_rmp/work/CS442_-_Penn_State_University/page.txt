@@ -1,0 +1,263 @@
+CMPSC 442 Spring 2024: Artificial Intelligence
+Course Information
+Instructor
+Rui Zhang
+Office Hour: Friday 2-4pm
+Lecture Time and Location
+Tuesday and Thursday, 4:35PM - 5:50PM @ Thomas Bldg 104
+TA
+Ryo Kamoi, Office Hour: Wednesday 2:30-3:30pm
+Ibraheem Muhammad Moosa, Office Hour: Monday 12:00-1:00pm
+Course Syllabus
+Detailed syllabus is avaialbe
+here
+.
+Course Goals and Objectives
+This course provides an overview of the foundations, problems, approaches, implementation, and applications of artificial intelligence. Topics covered include problem solving, goal-based and adversarial search, logical, probabilistic, and decision theoretic knowledge representation and inference, decision making, and learning. Through programming assignments that sample these topics, students acquire an understanding of what it means to build rational agents of different sorts as well as applications of AI techniques in language processing, planning, vision.
+The goal of this course is to learn
+Basic techniques for building intelligent computer systems
+Search, (games,) constraint satisfaction, uncertainty and probability, Bayes Rule, Naïve Bayes, Hidden Markov Models
+Introduction to fundamental concepts in machine learning: linear regression, linear regression classifier, perceptron learning rule
+In depth consideration of the role AI will play in our lives
+Prerequisites
+Enforced Prerequisite at Enrollment: CMPSC 221. Enforced Concurrent at Enrollment: CMPSC 465. Students are expected to have a good understanding of probability, data structures, and programming. We will cover Python basics early in the semester. Students should feel comfortable programming, debugging, and testing in Python.
+Textbook
+Artificial Intelligence: A Modern Approach, 3rd Edition
+by Stuart Russell & Peter Norvig.
+The sections on machine learning covered in the course are not in the 2nd Edition. Because this course is a prerequisite for machine learning, the 3rd Edition is recommended over the much cheaper 2nd Edition.
+Speech and Language Processing
+by Dan Jurafsky and James H. Martin.
+Programming Assignments
+There are 6 programming assignments. The programming assignments shall be done with Python 3.6+. Every programming assignment will be graded by an autograder. Do not submit with import errors or syntax errors. You must use the template *py files. Your code must produce a correct or partly correct answer to get full or partial credit.
+All submissions must be your own dependent work. Do not copy other people's code or misrepresent it as yours. We will use high grade plagiarism detection code.
+Late Policy for Programming Assignments. There is only 1 late day allowed with a penalty of 25% for EACH programming assignment. For example, if you obtain a raw score 90 on the first late day, you will get 90x75%= 67.5; if you submit two days after the deadline, the score is 0.
+Course Schedule
+Date
+Topic
+Material / Reading
+Event
+Due
+Week 1
+Tuesday Jan 9
+Introduction
+[
+slides
+]
+AIMA Chapter 1.1 1.2
+Thursday Jan 11
+Intelligent Agents
+[
+slides
+]
+AIMA Chapter 2.1 2.2 2.3 2.4
+Week 2
+Tuesday Jan 16
+Class Cancelled
+HW 1
+Out
+Thursday Jan 18
+Search
+[
+slides
+]
+AIMA Chapter 3
+Week 3
+Tuesday Jan 23
+Uninformed Search
+[
+slides
+]
+AIMA Chapter 3
+Thursday Jan 25
+Informed Search
+[
+slides
+]
+AIMA Chapter 3
+Week 4
+Tuesday Jan 30
+Games and Adversarial Search
+[
+slides
+]
+AIMA Chapter 5
+Thursday Feb 1
+Games and Adversarial Search
+[
+slides
+]
+AIMA Chapter 5
+HW 1
+Due
+Week 5
+Tuesday Feb 6
+Non-classical Search
+[
+slides
+]
+AIMA Chapter 4
+HW 2
+Out
+Thursday Feb 8
+Non-classical Search
+[
+slides
+]
+AIMA Chapter 4
+Week 6
+Tuesday Feb 13
+Constraint Satisfaction Problem
+[
+slides
+]
+AIMA Chapter 6
+Thursday Feb 15
+Constraint Satisfaction Problem
+[
+slides
+]
+AIMA Chapter 6
+Week 7
+Tuesday Feb 20
+HW 3
+[
+slides
+]
+HW 3
+Out
+Thursday Feb 22
+Logical Agents
+[
+slides
+]
+AIMA Chapter 7
+HW 2
+Due
+Week 8
+Tuesday Feb 27
+Propositional Logic
+[
+slides
+]
+AIMA Chapter 7
+Thursday Feb 29
+First-Order Logic
+[
+slides
+]
+AIMA Chapter 8
+HW 3.1
+Due
+Week 9
+Tuesday March 5
+Spring Break
+Thursday March 7
+Spring Break
+Week 10
+Tuesday March 12
+Logical Inference
+[
+slides
+]
+AIMA Chapter 7,8,9
+HW 4
+Out
+Thursday March 14
+Probabilistic Agents
+[
+slides
+]
+AIMA Chapter 13
+Week 11
+Tuesday March 19
+Naive Bayes Classifier
+[
+slides
+]
+AIMA Chapter 13, 20
+HW 3.2
+Due
+Thursday March 21
+Naive Bayes Classifier
+[
+slides
+]
+AIMA Chapter 13, 20
+Week 12
+Tuesday March 26
+Bayesian Networks
+[
+slides
+]
+AIMA Chapter 14
+HW 4
+Due
+Thursday March 28
+Bayesian Networks
+[
+slides
+]
+AIMA Chapter 14
+HW 5
+Out
+Week 13
+Tuesday April 2
+Bayesian Networks
+[
+slides
+]
+AIMA Chapter 14
+Thursday April 4
+Hidden Markov Models
+[
+slides
+]
+SLP Appendix A
+Week 14
+Tuesday April 9
+Hidden Markov Models
+[
+slides
+]
+SLP Appendix A
+Thursday April 11
+Hidden Markov Models
+[
+slides
+]
+SLP Appendix A
+HW 6
+Out
+HW 5
+Due
+Week 15
+Tuesday April 16
+Machine Learning
+[
+slides
+]
+Thursday April 18
+Neural Networks and Transformers
+[
+slides
+]
+SLP Chapter 7, 10
+Week 16
+Tuesday April 23
+Large Language Models
+[
+slides
+]
+SLP Chapter 10
+Thursday April 25
+AI Ethics
+[
+slides
+]
+On the opportunities and risks of foundation models
+HW 6
+Due
+Week 17
+Thursday May 2
+Final Exam
+Due

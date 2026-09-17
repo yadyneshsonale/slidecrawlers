@@ -1,0 +1,162 @@
+Database System Technology
+CSC 443, Winter 2019
+Course Info
+Instructor:
+Sayyed Nezhadi
+Lectures:
+Mon & Wed, 2:00 - 3:00 PM, SS1083
+Tutorials:
+Fri, 2:00 - 3:00 PM, SS1083
+Office Hours:
+During Tutorials
+TAs:
+Ioannis Xarchakos, Safoura Janosepah
+Contact
+My Email:
+snezhadi@cs.toronto.edu
+Course Website:
+The
+course website
+is required reading. It contains assignment handouts and other essential material and will be updated throughout the semester.
+Discussion Board:
+We will be using
+Piazza
+as our main discussion board. You are responsible for reading all postings made by me or the TAs. Please use Piazza to ask questions about assignments and course lecture materials so that everyone can benefit. For personal questions, email us from your UofT address. Please include "csc443" in the subject line and include your full name. If you do not hear back quickly, we are always available during office hours to help.
+Course Description
+The course examines advanced topics in database system implementation. It starts with the in-depth coverage of algorithms and data structures used in the implementation of relational DBMSs. These include sorting, hashing, and indexing.
+The use of the above techniques in query processing and query optimization is studied next.
+In the third part of the course, the techniques used for implementing concurrency control and crash recovery in database systems are studied.
+Parallel dataflow algorithms are introduced, in the last part of the course, on the example of MapReduce model.
+Prerequisites
+Students should have taken the courses listed in this
+calendar entry
+or have equivalent knowledge in algorithms, data structures, relational algebra, and systems.
+Course work involves a major programming project. Hands-on experience with C/C++ or Python is required.
+Course Objectives
+By the end of the course students should be able to propose and implement an efficient algorithm for an out-of-core problem (i.e. when the input size exceeds the available main memory); understand the internals of relational database system implementation; apply optimization algorithms to SQL queries to produce efficient query plans; apply concurrency control and recovery algorithms to sample transaction workloads; apply the MapReduce framework to a sample big data problem.
+Textbook
+"Database Management Systems" by
+Raghu Ramakrishnan
+and
+Johannes Gehrke
+, 3rd Edition. Available new and used at the UofT bookstore.
+We are interested in the parts III to V. The last part of the course will be covered using other resources.
+Marking Scheme
+There will be three problem sets and one major course project.
+Problem sets are done individually but the course project has to be done in a group of 3 to 4 students.
+Project is a major programming assignment and will take considerable time. You will need to plan your time accordingly.
+There is no final exam for this course.
+You need to get 20 out of 45 from the problem sets to pass the course.
+Component
+Weight
+Description
+Due
+Homework 1
+15%
+Cost of Operations, Storage and Index Structure
+Feb 10, 2019 11:59 PM
+Homework 2
+15%
+TBD
+TBD
+Homework 3
+15%
+TBD
+TBD
+Test (in class)
+10%
+TBD
+TBD
+Final Project
+45%
+TBD
+TBD
+Syllabus
+Week
+Dates
+Topic
+Reading (Textbook)
+1
+Jan 07 - Jan 11
+Introduction to DBMS (
+slides
+)
+Chapter 1
+2
+Jan 14 - Jan 18
+Overview of Storage and Indexing (
+slides
+)
+Chapter 8 and 11
+3
+Jan 21 - Jan 25
+Storing Data (
+slides
+)
+N/A
+4
+Jan 28 - Feb 01
+Index Structure (
+slides
+)
+N/A
+3
+Feb 04 - Feb 08
+External Sorting and Hash-based Indexes(
+slides
+)
+Chapter 11, 13
+4
+Feb 11 - Feb 15
+Overview of Query Evaluation(
+slides
+)
+Chapter 12
+7
+Feb 18 - Feb 22
+Reading Week
+5
+Feb 25 - Mar 01
+Evaluating Relational Operators(
+slides
+)
+Chapter 14
+6
+Mar 04 - Mar 08
+Relational Query Optimization(
+slides
+)
+Chapter 15
+8
+Mar 11 - Mar 15
+Concurrency Control(
+slides
+)
+Chapter 14
+9
+Mar 18 - Mar 22
+Crash Recovery(
+slides
+)
+Chapter 17
+12
+Mar 25 - Mar 29
+Project Presentations
+N/A
+13
+Apr 01 - Apr 05
+Project Presentations & Test
+N/A
+Homeworks
+Homeworks are due at 11:59 pm on due date sharp. They must be submitted electronically, using the MarkUs online system. You can submit each homework up to 2 days late with 10% penalty per day.
+Homeworks should be done individually and the work you submit must be your own. It is an academic offence to copy someone else's work. Whether you copy or let someone else copy, it is an offence. Academic offences are taken very seriously.
+At the same time, we want you to benefit from working with other students. It is appropriate to discuss course material related to homeworks, and we encourage you to do so.
+Final Project
+The course project is a major programming assignmnet that should be done in a group of 3-4 students. You cannot do the project individually because of the workload and because in real life you have to work in a team too.
+The work you submit must be fully developed by your own team. It is an academic offence to copy someone else's work. Whether you copy or let someone else copy, it is an offence. Academic offences are taken very seriously.
+At the same time, we want you to benefit from working with other students. It is appropriate to discuss course material and technologies related to the project, and we encourage you to do so. You are not allowed to use any third-party library other than the libraries or the tools mentioned in the project description.
+Every group submits a project report (not longer than 10 pages) and presents in the class for around 10 mins.
+Accessibility Needs
+The University of Toronto is committed to accessibility. If you require accommodations or have any accessibility concerns, please visit
+Accessibility Services
+as soon as possible.

@@ -1,0 +1,322 @@
+CS 230
+Online Course Materials
+Discrete Mathematics for Computer Science
+Tl;dr: for
+Lecture notes
+for
+the
+Online
+video class
+, go
+here
+.
+Videos of these lectures are available
+here on
+YouTube
+.
+Lecture notes
+are available for those recorded lectures (click on "lecture notes" for the
+desired lecture).
+This webpage will complement the Online Videos on (e.g.) Youtube. It
+will eventually have course notes, lecture notes, etc. But it does not
+have all of those yet, except for most lectures.
+This website is under constuction. It will be updated. Please check
+back for corrections and new materials.
+© Bruce R. Donald, Duke University (2014-2021),
+except for materials
+acknowledged here
+.
+All rights reserved, All wrongs reversed.
+Lecture Notes
+Textbooks
+Software
+Handouts
+Problem Sets
+Tips
+Academic Integrity, and Class Mechanics
+Course Homepage
+CS230 TikTok
+(
+How to
+,
+Skits
+)
+Course Staff
+Acknowledgments
+Course Staff
+Professor Bruce
+R. Donald
+.
+[
+www
+]
+Lecture Notes and Materials
+Videos of all these lectures are available
+here on
+YouTube
+.
+Lecture notes
+are available for those recorded lectures (click on "
+Lecture Notes
+" for the
+desired lecture).
+This webpage will complement the Online Videos on (e.g.) Youtube. It
+will eventually have course notes, lecture notes, etc. But it does not
+have all of those yet, except for most lectures.
+The date and
+number of the
+recording is indicated.
+Written notes (please read):
+Topic: The Study of Computation From A Mathematical Viewpoint
+Date: M Aug 23, 2021
+Reading:
+SICP
+1.1 to 1.1.4 (pg. 1-13)
+Academic Integrity
+Lecture Notes
+Recorded
+lecture [youtube video] (Minus administrivia)
+Topics for the first 7 weeks of CS 230
+Handouts:
+Textbooks
+,
+Racket Download
+Going forward:
+All recorded lectures for Lectures 1-26 [youtube videos] (L01-L26)
+(please
+watch).
+NB: A few of the lectures (e.g., L01, L07, L08...) may be
+uploaded
+ex post facto
+, so we can
+work the problems together in class.
+Written  notes/handouts (please read):
+Topic: Logical Foundations of Functional Abstraction, and the Substitution Model
+Date: W Aug 25, 2021
+Reading:
+SICP
+1.1.5 to 1.1.7 (pg. 13-25)
+Lecture Notes
+Recorded lecture [youtube video]
+Handouts:
+scheme-tips.shtml
+,
+substitution
+model
+Examples:
+newton-cube-root.scm
+,
+newton-cube-root2.scm
+Lecture Notes:
+define.txt
+,
+lambda.txt
+Topic: Procedures and Processes: Iteration, Recursion and Induction
+Date: M Aug 30, 2021
+Reading:
+SICP
+1.2 to 1.2.2 (pg. 31-41)
+SDB
+Ch. 4.1-4.2
+Lecture Notes
+Alternative Proof
+Recorded lecture [youtube
+video]
+- Please note that the
+Integrity
+and Honesty Matrix
+has changed this year, relative to the video.
+There is a small
+typo in
+the video here
+at 30:30. It should read
+(+ a a*(b-1)) = a + a*b - a = a*b.
+Handouts:
+induction
+,
+substitution
+model
+,
+Strong
+induction example
+-
+SICP
+Exercise 4.1-7
+(by Surya)
+Examples:
+times.scm
+,
+prove-mult.scm
+Lecture Notes:
+let.txt
+Topic:
+Constructing Series, Sets, Functions, and Functionals
+( Higher-Order Procedures: Functional Arguments and Values)
+Date: Sept 1, 2021
+Reading:
+SICP
+1.3 (pg. 56-78)
+SDB
+Ch. 1.4, 1.1
+Lecture Notes
+Recorded lecture [youtube video]
+Examples:
+Finite and infinite Series
+,
+repeated.scm
+,
+compose.scm
+Example:
+curry.scm (Curry in
+Scheme)
+Example:
+An alternative way to
+define Curry
+Example:
+Here is Curry in C++
+Handout:
+Sets, Functions
+Topic: Analysis of Algorithms, Algorithmic Complexity
+∇ Date: Sept 6, 2021
+Happy Labor Day. Duke will celebrate by having classes.
+Reading:
+SICP
+1.2.3 (pg. 42-43)
+SDB
+Ch. 4.2-4.6
+Lecture Notes
+Recorded lecture [youtube video]
+There is a small typo in the video at ~34:05. As you can see at
+~30:20, ~27:25, and throughout we assumed T(0)=c. However, at ~34:05 I
+wrote T(0)=b, and it should be T(0)=c.
+Handout:
+Computational
+Complexity
+Examples:
+timetest.scm
+Hyperbola with asymptotes
+More proofs:
+On the complexity of fast-times (divide and conquer)
+Topic:  Hierarchical Data: Lists, Trees and the need for Quotation
+∇ Date: Sep 8, 2021
+Reading:
+SICP
+2.2 to 2.2.3 (pg. 97-126)
+Lecture Notes
+Recorded lecture [youtube video]
+Examples:
+lists.scm
+Notes:
+lists.txt
+A slightly harder example:
+list?
+vs. list
+Optional reading --
+(From Harvard SEAS CS 61):
+These memory leaks cannot occur in
+Scheme
+Common memory errors that cannot occur in Scheme
+"The moral of this story is that
+if lives are at stake, you shouldn't use C to write this code."
+Topic: Proofs, and More Proofs:
+Reforming the Post Office, and
+√
+2
+is irrational
+Date: Sept 13, 2021
+Reading:
+SDB
+Ch. 3, & 4.1-4.2.
+Review
+This material on Induction
+from Lecture 3.
+In class, we will work out some induction proofs by collaborating together.
+Lecture notes
+(PDF) from L07
+Pages 1-4
+Recorded
+lecture [youtube video]
+Topic: Proofs, and More Proofs:
+√
+2
+irrational
+Fun "proofs":  a Mathematician
+looks at Equine Biology.
+Date: Sep. 15, 2021
+Reading:
+SDB
+Ch. 3, & 4.1-4.2.
+Review
+This material on Induction
+from Lecture 3.
+In class, we will work out some induction proofs by collaborating together.
+Lecture notes
+(PDF) from L07
+Pages 1-4
+Recorded lecture [youtube video]
+What color are these horses?
+"Proof"  vs. Lunchbox
+Mathematics,
+Rigor, and Proofs
+Topic: Structural Induction
+∇ Date: M Sep. 20, 2021
+Reading:
+SDB
+pp. 167-183 and Ch. 4.1.
+Lecture Notes
+Recorded lecture [youtube video]
+Examples:
+struct-ind.scm
+,
+struct-ind-2.scm
+,
+struct-ind-tree.scm
+,
+struct-ind-2-tree.scm
+Topic: Streams
+∇ Date: W Sep. 22, 2021
+SICP
+3.5.1-3.5.3 (pp. 316-346), &
+review Sec. 2.2.3
+Lecture Notes
+Recorded lecture [youtube video]
+Chalk
+and Mathematicians
+Manual:
+RTFM!
+(Read
+the Fine Manual!)
+Examples:
+streams-example.scm
+,
+streams-racket.scm
+,
+stream-impl.scm
+,
+fibrec.scm
+,
+fib-racket-memoize.scm
+(+)
+Midterm 1
+Topic: Infinite Streams
+∇ Date: W Sept. 29, 2021
+Please carefully review
+Lecture 10 (Streams)
+before coming to class!
+SICP
+3.5.1-3.5.3 (pp. 316-346)
+Lecture Notes
+Recorded lecture [youtube video]
+Manual:
+RTFM!
+(Read the Fine Manual!)
+Examples:
+streams-example.scm
+,
+streams-racket.scm
+,
+stream-impl.scm
+,
+fibrec.scm
+,
+fib-racket-memoize

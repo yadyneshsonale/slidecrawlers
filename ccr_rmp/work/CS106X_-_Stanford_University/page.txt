@@ -1,0 +1,107 @@
+CS106X: Programming Abstractions in C++
+Autumn 2019
+Handouts
+Reader
+Calendar
+Campuswire
+Assignments
+Blank Qt Project
+Stanford C++ Libraries
+Paperless
+Announcements:
+December 1
+st
+I just went ahead and published all midterm scores via
+Gradescope
+.  Head on over to see your score, and check out the updated
+solution handout
+for exam stats.
+Note that we're done with lectures, as I'm expecting you to take the remaining time to focus on your final projects.  Don't despair if you haven't gotten much done yet.
+Finally, I'm calling out several classes you might consider taking next quarter.  They're all designed for recent CS106B and CS106X graduates, and past offerings have been very well received.
+CS41: Hap.py Code: The Python Programming Language
+, which teaches students who already know how to code to the Python programming language and the large collection of third-party libaries developers use to build large systems.  The course was first offered about five years ago and has since matured into a course that's as high-quality as those courses taught my full-time lecturers and professors.
+CS43: Functional Programming Abstractions
+, which introduces students to the functional programming paradigm using a popular programming language called Haskell.  It's slightly more theoretical than CS106X and CS41, but it's been taught three times now and it's been very well received.
+CS106S: Coding for Social Good (on active class URL right now) is taught as a weekly discussion section and
+frames the material taught in CS106B/X in terms of social good problems.  More details are available right
+here
+.
+November 22
+nd
+Good morning, CS106X'ers.  I hope the midterm went brilliantly last night,
+and that you're all psyched to tackle Assignment 7 and your final projects.
+For those of you who don't have enough to do, I've gone ahead and posted
+a third content problem: the
+shattered glass problem
+.
+It was more or less given as is in 2011 at an ACM programming contest,
+and it requires some computational geometry and some graph theory.
+Those who submit working solutions will, as always, be taken out to dinner (likely next
+quarter, since this quarter is pretty much booked up at this point).  In addition, I
+will give those who submit a working program a copy of my favorite mathematics
+textbook in the history of math textbooks:
+Concrete Mathematics
+.
+I love the book so much that I have some four or five copies of it.
+Finally, here is a PDF version of
+last night's exam
+and
+my
+solution
+.  The solution comes with
+code and memory diagrams, and it also comes with a rough grading criteria we'll subscribe to while
+grading (though the grading criteria is definitely beta, so understand that that may change).
+November 13
+th
+Mary Wootters was in touch and shared her amazing presentation slides
+with me so I could share them with you.  They are
+right here
+.
+November 2
+nd
+There've been a few times in the past two weeks where we've taken care
+to not access dynamnically allocated memory after we've freed it.  Chrome
+issued a patch this past Thursday night to address a security flaw that
+resulted from a use-after-free bug with their audio library.  ZDNet published
+an article about it, and you can check it out right
+here
+.
+October 30
+th
+You may be interested in seeing some past 106X final projects; they are
+linked
+here
+!
+October 25
+th
+As promised,
+Assignment 5
+has been posted, and hard copies of the handout are sitting outside my Gates
+192 office door.  The assignment is due a week from Monday, and I'll bring
+hard copies to lecture this coming Monday as well.
+The assignment has you code to a well defined abstraction called a priority queue,
+and it has you code to that abstraction four different ways.  The assignment is
+a good vehicle for learning all things pointers, memory allocation, and linked
+structures.  There's some genuinely tricky pointer and memory work here, and I
+think you're going to absolutely love wiring up the various data structures I'm having
+you build.  It's all awesome material, in my opinion.
+October 21
+st
+Those of you who've used
+Campuswire
+(or elected to ignore it because you don't like) are encouraged to complete a superduper short survey,
+right here
+.
+October 20
+th
+CS+Social Good is a student group dedicated to leveraging technology for social change. They operate classes and workshops, organize mixers to engage students across campus, and even offer fellowships!  If you're excited about changing campus culture around tech and social good, launching initiatives that create impact with computing, and joining a community that's driving to make Silicon Valley a platform for the betterment of humanity, then CS + Social Good wants to meet you!  Among many of the CS + Social Good efforts: CS + Social Good Studio.  CS + Social Good Studio is a two-quarter sequence of courses where students design (in CS51) and implement (in CS52) a solution to some problem facing the local or global community.  Students are accepted into the course by application, and those leading the studio are holding an information session this coming Thursday.  More information can be found
+right here
+, and the application itself can be found
+right here
+.  If you're in CS106X right now and you've an interest in computing for good, then you're more than qualified to apply.  Reach out to Jerry if you have any questions.
+October 15
+th
+Everyone! I've gone ahead and posted a second contest problem
+right here
+.  This particular problem requires you understand recursive backtracking and either memoization (which we discussed in lecture) or dynamic programming (which I mentioned in lecture, but didn't really cover).  As with the first contest problem, you're welcome to submit as many times as needed until it passes all of my tests and passes them in a short amount of time.  And I'll take those who submit working solutions out to dinner (yes, a second dinner, so you can get fed good food twice!) sometime toward the end of the quarter.
+Remember that I'm still

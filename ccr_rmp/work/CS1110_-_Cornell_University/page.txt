@@ -1,0 +1,171 @@
+T-Th 9:05
+or
+T-Th 11:15
+in Olin 155
+CS 1110: Introduction to Computing Using Python
+Spring 2016
+Main
+(image source)
+About:
+Announcements
+Staff
+Times & Places
+Calendar
+Materials:
+Texts/Clickers
+Python/Komodo
+Command Shell
+Terminology
+VideoNote
+Learning:
+Lectures
+Assignments
+Labs
+Assessment:
+Grading
+Exams
+Resources:
+CMS
+Piazza
+AEWs
+FAQ
+Python reference
+Python Tutor
+Alternative classes
+Style Guide
+Academic Integrity
+The Lectures
+The "Handout" link connects to a printer friendly pdf of the lecture slides.
+There are 6 slides per page and you may find it handy to bring a copy to class for note taking.
+The "Slides" link will give you a pdf with one slide per page. It is sometimes the
+case that we do not get through all the slides in lecture. Nevertheless, you are responsible for their
+content.
+Get all the lecture slides and handouts for the entire semester in one (24mb) download:
+AllTheLectures.zip.
+The "Python Demos" are .py modules that relate to the lecture material.
+Many of these demos figure in the Lab exercises. Regardless,
+you are expected to download, run, and understand these programs.
+A compact schedule for the whole semester showing lectures, labs, readings,
+due dates and prelim dates is available
+here
+.
+Week 1
+28 January (Thursday):
+1. The Assignment Statement and Types
+Python Demos
+Read All About It!
+Course Overview
+Handout
+Slides
+We start out using Python as a calculator in what is called the interactive mode. The idea of a variable is
+introduced and the dynamics of the assignment statement are detailed. Three basic types are illustrated
+through examples: integers, floats, and strings.
+Week 2
+2 February (Tuesday):
+2. Modules and Scripts
+Python Demos
+2.Demos.zip
+Read All About It!
+Handout
+Slides
+A module is a .py file that contains Python code. The easiest kind of module to understand simply houses a
+sequence of statements called a script. Sample scripts that involve numbers and strings are used to solidify our
+understanding of the assignment statement and types. Code in one module can ''import'' code from another.
+Mechanisms for input and output are discussed.
+4 February (Thursday):
+3. Conditional Execution
+Python Demos
+Abbreviator.py
+Hyphenator.py
+PiAppx.py
+Read All About It!
+Handout
+Slides
+README!
+Sometimes a condition has to be checked before heading into a computation and for that we need various
+''if-else'' constructions. The Boolean type is introduced together with three logical operators: and, or, not.
+We will see a distinction between program structure and program flow.
+Week 3
+9 February (Tuesday):
+4. Modules and Functions
+Python Demos
+SimpleMath.py
+ShowSimpleMath.py
+Read All About It!
+Handout
+Slides
+ReadMe!
+Modules can also house functions. Functions are packagings of important calculations that are typically used
+over and over again. Experts design useful modules that can then be shared within the Python community. We
+show how to import and use certain functions from the math module. A sample module is used to show
+how to design your own functions. We with start simple examples that look like high school algebra math
+functions. A function is built to compute square roots. The building process will highlight the connections between
+algorithmic thinking and program implementation.
+11 February (Thursday):
+5. Introduction to Procedures Through Graphics
+Python Demos
+5.Demos.zip
+Read All About It!
+Handout
+Slides
+We get more practice with functions by using a module that supports the drawing rectangles, circles, and other
+geometric shapes. These functions have multiple inputs and they do not return values like the square root function. We
+show how one function can call another function, how optional arguments work, and how ease-of-use can
+affect the design of a function inputs.
+Week 4
+18 February (Thursday):
+6. How Modules and Functions Work
+Python Demos
+Read All About It!
+Handout
+Lectures
+We use examples to lock in our understanding of how functions work. Topics include call frames, tracing
+execution, arguments, parameters, and local variables.  Regarding the use of modules we discuss the logic behind
+the import command, global variables, and the ''dot'' notation.
+Week 5
+23 February (Tuesday):
+7. String Methods
+Python Demos
+DateFormat.py
+Emphasizer.py
+VowelFraction.py
+Read All About It!
+Handout
+Slides
+In object-oriented programming, functions and the data that they manipulate are packaged in classes. We
+become acquainted with this idea by practicing with the built-in string class. In this context, the functions are
+referred to as methods. We get practice with various string methods such as count, find, and replace. The ''in''
+operator is introduced and we uplift our ability to ''think Boolean'' by practicing with various Boolean-valued
+methods that relate to strings.
+25 February (Thursday):
+8. Iteration with Strings
+Python Demos
+ShowForString.py
+9ADemos.zip
+Read All About It!
+Handout
+Slides
+HandoutA
+SlidesA
+Iteration is all about the idea of repeated calculation and it is an absolutely essential part of the course. We show
+how for-loops can be used to ''walk down a string'' processing each character in turn. With this capability we can
+solve problems that would otherwise be out of our reach. For example, we need the loop construction if we are to
+count the number of digits in a given string or if we are to reverse the order of its characters.
+Week 6
+1 March (Tuesday):
+9. Iteration Using the range Function
+Python Demos
+9ADemos.zip
+9BDemos.zip
+Read All About It!
+HandoutA
+SlidesA
+HandoutB
+SlidesB
+We revisit the sqrt function and use a  for loop to handle the rectangle averagings. We show how to draw an n
+by-n checkerboard. Summation problems and find-the-min problems provide instructive examples. We introduce
+the random module and use some of its functions to execute interesting simulations that involve  random events.
+Estimating probabilities and averages is very important and we provide a snapshot of how this is done.
+3 March (Thursday):
+10. While Loops and Random Walks
+Python

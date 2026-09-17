@@ -1,0 +1,274 @@
+Skip to content
+Intelligent Robotics and Vision Lab at the University of Texas at Dallas
+The University of Texas at Dallas
+Menu
+Home
+Research
+Publications
+People & Robots
+Courses
+Resources
+News
+Gallery
+Fall 2024: CS 6301 Special Topics in Computer Science: Introduction to Robot Manipulation and Navigation
+Course Information
+Term: Fall 2024
+Class Level: Graduate
+Activity Type: Lecture
+Days & Times: Monday & Wednesday 1:00 PM – 2:15 PM
+Location: ECSS 2.311
+Instructor:
+Prof. Yu Xiang
+Office Location: ECSS 4.702
+Office Hours: Monday & Wednesday 3:00PM – 4:00 PM
+Teaching Assistant:
+Jishnu P
+Office Hours: Monday 11:30AM – 12:30 PM
+Syllabus
+All the course materials can be found
+here
+.
+Course Description
+Theory and practice of robotics
+. Provides in-depth overview of robot manipulation and robot navigation, including kinematics, statics, and dynamics of robot manipulators, motion planning, state estimation, environment mapping and robot control.
+Textbooks
+Kevin M. Lynch and Frank C. Park. Modern Robotics: Mechanics, Planning, and Control. 1st Edition. (
+PDF
+)
+ISBN-13: 978-1107156302
+ISBN-10: 1107156300
+Grading Policy
+Homework (50%)
+Assignment 1 (10%)
+Assignment 2 (10%)
+Assignment 3 (10%)
+Assignment 4 (10%)
+Assignment 5 (10%)
+Team Project (45%)
+Project proposal (5%)
+Project mid-term report (10%)
+Project presentation (15%)
+Project final report (15%)
+In-class Activity (5%)
+Project
+Project proposal description (
+PDF
+)
+Project mid-term report requirement (
+PDF
+)
+Project presentation and final report requirement (
+PDF
+)
+Homework
+Assignment 1 (
+PDF
+)
+Assignment 2 (
+PDF
+,
+programming
+)
+Assignment 3 (
+PDF
+,
+programming
+)
+Assignment 4 (
+PDF
+,
+programming
+)
+Assignment 5 (
+PDF
+,
+programming
+)
+Guest Lecturer
+Dr. Karthik Desingh
+from the University of Minnesota talked about robot manipulation on 11/20/2024.
+Title:
+Object Assembly: A Spatial-Geometric Reasoning Pathway to Physical Intelligence
+Abstract:
+In this talk, I will introduce object assembly as a spatial-geometric reasoning challenge within robot manipulation learning. I aim to convince you that every object-object interaction task humans perform can be viewed as a form of object assembly, underscoring the critical need for research in this domain to advance physical intelligence. I will discuss our efforts to design spatial-geometric reasoning tasks and examine the limitations of pre-trained visual representations revealed in our experiments. These experiments also include a robustness study of high-precision assembly tasks, offering insights into grasp-induced complexities and failure modes during the contact-rich phases of object assembly. In the latter part of the talk, I will present our visuo-tactile representation learning approach, “AugInsert,” which achieves robust performance during contact-rich assembly phases by leveraging online data augmentation to address perturbations and distributional shifts during inference. Finally, I will share key findings and highlight open challenges in the field of object assembly.
+Lectures
+Date
+Topic
+Week 1, 8/19, Lecture 1
+Introduction to Robotics (
+slides
+)
+Week 1, 8/21, Lecture 2
+Configuration Space (
+slides
+)
+Week 2, 8/26, Lecture 3
+Task Space, Workspace and Introduction to ROS
+Installation of ROS in Docker (
+slides
+,
+docker
+)
+Week 2, 8/28, Lecture 4
+Course Project Description (
+slides
+)
+Week 3, 9/2
+Labor Day
+Week 3, 9/4, Lecture 5
+Rigid-Body Motions and Rotation Matrices (
+slides
+)
+Week 4, 9/9, Lecture 6
+Angular Velocities and Exponential Coordinates of Rotations (
+slides
+)
+Week 4, 9/11, Lecture 7
+Matrix Logarithm of Rotations and Homogeneous Transformation Matrices (
+slides
+)
+Week 5, 9/16, Lecture 8
+Homogenous Transformations and Twists (
+slides
+)
+Week 5, 9/18, Lecture 9
+Twist and Screw Axes (
+slides
+)
+Week 6, 9/23, Lecture 10
+Screw Axes and Exponential Coordinates of Rigid-Body Motions (
+slides
+,
+quiz
+)
+Week 6, 9/25, Lecture 11
+Forward Kinematics and Denavit-Hartenberg Parameters (
+slides
+)
+Week 7, 9/30, Lecture 12
+Forward Kinematics and Product of Exponentials Formula (
+slides
+)
+Week 7, 10/2, Lecture 13
+Product of Exponentials Formula and URDF (
+slides
+)
+Week 8, 10/7, Lecture 14
+Velocity Kinematics I (
+slides
+)
+Week 8, 10/9, Lecture 15
+Velocity Kinematics II (
+slides
+)
+Week 9, 10/14
+, Lecture 16
+Grasp Planning, PhD Student Lecture:
+Ninad Khargonkar
+(due to
+IROS Traveling
+) (
+slides
+)
+Week 9, 10/16
+, Lecture 17
+ROS Navigation, PhD Student Lecture:
+Sai Haneesh Allu
+(due to
+IROS Traveling
+) (
+slides
+)
+Week 10, 10/21, Lecture 18
+Inverse Kinematics (
+slides
+)
+Week 10, 10/23, Lecture 19
+Dynamics of a Single Rigid Body (
+slides
+)
+Week 11, 10/28, Lecture 20
+Dynamics of a Single Rigid Body and Statics (
+slides
+)
+Week 11, 10/30, Lecture 21
+Dynamics of Open Chains (
+slides
+)
+Week 12, 11/4, Lecture 22
+Motion Planning: Overview and Foundations (
+slides
+)
+Week 12, 11/6, Lecture 23
+Motion Planning: Algorithms (
+slides
+)
+Week 13, 11/11, Lecture 24
+Robot Control: Motion Control with Velocities (
+slides
+)
+Week 13, 11/13, Lecture 25
+Homework Solutions by TA
+Jishnu P
+Week 14, 11/18, Lecture 26
+Robot Control: Motion Control and Force Control (
+slides
+)
+Week 14, 11/20
+Guest Lecture from
+Dr. Karthik Desingh
+(
+slides
+,
+video
+)
+Week 15, 11/25
+Fall Break
+Week 15, 11/27
+Fall Break
+Week 16, 12/2
+Project Presentation I
+Group 1: Automated Chessboard Setup: Model-Based Manipulation of Chess Pieces (
+slides
+,
+demo
+)
+Group 4: Trajectory-Aware Human Feedback for Efficient Hierarchical Reinforcement Learning in Robotics (
+slides
+)
+Group 5: Dynamic Object Sorting & Placement Using Model-Based Grasping (
+slides
+,
+demo
+)
+Group 6: Carrybox with Ros Vacuum Gripper Plugin (
+slides
+,
+demo
+)
+Group 7: The Dinnerware Distributor (
+slides
+,
+demo
+)
+Group 8: 2D Deterministic Path-based Dynamic Object Grasping (
+slides
+,
+demo
+)
+Group 9: Trajectory simulation for robot-assisted prostate biopsy system (
+slides
+,
+demo
+)
+Group 10: Cup Stacking (
+slides
+,
+demo
+)
+Group 11: AgriSort(
+slides
+,
+demo
+)
+Group 12: Robot Grasping and Sorting Using User-Defined Ca

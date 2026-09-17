@@ -1,0 +1,128 @@
+COSC 240 Introduction to Algorithms
+Spring 2019
+Lectures:  Tuesday-Thursday 12:30-1:45 pm, St. Mary's 124
+Instructor:
+Nitin Vaidya
+Office hours: Wednesday 3:00-4:00 pm (or by appointment) at 358 St. Mary's Hall
+nitin.vaidya@georgetown.edu
+Teaching assistant
+: Yuansheng (Sean) Xie (
+yx131@georgetown.edu
+)
+Office hours: Friday
+2:30 - 4:00 PM in St. Mary G39
+Course Schedule
+Piazza
+Textbook Website
+MIT Videos/Slides
+Canvas
+Description:
+This course explores various techniques used in the design and analysis of computer algorithms. Topics covered include sorting, search trees, hashing, dynamic programming, greedy algorithms, amortized analysis, graph algorithms and basic compexity theory. Time permitting additional advanced topics might be covered.
+Textbook:
+The required textbook for this course is
+Introduction to Algorithms (Third Edition)
+by Cormen, Leiserson, Rivest and Stein. Most of the topics and examples covered in this course will be adapted from this text.
+Grading:
+This course focuses on the theoretical aspects of designing and analyzing correct and efficient algorithms. Accordingly, there are no programming projects. Problem set assignments and exams will instead require pencil and paper analysis. The weights assigned to the different components are as follows:
+Problem sets 46%
+Mid-term exam 24%: The mid-term exam will be in class on Thursday, February 28, 2019. Topics covered through February 22, 2019 are included in the scope of the mid-term exam.
+Final exam 30% : See schedule & scope below.
+The grade cutoffs below may be lowered based on class performance. The table shows the minimum grade that will be earned for a given total score on the course. Range of [a,b) includes all values x such that a <= x < b.
+grade
+total points
+A
+[94, 100]
+A-
+[90, 94)
+B+
+[87, 90)
+B
+[83, 87)
+B-
+[80, 83)
+C+
+[77, 80)
+C
+[73, 77)
+C-
+[70, 73)
+D+
+[67, 70)
+D
+[60,67)
+F
+[0, 60)
+Problem Sets
+Each problem set will be posted in the
+course schedule
+. Approximately eight problem sets are expected to be assigned, with each problem set typically covering three or four lectures.
+You may work in groups of at most three people on the problem sets. However,
+every student must hand in their own problem set solution written in their own words, and
+record on the top of the problem set any group members they worked with.
+You may only discuss problems with the instructor, your group members, or the course teaching assistant. The only materials you may reference when working on these problems are your course notes and the assigned textbook. In particular, you
+may not
+refearence online sources or solutions from previous/other classes.
+Problem sets should be handed in at the beginning of class on the day they are due. Bring a physical copy of your problem set solution to class to submit at the beginning of the lecture. If you cannot attend the class, please make arrangements with the instructor in advance for alternative submission procedures.
+Late submissions: Please bring to the instructor's office at 358 St. Mary's -- if the office door is closed, please slide the submssion under the door.
+For the purpose of computing late submission penalty below, 12:45 pm is considered to be the due time for each problem set on its due date.  Late submission penalty for each problem set will be defined as a percentage of the maximum possible points
+for that problem set
+, as follows:
+Submission delay past due time <= 48 hours: no penalty (i.e., two day extension is granted for everyone without requiring approval)
+48 hours < Submission delay past due time <= 72 hours: penalty of 30% of maximum possible points.
+Submissions late by more than 72 hours past the due time will not receive credit.
+Exams
+MID-TERM EXAM: Feb 28, 2019:
+Topics covered through February 22 are included in the scope of the mid-term exam.
+FINAL EXAM: May 9, 2019,
+12:30 pm - 2:30 pm, 124 St. Mary's.
+The questions on the final exam will relate to topics listed for lectures below from 2/26/2019 till the end of the semester (i.e. hash tables and subsequent topics). However, it is important to note that the basic concepts (such as step complexity) introduced in the topics for the mid-term exam may also be relevant for the final exam.
+Academic Integrity
+As stated above, you may work in groups of at most three people on the problem sets. All students must write up their own answers and record on the top of the problem set any group members they worked with.
+You many only discuss problems with the instructor, your group members, and the teaching assistant. The only materials you may reference when working on these problems are your course notes and the assigned textbook. In particular, you
+may not
+reference other online sources.
+You may not bring any outside material into exams.
+You may not reference any problem sets, exams, or solutions from prior teachings of this course.
+The Georgetown University
+Standards of Conduct
+apply.
+Violating academic integrity policy will lead to a zero on the relevant assignment and potential reporting to the
+honor council
+.
+When in doubt, ask the instructor what is allowed.
+Course Schedule
+Below is the tentative lecture schedule for the course. The schedule may be updated as the semester progresses.
+Lecture
+Date
+Description
+Textbook (CLRS) Chapters
+1
+Jan. 10
+Introduction
+1,2
+2
+Jan. 15
+Tools: correctness proofs, step complexity and asymptotic analysis
+2,3 (little-o and little-omega not covered)
+3
+Jan. 17
+Tools: Recurrences: recursion trees and master method
+4
+4
+Jan. 22
+Tools: probabilistic analysis and randomized algorithms
+Problem Set 1 (assigned today)
+5.1. 5.2, Appendix C (as needed)
+5
+Jan. 24
+Divide and conquer: basic technique, mergesort, quicksort
+2,7
+6
+Jan. 29
+Advanced sorting: randomized quicksort, sorting lower bounds
+Minimum, maximum and selection, counting sort, radix sort
+7,8.1,8.2,8.3
+Section 9.1
+7
+Jan. 31
+Graph representation, directed and undirected graphs, adjacency matrix and adjacency list, vertex degree, paths in a graph. Product of ad

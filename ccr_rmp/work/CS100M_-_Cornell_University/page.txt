@@ -1,0 +1,323 @@
+CS100M
+-->
+Lecture Materials
+Selected lecture slides, computer code from lecture, lecture handout, and the associated reading from the textbooks
+are listed here.  Typically, lecture handouts are
+sketches
+of the lectures and may contain example programs that are too long for students to copy in class.
+Lecture handouts are
+not
+complete transcripts of the lectures.  You are expected to attend lecture and to take notes for yourself.
+S
+refers to the textbook "Engineering Computation with MATLAB"
+by David Smith.
+FVL
+refers to the online supplement
+"Foundations of Computational Science and Engineering," accessed through CMS.
+Date
+Topics
+Slides / Handouts
+Program Examples
+Reading
+1/22
+T
+Introduction
+introSP08.pdf
+Browse:
+Intuition
+,
+S 1.1-1.4
+1/24
+R
+Programming basics
+L2basics.pdf
+sphereArea.m
+,
+diffArea.m
+FVL 1.1 and S 2
+1/29
+T
+Conditionals
+L3_handout.pdf
+L3_slides.pdf
+FVL 1.2, and S 4.3
+1/31
+R
+Nested conditionals, logical operators
+L4_handout.pdf
+,
+L4_slides.pdf
+quadMin.m
+2/5
+T
+Iteration:  for
+L5_handout.pdf
+L5_slides.pdf
+stickExp.m
+showForLoop.m
+ave10.m
+FVL 2.1 and S 4.5, 4.6
+2/7
+R
+Iteration:  while
+L6_handout.pdf
+L6_slides.pdf
+areaCircle.m
+areaIndef.m
+drawDemo.m
+drawDisk.m
+drawRect.m
+drawStar.m
+nestedStars.m
+FVL 2.2 and S 4.7
+2/12
+T
+Developing algorithms; nested loops
+L7_handout.pdf
+L7_slides.pdf
+L7_correction.pdf
+nestedStars.m
+drawRect.m
+drawStar.m
+isItPrime.m
+areTheyPrime.m
+table.m
+FVL 3.1 and 3.2
+2/14
+R
+Discrete vs. continuous; ploting continuous functions
+L8_handout.pdf
+L8_slides.pdf
+biggestRect.m
+FVL 4.1, 4.3 and S 3.1-3.2, 11.1
+2/19
+T
+User-defined functions
+L9_handout.pdf
+L9_slides.pdf
+ellipsePeri.m
+plotEllipse.m
+polar2xyScript.m
+polar2xy.m
+dotsInCircles.m
+randDouble.m
+polar2xyScript.m
+drawColorDot.m
+FVL 5.1, 5.2 and S 5.1-5.4
+2/21
+R
+User-defined functions; local memory space
+L10_handout.pdf
+(Note correction to second last slide on handout)
+L10_slides.pdf
+polar2xy.m
+dotsInCircles.m
+randDouble.m
+2/26
+T
+Probabilities and Averages; vectors; plots
+L11_handout.pdf
+L11_slides.pdf
+rollDieV1.m
+rollUnfairDie.m
+RBCombinations.m
+FVL 6.1, 4.2, and S 3.3, S11.1-11.2
+2/28
+R
+Simulation; vectors
+L12_handout .pdf
+L12_slides.pdf
+FVL 6.2-6.3
+3/4
+T
+Search and Discovery; characters and strings
+L13_handout.pdf
+L13_slides.pdf
+capitalize.m
+Centralize.m
+Normalize.m
+ShowSmooth.m
+Smooth.m
+toUpper.m
+S 6.1-6.4
+3/6
+R
+2-d Arrays--matrix
+L14_handout .pdf
+L14_slides.pdf
+createExample.m
+RandomWalk2D.m
+ShowRW.m
+S 3.5
+3/11
+T
+Matrix--contour plotting
+L15_handout .pdf
+L15_slides.pdf
+RandomLinks.m
+PrintLinkArray.m
+CirclePoints.m
+ShowRandomLinks.m
+Elev.m
+SetUp.m
+ShowContour.m
+S 11.2-11.4
+3/13
+R
+Working with Images
+L16_handout .pdf
+L16_slides.pdf
+Cheapest.m
+ShowCheapest.m
+LawSchool.jpg
+ImageDemo.m
+ImageDemoBW.m
+S 13.1-13.4
+3/25
+T
+Working with Images
+L17_handout .pdf
+L17_slides.pdf
+Tower.jpg
+Hockey.jpg
+LawSchool.jpg
+LSNoisy.jpg
+LSNoisyFiltered.jpg
+LSNoisyMeanFiltered.jpg
+Filter.m
+MeanVal.m
+MedianFilter.m
+MedVal.m
+Edges.m
+ShowEdges.m
+3/27
+R
+Cell arrays and structures
+L18_handout .pdf
+L18_slides .pdf
+CardDeck.m
+Deal.m
+Shuffle.m
+ShowCards.m
+RomanNum.m
+ShowRoman.m
+RN2Int.m
+S 7.1-7.2
+4/1
+T
+Cell arrays and structures
+L19_handout .pdf
+L19_slides .pdf
+CirclePoints.m
+DrawLS.m
+DrawPoints.m
+DrawTriangle.m
+LotsaTriangles.m
+MakePoint.m
+PickUpStix.m
+S 7.3-7.4
+4/3
+R
+Working with numerical data (file I/O)
+L20_handout.pdf
+L20_slides.pdf
+cellArray2file.m
+file2cellArray.m
+matrix2file.m
+proteinXYZData.m
+population.m
+statePop.txt
+S 6.3, 8.1-8.2
+4/8
+T
+Simulation on a grid (matrix and cell arrays)
+L21_handout.pdf
+L21_slides.pdf
+TheDigits.m
+drawDigit.m
+showDigits.m
+reverseCol.m
+reverseDigits.m
+showNumber.m
+FVL 7.1-7.3
+4/10
+R
+Working with Acoustic Data
+L22_handout.pdf
+L22_slides.pdf
+movies.m
+playAList.m
+wavSegments.m
+playSegments.m
+austin.wav
+sp_beam.wav
+sp_oz6.wav
+sp_truth.wav
+S 14.1-14.4
+4/15
+T
+Working with Acoustic Data
+L23_handout.pdf
+L23_slides.pdf
+OmegaTable.m
+PlayScale.m
+playTwoNotes.m
+playPhoneButtons.m
+makeCall.m
+findNumber.m
+showFindNumber.m
+S 14.5, 14.6
+4/17
+R
+Divide and Conquer
+L24_handout.pdf
+L24_slides.pdf
+binSearch.m
+showBinSearch.m
+mergeSort.m
+4/22
+T
+Divide and Conquer--Recursion
+L25_handout.pdf
+L25_slides.pdf
+mergeSort.m
+merge.m
+showMergeSort.m
+DrawTriangle.m
+showDrawTriangle.m
+S 9.1-9.5
+4/24
+R
+Writing Efficient Code
+L26_handout.pdf
+L26_slides.pdf
+insertSort.m
+showInsertSort.m
+compareInsertMerge.m
+insertSort2.m
+showInsertSort2.m
+S 16.1, 16.2.1, 16.2.5
+4/29
+T
+Models and Sensitivity Analysis
+L27_handout.pdf
+L27_slides.pdf
+Apportion.m
+CensusData.m
+ShowMethods.m
+Names.dat
+Pop.dat
+Reps.dat
+5/1
+R
+Simulation & Optimization
+L28_handout.pdf
+L28_slides.pdf
+Update.m
+StatVec.m
+PageRank0.m
+PageRank.m
+RandomConnectivity.m
+tsp.m
+usaMajorCities.jpg
+westAfrica.jpg

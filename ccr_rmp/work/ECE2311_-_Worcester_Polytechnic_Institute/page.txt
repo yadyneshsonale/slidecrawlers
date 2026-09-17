@@ -1,0 +1,147 @@
+Home
+People
+Projects
+Publications
+Downloads
+Opportunities
+Teaching
+Contact Us
+a note about course materials
+My more recent course materials is now on WPI's Canvas learning management system. Older course
+materials can be found below.
+ece4703: real-time dsp
+This course provides a basic introduction to the principles of
+real-time digital signal processing (DSP). Topics include: design of
+real-time DSP architectures, sampling and quantization of continuous time
+signals, design and implementation of FIR and IIR digital filters, and
+theory and application of the Fast Fourier Transform (FFT). The emphasis of
+the course is on the design and implementation of DSP algorithms. The
+algorithms are implemented on personal, portable DSP boards that the
+students can either program in the lab or purchase for use on their home
+computers. This course features an interactive studio format with
+mini-lectures and labs integrated into three-hour sessions. This format
+allows the students to try out the algorithms and methods shown in class
+immediately, with the instructor nearby to lend assistance and advice.
+Recommended background: ECE 2312 experience in C programming.
+2019 course web page
+.
+2015 course web page
+.
+2013 course web page
+.
+2012 course web page
+.
+2011 course web page
+.
+2010 course web page
+.
+2009 course web page
+.
+2008 course web page
+.
+2006 course web page
+.
+ece2305: introduction to communications and networking
+This course provides an introduction to the broad area of communications
+and networking, providing the context and fundamental knowledge
+appropriate for all electrical and computer engineers, as well as for
+further study in this area. The course is organized as a systems approach
+to communications and networking. Topics include fundamental definitions
+and concepts (bandwidth, information, etc.), types of transmission media,
+conversion between the analog and digital domains, switching and
+networking principles and architectures, wireless networking, networking
+protocols, regulatory and applications issues.  Recommended background:
+ECE
+2011
+.
+2014 course web page
+.
+ece503: digital signal processing
+ECE503 is a first-year graduate course on the analysis of and simulation of
+discrete-time signals and systems. The topics covered in this course include:
+discrete-time signals and systems, frequency analysis, sampling of
+continuous-time signals, the z-transform, implementation of discrete-time systems,
+the discrete Fourier transform, fast Fourier transform algorithms,
+filter design techniques, finite precision effects, and multirate signal processing.
+Students taking this course should have previously completed an undergraduate-level
+course on discrete-time signals and systems as well as a course
+in complex variables. This course also assumes some familiarity with Matlab.
+Catalog description
+.
+The Spring 2019 offering of this course is available on WPI Canvas.
+Spring 2014 course web page
+.
+Spring 2012 course web page
+.
+ece531: principles of detection and estimation theory
+The subject of signal detection and
+estimation is concerned with the processing of information-bearing signals
+for the purpose of making inferences about the information that they contain.
+The purpose of this course is to provide an introduction to the fundamental theoretical
+principles underlying the development and analysis of techniques for such
+processing. The level of this course is suitable for research students in
+communications, control, signal processing, and related areas. Students taking ECE531
+should have a background in probability and random processes (ECE502 or equivalent; may be taken
+concurrently) and a familiarity with dynamic systems (ECE504 or equivalent).
+Catalog description
+.
+2013 course web page
+.
+2011 course web page
+.
+2009 course web page
+.
+ece2311: continous-time signal and system analysis
+This course provides an introduction to time and frequency domain analysis
+of continuous time signals and linear systems. Topics include signal
+characterization and operations; singularity functions; impulse response and
+convolution; Fourier series; the Fourier transform and its applications; frequency-domain
+characterization of linear, time-invariant systems such as filters; and the Laplace
+transform and its applications.
+D10 course web page
+.
+ece504: analysis of deterministic signals and systems
+ECE504 is a first-year graduate course on the analysis of deterministic
+continuous-time and discrete-time signals and systems. The topics covered in
+this course form a foundation for several applied disciplines including control
+systems, signal processing, and communication systems. The primary goals of
+this course are to provide an understanding of the fundamentals that govern the
+behavior of continuous-time and discrete-time dynamic systems and to provide
+the student with a sophisticated set of tools for analyzing systems. From a top
+level perspective, this course addresses three core subjects: (i) mathematical
+description of signals and systems, (ii) qualitative and quantitative analysis
+of systems, and (iii) design/modification of systems to meet performance
+criteria. The focus of this course is primarily theoretical, but illustrative
+examples and computer exercises will be used liberally to develop intuition and
+reinforce the core concepts.
+Catalog description
+.
+Fall 2009 course web page
+.
+Fall 2008 course web page
+.
+ieee texas instruments real-time dsp workshop (oct 19-20, 2009)
+Course web page
+.
+handouts
+Workshop day 1 slides
+.
+How to correctly install the Code Composer Studio v3.1 IDE
+.
+Workshop day 2 slides
+.
+example code
+Example code for stereo loop.
+.
+Example code for stereo FIR filtering
+.
+A better example project for
+stereo FIR filtering
+with a
+73 coefficient bandpass filter and array index updating rather than
+moving data.
+Example code for IIR
+filtering
+. Unzip this file into the c:\myproject\workshop directory. Note
+that there are three source files in this project - one for Direct Form I,
+one for Direct Form

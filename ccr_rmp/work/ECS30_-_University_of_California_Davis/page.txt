@@ -1,0 +1,148 @@
+ECS30-A: Introduction to Programming and Problem Solving, Fall 2008
+Lecture
+:
+6 Wellman, MWF 10:00am - 10:50am
+Discussion
+:
+Sec.30-A01, M 4:10-5:00pm, 115 Hutchinson
+Sec.30-A02, F 1:10-2:00pm, 176 Chemistry
+Sec.30-A03, R 8:00-8:50am, 1006 Giedt
+Professor
+:
+Zhaojun Bai
+,
+3005 Kemper Hall, 752-4874, bai@cs.ucdavis.edu
+Office Hours: MWF 11:30-12:30 or by appointment
+Teaching Assistant
+:
+Stanley Tzeng
+, stzeng@ucdavis.edu
+Office hours: M 1:00-3:00pm and W 4:10-5:10pm, 53 Kemper
+Matthew Lietzke
+, mjlietzke@ucdavis.edu
+Office hours: T 3:30-5:00pm and R 4:10-5:40pm, 53 Kemper
+Webpage
+Textbook
+:
+Hanly, Jeri R., and Koffman, Elliot B,
+Problem Solving and Program Design in C, 5th ed.
+,
+Addison Wesley, 2007, ISBN-10: 0321409914,  ISBN-13: 9780321409911
+Course objectives
+:
+learn how to use Unix operating system tools to develop and debug programs,
+develop expertise in using C programming language,
+understand the process of writing efficient and robust programs to
+solve problems.
+Course Outline
+Unix tools, including vi, make, and gdb, to develop and debug programs
+Algorithms: general concept, development of efficient algorithms.
+Programming in C
+Scalar data types, concept of data type, standard and
+user-defined scalar types.
+Simple Statements, arithmetic and boolean expressions,
+assignment statements, simple input and output statements.
+Flow of control, repetitive statements, conditional statements,
+unconditional branching
+Data structures: single and multidimensional arrays; character
+strings; structs.
+Functions: general concept; declaration and calls; & and * operators;
+parameters; introduction to recursion.
+Software engineering: running, debugging, testing programs,
+building quality programs.
+Prerequisite
+Math 16A or 21A (may be taken concurrently); prior experience
+with basic programming concepts recommended.
+Homeworks and Exams
+:
+There will be about 8 program projects/homework assignments.
+Written homework must be submitted in Room 2131 by 4pm on the date due.
+Programs will be submitted using the
+handin
+facility of Unix.
+Programs will be due at 11:50pm on the date due.
+No late homework will be accepted!
+All exams are closed-book, no notes allowed.
+Grading
+:
+Grading breakdown:
+Programming projects (homework): 35%
+Two midterm exams: 40%
+Final exam: 25%
+Regrading is only considered within one week (7 days) from the date return.
+The request must be submitted in writing.
+On-line Info/Discussion
+:
+Class webpage: http://www.cs.ucdavis.edu/~bai/ECS30
+class annoucements, assignments and notes will be posted on this site.
+Course questions and discussions should be posted to
+the
+ucd.class.ecs30.sec-a.d
+newsgroup at the URL
+http://news.ucdavis.edu
+(web-based news reader)
+E-mail to Instructor/TAs should only be regarding personal matters.
+Distribution list
+9/26
+Introduction and logistics
+Norman Matloff's toturial page
+: Read, at least,
+`if you have no Unix background at all'
+`The Unix file system'
+`Extremely quick and simple introduction to the Vi Text editor'
+Work your way through
+Sean Davis' ECS30 Unix tutorial
+and
+vi tutorial
+Everyone who is enrolled should have a computer account set up for
+using computers in the CS Instructional facility (CSIF) in the basement
+of Kemper Hall. Go to the CSIF lab to look up your user name. Your
+initial password is the last 8 digits of your student ID.
+If you want to change your password, and you should want to, read
+the man file for the Unix command yppasswd (type man yppasswd),
+to learn more about the command. Help is available in room 47 for
+using the labs. Note that this help is for using the labs, not
+help with CS 30.
+You may also log into the CSIF machines remotely
+(see
+UCDAVIS Computer Science at Home
+).
+Or you can work on any other machine that has Unix, and a C compiler
+for writing C programs, and internet access.
+Note: Different systems
+(operating systems, computer type, configurations, libraries etc.)
+can behave differently, so a C program written on one machine and system
+might not behave exactly the same on a different machine or system
+(an ugly reality!). You may find it more convenient to do most of your
+work at home, or in another lab, BUT before handing in your program,
+you must make sure it works correctly on the machines in the CSIF.
+Those are the machines we will use when we compile, run and grade
+your programs. If your programs don't run correctly there, it will
+not matter to the grader that they ran correctly elsewhere. It is
+your responsibility to port your programs in time to the CSIF and
+test them there. It will not be a legitimate excuse that the connection
+to the CSIF was down just before the assignment was due. Also,
+we (Instructors and the TAs) can only give very limited help on problems
+you encounter on machines and systems outside of the CSIF, and how to
+set up the software to work at home, or connect to the CSIF remotely.
+Campus IT staff and the CSIF staff can also help somewhat on those
+issues if you run into problems.
+Unless stated otherwise, all assignments are meant to be done
+individually. Of course you can discuss some aspects of the assignment
+with others, but each student is expected to individually work out assignments.
+If you have any questions about the degree of individuality that
+is expected, please ask. We may routinely run all the submitted homework
+programs through a utility that finds pairs of programs that
+are ``too similar". We really don't like dealing with such a situation,
+so please design and write your programs yourself. Also, you will
+learn much more that way, and be better prepared for exams.
+Discussion sections in the first week of 9/29-10/3 will be
+held in the CSIF Computer Lab (room 67).  After the first week, all the
+discussion sections will be held in their scheduled classrooms.
+Learning C requires learning a great number of exacting details
+and you will not get your C programs working unless you learn
+those details. However, in the long run, what is of value is learning
+how to
+think
+like a programmer, how to
+or

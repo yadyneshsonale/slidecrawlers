@@ -1,0 +1,179 @@
+COSC 1320 Introduction to
+Computer Science II
+Having as many practices as possible is the right way to learn a
+language!
+There is NO lab for this course, so please do compile and modify
+the provided examples!
+Spring 2014
+Instructor
+:
+Guoning Chen
+Location
+:
+D3 E321
+Time
+:
+Tue/Th. 10am~11:30am
+Office hours
+:
+Tue/Th. 11:30am~12:30pm
+at PGH 566
+TA:
+Xifeng Gao
+TA office hours:
+Th3~5pm, Fri 1~3pm at
+PGH
+300A
+There will be a review section on EVERY FRIDAY from 10am to 1pm at room
+PGH 376.
+Other TAs from the other section:
+please see the
+information in the blackboard learn
+Course summary
+This course aims to introduce the students the
+principles of object-oriented programming with the examples of C++ and Java
+languages.
+The goal is to prepare students with the
+fundamental programming skills of C++ and Java for the future large-scale OOP
+tasks.
+Prerequisites:
+COSC 1410 Introduction to Computer Science I
+Textbooks (required):
+Absolute C++ (5th edt.), Absolute Java (5th edt.),
+Walter Savitch, Addison-Wesley.
+Recommended Reading:
+C++ How to program , 8/e, Deitel and Deitel,
+2012, Prentice Hall, ISBN-10: 0132662361 , ISBN-13: 9780132662369
+Java How to Program: Late Objects Version, 8/e,
+Deitel, 2010 , Prentice Hall,ISBN-10: 0136123716 , ISBN-13:
+9780136123712.
+Java Programming: Comprehensive Concepts and
+Techniques, 3rd Edition
+Shelly, Cashman, Starks, Mick, 2006 Course
+Technology, a division of Thompson Learning.
+Object-Oriented Software Engineering Using UML,
+Patterns, and Java, 3/E, Bruegge & Dutoit, 2010, Prentice Hall.ISBN-10:
+0136061257, ISBN-13: 9780136061250.
+Software and IDE (tutorials should be
+available in the blackboard learn):
+Microsoft Visual Studio 2012/2010/2008/2005 (for
+C++ on windows)
+Xcode (for C++ on Mac)
+Eclipse (for Java)
+UML editor
+Detailed syllabus is available in the blackboard
+learn.
+Schedule and Materials
+Come and visit often as the materials will be
+updated without notice.
+Week 1 (Ch 6~8, except 7.3)
+Main goal:
+review OOP principles,
+important concepts of class, object, encapsulation, abstract data type (ADT),
+constructors,
+Knowledge points that you should
+know:
+What is the difference between structured programming and object-oriented
+programming? (algorithm centric vs. object centric)
+What is a class and its relation to object? (A class is a user-defined
+type that consists of both member variables and functions. An object of a
+defined class is its instance or variable)
+How to access member variables and functions? (Define an object and use
+dot operator "." to
+access only "public" members
+)
+How to implement member functions outside of the class body? (
+return_type class_name::function_name(argument list) {function
+body}
+)
+How to use "public" or "private" to limit the access to certain members
+of a class? and Why? (to achieve encapsulation)
+NOTE THAT the default access without specification is "private" for a
+class, but "public" for a structure!
+What is an abstract data type (ADT)?
+What does encapsulation mean? (enclose both attributes and behaviors,
+information and implementation detailed hidden, good interface and
+comments...)
+Can you tell the difference between structure and class now?
+How to define and initialize an object from a pre-defined class?
+(class_name object_name(initial parameters);)
+What is the way to define a constructor (pp.276, must have the
+same name as the class
+, NO RETURN TYPE)
+What does a constructor do? Can it be defined under a "private"
+section?
+How many different constructors one class can have? (default constructor,
+overloaded constructors)
+How to initialize member variables in a constructor? (direct or via an
+initialization section)
+How to manage dynamic memory allocation? (see the additional examples,
+new
+operator)
+Why do we need destructor and how to define it?
+(
+~class_name(){body};
+NO RETURN TYPE,
+ARGUMENT LIST IS
+ALWAYS EMPTY
+)
+Using
+"const
+" in class and define member functions with
+"const"
+type. Why do we need that? (pp.295, Do not want a
+member function to change member variables)
+Using "static" members in class. Why do we need that? (pp.303, All the
+objects of the class shared one variable, e.g. a token for take or a
+counter, it is better to be defined as "static")
+Overloaded operator functions. Why do we need that? (pp. 322, apply '-',
+'+', '>', '==', etc. to objects that are not basic types, pp.343 the
+rules)
+What is the difference when overloading operator functions as the member
+functions vs. non-member functions? (one parameter less!)
+operator '=' is overloaded when the member variables have
+pointer type!
+Friend functions (especially for overloaded operators). How do we define
+them? Why do we need that? (pp.338, Auto type conversion +Access other
+class private members directly, not-so encapsulated, though)
+Additional examples: (
+Again, please
+compile and play with the following examples, try to break the rules and see
+what would happen!
+)
+An example of course grade for students,
+cpp1
+,
+cpp2
+,
+(constructors, destructor, dynamic memory allocation)
+An example of a clock class
+cpp3
+(constructors and operator overloading)
+An example of car
+cpp4
+(constructors)
+A different employee example
+cpp5
+(constructors, destructor, dynamic memory allocation, dynamic creation of
+objects)
+Please be familiar with your selected
+programming environment.
+Be sure to compile and execute the examples
+of the textbook and the course webpage!
+Week 2 (Ch.14) Inheritance, UML
+intro
+Main goal:
+understand the mechanism
+and benefits of inheritance of OOP, and know how to implement it in C++. Basic
+knowledge on UML (will get familiar with it through subsequent exercises)
+Knowledge points that you should
+know:
+How to do composition and why it is useful? (To build up complex objects
+by "compositing" many basic objects, like building a car.
+In OOP,
+you use the objects of pre-defined classes as the member
+variables
+.)
+How to initialize the composited objects? (see the additional slides in
+the review of last week)
+What is the inheritance and why is it useful? (see the ad

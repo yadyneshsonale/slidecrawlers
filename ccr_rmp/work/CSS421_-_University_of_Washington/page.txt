@@ -1,0 +1,319 @@
+CSE 421: Introduction to Algorithms, Autumn 2024
+Materials
+Schedule
+Syllabus
+Course Staff (Office Hours)
+Resources
+Gradescope
+Discussion Board
+Feedback
+References
+Homework Guide
+Homework LaTeX template
+Manber text: Arithmetic Divide and Conquer
+Schedule
+For future lectures, this is a
+tentative
+schedule. The
+exact contents are subject to change. Links to future materials
+may also be broken.
+Week 1
+Topic
+Week 1
+Lecture 1
+(Wed, Sep 25)
+Intro, Stable Matching
+slides
+annotated
+Reading: Kleinberg & Tardos: 1.1
+HW1 Out
+Section 1
+(Thu, Sep 26)
+Stable Matching, Proofs/Induction review
+handout
+slides
+solutions
+solved slides
+Lecture 2
+(Fri, Sep 27)
+Stable Matching, Overview
+slides
+annotated
+Reading: Kleinberg & Tardos: 1.1, Review 2
+Week 2
+Lecture 3
+(Mon, Sep 30)
+Overview, Graph Traversal (BFS)
+slides
+annotated
+Reading: Kleinberg & Tardos: 1.2,3.2
+Lecture 4
+(Wed, Oct 2)
+Graph Traversal (DFS & Applications)
+Topological Sort
+slides
+annotated
+Reading: Kleinberg & Tardos: 3.3-3.6
+HW2 Out
+HW1 Due
+Section 2
+(Thu, Oct 3)
+Graph Search, Asymptotics
+handout
+slides
+solutions
+solved slides
+Lecture 5
+(Fri, Oct 4)
+Greedy Algorithms
+slides
+annotated
+Reading: Kleinberg & Tardos: 4.1
+Week 3
+Lecture 6
+(Mon, Oct 7)
+More Greedy Algorithms
+Dijkstra's Algorithm
+slides
+annotated
+Reading: Kleinberg & Tardos: 4.2, 4.4
+Lecture 7
+(Wed, Oct 9)
+Minimum Spanning Trees:
+Prim's and Kruskal's Algorithms and beyond
+slides
+annotated
+Reading: Kleinberg & Tardos: 4.5
+HW3 Out
+HW2 Due
+Section 3
+(Thu, Oct 10)
+Problem Solving Strategy
+Greedy Algorithms
+handout
+slides
+solutions
+solved slides
+Lecture 8
+(Fri, Oct 11)
+Divide and Conquer
+slides
+annotated
+Reading: Kleinberg & Tardos: 5.1,5.4,5.2
+Week 4
+Lecture 9
+(Mon, Oct 14)
+Multiplication: Matrix, Integer, Polynomial
+Strassen, Karatsuba, (FFT)
+slides
+annotated
+Reading: Kleinberg & Tardos: 5.5,(5.6), (Manber Text)
+Lecture 10
+(Wed, Oct 16)
+Median, Quicksort
+Beyond the Master Theorem
+slides
+annotated
+Reading: Kleinberg & Tardos: 13.5
+HW4 Out
+HW3 Due
+Section 4
+(Thu, Oct 17)
+Problem Solving Strategy
+Divide and Conquer
+handout
+slides
+solutions
+solved slides
+Lecture 11
+(Fri, Oct 18)
+Dynamic Programming
+slides
+annotated
+Reading: Kleinberg & Tardos: 6.1, 6.2
+Week 5
+Lecture 12
+(Mon, Oct 21)
+Dynamic Programming
+Longest Increasing Subsequence, Knapsack
+slides
+annotated
+Reading: Kleinberg & Tardos: 6.3, 6.4
+Lecture 13
+(Wed, Oct 23)
+Dynamic Programming
+RNA Secondary Structure, Edit Distance (Sequence Alignment)
+slides
+annotated
+Reading: Kleinberg & Tardos: 6.5, 6.6
+HW5 Out
+HW4 Due
+Section 5
+(Thu, Oct 24)
+Problem Solving Strategy
+Dynamic Programming
+handout
+slides
+solutions
+solved slides
+Lecture 14
+(Fri, Oct 25)
+Dynamic Programming
+Bellman-Ford algorithm, Applications
+slides
+annotated
+Reading: Kleinberg & Tardos: 6.8, 6.9, 6.10
+Week 6
+Lecture 15
+(Mon, Oct 28)
+Network Flow
+slides
+Reading: Kleinberg & Tardos: 7.1, 7.2
+Lecture 16
+(Wed, Oct 30)
+MaxFlow/MinCut
+Ford-Fulkerson Algorithm
+slides
+annotated
+Reading: Kleinberg & Tardos: 7.1, 7.2, 7.5
+HW5 Due
+Section 6
+(Thu, Oct 31)
+Midterm Review
+handout
+slides
+solutions
+solved slides
+Lecture 17
+(Fri, Nov 1)
+Network Flow in Polynomial Time
+slides
+annotated
+Reading: Kleinberg & Tardos: 7.3
+Week 7
+Midterm
+(Mon, Nov 4)
+6:00-7:30 pm
+Midterm (Evening, CSE2 G20)
+Lecture 18
+(Wed, Nov 6)
+Applications of MaxFlow/MinCut I
+slides
+annotated
+Reading: Kleinberg & Tardos: 7.5, 7.6, 7.7
+HW6 Out
+Section 7
+(Thu, Nov 7)
+Network Flow
+handout
+slides
+solutions
+solved slides
+Lecture 19
+(Fri, Nov 8)
+Applications of MaxFlow/MinCut II
+slides
+annotated
+Reading: Kleinberg & Tardos: 7.10, 7.11, 7.12
+Week 8
+Lecture 19
+(Mon, Nov 11)
+No Lecture: Veteran's Day Observed
+Lecture 20
+(Wed, Nov 13)
+Linear Programming
+slides
+annotated
+Reading: Kleinberg & Tardos: 11.6, p. 630-633.
+HW6 Due
+Section 8
+(Thu, Nov 14)
+Algorithmic Toolbox
+Linear Programming
+handout
+slides
+solutions
+solved slides
+Lecture 21
+(Fri, Nov 15)
+Linear Programming Duality
+slides
+annotated
+HW7 Out
+Week 9
+Lecture 22
+(Mon, Nov 18)
+NP-completeness I: Reductions
+slides
+annotated
+Reading: Kleinberg & Tardos: 8.1.
+Lecture 23
+(Wed, Nov 20)
+NP-completeness II
+slides
+annotated
+Reading: Kleinberg & Tardos: 8.2, 8.3, 8.4.
+Section 9
+(Thu, Nov 21)
+NP-completeness
+handout
+slides
+solutions
+solved slides
+Lecture 24
+(Fri, Nov 22)
+NP-Completeness III
+slides
+Reading: Kleinberg & Tardos: 8.1, 8.4, 8.7, 8.8, 8.5.
+HW8 Out
+HW7 Due
+Week 10
+Lecture 25
+(Mon, Nov 25)
+Finish NP-completeness
+Approximation Algorithms
+slides
+annotated
+Reading: Kleinberg & Tardos: 8.8, 8.5, 10, 11.
+Lecture 26
+(Wed, Nov 27)
+Linear Programming Algorithms
+slides
+annotated
+(Thu, Nov 28)
+No Section: Thanksgiving Holiday
+(Fri, Nov 29)
+No Lecture: Thanksgiving Holiday
+Week 11
+Lecture 27
+(Mon, Dec 2)
+Dealing with NP-completeness
+slides
+annotated
+Reading: Kleinberg & Tardos: 11, 12.
+Lecture 28
+(Wed, Dec 4)
+Parametrized complexity
+SAT Solvers
+slides
+annotated
+Reading: Kleinberg & Tardos: 10.
+HW8 Due
+Section 10
+(Thu, Dec 5)
+Review
+handout
+slides
+solutions
+solved slides
+Lecture 29
+(Fri, Dec 6)
+Course wrap up
+slides
+annotated
+Exam Week
+Final Exam
+(Mon, Dec 9)
+The final exam is scheduled at 2:30-4:45 pm in our regular classroom (CSE2 G20) beginning at the time specified in the UW Final Exam Schedule for Autumn 2024.
+This course website heavily follows the example of the website of
+CSE373 2019 Spring.

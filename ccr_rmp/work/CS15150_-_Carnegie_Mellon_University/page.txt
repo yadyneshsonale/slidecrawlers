@@ -1,0 +1,202 @@
+15-150
+Assessment
+Schedule
+Tools
+Staff
+Policy
+Gradescope
+15-150: Principles of Functional Programming (Fall 2025)
+Overview
+The purpose of this course is to introduce
+functional programming
+.
+Saying that this is another "programming paradigm" is an understatement.
+Instead, think of functional programming as a different way to understand
+computation, one coming from a mathematical perspective. This has
+interesting implications.
+First of all, programs become more structured objects, which facilitates
+reasoning about their correctness. We will see how to apply the well-know
+principle of induction to do that.
+Learning how to implement programs with this particular mathematical
+structure will change the way we solve problems. We will learn how to
+decompose problems in smaller parts and use these parts to compose a
+solution. This approach results in natural and elegant solutions for many
+computer science problems.
+Learning goals
+Upon completion of this course, students will have acquired a mastery of
+basic functional programming techniques, including the design of programs
+using types, the development of programs using mathematical techniques for
+verification and analysis, the use of abstract types and modules to
+structure code, and the exploitation of parallelism in applications.
+In particular, a student taking this course will learn to:
+Write well-typed functional programs using the language ML
+Develop specifications and prove program correctness using rigorous
+techniques
+Apply equational, evaluational, and compositional reasoning
+techniques, and use mathematical and structural induction in proofs
+Analyze sequential and parallel running time of programs using the
+concepts of work and span
+Develop cost graphs and recurrences from programs, and use them to
+derive asymptotic bounds on work and span
+Use abstract types and modules to structure code with clear and
+well-designed interfaces
+Identify opportunities for parallelism in code and exploit
+parallelism by choosing appropriate data structures and function designs
+Moreover, you should be able to understand
+this
+(do not forget the tooltip).
+Pre-requisites
+21-127 (Concepts of Mathematics) and
+15-112 (Fundamentals of Programming)
+Credits
+This is a 12 unit core course.
+Place and time
+Lecture
+or
+Recitation
+Mondays, Wednesday, Thursdays
+14:30 to 15:45
+Room 1064
+Interview
+Sundays
+15:30 to 18:30 (15 minutes per student)
+Room 1199
+Class discussions will be on a
+Discord
+server, which all students will be invited to by email.
+Assessment
+Homework: 15%
+To be solved individually
+The programming part is evaluated on:
+Correct type-checking (autograded)
+Correct functionality (autograded)
+Correct requires and ensures (manually checked)
+Comprehensive test cases (manually checked)
+Style (manually checked)
+The written part is evaluated on:
+Correct answer
+Clarity, objectiveness, and conciseness
+Typesetting (in LaTeX)
+Style
+The following guidelines are useful for you to avoid losing style points:
+Coding and writing style guidelines
+(including rubrics)
+LaTeX samples
+The lowest homework is dropped
+Labs: 20%
+Lab interviews take place every Sunday
+Instructions:
+Lab interviews
+Midterm I: 20%
+Midterm II: 20%
+Final exam: 25%
+AI policy
+Someone very smart once said that using AI in your assignments
+for learning is like using a car to do 10km for exercising. Hence,
+for this course,
+you are not
+allowed to use AI.
+The only exception to this rule is regarding LaTeX. You may
+use AI to help you typeset your answers neatly, since learning
+LaTeX is not one of the learning goals (just a very nice
+by-product).
+Getting the Assignments
+The writeup and starter files for each assignment are in a
+zip
+file linked in the schedule below.
+Uncompressing this file will create the directory
+<asgn>-handout
+with the starter code and a LaTeX
+template.
+If you need to download these files again, be
+careful not to overwrite your work!
+Submitting the Assignments
+The handout contains
+Makefile
+s to help you organize your
+files for submission. Typing
+make
+in the
+code
+directory will create the file
+<asgn>-handin.zip
+.
+Typing
+make
+in the
+latex
+directory will
+compile the LaTeX into a pdf.
+If you need help using this
+Makefile
+, ask the course staff.
+The
+zip
+file must contain the solutions for the coding
+part. The
+pdf
+must contain the solutions for the
+written part.
+It is your responsibility to
+ensure that the generated files contain the correct
+material.
+The
+zip
+file needs to be submitted to the coding part of the
+assignment on
+Gradescope
+.
+It will immediately run a series of tests and give you a
+score with some feedback. Make sure to check it! If your code does not
+pass all tests, you can submit it again until the deadline.
+You are limited to a total of 5 submissions
+for each assignment.
+The
+pdf
+file needs to be submitted to the written part of
+the assignment on
+Gradescope
+.
+Submissions that are in another
+format or badly typed will be penalized.
+Schedule and deadlines
+Tools
+SML
+The functional programming language we will use for this course is in the
+ML
+(for Meta-Language) family and it is called SML (Standard ML). There
+are different compilers (i.e. implementations) for SML, but your code
+will be tested with
+Standard ML of New Jersey
+(or SML/NJ)
+version
+110.99.3
+.
+SML references:
+SML Online Book
+(developed by 15-150 TAs)
+SML Basis Library
+(SML standard library documentation)
+SML Book
+You can use SML/NJ in (at least) one of two ways:
+On your machine:
+Go to
+http://www.smlnj.org/
+to download the
+files and follow the installation instruction for your operating system.
+Having a local installation is convenient since you will not need to
+rely on a good internet connection and you can compile local files
+edited in your favorite
+text editor
+.
+I recommend
+vim
+or
+emacs
+(both can
+be used in a terminal, and remember to keep an eye on the status bar at
+the bottom of the screen).
+On CMU’s machines:
+All machines should have SML/NJ installed, so you
+can use it by simply ssh-ing them (type
+ssh your_andrew_id@unix.qatar.cmu.e

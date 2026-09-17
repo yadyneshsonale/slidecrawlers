@@ -1,0 +1,190 @@
+CISC 2000: Computer Science II
+CISC 2010: Computer Science II Laboratory
+What's this course about?
+Faculty
+Dr. A. G. Werschulz
+Office: Rm 815D.
+Phone: (212) 636-6325
+Email:
+agw STRUDEL dsm.fordham.edu
+.
+(STRUDEL is a thinly-disguised @, to thwart the amount of spam
+that your instructor receives.)
+[1]
+Class meetings:
+CISC 2000: Mondays and Wednesdays, 11:30 a.m. to 12:45 p.m., in
+Room LL 908.
+CISC 2010: Wednesdays, from 10:00 a.m. to 11:00 a.m.
+Most of the time, we will meet in the lab (Room 812).
+If there are no programming assignments outstanding, we will meet
+in Room 908; I will send the class an email announcement should
+this be the case.
+Special scheduling notes:
+Our first meeting is CISC 2010 (lab) at 11:30 a.m. on
+Wednesday, August 28, followed by CISC 2000 (lecture)
+at 1:00 p.m.  It doesn't make sense to have a lab before
+we've covered any material.  Hence the "lab" meeting will be a
+lecture, to be held in Room 908.  Depending on how things
+work out, we might be in a position to do some lab work during
+the nominal lecture period meeting later that day.  We'll need
+to have a little flexibility here.
+Monday, September 2 is a University holiday (Labor
+Day).  To make up for same, the University has declared
+Wednesday, September 4 to be a "virtual Monday".  Hence
+only
+CISC 2000 is scheduled to meet on that date
+(i.e., no lab for that day).  However, since September 4 is
+the day before
+Rosh Hashanah
+, I am moving this class to the same timeslot on
+Monday, December  9, which is a reading day.
+Office hours:
+Mondays: 10:00 a.m. to 11:30 p.m.
+Wednesdays: 2:30 p.m. to 4:00 p.m.
+or by appointment.
+Class email list:
+cs2 STRUDEL dsm.fordham.edu
+.
+This can be used for both announcements and discussion.
+Text and Readings
+The text for this course is:
+Bjarne Stroustrup,
+Programming: Principles and Practice Using C++
+,
+Addison-Wesley, 2009 (ISBN-13: 978-0-321-54372-1).
+We hope to cover Chapters 12–22 of the text; if time
+permits, we'll cover additional chapters.
+The author has a
+website
+for this text.  It has a
+lot
+of useful material.
+For starters, you should consult his
+style guide
+.
+Note:
+It is sometimes possible to get cheaper "international editions"
+of textbooks.  However, these books may not be a 100% match of the
+original text.  I have sometimes seen cases where the exercises of
+the international edition do not match those in the standard
+edition.  For this reason, I highly suggest that you obtain the
+standard edition of the text.  If you opt for the international
+edition, it is
+your
+responsibility to ensure (e.g.) that
+the exercises in your edition match those in the standard edition;
+I am
+not
+going to grade two different sets of exercises.
+Grading
+You will receive the same grade for both components of the course
+(CISC 2000 and CISC 2010).  This grade will be determined as follows:
+programming assignments
+:
+50%, each graded according to the following standards:
+Documentation (pseudocode and comments)
+20%
+Correctness of algorithm
+20%
+Correctness of program
+20%
+Overall
+style
+of program
+20%
+I/O Interface (e.g., quality of output)
+20%
+One midterm exam: 20%
+One final exam: 20%
+Class attendance: 10%.  Please read the
+attendance policy
+for this class.
+Protocol
+Examinations:
+There will be a midterm exam
+and a final exam. The midterm will be on Wednesday,
+October 9, during the usual class period for CISC 2000.
+The final examination will be on Monday, December 16, from
+9:30 a.m. to 11:30 a.m.
+Homeworks:
+Programming assignments
+(as announced in
+class). I hope to assign one program for each chapter we cover in
+class. In addition to handing out the assignments in class, I will
+also post them on the class website. The earlier programs (being
+simple) will be due at the next class session; the due dates for the
+later ones will depend on their complexity.
+Attendance:
+Attendance for this course is
+mandatory.  You will be granted up to four absences from the class
+lectures.  You must inform be by email
+in advance
+for a
+non-emergency absence.
+Other important information
+The official class
+syllabus
+.
+The
+cheating policy
+for this class.
+The
+make-up exam policy
+for this class.
+I have written a
+guide
+to getting
+better grades.  Read it!
+The author of our text (Bjarne Stroustrup, the inventor of C++)
+has a
+website
+for this text.  It has a
+lot
+of useful stuff.  For starters,
+take a look at
+his
+style guide
+.
+This
+is a "convenience" link for
+accessing the overhead slides for this course.  Given that the
+slides have white print on a dark background, you probably don't
+want to print them.  So I've put together
+handout (black on white) versions
+of these slides, which are
+printable.
+You can find a lot of useful goodies in the directory
+~agw/class/cs2/share
+.  In particular, you'll find the
+source code for all the examples in the text, as well as support
+material for all the projects that we will be doing.  The former
+material can be
+reached
+via the Web, but the
+latter material is only reachable via the Departmental Liunx
+systems, and not via the web.  That's because most of the time,
+you'll simply want to copy some of the latter material (either a
+file or an entire directory) into one of your own
+directories.
+Since this is the second semester of the CS1/CS2 sequence, I'm
+assuming that you have some experience programming on our
+Departmental Linux systems.  Here are some resources that might
+help you in this regard, should you need them:
+There is an
+online
+introduction
+on using the Linux computer systems at Lincoln
+Center that belong to the Computer and Information Sciences
+Department.
+Our departmental machines run Linux, which is a free Unix-like
+operating system. Many websites have material on Unix and Linux.
+I have collected a
+sample
+of same.  You should especially look at the
+material for beginners.
+We strongly encourage you to use the
+emacs
+editor.
+When you eventually get into templates, you'll find that
+they can be tricky.  You'll also find that the C++ compiler
+will sometimes generate a bewildering maze of error messa

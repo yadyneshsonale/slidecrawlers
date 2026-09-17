@@ -1,0 +1,80 @@
+Indian Institute of Technology Patna
+CS2201: Formal Languages and Automata Theory
+Fall 2025
+Main Navigation
+Home
+Schedule
+Lectures
+Assignments
+Lectures
+You can download the lectures here. We will try to upload lectures prior to their corresponding classes.
+Finite Automata
+tl;dr:
+The document covers the fundamentals of Finite Automata (FA), including alphabets, strings, and languages, with examples of Deterministic Finite Automata (DFA) and Non-deterministic Finite Automata (NFA). It also discusses DFA/NFA construction, minimization, and handling ε-transitions, with practical examples and diagrams illustrating the conversion between NFA and DFA
+[
+slides
+]
+Regular Expression - Part 1
+tl;dr:
+Introduces regular expressions as an algebraic way to describe regular languages, covering their formal definition (basis cases like symbols and ε, inductive cases like union, concatenation, and Kleene closure) and establishing their equivalence to finite automata.
+[
+slides
+]
+Regular Expression - Part 2
+tl;dr:
+Explains three methods for converting regular expressions to automata, Thomson's construction (RE to NFA), subset construction (NFA to DFA), and direct construction (RE to DFA using syntax trees with followpos, firstpos, and lastpos functions).
+[
+slides
+]
+Closure Properties of Regular Languages
+tl;dr:
+Union, Intersection, Difference Concatenation, Kleene Closure, Reversal, Homomorphism, Inverse Homomorphism
+[
+slides
+]
+Regular Expression - Additional Resources
+tl;dr:
+Explains regular expressions as an algebraic framework equivalent to DFAs for describing regular languages, covering syntax, identities, and practical pattern examples. It also shows how to systematically convert regular expressions to NFAs, including constructions for union, concatenation, star, and generalized transitions.
+[
+slides
+]
+Context Free Grammar
+tl;dr:
+A concise introduction to context free grammars covering derivations, parse trees, ambiguity resolution, left recursion elimination, left factoring, and the limits of CFGs in programming language constructs
+[
+slides
+]
+Pushdown Automata
+tl;dr:
+This document introduces Pushdown Automata as finite automata extended with stack memory, explaining how they characterize context-free languages and differ from regular languages. It formally defines PDA, DPDA, and NPDA, compares their expressive power, and demonstrates PDA constructions for languages with both empty stack and final state acceptance.
+[
+slides
+]
+Pushdown Automata (Part -2)
+tl;dr:
+This document introduces Pushdown Automata as finite automata extended with stack memory, explaining how they characterize context-free languages and differ from regular languages. It formally defines PDA, DPDA, and NPDA, compares their expressive power, and demonstrates PDA constructions for languages with both empty stack and final state acceptance.
+[
+slides
+]
+Top Down Parser
+tl;dr:
+This document introduces Top-Down Parsing as a syntax analysis technique that constructs parse trees starting from the start symbol, explaining how it recognizes context-free languages using predictive expansion rules and differs from bottom-up approaches. It formally defines LL(1) parsers, recursive descent parsing, and predictive parsing tables, compares their predictive power with backtracking limitations, and demonstrates parser constructions for grammars with FIRST/FOLLOW sets and parsing table generation.
+[
+slides
+]
+Bottom Up Parser
+tl;dr:
+This document introduces Bottom-Up Parsing as a syntax analysis technique that constructs parse trees starting from input tokens, explaining how it recognizes context-free languages using shift-reduce operations and differs from top-down approaches. It formally defines LR(0), SLR(1), LR(1), and LALR parsers, compares their shift-reduce conflict resolution power, and demonstrates parser constructions using LR parsing tables, handles, and reduce actions for viable prefixes.
+[
+slides
+]
+Turing Machines
+tl;dr:
+This document explains Turing Machines as a model of computation, including their formal definition, transition rules, acceptance, and examples. It also covers TM variants like storage, multi-track, multi-tape, and non-deterministic TMs, showing that they are equivalent in power to the standard TM.
+[
+slides
+]
+Department of Computer Science and Engineering
+IIT Patna
+Bihta, Patna, India
+iitp.ac.in

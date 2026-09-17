@@ -1,0 +1,212 @@
+San Jose State University : Site Name
+Navigation
+Main Content
+Ronald Mak
+Department of Computer Science
+Summer Semester 2015
+Office hours:
+TuTh: 2:00-3:00 PM
+Office location:
+MacQuarrie Hall, room 413
+E-mail:
+ron.mak@sjsu.edu
+Mission Control, Jet Propulsion Laboratory (JPL)
+NASA Mars Exploration Rover Mission
+CS 146: Data Structures and Algorithms
+Section 1: TuTh noon-1:55 PM, MacQuarrie Hall 422
+Green sheet
+Prerequisites
+Required textbooks
+Assignments
+#
+Date
+Due
+Project
+1
+June 2
+June 8
+Text Search
+Input:
+War and Peace
+A solution using a state transition matrix:
+Searcher.java
+output.txt
+searcher.xlsx
+A solution using switch statements:
+Searcher2.java
+output2.txt
+2
+June 11
+June 22
+Indexed List
+A solution to Assignment #2
+IndexedList.zip
+output.txt
+3
+June 23
+July 3
+Binary Search Trees and AVL Trees
+Binary tree printer:
+TreePrinter.java
+Sample output for Part 1:
+BST
+AVL
+4
+July 7
+July 13
+Insertion Sort and Shellsort
+Sample output
+5
+July 14
+July 24
+More Sorting Algorithms
+A solution to Assignments #4 and #5:
+CountSort.zip
+Sample output
+Lectures
+Date
+Content
+June 2
+Slides:
+Course objectives and learning outcomes; introduction to
+algorithm analysis; how well does an algorithm scale;
+Towers of Hanoi recursive solution and analysis; solving
+a recurrence relation; proof by induction; big-oh; omega;
+theta; little-oh; compare growth rates; general rules
+for computing running time; scalability of different
+algorithms; Assignment #1
+June 4
+Slides:
+Review of proof by induction; another induction proof
+example; arrays; raw ArrayList; ArrayList<Integer>;
+boxing and unboxing; raw Comparable interface;
+SimpleShape and subclasses; Comparable<SimpleShape>;
+covariance; type parameters
+Examples of Array and ArrayList:
+Arrays.zip
+(deliberate errors in Array8.java and Array10.java)
+June 9
+Slides:
+Primitive and reference types; type erasure, function objects;
+how to say T(N) = O(f(N)); logarithms in algorithm
+analysis; binary search; abstract data type (ADT); List;
+ArrayList advantages and disadvantages; LinkedList
+advantages and disadvantages; singly and doubly linked
+lists; node access time, Java collections framework;
+Iterable interface; node delete time; remove() methods;
+ListIterator interface; Java nested classes
+Example binary search:
+BinarySearch.zip
+Example Lists:
+Lists.zip
+June 11
+Slides:
+State transition diagram and matrix; a solution to
+Assignment #1; a new List type; IndexedList; Assignment #2;
+insertions into a sorted list; use of binary search to
+find the insertion position; multithreaded insertions
+Insertions into a sorted list:
+Insertion.zip
+June 16
+Slides:
+The Stack ADT; stack implementation; stack uses; solve the
+Towers of Hanoi puzzle with a stack instead of recursion;
+the Queue ADT; queue implementation; multithreaded
+producer-consumer problem
+Towers of Hanoi (with stack solution):
+Hanoi.zip
+Producer-Consumer:
+ProducerConsumer.zip
+June 18
+Slides:
+Trees; tree implementation; tree traversals; preorder;
+postorder; binary trees; binary search trees; inorder;
+binary search tree ADT: min, max, contains, insert,
+remove; binary search tree animation applet
+Binary search tree:
+BinarySearchTree.zip
+June 23
+Slides:
+AVL trees; balancing AVL trees with rotations; AVL tree
+implementation; Assignment #3; printing binary trees;
+splay trees
+June 25
+Slides:
+B-trees; proof that the average time for a BST operation is
+O(log N); priority queue ADT; priority queue
+implementation as a binary heap; binary heap
+implementation as an array; heap-order priority; heap
+insertion and deletion
+June 30
+Slides:
+Build a heap from scratch; proof that the runtime of
+buildHeap() is O(N); review for the midterm
+July 7
+Slides:
+Midterm solutions; a solution to Assignment #2; sorting;
+insertion sort and analysis; Shellsort; Assignment #4
+July 9
+Slides:
+Insertion sort vs. Shellsort; heapsort; mergesort and
+analysis; mergesort for linked lists; partitioning;
+picking the pivot; quicksort; mergesort vs. quicksort;
+sorting animations
+July 14
+Slides:
+Analysis of quicksort: worst case, best case, average
+case; general lower bound for sorting; Assignment #5;
+bucket sort and radix sort; sorting with a card sorter;
+external merge sort for magnetic tape
+Sorting exposed:
+ShowSort.zip
+July 16
+Slides:
+Disjoint set class; properties of an equivalence relation;
+dynamic equivalence; disjoint set as a tree; union/find;
+array implementation; find and union operations; smart
+union algorithm; union-by-size; union-by-height; disjoint
+set class; path compression; maze generation; graphs:
+uses and terms; graph representation; topological sort
+Maze generation tutorial:
+Maze Tutorial
+July 21
+Slides:
+Topological sort; unweighted shortest path; weighted
+least cost path; Dijkstra's Algorithm; Assignment #6;
+minimum spanning tree (MST)
+July 23
+Slides:
+Minimum spanning tree (MST); Prim's algorithm; Kruskal's
+algorithm; graph traversal algorithms; depth-first
+search; breadth-first search; hash tables; hash
+function; collisions: separate chaining, linear probing;
+keys to successful hashing; collision resolution;
+quadratic probing; load factor; double hashing;
+rehashing; Java support for hashing
+July 28
+Slides:
+Dijkstra's algorithm revisited;
+greedy algorithms; job scheduling algorithm; Huffman's
+algorithm; divide and conquer algorithms; multiplying
+two large integers; dynamic programming algorithms; the
+knapsack problem; ordering matrix multiplications;
+common subproblems of dynamic programming
+Example dynamic programming:
+Knapsack.zip
+July 30
+Slides:
+A solution to Assignment #5: split a linked list,
+concatenate two sublists, mergesort, merge;
+string algorithms; longest common subsequence (LCS);
+recursive algorithm for LCS length; LCS with dynamic
+programming; string pattern matching algorithms;
+brute search; Knuth-Morris-Pratt; KMP next[] array; KMP
+pattern matching
+Example LCS:
+LCS.zip
+Example brute and Knuth-Morris-Pratt pattern matches:
+StringMatch.zip
+Aug 4
+Slides:
+Algorithm running times; easy vs. hard problems;
+reductions; polynomial running times; determinis

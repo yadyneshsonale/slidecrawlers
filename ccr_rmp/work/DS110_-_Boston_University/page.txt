@@ -1,0 +1,219 @@
+Boston University Faculty for Computing and Data Science
+Deep Learning for Data Science (DL4DS)
+Spring 2025
+Main Navigation
+Home
+Schedule
+Lectures
+Discussions
+Assignments
+Project
+Materials
+MiniConf
+Lectures
+You can download the lectures here. We will try to upload lectures prior to
+their corresponding classes. Future lectures listed below likely have
+broken links.
+01 - Intro to Deep Learning and Course Logistics
+tl;dr:
+We will introduce the topic of deep learning, a bit about it's history, and what impact it has had. Then we'll go over the course logistics, the lecture topics, problem sets and the mid-term and final projects.
+[
+slides
+]
+[
+lecture recording
+]
+Suggested Readings:
+UDL Chapter 1
+02 - Supervised Learning
+tl;dr:
+We go a little deeper into supervised learning, introducing terminology and illustrating with a simple example of a linear model.
+[
+slides
+]
+[
+lecture recording
+]
+Suggested Readings:
+UDL Chapter 2
+03 - Shallow Networks
+tl;dr:
+In this lecture we consider networks with one layer of hidden units and explore their representational power.
+[
+slides
+]
+[
+lecture recording
+]
+Suggested Readings:
+UDL Chapter 3
+04 - Deep Networks
+tl;dr:
+We dive into deep networks by composing two shallow networks and visualizing their representational capabilities. We then generalize fully connected networks with two and more layers of hidden units. We'll compare the modeling efficiency between deep and shallow networks.
+[
+slides
+]
+[
+lecture recording
+]
+Suggested Readings:
+UDL Chapter 4
+05 - Loss Functions
+tl;dr:
+We reconsider loss functions as a measure of how well the data fits to parametric probability distribution. We show that for univariate gaussian distributions we arrive back at least squares loss. We then introduce the notion of maximum likelihood and see how we can use that to define loss functions for many types data distributions. We cover some examples and then show how to generalize. This is a key topic to aid you in applying deep learning models to new types of data.
+[
+slides
+]
+[
+AI Podcast
+]
+[
+lecture recording
+]
+Suggested Readings:
+UDL Chapter 5
+05a - Loss Functions, Continued
+tl;dr:
+We reconsider loss functions as a measure of how well the data fits to parametric probability distribution. We show that for univariate gaussian distributions we arrive back at least squares loss. We then introduce the notion of maximum likelihood and see how we can use that to define loss functions for many types data distributions. We cover some examples and then show how to generalize. This is a key topic to aid you in applying deep learning models to new types of data.
+[
+slides
+]
+[
+AI Podcast
+]
+[
+recording 1 -- Projects
+]
+[
+recording 2 -- Loss Functions continued
+]
+Suggested Readings:
+UDL Chapter 5
+06 - Fitting Models
+tl;dr:
+In this lecture we look at different ways minimizing the loss function for models given a training dataset. We'll formally define gradient descent, then show the advantages of stochastic gradient descent and then finally see how momentum and normalized gradients (ADAM) can improve model training farther.
+[
+slides
+]
+[
+lecture recording
+]
+Suggested Readings:
+UDL Chapter 6
+07 - Gradients and Backpropagation
+tl;dr:
+In this lecture we show how to efficienctly calculate gradients over more complex functions like deep neural networks using backpropagation. We also show an example simple implementation in the accompanying Jupyter notebook.
+[
+slides
+]
+[
+lecture recording
+]
+Suggested Readings:
+UDL Sections 7.1 - 7.4
+08 - Initialization
+tl;dr:
+In this lecture we talk about weight initialization and how it can impact the training results. We'll also give some tips and tricks on how to efficiently scan and read research papers.
+[
+slides
+]
+[
+how to read research papers
+]
+[
+lecture recording
+]
+Suggested Readings:
+UDL Sections 7.5 - 7.6
+09 - Measuring Performance
+tl;dr:
+We look at measuring model training performance, the importance of test sets as well as how noise, bias and variance play a role in training outcomes.
+[
+slides
+]
+[
+lecture recording
+]
+Suggested Readings:
+UDL Chapter 8
+10 - Regularization
+tl;dr:
+We explain explicit and implicit regularization techniques and how they help generalize models.
+[
+slides
+]
+[
+lecture recording
+]
+Suggested Readings:
+UDL Chapter 9
+11 - Convolutional Neural Networks
+tl;dr:
+We cover 1D and 2D convolutional neural networks along with subsampling and upsampling operations.
+[
+slides
+]
+[
+lecture recording
+]
+Suggested Readings:
+UDL Chapter 10
+11 - Convolutional Neural Networks -- Part 2
+tl;dr:
+We cover 1D and 2D convolutional neural networks along with subsampling and upsampling operations.
+[
+slides
+]
+[
+lecture recording
+]
+Suggested Readings:
+UDL Chapter 10
+12 - Residual Networks
+tl;dr:
+In this lecture we introduce residual networks, the types of problems they solve, why we need batch normalization and then review some example residual network architectures.
+[
+slides
+]
+[
+lecture recording
+]
+Suggested Readings:
+UDL Chapter 11
+13 - Recurrent Neural Networks
+tl;dr:
+In this lecture we introduce recurrent neural networks, starting the plain vanilla RNN, the problem of vanishing gradients, LSTM and GRU and batch normalization.
+[
+slides
+]
+[
+lecture recording
+]
+Suggested Readings:
+lecture slides
+14 - Transformers Part 1
+tl;dr:
+In this lecture we cover the transformer architecture, starting with the motivation that required a new type of model, the concept and implementation of self-attention and then the full transformer architecture for encoder, decoder and encoder-decoder type models.
+[
+slides
+]
+[
+lecture recording
+]
+Suggested Readings:
+UDL Chapter 12
+Optional:
+The Illustrated Transformer
+15 - Transformers Part 2
+tl;dr:
+In this lecture we continue to review the transformer architecture. We continue the discussion of decoders and encoder-decoder architectures, then discuss scaling to large contexts and then tokenization and embedding.
+[
+slides
+]
+Suggested Readings:
+UDL Chapter 12
+Optional
+The Illustrated Transformer
+16 -- Vision & Multimodal Transformers
+tl;dr:
+In th

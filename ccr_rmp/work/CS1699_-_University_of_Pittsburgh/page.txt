@@ -1,0 +1,131 @@
+CS1699/2099: ML and Game Theory
+Course Info
+Schedule
+Paper Presentations
+Project
+Grading
+Policies
+CS1699/2099 Machine Learning and Game Theory (Fall 2024)
+Class time: Wednesday 6:00pm – 8:30pm
+Class location: Sennott Square 5313
+Instructor:
+Ryan Shi
+Email: ryanshi@pitt.edu
+Office location: Sennott Square 5415
+Office hours: By appointment on Calendly. If the times don't work for you, please send me an email with [CS1699] or [CS2099] in the title.
+Course Description
+This is an advanced course covering the topics at the intersection of machine learning and game theory. From auction and ads bidding to entertainment games such as Go and Poker,
+from autonomous driving and traffic routing to home assistants and the Internet of Things, in many applications there is more than one agent interacting with each other.
+Game theory provides a framework for analyzing the strategic interaction between multiple agents and can complement machine learning when dealing with challenges in these domains.
+In the course, we will introduce how to integrate machine learning and game theory to tackle challenges in multi-agent systems.
+Prerequisites
+This course requires a high level of mathematical maturity - being comfortable with theory and proofs is essential. Formal prerequisites include linear algebra,
+probability, algorithms, and at least one course in artificial intelligence. Familiarity with optimization is a plus but not necessary. Please see the instructor if you are
+unsure whether your background is suitable for the course.
+Textbooks
+The course will not use any particular textbook. All reference materials will be provided on the course schedule page and Canvas.
+Course Schedule (Subject to Change)
+#
+Date
+Topic
+References
+1
+8/28/24
+Intro to Mathematical Optimization
+How does AI help address food security in our local community?
+Applied Mathematical Programming, Chp 2,4,9
+Improving Efficiency of Volunteer-Based Food Rescue Operations
+A Recommender System for Crowdsourcing Food Rescue Platforms
+2
+9/4/24
+Intro to Game Theory
+How does AI protect wildlife and public infrastructure from attackers?
+Deployed ARMOR Protection: The Application of a Game Theoretic Model for Security at the Los Angeles International Airport
+Optimal Patrol Strategy for Protecting Moving Targets with Multiple Mobile Resources
+When Security Games Go Green: Designing Defender Strategies to Prevent Poaching and Illegal Fishing
+Deploying PAWS: Field Optimization of the Protection Assistant for Wildlife Security
+Multiagent Systems: Algorithmic, Game-Theoretic, and Logical Foundations, Chp 3-6
+3
+9/11/24
+Learning Game Parameters
+How to make game theory more realistic?
+Improving resource allocation strategies against human adversaries in security games: An extended study;
+Analyzing the effectiveness of adversary modeling in security games
+Learning Payoff Functions in Infinite Games
+What Game Are We Playing? End-to-end Learning in Normal and Extensive Form Games
+4
+9/18/24
+Online Learning, Online Convex Optimization
+A case for why ML and game theory are instrinsically connected.
+Online Learning and Online Convex Optimization
+, Chp 1-3
+Multiagent Systems: Algorithmic, Game-Theoretic, and Logical Foundations
+, Chp 7
+Regret Minimization in Games with Incomplete Information
+5
+9/25/24
+Intro to Reinforcement Learning
+ML is needed as game trees become larger.
+Reinforcement Learning: An Introduction
+, Ch. 3, 6, 13
+6
+10/2/24
+Classical Algorithms for Multi-Agent Reinforcement Learning (MARL)
+How does AI play Dota?
+Multiagent Systems: Algorithmic, Game-Theoretic, and Logical Foundations
+, Chp 7
+An Analysis of Stochastic Game Theory for Multiagent Reinforcement Learning
+Value-function reinforcement learning in Markov Games
+Multiagent learning using a variable learning rate
+7
+10/9/24
+Policy-Based Methods in MARL
+Value-Based Methods for Cooperative MARL
+Multi-Agent Actor-Critic for Mixed Cooperative-Competitive Environments
+Counterfactual Multi-Agent Policy Gradients
+Learning with opponent-learning awareness
+Value-Decomposition Networks For Cooperative Multi-Agent Learning
+QMIX:Monotonic Value Function Factorisation for Deep Multi-Agent Reinforcement Learning
+QTRAN: Learning to factorize with transformation for cooperative multi-agent reinforcement learning
+8
+10/16/24
+Double Oracle and League Training in MARL
+How does AI play StarCraft?
+A Double Oracle Algorithm for Zero-Sum Security Games on Graphs
+A Unified Game-Theoretic Approach to Multiagent Reinforcement Learning
+Deep Reinforcement Learning for Green Security Games with Real-Time Information
+Grandmaster level in StarCraft II using multi-agent reinforcement learning
+9
+10/23/24
+Learning to Play Large Zero-Sum Games with Perfect Information
+How does AI play chess and go?
+Mastering the game of go without human knowledge
+Mastering Chess and Shogi by Self-Play with a General Reinforcement Learning Algorithm
+10
+10/30/24
+Learning to Play Large Games with Imperfect Information
+How does AI play poker?
+Fictitious Self-Play in Extensive-Form Games
+Deep Reinforcement Learning from Self-Play in Imperfect-Information Games
+DeepFP for Finding Nash Equilibrium in Continuous Action Spaces
+DeepStack: Expert-level artificial intelligence in heads-up no-limit poker
+Superhuman AI for heads-up no-limit poker: Libratus beats top professionals
+Superhuman AI for multiplayer poker
+Monte Carlo sampling for regret minimization in extensive games
+11
+11/6/24
+Transformer in Multi-agent Decision-Making Setting
+"Is transformer all you need?"
+Multi-agent reinforcement learning is a sequence modeling problem
+12
+11/13/24
+Combining Language Models with Strategic Reasoning
+How does AI play your favorite party games?
+Human-level play in the game of Diplomacy by combining language models with strategic reasoning
+Strategic Reasoning with Language Models
+Language Agents with Reinforcement Learning for Strategic Play in the Werewolf Game
+13
+11/20/24
+Real-world applications of MARL
+"Looking at some 'real' applications"
+Efficient large-scale fleet ma

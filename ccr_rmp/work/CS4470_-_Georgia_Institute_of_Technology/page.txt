@@ -1,0 +1,99 @@
+From the online course list: "Concepts, techniques, structures, and strategies for implementation of interactive software."
+The goal of this course is to provide you with an understanding of:
+How to implement 2D GUI interfaces effectively.
+The commonly used structure of window systems and toolkits that enable programmers to build and maintain complex applications.
+As time permits, the course will also touch on issues related to non-2D GUI interfaces.
+Blair MacIntyre
+blair@cc.gatech.edu
+Office:
+239 College of Computing
+Office Phone:
+894-5224
+Office Hours:
+11-12 Wednesday and 12:30-1:30 Teusday (in 239 or 259C CoC)
+Alex Zhao
+azhao@cc.gatech.edu
+Office
+: 225-E College of Computing
+Office Phone:
+385-2021
+Office Hours:
+Monday/Thursday 3-4pm
+The prerequisite for this course is
+CS 2340 and (CS 4750 or PSYC 4750)
+In practice, this means I expect that students are
+Familiar with human-computer interaction
+Fluent
+in programming Java on a Unix (Solaris) workstation
+Comfortable with non-trivial data structures, and comfortable learning a complex API
+The
+syllabus
+to the course will be here.
+Here's a link to the
+git.cc.class.cs4470
+newsgroup.
+(for you to print before class)
+We will try to make the notes that will be used in class available before class. These files will be Adobe Acrobat files, which you should be able to view and print from a web browser that has the Acrobat plugin. The notes will be linked into the
+syllabus
+on the line for that days lecture.
+Here's a link to the
+automatically recorded notes
+from class. To access the notes, your user id is your name (in the format FirstLast) and your password is your student id number. There will be audio, but no video, recorded with the notes.
+There is one required text for the class:
+Dan R. Olsen, Jr. Developing User Interfaces (available at the bookstore and at online stores such as Amazon)
+This book is a good introduction to user-interface software programming, but does not cover all the material in the course. Therefore, we will read numerous research papers from conferences, in particular from the ACM User Interface Software and Technology (UIST) conference. When looking at the reading list below, you will probably notice that most of the papers listed are quite old in "computer time" (over a decade, in some cases); since the techniques and approaches on which current toolkits are built was the subject of research a decade or more ago, the best descriptions of these techniques is the papers that describe that research.
+Here are that have been assigned so far:
+Brad A. Myers. A Brief History of Human Computer Interaction Technology. Carnegie Mellon University School of Computer Science Technical Report CMU-CS-96-163, December, 1996.
+http://reports-archive.adm.cs.cmu.edu/anon/1996/CMU-CS-96-163.ps
+This paper is a short history of when familiar 2D UI techniques were developed. It is interesting to read to gain a historical understanding of HCI technology, although it is slanted by it's original goal of briefing government officials of the value of funding HCI research.
+Brad A. Myers. User Interface Software Tools. Carnegie Mellon University School of Computer Science Technical Report, no. CMU-CS-94-182 and Human Computer Interaction Institute Technical Report CMU-HCII-94-107. August 1994.
+http://reports-archive.adm.cs.cmu.edu/anon/1994/CMU-CS-94-182.ps
+This paper, which I expect you to read gradually over the course of the semester, presents a more detailed history of UI software tools.
+Here are some of the papers we will read, in no particular order:
+Primal Screens, Sun Expert Magazine.
+Linton, M. A., Vlissides, John M., and Calder, Paul R., "Composing User Interfaces with Interviews",
+IEEE Computer
+, 22(2), Feb. 1989, pp. 8-22.
+Steven H. Tang and Mark A. Linton. "Pacers: time-elastic objects." In
+Proceedings of UIST'93
+, Pages 35-43.
+Hudson, S., Stasko, J., Animation support in a user interface toolkit: Flexible, robust and reusable abstractions. In
+Proceedings of UIST '93
+, pp. 57-67.
+Scott E. Hudson, "A System for Efficient and Flexible One-Way Constraint Evaluation in C++",
+GVU Tech report 93-15.
+Bjorn N. Freeman-Benson, John Maloney and Alan Borning. An incremental constraint solver. In
+Commun. of the ACM: 33(1)
+(Jan. 1990), pages 54 - 63
+Scott E. Hudson and Shamim P. Mohamed, Interactive specification of flexible user interface displays, In
+ACM Trans. Inf. Systems:8(3)
+(July 1990), Pages 269 - 288.
+Olsen D. R., "A Programming Language Basis for User Interface Mangement",
+Proceedings of CHI '89
+, Austin, TX, April 1989, pp. 171-176.
+Luca Cardelli. Building user interfaces by direct manipulation. In
+Proceedings of UIST'88
+, Pages 152 - 166.
+Sukaviriya, P., Foley, J. and Griffith, T., "A Second Generation User Interface Design Environment: The Model and Runtime Architecture",
+Proceedings of INTERCHI '93
+, April 1993, pp. 375-382.
+Eric A. Bier, Maureen C. Stone, Ken Pier, William Buxton and Tony D. DeRose. Toolglass and magic lenses: the see-through interface. In
+Proceedings of SIGGRAPH '93
+, 1993, Pages 73 - 80
+Scott E. Hudson, Roy Rodenstein and Ian Smith. Debugging lenses: a new class of transparent tools for user interface debugging. In
+Proceedings of UIST'97
+, Pages 179 - 187
+Brad Myers, Scott E. Hudson, and Randy Pausch, Past, Present and Future of User Interface Software Tools.
+ACM Transactions on Computer Human Interaction
+. In the Special Millennium Issue. Available as
+http://www.cs.cmu.edu/~amulet/papers/futureofhci.pdf
+Course notes will be available online, hopefully at least a few hours before each class. These will follow the lectures given in class.
+Overview of GUI Architectures
+Introduction to Computer Graphics
+Java Graphics
+Window Systems and Event Handling
+Grading will be based on a combination of programming assignments and tests. The breakdown is approximately the following:
+Programming assignments (4 or 5 of them) (50%)
+Tests (2) (30%)
+Final exam (20%)
+All programming assignments must execute on the Solaris workstations in the

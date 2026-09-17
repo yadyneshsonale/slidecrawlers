@@ -1,0 +1,18 @@
+x,y,n,pearson_r,pearson_p,spearman_rho,spearman_p,group
+ccr_star_rating,rmp_course_avg_quality,73,0.4960800455824555,8.077946200840773e-06,0.46947112863052787,2.7896982999890757e-05,Primary: CCR course rating vs RMP professor quality
+ccr_star_rating,rmp_prof_avg_rating_overall,73,0.4083539119868051,0.0003352008687146272,0.3614702036254618,0.0016775817880730116,Primary: CCR course rating vs RMP professor quality
+ccr_star_rating,rmp_course_would_take_again_pct,73,0.3532076142385468,0.0021754814633901877,0.3397991503927325,0.003269550530109591,Primary: CCR course rating vs RMP professor quality
+ccr_recommendation_rate,rmp_course_avg_quality,73,0.29300793244699486,0.011878603979961145,0.26538962299221824,0.02325554351707462,Primary: CCR course rating vs RMP professor quality
+ccr_challenge_level,rmp_course_avg_difficulty,73,0.5562168144308174,3.2372508715908535e-07,0.5880609418778459,4.4884117674984556e-08,Difficulty / workload alignment
+ccr_time_investment,rmp_course_avg_difficulty,73,0.5961178037901436,2.6308078355456537e-08,0.6038226537749789,1.5566037883031342e-08,Difficulty / workload alignment
+ccr_challenge_level,rmp_course_avg_quality,73,-0.31239544781806733,0.007129387570225452,-0.2817346219674927,0.015746966446877012,Difficulty / workload alignment
+ccr_student_satisfaction,rmp_course_avg_quality,73,0.4956445527991232,8.250424693306429e-06,0.4648850920447916,3.418930695649381e-05,CCR sub-metrics vs RMP course quality
+ccr_grade_accessibility,rmp_course_avg_quality,73,0.04927955134577429,0.678852694108212,0.11176681776073236,0.34649578405489095,CCR sub-metrics vs RMP course quality
+ccr_time_investment,rmp_course_avg_quality,73,-0.3916867399816386,0.0006106786384529602,-0.34244245760795755,0.0030214044537683863,CCR sub-metrics vs RMP course quality
+ccr_attendance_importance,rmp_course_avg_quality,73,0.06530747856807573,0.5830444535510582,0.10174211834980551,0.39171741739288973,CCR sub-metrics vs RMP course quality
+slide_final,ccr_star_rating,58,-0.3315593285430432,0.011006992737183587,-0.3962859886060282,0.0020736697943926847,Slide quality vs CCR and RMP
+slide_final,rmp_course_avg_quality,58,-0.13999568583280692,0.2945747975343742,-0.14893780882999988,0.2644983447999378,Slide quality vs CCR and RMP
+slide_final,ccr_challenge_level,58,0.29109296352441116,0.026630725542223215,0.38553407638830917,0.002801735174209878,Slide quality vs CCR and RMP
+slide_final,rmp_course_avg_difficulty,58,0.019289533039245993,0.8857215060082906,0.055880365069538245,0.676946267094904,Slide quality vs CCR and RMP
+slide_layer1_course,rmp_course_avg_quality,58,-0.08586450910605048,0.5216040712345413,-0.06703893522837633,0.6170734485565045,Slide quality vs CCR and RMP
+slide_layer2,rmp_course_avg_quality,58,-0.12476199544764507,0.3507538585561763,-0.1578008202531158,0.2367918707431528,Slide quality vs CCR and RMP

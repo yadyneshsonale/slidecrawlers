@@ -1,0 +1,192 @@
+CS 4240
+Compilers and Interpreters
+Fall 2025
+Announcements:
+[8/13] This page lists the basic course information. We will be using Piazza for CS4240. If you need access to Piazza, please email the instructor.
+[8/13] Welcome to CS 4240!
+Instructor
+:
+Qirun Zhang
+,
+Office: 2324 Klaus
+Office Hours: Wednesdays 11:00 AM - 12:00 PM or by appointment
+Email: qrzhang@gatech.edu
+Teaching Assistants
+:
+Camille Bossut,
+Office: Open lounge area in front of KACB 2319
+Office Hours: See Piazza
+Email: cbossut21@gatech.edu
+Ethan Fox,
+Office: Open lounge area in front of KACB 2319
+Office Hours: See Piazza
+Email: efox36@gatech.edu
+Jinghao Jiang,
+Office: Open lounge area in front of KACB 2319
+Office Hours: See Piazza
+Email: jjiang409@gatech.edu
+Tejas Joshi,
+Office: Open lounge area in front of KACB 2319
+Office Hours: See Piazza
+Email: tejas.joshi@gatech.edu
+Andy Wanna,
+Office: Open lounge area in front of KACB 2319
+Office Hours: See Piazza
+Email: awanna3@gatech.edu
+Lectures
+:
+Time: Mon/Wed 9:30 AM - 10:45 PM
+Location: Scheller 200
+Course Summary
+:
+This course will cover the principles and foundations of compiler design. The course project will be structured
+around the design of a compiler for a small, but expressive, imperative language to be translated for execution
+on a simulator of the MIPS processor. After successfully completing the course, students will be able to
+design and develop all major components of a compiler.
+References
+:
+Compilers
+[CT11]
+Engineering a Compiler
+by K. Cooper and L. Torczon,
+Morgan Kaufmann,
+2011.
+Access
+via ScienceDirect
+(may require GT login).
+Updated lecture notes will be posted on
+Piazza.
+Writing and Presentation
+Tips and Resources for Writing Computer Science Papers
+.
+Hints for Giving Technical Talks
+.
+Assignments
+:
+Homework 1
+Deadline: 9/10/2025 by 23:59 pm EST.
+Homework 2
+Deadline: 10/15/2025 by 23:59 pm EST.
+Homework 3
+Deadline: 11/24/2025 by 23:59 pm EST.
+Worksheets
+Deadline: Each lecture day by 23:59 pm EST.
+Grading
+:
+Grading breakdown:
+Written Homework: 15%
+Programming Projects: 30%
+Midterm Exam: 20%
+Final Exam: 30%
+Class Participation: 5% (1% for Assignment 0 and 4% for Worksheets)
+Project BONUS: 5%
+Late assignment submission policy:
+Within 1 hour after the assignment is due: see the course syllabus on Piazza;
+Within 24 hours after the assignment is due: 50% point deduction;
+More than 24 hours late: 100% point deduction.
+Schedule (tentative)
+:
+Date
+Topic
+Reading
+Remark
+8/18
+Compiler Structure, Intermediate Representations
+[CT11] Chapter 1; Sections 5.3.1 - 5.3.3
+Homework 1 assigned
+8/20
+Control Flow Graphs, Reaching Definitions
+[CT11] Sections 5.2.2, 5.3.4
+Project 1 assigned.
+8/25
+Reaching Definitions, Data Flow Analysis
+[CT11] Page 491 of Section 9.2.4
+8/27
+Redundancy Elimination, Value Numbering, Dominator
+[CT11] Sections 8.3, 8.4.1, 8.5.1, 9.2.1
+9/1
+No class (school holiday)
+9/3
+Lazy Code Motion, Available Expression Analysis
+[CT11] Sections 10.3, 9.2.4
+9/8
+Available Expression Analysis, Constant Propagation
+[CT11] Sections 9.2.4, 9.3.6 (skip material related to SSA form)
+9/10
+Project 1 & Tiger IR Help Session
+Homework 1 due.
+9/15
+Copy Propagation, Constant Propagation Revisited
+[CT11] Section 9.2.4
+9/17
+Instruction Selection
+[CT11] Sections 11.1 - 11.4
+Project 1 due.
+Project 2 assigned.
+Project BONUS assigned.
+9/22
+Peephole Matching, Register Allocation
+[CT11] Sections 11.5, 13.4
+9/24
+Register Allocation (contd)
+[CT11] Section 13.4
+9/29
+Instruction Scheduling
+[CT11] Sections 12.1 - 12.3
+Homework 2 assigned.
+10/1
+MIPS Processor Architecture, SPIM simulator
+10/6
+No class (school holiday)
+10/8
+Procedure Abstraction, MIPS Calling Convention
+[CT11] Sections 6.1 - 6.5
+10/13
+Global Instruction Scheduling, Software Pipelining
+[CT11] Sections 12.4, 12.5
+10/15
+Static Single Assignment Form
+[CT11] Section 9.3
+Homework 2 due.
+10/20
+Midterm Review (Part 1)
+10/22
+Midterm Review (Part 2)
+Project 2 due.
+10/27
+Mid Term
+10/29
+Lexical Analysis, Introduction to Parsing
+[CT11] Sections 2.1 - 2.3
+Project 3 assigned.
+11/3
+Context Free Grammars, Top Down Parsing
+[CT11] Sections 3.1 - 3.3.1
+Homework 3 assigned.
+11/5
+LL(1) Parsing
+[CT11] Sections 3.3.1, 3.3.3
+11/10
+Finite State Automata
+[CT11] Sections 2.4, 2.5
+11/12
+Attribute Grammars, Type Checking
+[CT11] Sections 4.1 - 4.3
+11/17
+ANTLR Overview and Demonstration
+11/19
+Course Review
+11/24
+Homework 3 Help Session
+Homework 3 due.
+Project 3 due.
+Project BONUS due.
+11/26
+No class (school break)
+Misc
+:
+If you have any concern, please send an email to the
+instructor. This
+link
+could
+help to send anonymous messages.

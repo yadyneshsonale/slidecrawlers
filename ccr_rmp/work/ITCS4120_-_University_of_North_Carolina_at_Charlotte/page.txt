@@ -1,0 +1,203 @@
+Skip to main content
+Visit the University of North Carolina at Charlotte homepage
+Explore
+Visit the University of North Carolina at Charlotte homepage
+Close
+What can we help you find?
+Submit search query to search.charlotte.edu
+Academics
+Admissions
+Campus Life
+Research
+Athletics
+About
+Apply
+Visit
+Give
+News & Events
+Directory
+My UNC Charlotte
+Quick Links
+Majors & Minors
+Graduate Programs
+Calendar
+Campus Maps
+Class Registration
+Financial Aid
+Housing
+Library
+Report an Incident
+Resources
+Prospective Students
+Alumni & Friends
+Faculty & Staff
+Current Students
+Parents & Family
+Colleges
+Arts + Architecture
+Business
+Computing and Informatics
+Education
+Engineering
+Graduate School
+Health and Human Services
+Honors College
+Humanities & Earth and Social Sciences
+Science
+College of Computig and Informatics
+The Ribarsky Center for Visual Analytics
+Go to Search Page
+Search this site
+Search
+Main Menu Toggle
+Home
+About Us
+Research
+Seminar Series
+Videos (YouTube)
+Facilities
+Events
+Publications
+About the VisCenter
+Toggle Submenu
+People
+Faculty
+Staff
+Students
+Courses
+ITCS 3120: Introduction to Interactive Computer Graphics (Fall)
+ITCS 4235/5235 Game Engine Construction – Spring 2019
+ITCS 5121/4121 Information Visualization (Spring 2021)
+ITCS 5122/4122 Visual Analytics
+ITCS 6120/8120 Computer Graphics (Fall)
+ITCS 6124/8124 Illustrative Visualization
+ITCS 6125/8125 Virtual and Augmented Reality (Spring 2020)
+News
+ITCS 6120/8120 Computer Graphics (Fall)
+Instructor:
+Prof. Zachary Wartell
+Contents
+Overview
+Handouts
+Lecture Slides
+Lecture Resources
+Project Assignments
+Programming References
+Overview
+Introduction to the design and implementation of interactive graphics systems. Raster and vector display systems, I/O devices; graphics primitives and their attributes; raster algorithms and clipping; 2D/3D geometric transformations; 3D viewing and projections; hierarchical and procedural models; surface representation; color and lighting models; rendering algorithms; global illumination and texture mapping.
+Prerequisites: Graduate student standing and permission of the department. (Your undergraduate experience should include equivalents of
+ITCS 2214
+and
+MATH 2164)
+ITCS 6120/8120 Computer Graphics is a standard course on computer graphics as a discipline in computer science. This differs from a computer graphics course found in an industrial art and design department that might cover how to use computer graphics applications or how to program in a 4th generation programming/scripting languages to develop 2D or 3D visual media presentations (VRML, Macromedia Flash, etc.).
+Lecture Slides
+Files are in PowerPoint (PPT)
+Lecture 1: Introduction (
+PPT
+)
+Lecture 2: Scan Conversion (
+PPT
+)
+Lecture 3: OpenGL (2D)
+Lecture 4: Scan Conversion – Part II (
+PPT
+)
+Lecture 5: Anti-Aliasing (
+PPT
+)
+Textbook: Chapter 4
+Lecture 6: 2D Transforms (
+PPT
+), 2D Coordinates (
+PPT
+)
+Lecture 7: 2D Viewing (
+PPT
+)
+Lecture 8: Transforms in OpenGL and OO Approaches
+ITCS 4120-OpenGL Transforms.ppt
+The OpenGL Programming Guide
+(Red Book): “
+Manipulating the Matrix Stacks
+”
+Lecture 9: 3D Viewing (
+PPT
+)
+ITCS 4120-Homogenous Coordinates.ppt
+Lecture 10: Visibility (
+PPT
+)
+Lecture 11: Illumination (
+PPT
+)
+Lecture Resources
+Midterm Exam will be: TBD
+Midterm Exam Guide:
+ITCS 4120 Midterm Guide – Fall 2009.doc
+Midterm ITCS 6120 – Fall 2009 – Answers.docx
+Old Exams:
+ITCS 4120 Fall 2005-Midterm.doc
+,
+ITCS 4120 Fall 2005-Midterm – Answers.doc
+ITCS 4120 Spring 2005-Midterm.doc
+ITCS 4120 Fall 2006-Midterm.doc
+,
+ITCS 4120 Fall 2006-Midterm – Answers.doc
+Final Exam will be: TBD
+Old Exams:
+ITCS 4120-Fall 2005-Final.doc
+ITCS 4120-Spring 2005-Final.doc
+Project Assignments
+Programming assignments will use C++, OpenGL, and GLUT.
+​
+Projects and Assignments
+Project 1
+ITCS 6120-8120 Fall 2009 – Project 1.doc
+Project 2
+ITCS 6120-8120 Fall 2009 – Project 2.doc
+Project 3
+ITCS 6120-8120 Fall 2009 – Project 3.doc
+ITCS 4120 – Planet Mobile.zip
+–
+executable
+Project 4
+ITCS 6120-8120 Fall 2009 – Project 4.doc
+Programming References
+OpenGL:
+http://www.opengl.org
+–
+[General]
+The official OpenGL website. There are lots of information resources here. Some of the most helpful ones for this class are listed separately below. This class will only use features found OpenGL versions 1.4 and earlier.
+The OpenGL Programming Guide
+–
+[Introductory]
+(
+HTML
+,
+SAMPLE CODE
+) These links reference a freely available copy of the original introductory programming guide for OpenGL version 1.1. This guide and its later commercial versions are affectionately called “The Red Book”. OpenGL has since advanced to version 2.1. (The latest commercial “Red Book” covers 2.1). Note, the course textbook (H&B) includes an introduction to OpenGL including various v1.5 features. In combination, H&B, the free version of the “Red Book v1.1”, and an OpenGL reference manual (see below) should be sufficient for the OpenGL aspects of the programming projects.
+The Open GL Reference Manual
+–
+[Introductory]
+(
+HTML
+) The official printed OpenGL Reference Manual is affectionately called “
+The Blue Book
+“. The reference manual is mostly a list of each OpenGL function with a description of what it does, its parameters, etc.
+Nate Robins OpenGL tutors –
+[Introductory]
+(
+HTML
+) These are programs written in OpenGL that illustrate how various OpenGL API functions work.
+“The OpenGL Graphics System: A Specification (Version 2.1)”
+–
+[Advanced]
+This is the official highly, excrutiatingly detailed specification of OpenGL 2.1. This can be a useful resource for understanding deeper details of the design and inner working of the OpenGL specification for advanced OpenGL programmers.
+OpenGL + GLUT:
+GLUT
+is a very simple cross platform API for creating a windows and handling GUI events. It is designed for making cross-platform OpenGL applications. Many books such as your textbook and the “OpenGL Redbook” use GLUT in their code examples.
+GLUT manual – [
+HTML
+PDF
+] Here are the reference manual for GLUT. Again your text book and the
+OpenGL ‘Redboo

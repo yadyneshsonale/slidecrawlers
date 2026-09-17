@@ -1,0 +1,172 @@
+COSC-270: Artificial Intelligence
+Spring 2022
+Contents
+Announcements
+Where, When, Who
+Description
+Learning Goals
+Policies
+Schedule
+Assignments and Grading
+Materials: Readings, Videos, and Links
+Other Interesting Links
+Announcements
+4/27/22: Posted the slides from the recording on
+MCTS and AlphaGo
+.
+4/25/22: Posted the slides from the lecture on
+neural networks
+.
+4/12/22: Posted
+p5
+.
+3/24/22: Posted
+p4
+.
+2/24/22: Posted
+p3
+.
+2/15/22: Posted optional
+hw1
+.
+2/3/22: Posted
+p2
+.
+1/31/22: Updated the syllabus for the 4th edition.
+1/18/22: Posted
+p1
+.
+1/6/22: Added assignment dates.
+10/27/21: Posted this Web site.
+Where, When, Who
+Class Time:
+TR 2–3:15 PM
+Classroom:
+Walsh 497
+Instructor:
+Mark Maloof
+Office:
+325 St. Mary's Hall
+Office Hours:
+In person (325 STM): TR 11:00–12:30 PM; Online: M 10:30–11:30 AM, W 3:00–4:00 PM (and by appointment).
+Description
+Artificial Intelligence (AI) is the branch of computer science that
+studies how to program computers to reason, learn, perceive, and understand.
+The lecture portion of the class surveys basic and advanced concepts
+and techniques of artificial intelligence, including
+search,
+knowledge representation,
+automated reasoning,
+uncertain reasoning,
+and machine learning.
+Specific topics include
+symbolic computing,
+state-space search,
+game playing,
+theorem proving,
+rule-based systems,
+Bayesian networks,
+probability estimation,
+rule induction,
+Markov decision processes,
+reinforcement learning,
+and ethical and philosophical issues.
+Applications of artificial intelligence are
+also discussed in domains such as medicine and
+computer security.
+Students complete midterm and final exams, and five programming
+projects using the Java programming language.
+Prerequisite: Data Structures (COSC-160) and Advanced Programming (COSC-150).
+Required Text:
+Artificial intelligence: A modern approach
+, 3rd Edition,
+by Russell and Norvig.
+Learning Goals
+By the end of the semester, students will be able to:
+explain the main philosophical stances of artificial intelligence
+describe, compare, and contrast the main formalisms used in artificial intelligence
+describe, compare, and contrast algorithms used in artificial intelligence for reasoning and for learning
+devise and implement algorithms used in artificial intelligence for
+reasoning and for learning using the Java programming language
+explain the main ethical and philosophical issues in artificial
+intelligence, especially that pertain to machine learning and autonomous
+systems
+describe and critique thought experiments that support or refute strong or general artificial intelligence
+Policies
+My course policies are designed to supplement the
+University's
+Undergraduate Honor System
+and the
+CS
+Department's Honor Policy
+.
+Unless stated otherwise when I distribute an assignment, the
+following is the default for all assignments for this course.
+I have developed my policies from past teaching experiences and from
+the
+CS Department's Honor Code at George Mason University
+.
+I am obligated to refer all suspected cases of academic dishonesty by
+undergraduate and master's students to Georgetown's
+Honor Council
+.
+I am obligated to refer all suspected cases of academic dishonesty by
+doctoral students to the dean of the Graduate School.
+If you have any questions about these policies or how they apply,
+please discuss such concerns with me during class, during office hours,
+by e-mail, or using the class's discussion board.
+In my experience, students at Georgetown do honest work.
+The very small percentage of students who have submitted someone else's
+work as their own did so because they did not manage their time wisely.
+Students must always follow proper scholarly practice for all submitted
+work, whether graded or ungraded and whether a draft or final version of
+a proposal, paper, program, or problem set.
+As scholars, we must acknowledge our reliance on the work of others
+through citation.
+You can never submit someone else's work as your own without proper
+attribution.
+The University assumes that students learned how to properly cite
+material at their previous institutions.
+If this is not the case, please let me know.
+Indeed, students may be quite adept at and knowledgeable about citing and
+quoting material from traditional sources, such as books and articles.
+Typically, we do not have cite facts, common math formulae, or expressions
+of our own ideas, observations, interpretations, and analyses,
+However, students new to computer science may not realize that theorems,
+proofs, algorithms, programs, and code fragments may require the same
+treatment as any other form of expression.
+For convenience, you do not need to cite the course materials, which
+are the syllabus,
+sources linked from the syllabus,
+the course textbook,
+the class lectures and discussion,
+posts on the discussion board, and
+conversations with me and the course assistants.
+You must, however, cite the use of any resource that is not part of
+the course materials.
+Note that “the textbook” does not extend to the
+textbook's Web site,
+its contents,
+lecture slides,
+solution manuals,
+code repositories, or any
+other material related to the textbook.
+The syllabus links to any such material pertinent for the class.
+If you are unsure about what requires citation or what constitutes
+proper scholarly practice, please ask me
+during class,
+during office hours,
+by e-mail, or
+using the discussion board.
+I design my courses and assignments so students have what they need
+to complete the assignments individually without consulting outside
+resources.
+I determine the size of and credit for assignments based on the
+assumption that the work for them is the result of individual
+effort using only the course resources and materials.
+Students who use outside resources to complete assignments may not be
+eligible for full credit.
+Students who do not acknowledge their use of outside resources to
+complete assignments may be in violation of my course policies
+and the university's policies on academic integrity.
+The

@@ -1,0 +1,160 @@
+CSC180: Introduction to Computer Programming  (Fall 2016)
+Announcements
+All annonucements will be on Piazza
+About CSC180
+This course serves as an introduction to
+computer programming
+and
+computer science
+. We will introduce the Python programming language. We will use Python to solve a variety of problems, and practice problem-solving techniques that are applicable to computational problems. We will discuss good practices in software engineering (designing and building large software systems). We will analyze the efficiency of algorithms, and discuss designing efficient algorithms. Various research areas in computer science (AI, software engineering research, the theory of computation, etc.) will be introduced throughout the term. No previous knowledge of programming or computer science is assumed.
+Class tournaments
+Pong Tournament:
+a Pong AI tournament will be held at the end of November, with the format outlined
+here
+. Prizes: .5 bonus point for qualifying (beating the Chaser by at least 150 points when playing to 1000),  2 points for third place, 3 points for second place, 4 points for winning, plus medals for teams placing 1st, 2nd, and 3rd. Deadline to enter: Nov. 25 on MarkUs, in teams of one or two.
+Gomoku tournament:
+Teams of up to two people are allowed. To qualify for the tournament, you must win against a program that plays according to the algorithm outlined in Project 2. Two black stones and one white stone will be placed randomly on the board, and you play white. The format of the final tournament is TBD, but you are expected to play for either white or black. Prizes: .5 bonus point for qualifying,  2 points for third place, 3 points for second place, 4 points for winning, plus medals for the winning teams. Time control: your function will have 250ms to return a move. Your submission should be in
+this format
+.Deadline to enter: Dec. 2 on MarkUs, in teams of one or two.
+Teaching team
+Instructor:
+Michael Guerzhoy
+.
+Office:
+BA5244,
+Email:
+guerzhoy at cs.toronto.edu
+(please include CSC180 in the subject, and please ask questions on
+Piazza
+if they are relevant to everyone.)
+Lab TAs
+Getting help
+Michael's office hours: Monday 6-7, Tuesday 5-6, Wednesday 6-7, Thursday 7-8. Or email for an appointment. Or drop by to see if I'm in. Feel free to chat with me after lecture!)
+Course forum on Piazza
+(Please sign up right away!)
+Lectures
+L0101: Monday 5-6 in SF1101, Wednesday 2-3 in BA1130, Thursday 3-4 in BA1130
+L0102: Monday 4-5 in SF1101, Wednesday 4-5 in MB128, Thursday 11-12 in WB116
+Labs
+PRA0101: Tuesday  9-12 in SF1013 (9:30 in the first week)
+PRA0102: Wednesday 9-12 in SF1013 (9:30 in the first week)
+PRA0103: Friday 3-6 in SF1013
+Software
+We will be using the free
+Pyzo IDE
+to develop Python programs. Please download and install Pyzo right away.
+Textbooks
+CSC180 is not a standard course (because EngSci students are not standard students), and so we will not be following any one textbook. During the term, I will be recommending readings from:
+Practical Programming (2nd edition): An Introduction to Computer Science Using Python 3
+by Paul Gries, Jennifer Campbell, and Jason Montojo, 2013 (excellent explanations of basic topics). Available at the link as a pdf, and also available in the bookstore (look on the CSC108 shelf)
+Think Python: How to Think Like a Computer Scientist
+by Allen B. Downey, 2014 (free on the web, the explanations can be somewhat terse)
+Problem Solving with Algorithms and Data Structures Using Python
+by Brad Miller and David Ranum, 2014 (free on the web, I will be recommending readings during the second half of the course from this book)
+Evaluation
+The better of
+:
+5%: Weekly labs
+20%:  Assignments
+30%:  A two-hour midterm
+45%: A final exam
+and
+5%: Weekly labs
+20%:  Assignments
+20%:  A two-hour midterm
+55%: A final exam
+You must receive at least 40% on the final exam to pass the course.
+Bonus marks may be available throughout the term.
+Exam
+2016 exam paper
+(
+reference sheet
+).
+Solutions + marking scheme
+.
+2015 exam paper
+(
+reference sheet
+).
+Partial solution of the challenging problems
+. I encourage people to work on the problems in the beginning of the exam by themsleves. (Note that Q8 and Q9 were supposed to be very challenging -- exam grades were adjusted.)
+2014 exam paper
+(
+reference sheet
+).
+Solutions
+and
+my favourite solution of Q7
+.
+Video solution of Q7
+.
+2010 exam paper
+.
+Some solutions.
+Midterm
+Midterm paper
+,
+solutions + notes on marking
+Oct 31, 6:30pm-8:30pm, in EX200.
+How to prepare: make sure that you understand (i.e., can write from scratch) all the labs (and Project I). Make sure you can explain and write from scratch the material from the lecture. Make sure you understand the memory model and global/local variables, and can predict the output in complicated cases.
+2015 midterm paper
+.
+Reference sheet
+. Solutions:
+Part 1
+,
+Part 2
+(contains optional advanced material).
+2014 midterm
+and
+aid sheet
+. (
+Solutions
+).
+Note: in Q2d, True and False should switch places. Another solution is to go return not (a==b==c)
+. Not covered yet: Q2(a), Q2(c), Q3(d), the bonus is difficult without more material.
+2010 midterm
+. (
+Solutions
+; note that there is a small bug in the solutions to the last question and that the midterm was written in Python 2, which means that it uses
+print <things-to-print>
+instead of
+print(<things-to-print>)
+.)
+Projects
+The projects will be submitted and graded using
+MarkUs
+. You should be able to login to MarkUs soon.
+The assignments are to be done by each student or team alone.  Any
+discussion of the assignments with other students should be about
+general issues only, and should
+not
+involve giving or receiving
+written, typed, or emailed notes. Please refer to François Pitt's
+Guidelines for Avoiding Plagiarism
+.
+Project 1
+:
+handout
+,
+gamify.py
+(worth 4%, due on Oct.
+11
+16 at 10:59 PM). Video:
+How we'll be testing your program
+(
+test_gamify.py
+).
+Project 1 FAQ
+.
+Sample solution
+:
+gamify_soln.py
+.
+Marking scheme
+,
+gamify_cov.py
+.
+Project 2
+:
+ha

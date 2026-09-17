@@ -1,0 +1,228 @@
+Staff
+������������
+Instructor
+����������������
+����������������
+Chuck Hansen
+(hansen (delete me) @cs.utah.edu)
+������������
+TA
+����������������
+����������������
+No TA
+Office Hours
+T,Th: 10:30-11:30
+I am always able to schedule appointments if you simply email me.
+TA Hours
+TBA
+Class Times
+T Th 9:10am-10:30am
+L114 WEB
+Mailing List
+cs5600@list.eng.utah.edu
+: You should subscribe to this class mailing list.
+To subscribe, go to the
+cs5600 mailing list website
+.
+I expect all questions about the lectures, assignments, or the class in general to be sent to the class email list.
+The reason is that others may very well have the same question and it saves myself and the TA from repeatedly answering the same question.
+Don't be bashful about posting to the class email list ... everyone is learning!
+College of Engineering Guidelines
+College of Engineering Guidelines
+(pdf field)
+The guidelines are simple: add by the add-date, drop by the drop-date, you have an official appeal process if needed (hopefully never), we will accomodate disabilities (ADA).
+Text
+The OpenGL Red Book: OpenGL Programming Guide 3.x (the one the bookstore has)
+The Library has a copy on-line. You'll need to be on campus (campus IP address) or use VPN to have access to the book.
+OpenGL Redbook Online linked from the Marriott Library
+Grading
+Your grade will be 70% homework, 5% class participation, and 25% exams.
+Cheating will not be tolerated.
+If you are caught cheating, you will fail the class. You should work alone and you may not copy code from any web-page or other resource than the book and the book�s web-page. DON'T share code: it is considered cheating! DON'T grab code off the web: it is considered cheating! (we check; you will fail the class!) DON�T use code from other students or other books: it is considered cheating!
+Late penalty: -20%/day.
+�
+But you have 4 free late-days. That is, you can use these to avoid a late penalty since stuff-happens. Yes, this is stiff but you should turn in what you have for partial credit rather than try to complete an assignment a week late.
+NO Incompletes, except for very serious medical reasons. Turn in semi-working stuff for partial credit.
+Course Philosophy and Objectives
+In this course, you will learn the fundamentals of computer graphics. We will explore raster algorithms in 2D and 3D, coordinate transformations, projections, lighting/shading, and ray-tracing. We will use OpenGL in this course so when you complete the course, you should understand how to use basic OpenGL and also write a simple ray-tracer.
+The course will start with how to take mathematical equations into algorithms.
+�
+We will then study the fundamentals of computer graphics such as rasterization, transformations, hidden-surface removal, lighting, texture mapping and ray-tracing.
+�
+The objection is a fundamental understanding of computer graphics methods as well as practical OpenGL programming abilities.
+Schedule
+Week
+Date
+Topic
+Resources
+Lecture Notes
+1
+T Jan 8
+Vectors, parametric/implicit,RGB colors
+�
+Chapt 4 (redbook)
+Cross Product, Line Equations, Color
+Th Jan  10
+Lines, circles, barycentric coords, rasterization
+(Basic Implementation Strategies to Bresenham's Algorithm)
+Bresenham's line rasterization
+2
+T Jan 15
+Lines, circles, barycentric coords, rasterization
+(Basic Implementation Strategies to Bresenham's Algorithm)
+Bresenham's circle rasterization
+Th Jan 17
+Overview of OpenGL Fixed-function vs
+���
+shader-based pipeline
+Understand fixed function pipeline and programs
+�
+GLSL Intro
+3
+T Jan 22
+Rasterization
+How to rasterize a polygon
+Polygon Scan Conversion
+Th Jan 24
+rasterization, barycentric coords,
+Transformations I
+4
+T Jan 29
+Transformations
+Chapt 3 (redbook)
+Transformations II
+Th Jan 31
+3D Transformations and matrix stacks
+Hierarchical Transformations
+5
+T Feb 5
+Viewing and projections
+Msys and Mview reference
+�
+Intro to Projection
+Th Feb 7
+�
+Viewing and projections
+�
+OpenGL projection
+Second Projection Slides
+6
+T Feb 12
+Z-buffer
+Visible Surface Methods
+Th Feb 14
+Lighting
+Chapt 5 (redbook)
+�
+Lighting Notes
+7
+T Feb 19
+Lighting continued and Exam review
+Th Feb 21
+OpenGL Overview Shaders
+Chapt 1, Chapt 2 (redbook)
+Chapt 15 (OpenGL Shading Languuage)
+GLSL Overview
+8
+T Feb 26
+Exam
+Th Feb 28
+continue GLSL
+GLSL Specificatiaon (PDF)
+Deferred Shading
+9
+T Mar 5
+Texture Mapping
+Chapt 9 (redbook)
+Texture Mapping
+Th Mar 7
+Texture Mapping, Blending
+�
+Chapt 6
+Texture Mapping with OpenGL
+10
+T Mar 12
+Spring Break
+Th Mar 14
+Spring Break
+11
+T Mar 19
+Texture Shaders
+Glsl example
+Th Mar 21
+Ray Tracing
+Ray-tracing suppliment
+Ray Tracing
+12
+T Mar 26
+Ray Tracing
+�
+Th Mar 28
+Exam Review
+�
+Ray Tracing 2rd Lecture
+13
+T Apr 2
+Exam 2
+Transforms, lighting, hidden surface
+Th Apr 4
+Ray Tracing acceleration
+Ray Tracing 3rd Lecture
+14
+T Apr 9
+Ray Tracing at Pixar
+Ray Tracing for the Movie Cars
+Th Apr 11
+Alpha Blending
+Alpha Channel and Blending Lecture
+15
+T Apr 16
+Brian Summa Panorama Weaving
+Siggraph Paper
+(PDF)
+Th Apr 18
+Exam Review
+16
+T Apr 23
+Exam 3 Last Day of Class
+texture mapping/ray-tracing/blending
+Th May 5
+No Final Exam
+Assignments
+This is NOT an assignment, this is just a program to get things to compile and work. You will use this for your assignments but no assignments have been made at this point.
+Getting Started
+Getting Started Programs for Windows and Linux
+Assignment 1
+: due January 30, 2013
+Assignment 2
+: due February 20, 2013
+Assignment 3
+: due March 20, 2013
+Assignment 4:
+due April 10, 2013
+Assignment 5:
+due April 25, 2013
+Exams
+����������������
+Exam 1 Review Solution
+����������������
+Exam 2 Review Solution
+����������������
+Exam 3 Review Solution
+Quizzes (from previous class, the students did not like quizzes so I will not give them but they will help with the exams).
+Quiz 2 solution
+Solution to Quiz 2
+Quiz 3 solution
+Solution to Quiz 3
+Quiz 4 solution
+Solution to Quiz 4
+Quiz 5 solution
+Solution to Quiz 5
+Quiz 6 solution
+Solution to Quiz 6
+Quiz 7 solution
+Solution to Quiz 7
+Quiz 8 solution
+Solution to Quiz 8
+Quiz 9 solution
+So

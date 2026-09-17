@@ -1,0 +1,277 @@
+Discrete Structures II (COMP 2804)
+Winter 2016
+Instructor:
+Anil Maheshwari
+Office:
+Herzberg Building 5125B
+E-mail:
+anil@scs.carleton.ca
+Lectures:
+Monday & Wednesday 08:35 -
+09:55 AT 102
+Office hours:
+Monday 10:00 - 11:45
+in 5125B HP
+FYI: I am away February 11-19 and March 7-11 for
+Conferences/Workshops, and hence I will not have office hours during
+these periods.
+Teaching assistants:
+The TAs have their
+office hours in Herzberg Building 1170.
+A Moni
+Office hours: Monday 2-4PM (Starting on Jan 18th)
+Farah Chanchary  (NO office hours in the week of March
+28-April 1)
+Office hours:Tuesday 10-12
+Lei Chen
+Office hours: Wednesday 10-11
+Kimberly Crosbie
+Office hours: Thursday 10-12
+Ian McEachern
+Office hours:Thursday 3-4P M
+Course objectives:
+A second course that is
+designed to give students a basic understanding of Discrete
+Mathematics and its role in Computer Science. Computers handle
+discrete data rather than continuous data. The course presents an
+overview of some of the major theoretical concepts needed to analyze
+this type of data.
+Topics covered include:
+Counting,
+sequences and sums, discrete probability, basic statistics,
+recurrence relations, randomized algorithms. Material is illustrated
+through examples from computing.
+Textbook:
+Discrete Structures for Computer Science: Counting, Recursion,
+and Probability by Michiel Smid
+Additional material: Discrete Mathematics and its
+Applications, by Rosen. This book contains a large number of
+exercises as well as solutions. Do not buy this book, because it
+is too expensive. We used to use this book for COMP 1805, so you
+may still have an old copy, or you may borrow a copy from a
+friend.
+Important dates:
+Assignment 1: posted Jan 25, due Feb
+08  PDF-FILE
+TEX-FILE
+(Solutions have been sent by e-mail via CuLearn - FYI: For
+question 2 ("The word starts with A and ends with T."), the
+solution should be 4
+^
+3
+,
+not 3
+^
+4
+.
+)
+Assignment 2: posted Feb 08, due Feb
+24 PDF-FILE
+TEX-FILE
+Assignment 3: posted Mar 07 due Mar
+21  PDF-File
+TEX FILE (Solutions are in the usual
+place on the web)
+Assignment 4: posted Mar 21 due Apr
+04 PDF-FILE
+TEX-FILE (A typo in Question 4.3 is
+fixed - Thanks to a couple of students who noticed that!)
+Midterm: Wednesday March 02  (in class)
+Final exam: Please cross check with the Exam Schedule. As per
+my information it is listed as follows
+COMP2804B
+Apr 21, 2016
+7:00pm
+FH, rows 15-25
+Grading scheme:
+Assignments: 25%
+Midterm: 25%
+Final exam: 50%
+What was done in class
+in Winter 2016:
+Jan  6:
+My Notes
+Course overview. Chapter 1 in the textbook:
+Ramsey
+Theory
+,
+Sperner's Theorem
+,
+Quick-Sort
+.
+You are supposed to be familiar with the following topics from
+COMP 1805: basic logical reasoning, sets and functions, proof
+strategies (direct proof, proof by contradiction, proof by
+induction), Sigma-notation for summations, basic graph theory,
+Big-Oh, Big-Omega, Big-Theta. You may take a look at Chapter 2
+of the textbook and do some of the exercises at the end of that
+chapter.
+Jan 11:
+My Notes
+Counting:
+Product Rule
+, Section 3.1.
+Examples: number of
+seats in CTC center, number of three digits numbers with
+distinct odd digits, number of binary strings, number of
+functions and number of one-to-one functions, number of ways
+to arrange m books on n shelves.
+Jan 13:
+My Notes
+Sections 3.2, 3.3, 3.4
+Counting:
+Bijection Rule
+,
+Complement Rule,
+Sum Rule
+,
+Inclusion-Exclusion
+,
+Jan 18:
+My Notes
+Sections 3.5, 3.6, 3.7
+permutations
+,
+binomial
+coefficients
+Newton's
+Binomial Theorem
+,
+Combinatorial
+proofs
+,
+Jan 20:
+My Notes
+Sections 3.7, 3.8, 3.9.
+Counting:
+Vandermonde's Identity
+,
+Pascal's Triangle
+How many strings can be obtained from MISSISSIPPI,
+Counting solutions of linear equations and inequalities,
+Jan 25:
+Assignment 1 is posted
+My Notes
+Section 3.10.1.
+Pigeonhole
+Principle
+Jan 27:
+My Notes
+Sections 4.1, 4.2, 4.3, 4.4
+Recursion
+:
+recursive functions,
+Fibonacci numbers
+, Sections 4.1, 4.2
+Counting 00-free bitstrings,
+Feb 01:
+My Notes
+Section 4.4 and 4.5
+Gossip Problem
+MergeSort
+Feb 03:
+My Notes
+Height and number of
+nodes in a Full Binary Tree
+Tower of Hanoi
+Intro to Probability
+Feb 08:
+Assignment 1 is Due.
+Assignment 2 is posted.
+My Notes
+Notion of Experiments, Sample Space, Events, Frequency and
+Probability.
+Probability
+Theory
+:
+Probability spaces
+,
+sample spaces
+,
+probability functions, Section 5.2.
+Feb 10:
+My Notes
+Basic rules of
+probability, Section 5.3.
+Several Examples
+Feb 15/17: Fall Break
+Feb 22:
+My Notes
+uniform probability
+spaces, Section 5.4
+Examples: Full House
+and
+Birthday
+paradox
+, Sections 5.4, 5.5.
+Feb 24:
+Assignment 2 is Due.
+My Notes
+Balls and Bins
+Find the big box, Section 5.6.
+Let's Make a Deal
+, the
+Monty Hall
+Problem
+, Section 5.7.
+Conditional probability
+, Section 5.8.
+Feb 29:
+My Notes
+Conditional
+probability
+, Section 5.8.
+Independent events
+, Section 5.10.
+Mar 02: Mid-Term (In Class)
+Here
+is the Mid-Term with Solutions
+It will include all the material covered
+in the months of January and February, excluding the class of
+Feb 29th.
+It is multiple choice exam, where you to mark the answers on a
+Scantron sheet. Please bring a pencil, and a calculator for the
+exam.
+Please have a look at previous midterms and that will provide a
+good practice.
+Mar 07:
+Assignment 3 is
+posted.
+Carsten Grimm will take this class as I am away for a workshop
+Mar 09:
+Carsten
+Grimm will take this class as I am away for a workshop
+Notes from Carsten on Cutting Circles
+Mar 14:
+My Notes
+Choosing a random
+element in a linked list, Section 5.12.
+Infinite probability spaces, Section 5.14.
+Random
+variables
+, Section 6.1.
+Mar 16:
+My Notes
+Independent
+random variables
+, Section 6.2.
+Distribution functions, Section 6.3: Read this section on your
+own.
+Expected
+value
+, Section 6.4.
+Mar 21:
+Assignment
+3 is Due. Assignment 4 is posted.
+My Notes
+Linearity of expectation, Section 6.5
+Geometric distribution and its expected value
+, Section
+6.6.
+Binomial
+distribution and its expected value
+, Section 6.7
+Indicator random variables, Section 6.8.
+Mar 23:
+My Notes
+Analysis of

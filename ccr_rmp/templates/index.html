@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block title %}ccr_rmp · dashboard{% endblock %}
+{% block body %}
+
+<div class="filters">
+  {% for f in filters %}
+    <a href="{{ url_for('index', filter=f.key) }}"
+       class="{{ 'active' if f.key == active else '' }}">{{ f.label }} ({{ f.count }})</a>
+  {% endfor %}
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>#</th><th>Code</th><th>College</th><th>Slide</th>
+      <th>Instructor</th><th>Conf</th><th>RMP</th><th>Ratings</th><th>Review</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for c in courses %}
+    <tr>
+      <td class="muted mono">{{ c.row_index }}</td>
+      <td class="mono"><a href="{{ url_for('course', c=c.course_college) }}">{{ c.course_code }}</a></td>
+      <td>{{ c.college_name }}</td>
+      <td>
+        <span class="muted mono">{{ c.slide_kind or '·' }}</span>
+        {% if c.slide_status %}<span class="badge b-{{ c.slide_status }}">{{ c.slide_status }}</span>{% endif %}
+      </td>
+      <td>{{ c.instructor or '' }}
+        {% if c.instructor_status %}<span class="badge b-{{ c.instructor_status }}">{{ c.instructor_status }}</span>{% endif %}
+      </td>
+      <td class="mono">{{ '%.2f'|format(c.instructor_confidence) if c.instructor_confidence is not none else '' }}</td>
+      <td>{% if c.rmp_status %}<span class="badge b-{{ c.rmp_status }}">{{ c.rmp_status }}</span>{% else %}<span class="muted">·</span>{% endif %}</td>
+      <td class="mono">{{ c.course_num_ratings if c.course_num_ratings is not none else '·' }}</td>
+      <td>{% if c.fb_needs_review %}<span class="badge b-review">review</span>{% elif c.fb_instructor_ok == 1 %}<span class="badge b-found">ok</span>{% elif c.fb_instructor_ok == 0 %}<span class="badge b-error">wrong</span>{% endif %}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

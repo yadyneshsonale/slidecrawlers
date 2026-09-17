@@ -1,0 +1,248 @@
+San Jose State University : Site Name
+Navigation
+Main Content
+Ronald Mak
+Department of Computer Engineering
+Department of Computer Science
+Department of Applied Data Science
+Spring Semester 2021
+Office hours:
+TuTh: 4:30-5:30 PM
+Office location:
+ENG 250
+E-mail:
+ron.mak@sjsu.edu
+CMPE 142 Operating Systems
+Section 1: F 12:00 noon - 2:45 PM online via Zoom
+Open student internships
+and fulltime positions
+at the NASA Ames Research Center.
+Syllabus
+Prerequisites
+Required books
+Assignments
+#
+Assigned
+Due
+Assignment
+1
+Jan 29
+Feb 5
+Ubuntu and the bash Shell
+2
+Feb 5
+Feb 12
+Pipes
+Input file:
+presidents.csv
+Expected output file:
+presidents.html
+Example solutions:
+ReadCSV.c
+MakeTable.c
+PipeMakeTable.zip
+(C)
+PipeMakeTableCpp.zip
+(C++)
+3
+Feb 12
+Feb 26
+Process scheduling algorithms
+Example solution:
+ProcessScheduling.zip
+4
+Feb 26
+Mar 5
+Interprocess communication
+Example solutions:
+Asgn04-1.zip
+Asgn04-2.zip
+5
+Mar 5
+Mar 12
+Memory allocation algorithms
+Example ncurses program:
+DotsAndStars.c
+Example solutions:
+Requester.zip
+MemoryManager.zip
+6
+Mar 12
+Mar 26
+Page replacement algorithms
+Example solution:
+PageReplacement.zip
+7
+Apr 9
+Apr 16
+Disk scheduling algorithms
+Example solution:
+DiskScheduling.zip
+8
+Apr 16
+Apr 23
+POSIX file system functions
+Example solution:
+POSIXFileFunctions.zip
+9
+Apr 23
+Apr 30
+POSIX select() and socket connections
+Example solution:
+TimeServer.zip
+SelectClient.zip
+10
+Apr 30
+May 7
+Install a VMM and a Linux distro
+Lectures
+Week
+Date
+Content
+1
+Aug 20
+Zoom recording
+Passcode: n&!5qyr5
+Slides:
+Course objectives; project teams; postmortem report;
+grading; what is an operating system; virtual views;
+hardware generations; batch systems: IBM 1401 and 7094;
+historic operating systems; evolution of UNIX; interfaces;
+POSIX; macOS; Windows; Linux; bash shell; Assignment #1
+2
+Feb 5
+Zoom recording
+Passcode: AU5.?m3z
+Slides:
+Abstractions: processes, memory, file systems; fork();
+compile and run C and C++ programs; mounted file systems;
+stdin and stdou; shell; I/O redirection; pipes; POSIX
+functions; kernel mode vs. user mode; system call workflow;
+OS structures: monolithic, layered, microkernel,
+client-server, virtual machines; hypervisors
+Example programs:
+echo.c
+echo.pp
+forktest.c
+tagger.c
+tagger.cpp
+pipe.zip
+3
+Feb 12
+Zoom recording
+Passcode: +T2u@e^A
+Slides:
+Processes; memory layout; process models; process control
+block; context switching; process creation and termination;
+process states; process scheduling; process behavior;
+scheduling algorithms; dispatcher; first-come-first-served;
+shortest job first; shortest remaining time; round robin;
+context switching; highest priority first; shortest
+process next; lottery and fair-share scheduling;
+interrupt handler routines; threads; thread scheduling;
+POSIX threads
+4
+Feb 19
+Zoom recording
+Passcode: 9rY=fpGV
+Slides:
+Interprocess communication: shared memory, message
+passing, direct and indirect communication, named pipes;
+client-server communication: sockets, remote procedure
+calls; message synchronization; process synchronization;
+race condition; mutual exclusion; critical region; lock
+variables; busy waiting; Peterson's solution; test and
+set lock instruction; priority inversion; sleep and wakeup;
+semaphores; mutexes; synchronized producers and consumers;
+problems with semaphores
+Example programs:
+SharedMem-Producer.zip
+SharedMem-Consumer.zip
+NamedPipe-WriteRead.zip
+NamedPipe-ReadWrite.zip
+Socket.zip
+Semaphore-ProducerConsumer.zip
+5
+Feb 26
+Zoom recording
+Passcode: =0*yfr!*
+Slides:
+Threads; Office Hour multithreading example; readers-writers
+problem; dining philosophers problem; C++ threads, mutexes,
+and condition variables; C++ Office Hour; deadlock conditions;
+resource contention; deadlock modeling; deadlock example
+Example programs:
+OfficeHour.zip
+OfficeHour.cpp
+PrintMutex.cpp
+QueueSync.cpp
+deadlock.c
+6
+Mar 5
+Zoom recording
+Passcode: Ae$Qut&5
+Slides:
+Deadlocks: strategies, detection, recovery, prevention;
+global resource numbering; deadlock avoidance; resource
+trajectories; banker's algorithm for a single resource
+and for multiple resources; two-phase locking;
+memory management; computer system architecture;
+memory hierarchy; memory/storage speed comparisons;
+memory manager;
+monoprogramming systems; fixed partitions; process
+relocation; process protection; address binding
+Logical vs. physical address space; dynamic loading
+and linking; swapping; variable partition scheme;
+memory compaction; memory demands; keeping track of
+memory; memory allocation algorithms; memory fragmentation
+Example ncurses program:
+DotsAndStars.c
+7
+Mar 12
+Zoom recording
+Passcode: gC.Y0^jT
+Slides:
+Internal vs. external fragmentation; paging;
+shared pages; multilevel page tables; page table entry;
+translation lookaside buffer (TLB); TLB hit ratio;
+inverted page tables; segmentation; paging vs. sementation;
+virtual memory; demand paging; page fault;
+copy-on-write; page replacement; first-in first-out
+(FIFO); second chance; least recently used (LRU); least
+frequently used (LFU); most frequently used (MFU);
+random pick; working set; thrashing; page fault frequency
+(PFF);
+8
+Mar 19
+Zoom recording
+Passcode: C1US02#f
+Slides:
+Locality model; working set model; local vs. global page
+allocation; working set and page fault rate; prepaging;
+page size; TLB reach; program structure; kernel memory;
+buddy system; memory-mapped files; Intel memory management;
+ARM memory management; Linux memory management;
+review for the midterm
+Example memory-mapped file program:
+MemoryMappedFile.zip
+9
+Mar 26
+Midterm
+Zoom recording
+Passcode: P*%E7M7n
+Slides:
+OS design goals and challenges; hide the low-level hardware;
+interface design principles; layered OS architecture;
+performance; space-time tradeoff; The Mythical Man Month;
+OS trends
+Recommended book:
+The Mythical Man-Month
+10
+Apr 9
+Zoom recording
+Passcode: F&DcKK4!
+Slides:
+Midterm solutions; hard disk drive; solid state disk;
+secondary storage connection methods;
+disk scheduling: FCFS, SSTF, SCAN, C-SCAN, LOOK, C-LOOK;
+scheduling choices; Assignment #7; sto

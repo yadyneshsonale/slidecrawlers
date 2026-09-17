@@ -1,0 +1,134 @@
+COMP 557  Fundamentals of Computer Graphics W2015
+Instructor:
+Michael Langer
+Lecture Notes, Slides, Exercises
+preliminaries
+(slides)
+(notes)
+(exercises)
+Course Outline,  overview,  dot & cross products (review)
+Part 1:  Viewing transformations: from vertices to pixels
+model transformations
+(notes)
+(slides)
+(3x3)
+(exercises)
+rotations, scaling, translations, homogeneous coordinates, points at infinity
+view transformations
+(notes)
+(slides)
+(3x3)
+(exercises)
+viewer coordinates, GL_MODELVIEW, quadrics
+projections,  view volume
+(notes)
+(slides)
+(3x3)
+(exercises)
+orthographic & parallel, perspective, vanishing points;  frustum, near and far planes
+projective transform
+(notes)
+(slides)
+(3x3)
+(exercises)
+normalized view volume, GL_PROJECTION, clipping coordinates
+clipping, windows, scan conversion
+(notes)
+(slides)
+(3x3)
+(exercises)
+Cohen-Sutherland, display coordinates and viewports, rasterizing a line
+Part 2:  Visibility,  geometry modelling
+hidden surface removal
+(notes)
+(slides)
+(3x3)
+(exercises)
+OpenGL pipeline (end of part 1),  back face culling, depth buffer, painter, ray casting
+more (efficient) hidden surface removal
+(notes)
+(slides)
+(3x3)
+(exercises)
+BSP tree, octrees, bounding volume hierarchy
+object hierarchies
+(notes)
+(slides)
+(3x3)
+(exercises)
+OpenGL transformation stack, fractals, L-systems
+smooth curves and surfaces
+(notes)
+(slides)
+(3x3)
+(exercises)
+cubic splines (Hermite, Bezier, Catmull-Rom), bicubic surfaces
+meshes
+(notes)
+(slides)
+(3x3)
+(exercises)
+level of detail,  simplification, subdivision
+Part 3:  Rendering:  light, material, texture, transparency
+lighting, material, shading
+(notes)
+(slides)
+(3x3)
+(exercises)
+ambient/point/spot, diffuse/mirror/glossy,  Gouraud/Phong
+review of selected exercises (1-11)
+(slides)
+review of midterm exam,  review of rotations
+(slides)
+texture mapping
+(notes)
+(slides)
+(3x3)
+(exercises)
+homographies, aliasing, magnification and minification, interpolation
+more texture mapping, procedural shading
+(notes)
+(slides)
+(3x3)
+(exercises)
+MIP mapping, bump mapping
+ray tracing, environment mapping
+(notes)
+(slides)
+(3x3)
+(exercises)
+cube/sphere map, refraction
+shadows and interreflections
+(slides)
+(3x3)
+(exercises)
+cast vs attached, ray tracing, shadow mapping, ambient occlusions, interreflections
+image compositing
+(slides)
+(3x3)
+(exercises)
+alpha, over, blending, pulling a matte
+volume rendering
+(slides)
+(3x3)
+(exercises)
+blending N layers, fog, transfer functions
+review of selected exercises (12, 16-19)
+(slides)
+(exercises)
+Part 4:  Image Capture and Display
+color
+(slides)
+(3x3)
+(exercises)
+trichromacy, spectra, color matching, color displays, perceptual vs physical
+image capture
+(slides)
+(3x3)
+(exercises)
+image blur, f-number, exposure, HDR imaging
+image display
+(slides)
+(3x3)
+(exercises)
+Weber/Stevens Laws, gamma correction

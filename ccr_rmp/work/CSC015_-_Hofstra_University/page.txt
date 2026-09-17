@@ -1,0 +1,126 @@
+CSC015 Fundamentals of Computer Science I:
+Problem Solving and Program Design Spring 2015
+Course Info
+Objectives
+Instructional Staff
+Textbooks
+Software
+Grading
+Homework
+Policies
+Syllabus
+Course Info
+Time:
+Lecture: Tues & Thurs 11:10AM to 12:35 PM
+Lab: Wed 12:45-2:35PM
+Summary:
+Introduction to computer science with emphasis on problem solving, programming and algorithm design. Uses a high-level programming language for solving problems and emphasizing program design and development. Topics include basic programming constructs, expressions, functions, data types, arrays and strings. (3 hours lecture, 2 hours laboratory.)
+Objectives
+Develop a basic understanding of computing.
+Proficiently master a very high level programming language (Python) for tacking real-world problems.
+Develop problem solving skills.
+Instructional Staff
+Professor:
+Dr. Knarig Arabshian
+Email:
+[email protected]
+Office hours: Tues/Thurs 12:40-2:10 PM
+Office Number: Adams 115.
+Textbooks
+Python Programming: An Introduction to Computer Science 2nd Edition Paperback
+by John Zelle and Michael Smith
+Software
+Software requirements for this course:
+Unix/Linux Terminal
+Windows: If you are running on a Windows machine, follow these directions to install
+Cygwin
+Mac: Macs already come with a terminal program. Go to Applications->Utilities->Terminal.
+Logging into the Linux Lab machines from home
+Open a terminal
+SSH into your account by issuing the following command: ssh -p 5010 adamsXXXXX.hofstra.edu
+where XXXXX is in the range [20401..20425]
+Example: ssh -p 5010 adams20401.hofstra.edu
+If you are working on your assignments in the lab and need to access your files, you can do so via sftp.
+Download
+Filezilla
+and set up an sftp connection.
+Alternatively, you can use the sftp command:
+Open terminal
+cd to the directory you want to download your files
+Login command is similar to ssh command, except replace ssh with sftp. Example:  sftp -p 5010 adams20401.hofstra.edu
+cd to the directory where your files are
+to download files: get filename
+to upload files: put filename
+Python software:
+Download the software
+Windows:
+https://www.python.org/downloads/windows/
+Mac already comes with a pre-installed python software. To update it, go to
+https://www.python.org/download/mac
+Go to the Python folder
+Open the idle editor
+Instructions here do a pretty good job of explaining how to use the idle editor
+and run your python program:
+Windows users check this:
+http://www.annedawson.net/Python_Editor_IDLE.htm
+Mac users check this:
+http://anh.cs.luc.edu/python/hands-on/3.0/IdleOnMac.html
+Here are a few more development environments you can use for python programming. It includes instructions for Windows/Mac/Linux.
+Pycharm:
+https://www.jetbrains.com/pycharm/
+http://learnpythonthehardway.org/book/ex0.html
+Grading
+Attendance ("Thinking Question" given first 10 minutes of each class) -- 5%
+4 Quizzes (Closed book; will count top 3) -- 15%
+10 Assignments (will count top 7) -- 45%
+Midterm Exam (Open book) -- 15%
+Final Exam (Closed book) -- 20%
+Let me know about midterm exam conflicts
+ASAP!
+Grades will be posted on Blackboard
+Homework
+All assignments must be submitted
+*BEFORE*
+class.
+Programming Assignments:
+submit through Blackboard. Instructions can be found
+here
+.
+Policies
+Cheating and plagiarism: will not be tolerated in any capacity. All work in this class is to be done on your own unless otherwise specified. Please read Hofstra University's
+policy on academic integrity
+for more details.
+Grade Change Request:
+Write out an explanation as to why the grade was incorrect and staple it to the original assignment/exam and submit to me
+If your explanation is correct, I will change your grade
+You have up to
+THREE DAYS
+to submit a grade change request
+Lateness: Up to three days to submit an assignment
+1 day late 25% deduction
+2 days late 50% deduction
+3 days late 75% deduction
+Email: is the best way to contact me. Make sure you put
+[CSC015]
+in
+the subject heading so I will notice your email.
+Feedback: Send me feedback on the course at any point in time and I will consider your input.
+Exam Schedule:
+Thu, Feb 12: Quiz 1
+Wed, Mar 4:  Quiz 2 (Programming)
+Thu, Mar 12: Midterm
+Thu, Apr 2:  Quiz 3
+Wed, Apr 29: Quiz 4 (Programming)
+TBD: Final
+Schedule (tentative)
+This schedule is subject to change, please check regularly and refresh the HTML page to see the latest updates.
+Lectures and Labs will be uploaded onto Blackboard.
+Syllabus
+Lecture Slides
+Assigned Reading
+Lecture 1:
+Introduction to Computers and Programming
+Gaddis: Ch 1
+Lecture 2:
+Introduction to Computers and Programming
+Gaddis: Ch 1

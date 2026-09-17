@@ -1,0 +1,177 @@
+Lecture notes for COMP 40
+Table of Contents
+Lecture notes for COMP 40
+Table of Contents
+7 Sep 2011: Intro to Comp 40
+Books and handouts
+Course title: Machine-level programming
+Engineering problem-solving: tracking Irene
+What to expect from COMP 40:  A course built around problem-solving
+Outcomes from COMP 40
+What does Professor Ramsey want?
+Fundamental technique: Abstraction
+12 Sep 2011: Technique, Programming with interfaces and implementations
+Introduction
+Lab comments
+Project comments
+Response to Wednesday's exercise on technique
+Handling the paper storm
+What is a loop invariant?
+What problem do invariants solve?
+Invariant in action: sorting an array in place
+14 Sep 2011: Hanson's  Table interface
+19 Sep 2011: Iterators, abstraction and invariants: Implementing arrays
+Iterators, also called map
+Abstraction and invariants: where are we going?
+Unboxed, polymorphic arrays
+Using values stored in Hanson's arrays
+Storing values into unboxed arrays
+The representation revealed
+21 Sep 2011: Fire, Brimstone, Compiling, linking, and libraries
+Learning objectives:
+Homework alerts
+Fire and Brimstone
+Comments on names (and expectations for next homework)
+Comments on fingerprint groups
+From source code to a running process image: compiling, linking, and libraries
+26 Sep 2011: From Newton to Einstein---locality and the costs of storage
+Learning objectives
+What to expect from the latest project
+New software:
+Storage
+Fast is small; big is slow
+28 Sep 2011: The how and why of caching
+Review questions
+How caches work
+Example: load a word
+What happens on a cache miss
+Why caching works
+Three reasons a block might not be in the cache
+Extra hardware to avoid misses
+Cache review, Split caches, prediction hardware
+3 Oct 2011: Cache review and practice
+Cache review
+Eviction
+Conflicts
+Class exercise: modeling the cache
+The alignment conspiracy (AMD64 version)
+5 October 2011: Machine Arithmetic
+Learning objectives
+Current project wrapup
+Finite-precision arithmetic
+Preface: Where have we been and where are we going
+Arithmetic with limited precision
+Key concepts
+Topics
+Natural numbers using positional notation with finite precision
+Signed-magnitude representation
+Fixed-point representation of real numbers
+Normalized numbers
+12 Oct 2011: Binary arithmetic and floating-point numbers
+Review
+Floating-point review: normalized and denormalized Floating-point numbers
+What a normalized number looks like
+IEEE double precision (binary format)
+All the world's a bit vector
+Two's-complement arithmetic
+Bitwise operations
+Multiple interpretations of bit vectors
+What are 'Big-Endian' and 'Little-Endian'
+Shifting
+Combining bitwise operations with shifts
+17 Oct 2011: Miscellany
+Results from your homework:
+Right and wrong ways to represent image transformations
+What to expect from the midterm:
+Debugging and assembly code
+24 October 2011: C and assembly
+Preliminaries
+Plan for the week
+Introduction to assembly code
+Calling convention: parameters and results
+Computation by two-address code
+26 October 2011: Lowering, control flow
+Control flow
+Condition codes
+Translating control flow
+Translating control flow
+Calls and returns (to return to later)
+Not covered in lecture: Mapping C data to the machine
+Key locations for values, including effective addresses (overview page 1)
+Mapping C data onto machine data
+31 October 2011: A Universal Machine
+Architecture of the Universal Machine
+Emulating the Universal Machine
+Design of UM software
+2 November 2011: UM Design and Documentation
+UM segmented memory architecture
+7 November 2011: Documentation (as expected for UM)
+What I'm looking for in your code and documentation
+9 November 2011: Refactoring and bit operations
+Results of labratory exercise
+Comments on image compression
+Refactoring: making things better
+Review of bit operations
+14 Nov 2011: Code tuning
+Amdahl's Law
+The 80/20 rule (not a law of nature):
+Tools and techniques for finding hot spots
+Performance killers
+16 November 2011: Code tuning, continued
+Review
+Four more Performance killers
+Performance: refactoring loops
+21 Nov 2011: Code improvement wrapup
+Performance: function inlining and specialization
+Using the world of ideas for advanced code tuning
+28 November 2011: Universal Machine Macro Assembler
+Assembling via named sections
+Example translation of C into sections
+Sections on the Universal Machine
+Sections, the state of the assembler, and its invariants
+Enforcing the phase distinction: the linker
+30 November 2011: Course evaluations, Macro instructions, Calls
+Course evaluations
+Macro assembler Review
+More macro insturctions
+Macro assembly code examples
+Macro instructions and your homework
+Macro instructions and algebraic laws
+5 December 2011: Procedures in macro assembler
+Return of profile assignment
+Learning outcomes
+Today's class
+Control-flow review
+Procedures
+Calling and register-use conventions
+Implementing a call instruction
+Startup code
+Using the call stack
+Recursive functions
+A recursive factorial function
+A main routine
+Printing numbers in decimal notation
+Implmenting the RPN calculator
+Review
+12 Dec 2011: Exams, past and future
+7 Sep 2011: Intro to Comp 40
+Introduce course staff
+Myself: programming language guy, but deeply involved in
+compilers, assemblers, linkers, debuggers, all of which work with
+machine structures and assembly language.
+Call me 'Professor' or 'Professor Ramsey' or 'Norman'
+Please
+do not call me 'Ramsey'
+I like questions!  If you have a question, chances are several
+other people also have a similar question.
+Eli Brown: Head grader, evalute your written work
+Teaching assistants: Greg Bodwin, Adrienne Dreyfus, Hawk Glazier,
+Amanda Hay, Foster Lockwood, Marshall Moutenot, Josh Pearl
+Pair programming with the course staff: Ari Kobren, Jesse Welch, me
+Books and handouts
+Hanson is essential, Kernighan and Ritchie is highly recommended
+For the other book, it depends how much you like books---suggestions
+on web.  If books will save you time, spend the money.
+Today's handouts:
+Printed copies of web pages:
+Lots of

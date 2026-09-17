@@ -1,0 +1,172 @@
+Department of Computer Science
+California State University, Sacramento
+Computer Science 139: Operating System Principles
+Fall
+2014
+Course Description
+This course deals with concepts, design principles, fundamental issues and implementations (algorithms and data structures) of modern operating systems. Topics include: operating system structures, processes and threads, concurrency, process communication and synchronization, deadlock and its solutions, processor scheduling, virtual memory management, file systems, I/O device management, security and protection, algorithms and methods from commercial operating systems. Prerequisite: CSC 60 and CSC 137.  3 units.
+Instructor
+Dr. Du Zhang,     RVR 5020,     zhangd at ecs.csus.edu
+Classroom and Meeting Time
+Section 1:
+RVR 1004,        TR 3:00-4:15pm
+Section 2:
+RVR 1002,
+TR 12:00-1:15pm
+Textbook
+Silberschatz, Galvin & Gagne,
+Operating System Concepts
+, 9th Edition, John Wiley & Sons, 2013.
+Lecture notes
+Supplementary materials: available from SacCT.
+Reference Book: J. S. Gray, Interprocess Communications in UNIX: the Nooks and Crannies, Prentice Hall, 1997.
+Office Hours
+Tuesdays/Thursdays:  1:20-2:00pm;   6:45-7:35pm;     or by appointment.
+OSCAL: Operating System Concept Animation Library
+Programming Assignments
+Handouts: available from SacCT.
+Course Grading
+[16%]   Quizzes (close book/close notes)
+[24
+%]
+Programming assignments
+[28%]   Midterm exam (close book/close notes)
+[32%]   Final exam (close book/close notes)
+Policy on Letter Grade
+Percentage Range
+Letter Grade
+[92, 100]
+A
+[88, 91]
+A
+-
+[83, 87]
+B+
+[78, 82]
+B
+[73, 77]
+B
+-
+[68, 72]
+C+
+[64, 67]
+C
+[60, 63]
+C
+-
+[56, 59]
+D+
+[53, 55]
+D
+[50, 52]
+D
+-
+[0, 49]
+F
+Tentative Schedule
+Week
+Topic Covered
+Textbook
+Extra Materials
+1
+Sept 1
+Overview of Operating Systems
+von Neumann machine architecture, OS structure and operations, resource managements
+Chapters 1 and 2
+2
+Sept 8
+Processes
+Processes, state transitions, PCB, process communication.
+Chapter 3
+3
+Sept 15
+Threads
+Multithreading, models, thread libraries, Pthreads, threading issues.
+Chapter 4
+Notes on threads
+4
+Sept 22
+Process Synchronization
+Critical section problem, mutual exclusion solutions, semaphores, monitors, Eisenberg-McGuire algorithm.
+Chapter 5
+Notes on EM Algo.
+Notes on CS approaches
+5
+Sept 29
+Classic Problems of Synchronization
+Producers/consumers problem, readers/writers problem, dining philosophers problem.
+Chapter 5
+6
+Oct 6
+Deadlock and Its Solutions
+Deadlock, deadlock prevention, avoidance, and detection and recovery. Starvation.
+Chapter 7
+7
+Oct 13
+Processor Scheduling
+Scheduling criteria, scheduling algorithms. Performance analysis.
+Chapter 6
+8
+Oct 20
+Midterm Exam:
+Oct
+23
+-
+Midterm Review
+9
+Oct 27
+Real-Time Scheduling
+Periodic and aperiodic tasks, deadline-based scheduling, RMS.
+Chapter 6
+10
+Nov 3
+Memory Management
+Partitioning, paging, segmentation
+Chapter 8
+11
+Nov 10
+Virtual Memory
+Locality of reference. Demand paging, page replacement strategies, thrashing
+Chapter 9
+12
+Nov 17
+File Systems
+File system structure, access methods, .directories, allocation methods
+Chapters 11 and 12
+13
+Nov 24
+Mass-Storage Structure and I/O Systems
+Disk structure, scheduling and management, RAID, I/O hardware structure,  kernel I/O subsystem.
+Chapters 10, and 13
+Notes on RAID
+14
+Dec 1
+Security and Protection, Distributed Systems
+Principles of protection, access matrix, threats, computer security,
+network OS, distributed OS
+Chapters 14, 15,
+and 17
+15
+Dec 8
+Final Review
+16
+Dec 15
+Finals Week
+Final Exam:
+Tuesday, Dec 16:  3:00-5:00pm (Section 1);  12:45-2:45pm (Section 2)
+Notes
+1.   Any adjustment to this syllabus will be announced in class and posted on the course web site. Class attendance is very important. Each student is responsible for any additional material to be discussed or distributed in class.
+2.  Both exams will be close-book/close-notes. Prior to an exam, a review guideline will be posted and discussed. No make-up exam will be arranged unless there is a serious and compelling reason and instructor must be notified prior to an exam.
+3.  Quizzes will be announced ahead of time and will also be close-book/close-notes. Quizzes are given at the beginning 15-minute of
+a class. Anyone late to a quiz, regardless of the reason, must turn in the quiz at the end of the first 15-minute period. Quizzes cannot be made up.
+4.  When a submission is required for an assignment, there will be a penalty involved for late submission beyond the due day: 10 points reduction per day for no more than 1 school day after the due day.
+No credit will be given to any submission beyond the 1 school-day grace period.
+5.  Cheating or plagiarism is a violation of a fundamental principle of academic honesty and integrity, and will not be tolerated in the University. Under the provisions of the California Code of Regulations, cheating or plagiarism is cause for disciplinary action, including expulsion (Please refer to the University policy on
+plagiarism
+and
+academic honesty, policy and procedures
+). Your answers in the exams, quizzes, and assignments must be your own. Since
+all parties involved will be subject to disciplinary action
+, you should be careful in guarding both printed and on-line versions of your work. Please read the
+Department Policy on Academic Integrity
+first, and then sign and return the Agreement sheet back to me.

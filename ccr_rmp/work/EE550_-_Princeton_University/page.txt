@@ -1,0 +1,63 @@
+COS 597G (Fall 2022): Understanding Large Language Models
+Instructor
+Danqi Chen
+(danqic AT cs.princeton.edu)
+Teaching assistant
+Alexander Wettig
+(awettig AT cs.princeton.edu)
+Lectures
+Monday/Wednesday 10:30-11:50am
+Location
+Sherrerd Hall 101
+Pre-lecture feedback meetings
+Monday 3:30-4pm for Wednesday lectures, Friday 4:45pm-5:15pm for Monday lectures, COS 412
+Office hours
+Danqi's office hour: Monday 2:30-3:30pm, COS 412 (
+by appointment
+)
+Alex's office hour: Wednesday 3-4pm, Friend Center (student space lobby)
+Feedback form
+https://forms.gle/rkJVxY8fvn7pchv89
+We will use a Slack team for most communiations this semester (no Ed!). We will let you get in the Slack team after the first lecture; If you join the class late, just email us and we will add you. As long as you are on Slack, we prefer Slack messages over emails for all logistical questions. We also encourage students to use Slack for discussion of lecture content and projects.
+Large language models (LLMs) have utterly transformed the field of natural language processing (NLP) in the last 3-4 years. They form the basis of state-of-art systems and become ubiquitous in solving a wide range of natural language understanding and generation tasks. With the unprecedented potential and capabilities, these models also give rise to new ethical and scalability challenges. This course aims to cover cutting-edge research topics centering around pre-trained language models. We will discuss their technical foundations (BERT, GPT, T5 models, mixture-of-expert models, retrieval-based models), emerging capabilities (knowledge, reasoning, few-shot learning, in-context learning), fine-tuning and adaptation, system design, as well as security and ethics. We will cover each topic and discuss important papers in depth. Students will be expected to routinely read and present research papers and complete a research project at the end.
+This is an advanced graduate course and all the students are expected to have taken machine learning and NLP courses before and are familiar with deep learning models such as Transformers.
+Learning goals:
+This course is intended to prepare you for performing cutting-edge research in natural language processing, especially topics related to pre-trained language models. We will discuss the state-of-the-art, their capabilities and limitations.
+Practice your research skills, including reading research papers, conducting literature survey, oral presentations, as well as providing constructive feedback.
+Gain hands-on experience through the final project, from brainstorming ideas to implementation and empirical evaluation and writing the final paper.
+Course structure
+Class participation (25%)
+: In each class, we will cover 1-2 papers. You are required to read these papers in depth and answer around 3 pre-lecture questions (see "pre-lecture questions" in the schedule table)
+before 11:59pm prior to the lecture day
+. These questions are designed to test your undersatnding and stimulate your thinking on the topic and will count towards class participation (we will not grade the correctness; as long as you do your best to answer these questions, you will be good). In the last 20 minutes of the class, we will review and discuss these questions in small groups.
+Presentations (30%)
+: For each lecture, we will ask two students to work together and deliver a 60-minute lecture. The goal is to educate the others in the class about the topic, so do think about how to best cover the material, do a good job with slides, and be prepared for lots of questions. The topics and scheduling will be decided at the beginning of the semester. All the students are expected to come to the class regularly and participate in discussion.
+1-2 papers have already been chosen for each topic. We also encourage you to include background, or useful materials from "recommended reading" when you see there is a fit.
+You are also required to meet with the instructor before the lecture (Monday 3:30-4pm for Wednesday lectures and Friday 4:45-5:15pm for Monday lectures). Please send your draft slides on Slack
+before 11:59pm
+the day prior to the meeting and we will go over your slides during the meeting.
+You are expected to present 1-2 times and you will receive feedback on your presentation from 3-4 classmates.
+Lecture feedback (5%)
+: In addition to giving lectures, you are also required to provide written feedback to the presenter(s) on their lecture, 1+ pages in length, commenting on the content, delivery, clarity, completeness, etc. No need for complete sentences, bullet points are fine, but should be thorough and constructive. These notes should be sent to the instructor/TA on Slack within a day of the lecture (
+a google doc link is preferred
+). You are expected to do this 2-3 times throughout the semester.
+Final project (40%)
+: At the end of the class, everyone is required to do a class project related to LLMs and submit a final paper. You should work as a team of 2 or 3. Two example types of project include:
+Train or fine-tune a medium-sized language model (e.g., BERT/RoBERTa, T5, GPT-2) yourself for the task of your interest. You will probably need to access pre-trained models on
+HuggingFace's hub
+. If you don't have decent compute resources, we will provide certain compute budget for you to execute your projects.
+Prompt and evaluate a very large language model (e.g., GPT-3, Codex) to understand their capabilities, limitations or risks. We will provide certain budget for you to
+access
+these large models if needed.
+Everyone is required to submit a proposal
+by Oct 14th 11:59pm
+and the final paper is due on
+Dec 16th
+(dean's date). We will schedule in-class project presentations at the end of semester on Dec 5th. More detailed guidelines can be found
+here
+.
+Useful materials:
+J & M, slp3
+is an NLP textbook for you to check out specific topics in NLP.
+On the Opportunities and Risks of Foundation Models
+(published by Stanford researchers in July 2021) surveys a range of top

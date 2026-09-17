@@ -1,0 +1,32 @@
+# ccr_rmp pipeline configuration
+# Source of truth = dataset_ccr_new.xlsx ONLY. No other DB is read or joined.
+
+# --- Input / output ---------------------------------------------------------
+input_xlsx: ../slidefetch/dataset_ccr_new.xlsx
+db_path: ccr_rmp.db
+artifacts_dir: work          # cached fetched pages / rendered slide images
+
+# --- Local LLM (Qwen2.5-VL served by RateMySlides/serve_vllm.sh on :8000) ---
+llm:
+  base_url: http://127.0.0.1:8000/v1
+  model: AUTO                 # AUTO = ask the server (/v1/models) for the id
+  api_key: EMPTY
+  temperature: 0.0
+  max_tokens: 400
+  timeout: 90
+
+# --- Instructor extraction (Stage 2, "smarter pick") ------------------------
+instructor:
+  scan_pages: 12              # scan text of the first N PDF pages for cues
+  max_vlm_pages: 3            # send at most N candidate pages to the vision model
+
+# --- Rate My Professors (GraphQL API) ---------------------------------------
+rmp:
+  delay: 0.4                  # seconds between requests
+  workers: 4
+
+# --- Slide fetching ---------------------------------------------------------
+fetch:
+  timeout: 25                 # seconds per HTTP request
+  max_pdf_pages: 2            # render the first N PDF/PPT pages for the VLM
+  max_html_chars: 6000        # visible-text budget sent to the LLM

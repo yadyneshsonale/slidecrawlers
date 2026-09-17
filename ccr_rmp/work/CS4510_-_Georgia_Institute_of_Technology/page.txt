@@ -1,0 +1,252 @@
+CS4510 Automata and Complexity
+Spring 2024 3:30-4:45PM MW
+Howey L4
+People
+Lecturer:
+Abrahim
+Ladha
+TAs:
+Rahul
+Denise (Yitong) Li
+Justin Hinckley
+Madhura Ummettuguli
+Samina Mulani
+Suchet Sapre
+Yash Patel
+Aditya Yadavalli
+Eric (Jiacheng) Shang
+Anvitha Veeragandham
+Ruchi Patel
+Anant Gupta
+OFFICE HOUR TIMES. These are subject to change as TAs may need to
+reschedule. See piazza for updates.
+Office hours are located at outside CCB203, an open area on the
+second floor of CCB.
+My Office is in CCB 207B, second floor. I have an open door policy.
+If my door is open, you may come in and ask any questions. I am also
+extremely responsive on piazza. Please use me as a resource, even for
+simple quick questions.
+Course Information
+This course answers two main questions:
+What are the fundamental limits of computation?
+What makes some problems easy, and others hard?
+The first question is the study of the area of
+Computability
+theory
+. Most of its questions are solved, which is what makes
+this subject fun. We are concerned with such extremal, almost
+philosophical questions. What even is computation? What even is a
+computer? Are all problems solvable? We will explore several models of
+computation and explore their relative power, and weaknesses.
+The second question is the study of
+Complexity
+theory
+. Most of its questions are unsolved. This subject does
+not have a happy ending (and perhaps won’t, in our lifetimes) but this
+contrast is what makes it interesting. We may not know how to solve
+certain questions, but ironically, we know a lot about how hard these
+questions are.
+I like to think of this course as a finale to your CS degree. It is
+simultaneously the most important and least important course you will
+take. It is the least important as it doesn’t develop any single
+technical skill. It is the most important, as it develops your ability
+to conceptualize and theorize. This is the course where you will learn
+why computer science gets to be called a science. It puts the rest of
+your degree into context.
+This course has a lot of pre-reqs, some of which I would disagree
+should be a requirement. All you really need is good proof skills, like
+those found CS2050. If you think you might be rusty, please refresh
+chapter zero of the Sipser book.
+The book for the course is Introduction to the Theory of Computation
+by Michael Sipser. It is an excellent textbook, can’t count how many
+times I’ve read it. The notes and lectures for the course are the
+authoritative reference, but it is expected you follow along with
+Sipser’s book. Later on, I may reference the Arora-Barak and Li-Vitanyi
+books.
+Evaluation
+3 Exams, each worth 15%
+1 Optional Final, replacing your lowest exam grade.
+7+ Homeworks, worth 45%
+with one dropped.
+Each homework will also have a 4% bonus if you use the provided
+Latex template.
+Final project, worth 10%
+There will be more information towards the end of the semester
+You will have to record a video covering some topic related to this
+course.
+teams of up to size three, and videos atleast 15 minutes in
+length
+Schedule
+This is subject to change as I realize what takes more or less
+time.
+No.
+Date
+Subject
+Notes
+Other
+01
+Jan 08
+Introduction and DFAs
+notes
+02
+Jan 10
+Nondeterminism
+notes
+03
+Jan 17
+Regular Expressions
+notes
+04
+Jan 22
+The Pumping Lemma
+notes
+Jan 24
+Exam 1
+05
+Jan 29
+Context-Free Grammars
+notes
+06
+Jan 31
+Syntactic Structures
+notes
+07
+Feb 05
+Pushdown Automata
+notes
+08
+Feb 07
+Equivalence of PDAs and CFGs
+notes
+09
+Feb 12
+Exam 2
+Feb 14
+Turing Machines
+notes
+10
+Feb 19
+Church-Turing Thesis
+notes
+slides
+,
+required reading1
+,
+required reading 2
+,
+required reading
+3
+11
+Feb 21
+Turing-Completeness
+notes
+12
+Feb 26
+Countability
+notes
+13
+Feb 28
+Foundations of Mathematics
+notes
+14
+Mar 04
+Incompleteness and Undecidability
+notes
+15
+Mar 06
+Art of Reduction
+notes
+16
+Mar 11
+Post’s Correspondence Problem &
+Rice’s Theorem
+notes
+17
+Mar 13
+Kolmogorov Complexity
+notes
+18
+Mar 25
+Complexity Classes
+notes
+Mar 27
+Exam 3
+19
+Apr 01
+In and around NP
+notes
+20
+Apr 03
+In and around PSPACE
+notes
+21
+Apr 08
+Relativization
+notes
+22
+Apr 10
+Circuits
+notes
+23
+Apr 15
+The Polynomial Hierarchy
+notes
+24
+Apr 17
+Karp-Lipton Theorems
+notes
+25
+Apr 22
+Why is Computer Science a Science?
+notes
+Apr 26
+Final Exam (2:40-5:30PM)
+Other Resources
+Besides the notes we will publish this semester, I recommend you use
+the following two references:
+Summer
+recorded lectures
+Previous
+notes from Fall
+Homework Schedule
+No.
+Released
+Due
+Returned
+1
+Jan 10
+Jan 17
+Jan 22
+2
+Jan 25
+Feb 07
+Feb 10
+3
+Feb 13
+Feb 22
+Feb 26
+4
+Feb 23
+Mar 06
+Mar 11
+5
+Mar 07
+Mar 15
+Mar 22
+6
+Mar 28
+Apr 11
+Apr 15
+7
+Apr 12
+Apr 26
+Apr 32
+Statement of
+Intent for Classroom Inclusivity
+As a member of the Georgia Tech community, I am committed to creating
+a learning environment in which all of my students feel safe and
+included. Because we are individuals with varying needs, I am reliant on
+your feedback to achieve this goal. To that end, I invite you to enter
+into dialogue with me about the things I can stop, start, and continue
+doing to make my classroom an environment in which every student feels
+valued and can engage actively in our learning community.

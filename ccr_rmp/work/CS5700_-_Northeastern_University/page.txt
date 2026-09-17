@@ -1,0 +1,136 @@
+Computer Networks
+Class Information
+Lectures
+Class Information
+Professor:
+Cristina Nita-Rotaru
+Time:
+TF 9:50-11:30am
+Office Hours:
+Tu 11:30 - 1:30pm (after class) or by appointment.
+TA:
+TBD
+TA Email:
+available on piazza
+Class Forum:
+On
+Piazza
+Paper List:
+Click here
+Syllabus:
+Click here
+Course Description
+Computer networking is a rapidly advancing field, and the Internet is already an integral part of society. It is therefore important for computer scientists and computer engineers to be familiar with the fundamentals of computer networking. This course will focus on the architecture, algorithms, and protocols of the Internet. Topics include local area networking, routing, congestion control, network security, and applications such as peer-to-peer and content distribution networks. This course will be systems oriented, and students will work on hands-on projects to learn how to build and understand Internet applications.
+Prerequisites
+The official prerequisites for this course are   CS 3600 or CS 3650 (or equivalents). This course is systems oriented, students are expected  to understand the basics of computer architecture and operating systems, and to have experience implementing non-trivial systems-type projects. Basic knowledge of the Unix command line,
+write code using emacs/vim, write a makefile, compile/debug code,
+check for running processes, kill runaway processes, and create
+compressed archives are also expected.
+All projects will be in C.
+Lectures for the undergraduate introduction to C course I taught at Purdue: [
+www
+]
+Socket programming:  [
+www
+]
+Unix programming links:  [
+www
+]
+Grade
+The grade will be based on several written homework assignments (HW),
+three programming projects (PP), one midterm (MT), and final exam (FE).
+as follows:
+Grade = 15%*HW + 40%*PP + 20%*MT + 25*FE.
+Textbook
+The focus of this course will be on lectures, in-class exercises and reading important papers from the networking research community.  While the class does not require any textbook, one may be useful if you are not totally comfortable with network fundamentals.
+Official textbook: Computer Networks: A Systems Approach, 4th Edition by Larry Peterson and Bruce Davie, Morgan Kaufmann.
+There is also a supplement:
+TCP/IP Sockets in C by Jeff Donahoo and Ken Calvert, Morgan Kaufmann.
+Recommended, for reference:
+Computer Networking: A Top-Down Approach Featuring the Internet. by Jim Kurose and Keith Ross, Addison-Wesley.
+Other references:
+UNIX Network Programming, Volume 1, Second Edition: Networking APIs: Sockets and XTI, Prentice Hall, 1998, ISBN 0-13-490012-X.
+W. Richard Stevens
+Academic Integrity
+Academic Honesty and Ethical behavior are required in this course,
+as it is in all courses at Northeastern University (here is the
+guide
+for academic integrity).
+There is zero tolerance to cheating.
+You are encouraged to talk with the professor about any questions
+you have about what is permitted on any particular assignment.
+Lectures
+Lecture slides will be posted below. Homework and projects will be handed
+in class and/or posted on piazza.
+Week
+Topics
+Homework
+Project
+1 (Sept. 6)
+First class on Sept. 8.
+Introduction.
+History.
+2 (Sept. 11)
+Architecture.
+C Primer -
+data types.
+Physical layer.
+C Primer -
+socket programming.
+Hw1 assigned.
+3 (Sept. 18)
+Data link layer.
+Prj1
+assigned.
+4 (Sept. 25)
+Bridging.
+Network layer
+Hw1 due
+Prj1 due.
+5  (Oct. 2)
+Intra-domain
+Inter-domain
+Hw2 assigned.
+6 (Oct. 9)
+Inter-domain (cont.)
+Transport layer.
+Prj2 assigned.
+7  (Oct. 16)
+Congestion control
+Midterm review Oct. 20.
+Hw2 due.
+Prj2 due.
+8  (Oct. 23)
+Midterm exam Oct. 24.
+TCP variants. TCP issues.
+9 (Oct. 30)
+P2P
+.
+DNS.  NAT.
+Hw3 assigned
+10 (Nov. 6)
+Solving
+midterm.
+DNS.  NAT.
+CDN.
+TLS.
+Hw3 due.
+Prj3
+assigned Sat Nov. 5th.
+11  (Nov. 13)
+TLS (cont.)
+DCN architectures and protocols
+12  (Nov. 20)
+SDNs
+IXPs
+Anonymity.
+No class on Friday, Thanksgiving break.
+13  (Nov. 27)
+Mobile networks
+Final review, Dec. 1.
+Prj3 due.
+14  (Dec. 4)
+Final exam on Dec. 4.
+Copyright© 2015 Cristina Nita-Rotaru
+. Send your comments and questions to
+Cristina Nita-Rotaru

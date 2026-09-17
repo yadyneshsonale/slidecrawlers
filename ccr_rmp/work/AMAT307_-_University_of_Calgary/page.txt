@@ -1,0 +1,207 @@
+CPSC 457: Slides
+CPSC 457: Operating Systems
+Professor Carey Williamson
+Winter 2010
+CPSC 457 Home
+Course Syllabus
+Lecture Materials
+Textbook
+Instructor
+TA Info
+Tutorial Info
+Lab Info
+Grading Scheme
+Assignments
+Exams
+Useful Links
+Lecture Materials
+Slides, readings, and related lecture material will appear here
+gradually throughout the semester.
+The bulk of these materials are copyrighted by the
+authors of the course textbook, and are to be used
+for CPSC 457 purposes only.
+Week 1: Introduction and Overview
+Course overview. Admin details.
+General overview of operating systems and basic concepts.
+Chapter 1.
+Slides
+:
+PPT slides (3.4 MB)
+PDF slides (1.5 MB)
+Reading
+: Chapter 1 (sections 1.1-1.9 and 1.13-1.14)
+Week 2: Operating System Structures
+OS organization. OS services. System calls. User interface.
+Command interpreter shell. OS design and implementation.
+Virtual machines.
+Chapter 2.
+Slides
+:
+PPT slides (4.5 MB)
+PDF slides (2.6 MB)
+Reading
+: Chapter 2 (sections 2.1 to 2.12)
+Examples
+:
+sentence.sh
+sentence3.sh
+poetry.sh
+mary1.txt
+mary2.txt
+fred.txt
+Week 3: Processes
+Processes. Process attributes. Process control block.
+Process state. Process scheduling. Process operations.
+Inter-process communication.
+Chapter 3.
+Slides
+:
+PPT slides (4.6B)
+PDF slides (1.8 MB)
+Reading
+: Chapter 3 (sections 3.1 to 3.7)
+Examples
+:
+summer.c
+lister.c
+burner.c
+sleepfun.c
+canada.c
+memtest1.c
+memtest2.c
+memtest3.c
+Week 4: Threads
+Threads concept. Threads versus processes. P-Threads.
+Multi-threaded applications. Threading issues. OS examples.
+Chapter 4.
+Slides
+:
+PPT slides (2.5 MB)
+PDF slides (480 KB)
+Reading
+: Chapter 4 (sections 4.1 to 4.6)
+Examples
+:
+summer1.c
+summer2.c
+summer3.c
+summer4.c
+summer5.c
+Week 5: CPU Scheduling
+Short-term scheduling. Long-term scheduling.
+Basic concepts. Scheduling goals. Scheduling mechanisms.
+Priority scheduling. Size-based scheduling. OS examples.
+Chapter 5.
+Slides
+:
+PPT slides (4.3 MB)
+PDF slides (1.5 MB)
+Reading
+: Chapter 5 (sections 5.1 to 5.3, and 5.5 to 5.8)
+Examples
+:
+spinner.c
+Week 6: Concurrency and Synchronization
+Concurrent processes. Contention. Synchronization issues.
+Critical sections.
+Chapter 6.
+Slides
+:
+PPT slides (2.5 MB)
+PDF slides (620 KB)
+Reading
+: Chapter 6 (sections 6.1 to 6.8, plus 6.10)
+Examples
+:
+banking.c
+deposits.txt
+withdrawals.txt
+burger1.c
+burger2.c
+burger3.c
+burger4.c
+burger5.c
+Week 7: Deadlocks
+Deadlock. Progress. Safety. Correctness.
+Deadlock prevention. Deadlock avoidance.
+Deadlock detection and recovery.
+Chapter 7. Midterm exam.
+Slides
+:
+PPT slides (2.4 MB)
+PDF slides (610 KB)
+Reading
+: Chapter 7 (sections 7.1 to 7.8)
+Examples
+:
+shuffler0.c
+shuffler1.c
+shuffler2.c
+shuffler3.c
+shuffler4.c
+shuffler5.c
+Week 8: Main Memory
+Memory layout. Memory management. Hardware and software
+support for addressing. Contiguous allocation.
+Fragmentation issues. Paging. TLBs. Segmentation. Segmentation versus paging.
+Chapter 8.
+Slides
+:
+PPT slides (5.6 MB)
+PDF slides (2.3 MB)
+Reading
+: Chapter 8 (sections 8.1 to 8.8)
+Week 9: Virtual Memory
+Virtual memory systems. Memory hierarchy.
+Hardware and software support. Page tables. Page faults.
+TLBs.
+Chapter 9.
+Slides
+:
+PPT slides (6.4 MB)
+PDF slides (2.4 MB)
+Reading
+: Chapter 9 (sections 9.1 to 9.11)
+Example
+:
+memfun.c
+Week 10: File System Interface
+File system concepts. File operations. Files. Directories.
+Basic storage: disk partitions. File management issues. Mounting.
+Sharing. Protection.
+Chapter 10.
+Slides
+:
+PPT slides (3.5 MB)
+PDF slides (1.1 MB)
+Reading
+: Chapter 10 (sections 10.1 to 10.7)
+Week 11: File System Implementation
+File system design issues. Original Unix file system.
+Unix fast file system. Inodes. Caching. File system optimization.
+Chapter 11.
+Slides
+:
+PPT slides (6.1 MB)
+PDF slides (1.9 MB)
+Reading
+: Chapter 11 (sections 11.1 to 11.8 plus 11.10)
+Example
+:
+Unix Files (.xls)
+bigfiles.c
+Week 12: Storage and I/O Systems
+Storage systems. Disk scheduling.
+Speed. Capacity. Reliability. RAID systems.
+Storage Area Networks.
+Chapter 12.
+Slides
+:
+PPT slides (5.0 MB)
+PDF slides (2.0 MB)
+Reading
+: Chapter 12 (sections 12.1 to 12.4, plus 12.7)
+Week 13: Advanced Topics
+Selected topics: computer system security,
+multimedia systems, real-time systems, green computing, OS research.
+Course wrap up and review.

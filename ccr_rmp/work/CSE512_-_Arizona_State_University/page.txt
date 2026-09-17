@@ -1,0 +1,195 @@
+CSE512
+Data Visualization
+(Spring 2025)
+instructor
+Jeffrey Heer
+OH: Tue 10-11am
+Gates 302
+assistants
+Shaan Chopra
+OH: Thu 1-2p
+Gates 153
+Lisa Elkin
+OH: Mon 5-6p
+Allen 218 or Zoom
+Heer Patel
+OH: Online / By appt
+Luke Snyder
+OH: Wed 2-3p
+Gates 152
+meeting
+Location: Gates G20
+Time: Tu/Th 11:30-12:50
+CSE512
+About
+Textbook
+Learning Goals
+Assignments
+CP
+A1
+A2
+A3
+FP
+Schedule
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+Expectations
+Q&A
+(
+Ed
+)
+The world is awash with increasing amounts of data, and we must keep afloat with our relatively constant perceptual and cognitive abilities. Visualization provides one means of combating information overload, as a well-designed visual encoding can supplant cognitive calculations with simpler perceptual inferences and improve comprehension, memory, and decision making. Furthermore, visual representations may help engage more diverse audiences in the process of analytic thinking.
+In this course we will study techniques for creating effective visualizations based on principles from graphic design, perceptual psychology, and cognitive science. The course is targeted both towards students interested in using visualization in their own work, as well as students interested in building better visualization tools and systems.
+In addition to class discussions, students will complete visualization design and data analysis assignments, as well as a final project. Students will share the results of their final project as both an interactive website and a video presentation.
+Textbooks
+The Visual Display of Quantitative Information
+, E. Tufte. Graphics Press, 2001.
+Envisioning Information
+, E. Tufte. Graphics Press, 1990.
+Vega-Lite Visualization Notebook Curriculum
+. Jeffrey Heer, Dominik Moritz, Jake VanderPlas, and Brock Craft.
+Optional:
+Interactive Data Visualization for the Web, 2nd Edition
+. Scott Murray, O'Reilly Press.
+To read online, use the "O'Reilly (Formerly Safari)" link on the
+UW library page
+.
+Code examples available on
+GitHub
+.
+Learning Goals & Objectives
+This course is designed to provide students with the foundations necessary for understanding and extending the current state of the art in data visualization. By the end of the course, students will have gained:
+An understanding of key visualization techniques and theory, including data models, graphical perception and methods for visual encoding and interaction.
+Exposure to a number of common data domains and corresponding analysis tasks, including multivariate data, geo-spatial data, and networks.
+Practical experience building and evaluating visualization systems.
+The ability to read and discuss research papers from the visualization literature.
+Schedule & Readings
+Week 1
+Tue 4/1
+Introduction
+Slides
+Assigned:
+Assignment 1: Visualization Design
+(Due: Tue 4/8)
+REQUIRED
+Chapter 1: Information Visualization, in
+Readings in Information Visualization
+. Stuart Card, Jock Mackinlay, and Ben Shneiderman. 1999.
+REQUIRED
+Introduction to Vega-Lite / Altair
+. One of:
+JavaScript (Observable)
+,
+Python (Colab)
+,
+Python (Jupyter Notebook)
+Optional
+Decision to Launch the Challenger, in
+Visual Explanations
+. Edward Tufte.
+(See also a
+critique of Tufte's argument
+.)
+Thu 4/3
+Visualization Tools, Part 1
+Slides
+REQUIRED
+Data Types, Graphical Marks, and Visual Encoding Channels
+. One of:
+JavaScript (Observable)
+,
+Python (Colab)
+,
+Python (Jupyter Notebook)
+REQUIRED
+Chapter 1: Graphical Excellence, In The Visual Display of Quantitative Information. Tufte.
+REQUIRED
+Chapter 2: Graphical Integrity, In The Visual Display of Quantitative Information. Tufte.
+REQUIRED
+Chapter 3: Sources of Graphical Integrity, In The Visual Display of Quantitative Information. Tufte
+Optional
+Vega-Lite: A Grammar of Interactive Graphics. K. Wongsuphasawat, D. Moritz, A. Satyanarayan & J. Heer. OpenVis Conf 2017 Presentation.
+Optional
+A Minimal Introduction to JavaScript and Observable.
+Read this first if you are new to JavaScript and/or Observable notebooks!
+Optional
+The Eyes Have It: A Task by Data Type Taxonomy for Information Visualizations, Shneiderman, Proc. IEEE Conference on Visual Languages, Boulder 1996.
+Week 2
+Tue 4/8
+Visual Encoding
+Slides
+REQUIRED
+Scales, Axes, and Legends
+. One of:
+JavaScript (Observable)
+,
+Python (Colab)
+,
+Python (Jupyter Notebook)
+Optional
+Chapter 3: The Power of Representation, in
+Things That Make Us Smart
+. Don Norman.
+Optional
+The representation of numbers. Zhang and Norman.
+Thu 4/10
+Deceptive Visualization & A1 Review
+Slides
+Assigned:
+Assignment 2: Deceptive Visualization
+(Due: Mon 4/21)
+REQUIRED
+Multi-View Composition
+. One of:
+JavaScript (Observable)
+,
+Python (Colab)
+,
+Python (Jupyter Notebook)
+REQUIRED
+Design and Redesign in Data Visualization. Martin Wattenberg and Fernanda Viégas. 2015.
+Encouraged
+Chapter 4: Data-Ink and Graphical Redesign, In The Visual Display of Quantitative Information. Tufte.
+Encouraged
+Chapter 5: Chartjunk, In The Visual Display of Quantitative Information. Tufte.
+Encouraged
+Chapter 6: Data-Ink Maximization and Graphical Design, In The Visual Display of Quantitative Information.
+Fri 4/11
+Tableau Tutorial
+-
+4:00pm-5:30pm via Zoom (Optional)
+Week 3
+Tue 4/15
+Data Transformation
+Slides
+REQUIRED
+Data Transformation
+. One of:
+JavaScript (Observable)
+,
+Python (Colab)
+,
+Python (Jupyter Notebook)
+REQUIRED
+Polaris: A System for Query, Analysis and Visualization of Multi-dimensional Relational Databases. Stolte, Tang, and Hanrahan. IEEE TVCG 2002.
+Optional
+Introducing Arquero: A JavaScript library for query processing and transformation of data tables.
+Optional
+Characterizing Exploratory Visual Analysis: A Literature Review and Evaluation of Analytic Provenance in Tableau. Leilani Battle and Jeffrey Heer. Computer Graphics Forum 38(3), pp. 145-159, 2019.
+Thu 4/17
+Dimensionality Reduction
+Slides
+REQUIRED
+How to Use t-SNE Effectively. Martin Wattenberg, Fernanda Viégas, Ian Johnson. Distill, 2016.
+Encouraged
+Chapter 8: Data Density and Small Multiples, In The Visual Display of Quantitative Information. Tufte.
+Encouraged
+Chapte

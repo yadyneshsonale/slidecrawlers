@@ -1,0 +1,165 @@
+UCSB CS16
+Resources
+F21
+F21
+W20
+Homework
+Lab
+Lectures
+Exam
+Calendar
+Info
+Syllabus
+Open Lab/Office Hours
+Other Info Links
+Links
+Gauchospace
+zyBooks
+Campuswire
+Repl.it
+GradeScope
+Github
+ucsb-cs16-mirza
+Homework
+Lab
+Lectures
+Exam
+Calendar
+Info
+Syllabus
+Open Lab/Office Hours
+Other Info Links
+Links
+Gauchospace
+GradeScope
+Piazza
+Github
+ucsb-cs16-mirza
+Syllabus
+This document and others linked within it should be your PRIMARY source for understanding the expectations of this course. Be sure to read it
+carefully
+.
+You must contact the instructor for clarification if you receive information from any another source that is in contradiction to what is provided below.
+Grading
+Schedule
+Resources
+What this course is about
+Course Policies
+Graded components
+Grading
+Grade breakdown by evaluation component
+Homeworks/Quizzes: 10%
+Lab assignments: 30%
+Midterm Exams (2): 30%
+Final Examination : 30%
+Are any scores dropped?
+I will drop the lowest three homeworks. I will not drop any labs, exams, etc.
+Grade assignment policy
+A/A+
+97-100
+A
+93-97
+A-
+90-93
+B+
+87-90
+B
+83-87
+B-
+80-83
+C+
+77-80
+C
+73-77
+C-
+70-73
+D+
+67-70
+D
+63-67
+D-
+60-63
+F
+Below 60
+Curving:
+The grade  scale above represents the
+minimum
+letter grade you will be assigned—at the instructor's discretion, the grading scale  may be altered
+in the students' favor
+if this will better reflect the students' mastery of the material. Thus,
+if
+there is a "curve", it will be applied at the
+end
+, not to individual assignments.
+A+ grades:
+These may be awarded to the very best performing students in the class—but the cutoff for A+ grades will be determined at the end of the course at the discretion of the instructor (there is no pre-determined cutoff---an average of 97 or more doesn't guarantee you an A+ grade.)
+Everything
+is cumulative—that's just how CS is.
+Finally—note that just as in a math class, everything we do builds on all the work that came before. So,
+everything
+is
+cumulative
+—so, you can't afford to miss any classes unless absolutely necessary. Miss two lectures in a 10-week two-lecture per week course, and you've already skipped exactly 10% of the course—it wouldn't be surprising if your performance (i.e. final grade) in the course dipped by a similar amount.
+Schedule
+For office hours please check the
+course Google Calendar
+.
+For hw, lab and exam schedule, please check the
+assignment calendar
+.
+Resources
+Required Resources
+Textbook: Problem Solving with C++, Walter Savitch, Edition 9. Available for purchase at the UCSB book store
+iClickers: You will need to own an iClicker and register it on Gauchospace. Be sure to register your clicker by the end of the first week.
+Exam Resources
+You can find examples of previous quarter’s  exams at the following links.
+http://www.cs.ucsb.edu/~pconrad/cs16/14F/exams/
+But BEWARE—offerings of CS16 may vary in terms of their exact pace, and placement of exams. So these exams are a guide to the style of my exams, but NOT necessarily for specific content.
+In addition, these exams from prior to F14 used the C programming language rather than C++, and went at a much slower pace, so treat them with even more skepticism.
+http://www.cs.ucsb.edu/~pconrad/cs16/10S/exams/
+http://www.cs.ucsb.edu/~pconrad/cs16/10W/exams/
+http://www.cs.ucsb.edu/~pconrad/cs16/09F/exams/
+Back to Syllabus
+What this course is about
+This course is the first in a three course sequence, CS16-24-32 that provides a foundation in data structures and algorithms for deeper study of Computer Science.
+This is NOT an introductory programming course.  This is an INTERMEDIATE programming course.
+What you need BEFORE you take this course
+This course will present C++ from the beginning; no prior knowledge of C++ is assumed.  However, it IS assumed that you already have successfully completed CMPSC 8, or have an equivalent background in programming.  You should
+be comfortable with all of the following:
+Problem solving
+breaking down a problem into a sequence of steps
+abstracting specific problems into general ones
+and finding general solutions
+Memory concepts
+variables, primitive vs. reference variables, name, type, value
+assignment statements
+scope of variables
+Control structures
+for loops, if/else, while loops
+Arrays (or a similar data structure, e.g. Lists in Python)
+index vs. value, finding sum, min, max, average, count of elements matching some condition, making a new list of elements containing only those that match some condition
+Functions
+function call vs. function definition
+formal vs. actual parameters (arguments)
+Testing
+How to test your code
+Input/output concepts
+Writing to the terminal
+Reading from the keyboard
+Reading and writing to files
+Neatly formatting output
+Program style
+How to write code that other people can read and understand
+What you SHOULD HAVE LEARNED BY THE END of this course to be ready for CS24
+So, what is it that you need to know by the end of this course?   Here's the  list of just a few of the things you'll need to know to be ready for CS24 (the next programming course).  You'll have the opportunity to learn all of these things (though not necessarily in this order).
+A few of the basic data types of C++, including at least, int, double, char, bool, string
+The basic control structures of C++ (if/else, while, for etc.)
+Defining functions in C++, and passing parameters to functions in three different ways (by value, by pointer, and by reference)
+Scope and lifetime of variables in C++
+The use of “const” with parameters to functions
+Using arrays in C++, and C-strings (null-terminated character arrays)
+How arrays are passed to functions, and the relationship between arrays and pointers
+Defining and working with structs in C++
+Using structs to create singly linked lists where the space for the list nodes is allocated on the heap
+The difference between space allocated on the stack (e.g. local variables) and space allocated on the heap (with the new and delete operators)
+Converting from binary to decimal, octal, and hex, and back again—and how this rel

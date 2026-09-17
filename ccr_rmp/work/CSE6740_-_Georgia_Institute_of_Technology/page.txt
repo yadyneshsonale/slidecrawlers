@@ -1,0 +1,200 @@
+CS 7643 Deep Learning, Spring 2025
+CS 4644 / 7643 Deep Learning
+Spring 2025, Mon/Wed 11:00pm - 12:15pm, Scheller College of Business 100
+Course Information
+Schedule
+Grading
+Late Policy
+Prerequisites
+FAQs
+Projects
+External Resources
+Course Information
+This is an exciting time to be studying (Deep) Machine Learning, or Representation Learning, or for lack of a better term, simply Deep Learning!
+Deep Learning is rapidly emerging as one of the most successful and widely applicable set of techniques across a range of domains
+(vision, language, speech, reasoning, robotics, AI in general), leading to some
+pretty
+significant
+commercial
+success
+and
+exciting
+new
+directions
+that may previously have seemed out of
+reach
+. With the recent advances in large language models (LLMs)
+and
+successful commercial deployments
+, the hype of these techniques continue to grow.
+This course will introduce students to the basics of Neural Networks (NNs) and expose them to some cutting-edge research.
+It is structured in modules (background, Convolutional NNs, Structured Neural Representations including Attention-base Models and Transformers,
+Deep Reinforcement Learning, and Generative Models).
+Modules will be presented via instructor lectures and reinforced with homeworks that teach theoretical and practical
+aspects. The course will also include a project which will allow students to explore an area of Deep Learning that interests them in more depth.
+Instructor
+Zsolt Kira
+Teaching Assistants
+Wei Zhou (Head TA)
+Elias Cho
+Cari He
+David He
+Sriharsha 	Kocherla
+Pratham R	Mehta
+Ayush Patel
+Sri
+Prakash
+Aryan	Sarswat
+Woo Chul	Shin
+Neelabh	Sinha
+Haotian Xue
+Class Info & Links
+Lectures: Mon/Wed 11:00am - 12:15pm, Scheller College of Business 100
+Piazza:
+https://piazza.com/gatech/spring2025/cs4644acs7643a
+(code available via Canvas)
+Canvas
+CS4644:
+https://gatech.instructure.com/courses/433296
+CS7643:
+https://gatech.instructure.com/courses/433264
+Gradescope
+CS4644:
+https://www.gradescope.com/courses/939128
+CS7643:
+https://www.gradescope.com/courses/939135
+Tentative Schedule (subject to changes)
+Date
+Topic
+Optional Reading
+W1: Jan 6
+Intro lecture + class logistics.
+Slides (PDF)
+PS0 (
+download zip file here
+if you are not yet registered) will be released and due Sunday Jan 12th 11:59pm (no grace period).
+IMPORTANT: All students MUST complete PS0! This is true even if you are currently on the waitlist and want to get in! See FAQ below for gradescope access if you are not registered.
+>
+LeCun et al., Nature '15
+Shannon, 1956
+DL book: Linear Algebra background
+DL book: Probability background
+DL book: ML Background
+W1: Jan 8
+Machine learning intro, applications (CV, NLP, etc.), parametric models and their components
+Slides (PDF)
+PS0 due Jan 12th 11:59pm EST (no grace period)
+PS1/HW1 Released, due Jan 31st 11:59pm (grace period until Feb 2nd)
+W2: Jan 13
+Supervised Learning, Linear Classification, Loss functions, Gradient Descent
+Slides (PDF)
+Supervised Learning notes
+DL book: Linear Algebra background
+DL book: Probability background
+DL book: ML Background
+W2: Jan 15
+Gradient Descent, Backpropagation
+Slides (PDF)
+W3: Jan 20
+No Class (Holiday)
+W3: Jan 22
+Neural Networks, Backpropagation, Linear Algebra View
+Slides (PDF)
+Gradients notes
+MLP/ReLU Jacobian notes
+DL book: Deep Feedforward Nets
+Matrix calculus for deep learning
+W4: Jan 27
+Backpropagation, Jacobians, Autodiff
+Slides (PDF),
+Annotated Slides (PDF)
+Forward/Reverse Autodiff Examples
+Automatic Differentiation Survey, Baydin et al.
+W4: Jan 29
+Automatic Differentiation recap, activation functions, optimization
+PS1/HW1 due Jan 31st 11:59pm (grace period until Feb 2nd)
+PS2/HW2 released, due Feb 17th 11:59pm (grace period until Feb 19th)
+Slides (PDF)
+W5: Feb 3
+Optimization, Convolution Layers
+Slides (PDF)
+DL book: Optimization for Training Deep Models
+DL book: Convolutional Networks
+General preprocessing:
+cs231n on preprocessing
+Optional: Khetarpal, Khimya, et al.
+Re-evaluate: Reproducibility in evaluating reinforcement learning algorithms."
+(2018). See related
+blog post
+W5: Feb 5
+Convolutions Cont., Convolution Gradients
+Slides (PDF)
+CNNs notes
+,
+CNNs Backprop notes
+.
+W6: Feb 10
+Pooling, Convolutional Neural Networks (CNNs)
+Slides (PDF)
+W6: Feb 12
+CNNs continued, Regularization, Augmentation, Transfer Learning
+Project Proposal Due Feb 14th 11:59pm (grace period until Feb 16th)
+Slides (PDF)
+DL book: Regularization for DL
+General preprocessing:
+Preprocessing for deep learning: from covariance matrix to image whitening
+W7: Feb 17
+Recurrent Neural Networks, Long Short-Term Memory
+Slides (PDF)
+PS2/HW2 due Feb 17th 11:59pm (grace period Feb 19th), PS3/HW3 out (due Mar 8th)
+W7: Feb 19
+Attentions and Transformers
+Slides (PDF)
+DL Book: Sequential Modeling and Recurrent Neural Networks (RNNs)
+W8: Feb 24
+Transformers Cont. and Vision Transformers
+Slides (PDF)
+Attention is all you need
+BERT Paper
+The Illustrated Transformer
+W8: Feb 26
+Object Detection and Segmentation
+Slides (PDF)
+An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale
+Swin Transformer: Hierarchical Vision Transformer using Shifted Windows
+W9: Mar 3
+Generative Models (Part I): Generative Adversarial Networks
+Slides (PDF)
+Generative Adversarial Networks
+;
+W9: Mar 5
+Project Planning Session
+W10: Mar 10
+Generative Models (Part II): Diffusion Models
+Slides (PDF)
+PS3/HW3 due Mar 8th 11:59pm (grace period Mar 10th), PS4/HW4 out (due Mar 30th)
+W10: Mar 12
+Variational Autoencoders (VAEs)
+Slides (PDF)
+Project Check-in Due March 14th 11:59pm (grace period until March 16th)
+Tutorial on Variational Autoencoders
+W11: Mar 17
+Spring Break
+W11: Mar 19
+Spring Break
+W12: Mar 24
+Guest Lecture - Will Held - Large Language Models
+Slides (PDF)
+W12: Mar 26
+Guest Lecture (Mido Assran, Meta) - Deep Denoising Models for Visual Representation Learning
+-
+Slides (PDF)
+W13: Mar 31
+Guest Lecture (Hao Zhu) - LLM Agents
+Slides (PDF)
+W13: Apr 2
+RL background.
+Slides (PDF)
+PS4/HW4 due Apr 6th (grace period Apr 8th)
+Sutton & Bartow Chapter 1
+Survey

@@ -1,0 +1,220 @@
+AI 534 (400/401), Machine Learning (e-campus), Fall 2024
+“Equations are just the boring part of mathematics. I attempt to see things in terms of geometry.”
+-- Stephen Hawking (1942--2021)
+Coordinates
+[Canvas]
+[Registrar]
+[Ed Discussion Forum]
+Instructor
+Liang Huang
+(liang.huang@oregonstate.edu).
+TAs
+Zetian Wu
+(wuzet@oregonstate.edu)
+Milan Gautam
+(gautammi@oregonstate.edu)
+Office Hours
+M 4-5pm, W 4:30-5:30pm, Th 3-3:40pm, F 4:30-5:30pm
+Zoom link
+(no passcode needed)
+Prerequisites
+CS: algorithms and datastructures, and Python proficiency.
+Math: very basic linear algebra.
+Textbooks
+Our notes below (default reference; this course is self-contained).
+Daume.
+A Course in Machine Learning (CIML)
+.
+Bishop (2007). Pattern Recognition and Machine Learning (PRML).
+Actually I do not recommend it for beginners. But the figures are pretty and I use them in my slides.
+Grading
+Background survey (on Canvas):
+each student gets 2% by submitting on time.
+Quizzes (on Canvas, autograded): 10% + 8% = 18%. everybody has two attempts on each quiz.
+HWs 1-4 (programming,
+Kaggle competitions
+): 20% + 15% + 15% + 15% = 65%. In Python + numpy + sklearn.
+HW5: Paper review: 15%. cutting-edge machine learning research.
+HWs are due on Mondays; Quizzes are  due on Fridays.
+Late Penalty: Each student can be late by 24 hours
+only once
+without penalty. No more late submissions will be accepted.
+Machine Learning evolves around a central question:
+How can we make computers to
+learn from experience, without being explicitly programmed?
+In the past decade, machine learning has given us
+self-driving cars,
+practical speech recognition,
+effective web search,
+accurate spam filters,
+and a vastly improved understanding of the human genome.
+Machine learning is so pervasive today that everybody uses it
+dozens of times a day without knowing it.
+This course will survey the most important algorithms and techniques
+in the field of machine learning.
+The treatment of mathematics will be rigorous,
+but unlike most other machine learning courses
+which feature
+tons of equations,
+my version will focus on the
+geometric intuitions
+and the algorithmic perspective.
+I will try my best to visualize every concept.
+Even though machine learning appears to be "mathy" on the surface,
+it is
+not
+abstract in any sense,
+unlike mainstream CS (algorithms, theory of computation, programming languages, etc.).
+In fact, machine learning is so applied and empirical
+that it is more like
+alchemy
+.
+So we will also discuss practical issues and
+implementation details.
+Some preparatory materials:
+Linear Algebra:
+(
+required
+)
+a geometric review
+. also
+slides
+.
+(optional) geometric views of
+eigen vectors
+and
+covariance matrix
+(optional)
+a more advanced, non-geometric review
+(optional)
+a nice textbook with videos
+Python+numpy (
+required
+):
+python/numpy tutorial
+Linux command-line (
+required
+):
+Linux tutorial
+(only Chap. 1)
+Jupyter (ipython) Notebook (
+recommended
+):
+tutorial
+and
+TA's tutorial on running jupyter remotely
+Probability Theory (optional):
+probs/stats
+Weekly Materials
+Unit 1 (weeks 1-3): ML intro, \(k\)-NN, and math/numpy review
+1.0
+Introduction
+1.1
+Machine Learning Settings
+1.2
+Basic Machine Learning Concepts
+1.3
+Nearest Neighbor Classifier
+1.4
+Linear Algebra and Numpy Tutorials
+HW1
+\(k\)-NN for income classification [
+pdf
+] [
+data
+] [
+kaggle
+]
+Unit 2 (weeks 4-5): linear classification and perceptron
+2.1
+History of Perceptron
+2.2
+Linear Classification
+2.3
+The Perceptron Algorithm
+2.4
+Convergence Theorem and Proof
+2.5
+Inseparable Cases and Feature Engineering
+2.6
+Voted and Averaged Perceptrons
+HW2
+perceptron for sentiment [
+pdf
+] [
+data
+]  [
+kaggle
+]
+demos
+perceptron, MIRA, and SVM demos
+Unit 3 (weeks 6-7): linear and polynomial regression
+3.1
+Linear Regression
+3.2
+Regularize
+3.3
+Gradient Descent
+3.4
+Normal Equation
+3.5
+Nonlinear Regression
+HW3
+regression for housing price prediction [
+pdf
+] [
+data
+]  [
+kaggle
+]
+Unit 4 (weeks 8-9): a taste of deep learning
+4.1
+Multilayer Neural Networks
+4.2
+Word Embeddings
+HW4
+redo HW2 with word embeddings [
+pdf
+] (HW2 data +
+embeddings
+)  [
+kaggle
+]
+Unit 5 (week 10): paper review (cutting-edge ML)
+HW5
+paper review (see the list of papers on Canvas)
+Classical Papers:
+USA
+(perceptron and convergence theorem):
+Rosenblatt 1958
+(perceptron)
+Novikoff 1962
+and a
+longer 1963 version
+(perceptron convergence proof)
+USSR
+(optimal-margin perceptron and kernels):
+Vapnik and Chervonenkis 1964
+. On a class of perceptrons. (translated from Russian) (origin of max-margin and SVM)
+Aizerman et al 1964
+. Theoretical foundations of the potential function method in pattern recognition learning. (translated from Russian, in the same journal) (origin of kernels and kernelized perceptron)
+... A LONG GAP ... THEN THE FALL OF USSR ...
+Boser, Guyon and Vapnik 1992
+(training optimal margin classifier)
+Cortes and Vapnik 1995
+(SVN)
+Freund and Schapire 1999
+(large-margin voting/averaged perceptron)
+Joachims 2006
+(linear SVM in linear time)
+Pegosos 2011
+(Primal SVM,
+2007
+)
+The structured prediction revolution 2001--2003:
+Lafferty et al 2001. CRF. best paper award, ICML.
+Collins 2002. structured perceptron. best paper award, EMNLP.
+Taskar et al 2003. max-margin markov network (structured SVM). best paper award, NIPS.
+Tech Giants Are Paying Huge Salaries for Scarce A.I. Talent
+(New York Times)
+Liang Huang

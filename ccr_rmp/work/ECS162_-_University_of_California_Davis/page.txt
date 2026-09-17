@@ -1,0 +1,182 @@
+ECS 162 Lectures
+Spring 2019
+Readings in the O'Reilly books can be accessed for free from on-campus
+locations, through the library.  From home, you will need to have the
+VPN client software installed on your machine.
+4/1 -
+Mechanics, HTML, the DOM
+Read the
+section on HTML
+in Interactive Data Visualization for the Web,
+and the section on the DOM.
+firstPage.html
+4/3 -
+CSS, fonts, default layout
+Read the
+section on CSS
+in Interactive Data Visualization for the Web.
+Example code from lecture:
+poultry.zip
+4/5 -
+Assignment, Flexbox
+Mozilla Developer's Network has a good
+basic concepts of flexbox
+page.
+We did not get to media queries, which you need to switch from
+laptop to tablet to phone views; we'll cover them Monday.
+The
+first example
+here is all you'll really need for this assignment.
+Example code:
+poultry2.zip
+4/8 -
+Pixels, media queries, onclick in Javascript
+Responsive Design Basics
+on Google Developers.
+Chapters 1 and 2 in
+Eloquent
+Javascript
+will help get us started with the language.
+Example code:
+cars.zip
+4/10 -
+Media queries, color, floats, Javascript data
+We're still on Chapters 1 and 2
+in
+Eloquent Javascript
+.
+Example of floating text around an image:
+floaty.zip
+4-12 -
+Javascript functions and variables
+.
+Chapters 3 and 5 in
+Eloquent Javascript
+are about functions.
+4-15 -
+Objects and JSON
+.
+Chapters 4 and 6 in
+Eloquent Javascript
+are about objects.
+4-17 -
+CORS, Asynchronous code, Same Origin Policy, and some warnings
+.
+Comic
+from lecture.
+changeTemp.zip
+, demo of changing page
+contents.
+4-19 -
+Animation, overlays, image downloads
+animation.zip
+, demos both CSS and Javascript
+animations.
+CSS animations
+at MDN has an example of slide-in.
+Comic
+on animation from lecture.
+4-22 -
+References to compound data types, functions as object, closures.
+The section in
+Eloquent Javascript
+about closures is at the end of Chapter 3.
+4-24 -
+Using closures to get static or private variables.
+The MDN section on
+closures
+is very good.
+dummy2.zip
+, containing all the code examples from lecture.
+4-26 -
+Server intro with node and express.
+miniServer2.js
+, first server.  After reading the lecture
+slides, try uploading it to our server (use your Kerberos password and login),
+add your port number and try running it.  Can you get to the new Web site
+from Chrome on your laptop?
+You can start reading
+Web Development with Node and Express
+. In true Web programming style, we begin with two ways of making a simple Web server; we'll skip to the second one, in Chapter 3.
+4-29 -
+Server for static and dynamic queries.
+Example from class is available as part of Assignment 4.
+Express documentation
+.
+5-1 -
+Design, server behavior, validation, interaction patterns
+.
+Flash cards project design sketch
+, for those interested in making their own design.
+5-3 -
+Midterm review
+.
+5-6 - Midterm
+From here on, all the .pdfs are one slide per page.  It is up to
+you to shrink them down when printing, if you want to.
+5-8 -
+The Google Cloud Translate API
+Jason's slides
+5-10 -
+Database intro
+createDB.js
+, node program to run to create the
+database on the server.
+Read the chapter on Tables in
+Using SQLite
+.
+5-13 -
+Data base insertion, sanitization, React intro
+Chapters 4 and 5 of
+Using SQLite
+give a more comprehensive description of the SQL
+language.
+5-15 -
+React JSX, elements, components
+Start with
+Add React to a Web page in one minute
+for an initial orientation.
+It also explains where to download the Babel compiler, at the bottom. I like the pages on the
+Main Concepts
+, which begins with a "Hello, world!".
+firstReact.zip
+, the code from the lecture.
+5-17 -
+React props, classes, state
+lango.jsx
+, example jsx file from lecture.
+5-20 -
+This, modules, redirection
+The chapter on modules in
+Eloquent Javascript
+is very good.
+5-22 -
+Cookies, sessions
+Check out Chapter 9 of
+Web Development with Node and Express
+.
+5-24 -
+Login process
+The login pipeline we are using comes from this
+excellent
+video tutorial
+by the
+Net Ninja
+. He has tutorials on a lot of
+other interesting topics.
+Chapter 18 in
+Web Development with Node and Express
+gives a good
+description of what is really going on.
+5-29 -
+Using encryption, digital signature
+Check out the two login comics on the
+comics
+page.
+5-31 -
+CSRF, and XSS and other injection attacks
+vulnerable.zip
+, demo of various
+Website vulnerabilities.
+5-6 -
+Review for the final

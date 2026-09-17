@@ -1,0 +1,134 @@
+AerE 3610
+¶
+Professor Nelson
+¶
+Lecture 1
+¶
+Computational Techniques for Aerospace Design
+¶
+Welcome to AerE 3610
+¶
+Computational Techniques for Aerospace Design
+¶
+Advanced programming
+High-Performance Computing
+Development of computational tools for aerospace analysis and design
+Technical report writing
+About Me
+¶
+Teaching Assistants
+¶
+TA Name
+Duties
+Phillip Misterman
+Helping with Lectures
+Michael Jacks
+Grading and Labs
+Aniket Singh
+Grading and Labs
+Course Objectives
+¶
+This course is to cover the fundamentals of numerical methods and how that applies to solving engineering problems. At the core of this is using computers to come up with these numerical solutions. There are several tools we can use including:
+Python programming language
+High-Performance Computing
+Using programming and numerical methods to solve engineering problems
+Properly document both code and other engineering systems
+Learning outcomes
+¶
+In this course, you will gain hands-on experience with scientific computing techniques, tools, and processes for aerospace design. Through projects, classroom discussions, and laboratory sessions, you will have the opportunity to learn to:
+Understand the basic operations of a modern computer and it's limitations
+Understand the basics of operating systems including Linux/Unix systems used in High-Performance Computing
+Understand and use code management using git and GitHub
+Learning outcomes
+¶
+Be able to write good documentation and understand how to use LaTeX
+Practice scientific computing using programming languages, with a focus on understanding how to write generic and robust code to reliably calculate properties of life-sized systems.
+Debug code effectively, with a variety of best-practices
+Explain and solve real-world aerospace problems utilizing the above tools and techniques.
+Additional Objectives
+¶
+This course is a prereq for AerE 461 and as such, I also use this course to give you some fundamentals skills you will need in your capstone course. These include
+Problem-solving
+Working in groups
+Documenting your solution
+Presenting your work
+How I teach
+¶
+What to expect in this class
+¶
+What to bring to class
+¶
+Most of the class will be interactive. I strongly suggest that you bring a laptop to class.
+Laptop computer
+I will have lecture notes available via a link
+In-class assignments will be issued through GitHub Classroom
+Syllabus
+¶
+Read it.
+PreReqs
+¶
+Prerequisites:  AER E 310, MATH 267, E M 324, E M 345.  Course restricted to AER E juniors and seniors.
+It is the policy of the Department of Aerospace Engineering and the College of Engineering to require all students enrolled in this course to have satisfied all of the course's prerequisite requirements. If it is discovered that a student has not met any applicable prerequisite requirements, he/she will be required to immediately drop the course. The failure to drop the course will result in a final course grade of 'F', regardless of course performance. Students who discover they have improperly enrolled in a course without meeting the applicable prerequisite requirements are strongly encouraged to meet with advising staff to promptly drop the course and make alternative scheduling arrangements or discuss if an official waiver of the pre-requisite requirements may be applicable.
+Course Details
+¶
+Lectures
+¶
+Lectures are Tues/Thurs at 11:00 a.m.
+I generally try to be done right at 11:50, sometimes sooner
+Lab Time
+¶
+Held in the remodeled Computer Lab (2304 Howe Hall)
+Attendance will be taken
+TAs will be there to give additional information and help out
+Numerical Python
+Scientific Computing and Data Science Applications with Numpy, SciPy and Matplotlib
+ISBN 978-1-4842-4245-2    e-ISBN 978-1-4842-4246-9
+Python Crash Course
+3rd Edition
+print copy ISBN-13: 978-1-7185-0270-3    ebook ISBN-13: 978-1-7185-0271-0
+You can access both books for free through O'Reilly (use your ISU NetID, information through the ISU Library)
+Software
+¶
+We will use ISU's HPC using Nova OnDemand. This provides us with a Linux environment
+without needing to install anything!
+. It also allows us to have Visual Studio Code again without needing to install anything.
+Other options
+¶
+Nova is what we expect all students to use and is the only setup both myself and my TAs will support. I can't stop you from setting up your own environment, but if it doesn't work, you are on your own. All assignments have been tested to run on the HPC and in our Python environment.
+Other software you might want
+¶
+GitHub client
+¶
+Even though Nova OnDemand with Visual Studio Code has a way to interact with your repo, you still might want a standalone git client. This espcially true for the Final Project. The two I recommend are:
+GitHub Desktop
+(free)
+GitKraken
+- free-ish, you can get a Pro version for free (for one year) through GitHub Education pack
+LaTeX   Software
+¶
+You can use Overleaf, but, BEWARE. Overleaf has a few issues. It does not report errors correctly. If your reports does not compile in our GitHub action,
+IT DOES NOT COUNT
+. In addition, you can also:
+Install Tex Live
+(free) and then
+Use Visual Studio Code
+Or another LaTeX editor like
+TexMaker
+Please note that Tex Live takes a long time to download/install and needs around 2-4 GB of drive space. Tex Live is what our scripts use.
+GitHub
+¶
+We use GitHub for several things in this course.
+Distribution of the assignments
+Assignment submission
+Compiling $\LaTeX$ documents
+Compiling Sphinx documents
+Grading
+We use an Autograder to grade the code
+We manually check for partial credit and reports
+Final Project
+All teams will have a team in GitHub and a repo for their final project
+GitHub Classroom
+¶
+All coding assignments will be administered through GitHub Classroom. All students enrolled in the class have been added to this classroom. You must have a GitHub account (which is free) to do this. In addition, if you see an invite from GitHub to join the AerE 361 Organization,
+ACCEPT IT
+. You will also be asked to link your GitHub account to

@@ -1,0 +1,150 @@
+CSE 156: Statistical Natural Language Processing
+Term: Spring Qtr 2019
+Credits: 4
+Lecture: MWF 10:00am-10:50am, CENTER 119
+Instructor:
+Ndapa Nakashole
+, CSE 4108
+Office Hours: Friday 12pm - 3pm
+Teaching Assistants & office hours:
+Anmol Popli [apopli@ucsd.edu]         Monday 11am-12pm B250A
+Sanatan Sharma [sas001@ucsd.edu]        Tuesday 9am-10am, CSE B50A
+Archit Aggarwal [a1aggarw@ucsd.edu]        Wednesday 9am - 10am, CSE B215
+Nikhil Bangalore Mohan [nmohan@ucsd.edu]        Wednesday from 11am - 12pm , CSE B275
+Announcements
+April 1: Lecture 1 slides posted on TritonEd
+Course Description.
+Natural language processing (NLP) is a field of AI which aims to equip computers with the ability to intelligently process natural (human) language. This course will explore statistical techniques for the automatic analysis of natural language data. Specific topics covered include: probabilistic language models, which define probability distributions over text sequences; text classification; sequence models; parsing sentences into syntactic representations;  machine translation, and machine reading.
+The course assumes knowledge of basic probability.
+Probability Review
+Programming assignments will require knowledge of Python.
+Python Numpy Tutorial
+Grading.
+The course is lab-based. You will complete: five hands-on programming assignments (individually); and  a final project (can be done in
+pairs
+groups of up to three people).
+Final Project.
+The project can be done in teams of up to
+two
+three people. You will need to tell us your team composition by  April 26 (The link is in the project description and on Piazza).
+Late Submission Policy.
+Please note that assignemnts must be submitted by the due date. Late submissions will not be accepted.
+Academic Integrity.
+If plagiarism is detected in the programming assignment code or report, University authorities will be notified for appropriate disciplinary action to be taken.
+Books.
+Texts we will use:
+Jacob Eisenstein Book:
+online
+, version: Nov 13, 2018
+Michael Collins notes:
+online
+Other texts:
+Jurafsky and Martin, Speech and Language Processing, 2nd edition (
+amazon
+) (
+online
+)
+Manning and Schütze, Foundations of Statistical Natural Language
+Processing (
+amazon
+)
+(
+online
+)
+CSE156 vs CSE256.
+The content, assignments, and project of these courses are very similar. You can only get credit for one of them but not both. CSE156 is for undegraduate students and CSE256 is for graduate students. The minor difference is that assignments for CSE 256 will take slightly longer to complete.
+Syllabus
+(tentative)
+Date
+Topic/Readings
+Assignment (Out)
+Apr 1
+Introduction
+J&M
+Chapter 1
+Introduction
+Hirschberg & Manning, Science 2015
+Advances in NLP
+Language Modelling
+Apr 3
+Michael Collins. Notes on
+Language Modelling
+PA1: Language Modeling (Due April 15)
+Apr 5 & 8
+Eisenstein
+Chapter 6
+Language Models
+Apr 10
+Michael Collins. Notes on
+Log-linear models
+Apr 12
+Michael Collins. Notes on
+Feedforward Neural Networks
+Eisenstein
+Chapter 6.3
+Recurrent Neural Network Language Models
+Text Classification
+Apr 15 & 17
+Eisenstein
+Chapter 2
+Linear Text Classification
+PA2: Text Classification (Due April 29)
+Michael Collins. Notes on
+Naive Bayes, MLE, and EM
+Distributional Semantics
+Apr 19 & 22
+Eisenstein
+Chapter 14
+Distributional and distributed
+semantics
+Chris McCormick, 2016
+Word2Vec Tutorial - The Skip-Gram Model
+Mikolov et al., NIPS 2013
+Distributed Representations of Words and Phrases ...
+Mikolov et al.,  2013
+Efficient Estimation of Word Representations in Vector Space
+Apr 24
+Eisenstein
+Chapter 14.4
+Brown clusters
+Tagging Problems
+Apr 26
+Michael Collins. Notes on
+Tagging with Hidden Markov Models
+Eisenstein
+Chapter 8
+Applications of sequence labeling
+Apr 29
+"""
+PA3: Sequence Tagging (Due May 15)
+May 1
+"""
+May 3
+No class
+Machine Translation
+May 6, 8, & 10
+Michael Collins. Notes on
+Statistical Machine Translation
+May 13, & 15
+Michael Collins. Notes on
+Phrase-Based Translation Models
+PA4: Machine Translation (Due June 10)
+Parsing and Context Free Grammars
+May 17, 20, 22
+Michael Collins.
+Notes on Probabilistic Context-Free Grammars
+(Optional) J&M
+Chapter 12
+Syntactic Parsing
+(Optional) J&M
+Chapter 13
+Statistical Parsing
+Dialog Systems and Chatbots
+May 24
+J&M
+Chapter 29
+Dialog Systems and Chatbots
+Learning Language with Limited Labeled Data
+May 29
+Live Demos
+June 3, 5, 7

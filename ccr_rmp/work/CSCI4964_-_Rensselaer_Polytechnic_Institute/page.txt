@@ -1,0 +1,227 @@
+CSci 4964 and 627 - Computational Vision
+This is an introductory course in computer vision for both
+undergraduate and graduate students.  It is being offered in the fall
+semester of 1999 by the
+Department of
+Computer Science
+at
+Rensselaer
+Polytechnic Institute
+.
+Announcements
+Instructor
+TA
+Syllabus
+Class notes
+Software
+Project ideas
+Resources
+Announcements
+(Check frequently)
+Wednesday November 17th at
+5:45pm
+If you don't have a partner for the final project and would like to
+have one, or if you would like an extra team member,  please let me
+know.  I will try to help form teams.  Many students are
+attempting to work alone!
+Tuesday November 9th at 12:45pm
+Suggestion
+from Adam Goode for making the
+TargetJr display faster remotely.
+Friday November 5th at 3:45pm
+Questions and answers
+on the
+puzzle project.
+Friday November 5th at 12:50pm
+Fixed a minor bug in the corner detector that did not show up on
+Linux, but did on FreeBSD.  The fixed code is in the cvs repository.
+Friday November 5th at 10:55am
+Important notes
+for the puzzle
+project.
+Sunday October 31st at 4:00pm
+Images for the puzzle piece recognition program are available in
+~stewart/images/puzzle
+The files named
+piece*.pgm
+are the models and the others are
+the images in which your program should recognize the pieces.   In
+some of them, your program will not succeed.  You should try to
+understand why, though!
+One problem with the edge detectors is that they do not break
+edges up at corners.  I will be providing such a technique by
+midweek. (Actually, Friday, see above!)  As an alternative, you might
+want to consider running a line detector after running the edge
+detector.  Use a low threshold on the line length, though.
+Past announcements
+If you haven't done so, be sure
+to check
+past announcements
+, which
+are more than a week old.
+Instructor
+Prof. Chuck Stewart
+Office hours:  Monday and Wednesday after class, Thursday 1:00-3:00
+Teaching Assistant
+Amitha Perera is available to assist mostly with TargetJr questions.
+He is only assigned to the course for a few hours a week.  Direct
+questions to him via email
+perera@cs.rpi.edu
+.
+Class notes
+Introduction
+Class 1, Monday August 30:
+html
+,
+ps
+, or
+pdf
+Binary Algorithms
+Class 2, Wednesday September 1:
+html
+,
+ps
+, or
+pdf
+Class 3, Wednesday September 8:
+html
+,
+ps
+, or
+pdf
+;  introduction to programming in TargetJr
+(
+html
+,
+ps
+,
+pdf
+).
+Class 4, Monday September 13:
+html
+,
+ps
+, or
+pdf
+Class 5, Wednesday September 15:
+html
+,
+ps
+, or
+pdf
+Feature Extraction
+Class 6, Monday September 20:
+html
+,
+ps
+, or
+pdf
+.  Note that the homework
+assignment was changed in class so that solutions to questions 1  and
+3 were to be turned in.
+Class 7, Wednesday September 22:
+html
+,
+ps
+, or
+pdf
+.  Students do
+NOT
+need to do the
+last two homework problems for next Monday.
+Class 8, Monday September 27, on edge detection in
+two-dimensional images:
+html
+,
+ps
+, or
+pdf
+.
+Class 9, Wednesday September 29, on higher level geometric
+primitives and the SpatialObjects package in TargetJr:
+html
+,
+ps
+,
+or
+pdf
+.   The class notes include a
+short programming assignment.
+Transforms and Camera
+Modeling
+Class 10, Monday October 4:
+html
+,
+ps
+, or
+pdf
+.  This covered Wednesday
+October 6th as well
+Class 11 notes - class held on Tuesday October 12:
+html
+,
+ps
+, or
+pdf
+.   Homework problems at the
+end of the notes are due on Monday, October 18th.
+Image Brightness
+Class 13, Wednesday October 13:
+html
+,
+ps
+, or
+pdf
+.
+Class 14 (first half), Monday October 18:
+html
+,
+ps
+, or
+pdf
+.  This includes outlines
+of class coverage and due dates for the remainder of the semester.
+Mosaics
+Classes 14 and 15, Monday Octover 18th and Wednesday October 20th:
+html
+,
+ps
+, or
+pdf
+.
+Software
+TargetJr homepage
+.  Use the
+search tool.
+TargetJr
+set-up instructions
+for
+students in the class.
+Introduction to programming in TargetJr
+(
+html
+,
+ps
+,
+pdf
+).
+Here's a link to the Large C++ Systems
+homepage
+.
+It gives more detail on the design and implementation of TargetJr as
+well as instructions for building TargetJr on NT machines.
+Project ideas
+Resources
+CVonline: The
+Evolving, Distributed, Non-Proprietary, On-Line Compendium of Computer
+Vision.
+This is set of tutorial articles on various aspects of
+computer vision.
+The Computer Vision Homepage.
+Lots of computer vision resources,
+including software and images.  It is hosted by Carnegie-Mellon
+University.
+USC
+Annotated Computer Vision Bibliography
+This is good for finding
+papers on various topics.

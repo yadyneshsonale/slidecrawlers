@@ -1,0 +1,121 @@
+Toggle navigation
+CMPSC 431W
+Syllabus
+Schedule
+Lectures
+Project
+Lab
+CMPSC 431W Database Management Systems
+Fall 2015
+Department of Computer Science and Engineering
+Penn State University
+Lecture 1: Introduction
+Lecture 2: Introduction (cont.)
+Lecture 3: ER Model
+Lecture 4: ER Mode (cont.)
+Lecture 5: ER Mode (cont.) & Relational Model
+Lecture 6: Relational Model (cont.) & Introduction to SQL Programming (lab) - Part 1
+Lecture 7: Introduction to SQL Programming (lab) - Part 2
+Lecture 8: Introduction to SQL Programming (lab) - Part 3
+Lecture 9: Relational Algebra - Part 1
+Lecture 10: Relational Algebra - Part 2
+Lecture 11: Relational Algebra - Part 3
+Lecture 12: Relational Algebra - Part 4 & Relational Calculus - Part 1
+Lecture 13: Relational Calculus - Part 2
+Lecture 14: Functional Dependency & Armstrong's Axioms
+Lecture 15: Armstrong's Axioms & Normal Forms
+Lecture 16: Third Normal Form (3NF)
+Lecture 17: Boyce-Codd Normal Form (BCNF) & Decompositions
+Lecture 18: Decompostition into BCNF and 3NF
+Lecture 19: SQL - Part 1
+Lecture 20: SQL - Part 2
+Lecture 21: SQL - Part 3
+Lecture 22: SQL - Part 4
+Lecture 23: Introduction to NoSQL
+Lecture 24: Introduction to NoSQL: MongoDB - Part 1
+Lecture 25: Introduction to NoSQL: MongoDB - Part 2
+Lecture 26: Database Application Development - Part 1
+Lecture 27: Database Application Development - Part 2
+Lecture 28: Internet Applications - Part 1
+Lecture 29: Internet Applications - Part 2
+Lecture 30: Internet Applications - Part 3
+Lecture 31: File Organizations
+Lecture 32: Indexing: Hash-Based Indexing
+Lecture 33: Indexing: Tree-Based Indexing, ISAM
+Lecture 34: Cost Analysis Model
+Lecture 35: Cost Analysis Model and Index Selection
+Lecture 36: Index Selection and Query Evaluation
+Lectures
+Note:
+Note: These lecture videos and slides are recorded in Fall 2015. Additional revisions have been done on the newer offered courses. If you find any errata, feel free to shoot me an email to report!
+Find the lecture slides and lecture videos here. Note that the slides uploaded here have words taken out as "fill in the blank." You will only be provided with the filled in words by attending the lectures or watching the lecture videos.
+Disclaimer:
+all the slides are originally created by McGraw Hill, first revised by Dr. Wang-Chien Lee, and second revised by Yu-San Lin.
+Lecture 36: Index Selection and Query Evaluation
+Date: 12/4/15 (Fri)
+In this lecture, we continue the discussion on index selection. We then introduce the basic of query evaluation, including relational algebra trees and the algorithms for executing the operators in relational algebra.
+[slides]
+[video]
+Lecture 35: Cost Analysis Model and Index Selection
+Date: 12/2/15 (Wed)
+We finish up the discussion on cost analalysis model in this lecture. We then move on to talk about index selection, in which we consider among all the indexing strategies we have learned so far, which are the best under different situations.
+[slides]
+[video]
+Lecture 34: Cost Analysis Model
+Date: 11/30/15 (Mon)
+Welcome back from the break! In this lecture, we introduce how to analyze cost of different operations: scan, search, insertion, and deletion, under different file organizations and indexings: heap files, sorted files, clustered files, and unclustered files.
+[slides]
+[video]
+Lecture 33: Indexing: Tree-Based Indexing, ISAM
+Date: 11/20/15 (Fri)
+Continue the discussion on indexing, we introduce ISAM in this lecture by working through different operations in actions on such indexing approach.
+[slides]
+[video]
+Lecture 32: Indexing: Hash-Based Indexing
+Date: 11/18/15 (Wed)
+Continued the topics from last lecture, we discuss different approaches of indexings that work with the alternatives. To start the discussion on indexing, we introduce hash-based indexing.
+[slides]
+[video]
+Lecture 31: File Organizations
+Date: 11/16/15 (Mon)
+In this lecture, we introduce storage engines. In particular, we focus on three alternatives of file organization: Alternative 1, Alternative 2, and Alternative 3.
+[slides]
+[video]
+Lecture 30: Internet Applications - Part 3
+Date: 11/6/15 (Fri)
+To wrap up the internet applications, we present designing simple input forms in HTML, using Cascading Style Sheet (CSS) to change up the styles, and adding JavaScript for additional functionalities.
+[slides]
+[video]
+Lecture 29: Internet Applications - Part 2
+Date: 11/4/15 (Wed)
+In this lecture, we discuss Document Type Definitions. We also demonstrate how to scrape data from the web using BeautifulSoup in Python. Lastly, we introduce different system architectures: single tier, two tier, and three tier.
+[slides]
+[video]
+Lecture 28: Internet Applications - Part 1
+Date: 11/2/15 (Mon)
+Up until now, we have not yet discussed about applications of DBMS when considering the Internet. In this lecture, we started out by introducing some basics of Internet communication protocols, and discuss three well known web data formats: HTML, XML, and JSON.
+[slides]
+[video]
+Lecture 27: Database Application Development - Part 2
+Date: 10/30/15 (Fri)
+Continued the last lecture, we finish our discussion on JDBC in this lecture. We also introduce SQLJ and Stored Procedures.
+[slides]
+[video]
+Lecture 26: Database Application Development - Part 1
+Date: 10/28/15 (Wed)
+In this lecture, we cover the more traditional and well known tools for combining the frontend  and backend, including: Embedded SQL, and JDBC.
+[slides]
+[video]
+Lecture 25: Introduction to NoSQL: MongoDB - Part 2
+Date: 10/26/15 (Mon)
+Wrapping up the lesson on NoSQL, we learn about the Update function in MongoDB by playing around with the unicorn dataset a bit more.
+[slides]
+[video]
+Lecture 24: Introduction to NoSQL: MongoDB - Part 1
+Date: 10/23/15 (Fri)
+Today we study a bit further on NoSQL by learning the basics of MongoDB. We also practice how to implement three out of the four CRUD semantics, Create, Read, and Delete, on the unicorn dataset.
+[slides]
+[video]
+Lecture 23: Introduction to NoSQL
+Date: 10/21/15 (Wed)
+We introduct NoSQL in this

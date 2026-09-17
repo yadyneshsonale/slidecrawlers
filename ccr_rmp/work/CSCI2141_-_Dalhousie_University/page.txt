@@ -1,0 +1,183 @@
+CSCI 2141 - Intro to Database Systems
+Winter 2013
+Dr. Kirstie Hawkey
+Syllabus
+Syllabus
+**Note: updated January 8 to include correct dates
+Recommended Textbooks
+Modern Database Management
+, Hoffer, Prescott, Topi
+A First Course in Database Systems
+, Ullman and Widom
+Resources
+for the book
+Coursera
+Free online Stanford course by author Widom.
+Note: for all resources from this course, must be registered and logged in for the links to work!  The old self-directed course is no longer available. The new course that started on January 15th can be found
+here.
+If any old links are not working, try using http://class2go.stanford.edu/db/Winter2013 as the first part of any URL that fails
+Database Management Systems
+, Ramakrishnan and Gehrke
+Website
+with slides for the text book
+Fundamentals of Database Systems
+Readings, resources, slides
+Intro
+Class Slides:
+01/07/13
+Intro to course
+01/09/13 - Coursera db: Introduction video
+Relational Model & ER Diagrams
+Class Slides:
+01/09/13
+Intro to data modeling
+Class Running Example
+01/11/13
+Transit Schedules Scenario Exercise
+Task Scenario Brainstorming files
+Running example: Task Scenarios
+Activity 3: Creating an ER Diagram for our bus example
+Bus ER Diagram as of Jan 28th
+Note: still needs refinement
+Bus Tables as of Jan 28th
+Note: many issues still to resolve
+SFU tutorial: From task scenario to DB (note: no longer accessible)
+for 01/11/13 - SFU tutorial: Order Entry Scenario
+for 01/14/13 - SFU tutorial: Introduction to Data Modeling
+Relational Model & ER Diagram Primer
+Relational Model (Wikipedia)
+Class slides
+01/18/13
+From ER Models to DB Tables
+01/18/13 - Coursera db: The relational model video
+01/21/13 - Coursera db: Querying relational databases video
+Class slides
+01/23/13
+Data Anomalies
+Relational Algebra
+01/25/13 - Stanford db course - Relational Algebra 1 (select/project/join)
+01/25/13 - Stanford db course - Relational Algebra 2 (set operators/renaming/notation)
+Nice set of notes with diagrams showing results in tables - may be helpful as you learn how to combine the various relational algebra operations to solve problems. Also covers optimization at a high level.
+Part 1
+Part 2
+Class slides
+01/25/13
+Relational Algebra Operations
+Class slides
+01/28/13
+With slides on division
+Class exercises
+01/28/13
+Relational Algebra Exercises
+Class handout
+01/30/13
+1st page of handout - remainder of handout available on hard copy.
+PDF
+with sample solutions from which 01/30/13 exercise was drawn.
+Set theory
+primer
+for those in need
+Nice
+tutorial
+with some strategies for composing queries
+Presentation
+with a nice explanation/examples of division operator (note: For A/B, the attributes in B should be a subset of the attributes in A, so for the puppy example, the projection of trick# after the selection of level='2' is necessary)
+Class slides
+02/15/13
+Mid-term review
+Post mid-term discussion of when to use not
+Normalization
+Rettig Normalization Poster
+Class slides
+02/11/13
+Normalization
+Class slides
+02/20/13
+Normalization and data anomalies (review)
+Good
+tutorial
+with several examples (up to 3NF)
+Good
+tutorial
+with several examples (focus on BCNF)
+SQL (MYSQL)
+W3 Schools
+Great resource for learning, great to bookmark as a reference when coding. Many interactive examples.
+Reference documentation for MySQL
+(This is the version running on the db.cs.dal.ca server, which can be accessed through bluenose or hector. Chris Maxwell of Tech Support will be giving an in-class tutorial on accessing MySQL in preparation for your project work)
+This is a well-covered topic on the Stanford Online site.  Watch the following videos:
+Intro to SQL
+Select statement
+Table variables and set operators
+Subqueries in where
+Subqueries in from and select
+Aggregation
+Null Values
+Data modification statements
+Join operators
+Class slides
+03/08/13+
+Relational Algebra to SQL
+03/08/13: Chris Maxwell's db.cs.dal.ca tutorial:
+Tutorial Notes
+Schema
+03/13/13 - Revised to fix foreign key constraint problem
+Data
+Homework: By Friday, March 8th: Familiarize yourself with the basic SQL statements and joins using the W3 Schools site, and/or the SQL videos on the Stanford db site. A pop quiz will reward those that have done the work.
+Constraints, Triggers, Transactions
+Class slides
+03/22/13
+Constraints, Triggers, Transactions, ACID. Slides give high level overview. Self-directed learning is required as well (and practiced on the assignment).
+Relevant Standford Online videos:
+Transactions Intro
+Properties of Transactions
+Transactions: Isolation Levels
+Constraints & Triggers: Motivation
+Constraints
+Referential Integrity
+Triggers
+Indexes
+Query Optimization
+Class slides
+04/01/13
+Query Optimization
+Class handout with relational algebra equivalencies available on paper
+Miscellaneous
+Beyond SQL
+Class slides
+03/25/13
+Beyond SQL: No SQL, New SQL
+NoSQL data modeling techniques
+The database landscape
+Security
+Class slides
+04/05/13
+SQL Security: SQL injection attacts
+Quizzes (approximately every 2 weeks)
+Quiz 1 - was 01/23/13
+Quiz 2 - was 02/06/13
+Quiz 3 - was 02/22/13
+Quiz 4 - was 03/11/13
+Quiz 5 - was 03/27/13
+Quiz 6 - 04/08/13
+Deliverables
+Assignments
+A1
+due 01/28/13,
+Solution
+A2
+- due 02/06/13,
+Solution
+A3
+- due 02/22/13 (was 02/20/13),
+Solution
+(note: need to fix image in Q11 - will do so this weekend)
+A4
+- due 03/15/13 (was 03/13/13),
+Solution
+A5
+Ass 5 Fix - READ THIS!
+- due 03/27/13  Note: use standard SQL for part2 if mySQL does not evaluate check constraints when tables are created (not sure what the particular version of SQL on the db.cs.dal.ca server allows).  Also, there is a problem with the logical database design in part 1.  We cannot have a foreign key in a table referencing two different tables (the model). There are a number of solutions to this that you can use (I have provided one in the Ass 5 fix document), but feel free to implement any one of the options(see http://stackoverflow.com/questions/7844460/foreign-key-to-multiple-tables for possible solutions).
+03/27/13 clarification slides
+A6
+- due 04/08/13 (1

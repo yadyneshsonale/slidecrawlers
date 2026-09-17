@@ -1,0 +1,14 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.DS_Store
+
+# Download bodies are intentionally represented by DB/manifests only.
+slidefetch/downloads/**
+!slidefetch/downloads/download_metadata.sqlite3
+slidefetch/rated70/[0-9][0-9]*/
+slidefetch/rated4ccr/*/
+slidefetch/rated4rmp/*/
+slidefetch/rated4rmp.bak_aggregated/*/
+rmp_scrape/downloads/

@@ -1,0 +1,92 @@
+CSCE 790 Section 1: Advanced Topics in Probabilistic Graphical Models
+Instructor:
+Marco Valtorta
+Office:
+INNOVA 2269, 777-4641
+E-mail:
+mgv@cse.sc.edu
+Office Hours:
+M 1500-1800.  Please check by phone or email.  Others by
+appointment.
+Meeting Time and Place:
+TTH 1140-1255,
+SWGN 2A15.
+Bulletin Description:
+Topics in Information Technology.
+Reading and research on selected topics in information technology.
+Course content varies and will be announced in the schedule of courses
+by suffix and title. May be repeated for credit as topics vary.
+Prerequisites:
+Graduate Standing in Computer Science, Mathematics, Statistics, or
+permission of the instructor.
+Students from these three disciplines will be asked to
+contribute according to their background and interests.  For example, a
+computer science student may be asked to explain the implementation of a
+Bayesian network learning algorithm in an R package; a statistics student may
+be asked to present a paper on the parametric variant of an
+inference algorithm, and a mathematics student may be asked to
+present a paper that describes the
+algebraic structure of a local computation framework.
+Course Learning Outcomes
+.  The overall goal of the
+course is to prepare students to carry out research in
+probabilistic graphical models.
+Specifically, by the end of this course, the student will be able to:
+Use the Hugin Bayesian network and influence diagram tool to
+construct Bayesian networks.
+Compare and contrast key algorithms for belief propagation in
+Bayesian networks based on local computation and relate them to a common
+algebraic foundation.
+Apply and explain
+variable elimination and several version of the junction
+tree methods at a detailed algorithmic level.
+Explain and justify the interventional model of causality.
+Apply Pearl's do-calculus of
+intervention, prove its properties,
+and describe its limitations in the parametric case.
+Compare and contrast the Markov properties of
+advanced probabilistic graphical models, such as chain graphs and
+ancestral graphs, and explain the uses of such models,
+with special focus on causal modeling.
+Explain the properties and limitations of structural learning
+algorithms for Bayesian networks, under the assumption of faithfulness (PC
+algorithm and its variants) and embedded faithfulness (FCI
+algorithm and its variants).
+Use a few key R packages for inference, learning, and causal modeling.
+Reasonable accommodations are available for
+students with a
+documented disability
+. If you have a disability and may need
+accommodations to fully participate in this class, contact the
+Office of Student Disability Services: 777-6142, TDD 777-6744,
+email sasds@mailbox.sc.edu, or stop by LeConte College Room 112A.
+All accommodations must be approved through the Office of Student
+Disability Services.
+Grading Policy
+Time Allocation Framework
+Lecture Log
+Lecture Notes
+Introductory PowerPoint Slides
+Slides for the Introductory Examples
+Presentations
+Videos
+from the
+spring 2009 version of CSCE 582, which may be useful to catch up on
+background notions.
+Lecture Notes
+from the spring 2009 version of CSCE 582, which may be useful for
+background notions.
+For example:
+The pdf slides for Ch.1 [J07] have a good presentation of pointwise
+table operations in the context of probability computation
+The pdf slides for Ch.2 [J07] define evidence as a vector of zeros and
+ones.
+The transcript of notes of 2009-01-30 has a proof of the chain rules for
+Bayesian networks.
+Notes on Non-Serial Dynamic
+Programming (NSDP)
+used on 2019-02-19.
+This set of slides
+includes
+a presentation of variable elimination using relational algebra (slides
+38-41), as used on 2019-02-19.

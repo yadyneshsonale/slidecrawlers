@@ -1,0 +1,217 @@
+CS 167: Machine Learning (Spring 2026)
+Instructor: Alimoor Reza
+Assistant Professor of Computer Science
+Department of Mathematics and Computer Science
+Drake University
+Class room: Meredith Hall # 234
+Meeting time (Section#1): Mon/Wed (11:00am-12:15pm)
+Meeting time (Section#2): Mon/Wed (12:30pm-1:45pm)
+Office hours (Collier Scripps#323): Tue/Thurs (1:00pm-3:15pm) or by appointment
+Schedule
+A tentative schedule below (subject to change as we progress).
+Date
+Topic
+Reading
+Items due
+week 1 (Mon: 01/26)
+Introduction to Machine Learning
+Lecture Slides 1
+Notebook#0 (released)
+week 1 (Wed: 01/28)
+Google Colab and Python Review
+Day02 Notes: Python Refresher
+Lecture Slides 2
+Reading:
+Notebook#0 (due on 01/30)
+week 2 (Mon: 02/02)
+Pandas Tutorial
+Day03 Notes: Pandas Tutorial
+Lecture Slides 3
+Reading:
+week 2 (Wed: 02/04)
+Practicing with Pandas (Give it a try first, and I'll provide a solution)
+Day04 Notes: Pandas Practice
+Lecture Slides 4
+Notebook#1 (released on 02/04)
+Reading:
+week 3 (Mon: 02/09)
+Missing Data
+Day05 Notes: Handling Missing Data
+Lecture Slides 5
+Reading:
+isna()
+notna()
+any()
+value_counts()
+dropna()
+fillna()
+Notebook#1 (due on 02/11)
+week 3 (Wed: 02/11)
+k-Nearest Neighbor (kNN)
+Day06 Notes: k-Nearest Neighbor using Pandas Library
+Lecture Slides 6
+Reading:
+The relationship ML and other fields
+week 4 (Mon: 02/16)
+Introduction to Scikit-learn Library
+kNN code using Scikit-learn Library (more efficient)
+Day07 Notes: kNN code with scikit-learn
+Lecture Slides 7
+Notebook#2 (released on 02/16)
+Reading:
+sklearn
+sklearn::KNeighborsClassifier
+sklearn::KNeighborsRegressor
+week 4 (Wed: 02/18)
+Data Normalization
+Day08 Notes: Data Normalization
+Lecture Slides 8
+Reading:
+sklearn: standard scalar
+In-class activity#1 kNN using scikit-learn (due on 02/28)
+Notebook#2 (due on 02/23)
+Week 5 (Mon: 02/23)
+Weighted k-NN
+Graph Plot
+Cross-validation Discussion
+Day09 Notes: Weighted k-NN code using sklearn
+Day09 Notes: Graph Plot (take home activity due by 02/25)
+Lecture Slides 9
+Reading:
+matplotlib: Pyplot
+week 5 (Wed: 02/25)
+Evaluation Metrics (Accuracy, Confusion Matrix, MAE, MSE, R2)
+Evaluation Metrics on kNN Regression Coding Activity
+Day10 Notes: Evaluation Metrics and Testing
+Lecture Slides 10
+Notebook#3 (released on 02/25)
+Reading:
+sklearn.metrics: accuracy_score
+sklearn.metrics: confusion_matrix
+sklearn.metrics: mean_absolute_error
+sklearn.metrics: mean_squared_error
+In-class activity#2 Graph Plot (due on 02/25)
+week 6 (Mon: 03/02)
+Introduction to Decision Trees
+Decision trees and Entropy Calculation
+Paper-based in-class Activity on Decision Trees
+Day10 Notes: Entropy Calculation for Decision Trees
+Lecture Slides 11
+Reading:
+week 6 (Wed: 03/04)
+Decision Tree code using Scikit-learn Library
+Day12 Notes: Decision tree code using Scikit-learn
+Day12 Notes: More practice exercises using Scikit-learn
+Lecture Slides 12
+Reading:
+sklearn: Decision Tree classifier
+sklearn: train and test split
+sklearn: evaluation metrics
+sklearn: confusion matrix
+Notebook#3 (due on 03/04)
+In-class activity#3 Entropy Calculation for DT (due on 03/04)
+week 7 (Wed: 03/09)
+Random Forest
+Day13 Notes: Random Forest
+Lecture Slides 13
+Notebook#4 (released on 03/06)
+Reading:
+sklearn: Random Forest Classifier
+sklearn: Random Forest Regressor
+Random Forests: Leo Breiman and Adele Cutler
+Application of Random Forest: A Computer Vision paper
+week 7 (Wed: 03/11)
+Midterm Exam
+(in-class exam released on Blackboard)
+Midterm Exam (due on 03/11)
+week 8 (Mon: 03/16)
+Spring Break (classes do not meet)
+Notebook#4 (due on 03/13)
+week 8 (Mon: 03/18)
+Spring Break (classes do not meet)
+week 9 (Mon: 03/23)
+Day14 Notes: Dimensionality Reduction Techniques
+Principle Component Analysis (PCA)
+Lecture Slides 14
+Project#1 (released on Blackboard 03/23)
+Day14 Notes: Project#1
+Reading:
+sklearn: Principle Component Analysis (PCA)
+sklearn: Feature Selection: SelectKBest
+week 9 (Wed: 03/25)
+Linear Classifiers
+Perceptron
+Lecture Slides 15
+Reading:
+week 10 (Mon: 03/30)
+Perceptron (continued)
+Perceptron Learning Algorithm
+Lecture Slides 16
+In-class activity (linear model, perceptron)#4
+Day16 Notes: Perceptron Code (optional)
+Reading:
+The Perceptron: A Perceiving and Recognizing Automaton (Rosenblatt - 1957)
+In-class activity#4 Linear Models (due on 03/30)
+week 10 (Wed: 04/01)
+Neuron Model and General Weight Learning Algorithm
+Optimization: Gradient Descent (GD), Stochastic Gradient Descent (SGD)
+Lecture Slides 17
+Day17 Notes: Loss Surface Visualization
+Day17 Notes: Stochastic Gradient Descent (code)
+Reading:
+An overview of gradient descent optimization algorithms - Sebastian Ruder
+Week 11 (Mon: 04/06)
+Introduction to Neural Networks
+Multilayer Perceptron (MLP)
+Lecture Slides 18
+Reading:
+Multilayer Perceptron (MLP)
+The Backpropgation Algorithm (Rumelhart-1985)
+Project#1 (due by 04/06)
+Week 11 (Mon: 04/08)
+PyTorch Basics
+Lecture Slides 19
+Day20 Notes: PyTorch Basics
+in-class activity
+Reading:
+PyTorch
+PyTorch: matmul()
+PyTorch: transpose()
+PyTorch: nn.Linear()
+PyTorch: nn.Sigmoid()
+PyTorch: nn.ReLU()
+Week 12 (Mon: 04/13)
+MLP Code using PyTorch
+Lecture Slides 20
+Day 21 Notes: PyTorch's Useful Functions for MLP
+Reading:
+PyTorch: nn.Flatten()
+In-class activity#5 PyTorch Basics (due on 04/13)
+Week 12 (Wed: 04/15)
+MLP: Multilayer Perceptron (Modular PyTorch Implementation)
+Training an MLP using PyTorch (Discussion/lecture)
+Lecture Slides 21
+Day 22 Notes: Building Modular MLP with PyTorch
+Reading:
+PyTorch: nn.Softmax()
+PyTorch: nn.CrossEntropyLoss()
+PyTorch: nn.MSELoss()
+PyTorch: optim.SGD()
+PyTorch: optim.ADAM()
+PyTorch: optim.RMSprop()
+PyTorch: torchvision.datasets
+Week 13 (Mon: 04/20)
+Training an MLP using PyTorch (implementation/coding)
+Lecture Slides 22
+Day 23 Notes: Training MLP using PyTorch
+Notebook #5 (Released)
+Week 13 (Wed: 04/22)
+Convolutional Neural Network (CNN)
+Lecture Slides 23
+[pdf]
+[powerpoint]
+Reading:
+Popular CNN: AlexNet (Krizevsky-2012)
+Popular CNN: VGGNet (Simonyan-2015)
+Popular CNN: ResNet (He-2015)
+In-class activity#6 Convolution and Tensor Size (due on 0

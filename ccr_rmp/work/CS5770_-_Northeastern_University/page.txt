@@ -1,0 +1,149 @@
+NEU CY 5770 Software Vulnerabilities and Security
+Fall 2024, T 11:45 am - 1:25 pm, R 2:50 pm - 4:30 pm, Robinson Hall 109
+General Information
+Instructor
+Dr. Ziming Zhao
+E-mail: z.zhao@northeastern.edu
+Homepage:
+https://zzm7000.github.io/
+Fall 2024, T 11:45 am - 1:25 pm, R 2:50 pm - 4:30 pm
+Office hours will be T 1:45 pm - 2:45 pm or by appointment
+513 or Zoom at
+https://northeastern.zoom.us/j/99475115019?pwd=4dMw5mmuLNHHh0LS9CCll93xapoB4o.1
+CTF platform (only available on NEU campus)
+http://cy5770-cacti.khoury.northeastern.edu
+The lecture recordings will be posted online after each class.
+Overview
+This course is designed to provide students with good understanding of the theories, principles, techniques and tools used for software and system hacking and hardening. Students will study, in-depth, binary reverse engineering, vulnerability classes, vulnerability analysis, exploit and shellcode development, defensive solutions, etc. to understand how to crack and protect native software. In particular, this class covers offensive techniques including stack-based buffer overflow, heap security, format string vulnerability, return-oriented programming, etc. This class also covers defensive techniques including canary, shadow stack, address space layout randomization, control-flow integrity, etc. A key part of studying security is putting skills to the test in practice. Hacking challenges known as Capture The Flag (CTF) competitions are a great way to do this. In this class the progress of students are evaluated by lab assignment and in-class Capture-The-Flag (CTF) competitions.
+Downloads:
+Course Syllabus
+Tentative Schedule
+Date
+Topic
+Dues
+Week-1 Class-1 9/5
+Overview and Background Knowledge
+L1 Class Overview
+L2 Background Knowledge
+Hw
+Video
+Week-2 Class-1 9/10
+Background Knowledge
+Video
+Week-2 Class-2 9/12
+Buffer Overflow (Background and Local variables)
+L3 Buffer Overflow (Local Variables)
+Video
+Week-3 Class-1 9/17
+Buffer Overflow (Local variables)
+Hw
+Video
+Hw-1
+Week-3 Class-2 9/19
+Buffer Overflow (Return address)
+L4 Buffer Overflow (Return address)
+Video
+Week-4 Class-1 9/24
+Buffer Overflow (Return to Shellcode)
+L5 Buffer Overflow (Return to Shellcode)
+Video
+Hw
+Hw-2
+Week-4 Class-2 9/26
+Buffer Overflow (Frame Pointer Attack)
+L6 Buffer Overflow (Frame Pointer Attack)
+Video
+Week-5 Class-1 10/1
+Buffer Overflow (DEP, Shadow Stack)
+L7 Buffer Overflow (DEP, Shadow Stack, Stack Canary)
+Video
+Hw
+Hw-3
+Week-5 Class-2 10/3
+Buffer Overflow (Stack Canary)
+Video
+Week-6 Class-1 10/8
+ASLR and Seccomp
+L8 ASLR and Seccomp
+Video
+Hw
+Hw-4
+Week-6 Class-2 10/10
+Shellcoding
+L9 Shellcoding
+Video
+The instructor will be out of town for a conference. The class will be delivered online at the office hour Zoom link at 10/11 4:35PM
+Week-7 Class-1 10/15
+*** Midterm CTF Part-1***
+Midterm-1
+Hw-5
+Week-7 Class-2 10/17
+*** Midterm CTF Part-2***
+Midterm-2
+Week-8 Class-1 10/22
+Buffer Overflow (Real-world examples)
+L10 Buffer Overflow (Real-world Examples)
+Video
+Hw6
+Hw7
+Week-8 Class-2 10/24
+Format string vulnerability
+L11 Format String (Memory Read)
+Video
+Week-9 Class-1 10/29
+Format string vulnerability
+L12 Format String (Memory Write)
+Hw
+Video
+Hw-6 and Hw-7
+Week-9 Class-2 10/31
+Format string vulnerability
+Video
+Week-10 Class-1 11/5
+Return-oriented programming
+L13 Return-oriented Programming
+Hw
+Video
+Hw-8
+Week-10 Class-2 11/7
+Return-oriented programming
+Video
+Week-11 Class-1 11/12
+Return-oriented programming
+Hw
+Video
+Hw-9
+Week-11 Class-2 11/14
+Heap exploitation
+L14 Heap Exploitation
+Video
+Week-12 Class-1 11/19
+Heap exploitation
+Hw
+Video
+Hw-10
+Week-12 Class-2 11/21
+Cache and cache side-channel
+L15 Cache and cache side-channel
+Video
+Week-13 Class-1 11/26
+Cache and others
+Hw12
+Hw13
+Hw-11. The class will be delivered online as this is the day before Thanksgiving.
+Week-13 Class-2 11/28
+=== Fall Break (No class) ===
+Week-14 Class-1 12/3
+***FinalCTF Part-1***
+Final-1
+Hw-12, Hw-13
+Week-14 Class-2 12/5
+***FinalCTF Part-2***
+Resources
+GDB Cheat Sheet
+Tmux Cheet Sheet
+x64 Cheat Sheet
+x32 Cheat Sheet
+x32 Cheat Sheet
+ARM Cheat Sheet
+ARM Cheat Sheet 32-bit

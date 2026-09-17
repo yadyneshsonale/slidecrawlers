@@ -1,0 +1,338 @@
+CS231n Home
+Schedule
+Assignments
+Project
+Office Hours
+Lecture Videos
+Ed
+Useful Notes
+CS231n: Deep Learning for Computer Vision
+Stanford - Spring 2026
+Schedule
+Lectures
+will occur Tuesdays and Thursdays from 12:00-1:20pm Pacific Time at
+NVIDIA Auditorium
+.
+Discussion
+sections will (generally) occur on Fridays from 12:30-1:20pm Pacific Time at
+NVIDIA Auditorium
+. Check
+Ed
+for any exceptions.
+Updated lecture slides will be posted here shortly before each lecture. For ease of reading, we have color-coded
+the lecture category titles in
+blue
+, discussion
+sections (and final project poster session) in
+yellow
+, and the
+midterm exam in
+red
+. Note that the schedule is subject to
+change as the quarter progresses.
+Date
+Description
+Course Materials
+Events
+Deadlines
+Mar 31
+Lecture 1: Introduction
+Computer vision overview
+Course overview
+Course logistics
+[
+slides 1
+]
+[
+slides 2
+]
+âââ
+Deep Learning Basics
+Apr 02
+Lecture 2: Image Classification with Linear Classifiers
+The data-driven approach
+K-nearest neighbor
+Linear Classifiers
+Algebraic / Visual / Geometric viewpoints
+Softmax loss
+[
+slides
+]
+Image Classification Problem
+Linear Classification
+Assignment 1
+out
+Apr 03
+Python / Numpy Review Session
+[
+Colab
+]
+[
+Tutorial
+]
+12:30-1:20pm PT
+Apr 07
+Lecture 3: Regularization and Optimization
+Regularization
+Stochastic Gradient Descent
+Momentum, AdaGrad, Adam
+Learning rate schedules
+[
+slides
+]
+Optimization
+Apr 09
+Lecture 4: Neural Networks and Backpropagation
+Multi-layer Perceptron
+Backpropagation
+[
+slides
+]
+Backprop
+Linear backprop example
+Suggested Readings:
+Why Momentum Really Works
+Derivatives notes
+Efficient backprop
+More backprop references:
+[1]
+,
+[2]
+,
+[3]
+Apr 10
+Backprop Review Session
+[
+Colab
+]
+[
+slides
+]
+12:30-1:20pm PT
+âââ
+Perceiving and Understanding the Visual World
+Apr 14
+Lecture 5: Image Classification with CNNs
+History
+Higher-level representations, image features
+Convolution and pooling
+[
+slides
+]
+Convolutional Networks
+Apr 16
+Lecture 6: CNN Architectures
+Batch Normalization
+Transfer learning
+AlexNet, VGG, ResNet
+[
+slides
+]
+AlexNet
+,
+VGGNet
+,
+GoogLeNet
+,
+ResNet
+Project Proposal
+out
+Assignment 1
+due
+Apr 17
+Final Project Overview and Guidelines
+[
+slides
+]
+12:30-1:20pm PT
+Apr 21
+Lecture 7: Recurrent Neural Networks
+RNN, LSTM, GRU
+Language modeling
+Image captioning
+Sequence-to-sequence
+[
+slides
+]
+Suggested Readings:
+DL book RNN chapter
+Understanding LSTM
+Networks
+Apr 23
+Lecture 8: Attention and Transformers
+Self-Attention
+Transformers
+[
+slides
+]
+Suggested Readings:
+Attention is All You Need
+[
+Original Transformers Paper
+]
+Attention? Attention
+[
+Blog by Lilian
+Weng
+]
+The Illustrated Transformer
+[
+Blog by Jay Alammar
+]
+ViT: Transformers for Image Recognition
+[
+Paper
+]
+[
+Blog
+]
+[
+Video
+]
+Assignment 2
+out
+Project Proposal
+due
+Apr 24
+PyTorch Review Session
+[
+Colab
+]
+12:30-1:20pm PT
+Apr 28
+Lecture 9: Object Detection, Image Segmentation, Visualizing and Understanding
+Single-stage detectors
+Two-stage detectors
+Semantic/Instance/Panoptic segmentation
+Feature visualization and inversion
+Adversarial examples
+DeepDream and style transfer
+[
+slides
+]
+FCN
+,
+R-CNN
+,
+Fast
+R-CNN
+,
+Faster R-CNN
+,
+YOLO
+DETR: End-to-End Object Detection with Transformers
+[
+Paper
+]
+[
+Blog
+]
+[
+Video
+]
+Apr 30
+Lecture 10: Video Understanding
+Video classification
+3D CNNs
+Two-stream networks
+Multimodal video understanding
+[
+slides
+]
+May 01
+RNNs & Transformers
+[
+slides
+]
+12:30-1:20pm PT
+May 05
+Lecture 11: Large Scale Distributed Training
+Utilization, Parallelism, and Activation Checkpointing
+[
+slides
+]
+âââ
+Generative and Interactive Visual Intelligence
+May 07
+Lecture 12: Self-supervised Learning
+Pretext tasks
+Contrastive learning
+Multisensory supervision
+[
+slides
+]
+Suggested Readings:
+Lilian Weng
+Blog Post
+DINO: Emerging Properties in Self-Supervised Vision Transformers
+[
+Paper
+]
+[
+Blog
+]
+[
+Video
+]
+May 08
+Midterm Review Session
+12:30-1:20pm PT
+Assignment 2
+due
+May 12
+In-Class Midterm
+12:00-1:20pm PT
+May 14
+Lecture 13: Generative Models 1
+Variational Autoencoders
+Generative Adversarial Network
+Autoregressive Models
+[
+slides
+]
+Suggested Readings:
+Blog: ELBO â What & Why
+Assignment 3
+out
+May 15
+Milestone 1 Check-In
+due
+May 19
+Lecture 14: Generative Models 2
+Diffusion models
+[
+slides
+]
+May 21
+Lecture 15: 3D Vision
+3D shape representations
+Shape reconstruction
+Neural implicit representations
+[
+slides
+]
+May 22
+Milestone 2 Check-In
+due
+May 26
+Lecture 16: Vision and Language
+[
+slides
+]
+May 28
+Lecture 17: World Modeling
+Guest Lecturer: Prof. Gordon Wetzstein
+Assignment 3
+due
+May 29
+Milestone 3 Check-In
+due
+Jun 02
+Lecture 18: Human-Centered AI
+Jun 05
+Final Report
+due
+Jun 10
+Final Project Poster Session
+12:15-3:15 PM PT
+Location: Gates Patio + HAI

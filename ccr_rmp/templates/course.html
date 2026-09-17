@@ -1,0 +1,218 @@
+{% extends "base.html" %}
+{% block title %}{{ course.course_code }} · review{% endblock %}
+{% block body %}
+
+<p><a href="{{ url_for('index') }}">&larr; dashboard</a></p>
+<h1 class="mono">{{ course.course_code }} <span class="muted">·</span> {{ course.college_name }}</h1>
+
+<!-- ---------- Source ---------- -->
+<div class="panel">
+  <h2>Source (from xlsx)</h2>
+  <form method="post" action="{{ url_for('set_source', c=course.course_college) }}">
+    <div class="src-grid">
+      <label class="muted">course key</label>
+      <div class="mono muted">{{ course.course_college }}</div>
+
+      <label class="muted" for="f_code">course code <span style="opacity:.7">(class matching)</span></label>
+      <input id="f_code" type="text" name="course_code" value="{{ course.course_code or '' }}">
+
+      <label class="muted" for="f_college">college <span style="opacity:.7">(RMP school lookup)</span></label>
+      <input id="f_college" type="text" name="college_name" value="{{ course.college_name or '' }}">
+
+      <label class="muted" for="f_link">slide link</label>
+      <input id="f_link" type="text" name="course_slide_links" value="{{ course.course_slide_links or '' }}">
+
+      <label class="muted">CCR num_ratings</label>
+      <div class="mono muted">{{ course.num_ratings if course.num_ratings is not none else '·' }}</div>
+    </div>
+    <div style="margin-top:10px;display:flex;gap:12px;align-items:center">
+      <button type="submit">Save source</button>
+      {% if course.course_slide_links %}<a href="{{ course.course_slide_links }}" target="_blank" rel="noopener" class="muted">open current link ↗</a>{% endif %}
+    </div>
+    <p class="muted" style="margin:6px 0 0;font-size:12px">Changing the link clears the fetched slide — press <strong>Run Stage&nbsp;1</strong> below to re-fetch, then Stage&nbsp;2.</p>
+  </form>
+</div>
+
+<!-- ---------- Stage 1 ---------- -->
+<div class="panel">
+  <h2>Stage 1 — Slide fetch
+    <form class="inline" method="post" action="{{ url_for('run', c=course.course_college, stage='fetch') }}">
+      <button class="btn-run">Run Stage 1</button></form>
+  </h2>
+  <div class="kv">
+    <div class="k">kind / status</div>
+    <div><span class="mono">{{ course.slide_kind or '·' }}</span>
+      {% if course.slide_status %}<span class="badge b-{{ course.slide_status }}">{{ course.slide_status }}</span>{% endif %}</div>
+    <div class="k">url used</div>
+    <div>{% if course.slide_url_used %}<a href="{{ course.slide_url_used }}" target="_blank" rel="noopener">{{ course.slide_url_used }}</a>{% else %}·{% endif %}</div>
+  </div>
+  {% if sart.preview %}
+    <div class="thumbs">
+      {% for p in sart.preview %}<a href="{{ url_for('artifact', path=p) }}" target="_blank"><img src="{{ url_for('artifact', path=p) }}"></a>{% endfor %}
+    </div>
+  {% elif sart.text %}
+    <p class="muted">extracted text: <a href="{{ url_for('artifact', path=sart.text) }}" target="_blank">view page.txt</a></p>
+  {% endif %}
+</div>
+
+<!-- ---------- Stage 2 ---------- -->
+<div class="panel">
+  <h2>Stage 2 — Instructor (Qwen2.5-VL)
+    <form class="inline" method="post" action="{{ url_for('run', c=course.course_college, stage='instructor') }}">
+      <button class="btn-run">Run Stage 2</button></form>
+  </h2>
+  <div class="big">{{ course.instructor or 'NULL' }}
+    {% if course.instructor_status %}<span class="badge b-{{ course.instructor_status }}" style="font-size:13px">{{ course.instructor_status }}</span>{% endif %}
+  </div>
+  <div class="kv" style="margin-top:8px">
+    <div class="k">confidence</div><div class="mono">{{ '%.2f'|format(course.instructor_confidence) if course.instructor_confidence is not none else '·' }}</div>
+    <div class="k">source</div><div class="mono">{{ course.instructor_source or '·' }}</div>
+    {% if idbg.mode == 'image' %}
+      <div class="k">cue pages</div><div class="mono">{{ idbg.cue_pages }}</div>
+      <div class="k">pages sent</div><div class="mono">{{ idbg.pages_sent }}</div>
+    {% elif idbg.mode == 'text' %}
+      <div class="k">text sent</div><div class="mono">{{ idbg.focus_chars }} chars (focused on cue)</div>
+    {% endif %}
+  </div>
+  {% if idbg.images %}
+    <div class="thumbs">
+      {% for p in idbg.images %}<a href="{{ url_for('artifact', path=p) }}" target="_blank"><img src="{{ url_for('artifact', path=p) }}"></a>{% endfor %}
+    </div>
+  {% endif %}
+  {% if idbg.raw %}<p class="muted" style="margin-bottom:4px">raw model reply</p><div class="raw">{{ idbg.raw }}</div>{% endif %}
+  {% if idbg.error %}<div class="raw">{{ idbg.error }}</div>{% endif %}
+
+  <form class="edit-instr" method="post" action="{{ url_for('set_instructor', c=course.course_college) }}">
+    <label class="muted">Set / edit instructor(s) — separate co-instructors with <span class="mono">&amp;</span></label>
+    <div class="edit-row">
+      <input type="text" name="instructor" value="{{ course.instructor or '' }}" placeholder="e.g. Jane Doe & John Smith">
+      <button type="submit">Save instructor(s)</button>
+    </div>
+    <p class="muted" style="margin:6px 0 0;font-size:12px">Saving marks it <span class="badge b-found">found</span> (source: human) and clears any old Stage&nbsp;3/4 results, so you can run Stage&nbsp;3 then Stage&nbsp;4 below.</p>
+  </form>
+</div>
+
+<!-- ---------- Stage 3 ---------- -->
+<div class="panel">
+  <h2>Stage 3 — RateMyProfessors match
+    <form class="inline" method="post" action="{{ url_for('run', c=course.course_college, stage='rmp') }}">
+      <button class="btn-run">Run Stage 3</button></form>
+  </h2>
+  {% if course.rmp_status %}
+    <div class="kv">
+      <div class="k">status</div><div><span class="badge b-{{ course.rmp_status }}">{{ course.rmp_status }}</span></div>
+      <div class="k">school</div><div>{{ course.rmp_school_name or '·' }}</div>
+    </div>
+    {% if professors %}
+      <table class="rmp-table">
+        <thead><tr><th>instructor</th><th>matched</th><th>type</th><th>quality</th><th>difficulty</th><th>n</th><th>dept</th><th>profile</th></tr></thead>
+        <tbody>
+        {% for p in professors %}
+          <tr>
+            <td class="mono">{{ p.instructor_name }}</td>
+            <td>{% if p.rmp_status == 'found' %}{{ p.matched_name }}{% else %}<span class="badge b-{{ p.rmp_status }}">{{ p.rmp_status }}</span>{% endif %}</td>
+            <td class="muted mono">{{ p.match_type or '·' }}</td>
+            <td class="mono">{{ p.avg_rating_overall if p.avg_rating_overall is not none else '·' }}</td>
+            <td class="mono">{{ p.avg_difficulty_overall if p.avg_difficulty_overall is not none else '·' }}</td>
+            <td class="mono">{{ p.num_ratings_overall if p.num_ratings_overall is not none else '·' }}</td>
+            <td class="muted">{{ p.department or '·' }}</td>
+            <td>{% if p.profile_url %}<a href="{{ p.profile_url }}" target="_blank" rel="noopener">open ↗</a>{% else %}·{% endif %}</td>
+          </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+    {% endif %}
+  {% else %}<p class="muted">not run yet (Stage 3 pending)</p>{% endif %}
+</div>
+
+<!-- ---------- Stage 4 ---------- -->
+<div class="panel">
+  <h2>Stage 4 — This course's ratings
+    <form class="inline" method="post" action="{{ url_for('run', c=course.course_college, stage='ratings') }}">
+      <button class="btn-run">Run Stage 4</button></form>
+  </h2>
+  {% if course.course_num_ratings is not none %}
+    <div class="kv">
+      <div class="k">course n ratings</div><div class="mono">{{ course.course_num_ratings }}</div>
+      <div class="k">course avg quality</div><div class="mono">{{ course.course_avg_quality if course.course_avg_quality is not none else '·' }}</div>
+      <div class="k">course avg difficulty</div><div class="mono">{{ course.course_avg_difficulty if course.course_avg_difficulty is not none else '·' }}</div>
+      <div class="k">would-take-again %</div><div class="mono">{{ course.course_would_take_again if course.course_would_take_again is not none else '·' }}</div>
+      <div class="k">matched classes</div><div class="mono">{{ course.matched_class_values or '·' }}</div>
+    </div>
+    {% if professors %}
+      <table class="rmp-table" style="margin-top:12px">
+        <thead><tr><th>professor</th><th>kept</th><th>quality</th><th>difficulty</th><th>wta %</th><th>classes</th></tr></thead>
+        <tbody>
+        {% for p in professors if p.rmp_status == 'found' %}
+          <tr>
+            <td>{{ p.matched_name or p.instructor_name }}</td>
+            <td class="mono">{{ p.course_num_ratings if p.course_num_ratings is not none else '·' }}</td>
+            <td class="mono">{{ p.course_avg_quality if p.course_avg_quality is not none else '·' }}</td>
+            <td class="mono">{{ p.course_avg_difficulty if p.course_avg_difficulty is not none else '·' }}</td>
+            <td class="mono">{{ p.course_would_take_again if p.course_would_take_again is not none else '·' }}</td>
+            <td class="mono muted">{{ p.matched_classes | join(', ') if p.matched_classes else '·' }}</td>
+          </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+    {% endif %}
+    {% if ratings %}
+      <h3 class="sub">Individual ratings ({{ ratings|length }})</h3>
+      {% for r in ratings %}
+        <div class="rating">
+          <div class="rating-head">
+            <span class="chip q">Quality {{ r.quality if r.quality is not none else '·' }}</span>
+            <span class="chip d">Difficulty {{ r.difficulty if r.difficulty is not none else '·' }}</span>
+            <span class="muted mono">{{ r.class }}</span>
+            <span class="muted">{{ r.date or '' }}</span>
+            <span class="grow"></span>
+            {% if r.grade %}<span class="chip">Grade: {{ r.grade }}</span>{% endif %}
+            {% if r.for_credit is not none %}<span class="chip">For credit: {{ 'Yes' if r.for_credit else 'No' }}</span>{% endif %}
+            {% if r.attendance %}<span class="chip">Attendance: {{ r.attendance }}</span>{% endif %}
+            {% if r.textbook_use is not none %}<span class="chip">Textbook: {{ r.textbook_use }}</span>{% endif %}
+            {% if r.online_class %}<span class="chip">Online</span>{% endif %}
+            {% if r.would_take_again == 1 %}<span class="chip wta">Would take again</span>{% elif r.would_take_again == 0 %}<span class="chip nwta">Would not</span>{% endif %}
+          </div>
+          {% if r.tags %}<div class="rating-tags">{{ r.tags }}</div>{% endif %}
+          {% if r.comment %}<div class="rating-comment">{{ r.comment }}</div>{% endif %}
+          {% if r.thumbs_up or r.thumbs_down %}<div class="muted mono thumbs-line">👍 {{ r.thumbs_up or 0 }} · 👎 {{ r.thumbs_down or 0 }}</div>{% endif %}
+        </div>
+      {% endfor %}
+    {% endif %}
+  {% else %}<p class="muted">not run yet (Stage 4 pending)</p>{% endif %}
+</div>
+
+<!-- ---------- Feedback ---------- -->
+<div class="panel">
+  <h2>Your feedback</h2>
+  <form method="post" action="{{ url_for('feedback', c=course.course_college) }}">
+    <div class="row">
+      <div>
+        <p class="muted" style="margin:0 0 4px">Instructor correct?</p>
+        <select name="instructor_ok">
+          <option value="" {{ 'selected' if fb.instructor_ok is none else '' }}>— unset —</option>
+          <option value="1" {{ 'selected' if fb.instructor_ok == 1 else '' }}>Yes, correct</option>
+          <option value="0" {{ 'selected' if fb.instructor_ok == 0 else '' }}>No, wrong</option>
+        </select>
+        <p class="muted" style="margin:10px 0 4px">Correct instructor name</p>
+        <input type="text" name="instructor_correction" value="{{ fb.instructor_correction or course.instructor or '' }}">
+        <label class="muted" style="display:block;margin-top:6px">
+          <input type="checkbox" name="apply_correction" value="1"> apply this as the instructor (feeds Stage 3)</label>
+      </div>
+      <div>
+        <p class="muted" style="margin:0 0 4px">RMP match correct?</p>
+        <select name="rmp_ok">
+          <option value="" {{ 'selected' if fb.rmp_ok is none else '' }}>— unset —</option>
+          <option value="1" {{ 'selected' if fb.rmp_ok == 1 else '' }}>Yes, correct</option>
+          <option value="0" {{ 'selected' if fb.rmp_ok == 0 else '' }}>No, wrong</option>
+        </select>
+        <label class="muted" style="display:block;margin-top:10px">
+          <input type="checkbox" name="needs_review" value="1" {{ 'checked' if fb.needs_review else '' }}> flag needs review</label>
+      </div>
+    </div>
+    <p class="muted" style="margin:12px 0 4px">Notes / reasoning (recorded for the knowledge base)</p>
+    <textarea name="notes">{{ fb.notes or '' }}</textarea>
+    <p style="margin-top:12px"><button type="submit">Save feedback</button></p>
+  </form>
+</div>
+{% endblock %}

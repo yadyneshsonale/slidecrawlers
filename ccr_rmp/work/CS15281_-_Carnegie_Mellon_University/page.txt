@@ -1,0 +1,363 @@
+15-281: Artificial Intelligence
+OH
+Schedule
+Recitations
+Exams
+Assignments
+Course Notes
+Policies
+Staff page
+15-281, Spring 2026
+Artificial Intelligence: Representation and Problem
+Solving
+Overview
+Key Information
+Lecture
+Asynchronous Lectures, see
+schedule
+for
+lectures
+Recitation
+Friday 11:00 - 11:50 am, GHC 5222, see
+Recitations
+Instructors
+Tuomas
+Sandholm
+Teaching
+Assistants
+Pranav Rajbhandari
+, Sunny Kim, see the
+281 Staff page
+Grading
+Grades will be collected in
+Canvas
+.
+Midterms 15% (each), Final 30%, Programming homework 20%,
+Written homework 10%, Online homework 5%, Recitation attendance
+5%
+Textbook
+Artificial Intelligence: A Modern Approach,
+Fourth
+Edition
+Announcements +
+Q&A
+We will use
+Piazza
+for questions and any
+course announcements.
+Submitting
+Assignments
+Students will turn in their
+homework electronically using
+Gradescope
+.
+This course is about the theory and practice of Artificial
+Intelligence. We will study modern techniques for computers to
+represent task-relevant information and make intelligent (i.e.,
+satisficing or optimal) decisions towards the achievement of goals. The
+search and problem-solving methods are applicable throughout a large
+range of industrial, civil, medical, financial, robotic, and
+information systems. We will investigate questions about AI systems
+such as: how to represent knowledge, how to effectively generate
+appropriate sequences of actions and how to search among alternatives
+to find optimal or near-optimal solutions. We will also explore how to
+deal with uncertainty in the world and how to learn from experience. We
+will cover the aggregation of conflicting preferences and computational
+game theory. Throughout the course, we will discuss topics such as AI
+and Ethics and introduce applications related to AI for Social Good. We
+expect that by the end of the course students will have a thorough
+understanding of the algorithmic foundations of AI, how probability and
+AI are closely interrelated, and how automated agents make decisions.
+We also expect students to acquire a strong appreciation of the
+big-picture aspects of developing fully autonomous intelligent
+agents.
+This iteration of the course will be taught through pre-recorded lectures from last year's version
+of this class, available on
+Panopto
+.
+Scheduled class times will be used as office hours for students to ask questions
+(ideally mostly about the corresponding lecture/related assignments).
+Please watch the assigned lecture before this!
+Recitations will be hosted on Fridays by your wonderful TAs and will be a review of lecture topics.
+Prerequisites + Corequisites
+The prequisites for this course are:
+15-122
+Principles of Imperative Computation
+21-241
+Matrices and Linear Transformations
+21-127
+Concepts of Mathematics
+or 15-151
+Mathematical
+Foundations of Computer Science
+.
+The corequisite for this course is:
+21-122
+Integration and Approximation
+For this corequisite, you should either have completed it prior to
+starting 15-281 or have it on your schedule for Spring 2026.
+Please see the instructors if you are unsure whether your background
+is suitable for the course.
+Office Hours
+Office hours will function mostly for students to ask questions related to the lecture assigned that day.
+You may also ask questions about upcoming assignments or about less related topics, but please allow any
+questions
+about the assigned lecture to take priority. We may schedule additional times if needed.
+If you need to schedule individual office hours outside of the listed times, please email/speak to one of the
+TAs.
+Find their andrew ids on the
+281 Staff page
+.
+Professor Office Hours
+Mondays 11:00-12:00, GHC 9205 (starting 1/19)
+TA Office Hours
+Wednesdays 11:00-12:00, GHC 5222 (starting 1/14)
+Friday 4:00-5:00 pm, GHC 5222 (starting 1/23)
+We will add more OH times as we see fit throughout the semester.
+Schedule (subject to change)
+Updated Jan. 8 2026
+Dates
+Topic / Lecture Video
+Reading / Demo
+Slides
+1/12 Mon
+Live
+Meeting with Professor Sandholm and TAs at GHC 5222
+Introduction
+Lecture
+AIMA Ch. 1
+pptx
+(
+pdf
+)
+1/14 Wed
+Agents
+and Search
+AIMA Ch. 3.1-4
+pptx
+(
+pdf
+)
+1/19 Mon
+No class: MLK Day
+1/21 Wed
+Informed
+Search
+AIMA Ch. 3.5-6
+pptx
+(
+pdf
+)
+1/26 Mon
+Adversarial
+Search
+AIMA Ch. 5
+pptx
+(
+pdf
+)
+1/28 Wed
+Contraint
+Satisfaction Problems
+AIMA Ch. 6.1-3, 6.5
+CSP Demo
+pptx
+(
+pdf
+)
+2/2 Mon
+Local
+Search and Gradient Descent
+AIMA Ch. 4.1, 6.4
+pptx
+(
+pdf
+)
+2/4 Wed
+Linear Programming
+Boyd and
+Vandenberghe
+Ch. 2.2.1, 2.2.4, 4.3-4.3.1
+Desmos Demos:
+Prereq: Dot
+Product
+LP: Cost at
+points
+LP: Zero
+cost
+LP: Cost
+contours
+LP:
+Constraint
+LP: Cost with
+one constraint
+LP
+pptx
+(
+pdf
+)
+2/9 Mon
+Integer
+Programming
+Desmos Demos:
+IP
+pptx
+(
+pdf
+)
+2/11 Wed
+Propositional
+Logic and Logical Agents
+AIMA Ch. 7.1-7
+pptx
+(
+pdf
+)
+2/13 Fri
+Live
+MT1 Review session
+4:00 - 5:30 pm
+In class (GHC 5222)
+slides
+(
+pdf
+)
+questions
+(
+sol
+)
+2/16 Mon
+AI
+Ethics and Practice Activity
+pptx
+(
+pdf
+)
+2/18 Wed
+MIDTERM 1 EXAM
+In class (GHC 5222)
+2/23 Mon
+Planning
+AIMA Ch. 11.1-3, 26.5
+pptx
+(
+pdf
+)
+2/25 Wed
+Machine
+Learning
+AIMA Ch. 19
+pptx
+(
+pdf
+)
+3/2 Mon
+No class: Spring Break
+3/4 Wed
+No class: Spring Break
+3/9 Mon
+Markov
+Decision Process I
+AIMA Ch. 17.1-2
+pptx
+(
+pdf
+)
+3/11 Wed
+Markov
+Decision Process II
+Markov Decision Process II
+pptx
+(
+pdf
+)
+3/16 Mon
+Reinforcement
+Learning I
+AIMA Ch. 22.1-3
+pptx
+(
+pdf
+)
+3/18 Wed
+Reinforcement
+Learning II
+AIMA Ch. 22.4-4.3
+pptx
+(
+pdf
+)
+3/19 Thurs
+Live
+MT2 Review session
+5:00 - 6:00 pm
+GHC 4215
+slides
+(
+pdf
+)
+3/23 Mon
+Bayes
+Nets: Representation
+AIMA Ch. 12.1-5, 13.1-2
+Bayes Net Demo
+(
+highres
+)
+pptx
+(
+pdf
+)
+3/25 Wed
+MIDTERM 2 EXAM
+In class (GHC 5222)
+3/30 Mon
+Bayes
+Nets: Independence
+AIMA Ch. 12.4-5, 13.2
+pptx
+(
+pdf
+)
+(
+annotated
+)
+4/1 Wed
+Bayes
+Nets: Inference
+AIMA Ch. 13.3
+pptx
+(
+pdf
+)
+4/6 Mon
+Bayes
+Nets: Sampling
+AIMA Ch. 13.4
+Likelihood Demo
+,
+Gibbs Demo
+pptx
+(
+pdf
+)
+(
+annotated
+)
+4/8 Wed
+Hidden
+Markov Models
+AIMA Ch. 14.1-3
+pptx
+(
+pdf
+)
+(
+annotated
+)
+Video:
+Forward Algorithm Math
+Video:
+Math for Variable Elimination
+4/13 Mon
+Particle

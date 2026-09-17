@@ -1,0 +1,260 @@
+ECE471: Embedded Systems
+University of Maine ECE
+Fall 2022
+Instructor:
+Vincent Weaver
+The class meeting time is Monday/Wednesday/Friday at 10:00am-10:50am.
+The meeting place is Williams 219.
+Office hours:
+Weaver: Wednesday 1pm-2pm, Thursday 1pm-1:50pm.  Barrows 203
+TA: Saher Fatima (saher.fatima@maine.edu):
+Wednesday 12pm-1pm, Friday 1pm-2pm, Barrows 208.
+Notes on Required Hardware
+Required Raspberry Pi Hardware
+Syllabus
+ece471_2022f.pdf
+Course Listing
+Application of micro-processors to the solution of design problems,
+including hardware characteristics, peripheral control techniques and
+system development. Lec 3. (Fall.)
+What We'll Do this Semester
+We will investigate modern embedded systems, with a focus on ARM processors.
+Class Schedule
+Monday
+Wednesday
+Friday
+Week 1
+29 August
+Introduction to Embedded Systems
+Lecture 1 notes
+31 August
+Embedded Hardware, 8 vs 32-bit
+Lecture 2 notes
+2 September
+Embedded Tradeoffs, ARM History
+Lecture 3 notes
+Week 2
+5 September
+No class, Labor day
+7 September
+Single Board Computers, Raspberry Pi
+Lecture 4 notes
+9 September
+C, Running Linux on a Pi
+Lecture 5 notes
+Week 3
+12 September
+Pi Setup, Linux Commandline Demo
+Lecture 6 notes
+14 September
+C review, Compiling Executables
+Lecture 7 notes
+16 September
+ABIs and Assembly Overview
+Lecture 8 notes
+Lecture 8 sample code
+Week 4
+19 September
+ARM32 assembly Overview
+Lecture 9 notes
+21 September
+THUMB/Thumb2/AARCH64, Code Density
+Lecture 10 notes
+23 September
+Linux GPIO Interface
+Lecture 11 notes
+Week 5
+26 September
+ELF Executables, Virtual Memory
+Lecture 12 notes
+28 September
+HW3 Review, Operating Systems
+Lecture 13 notes
+30 September
+Lecture 14 notes
+i2c
+Week 6
+3 October
+Booting
+Lecture 15 notes
+5 October
+HW4 Review, Device Detection, Processes
+Lecture 16 notes
+7 October
+Firmware, Trusted Firmware
+Lecture 17 notes
+Week 7
+10 October
+No Class, Fall Break
+12 October
+Midterm Review
+Lecture 18 notes
+14 October
+Midterm Exam
+Week 8
+17 October
+Real Time Systems
+Lecture 19 notes
+19 October
+No class -- Engineering Career Fair
+21 October
+Real Time OS Issues
+Lecture 20 notes
+Week 9
+24 October
+Real Time OS Examples
+Lecture 21 notes
+26 October
+Real Time Linux
+Lecture 22 notes
+28 October
+SPI Bus
+Lecture 23 notes
+Week 10
+31 October
+Computer Security
+Lecture 24 notes
+2 November
+More Computer Security
+Lecture 25 notes
+4 November
+1-wire bus
+Lecture 26 notes
+Week 11
+7 November
+C I/O and String Manipulation
+Lecture 27 notes
+9 November
+Buggy Software Case Studies
+Lecture 28 notes
+11 November
+No class, Veterans' Day
+Week 12
+14 November
+More Case Studies, Homework Review
+Lecture 29 notes
+16 November
+Writing Good Code / Review for Midterm
+Lecture 30 notes
+18 November
+Midterm #2
+Week 13
+21 November
+Other busses
+Lecture 31 notes
+23 November
+THANKSGIVING
+25 November
+THANKSGIVING
+Week 14
+28 November
+Energy / Power Concerns
+Lecture 32 notes
+30 November
+Final Exam Review / Project Example
+Lecture 33 notes
+2 December
+Project Presentations
+Week 15
+5 December
+Project Presentations
+7 December
+Project Presentations
+9 December
+Project Presentations
+Homework Assignments
+Homework 1 -- Embedded Systems Overview
+Assignment:
+ece471_hw1.pdf
+Assigned: 2 September 2022
+Due: (via e-mail) Friday, 9 September 2022, 10am
+Homework 2 -- Pi Setup / C coding
+Assignment:
+ece471_hw2.pdf
+Code:
+ece471_hw2_code.tar.gz
+Assigned: 9 September 2022
+Due: (via e-mail) Friday, 16 September 2022, 10am
+Homework 3 -- Assembly Language / Code Density
+Assignment:
+ece471_hw3.pdf
+Code:
+ece471_hw3_code.tar.gz
+Assigned: 16 September 2022
+Due: (via e-mail) Friday, 23 September 2022, 10am
+Homework 4 --  Linux GPIOs
+Assignment:
+ece471_hw4.pdf
+Code:
+ece471_hw4_code.tar.gz
+Assigned: 23 September 2022
+Due: (via e-mail) Friday, 30 September 2022, 10am
+Homework 5 --  Linux i2c
+Assignment:
+ece471_hw5.pdf
+Code:
+ece471_hw5_code.tar.gz
+Assigned: 30 September 2022
+Due: (via e-mail) Friday, 7 October 2022, 10am
+Homework 6 --  Linux and Real Time
+Assignment:
+ece471_hw6.pdf
+Code:
+ece471_hw6_code.tar.gz
+Assigned: 21 October 2022
+Due: (via e-mail) Friday, 28 October 2022, 10am
+Homework 7 --  Linux SPI
+Assignment:
+ece471_hw7.pdf
+Code:
+ece471_hw7_code.tar.gz
+Assigned: 28 October 2022
+Due: (via e-mail) Friday, 4 November 2022, 10am
+Homework 8 --  Linux 1-wire
+Assignment:
+ece471_hw8.pdf
+Code:
+ece471_hw8_code.tar.gz
+Assigned: 4 November 2022
+Due: (via e-mail) Friday, 11 November 2022, 10am
+Homework 9 --  Temperature Display
+Assignment:
+ece471_hw9.pdf
+Code:
+ece471_hw9_code.tar.gz
+Assigned: 11 November 2022
+Due: (via e-mail) Wednesday, 23 November 2022, 5pm
+Homework 10 -- Power/Energy
+Assignment:
+ece471_hw10.pdf
+Assigned: 29 November 2022
+Due: (via e-mail) Friday, 9 December 2022, 5pm
+Final Project
+Assignment:
+ece471_project.pdf
+Assigned: 12 October 2022
+Topic due: Friday, 4 November 2022
+Status update due: 22 November 2022
+Presentations: last 4 class sessions
+Projects from previous years
+Slides from sample project
+Paper Due: Friday, 16 December 2022, 5pm (End of finals)
+Old Lecture Videos
+Old lecture videos from 2020 can be found
+here
+let me know if you need the password.
+Optional Useful Textbooks
+Computers as Components: Principles of Embedded Computing System Design
+by Wolf
+ARM System Developer's Guide
+by Sloss, Symes and Wright
+ARM Assembly Language Links
+Intro to ARM Assembly Language
+ARM Assembly Language using the Raspberry Pi
+Useful Links
+Article on installing Linux onto a hard-drive microcontroller
+Quick ssh and scp overview
+A quick overview of the Linux Commandline
+Linux i2c programming document
+Back to my homepage
+Last updated 15 December 2022, 18:40

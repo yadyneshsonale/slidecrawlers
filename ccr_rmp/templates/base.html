@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}ccr_rmp review{% endblock %}</title>
+  <style>
+    :root { --bg:#0f1115; --panel:#171a21; --line:#2a2f3a; --fg:#e6e8ee;
+            --mut:#9aa4b2; --acc:#5aa9ff; --grn:#2fbf71; --red:#ff5c66;
+            --gry:#7a828f; --ylw:#e7b53c; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--bg); color:var(--fg);
+           font:14px/1.5 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif; }
+    a { color:var(--acc); text-decoration:none; } a:hover { text-decoration:underline; }
+    header { padding:12px 20px; border-bottom:1px solid var(--line);
+             display:flex; gap:18px; align-items:center; position:sticky; top:0;
+             background:var(--bg); z-index:5; }
+    header .brand { font-weight:700; letter-spacing:.3px; }
+    header .stat { color:var(--mut); font-size:13px; }
+    main { padding:20px; max-width:1180px; margin:0 auto; }
+    .mono { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; }
+    table { width:100%; border-collapse:collapse; }
+    th,td { text-align:left; padding:7px 10px; border-bottom:1px solid var(--line);
+            vertical-align:top; }
+    th { color:var(--mut); font-weight:600; font-size:12px; text-transform:uppercase;
+         letter-spacing:.4px; }
+    tr:hover td { background:#12151c; }
+    .badge { display:inline-block; padding:1px 8px; border-radius:10px; font-size:12px;
+             border:1px solid var(--line); }
+    .b-ok,.b-found { color:var(--grn); border-color:#1f6b45; }
+    .b-null,.b-no_instructor,.b-not_found { color:var(--gry); border-color:#3a3f4a; }
+    .b-error,.b-fetch_failed,.b-school_not_found { color:var(--red); border-color:#7a2b30; }
+    .b-review { color:var(--ylw); border-color:#6b571f; }
+    .b-ambiguous { color:var(--ylw); border-color:#6b571f; }
+    .rmp-table { margin-top:12px; font-size:13px; }
+    .rmp-table th,.rmp-table td { padding:5px 9px; }
+    h3.sub { font-size:13px; text-transform:uppercase; letter-spacing:.4px;
+             color:var(--mut); margin:16px 0 8px; }
+    .rating { border:1px solid var(--line); border-radius:8px; padding:10px 12px;
+              margin-bottom:8px; background:#0f1219; }
+    .rating-head { display:flex; flex-wrap:wrap; align-items:center; gap:6px;
+                   font-size:12px; }
+    .rating-head .grow { flex:1; }
+    .chip { display:inline-block; padding:1px 8px; border-radius:6px; font-size:12px;
+            border:1px solid var(--line); color:var(--fg); background:#171b23; }
+    .chip.q { color:var(--grn); border-color:#1f6b45; }
+    .chip.d { color:var(--ylw); border-color:#6b571f; }
+    .chip.wta { color:var(--grn); border-color:#1f6b45; }
+    .chip.nwta { color:var(--red); border-color:#7a2b30; }
+    .rating-tags { color:var(--acc); font-size:12px; margin-top:6px; }
+    .rating-comment { margin-top:6px; color:#cfd6e4; font-size:13px; line-height:1.45; }
+    .thumbs-line { margin-top:6px; font-size:12px; }
+    .edit-instr { margin-top:14px; padding-top:12px; border-top:1px dashed var(--line); }
+    .edit-row { display:flex; gap:8px; margin-top:6px; }
+    .edit-row input[type=text] { flex:1; }
+    .edit-row button { white-space:nowrap; border-color:#1f6b45; }
+    .src-grid { display:grid; grid-template-columns:210px 1fr; gap:8px 14px; align-items:center; }
+    .panel { background:var(--panel); border:1px solid var(--line); border-radius:10px;
+             padding:16px 18px; margin-bottom:16px; }
+    .panel h2 { margin:0 0 10px; font-size:14px; text-transform:uppercase;
+                letter-spacing:.5px; color:var(--mut); }
+    .kv { display:grid; grid-template-columns:150px 1fr; gap:4px 14px; }
+    .kv div.k { color:var(--mut); }
+    .big { font-size:22px; font-weight:700; }
+    .thumbs { display:flex; gap:10px; flex-wrap:wrap; margin-top:8px; }
+    .thumbs img { max-height:230px; border:1px solid var(--line); border-radius:6px;
+                  background:#fff; }
+    .raw { white-space:pre-wrap; background:#0c0e13; border:1px solid var(--line);
+           border-radius:6px; padding:10px; color:#cfd6e4; max-height:220px;
+           overflow:auto; }
+    form.inline { display:inline; }
+    button, .btn { background:#20262f; color:var(--fg); border:1px solid var(--line);
+             border-radius:7px; padding:6px 12px; cursor:pointer; font-size:13px; }
+    button:hover { border-color:var(--acc); }
+    .btn-run { border-color:#1f6b45; }
+    input[type=text], textarea, select { width:100%; background:#0c0e13; color:var(--fg);
+             border:1px solid var(--line); border-radius:6px; padding:7px 9px;
+             font:inherit; }
+    textarea { min-height:70px; resize:vertical; }
+    .row { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+    .filters { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:14px; }
+    .filters a { padding:4px 10px; border:1px solid var(--line); border-radius:14px;
+                 color:var(--mut); }
+    .filters a.active { color:var(--fg); border-color:var(--acc); }
+    .flash { background:#173026; border:1px solid #1f6b45; color:#bff0d4;
+             padding:8px 12px; border-radius:8px; margin-bottom:14px; }
+    .muted { color:var(--mut); }
+  </style>
+</head>
+<body>
+  <header>
+    <span class="brand">ccr_rmp · review</span>
+    <a href="{{ url_for('index') }}">dashboard</a>
+    <span class="stat">{{ progress }}</span>
+  </header>
+  <main>
+    {% with msgs = get_flashed_messages() %}
+      {% if msgs %}{% for m in msgs %}<div class="flash">{{ m }}</div>{% endfor %}{% endif %}
+    {% endwith %}
+    {% block body %}{% endblock %}
+  </main>
+</body>
+</html>

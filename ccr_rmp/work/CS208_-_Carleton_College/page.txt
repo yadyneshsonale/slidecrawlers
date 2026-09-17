@@ -1,0 +1,246 @@
+CS208 W26
+CS208 Intro to Computer Systems, Winter 2026
+Resources
+Samples
+Info
+How To
+Office Hrs
+ASSIGNMENT
+s are due on the day in which they
+appear below. Due time is 5:00PM if the due date is a Friday, or 11:59PM otherwise.
+Do
+READING/VIDEO
+items by class time on the date where they appear.
+LAB
+s will happen during class.
+You will submit homework
+via
+Moodle
+.
+M Jan 5
+[READ]
+Course information
+[READ]
+Advice
+Join our class Slack workspace and introduce yourself in #general
+[LAB]
+JupyterHub & mantis
+Do this no later than the first day of class.
+[SAMPLES] Read through and experiment with these simple C programs:
+hello.c
+,
+output.c
+,
+args.c
+,
+and
+bitwise.c
+Class notes
+Slides
+W Jan 7
+[QUIZ] in class today
+[READ]
+Dive Into Systems (DIS), section 1.1 Getting Started Programming in C
+[READ]
+DIS 4.6 Bitwise Operators
+[READ (or SKIM, as needed)] the DIS sections about
+print statements
+,
+if statements
+,
+functions
+,
+and
+arrays
+.
+Questions about other starter topics in C? Take a look at the rest of Chapter 1.
+Class notes
+Slides
+Thu Jan 8
+[ASSIGNMENT]
+bases & bits
+: getting started with integers in C
+Fri Jan 9
+[SAMPLES]
+byte-counter.c
+and
+byte-counter-better.c
+and
+strings.c
+Class notes
+Slides
+Mon Jan 12
+[QUIZ] in class today. Bitwise operators |, &, ^, and ~
+[ASSIGNMENT]
+select-column
+: a simple CSV file parsing exercise
+Class notes
+Slides
+Wed Jan 14
+[READ]
+DIS 4.3 Signed Binary Integers
+[READ]
+DIS 4.7 Integer Byte Order
+[READ]
+DIS 2.6 Strings and the String Library
+Class notes
+Slides
+Thu Jan 15
+[ASSIGNMENT]
+minigrep
+: some string functions in C
+Fri Jan 16
+[QUIZ] in class today. Two's complement integers
+[READ]
+UTF-8
+Class notes
+Slides
+Mon Jan 19
+[ASSIGNMENT]
+bits & character encodings
+: UTF-8 and its friends
+[SAMPLES]
+printing-bytes.c
+,
+pointers.c
+Class notes
+Slides
+Wed Jan 21
+[READ]
+DIS 2.1-4
+:
+Various sections about memory and pointers
+[VIDEO]
+tokenizer assignment info
+Class notes
+Slides
+Fri Jan 23
+No class. I will be in the classroom with optional practice
+exercises, or in case you want to talk about pointers, homework,
+or whatever.
+Worksheet about memory, etc.
+Put all your layers on! It's cold out there.
+Sun Jan 25
+[ASSIGNMENT]
+tokenizer
+: making space for an array of strings
+Mon Jan 26
+Class notes
+Slides
+Tue Jan 27
+[QUIZ]
+about data representation. You can take it as
+many times as you wish. I'll record only your highest score.
+Wed Jan 28
+[SAMPLES]
+memory.c
+Class notes
+Slides
+Fri Jan 30
+Exam
+Mon Feb 2
+[READ]
+DIS 6 and 7.1-4
+:
+Intel x86_64 assembly language basics. You really need to read these sections.
+Class notes
+Slides
+Wed Feb 4
+[ASSIGNMENT]
+Assembly & C
+: three puzzles + one reverse-engineered puzzle
+Class notes
+Slides
+Fri Feb 6
+[ASSIGNMENT, due 9:40AM on paper]
+(Optional) exam corrections
+Class notes
+Slides
+Tue Feb 10
+[ASSIGNMENT]
+Assembly & C
+: the rest of the assignment
+Wed Feb 11
+[VIDEO] (29:04)
+The Zoo: Getting Started
+[READ]
+C Debugging Tools
+is the Dive Into Systems chapter about gdb. Skim through this section so you'll know what kind of help the textbook is offering you.
+[SAMPLE]
+minizoo.c
+(see compilation instructions in the comment at the top)
+[LAB]
+Debugging C programs with gdb
+Class notes
+Fri Feb 13
+Class notes
+Slides
+Mon Feb 16
+Class notes
+Slides
+Tue Feb 17
+[ASSIGNMENT]
+Escape from the Zoo: A Reverse Engineering Adventure
+Wed Feb 18
+Class notes
+Slides
+Fri Feb 20
+[READ]
+Advice for the buffer overflow assignment
+[SAMPLE]
+exitstatus.c
+Class notes
+Slides
+Sun Feb 22
+[ASSIGNMENT]
+Exploiting buffer overflow
+Mon Feb 23
+[LAB]
+Command-line redirection operators
+[VIDEO] (31:21)
+Command shell, part 1
+(fork, exec, argv/argc)
+[VIDEO] (26:05)
+Command shell, part 2
+(redirection)
+[SAMPLES] Some programs relevant to the command shell assignment.
+forktest.c
+,
+exectest.c
+,
+argv.c
+,
+exectest_with_args.c
+,
+files.c
+,
+redirect.c
+,
+pipe.c
+,
+and
+shell208.c
+Class notes
+Slides
+Wed Feb 25
+Class notes
+Slides
+Fri Feb 27
+Class notes
+Slides
+Sun Mar 1
+[ASSIGNMENT]
+a simple command shell
+Mon Mar 2
+Class notes
+Slides
+Wed Mar 4
+Class notes
+Fri Mar 6
+[ASSIGNMENT]
+some networking questions
+Class notes
+Slides
+Mon Mar 16
+[TAKEHOME EXAM, due 5:00PM]
+Takehome exam

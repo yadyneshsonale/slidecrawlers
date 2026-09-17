@@ -1,0 +1,233 @@
+Title
+ECS 120 Theory of Computation
+Introduction
+Julian Panetta
+University of California,
+Davis
+ECS 120 Teaching Team
+Lecturer
+Julian Panetta,
+jpanetta@ucdavis.edu
+, 3011 Kemper Hall; Website:
+julianpanetta.com
+TAs
+Xinzhuo (Johnson) Hu,
+xzhhu@ucdavis.edu
+Haleh Mohammadian,
+hmohammadian@ucdavis.edu
+Primary mode of communication:
+Piazza
+Julian
+Johnson
+Haleh
+Acknowledgements
+Massive
+thanks to
+David Doty
+!
+This course is based on the lecture materials, assessments, and policies heâs developed over the years starting back in 2015.
+Weâll be using several tools heâs developed like the
+automaton simulator
+for simulating various computational models and his autograding infrastruture for the homeworks.
+Heâs been incredibly generous in sharing these materials!
+David Doty
+General Information
+Time and location
+Lecture: Monday, Wednesday, Friday 1:10pm - 2:00pm
+Giedt Hall
+1003
+Discussion sections:
+A01 Tuesday 5:10pm - 6pm,
+Olson Hall
+147
+A02 Monday 3:10pm - 4pm,
+Hart Hall
+1130
+Â Â Â Â
+Starting today!
+A03 Tuesday 1:40pm - 2:30pm,
+Olson Hall
+147
+Zoom office hours: to be scheduled
+Canvas:
+https://canvas.ucdavis.edu/courses/975574
+Lectures
+I will upload slides before the start of class so you can annotate them during lecture.
+Please interrupt at any time to ask questions!
+Attendance is not required except on midterm day
+â¦ but itâs strongly recommended!
+Recording of lectures is not planned this quarter.
+â¦ but weâre closely following Dave Dotyâs lectures, which have been recorded.
+The relevant recording(s) for each lecture will be linked from the Canvas page.
+How to use the HTML slides
+Use the keys
+left/right
+to navigate through the slides.
+Click
+page number
+(bottom right) to open navigation menu.
+Press
+f
+to enter fullscreen mode,
+ESC
+to leave fullscreen mode.
+Double-click
+an item (e.g.Â an image) to zoom in/out.
+The slides are best viewed with Chrome or Chromium. Firefox unfortunately has some problems with vector graphics and doesnât support some video codecs.
+Live Polls/âClicker Questionsâ
+What is your major?
+Computer Science
+Electrical and Computer Engineering
+Mathematics
+Other
+Live Polls/âClicker Questionsâ
+Which of the recommended prerequisites have you taken?
+ECS 32B
+ECS 36C
+Neither
+Daveâs Prereq Advice and Historical Grade Trends
+Technically the single required prerequisite (ECS 20: Discrete Mathematics) introduces all the mathematical concepts you need for this course.
+However, our Data Structures classes (ECS 32B, 36C) provide intuition-building practice (
+e.g.
+, manipulating discrete objects like graphs, trees and lists in code).
+Historically, UCD CS/ECE students who previously took a course on data structures have performed roughly half a letter grade better in ECS 120.
+Math majors tend to grasp the formal definitions and proofs well without studying data structures.
+Theory of Computation
+Fundamental questions:
+What
+is
+a computer?
+How can we model computers formally to prove things about them?
+ENIAC â 1945
+PC â c. 2000
+iPhone â 2007
+Finite Automata â 1943
+Turing Machines â 1936
+What is a computational problem?
+What is an algorithm?
+Which problems can and canât be solved by a computer/algorithm?
+Which problems can be solved
+efficiently
+?
+This course will build up the tools to answer these questions rigorously.
+â¦ but arenât the answers to these already intuitively clear?
+Motivating Example: Polynomial Equations
+Consider polynomial equations with integer coefficients:
+\(x^2 - 2x + 1 = 0\)
+\(x^2 - 2x - 1 = 0\)
+\(x^2 + 1 = 0\)
+\(x^2 - y^2 - 2 = 0\)
+\(x^2 + 2 x y - y^3 - 13 = 0\)
+â¦
+Which of these has at least one solution (root) of a particular type?
+Specifically, we are interested in the following cases:
+Solution Type
+\(\R\)
+(Real)
+\(\Z\)
+(Integer)
+# of Vars
+1
+?
+?
+\(\ge 2\)
+?
+?
+Motivating Example: Polynomial Equations
+Consider polynomial equations with integer coefficients:
+\(x^2 - 2x + 1 = 0\)
+\(x^2 - 2x - 1 = 0\)
+\(x^2 + 1 = 0\)
+\(\color{lightgrey} x^2 - y^2 - 2 = 0\)
+\(\color{lightgrey} x^2 + 2 x y - y^3 - 13 = 0\)
+â¦
+Which of these has at least one solution (root) of a particular type?
+Specifically, we are interested in the following cases:
+Solution Type
+\(\R\)
+(Real)
+\(\Z\)
+(Integer)
+# of Vars
+1
+?
+?
+\(\ge 2\)
+?
+?
+These three examples are all easy (quadratic formula):
+\(x = \frac{2 \pm \sqrt{4 - 4}}{2} = 1 \pm 0\)
+(1 integer root)
+\(x = \frac{1 \pm \sqrt{4 + 4}}{2} = 1 \pm \sqrt{2}\)
+(2 real roots)
+\(x = \frac{\pm \sqrt{-4}}{2} = \pm i\)
+(2 complex roots)
+Motivating Example: Polynomial Equations
+Consider polynomial equations with integer coefficients:
+\(\color{lightgrey} x^2 - 2x + 1 = 0\)
+\(\color{lightgrey} x^2 - 2x - 1 = 0\)
+\(\color{lightgrey} x^2 + 1 = 0\)
+\(x^2 - y^2 - 2 = 0\)
+\(x^2 + 2 x y - y^3 - 13 = 0\)
+â¦
+Which of these has at least one solution (root) of a particular type?
+Specifically, we are interested in the following cases:
+Solution Type
+\(\R\)
+(Real)
+\(\Z\)
+(Integer)
+# of Vars
+1
+(a), (b)
+(b)
+\(\ge 2\)
+?
+?
+Real solutions to
+\(x^2 - y^2 - 2 = 0\)
+are easy to find:
+\[
+\setbuild{(\pm \sqrt{2 + y^2}, y)}{y \in \R}% = \setbuild{(x, \pm \sqrt{x^2 - 2})}{x \ge \sqrt{2}}
+\]
+What about solutions where
+\(x\)
+and
+\(y\)
+are both integers?
+â¦ I donât see anyâ¦
+We can prove none exist by realizing
+\(x^2 = y^2 + 2\)
+is asking for squares of integers that are two apart, but the perfect squares are
+\(\{0, 1, 4, 9, 16, \ldots\}\)
+.
+Motivating Example: Polynomial Equations
+Consider polynomial equations with integer coefficients:
+\(\color{lightgrey} x^2 - 2x + 1 = 0\)
+\(\color{lightgrey} x^2 - 2x - 1 = 0\)
+\(\color{lightgrey} x^2 + 1 = 0\)
+\(x^2 - y^2 - 2 = 0\)
+\(x^2 + 2 x y - y^3 - 13 = 0\)
+â¦
+Which of these has at least one solution (root) of a particular type?
+Specifically, we are interested in the following cases:
+Solution Type
+\(\R\)
+(Real)
+\(\Z\)
+(Integer)
+# of Vars
+1
+(a), (b)
+(b)
+\(\ge 2\)
+(d), ?
+?
+What about
+\(x^2 + 2 x y - y^3 - 13 = 0\)
+?
+Real solutions clearly can be found for any
+\(x \in \R\)
+.
+What about integer solutions?
+Actually,

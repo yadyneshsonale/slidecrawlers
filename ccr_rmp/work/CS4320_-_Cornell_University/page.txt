@@ -1,0 +1,28 @@
+Introduction to Database Systems by Prof. Trummer
+This is an introduction to relational and non-relational database management systems. We will learn how to query database systems via languages such as SQL (the structured query language). Then, we will see how database systems work internally, how they store and index data, how they process and optimize queries, and how they process transactions while providing guarantees such as isolation, atomicity, and durability (ACID guarantees).
+We will address questions of database design and discuss novel approaches to data management via NoSQL or NewSQL systems. Finally, we will discuss about graph, stream, and spatial data, and about systems that are specialized for those data types. The following recordings are taken from the Fall 2020 online lecture at Cornell by Prof. Immanuel Trummer (
+www.itrummer.org
+).
+Click on the following topics to access videos and slides:
+The Structured Query Language (SQL)
+Storing and Indexing Data
+Relational Data Processing
+Transaction Processing
+Database Design
+Distributed Data Processing
+Beyond Relational Data
+The Structured Query Language (SQL)
+Intro: Database Management Systems;
+Slides
+Defining Database Schemata; Inserting and Updating Data;
+Slides
+Simple SQL Queries; Joins; Aggregation; Grouping;
+Slides
+Advanced SQL Queries; Null Values; Outer Joins; Nested Queries;
+Slides
+More on Advanced SQL Queries; Correlated Nested Queries;
+Slides 1
+;
+Slides 2
+Additional Reading
+About the first two thirds of the course are based on the textbook "Database Management Systems" by Raghu Ramakrishnan and Johannes Gehrke. The last third of the course discusses recently proposed systems, more details about them can be found in the corresponding research papers.

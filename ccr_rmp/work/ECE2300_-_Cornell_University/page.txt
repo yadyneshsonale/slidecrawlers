@@ -1,0 +1,36 @@
+The field of computer engineering is at the interface between computer
+science and electrical engineering, where engineers design systems that
+must meet software application requirements within hardware technology
+constraints. Digital logic and computer organization form the heart of
+computer engineering:
+digital logic
+transforms low-level
+circuits into hardware blocks dedicated to processing, storing, and
+moving digital data, while
+computer organization
+transforms
+these hardware blocks into programmable computing systems capable of
+executing high-level software. This course aims to provide a
+comprehensive introduction to the principles and practice of digital
+logic and computer organization. The course will demystify how computer
+hardware works and at the same time serve as a foundation for more
+advanced courses in embedded systems and computer architecture.
+The course lectures are structured into two parts. In the first part of
+the course, students will learn about digital logic (e.g., digital
+circuits, combinational logic, Boolean algebra, combinational
+building blocks, number systems, sequential logic, finite-state
+machines, and sequential building blocks). In the second part of the
+course, students will then apply their understanding of digital logic
+to explore computer organization (e.g., instruction set architecture,
+single-cycle processors, multi-cycle processors, pipelined processors,
+caches, and integrating processors with caches).
+The course includes hands-on discussion sections and a series of four
+laboratory assignments for students to put the principles they have
+learned into practice. These laboratory assignments will make extensive
+use of the Verilog hardware description language. Students will use
+open-source tools to model and simulate hardware using Verilog, before
+using commercial tools to synthesize their Verilog designs to
+field-programmable gate arrays (FPGAs) in the lab. Throughout the
+semester, students will design, implement, test, and evaluate a
+two-function calculator, music player, and programmable processor
+capable of running simple RISC-V assembly programs.

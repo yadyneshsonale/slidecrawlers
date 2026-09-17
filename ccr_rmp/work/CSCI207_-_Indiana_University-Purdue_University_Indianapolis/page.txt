@@ -1,0 +1,184 @@
+Distributed Systems
+CSCI-B 534/ENGR-E 510 (Spring 2024)
+Course Description
+Distributed computing systems are complex, difficult to understand, and everywhere.
+This course will cover the necessary principles, techniques, and tools for understanding, analyzing, and building distributed applications and systems. We will be looking at both distributed computing fundamentals, as well as study the design of popular distributed systems.
+We will look at  how systems can communicate and coordinate through message passing, and study classical distributed algorithms involving logical and vector clocks, leader election, fault-tolerance, data-consistency, and consensus. Students will also learn about the design of large-scale distributed systems, and be expected to implement many of the ideas studied in class as part of homework assignments and projects.
+Prerequisites
+"To be able to use a second computer, you must know how to use the first one".
+Distributed systems build upon and extend many classical areas in Computer Science. Strong fundamentals in Operating Systems, Computer Networks, and Algorithms are a must.
+Text-books
+We will use a combination of books and research papers.
+Required
+: Distributed Systems: Principles and Paradigms, 3rd Edition (Maarten Van Steen and Andrew Tanenbaum)
+Online version
+Recommended
+: Elements of Distributed Computing (Vijay Garg)
+Learning Objectives
+A fundamental shift in how you think about computing: from serial programs to loosely coupled asynchrnous distributed systems.
+Design and implement moderately complex distributed systems of your own
+Understand classic distributed algorithms for synchronization, consistency, fault-tolerance, etc.
+Reason about correctness of distributed algorithms, and derive your your own algorithms for special cases
+Understand how modern distributed systems are designed and engineered.
+Format
+This course is designed and optimized for in-person socratic teaching. A typical in-class lecture comprises of starting with a simplistic solution, and collaboratively iterating on it to develop the final, correct solution.
+Syllabus
+Lecture
+Topic
+Reading
+Notes
+Module A
+Overview and Prerequisites
+1
+Introduction to Distributed Computing
+Chapter 1
+1-Intro
+2
+Operating Systems: Processes
+2-OS
+3,4
+Computer Networks
+Chapter 4
+3-net
+5
+OS Concurrency
+5-concurrency
+Module B
+Logical Clocks
+6
+Event ordering and logical clocks
+Lamport Clocks
+, Chapter 6
+6-Lamport
+7
+Total Order Multicast
+[See previous]
+8
+Vector Clocks
+8-VC
+,
+Vector clock proof
+9
+Vector clock applications and Causal Orders
+Garg Chapter 4, 6
+9-VC
+,
+Causal Order Broadcast
+Module C
+Classic Distributed Algorithms
+10
+Mutual exclusion and leader election
+Chapter 6
+10-Mutex
+11
+Shared Memory mutual execution
+11-Bakery
+12
+Distributed Snapshots
+Chapter 10 from Garg
+12-Snapshots
+13
+MapReduce
+MapReduce paper
+7-MapReduce
+14
+Midterm prep
+March 7
+Midterm Exam
+Module D
+More Networking and Load-balancing
+15
+Remote Procedure Calls
+Birrel and Nelson
+Lec4-slides
+16
+High-level communication and publish-subscribe
+ZeroMQ, Kafka
+Lec6-slides
+17
+Load balancing
+Lec12-notes
+Module E
+Distributed Data Storage
+18
+Consistency Models: Sequential Consistency
+Chapter 7
+Lec13-slides
+19
+Causal Consistency models
+Chapter 7
+Lec14-slides
+20
+CAP Theorem, Eventual Consistency
+Lec15-slides
+21
+CRDT
+Lec16-slides
+22
+Failures
+Chapter 8
+Lec17-slides
+23–24
+Consensus: Paxos
+Chapter 8
+Lec18-slides
+Overflow
+20
+Raft and Zookeeper
+raft
+Zookeeper
+21
+Byzantine fault tolerance
+Chapter 8
+Lec21-slides
+22
+Spark Fault Tolerance
+Spark
+26
+Distributed Filesystems
+NFS, Ceph
+Lec22-slides
+27
+Distributed Machine Learning
+TensorFlow
+Lec23-slides
+28
+Distributed Resource Management
+Mesos, DRF, Sparrow
+Lec24-slides
+Important Dates
+Date
+Event
+Around Lecture #12
+Mid-term 1
+Evaluation Criteria
+The rough breakdown is as follows:
+Mid-term
+20%
+Final
+30%
+Assignments and Homework
+40%
+Class participation and Quizzes
+10%
+Exams
+The exams will test how well students have understood various distributed algorithms, correctness proofs,  edge-cases, tradeoffs, and real-life implementation considerations.
+Programming Assignments
+The assignments will be a mix of theory and distributed system design. Students will implement various classic distributed algorithms (such as Map-Reduce, totally ordered multicast, logical clocks, various consistency models in a distributed key-value store, etc.).
+The design oriented assignments will involve a large degree of programming and debugging. In most cases, the programming assignments are language agnostic (you can pick any reasonable programming language).
+A key learning objective of this course is to design, architect, and implement a distributed system
+from scratch
+, and to design useful test-cases for evaluating the implementation. Therefore, no starter-code or templates will be provided, to give students the maximum flexibility and freedom to explore the unconstrained design space. Points will be awarded for correct and faithful designs, complete implementation, adequate testing, and reports and documentation.
+Most programming assignments
+will
+take significantly longer than you anticipate. Start early. Please see the assignment descriptions below (from last year), to get a sense of how they will look like. In general, all programming assignments in this course only specify the "end goal", and you must figure out how to get there: what and how to implement, what libraries to use, etc. There will be no starter-code, no templates, no training wheels. You are on your own.
+Simple Data Store
+Distributed Map-Reduce
+Total Order Multicast
+Project: Distributed KV Store
+Homework
+Classic distributed systems papers will be assigned for reading and review.
+Active learning/In-person class participation
+Students will learn about distributed algorithms using group activities in class. Typically, small groups of students will "emulate" a message-passing-based distributed algorithm, by passing messages (on post-it notes).
+Late submission policy
+Students can avail

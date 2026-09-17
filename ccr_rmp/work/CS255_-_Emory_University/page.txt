@@ -1,0 +1,340 @@
+CS255 Syllabus & Progress
+Material covered are displayed in
+blue
+.
+Intro to CS255:
+Logistics:
+Part 1: Fundamental knowledge of the Computer
+Intro to the Computer
+What exactly is a "computer" ?
+click here
+---
+What the inside of a computer looks like:
+click here (show pictures)
+---
+Functional/logical structure
+of the computer:
+Logical
+components of a computer and their functions:
+click here
+---
+What does the
+computer system
+do:
+click here
+---
+What does the
+peripheral devices
+do for the computer system:
+click here
+---
+Inter-connecting
+the various parts of the computer:
+click here
+---
+The computer
+memory (RAM)
+:
+Computer memory and binary digits (bits):
+click here
+---
+--------------------------------- 1/18
+Combining consecutive memory cells tomake larger memory cells:
+click here
+---
+Data transfer between CPU and memory:
+click here
+---
+Watch an insighful YOUTUBE video on computer memory
+The
+effect
+of the number of wires in the
+data bus and address bus:
+click here
+---
+Storing information using Binary numbers (codes + context = information):
+Intro to number systems:
+click here
+---
+Representing information using codes - brief introduction:
+click here
+---
+How computers store/represent (
+non-numerical
+) information:
+click here
+---
+The
+different types of codes
+used
+in a computer system to represent
+various kinds of information
+Storing
+Boolean data
+inside a computer
+Overview of the codes used for
+data types
+in programming languages:
+click here
+---
+--------------------------------- 1/23
+Storing
+Boolean
+values
+inside the computer:
+click here
+---
+Representing and storing
+unsigned
+integer (= whole)
+numbers inside a computer
+Representing
+unsigned
+integral values
+inside the computer:
+Unsigned
+numeric values:
+click here
+---
+The
+decimal
+and
+binary
+number systems:
+click here
+---
+Converting between
+dec <--> bin
+and
+storing unsigned (integer) values in program variables:
+click here
+---
+Arithmetic with binary numbers:
+click here
+---
+Other number systems that are related to the Binary number system
+(condensed representation of bit patterns):
+Octal numbers:
+click here
+---
+Hexadecimal numbers:
+click here
+---
+Homework 1: computer architecture
+click here
+Representing and storing
+signed
+integer (whole)
+numbers inside a computer
+Representing (and storing)
+signed
+integral values
+inside the computer:
+Introduction to
+signed
+integer (whole) values:
+click here
+---
+The
+signed-magnitude representation
+for
+signed
+integer (whole) values:
+click here
+---
+--------------------------------- 1/25
+Prelude
+to 2's complement code -
+the
+10's complement encoding
+:
+click here
+---
+- Intro to 10s complement encoding
+---
+- Mapping 3 digit 10s complement code to signed values
+---
+- What can the 10s complement code do for us and why it works
+---
+- Encoding and decoding 10s complement codes
+---
+- The alternate reality created by the 10s compl code
+and the
+overflow
+phenomenon
+The 2's complement number
+encoding
+:
+How are
+signed numbers
+encoded inside
+the computer (2's complement code):
+click here
+---
+- Intro to 2s complement encoding
+---
+- Encoding and decoding 2s complement codes
+Compile-time support
+for the
+int
+,
+short
+and
+byte
+data types:
+click here
+---
+--------------------------------- 1/30
+Converting
+between the different
+integer types
+(
+int
+,
+short
+and
+byte
+):
+click here
+---
+The "Excess-n" codes:
+an alternate
+binary encoding
+for
+signed values
+:
+click here
+---
+Representing and storing
+fractional numerical values
+inside a computer:
+Fixed point binary numbers:
+click here
+---
+Floating point numbers
+Floating point binary representation:
+click here
+---
+Floating point round off error:
+click here
+---
+Homework 2 re-enforces number system concepts:
+click here
+Representing and storing
+text data
+inside the computer
+ASCII code:
+click here
+---
+Unicode:
+click here
+---
+--------------------------------- 2/1
+Input and output operations in a computer program
+Human <==> Computer communication
+(explains the need
+for conversion from ASCII to other representation and vice versa):
+Introduction: keyboard input and terminal output devices
+click here
+---
+Boolean input and output:
+(converting between
+ASCII
+representation of Boolean values
+and the
+0/1 boolean code
+)
+Pre-requisite: Java Strings
+click here
+---
+How to enter Boolean inputs - converting between
+ASCII String representation
+and
+Boolean representation
+:
+click here
+---
+How computers print out Boolean outputs - converting between
+Boolean representation
+to
+ASCII String representation
+:
+click here
+---
+Numeric (integer) input/output
+:
+(converting between
+ASCII representation
+of integer numbers and
+the
+2's complement code
+)
+Introduction:
+click here
+---
+Java pre-requisites for String <==> Integer conversion:
+The compiler translates every number in your program
+into a 2s complement binary representation:
+click here
+---
+Computing (calculations)
+with
+ASCII codes in Java:
+click here
+---
+The
+charAt( )
+method and a
+final reminder/review
+:
+click here
+---
+How to enter integer inputs - Conversion algorithm
+ASCII representation -> 2's complement representation
+:
+Intro: what is the problem when you enter an integer number ?
+click here
+---
+The trivial (but not-practical) solution:
+click here
+---
+Converting a string of 1 digit integer to 2's complement representation:
+click here
+---
+Converting a TWO DIGIT decimal integer string
+to 2's complement representation
+click here
+---
+Converting
+any
+decimal integer string to 2's complement representation
+click here
+---
+How computers print out integer values - Conversion algorithm
+2's complement representation -> ASCII representation
+:
+Intro: what is the problem when the program prints an integer number ?
+click here
+---
+The trivial (but not-practical) solution:
+click here
+---
+Converting a 1 digit decimal number to
+ASCII representation:
+click here
+---
+Converting a TWO-digits decimal number to
+ASCII representation:
+click here
+---
+Converting
+any
+decimal number to
+ASCII representation:
+click here
+---
+--------------------------------- 2/6
+(My old notes on conversion algorithms:
+click here
+)
+Home

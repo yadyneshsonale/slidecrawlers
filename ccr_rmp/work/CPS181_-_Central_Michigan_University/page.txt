@@ -1,0 +1,254 @@
+Machine Learning
+10-601, Spring 2015
+Carnegie Mellon University
+Tom Mitchell
+and
+Maria-Florina Balcan
+Home
+People
+Lectures
+Recitations
+Homeworks
+Project
+Previous material
+This is a tentative schedule and is subject to change.
+Please note that Youtube takes some time to process videos before they become available.
+Date
+Lecture
+Topics
+Readings and useful links
+Handouts
+Jan 12
+Intro to ML
+Decision Trees
+Machine learning examples
+Well defined machine learning problem
+Decision tree learning
+Mitchell: Ch 3
+Bishop: Ch 14.4
+The
+Discipline of Machine Learning
+Slides
+Video
+Jan 14
+Decision Tree learning
+Review of Probability
+The big picture
+Overfitting
+Random variables and probabilities
+Mitchell: Ch 3
+Andrew Moore's Basic Probability Tutorial
+Slides
+Annotated Slides
+Video
+Jan 21
+Probability and Estimation
+Bayes rule
+MLE
+MAP
+Mitchell:
+Estimating Probabilities
+Slides
+Annotated Slides
+Video
+Jan 26
+Naive Bayes
+Conditional Independence
+Naive Bayes: why and how
+Mitchell:
+Naive Bayes and Logistic Regression
+Slides
+Annotated Slides
+Video
+Jan 28
+Gaussian Naive Bayes
+Gaussian Bayes classifiers
+Document Classification
+Brain image classification
+Form of decision surfaces
+Mitchell:
+Naive Bayes and Logistic Regression
+Slides
+Annotated Slides
+Video
+Feb 2
+Logistic Regression
+Naive Bayes - the big picture
+Logistic Regression: Maximizing conditional likelihood
+Gradient ascent as a general learning/optimization method
+Mitchell:
+Naive Bayes and Logistic Regression
+Slides
+Annotated Slides
+Video
+Feb 4
+Linear Regression
+Generative/Discriminative models
+Minimizing squared error and maximizing data likelihood
+Regularization
+Bias-variance decomposition
+Slides
+Annotated Slides
+Video
+Feb 9
+Learning Theory I
+Distributional Learning
+PAC and Statistical Learning Theory
+Sample Complexity
+Mitchell: Ch 7
+Notes on Generalization Guarantees
+Slides
+Video
+Feb 11
+Learning Theory II
+Sample Complexity
+Shattering and VC Dimension
+Sauer's Lemma
+Mitchell: Ch 7
+Notes on Generalization Guarantees
+Slides
+Video
+Feb 16
+Learning Theory III
+Rademacher Complexity
+Overfitting and Regularization
+Slides
+Video
+Feb 18
+Graphical Models I
+Bayes Nets
+Representing joint distributions with conditional independence assumptions
+Bishop chapter 8, through 8.2
+Slides
+Annotated Slides
+Video
+Feb 23
+Graphical Models II
+Inference
+Learning from fully observed data
+Learning from partially observed data
+Annotated Slides
+Video
+Feb 25
+Graphical Models III
+EM
+Semi-supervised learning
+Bishop Chapter 8
+Mitchell Chapter 6
+Slides
+Annotated Slides
+Video
+Mar 2
+Exam #1
+Mar 4
+EM and Clustering
+Mixture of Gaussian clustering
+K-means clustering
+Bishop Chapter 8
+Mitchell Chapter 6
+Slides
+Annotated Slides
+Video
+Spring Break
+Mar 16
+Boosting
+Weak vs Strong (PAC) Learning
+Boosting Accuracy
+Adaboost
+The Boosting Approach to Machine Learning: An Overview
+Theory and Applications of Boosting (NIPS Tutorial)
+Slides
+Video
+Mar 18
+Adaboost, Margins, Perceptron
+Adaboost: Generalization Guarantees(naive and margins based).
+Geometric Margins and Perceptron
+Notes on Perceptron
+Slides
+Slides (PPT)
+Video
+Mar 23
+Kernels
+Geometric Margins
+Kernels: Kernelizing a Learning Algorithm
+Kernelized Perceptron
+Bishop 6.1 and 6.2
+Slides
+Video
+Mar 25
+SVM
+Geometric Margins
+SVM: Primal and Dual Forms
+Kernelizing SVM
+Semi-supervised Learning
+Semi-supervised SVM
+Notes on SVM by Andrew Ng
+Slides
+Video
+Mar 30
+Semi-supervised Learning
+Transductive SVM
+Co-training and Multi-view Learning
+Graph-based Methods
+"Semi-Supervised Learning" in Encyclopedia of Machine Learning
+Co-training Paper
+Transductive SVM Paper
+Slides
+Video
+Apr 1
+Active Learning
+Batch Active Learning
+Selective Sampling and Active Learning
+Sampling Bias
+Two Faces of Active Learning
+Active Learning Literature Survey (by Burr Settles)
+Active Learning Survey (by Balcan and Urner)
+Slides
+Video
+Apr 6
+Partitional Clustering
+Hierarchical Clustering
+k-means, Lloyd's method,  k-means++
+Agglomerative Clustering
+Hastie, Tibshirani and Friedman, Chapter 14.3
+Center Based Clustering: A Foundational Perspective
+Slides
+Video
+Apr 8
+Learning Representations
+Dimensionality Reduction
+Principal Component Analysis
+Kernel Principal Component Analysis
+Bishop 12.1, 12.3
+Slides
+Video
+Apr 13
+Never Ending Learning
+Slides
+Video
+Apr 15
+Neural Networks
+Deep Learning
+Mitchell, Chapter 4
+Slides
+Video
+Apr 20
+Reinforcement Learning
+Markov Decision Processes
+Value Iteration
+Q-learning
+Mitchell, Chapter 13
+Kaelbling, et al., Reinforcement Learning: A Survey
+Slides
+Video
+Apr 22
+Deep Learning
+Differential Privacy
+Discussion on the Future of ML
+Slides (Privacy)
+Slides (Deep Nets)
+Video
+Apr 27
+Course review
+Apr 29
+Exam #2

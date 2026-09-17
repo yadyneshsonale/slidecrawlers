@@ -1,0 +1,254 @@
+COMP/ELEC 529 -
+Computer Network Protocols and Systems
+Rice University
+Fall 2004
+Instructor
+Prof. T. S. Eugene Ng
+Office: Duncan Hall 3005
+Email: eugeneng at cs.rice.edu
+Teaching
+Assistant
+Andreas Haeberlen
+Office: Duncan Hall 3001
+Email: ahae at cs.rice.edu
+Meeting
+1:00pm
+- 2:20pm, Tuesdays & Thursdays
+Room: MART 104 (Martel College, Building 31 on Rice campus map)
+Course
+Overview
+Computer
+networking is a rapidly evolving discipline with many exciting
+opportunities. Challenges that arise in networking and particularly in
+the Internet tend to be truly global problems that impact millions of
+users. However, existing solutions to many of the classical challenges
+(e.g. routing, congestion control, quality-of-service, management)
+remain unsatisfactory, while new challenges (e.g. worm,
+denial-of-service, peer-to-peer) are emerging as people continue to use
+the Internet in ways the original designers did not anticipate in the
+70's and 80's.
+In the long run,
+coping with the complexity of the Internet may become the ultimate
+challenge.
+The goals of
+this graduate level course are to provide students with a proper
+grounding in the basic concepts and seminal work in computer network
+protocols and systems, and to introduce students to some of the most
+exciting recent research developments. The basic concepts covered
+include network architecture, switching, routing, congestion control,
+and quality-of-service. The advanced research topics will focus on
+network structural measurement and modeling, network scaling and
+management, overlay networking and peer-to-peer systems, network
+security, and new network architectures.
+Course
+Format
+The course will
+consist of lectures, paper readings and reviews, and a group research
+project. The lectures will begin with a broad overview of the basic
+concepts in computer networking and gradually transition to the
+advanced
+topics. Each lecture will be based on one or two research papers.
+Students must read the assigned papers and submit paper reviews before
+each lecture. Students will also form teams of two, each team will
+tackle a well-defined research project during the semester. A list of
+suggested project topics will be provided. All projects are subjected
+to
+approval by the instructor. The project component will include a short
+written project proposal, a short mid-term project presentation, a
+final
+project poster presentation and a final project report.
+Prerequisites
+Undergraduate
+experience with operating systems, computer networking, and algorithms
+is required.
+Grading
+Paper reviews
+30%
+Project proposal, presentations,
+and final report
+60%
+(Project grading breakdown: proposal 5%, mid-term presentation 20%,
+final presentation 25%, final report 50%)
+Class participation
+10%
+Writing
+and Submitting Review
+All students
+must read the assigned papers and write reviews for the papers before
+each lecture. Email the reviews to the instructor (eugeneng at
+cs.rice.edu) prior to each lecture and the reviews will be posted on
+the
+course web page. Periodically, the instructor will evaluate a random
+subset of the reviews and provide feedback and grades to students.
+Do not
+send reviews as
+email
+attachments.  Please send one review in plain text per email in
+the
+body of the email message. In your email, please use the following
+format for the subject line to enable some automation:
+comp529review:[PaperID]
+Recognizing that
+not everyone has had experience writing reviews, the reviews on or
+before 9/30/2004 will be graded on a credit/no-credit basis.
+A review should summarize the paper sufficiently to demonstrate
+your understanding, should point out the paper's contributions,
+strengths as well as weaknesses. Think in terms of what makes good
+research? What qualities make a good paper? What are the potential
+future impacts of the work? Note that there is no right or wrong answer
+to these questions. A review's quality will mainly depend on its
+thoughtfulness. Restating the abstract/conclusion of the paper will not
+earn a top grade.
+Project
+The course project is intended to be a mini-research project that
+allows each student team (2 people) to explore an aspect of computer
+networking that is of interest during the course of the semester. Each
+student team will most likey work on a different topic. There will be
+three milestones in the project component: (1) project selection and
+proposal, (2) mid-term presentation, (3) final poster presentation and
+report. Further details will be provided during class.
+Reference Textbook
+Computer
+Networks: A Systems Approach, 3rd Edition
+by Larry
+Peterson, Bruce S. Davie
+Publisher:
+Morgan Kaufmann; 3
+edition (May, 2003)
+ISBN:
+155860832X
+Schedule
+Under
+construction, subject to changes.
+The
+reading list with links to papers is here
+.
+Class
+Date
+Topic
+Primary paper(s)
+Other paper(s) (no review needed)
+Your reviews
+Notes
+Remarks
+1
+8/24
+Overview
+None assigned
+lecture1.ppt
+2
+8/26
+Network architectures
+[Zim80],[SRC84]
+[Zim80]
+,
+[SRC84]
+lecture2.ppt
+3
+8/31
+No class
+No class
+4
+9/2
+No class
+No class
+5
+9/7
+TCP/IP
+[CK74],[Cla88]
+[Pos81a],[Pos81b]
+[CK74]
+,
+[Cla88]
+lecture3.ppt
+Suggested project topics out
+6
+9/9
+LAN: Ethernet
+None assigned
+lecture4.ppt
+7
+9/14
+WAN: SONET/RPR
+[WB90],[BR00]
+[BC89],[Els04]
+[WB90]
+,
+[BR00]
+lecture5.ppt
+see also
+this
+and
+this
+8
+9/16
+Intra-domain routing
+None assigned
+lecture6.ppt
+9
+9/21
+Inter-domain routing
+[LAB+00],[GSW02]
+[S+99],[LMJ97],[Pax96]
+[LAB+00]
+,
+[GSW02]
+lecture7.ppt
+10
+9/23
+Congestion control I
+[Jac88],[CJ89]
+[RCJ88],[Jac90]
+[Jac88]
+,
+[CJ89]
+lecture8.ppt
+Project proposals due
+11
+9/28
+Congestion control II
+[FJ93],
+[LAJ+03]
+[FJ93]
+,
+[LAJ+03]
+lecture9.ppt
+12
+9/30
+Quality of service, Intserv
+[DKS89],
+[SSZ98]
+[PG93]
+[DKS89]
+,
+[SSZ98]
+lecture10.ppt
+13
+10/5
+Quality of service, Intserv
+[SZN97], [Z+93]
+[BZ96]
+[SZN97]
+,
+[Z+93]
+14
+10/7
+Quality of service, Diffserv
+[SZ99]
+[SZ99]
+15
+10/12
+Mid-term recess
+16
+10/14
+Topology measurement  &
+modeling
+[FFF99], [LBC+03]
+[FFF99]
+,
+[LBC+03]
+17
+10/19
+Topology measurement &
+modeling
+[LAW+04], [NZ02]

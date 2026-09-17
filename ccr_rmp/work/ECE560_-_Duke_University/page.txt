@@ -1,0 +1,260 @@
+This is an archive of a course I taught Fall 2024, preserved here as a resource for future students.
+ECE 560: Computer and Information Security
+Section 01, Fall 2024
+Computer Security basically just means wearing
+a ski mask on the internet.
+Overview
+Lecture location
+: Schiciano B (CIEMAS 1466)
+Lecture time
+: Tue/Thu 10:05am - 11:20am
+Instructor
+: Dr. Tyler Bletsch
+Email
+:
+Tyler.Bletsch AT duke.edu
+Office Hours
+:
+After every lecture
+: In classroom + class zoom.
+^ These are *real* office hours, not just answering a few short questions - feel free to approach after class with substantive issues.
+By appointment
+: Feel free to email to meet if the above times don't work for you.
+Teaching Assistants
+:
+Andrew Van Horn (
+andrew.van.horn AT duke.edu
+)
+Xiuqi Chen (
+x.chen AT duke.edu
+)
+Jiakai Luo (
+jiakai.luo AT duke.edu
+)
+Links:
+Canvas
+- submit code and see grades
+Ed forum
+- get help and discuss course material
+GradeScope
+- submit homework assignments and get feedback
+Feedback form
+- send anonymous feedback to the instructor
+NOTE: This course has a significant overlap with COMPSCI 351 (taught by Maggs, Nayak, and Reiter in the Computer Science department).
+It is not recommended to take both
+. That course is great, by the way, it just didn't have enough slots to meet demand, especially from the ECE side.
+Schedule
+#
+Date
+Lecture
+Reading
+Homework due
+(11:59:00pm)
+1
+Tue 8/27
+Introduction, Syllabus, Course Overview
+-
+2
+Thu 8/29
+Computer Security Overview
+Chapter 1
+Appendix C
+3
+Tue 9/3
+Computer Security Overview
+Chapter 1
+Appendix C
+Homework 0
+,
+Ethics Pledge
+4
+Thu 9/5
+Computer Networking Overview
+Appendix F
+Appendix I
+5
+Tue 9/10
+Computer Networking Overview
+Appendix F
+Appendix I
+6
+Thu 9/12
+Cryptography
+Chapters 2,20
+7
+Tue 9/17
+Cryptography
+Chapters 20,21
+Homework 1
+8
+Thu 9/19
+User Authentication and Access Control
+Chapters 3-4
+9
+Tue 9/24
+User Authentication and Access Control
+Chapters 3-4
+10
+Thu 9/26
+Shell and Data Manipulation Skills
+Regex Quick Reference
+11
+Tue 10/1
+Shell and Data Manipulation Skills
+Regex Quick Reference
+12
+Thu 10/3
+Shell and Data Manipulation Skills
+Regex Quick Reference
+Stuxnet analysis
+Homework 2
+-
+HW2 encrypted materials
+13
+Tue 10/8
+Midterm review (bring questions!)
+Malicious Software
+Chapter 6
+Stuxnet analysis
+14
+Thu 10/10
+Midterm exam
+-
+Study guide
+-
+Practice midterm
+Chapter 6
+-
+Tue 10/15
+Fall Break
+15
+Thu 10/17
+Malicious Software
+Chapter 6
+16
+Tue 10/22
+Denial-of-Service Attacks
+Chapter 7
+17
+Thu 10/24
+Buffer Overflows
+Chapter 10-11
+Homework 3
+(PDF issue? Try Chrome.)
+18
+Tue 10/29
+Buffer Overflows
+Chapter 10-11
+19
+Thu 10/31
+Software Security
+Chapter 12
+20
+Tue 11/5
+Endpoint security
+,
+Database security
+Chapter 12-13
+21
+Thu 11/7
+Cloud security
+,
+Reverse Engineering
+Chapter 13,
+NSA Codebreaker Challenge (2015)
+22
+Tue 11/12
+Intrusion Detection, Intrusion Prevention, and Firewalls
+Chapter 8-9,
+Base rate fallacy spreadsheet
+Homework 4
+-
+Buffer overflow preview
+23
+Thu 11/14
+Wireless Network Security, Mobile Security
+Chapter 24
+24
+Tue 11/19
+Physical security, organizational security,
+security auditing, and legal/ethical aspects
+Chapter 16-19
+25
+Thu 11/21
+Guest lecture: Alexander Merck
+26
+Tue 11/26
+Human Factors and Social Engineering
+,
+Final exam course review,
+Optional topics?
+-
+BitCoin and Cryptocurrency
+-
+Jump oriented programming (end part of deck)
+Poorly-spelled 1990s textfiles:
+social.txt
+,
+soceng.txt
+-
+Thu 11/28
+Thanksgiving break
+(Due Tue 12/3)
+Homework 5
+Fri 12/13
+Final exam (9am)
+-
+Practice final exam
+-
+Study guide
+Lecture videos
+Lecture recordings from 2021/2022 Fall
+Syllabus & policies
+Course synopsis
+An intense trip through many facets of computer and information security. Includes discussion and practical exercises in risk management, threat modeling, applied cryptography, malicious software, network security, intrusion detection and prevention, software and OS security, auditing and forensics, reverse engineering, and social engineering.
+Includes *many* hands-on security assignments.
+Should be fun.
+Pre-requisites for grad students
+: ECE 650 (Systems Programming and Engineering) or instructor consent.
+Pre-requisites for undergrad students
+: Computer Science 310/ECE 353 (Operating Systems).
+If you feel you have an OS background but are missing the above pre-reqs, just contact me.
+Grading breakdown
+Category
+%
+Homeworks
+60%
+Midterm exam
+20%
+Final exam
+20%
+The course letter grade cutoffs are:
+100 A+, 95 A, 90 A-,
+87 B+, 83 B, 80 B-,
+77 C+, 73 C, 70 C-,
+67 D+, 62 D, 60 D-,
+<60 F. Note that the "A" grades are elevated because of the significant extra credit available in the course.
+Homework
+You are expected to complete the homework
+individually
+unless otherwise stated. However, you may discuss topics covered in the class.
+Late homework submissions incur penalties as follows:
+Submission is 0-24 hours late: total score is multiplied by 0.9
+Submission is 24-48 hours late: total score is multiplied by 0.8
+Submission is more than 48 hours late: total score is multiplied by the
+Planck constant
+(as measured in J·s)
+NOTE: If you feel
+in advance
+that you may need an extension, contact the instructor. We can work with you if you see a scheduling problem coming, but extensions cannot be granted at or near the due date!
+Your homework grade will be based on what you submit to Sakai and when you submit it.
+Grade appeals
+All regrade requests must be in writing. Email the TA with your questions.
+After speaking with the TA, if you still have concerns, contact the instructor.
+All regrade requests must be submitted to the instructor no later than 1 week after the assignment was returned to you.
+Academic integrity
+I take academic integrity extremely seriously.
+Academic misconduct will not be tolerated, and all suspected violations of the Duke Honor Code will be referred to the
+Office of Student Conduct
+(for undergraduates) or the departmental Director of Graduate Studies (for graduate students).
+A student found responsible for academic dishonesty faces formal disciplinary action, which may includ

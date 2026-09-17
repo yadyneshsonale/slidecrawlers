@@ -1,0 +1,123 @@
+CS534: Machine Learning
+CS534: Machine Learning
+Course Description
+This course will present an introduction to algorithms for machine
+learning and data mining.  These algorithms lie at the heart of many
+leading edge computer applications including optical character
+recognition, speech recognition, text mining, document classification,
+pattern recognition, computer intrusion detection, and information
+extraction from web pages.  Every machine learning algorithm has both a
+computational aspect (how to compute the answer) and a statistical
+aspect (how to ensure that future predictions are accurate).  Algorithms
+covered include linear classifiers (Gaussian maximum likelihood, Naive
+Bayes, and logistic regression) and non-linear classifiers (neural
+networks, decision trees, support-vector machines, nearest neighbor
+methods).  The class will also introduce techniques for learning from
+sequential data and advanced ensemble methods such as bagging and
+boosting.
+Prerequisites:  CS515; basic knowledge of search algorithms,
+probability, statistics, calculus, linear algebra. 4 Units.
+Class Hours:  MWF 9:00-10:00 Bat 250
+Office Hours: Thursdays 9:00-10:30 Dear 221C
+Grader:
+Charles Parker
+Textbook:
+Duda, Hart, and Stork:
+Pattern Classification
+. Make sure your
+copy is not the first printing (or go to David Stork's web page and
+download the bug fixes).
+Course Handouts
+Syllabus
+(Updated Thu May 12 09:29:43 2005)
+Midterm Exam Study Guide
+.
+Final Exam Study Guide
+.
+Software
+In this class, we will be using the WEKA package from The University
+of Waikato (Hamilton, New Zealand).  This is a package of machine
+learning algorithms and data sets that is very easy to use and easy to
+extend.  See the assignment for Homework 2 for information about how
+to use WEKA.
+Homework Assignments
+Homework 1
+due April 4.
+Homework 2
+due April 11.
+Homework 3
+due April 18.
+Homework 4
+due April 25.
+Homework 5
+due May 2.
+Homework 6
+due May 9.
+Homework 7
+due May 16.
+Homework 8
+due June 3.
+The hyphen test data set has been posted in
+/usr/local/classes/eecs/spring2005/cs534/weka/data/hyphen.test
+Solutions and course grades are available on the
+Blackboard
+System
+.
+Please turn in all homework in two forms: (i) as hardcopy at the start
+of class and (ii) electronically via
+the ENGR homework
+system
+.  (To submit electronically, first Login to the ENGR Teach
+site, and then click on the Submit Assignment item on the left side of
+the page.)
+Viewgraphs for Lectures
+Part 1: Introduction, Perceptrons, Logistic Regression, Linear
+Discriminant Analysis  (
+pdf
+)
+Part 2: Requirements for Off-The-Shelf Learning Methods. Decision Trees.
+(
+pdf
+)
+Part 3: Neural networks.
+(
+pdf
+)
+Part 4: Nearest neighbor. (
+pdf
+)
+Part 5: Support Vector Machines. (
+pdf
+)
+Part 6: Bayesian Networks (
+pdf
+)
+Part 7: Statistical and Computational Learning Theory (
+pdf
+)
+Part 8: Bayesian Learning Theory (
+pdf
+)
+Updated April 29, 2005
+Part 9: Bias/Variance Theory (
+pdf
+)
+Part 10: Overfitting and Penalty Methods (
+pdf
+)
+Part 11: Hold-Out and Cross-validation methods (
+pdf
+Part 12: Sequential Supervised Learning (
+pdf
+)
+Part 13: Methodology (
+pdf
+)
+Bonus: Unsupervised Learning (
+pdf
+)
+Part 14: Course Summary (
+pdf
+)
+Tom Dietterich
+, tgd@cs.orst.edu

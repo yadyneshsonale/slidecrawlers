@@ -1,0 +1,197 @@
+DEPARTMENT OF COMPUTER SCIENCE AND ENGINEERING
+UNIVERSITY OF CALIFORNIA, SAN DIEGO
+CSE 252A: Computer Vision I
+Fall 2025
+Syllabus
+Instructor:
+Ben Ochoa
+Email: bochoa at ucsd.edu
+Office hours: M 8:00 PM-9:00 PM (primary) and W 8:00 PM-9:00 PM (secondary), EBU3B 3234, and at other times by appointment
+TA: Qingyang (Billy) Yin
+Email: q8yin at ucsd.edu
+Office hours: Tu 3:30 PM-4:30 PM, EBU3B B250A, and Th 3:00 PM-4:00 PM, EBU3B B270A
+TA: Chandrakant Viraktamath
+Email: cviraktamath at ucsd.edu
+Office hours: M 11:30 AM-12:30 PM, EBU3B B250A, and W 2:00 PM-3:00 PM, EBU3B B275
+Note: when emailing the instructor or one of the TAs about the class,
+please put "CSE 252A" in the subject line.
+Class section ID: 915000
+Lecture: MW 5:00 PM-6:20 PM, CENTR 109
+This course provides a comprehensive introduction to computer vision
+providing broad coverage including low level vision (image formation,
+photometry, color, image feature detection), inferring 3D properties
+from images (shape-from-shading, stereo vision, motion interpretation)
+and object recognition.
+Prerequisites: Linear algebra, calculus, probability and statistics.
+Python or other programming experience.
+Assignments will be completed using a Jupyter Notebook with Markdown
+cells for text and math (images of handwritten text or math will not
+be accepted), and Code cells in Python.
+Collaboration Policy: It is expected that you complete your academic
+assignments on your own and in your own words and code. The
+assignments have been developed by the instructional team to
+facilitate your learning and to provide a method for fairly evaluating
+your knowledge and abilities (not the knowledge and abilities of
+others). So, to facilitate learning, you are authorized to discuss
+assignments with others; however, to ensure fair evaluations, you are
+not authorized to use the answers developed by another, copy the work
+completed by others in the past or present, or write your academic
+assignments in collaboration with another person.
+Academic Integrity Policy: Integrity of scholarship is essential for
+an academic community. The University expects that both faculty and
+students will honor this principle and in so doing protect the
+validity of University intellectual work. For students, this means
+that all academic work will be done by the individual to whom it is
+assigned, without unauthorized aid of any kind. No student shall allow
+any academic work or academic credit to be completed or obtained, in
+part or in whole, for themselves by another (human or
+machine/artificial intelligence).
+If the work you submit is determined to be other than your own, you
+will be reported to the Academic Integrity Office for violating UC San
+Diego's Policy on Integrity of Scholarship.  In accordance with the
+CSE department academic integrity guidelines, students found
+committing an academic integrity violation will receive an F in the
+course.
+Student Conduct Policy: UC San Diego strives to maintain a climate of
+fairness, cooperation, and professionalism. It is expected that you
+practice basic principles, including, but not limited to, mutual
+respect, civility, and decency, towards maintaining an atmosphere free
+of abusive or demeaning treatment. Non-academic student misconduct
+will be reported to the Center for Student Accountability, Growth, and
+Education for violating UC San Diego's Principles of Community.
+Grading: There will be 5 homework assignments and a final exam
+weighted with the following percentages:
+Assignments: 60% (4% for assignment 0, 14% for each of the other 4
+assignments)
+Final exam: 40%
+This course uses the standard grading scale:
+96% ≤
+A+
+(4.0)
+93% ≤
+A
+(4.0)
+< 96%
+90% ≤
+A-
+(3.7)
+< 93%
+86% ≤
+B+
+(3.3)
+< 90%
+83% ≤
+B
+(3.0)
+< 86%
+80% ≤
+B-
+(2.7)
+< 83%
+76% ≤
+C+
+(2.3)
+< 80%
+73% ≤
+C
+(2.0)
+< 76%
+70% ≤
+C-
+(1.7)
+< 73%
+60% ≤
+D
+(1.0)
+< 70%
+F
+(0.0)
+< 60%
+Late Policy: Assignments will have a submission procedure described
+with the assignment.  Assignments submitted late will receive a 15%
+grade reduction for each 12 hours late (i.e., 30% per day).
+Assignments will not be accepted 72 hours after the due date.  If you
+require an extension (for personal reasons only) to a due date, you
+must request one as far in advance as possible.  Extensions requested
+close to or after the due date will only be granted for clear
+emergencies or clearly unforeseeable circumstances.  You are advised
+to begin working on assignments as soon as they are assigned.
+Assignments and exams:
+Assignment 0
+and
+files
+(assigned Oct 1, due Oct 8)
+Assignment 1
+and
+files
+(assigned Oct 8, due Oct 22)
+Assignment 2
+and
+files
+(assigned Oct 22, due Nov 5)
+Assignment 3
+and
+files
+(assigned Nov 5, due Nov 19)
+Assignment 4
+and
+files
+(assigned Nov 19, due Dec 3)
+Final exam (Dec 11)
+Handouts/Readings:
+Beyond Lambert: Reconstructing Specular Surfaces Using Color (
+Mallick et al.
+) [
+pdf
+]
+What Is the Set of Images of an Object under All Possible Illumination Conditions? (
+Belhumeur and Kriegman
+) [
+pdf
+]
+Lecture slides:
+Lecture 1
+Introduction and overview (Sep 29)
+Lecture 2
+Geometric image formation (Oct 1)
+Lecture 3
+Photometric image formation (Oct 6)
+Lecture 4
+Photometric stereo (Oct 8)
+Lecture 5
+Image filtering (Oct 13)
+Lecture 6
+Edge detection and corner detection (Oct 15)
+Lecture 7
+Calibrated stereo (Oct 20)
+Lecture 8
+Calibrated stereo and feature matching (Oct 22)
+Lecture 9
+Uncalibrated stereo and feature extraction (Oct 27)
+Lecture 10
+Structure from motion (Oct 29)
+Lecture 11
+Model fitting (Nov 3)
+Lecture 12
+Optical flow and motion (Nov 5)
+Lecture 13
+Recognition, detection, and classification (Nov 10)
+Lecture 14
+Recognition, detection, and classification (Nov 12)
+Lecture 15
+Neural networks (Nov 17)
+Lecture 16
+Convolutional neural networks (Nov 19)
+No lecture meeting (Nov 24)
+No lecture meeting (Nov 26)
+Lecture 17
+Color (Dec 1)
+Lecture 18
+Human visual system (Dec 3)
+Lecture topics (tentative):
+Introduction to computer vision
+Geometric image formation
+Photometric image formation
+Photometric stereo
+Image filtering
+Edge de

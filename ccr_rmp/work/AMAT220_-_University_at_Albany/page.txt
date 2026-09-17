@@ -1,0 +1,596 @@
+Math 220 Review Slides
+on Inner Products
+http://math.albany.edu/pers/hammond/course/mat220/
+Course
+Assignments
+Slides
+May 6, 2008
+1.
+Inner Products
+The notion of
+inner product
+generalizes the “dot product” in
+R
+n
+is coordinate-free
+makes it possible in abstract contexts to speak of
+lengths
+angles
+2.
+Abstract Inner Products
+Definition.
+An
+inner product
+on a vector space
+V
+is a function
+I
+of two variables from
+V
+that takes scalar values and satisfies
+the following rules:
+I
+c
+1
+v
+1
++
+c
+2
+v
+2
+,
+v
+3
+=
+c
+1
+I
+v
+1
+,
+v
+3
++
+c
+2
+I
+v
+2
+,
+v
+3
+I
+v
+3
+,
+c
+1
+v
+1
++
+c
+2
+v
+2
+=
+c
+1
+I
+v
+3
+,
+v
+1
++
+c
+2
+I
+v
+3
+,
+v
+2
+I
+v
+1
+,
+v
+2
+=
+I
+v
+2
+,
+v
+1
+I
+v
+,
+v
+>
+0
+provided
+v
+≠
+0
+3.
+Inner Products: Example 1
+Ordinary “Dot” Product
+V
+=
+R
+n
+I
+v
+,
+w
+=
+v
+·
+w
+=
+v
+1
+w
+1
++
+v
+2
+w
+2
++
+…
++
+v
+n
+w
+n
+4.
+Inner Products: Example 2
+Inner Product given by a
+Postiive-Definite Symmetric Matrix
+V
+=
+R
+2
+S
+=
+a
+b
+b
+c
+where
+a
+c
+−
+b
+2
+>
+0
+and
+a
++
+c
+>
+0
+I
+v
+,
+w
+=
+v
+t
+S
+w
+=
+a
+v
+1
+w
+1
++
+b
+v
+1
+w
+2
++
+b
+v
+2
+w
+1
++
+c
+v
+2
+w
+2
+5.
+Inner Products: Example 3
+V
+=
+P
+d
+=
+polynomials of degree
+≤
+d
+A inner product on
+V
+for each interval
+a
+≤
+t
+≤
+b
+(
+a
+<
+b
+):
+I
+f
+,
+g
+=
+∫
+a
+b
+f
+t
+g
+t
+d
+t
+6.
+Cauchy-Schwarz Inequality
+Theorem.
+If
+I
+is an inner product on
+V
+, then for all
+v
+,
+w
+in
+V
+I
+v
+,
+w
+≤
+I
+v
+,
+v
+I
+w
+,
+w
+.
+Moreover, when
+v
+≠
+0
+, equality occurs if and only if there is a scalar
+c
+such that
+w
+=
+c
+v
+.
+7.
+Length of a vector
+Relative to an inner product
+I
+:
+length of
+v
+=
+v
+I
+=
+I
+v
+,
+v
+8.
+Distance between two points
+Relative to an inner product
+I
+:
+distance from
+P
+to
+Q
+=
+Q
+−
+P
+I
+9.
+Angle between two vectors
+Relative to an inner product
+I
+, when
+v
+,
+w
+≠
+0
+:
+∠
+I
+v
+,
+w
+=
+arccos
+I
+v
+,
+w
+v
+I
+w
+I
+10.
+Orthogonality
+Perpendicularity (or orthogonality) relative to an inner product
+I
+v
+⊥
+w
+if and only if
+I
+v
+,
+w
+=
+0
+11.
+Parallelism
+Relative to an inner product
+I
+v
+∥
+w
+if and only if
+I
+v
+,
+w
+=
+v
+I
+w
+I
+12.
+Orthonormal bases
+Definition.
+A basis
+v
+=
+v
+1
+v
+2
+…
+v
+n
+of an
+n
+-dimensional
+vector space with an inner product
+I
+is an
+orthonormal basis
+relative to
+I
+if
+v
+1
+,
+v
+2
+,
+…
+,
+v
+n
+are mutually perpendicular
+vectors of length
+1
+(relative to
+I
+).
+Equivalently, relative to
+I
+,
+v
+is an orthonormal basis if and only if
+I
+v
+j
+,
+v
+k
+=
+0
+if
+j
+≠
+k
+1
+if
+j
+=
+k
+13.
+Orthogonal matrices
+Let
+U
+be an
+n
+×
+n
+matrix.    The following conditons on
+U
+are equivalent:
+U
+is an orthogonal matrix.
+U
+is invertible and
+U
+−
+1
+=
+U
+t
+.
+The
+n
+columns of
+U
+form an orthonormal basis of
+R
+n
+relative to the standard inner product (the “dot” product).
+The
+n
+rows of
+U
+form an orthonormal basis of
+R
+n
+relative to the standard inner product.
+14.
+Orthogonal linear maps
+Definition.
+If
+V
+is a vector space with an inner product
+I
+and
+V
+→
+φ
+V
+a linear map,
+φ
+is said to be an
+orthogonal linear map
+relative to
+I
+if
+φ
+is invertible and if one has
+I
+φ
+v
+,
+φ
+w
+=
+I
+v
+,
+w
+for all
+v
+,
+w
+in
+V
+.
+Note:
+If
+V
+is finite-dimensional, it is redundant to require that
+φ
+should be invertible when
+φ
+is required to preserve the
+inner product.
+15.
+Preservation of Distances
+Theorem.
+If
+V
+is a vector space with an inner product
+I
+and
+V
+→
+φ
+V
+a linear map, then
+φ
+is an orthogonal linear map if and only if
+φ
+is invertible and length-preserving, i.e., for each
+v
+in
+V
+one has
+φ
+v
+=
+v
+.
+Note:
+If
+V
+is finite-dimensional, it is redundant to require that
+φ
+should be invertible when
+φ
+is required to preserve
+lengths.
+16.
+Orthogonal Linear Maps and Orthogonal Matrices
+Theorem.
+If
+V
+is an
+n
+-dimensional vector space,
+I
+an inner product on
+V
+,
+V
+→
+φ
+V
+a linear map,
+v
+=
+v
+1
+v
+2
+…
+v
+n
+an orthonormal basis of
+V
+relative to
+I
+, and
+M
+the matrix of
+φ
+relative to
+v
+, then
+φ
+is an orthogonal linear map relative to
+I
+if and only if
+M
+is an orthogonal matrix.

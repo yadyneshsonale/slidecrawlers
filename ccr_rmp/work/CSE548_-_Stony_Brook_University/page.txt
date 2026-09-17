@@ -1,0 +1,157 @@
+CSE 548-01 (#89599), AMS 542-01 (#89683): Analysis of Algorithms, Fall 2023
+Lecture Time and Location.
+Tue/Thu 7:00 pm - 8:20 pm, Frey Hall Room 102, West Campus (classes will be live-streamed with Echo360).
+Instructor.
+Rezaul Chowdhury
+(rezaul{at}cs{dot}stonybrook{dot}edu)
+office hours:
+Tue/Thu 12:00 pm - 1:30 pm, via Zoom (link available on
+Brightspace
+)
+Teaching Assistants.
+Kiera Gross
+(kiera.gross{at}stonybrook{dot}edu)
+office hours: Mon/Wed 1:00 pm - 2:30 pm, via Zoom
+Tianchi (Maverick) Mo
+(timo{at}cs{dot}stonybrook{dot}edu)
+office hours: Tue 2:00 pm - 5:00 pm, NCS 358
+Santa Shithil
+(sshithil{at}cs{dot}stonybrook{dot}edu)
+office hours: Fri 4:00 pm - 7:00 pm, via Zoom
+Course Description.
+We will explore techniques for designing and analyzing efficient algorithms, including recurrence relations and divide-and-conquer algorithms, dynamic programming, graph algorithms (e.g., network flow), amortized analysis, cache-efficient and external-memory algorithms, high probability bounds and randomized algorithms, parallel algorithms and multithreaded computations, NP-completeness and approximation algorithms, the alpha technique, and FFT ( Fast Fourier Transforms ).
+Prerequisites.
+Some background in algorithms analysis (e.g., CSE 373) and programming languages (e.g., C/C++) is required (or consent of instructor).
+Recommended Textbooks.
+Thomas Cormen, Charles Leiserson, Ronald Rivest, and Clifford Stein.
+Introduction to Algorithms
+(4th Edition), MIT Press, 2022.
+Sanjoy Dasgupta, Christos Papadimitriou, and Umesh Vazirani.
+Algorithms
+(1st Edition), McGraw-Hill, 2006.
+Jon Kleinberg and Éva Tardos.
+Algorithm Design
+(1st Edition), Addison Wesley, 2005.
+Rajeev Motwani and Prabhakar Raghavan.
+Randomized Algorithms
+(1st Edition), Cambridge University Press, 1995.
+Vijay Vazirani.
+Approximation Algorithms
+, Springer, 2010.
+Joseph JáJá.
+An Introduction to Parallel Algorithms
+(1st Edition), Addison Wesley, 1992.
+Course Requirements.
+There will be 4 homework assignments (mainly theory problems) and two in-class exams (the first one on Oct 12 and the second one on Nov 30; 75 minutes each). Each student will be responsible for scribing one lecture. The course grade will be based on the following.
+Homework Assignments: 40% (the highest score will be worth 15%, the lowest score will be worth 5%, and the remaining two will be worth 10% each)
+Exams: 45% (the higher of the two scores will be worth 30%, and the lower one 15%)
+Scribe notes: 10%
+Class participation and attendance: 5%
+Download
+the Latex template for scribe notes. You can use the online Latex compiler at
+www.overleaf.com
+to create your notes.
+Brightspace.
+Some course documents (e.g., scribe notes, homework solutions, etc.) will be available through
+Brightspace
+.
+Students with Disabilities.
+If you have a physical, psychological, medical, or learning disability that may impact your course work, please contact the
+Student Accessibility Support Center
+, Stony Brook Union Suite 107, (631) 632-6748, or at sasc@stonybrook.edu. They will determine with you what accommodations are necessary and appropriate. All information and documentation is confidential.
+Lecture Schedule.
+Date
+Topic
+Notes / Reading Material
+Tue, Aug 29
+Introduction
+VIII Appendix: Mathematical Background,
+Introduction to Algorithms
+(4th Edition) by Cormen et al.
+Chapter 3 (Characterizing Running Times),
+Introduction to Algorithms
+(4th Edition) by Cormen et al.
+Thu, Aug 31
+Introduction
+(continued)
+-
+Tue, Sep 5
+Introduction
+(continued)
+-
+Thu, Sep 7
+Introduction
+(continued)
+Integer Multiplication & Karatsuba's Algorithm
+Chapter 2 (Divide-and-Conquer Algorithms), Section 2.1 (Multiplication),
+Algorithms
+(1st Edition) by Dasgupta et al.
+[optional]
+Anatolii A. Karatsuba,
+“The Complexity of Computations”
+, Proceedings of the
+Steklov Institute of Mathematics
+, 211:169-183, 1995.
+Tue, Sep 12
+Integer Multiplication & Karatsuba's Algorithm
+(continued)
+Matrix Multiplication & Strassen's Algorithm
+Chapter 2 (Divide-and-Conquer Algorithms), Section 2.1 (Multiplication),
+Algorithms
+(1st Edition) by Dasgupta et al.
+Chapter 4 (Divide-and-Conquer), Section 4.2 (Strassen’s Algorithm for Matrix Multiplication),
+Introduction to Algorithms
+(4th Edition) by Cormen et al.
+Thu, Sep 14
+Matrix Multiplication & Strassen's Algorithm
+(continued)
+Polynomial Multiplication & the Fast Fourier Transform
+[optional]
+Chapter 9 (Algebraic and Numeric Algorithms), Section 9.5.2 (Strassen’s Algorithm),
+Introduction to Algorithms - A Creative Approach
+(1st Edition) by Udi Manber.
+Volker Strassen,
+“Gaussian Elimination is not Optimal”
+, Numerische Mathematik, 13:354-356, 1969.
+Chapter 30 (Polynomials and the FFT),
+Introduction to Algorithms
+(4th Edition) by Cormen et al.
+Tue, Sep 19
+Polynomial Multiplication & the Fast Fourier Transform
+(continued)
+James W. Cooley and John W. Tukey,
+“An Algorithm for the Machine Calculation of Complex Fourier Series”
+, Mathematics of Computation, 19(90):297–301, 1965.
+Thu, Sep 21
+Polynomial Multiplication & the Fast Fourier Transform
+(continued)
+[fun]
+Thomas S. Huang,
+“How the Fast Fourier Transform Got its Name”
+, Computer, 4(3), page 15, 1971.
+Tue, Sep 26
+Polynomial Multiplication & the Fast Fourier Transform
+(continued)
+-
+Thu, Sep 28
+The Master Theorem
+Chapter 4 (Divide-and-Conquer), Section 4.5 (The Master Method for Solving Recurrences),
+Introduction to Algorithms
+(4th Edition) by Cormen et al.
+Tue, Oct 3
+The Master Theorem
+(continued)
+Chapter 4 (Divide-and-Conquer), Section 4.5 (The Master Method for Solving Recurrences),
+Introduction to Algorithms
+(3rd Edition) by Cormen et al.
+Thu, Oct 5
+Akra-Bazzi Recurrences
+Chapter 9 (Medians and Order Statistics), Section 9.3 (Selection in Worst-case Linear Time),
+Introduction to Algorithms
+(4th Edition) by Cormen et al.
+Chapter 4 (Divide-and-Conquer), Section 4.7 (Akra-Bazzi Recurrences),
+Introduction to Algorithms
+(4th Edition) by Cormen et al.
+Mohamad Akra and Louay Bazzi,
+“On the Solution of Linear Recurrence Equations”
+, Computational Optimization a

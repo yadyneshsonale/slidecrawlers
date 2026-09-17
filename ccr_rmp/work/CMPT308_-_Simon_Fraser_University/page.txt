@@ -1,0 +1,231 @@
+Navigation
+Course info
+Instructor & TAs
+Important dates
+Assignments
+Lecture notes
+FA & TM simulators
+CMPT 308
+Computability & Complexity
+-   Summer 2019
+Announcements
+Aug 2: I'll have 2-hour office hours on Wed, Aug 7, 11:30-13:30.
+Aug 2: The final exam on Aug 8 will be on all topics of the course, with equal emphasis. You'll have 3 hours for an exam that will be roughly two quizzes in size. To prepare, go over all lecture slides and notes, HWs, quizzes, and the textbook. The questions on the final exam will be similar to those on the quizzes we had.
+July 30: Quiz 4 solutions are posted.
+older announcements...
+July 25: Quiz 4 will cover lectures 19-27 (inclusive).
+July 21: The soutions to HW 4 are now posted.
+July 14: Quiz 3 solutions are now posted.
+July 4:
+No classes
+on Wed, July 10, and Fri, July 12, as I'm away at a conference.
+July 1: Quiz 3 will cover the material from Lectures 12-18 (inclusive).
+June 20: There will be no class on Wed, June 26 (as I'll be away).
+June 16: Quiz 2 will cover the material from lectures 7-12, excluding the Recursion Theorem. That is, Quiz 2 will cover TMs, decidability, undecidability, non-semi-decidability, Rice's Theorem, and reductions.
+June 16: The solutions to HW 2 are now posted.
+May 24: Quiz 1 will cover the material from Lectures 1-6 (inclusive), that is, Regular Languages, their properties, as well as the Pumping Lemma. The problems on the quiz will be similar to those in HW 1.
+May 16: HW 1 is now available.
+Course description
+This course focuses on the inherent ''complexity''
+of solving problems using a computer. The goal is to understand why
+some seemingly simple problems cannot be solved on computers and
+others have no efficient (i.e., fast) solution. Formal notions of
+computers, computability and complexity will be given. At the
+successful completion of this course, students will understand why,
+for example, computer viruses are so pervasive and why no one will
+ever write a perfect virus checker. We will see how these concepts are
+related to logic, in particular, the famous Incompleteness Theorem of
+Gödel. Finally, we will see a few surprising results from modern
+complexity, in particular, the results making use of randomness in
+computation.
+Topics
+Texts
+Lectures
+Office hours
+Marking scheme
+Models of Computation: Finite automata and Turing machines
+Decidable and undecidable problems
+Recursion theorem
+Kolmogorov complexity
+Gödel's Incompleteness theorems
+NP-completeness
+Time & Space complexity
+Randomized computation
+Interactive proofs
+Probabilistically Checkable Proofs and the PCP Theorem
+Time & Space Hierarchy Theorems
+Cryptography
+Introduction to the Theory of Computation
+by Michael Sipser, 2012, 9781133187790; the earlier (second) edition of the book is also OK.
+[main]
+Introduction to Automata Theory, Languages and Computation - 3rd Edition
+by J.E. Hopcroft , Rajeev Motwani, J.D. Ullman, Addison Wesley, 2006, 9780321455369.
+[optional]
+day
+time
+room
+Mon
+13:30-14:20
+WMC 3260
+Wed
+13:30-14:20
+WMC 3260
+Fri
+13:30-14:20
+WMC 3260
+Wed & Fri, 12:30 - 13:20, TASC 1, 8011
+4 in-class 50-min quizzes, worth 15% each, and
+final exam, worth 40%
+Note:
+I will post 4 homework assignments (one before each quiz),
+which will
+not
+be collected and graded.  The solutions to homework problems will be posted
+before the quiz. The quizzes will be loosely based
+on the homework problems, so you will benefit
+by solving the homework problems by yourself!
+Teaching staff
+Instructor:
+Valentine
+Kabanets
+(kabanets@cs.sfu.ca), Office: TASC1 8011
+TAs:
+Fatemeh Hasiri (fhasiri@sfu.ca) and Young Shin Oh (sophieo@sfu.ca)
+If you have
+grading-related
+questions, please email the TAs and ask
+for an appointment. If you still have questions after meeting with the
+TA, then come and see me.
+Important dates
+The 50-minute
+quizzes will be given during our regular
+lecture times on the following dates.
+Quiz 1
+Quiz 2
+Quiz 3
+Quiz 4
+June 3
+June 24
+July 8
+July 29
+Final exam:
+Thu, Aug 8, 15:30-18:30, AQ 3159
+Assignments
+I'll post homework assignments & solutions.
+Homework 1
+solutions
+quiz 1 solutions
+Homework 2
+solutions
+quiz 2 solutions
+Homework 3
+solutions
+quiz 3 solutions
+Homework 4
+solutions
+quiz 4 solutions
+Lecture notes
+I'll post my lecture notes for each class,
+and a reading assignment.
+05/6:
+Lecture 1
+(intro, existence of unsolvable problems, Turing machine)
+Read:
+Chap. 0, Secs. 4.1, 3.1. (Read ahead: Sec. 1.1.)
+Slides for lecture 1 (pdf)
+and
+(one note)
+05/10:
+Lecture 2
+(Finite Automata)
+Read:
+Sec. 1.1. (Read ahead: Secs. 1.2, 1.3.)
+Slides for lecture 2 (pdf)
+and
+(one note)
+05/13:
+Lecture 3 (Regular operations)
+Slides for lecture 3 (pdf)
+and
+(one note)
+05/15:
+Lecture 4
+(NFA, equivalence of NFA and DFA, regular expressions)
+Read:
+Secs. 1.2, 1.3, 1.4. (Read ahead: Secs. 4.1, 3.1-3.3.)
+Slides for lecture 4 (pdf)
+and
+(one note)
+05/17:
+Lecture 5
+(regular expressions vs NFA, Pumping Lemma)
+Slides for lecture 5 (pdf)
+and
+(one note)
+05/22:
+Lecture 6
+(Summary of Regular Languages)
+Read:
+Secs. 1.4, 4.1. (Read ahead: Sec. 3.1-3.3.)
+Slides for lecture 6 (pdf)
+and
+(one note)
+05/24:
+Lecture 7
+(Turing machines)
+Read:
+Sec. 3.2. (Read ahead: Sec. 4.2.)
+Slides for lecture 7 (pdf)
+and
+(one note)
+05/27:
+Lecture 8
+(Undecidability)
+Read:
+Sec. 4.1-4.2. (Read ahead: Secs. 5.1-5.3)
+Slides for lecture 8 (pdf)
+and
+(one note)
+05/29:
+Lecture 9
+(Variants of the Halting problem, reductions)
+Slides for lecture 9 (pdf)
+and
+(one note)
+05/31:
+Lecture 10
+(reductions)
+Read:
+Sec. 5.1 (see the solution to problem 5.28), 5.3.
+(Read ahead: Secs. 6.1 and 6.2.)
+Slides for lecture 10 (pdf)
+and
+(one note)
+06/5:
+Lecture 11
+(Rice's Theorem)
+Read:
+Secs. 5.3, 6.1. (Read ahead: Secs. 6.4, 6.2.)
+Slides for lecture 11 (pdf)
+and
+(one note)
+06/7:
+Lecture 12 (Recursion Theorem)
+Slides for lecture 12 (pdf)
+and
+(one note)
+06/10:
+Lecture 13 (Recursion Theorem: Applications)
+Slides for lecture 13 (pdf)
+and
+(one note)
+06/12:
+Lecture 14
+(Kolmogorov complexity)
+Read:
+Sec. 6.4. (Read ahead: Sec. 6.2.)
+Slides for lecture 14 (pdf)
+and
+(one note)
+06/14:
+Lec

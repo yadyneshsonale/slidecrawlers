@@ -1,0 +1,214 @@
+ECE177:
+Programming I: From C Foundations to Hardware Interaction
+University of Maine ECE
+Spring 2026
+Instructor:
+Vincent Weaver
+The class meeting time is Mon/Wed/Fri at 1:00pm-1:50pm.
+The meeting place is Williams Hall 120.
+Labs:
+There are four lab sections, Mon/Tues/Wed/Thurs 2pm-4:50pm
+in Barrows Hall 228.
+Final exam
+: Wednesday 6 May 2026, 1:30pm, Williams Hall 120
+Office hours:
+Weaver: Tues/Thurs 1-2pm
+Syllabus
+ece177_2026s.pdf
+Course Listing
+Introduction to computer programming with emphasis on algorithms and an
+understanding of underlying hardware. Topics include syntax, variables,
+control structures, pointers, operators, functions, and input and
+output.
+What We'll Do this Semester
+Learning about C
+Class Schedule
+Lab
+Lectures
+Monday
+Wednessday
+Friday
+Week 1
+No Lab
+19 January
+No Class (MLK Day)
+21 January
+Introduction / Hello World!
+Lecture 1 Notes
+23 January
+C History, CPU/Memory Background
+Lecture 2 Notes
+Week 2
+Lab 1
+26 January
+No Class (snow)
+28 January
+Lab1 Preview, Code Comments/Style, C Data Types
+Lecture 3 Notes
+30 January
+Number Systems, Type Promotion
+Lecture 4 Notes
+Week 3
+Lab 2
+2 February
+Simple Arithmetic, Hello World Revisited
+Lecture 5 Notes
+4 February
+Lab2 Preview, printf
+Lecture 6 Notes
+6 February
+for/while loops
+Operators/Statements/Functions
+Lecture 7 Notes
+Week 4
+Makeup Lab
+9 February
+if/else Statements
+Logical Boolean Operators
+Lecture 8 Notes
+11 February
+Switch/Case Statements, getchar
+Lecture 9 Notes
+13 February
+Bitwise Logic Operators
+Lecture 10 Notes
+Week 5
+Lab 3
+16 February
+No Class (President's Day)
+18 February
+Arrays
+Lecture 11 Notes
+20 February
+Strings
+Lecture 12 Notes
+Week 6
+Lab 4
+23 February
+No Class (snow again)
+25 February
+Lab#4 Preview, HW#3 Notes
+Lecture 13 Notes
+27 February
+Variable Scope, Pointers, scanf()
+Lecture 14 Notes
+Week 7
+Lab 5
+2 March
+Lab5 Preview, GPIO, Structs
+Lecture 15 Notes
+4 March
+Midterm Preview
+Lecture 16 Notes
+6 March
+Midterm #1
+Week 8
+Makeup Lab
+9 March
+C Pre-processor
+Lecture 17 Notes
+11 March
+Commas, Ternary Operator, sizeof, Casting
+Lecture 18 Notes
+13 March
+goto
+Lecture 19 Notes
+Spring Break
+16 March
+18 March
+20 March
+Week 9
+Lab 6
+23 March
+HW5 Preview, Lab6 Preview
+Lecture 20 Notes
+25 March
+Operator Precedence
+Lecture 21 Notes
+27 March
+Went over Midterm1 Results
+Lecture 22 Notes
+Week 10
+Lab 7
+30 March
+Lab 7 Preview
+Lecture 23 Notes
+1 April
+Music on Pico, Dynamic Memory allocation (malloc)
+Lecture 24 Notes
+3 April
+free(), pointer math
+Lecture 25 Notes
+Week 11
+Lab 8
+6 April
+Lab #8 Preview, malloc() of multidimensional arrays
+Lecture 26 Notes
+8 April
+Midterm #2 Preview
+Lecture 27 Notes
+10 April
+Midterm #2
+Week 12
+Lab 9
+13 April
+Lab #9 Preview
+Lecture 28 Notes
+15 April
+typedef, volatile, unions, bitfields, enums
+Lecture 29 Notes
+17 April
+File I/O
+Lecture 30 Notes
+Week 13
+Makeup Lab
+20 April
+math.h
+Lecture 31 Notes
+22 April
+Senior Project Expo
+24 April
+Code Quality / git / Debugging
+Lecture 32 Notes
+Week 14
+Makeup Lab?
+27 April
+Midterm2 Review
+Lecture 33 Notes
+29 April
+Recursion, Command Line Arguments
+Lecture 34 Notes
+1 May
+Final Exam Preview
+Lecture 35 Notes
+Homework Assignments
+All homeworks will be done via
+CodeLab
+.  You should have received
+an e-mail with the information you need to log into the CodeLab site.
+Homework 1 -- Variable Definitions -- Due 11 February 2026
+Homework 2 -- Assignments -- Due 18 February 2026
+Homework 3 -- Conditionals and Loops -- Due 25 February 2026
+Homework 4 -- Comparisons and Arrays -- Due 4 March 2026
+Homework 5 -- Structs, Scanf, String Comparison -- Due 27 March 2026
+Homework 6 -- Preprocessor and Pointers -- Due 6 April 2026
+Homework 7 -- Functions -- Due 24 April 2026
+Labs
+See
+here
+for details on the Labs
+Optional Useful Textbooks
+Note: in my experience there aren't really any standout C textbooks.
+That, combined with how expensive textbooks tend to be, is why
+I don't have a required textbook.  However, with the new "flat-rate"
+textbook thing the bookstore does it might be worth reinvestigating
+that.  If you feel strongly about this let me know.  Below
+are a few texbooks that might be useful if you would like to have one.
+"The C Programming Language" by Kernighan and Ritchie.  --
+this is the classic book about C, but it is a bit bare bones and
+maybe not the best if trying to learn from scratch.
+"C Programming for Scientists and Engineers" by Reddy and Ziegler. --
+This is what ECE177 used years ago with previous professors.
+Useful Links
+Back to my homepage
+Last updated 24 April 2026, 16:24

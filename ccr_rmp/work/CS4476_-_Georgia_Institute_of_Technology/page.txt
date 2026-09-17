@@ -1,0 +1,79 @@
+CS 4476-A Computer Vision
+Spring 2026, Monday and Wednesday 2:00 to 3:15,
+Scheller 100
+Instructor:
+James Hays
+TAs:
+Yiming Chen, Kyle Kam, (head TAs)
+, Keerthi Kaashyap, Amogh Palasamudram, Mohit Talreja, Yue Zhao, Jiannan Huang, Aadi Rane, Rachel Shi, Ankith Chandra, Adrian Cheung, Divya Ramaswamy
+Course Description
+This course provides an introduction to computer vision including
+fundamentals of image formation, camera imaging geometry, feature
+detection and matching, stereo, motion
+estimation, convolutional networks, image classification, segmentation, object detection, transformers, and 3D computer vision.
+We'll explore methods for depth recovery from
+stereo images, camera calibration, automated alignment, tracking,
+boundary detection, and recognition. We'll use both classical machine
+learning and deep learning to approach these problems. The focus of the
+course is to develop the intuitions and mathematics of the methods in
+lecture, and then to implement substantial projects that resemble contemporary approaches to computer vision.
+Learning Objectives
+Upon completion of this course, students should be able to:
+1. Recognize and describe both the theoretical and practical aspects
+of computing with images. Connect issues from Computer Vision to Human
+Vision
+2. Describe the foundation of image formation and image analysis. Understand the basics of 2D and 3D Computer Vision.
+3. Become familiar with image processing approaches like convolution and their use in registration, alignment, and matching in images (i.e. classical computer vision).
+4. Become familiar with machine learning (including deep learning) concepts used in object categorization, segmentation, and object detection in images. Apply similar approaches to data such as 3D point clouds from lidar sensors.
+5. Implement computer vision techniques using Python and deep learning toolboxes such as PyTorch.
+Prerequisites
+No prior experience with computer vision is assumed, although previous
+knowledge of visual computing or signal processing will be helpful. The
+following skills are necessary for this class:
+Data structures: You'll be writing code that builds representations of images, features, and geometric constructions.
+Programming: Projects are to be completed and graded in Python and PyTorch.
+All project starter code will be in Python. TA's will support questions about Python. If you've never used Python that is OK, as long as you have programming experience, but you will be playing catch up compared to most students.
+Math: Linear algebra, vector calculus, and probability. Linear
+algebra is the most important and students who have not taken a linear
+algebra course have struggled in the past. If you want a refresher on linear algebra,
+check out
+Prof. Gilbert Strang's lectures
+.
+Compute Requirements
+The institute has
+minimum compute requirements
+for all students that you are expected to meet.
+The projects are somewhat compute intensive, though, so a faster machine will let you iterate more quickly.
+The institute requirements say nothing about GPUs, unfortunately. The deep learning projects can benefit from (but will not require) a local GPU.
+Since we cannot rely on students having GPUs, projects will rely on cloud services such as Google Colab or the
+PACE ICE Cluster
+.
+Grading
+Your final grade will be made up from
+60% 6 programming projects, each 10.00% of your final grade.
+40% from three in class written quizzes.
+Final grades will be A/B/C etc for 90.00%+, 80.00%+, 70.00%+, etc. with no rounding.
+You will lose 10% each day for late projects. However, you have six
+"late days" for the whole course. That is to say, the first 24 hours
+after the due date and time counts as 1 day, up to 48 hours is two and
+72 for the third late day. A late day cannot be split among projects (e.g. half a late day for project 1, and half a late day for project 2). They are used
+in integer amounts. There is no grace period for project handins. 5 minutes after the deadline is a full day late.
+If you are taking this course, the expectation is that you have set aside the considerable amount
+of time needed to get your projects done in a timely manner. These late days are intended to cover unexpected clustering of due dates,
+travel commitments, interviews, hackathons, computer problems,
+extracurricular commitments, etc. Don't ask for extensions to due dates because we are already giving you a pool of late days to manage yourself. If you are seriously
+ill and need more time on projects beyond what late days can cover, you should submit documentation to the Dean of
+Students office and they will reach out to us.
+Academic Integrity
+Academic dishonesty will not be tolerated. This includes cheating, lying about course matters, plagiarism, code copying, or helping others commit a violation of the Honor Code.
+Plagiarism includes reproducing the words of others without both the use of quotation marks and citation. Students are reminded of the obligations and expectations
+associated with the
+Georgia Tech Academic Honor Code
+. We will use tools to find code sharing in projects.
+You are expected to implement the core components of each project on your own, but the extra credit opportunties often build
+on third party data sets or code. That's fine. Feel free to include results built on other software, as long as your handin cites the toolboxes you build on.
+You should not view, edit, or copy anyone else's code. You should not publicly post code to Canvas, except for starter code or helper code that isn't related to the core project.
+More detailed guidance about what is and is not allowed in terms of collaboration with other students:
+Allowed
+Talking at the non-code level about project strategies, e.g. "I found it works best if you increase the channel depth of the bottleneck layers". But this does not mean you can collaborate or share answers for the non-code portions of projects and problem sets.
+Explaining concepts or project strategies at the "white board" level, for exam

@@ -1,0 +1,277 @@
+CSCI.4430 Programming Languages-- Fall 2024
+Instructor
+:  Carlos Varela
+Office
+:  Lally 308 (x 6912)
+WebEx Personal Room
+:
+https://rensselaer.webex.com/meet/varelc
+Office Hours
+:  Tuesdays and Fridays, 8:30-9:45am; or by appointment
+Meeting Place
+:  Darrin 308.
+Meeting Hours
+:  Tuesdays and Fridays 10:00-11:50am
+TAs
+: Kushal Bhandari, Justin Buergi, Brendan Cross, Aamir Mandviwalla, Ingkarat Rak-amnouykit, Ron
+Rattanakornphan.
+CAs
+: Chris McCarthy, Itamar Oren-Naftalovich, Sutherland Brown and Samyuth Sagi.
+Mentors
+: Muhammad Alafifi, Tim Gross, Xiaoxiao He, Max Hutz, Nicholas Pardave, Tarun Rajan, and Shane
+Stoll.
+Instructional Support Coordinator
+: Meredith Widman.
+OFFICE HOURS SCHEDULE
+Monday
+Tuesday
+Wednesday
+Thursday
+Friday
+8:30 - 9.45 AM
+Instructor OH
+Prof. Varela
+Lally 308
+Instructor OH
+Prof. Varela
+Lally 308
+10:00 AM - 12:00 PM
+OH
+TA: Kushal
+Mentor(s): Tarun
+Carnegie 210
+Lecture
+Darrin 308
+Lecture
+Darrin 308
+12:00 - 2:00 PM
+OH
+TA: Brendan
+Mentor(s): Xiaoxiao (12:30 - 2:00)
+Carnegie 210
+OH
+TA: Aamir
+Mentor(s): Xiaoxiao (12:30 - 2:00)
+Sage 2715
+2:00 - 4:00 PM
+OH
+TA: Brendan
+Mentor(s): Max
+Carnegie 205
+OH
+CA: Sutherland
+Mentor(s): Shane
+DCC 235
+OH
+TA: Aamir
+Mentor(s): Max
+Sage 2715
+OH
+TA: Justin
+Mentor(s): Nicholas
+Sage 4112
+4:00 - 6:00 PM
+OH
+TA: Ron
+CA: Itamar, Chris
+Mentor(s): Tim
+Carnegie 205
+OH
+TA: Ingkarat
+Mentor(s): Muhammad
+DCC 235
+OH
+CA: Samyuth
+Mentor(s): Shane
+J-Rowl 2C22
+OH
+TA: Ron
+CA: Itamar, Chris
+Mentor(s): Tim
+Sage 2715
+6:00 - 8:00 PM
+OH
+TA: Ingkarat
+Mentor(s): Muhammad
+Xiaoxiao (6:00 -
+7:00)
+Carnegie 205
+OH
+TA: Kushal
+Mentor(s): Tarun
+J-Rowl 2C22
+Home page
+:
+https://www.cs.rpi.edu/academics/courses/fall24/csci4430
+Submitty Home Page:
+https://submitty.cs.rpi.edu/courses/f24/csci4430
+Use Submitty to submit your assignments, check your grades, and post/answer questions in the discussion forum.
+To contact the instructor, TAs, CAs, mentors, and coordinator about the course, please email:
+proglang AT cs DOT lists DOT rpi DOT edu
+.
+Course Description
+This course will enable
+students to understand essential aspects of programming languages
+--i.e., theoretical foundations, syntax, semantics, data abstraction,
+control abstraction, types, scope of variables, and expression
+evaluation mechanisms.  Students will be exposed to different
+programming paradigms (computation models) including functional
+programming, concurrent programming, and logic programming. Students
+will write programming assignments in Haskell, SALSA or Erlang,
+and Prolog.
+Pre-requisites
+CSCI.2300 Introduction to Algorithms and CSCI.2600 Principles of Software.
+Course Themes
+Programming Language Essentials. Functional, Concurrent, and Logic
+Programming Paradigms.
+Learning Outcomes
+When students have successfully completed this course, they
+will be able to:
+understand the essential aspects of programming languages,
+including theoretical foundations such as the lambda calculus, the
+actor model, and first-order logic.
+design and develop functional, concurrent (including
+distributed and mobile), and logic (including constraint
+satisfaction) programs.
+compare multiple programming paradigms and know when to apply
+them to solve different problems.
+Programming Assignments
+Programming Assignment 1
+Programming Assignment 2
+(
+extra testcases
+)
+Programming Assignment 3
+(
+starter code
+)
+Course Contents
+Introduction
+Brief history of programming languages
+Essentials
+Syntax
+Semantics
+Paradigms
+Functional
+Concurrent
+Logic
+Functional Programming
+Lambda calculus
+Scope of variables
+Expression evaluation orders
+Data abstraction/control abstraction
+Recursion
+Higher-order programming
+Lazy evaluation
+Types
+Concurrent Programming
+Actor model
+Synchronous vs asynchronous communication, message passing
+Concurrent functional programming and concurrent object-oriented programming
+Named tokens, join blocks, first-class continuations
+Distributed and mobile computing: Universal naming, remote message passing, migration
+Fault tolerant computing
+Logic Programming
+Predicate calculus, first-order logic, Horn clauses
+Resolution and unification
+Search and backtracking
+Dynamically updating knowledge base and modifying search
+methods
+Difference lists, definite clause grammars
+Natural language parsing
+Constraint satisfaction
+Tentative Course Syllabus
+Date
+Topic
+Handouts
+Chapter/Section
+08/30
+Introduction to programming languages:  history,
+essentials, syntax, semantics, paradigms
+slides(pdf)
+slides(ppt)
+functions.hs
+Syntax.pdf
+PDCS Chapter 2
+09/06
+Lambda calculus:  alpha-renaming, beta-reduction,
+applicative and normal evaluation orders, Church-Rosser theorem,
+combinators, booleans
+slides(pdf)
+slides(ppt)
+combinators.hs
+eta.hs
+Order.pdf
+PDCS Chapter 2
+09/10
+Lambda calculus: higher order programming, eta-conversion,
+recursion combinator, numbers, Church numerals
+slides(pdf)
+slides(ppt)
+hop.hs
+lambda-booleans.hs
+lambda-numbers.hs
+ChurchNumerals.pdf
+HOFNumerals.pdf
+rec.hs
+PDCS Chapter 2
+09/13
+Functional programming: lists, pattern matching,
+recursion
+Programming Assignment 1 Due 09/26
+slides(pdf)
+slides(ppt)
+comb.hs
+lists.hs
+nth.hs
+pascal.hs
+LambdaReductionEg.pdf
+NewtonSqrt.pdf
+sqrt.hs
+ProgrammingAssignment1
+CTM Sections 1.1-1.7, 3.2, 3.4.1-3.4.2, 4.7.2
+09/17
+Higher order programming: closures, functional abstraction,
+genericity, instantiation, embedding
+slides(pdf)
+slides(ppt)
+Closures.pdf
+andthen.hs
+iterate.hs
+sqrt.hs
+IFactorial.pdf
+CTM Sections 3.2 and 3.6.1
+09/20
+Control abstractions: map, reduce, iterate,
+fold, filter
+slides(pdf)
+slides(ppt)
+closure.hs
+iscombinator.hs
+mapreduce.hs
+trees.hs
+InfiniteDataStructures.pdf
+CTM Sections 1.9, 3.6, and 4.7
+09/24
+Lazy evaluation, infinite data structures, set comprehensions
+slides(pdf)
+slides(ppt)
+lazy-eval.hs
+CTM Sections 1.8 and 4.5
+GIH Sections 3.4
+09/27
+Type
+checking and type inference, abstract data types
+slides(pdf)
+slides(ppt)
+count-monad.hs
+dictionary-client.hs
+DictionaryADT.hs
+list-monad.hs
+stack-client.hs
+stack-client2.hs
+stack.hs
+StackADT.hs
+StackADT2.hs
+type-limitations.hs
+EPL Chapter 4, GIH, and CTM

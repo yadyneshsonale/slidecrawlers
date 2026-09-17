@@ -1,0 +1,254 @@
+Schedule
+Syllabus
+Resources
+Moodle
+Gradescope
+CSSE232 : Computer Architecture I
+Toggle past sessions
+1: Tue Mar 10
+1
+Introduction & Course Overview
+Read Ch 1 (esp. 1.1-1.3, 1.11)
+Read A.2, A.3 (decoder/multiplexor) ; 2.4; 3.1-3.2
+Practice A.11; 2.6
+HW1
+review  (due Tue Mar 17)
+Note: HWs are always due at class time.
+Intro to RISC-V assembly
+RISC-V green sheet
+Read 2.1-2.3
+Practice 2.1-2.4; 2.7-2.8
+RISC-V R Types
+Arithmetic operations
+Logical operations
+Read 2.6
+Practice 2.17-18,20
+HW2
+compiling c into assembly  (due Tue Mar 17)
+2: Thu Mar 12
+1
+RISC-V I-types, immediates, lw and sw
+Read 2.10 (Important reading)
+HW3
+assembling instructions  (due Thu Mar 19)
+Practical1
+Assembler I  (due Thu Mar 19)
+3: Tue Mar 17
+2
+RISC-V Branches and Jumps
+Read 2.7
+Practice 2.21-22; 2.24; 2.27-28
+HW4
+loops  (due Tue Mar 24)
+Pseudoinstructions
+Read 2.12 "Assembler" section
+HW5
+pseudoinstructions  (due Tue Mar 24)
+Due: *
+HW1
+Due: *
+HW2
+4: Thu Mar 19
+2
+Addressing modes
+Read 2.10 (Important reading)
+Practice 2.12; 2.22
+Immediate Translation Handout
+HW6
+addressing modes  (due Tue Mar 24)
+Practical2
+Assembler II  (due Thu Mar 26)
+Due: *
+HW3
+Due: *
+Practical1
+5: Tue Mar 24
+3
+Procedures
+Read 2.8; (this is an important reading)
+Practice 2.29-31; 2.33
+HW7
+procedure calling  (due Tue Mar 31)
+More procedures
+Read 2.13
+HW8
+procedures and loops  (due Tue Mar 31)
+Due: *
+HW4
+Due: *
+HW5
+Due: *
+HW6
+6: Thu Mar 26
+3
+Quiz 1
+See
+Sample Quiz 1
+and (
+Sample Quiz 1 Solution
+)
+Practical3
+RISC-V Programming  (due Thu Apr 02)
+Due: *
+Practical2
+7: Tue Mar 31
+4
+Verilog Survival Guide
+Check Moodle -> Videos -> Verilog Surivial Videos
+If you want more, there are old videos Old Verilog Surivial I and II (warning, uses Quartus)
+HW9
+write verilog code  (due Tue Apr 07)
+Building Single-Cycle datapath  (R-types)
+Read 4.1-3
+Practice 4.1-4
+HW10
+write relprime  (due Tue Apr 07)
+Due: *
+HW7
+Due: *
+HW8
+8: Thu Apr 02
+4
+Quiz 2
+See
+Sample Quiz 2
+and (
+Sample Quiz 2 Solution
+)
+Practical4
+Building and Testing Hardware  (due Thu Apr 09)
+Due: *
+Practical3
+9: Tue Apr 07
+5
+More Single-Cycle datapath (I-types and memory)
+Read
+Single-cycle RTL
+CATME single-cycle team forming survey   (due Thu Apr 09)
+Even more Single-Cycle datapath (Branch and Jumps)
+HW11
+adding new single cycle instruction  (due Tue Apr 21)
+Due: *
+HW9
+Due: *
+HW10
+10: Thu Apr 09
+5
+Single-Cycle Control
+Read 4.4
+Practice 4.4-5
+HW12
+single cycle control  (due Tue Apr 21)
+Practical5
+Single-Cycle Processor I  (due Thu Apr 23)
+Due: *
+Practical4
+Due: * CATME single-cycle team forming survey
+Break
+11: Tue Apr 21
+6
+Input/Output
+Read 2.9
+Practice 2.38
+Performance
+Read 1.4-1.9
+Practice Examples
+; 1.5–7; 2.39-40
+HW14
+performance  (due Tue Apr 28)
+Due: *
+HW11
+Due: *
+HW12
+12: Thu Apr 23
+6
+Quiz 3
+Study HW11
+See
+Example Quiz 3
+(
+Example Quiz 3 solution
+)
+Practical6
+Single-Cycle Processor II  (due Thu Apr 30)
+CATME single cycle team eval   (due Thu Apr 30)
+Due: *
+Practical5
+13: Tue Apr 28
+7
+Pipelined datapath and control
+Read 4.6-4.7
+Practice 4.19-20
+CATME pipeline team forming survey   (due Thu Apr 30)
+Due: *
+HW14
+14: Thu Apr 30
+7
+More Pipelined datapath and control
+Practical7
+Pipelined Processor I  (due Thu May 07)
+Due: *
+Practical6
+Due: * CATME single cycle team eval
+Due: * CATME pipeline team forming survey
+15: Tue May 05
+8
+Data and control hazards
+Read 4.8-4.9
+Practice 4.22; 4.26
+More Pipeline Hazards
+Read 4.8-4.9
+HW15
+pipeline diagrams and efficiency  (due Tue May 12)
+16: Thu May 07
+8
+Quiz 4
+Study HW11 and HW12
+See
+Example Quiz 4
+(
+Example Quiz 4 solution
+)
+Practical8
+Pipelined Processor II  (due Thu May 14)
+Due: *
+Practical7
+17: Tue May 12
+9
+Adding Pipelined Instructions
+HW16
+add inst to pipeline  (due Tue May 19)
+Faster Branching with a Pipelined Processor
+Due: *
+HW15
+18: Thu May 14
+9
+Adding more pipelined instructions
+Practical9
+Pipelined Processor III  (due Thu May 21)
+Due: *
+Practical8
+19: Tue May 19
+10
+Pipelined Performance
+Other Architectures
+x86 insts
+x86 encoding
+ARM insts
+Practical 10: Pipeline Design Presentation
+(The presentation happens during Finals Week.)
+CATME pipeline team eval   (due Tue May 26)
+Due: *
+HW16
+20: Thu May 21
+10
+Quiz 5
+Study HW15 and HW16
+See
+Example Quiz 5
+(
+Example Quiz 5 solution
+)
+Wrap up (attendance required)
+Due: *
+Practical9

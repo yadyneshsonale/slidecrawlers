@@ -1,0 +1,58 @@
+-- STAGE 2 — instructor extraction -----------------------------------------------------
+  courses to process  53
+  [  1/53] CSC476     NULL                         no_instructor
+  [  2/53] CIS541     NULL                         no_instructor
+  [  3/53] CSE220     NULL                         no_instructor
+  [  4/53] CSE259     NULL                         no_instructor
+  [  5/53] CSE325     NULL                         no_instructor
+  [  6/53] CIS9002    NULL                         no_instructor
+  [  7/53] CS605      NULL                         no_instructor
+  [  8/53] CS240      NULL                         no_instructor
+  [  9/53] CS611      NULL                         no_instructor
+  [ 10/53] DS110      NULL                         no_instructor
+  [ 11/53] 1JC3       NULL                         no_instructor
+  [ 12/53] 2DM3       NULL                         no_instructor
+  [ 13/53] 2GA3       NULL                         no_instructor
+  [ 14/53] 4HC3       NULL                         no_instructor
+  [ 15/53] CIS52      NULL                         no_instructor
+  [ 16/53] CISC1050   NULL                         no_instructor
+  [ 17/53] CSC28      NULL                         no_instructor
+  [ 18/53] CS208      NULL                         no_instructor
+  [ 19/53] CS150      NULL                         no_instructor
+  [ 20/53] CS15110    NULL                         no_instructor
+  [ 21/53] CS213      NULL                         no_instructor
+  [ 22/53] CPSC1010   NULL                         no_instructor
+  [ 23/53] CPSC102    NULL                         no_instructor
+  [ 24/53] CS303      NULL                         no_instructor
+  [ 25/53] CSCI304    NULL                         no_instructor
+  [ 26/53] ECE160     NULL                         no_instructor
+  [ 27/53] CS1110     NULL                         no_instructor
+  [ 28/53] CS2110     NULL                         no_instructor
+  [ 29/53] CS2800     NULL                         no_instructor
+  [ 30/53] CS4820     NULL                         no_instructor
+  [ 31/53] CSCI1170   NULL                         no_instructor
+  [ 32/53] CSCI3151   NULL                         no_instructor
+  [ 33/53] IT130      NULL                         no_instructor
+  [ 34/53] IT230      NULL                         no_instructor
+  [ 35/53] CS065      NULL                         no_instructor
+  [ 36/53] CS167      NULL                         no_instructor
+  [ 37/53] COMPS101L  NULL                         error
+  [ 38/53] CPS108     NULL                         no_instructor
+  [ 39/53] CS330      NULL                         no_instructor
+  [ 40/53] CS371      NULL                         no_instructor
+  [ 41/53] ECE250     NULL                         error
+  [ 42/53] ECE350     NULL                         no_instructor
+  [ 43/53] CSCI1010   NULL                         no_instructor
+  [ 44/53] CSCI2540   NULL                         no_instructor
+  [ 45/53] CSC121     NULL                         no_instructor
+  [ 46/53] CS171      NULL                         no_instructor
+  [ 47/53] COP4338    NULL                         no_instructor
+  [ 48/53] ECE6100    NULL                         no_instructor
+  [ 49/53] ECE6254    NULL                         no_instructor
+  [ 50/53] CS7637     NULL                         no_instructor
+  [ 51/53] CS109      NULL                         no_instructor
+  [ 52/53] CSCI300    NULL                         no_instructor
+  [ 53/53] CPRE416    NULL                         no_instructor
+
+-- SUMMARY -----------------------------------------------------------------------------
+  by status   {'no_instructor': 51, 'error': 2}

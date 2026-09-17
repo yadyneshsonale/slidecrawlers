@@ -1,0 +1,401 @@
+CSCI C343 Data Structures Spring 2024
+Indiana University, Spring 2024
+This course studies the fundamental ideas for efficiently analyzing
+large amounts of data, such as DNA sequence databases and geographic
+information. These fundamental ideas come in two kinds: algorithms and
+data structures. Algorithms are instructions for solving problems and
+data structures are strategies for organizing information on
+computers. Efficient algorithms require appropriate data structures,
+and vice versa, so the study of algorithms and data structures is
+tightly linked. In this course we learn about the algorithms and data
+structures that form the building blocks for many of Today’s
+large-scale computer systems. We apply these ideas to solve
+challenging problems in bioinformatics and geographic information
+systems. Warning: a possible side-effect of taking this course is
+doing better on job interview questions.
+Lecture
+Section 14377, Tuesdays and Thursdays 9:45am-11:00am, Wendell W. Wright Education Building (ED), Room 1120.
+Section 1737, Tuesdays and Thursdays 11:30am-12:45pm, Luddy Hall (IF), Room 1106.
+Labs and Teaching Assistants
+Section 6635, Thursday 5:30pm-7:25pm, Wells Library (LI) 402
+Aaron Olson
+Luke Nargang
+Meet Palod
+Section 6399, Friday 8:45am-10:40am, Luddy Hall (IF) 1019
+Calvin Josenhans
+Chenchao Ding
+Section 6402, Friday 11:15am-1:10pm, Gresham Hall (GR) 102A
+Tianyu Chen
+Niloy Deb Roy Mishu
+Section 36105, Friday 11:30am-1:25pm, Wells Librayr (LI) 402
+Kyle Li
+Ganesh Arkanath
+Section 6637, Friday 12:45-2:40pm, Myles Brand Hall (I) E150
+Chenchao Ding
+Matthew Hammans
+Section 7896, Friday 1:45pm-3:40pm, Ballantine Hall (BH) 118
+Tianyu Chen
+Anuj Mahajan
+Aditya Ramachandra
+Expect at least one quiz per month during lab time.
+15 minutes, at the end of a lab session
+The scope of each quiz is everything turned in prior to the quiz, including homework and lab assignments
+Instructors
+Jeremy Siek (jsiek), office hours Mondays 2:30-4pm, Wednesdays 1-2pm, Luddy Room 3014,
+make a reservation
+Funda Ergun (fergun), office hours Tuesdays 2:30-4:30pm, Luddy Room 2058.
+Teaching Assistants
+Tianyu Chen (chen512)
+Chenchao Ding (cd17)
+Niloy Deb Roy Mishu (nilmish)
+Ganesh Arkanath (napoom)
+Meet Palod (mpalod)
+Aditya Ramachandra (ar83)
+Anuj Mahajan (anujmaha)
+Luke Nargang (lnargang)
+Aaron Olson (aarolson)
+Calvin Josenhans (cjosenha)
+Matthew Hammans (mmhamman)
+Kyle Li (kyleli)
+Office Hours
+Office hours with TAs are in Luddy Hall Room 0121.
+Time
+Monday
+Tuesday
+Wednesday
+Thursday
+Friday
+11am
+Anuj
+Chenchao
+12pm
+Anuj, Aaron
+Chenchao
+Niloy
+1pm
+Tianyu, Luke
+Ganesh
+Meet
+2pm
+Tianyu
+Ganesh
+3pm
+Niloy
+Kyle
+Calvin
+Kyle
+Aaron
+4pm
+Niloy (unil 4:30)
+Calvin
+Meet
+5pm
+Luke
+Textbook
+Data Structures and Algorithm Analysis in Java
+, 3rd Ed. by Mark A. Weiss
+Slack (communicating with instructors and other students)
+Workspace
+(
+signup
+)
+Schedule
+Day
+Lecture Topic
+Reading Due
+Assignments and Due Dates
+Link
+Jan. 9
+Introduction
+Jan. 11
+Arrays, Rotation, Testing
+Ch. 1
+Jan. 11 or 12
+No lab
+Jan. 16
+Algorithm Analysis
+(
+video
+)
+Ch. 2
+Jan. 18
+Algorithm Analysis, continued
+(
+video
+)
+Jan. 18 or 19
+Lab 1: Array Search and Testing
+code
+,
+test
+Jan. 22
+Lab 1 due
+Jan. 23
+Linked Lists and Interfaces
+Ch. 3 sec. 1-5
+Jan. 25
+More Interfaces, Binary Trees
+(
+video
+)
+Ch. 3 sec. 6-7,
+Ch. 4 sec. 1-2
+Jan. 25 or 26
+Lab: work on
+Project 1: Flood It
+,
+Quiz 1
+code
+Jan. 29
+Project 1 due
+Jan. 30
+Binary Search Trees
+(
+video
+)
+Ch. 4 sec. 3 and 7
+Feb. 1
+Balanced Search Trees (AVL)
+(
+video
+)
+Ch. 4 sec. 4
+Feb. 1 or 2
+Lab 2: Merge Sort on Linked Lists
+code
+,
+test
+Feb. 5
+Lab 2 due
+Feb. 6
+More AVL
+(
+video
+)
+Feb. 8
+Code Review (Flood It!), Hash Tables
+(
+video
+)
+Ch. 5 sec. 1,2,3,5,6
+Feb. 8 or 9
+Lab 3: Next Prev Binary Tree
+code
+,
+test
+Feb. 12
+Lab 3 due
+Feb. 13
+Recipes for Time Analysis and Testing
+(
+video
+)
+Feb. 15
+Heaps and Priority Queues
+(
+video
+)
+Ch. 6 sec. 1-4, 9
+Feb. 15 or 16
+Lab: work on
+Project 2: Segment Intersection
+,
+Quiz 2
+code
+,
+test
+Feb. 20
+Priority Queues, Code Review of Binary Trees
+(
+video
+)
+Feb. 22
+Binomial Queues
+(
+video
+)
+Ch. 6 sec. 8
+Feb. 22 or 23
+Lab: finish
+Project 2: Segment Intersection
+code
+,
+test
+Feb. 26
+Project 2 due
+Feb. 27
+Quicksort
+(
+video
+)
+Ch. 7, sec. 1-7
+Feb. 29
+Review for Midterm Exam
+(
+video
+)
+Feb. 29 and Mar. 1
+No Labs
+Mar. 5
+Midterm Exam
+(in class)
+Mar. 7
+Sorting in Linear Time
+(
+video
+)
+Ch. 7 sec. 11
+Mar. 7 or 8
+Lab 4: Binomial Heaps
+code
+,
+test
+Mar. 10 - 17
+Spring Break
+Mar. 18
+Lab 4 due
+Mar. 19
+Graphs and Breadth-first Search
+(
+video
+)
+Ch. 9, sec. 1, sec. 3.1
+Mar. 21
+Depth-first Search
+(
+video
+)
+Ch. 9 sec. 6
+Mar. 21 or 22
+Lab 5: Generic Quicksort
+code
+,
+test
+Mar. 25
+Lab 5 due
+Mar. 26
+Shortest Paths
+(
+video
+)
+Ch. 9 sec. 3
+Mar. 28
+Union Find
+(
+video
+)
+Ch. 8
+Mar. 28 or 29
+Lab 6: Connected Components
+,
+Quiz 3
+code
+,
+test
+Apr. 1
+Lab 6 due
+Apr. 2
+Minimum Spanning Tree
+(
+video
+)
+Ch. 9 sec. 5
+Apr. 4
+Backtracking
+and
+Testing Connected Components
+(
+video
+)
+Ch. 10 sec. 5
+Apr. 4 or 5
+Lab: work on
+Project 3: Routing Wires
+code
+Apr. 9
+Dynamic Programming
+(
+video
+)
+Ch. 10, sec. 3
+Apr. 11
+DNA Alignment
+(
+video
+)
+Apr. 11 or 12
+Lab: finish
+Project 3: Routing Wires
+code
+Apr. 15
+Project 3 due
+Apr. 16
+More Dynamic Programming
+(
+video
+)
+Apr. 18
+Greedy Algorithms
+(
+video
+)
+Apr. 18 or 19
+Lab: DNA Sequence Alignment
+,
+Quiz 4
+code
+,
+test
+Apr. 22
+Lab DNA due
+Apr. 23
+Code Review (Routing Wires)
+(
+video
+)
+Apr. 25
+Review for Final Exam
+(
+video
+)
+Apr. 30
+Final Exam
+10:20am–12:20 pm for 1724 (Jeremy) and 8am–10am for 14377 (Funda).
+Resources
+Midterm Exams
+2021
+with solutions
+and
+without solutions
+.
+2022
+with solutions
+and
+without solutions
+.
+Final Exams
+2024
+with solutions
+2021
+with solutions
+and
+without solutions
+.
+2022
+with solutions
+and
+without solutions
+.
+Autograder
+for submitting coding assignments.
+Code Editor and Debugger:
+IntelliJ IDEA
+(Community Edition)
+Grade Weighting
+Assignments (30%)
+Quizzes (10%)
+Midterm Exam (25%)
+Final Exam (35%)
+Late Policy
+This policy applies to labs, projects, textbook exercises, and
+quizzes.  For quizzes, you can do a make-up quiz dur

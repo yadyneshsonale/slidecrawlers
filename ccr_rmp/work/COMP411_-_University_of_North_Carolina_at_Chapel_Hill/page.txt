@@ -1,0 +1,243 @@
+COMP 411: Schedule
+Home
+Schedule
+Syllabus
+Labs
+Reference
+Announcements
+Mailing List
+All material covered in the lectures, labs, and required readings may
+appear on the exams.
+Optional readings provide additional explanation of material covered in class
+that can be useful in preparing for the exams.
+Unless otherwise stated, required readings are from Patterson and Hennessy
+Initially, I will post slides or notes from the last incarnation of this course (if they exist), and incrementally replace them with the versions presented in class (perhaps with fixes after class)  as the semester progresses.
+Papers are only accessible to hosts in the unc.edu domain, although most are available elsewhere online.
+Video links are restricted to users with a cs.unc.edu youtube account.  If you do not have a cs.unc.edu email address and are registered in the class, please send the instructor your preferred google account to be granted access to the videos.
+The schedule of topics is tentative, and may adjust over the course of the semester.
+Date
+Topics
+Notes
+Required Readings
+Optional Readings
+Thu 01/11
+Administrative and Introduction
+Slides.
+Video.
+Fri 01/12
+Lab 1: UNIX Tutorial, and Editing, Compiling and Running C Programs
+Slides.
+Perry & Miller - Ch. 1-5, 7-10 and 14.
+Tue 01/16
+Introduction
+Video.
+Ch 1.1--1.4
+Thu 01/18
+Snow Day
+Academic Integrity Homework
+Due.
+Fri 01/19
+Lab 2: Arithmetic, I/O, and Conditionals and Loops in C
+Slides
+P&M Ch. 4, 6, 8 and 18.
+A very good
+online reference
+for I/O functions in C
+Mon 01/22
+Lab 1 Due, 11:59 PM
+Tue 01/23
+Performance and Trends
+Slides.
+Video.
+Ch 1.5--1.7
+Thu 01/25
+Performance and Trends
+Video.
+Fri 01/26
+Lab 3: Arrays and Functions in C
+Lab 2 Due, 11:59 PM
+Slides
+P&M Ch. 21-23 and 30-32.
+Tue 01/30
+Performance and Trends
+Video.
+Thu 02/01
+Representing Information
+Slides.
+Video.
+Ch. 2.3-2.4, Ch. 3.5 (only through p. 202)
+Fri 02/02
+Lab: Strings and Pointers in C
+Lab 3 Due, 11:59 PM
+Slides
+Tue 02/06
+Representing Information
+Video.
+Wed 02/07
+Lab 4 Due, 11:59 PM
+Thu 02/08
+Instruction Sets, Part 1
+Slides.
+Video.
+Ch. 2.1-2.2 and Ch. 2.5-2.6
+Fri 02/09
+Lab: Maze Finding in C
+Problem Set 1 Due, 11:55 PM.
+Slides
+Tue 02/13
+Instruction Sets, Part 2, and Pointers
+Slides.
+Video.
+Wed 02/14
+Lab 5 Due, 11:59 PM
+Thu 02/15
+Instruction Sets, Part 2
+Slides.
+Video (well, Audio)
+Ch. 2.1-2.7
+Fri 02/16
+Lab: Basic MIPS Assembly
+Problem Set 2 Due, 11:55 PM.
+Slides
+Tue 02/20
+Assembly and Simulator
+Examples:
+Sum.asm
+,
+SumArray.asm
+and
+Fibonacci.asm
+.  Please be sure that the following are enabled in Mars, under Settings:  "Permit extended (pseudo) instructions and formats" is enabled, and Memory Configuration is set to be "Compact, Data at Address 0".
+Slides.
+Video.
+App. A.1-A.5 (Patterson/Hennessy Appendix)
+Thu 02/22
+Addressing Modes
+Slides.
+Video.
+Ch. 2.3, 2.10 and 2.14
+Fri 02/23
+Lab: More MIPS: Assembling Pictures
+Slides
+Tutorial on MIPS procedure calls (by Istvan Csapo)
+Sun 02/25
+Lab 6 Due, 11:59 PM
+Tue 02/27
+Addressing Modes
+Video
+Thu 03/01
+Procedures and Stacks
+Slides.
+Video.
+Ch. 2.8 and App. A.6
+Fri 03/02
+Lab: String Processing, Procedure Calls and Recursion
+Slides.
+Sun 03/04
+Lab 7 Due, 11:59 PM
+Tue 03/06
+Review
+Video.
+Thu 03/08
+Mid-Term Exam
+Fri 03/09
+Recursion in Assembly
+Tue 03/13
+Spring Break
+No class.
+Thu 03/15
+Spring Break
+No class.
+Fri 03/16
+Spring Break
+No class.
+Tue 03/20
+Transistors and Logic, Part 1
+Slides.
+Video.
+App. B.1-B.3
+Thu 03/22
+Transistors and Logic, Part 1
+Video
+Fri 03/23
+Lab: Logical Shifts
+Lab 8 Due, 11:59 PM
+.
+Slides
+Tue 03/27
+Transistors and Logic, Part 2
+Slides
+Video
+App. B.1-B.3
+Wed 03/28
+Lab 9 Due, 11:59 PM
+Thu 03/29
+Transistors and Logic, Part 2
+Video
+Fri 03/30
+Holiday
+No class.
+Tue 04/03
+Arithmetic and Logic Circuits
+Slides
+Video
+Ch. 3.1-3.2 and App. B.5, Skim App. B.6
+Wed 04/04
+Lab 10 Due, 11:59 PM
+Thu 04/05
+Multiplication, Division and Floating-Point Numbers
+Slides
+Video
+Ch. 3.3-3.5
+Fri 04/06
+Lab: Mini-project
+Slides
+Tue 04/10
+Memories and State Machines
+Slides.
+Video
+App. B.7-B.12 and Ch. 4.2
+Thu 04/12
+Let's Build a Computer
+Slides.
+Video
+Ch. 4.1-4.4
+Fri 04/13
+Lab: Mini-project
+Problem Set 4 Due, 11:59 PM.
+Tue 04/17
+Let’s Build a Computer
+Video
+Review
+Istvan's tutorial on the MIPS Computer
+Thu 04/19
+Let’s Build a Computer
+Video
+Fri 04/20
+Lab: Mini-project
+Mini-Project Due
+Tue 04/24
+Memory Hierarchy and Caches: An Overview
+Slides
+Video
+Ch. 5.1-5.3
+Wed 04/25
+Problem Set 5 Due, 11:55 PM
+Thu 04/26
+Pipelining: An Overview
+Slides
+Video
+Ch. 4.5-4.8
+Fri 04/27
+Wrap-up and Review
+Slides
+Mon 05/07
+Final Exam
+12:00 noon - 2:00pm.  Held in Brooks 141 and Sitterson 011.
+Copyright Notice:
+These lecture notes, homeworks, and lab assignments are part of an undergraduate course on operating systems. You must ask me permission to use these materials.  I do not grant to you the right to publish these materials for profit in any form.
+Donald Porter, The University of North Carolina at Chapel Hill
+Last updated: 2025-04-04 13:31:13 -0400
+[
+validate xhtml
+]

@@ -1,0 +1,222 @@
+CptS 260: Introduction to Computer Architecture
+WSU Tri-Cities
+Fall, 2021
+Document Update History
+Date
+Update
+11/9
+added Veteran's Day holiday
+11/1
+shortened cybersecurity unit
+10/28
+clarified contact information for IT
+10/24
+added Final Exam date and time
+10/14
+moved due date for HW5 from 10/26 to 10/28
+9/22
+pushed back due date for HW3
+9/17
+included information on printing hard copy listings from campus
+and a clarification on resumbissions
+9/16
+updated results on homework submission
+9/14
+altered schedule for weeks 4 and 5
+8/23
+initial publication
+Instructor
+Bob Lewis
+Associate Professor, WSU TC
+Office: Floyd 134D
+Campus Phone: 2-7178
+Off-Campus Phone: (509) 372-7178
+Cell Phone: (509) 374-7520
+Personal Zoom:
+https://wsu.zoom.us/j/5635500668
+Email:
+bobl@wsu.edu
+(Be sure to include "cpts260" in the subject line of all
+course-related correspondence.)
+Web Page:
+http://www.tricity.wsu.edu/~bobl
+Office Hours: W 3-5pm, or by appointment (personal Zoom will be available)
+System Administration
+Our systems are administered by the campus Information Technology
+group. Their contact information is:
+Office: CIC 225
+Phone: (509) 372-7334 (on campus: 2-7334) (M-F 8am-5pm)
+Email:
+tchelp@wsu.edu
+(any time)
+Contact IT if you have questions regarding your CSLab account.
+Also inform IT if you are unable to log into the
+elec
+or
+mips
+systems (see below).
+Lecture
+TuTh 2:55-4:10pm, Collaboration 202
+Goals
+The goals of this course are to provide Computer Science students
+with the knowledge of computer hardware they need to design and
+implement effective, efficient, and safe software and to de-mystify
+computers in general.
+Objectives
+Students who complete this course should be able to perform the
+following tasks:
+Describe the levels of abstraction used to represent computing
+from gate-level logic to high-level computer language.
+Write and debug simple programs using assembly code.
+Outline the architectural features of a modern microprocessor.
+Explain the principles underlying the design and development of
+computer systems for a variety of purposes.
+Trace the influences of important computing developments (such as
+compiler technology, networking, the web, multimedia, safety,
+security) on the architecture of computer systems and vice versa.
+Course Description (from catalog)
+260 Introduction to Computer Architecture
+3 Course
+Prerequisite: CPT S 223 with a C or better or concurrent enrollment.
+Computer systems architecture; logic, data representation, assembly
+language, memory organization and trends.
+Prerequisites
+The official prerequisite (which may also be a co-requisite) for the
+class is CptS 223 (Advanced Data Structures). It is also highly
+recommended that students have either taken or be concurrently
+enrolled in CptS 224 (Programming Tools) or had considerable
+experience with a command line interface prior to this class.
+Familiarity with the
+gdb
+debugger is particularly useful.
+Although little high-level programming will be done in the
+class, analogies will be drawn that assume a knowledge of C or C++.
+The course makes use of the binary and hexadecimal number systems.
+Most students have encountered these in previous math classes, but
+it is highly recommended that all students review this material. An
+excellent resource for this is available at no cost from the
+Khan Academy
+The number systems lectures are
+here
+.
+Resources
+Text
+Harris and Harris,
+Digital Design and Computer Architecture
+(2nd. ed.),
+Morgan Kaufman, 2013.
+This is available at the WSU Tri-Cities Bookstore.
+Reference
+Patterson and Hennessy,
+Computer Organization and Design MIPS Edition
+, (6th. ed.)
+Morgan Kaufman, 2020.
+The authors are the 2017 recipients of the ACM A. M. Turing Award,
+the Computer Science equivalent of the Nobel Prize.
+Web Page
+http://www.tricity.wsu.edu/~bobl/cpts260
+Programming Resources
+The course will be taught using the Linux (e.g. Ubuntu) operating
+system.
+Most programming assignments will be in MIPS assembly language.
+We have several MIPS virtual machines available for remote login, so
+you can access them from your laptop. To do this:
+Remotely log in to the compute server
+elec.tricity.wsu.edu
+(hereafter
+elec
+) via
+ssh(1)
+,
+MobaXterm
+,
+or
+putty
+.
+(This system runs Ubuntu Linux.)
+Log in to the
+mips
+system via
+ssh
+.
+The
+mips
+virtual machine is slow. Login takes several
+seconds. Since your directory is shared on both
+mips
+and
+elec
+, you may want to open a
+second
+ssh
+session on
+elec
+for editing files.
+See
+http://www.tricity.wsu.edu/cs/connecting
+for additional information on remote login.
+We also have several properly-configured Lubuntu/Xubuntu Linux
+workstations in CSLab (East 118). You can remotely log in from one
+of them to the
+mips
+system via
+ssh
+.
+Note: CSLab is moving and is under renovation but should be open
+soon.
+If you do not already have a CSLab login, contact the
+System Administrator
+. This will allow you to log in to both
+elec
+,
+mips
+, and the CSLab systems.
+Home directories on both systems are shared via NFS (Network File
+System), so files you edit on
+elec
+are immediately
+available to assemble and run on
+mips
+.
+Test this
+now
+so you'll be ready for the first homework.
+MIPS Hardware Emulation: The
+mips
+System
+We will be learning the MIPS assembly language.
+mips
+is actually a collection of virtual machines ("VMs"),
+each one emulates MIPS 32-bit processor hardware and runs a subset
+of the Debian Linux distribution.
+As noted above, you may log into it from any campus system
+(including
+elec
+) with
+ssh
+(e.g. "
+$ ssh mips
+").
+We will demonstrate how to use this system in class and provide
+"makefiles" to simplify assembly and linking.
+During grading, your homework will be assembled, linked, and run on
+the
+mips
+system.
+mips
+supports the
+gdb(1)
+debugger.
+Here is
+a short PDF guide
+on using the
+gdb
+with assembly language. (Be careful: This
+guide was not written for the MIPS, so things like register names
+are different.) There's more information
+here
+.
+By default,
+gdb
+runs in conventional scrolling terminal
+mode, but it also has

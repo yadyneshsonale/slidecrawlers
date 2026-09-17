@@ -1,0 +1,169 @@
+CSCI 221: CS Fundamentals II
+This is a second course in computer science that serves as an
+introduction to computer systems fundamentals and provides its students
+a transition to advanced programming. We introduce students to how
+programming systems are constructed— from transistors, to logic gates
+and registers, through an instruction set architecture, to the runtime
+system of C and C++ programs. This is a dense survey so students gain
+maturity in how programs actually execute on computer systems. This has
+value in two ways (1) it gives them a realistic sense of the performance
+and optimization of programs, and (2) it provides a foundation for
+thinking about the tools and systems they might someday construct
+themselves. Furthermore, learning these fundamentals is useful for
+understanding the various security vulnerabilities that arise in our
+current hardware and software infrastructure.
+The course also serves as an introduction to C programming and to
+modern object-oriented programming in C++. To master these languages, we
+cover techniques for structuring code and representing data, including
+using standard object libraries and widely adopted idioms for careful
+management of object heap data, and of a program’s references to it.
+There will be significant programming projects in C, MIPS assembly,
+and C++ as well as logic circuit construction in a logic circuit
+simulator. Program development tools including the Unix command line and
+editors, compilers, building and debugging tools, and repositories for
+version control and sharing will also be covered. We meet once a week
+(Tuesday) for lab exercises, have weekly homeworks (assigned either
+Wednesday or Thursday, due Wednesday), and have several longer term
+programming projects usually due every third or fourth week.
+Prerequisite:
+CSCI 121 or the equivalent.
+Lecture:
+MW 3:00-4:20pm in TRL 150/Zoom.
+Labs:
+• Section FL1 8:50-10:10am in ETC 211 when possible, over Zoom
+otherwise.
+• Section FL2 10:25-11:45am in ETC 211 when possible, over Zoom
+otherwise.
+• Section FL3 3:15-4:35pm over Zoom.
+Instructor:
+Jim Fix
+jimfix@reed.edu
+Zoom hours:
+M 5-6:30pm, F 2:30-4pm
+Teaching assistants (grading and tutoring):
+• Ariel Flaster,
+flastera@reed.edu
+• Henry Lindeman,
+henlindem@reed.edu
+• Eli Poppele,
+poppelee@reed.edu
+• Ryan Quisenberry,
+quisenry@reed.edu
+Schedule Overview
+Part I:
+C programming and low-level data structure
+design. (4 weeks)
+Part II:
+Logic circuits, processor design, and
+machine-level programming. (4 weeks)
+Part III:
+Object-oriented programming and memory
+management in C++. (5 weeks)
+This schedule is
+detailed below.
+Texts and Resources
+The course draws on material from written texts and also on-line, and
+we will share references to these throughout the semester. Most reading
+will not be required—your main goal is to work with the lecture and lab
+materials to complete the assignments— but you will find it useful to
+consult references on the technical material and also to do some
+background reading on the topics we cover.
+We encourage you to consult the following texts during the semester.
+The first four C++ books are often required in courses, the first two
+are references to the language, the third is an attempt by the C++
+author to write a programming textbook, and the fourth’s goals seem to
+be a mash-up of the first three’s, but not written by the language
+inventor. The two following texts are each a nice overview of the
+non-C++ components of the course, giving a tour of how computer systems
+are constructed from the transitor level to the C/C++ language level.
+The last is an advanced text on digital circuit logic, but some of you
+might just enjoy delving into the deep details.
+I don’t
+require
+texts, since many people are good at picking
+up languages without a text, and there are also lots of reference
+materials available on C++ on-line.
+Recommended Texts
+A TOUR OF
+C++
+by Bjarne Stroustrup
+.
+This is a brief reference to many aspects of the C++ language from the
+language inventor. Get this if you like carrying around a small book
+rather than searching for info on-line.
+THE C++
+PROGRAMMING LANGUAGE
+by Bjarne Stroustrup.
+This is a (the?) comprehensive reference text on the C++ language from
+the language inventor. It’s a big text, but it has a lot in it. It
+contains the
+TOUR
+(above) within it.
+**
+PROGRAMMING:
+PRINCIPLES AND PRACTICE USING C++
+by Bjarne Stroustrup.
+This seems to be available through the
+O’Reilly
+Education
+portal
+through Reed’s library catalog. It contains
+more programming advice and philosophy than the two references
+above.
+C++
+PRIMER
+by Stanley Lippman and others.
+I personally think that Stroustrup’s guides to C++ can be tricky to
+read, and his writing has its strengths and its weaknesses. This is an
+alternative written by authors. This is often a primary text for C++
+courses, including for a course I helped teach in the 90s (with an older
+edition).
+Optional Additional Texts
+THE
+ELEMENTS OF COMPUTING SYSTEMS:
+BUILDING A MODERN COMPUTER FROM FIRST PRINCIPLES
+by Noam Nisan and Shimon Shocken.
+Useful side-reading to give you more perspective and context on the work
+we do this semester.
+INTRODUCTION
+TO COMPUTING SYSTEMS:
+FROM BITS & GATES TO C & BEYOND
+by Yale Patt and Sanjay Patel.
+Siimilar to the above but with additional depth.
+Fundamentals
+of Digital Logic
+by Stephen Brown and Zvonko Vranesic.
+This is a rich supplement, a text for digital design junior-level
+computer engineering courses. We only look at circuits and processors
+briefly, for three weeks. Probably half of this book would be used for a
+semester-long course.
+In addition, here are some links for the tools we will use this
+semester: •
+Unix
+command-line
+: how we compile and run C/C++ programs.
+•
+Git repository
+for saving and
+submitting work.
+• Editors for program development, listed below.
+Cheat sheets
+for using these abound.
+…
+VIM
+…
+Emacs
+or
+nano
+…
+Atom
+…
+Sublime Text
+*
+repl.it
+: an on-line
+(collaborative) IDE for C++
+•
+LogiSim
+a (now outdated)
+Java program for simulat

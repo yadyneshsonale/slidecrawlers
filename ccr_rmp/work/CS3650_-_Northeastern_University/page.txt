@@ -1,0 +1,174 @@
+Web Resources for CS3650
+(Computer Systems)
+FINAL EXAM:
+As of end-of-March, the registrar has scheduled our
+Final Exam for: 8:00 am - 10:00 am, Friday,, Dodge Hall 050, Apr 18, 2025.
+Please check closer to the date, since times and places can change.
+And there is now a:
+study guide for the final exam
+and the:
+older study guide for the midterm
+Instructor:
+Gene Cooperman
+Spring Semester, 2025
+NOTE:
+The office hours are as stated on the
+syllabus
+(Tues. and Fri., 5:15 - 6:30; 336 WVH or nearby, for Spring, 2025),
+and by appointment.  I am typically still in my office at least until 7pm.
+NOTE:
+And further office hours:
+TA: Punith Subashchandra
+Please find the Zoom invitation attached for the office hours. Let me know if you have any concerns or if any adjustments are needed.
+[ The Zoom link was mailed to the class.  Please ask a classmate or me, if you didn't note down the Zoom link. ]
+NOTE:
+Extra TA office hours (in addition to 5:30 - 6:30, Tues./Fri. by Prof. Cooperman, as noted above):
+Regular Office Hours: Monday and Friday, 12-1 PM EST
+TA: Manasa Rao
+Mode: Online
+Every week on Mon, Fri,
+Join Zoom Meeting
+[ The Zoom link was mailed to the class.  Please ask a classmate or me, if you didn't note down the Zoom link. ]
+Course basics:
+Here are some immediate resources in the course for doing homework, following
+the readings, etc.
+Course home:
+The course materials will always be available either from this web page or
+from the course directory on the Khoury Linux computers:
+/course/cs3650/
+.
+Syllabus:
+The
+syllabus
+contains the
+required readings in the textbook
+.  It's available
+from the link or from
+/course/cs3650/
+(the course directory)
+on Khoury Linux computers.  Note especially our online
+textbook
+ostep.org
+.
+Homework:
+The
+homework subdirectory
+of the
+course directory
+contains all course homework,
+and the course directory contains all handouts.
+Help directory:
+The course directory includes a
+help directory
+.
+There are two
+older
+reviews of UNIX there.
+But please consider this
+excellent
+modern introduction to UNIX
+by M. Stonebank.
+(or
+alt
+,
+with updates to Linux/bash by C. Tothill)
+Linux:
+The course is based on Linux (the third of the three popular
+operating systems).  If you do not yet have a Khoury Linux account, get one.
+If you are not fluent in the basics of Linux/UNIX,
+please go to any of the good tutorials on the Web
+.
+Personally, I like:
+*** this
+tutorial for Linux/bash ***
+(by C. Tothill; and
+based on the
+tutorial from M. Stonebank
+)
+Other useful tips on Linux:
+Productivity tip:
+In most settings: the four cursor keys work
+(for editing the current or previous commands);
+and the <TAB> key works (for auto-completion of filenames and commands).
+If you're using Apple macOS (the second most popular operating system),
+the terminal window provides you with a UNIX-like environment.
+It may differ from true Linux in small ways.  You may need to
+install extra packages for macOS.  You should still test
+your homework solution on the Khoury login commputer, since
+that will be the standard for correctness.
+Further, please be aware that GDB is not compatible with
+current Apple Macs.  As a workaround, please use the
+LLDB, with similar (but not the same) commands.
+See instructions for
+GDB
+on this web page.
+If you're using Windows (the most popular operating system), you can
+install WSL
+(Windows Subsytem for Linux).
+Then go to the Microsoft Store, and install a Linux.
+If you are unsure of which Linux distribution to use, Ubuntu is
+a common first choice for those unfamiliar with Linux, especially
+an Ubuntu labelled "LTS" (Long Term Support".
+This gives you a Linux virtual machine side-by-side with Windows.
+Some "gotchas" and workarounds follow.
+If installing Ubuntu from the Microsoft Store and it fails with an error code,
+try executing
+wsl --update
+in PowerShell with
+admin privlege.
+After installing WSL, a known, older bug from May, 2021 causes
+the vmmem process to consume a lot of
+CPU time at wake-after-sleep, if WSL was running.  There is
+a workaround here
+.
+Some people may also need to
+turn on virtualization in their BIOS
+.  After entering BIOS,
+examine all options in all tabs with the letter 'v'.  For me,
+the option was "AMD SVM".)
+In order to copy files between Windows and WSL, I create a link
+inside WSL to the 'Downloads' folder:
+cd
+ls /mnt/c/Users
+# For me, I am user genec in Windows.  So, I then type:
+ln -s /mnt/c/Users/genec/Downloads ./
+# You can now copy (cp) between ~/Downloads and ~ in WSL,
+# where '~' is the Linux shortcut for your home directory.
+Similarly, you can copy between Windows Desktop and WSL.  In my
+case, I type:
+cd
+ln -s /mnt/c/Users/genec/Desktop ./
+# OR:
+ln -s /mnt/c/Users/genec/OneDrive/Desktop ./
+# Try both forms.  It depends on where Windows put your Desktop.
+Whether you use Windows/WSL or Apple Terminal, you'll need 'ssh' and 'scp':
+# Logging into Khoury login:  (You'll need this to submit.)
+ssh USER@login.ccs.neu.edu  # Replace 'USER' by your Khoury username
+# Copying your local laptop files to Khoury login:  (You'll need this to submit.)
+# Note the ':' at the end.  You can add a Khoury directory in your account.
+# Or, you can leave it blank after ':', and the file is copied to your home dir.
+scp myhw.tar.gz USER@login.ccs.neu.edu:  # Note: After ':' Default dir is home dir
+For help, try:
+man ssh
+and
+man scp
+.
+And note one gotcha.  If you use the wrong password three times with 'ssh', then
+Khoury login (as of 2025) logs your IP address, and locks you out for 3 days.
+WORKAROUND:
+Set up a hotspot with your smartphone, and connect your
+laptop to the hotspot.  The smartphone will have a different IP address.
+But if you insist on using Windows, but not WSL, then please try
+putty
+(substitute for 'ssh') and
+WinSCP
+(substitute
+for 'scp').
+For 'ssh' without WSL, you can alternatively install
+OpenSSH for Windows
+.
+Regardless of whether you are using Linux, Apple, or Windows/WSL2
+on your laptop, practice using
+ssh USERNAME@login.ccs.neu.edu
+and
+scp myfile.txt USERNAME@login.ccs.neu.ed

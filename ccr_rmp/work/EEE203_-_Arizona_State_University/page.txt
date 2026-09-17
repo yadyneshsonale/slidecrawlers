@@ -1,0 +1,237 @@
+EEE 203
+Signals and Systems
+Spring 2016, MW 12:00-1:15 SCOB228
+Instructor:
+Kostas Tsakalis,
+GWC 358,
+965-1467,
+Office
+Hours:
+see
+schedule
+or by appt.
+Textbook:
+Oppenheim and
+Willsky
+Signals and
+Systems, 2nd Ed.,
+Prentice Hall, 1997.
+Course Outline:
+Intro, CT-DT Signals and Systems
+Elementary signals, Signal representation. Step,
+impulse signals and their properties
+Systems I. Elementary operations: Shift, Reflection,
+Scaling.
+System Properties: Linearity, Time Invariance,
+Causality, Memory, Stability
+Systems II. LTI systems and convolution integrals/sums
+(graphical methods, analytical methods), Properties of LTI systems (C,M,S)
+Response of LTI systems to inputs: complete response,
+steady-state response
+Key Application #1: LTI system realization by
+convolution sums
+Response  of LTI systems to exponentials,
+motivation of the Fourier Transform
+Fourier Series and approximation of signals, Fourier
+Transform: Basic Definitions, Properties and Usage, Frequency response of
+systems
+Key Application #2: Filtering
+Laplace Transform: Definition, Properties, Connection
+with F-transform
+DT case: DFT, Z-transform. Basic definition and
+properties, connection with CT transforms
+Transfer functions and filtering in DT
+Key Application #3: Sampling and Reconstruction
+Preview of more advanced topics:
+state-space and feedback
+Grading:
+HW (10%), 5 Tests (50% average of best 4/5), Final (40%)
+Absolute
+Grading Scale: A > 90 >
+B
+> 75 > C
+> 60 > D > 50 > E
+(Cut-off
+points may only decrease depending on the final grade distribution.)
+ALL TESTS ARE CLOSED-BOOKS/NOTES.
+THE
+LINKED TABLES OF FOURIER PROPERTIES
+ARE
+ALLOWED (Print your own copy).
+Important Dates:
+HW: see below
+Tests: see below
+(
+typically
+last 30min of class, 2 problems)
+�
+Grade distribution
+Final Exam
+,
+WED May 4
+9:50-11:40 (Notice time!!!)
+Academic integrity policy:
+https://provost.asu.edu/index.php?q=academicintegrity
+-------------------------------------------------------------------------------------
+HW Assignments, Test
+Material, Handouts
+Reading material:
+Class Notes #1
+(.
+pdf
+)
+Basic definitions and examples on system properties.
+Linearity, Time Invariance, Causality, Memory, Stability.
+Solved Problems:
+Selection from
+Ch.1-8
+Other
+Solved Problems Ch.1-10
+Old tests and homework
+Last tests and homework
+(note:
+different numbering)
+!!! Convolution Demos: Try out
+this JAVA-based program (http://www.eas.asu.edu/~midle/jdsp/)
+ASSIGNMENTS
+��
+SEE
+LINK
+FOR HW PROBLEM STATEMENTS AND
+SOLUTIONS
+Study: Chapters 1.1-1.4
+and relevant
+solved problems, including 2.20
+HW#1
+. Due Date 2/1
+2/8.  Test 1
+Material:  HW#1
+SOLUTIONS
+Transformations of the independent variable; e.g.,
+given x(t), sketch x(2t-1), given y[n], sketch y[1-n].
+Elementary functions; unit step, e.g., given a
+piece-wise constant x(t), express it in terms of unit steps;
+unit delta, e.g., compute an integral involving
+delta(.)
+Study: Chapters 1.5, 1.6,
+2
+and relevant solved problems
+HW#2 Due date 2/15
+2/22.  Test 2
+Material:  HW#2
+SOLUTIONS
+System properties and applications (Linearity,
+time-invariance). Convolution
+Study: Chapters 3, 4, 6
+and relevant
+solved problems
+HW#3. Due date 2/29
+3/14.  Test 3
+Material: HW#3
+SOLUTIONS
+Fourier
+Series
+: Signal
+approximation, response of LTI systems to periodic inputs
+Fourier Transform: Basic Properties
+Fourier Transform Applications: Filtering
+Notice: New dates
+Study: Chapter 7
+and relevant solved
+problems
+HW#4. Due date
+3/21
+3/28
+3/28
+4/4
+Test 4
+Material:  HW#4
+SOLUTIONS
+Sampling and reconstruction
+Study:
+Chapter 9
+and relevant solved problems
+�
+HW#5.
+Due
+date
+4/4
+4/11
+4/11
+4/18
+Test 5
+Material:  HW#5
+SOLUTIONS
+Laplace transforms: Basic properties, System
+transfer functions
+�
+Study: Chapters 5, 10
+and relevant solved
+problems
+HW#6. Due date
+4/18
+4/25
+4/25 Test 6
+Material: HW#
+6
+�
+Practice
+Test with Solutions
+Z-transforms: Basic properties, System
+transfer functions
+Other HW.
+Download the files:
+Problem description
+,
+Matlab
+file
+,
+Tada sound
+.
+Study the problem described in the linked notes. Use the
+Matlab
+program to experiment with
+different parameter values (frequency, filters, etc)
+-----------------------------------------------------------
+EEE 203 FINAL EXAM Material:
+System properties (L
+,TI,C,M,S
+),
+e.g., given a system determine if it is TI.
+Output of a system to
+"composite" inputs from its output to elementary inputs.
+Linear systems: General description; system
+properties in terms of the impulse response; convolution;
+e.g., given a linear system determine if it is
+causal. Also given h and x find the convolution h*x.
+Fourier Series expansions; expansion of periodic
+signals (impulse-trains, pulse-trains);
+properties of FS (simplify the computation of FS
+using linearity, time shifts etc.);
+filtering (computation of FS for the output);
+Parseval's
+relation (finite FS approximation properties, compute
+filter/other parameters
+to retain/reject a certain percentage of the input
+signal energy etc).
+Fourier Transforms, Basic Properties. (Compute the
+Fourier Transform of "composite" signals
+using shifting/convolution/... properties. Compute
+frequency-domain properties without
+explicitly computing the transform itself).
+Fourier Transforms, Applications:
+Filtering (Use of the convolution property, ideal
+filters,
+basic
+notions of non-ideal filters.
+Steady-state response to sinusoids.
+Transfer functions of systems described by ODEs
+with constant coefficients.).
+Sampling and Reconstruction
+(Frequency domain analysis of sampling systems).
+Discrete time signals and
+systems.
+Fundamental properties,
+difference equations, transfer functions.
+Steady-state response to
+asymptotically (steady-state) periodic inputs.

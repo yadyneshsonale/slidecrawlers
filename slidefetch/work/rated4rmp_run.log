@@ -1,0 +1,398 @@
+74 RMP course(s) num_ratings>=4; web-search=off; llm=off
+[fetch] https://cs61a.org/
+[fetch] status=200 rendered=False
+[extract] found 11 slide link(s)
+[1/74] CS61A - University of California Berkeley  -> complete N=11 (dl=11 skip=0 fail=0)
+[fetch] https://cs61a.org/
+[fetch] status=200 rendered=False
+[extract] found 11 slide link(s)
+[2/74] 61A - University of California Berkeley -  -> complete N=11 (dl=11 skip=0 fail=0)
+[fetch] https://see.stanford.edu/Course/CS106A
+[fetch] status=200 rendered=False
+[extract] found 56 slide link(s)
+[3/74] CS106A - Stanford University - Mehran Saha -> complete N=28 (dl=28 skip=0 fail=28)
+[fetch] https://www.cs.cornell.edu/courses/cs2110/2024fa/schedule.html
+[fetch] status=200 rendered=False
+[extract] found 65 slide link(s)
+[4/74] CS2110 - Cornell University - Curran Muhlb -> download_incomplete (saved 2/65, fail=63)
+[fetch] https://www.cs.cornell.edu/courses/cs4780/2023fa/
+[fetch] status=200 rendered=False
+[extract] found 54 slide link(s)
+[5/74] CS4780 - Cornell University - Kilian Weinb -> ambiguous (no numbered decks; needs subagent)
+[fetch] https://courses.grainger.illinois.edu/cs225/sp2024/pages/lectures.html
+[fetch] status=200 rendered=False
+[extract] found 44 slide link(s)
+[6/74] CS225 - University Of Illinois at Urbana - -> ambiguous (no numbered decks; needs subagent)
+[7/74] CS261 - University of Illinois Chicago - D -> no_link
+[fetch] https://web.stanford.edu/class/cs107/calendar.html
+[fetch] status=200 rendered=False
+[extract] found 16 slide link(s)
+[8/74] CS107 - Stanford University - Jerry Cain   -> complete N=8 (dl=16 skip=0 fail=0)
+[9/74] CSE214 - Stony Brook University (SUNY) - R -> no_link
+[fetch] https://ocw.mit.edu/courses/3-091sc-introduction-to-solid-state-chemistry-fall-2010/pages/lecture-notes/
+[fetch] status=200 rendered=False
+[extract] found 35 slide link(s)
+[10/74] 3091 - Massachusetts Institute of Technolo -> complete N=35 (dl=35 skip=0 fail=0)
+[11/74] CSE216 - Stony Brook University (SUNY) - R -> no_link
+[fetch] https://www.cs.cornell.edu/courses/cs1110/2024fa/lectures/
+[fetch] status=200 rendered=False
+[extract] found 5 slide link(s)
+[12/74] CS1110 - Cornell University - Lillian Lee  -> incomplete (lec: gap: missing 1, 2, 3, 4, 5, 6, 7, 8...)
+[fetch] https://data8.org/sp25/
+[fetch] status=200 rendered=False
+[extract] found 0 slide link(s)
+[follow] no slides here; checking 2 sub-page(s)
+[follow] https://data8.org/sp25/schedule/
+[follow] https://data8.org/sp25/resources/
+[extract] 0 slide link(s) after following
+[13/74] DATA8 - University of California Berkeley  -> no_decks
+[fetch] https://web.stanford.edu/class/cs103/schedule.html
+[fetch] status=200 rendered=False
+[extract] found 0 slide link(s)
+[follow] no slides here; checking 6 sub-page(s)
+[follow] https://web.stanford.edu/class/archive/cs/cs103/cs103.1268/lectures/00/
+[follow] +1 slide link(s)
+[follow] https://web.stanford.edu/class/archive/cs/cs103/cs103.1268/lectures/01/
+[follow] +1 slide link(s)
+[follow] https://web.stanford.edu/class/archive/cs/cs103/cs103.1268/lectures/02/
+[follow] +1 slide link(s)
+[follow] https://web.stanford.edu/class/archive/cs/cs103/cs103.1268/lectures/03/
+[follow] +1 slide link(s)
+[follow] https://web.stanford.edu/class/archive/cs/cs103/cs103.1268/lectures/04/
+[follow] +2 slide link(s)
+[follow] https://web.stanford.edu/class/archive/cs/cs103/cs103.1268/lectures/05/
+[follow] +1 slide link(s)
+[extract] 7 slide link(s) after following
+[14/74] CS103 - Stanford University - Keith Schwar -> complete N=5 (dl=7 skip=0 fail=0)
+[15/74] CSE219 - Stony Brook University (SUNY) - R -> no_link
+[fetch] https://harvard-iacs.github.io/2021-CS109A/pages/schedule.html
+[fetch] status=200 rendered=False
+[extract] found 0 slide link(s)
+[follow] no slides here; checking 6 sub-page(s)
+[follow] https://harvard-iacs.github.io/2021-CS109A/lectures/lecture01/
+[follow] +1 slide link(s)
+[follow] https://harvard-iacs.github.io/2021-CS109A/lectures/lecture02/
+[follow] https://harvard-iacs.github.io/2021-CS109A/lectures/lecture03/
+[follow] +7 slide link(s)
+[follow] https://harvard-iacs.github.io/2021-CS109A/lectures/lecture04/
+[follow] +2 slide link(s)
+[follow] https://harvard-iacs.github.io/2021-CS109A/lectures/lecture05/
+[follow] +2 slide link(s)
+[follow] https://harvard-iacs.github.io/2021-CS109A/lectures/lecture06/
+[follow] +3 slide link(s)
+[extract] 15 slide link(s) after following
+[16/74] CS109 - Harvard University - Pavlos Protop -> incomplete (lec: gap: missing 2)
+[17/74] CS362 - University of Illinois Chicago - D -> no_link
+[18/74] 6.115 - Massachusetts Institute of Technol -> no_link
+[fetch] https://www.cs.toronto.edu/~rgrosse/courses/csc411_f18/
+[fetch] status=200 rendered=False
+[extract] found 33 slide link(s)
+[19/74] CSC411 - University of Toronto - St. Georg -> incomplete (lec: gap: missing 17, 22)
+[fetch] https://see.stanford.edu/Course/CS106A
+[fetch] status=200 rendered=False
+[extract] found 56 slide link(s)
+[20/74] CS106 - Stanford University - Mehran Saham -> complete N=28 (dl=28 skip=0 fail=28)
+[fetch] https://cs.stanford.edu/people/eroberts/cs106a/lectures/index.html
+[fetch] status=200 rendered=False
+[extract] found 26 slide link(s)
+[21/74] CS106A - Stanford University - Eric Robert -> incomplete (num: gap: missing 20)
+[fetch] https://ocw.mit.edu/courses/5-12-organic-chemistry-i-spring-2005/pages/lecture-handouts/
+[fetch] status=200 rendered=False
+[extract] found 0 slide link(s)
+[follow] no slides here; checking 6 sub-page(s)
+[follow] https://ocw.mit.edu/courses/5-12-organic-chemistry-i-spring-2005/resources/lecture01_s05/
+[follow] +1 slide link(s)
+[follow] https://ocw.mit.edu/courses/5-12-organic-chemistry-i-spring-2005/resources/lecture02_s05/
+[follow] +1 slide link(s)
+[follow] https://ocw.mit.edu/courses/5-12-organic-chemistry-i-spring-2005/resources/lecture02b_s05/
+[follow] +1 slide link(s)
+[follow] https://ocw.mit.edu/courses/5-12-organic-chemistry-i-spring-2005/resources/lecture03_s05/
+[follow] +1 slide link(s)
+[follow] https://ocw.mit.edu/courses/5-12-organic-chemistry-i-spring-2005/resources/lecture05_s05/
+[follow] +1 slide link(s)
+[follow] https://ocw.mit.edu/courses/5-12-organic-chemistry-i-spring-2005/resources/lecture06_s05/
+[follow] +1 slide link(s)
+[extract] 6 slide link(s) after following
+[22/74] 512 - Massachusetts Institute of Technolog -> incomplete (lec: gap: missing 4)
+[23/74] BIO7012 - Massachusetts Institute of Techn -> no_link
+[24/74] CS106X - Stanford University - Mehran Saha -> no_link
+[25/74] CS1110 - Cornell University - Charles Van  -> no_link
+[26/74] CS173 - University Of Illinois at Urbana - -> no_link
+[fetch] https://www.cs.cornell.edu/courses/cs4780/2023fa/
+[fetch] status=200 rendered=False
+[extract] found 54 slide link(s)
+[27/74] CS5780 - Cornell University - Kilian Weinb -> ambiguous (no numbered decks; needs subagent)
+[fetch] https://harvard-iacs.github.io/2021-CS109B/pages/schedule.html
+[fetch] status=200 rendered=False
+[extract] found 0 slide link(s)
+[follow] no slides here; checking 6 sub-page(s)
+[follow] https://harvard-iacs.github.io/2021-CS109B/lectures/lecture01/
+[follow] +1 slide link(s)
+[follow] https://harvard-iacs.github.io/2021-CS109B/lectures/lecture02/
+[follow] https://harvard-iacs.github.io/2021-CS109B/lectures/lecture03/
+[follow] https://harvard-iacs.github.io/2021-CS109B/lectures/lecture04/
+[follow] https://harvard-iacs.github.io/2021-CS109B/lectures/lecture05/
+[follow] https://harvard-iacs.github.io/2021-CS109B/lectures/lecture05_5/
+[extract] 1 slide link(s) after following
+[28/74] CSCIE109B - Harvard University - Pavlos Pr -> ambiguous (only 1/1 decks numbered (lec); needs subagent)
+[fetch] https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-spring-2015/pages/readings/
+[fetch] status=200 rendered=False
+[extract] found 0 slide link(s)
+[follow] no slides here; checking 6 sub-page(s)
+[follow] https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-spring-2015/resources/mit6_042js15_session1/
+[follow] +1 slide link(s)
+[follow] https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-spring-2015/resources/mit6_042js15_session2/
+[follow] +1 slide link(s)
+[follow] https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-spring-2015/resources/mit6_042js15_session3/
+[follow] +1 slide link(s)
+[follow] https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-spring-2015/resources/mit6_042js15_session4/
+[follow] +1 slide link(s)
+[follow] https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-spring-2015/resources/mit6_042js15_session5/
+[follow] +1 slide link(s)
+[follow] https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-spring-2015/resources/mit6_042js15_session6/
+[follow] +1 slide link(s)
+[extract] 6 slide link(s) after following
+[29/74] 6042 - Massachusetts Institute of Technolo -> complete N=6 (dl=6 skip=0 fail=0)
+[30/74] 7012 - Massachusetts Institute of Technolo -> no_link
+[fetch] https://ocw.mit.edu/courses/8-02-physics-ii-electricity-and-magnetism-spring-2007/pages/class-slides/
+[fetch] status=200 rendered=False
+[extract] found 0 slide link(s)
+[follow] no slides here; checking 6 sub-page(s)
+[follow] https://ocw.mit.edu/courses/8-02-physics-ii-electricity-and-magnetism-spring-2007/pages/class-topics/
+[follow] https://ocw.mit.edu/courses/8-02-physics-ii-electricity-and-magnetism-spring-2007/pages/class-activities/
+[follow] https://ocw.mit.edu/courses/8-02-physics-ii-electricity-and-magnetism-spring-2007/resources/presentati_w01d1/
+[follow] https://ocw.mit.edu/courses/8-02-physics-ii-electricity-and-magnetism-spring-2007/resources/prs_w01d1_qonly/
+[follow] https://ocw.mit.edu/courses/8-02-physics-ii-electricity-and-magnetism-spring-2007/resources/presentati_w01d2/
+[follow] https://ocw.mit.edu/courses/8-02-physics-ii-electricity-and-magnetism-spring-2007/resources/prs_w01d2_qonly/
+[extract] 0 slide link(s) after following
+[31/74] 802 - Massachusetts Institute of Technolog -> no_decks
+[fetch] https://ocw.mit.edu/courses/8-02-physics-ii-electricity-and-magnetism-spring-2007/pages/class-slides/
+[fetch] status=200 rendered=False
+[extract] found 0 slide link(s)
+[follow] no slides here; checking 6 sub-page(s)
+[follow] https://ocw.mit.edu/courses/8-02-physics-ii-electricity-and-magnetism-spring-2007/pages/class-topics/
+[follow] https://ocw.mit.edu/courses/8-02-physics-ii-electricity-and-magnetism-spring-2007/pages/class-activities/
+[follow] https://ocw.mit.edu/courses/8-02-physics-ii-electricity-and-magnetism-spring-2007/resources/presentati_w01d1/
+[follow] https://ocw.mit.edu/courses/8-02-physics-ii-electricity-and-magnetism-spring-2007/resources/prs_w01d1_qonly/
+[follow] https://ocw.mit.edu/courses/8-02-physics-ii-electricity-and-magnetism-spring-2007/resources/presentati_w01d2/
+[follow] https://ocw.mit.edu/courses/8-02-physics-ii-electricity-and-magnetism-spring-2007/resources/prs_w01d2_qonly/
+[extract] 0 slide link(s) after following
+[32/74] 802T - Massachusetts Institute of Technolo -> no_decks
+[fetch] https://ocw.mit.edu/courses/3-091sc-introduction-to-solid-state-chemistry-fall-2010/pages/lecture-notes/
+[fetch] status=200 rendered=False
+[extract] found 35 slide link(s)
+[33/74] CHEM3091 - Massachusetts Institute of Tech -> complete N=35 (dl=35 skip=0 fail=0)
+[fetch] https://www3.cs.stonybrook.edu/~has/CSE354/Slides/
+[fetch] status=200 rendered=False
+[extract] found 11 slide link(s)
+[34/74] CSE354 - Stony Brook University (SUNY) - H -> ambiguous (no numbered decks; needs subagent)
+[35/74] PHYS801 - Massachusetts Institute of Techn -> no_link
+[36/74] SOC2233 - Western University - Tom Murphy  -> no_link
+[37/74] SOC233 - Western University - Tom Murphy   -> no_link
+[fetch] https://see.stanford.edu/Course/CS106A
+[fetch] status=200 rendered=False
+[extract] found 56 slide link(s)
+[38/74] 106A - Stanford University - Mehran Sahami -> complete N=28 (dl=28 skip=0 fail=28)
+[39/74] 201X - Massachusetts Institute of Technolo -> no_link
+[40/74] 5112 - Massachusetts Institute of Technolo -> no_link
+[41/74] 6.131 - Massachusetts Institute of Technol -> no_link
+[fetch] https://ocw.mit.edu/courses/9-00-introduction-to-psychology-fall-2004/video_galleries/lecture-notes/
+[fetch] status=200 rendered=False
+[extract] found 0 slide link(s)
+[follow] no slides here; checking 6 sub-page(s)
+[follow] https://ocw.mit.edu/courses/9-00-introduction-to-psychology-fall-2004/pages/calendar/
+[follow] https://ocw.mit.edu/courses/9-00-introduction-to-psychology-fall-2004/pages/study-materials/
+[follow] https://ocw.mit.edu/courses/9-00-introduction-to-psychology-fall-2004/resources/mit9_00f04_lec01_trimmed_mp4/
+[follow] https://ocw.mit.edu/courses/9-00-introduction-to-psychology-fall-2004/resources/mit9_00f04_lec02_mp4/
+[follow] https://ocw.mit.edu/courses/9-00-introduction-to-psychology-fall-2004/resources/mit9_00f04_lec03_mp4/
+[follow] https://ocw.mit.edu/courses/9-00-introduction-to-psychology-fall-2004/resources/mit9_00f04_lec04_mp4/
+[extract] 0 slide link(s) after following
+[42/74] 900 - Massachusetts Institute of Technolog -> no_decks
+[43/74] CS126 - University Of Illinois at Urbana - -> no_link
+[fetch] https://web.stanford.edu/class/cs234/modules.html
+[fetch] status=200 rendered=False
+[extract] found 29 slide link(s)
+[44/74] CS234 - Stanford University - Emma Brunski -> complete N=14 (dl=29 skip=0 fail=0)
+[fetch] http://web.cs.wpi.edu/~emmanuel/courses/cs4731/B16/
+[fetch] status=200 rendered=False
+[extract] found 26 slide link(s)
+[45/74] CS4731 - Worcester Polytechnic Institute - -> complete N=24 (dl=26 skip=0 fail=0)
+[fetch] https://c88c.org/fa24/
+[fetch] status=200 rendered=False
+[extract] found 24 slide link(s)
+[46/74] DATAC88C - University of California Berkel -> incomplete (num: gap: missing 20)
+[fetch] https://ocw.mit.edu/courses/5-60-thermodynamics-kinetics-spring-2008/pages/lecture-notes/
+[fetch] status=200 rendered=False
+[extract] found 0 slide link(s)
+[follow] no slides here; checking 6 sub-page(s)
+[follow] https://ocw.mit.edu/courses/5-60-thermodynamics-kinetics-spring-2008/video_galleries/video-lectures/
+[follow] https://ocw.mit.edu/courses/5-60-thermodynamics-kinetics-spring-2008/resources/5_60_lecture1/
+[follow] +1 slide link(s)
+[follow] https://ocw.mit.edu/courses/5-60-thermodynamics-kinetics-spring-2008/resources/5_60_lecture2/
+[follow] +1 slide link(s)
+[follow] https://ocw.mit.edu/courses/5-60-thermodynamics-kinetics-spring-2008/resources/5_60_lecture3/
+[follow] +1 slide link(s)
+[follow] https://ocw.mit.edu/courses/5-60-thermodynamics-kinetics-spring-2008/resources/5_60_lecture4/
+[follow] +1 slide link(s)
+[follow] https://ocw.mit.edu/courses/5-60-thermodynamics-kinetics-spring-2008/resources/5_60_lecture5/
+[follow] +1 slide link(s)
+[extract] 5 slide link(s) after following
+[47/74] 560 - Massachusetts Institute of Technolog -> complete N=5 (dl=5 skip=0 fail=0)
+[48/74] 700X - Massachusetts Institute of Technolo -> no_link
+[fetch] https://ocw.mit.edu/courses/8-05-quantum-physics-ii-fall-2013/pages/lecture-notes/
+[fetch] status=200 rendered=False
+[extract] found 0 slide link(s)
+[follow] no slides here; checking 3 sub-page(s)
+[follow] https://ocw.mit.edu/courses/8-05-quantum-physics-ii-fall-2013/video_galleries/video-lectures/
+[follow] https://ocw.mit.edu/courses/8-05-quantum-physics-ii-fall-2013/pages/calendar/
+[follow] https://ocw.mit.edu/courses/8-05-quantum-physics-ii-fall-2013/resources/mit8_05f13_chap_01/
+[extract] 0 slide link(s) after following
+[49/74] 805X - Massachusetts Institute of Technolo -> no_decks
+[50/74] AC297R - Harvard University - Pavlos Proto -> no_link
+[51/74] CHEM503 - Massachusetts Institute of Techn -> no_link
+[52/74] CS106 - Stanford University - Jerry Cain   -> no_link
+[53/74] CS4514 - Worcester Polytechnic Institute - -> no_link
+[54/74] CS5150 - Cornell University - Curran Muhlb -> no_link
+[55/74] CSE544 - Stony Brook University (SUNY) - A -> no_link
+[fetch] https://www3.cs.stonybrook.edu/~has/CSE545/Slides/
+[fetch] status=200 rendered=False
+[extract] found 10 slide link(s)
+[56/74] CSE545 - Stony Brook University (SUNY) - H -> ambiguous (no numbered decks; needs subagent)
+[fetch] https://ocw.mit.edu/courses/14-03-microeconomic-theory-and-public-policy-fall-2016/pages/lecture-notes/
+[fetch] status=200 rendered=False
+[extract] found 0 slide link(s)
+[follow] no slides here; checking 3 sub-page(s)
+[follow] https://ocw.mit.edu/courses/14-03-microeconomic-theory-and-public-policy-fall-2016/pages/calendar/
+[follow] https://ocw.mit.edu/courses/14-03-microeconomic-theory-and-public-policy-fall-2016/pages/related-resources/
+[follow] https://ocw.mit.edu/courses/14-03-microeconomic-theory-and-public-policy-fall-2016/resources/mit14_03f16_lec3mathtools/
+[follow] +1 slide link(s)
+[extract] 1 slide link(s) after following
+[57/74] ECON1403 - Massachusetts Institute of Tech -> ambiguous (only 1/1 decks numbered (lec); needs subagent)
+[fetch] https://ocw.mit.edu/courses/6-849-geometric-folding-algorithms-linkages-origami-polyhedra-fall-2012/pages/calendar-and-notes/
+[fetch] status=200 rendered=False
+[extract] found 0 slide link(s)
+[follow] no slides here; checking 6 sub-page(s)
+[follow] https://ocw.mit.edu/courses/6-849-geometric-folding-algorithms-linkages-origami-polyhedra-fall-2012/pages/instructor-insights/inverted-lecture-format-in-fall-2012/
+[follow] https://ocw.mit.edu/courses/6-849-geometric-folding-algorithms-linkages-origami-polyhedra-fall-2012/pages/class-and-lecture-videos/
+[follow] https://ocw.mit.edu/courses/6-849-geometric-folding-algorithms-linkages-origami-polyhedra-fall-2012/video_galleries/lecture-videos/
+[follow] https://ocw.mit.edu/courses/6-849-geometric-folding-algorithms-linkages-origami-polyhedra-fall-2012/resources/mit6_849f12_slidesl01_pdf/
+[follow] +1 slide link(s)
+[follow] https://ocw.mit.edu/courses/6-849-geometric-folding-algorithms-linkages-origami-polyhedra-fall-2012/resources/mit6_849f12_slidesc01/
+[follow] +1 slide link(s)
+[follow] https://ocw.mit.edu/courses/6-849-geometric-folding-algorithms-linkages-origami-polyhedra-fall-2012/resources/mit6_849f12_desc02/
+[extract] 2 slide link(s) after following
+[58/74] GFA6849 - Massachusetts Institute of Techn -> incomplete (num: sequence too short: N=1 < min 3)
+[59/74] SOC234 - Western University - Tom Murphy   -> no_link
+[fetch] https://ocw.mit.edu/courses/14-03-microeconomic-theory-and-public-policy-fall-2016/pages/lecture-notes/
+[fetch] status=200 rendered=False
+[extract] found 0 slide link(s)
+[follow] no slides here; checking 3 sub-page(s)
+[follow] https://ocw.mit.edu/courses/14-03-microeconomic-theory-and-public-policy-fall-2016/pages/calendar/
+[follow] https://ocw.mit.edu/courses/14-03-microeconomic-theory-and-public-policy-fall-2016/pages/related-resources/
+[follow] https://ocw.mit.edu/courses/14-03-microeconomic-theory-and-public-policy-fall-2016/resources/mit14_03f16_lec3mathtools/
+[follow] +1 slide link(s)
+[extract] 1 slide link(s) after following
+[60/74] 1403 - Massachusetts Institute of Technolo -> ambiguous (only 1/1 decks numbered (lec); needs subagent)
+[fetch] https://ocw.mit.edu/courses/5-12-organic-chemistry-i-spring-2005/pages/lecture-handouts/
+[fetch] status=200 rendered=False
+[extract] found 0 slide link(s)
+[follow] no slides here; checking 6 sub-page(s)
+[follow] https://ocw.mit.edu/courses/5-12-organic-chemistry-i-spring-2005/resources/lecture01_s05/
+[follow] +1 slide link(s)
+[follow] https://ocw.mit.edu/courses/5-12-organic-chemistry-i-spring-2005/resources/lecture02_s05/
+[follow] +1 slide link(s)
+[follow] https://ocw.mit.edu/courses/5-12-organic-chemistry-i-spring-2005/resources/lecture02b_s05/
+[follow] +1 slide link(s)
+[follow] https://ocw.mit.edu/courses/5-12-organic-chemistry-i-spring-2005/resources/lecture03_s05/
+[follow] +1 slide link(s)
+[follow] https://ocw.mit.edu/courses/5-12-organic-chemistry-i-spring-2005/resources/lecture05_s05/
+[follow] +1 slide link(s)
+[follow] https://ocw.mit.edu/courses/5-12-organic-chemistry-i-spring-2005/resources/lecture06_s05/
+[follow] +1 slide link(s)
+[extract] 6 slide link(s) after following
+[61/74] 512 - Massachusetts Institute of Technolog -> incomplete (lec: gap: missing 4)
+[62/74] 600SC - Massachusetts Institute of Technol -> no_link
+[fetch] https://ocw.mit.edu/courses/6-041-probabilistic-systems-analysis-and-applied-probability-fall-2010/pages/lecture-notes/
+[fetch] status=200 rendered=False
+[extract] found 0 slide link(s)
+[follow] no slides here; checking 6 sub-page(s)
+[follow] https://ocw.mit.edu/courses/6-041-probabilistic-systems-analysis-and-applied-probability-fall-2010/video_galleries/video-lectures/
+[follow] https://ocw.mit.edu/courses/6-041-probabilistic-systems-analysis-and-applied-probability-fall-2010/resources/mit6_041f10_lec_slides/
+[follow] +1 slide link(s)
+[follow] https://ocw.mit.edu/courses/6-041-probabilistic-systems-analysis-and-applied-probability-fall-2010/pages/calendar/
+[follow] https://ocw.mit.edu/courses/6-041-probabilistic-systems-analysis-and-applied-probability-fall-2010/resources/mit6_041f10_l01/
+[follow] https://ocw.mit.edu/courses/6-041-probabilistic-systems-analysis-and-applied-probability-fall-2010/resources/mit6_041f10_l02/
+[follow] https://ocw.mit.edu/courses/6-041-probabilistic-systems-analysis-and-applied-probability-fall-2010/resources/mit6_041f10_l03/
+[extract] 1 slide link(s) after following
+[63/74] 6041 - Massachusetts Institute of Technolo -> ambiguous (only 1/1 decks numbered (num); needs subagent)
+[fetch] https://ocw.mit.edu/courses/8-02-physics-ii-electricity-and-magnetism-spring-2007/pages/class-slides/
+[fetch] status=200 rendered=False
+[extract] found 0 slide link(s)
+[follow] no slides here; checking 6 sub-page(s)
+[follow] https://ocw.mit.edu/courses/8-02-physics-ii-electricity-and-magnetism-spring-2007/pages/class-topics/
+[follow] https://ocw.mit.edu/courses/8-02-physics-ii-electricity-and-magnetism-spring-2007/pages/class-activities/
+[follow] https://ocw.mit.edu/courses/8-02-physics-ii-electricity-and-magnetism-spring-2007/resources/presentati_w01d1/
+[follow] https://ocw.mit.edu/courses/8-02-physics-ii-electricity-and-magnetism-spring-2007/resources/prs_w01d1_qonly/
+[follow] https://ocw.mit.edu/courses/8-02-physics-ii-electricity-and-magnetism-spring-2007/resources/presentati_w01d2/
+[follow] https://ocw.mit.edu/courses/8-02-physics-ii-electricity-and-magnetism-spring-2007/resources/prs_w01d2_qonly/
+[extract] 0 slide link(s) after following
+[64/74] 802 - Massachusetts Institute of Technolog -> no_decks
+[fetch] https://ocw.mit.edu/courses/8-05-quantum-physics-ii-fall-2013/pages/lecture-notes/
+[fetch] status=200 rendered=False
+[extract] found 0 slide link(s)
+[follow] no slides here; checking 3 sub-page(s)
+[follow] https://ocw.mit.edu/courses/8-05-quantum-physics-ii-fall-2013/video_galleries/video-lectures/
+[follow] https://ocw.mit.edu/courses/8-05-quantum-physics-ii-fall-2013/pages/calendar/
+[follow] https://ocw.mit.edu/courses/8-05-quantum-physics-ii-fall-2013/resources/mit8_05f13_chap_01/
+[extract] 0 slide link(s) after following
+[65/74] 805 - Massachusetts Institute of Technolog -> no_decks
+[66/74] CS106B - Stanford University - Keith Schwa -> no_link
+[67/74] CS110 - Stanford University - Jerry Cain   -> no_link
+[fetch] https://cs184.eecs.berkeley.edu/sp25
+[fetch] status=200 rendered=False
+[extract] found 25 slide link(s)
+[68/74] CS184 - University of California Berkeley  -> incomplete (num: gap: missing 10, 16, 21, 23, 25)
+[69/74] ECON1432 - Massachusetts Institute of Tech -> no_link
+[70/74] EECS6207 - Massachusetts Institute of Tech -> no_link
+[71/74] EECS824 - Massachusetts Institute of Techn -> no_link
+[72/74] MITX700X - Massachusetts Institute of Tech -> no_link
+[fetch] https://ocw.mit.edu/courses/8-033-relativity-fall-2006/pages/lecture-notes/
+[fetch] status=200 rendered=False
+[extract] found 0 slide link(s)
+[follow] no slides here; checking 6 sub-page(s)
+[follow] https://ocw.mit.edu/courses/8-033-relativity-fall-2006/resources/lecture1_overvie/
+[follow] +1 slide link(s)
+[follow] https://ocw.mit.edu/courses/8-033-relativity-fall-2006/resources/lecture2_symme1/
+[follow] +1 slide link(s)
+[follow] https://ocw.mit.edu/courses/8-033-relativity-fall-2006/resources/lecture3_symme2/
+[follow] +1 slide link(s)
+[follow] https://ocw.mit.edu/courses/8-033-relativity-fall-2006/resources/lecture4_kinem1/
+[follow] +1 slide link(s)
+[follow] https://ocw.mit.edu/courses/8-033-relativity-fall-2006/resources/lecture5_kinem2/
+[follow] +1 slide link(s)
+[follow] https://ocw.mit.edu/courses/8-033-relativity-fall-2006/resources/lecture6_kinem3/
+[follow] +1 slide link(s)
+[extract] 6 slide link(s) after following
+[73/74] PHYS8033 - Massachusetts Institute of Tech -> complete N=6 (dl=6 skip=0 fail=0)
+[fetch] https://ocw.mit.edu/courses/8-324-relativistic-quantum-field-theory-ii-fall-2010/pages/lecture-notes/
+[fetch] status=200 rendered=False
+[extract] found 0 slide link(s)
+[follow] no slides here; checking 6 sub-page(s)
+[follow] https://ocw.mit.edu/courses/8-324-relativistic-quantum-field-theory-ii-fall-2010/resources/mit8_324f10_lecture1/
+[follow] +1 slide link(s)
+[follow] https://ocw.mit.edu/courses/8-324-relativistic-quantum-field-theory-ii-fall-2010/resources/mit8_324f10_lecture2/
+[follow] +1 slide link(s)
+[follow] https://ocw.mit.edu/courses/8-324-relativistic-quantum-field-theory-ii-fall-2010/resources/mit8_324f10_lecture3/
+[follow] +1 slide link(s)
+[follow] https://ocw.mit.edu/courses/8-324-relativistic-quantum-field-theory-ii-fall-2010/resources/mit8_324f10_lecture4/
+[follow] +1 slide link(s)
+[follow] https://ocw.mit.edu/courses/8-324-relativistic-quantum-field-theory-ii-fall-2010/resources/mit8_324f10_lecture5/
+[follow] +1 slide link(s)
+[follow] https://ocw.mit.edu/courses/8-324-relativistic-quantum-field-theory-ii-fall-2010/resources/mit8_324f10_lecture6/
+[follow] +1 slide link(s)
+[extract] 6 slide link(s) after following
+[74/74] QFTII01 - Massachusetts Institute of Techn -> complete N=6 (dl=6 skip=0 fail=0)
+
+summary: ambiguous=9, complete=15, download_incomplete=1, incomplete=9, no_decks=7, no_link=33
+metadata (complete only): /home/b-ysonale/slidefetch/rated4rmp/rated4rmp.db
+searched links + progress: /home/b-ysonale/slidefetch/rated4rmp/rated4rmp_search.db

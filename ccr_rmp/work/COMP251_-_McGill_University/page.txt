@@ -1,0 +1,234 @@
+Home
+General Information
+Announces
+Schedule
+Rules & Policies
+Contact
+COMP251: Algorithms & Data Structures
+Fall 2022
+School of Computer Science
+McGill University
+Introduction to algorithm design and analysis. Graph algorithms, greedy algorithms, data structures, dynamic programming, maximum flows.
+GENERAL INFORMATION
+Instructors:
+Giulia Alberini
+and
+Prof. Jérôme Waldispühl
+.
+Teaching Assistants:
+TBD
+Lectures:
+Adams Auditorium on Tuesday & Thursday at 10am (EDT). The lecture will be recorded and available on MyCourses.
+Contact:
+All course-related email should be sent to
+cs251@cs.mcgill.ca
+. Emails sent to personal addresses will not likely be seen.
+Office hours:
+Please consult the COMP251 calendar below for the most up-to-date schedule including office hours and other important dates.
+Course Webpage:
+http://www.cs.mcgill.ca/~jeromew/comp251.html
+Course Material:
+All the material needed for this class will be available on the public course web page.
+There is no required textbook. However, we recommend the following textbooks from which most lectures will be based upon:
+[CLRS2009] Cormen, Leiserson, Rivest, & Stein,
+Introduction to Algorithms
+. (
+E-book
+)
+[KT2006] Kleinberg & Tardos,
+Algorithm Design
+.
+Lecture slides will be made available in PDF form on the course web page. Lectures will be recorded and available on MyCourse (You must login into MyCourses. Download is not enabled). Instructions to borrow a E-book online are available at
+http://www.mcgill.ca/library/find/ebooks/borrowing-ebooks/
+.
+Discussion Board:
+We are using Ed for class discussion. The system is highly catered to getting you help fast and efficiently from classmates, the TAs, and instructors. Rather than emailing questions to the teaching staff, we encourage you to post your questions there
+.
+The official discussion board for this class is
+Ed
+.
+You must Login to the platform via MyCourses.
+Evaluation
+Your final grade will be calculated as follows:
+30% for 3 assignments
+20% for the midterm exam
+50% for the final exam
+ANNOUNCES
+Release Date
+Due Date
+Announce
+Sep 1
+Welcome in COMP 251! A link is available on MyCourses. The class will be recorded and available of streaming later. Online office hours will be arranged and announced in due time.
+SCHEDULE
+Date
+Topic
+Material
+References
+Instructor
+Lecture 0
+Sep 1
+Introduction
+[SLIDES]
+J. Waldispühl
+Lecture 1
+Sep 6
+Recurrences
+[SLIDES]
+Chapter 4 of [CLRS2009]
+J. Waldispühl
+Lecture 2
+Sep 8
+Big Oh notation
+[SLIDES]
+Chapter 3 of [CLRS2009]
+J. Waldispühl
+Lecture 3
+Sep 13
+Proofs by induction and loop invariants
+[SLIDES]
+J. Waldispühl
+Lecture 4
+Sep 15
+Graphs, Probability and Binary numbers
+[SLIDES]
+G. Alberini
+Lecture 5
+Sep 20
+Heaps & Heapsort
+[SLIDES]
+Chapter 6 of [CLRS2009]
+G. Alberini
+Lecture 6
+Sep 22
+BST and AVL trees
+[SLIDES]
+G. Alberini
+Lecture 7
+Sep 27
+Red-black trees
+[SLIDES]
+Chapter 13 of [CLRS2009]
+J. Waldispühl
+Lecture 8
+Sep 29
+Hashing
+[SLIDES]
+Chapter 11 of [CLRS2009]
+J. Waldispühl
+Lecture 9
+Oct 4
+Disjoint sets
+[SLIDES]
+Chapter 21 of [CLRS2009]
+J. Waldispühl
+Lecture 10
+Oct 6
+Greedy algorithms (Scheduling, Huffman coding)
+[SLIDES]
+Chapter 16 of [CLRS2009]
+J. Waldispühl
+Reading Break
+Oct 11
+Lecture 11
+Oct 14
+Elementary graph algorithms
+[SLIDES]
+Chapter 22 of [CLRS2009]
+G. Alberini
+Lecture 12
+Oct 18
+Topological sort and strongly connected components
+[SLIDES]
+Chapter 22 of [CLRS2009]
+G. Alberini
+Lecture 13
+Oct 20
+Single source shortest path
+[SLIDES]
+Chapter 24 of [CLRS2009]
+G. Alberini
+Lecture 14
+Oct 25
+Minimum Spanning Tree
+[SLIDES]
+Chapter 23 of [CLRS2009]
+G. Alberini
+Lecture 15
+Oct 27
+Bipartite graphs
+[SLIDES]
+Chapter 1.1 of [KT2006]
+G. Alberini
+Midterm Exam
+Nov 1
+Mid-term Examination
+Online
+during the regular class hours (10am-11:30am EDT)
+Lecture 16
+Nov 3
+Network flow 1
+[SLIDES]
+Chapter 26 of [CLRS2009]
+J. Waldispühl
+Lecture 17
+Nov 8
+Network flow 2
+[SLIDES]
+Chapter 26 of [CLRS2009]
+J. Waldispühl
+Lecture 18
+Nov 10
+Dynamic Programming 1 (weighted interval scheduling)
+[SLIDES]
+Chapter 6 of [KT2006]
+J. Waldispühl
+Lecture 19
+Nov 15
+Dynamic Programming 2 (Bellman Ford, knapsack problem)
+[SLIDES]
+Chapter 6 of [KT2006]
+J. Waldispühl
+Lecture 20
+Nov 17
+Amortized analysis
+[SLIDES]
+Chapter 17 of [CLRS2009]
+J. Waldispühl
+Lecture 21
+Nov 22
+Divide-and-conquer 1 (Merge sort & integer multiplication)
+[SLIDES]
+Chapter 5 of [KT2006]
+G. Alberini
+Lecture 22
+Nov 24
+Divide-and-conquer 2 (Master Theorem)
+[SLIDES]
+Chapter 4 of [CLRS2009]
+G. Alberini
+Lecture 23
+Nov 29
+Randomized algorithms (Global min-cut, randomized quick sort)
+[SLIDES]
+Chapter 13 of [KT2006]
+G. Alberini
+Lecture 24
+Dec 1
+Probabilistic analysis
+[SLIDES]
+Chapter 5 of [CLRS2009]
+G. Alberini
+Final Exam
+TBD
+Final Examination
+In-person formal exam (Full details available at the Exam office)
+RULES & POLICIES
+Prerequisites
+The official prerequisites for this course are COMP 250 (Introduction to Computer Science) and MATH 240 (Discrete Structures) or MATH 235 (Algebra 1). We recommend the students to review the material covered in this class. The students must also be familiar with basic concepts and techniques in probability.
+Policy on discussion Board
+The official discussion board is accessible on
+Ed
+. Please follow common sense rules and etiquette for discussion board postings: be polite, avoid texting shorthand ("ur" instead of "you are", ...), choose a suitable subject line for your posting and use multiple postings for multiple subjects, keep your postings brief, etc.
+Policy on collaborations
+We encourage you to discuss the assignment problems with each other. However, these discussions should not so far that you are sharing code or giving away the answer. A rule of thumb is that your discussions should considered public in the sense that anything you share with a friend should be sharable with any student in the class.
+Importantly, we ask you to indicate on your assignments (as a comment in the header of your source code if it is a programming question) the names of the persons with who you collaborated or discussed your assignments

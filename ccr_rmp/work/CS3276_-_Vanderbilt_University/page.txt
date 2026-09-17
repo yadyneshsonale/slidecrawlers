@@ -1,0 +1,150 @@
+CS3276 - Compiler Construction
+Home
+Schedule
+Homeworks
+PA1 - Rosetta
+PA2 - Lexer
+PA3 - Parser
+PA4 - Semantic Analyzer
+PA5 - Code Generator
+PA6 - Optimizer
+Autograder (requires login)
+COOL
+Exams
+Piazza
+CS3276 (CS5276) — Course Schedule
+Fall 2024
+While I make every effort to finalize the schedule at the beginning of
+the semester, there may be updates during the semester.  I will
+communicate any changes to the schedule during lecture, on the Piazza,
+and on this schedule.
+The readings are not required but are mainly suggestions.
+The textbook was more crucial in the past when Internet resources were
+less available.  You do not need the textbook to complete this course.
+Unless otherwise noted, all due dates are at
+11:59PM Central time
+on the indicated day.
+Date
+Topic
+Due
+Readings
+W 08/21/24
+Course Introduction
+(None, first day)
+M 08/26/24
+Overview of Python and Cool
+Cool Reference Manual
+W 08/28/24
+Lexical Analysis
+PA1P (Python Implementation) Due
+The last day to add or drop courses is 8/30/2024.  PA1P is intended to help you decide whether you want to stay in this course.  If you join late, you can turn PA1P in with PA1C on 9/4/24.
+Dragon Book Ch 3;
+PL Pragmatics Ch 2.1 – 2.2
+M 09/02/24
+Lexical Analysis Foundations and Lexer Generators
+Flex Manual (
+especially in Python's ply package
+)
+PL Pragmatics Ch 2.1-2.2
+W 09/04/24
+Parsing Basics (Grammars) / LL Parsing
+Guest lecture by Dr. Daniel Balasubramanian.  Kevin at NSF meeting.
+PA1C (Cool implementation) Due
+Dragon Book Ch 4.1, 4.2;
+PL Pragmatics Ch 2.3
+M 09/09/24
+LL Parsing, part 2
+Dragon Book Ch 4.3, 4.4;
+PL Pragmatics 2.3.1-2.3.4
+W 09/11/24
+More Parsing (LR)
+PA2 Due
+Friday 9/13
+PL Pragmatics Ch 4.8
+M 09/16/24
+Parser Generators, exam review
+Yacc or Bison Manual (
+especially Python's ply package
+)
+W 09/18/24
+Midterm 1
+M 09/23/24
+Types and Scoping
+Dragon Book Ch 1.6.1, 1.6.2, 1.6.5, 1.6.6, 1.6.7;
+PL Pragmatics Ch 3.2.1-3.2.3, 3.6
+W 09/25/24
+Intro to PA4, Types, Scoping
+Typchecking example code
+PA3 Due
+M 09/30/24
+Type Checking
+Dragon Book Ch 6.5, PL Pragmatics 4.2, 4.3, 4.6
+W 10/02/24
+Type checking wrap up
+M 10/07/24
+Bonus lecture: career development and failure
+Dragon Book Ch 6, 6.5;
+PL Pragmatics Ch 4.2, 4.3, 4.6
+W 10/09/24
+No class.  Fall break.
+Dragon Book Ch 6.4, 6.6
+M 10/14/24
+Program and Runtime Organization
+Dragon Book Ch 6.9, 8.2, 8.6
+PL Pragmatics Ch 5.2, 5.4, 5.6, 9.4, 9.5
+W 10/16/24
+Intermediate Representations
+PA4 Due
+Dragon Book Ch 9.2, 9.3
+M 10/21/24
+Intro to Code Generation, TAC
+Dragon Book Ch 9.2, 9.3
+W 10/23/24
+Code
+Generation, Control Flow Graphs, Objects
+M 10/28/24
+Midterm 2
+W 10/30/24
+Control Flow Graphs
+Dragon Book Ch 7.1, 7.2, 7.4, 8.3, 8.4, 8.6;
+PL Pragmatics 14.1.1, 14.2, 14.3.1
+M 11/04/24
+CFGs
+(continued)
+I recommend having "Hello, world." compiling for PA5 by this date.
+W 11/06/24
+Garbage Collection
+Dragon Book Ch. 7.5, 7.6
+PL Pragmatics Ch 14.6, 14.7
+M 11/11/24
+Memory
+Hierarchy, Register Allocation
+PL Pragmatics Ch 15.3.2
+W 11/13/24
+Linking/Loading
+LLVM paper
+Reflections on trusting trust
+M 11/18/24
+Optimizations
+Wikipedia's article on Basic Blocks
+;
+Wikipedia's article on Dataflow analysis
+W 11/20/24
+Optimizations (2)
+PA5 due Friday, 11/22.
+M 11/25/24
+Thanksgiving Break
+W 11/27/24
+Thanksgiving Break
+M 12/02/24
+Exam Review
+W 12/04/24
+Final Exam
+PA6 recommended turn in.
+F 12/14/24
+No class.
+This is the scheduled final exam day, however we will have the final exam in class instead.
+PA6 Due at NOON CT.
+Absolutely no extensions
+.
+Absolutely all course material must be turned in by 5PM CT on this day.

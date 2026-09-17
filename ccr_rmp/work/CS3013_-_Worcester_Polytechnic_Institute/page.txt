@@ -1,0 +1,247 @@
+CS 3013
+Operating Systems
+C Term 2007
+Welcome to CS 3013.  For this course, we will centralize the
+distribution of
+information on this course web page. This page can be found on the WPI
+web server at http://web.cs.wpi.edu/~cs3013/c07/
+Basic Information
+Course Description
+Textbook
+Your Evaluation
+Lectures
+Course Calendar
+Additional Goodies
+The Projects
+Basic Information
+Professor:
+Dr. Jerry Breecher, Mail to: jb
+at cs.wpi.edu
+Meeting Time:
+Lecture: Monday, Tuesday,
+Thursday, Friday  10:00
+- 10:50 a.m.    SL 115
+Office Hours:
+Before and after class  -
+e-mail works great
+TA's
+Choong-Soo
+Lee        clee01@cs.wpi.edu
+Rui
+Lu
+kkboy@cs.wpi.edu
+Keith
+Craig
+kcraig08@WPI.EDU
+CS3013-staff mailing list to
+Professor and Teaching Assistants
+Course Description
+This is what the catalog says:
+This course provides the student with an understanding of the basic
+components
+of a general-purpose operating system.
+Topics include processes, process management, synchronization, input/
+output devices and their programming, interrupts, memory management,
+resource allocation, and an introduction to file systems.
+Students will be expected to design and implement a large piece of
+system
+software.
+Intended audience: computer science majors and others interested in
+studying
+the software and hardware components of computer systems.
+Undergraduate credit may not be earned both for this course and for
+CS
+502
+.
+Recommended background:
+CS
+2303
+or
+CS
+2301
+, and
+CS
+2011
+.
+Textbook
+Operating System Concepts, Seventh Edition, Abraham Silberschatz,
+Peter Baer Galvin, Greg Gagne. John Wiley & Sons, Inc.
+The
+hardcover edition is ISBN: 0-471-69466-5
+The paperbacked edition is ISBN 0471-973777. I've asked the bookstore
+to
+get the paperback since it's much less expensive. Also, the text
+doesn't change
+that much from edition to edition; you can probably get away with a 6th
+edition just fine.
+Your Evaluation
+Your evaluation in this course is determined by:
+40% Projects,  homework, class involvement
+30% Midterm Exam
+30% Final Exam
+Project Weights:
+Project 1 - 15 pts
+Project 2 - 10 pts
+Project 3 - 20 pts
+Project 4 - 30 pts
+Project 5 - 25 pts
+Lectures
+In the Table below are pointers to the notes for the course.
+The formats available can be read by Microsoft PowerPoint (.ppt), or
+read
+by Apache (.pdf).
+Lectures generally will be from these notes. Feel free to print them
+out and use them during class to avoid extensive notetaking. You can
+simply annotate these notes rather than writing everything. But
+warning,
+don't be lulled into a false sense of security. What's talked about in
+the
+class will be in MUCH MORE DETAIL than is present on these slides.
+An added advantage of written out notes is that you know what to
+read in the
+text. In general, I follow the book fairly closely so you should have
+no trouble
+figuring out where to find material to amplify these course notes.
+The following Notes are arranged in book order, not necessarily in the
+order
+we'll lecture on them.
+Lecture Title
+PowerPoint
+Adobe Acrobat
+Overview
+Overview.ppt
+Overview.pdf
+Components
+Structures.ppt
+Structures.pdf
+Processes
+Processes.ppt
+Processes.pdf
+Threads
+Threads.ppt
+Threads.pdf
+Scheduling
+Scheduling.ppt
+Scheduling.pdf
+The Big Picture
+SystemOverview.ppt
+SystemOverview.pdf
+Synchronization I
+Synchronization.ppt
+Synchronization.pdf
+Deadlocks
+Deadlocks.ppt
+Deadlocks.pdf
+Memory Management
+Mem_Mgmt.ppt
+Mem_Mgmt.pdf
+Virtual Memory
+Virtual_Memory.ppt
+Virtual_Memory.pdf
+Intel's Use of Virtual Memory
+Intel
+Virtual Memory.ppt
+Intel
+Virtual Memory.pdf
+File Systems
+File_Systems.ppt
+File_Systems.pdf
+File Structures
+IO_Systems.ppt
+IO_Systems.pdf
+PROJECTS: These are programming assignments that you
+are expected to turn in. There's a schedule for these that's given
+later in this syllabus.
+Course Calendar
+Here's how the material and deliverables break down for the semester.
+Date
+Topic
+Thurs - Jan 11
+Course Introduction.
+PROJECT 1 ASSIGNED
+Fri - Jan 12
+Overview & Structure of Operating Systems
+Mon - Jan 15
+Structures
+Tues - Jan 16
+Processes
+Thurs -Jan 18
+Processes
+Fri - Jan 19
+Threads
+PROJECT 1
+DUE,
+PROJECT 2 ASSIGNED
+Mon - Jan 22
+Scheduling
+Tues - Jan 23
+Scheduling
+Thurs -Jan 25
+Synchronization
+PROJECT 3 ASSIGNED
+Fri - Jan 26
+Synchronization
+PROJECT 2 DUE,
+Mon - Jan 29
+Synchronization
+Tues - Jan 30
+Deadlocks
+Thurs -Feb 1
+Deadlocks
+Fri - Feb 2
+Deadlocks
+Mon - Feb 5
+MIDTERM  EXAM
+Tues - Feb 6
+Memory Management
+PROJECT 4 ASSIGNED
+Thurs - Feb 8
+Memory Management
+PROJECT 3
+DUE,
+Fri - Feb 9
+Memory Management
+Mon - Feb 12
+Memory Management
+Tues - Feb 13
+Memory Management
+Thurs - Feb 15
+NO CLASS
+Fri - Feb 16
+Virtual Memory
+Mon - Feb 19
+Virtual Memory
+PROJECT
+5 ASSIGNED
+Tues - Feb 20
+Virtual Memory
+PROJECT 4
+DUE MONDAY AT MIDNIGHT
+Thurs - Feb 22
+Virtual Memory
+Fri - Feb 23
+File Systems
+Mon - Feb 26
+IO Systems
+Tues - Feb 27
+IO
+Systems
+PROJECT 5 DUE MONDAY AT MIDNIGHT
+Thurs - Mar 1
+FINAL EXAM
+Other Useful Material
+Operating System Goodies:
+The Projects
+A significant component of the CS 3013 course is  the set of
+projects, in which you will   gain practice in diving into
+the guts of LINUX as well as using system programming to better
+understand the services that can be provided by the OS.
+The calendar indicating kickoff and due dates for these projects is
+given above.
+Project 1 - LINUX Process Management
+Project 2 - Fossil Lab Machine Setup
+Project 3 - Diving into LINUX
+Project 4 - "It's Always Wise To
+Synchronize"
+Project 5 - Memory Management and
+Performance
