@@ -1,0 +1,294 @@
+<html><head>
+<title>Introduction to Machine Learning (CS771A) - Autumn 2023 - IIT Kanpur</title>
+<link rel="stylesheet" href="main.css" type="text/css">
+</head>
+<body bgcolor="#BFBCB6">
+
+<table width="100%">
+<tbody><tr>
+<td>
+<h1>Introduction to Machine Learning<br>
+CS771A<br>
+Autumn 2023</h1></td>
+<td align="right"><a href="http://www.iitk.ac.in"><img src="iitk_logo.jpg" valign="top" align="right" border="0" height="130" width="150"></a></td>
+</tr>
+</tbody></table>
+<hr>
+Instructor: <a href="http://www.cse.iitk.ac.in/users/piyush">Piyush Rai</a>: (office: RM-502, email: piyush AT cse DOT iitk DOT ac DOT in)<br>
+TAs: Aditya Dhaulakhandi (adityad@cse), Subhajit Panday (subhajitpanday@cse), Malay Pandey (malay@cse), Abhishek Jaiswal (abhijais@cse), Putrevu Venkata Sai Charan (pvcharan@cse), Pramit Bhattacharyya (pramitb@cse), Gargi Sarkar (gsarkar@cse), Virendra Nishad (viren@cse), Priyanka Maity (priyankamaity@cse), Ayush Pande (ayushp@cse), Debkanta Chakraborty (debkanta@cse), Saqib Sarwar (saqib@cse) <br>
+TA Office Hours: TBA <br>
+<strong>Q/A Forum:</strong> <a href="https://piazza.com/class/lkpr260y82k25e">Piazza</a> <br>
+Class Location: L-20 (lecture hall complex)<br>
+Timings: Mon/Thur 6:00-7:30pm
+
+
+<h3>Background and Course Description</h3>
+
+Machine Learning is the discipline of designing algorithms that allow machines (e.g., a computer) to learn patterns and concepts from data without being explicitly programmed. This course will be an introduction to the design (and some analysis) of Machine Learning algorithms, with a modern outlook, focusing on the recent advances, and examples of real-world applications of Machine Learning algorithms. This is supposed to be the first ("intro") course in Machine Learning. No prior exposure to Machine Learning will be assumed. At the same time, please be aware that this is NOT a course about toolkits/software/APIs used in applications of Machine Learning, but rather on the principles and foundations of Machine Learning algorithms, delving deeper to understand what goes on "under the hood", and how Machine Learning problems are formulated and solved. <br>
+
+<h3>Grading</h3>
+
+Tentative grading scheme: There will be 4 quizzes (worth 30% of your grade), 2 homework assignments (worth 20%), a mid-sem exam (worth 20%), and a final exam (worth 30%).
+
+<h3>Reference materials</h3>
+
+There will not be any dedicated textbook for this course. Recommended readings for specific topics will be suggested. Some reference books (free PDF available for most) for machine learning are listed below:
+
+<ul>
+	<li>Kevin P. Murphy. <a href="https://probml.github.io/pml-book/book1.html">Probabilistic Machine Learning: An Introduction</a> (PML), MIT Press, March 2022.</li>	
+	<li>Christopher Bishop, <a href="http://research.microsoft.com/en-us/um/people/cmbishop/PRML/index.htm" target="_blank">Pattern Recognition and Machine Learning</a> (PRML), Springer, 2007.</li>
+    <li>Trevor Hastie, Robert Tibshirani, Jerome Friedman, <a href="https://web.stanford.edu/~hastie/ElemStatLearn/" target="_blank">The Elements of Statistical Learning</a> (ESL), Springer, 2009 (freely available online) </li>	
+	<li>David G. Stork, Peter E. Hart, and Richard O. Duda. <a href="https://www.amazon.in/Pattern-Classification-Richard-Duda/dp/0471056693" target="_blank">Pattern Classification</a> (PC), Wiley-Blackwell, 2000</li>
+	<li>Aston Zhang, Zack C. Lipton, Mu Li, Alex J. Smola. <a href="https://www.d2l.ai/index.html" target="_blank">Dive into Deep Learning</a> (D2L), Cambridge University Press, 2023.</li>
+	<li>Simon J.D. Prince. <a href="https://udlbook.github.io/udlbook/" target="_blank">Understanding Deep Learning</a> (UDL), MIT Press, 2023.</li>
+	<li>Marc Peter Deisenroth, A. Aldo Faisal, and Cheng Soon Ong. <a href="https://mml-book.github.io/" target="_blank">Maths for Machine Learning</a> (MML), Cambridge University Press, 2023.</li>	
+</ul> 
+
+<h3><a name="schedule"></a>Schedule</h3>
+<strong>Note: PPTX slides best viewed in Microsoft Powerpoint</strong>
+<table width="100%" border="1">
+<tbody><tr>
+<td><strong>Lec. No.</strong></td>
+<td><strong>Topics</strong></td>
+<td><strong>Readings/References</strong></td>
+<td><strong>Code/Demo</strong></td>
+<td><strong>Slides/Notes</strong></td>
+</tr>
+<tr>
+<td>1</td>
+<td>Course Logistics and Introduction to Machine Learning</td>
+<td><a href="https://www.cse.iitk.ac.in/users/piyush/courses/ml-autumn23/slides/ML_Science.pdf" target="_blank">ML article in Science</a>, 
+<a href="https://www.cse.iitk.ac.in/users/piyush/courses/ml-autumn23/slides/maths_refresher_slides.pdf" target="_blank">maths refresher slides</a></td> 
+<td><a href="https://www.cse.iitk.ac.in/users/piyush/courses/ml-autumn23/slides/python_tutorial.ipynb" target="_blank">Python basics</a>, 
+<a href="https://www.cse.iitk.ac.in/users/piyush/courses/ml-autumn23/slides/numpy_tutorial.ipynb" target="_blank">NumPy basics</a>
+</td>
+<td><a href="https://www.cse.iitk.ac.in/users/piyush/courses/ml-autumn23/slides/Lecture-1.pptx" target="_blank">PPTX slides</a>, 
+<a href="https://www.cse.iitk.ac.in/users/piyush/courses/ml-autumn23/slides/Lecture-1.pdf" target="_blank">PDF slides</a></td>
+</tr>
+<tr>
+<td>2</td>
+<td>Data and Features, Supervised Learning by Computing Distances (Learning with Prototypes)</td>
+<td><a href="https://www.cse.iitk.ac.in/users/piyush/tmp/DfM.pdf" target="_blank">Learning with Prototypes</a></td>
+<td><a href="https://colab.research.google.com/drive/10o6CyRwA0du9V_rwyCPZB4vqNMVjBt5s?usp=sharing" target="_blank">LwP demo</a></td>
+<td><a href="https://www.cse.iitk.ac.in/users/piyush/courses/ml-autumn23/slides/Lecture-2.pptx" target="_blank">PPTX slides</a>, 
+<a href="https://www.cse.iitk.ac.in/users/piyush/courses/ml-autumn23/slides/Lecture-2.pdf" target="_blank">PDF slides</a></td>
+</tr>
+<tr><td>3</td>
+<td>Learning with Prototypes (wrap-up), Nearest Neighbors</td> 
+<td>(Optional but recommended) <a href="https://scikit-learn.org/stable/modules/neighbors.html" target="_blank">sklearn page on nearest neighbors</a></td>
+<td><a href="https://colab.research.google.com/drive/1PDnYU_iS-CRasiPYAkWvY0k5UVkX2Rmv?usp=sharing" target="_blank">KNN demo</a></td>
+<td><a href="https://www.cse.iitk.ac.in/users/piyush/courses/ml-autumn23/slides/Lecture-3.pptx" target="_blank">PPTX slides</a>, 
+<a href="https://www.cse.iitk.ac.in/users/piyush/courses/ml-autumn23/slides/Lecture-3.pdf" target="_blank">PDF slides</a></td>
+</tr>
+<tr>
+<td>4</td>
+<td>Learning with Decision Trees</td> 
+<td><a href="http://www.cse.iitk.ac.in/users/piyush/tmp/dtrees.pdf">Intro to DT</a>, <a href="http://www.r2d3.us/visual-intro-to-machine-learning-part-1/">A nice visual illustration of DTs</a>, 
+<a href="https://scikit-learn.org/stable/modules/tree.html" target="_blank">sklearn page on Decision Trees</a></td>
+<td></td>
+<td><a href="https://www.cse.iitk.ac.in/users/piyush/courses/ml-autumn23/slides/Lecture-4.pptx" target="_blank">PPTX slides</a>, 
+<a href="https://www.cse.iitk.ac.in/users/piyush/courses/ml-autumn23/slides/Lecture-4.pdf" target="_blank">PDF slides</a></td>
+</tr>
+<tr>
+<td>5</td>
+<td>Linear Models</td> 
+<td><a href="https://www.cse.iitk.ac.in/users/piyush/courses/books-ml/linear-models.pdf" target="_blank">Least Squares and Ridge Regression</a></td> 
+<td>Ridge regression: <a href="https://colab.research.google.com/drive/1fU9NLR8UiCIB4SXo9l4srTshG_brAdqv?usp=sharing" target="_blank">demo 1</a>, 
+<a href="https://colab.research.google.com/drive/1DlrE2I-tyw7SzVT-xI6wRqPP8pxfY937?usp=sharing" target="_blank">demo 2</a>
+</td>
+<td><a href="https://www.cse.iitk.ac.in/users/piyush/courses/ml-autumn23/slides/Lecture-5.pptx" target="_blank">PPTX slides</a>, 
+<a href="https://www.cse.iitk.ac.in/users/piyush/courses/ml-autumn23/slides/Lecture-5.pdf" target="_blank">PDF slides</a></td>
+</tr>
+<tr>
+<td>6</td>
+<td>Linear Models (contd), Linear Classification (logistic and softmax)</td> 
+<td>Section 10.1-10.3 from PML (logistic and softmax/multinomial classification)</td>
+<td><a href="https://colab.research.google.com/drive/1w_3KevO6uiTezAiUiU18yJea283wEpSr?usp=sharing" target="_blank">
+Logistic Regression</a>, <a href="https://colab.research.google.com/drive/1epVUXoWbqckCGd59vtT95PVM8SgBZxAS?usp=sharing" target="_blank">Softmax Classification</a></td>
+<td><a href="https://www.cse.iitk.ac.in/users/piyush/courses/ml-autumn23/slides/Lecture-6.pptx" target="_blank">PPTX slides</a>, 
+<a href="https://www.cse.iitk.ac.in/users/piyush/courses/ml-autumn23/slides/Lecture-6.pdf" target="_blank">PDF slides</a></td>
+</tr>
+<tr>
+<td>7</td>
+<td>Optimization Techniques for ML</td> 
+<td>Chapter 8 from PML (only the topics discussed in class). 
+Also recommended: <a href="https://www.ruder.io/optimizing-gradient-descent/" target="_blank">This blog post</a></td>
+<td></td>
+<td><a href="https://www.cse.iitk.ac.in/users/piyush/courses/ml-autumn23/slides/Lecture-7.pptx" target="_blank">PPTX slides</a>, 
+<a href="https://www.cse.iitk.ac.in/users/piyush/courses/ml-autumn23/slides/Lecture-7.pdf" target="_blank">PDF slides</a></td>
+</tr>
+<tr>
+<td>8</td>
+<td>Optimization Techniques for ML (contd)</td> 
+<td>Same readings as lecture 7</td>
+<td><a href="https://colab.research.google.com/drive/1OsmX8J3mvii3WPboQ5jaiJyk7CuciSf_?usp=sharing" target="_blank">GD vs ALT-OPT</a></td>
+<td><a href="https://www.cse.iitk.ac.in/users/piyush/courses/ml-autumn23/slides/Lecture-8.pptx" target="_blank">PPTX slides</a>, 
+<a href="https://www.cse.iitk.ac.in/users/piyush/courses/ml-autumn23/slides/Lecture-8.pdf" target="_blank">PDF slides</a></td>
+</tr>
+<tr>
+<td>9</td>
+<td>Optimization Techniques for ML (wrap-up)</td> 
+<td>Same readings as lecture 7</td>
+<td></td>
+<td><a href="https://www.cse.iitk.ac.in/users/piyush/courses/ml-autumn23/slides/Lecture-9.pptx" target="_blank">PPTX slides</a>, 
+<a href="https://www.cse.iitk.ac.in/users/piyush/courses/ml-autumn23/slides/Lecture-9.pdf" target="_blank">PDF slides</a></td>
+</tr>
+<tr>
+<td>10</td>
+<td>Large-Margin Classification: Support Vector Machines</td> 
+<td>PML 17.3</td>
+<td>
+Linear SVM (in dual): <a href="https://colab.research.google.com/drive/1Zp7jKCoiMRKae6TX-gincu70-9KM6ePT?usp=sharing" target="_blank">Hard-Margin</a>, 
+<a href="https://colab.research.google.com/drive/1ZAN_qn2z1qO49Bz7JWIencP0Vip5P7t1?usp=sharing" target="_blank">Soft-Margin</a>, 
+</td>
+<td><a href="https://www.cse.iitk.ac.in/users/piyush/courses/ml-autumn23/slides/Lecture-10.pptx" target="_blank">PPTX slides</a>, 
+<a href="https://www.cse.iitk.ac.in/users/piyush/courses/ml-autumn23/slides/Lecture-10.pdf" target="_blank">PDF slides</a></td>
+</tr>
+<tr>
+<td>11</td>
+<td>Support Vector Machines (contd)</td> 
+<td>PML 17.3</td>
+<td>Linear SVM (in primal): <a href="https://colab.research.google.com/drive/1hTKmInrsKJJ0k3Q4OyVugp7jRmRy0cC1?usp=sharing" target="_blank">Hinge-Loss Optimization</a></td>
+<td><a href="https://www.cse.iitk.ac.in/users/piyush/courses/ml-autumn23/slides/Lecture-11.pptx" target="_blank">PPTX slides</a>, 
+<a href="https://www.cse.iitk.ac.in/users/piyush/courses/ml-autumn23/slides/Lecture-11.pdf" target="_blank">PDF slides</a></td>
+</tr>
+<tr>
+<td>12</td>
+<td>Kernel Methods</td> 
+<td>PML 17.1 and 17.3</td>
+<td><a href="https://colab.research.google.com/drive/1VfrrQxHb0k3eGCCm-EV0-ojr2xzCo7QX?usp=sharing" target="_blank">
+Kernel LwP</a>, <a href="https://colab.research.google.com/drive/1CyVnrit3UdUM8eomeZIw8tMx7aYihVvg?usp=sharing" target="_blank">Kernel SVM</a></td>
+<td><a href="https://www.cse.iitk.ac.in/users/piyush/courses/ml-autumn23/slides/Lecture-12.pptx" target="_blank">PPTX slides</a>, 
+<a href="https://www.cse.iitk.ac.in/users/piyush/courses/ml-autumn23/slides/Lecture-12.pdf" target="_blank">PDF slides</a></td>
+</tr>
+<tr>
+<td>13</td>
+<td>Probabilistic Modeling: The Basics</td> 
+<td>Probability basics for ML: <a href="https://www.cse.iitk.ac.in/users/piyush/courses/ml-autumn23/slides/probability-basics.pptx" target="_blank">PPTX slides</a>, 
+<a href="https://www.cse.iitk.ac.in/users/piyush/courses/ml-autumn23/slides/probability-basics.pdf" target="_blank">PDF slides</a></td>
+<td></td>
+<td><a href="https://www.cse.iitk.ac.in/users/piyush/courses/ml-autumn23/slides/Lecture-13.pptx" target="_blank">PPTX slides</a>, 
+<a href="https://www.cse.iitk.ac.in/users/piyush/courses/ml-autumn23/slides/Lecture-13.pdf" target="_blank">PDF slides</a></td>
+</tr>
+<tr>
+<td>14</td>
+<td>Probabilistic Models for Supervised Learning: Discriminative Methods</td> 
+<td></td>
+<td></td>
+<td><a href="https://www.cse.iitk.ac.in/users/piyush/courses/ml-autumn23/slides/Lecture-14.pptx" target="_blank">PPTX slides</a>, 
+<a href="https://www.cse.iitk.ac.in/users/piyush/courses/ml-autumn23/slides/Lecture-14.pdf" target="_blank">PDF slides</a></td>
+</tr>
+<tr>
+<td>15</td>
+<td>Probabilistic Models for Supervised Learning: Generative Methods</td> 
+<td>PML-1: Chapter 9</td>
+<td></td>
+<td><a href="https://www.cse.iitk.ac.in/users/piyush/courses/ml-autumn23/slides/Lecture-15.pptx" target="_blank">PPTX slides</a>, 
+<a href="https://www.cse.iitk.ac.in/users/piyush/courses/ml-autumn23/slides/Lecture-15.pdf" target="_blank">PDF slides</a></td>
+</tr>
+<tr>
+<td>16</td>
+<td>Unsupervised Learning: Clustering</td> 
+<td>PRML (Bishop) Section 9.1, PML-1: Section 21.1-21.3</td>
+<td><a href="https://colab.research.google.com/drive/1R1iCIsSyJoBH9dzRU2oQcKR6JglBEccx?usp=sharing" target="_blank">
+K-means</a>, <a href="https://colab.research.google.com/drive/1UrIWmQnmBRZyVj5dLh73HO1VLjQMo95K?usp=sharing" target="_blank">K-means++</a></td>
+<td><a href="https://www.cse.iitk.ac.in/users/piyush/courses/ml-autumn23/slides/Lecture-16.pptx" target="_blank">PPTX slides</a>, 
+<a href="https://www.cse.iitk.ac.in/users/piyush/courses/ml-autumn23/slides/Lecture-16.pdf" target="_blank">PDF slides</a></td>
+</tr>
+<tr>
+<td>17, 18</td>
+<td>Unsupervised Learning: Dimensionality Reduction</td> 
+<td>PML-1: Section 20.1, 20.4, 20.5</td>
+<td></td>
+<td><a href="https://www.cse.iitk.ac.in/users/piyush/courses/ml-autumn23/slides/Lecture-17-and-18.pptx" target="_blank">PPTX slides</a>, 
+<a href="https://www.cse.iitk.ac.in/users/piyush/courses/ml-autumn23/slides/Lecture-17-and-18.pdf" target="_blank">PDF slides</a></td>
+</tr>
+<tr>
+<td>19, 20</td>
+<td>Probabilistic Models for Unsupervised Learning: Latent Variable Models </td> 
+<td>PRML 9.2 - 9.3.2, 9.4, Sec 12.2 (up to 12.2.2)</td>
+<td></td>
+<td><a href="https://www.cse.iitk.ac.in/users/piyush/courses/ml-autumn23/slides/Lecture-19-and-20.pptx" target="_blank">PPTX slides</a>, 
+<a href="https://www.cse.iitk.ac.in/users/piyush/courses/ml-autumn23/slides/Lecture-19-and-20.pdf" target="_blank">PDF slides</a></td>
+</tr>
+<tr>
+<td>21</td>
+<td>Intro to Deep Neural Networks: Multi-layer Perceptrons</td> 
+<td>PML-1 Chapter 13</td>
+<td></td>
+<td><a href="https://www.cse.iitk.ac.in/users/piyush/courses/ml-autumn23/slides/Lecture-21.pptx" target="_blank">PPTX slides</a>, 
+<a href="https://www.cse.iitk.ac.in/users/piyush/courses/ml-autumn23/slides/Lecture-21.pdf" target="_blank">PDF slides</a></td>
+</tr>
+<tr>
+<td>22</td>
+<td>Intro to Deep Neural Nets (Contd)</td> 
+<td>PML-1 Chapter 13</td>
+<td></td>
+<td><a href="https://www.cse.iitk.ac.in/users/piyush/courses/ml-autumn23/slides/Lecture-22.pptx" target="_blank">PPTX slides</a>, 
+<a href="https://www.cse.iitk.ac.in/users/piyush/courses/ml-autumn23/slides/Lecture-22.pdf" target="_blank">PDF slides</a></td>
+</tr>
+<tr>
+<td>23</td>
+<td>Beyond MLPs: Convolutional Neural Networks</td> 
+<td>PML-1 Chapter 14</td>
+<td></td>
+<td><a href="https://www.cse.iitk.ac.in/users/piyush/courses/ml-autumn23/slides/Lecture-23.pptx" target="_blank">PPTX slides</a>, 
+<a href="https://www.cse.iitk.ac.in/users/piyush/courses/ml-autumn23/slides/Lecture-23.pdf" target="_blank">PDF slides</a></td>
+</tr>
+<tr>
+<td>24</td>
+<td>Beyond MLPs: Deep Neural Networks for Sequential Data</td> 
+<td>PML-1 Section 15.1-15.3</td>
+<td></td>
+<td><a href="https://www.cse.iitk.ac.in/users/piyush/courses/ml-autumn23/slides/Lecture-24.pptx" target="_blank">PPTX slides</a>, 
+<a href="https://www.cse.iitk.ac.in/users/piyush/courses/ml-autumn23/slides/Lecture-24.pdf" target="_blank">PDF slides</a></td>
+</tr>
+<tr>
+<td>25</td>
+<td>Attention Mechanism and Transformers</td> 
+<td>PML-1 Section 15.4-15.7</td>
+<td></td>
+<td><a href="https://www.cse.iitk.ac.in/users/piyush/courses/ml-autumn23/slides/Lecture-25.pptx" target="_blank">PPTX slides</a>, 
+<a href="https://www.cse.iitk.ac.in/users/piyush/courses/ml-autumn23/slides/Lecture-25.pdf" target="_blank">PDF slides</a></td>
+</tr>
+<tr>
+</tr><tr>
+<td>26</td>
+<td>Deep Neural Networks: Some Assorted Topics</td> 
+<td>Papers references on the slides</td>
+<td></td>
+<td><a href="https://www.cse.iitk.ac.in/users/piyush/courses/ml-autumn23/slides/Lecture-26.pptx" target="_blank">PPTX slides</a>, 
+<a href="https://www.cse.iitk.ac.in/users/piyush/courses/ml-autumn23/slides/Lecture-26.pdf" target="_blank">PDF slides</a></td>
+</tr>
+<tr>
+<td>27</td>
+<td>The Last Few Bits</td> 
+<td></td>
+<td></td>
+<td><a href="https://www.cse.iitk.ac.in/users/piyush/courses/ml-autumn23/slides/Lecture-27.pptx" target="_blank">PPTX slides</a>, 
+<a href="https://www.cse.iitk.ac.in/users/piyush/courses/ml-autumn23/slides/Lecture-27.pdf" target="_blank">PDF slides</a></td>
+</tr>
+
+</tbody></table>
+
+<h3>Course Policies</h3>
+
+<a href="http://www.cse.iitk.ac.in/pages/AntiCheatingPolicy.html" target="_blank">Anti-cheating policy</a>
+
+<script type="text/javascript">
+var sc_project=12905718; 
+var sc_invisible=1; 
+var sc_security="3cbc9fd7"; 
+</script>
+<script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async=""></script>
+<noscript><div class="statcounter"><a title="Web Analytics"
+href="https://statcounter.com/" target="_blank"><img
+class="statcounter"
+src="https://c.statcounter.com/12905718/0/3cbc9fd7/1/"
+alt="Web Analytics"
+referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+
+
+
+
+</body></html>

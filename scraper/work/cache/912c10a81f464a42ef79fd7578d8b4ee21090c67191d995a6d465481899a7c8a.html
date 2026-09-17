@@ -1,0 +1,443 @@
+<html><head>
+  <meta charset="utf-8">
+  <title>COS484: Natural Language Processing</title>
+  <script src="plugins/main.js"></script><script src="plugins/jquery.min.js"></script><link rel="stylesheet" href="plugins/main.css">
+</head>
+
+<body><div class="section">
+  <div>
+    <img width="200" style="margin-left:-20px" src="photos/princeton-logo.png">
+  </div>
+  <div class="top assignmentTitle">
+    COS 484: Natural Language Processing
+  </div>
+  <div class="top nav">
+    Fall 2019
+  </div>
+  <div class="top">
+    <a class="nav" href="https://calendar.google.com/calendar/embed?src=vhcmluqad6p58guumv5o5ulmjo%40group.calendar.google.com&amp;ctz=America%2FNew_York">[Calendar]</a>
+    &nbsp;
+    <a class="nav" href="#logistics">[Logistics]</a>
+    &nbsp;
+    <a class="nav" href="#content">[Content]</a>
+    &nbsp;
+    <a class="nav" href="#schedule">[Schedule]</a>
+    &nbsp;
+    <a class="nav" href="#coursework">[Coursework]</a>
+    &nbsp;
+    <a class="nav" href="projects.html">[Projects]</a>
+  </div>
+</div>
+<br>
+
+<div class="section">
+  <a name="logistics"><span class="header">Logistics</span></a>
+      <div class="cas">
+          <table>
+            <tbody><tr>
+              <td>
+                <p class="subheader">Instructors:</p>
+                <div class="photos_staff"><div><img src="photos/danqi_chen.jpeg" alt="Danqi Chen"></div><div><br><a href="https://www.cs.princeton.edu/~danqic/">Danqi Chen</a></div></div>
+                <div class="photos_staff"><div><img src="photos/karthik_narasimhan.jpeg" alt="Karthik Narasimhan"></div><div><br><a href="https://www.cs.princeton.edu/~karthikn/">Karthik Narasimhan</a></div></div>
+              </td>
+              <td>
+                <p class="subheader">TAs:</p>
+                <div class="photos"><div><img src="photos/no_photo.png"></div><div><br>Willie Chang</div></div>
+                <div class="photos"><div><img src="photos/pranay_manocha.jpeg" alt="Pranay Manocha"></div><div><br>Pranay Manocha</div></div>
+                <div class="photos"><div><img src="photos/runzhe_yang.jpeg" alt="Runzhe Yang"></div><div><br>Runzhe Yang</div></div>
+              </td>
+            </tr>
+          </tbody></table>
+        </div>
+  <p class="subheader" ,="" style="margin-top:-30px">Time/Location:</p>
+    <ul>
+      <li>Lectures: Tue/Thurs 1:30pm-2:50pm in Computer Science Building 104
+      </li><li>Office hours:
+        <ul>Danqi Chen: Tuesday 3-4pm, Computer Science 412</ul>
+        <ul>Karthik Narasimhan: Thursday 3-4pm, Computer Science 422</ul>
+        <ul>Willie Chang: Wednesday 1-2pm, Computer Science 402 (except Sept 18 12:30-1:30pm, CS301) </ul>
+        <ul>Pranay Manocha: Monday 4-5pm, Computer Science 402</ul>
+        <ul>Runzhe Yang: Monday 4-5pm, Computer Science 402</ul>
+      </li>
+    </ul>
+    You can check this <a href="https://calendar.google.com/calendar/embed?src=vhcmluqad6p58guumv5o5ulmjo%40group.calendar.google.com&amp;ctz=America%2FNew_York">calendar</a> for updated times of all lectures, sections, OHs and due dates.
+  </div>
+
+  <div class="section"><b>How to contact us:</b>
+    Please use <a href="https://piazza.com/class/k05e7y5ga8c6tt">Piazza</a>
+    for all questions related to lectures, homeworks, and projects, and to
+    find announcements. For external queries, emergencies, or personal matters, you can use a private Piazza post visible only to Instructors.
+  </div>
+
+
+  <!--
+  <div class="section"><b>Grades</b>: click <a href="restricted/grades.html">here</a> to check your grades and autograder feedback.</div>-->
+
+
+<div class="section">
+  <a name="content"><span class="header">Content</span></a>
+
+  <p class="subheader">What is this course about?</p>
+  Recent advances have ushered in exciting developments in natural language processing (NLP), resulting in systems that can translate text, answer questions and even hold spoken conversations with us. This course will introduce students to the basics of NLP, covering standard frameworks for dealing with natural language as well as algorithms and techniques to solve various NLP problems, including recent deep learning approaches. Topics covered include language modeling, representation learning, text classification, sequence tagging, syntactic parsing, machine translation, question answering and others.
+
+  <p class="subheader">Prerequisites:</p>
+    <ul>
+    <li>Required: <a href="https://www.cs.princeton.edu/courses/archive/spring19/cos226/">COS 226</a>, knowledge of probability, linear algebra, multivariate calculus.</li>
+    <li> <a href="https://www.cs.princeton.edu/courses/archive/spring19/cos324/">COS 324</a> (or similar Machine Learning class) is strongly recommended. </li>
+    <li> Proficiency in Python: programming assignments and projects will require use of Python, Numpy and PyTorch.</li>
+    </ul>
+
+  <p class="subheader">Reading:</p>
+    There is no required textbook for this class, and you should be able to
+    learn everything from the lectures and assignments.
+    However, if you would like to pursue more advanced topics or get another
+    perspective on the same material, here are some books (all of them can be read free online):
+    <ul>
+      <li>Dan Jurafsky and James H. Martin. <a href="https://web.stanford.edu/~jurafsky/slp3/">Speech and Language Processing (3rd ed. draft).</a></li>
+      <!-- <li>Manning and Schutze. Foundations of Statistical Natural Language Processing.</li> -->
+      <li>Yoav Goldberg. <a href="http://u.cs.biu.ac.il/~yogo/nnlp.pdf">A Primer on Neural Network Models for Natural Language Processing.</a></li>
+      <li>Jacob Eisenstein. <a href="https://github.com/jacobeisenstein/gt-nlp-class/blob/master/notes/eisenstein-nlp-notes.pdf">Natural Language Processing </a></li>
+    </ul>
+  </div>
+
+
+  <div class="section">
+  <a name="schedule"><span class="header">Schedule</span></a>
+
+  <p>Readings for future lectures are tentative and subject to change. <br> *: All assignments are due <b>11:59pm</b>.
+  <br>
+  <br>
+  <table border="1" cellpadding="3" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" id="AutoNumber5" width="800">
+    <tbody><tr>
+      <td width="70" height="18"><b>Date</b></td>
+      <td width="290" height="18"><b>Topics</b></td>
+      <td width="240" height="18"><b>Readings</b></td>
+      <td width="170" height="18"><b>Assignments</b></td>
+    </tr>
+    <tr>
+      <td>Sep 12</td>
+      <td><a href="lectures/lec1.pdf">Introduction &amp; Overview</a></td>
+      <td></td>
+      <td>A1 out </td>
+    </tr>
+    <tr>
+      <td>Sep 17</td>
+      <td><a href="lectures/lec2.pdf">Language modeling</a></td>
+      <td><a href="https://web.stanford.edu/~jurafsky/slp3/3.pdf">J&amp;M Chapter 3</a></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Sep 19</td>
+      <td><a href="lectures/lec3.pdf">Text classification (Naive Bayes)</a></td>
+      <td><a href="https://web.stanford.edu/~jurafsky/slp3/4.pdf">J&amp;M Chapter 4</a></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Sep 23</td>
+      <td></td>
+      <td></td>
+      <td>A1 due*</td>
+    </tr>
+    <tr>
+      <td>Sep 24</td>
+      <td><a href="lectures/lec4.pdf">Log-linear models</a></td>
+      <td><a href="https://web.stanford.edu/~jurafsky/slp3/5.pdf">J&amp;M Chapter 5</a></td>
+      <td>A2 out </td>
+    </tr>
+    <tr>
+      <td>Sep 26</td>
+      <td><a href="lectures/lec5.pdf">Word embeddings</a></td>
+      <td><a href="https://web.stanford.edu/~jurafsky/slp3/6.pdf">J&amp;M Chapter 6</a></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Oct 1</td>
+      <td><a href="lectures/lec6.pdf">Neural network basics</a></td>
+      <td><a href="https://web.stanford.edu/~jurafsky/slp3/7.pdf">J&amp;M Chapter 7</a> <br> <a href="https://u.cs.biu.ac.il/~yogo/nnlp.pdf">A Primer on Neural Network Models for Natural Language Processing</a> </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Oct 3</td>
+      <td><a href="lectures/lec7.pdf">Sequence modeling (HMMs, Viterbi)</a></td>
+      <td><a href="https://web.stanford.edu/~jurafsky/slp3/8.pdf">J&amp;M Chapter 8</a> <br> Notes from Michael Collins <a href="http://www.cs.columbia.edu/~mcollins/hmms-spring2013.pdf">[1]</a><a href="http://www.cs.columbia.edu/~mcollins/crf.pdf">[2]</a></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Oct 7</td>
+      <td></td>
+      <td></td>
+      <td>A2 due*</td>
+    </tr>
+    <tr>
+      <td>Oct 8</td>
+      <td><a href="lectures/lec8.pdf">Expectation Maximization (EM)</a></td>
+      <td><a href="http://www.cs.columbia.edu/~mcollins/em.pdf">Notes from Michael Collins</a></td>
+      <td>A3 out </td>
+    </tr>
+    <tr>
+      <td>Oct 10</td>
+      <td><a href="lectures/lec9.pdf">Recurrent NNs, neural language models</a></td>
+      <td><a href="https://web.stanford.edu/~jurafsky/slp3/9.pdf">J&amp;M Chapter 9</a> <br> <a href="http://colah.github.io/posts/2015-08-Understanding-LSTMs/">Understanding LSTM Networks</a></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Oct 15</td>
+      <td><a href="lectures/lec10.pdf">Constituency Parsing</a></td>
+      <td><a href="https://web.stanford.edu/~jurafsky/slp3/13.pdf">J&amp;M Chapter 13</a> <br> <a href="https://web.stanford.edu/~jurafsky/slp3/14.pdf">J&amp;M Chapter 14</a>  <br>
+        Notes from Michael Collins <a href="http://www.cs.columbia.edu/~mcollins/courses/nlp2011/notes/pcfgs.pdf">[PCFGs]</a><a href="http://www.cs.columbia.edu/~mcollins/courses/nlp2011/notes/lexpcfgs.pdf">[Lexicalized PCFGs]</a> </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Oct 17</td>
+      <td><a href="lectures/lec11.pdf">Dependency Parsing</a></td>
+      <td><a href="https://web.stanford.edu/~jurafsky/slp3/15.pdf">J&amp;M Chapter 15</a> </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Oct 22</td>
+      <td><a href="lectures/lec12.pdf">Midterm Review</a></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr bgcolor="#FED8B1">
+      <td>Oct 24</td>
+      <td>Midterm (in-class)</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Oct 25</td>
+      <td></td>
+      <td></td>
+      <td>A3 due* <br> A4 out <br> </td>
+    </tr>
+    <tr bgcolor="#D3D3D3">
+      <td>Oct 29</td>
+      <td>NO CLASS (Fall Recess)</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr bgcolor="#D3D3D3">
+      <td>Oct 31</td>
+      <td>NO CLASS (Fall Recess)</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Nov 5</td>
+      <td>1) <a href="lectures/lec13.pdf">Final project advice</a> <br> 2) <a href="lectures/pytorch.pdf">PyTorch tutorial</a> <br> 3) <a href="https://github.com/williehwc/pytorch-demo">PyTorch demo</a></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Nov 7</td>
+      <td><a href="lectures/lec14.pdf">Machine translation</a></td>
+      <td>Eisenstein 18.1,18.2 </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Nov 11</td>
+      <td></td>
+      <td></td>
+      <td>Project proposal due</td>
+    </tr>
+    <tr>
+      <td>Nov 12</td>
+      <td><a href="lectures/lec15.pdf">Neural machine translation</a></td>
+      <td>Eisenstein 18.3 <br> <a href="https://arxiv.org/abs/1709.07809"> Koehn, 2017 </a></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Nov 14</td>
+      <td><a href="lectures/lec16.pdf">Contextualized word embeddings</a></td>
+      <td><a href="https://arxiv.org/pdf/1802.05365.pdf">ELMo paper</a> <br> <a href="https://arxiv.org/pdf/1810.04805.pdf">BERT paper</a> <br> <a href="https://arxiv.org/pdf/1706.03762.pdf">Transformer paper </a> <br> <a href="http://jalammar.github.io/illustrated-bert/">The Illustrated BERT, ELMo, and co. (How NLP Cracked Transfer Learning)</a><br><a href="https://nlp.seas.harvard.edu/2018/04/03/attention.html">The Annotated Transformer</a></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Nov 18</td>
+      <td></td>
+      <td></td>
+      <td>A4 due*</td>
+    </tr>
+    <tr>
+      <td>Nov 19</td>
+      <td><a href="lectures/lec17.pdf">Question answering</a></td>
+      <td><a href="https://web.stanford.edu/~jurafsky/slp3/25.pdf">J&amp;M Chapter 25</a></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Nov 21</td>
+      <td><a href="lectures/lec18.pdf">Dialogue</a></td>
+      <td><a href="https://web.stanford.edu/~jurafsky/slp3/26.pdf">J&amp;M Chapter 26</a></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Nov 26</td>
+      <td><a href="lectures/lec19.pdf">Guest lecture: Jason Weston</a></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr bgcolor="#D3D3D3">
+      <td> Nov 28</td>
+      <td>NO CLASS (Thanksgiving)</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Dec 3</td>
+      <td>Guest lecture: Tom Kwiatkowski </td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Dec 5</td>
+      <td><a href="lectures/lec21.pdf">Coreference resolution</a></td>
+      <td><a href="https://web.stanford.edu/~jurafsky/slp3/22.pdf">J&amp;M Chapter 22</a><br>Eisenstein Chapter 15</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Dec 10</td>
+      <td><a href="lectures/lec22.pdf">Grounding</a></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Jan 14</td>
+      <td></td>
+      <td></td>
+      <td>Final project due</td>
+    </tr>
+  </tbody></table>
+
+  </p></div>
+
+
+<div class="section">
+  <a name="coursework"><span class="header">Coursework</span></a>
+
+  <p class="subheader">Grading</p>
+  <ul>
+    <li><b>Assignments</b> (40%):
+    There will be four assignments with both written and programming parts.
+    Each homework is centered around an application and will also deepen your understanding of the theoretical concepts.
+    </li>
+
+    <li><b>Mid-term exam</b> (25%): The exam is an in-class written exam that will
+    test your knowledge and problem-solving skills on all preceding lectures and assignments.
+    You cannot use any external aids except one single-sided page of notes.
+    <div id="exam">
+      <blockquote>
+        Date: <strong>Thursday, Oct 24</strong><br>
+        Location: COS 104
+      </blockquote>
+    </div>
+    </li>
+
+    <li><b>Final project</b> (35%): The final project offers you a chance to apply your newly acquired skills towards an in-depth application. All the final projects will be completed in teams of 2-3 students (find your teammates early!).
+You are required to turn in a project proposal (due on Nov 11) and complete a paper written in the style of a conference (e.g., ACL) submission (due on Jan 14). There will be also project presentations at the end of the semester.
+    </li>
+
+    <li><b>Extra credit</b> (5%): For participation in class and Piazza and bonus points from assignments. Limited to overall score of max 100%.
+    </li>
+  </ul>
+
+  <p class="subheader">Assignments</p>
+  <div class="section">
+    All assignments are due at <b><font color="red">11:59pm</font></b> on the due date (usually Mondays). There are no late days. Late submissions incur a penalty of 10% for each day, up to a maximum of 4 days beyond which submissions will not be accepted. The only exception to this rule is if you have a note from your Dean of Studies. In this case, you must notify the instructors via email. For students with a dean’s note, the weight of their missed/penalized assignment will be added to the midterm and your midterm score will be scaled accordingly (for homeworks 1,2 and 3) (e.g. if you are penalized 2 points overall, your midterm will be worth 27 and your score will be multiplied by 27/25). Missing homework 4 (after the midterm) can only be compensated by arranging an oral exam on the pertinent material.
+  </div>
+
+  <div class="section"><b>Writeups:</b>
+    Homeworks should be written up clearly and succinctly; you may lose points if your answers
+    are unclear or unnecessarily complicated.
+    Using LaTeX is recommended (here's a <a href="assignments/template.tex">template</a>), but not a requirement. Hand-written assignments must be scanned and uploaded as a pdf.
+  </div>
+
+
+  <div class="section"><b>Collaboration policy and honor code:</b>
+    You are free to form study groups and discuss homeworks and projects.
+    However, you must write up homeworks and code from scratch independently, and you must acknowledge in your submission all the students you discussed with.
+    The following are considered to be honor code violations (in addition to the Princeton honor code):
+    <ul>
+      <li>Looking at the writeup or code of another student.</li>
+      <li>Showing your writeup or code to another student.</li>
+      <li>Discussing homework problems in such detail that your solution (writeup or code) is almost identical to another student's answer.</li>
+      <li>Uploading your writeup or code to a public repository (e.g. github, bitbucket, pastebin) so that it can be accessed by other students.</li>
+    </ul>
+    When debugging code together, you are only allowed to look at the input-output behavior
+    of each other's programs (so you should write good test cases!).
+    It is important to remember that even if you didn't copy but just gave
+    another student your solution, you are still violating the honor code, so please be careful.
+    If you feel like you made a mistake (it can happen, especially under time
+    pressure!), please reach out to Danqi/Karthik;
+    the consequences will be much less severe than if we approach you.
+  </div>
+
+
+  <p class="subheader">Final Project</p>
+  <div class="section">
+  The final project offers you the chance to apply your newly acquired skills towards an in-depth NLP application. Students are required to complete the final project in teams of <b>2-3</b>. You can use Piazza to <a href="https://piazza.com/class/k05e7y5ga8c6tt?cid=5">search for teammates</a>.
+  </div>
+  <div class="section"><b>Deliverables</b>: The final project is worth 35% of your course grade. The deliverables include: </div>
+  <ul>
+      <li> <b>Proposal</b> (0%): You need to turn in a one-page proposal on Nov 11. The proposal should outline what you propose to do and a rough plan for how you will pursue the project. We will then provide feedback and guidance on the direction to maximize the project’s change
+of succeeding.  <i> The proposal is not graded.</i> </li>
+      <li> <b>Project presentation</b> (10%): At the end of the semester, we will schedule project presentations for all the projects in the class. More details TBA.</li>
+      <li> <b>Final paper</b> (25%): You need to complete a final report in the style of a conference (e.g. ACL) submission. It should begin with an abstract and introduction, clearly describe the proposed idea or exploration, present technical details, give results, compare to baselines, provide analysis and discussion of the
+results, and cite any sources you used. </li>
+  </ul>
+  <!-- <div class="section"><b>Project ideas</b>: Come to talk to us during our office hours!</div> -->
+  <div class="section"><b>Policy and honor code:</b>
+    <ul>
+      <li> The final projects are required to implement in Python. You can use any deep learning framework such as PyTorch and Tensorflow. </li>
+      <li> More generally, you may use any existing code, libraries, etc. and consult and any papers, books, online references, etc. for your project. However, you must cite your sources in your writeup and clearly indicate which parts of the project are your contribution and which parts were implemented by others. </li>
+      <li> You are free to discuss ideas and implementation details with other teams. However, under no circumstances may you look at another team's code,
+or incorporate their code into your project. </li>
+      <li> Do not share your code publicly (e.g. in a public GitHub repo) until after after the class has finished.</li>
+    </ul>
+  </div>
+</div>
+
+
+  <p class="subheader">Submission</p>
+
+  <div class="section"><b>Electronic Submission:</b>
+
+    Assignments and project proposal/paper are to be submitted as pdf files through <a href="https://www.gradescope.com/courses/61620">Gradescope</a> (we will send you the signup code for the class through Blackboard).
+    If you need to sign up for a Gradescope account, please use your @princeton.edu email address.
+    You can submit as many times as you'd like until the deadline: we will only grade the last submission.
+    <b>Submit early to make sure your submission uploads/runs properly on the Gradescope servers.</b>
+    If anything goes wrong, please ask a question on Piazza or contact a TA.
+    Do not email us your submission.
+    <b>Partial work is better than not submitting any work.</b>
+    <p>
+    For assignments with a programming component, we may automatically
+    sanity check your code with some basic test cases, but we will grade
+    your code on additional test cases.
+    <b>Important</b>: just because you pass the basic test cases, you are by no
+    means guaranteed to get full credit on the other, hidden test cases, so you should
+    test the program more thoroughly yourself!
+    </p><p>
+  </p></div>
+
+
+  <div class="section"><b>Regrades</b>: If you believe that the course
+    staff made an objective error in grading, then you may submit a
+    regrade request. Remember that even if the grading seems harsh to
+    you, the same rubric was used for everyone for fairness, so this
+    is not sufficient justification for a regrade.
+
+    It is also helpful to cross-check your answer against the released solutions.
+    If you still choose to submit a regrade request, click the corresponding
+    question on Gradescope, then click the "Request Regrade" button at the
+    bottom.
+    Any requests submitted over email or in person will be ignored.  Regrade requests for a
+particular assignment are due by Sunday 11:59pm, one week after the
+grades are returned. Note that we may regrade your entire submission,
+so depending on your submission you may actually lose more points
+than you gain.
+  </div>
+
+
+
+
+</body></html>

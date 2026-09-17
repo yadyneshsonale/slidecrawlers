@@ -1,0 +1,304 @@
+<html><head><title> COL106</title>
+
+</head><body>
+
+<h1> <center> COL106: Data Structures and Algorithms</center> </h1>
+
+<hr>
+
+<!--<H2> Required Textbook </H2> 
+
+<H4> &nbsp &nbsp <A href="http://ww3.datastructures.net/"> Data Structures and Algorithms in Java. </A> <br> 
+
+ &nbsp &nbsp Authors : Michael T. Goodrich and Roberto Tamassia <br> 
+
+ &nbsp &nbsp Publishers : John Wiley & Sons, Inc. 
+
+<br>
+
+<hr> -->
+
+<h2> Lecture Timings </h2> 
+
+<h4> &nbsp; Slot F : Tuesday, Thursday, Friday  11-11:50 am <br>
+ &nbsp; Venue: IV LT-3 (Section A), IIA-201 (Section B)<br>
+
+</h4> <br>
+
+<hr> 
+
+<h2> Announcements </h2>
+<font color="red">&nbsp; [30/11/2014] Major Scripts will be distributed tomorrow (01 December 2014) from 2-4pm in the SIT Building's Committee Room (1st Floor). Solutions are <a href="Resources/COL106-Major-Solutions.pdf">here</a>.</font><br>
+&nbsp; [10/11/2014] Assignment 6 is out!! It is due on Wednesday, Nov 19th 2014, 11:55 pm.<br>
+&nbsp; [17/10/2014] Assignment 5 is out!! It is due on Friday, Oct 31st 2014, 11:55 pm.<br>
+&nbsp; [02/10/2014] Deadline of Assignment 4 extended to Monday, Oct 13th 2014, 11:59 pm.<br>
+&nbsp; [23/09/2014] Assignment 4 is out!! It is due on Friday, Oct 3rd 2014, 11:59 pm. <br>
+&nbsp; [12/09/2014] Minor 1 solutions <a href="Resources/COL106-Minor1-Solutions.pdf">here</a>.<br>
+&nbsp; [02/09/2014] Assignment 3 is out!! It is due on Friday, Sep 12th 2014, 11:59 pm.<br>
+&nbsp; [14/08/2014] Assignment 2 is out!! It is due on Tuesday, Aug 26th 2014, 11:55 pm.<br>
+&nbsp; [11/08/2014] The Assignment 1 demos will be taken this week. DO NOT miss the lab sessions.<br>
+&nbsp; [07/08/2014] Important updates on Assignment 1. Check the Assignments section.<br>
+&nbsp; [01/08/2014] Assignment 1 is out!! It is due on Friday, Aug 8th 2014, 11:59 pm. <br><br>
+<hr>
+
+<h2> Teaching Assistants </h2>
+
+<table border="1">
+<tbody><tr>
+  <td><strong>Sl. No.</strong></td>
+  <td><strong>Name</strong></td>
+  <td><strong>EmailID</strong></td>
+</tr>
+<tr>
+  <td>1</td>
+  <td>Madhulika Mohanty</td>
+  <td>madhulikam@cse.iitd.ac.in</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td>Rajshekar K</td>
+  <td>rajshekark@cse.iitd.ac.in</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td>Rahul Jain</td>
+  <td>csz138520@cse.iitd.ac.in</td>
+</tr>
+
+<tr>
+  <td>4</td>
+  <td>Seep Goel</td>
+  <td>mcs132582@cse.iitd.ac.in</td>
+</tr>
+<tr>
+  <td>5</td>
+  <td>Priyanka Bhayana</td>
+  <td>mcs138408@cse.iitd.ac.in</td>
+</tr>
+<tr>
+  <td>6</td>
+  <td>Prateek Kajaria</td>
+  <td>mcs132573@cse.iitd.ac.in</td>
+</tr>
+<tr>
+  <td>7</td>
+  <td>Akriti Bagaria</td>
+  <td>mcs132541@cse.iitd.ac.in</td>
+</tr>
+
+<tr>
+  <td>8</td>
+  <td>Anjana Choudhary</td>
+  <td>cs5100275@cse.iitd.ac.in</td>
+</tr>
+<tr>
+  <td>9</td>
+  <td>Atul Jangra</td>
+  <td>cs5100277@cse.iitd.ac.in</td>
+</tr>
+
+<tr>
+  <td>10</td>
+  <td>Abhishek Raj</td>
+  <td>mcs142113@cse.iitd.ac.in</td>
+</tr>
+
+<tr>
+  <td>11</td>
+  <td>Akshay Jain</td>
+  <td>mcs142116@cse.iitd.ac.in</td>
+</tr>
+
+<tr>
+  <td>12</td>
+  <td>Amartya Chaudhuri</td>
+  <td>mcs142117@cse.iitd.ac.in</td>
+</tr>
+
+
+<tr>
+  <td>13</td>
+  <td>Arpan Das</td>
+  <td>mcs142799@cse.iitd.ac.in</td>
+</tr>
+<tr>
+  <td>14</td>
+  <td>Harinder Pal</td>
+  <td>mcs142123@cse.iitd.ac.in</td>
+</tr>
+<tr>
+  <td>15</td>
+  <td>Megha Gautam</td>
+  <td>mcs142125@cse.iitd.ac.in</td>
+</tr>
+<tr>
+  <td>16</td>
+  <td>Pallavi Sethi</td>
+  <td>mcs142868@cse.iitd.ac.in</td>
+</tr>
+<tr>
+  <td>17</td>
+  <td>Pratibha Wagholikar</td>
+  <td>mcs142129@cse.iitd.ac.in</td>
+</tr>
+<tr>
+  <td>18</td>
+  <td>Praveen Kumar</td>
+  <td>mcs142130@cse.iitd.ac.in</td>
+</tr>
+<tr>
+  <td>19</td>
+  <td>Raunak</td>
+  <td>mcs142802@cse.iitd.ac.in</td>
+</tr>
+<tr>
+  <td>20</td>
+  <td>Reshma Kumari</td>
+  <td>mcs142134@cse.iitd.ac.in</td>
+</tr>
+<tr>
+  <td>21</td>
+  <td>Shashank Khasare</td>
+  <td>mcs142137@cse.iitd.ac.in</td>
+</tr>
+</tbody></table> 
+<hr>
+<h2> Lab Schedule </h2>
+<h4> &nbsp; Lab Venue: GCL, Bharti Building <br>
+ &nbsp; Lab timings: 3-5 pm</h4><h4>
+</h4><h5> &nbsp; The TAs will be available as per the following schedule. You can meet them in case of any assignment/programming doubts.</h5>
+<h5> &nbsp; Check your group <a href="Resources/class-list.pdf">here</a> to find your lab session day.</h5><br>
+
+<strong>
+  </strong><table border="1">
+<tbody><tr><td><strong>Day</strong></td>
+  <td><strong>TA1</strong></td>
+  <td><strong>TA2</strong></td>
+  <td><strong>TA3</strong></td>
+  <td><strong>TA4</strong></td>
+  <td><strong>TA5</strong></td>
+  <td><strong>TA6</strong></td>	
+</tr>				
+<tr>
+  <td>Monday (Cycle 5; Groups 5,10) </td>
+  <td>Prateek Kajaria</td>
+  <td>Seep Goel</td>
+  <td>Akriti Bagaria</td>
+  <td>Arpan Das</td>
+  <td>Harinder Pal</td>
+  <td>Pallavi Sethi</td>	
+</tr>
+<tr>
+  <td>Tuesday (Cycle 1; Groups 1,6)</td>
+  <td>Anjana Choudhary</td>
+  <td>Priyanka Bhayana</td>
+  <td>Atul</td>
+  <td>Shashank Khasare</td>
+  <td>Pratibha Wagholikar</td>
+  <td>Praveen Kumar</td>	
+</tr>
+<tr>
+  <td>Wednesday (Cycle 2; Groups 2,7)</td>
+  <td>Anjana Choudhary</td>
+  <td>Atul</td>
+  <td>Akshay Jain</td>
+  <td>Pratibha Wagholikar</td>
+  <td>Praveen Kumar</td>
+  <td>Raunak</td>	
+</tr>
+<tr>
+  <td>Thursday (Cycle 3; Groups 3,8)</td>
+  <td>Seep Goel</td>
+  <td>Akriti Bagaria</td>
+  <td>Arpan Das</td>
+  <td>Harinder Pal</td>
+  <td>Pallavi Sethi</td>
+  <td>Reshma Kumari</td>	
+</tr>
+<tr>
+  <td>Friday (Cycle 4; Groups 4,9,G)</td>
+  <td>Priyanka Bhayana</td>
+  <td>Prateek Kajaria</td>
+  <td>Raunak</td>
+  <td>Reshma Kumari</td>
+  <td>Akshay Jain</td>
+  <td>Shashank Khasare</td>	
+</tr>
+</tbody></table><strong>
+
+
+
+<hr>
+
+<h2> Lecture Slides </h2><br>
+ 
+<ul>
+<li><a href="Resources/Week2-stacks-queues.pptx"> Stacks, Queues </a>
+</li><li><a href="Resources/Week3-Sequences-Vectors-Lists.ppt"> Sequences, Vectors, Lists </a>
+</li><li><a href="Resources/Recursion.ppt"> Recursion </a>
+</li><li><a href="Resources/Trees1.pptx"> Trees (1) </a>
+</li><li><a href="Resources/Trees2.pptx"> Trees (2) </a>
+</li><li><a href="Resources/AVL-Trees.pptx"> AVL Trees </a>
+</li><li><a href="Resources/234-Trees.pptx"> 234 Trees </a>
+</li><li><a href="Resources/B-trees.pptx"> B Trees </a>
+</li><li><a href="Resources/Hashing.pptx"> Hashing </a>
+</li><li> Skip Lists <a href="Resources/SkipLists.pdf">Slides</a> <a href="Resources/SkipList-analysis-notes.pdf">Notes</a>
+</li><li> Linearity of Expectations <a href="Resources/linearity_expectation.pdf">Notes </a>
+</li><li><a href="Resources/Binary-Heaps.pptx"> Binary Heaps </a>
+</li><li><a href="Resources/Tries.pdf"> Tries and String Matching </a>
+</li><li><a href="Resources/Tries-compressedsuffix.pdf"> More Tries </a>
+</li><li><a href="Resources/Rabin-Karp.ppt"> String and Pattern Matching - Rabin-Karp </a>
+</li><li><a href="Resources/quicksort.pdf"> Quick Sort </a>
+</li><li><a href="Resources/mergesort.pdf"> Merge Sort </a>
+</li><li><a href="Resources/radix.pdf"> Radix Sort </a>
+</li><li><a href="Resources/Graphs.pptx"> Graphs </a>
+</li><li><a href="Resources/More-Graphs.pptx"> More Graphs </a>
+</li><li><a href="Resources/Dijkstra.ppt"> Dijkstra's Algorithm </a>
+</li><li><a href="Resources/spatial.pptx"> Multi-Dimensional Data Searching </a>
+</li></ul>
+
+
+<hr>
+
+<h2> Assignments </h2> 
+<h3><u>NOTE:</u>&nbsp; All the assignments must be submitted on <a href="https://moodle.iitd.ac.in/login/index.php">Moodle</a>.</h3>
+<ol>
+<li><h4> &nbsp; <u>C/C++ Practice Material</u>  </h4> </li>
+<h5> &nbsp; The practice material for C/C++ programming is available <a href="Resources/COL106-LabPracticeAssignments.pdf">here</a>.</h5>
+<li><h4> &nbsp; <a href="Resources/COL106-Assignment-1.pdf"><u>Assignment 1</u></a>  </h4></li>
+<h5> &nbsp; Due: Friday, Aug 8, 2014, 11:59 pm	<br>
+&nbsp; This is for those students unable to access the course page on moodle. Please mail your assignment 1 submission in zipped format to the following gmail id :<br>
+<ul>
+<li>iitdcol106+mon@gmail.com for students attending monday lab sessions</li>
+<li>iitdcol106+tue@gmail.com for tuesday</li>
+<li>iitdcol106+wed@gmail.com for wednesday</li>
+<li>iitdcol106+thu@gmail.com for thursday</li>
+<li>iitdcol106+fri@gmail.com for friday </li><br>
+Also, please visit the UG section and initiate the process to get your name added on moodle as soon as possible.<br><br> 
+<font color="red">UPDATE: Write the main(). Have some order of function calls and print the stack/queue in between to show the changes made by those calls.
+</font>
+  </ul></h5>
+<li><h4> &nbsp; <a href="Resources/COL106-Assignment-2.pdf"><u>Assignment 2</u></a>  </h4></li>
+<h5>&nbsp; <a href="Resources/A2-files.tar.gz">Required files</a>. <br><br> &nbsp; Due: Tuesday, Aug 26, 2014, 11:55 pm	<br>
+ </h5>
+<li><h4> &nbsp; <a href="Resources/COL106-Assignment-3.pdf"><u>Assignment 3</u></a>  </h4></li>
+<h5> &nbsp; Due: Friday, Sep 12, 2014, 11:59 pm	<br>
+</h5>
+<li><h4> &nbsp; <a href="Resources/COL106-Assignment-4.html"><u>Assignment 4</u></a>  </h4></li>
+<h5> &nbsp; Due: <strike>Friday, Oct 3, 2014, 11:59 pm.</strike> Monday, Oct 13, 2014, 11:59 pm.	<br>
+&nbsp; <a href="Resources/COL106-A4-AdditionalDetails.html">Additional Details</a> 
+</h5>
+<li><h4> &nbsp; <a href="Resources/COL106-Assignment-5.pdf"><u>Assignment 5</u></a>  </h4></li>
+<h5>&nbsp; <a href="Resources/A5-files.tar.gz">Required files</a>. <br><br> &nbsp; Due: Friday, Oct 31, 2014, 11:55 pm	<br>
+ </h5>
+<li><h4> &nbsp; <a href="Resources/COL106-Assignment-6.pdf"><u>Assignment 6</u></a>  </h4></li>
+<h5>&nbsp; <a href="Resources/A6-files.tar.gz">Required files</a>. <br><br> &nbsp; Due: Wednesday, Nov 19, 2014, 11:55 pm	<br>
+ </h5>
+</ol>
+
+
+
+
+
+
+</strong></body></html>

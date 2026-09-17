@@ -1,0 +1,204 @@
+<html><head></head><body>
+<h1>CS 725: Foundations of Machine Learning (Autumn 2023) </h1>
+<br>
+<b>Lecture Schedule</b> Slot 5, Wednesdays, Fridays: 9:30--10:55 am
+<br>
+<b>Venue:</b> LA 002
+<br>
+<b>Instructor:</b> Sunita Sarawagi
+<br>
+<b>Course email:</b> cs725_iitb@googlegroups.com
+<br>
+<b>TAs: </b> Lokesh N, Vishak Prasad C, Ashutosh Sathe, Krishnakant Bhatt, Meet Doshi, Shrey Bavishi, Gurpreet Singh
+<br>
+<b>Instructor's office hours </b> <a href="http://www.cse.iitb.ac.in/~sunita"> check here </a>
+<br>
+<b> Course announcement, internal notes </b>: moodle.iitb.ac.in
+<br>
+<b> Syllabus and week-wise calendar: </b> <a href="calendar.html">Click here</a>
+<!--
+<br>
+<B> Homeworks</B> <a href="hws.html">Click here</a>
+<br>
+
+<B> <a href="http://blossom.it.iitb.ac.in/~sunita/it642/papers/">Previous years' exams</a></B>
+-->
+<a name="prereq"> <h3>Prerequisites</h3></a> <p align="justify">
+
+An upper-level undergraduate course(s) in algorithms and data
+structures, a basic course on probability and statistics, basic
+understanding of linear algebra and multivariate calculus.  If you
+feel you need to revise these topics, you can find some resources below.  Chapters 2,3,and 4 of the <a href="https://www.deeplearningbook.org/">Deep learning book</a> is a compact resource.  Homework assignments will require
+programming in Python.
+
+This is a first course on machine learning and no prior knowledge of
+machine learning is assumed. 
+<!-- You are urged to consider taking courses on Convex optimizatio
+running in parallel if you lack these background If you do not already
+know Python, you should be able to pick up easily if you know C++ or
+Java or Matlab.  <a href="http://cs231n.github.io/python-numpy-tutorial/">This tutorial is a good starting point.</a>
+. --> 
+<br>
+</p>
+
+<!--
+<a name="postreq"> <h3>Post-requisites</h3></a> <p align="justify">
+This course or CS419m or CS 337 is a prerequisite for the following courses:
+<ul>
+<li>Advanced Machine Learning, (Spring semester). 
+
+<li> Organization of web information, (Spring semester).
+<li> CS 635: Web search and mining,  (co-requisite for the Autumn offering).
+</ul>
+</p>
+-->
+
+<a name="eligi"> <h3>Eligibility</h3></a> <p align="justify">The
+course is open only to CS and CMInDS Masters and PhD students. PG
+students of other departments can write for permission if they meet
+the necessary pre-requisites. <b> UGs are not permitted</b>. Please do
+not write for special permission.
+</p>
+
+
+<a name="requirements">
+<h3>Credit/Audit Requirements</h3></a>
+<p>Approximate credit structure
+<ul>
+<li>25% Mid-semester exam
+</li><li>35% End semester exam
+</li><li>12% Three programming homeworks (Before midsems)
+</li><li>15% Class project (After midsems)
+</li><li>10% In-class quizzes
+  (best n-2 of n quizzes used for grading. There will be no compensation for missed quizzes) <!-- except under very special circumstances.) -->
+</li><li> Scribe class notes (3%)
+</li></ul><b>Audit Students:</b> Audit students will get a pass if they attend
+at least 90% of the lectures, and get at least 70% marks in the
+in-class online quizzes. Audit students are also allowed to
+participate in the first programming assignment.  If they do, then
+their 70% cutoff will be calculated based on the combination of SAFE
+quiz and marks in that assignment.  Due to our limited TA support, we
+will *not* grade all assignments or exams of audit students.  However,
+audit students are welcome to do the assignments and projects on their
+own.
+
+
+<h3>Reading Material</h3>
+Weekwise course calendar and classnotes (if any) will be made available on Moodle. Other reference books appear below.
+
+<h4> Reference books </h4><dl compact="">
+
+  <dt>
+[<a name="KM22" href="#CITEKM22"></a>
+<a href="#CITEKM22" name="KM22">KM22</a>]</dt>
+<dd>
+<a href="https://probml.github.io/pml-book/book1.html"> ``Probabilistic Machine Learning'' by Kevin Murphy</a>. MIT Press, Mar 2022, Available online.
+  
+</dd>
+
+    
+[<a name="SS17" href="#CITESS17"></a>
+<a href="#CITESS17" name="SS17">SS17</a>]
+<dd>
+<a href="http://www.cs.huji.ac.il/~shais/UnderstandingMachineLearning/index.html">Understanding Machine Learning. Shai Shalev-Shwartz and Shai Ben-David. Cambridge University Press. 2017</a>. Available online.
+  
+</dd>
+
+  
+<dt>
+[<a name="Bis07" href="#CITEBis07"></a>
+<a href="#CITEBis07" name="Bis07">Bis07</a>]</dt>
+<dd>
+<a href="">Pattern recognition and machine learning</a> by Christopher Bishop, Springer Verlag, 2006. <a href="https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf">website</a>
+</dd>
+
+<dt>
+[<a name="HTF" href="#HTF"></a>
+<a href="#HTF" name="HTF">HTF</a>]</dt>
+<dd>
+Hastie, Tibshirani, Friedman
+<i> The elements of Statistical Learning </i>
+Springer Verlag
+</dd>
+<dt>
+[<a name="Mitchell97" href="#CITEMitchell97"></a><a name="Mitchell97" href="#CITEMitchell97"></a><a name="Mitchell97" href="#CITEMitchell97"></a><a name="Mitchell97" href="#CITEMitchell97"></a><a name="Mitchell97" href="#CITEMitchell97"></a><a href="#CITEMitchell97" name="Mitchell97">Mit97</a>]
+</dt>
+<dt>
+[<a name="DDL" href="#CITEDDL">DDL2019</a>]
+</dt>
+<dd>
+  <a href="http://numpy.d2l.ai/index.html">
+    Dive into Deep Learning</a>
+  Aston Zhang and Zachary C. Lipton and Mu Li and Alexander J. Smola, 2019
+</dd>
+</dl><h4> Supplementary books</h4><dl compact="">
+<dt>
+[<a name="PRS" href="#PRS"></a>
+<a href="#PRS" name="PRS">PRS </a>]</dt>
+<dd>
+Probability, Random Variables and Stochastic processes by Papoulis and Pillai, 4th Edition, Tata McGraw Hill Edition.
+</dd> 
+
+<dt>
+[<a name="BV" href="#BV"></a>
+<a href="#BV" name="BV">BV </a>]</dt>
+<dd>
+Boyd and Vandenberghe
+<i> Convex optimization</i> Book available online: <!--<a href="http://blossom.it.iitb.ac.in/~sunita/papers/bv_cvxbook.pdf">Local copy</a>-->
+</dd>
+
+<dt>GBC16</dt>
+  <dd>
+<a href="http://www.deeplearningbook.org">Deep Learning</a>
+by Ian Goodfellow, Yoshua Bengio and Aaron Courville, MIT Press, 2016.
+  </dd>
+
+<dt>
+[<a name="GS" href="#GS"></a>
+<a href="#GS" name="GS">GS </a>]</dt>
+<dd>
+Linear Algebra and Its Applications by Gilbert Strand. Thompson Books.
+</dd> 
+  
+<!--
+<dt>
+[<a NAME="Han00" href="#CITEHan00"></a>
+<a href="#CITEHan00" name="Han00">Han00</a>]</dt>
+<dd>
+Data Mining: Concepts and Techniques
+by Jiawei Han, Micheline Kamber,
+Morgan Kaufmann Publishers
+</dd>
+
+<dt>
+[<a NAME="jain88" href="#CITEjain88"></a><a NAME="jain88" href="#CITEjain88"></a><a NAME="jain88" href="#CITEjain88"></a><a NAME="jain88" href="#CITEjain88"></a><a NAME="jain88" href="#CITEjain88"></a><a href="#CITEjain88" name="jain88">JD88</a>]</dt>
+<dd>
+A. K. Jain and R. C. Dubes. <i>Algorithms for Clustering Data</i>. Prentice
+Hall, 1988. <a href="">Local copy</a></dd>
+</dl>
+-->
+
+
+
+
+<h3> Other useful resources</h3>
+<ul>
+<li> <a href="https://www.coursera.org/course/ml">Andrew Ng's offering on Coursera</a>
+</li><li>
+<a href="lecturenotes.html">Lecture notes</a> from some of the previous offerings of the class.
+</li><li> <a href="https://docs.google.com/spreadsheet/ccc?key=0ApGjHieOqvTAdEQzR0NwdzFQMHoxOUNvbWREdHFNYXc&amp;hl=en_US#gid=0">Demo applets for various machine learning operations</a>
+</li></ul>
+<br>
+<br>
+
+
+</dl><table border="" cols="2" width="100%">
+
+<!-- Audit students have to score more than 30% over all, including
+     assignments, quizzes and mid/end sem exam.  -->
+
+
+
+
+
+</table></p></body></html>

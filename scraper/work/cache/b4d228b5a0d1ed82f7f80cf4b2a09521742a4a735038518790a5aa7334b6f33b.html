@@ -1,0 +1,499 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/">
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<link rel="icon" href="./images/icon.png">
+<link rel="stylesheet" href="main.css" type="text/css">
+<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+<!--- <title>CS3500: Operating Systems</title> --->
+<title>Prashanth L.A.</title>
+<!-- MathJax -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML" async="">
+</script>
+<script type="text/x-mathjax-config;executed=true">
+MathJax.Hub.Config({
+	  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+<!-- End MathJax -->
+<script type="text/javascript" async="" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script><style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 5px 0px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; -khtml-border-radius: 5px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 1px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: .7em}
+.MathJax_MenuRadioCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuLabel {padding: 1px 2em 3px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #DDDDDD; margin: 4px 3px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: #606872; color: white}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
+</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1px; bottom: 2px; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">.MJXp-script {font-size: .8em}
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXp-bold {font-weight: bold}
+.MJXp-italic {font-style: italic}
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-largeop {font-size: 150%}
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXp-display {display: block; text-align: center; margin: 1em 0}
+.MJXp-math span {display: inline-block}
+.MJXp-box {display: block!important; text-align: center}
+.MJXp-box:after {content: " "}
+.MJXp-rule {display: block!important; margin-top: .1em}
+.MJXp-char {display: block!important}
+.MJXp-mo {margin: 0 .15em}
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXp-denom {display: inline-table!important; width: 100%}
+.MJXp-denom > * {display: table-row!important}
+.MJXp-surd {vertical-align: top}
+.MJXp-surd > * {display: block!important}
+.MJXp-script-box > *  {display: table!important; height: 50%}
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}
+.MJXp-script-box > * > * > * {display: block!important}
+.MJXp-mphantom {visibility: hidden}
+.MJXp-munderover, .MJXp-munder {display: inline-table!important}
+.MJXp-over {display: inline-block!important; text-align: center}
+.MJXp-over > * {display: block!important}
+.MJXp-munderover > *, .MJXp-munder > * {display: table-row!important}
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXp-mtr {display: table-row!important}
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-mlabeledtr {display: table-row!important}
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style></head>
+<body><div id="MathJax_Message" style="display: none;"></div>
+<div id="main-container">
+<div id="header-container">
+<div id="header">
+<div id="header-icon-text-container">
+<div id="header-icon-container">
+<a href="index.html"><img src="./images/profile2.png" alt="" style="width: 100%; height: 100%; position: center; padding:0px; margin: 0px;"></a>
+</div>
+<div id="header-text-container">
+<a href="index.html">Prashanth L.A.</a>
+</div>
+</div>
+<div id="main">
+<button class="openbtn" onclick="openNav()">☰</button>
+</div>
+</div>
+</div>
+<div id="layout">
+<div id="layout-menu-container">
+<div id="layout-menu">
+<div class="menu-item"><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a></div>
+<div class="menu-item"><a href="index.html" class="current">Home</a></div>
+<div class="menu-item"><a href="bio.html">Biography</a></div>
+<div class="menu-item"><a href="awards.html">Awards</a></div>
+<div class="menu-item"><a href="news.html">News</a></div>
+<div class="menu-category">Research</div>
+<div class="menu-item"><a href="book.html">Books</a></div>
+<div class="menu-item"><a href="publications.html">Publications</a></div>
+<div class="menu-item"><a href="publicationsByYear.html">By&nbsp;Year</a></div>
+<div class="menu-category">Tutorials</div>
+<div class="menu-item"><a href="riskRLTut.html">Risk-RL</a></div>
+<div class="menu-item"><a href="simPertTut.html">Sim-opt</a></div>
+<div class="menu-item"><a href="riskBanditTut.html">Risk-bandits</a></div>
+<div class="menu-category">Notes</div>
+<div class="menu-item"><a href="notes/quarto-docs-rl/index.html" class="current">RL</a></div>
+<div class="menu-item"><a href="courseNotes.html">ML,&nbsp;bandits,&nbsp;etc</a></div>
+<div class="menu-category">Teaching</div>
+<div class="menu-item"><a href="teachingList.html">Metadata</a></div>
+<div class="menu-item"><a href="cs6700_2025.html">RL</a></div>
+<div class="menu-item"><a href="cs7011_2026.html">Topics&nbsp;in&nbsp;RL</a></div>
+<div class="menu-item"><a href="cs6046_2019.html">Bandits</a></div>
+<div class="menu-item"><a href="ee736_2025.html">Sto-opt</a></div>
+<div class="menu-item"><a href="cs5691_2020.html">ML</a></div>
+<div class="menu-item"><a href="ee6150_2020.html">Markov&nbsp;chains</a></div>
+<div class="menu-item"><a href="cs6015_2019.html">LARP</a></div>
+<div class="menu-item"><a href="cs2810_2026.html">Oops&nbsp;lab</a></div>
+<div class="menu-item"><a href="cs2700_2022.html">PDS</a></div>
+<div class="menu-item"><a href="cs3500_2023.html">OS</a></div>
+<div class="menu-item"><a href="cs4900_2020.html">UGRC</a></div>
+<div class="menu-category">Mentoring</div>
+<div class="menu-item"><a href="msphd.html">MS/PhD</a></div>
+<div class="menu-item"><a href="projectStudents.html">Projects</a></div>
+<div class="menu-category">Others</div>
+<div class="menu-item"><a href="activities.html">Activities</a></div>
+</div> <!-- <div id="layout-menu"> -->
+</div> <!-- <div id="layout-menu-container"> -->
+<div id="layout-content-container">
+<div id="layout-content">
+<div id="toptitle">
+<h1>CS3500: Operating Systems</h1>
+</div>
+<h2>Course information</h2>
+<ul>
+<li><p><b>When</b>: Jul-Nov 2023</p>
+</li>
+<li><p><b>Lectures</b>:  Slot <a href="https://www.iitm.ac.in/timetable" target="“blank”">D</a> </p>
+</li>
+<li><p><b>Lab</b>:  Slot <a href="https://www.iitm.ac.in/timetable" target="“blank”">T</a> </p>
+</li>
+<li><p><b>Where</b>: SSB134 for the lectures and DCF for the lab</p>
+</li>
+<li><p><b>Teaching Assistants</b>: 	
+YSS Narasimha Naidu, Sasubilli Yuvan, Bharath Reddy, Aashay Bharatkumar Shah, Ashok Rajeev, Ayush Kumar Mall, Devmalya Roy, Hrishikesh Tiwari, Mathew Thomas, Prince Dineshbhai Patel, Susmit Jaiswal, Tulsi Ram Meena, Yash Bhatia, Tirth Vamja</p>
+</li>
+</ul>
+<h2>Textbooks/References</h2>
+<ul>
+<li><p>Remzi H. Arpaci-Dusseau and Andrea C. Arpaci-Dusseau. <i><a href="https://pages.cs.wisc.edu/~remzi/OSTEP/" target="“blank”">Operating systems: Three easy pieces</a></i>. Arpaci-Dusseau Books, 2018.</p>
+</li>
+</ul>
+<h2>Course Content</h2>
+<ul>
+<li><p>Virtualizing the CPU: Chapters 4-9 of the text</p>
+</li>
+<li><p>Virtualizing the memory: Chapters 13-23 of the text</p>
+</li>
+<li><p>Concurrency: Chapters 26-32 of the text</p>
+</li>
+<li><p>Persistence: Chapters 36-40 of the text</p>
+</li>
+</ul>
+<h2>Labs</h2>
+<p>The lab exercises will either be standalone implementations of OS features (e.g. scheduling, file system, etc), or changing the xv6 OS, e.g., to add new system calls, change the memory management scheme, etc. We shall be using the RISC-V version of xv6, see <a href="https://pdos.csail.mit.edu/6.828/2022/xv6.html" target="“blank”">here</a>.</p>
+<h2>Grading</h2>
+<ul>
+<li><p>Quiz-I and II: 10% each</p>
+</li>
+<li><p>Final exam: 30%</p>
+</li>
+<li><p>Labs: 40% split over seven assignments</p>
+</li>
+<li><p>Tutorials: 8% split over two</p>
+</li>
+<li><p>Class participation: 2%</p>
+</li>
+</ul>
+<h2>Important Dates</h2>
+<ul>
+<li><p>Quiz-I:  31 Aug</p>
+</li>
+<li><p>Quiz-II:  12 Oct</p>
+</li>
+<li><p>Final exam: 22 Nov </p>
+</li>
+</ul>
+<p>Dates as per the the <a href="https://www.iitm.ac.in/academics/academic-calendar" target="“blank”">academic calendar</a></p>
+<h2>Slides</h2>
+<table id="Slides">
+<tbody><tr class="r1"><td class="c1">Process management                                               </td><td class="c2"> Memory management                                          </td><td class="c3"> Concurrency      </td><td class="c4"> Persistence   </td></tr>
+<tr class="r2"><td class="c1"><a href="cs3500/1OSintro.html" target="“blank”">Introduction</a>                       </td><td class="c2"> <a href="cs3500/8memintro.html" target="“blank”">Introduction</a> </td><td class="c3"> <a href="cs3500/16concurrenyintro.html" target="“blank”">Introduction</a>  </td><td class="c4"> <a href="cs3500/19io.html" target="“blank”">I/O devices</a> </td></tr>
+<tr class="r3"><td class="c1"><a href="cs3500/2processes.html" target="“blank”">Processes</a>                              </td><td class="c2"> <a href="cs3500/9segmentation.html" target="“blank”">Segmentation</a>                  </td><td class="c3"> <a href="cs3500/17locks.html" target="“blank”">Locks</a> </td><td class="c4">  <a href="cs3500/20hdd.html" target="“blank”">Hard disk drives</a> </td></tr>
+<tr class="r4"><td class="c1"><a href="cs3500/3forkexec.html" target="“blank”">Process API</a>             </td><td class="c2"> <a href="cs3500/10freespace.html" target="“blank”">Free space management</a>           </td><td class="c3"> <a href="cs3500/18semaphores.html" target="“blank”">Semaphores</a>  </td><td class="c4"> <a href="cs3500/21files.html" target="“blank”">Files and directories</a> </td></tr>
+<tr class="r5"><td class="c1"><a href="cs3500/4limitedDirectExecution.html" target="“blank”">Limited direct execution</a>  </td><td class="c2"> <a href="cs3500/11paging.html" target="“blank”">Paging</a>                             </td></tr>
+<tr class="r6"><td class="c1"> <a href="cs3500/5scheduling.html" target="“blank”">Process scheduling</a>                    </td><td class="c2"> <a href="cs3500/12tlb.html" target="“blank”">Translation lookaside buffers</a>         </td></tr>
+<tr class="r7"><td class="c1"> <a href="cs3500/6mlfs.html" target="“blank”">Multi-level feedback queue</a>                  </td><td class="c2"> <a href="cs3500/13pagingfancy.html" target="“blank”">Advanced page tables</a>          </td></tr>
+<tr class="r8"><td class="c1"> <a href="cs3500/7pf.html" target="“blank”">Proportionally fair scheduling</a>                </td><td class="c2"> <a href="cs3500/14pagefault.html" target="“blank”">Page fault handling</a>             </td></tr>
+<tr class="r9"><td class="c1"> 
+</td></tr></tbody></table>
+<h2>Schedule</h2>
+<p>
+</p><table style="width:100%">
+<tbody><tr>
+<th>Lecture number</th>
+<th>Topics Covered</th> 
+<th>Chapter reference<br>
+</th> 
+</tr>
+<tr>
+<td>Lecture 1</td>
+<td>Intro to OS: virtualizing cpu</td> 
+<td><a href="https://pages.cs.wisc.edu/~remzi/OSTEP/intro.pdf"> Chapter 2</a></td>
+</tr>
+<tr>
+<td>Lecture 2</td>
+<td>Intro to OS: virtualizing memory, concurrency</td> 
+<td><a href="https://pages.cs.wisc.edu/~remzi/OSTEP/intro.pdf"> Chapter 2</a></td>
+</tr>
+<tr>
+<td>Lecture 3</td>
+<td>Intro to OS: persistence <br> The process abstraction</td> 
+<td> <a href="https://pages.cs.wisc.edu/~remzi/OSTEP/intro.pdf"> Chapters 2</a>, <a href="https://pages.cs.wisc.edu/~remzi/OSTEP/cpu-intro.pdf">4</a></td>
+</tr>
+<tr>
+<td>Lecture 4</td>
+<td>Process API: fork, exec</td> 
+<td><a href="https://pages.cs.wisc.edu/~remzi/OSTEP/cpu-api.pdf"> Chapter 5</a></td>
+</tr>
+<tr>
+<td>Lecture 5</td>
+<td>Limited direct execution: Basics, restricted operations</td> 
+<td><a href="https://pages.cs.wisc.edu/~remzi/OSTEP/cpu-mechanisms.pdf"> Chapter 6</a></td>
+</tr>
+<tr>
+<td>Lecture 6</td>
+<td>Limited direct execution: process switching<br>Intro to process scheduling</td> 
+<td> <a href="https://pages.cs.wisc.edu/~remzi/OSTEP/cpu-mechanisms.pdf"> Chapters 6</a>, <a href="https://pages.cs.wisc.edu/~remzi/OSTEP/cpu-sched.pdf"> 7</a></td>
+</tr>
+<tr>
+<td>Lecture 7</td>
+<td>Process scheduling</td> 
+<td><a href="https://pages.cs.wisc.edu/~remzi/OSTEP/cpu-sched.pdf"> Chapter 7</a></td>
+</tr>
+<tr>
+<td>Lecture 8</td>
+<td>Multi-Level Feedback Queue</td> 
+<td><a href="https://pages.cs.wisc.edu/~remzi/OSTEP/cpu-sched-mlfq.pdf"> Chapter 8</a></td>
+</tr>
+<tr>
+<td>Lecture 9</td>
+<td>Multi-Level Feedback Queue</td> 
+<td><a href="https://pages.cs.wisc.edu/~remzi/OSTEP/cpu-sched-mlfq.pdf"> Chapter 8</a></td>
+</tr>
+<tr>
+<td>Lecture 10</td>
+<td>Introduction to shell commands</td> 
+<td></td>
+</tr>
+<tr>
+<td>Lecture 11</td>
+<td>Proportionally fair scheduling</td> 
+<td><a href="https://pages.cs.wisc.edu/~remzi/OSTEP/cpu-sched-lottery.pdf"> Chapter 9</a></td>
+</tr>
+<tr>
+<td>Lecture 12</td>
+<td>Proportionally fair scheduling <br> Discussion questions</td> 
+<td><a href="https://pages.cs.wisc.edu/~remzi/OSTEP/cpu-sched-lottery.pdf"> Chapter 9</a></td>
+</tr>
+<tr>
+<td colspan="3">Tutorial 1</td>
+</tr>
+<tr>
+<td>Lecture 13</td>
+<td>Introduction to memory virtualization</td> 
+<td><a href="https://pages.cs.wisc.edu/~remzi/OSTEP/vm-intro.pdf"> Chapter 13</a></td>
+</tr>
+<tr>
+<td>Lecture 14</td>
+<td>Address translation</td> 
+<td><a href="https://pages.cs.wisc.edu/~remzi/OSTEP/vm-mechanism.pdf">Chapter 15</a></td>
+</tr>
+<tr>
+<td colspan="3">Quiz 1</td>
+</tr>
+<tr>
+<td>Lecture 15</td>
+<td>Segmentation</td> 
+<td><a href="https://pages.cs.wisc.edu/~remzi/OSTEP/vm-segmentation.pdf">Chapter 16</a></td>
+</tr>
+<tr>
+<td>Lecture 16</td>
+<td>Segmentation <br> Discussion questions</td> 
+<td><a href="https://pages.cs.wisc.edu/~remzi/OSTEP/vm-segmentation.pdf">Chapter 16</a></td>
+</tr>
+<tr>
+<td>Lecture 17</td>
+<td>Free-space management</td> 
+<td><a href="https://pages.cs.wisc.edu/~remzi/OSTEP/vm-freespace.pdf">Chapter 17</a></td>
+</tr>
+<tr>
+<td>Lecture 18</td>
+<td>Introduction to paging</td> 
+<td><a href="https://pages.cs.wisc.edu/~remzi/OSTEP/vm-paging.pdf">Chapter 18</a></td>
+</tr>
+<tr>
+<td>Lecture 19</td>
+<td>Paging: Page table entry, an example</td> 
+<td><a href="https://pages.cs.wisc.edu/~remzi/OSTEP/vm-paging.pdf">Chapter 18</a></td>
+</tr>
+<tr>
+<td>Lecture 20</td>
+<td>Translation lookaside buffers</td> 
+<td><a href="https://pages.cs.wisc.edu/~remzi/OSTEP/vm-tlbs.pdf">Chapter 19</a></td>
+</tr>
+<tr>
+<td>Lecture 21</td>
+<td>Advanced page tables: segmentation+paging</td> 
+<td><a href="https://pages.cs.wisc.edu/~remzi/OSTEP/vm-smalltables.pdf">Chapter 20</a></td>
+</tr>
+<tr>
+<td>Lecture 22</td>
+<td>Advanced page tables: multi-level page tables</td> 
+<td><a href="https://pages.cs.wisc.edu/~remzi/OSTEP/vm-smalltables.pdf">Chapter 20</a></td>
+</tr>
+<tr>
+<td>Lecture 23</td>
+<td>Page fault handlers</td> 
+<td><a href="https://pages.cs.wisc.edu/~remzi/OSTEP/vm-beyondphys.pdf">Chapter 21</a></td>
+</tr>
+<tr>
+<td>Lecture 24</td>
+<td>Page replacement algorithms</td> 
+<td><a href="https://pages.cs.wisc.edu/~remzi/OSTEP/vm-beyondphys-policy.pdf">Chapter 22</a></td>
+</tr>
+<tr>
+<td>Lecture 25</td>
+<td>Complete VM systems: VAX/VMS</td> 
+<td><a href="https://pages.cs.wisc.edu/~remzi/OSTEP/vm-complete.pdf">Chapter 23</a></td>
+</tr>
+<tr>
+<td>Lecture 26</td>
+<td>Concurrency: Intro to threads</td> 
+<td><a href="https://pages.cs.wisc.edu/~remzi/OSTEP/threads-intro.pdf">Chapter 26</a></td>
+</tr>
+<tr>
+<td>Lecture 27</td>
+<td>Thread API</td> 
+<td><a href="https://pages.cs.wisc.edu/~remzi/OSTEP/threads-api.pdf">Chapter 27</a></td>
+</tr>
+<tr>
+<td colspan="3">Tutorial 2</td>
+</tr>
+<tr>
+<td>Lecture 28</td>
+<td>Locks: Basic idea</td> 
+<td><a href="https://pages.cs.wisc.edu/~remzi/OSTEP/threads-locks.pdf">Chapter 28</a></td>
+</tr>
+<tr>
+<td>Lecture 29</td>
+<td>Locks: Spin locks using HW primitives</td> 
+<td><a href="https://pages.cs.wisc.edu/~remzi/OSTEP/threads-locks.pdf">Chapter 28</a></td>
+</tr>
+<tr>
+<td>Lecture 30</td>
+<td>Locks: Efficienct variants using yield and queues</td> 
+<td><a href="https://pages.cs.wisc.edu/~remzi/OSTEP/threads-locks.pdf">Chapter 28</a></td>
+</tr>
+<tr>
+<td colspan="3">Quiz 2</td>
+</tr>
+<tr>
+<td>Lecture 31</td>
+<td>Locked data structures</td> 
+<td><a href="https://pages.cs.wisc.edu/~remzi/OSTEP/threads-locks-usage.pdf">Chapter 29</a></td>
+</tr>
+<tr>
+<td>Lecture 32</td>
+<td>Condition variables: Def, fork/join</td> 
+<td><a href="https://pages.cs.wisc.edu/~remzi/OSTEP/threads-cv.pdf">Chapter 30</a></td>
+</tr>
+<tr>
+<td>Lecture 33</td>
+<td>Condition variables: Producer/consumer problem</td> 
+<td><a href="https://pages.cs.wisc.edu/~remzi/OSTEP/threads-cv.pdf">Chapter 30</a></td>
+</tr>
+<tr>
+<td>Lecture 34</td>
+<td>Semaphores: Def, as locks and as CV</td> 
+<td><a href="https://pages.cs.wisc.edu/~remzi/OSTEP/threads-sema.pdf">Chapter 31</a></td>
+</tr>
+<tr>
+<td>Lecture 35</td>
+<td>Semaphores: Producer/consumer and dining philosophers problems</td> 
+<td><a href="https://pages.cs.wisc.edu/~remzi/OSTEP/threads-sema.pdf">Chapter 31</a></td>
+</tr>
+<tr>
+<td>Lecture 36</td>
+<td>Deadlocks: conditions, example</td> 
+<td><a href="https://pages.cs.wisc.edu/~remzi/OSTEP/threads-bugs.pdf">Chapter 32</a></td>
+</tr>
+<tr>
+<td>Lecture 37</td>
+<td>Avoiding deadlocks: illustration using a vector class</td> 
+<td><a href="https://pages.cs.wisc.edu/~remzi/OSTEP/threads-bugs.pdf">Chapter 32</a></td>
+</tr>
+<tr>
+<td>Lecture 38</td>
+<td>I/O devices</td> 
+<td><a href="https://pages.cs.wisc.edu/~remzi/OSTEP/file-devices.pdf">Chapter 36</a></td>
+</tr>
+<tr>
+<td>Lecture 39</td>
+<td>Hard disk drives</td> 
+<td><a href="https://pages.cs.wisc.edu/~remzi/OSTEP/file-disks">Chapter 37</a></td>
+</tr>
+<tr>
+<td>Lecture 40</td>
+<td>Files and directories</td> 
+<td><a href="https://pages.cs.wisc.edu/~remzi/OSTEP/file-intro.pdf">Chapter 39</a></td>
+</tr>
+</tbody></table><p></p>
+</div> <!-- <div id="layout-content"> -->
+<div id="footer-container">
+<div id="footer">
+<div id="footer-text">
+Last edited  on May 12<sup>th</sup> 2026  02:21PM (Time Zone: IST). <br>
+Powered by <a href="https://github.com/szl2/jemdoc-new-design" target="blank">jemdoc + new design</a>.
+</div> <!-- <div id="footer-text"> -->
+</div> <!-- <div id="footer"> -->
+</div> <!-- <div id="footer-container"> -->
+</div> <!-- <div id="layout-content-container"> -->
+</div> <!--- <div id="layout"> --->
+</div> <!--- <div id="main-container"> --->
+<script>
+function openNav() {
+    if (window.innerWidth <= 1200) {
+        document.getElementById("layout-menu").style.width = "280px";
+        document.getElementById("layout-content-container").style.marginLeft = "280.8px";
+        document.getElementById("layout-content-container").style.position = "fixed";
+    }
+}
+function closeNav() {
+    if (window.innerWidth <= 1200) {
+        document.getElementById("layout-menu").style.width = "0";
+        document.getElementById("layout-content-container").style.position = "static";
+        document.getElementById("layout-content-container").style.marginLeft = "0px";
+        setInterval(
+            function(){ location.reload() },
+            500
+        );
+    }
+}
+</script>
+
+
+</body></html>

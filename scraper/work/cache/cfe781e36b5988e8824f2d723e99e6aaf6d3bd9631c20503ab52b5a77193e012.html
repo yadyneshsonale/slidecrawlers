@@ -1,0 +1,377 @@
+<html><head>
+<title>CS124 Spring 2024 - Lecture Slides</title>
+</head>
+<body>
+<h1>CS124 Spring 2024 - Lecture Slides</h1>
+
+<p>
+Slides are made available as PDF files.
+</p>
+
+<dl>
+
+<dt>Lecture 1:  2024-04-01
+    [<a href="CS124Lec01.pdf">slides</a>]
+</dt>
+<dd>
+Introduction, course overview.
+Operating systems:  general principles, history from 1950s to present.
+Mainframes.  Batch processing systems.  Multiprogramming, time-sharing and
+multitasking.
+Minicomputers.  Microcomputers.  Multiprocessor systems.
+Virtualization, emulation, hypervisors.
+Embedded operating systems.
+Real-time operating systems:  soft real-time vs. hard real-time.
+</dd>
+
+<dt>Lecture 2:  2024-04-03
+    [<a href="CS124Lec02.pdf">slides</a>]
+</dt>
+<dd>
+Operating System components:  program execution, resource allocation,
+filesystems, I/O services, communication, accounting, error detection,
+protection/security, system calls.
+Processor operating modes:  kernel mode, user mode.  Hierarchical protection
+domains/protection rings.
+Virtual memory:  kernel space, user space.
+UNIX file IO:  file descriptors, stdin/stdout/stderr, I/O redirection, pipes.
+File descriptor duplication and manipulation.
+Command shell operation.
+</dd>
+
+<dt>Lecture 3:  2024-04-05
+    [<a href="CS124Lec03.pdf">slides</a>]
+</dt>
+<dd>
+Traps for system calls.
+Exceptional control flow:  traps, interrupts, faults, aborts.
+IA32 double-fault and triple-fault aborts.
+Cooperative multitasking, preemptive multitasking.  Hardware timer support.
+IA32 hardware Advanced Programmable Interrupt Controller (APIC).
+OS structure:  separation of policy and mechanism, simple structure (MS-DOS), monolithic kernels, layered structure (the THE OS), modular kernels.
+</dd>
+
+<hr>
+
+<dt>Lecture 4:  2024-04-08
+    [<a href="CS124Lec04.pdf">slides</a>]
+</dt>
+<dd>
+Microkernels.  Liedtke's Minimality Principle.
+Message-passing IPC.  CMU Mach.  L4 family of microkernels.
+Hybrid kernels.  Exokernels.
+</dd>
+
+<dt>Lecture 5:  2024-04-10
+    [<a href="CS124Lec05.pdf">slides</a>]
+</dt>
+<dd>
+Bootstrap process, bootloaders, firmware.  PC BIOS.  Master Boot Record (MBR).
+Chain loading.
+IA32 bootstrap process.
+Plug-and-play systems.  Intel MultiProcessor Specification, Advanced
+Configuration and Power Interface (ACPI).
+Unified Extensible Firmware Interface (UEFI):  preboot environment, EFI
+System Partition, GUID partition tables.
+</dd>
+
+<dt>Lecture 6:  2024-04-12
+    [<a href="CS124Lec06.pdf">slides</a>]
+</dt>
+<dd>
+The process abstraction.
+Process states:  new, ready, running, blocked, suspended, terminated.
+Process control block (aka task control block, task struct).
+Process context switch.
+Process management:  run queue (aka ready queue), wait queues.
+Process scheduling:  long-term scheduling (aka job scheduling), medium term
+scheduling, short-term scheduling.
+</dd>
+
+<hr>
+
+<dt>Lecture 7:  2024-04-15
+    [<a href="CS124Lec07.pdf">slides</a>]
+</dt>
+<dd>
+The thread abstraction.
+Threads and performance:  responsiveness, scalability, resource sharing,
+economy.  Concurrency vs. parallelism, Amdahl's Law, Gustafson-Barsis' Law.
+Threads and abstraction:  blocking vs. non-blocking operations.
+User-space threading vs. kernel threads.
+Multithreading models:  many-to-one model (i.e. user-space threading),
+one-to-one model (i.e. kernel threading), many-to-many threading model (a.k.a.
+hybrid threading model).  Scheduler activations, upcalls, upcall handlers.
+</dd>
+
+<dt>Lecture 8:  2024-04-17
+    [<a href="CS124Lec08.pdf">slides</a>]
+</dt>
+<dd>
+Kernel stacks.  Kernel stack initialization.
+Kernel control paths, reentrant kernels.  Process context vs. interrupt
+context.  IA32 protected-mode interrupt mechanics.
+Preventing or allowing overlapping interrupt handlers.
+Linux and overlapping interrupt handlers:  critical interrupts, noncritical
+interrupts, noncritical deferrable interrupts, softirqs.
+Preemptive vs. non-preemptive kernels:  scheduled vs. forced process-switches,
+dispatch latency.
+Race conditions, a.k.a. Heisenbugs.  Critical sections, mutual exclusion.
+</dd>
+
+<dt>Lecture 9:  2024-04-19
+    [<a href="CS124Lec09.pdf">slides</a>]
+</dt>
+<dd>
+Software mutual exclusion:  Peterson's algorithm.
+Hardware mutual exclusion:  optimization barriers, memory barriers, disabling
+local interrupts.
+Spin locks.
+Deadlocks.  Deadlock conditions:  mutual exclusion, hold and wait, no
+preemption, circular wait.  Deadlock prevention, deadlock avoidance, deadlock
+detection and resolution.
+Semaphores:  counting semaphores, binary semaphores.
+Mutex locks.
+Thinking like a kernel programmer.  Pintos Threads project guidance.
+</dd>
+
+<hr>
+
+<dt>Lecture 10:  2024-04-22
+    [<a href="CS124Lec10.pdf">slides</a>]
+</dt>
+<dd>
+Synchronization on shared data structures.  Lock-based approaches:  lock
+contention, lock overhead, lock granularity.  Mutexes vs. read/write locks.
+Crabbing.
+Read-Copy-Update (RCU):  publish/subscribe, copying to insert/update/delete,
+separation of replacement and reclamation phases of writing.  Read-side
+critical sections, grace period.
+Classic RCU, Sleepable RCU (SRCU), Preemptible RCU.
+</dd>
+
+<dt>Lecture 11:  2024-04-24
+    [<a href="CS124Lec11.pdf">slides</a>]
+</dt>
+<dd>
+Process scheduling.  Scheduler, dispatcher, switch_threads() operation.
+Scheduling measurements:  CPU utilization, throughput, turnaround time,
+waiting time, response time.  CPU bursts, I/O bursts.
+Nonpreemptive or cooperative schedulers vs. preemptive schedulers.
+First-come first-served (FCFS) scheduling (aka FIFO scheduling).
+Round-robin (RR) scheduling:  time slice / quantum.
+Shortest-job-first (SJF) scheduling, shortest-remaining-time-first scheduling.
+Priority scheduling:  starvation, aging, priority inversion.  Solutions for
+priority inversion:  random boosting, priority ceiling, priority inheritance
+(aka priority donation).
+Multilevel queue scheduling, multilevel feedback queue scheduling.
+</dd>
+
+<dt>Lecture 12:  2024-04-26
+    [<a href="CS124Lec12.pdf">slides</a>]
+</dt>
+<dd>
+Real-time scheduling:  soft real-time vs. hard real-time.
+Event latency, interrupt latency, dispatch latency.
+Periodic processes.  Admission control algorithms.
+Rate-monotonic scheduling:  CPU utilization, upper bound on CPU utilization.
+Earliest deadline first (EDF) scheduling.
+Linux 2.4 scheduler, Linux 2.6 O(1) scheduler, Linux Completely Fair Scheduler
+(CFS).
+</dd>
+
+<hr>
+
+<dt>Lecture 13:  2024-05-01
+    [<a href="CS124Lec13.pdf">slides</a>]
+</dt>
+<dd>
+System calls:  interrupt mechanics, system-call/trap mechanics.
+System call service routines.
+Verifying pointers from user-mode programs.
+Linux solution:  exception tables, kernel oops.
+Pintos system-call argument passing mechanism.
+</dd>
+
+<!--
+
+<dt>Lecture 14:  2023-05-05
+    [<a href="CS124Lec14.pdf">slides</a>]
+</dt>
+<dd>
+UNIX signals, signal handlers.  Advanced signal handlers:  siginfo and
+ucontext_t structs.  Pending and blocked signal masks.
+Signal generation vs. signal delivery.
+Kernel signal data structures:  pending signal queue, sigaction array.
+Signal delivery:  kernel handled signals vs. user signal handlers.  Default
+actions enforced by kernel signal delivery mechanism.
+User-mode signal handler invocation mechanism, signal handler stack frame,
+sigreturn() system call.
+Signal handlers and interrupted system calls.  Signal handlers and longjmp.
+</dd>
+
+-->
+
+<hr>
+
+<dt>Lecture 15:  2024-05-06
+    [<a href="CS124Lec15.pdf">slides</a>]
+</dt>
+<dd>
+Program layout and Application Binary Interface (ABI).
+Program addresses:  absolute code, relocatable code, platform independent code.
+Virtual addresses vs. physical addresses.  Memory Management Unit (MMU) and
+address translation.
+Swapping and the backing store.  Standard swapping.
+MMU strategies:  relocation and limit registers and contiguous memory
+allocation, segmentation, compaction.
+MMU strategy:  paging, frames and pages.  Page tables, Translation Lookaside
+Buffers (TLBs), TLB miss.  Simple page tables, hierarchical paging, hashed page
+tables and clustered page tables.
+</dd>
+
+<dt>Lecture 16:  2024-05-08
+    [<a href="CS124Lec16.pdf">slides</a>]
+</dt>
+<dd>
+Page table entries:  valid bit, dirty bit.  Aliasing of physical frames to
+multiple virtual frames.
+Demand paging, pure demand paging.  Copy on write, fork() and vfork().
+Memory area descriptors aka. supplemental page tables, resolving faults using
+memory area descriptors.
+</dd>
+
+<dt>Lecture 17:  2024-05-10
+    [<a href="CS124Lec17.pdf">slides</a>]
+</dt>
+<dd>
+Kernel frame tables.  Pinned pages.  Multiprocessor systems and memory:
+Symmetric Multiprocessing (SMP), Non-Uniform Memory Access (NUMA).
+Anonymous memory, memory-mapped files.  Swap partitions and swap files.
+Page replacement policies:  reference strings, Belady's Anomaly.  FIFO page
+replacement, Optimal (aka "clairvoyant") page replacement.
+</dd>
+
+<hr>
+
+<dt>Lecture 18:  2024-05-13
+    [<a href="CS124Lec18.pdf">slides</a>]
+</dt>
+<dd>
+More page replacement policies.
+Least Recently Used (LRU) policy:  implementing with a counter, implementing
+with a linked list.
+Not Frequently Used (NFU) policy.  Aging policy.
+Second-Chance policy, Clock policy as a more efficient implementation of
+second-chance.
+Not Recently Used (NRU) policy.
+The working set of a process, WSClock policy.
+Page buffering in free page-frame lists.
+Emulating "accessed" and "dirty" bits in software.
+Adaptive page-replacement policies.
+</dd>
+
+<dt>Lecture 19:  2024-05-15
+    [<a href="CS124Lec19.pdf">slides</a>]
+</dt>
+<dd>
+Project 4:  Pintos Virtual Memory - design discussion.
+</dd>
+
+<dt>Lecture 20:  2024-05-17
+    [<a href="CS124Lec20.pdf">slides</a>]
+</dt>
+<dd>
+Page allocation policies:  degree of multiprogramming, thrashing.
+Global replacement policies vs. local replacement policies.
+Equal allocation policy, proportional allocation policy.
+Working set model, prepaging.
+Page-fault frequency.
+Linux paging.  Windows paging and trimming.
+</dd>
+
+<hr>
+
+<dt>Lecture 21:  2024-05-20
+    [<a href="CS124Lec21.pdf">slides</a>]
+</dt>
+<dd>
+Persistent storage:  files and the file system.  File names and extensions.
+Directories aka. folders.  Root directory.  Single-level directory, two-level
+directory, general graph directory.  Paths.  Process "current directory."
+Hard links, symbolic links.
+File access patterns:  sequential access, direct access (or relative access).
+File layout approaches.
+Contiguous allocation.  Compacting free space.  Extents.  Data fragmentation.
+Linked allocation.  File allocation tables.  Clusters of blocks.
+Indexed allocation.  Index structures:  linked sequence, multilevel index,
+hybrid/composite index.
+Ext2 i-nodes:  direct blocks, single indirect blocks, double indirect blocks,
+triple indirect blocks.
+</dd>
+
+<dt>Lecture 22:  2024-05-22
+    [<a href="CS124Lec22.pdf">slides</a>]
+</dt>
+<dd>
+Concurrent access of files from multiple processes.
+File locking:  advisory vs. mandatory file locking, locking the entire file vs.
+locking a region of the file.  UNIX lockf() and flock() functions.
+File deletion and data remanence.
+Free-space list:  bitmap of free blocks, linked list of free blocks.
+Solid State Drives (SSDs):  Flash Translation Layer (FTL), erase blocks,
+read and write operations.  Write amplification, TRIM command.
+Effects of write amplification on random writes to SSDs.
+</dd>
+
+<hr>
+
+<dt>Lecture 23:  2024-05-29
+    [<a href="CS124Lec23.pdf">slides</a>]
+</dt>
+<dd>
+Project 5:  Pintos File System - design discussion.
+</dd>
+
+<dt>Lecture 24:  2024-05-31
+    [<a href="CS124Lec24.pdf">slides</a>]
+</dt>
+<dd>
+Journaling filesystems.
+</dd>
+
+<!--
+<hr />
+
+<dt>Lecture 15:  2023-05-07
+    [<a href="CS124Lec15.pdf">slides</a>]
+</dt>
+<dd>
+Kernel memory allocators:  performance, fragmentation.
+Resource map allocators.  Power-of-two free list allocators.
+The McKusick-Karels allocator.
+Binary buddy allocators:  eager vs. deferred coalescing.
+</dd>
+
+<dt>Lecture 16:  2022-05-04
+    [<a href="CS124Lec16.pdf">slides</a>]
+    [<a href="CS124-Sp2022-Lec16.mp4">recording</a>]
+</dt>
+<dd>
+Kernel memory allocators:  physically contigous memory pages.
+Mach zone allocator.  Slab allocator:  cache, slab, slab coloring.
+</dd>
+
+
+
+
+
+
+-->
+
+</dl>
+
+
+
+
+</body></html>

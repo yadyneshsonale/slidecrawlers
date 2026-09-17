@@ -1,0 +1,1346 @@
+<!DOCTYPE html><html lang="en" class=" js "><head>
+<!-- Meta, title, CSS, favicons, etc. -->
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, width=device-width, maximum-scale=1, minimum-scale=1">
+<!-- Favicon begin -->
+<style data-tippy-stylesheet="">.tippy-box[data-animation=fade][data-state=hidden]{opacity:0}[data-tippy-root]{max-width:calc(100vw - 10px)}.tippy-box{position:relative;background-color:#333;color:#fff;border-radius:4px;font-size:14px;line-height:1.4;white-space:normal;outline:0;transition-property:transform,visibility,opacity}.tippy-box[data-placement^=top]>.tippy-arrow{bottom:0}.tippy-box[data-placement^=top]>.tippy-arrow:before{bottom:-7px;left:0;border-width:8px 8px 0;border-top-color:initial;transform-origin:center top}.tippy-box[data-placement^=bottom]>.tippy-arrow{top:0}.tippy-box[data-placement^=bottom]>.tippy-arrow:before{top:-7px;left:0;border-width:0 8px 8px;border-bottom-color:initial;transform-origin:center bottom}.tippy-box[data-placement^=left]>.tippy-arrow{right:0}.tippy-box[data-placement^=left]>.tippy-arrow:before{border-width:8px 0 8px 8px;border-left-color:initial;right:-7px;transform-origin:center left}.tippy-box[data-placement^=right]>.tippy-arrow{left:0}.tippy-box[data-placement^=right]>.tippy-arrow:before{left:-7px;border-width:8px 8px 8px 0;border-right-color:initial;transform-origin:center right}.tippy-box[data-inertia][data-state=visible]{transition-timing-function:cubic-bezier(.54,1.5,.38,1.11)}.tippy-arrow{width:16px;height:16px;color:#333}.tippy-arrow:before{content:"";position:absolute;border-color:transparent;border-style:solid}.tippy-content{position:relative;padding:5px 9px;z-index:1}</style><link rel="apple-touch-icon" sizes="57x57" href="https://cds.iisc.ac.in/wp-content/themes/iisc-cds/images/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="https://cds.iisc.ac.in/wp-content/themes/iisc-cds/images/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="https://cds.iisc.ac.in/wp-content/themes/iisc-cds/images/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="https://cds.iisc.ac.in/wp-content/themes/iisc-cds/images/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="https://cds.iisc.ac.in/wp-content/themes/iisc-cds/images/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="https://cds.iisc.ac.in/wp-content/themes/iisc-cds/images/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="https://cds.iisc.ac.in/wp-content/themes/iisc-cds/images/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="https://cds.iisc.ac.in/wp-content/themes/iisc-cds/images/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://cds.iisc.ac.in/wp-content/themes/iisc-cds/images/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192" href="https://cds.iisc.ac.in/wp-content/themes/iisc-cds/images/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://cds.iisc.ac.in/wp-content/themes/iisc-cds/images/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="https://cds.iisc.ac.in/wp-content/themes/iisc-cds/images/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://cds.iisc.ac.in/wp-content/themes/iisc-cds/images/favicon/favicon-16x16.png">
+<link rel="manifest" href="https://cds.iisc.ac.in/wp-content/themes/iisc-cds/images/favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="https://cds.iisc.ac.in/wp-content/themes/iisc-cds/images/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!-- Favicon end -->
+<title>
+  DS221: Introduction to Scalable Systems:
+Department of Computational and Data Sciences-
+Indian Institute of Science, Bangalore</title>
+<!--[if lt IE 9]><script src="assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+
+		  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+
+		  <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+
+		<![endif]-->
+<meta name="theme-color" content="#ffffff">
+<meta name="robots" content="max-image-preview:large">
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://cds.iisc.ac.in/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcds.iisc.ac.in%2Fcourses%2Fds221%2F">
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://cds.iisc.ac.in/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcds.iisc.ac.in%2Fcourses%2Fds221%2F&amp;format=xml">
+<style id="wp-img-auto-sizes-contain-inline-css" type="text/css">
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+
+<style id="wp-emoji-styles-inline-css" type="text/css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<link rel="stylesheet" id="wp-block-library-css" href="https://cds.iisc.ac.in/wp-includes/css/dist/block-library/style.min.css?ver=6.9.4" type="text/css" media="all">
+
+<style id="wp-block-heading-inline-css" type="text/css">
+h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-background,h3:where(.wp-block-heading).has-background,h4:where(.wp-block-heading).has-background,h5:where(.wp-block-heading).has-background,h6:where(.wp-block-heading).has-background{padding:1.25em 2.375em}h1.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h1.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h2.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h2.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h3.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h3.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h4.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h4.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h5.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h5.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h6.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h6.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]){rotate:180deg}
+/*# sourceURL=https://cds.iisc.ac.in/wp-includes/blocks/heading/style.min.css */
+</style>
+<style id="wp-block-image-inline-css" type="text/css">
+.wp-block-image>a,.wp-block-image>figure>a{display:inline-block}.wp-block-image img{box-sizing:border-box;height:auto;max-width:100%;vertical-align:bottom}@media not (prefers-reduced-motion){.wp-block-image img.hide{visibility:hidden}.wp-block-image img.show{animation:show-content-image .4s}}.wp-block-image[style*=border-radius] img,.wp-block-image[style*=border-radius]>a{border-radius:inherit}.wp-block-image.has-custom-border img{box-sizing:border-box}.wp-block-image.aligncenter{text-align:center}.wp-block-image.alignfull>a,.wp-block-image.alignwide>a{width:100%}.wp-block-image.alignfull img,.wp-block-image.alignwide img{height:auto;width:100%}.wp-block-image .aligncenter,.wp-block-image .alignleft,.wp-block-image .alignright,.wp-block-image.aligncenter,.wp-block-image.alignleft,.wp-block-image.alignright{display:table}.wp-block-image .aligncenter>figcaption,.wp-block-image .alignleft>figcaption,.wp-block-image .alignright>figcaption,.wp-block-image.aligncenter>figcaption,.wp-block-image.alignleft>figcaption,.wp-block-image.alignright>figcaption{caption-side:bottom;display:table-caption}.wp-block-image .alignleft{float:left;margin:.5em 1em .5em 0}.wp-block-image .alignright{float:right;margin:.5em 0 .5em 1em}.wp-block-image .aligncenter{margin-left:auto;margin-right:auto}.wp-block-image :where(figcaption){margin-bottom:1em;margin-top:.5em}.wp-block-image.is-style-circle-mask img{border-radius:9999px}@supports ((-webkit-mask-image:none) or (mask-image:none)) or (-webkit-mask-image:none){.wp-block-image.is-style-circle-mask img{border-radius:0;-webkit-mask-image:url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="50"/></svg>');mask-image:url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="50"/></svg>');mask-mode:alpha;-webkit-mask-position:center;mask-position:center;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-size:contain;mask-size:contain}}:root :where(.wp-block-image.is-style-rounded img,.wp-block-image .is-style-rounded img){border-radius:9999px}.wp-block-image figure{margin:0}.wp-lightbox-container{display:flex;flex-direction:column;position:relative}.wp-lightbox-container img{cursor:zoom-in}.wp-lightbox-container img:hover+button{opacity:1}.wp-lightbox-container button{align-items:center;backdrop-filter:blur(16px) saturate(180%);background-color:#5a5a5a40;border:none;border-radius:4px;cursor:zoom-in;display:flex;height:20px;justify-content:center;opacity:0;padding:0;position:absolute;right:16px;text-align:center;top:16px;width:20px;z-index:100}@media not (prefers-reduced-motion){.wp-lightbox-container button{transition:opacity .2s ease}}.wp-lightbox-container button:focus-visible{outline:3px auto #5a5a5a40;outline:3px auto -webkit-focus-ring-color;outline-offset:3px}.wp-lightbox-container button:hover{cursor:pointer;opacity:1}.wp-lightbox-container button:focus{opacity:1}.wp-lightbox-container button:focus,.wp-lightbox-container button:hover,.wp-lightbox-container button:not(:hover):not(:active):not(.has-background){background-color:#5a5a5a40;border:none}.wp-lightbox-overlay{box-sizing:border-box;cursor:zoom-out;height:100vh;left:0;overflow:hidden;position:fixed;top:0;visibility:hidden;width:100%;z-index:100000}.wp-lightbox-overlay .close-button{align-items:center;cursor:pointer;display:flex;justify-content:center;min-height:40px;min-width:40px;padding:0;position:absolute;right:calc(env(safe-area-inset-right) + 16px);top:calc(env(safe-area-inset-top) + 16px);z-index:5000000}.wp-lightbox-overlay .close-button:focus,.wp-lightbox-overlay .close-button:hover,.wp-lightbox-overlay .close-button:not(:hover):not(:active):not(.has-background){background:none;border:none}.wp-lightbox-overlay .lightbox-image-container{height:var(--wp--lightbox-container-height);left:50%;overflow:hidden;position:absolute;top:50%;transform:translate(-50%,-50%);transform-origin:top left;width:var(--wp--lightbox-container-width);z-index:9999999999}.wp-lightbox-overlay .wp-block-image{align-items:center;box-sizing:border-box;display:flex;height:100%;justify-content:center;margin:0;position:relative;transform-origin:0 0;width:100%;z-index:3000000}.wp-lightbox-overlay .wp-block-image img{height:var(--wp--lightbox-image-height);min-height:var(--wp--lightbox-image-height);min-width:var(--wp--lightbox-image-width);width:var(--wp--lightbox-image-width)}.wp-lightbox-overlay .wp-block-image figcaption{display:none}.wp-lightbox-overlay button{background:none;border:none}.wp-lightbox-overlay .scrim{background-color:#fff;height:100%;opacity:.9;position:absolute;width:100%;z-index:2000000}.wp-lightbox-overlay.active{visibility:visible}@media not (prefers-reduced-motion){.wp-lightbox-overlay.active{animation:turn-on-visibility .25s both}.wp-lightbox-overlay.active img{animation:turn-on-visibility .35s both}.wp-lightbox-overlay.show-closing-animation:not(.active){animation:turn-off-visibility .35s both}.wp-lightbox-overlay.show-closing-animation:not(.active) img{animation:turn-off-visibility .25s both}.wp-lightbox-overlay.zoom.active{animation:none;opacity:1;visibility:visible}.wp-lightbox-overlay.zoom.active .lightbox-image-container{animation:lightbox-zoom-in .4s}.wp-lightbox-overlay.zoom.active .lightbox-image-container img{animation:none}.wp-lightbox-overlay.zoom.active .scrim{animation:turn-on-visibility .4s forwards}.wp-lightbox-overlay.zoom.show-closing-animation:not(.active){animation:none}.wp-lightbox-overlay.zoom.show-closing-animation:not(.active) .lightbox-image-container{animation:lightbox-zoom-out .4s}.wp-lightbox-overlay.zoom.show-closing-animation:not(.active) .lightbox-image-container img{animation:none}.wp-lightbox-overlay.zoom.show-closing-animation:not(.active) .scrim{animation:turn-off-visibility .4s forwards}}@keyframes show-content-image{0%{visibility:hidden}99%{visibility:hidden}to{visibility:visible}}@keyframes turn-on-visibility{0%{opacity:0}to{opacity:1}}@keyframes turn-off-visibility{0%{opacity:1;visibility:visible}99%{opacity:0;visibility:visible}to{opacity:0;visibility:hidden}}@keyframes lightbox-zoom-in{0%{transform:translate(calc((-100vw + var(--wp--lightbox-scrollbar-width))/2 + var(--wp--lightbox-initial-left-position)),calc(-50vh + var(--wp--lightbox-initial-top-position))) scale(var(--wp--lightbox-scale))}to{transform:translate(-50%,-50%) scale(1)}}@keyframes lightbox-zoom-out{0%{transform:translate(-50%,-50%) scale(1);visibility:visible}99%{visibility:visible}to{transform:translate(calc((-100vw + var(--wp--lightbox-scrollbar-width))/2 + var(--wp--lightbox-initial-left-position)),calc(-50vh + var(--wp--lightbox-initial-top-position))) scale(var(--wp--lightbox-scale));visibility:hidden}}
+/*# sourceURL=https://cds.iisc.ac.in/wp-includes/blocks/image/style.min.css */
+</style>
+<style id="wp-block-list-inline-css" type="text/css">
+ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:1.25em 2.375em}
+/*# sourceURL=https://cds.iisc.ac.in/wp-includes/blocks/list/style.min.css */
+</style>
+<style id="wp-block-paragraph-inline-css" type="text/css">
+.is-small-text{font-size:.875em}.is-regular-text{font-size:1em}.is-large-text{font-size:2.25em}.is-larger-text{font-size:3em}.has-drop-cap:not(:focus):first-letter{float:left;font-size:8.4em;font-style:normal;font-weight:100;line-height:.68;margin:.05em .1em 0 0;text-transform:uppercase}body.rtl .has-drop-cap:not(:focus):first-letter{float:none;margin-left:.1em}p.has-drop-cap.has-background{overflow:hidden}:root :where(p.has-background){padding:1.25em 2.375em}:where(p.has-text-color:not(.has-link-color)) a{color:inherit}p.has-text-align-left[style*="writing-mode:vertical-lr"],p.has-text-align-right[style*="writing-mode:vertical-rl"]{rotate:180deg}
+/*# sourceURL=https://cds.iisc.ac.in/wp-includes/blocks/paragraph/style.min.css */
+</style>
+<style id="wp-block-separator-inline-css" type="text/css">
+@charset "UTF-8";.wp-block-separator{border:none;border-top:2px solid}:root :where(.wp-block-separator.is-style-dots){height:auto;line-height:1;text-align:center}:root :where(.wp-block-separator.is-style-dots):before{color:currentColor;content:"···";font-family:serif;font-size:1.5em;letter-spacing:2em;padding-left:2em}.wp-block-separator.is-style-dots{background:none!important;border:none!important}
+/*# sourceURL=https://cds.iisc.ac.in/wp-includes/blocks/separator/style.min.css */
+</style>
+<style id="wp-block-spacer-inline-css" type="text/css">
+.wp-block-spacer{clear:both}
+/*# sourceURL=https://cds.iisc.ac.in/wp-includes/blocks/spacer/style.min.css */
+</style>
+
+<style id="classic-theme-styles-inline-css" type="text/css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+<style id="global-styles-inline-css" type="text/css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+<link rel="stylesheet" id="events-manager-css" href="https://cds.iisc.ac.in/wp-content/plugins/events-manager/includes/css/events-manager.min.css?ver=7.2.3.1" type="text/css" media="all">
+<style id="events-manager-inline-css" type="text/css">
+body .em { --font-family : inherit; --font-weight : inherit; --font-size : 1em; --line-height : inherit; }
+/*# sourceURL=events-manager-inline-css */
+</style>
+<link rel="stylesheet" id="dashicons-css" href="https://cds.iisc.ac.in/wp-includes/css/dashicons.min.css?ver=6.9.4" type="text/css" media="all">
+<link rel="stylesheet" id="to-top-css" href="https://cds.iisc.ac.in/wp-content/plugins/to-top/public/css/to-top-public.css?ver=3.1" type="text/css" media="all">
+<link rel="stylesheet" id="hamburger.css-css" href="https://cds.iisc.ac.in/wp-content/plugins/wp-responsive-menu/assets/css/wpr-hamburger.css?ver=3.2.1" type="text/css" media="all">
+<link rel="stylesheet" id="wprmenu.css-css" href="https://cds.iisc.ac.in/wp-content/plugins/wp-responsive-menu/assets/css/wprmenu.css?ver=3.2.1" type="text/css" media="all">
+<style id="wprmenu.css-inline-css" type="text/css">
+@media only screen and ( max-width: 1024px ) {html body div.wprm-wrapper {overflow: scroll;}#wprmenu_bar {background-image: url();background-size: cover ;background-repeat: repeat;}#wprmenu_bar {background-color: #004f95;}html body div#mg-wprm-wrap .wpr_submit .icon.icon-search {color: #ffffff;}#wprmenu_bar .menu_title,#wprmenu_bar .wprmenu_icon_menu,#wprmenu_bar .menu_title a {color: #ffffff;}#wprmenu_bar .menu_title a {font-size: 20px;font-weight: normal;}#mg-wprm-wrap li.menu-item a {font-size: 15px;text-transform: uppercase;font-weight: normal;}#mg-wprm-wrap li.menu-item-has-children ul.sub-menu a {font-size: 15px;text-transform: uppercase;font-weight: normal;}#mg-wprm-wrap li.current-menu-item > a {background: #004f95;}#mg-wprm-wrap li.current-menu-item > a,#mg-wprm-wrap li.current-menu-item span.wprmenu_icon{color: #ffffff !important;}#mg-wprm-wrap {background-color: #004f95;}.cbp-spmenu-push-toright,.cbp-spmenu-push-toright .mm-slideout {left: 80% ;}.cbp-spmenu-push-toleft {left: -80% ;}#mg-wprm-wrap.cbp-spmenu-right,#mg-wprm-wrap.cbp-spmenu-left,#mg-wprm-wrap.cbp-spmenu-right.custom,#mg-wprm-wrap.cbp-spmenu-left.custom,.cbp-spmenu-vertical {width: 80%;max-width: 400px;}#mg-wprm-wrap ul#wprmenu_menu_ul li.menu-item a,div#mg-wprm-wrap ul li span.wprmenu_icon {color: #ffffff;}#mg-wprm-wrap ul#wprmenu_menu_ul li.menu-item:valid ~ a{color: #ffffff;}#mg-wprm-wrap ul#wprmenu_menu_ul li.menu-item a:hover {background: #004f95;color: #ffffff !important;}div#mg-wprm-wrap ul>li:hover>span.wprmenu_icon {color: #ffffff !important;}.wprmenu_bar .hamburger-inner,.wprmenu_bar .hamburger-inner::before,.wprmenu_bar .hamburger-inner::after {background: #ffffff;}.wprmenu_bar .hamburger:hover .hamburger-inner,.wprmenu_bar .hamburger:hover .hamburger-inner::before,.wprmenu_bar .hamburger:hover .hamburger-inner::after {background: #ffffff;}#wprmenu_menu.left {width:80%;left: -80%;right: auto;}#wprmenu_menu.right {width:80%;right: -80%;left: auto;}.wprmenu_bar .hamburger {float: right;}.wprmenu_bar #custom_menu_icon.hamburger {top: px;right: 50px;float: right;background-color: #cccccc;}html body div#wprmenu_bar {height : 42px;}#mg-wprm-wrap.cbp-spmenu-left,#mg-wprm-wrap.cbp-spmenu-right,#mg-widgetmenu-wrap.cbp-spmenu-widget-left,#mg-widgetmenu-wrap.cbp-spmenu-widget-right {top: 42px !important;}.headermenu{ display: none !important; }.wpr_custom_menu #custom_menu_icon {display: block;}html { padding-top: 42px !important; }#wprmenu_bar,#mg-wprm-wrap { display: block; }div#wpadminbar { position: fixed; }}
+/*# sourceURL=wprmenu.css-inline-css */
+</style>
+<link rel="stylesheet" id="wpr_icons-css" href="https://cds.iisc.ac.in/wp-content/plugins/wp-responsive-menu/inc/assets/icons/wpr-icons.css?ver=3.2.1" type="text/css" media="all">
+<link rel="stylesheet" id="Poppins-css" href="https://fonts.googleapis.com/css2?family=Poppins%3Awght%40300&amp;ver=6.9.4" type="text/css" media="all">
+<link rel="stylesheet" id="Rambla-css" href="https://fonts.googleapis.com/css?family=Rambla%3Awght%40400%3B700&amp;display=swap&amp;ver=6.9.4" type="text/css" media="all">
+<link rel="stylesheet" id="LibreBaskerville-css" href="https://fonts.googleapis.com/css?family=Rambla%3Awght%40400%3B700&amp;display=swap&amp;ver=6.9.4" type="text/css" media="all">
+<link rel="stylesheet" id="bootstrap-css" href="https://cds.iisc.ac.in/wp-content/themes/iisc-cds/css/bootstrap.min.css?ver=6.9.4" type="text/css" media="all">
+<link rel="stylesheet" id="menu-styles.css-css" href="https://cds.iisc.ac.in/wp-content/themes/iisc-cds/css/menu-styles.css?ver=6.9.4" type="text/css" media="all">
+<link rel="stylesheet" id="fa-all.min.css-css" href="https://cds.iisc.ac.in/wp-content/themes/iisc-cds/css/fa-all.min.css?ver=6.9.4" type="text/css" media="all">
+<link rel="stylesheet" id="style.css-css" href="https://cds.iisc.ac.in/wp-content/themes/iisc-cds/css/style.css?ver=6.9.4" type="text/css" media="all">
+<link rel="stylesheet" id="theeventscalendar.css-css" href="https://cds.iisc.ac.in/wp-content/themes/iisc-cds/css/theeventscalendar.css?ver=6.9.4" type="text/css" media="all">
+<link rel="stylesheet" id="tablepress-default-css" href="https://cds.iisc.ac.in/wp-content/plugins/tablepress/css/build/default.css?ver=3.3" type="text/css" media="all">
+<style id="generateblocks-inline-css" type="text/css">
+:root{--gb-container-width:1100px;}.gb-container .wp-block-image img{vertical-align:middle;}.gb-grid-wrapper .wp-block-image{margin-bottom:0;}.gb-highlight{background:none;}.gb-shape{line-height:0;}
+/*# sourceURL=generateblocks-inline-css */
+</style>
+<style id="kadence-blocks-global-variables-inline-css" type="text/css">
+:root {--global-kb-font-size-sm:clamp(0.8rem, 0.73rem + 0.217vw, 0.9rem);--global-kb-font-size-md:clamp(1.1rem, 0.995rem + 0.326vw, 1.25rem);--global-kb-font-size-lg:clamp(1.75rem, 1.576rem + 0.543vw, 2rem);--global-kb-font-size-xl:clamp(2.25rem, 1.728rem + 1.63vw, 3rem);--global-kb-font-size-xxl:clamp(2.5rem, 1.456rem + 3.26vw, 4rem);--global-kb-font-size-xxxl:clamp(2.75rem, 0.489rem + 7.065vw, 6rem);}:root {--global-palette1: #3182CE;--global-palette2: #2B6CB0;--global-palette3: #1A202C;--global-palette4: #2D3748;--global-palette5: #4A5568;--global-palette6: #718096;--global-palette7: #EDF2F7;--global-palette8: #F7FAFC;--global-palette9: #ffffff;}
+/*# sourceURL=kadence-blocks-global-variables-inline-css */
+</style>
+<!--n2css--><!--n2js--><script type="text/javascript" src="https://cds.iisc.ac.in/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script type="text/javascript" src="https://cds.iisc.ac.in/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<script type="text/javascript" src="https://cds.iisc.ac.in/wp-includes/js/jquery/ui/core.min.js?ver=1.13.3" id="jquery-ui-core-js"></script>
+<script type="text/javascript" src="https://cds.iisc.ac.in/wp-includes/js/jquery/ui/mouse.min.js?ver=1.13.3" id="jquery-ui-mouse-js"></script>
+<script type="text/javascript" src="https://cds.iisc.ac.in/wp-includes/js/jquery/ui/sortable.min.js?ver=1.13.3" id="jquery-ui-sortable-js"></script>
+<script type="text/javascript" src="https://cds.iisc.ac.in/wp-includes/js/jquery/ui/datepicker.min.js?ver=1.13.3" id="jquery-ui-datepicker-js"></script>
+<script type="text/javascript" id="jquery-ui-datepicker-js-after">
+/* <![CDATA[ */
+jQuery(function(jQuery){jQuery.datepicker.setDefaults({"closeText":"Close","currentText":"Today","monthNames":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesShort":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"nextText":"Next","prevText":"Previous","dayNames":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"dayNamesShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"dayNamesMin":["S","M","T","W","T","F","S"],"dateFormat":"d M y","firstDay":1,"isRTL":false});});
+//# sourceURL=jquery-ui-datepicker-js-after
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://cds.iisc.ac.in/wp-includes/js/jquery/ui/resizable.min.js?ver=1.13.3" id="jquery-ui-resizable-js"></script>
+<script type="text/javascript" src="https://cds.iisc.ac.in/wp-includes/js/jquery/ui/draggable.min.js?ver=1.13.3" id="jquery-ui-draggable-js"></script>
+<script type="text/javascript" src="https://cds.iisc.ac.in/wp-includes/js/jquery/ui/controlgroup.min.js?ver=1.13.3" id="jquery-ui-controlgroup-js"></script>
+<script type="text/javascript" src="https://cds.iisc.ac.in/wp-includes/js/jquery/ui/checkboxradio.min.js?ver=1.13.3" id="jquery-ui-checkboxradio-js"></script>
+<script type="text/javascript" src="https://cds.iisc.ac.in/wp-includes/js/jquery/ui/button.min.js?ver=1.13.3" id="jquery-ui-button-js"></script>
+<script type="text/javascript" src="https://cds.iisc.ac.in/wp-includes/js/jquery/ui/dialog.min.js?ver=1.13.3" id="jquery-ui-dialog-js"></script>
+<script type="text/javascript" id="events-manager-js-extra">
+/* <![CDATA[ */
+var EM = {"ajaxurl":"https://cds.iisc.ac.in/wp-admin/admin-ajax.php","locationajaxurl":"https://cds.iisc.ac.in/wp-admin/admin-ajax.php?action=locations_search","firstDay":"1","locale":"en","dateFormat":"yy-mm-dd","ui_css":"https://cds.iisc.ac.in/wp-content/plugins/events-manager/includes/css/jquery-ui/build.min.css","show24hours":"0","is_ssl":"1","autocomplete_limit":"10","calendar":{"breakpoints":{"small":560,"medium":908,"large":false},"month_format":"M Y"},"phone":"","datepicker":{"format":"d/m/Y"},"search":{"breakpoints":{"small":650,"medium":850,"full":false}},"url":"https://cds.iisc.ac.in/wp-content/plugins/events-manager","assets":{"input.em-uploader":{"js":{"em-uploader":{"url":"https://cds.iisc.ac.in/wp-content/plugins/events-manager/includes/js/em-uploader.js?v=7.2.3.1","event":"em_uploader_ready"}}},".em-event-editor":{"js":{"event-editor":{"url":"https://cds.iisc.ac.in/wp-content/plugins/events-manager/includes/js/events-manager-event-editor.js?v=7.2.3.1","event":"em_event_editor_ready"}},"css":{"event-editor":"https://cds.iisc.ac.in/wp-content/plugins/events-manager/includes/css/events-manager-event-editor.min.css?v=7.2.3.1"}},".em-recurrence-sets, .em-timezone":{"js":{"luxon":{"url":"luxon/luxon.js?v=7.2.3.1","event":"em_luxon_ready"}}},".em-booking-form, #em-booking-form, .em-booking-recurring, .em-event-booking-form":{"js":{"em-bookings":{"url":"https://cds.iisc.ac.in/wp-content/plugins/events-manager/includes/js/bookingsform.js?v=7.2.3.1","event":"em_booking_form_js_loaded"}}},"#em-opt-archetypes":{"js":{"archetypes":"https://cds.iisc.ac.in/wp-content/plugins/events-manager/includes/js/admin-archetype-editor.js?v=7.2.3.1","archetypes_ms":"https://cds.iisc.ac.in/wp-content/plugins/events-manager/includes/js/admin-archetypes.js?v=7.2.3.1","qs":"qs/qs.js?v=7.2.3.1"}}},"cached":"1","bookingInProgress":"Please wait while the booking is being submitted.","tickets_save":"Save Ticket","bookingajaxurl":"https://cds.iisc.ac.in/wp-admin/admin-ajax.php","bookings_export_save":"Export Bookings","bookings_settings_save":"Save Settings","booking_delete":"Are you sure you want to delete?","booking_offset":"30","bookings":{"submit_button":{"text":{"default":"Submit Booking","free":"Submit Booking","payment":"Submit Booking","processing":"Processing ..."}},"update_listener":""},"bb_full":"Sold Out","bb_book":"Book Now","bb_booking":"Booking...","bb_booked":"Booking Submitted","bb_error":"Booking Error. Try again?","bb_cancel":"Cancel","bb_canceling":"Canceling...","bb_cancelled":"Cancelled","bb_cancel_error":"Cancellation Error. Try again?","txt_search":"Search","txt_searching":"Searching...","txt_loading":"Loading...","event_detach_warning":"Are you sure you want to detach this event? By doing so, this event will be independent of the recurring set of events.","delete_recurrence_warning":"Are you sure you want to delete all recurrences of this event? All events will be moved to trash.","disable_bookings_warning":"Are you sure you want to disable bookings? If you do this and save, you will lose all previous bookings. If you wish to prevent further bookings, reduce the number of spaces available to the amount of bookings you currently have","booking_warning_cancel":"Are you sure you want to cancel your booking?"};
+//# sourceURL=events-manager-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://cds.iisc.ac.in/wp-content/plugins/events-manager/includes/js/events-manager.js?ver=7.2.3.1" id="events-manager-js"></script>
+<script type="text/javascript" id="to-top-js-extra">
+/* <![CDATA[ */
+var to_top_options = {"scroll_offset":"100","icon_opacity":"50","style":"icon","icon_type":"dashicons-arrow-up-alt2","icon_color":"#ffffff","icon_bg_color":"#000000","icon_size":"32","border_radius":"5","image":"https://cds.iisc.ac.in/wp-content/plugins/to-top/admin/images/default.png","image_width":"65","image_alt":"","location":"bottom-right","margin_x":"20","margin_y":"20","show_on_admin":"0","enable_autohide":"0","autohide_time":"2","enable_hide_small_device":"0","small_device_max_width":"640","reset":"0"};
+//# sourceURL=to-top-js-extra
+/* ]]> */
+</script>
+<script async="" type="text/javascript" src="https://cds.iisc.ac.in/wp-content/plugins/to-top/public/js/to-top-public.js?ver=3.1" id="to-top-js"></script>
+<script type="text/javascript" src="https://cds.iisc.ac.in/wp-content/plugins/wp-responsive-menu/assets/js/modernizr.custom.js?ver=3.2.1" id="modernizr-js"></script>
+<script type="text/javascript" src="https://cds.iisc.ac.in/wp-content/plugins/wp-responsive-menu/assets/js/touchSwipe.js?ver=3.2.1" id="touchSwipe-js"></script>
+<script type="text/javascript" id="wprmenu.js-js-extra">
+/* <![CDATA[ */
+var wprmenu = {"zooming":"","from_width":"1024","push_width":"400","menu_width":"80","parent_click":"","swipe":"","enable_overlay":"","wprmenuDemoId":""};
+//# sourceURL=wprmenu.js-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://cds.iisc.ac.in/wp-content/plugins/wp-responsive-menu/assets/js/wprmenu.js?ver=3.2.1" id="wprmenu.js-js"></script>
+<script type="text/javascript" src="https://cds.iisc.ac.in/wp-content/themes/iisc-cds/js/jquery-3.4.1.min.js?ver=6.9.4" id="jquery-3.4.1.min-js"></script>
+<script type="text/javascript" src="https://cds.iisc.ac.in/wp-content/themes/iisc-cds/js/bootstrap.min.js?ver=6.9.4" id="bootstrap.min.js-js"></script>
+<script type="text/javascript" src="https://cds.iisc.ac.in/wp-content/themes/iisc-cds/js/jquery.scrollto.min.js?ver=6.9.4" id="jquery.scrollto.min.js-js"></script>
+<script type="text/javascript" src="https://cds.iisc.ac.in/wp-content/themes/iisc-cds/js/jquery.localscroll.min.js?ver=6.9.4" id="jquery.localscroll.min.js-js"></script>
+<script type="text/javascript" src="https://cds.iisc.ac.in/wp-content/themes/iisc-cds/js/menu-script.js?ver=6.9.4" id="menu-script.js-js"></script>
+<link rel="https://api.w.org/" href="https://cds.iisc.ac.in/wp-json/"><link rel="alternate" title="JSON" type="application/json" href="https://cds.iisc.ac.in/wp-json/wp/v2/pages/3941"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://cds.iisc.ac.in/xmlrpc.php?rsd">
+<meta name="generator" content="WordPress 6.9.4">
+<link rel="canonical" href="https://cds.iisc.ac.in/courses/ds221/">
+<link rel="shortlink" href="https://cds.iisc.ac.in/?p=3941">
+<link rel="icon" href="https://cds.iisc.ac.in/wp-content/uploads/cropped-CDS_Logo_Square_Small-32x32.png" sizes="32x32">
+<link rel="icon" href="https://cds.iisc.ac.in/wp-content/uploads/cropped-CDS_Logo_Square_Small-192x192.png" sizes="192x192">
+<link rel="apple-touch-icon" href="https://cds.iisc.ac.in/wp-content/uploads/cropped-CDS_Logo_Square_Small-180x180.png">
+<meta name="msapplication-TileImage" content="https://cds.iisc.ac.in/wp-content/uploads/cropped-CDS_Logo_Square_Small-270x270.png">
+		<style type="text/css" id="wp-custom-css">
+			.wp-block-latest-posts.wp-block-latest-posts__list li {
+  clear: both;
+  overflow-wrap: break-word;
+  margin-bottom: 10px;
+  display: block;
+  overflow: auto;
+}
+.wp-block-latest-posts__featured-image img {
+  height: auto;
+  max-width: 100%;
+  width: auto;
+	padding:2px;
+	border:1px solid #fc0;
+}
+.wp-block-latest-posts__post-date {
+  display: block;
+  font-size: 1em !important;
+}		</style>
+		</head>
+<body class="wp-singular page-template-default page page-id-3941 page-child parent-pageid-232 wp-theme-iisc-cds cbp-spmenu-push">
+<!-- Start Header -->
+<header id="header">
+  <div class="row">
+    <div class="col-md-8 col-sm-8 col-12 logo"> <a href="https://cds.iisc.ac.in" data-wpel-link="internal"><img src="https://cds.iisc.ac.in/wp-content/themes/iisc-cds/images/logo-cds.png" alt="Department of Computational and Data Sciences" title="Department of Computational and Data Sciences" class="img-responsive"></a> </div>
+    <div class="col-md-4 col-sm-4 col-12 logo right"><a href="https://iisc.ac.in/" target="_blank" data-wpel-link="external" rel="external noopener noreferrer"><img src="https://cds.iisc.ac.in/wp-content/themes/iisc-cds/images/logo-iisc.png" alt="Indian Institute of Science" title="Indian Institute of Science" class="img-responsive"></a></div>
+  </div>
+  <div class="row">
+    <div class="col-12 headermenu">
+      <div class="col-md-12 nopad">
+        <div class="row nopad">
+          <div class="col-md-10"> 
+            <!-- Start Navigation -->
+            <div id="cssmenu"><div id="menu-line" style="width: 103px; left: 0px;"></div><div id="menu-button">Menu</div>
+              <ul id="menu-main-menu" class="align-center"><li id="menu-item-8220" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-8220 has-sub"><span class="submenu-button"></span><a href="https://cds.iisc.ac.in/serc/" data-wpel-link="internal">About</a>
+<ul class="sub-menu">
+	<li id="menu-item-5908" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5908"><a href="https://cds.iisc.ac.in/serc/" data-wpel-link="internal">About CDS</a></li>
+	<li id="menu-item-1257" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1257 has-sub"><span class="submenu-button"></span><a href="https://cds.iisc.ac.in/opportunities/" data-wpel-link="internal">Opportunities</a>
+	<ul class="sub-menu">
+		<li id="menu-item-1258" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1258"><a href="https://cds.iisc.ac.in/opportunities/faculty/" data-wpel-link="internal">Apply for Faculty Positions</a></li>
+		<li id="menu-item-2966" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2966"><a href="https://cds.iisc.ac.in/sponsorship/" data-wpel-link="internal">Sponsorship</a></li>
+		<li id="menu-item-1260" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1260"><a href="https://cds.iisc.ac.in/category/openings/" data-wpel-link="internal">Research Staff Openings</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li id="menu-item-8221" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-8221 has-sub"><span class="submenu-button"></span><a href="https://cds.iisc.ac.in/research-new/" data-wpel-link="internal">Research</a>
+<ul class="sub-menu">
+	<li id="menu-item-8225" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8225"><a href="https://cds.iisc.ac.in/research-new/data-management-computing-and-analytics/" data-wpel-link="internal">Data management, Computing and Analytics</a></li>
+	<li id="menu-item-8224" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8224"><a href="https://cds.iisc.ac.in/research-new/software-and-runtime-systems/" data-wpel-link="internal">Software and Runtime Systems</a></li>
+	<li id="menu-item-8223" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8223"><a href="https://cds.iisc.ac.in/research-new/computational-science-and-engineering/" data-wpel-link="internal">Computational Science and Engineering</a></li>
+	<li id="menu-item-8222" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8222"><a href="https://cds.iisc.ac.in/research-new/bioinformatics/" data-wpel-link="internal">Bioinformatics</a></li>
+</ul>
+</li>
+<li id="menu-item-8243" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-8243 has-sub"><span class="submenu-button"></span><a href="https://cds.iisc.ac.in/people-all/" data-wpel-link="internal">People</a>
+<ul class="sub-menu">
+	<li id="menu-item-8244" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8244"><a href="https://cds.iisc.ac.in/people-all/faculty/" data-wpel-link="internal">Faculty</a></li>
+	<li id="menu-item-163" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-163"><a href="https://cds.iisc.ac.in/people-all/students/" data-wpel-link="internal">Students</a></li>
+	<li id="menu-item-162" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-162"><a href="https://cds.iisc.ac.in/people-all/alumni/" data-wpel-link="internal">Alumni</a></li>
+</ul>
+</li>
+<li id="menu-item-40" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-40 has-sub"><span class="submenu-button"></span><a href="https://cds.iisc.ac.in/academics/" data-wpel-link="internal">Academics</a>
+<ul class="sub-menu">
+	<li id="menu-item-323" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-323"><a href="https://cds.iisc.ac.in/academics/degree-programs/" data-wpel-link="internal">Degree Programs</a></li>
+	<li id="menu-item-7817" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7817"><a href="https://btech-ug.iisc.ac.in/MathandComputing/" data-wpel-link="external" target="_blank" rel="external noopener noreferrer">BTech Math and Computing</a></li>
+	<li id="menu-item-1251" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1251 has-sub"><span class="submenu-button"></span><a href="https://cds.iisc.ac.in/admissions/" data-wpel-link="internal">Admissions</a>
+	<ul class="sub-menu">
+		<li id="menu-item-1298" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1298"><a href="https://cds.iisc.ac.in/academics/degree-programs/" data-wpel-link="internal">Degree Programs Summary</a></li>
+		<li id="menu-item-7232" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7232"><a href="https://cds.iisc.ac.in/admissions/research-degrees/" data-wpel-link="internal">Research Admissions 2026</a></li>
+		<li id="menu-item-1254" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1254"><a href="https://cds.iisc.ac.in/admissions/course-degrees/" data-wpel-link="internal">M.Tech.(CDS) Course Degree Admissions, 2026</a></li>
+		<li id="menu-item-1255" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1255"><a href="https://cds.iisc.ac.in/admissions/admissions-faq/" data-wpel-link="internal">Admissions FAQ</a></li>
+		<li id="menu-item-8226" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8226"><a href="https://cds.iisc.ac.in/admissions/orientation/" data-wpel-link="internal">Incoming Students Orientation 2025</a></li>
+	</ul>
+</li>
+	<li id="menu-item-236" class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor menu-item-has-children menu-item-236 has-sub"><span class="submenu-button"></span><a href="https://cds.iisc.ac.in/courses/" data-wpel-link="internal">Courses</a>
+	<ul class="sub-menu">
+		<li id="menu-item-77" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-77"><a href="https://cds.iisc.ac.in/courses/descriptions/" data-wpel-link="internal">Course Descriptions</a></li>
+		<li id="menu-item-78" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-78"><a href="https://cds.iisc.ac.in/courses/schedule/" data-wpel-link="internal">Course Schedule</a></li>
+		<li id="menu-item-344" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-344"><a href="https://cds.iisc.ac.in/courses/m-tech-course-requirements/" data-wpel-link="internal">M.Tech. Course Requirements</a></li>
+	</ul>
+</li>
+	<li id="menu-item-7523" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7523"><a href="https://cds.iisc.ac.in/academics/departmental-curriculum-committee-dcc/" data-wpel-link="internal">Departmental Curriculum Committee (DCC)</a></li>
+	<li id="menu-item-2929" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2929"><a href="https://cds.iisc.ac.in/medals/" data-wpel-link="internal">Medals</a></li>
+	<li id="menu-item-322" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-322"><a href="https://cds.iisc.ac.in/academics/calendar/" data-wpel-link="internal">Academic Calendar</a></li>
+</ul>
+</li>
+<li id="menu-item-8234" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-8234 has-sub"><span class="submenu-button"></span><a href="https://cds.iisc.ac.in/news-events-2/" data-wpel-link="internal">News &amp; Events</a>
+<ul class="sub-menu">
+	<li id="menu-item-8236" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-8236"><a href="https://cds.iisc.ac.in/category/news/" data-wpel-link="internal">News</a></li>
+	<li id="menu-item-8237" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8237"><a href="https://cds.iisc.ac.in/events/" data-wpel-link="internal">Events</a></li>
+</ul>
+</li>
+<li id="menu-item-2219" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2219 has-sub"><span class="submenu-button"></span><a href="https://cds.iisc.ac.in/resources/" data-wpel-link="internal">Resources</a>
+<ul class="sub-menu">
+	<li id="menu-item-6172" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6172"><a href="https://cds.iisc.ac.in/internal-resources/department-wellness-committee/" data-wpel-link="internal">Department Wellness Committee</a></li>
+	<li id="menu-item-2314" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2314"><a href="https://cds.iisc.ac.in/internal-resources/student-resources/" data-wpel-link="internal">Students</a></li>
+	<li id="menu-item-2359" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2359"><a href="https://cds.iisc.ac.in/internal-resources/computing-resources/" data-wpel-link="internal">Computing</a></li>
+	<li id="menu-item-2358" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2358"><a href="https://cds.iisc.ac.in/internal-resources/library/" data-wpel-link="internal">Library</a></li>
+	<li id="menu-item-2360" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2360"><a href="https://cds.iisc.ac.in/forms/" data-wpel-link="internal">Forms</a></li>
+	<li id="menu-item-3036" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3036"><a href="https://cds.iisc.ac.in/resources/brand/" data-wpel-link="internal">CDS Logo &amp; Identity</a></li>
+</ul>
+</li>
+</ul>            </div>
+          </div>
+          <div class="col-md-2 searchbar">
+            <form action="https://cds.iisc.ac.in" method="get" class="search-form">
+              <fieldset>
+                <input value="submit" type="submit">
+                <span class="text">
+                <input name="s" id="s" type="text" size="15" placeholder="Search">
+                </span>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- End Header --> 
+
+<div class="clearfix"></div>
+<div class="ht-main-header" style="background: url('https://cds.iisc.ac.in/wp-content/uploads/khai-niem-va-thuat-ngu-data-science.jpeg') no-repeat center center; background-size:cover;">
+  <div class="ht-main-header-inner">
+    <div class="container nopad"> 
+      <!-- Start Breadcrumbs -->
+      <div id="breadcrumbs" class="col-md-12">
+              </div>
+      <!-- End Breadcrumbs -->
+      <div class="col-md-12 nopad">
+        <h1 class="ht-main-title">DS221: Introduction to Scalable Systems</h1>      </div>
+    </div>
+  </div>
+</div>
+<div style="clear:both;"></div>
+<section id="about" class="section">
+  <div class="about_inner">
+    <div class="container">
+    <div class="row">
+      <div class="clearfix"></div>
+      <div id="mainpanel" class="col-md-8 col-12">
+        <div>
+                    
+<h6 class="wp-block-heading">Department of Computational and Data Sciences</h6>
+
+
+
+<h1 class="wp-block-heading">Introduction to Scalable Systems</h1>
+
+
+
+<ul class="wp-block-list">
+<li><strong>Instructor</strong>: Sathish Vadhiyar (<a href="https://cds.iisc.ac.in/faculty/vss/" data-wpel-link="internal">www</a> | <a href="mailto:vss@iisc.ac.in">email</a>) and Chirag Jain (<a href="https://cds.iisc.ac.in/faculty/chirag/" data-wpel-link="internal">www</a> | <a href="mailto:chirag@iisc.ac.in">email</a>)</li>
+
+
+
+<li><strong>Teaching Assistant</strong>: Parvesh Barak</li>
+
+
+
+<li><strong>Course number</strong>: DS221</li>
+
+
+
+<li><strong>Credits</strong>: 3:1</li>
+
+
+
+<li><strong>Semester</strong>: Aug, 2025</li>
+
+
+
+<li><strong>Lecture</strong>: Tue/Thu 11:30 AM-1 PM, in-person CDS 202 <strong><em><mark class="has-inline-color has-vivid-red-color">(First class on Aug 5, 2025)</mark></em></strong></li>
+
+
+
+<li><strong>Lab:</strong> <em>As announced</em></li>
+
+
+
+<li><strong>Microsoft Teams Link</strong>: <a href="https://teams.microsoft.com/l/team/19%3ALF6YCV1q3h7jrQ2nR6ShCelIW8VvmU1TZEBMXWqShj01%40thread.tacv2/conversations?groupId=085bbc8b-c105-4f33-ade4-a84d9b8eea26&amp;tenantId=6f15cd97-f6a7-41e3-b2c5-ad4193976476" data-type="link" data-id="https://teams.microsoft.com/l/team/19%3AfYWsLDkmQSWI9zkO3IZWQLm713oa_6h8qRvI4JT4kkc1%40thread.tacv2/conversations?groupId=8e7f8a38-085a-4ac5-bb95-c8cfc9d25288&amp;tenantId=6f15cd97-f6a7-41e3-b2c5-ad4193976476" data-wpel-link="external" target="_blank" rel="external noopener noreferrer">Link</a> <em>(Use IISc Office 365 account to login</em>)</li>
+
+
+
+<li><strong><a href="https://forms.office.com/r/9D837gSgyz" data-wpel-link="external" target="_blank" rel="external noopener noreferrer">Survey form for Students</a></strong> <em>(Please fill this after the first class, by Aug 8, 2025)</em></li>
+
+
+
+<li><strong><a href="https://indianinstituteofscience-my.sharepoint.com/:x:/g/personal/vss_iisc_ac_in/EelX5tFIQB1GkUrFLDaWHH0BlLtnaqQXwRflAMNsXFaBRw?e=FVysWc" target="_blank" rel="noreferrer noopener external" data-wpel-link="external">Attendance Sheet</a></strong></li>
+</ul>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity">
+
+
+
+<ul class="wp-block-list">
+<li>Quiz 1 <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=l80Vb6f240Gyxa1Bk5dkdg3EcwQIQFhInv1G8B08SCRUOVZENldQS05MOTFNSkI1V1RDV000RjlYMy4u" data-wpel-link="external" target="_blank" rel="external noopener noreferrer">Link </a></li>
+
+
+
+<li>Assignment 1 <a href="https://github.com/at-cg/ds221-2025/tree/main" data-wpel-link="external" target="_blank" rel="external noopener noreferrer">Link</a></li>
+</ul>
+
+
+
+<p>[<a href="https://cds.iisc.ac.in/courses/ds221-introduction-to-scalable-systems-2024/" data-type="link" data-id="https://cds.iisc.ac.in/courses/ds221-introduction-to-scalable-systems-2023/" data-wpel-link="internal">DS221 2024 Website</a>] [<a href="https://cds.iisc.ac.in/courses/ds221-introduction-to-scalable-systems-2023/" data-type="link" data-id="https://cds.iisc.ac.in/courses/ds221-introduction-to-scalable-systems-2023/" data-wpel-link="internal">DS221 2023 Website</a>] <a href="https://cds.iisc.ac.in/courses/ds221-2022/" data-wpel-link="internal">[DS221 2022 Website]</a> <a href="https://cds.iisc.ac.in/ds221-2020/" data-wpel-link="internal">[DS221 2020 Website]</a><a href="https://cds.iisc.ac.in/courses/ds221-2019/" data-wpel-link="internal"> [DS221 2019 Website]</a><a href="https://cds.iisc.ac.in/courses/ds221-2018/" data-wpel-link="internal"> [DS221 2018 Website]</a><a href="https://cds.iisc.ac.in/courses/ds221-2017/" data-wpel-link="internal">[DS221 2017 Website]</a></p>
+
+
+
+<hr class="wp-block-separator has-css-opacity">
+
+
+
+<h2 class="wp-block-heading">Overview</h2>
+
+
+
+<p>This course covers computer systems topics that are essential for students engaging in computational and data sciences. It introduces topics on architecture, OS and data structures that may be new to students without a degree in Computer Science. Then it moves to more advanced topics on tree/graph data structures, HPC/GPGPU programming and Big Data platforms.</p>
+
+
+
+<p>Some of the topics covered are: </p>
+
+
+
+<ul class="wp-block-list">
+<li><strong>Architecture: </strong>computer organization, single-core optimizations including exploiting cache hierarchy and vectorization, parallel architectures including multi-core, shared memory, distributed memory and GPU architectures;</li>
+
+
+
+<li><strong>Algorithms and Data Structures:</strong> Overview of matrices, trees, queues, graphs, concurrent data structures; Using GitHub Copilot/Prompt Engineering; Performance and scalability analysis; Algorithmic complexity analysis and algorithmic strategies;</li>
+
+
+
+<li><strong>Parallelization Principles: </strong>motivation, challenges, metrics, parallelization steps, data distribution, PRAM model;</li>
+
+
+
+<li><strong>Parallel Programming Models and Languages: </strong>OpenMP, MPI, CUDA;</li>
+
+
+
+<li><strong>Distributed Computing: </strong>Commodity cluster and cloud computing; Distributed Programming: Apache Spark programming model for Big Data processing.</li>
+</ul>
+
+
+
+<p>This course is a precursor to more advanced courses like <a href="https://cds.iisc.ac.in/faculty/vss/courses/PP2017/index.html" data-wpel-link="internal">DS 295: Parallel Programming</a>, <a href="https://cds.iisc.ac.in/courses/ds256/" data-wpel-link="internal">DS 256: Scalable Systems for Data Science</a>, and <a href="https://sites.google.com/view/ds202" data-wpel-link="external" target="_blank" rel="external noopener noreferrer">DS202: Algorithmic Foundations of Big Data Biology</a> offered in the January term<span class="tahoma">.</span></p>
+
+
+
+<hr class="wp-block-separator has-css-opacity">
+
+
+
+<h2 class="wp-block-heading">Pre-requisites</h2>
+
+
+
+<p>This is an introductory crash-course on computer systems, algorithms, HPC and Big Data platforms. So the pre-requisites are minimal: <em>Basic knowledge of computer systems, data structures and programming, and algorithms</em>. However, the course will have a rapid pace and students are expected to pick up the skills rapidly through self-learning.</p>
+
+
+
+<hr class="wp-block-separator has-css-opacity">
+
+
+
+<h2 class="wp-block-heading">Grading Scheme</h2>
+
+
+
+<ul class="wp-block-list">
+<li><strong>Architecture</strong>
+<ul class="wp-block-list">
+<li>1 Quiz – 10 points</li>
+</ul>
+</li>
+
+
+
+<li><strong>Algorithms and Data Structures</strong>
+<ul class="wp-block-list">
+<li>1 Programming Assignment- 20 points</li>
+
+
+
+<li>1 Quiz – 10 points</li>
+</ul>
+</li>
+
+
+
+<li><strong>Parallel Programming</strong>
+<ul class="wp-block-list">
+<li>1 Written Assignment – 10 points</li>
+
+
+
+<li>1 Programming Assignment – 10 points</li>
+</ul>
+</li>
+
+
+
+<li><strong>Final Exam (40 points)</strong>
+<ul class="wp-block-list">
+<li>20 (Algos, Data Structures and Big Data) + 20 (Parallel Programming)</li>
+</ul>
+</li>
+</ul>
+
+
+
+<hr class="wp-block-separator has-css-opacity">
+
+
+
+<h2 class="wp-block-heading" id="section7">Resources</h2>
+
+
+
+<ul class="wp-block-list">
+<li>Data Structures, Algorithms, and Applications in C++, 2nd Edition, Sartaj Sahni
+<ul class="wp-block-list">
+<li><a href="http://www.cise.ufl.edu/~sahni/dsaac/" data-wpel-link="external" target="_blank" rel="external noopener noreferrer">http</a><a href="http://www.cise.ufl.edu/~sahni/dsaac/" data-wpel-link="external" target="_blank" rel="external noopener noreferrer">://www.cise.ufl.edu/~sahni/dsaac</a><a href="http://www.cise.ufl.edu/~sahni/dsaac/" data-wpel-link="external" target="_blank" rel="external noopener noreferrer">/</a></li>
+</ul>
+</li>
+
+
+
+<li>Parallel Computing Architecture. A Hardware/Software Approach. David Culler, Jaswant Singh. Publisher: Morgan Kauffman. ISBN: 981-4033-103. 1999.</li>
+
+
+
+<li>Parallel Computing. Theory and Practice. Michael J. Quinn. Publisher: Tata: McGraw-Hill. ISBN: 0-07-049546-7. 2002.</li>
+
+
+
+<li>Computer Systems – A Programmer’s Perspective. Bryant and O’Hallaron. Publisher: Pearson Education. ISBN: 81-297-0026-3. 2003.</li>
+
+
+
+<li>Introduction to Parallel Computing. Ananth Grama, Anshul Gupta, George Karypis, Vipin Kumar. Publisher: Addison Wesley. ISBN: 0-201-64865-2. 2003.</li>
+
+
+
+<li>An Introduction to Parallel Programming. Peter S Pacheco. Publisher: Morgan Kauffman. ISBN: 978-93-80931-75-3. 2011.</li>
+
+
+
+<li>Online references for OpenMP, MPI, CUDA</li>
+
+
+
+<li>Lecture slides</li>
+</ul>
+
+
+
+<hr class="wp-block-separator has-css-opacity">
+
+
+
+<h2 class="wp-block-heading">Tentative Schedule</h2>
+
+
+
+<ul class="wp-block-list">
+<li><strong>Architecture, <em><mark class="has-inline-color has-vivid-cyan-blue-color">VSS </mark>(5 lectures, Aug 5-19)</em></strong> <a href="https://cds.iisc.ac.in/wp-content/uploads/ComputerArchitecture_and_Organization.pdf" data-wpel-link="internal">pdf</a>
+<ul class="wp-block-list">
+<li>Computer organization including cache hierarchy, locality</li>
+
+
+
+<li>Prof. Rajaraman’s document on floating point representation <a href="https://cds.iisc.ac.in/wp-content/uploads/ieee_floatingpoint_Rajaraman.pdf" data-wpel-link="internal">pdf</a></li>
+
+
+
+<li><strong><em><mark class="has-inline-color has-luminous-vivid-orange-color">Quiz (10 points)</mark></em></strong></li>
+</ul>
+</li>
+
+
+
+<li><strong>Algorithms and Data Structures, <em><mark class="has-inline-color has-vivid-cyan-blue-color">CJ </mark>(13 lectures, Aug 21- Oct 7)</em></strong>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<ul class="wp-block-list">
+<li>Lists and matrices <a href="https://indianinstituteofscience-my.sharepoint.com/:b:/g/personal/chirag_iisc_ac_in/ESS5EicRQqpEjLTh7fVRUQMBp3Pn_hmWJ8nkA_5qL9VHxw?e=XxqARW" data-wpel-link="external" target="_blank" rel="external noopener noreferrer">pdf</a></li>
+
+
+
+<li>Algorithmic analysis and complexity <a href="https://indianinstituteofscience-my.sharepoint.com/:b:/g/personal/chirag_iisc_ac_in/ESr5-HZ_y3NHrMjymhx_QpEBuYkUJ_egJzbwAwLi_IjUbA?e=whIxGt" data-wpel-link="external" target="_blank" rel="external noopener noreferrer">pdf</a></li>
+
+
+
+<li>Data Structures (Part 1): Arrays, Stacks, Queues, Trees <a href="https://indianinstituteofscience-my.sharepoint.com/:b:/g/personal/chirag_iisc_ac_in/EXt01Og9C7pJkbncEDnO2PwB5rq6uXdIiH6FHRily6odxA?e=zbT39i" data-wpel-link="external" target="_blank" rel="external noopener noreferrer">pdf</a></li>
+
+
+
+<li>Prompt Engineering using Copilot to design code</li>
+
+
+
+<li>Data Structures (Part 2): Search trees, Hash tables <a href="https://indianinstituteofscience-my.sharepoint.com/:b:/g/personal/chirag_iisc_ac_in/EXeD_ZmVaUNKlTLGBxOyY0QBe6Ak_NYU6mSigSfuquBHDw?e=5YKH8Y" data-wpel-link="external" target="_blank" rel="external noopener noreferrer">pdf</a></li>
+
+
+
+<li>Performance Analysis of hash tables <a href="https://indianinstituteofscience-my.sharepoint.com/:b:/g/personal/chirag_iisc_ac_in/EcEN_YOOMppPggRYSYbFEVcB8NvDCMGGMQ-KDwHi0aGRhg?e=n05dky" data-wpel-link="external" target="_blank" rel="external noopener noreferrer">pdf</a></li>
+
+
+
+<li>Data Structures (Part 3): Graphs <a href="https://indianinstituteofscience-my.sharepoint.com/:b:/g/personal/chirag_iisc_ac_in/EW3ajWNPbCFCtZ7r_qbg74ABrxae0Ek6-V-RTRBOkoJY0w?e=Yf38Wc" data-wpel-link="external" target="_blank" rel="external noopener noreferrer">pdf</a> </li>
+
+
+
+<li>Graph algorithms: Single-source shortest path <a href="https://indianinstituteofscience-my.sharepoint.com/:b:/g/personal/chirag_iisc_ac_in/EXcT_Z_EHGJFq57W1s4qzrsBXVIfjJe60LJJh99CKkxxAg?e=BHNo4N" data-wpel-link="external" target="_blank" rel="external noopener noreferrer">pdf</a> </li>
+</ul>
+
+
+
+<ul class="wp-block-list">
+<li>Algorithmic Strategies <a href="https://indianinstituteofscience-my.sharepoint.com/:b:/g/personal/chirag_iisc_ac_in/EShGbVQ7yLZAoJxeTNCPPJgBsXzZvHb1UvUN5mXBLy_wUA?e=urwYsd" data-wpel-link="external" target="_blank" rel="external noopener noreferrer">pdf</a></li>
+
+
+
+<li><em><strong><mark class="has-inline-color has-luminous-vivid-orange-color">Assignment and <strong><em>Continuous Assessments</em></strong> (30 points)</mark></strong></em></li>
+
+
+
+<li>Big Data programming models: Apache Spark</li>
+</ul>
+</li>
+
+
+
+<li><strong>Parallel Computing, <em><mark class="has-inline-color has-vivid-cyan-blue-color">VSS </mark>(11 lectures, Oct 9 – Nov 13)</em></strong>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<ul class="wp-block-list">
+<li>Parallel architectures <a href="https://cds.iisc.ac.in/wp-content/uploads/ParallelArchitecture.pdf" data-wpel-link="internal">pdf</a></li>
+</ul>
+
+
+
+<ul class="wp-block-list">
+<li>Shared and Distributed memory architectures</li>
+
+
+
+<li>Many-core architectures <a href="https://cds.iisc.ac.in/wp-content/uploads/Many-core-Architecture.pdf" data-wpel-link="internal">pdf</a></li>
+</ul>
+
+
+
+<ul class="wp-block-list">
+<li>Parallelization Principles <a href="https://cds.iisc.ac.in/wp-content/uploads/ParallelizationPrinciples.pdf" data-wpel-link="internal">pdf</a></li>
+</ul>
+
+
+
+<ul class="wp-block-list">
+<li>Parallel Programming Models and Languages
+<ul class="wp-block-list">
+<li>Shared memory: OpenMP <a href="https://cds.iisc.ac.in/wp-content/uploads/OpenMP.pdf" data-wpel-link="internal">pdf</a></li>
+</ul>
+</li>
+</ul>
+
+
+
+<ul class="wp-block-list">
+<li>Distributed Memory: MPI – pt2pt, collectives <a href="https://cds.iisc.ac.in/wp-content/uploads/MPI-1.pdf" data-wpel-link="internal">pdf</a></li>
+</ul>
+
+
+
+<ul class="wp-block-list">
+<li>GPUs: CUDA <a href="https://cds.iisc.ac.in/wp-content/uploads/Cuda.pdf" data-wpel-link="internal">pdf</a></li>
+</ul>
+
+
+
+<ul class="wp-block-list">
+<li>Sample Parallel Algorithms
+<ul class="wp-block-list">
+<li>Sorting, Searching <a href="https://cds.iisc.ac.in/wp-content/uploads/ParallelAlgorithms-2019-1.pdf" data-wpel-link="internal">pdf</a></li>
+</ul>
+</li>
+</ul>
+
+
+
+<ul class="wp-block-list">
+<li>Parallel Gaussian Elimination <a href="https://cds.iisc.ac.in/wp-content/uploads/parallelLA.pdf" data-wpel-link="internal">pdf</a></li>
+
+
+
+<li>An ideal parallelism model – PRAM <a href="https://cds.iisc.ac.in/wp-content/uploads/PRAM.pdf" data-wpel-link="internal">pdf</a>
+<ul class="wp-block-list">
+<li>Reading: Book “Parallel Computing: Theory and Practice” by Michael J Quinn, Available with me. Pages 25-32, 40-42, 256</li>
+</ul>
+</li>
+
+
+
+<li>Prefix computations <a href="https://cds.iisc.ac.in/wp-content/uploads/PrefixAlgorithms.pdf" data-wpel-link="internal">pdf</a></li>
+
+
+
+<li><em><strong><mark class="has-inline-color has-luminous-vivid-orange-color">Assignment and <strong><em>Continuous Assessments</em></strong> (15+15 points)</mark></strong></em></li>
+</ul>
+</li>
+
+
+
+<li><strong><mark class="has-inline-color has-vivid-red-color">Final Exam <em>(40 points) on Friday, November 28, </em></mark></strong><strong><mark class="has-inline-color has-vivid-red-color"><em>9 am – noon</em></mark></strong></li>
+</ul>
+
+
+
+<p><em>NOTE: Besides these lectures, there will be several tutorials as well. The schedule for these will be announced in class.</em></p>
+
+
+
+<hr class="wp-block-separator has-css-opacity">
+
+
+
+<h2 class="wp-block-heading">Reading</h2>
+
+
+
+<ul class="wp-block-list">
+<li>Parallel architecture –&nbsp;Grama et al. – 2.4, Many-core – Google for NVIDIA A100 white paper</li>
+
+
+
+<li>Parallelization principles –&nbsp;Grama et al. – 3.1, 3.5, 5.1-5.6; Culler and Singh – 2.2, 2.3</li>
+
+
+
+<li>OpenMP tutorial: <a href="http://www.llnl.gov/computing/tutorials/openMP" data-wpel-link="external" target="_blank" rel="external noopener noreferrer">http://www.llnl.gov/computing/tutorials/openMP</a></li>
+
+
+
+<li>MPI online tutorial: “MPI complete reference”. Google for it.</li>
+
+
+
+<li>CUDA: Google for NVIDIA CUDA programming guide.</li>
+
+
+
+<li>PRAM: Reading: Book “Parallel Computing: Theory and Practice” by Michael J Quinn. Pages 25-32, 40-42, 256</li>
+
+
+
+<li>Parallel algorithms
+<ul class="wp-block-list">
+<li>Parallel Quick sort – the corresponding portion in the text book by Grama et al.</li>
+
+
+
+<li>BFS
+<ul class="wp-block-list">
+<li>Paper: A Scalable Distributed Parallel Breadth-First Search Algorithm on BlueGene/L. Yoo et al. SC 2005. (Pages 1-7)</li>
+
+
+
+<li>Paper: Accelerating large graph algorithms on the GPU using CUDA. Harish and Narayanan. HiPC 2007. (Page 5-8)</li>
+</ul>
+</li>
+</ul>
+</li>
+
+
+
+<li>For the rest, read the lecture slides.</li>
+</ul>
+
+
+
+<hr class="wp-block-separator has-css-opacity">
+
+
+
+<h2 class="wp-block-heading">Assignments</h2>
+
+
+
+<p><a href="https://cds.iisc.ac.in/cds-teaching-cluster" data-wpel-link="internal">Teaching cluster notes</a> on OpenMP and MPI for the assignment</p>
+
+
+
+<hr class="wp-block-separator has-css-opacity">
+
+
+
+<h2 class="wp-block-heading"><strong>Academic integrity</strong></h2>
+
+
+
+<p>Any assignment or exam you complete in this course is expected to be your own work. You should attempt homework questions and programming assignments on your own, but are allowed to verbally discuss concepts with your peers. However, the solutions must be written in your own words. Direct use of material, ideas, figures, code or data authored by someone else without appropriate acknowledgement is not allowed.<br>Please note that there will be no tolerance of academic dishonesty. If someone is academically dishonest in this course, they will receive a grade of F, and the misconduct will be brought to the notice of the department Chair. See <a rel="noreferrer noopener external" href="https://www.google.com/url?q=https%3A%2F%2Fwww.iisc.ac.in%2Fabout%2Fstudent-corner%2Facademic-integrity%2F&amp;sa=D&amp;sntz=1&amp;usg=AOvVaw2Hfj4XytvDdSh7C_4PJOQI" target="_blank" data-wpel-link="external">https://www.iisc.ac.in/about/student-corner/academic-integrity/</a> for more details.</p>
+                  </div>
+      </div>
+      <div class="col-md-4 col-12">
+      <div id="sidepanel">
+        	<div id="secondary" class="secondary">
+					<div id="widget-area" class="widget-area" role="complementary">
+				
+		<li id="recent-posts-13" class="widget widget_recent_entries">
+		<h2 class="widgettitle">Recent News</h2>
+		<ul>
+											<li>
+					<a href="https://cds.iisc.ac.in/cds-research-admissions-2026-offer-letters/" data-wpel-link="internal">CDS Research Admissions 2026 Offer Letters</a>
+									</li>
+											<li>
+					<a href="https://cds.iisc.ac.in/dr-phani-motamarri-and-prof-yogesh-simmhan-win-the-quantum-algorithms-research-award-from-national-quantum-mission/" data-wpel-link="internal">Dr. Phani Motamarri and Prof. Yogesh Simmhan win the Quantum Algorithms Research Award from National Quantum Mission</a>
+									</li>
+											<li>
+					<a href="https://cds.iisc.ac.in/cds-students-win-novelty-track-prize-at-the-medgemma-impact-challenge-hosted-by-google-research/" data-wpel-link="internal">CDS Students win Novelty Track prize at the MedGemma Impact Challenge hosted by Google Research</a>
+									</li>
+											<li>
+					<a href="https://cds.iisc.ac.in/dr-vaanathi-sundaresan-is-awarded-best-woman-professional-early-career-at-shri-pralhad-p-chhabria-awards-2025/" data-wpel-link="internal">Dr. Vaanathi Sundaresan is awarded Best Woman Professional (Early Career) at Shri Pralhad P. Chhabria Awards 2025</a>
+									</li>
+											<li>
+					<a href="https://cds.iisc.ac.in/prof-venkatesh-babu-is-awarded-prof-rustum-choksi-award-for-excellence-in-research-in-engineering-for-2025/" data-wpel-link="internal">Prof. Venkatesh Babu is awarded Prof. Rustum Choksi Award for Excellence in Research in Engineering for 2025.</a>
+									</li>
+					</ul>
+
+		</li><li id="custom_html-4" class="widget_text widget widget_custom_html"><h2 class="widgettitle">Contact Us</h2><div class="textwidget custom-html-widget"><strong>Department of Computational and Data Sciences, 
+Indian Institute of Science</strong><br>
+<strong>Bangalore, India 560012</strong> [<a href="https://goo.gl/maps/grwtmoWSB932" target="_blank" data-wpel-link="external" rel="external noopener noreferrer">Map</a>]
+
+<p>Phone: +91-80-2293 2789</p>
+<p>Fax: +91-80-2360 6332</p>
+<p>E-mail: office.cds@iisc.ac.in</p>
+<p>Web: cds.iisc.ac.in</p>
+</div></li><li id="custom_html-3" class="widget_text widget widget_custom_html"><h2 class="widgettitle">Shortcuts</h2><div class="textwidget custom-html-widget"><a href="https://outlook.office.com" data-wpel-link="external" target="_blank" rel="external noopener noreferrer">Outlook Webmail</a><br>
+
+<a href="https://portal.office.com" data-wpel-link="external" target="_blank" rel="external noopener noreferrer">Office 365</a><br>
+
+CDS Room Reservation <a href=" https://outlook.office.com/owa/?path=/calendar/view/Week" data-wpel-link="internal">[Office 365]</a><br> <!-- &nbsp; <a href="http://10.24.1.12/seminar_hall_bookings/" data-wpel-link="external" target="_blank" rel="external noopener noreferrer"><del>[Old/Intranet]</del></a><br/> -->
+
+<a href="https://twitter.com/cdsiisc/" data-wpel-link="external" target="_blank" rel="external noopener noreferrer">Twitter</a><br>
+
+<a href="https://cds.iisc.ac.in/wp-admin/" data-wpel-link="internal">WP Login</a>
+<br><br><br>
+
+<a href="https://cds.iisc.ac.in/resources/brand/" data-wpel-link="internal">
+<img src="https://cds.iisc.ac.in/wp-content/uploads/CDS_Logo_Square_Small.png" style="height:125px;margin: 0px 5px 0px 5px;" alt="Download CDS logo, PPT template, etc"></a></div></li>			</div><!-- .widget-area -->
+		
+	</div><!-- .secondary -->
+
+        </div>
+      </div>
+      <div style="clear:both; height:50px;"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Begin Footer -->
+
+<div style="clear:both;"></div>
+<section id="footer" class="section"> 
+<div class="container">
+  <!-- First Footer row -->
+  <div class="row"> 
+    <!-- First Footer column -->
+    <div class="col-md-4">
+            <div id="header-widget-area" class="hw-widget widget-area" role="complementary">
+        <div class="hw-widget"><h2 class="hw-title">Explore</h2><div class="menu-footer-menu-container"><ul id="menu-footer-menu" class="menu"><li id="menu-item-8245" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-8245"><a href="https://cds.iisc.ac.in/" data-wpel-link="internal">Home</a></li>
+<li id="menu-item-8246" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8246"><a href="https://cds.iisc.ac.in/serc/" data-wpel-link="internal">About CDS</a></li>
+<li id="menu-item-8254" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8254"><a href="https://cds.iisc.ac.in/research-new/" data-wpel-link="internal">Research</a></li>
+<li id="menu-item-8251" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8251"><a href="https://cds.iisc.ac.in/people-all/" data-wpel-link="internal">People</a></li>
+<li id="menu-item-8247" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8247"><a href="https://cds.iisc.ac.in/academics/" data-wpel-link="internal">Academics</a></li>
+<li id="menu-item-8248" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8248"><a href="https://cds.iisc.ac.in/admissions/" data-wpel-link="internal">Admissions</a></li>
+<li id="menu-item-8250" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8250"><a href="https://cds.iisc.ac.in/news-events-2/" data-wpel-link="internal">News &amp; Events</a></li>
+<li id="menu-item-8253" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8253"><a href="https://cds.iisc.ac.in/resources/" data-wpel-link="internal">Resources</a></li>
+<li id="menu-item-8249" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8249"><a href="https://cds.iisc.ac.in/contact-us/" data-wpel-link="internal">Contact Us</a></li>
+</ul></div></div>      </div>
+          </div>
+    <!-- Second Footer column -->
+    <div class="col-md-4">
+            <div id="header-widget-area" class="hw-widget widget-area" role="complementary">
+        <div class="hw-widget">
+<h2 class="wp-block-heading">Get in touch</h2>
+</div><div class="hw-widget">Phone: +91-80-2293 2789<br>
+Fax: +91-80-2360 6332<br>
+E-mail: office.cds@iisc.ac.in<br>
+Web: cds.iisc.ac.in<br></div><div class="hw-widget">
+<div style="height:25px" aria-hidden="true" class="wp-block-spacer"></div>
+</div><div class="hw-widget">
+<h2 class="wp-block-heading">Follow us</h2>
+</div><div class="hw-widget">
+<figure class="wp-block-image size-large is-resized"><a href="https://twitter.com/cdsiisc" target="_blank" rel=" noreferrer noopener external" data-wpel-link="external"><img loading="lazy" decoding="async" width="1002" height="1024" src="http://139.84.138.153/~cdsiiscac/wp-content/uploads/logo-white-1002x1024.png" alt="" class="wp-image-8358" style="width:32px" srcset="https://cds.iisc.ac.in/wp-content/uploads/logo-white-1002x1024.png 1002w, https://cds.iisc.ac.in/wp-content/uploads/logo-white-294x300.png 294w, https://cds.iisc.ac.in/wp-content/uploads/logo-white-1503x1536.png 1503w, https://cds.iisc.ac.in/wp-content/uploads/logo-white-2004x2048.png 2004w" sizes="auto, (max-width: 1002px) 100vw, 1002px"></a></figure>
+</div>      </div>
+          </div>
+    <!-- Third Footer column -->
+    <div class="col-md-4">
+            <div id="header-widget-area" class="hw-widget widget-area" role="complementary">
+        <div class="hw-widget">
+<h2 class="wp-block-heading">Locate us</h2>
+</div><div class="hw-widget"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15549.203628307623!2d77.5709509!3d13.0165001!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1786c19d1f6d%3A0xba84d2e59b2425a2!2sComputational%20and%20Data%20Science%20Department%20(CDS)!5e0!3m2!1sen!2sin!4v1683271725655!5m2!1sen!2sin" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>      </div>
+          </div>
+    <!--Fourth Footer column  -->
+        <!--Fifth Footer column  -->
+        </div>
+    <!--Sixth Footer column  -->
+       </div>
+  
+  
+</section>
+<!-- Second Footer row -->
+<div id="footer-bottom">
+<div class="row">
+  <div class="col-md-4 col-sm-4 col-xs-12 text-left">© 2026    Department of Computational and Data Sciences  </div>
+  <div class="col-md-4 col-sm-4 col-xs-12 text-center"><a href="https://forms.office.com/r/pisRVkE0Nj" target="_blank" data-wpel-link="external" rel="external noopener noreferrer"><i class="fa-solid fa-lock"></i> Submit Content</a></div>
+  <div class="col-md-4 col-sm-4 col-xs-12 text-right">Website by: <a href="http://www.surfzone-india.com/" target="_blank" data-wpel-link="external" rel="external noopener noreferrer">Surfzone Technologies</a> </div>
+</div>
+</div>
+<!-- End Footer --> 
+<!-- ********************* --> 
+<script language="javascript">
+    $(document).ready(function() {
+							   
+    });
+</script>
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/iisc-cds/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+		<script type="text/javascript">
+			(function() {
+				let targetObjectName = 'EM';
+				if ( typeof window[targetObjectName] === 'object' && window[targetObjectName] !== null ) {
+					Object.assign( window[targetObjectName], []);
+				} else {
+					console.warn( 'Could not merge extra data: window.' + targetObjectName + ' not found or not an object.' );
+				}
+			})();
+		</script>
+		<span aria-hidden="true" id="to_top_scrollup" class="dashicons dashicons-arrow-up-alt2" style=""><span class="screen-reader-text">Scroll Up</span></span>
+			<div class="wprm-wrapper">
+        
+        <!-- Overlay Starts here -->
+			         <!-- Overlay Ends here -->
+			
+			         <div id="wprmenu_bar" class="wprmenu_bar bodyslide right">
+  <div class="hamburger hamburger--slider">
+    <span class="hamburger-box">
+      <span class="hamburger-inner"></span>
+    </span>
+  </div>
+  <div class="menu_title">
+      <a href="https://cds.iisc.ac.in" data-wpel-link="internal">
+          </a>
+      </div>
+</div>			 
+			<div class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right default " id="mg-wprm-wrap">
+				
+				
+				<ul id="wprmenu_menu_ul">
+  
+  <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-8220 wprmenu_parent_item_li"><span class="wprmenu_icon wprmenu_icon_par icon_default"></span> <a href="https://cds.iisc.ac.in/serc/" data-wpel-link="internal" class="wprmenu_parent_item">About</a>
+<ul class="sub-menu" style="display: none;">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5908"><a href="https://cds.iisc.ac.in/serc/" data-wpel-link="internal">About CDS</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1257 wprmenu_parent_item_li"><span class="wprmenu_icon wprmenu_icon_par icon_default"></span> <a href="https://cds.iisc.ac.in/opportunities/" data-wpel-link="internal" class="wprmenu_parent_item">Opportunities</a>
+	<ul class="sub-menu" style="display: none;">
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1258"><a href="https://cds.iisc.ac.in/opportunities/faculty/" data-wpel-link="internal">Apply for Faculty Positions</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2966"><a href="https://cds.iisc.ac.in/sponsorship/" data-wpel-link="internal">Sponsorship</a></li>
+		<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1260"><a href="https://cds.iisc.ac.in/category/openings/" data-wpel-link="internal">Research Staff Openings</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-8221 wprmenu_parent_item_li"><span class="wprmenu_icon wprmenu_icon_par icon_default"></span> <a href="https://cds.iisc.ac.in/research-new/" data-wpel-link="internal" class="wprmenu_parent_item">Research</a>
+<ul class="sub-menu" style="display: none;">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8225"><a href="https://cds.iisc.ac.in/research-new/data-management-computing-and-analytics/" data-wpel-link="internal">Data management, Computing and Analytics</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8224"><a href="https://cds.iisc.ac.in/research-new/software-and-runtime-systems/" data-wpel-link="internal">Software and Runtime Systems</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8223"><a href="https://cds.iisc.ac.in/research-new/computational-science-and-engineering/" data-wpel-link="internal">Computational Science and Engineering</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8222"><a href="https://cds.iisc.ac.in/research-new/bioinformatics/" data-wpel-link="internal">Bioinformatics</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-8243 wprmenu_parent_item_li"><span class="wprmenu_icon wprmenu_icon_par icon_default"></span> <a href="https://cds.iisc.ac.in/people-all/" data-wpel-link="internal" class="wprmenu_parent_item">People</a>
+<ul class="sub-menu" style="display: none;">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8244"><a href="https://cds.iisc.ac.in/people-all/faculty/" data-wpel-link="internal">Faculty</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-163"><a href="https://cds.iisc.ac.in/people-all/students/" data-wpel-link="internal">Students</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-162"><a href="https://cds.iisc.ac.in/people-all/alumni/" data-wpel-link="internal">Alumni</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-40 wprmenu_parent_item_li"><span class="wprmenu_icon wprmenu_icon_par icon_default"></span> <a href="https://cds.iisc.ac.in/academics/" data-wpel-link="internal" class="wprmenu_parent_item">Academics</a>
+<ul class="sub-menu" style="display: none;">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-323"><a href="https://cds.iisc.ac.in/academics/degree-programs/" data-wpel-link="internal">Degree Programs</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7817"><a href="https://btech-ug.iisc.ac.in/MathandComputing/" data-wpel-link="external" target="_blank" rel="external noopener noreferrer">BTech Math and Computing</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1251 wprmenu_parent_item_li"><span class="wprmenu_icon wprmenu_icon_par icon_default"></span> <a href="https://cds.iisc.ac.in/admissions/" data-wpel-link="internal" class="wprmenu_parent_item">Admissions</a>
+	<ul class="sub-menu" style="display: none;">
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1298"><a href="https://cds.iisc.ac.in/academics/degree-programs/" data-wpel-link="internal">Degree Programs Summary</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7232"><a href="https://cds.iisc.ac.in/admissions/research-degrees/" data-wpel-link="internal">Research Admissions 2026</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1254"><a href="https://cds.iisc.ac.in/admissions/course-degrees/" data-wpel-link="internal">M.Tech.(CDS) Course Degree Admissions, 2026</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1255"><a href="https://cds.iisc.ac.in/admissions/admissions-faq/" data-wpel-link="internal">Admissions FAQ</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8226"><a href="https://cds.iisc.ac.in/admissions/orientation/" data-wpel-link="internal">Incoming Students Orientation 2025</a></li>
+	</ul>
+</li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor menu-item-has-children menu-item-236 wprmenu_parent_item_li"><span class="wprmenu_icon wprmenu_icon_par icon_default"></span> <a href="https://cds.iisc.ac.in/courses/" data-wpel-link="internal" class="wprmenu_parent_item">Courses</a>
+	<ul class="sub-menu" style="display: none;">
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-77"><a href="https://cds.iisc.ac.in/courses/descriptions/" data-wpel-link="internal">Course Descriptions</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-78"><a href="https://cds.iisc.ac.in/courses/schedule/" data-wpel-link="internal">Course Schedule</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-344"><a href="https://cds.iisc.ac.in/courses/m-tech-course-requirements/" data-wpel-link="internal">M.Tech. Course Requirements</a></li>
+	</ul>
+</li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7523"><a href="https://cds.iisc.ac.in/academics/departmental-curriculum-committee-dcc/" data-wpel-link="internal">Departmental Curriculum Committee (DCC)</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2929"><a href="https://cds.iisc.ac.in/medals/" data-wpel-link="internal">Medals</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-322"><a href="https://cds.iisc.ac.in/academics/calendar/" data-wpel-link="internal">Academic Calendar</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-8234 wprmenu_parent_item_li"><span class="wprmenu_icon wprmenu_icon_par icon_default"></span> <a href="https://cds.iisc.ac.in/news-events-2/" data-wpel-link="internal" class="wprmenu_parent_item">News &amp; Events</a>
+<ul class="sub-menu" style="display: none;">
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-8236"><a href="https://cds.iisc.ac.in/category/news/" data-wpel-link="internal">News</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8237"><a href="https://cds.iisc.ac.in/events/" data-wpel-link="internal">Events</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2219 wprmenu_parent_item_li"><span class="wprmenu_icon wprmenu_icon_par icon_default"></span> <a href="https://cds.iisc.ac.in/resources/" data-wpel-link="internal" class="wprmenu_parent_item">Resources</a>
+<ul class="sub-menu" style="display: none;">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6172"><a href="https://cds.iisc.ac.in/internal-resources/department-wellness-committee/" data-wpel-link="internal">Department Wellness Committee</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2314"><a href="https://cds.iisc.ac.in/internal-resources/student-resources/" data-wpel-link="internal">Students</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2359"><a href="https://cds.iisc.ac.in/internal-resources/computing-resources/" data-wpel-link="internal">Computing</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2358"><a href="https://cds.iisc.ac.in/internal-resources/library/" data-wpel-link="internal">Library</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2360"><a href="https://cds.iisc.ac.in/forms/" data-wpel-link="internal">Forms</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3036"><a href="https://cds.iisc.ac.in/resources/brand/" data-wpel-link="internal">CDS Logo &amp; Identity</a></li>
+</ul>
+</li>
+        <li>
+          <div class="wpr_search search_top">
+            <form role="search" method="get" class="wpr-search-form" action="https://cds.iisc.ac.in/">
+  <label for="search-form-6a2946e13e6f6"></label>
+  <input type="search" class="wpr-search-field" placeholder="Search..." value="" name="s" title="Search...">
+  <button type="submit" class="wpr_submit">
+    <i class="wpr-icon-search"></i>
+  </button>
+</form>          </div>
+        </li>
+        
+     
+</ul>
+				
+				</div>
+			</div>
+			<script id="wp-emoji-settings" type="application/json">
+{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://cds.iisc.ac.in/wp-includes/js/wp-emoji-release.min.js?ver=6.9.4"}}
+</script>
+<script type="module">
+/* <![CDATA[ */
+/*! This file is auto-generated */
+const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(window._wpemojiSettings=a,"wpEmojiSettingsSupports"),s=["flag","emoji"];function i(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function c(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0);const a=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);return t.every((e,t)=>e===a[t])}function p(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var n=e.getImageData(16,16,1,1);for(let e=0;e<n.data.length;e++)if(0!==n.data[e])return!1;return!0}function u(e,t,n,a){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!a(e,"\ud83e\u1fac8")}return!1}function f(e,t,n,a){let r;const o=(r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):document.createElement("canvas")).getContext("2d",{willReadFrequently:!0}),s=(o.textBaseline="top",o.font="600 32px Arial",{});return e.forEach(e=>{s[e]=t(o,e,n,a)}),s}function r(e){var t=document.createElement("script");t.src=e,t.defer=!0,document.head.appendChild(t)}a.supports={everything:!0,everythingExceptFlag:!0},new Promise(t=>{let n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),c.toString(),p.toString()].join(",")+"));",a=new Blob([e],{type:"text/javascript"});const r=new Worker(URL.createObjectURL(a),{name:"wpTestEmojiSupports"});return void(r.onmessage=e=>{i(n=e.data),r.terminate(),t(n)})}catch(e){}i(n=f(s,u,c,p))}t(n)}).then(e=>{for(const n in e)a.supports[n]=e[n],a.supports.everything=a.supports.everything&&a.supports[n],"flag"!==n&&(a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&a.supports[n]);var t;a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&!a.supports.flag,a.supports.everything||((t=a.source||{}).concatemoji?r(t.concatemoji):t.wpemoji&&t.twemoji&&(r(t.twemoji),r(t.wpemoji)))});
+//# sourceURL=https://cds.iisc.ac.in/wp-includes/js/wp-emoji-loader.min.js
+/* ]]> */
+</script>
+
+
+</body></html>

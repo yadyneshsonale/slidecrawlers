@@ -1,0 +1,52 @@
+[
+{
+"url": "https://www.cs.princeton.edu/courses/archive/spring26/cos217/classes.php",
+"title": "COS 217, Spring 2026 - Classes - cs.Princeton",
+"description": "LECTURE (Click for slides), PRECEPT (Click for handouts), WHAT'S DUE. Mon 01/26 \u2013 Tue 01/27, Unix Tutorial for Beginners; Rec.: GNU Emacs Tutorial; Rec.: Linux"
+},
+{
+"url": "https://www.cs.princeton.edu/courses/archive/spr17/cos217/lectures/01_Intro.pdf",
+"title": "[PDF] COS 217: Introduction to Programming Systems - cs.Princeton",
+"description": "C: Details Java C return stmt * return 5; return; return 5; return; Compound stmt (alias block) * { statement1; statement2; } { statement1; statement2; } Exceptions throw, try-catch-finally /* no equivalent */ Comments /* comment */ // another kind /* comment */ Method / function call f(x, y, z); someObject.f(x, y, z); SomeClass.f(x, y, z); f(x, y, z); * Essentially the same in the two languages 53 Example C Program #include <stdio.h> #include <stdlib.h> int main(void) { const double KMETERS_PER_MILE = 1.609; int miles; double kMeters; printf(\"miles: \"); if (scanf(\"%d\", &miles) != 1) { fprintf(stderr, \"Error: Expected a number.\\n\"); exit(EXIT_FAILURE); } kMeters = (double)miles * KMETERS_PER_MILE; printf(\"%d miles is %f kilometers.\\n\", miles, kMeters); return 0; } 54 Summary Course overview \u2022 Introductions \u2022 Course goals \u2022 Goal 1: Learn \u201cprogramming in the large\u201d \u2022 Goal 2: Look \u201cunder the hood\u201dand learn low-level programming \u2022 Use of C and Linux supports both goals \u2022 Resources \u2022 Lectures, precepts, programming environment, Piazza, textbooks \u2022 Course website: access via http://www.cs.princeton.edu \u2022 Grading \u2022 Policies \u2022 Schedule 55 Summary Getting started with C \u2022 History of C \u2022 Building and running C programs \u2022 Characteristics of C \u2022 Details of C \u2022 Java and C are similar \u2022 Knowing Java gives you a head start at learning C 56 Getting Started"
+},
+{
+"url": "https://www.youtube.com/channel/UCoOP5x7YmyBcdczK-TTsI7Q/videos",
+"title": "Princeton COS 217 - YouTube",
+"description": "This channel provides an archive of video content from Princeton's COS 217 \"Introduction to Programming Systems\" course. ...more"
+},
+{
+"url": "https://www.youtube.com/watch?v=_WvEScVKvTY",
+"title": "COS 217 Fall 2020 Lecture3 - C Introduction - YouTube",
+"description": "COS 217 Fall 2020 Lecture3 - C Introduction. 2.2K views \u00b7 5 ... COS 217 Fall 2020 Lecture4A - Crash Course in C (Part 1). Princeton COS 217"
+},
+{
+"url": "https://www.scribd.com/document/218404026/01-Intro",
+"title": "COS 217: Intro to Programming Systems | PDF - Scribd",
+"description": "This document provides an overview of COS 217: Introduction to Programming Systems taught by Jennifer Rexford. The goals of the course are to help students"
+},
+{
+"url": "https://www.coursehero.com/sitemap/schools/14-Princeton-University/courses/407497-COS217",
+"title": "COS 217 - Princeton University - Course Hero",
+"description": "Access study documents, get answers to your study questions, and connect with real tutors for COS 217 : Introduction to Programming Systems at Princeton"
+},
+{
+"url": "https://www.cs.princeton.edu/courses/archive/fall24/cos217",
+"title": "COS 217, Fall 2024 - Course Info - cs.Princeton",
+"description": "Developing skills for composing large programs, including modularity, abstraction, programming style, and best practices for code development."
+},
+{
+"url": "https://introcs.cs.princeton.edu/lectures",
+"title": "Lectures - Introduction to Programming in Java",
+"description": "This page provides information about online lectures and lecture slides for use in teaching and learning from the book Computer Science: An Interdisciplinary"
+},
+{
+"url": "https://www.reddit.com/r/princeton/comments/1h63v36/is_cos_217_mat_217_actually_a_good_class",
+"title": "Is COS 217 / MAT 217 actually a good class? - Princeton - Reddit",
+"description": "There is no good reason for you to take MAT 217 if you are between ORFE and COS, except just for interest."
+},
+{
+"url": "https://www.cs.princeton.edu/~wayne/cs423",
+"title": "Princeton COS 423 Analysis of Algorithms Lectures",
+"description": "| COS 423 Analysis of Algorithms Lectures, Spring 2001 |. The following table contains links to whatever electronic slides or demos were used in class. Here is a link to a more recent version of some of these lecture slides that supplement the textbook by Jon Kleinberg and \u00c9va Tardos. | Shortest path | pdf |  | CLR, Chapter 25 |. | Linear time selection | pdf |  | CLR 10.3 |. | Dynamic programming | pdf |  | CLR, Chapter 16 |. | Linear time reductions | pdf |  | CLR, Chapter 31.5 |. | Reductions to max flow | pdf |  | CLR, Chapter 27.3 |. | Polynomial time reductions | pdf |  | CLR, Chapter 36 |. * To print the PowerPoint files, we recommend printing 4 or 6 to the page. *The Design and Analysis of Computer Algorithms*. Instructors: if you use these slides in class, please provide a link back to this page."
+}
+]

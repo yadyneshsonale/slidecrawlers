@@ -1,0 +1,435 @@
+<!DOCTYPE html><html lang="en"><head>
+        <title>Course Explorer</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link type="image/x-icon" href="https://cis-data.cis.techservices.illinois.edu/images/favicon.ico" rel="icon">
+        
+    
+        
+
+
+
+<script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-X7QVZSEF1K&amp;cx=c&amp;gtm=4e66a1"></script><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-52702852-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-52702852-2');
+</script>
+
+<link rel="stylesheet" href="/static/css/cis/cis.min.css">
+
+<!--[if lte IE 9]>
+    <script src="/static/bootstrap/common/html5shiv.min.js"></script>
+    <script src="/static/bootstrap/common/respond.js"></script>
+ <![endif]-->
+
+<script src="/static/js/cis.min.js"></script>
+
+
+
+
+
+    
+    
+        
+    
+
+    </head>
+    <body>
+        
+        
+        <noscript><div id="noscript-padding"></div></noscript>
+        
+        
+        <div id="wrap">
+            
+            
+            <div role="banner">
+    <div id="header-wrap">
+        <div id="header-container" class="container">
+            <div class="row">
+                <div id="header" class="span12 hidden-xs">
+                    <a id="header-title" href="http://illinois.edu/" target="_blank">University of Illinois Urbana-Champaign</a>
+                    <ul id="login-info" class="list-unstyled list-inline pull-right">
+                        <li><b>Hello Guest</b></li>
+                        <!--<li><a href="https://illinois.edu/fb/sec/2080949">Contact Us</a></li>-->
+                        <li>
+                            
+                                <a href="/login/oidc">Login</a>
+                            
+                            
+                        </li>
+                    </ul>
+                </div>
+                <div id="header-mobile" class="span12 visible-xs-block">
+                    <a id="header-title" href="http://illinois.edu/" target="_blank">University of Illinois Urbana-Champaign</a>
+                    <br>
+                    <ul id="login-info" class="list-unstyled list-inline">
+                        <li><b>Hello Guest</b></li>
+                        <!--<li><a href="https://illinois.edu/fb/sec/2080949">Contact Us</a></li>-->
+                        <li>
+                            
+                                <a href="/login/oidc">Login</a>
+                            
+                             
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>    
+    <div id="header-brand-wrap" class="hidden-xs">
+        <div class="container">
+            <div class="row">
+                <div id="header-brand" class="col-xs-6">
+                    <a target="_blank" href="http://illinois.edu">
+                        <img alt="Illinois logo" src="https://cis-data.cis.techservices.illinois.edu/images/Illinois-Logo.png">
+                    </a>
+                    <a id="header-brand-title" class="noxs" href="/">Course Explorer</a>
+                </div>
+                <div id="header-brand" class="col-xs-6 easy-autocomplete" style="padding-top: 15px;">
+                    <form id="subjectAutoJump-form" action="/schedule/subjectjump" class="form-inline pull-right" method="post">
+                        <div class="form-group">
+                            <label id="cb1-label" for="subjectAutoJump" class="sr-only">Enter and go to subject for the enrolling term</label>
+                            <div class="easy-autocomplete" style="width: 255px;"><input id="subjectAutoJump" class="form-control" name="subjectAutoJump" placeholder="Go to subject..." role="combobox" aria-labelledby="cb1-label" aria-autocomplete="list" aria-owns="subject-jump-list" aria-readonly="false" autocomplete="off"><div class="easy-autocomplete-container" id="eac-container-subjectAutoJump"><ul id="subject-jump-list" tabindex="-1" role="listbox" aria-hidden="true" class="cb_list"></ul></div></div>
+                        </div>
+                        <button type="submit" class="btn btn-default">Go!</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="header-brand-wrap-xs" class="visible-xs-block">            
+        <div class="container">
+            <div class="row">
+                <div id="header-brand" class="span12">
+                    <a id="header-brand-title-xs" href="/">Course Explorer</a>
+                </div>
+            </div>    
+        </div>
+    </div>
+</div>
+            
+            
+            <div class="container">
+
+
+
+
+
+
+
+
+
+
+
+
+                
+                <div id="app-main-nav" class="navbar navbar-default" role="navigation" aria-label="primary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+    </div>
+    
+    <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <ul class="nav navbar-nav nav-justified">
+            
+            
+                
+                    <li class="navbar-text">Home</li>
+                
+                
+            
+                
+            
+                
+                
+                    <li><a href="/schedule/2017/fall/ECE/314">Schedule</a></li>
+                
+            
+                
+            
+                
+                
+                    <li><a href="/gened/DEFAULT/DEFAULT">GenEd&nbsp;REQs</a></li>
+                
+            
+                
+            
+                
+                
+                    <li><a href="/search/form">Search</a></li>
+                
+            
+                
+            
+                
+                
+                    <li><a href="/resources">Resources</a></li>
+                
+                
+            
+            
+        </ul>
+        
+    </div> 
+</div> 
+
+
+
+
+
+<div id="app-content" role="main">
+    
+    
+    
+
+    <h1 class="lead app-table-lead app-margtop15">Course Explorer</h1>
+    
+    <div class="row">
+        <div class="col-sm-9">
+
+            <div id="app-panel-info" class="panel panel-primary app-font14">
+
+                <div class="panel-body">
+                    <p>
+                        A new resource provides contact information to request a
+                        <a href="https://registrar.illinois.edu/registration/registration-process/enrollment-reqs-prereqs/">registration override</a>
+                        for various courses if needed.
+                    </p>
+                </div>
+            </div>
+
+            <p class="lead app-font16">
+                The Course Explorer provides the schedule of classes by term and a browsable database of
+                general education requirements in addition to other resources.
+            </p>
+            
+            <p class="lead app-font16">
+                For <em>Course Catalog</em> and <em>Programs of Study</em>, please visit the 
+                <a href="http://catalog.illinois.edu/">University of Illinois Urbana-Champaign Academic Catalog</a>,
+                which maintains the official listing of courses, program, and degree requirements for undergraduate and 
+                graduate students.
+            </p>
+            
+            
+            
+            <div role="navigation" aria-label="course explorer links">
+                <ul class="list-unstyled">
+                    <li>    
+                        <div class="app-section-link">
+                            <a href="/schedule/DEFAULT/DEFAULT">Class Schedule</a>
+                        </div>
+                        <div>Browse the schedule of classes for course information, times, locations, and instructors listed by semester.</div>
+                    </li>
+                    <li>
+                        <div class="app-section-link">
+                            <a href="/gened/DEFAULT/DEFAULT">General Education Requirements</a>
+                        </div>
+                        <div>Browse core requirements students must satisfy in order to graduate.</div>
+                    </li>
+                    <li>
+                        <div class="app-section-link">
+                            <a href="/search/form">Search Course Explorer</a>
+                        </div>
+                        <div>Search the Class Schedule and General Education Requirements.</div>
+                    </li>
+                    <li>
+                        <div class="app-section-link">
+                            <a href="/resources">Registration Resources</a>
+                        </div>
+                        <div>Various links to helpful informational resources concerning registration.</div>
+                    </li>
+                </ul>
+            </div>        
+            
+            
+            <h2 class="app-section-title app-commonh app-margtop40">Popular Course Resources</h2>
+            <div role="navigation" aria-label="Popular Course Resources">
+                <ul class="list-unstyled">    
+                    <li>
+                        <div class="app-section-link">
+                            <a target="_BLANK" href="http://catalog.illinois.edu/">Academic Catalog</a>
+                        </div>
+                        <div>The University of Illinois Urbana-Champaign Academic Catalog.  Browse the official
+                             listing of courses, programs, and degree requirements.</div>
+                    </li>
+                    <li>
+                        <div class="app-section-link">
+                            <a target="_BLANK" href="http://catalog.illinois.edu/courses-of-instruction/">Courses of Instruction</a>
+                        </div>
+                        <div>A list of all available courses in the Academic Catalog.</div>
+                    </li>
+                    <li>
+                        <div class="app-section-link">
+                            <a target="_BLANK" href="https://go.illinois.edu/ChangingMajors">Changing Majors</a>
+                        </div>
+                        <div>Detailed information regarding major requirements, application timelines, 
+                            and contact information organized by college.</div>
+                    </li>
+                    <li>
+                        <div class="app-section-link">
+                            <a target="_BLANK" href="https://apps.uillinois.edu/selfservice">Self-Service</a>
+                        </div>
+                        <div>Registration, financial aid, account and contact information for students. 
+                            Class rosters, teaching schedules and contact information for faculty.</div>
+                    </li>
+                </ul>
+            </div>
+        </div> <!-- end col-sm-9 -->
+        
+        <div class="col-sm-3">
+            
+            <div class="panel-group" id="accordionQuick">
+                <div class="panel panel-default" role="navigation" aria-label="Course Resources">
+    <div class="panel-heading">
+        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordionQuick" href="#collapseResCourse" aria-expanded="false" aria-controls="collapseResCourse">
+            <span class="right-caret"></span> Course Resources
+        </a>
+    </div>
+    <div id="collapseResCourse" class="panel-collapse collapse ql-tog-event" aria-hidden="true">
+        <div class="panel-body">
+            <ul class="list-unstyled">
+                <li><a target="_BLANK" href="http://www.registrar.illinois.edu/academic-calendars">Academic Calendars</a></li>
+                <li><a target="_BLANK" href="http://www.registrar.illinois.edu/academic-calendars">Academic Deadlines</a></li>
+                <li><a target="_BLANK" href="https://go.illinois.edu/ChangingMajors">Changing Majors (Undergraduate)</a></li>
+                <li><a target="_BLANK" href="http://registrar.illinois.edu/final-exam-schedule-public">Final Exam Information</a></li>
+                <li><a target="_BLANK" href="http://provost.illinois.edu/education/advising-resources/pursuing-undergraduate-minor/">How to Declare a Minor</a></li>
+                <li><a target="_BLANK" href="http://fms.registrar.illinois.edu/Report?file=CatalogInformation%5CLanguage%20Reqs%5CCourses_Approved_Language_Requirements.xml">Language Requirements</a></li>
+                <li><a target="_BLANK" href="http://registrar.illinois.edu/time-tickets">Registration Time Ticket Schedule</a></li>
+                <li><a target="_BLANK" href="http://registrar.illinois.edu/registration-procedures">Registration Procedures</a></li>
+                <li><a target="_BLANK" href="http://registrar.illinois.edu/tuition-fees">Refund and Withdrawal Deadlines</a></li>
+                <li><a target="_BLANK" href="https://registrar.illinois.edu/academic-records/trans-credit/">Reverse Transfer of Credit</a></li>
+                <li><a target="_BLANK" href="https://www.bookstore.illinois.edu/buy_main.asp">Textbook Listings</a></li>
+            </ul>
+        </div>    
+    </div>
+</div>
+                <div class="panel panel-default" role="navigation" aria-label="University Resources">
+    <div class="panel-heading">
+        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordionQuick" href="#collapseResUniversity" aria-controls="collapseResUniversity" aria-expanded="false">
+            <span class="right-caret"></span> University Resources
+        </a>
+    </div>
+    <div id="collapseResUniversity" class="panel-collapse collapse ql-tog-event" aria-hidden="true">
+        <div class="panel-body">
+            <ul class="list-unstyled">
+                <li><a target="_BLANK" href="http://registrar.illinois.edu/">Records and Registration Info</a></li>
+                <li><a target="_BLANK" href="http://illinois.edu/students/index.html">Campus Services</a></li>
+                <li><a target="_BLANK" href="https://map.illinois.edu/view">Campus Maps</a></li>
+                <li><a target="_BLANK" href="http://illinois.edu/ds/azList">Campus Units A-Z</a></li>
+                <li><a target="_BLANK" href="http://www.osfa.uiuc.edu/">Financial Aid</a></li>
+                <li><a target="_BLANK" href="http://si.illinois.edu/">Student Health Insurance</a></li>
+                <li><a target="_BLANK" href="http://admin.illinois.edu/policy/code/">Student Code</a></li>
+                <li><a target="_BLANK" href="http://www.grad.illinois.edu/admissions">Graduate College-Admissions</a></li>
+                <li><a target="_BLANK" href="http://admissions.illinois.edu/">Undergraduate Admissions</a></li>
+            </ul>
+        </div>    
+    </div>
+</div>
+            </div>
+            <hr>
+<div role="navigation" aria-label="Registration Resources">
+    <ul class="list-unstyled">
+        <li>
+            <a href="http://catalog.illinois.edu/" class="btn btn-large app-btn-link">
+                Academic Catalog
+            </a>
+        </li>
+        <li>
+            <a href="http://registrar.illinois.edu/" class="btn btn-large app-btn-link app-margtop15">
+                Office <small>of the</small> Registrar
+            </a>
+        </li>
+        <li>
+            <a href="https://go.illinois.edu/RegisterForClasses" class="btn btn-large app-btn-link app-margtop15">
+                Register for Classes
+            </a>
+        </li>
+        <li>
+            <a href="https://myillini.illinois.edu/IdentityManagement/Login" class="btn btn-large app-btn-link app-margtop15">
+                myillini
+            </a>
+        </li>
+        <li>
+            <a href="https://registrar.illinois.edu/courses-grades/course-information/" class="btn btn-large app-btn-link app-margtop15">
+                Course Explorer Tips
+            </a>
+        </li>
+    </ul>
+</div>
+
+        </div> <!-- end col-sm-3 -->
+    </div> <!-- end row -->
+    
+    
+</div> 
+
+
+    </div> 
+
+    
+    <div id="push"></div>
+
+    </div> 
+
+    
+    <footer id="footer" role="contentinfo">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-1">
+                <a target="_blank" href="http://illinois.edu" class="pull-right">
+                    <img alt="Illinois logo" src="https://cis-data.cis.techservices.illinois.edu/images/Illinois-Logo-footer.png">
+                </a>
+            </div>
+            <div class="col-sm-11">
+                <p>
+                    <strong>
+                        <a href="http://registrar.illinois.edu/">OFFICE OF THE REGISTRAR</a>
+                    </strong> | 901 W. Illinois Street, Suite 140, Urbana, Illinois 61801</p>
+                <p>
+                    Site developed by: <strong>
+                        <a target="_blank" href="http://techservices.illinois.edu/">Technology Services at Illinois</a>
+                    </strong>  |  
+                    <a target="_blank" href="http://illinois.edu/">UNIVERSITY OF ILLINOIS URBANA-CHAMPAIGN</a>
+                </p>
+                <p>1102 Digital Computer Laboratory | MC-256 | Urbana, IL 61801 
+                    | phone <a href="tel:2172447000">217-244-7000</a> 
+                    | email <a href="https://illinois.edu/fb/sec/2080949">Course Explorer Feedback</a>
+                </p>
+                <p>
+                    <a href="https://www.vpaa.uillinois.edu/resources/web_privacy">Web Privacy Notice</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <!--OneTrust Cookies Settings button start -->
+
+    <!--OneTrust Cookies Settings button end -->
+</footer>
+
+
+<script src="https://cis-data.cis.techservices.illinois.edu/js/application.js"></script>
+
+
+
+
+
+    
+    
+    <noscript>
+        <div id="noscript-warning">Course Explorer works best with JavaScript enabled</div>
+    </noscript>
+
+    
+
+    <!--OneTrust Cookies Consent Notice (Production CDN, illinois.edu, en-GB) end -->
+
+</body></html>

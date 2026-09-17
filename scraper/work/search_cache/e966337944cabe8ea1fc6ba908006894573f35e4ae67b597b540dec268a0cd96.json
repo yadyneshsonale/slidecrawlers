@@ -1,0 +1,52 @@
+[
+{
+"url": "https://eecs189.org/fa25/lecture/lec12",
+"title": "Lecture 12 \u2013 Optimization and Gradient Descent - Berkeley - CS 189",
+"description": "Lecture 12 \u2013 Optimization and Gradient Descent. Presented by Joseph E. Gonzalez. Slides (PDF, pptx); Code (HTML, Colab); Chapter 7 (Gradient Descent),"
+},
+{
+"url": "https://eecs189.org",
+"title": "Home / Schedule | CS 189 - Introduction to Machine Learning",
+"description": "CS 189/289A: Intro to Machine Learning. UC Berkeley, Spring 2026. Wheeler 150, Tuesdays and Thursdays 2pm-3:30pm. Zoom Livestream."
+},
+{
+"url": "https://smartspot2.github.io/assets/pdf/CS189_Lecture_Notes.pdf",
+"title": "[PDF] CS 189 Lecture Notes - Alec Li",
+"description": "Let n = |V |, and let \u20d7 y \u2208Rn be an indicator vector: yi = ( 1 vertex i \u2208G1 \u22121 vertex i \u2208G2 This means that we have wi j (yi \u2212y j )2 4 = ( wi j (i, j) is cut 0 (i, j) is not cut Calculating the value of the cut, we have Cut(G1,G2) = X (i,j)\u2208E wi j (yi \u2212y j )2 4 = 1 4 X (i,j)\u2208E \u00b3 wi j y2 i \u22122wi j yi y j + wi j y2 j \u00b4 = 1 4 \u00b5 X (i,j)\u2208E \u22122wi j yi y j | {z } off-diagonal terms + n X i=1 y2 i X k\u0338=i wik | {z } diagonal terms \u00b6 = \u20d7 yT L\u20d7 y 4 Here, Li j = ( \u2212wi j i \u0338= j P k\u0338=i wik i = j . We can see that minimizing the weight of the cut is equivalent to minimizing the Laplacian quadratic form \u20d7 yT L\u20d7 y; this lets us turn graph partitioning into a problem in matrix algebra. However, there are several other methods to subdivide a graph into k clusters in one shot that use multiple eigenvectors rather than just the Fiedler vector \u20d7 v2; these methods sometimes give better results."
+},
+{
+"url": "https://people.eecs.berkeley.edu/~jrs/189",
+"title": "CS 189/289A: Introduction to Machine Learning",
+"description": "|  | CS 189/289A  Introduction to Machine Learning Jonathan Shewchuk   Spring 2025  Mondays and Wednesdays, 6:30\u20138:00 pm  Wheeler Hall Auditorium (a.k.a. 150 Wheeler Hall)  Begins Wednesday, January 22  Discussion sections begin Tuesday, January 28   Contact:  Use Ed Discussion for public and private questions that can be viewed by all the TAs. I check Ed Discussion far more often and reliably than email. * classification: perceptrons, support vector machines (SVMs), Gaussian discriminant analysis (including linear discriminant analysis, LDA, and quadratic discriminant analysis, QDA), logistic regression, decision trees, neural networks, convolutional neural networks, boosting, nearest neighbor search;. If you need the entry code, find it on Ed Discussion in the post entitled \u201cWelcome to CS 189!\u201d. * An alternative guide to CS 189 material (if you're looking for a second set of lecture notes besides mine), written by our former TAs Soroush Nasiriany and Garrett Thomas, is available at this link."
+},
+{
+"url": "https://wesleyzheng.me/discussions/cs189.html",
+"title": "CS 189 Discussion Notes \u2013 Wesley\u2019s Discussion Notes",
+"description": "+ 2\u00a0 CS 189 Discussion 02: Math Review II (From Spring 2026). + 3\u00a0 CS 189 Discussion 03: Gaussians and K-Means (From Spring 2026). + 4\u00a0 CS 189 Discussion 04: Ridge Regression (From Spring 2026). + 5\u00a0 CS 189 Discussion 05: Lasso Regression & Bias-Variance Decomposition (From Spring 2026). + 6\u00a0 CS 189 Discussion 06: Logistic Regression (From Spring 2026). + 8\u00a0 CS 189 Discussion 08: Gradient Descent II (From Spring 2026). + 9\u00a0 CS 189 Discussion 09: Backpropagation & CNNs (From Spring 2026). + 10\u00a0 CS 189 Discussion 10: Transformers I (From Spring 2026). + 12\u00a0 CS 189 Discussion 12: Representation Alignment (From Spring 2026). + 13\u00a0 Data 8 Discussion 01: By the Numbers (from Fall 2025). + 14\u00a0 Discussion 02: Intro to Tables and Causation (from Fall 2025). + 16\u00a0 Discussion 04: More Visualizations, Intro to Functions (from Fall 2025). This chapter offers supplementary resources to accompany Wesley\u2019s discussions presented during the Spring 2026 iteration of the UC Berkeley course CS 189: Introduction to Machine Learning."
+},
+{
+"url": "https://www.youtube.com/watch?v=-umiPxlKX-I",
+"title": "2022-01-19 Introduction",
+"description": "2022-01-19 Introduction\nCs189-cdss-sp22 Departmental\n384 subscribers\n72 likes\n9647 views\n8 Sep 2022\n\n3 comments\n"
+},
+{
+"url": "https://eecs189.org/fa25/resources",
+"title": "Resources | CS 189 - Introduction to Machine Learning",
+"description": "We will be posting all lecture materials on the course syllabus. Additionally, they will be listed in the following publicly visible [GitHub repository]. You"
+},
+{
+"url": "https://people.eecs.berkeley.edu/~jrs/189s16",
+"title": "CS 189/289A: Introduction to Machine Learning - People @EECS",
+"description": "Final exam solutions are available. This class introduces algorithms for learning, which constitute an important part of artificial intelligence."
+},
+{
+"url": "https://github.com/cy-Yin/UCBerkeley-CS189-Sp24-Machine-Learning",
+"title": "GitHub - cy-Yin/UCBerkeley-CS189-Sp24-Machine-Learning: This repo contains all the materials and solutions of UC Berkeley CS189/289A spring semester 2024 \u00b7 GitHub",
+"description": "## Navigation Menu. We read every piece of feedback, and take your input very seriously. ## Use saved searches to filter your results more quickly. | Latest commit   History15 Commits   15 Commits | | |. ## Latest commit. ## Repository files navigation. This repository contains all the materials of the course \"Introduction to Machine Learning\" in the UC Berkeley CS189/289A in the semester of spring 2024, including the discussions, exams and my solutions of all the 6 homework (hw2 does not involve coding part). Since some datasets in the homework are too large to upload to GitHub, ~~I will not upload the datasets in this repository~~. However, you can find the datasets on the course website, which have the suffix as follows:. and I also uploaded all the **blank** homework .zip files in the Releases, which contain the whole large datasets, you can also download them there. This repo contains all the materials and solutions of UC Berkeley CS189/289A spring semester 2024. ### Footer navigation."
+},
+{
+"url": "https://www.quora.com/What-is-it-like-to-take-CS-189-Introduction-to-Machine-Learning-at-Berkeley",
+"title": "What is it like to take CS 189 (Introduction to Machine Learning) at ...",
+"description": "The lectures were fantastic, and if you didn't like watching lectures, the lecture notes were great too. The class was a lot of work. Each set"
+}
+]

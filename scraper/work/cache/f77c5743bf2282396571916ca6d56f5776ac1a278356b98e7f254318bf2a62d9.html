@@ -1,0 +1,276 @@
+<html><head> 
+</head><body bgcolor="#FFFFFA"><center><h2>Virtualization and Cloud Computing (CS695)</h2></center>
+
+
+
+
+
+<title>Virtualization and Cloud Computing</title>
+
+
+
+
+
+<center>
+<table cellspacing="10" cellpadding="10" width="80%" style="border:0px solid black;"> 
+
+<tbody><tr> 
+
+<td width="20%"></td>
+
+<td width="60%">
+
+<b>Instructor:</b> <a href="http://www.cse.iitb.ac.in/~mythili">Mythili Vutukuru</a> (mythili @ cse.iitb.ac.in)<br><br>
+
+</td>
+
+<td width="20%"></td>
+
+</tr>
+</tbody></table>
+</center>
+<hr>
+
+<h3>Course Overview</h3>
+
+
+<p>Virtualization and Cloud Computing (CS695) is a graduate-level course open to undergraduate and postgraduate students. A previous course on operating systems (CS347/CS333 for UGs, CS744 for PGs) is a hard pre-requisite. The course also involves significant hands-on programming, so an interest and aptitude for systems programming is highly desirable. Please talk to the instructor if you do not meet these criteria but still wish to take the class. 
+
+</p><p>This course covers basic and advanced concepts related to the virtualization and how it enables the latest revolution of cloud computing. You will understand the various virtualization paradigms of full virtualization, para virtualization, and hardware-assisted virtualization, for CPU, memory, and I/O. You will also learn about containers and related concepts. The later part of the course will cover various advanced topics related to virtual machine live migration, modern cloud storage frameworks, and so on. The programming assignments in the course are designed to reinforce the concepts learnt in class.
+
+</p><p><b>System requirements:</b> You must have access to a machine with a native Linux installation to solve the programming asignments in the course.
+
+</p><p><b>Related courses:</b> Links to other related courses for which I have made lecture videos available:
+</p><ul>
+<li><a href="https://www.cse.iitb.ac.in/~mythili/os/">Lectures on Operating Systems</a></li>
+<li><a href="https://www.cse.iitb.ac.in/~mythili/decs/">Design and Engineering of Computer Systems</a></li>
+</ul>
+
+<p><b>Practice Problems</b>: This PDF <a href="./practice-problems.pdf">practice-problems.pdf</a> contains some sample exam questions from the course offering at IIT Bombay.
+
+</p><hr>
+
+<center>
+
+
+<h4><a href="https://www.youtube.com/playlist?list=PLDW872573QAbcpQ7VSUdcm4o3tgnQYBE8">YouTube playlist with all videos</a></h4>
+
+<table rules="all" cellspacing="10" cellpadding="10" width="90%" style="border:1px solid black;"> 
+  <tbody><tr bgcolor="eca89a">
+<td width="5%" style="border:1px solid black;"> <b>Lecture#</b></td>
+<td width="35%" style="border:1px solid black;"> <b>Topic</b></td>
+<td width="5%" style="border:1px solid black;"> <b>Video</b></td>
+<td width="5%" style="border:1px solid black;"> <b>Slides</b></td>
+<td width="30%" style="border:1px solid black;"> <b>References</b>
+</td><td width="20%" style="border:1px solid black;"> <b>Programming Assignments</b></td>
+</tr><tr>
+
+</tr><tr>
+<td>1</td>
+<td>Introduction to the course</td>
+<td><a href="https://youtu.be/Jph3H1wZTKM">video</a></td>
+<td><a href="./slides_pdf/01-intro.pdf">slides</a></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>Review of concepts from operating systems</td>
+<td><a href="https://youtu.be/ix9Ylli70yY">video</a></td>
+<td><a href="./slides_pdf/02-OS-review.pdf">slides</a></td>
+<td><ul><li>Brush up OS concepts from here: <a href="https://www.cse.iitb.ac.in/~mythili/os/">Lectures on Operating Systems</a></li></ul>
+</td>
+<td></td>
+</tr>
+
+<tr>
+<td>3</td>
+<td>Techniques to design virtual machine monitors</td>
+<td><a href="https://youtu.be/cVFyK1f5lDw">video</a></td>
+<td><a href="./slides_pdf/03-vmm.pdf">slides</a></td>
+<td>
+<ul>
+      <li><a href="./papers/vmmtrends.pdf">Virtual Machine Monitors: Current Technology and Future Trends</a>
+	</li><li><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/vmm-intro.pdf">Virtual Machine Monitors</a>
+    </li></ul>
+</td>
+<td></td>
+</tr>
+
+
+<tr>
+<td>4</td>
+<td>Hardware-assisted CPU virtualization in KVM/QEMU</td>
+<td><a href="https://youtu.be/wiSwGRjJN-w">video</a></td>
+<td><a href="./slides_pdf/04-hwvirt-kvmqemu.pdf">slides</a></td>
+<td>
+<ul>
+<li><a href="https://lwn.net/Articles/658511/">Using the KVM API</a> (sample code using the KVM API)
+</li></ul>
+</td>
+<td><a href="./pa/pa1.html">Programming Assignment 1</a></td>
+</tr>
+
+<tr>
+<td>5</td>
+<td>Full virtualization via dynamic binary translation</td>
+<td><a href="https://youtu.be/MVxBxg_aNk0">video</a></td>
+<td><a href="./slides_pdf/05-fullvirt.pdf">slides</a></td>
+<td><ul>
+<li> <a href="./papers/vmware.pdf">Bringing Virtualization to the x86 Architecture with the Original
+VMware Workstation</a> (very long read, only the key ideas in the first few pages covered in class)
+</li><li> <a href="./papers/x86virt.pdf">A Comparison of Software and Hardware Techniques for x86
+Virtualization</a>
+</li></ul>
+</td>
+<td></td>
+</tr>
+
+
+<tr>
+<td>6</td>
+<td>Memory virtualization techniques</td>
+<td><a href="https://youtu.be/SiVuXTqwYWk">video</a></td>
+<td><a href="./slides_pdf/06-memvirt.pdf">slides</a></td>
+<td><ul>
+<li><a href="./papers/memory-esx.pdf">Memory Resource Management in VMware ESX Server</a>
+</li></ul></td>
+<td></td>
+</tr>
+
+
+<tr>
+<td>7</td>
+<td>I/O virtualization techniques</td>
+<td><a href="https://youtu.be/gwMrdCONERo">video</a></td>
+<td><a href="./slides_pdf/07-iovirt.pdf">slides</a></td>
+<td><ul>
+  <li><a href="./papers/iovirt.pdf">I/O Virtualization</a>
+</li></ul>
+</td>
+<td></td>
+</tr>
+
+
+<tr>
+<td>8</td>
+<td>Paravirtualization in Xen</td>
+<td><a href="https://youtu.be/4XGbDWbEkU0">video</a></td>
+<td><a href="./slides_pdf/08-paravirt-xen.pdf">slides</a></td>
+<td><ul>
+<li><a href="./papers/xen.pdf">Xen and the Art of Virtualization</a>
+</li></ul>
+</td>
+<td></td>
+</tr>
+
+
+<tr>
+<td>9</td>
+<td>VM live migration</td>
+<td><a href="https://youtu.be/npT3smBqgAc">video</a></td>
+<td><a href="./slides_pdf/09-vm-migration.pdf">slides</a></td>
+<td><ul>
+<li><a href="./papers/livemigration.pdf">Live Migration of Virtual Machines</a>
+</li><li><a href="./papers/postcopy.pdf">Post-Copy Based Live Virtual Machine Migration Using
+Adaptive Pre-Paging and Dynamic Self-Ballooning</a>
+</li></ul>
+</td>
+<td><a href="./pa/pa2.html">Programming Assignment 2</a> </td>
+</tr>
+
+
+<tr>
+<td>10</td>
+<td>VM checkpointing and cloning</td>
+<td><a href="https://youtu.be/_G_p-K5fmIw">video</a></td>
+<td><a href="./slides_pdf/10-vm-checkpoint-cloning.pdf">slides</a></td>
+<td><ul>
+<li><a href="./papers/remus.pdf">Remus: High Availability via Asynchronous Virtual Machine Replication</a>
+</li><li><a href="./papers/snowflock.pdf">SnowFlock: Rapid Virtual Machine Cloning for Cloud Computing</a>
+</li></ul>
+</td>
+<td></td>
+</tr>
+
+
+<tr>
+<td>11</td>
+<td>Containers: namespaces, cgroups, frameworks</td>
+<td><a href="https://youtu.be/4BG-hE72r_I">video</a></td>
+<td><a href="./slides_pdf/11-containers.pdf">slides</a></td>
+<td><ul>
+<li><a href="https://lwn.net/Articles/531114/">Namespaces in operation</a> 
+</li><li><a href="https://lwn.net/Articles/524935/">CGroups documentation</a> 
+</li></ul>
+</td>
+<td><a href="./pa/pa3.html">Programming Assignment 3</a></td>
+</tr>
+
+
+<tr>
+<td>12</td>
+<td>Introduction to the cloud</td>
+<td><a href="https://youtu.be/yMjrkUDRDqI">video</a></td>
+<td><a href="./slides_pdf/12-cloud-intro.pdf">slides</a></td>
+<td></td>
+<td></td>
+</tr>
+
+
+<tr>
+<td>13</td>
+<td>Cloud storage: key-value stores: Dynamo</td>
+<td><a href="https://youtu.be/AVkMM9qWy20">video</a></td>
+<td><a href="./slides_pdf/13-dynamo.pdf">slides</a></td>
+<td><ul><li><a href="./papers/dynamo.pdf">Dynamo: Amazon’s Highly Available Key-value Store</a> 
+</li></ul></td>
+<td></td>
+</tr>
+
+
+<tr>
+<td>14</td>
+<td>Cloud storage: semi-structured data storage: Bigtable</td>
+<td><a href="https://youtu.be/vHTGhYK7Xjo">video</a></td>
+<td><a href="./slides_pdf/14-bigtable.pdf">slides</a></td>
+<td><ul><li><a href="./papers/bigtable.pdf">Bigtable: A Distributed Storage System for Structured Data</a> 
+</li><li><a href="./papers/chubby.pdf">The Chubby lock service for loosely-coupled distributed systems</a> 
+</li><li><a href="./papers/gfs.pdf">The Google File System</a>
+</li></ul></td>
+<td></td>
+</tr>
+
+
+<tr>
+<td>15</td>
+<td>Cloud storage: application-specific optimizations: Haystack</td>
+<td><a href="https://youtu.be/nuzwtFha0Vk">video</a></td>
+<td><a href="./slides_pdf/15-haystack.pdf">slides</a></td>
+<td><ul>
+<li><a href="./papers/haystack.pdf">Finding a needle in Haystack: Facebook’s photo storage</a> 
+</li></ul></td>
+<td></td>
+</tr>
+
+
+<tr>
+<td>16</td>
+<td>Cloud storage: caching: Memcache</td>
+<td><a href="https://youtu.be/OnRPxpuEBIM">video</a></td>
+<td><a href="./slides_pdf/16-memcache.pdf">slides</a></td>
+<td><ul><li><a href="./papers/memcache.pdf">Scaling Memcache at Facebook</a> 
+</li></ul></td>
+<td></td>
+</tr>
+
+
+</tbody></table>
+</center>
+
+
+<hr>
+
+
+</body></html>

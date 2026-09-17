@@ -1,0 +1,2283 @@
+<html lang="en"><head>
+        <meta charset="UTF-8">
+        <title>CS 182: Deep Learning</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css?family=Nothing+You+Could+Do|Raleway:300|Work+Sans:400,500" rel="stylesheet">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        <script src="//cdn.jsdelivr.net/jquery.marquee/1.4.0/jquery.marquee.min.js" type="text/javascript"></script>
+
+        <link href="/css/style.min.css" rel="stylesheet">
+        <script src="/js/script.min.js"></script>
+        
+        
+    </head>
+    <body>
+        
+<header class="wrap-container">
+    <div class="wrap">
+        <h1 class="header-title col-md-3 col-xs-3"><a href="/">CS W182 / 282A</a></h1>
+        <nav class="col-md-9 col-xs-9">
+            <ul class="hidden-sm hidden-xs">
+                <li><a href="/calendar">Calendar</a></li>
+                <li><a href="/resources">Resources</a></li>
+                <li><a href="/syllabus">Syllabus</a></li>
+                <li><a href="/staff">Staff</a></li>
+                <li><a class="menu">Menu
+                    <span class="bars">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </span>
+                </a></li>
+            </ul>
+            <ul class="hidden-xs hidden-md hidden-lg">
+                <li><a href="/calendar">Calendar</a></li>
+                <li><a href="/resources">Resources</a></li>
+                <li><a class="menu">Menu
+                    <span class="bars">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </span>
+                </a></li>
+            </ul>
+            <ul class="hidden-sm hidden-md hidden-lg">
+                <li><a href="/resources">Resources</a></li>
+                <li><a class="menu">Menu
+                    <span class="bars">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </span>
+                </a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<aside class="animate-5 drawer wrap-container">
+    <div class="wrap">
+        <div class="col-md-12 x-container">
+            <div class="animate-3 x">
+                <span class="outer bar"><span class="bar inner"></span></span>
+            </div>
+        </div>
+                <div class="col col-md-3">
+            <h3><a href="/calendar">Calendar</a></h3>
+        </div>
+        <div class="col col-md-3">
+            <h3><a href="/resources">Resources</a></h3>
+            <ul class="lists">
+                <li><a href="/resources#videos">Videos</a></li>
+                <li><a href="/resources#extras">Extras</a></li>
+                <li><a href="/resources#latex">LaTeX</a></li>
+                <li><a href="/resources#tips">Tips</a></li>
+            </ul>
+        </div>
+        <div class="col col-md-3">
+            <h3><a href="/syllabus">Syllabus</a></h3>
+            <ul class="lists">
+                <li><a href="/syllabus#technology">Technology</a></li>
+                <li><a href="/syllabus#exams">Exams</a></li>
+                <li><a href="/syllabus#piazza-etiquette">Piazza
+                    Etiquette</a></li>
+                <li><a href="/syllabus#materials">Materials</a></li>
+                <li><a href="/syllabus#cheating">Cheating</a></li>
+                <li><a href="/syllabus#grading">Grading</a></li>
+                <li><a href="/syllabus#faqs">FAQs</a></li>
+            </ul>
+        </div>
+        <div class="col col-md-3">
+            <h3><a href="/staff">Staff</a></h3>
+        </div>
+    </div>
+</aside>
+        
+<main class="index-page">
+    <section class="page-head wrap-container">
+        <div class="wrap">
+            <div class="head-decor">
+                <p class="head-subtitle">CS W182 / 282A at UC Berkeley</p>
+                <h1 class="head-title">Designing, Visualizing and Understanding Deep Neural Networks</h1>
+                <p class="head-subtitle">Lectures: M/W 5:30-7 p.m., via Zoom.</p>
+            </div>
+            <div class="head-people">
+                
+                <div class="person col-md-6 col-sm-12 col-xs-12">
+                    <div class="person-thumbnail">
+                        <div class="person-avatar">
+                            <span class="person-image" style="background: url('https://riiaa.org/wp-content/uploads/2020/07/Sergey-Levine.png'); background-size:cover;"></span>
+                        </div>
+                    </div>
+                    <div class="person-text">
+                        <h2 class="person-name">Instructor
+                            <a href="https://people.eecs.berkeley.edu/~svlevine/">Sergey Levine</a>
+                        </h2>
+                        <p><span>svlevine@eecs.berkeley.edu</span></p>
+                        <p>Office Hours: Mo/We 6:30pm-7:00pm.</p>
+                    </div>
+                </div>
+                
+
+                
+                <div class="person col-md-6 col-sm-12 col-xs-12">
+                    <div class="person-thumbnail">
+                        <div class="person-avatar">
+                            <span class="person-image" style="background: url('https://avatars.githubusercontent.com/u/20047747?s=400&amp;u=88d5f3274f00069453a14d0cec20092d15a04dd3&amp;v=4'); background-size:cover;"></span>
+                        </div>
+                    </div>
+                    <div class="person-text">
+                        <h2 class="person-name">Head uGSI
+                            <a href="https://www.btrabucco.com/">Brandon Trabucco</a>
+                            
+                        </h2>
+                        <p><span>btrabucco@berkeley.edu</span></p>
+                        <p>Office Hours: Th 10:00am-12:00pm</p>
+                        <p>Discussion(s): Fr 1:00pm-2:00pm</p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    <section class="standard-text wrap-container">
+        <div class="wrap">
+            <p>For publicly viewable lecture recordings, see <a href="https://youtube.com/playlist?list=PL_iWQOsE6TfVmKkQHucjPAoRtIJYt8a5A">this playlist</a>. This link is <b>not</b> intended for students taking the course. Students enrolled in CS182 should instead use the internal class playlist link.</p>
+        </div>
+    </section>
+    
+        
+    <section class="highlighted-text week-overview wrap-container inactive" data-number="1">
+        <div class="wrap">
+            <h3 class="highlighted-subtitle">Week 1
+                Overview</h3>
+            <h2 class="highlighted-title">Introduction &amp; Logistics</h2>
+            <p class="highlighted-byline">Wednesday, January 20 - Friday, January 22</p>
+            <span class="dividing-bar"></span>
+            <ul class="lists two-col">
+            
+                
+            
+                
+            
+                
+            
+                
+            
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+            
+                
+                    
+                    <li><a href="/static/homeworks/hw1.zip">Homework 1: Neural Networks &amp; Backprop.</a> </li>
+                    
+                
+            
+                
+            
+                
+            
+                
+            
+            
+                
+                    
+                    <li><a href="/static/slides/lec-1.pdf">Lecture 1: Introduction.</a></li>
+                    
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+            </ul>
+            
+            <i class="fa fa-angle-left prev animate-3 prev-week-overview"></i>
+            
+            
+            <i class="fa fa-angle-right next animate-3 next-week-overview"></i>
+            
+        </div>
+    </section>
+        
+    
+        
+    <section class="highlighted-text week-overview wrap-container inactive" data-number="2">
+        <div class="wrap">
+            <h3 class="highlighted-subtitle">Week 2
+                Overview</h3>
+            <h2 class="highlighted-title">ML Basics</h2>
+            <p class="highlighted-byline">Monday, January 25 - Friday, January 29</p>
+            <span class="dividing-bar"></span>
+            <ul class="lists two-col">
+            
+                
+            
+                
+            
+                
+            
+                
+            
+            
+                
+                    
+                    <li><a href="/static/discussions/dis1.pdf">Discussion 1: Introduction &amp; Logistics.</a> (<a href="/static/discussions/dis1-sol.pdf">solution</a>)</li>
+                    
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+            
+                
+                    
+                    <li><a href="/static/homeworks/hw1.zip">Homework 1: Neural Networks &amp; Backprop.</a> </li>
+                    
+                
+            
+                
+            
+                
+            
+                
+            
+            
+                
+            
+                
+                    
+                    <li><a href="/static/slides/lec-2.pdf">Lecture 2: ML Basics 1.</a></li>
+                    
+                
+            
+                
+                    
+                    <li><a href="/static/slides/lec-3.pdf">Lecture 3: ML Basics 2.</a></li>
+                    
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+            </ul>
+            
+            <i class="fa fa-angle-left prev animate-3 prev-week-overview"></i>
+            
+            
+            <i class="fa fa-angle-right next animate-3 next-week-overview"></i>
+            
+        </div>
+    </section>
+        
+    
+        
+    <section class="highlighted-text week-overview wrap-container inactive" data-number="3">
+        <div class="wrap">
+            <h3 class="highlighted-subtitle">Week 3
+                Overview</h3>
+            <h2 class="highlighted-title">Optimization &amp; Backpropagation</h2>
+            <p class="highlighted-byline">Monday, February 1 - Friday, February 5</p>
+            <span class="dividing-bar"></span>
+            <ul class="lists two-col">
+            
+                
+            
+                
+            
+                
+            
+                
+            
+            
+                
+            
+                
+                    
+                    <li><a href="/static/discussions/dis2.pdf">Discussion 2: Matrix Calc &amp; Optimization.</a> (<a href="/static/discussions/dis2-sol.pdf">solution</a>)</li>
+                    
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+            
+                
+                    
+                    <li><a href="/static/homeworks/hw1.zip">Homework 1: Neural Networks &amp; Backprop.</a> </li>
+                    
+                
+            
+                
+            
+                
+            
+                
+            
+            
+                
+            
+                
+            
+                
+            
+                
+                    
+                    <li><a href="/static/slides/lec-4.pdf">Lecture 4: Optimization.</a></li>
+                    
+                
+            
+                
+                    
+                    <li><a href="/static/slides/lec-5.pdf">Lecture 5: Backpropagation.</a></li>
+                    
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+            </ul>
+            
+            <i class="fa fa-angle-left prev animate-3 prev-week-overview"></i>
+            
+            
+            <i class="fa fa-angle-right next animate-3 next-week-overview"></i>
+            
+        </div>
+    </section>
+        
+    
+        
+    <section class="highlighted-text week-overview wrap-container inactive" data-number="4">
+        <div class="wrap">
+            <h3 class="highlighted-subtitle">Week 4
+                Overview</h3>
+            <h2 class="highlighted-title">Conv Nets &amp; Training</h2>
+            <p class="highlighted-byline">Monday, February 8 - Friday, February 12</p>
+            <span class="dividing-bar"></span>
+            <ul class="lists two-col">
+            
+                
+            
+                
+            
+                
+            
+                
+            
+            
+                
+            
+                
+            
+                
+                    
+                    <li><a href="/static/discussions/dis3.pdf">Discussion 3: Backpropagation &amp; CNNs.</a> (<a href="/static/discussions/dis3-sol.pdf">solution</a>)</li>
+                    
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+            
+                
+                    
+                    <li><a href="/static/homeworks/hw1.zip">Homework 1: Neural Networks &amp; Backprop.</a> </li>
+                    
+                
+            
+                
+            
+                
+            
+                
+            
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+                    
+                    <li><a href="/static/slides/lec-6.pdf">Lecture 6: Convolutional Nets.</a></li>
+                    
+                
+            
+                
+                    
+                    <li><a href="/static/slides/lec-7.pdf">Lecture 7: Getting Neural Nets to Train.</a></li>
+                    
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+            </ul>
+            
+            <i class="fa fa-angle-left prev animate-3 prev-week-overview"></i>
+            
+            
+            <i class="fa fa-angle-right next animate-3 next-week-overview"></i>
+            
+        </div>
+    </section>
+        
+    
+        
+    <section class="highlighted-text week-overview wrap-container inactive" data-number="5">
+        <div class="wrap">
+            <h3 class="highlighted-subtitle">Week 5
+                Overview</h3>
+            <h2 class="highlighted-title">Computer Vision</h2>
+            <p class="highlighted-byline">Monday, February 15 - Friday, February 19</p>
+            <span class="dividing-bar"></span>
+            <ul class="lists two-col">
+            
+                
+            
+                
+            
+                
+            
+                
+            
+            
+                
+            
+                
+            
+                
+            
+                
+                    
+                    <li><a href="/static/discussions/dis4.pdf">Discussion 4: CNN Architectures &amp; Dropout.</a> (<a href="/static/discussions/dis4-sol.pdf">solution</a>)</li>
+                    
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+            
+                
+                    
+                    <li><a href="/static/homeworks/hw1.zip">Homework 1: Neural Networks &amp; Backprop.</a> </li>
+                    
+                
+            
+                
+                    
+                    <li><a href="https://github.com/cs182sp21/cs182_hw2_student">Homework 2: RNNs &amp; Conv Nets.</a> </li>
+                    
+                
+            
+                
+            
+                
+            
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+                    
+                    <li><a href="/static/slides/lec-8.pdf">Lecture 8: Computer Vision.</a></li>
+                    
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+            </ul>
+            
+            <i class="fa fa-angle-left prev animate-3 prev-week-overview"></i>
+            
+            
+            <i class="fa fa-angle-right next animate-3 next-week-overview"></i>
+            
+        </div>
+    </section>
+        
+    
+        
+    <section class="highlighted-text week-overview wrap-container inactive" data-number="6">
+        <div class="wrap">
+            <h3 class="highlighted-subtitle">Week 6
+                Overview</h3>
+            <h2 class="highlighted-title">Applications Of CNNs</h2>
+            <p class="highlighted-byline">Monday, February 22 - Friday, February 26</p>
+            <span class="dividing-bar"></span>
+            <ul class="lists two-col">
+            
+                
+            
+                
+            
+                
+            
+                
+            
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+                    
+                    <li><a href="/static/discussions/dis5.pdf">Discussion 5: Review of Vision Problems.</a> (<a href="/static/discussions/dis5-sol.pdf">solution</a>)</li>
+                    
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+            
+                
+            
+                
+                    
+                    <li><a href="https://github.com/cs182sp21/cs182_hw2_student">Homework 2: RNNs &amp; Conv Nets.</a> </li>
+                    
+                
+            
+                
+            
+                
+            
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+                    
+                    <li><a href="/static/slides/lec-9.pdf">Lecture 9: Generating Images from CNNs.</a></li>
+                    
+                
+            
+                
+                    
+                    <li><a href="/static/slides/lec-10.pdf">Lecture 10: Recurrent Neural Networks.</a></li>
+                    
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+            </ul>
+            
+            <i class="fa fa-angle-left prev animate-3 prev-week-overview"></i>
+            
+            
+            <i class="fa fa-angle-right next animate-3 next-week-overview"></i>
+            
+        </div>
+    </section>
+        
+    
+        
+    <section class="highlighted-text week-overview wrap-container inactive" data-number="7">
+        <div class="wrap">
+            <h3 class="highlighted-subtitle">Week 7
+                Overview</h3>
+            <h2 class="highlighted-title">Sequence Models</h2>
+            <p class="highlighted-byline">Monday, March 1 - Friday, March 5</p>
+            <span class="dividing-bar"></span>
+            <ul class="lists two-col">
+            
+                
+                <li><a href="/midterm1">Midterm 1 Practice</a></li>
+                
+            
+                
+            
+                
+            
+                
+            
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+                    
+                    <li><a href="/static/discussions/dis6.pdf">Discussion 6: Recurrent Neural Networks.</a> (<a href="/static/discussions/dis6-sol.pdf">solution</a>)</li>
+                    
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+            
+                
+            
+                
+                    
+                    <li><a href="https://github.com/cs182sp21/cs182_hw2_student">Homework 2: RNNs &amp; Conv Nets.</a> </li>
+                    
+                
+            
+                
+                    
+                    <li><a href="https://github.com/cs182sp21/hw3_public">Homework 3: Natural Language Processing.</a> </li>
+                    
+                
+            
+                
+            
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+                    
+                    <li><a href="/static/slides/lec-11.pdf">Lecture 11: Sequence To Sequence Models.</a></li>
+                    
+                
+            
+                
+                    
+                    <li><a href="/static/slides/lec-12.pdf">Lecture 12: Transformers.</a></li>
+                    
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+            </ul>
+            
+            <i class="fa fa-angle-left prev animate-3 prev-week-overview"></i>
+            
+            
+            <i class="fa fa-angle-right next animate-3 next-week-overview"></i>
+            
+        </div>
+    </section>
+        
+    
+        
+    <section class="highlighted-text week-overview wrap-container inactive" data-number="8">
+        <div class="wrap">
+            <h3 class="highlighted-subtitle">Week 8
+                Overview</h3>
+            <h2 class="highlighted-title">Natural Language Processing</h2>
+            <p class="highlighted-byline">Monday, March 8 - Friday, March 13</p>
+            <span class="dividing-bar"></span>
+            <ul class="lists two-col">
+            
+                
+                <li><a href="/midterm1">Midterm 1 Practice</a></li>
+                
+            
+                
+                <li><a href="/midterm1">Midterm 1</a></li>
+                
+            
+                
+            
+                
+            
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+                    
+                    <li><a href="/static/discussions/dis7.pdf">Discussion 7: Attention &amp; Transformers.</a> (<a href="/static/discussions/dis7-sol.pdf">solution</a>)</li>
+                    
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+            
+                
+            
+                
+            
+                
+                    
+                    <li><a href="https://github.com/cs182sp21/hw3_public">Homework 3: Natural Language Processing.</a> </li>
+                    
+                
+            
+                
+            
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+                    
+                    <li><a href="/static/slides/lec-13.pdf">Lecture 13: Applications: NLP.</a></li>
+                    
+                
+            
+                
+                    
+                    <li><a href="/static/slides/lec-14.pdf">Lecture 14: Learning-Based Control &amp; Imitation.</a></li>
+                    
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+            </ul>
+            
+            <i class="fa fa-angle-left prev animate-3 prev-week-overview"></i>
+            
+            
+            <i class="fa fa-angle-right next animate-3 next-week-overview"></i>
+            
+        </div>
+    </section>
+        
+    
+        
+    <section class="highlighted-text week-overview wrap-container inactive" data-number="9">
+        <div class="wrap">
+            <h3 class="highlighted-subtitle">Week 9
+                Overview</h3>
+            <h2 class="highlighted-title">Reinforcement Learning</h2>
+            <p class="highlighted-byline">Monday, March 15 - Friday, March 19</p>
+            <span class="dividing-bar"></span>
+            <ul class="lists two-col">
+            
+                
+            
+                
+            
+                
+            
+                
+            
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+                    
+                    <li><a href="/static/discussions/dis8.pdf">Discussion 8: Pretraining &amp; Imitation.</a> (<a href="/static/discussions/dis8-sol.pdf">solution</a>)</li>
+                    
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+            
+                
+            
+                
+            
+                
+                    
+                    <li><a href="https://github.com/cs182sp21/hw3_public">Homework 3: Natural Language Processing.</a> </li>
+                    
+                
+            
+                
+                    
+                    <li><a href="https://github.com/cs182sp21/hw4_student">Homework 4: Deep Reinforcement Learning.</a> </li>
+                    
+                
+            
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+                    
+                    <li><a href="/static/slides/lec-15.pdf">Lecture 15: Reinforcement Learning.</a></li>
+                    
+                
+            
+                
+                    
+                    <li><a href="/static/slides/lec-16.pdf">Lecture 16: Q-Learning.</a></li>
+                    
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+            </ul>
+            
+            <i class="fa fa-angle-left prev animate-3 prev-week-overview"></i>
+            
+            
+            <i class="fa fa-angle-right next animate-3 next-week-overview"></i>
+            
+        </div>
+    </section>
+        
+    
+        
+    <section class="highlighted-text week-overview wrap-container inactive" data-number="10">
+        <div class="wrap">
+            <h3 class="highlighted-subtitle">Week 10
+                Overview</h3>
+            <h2 class="highlighted-title">Generative Models I</h2>
+            <p class="highlighted-byline">Monday, March 29 - Friday, April 2</p>
+            <span class="dividing-bar"></span>
+            <ul class="lists two-col">
+            
+                
+            
+                
+            
+                
+            
+                
+            
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+                    
+                    <li><a href="/static/discussions/dis9.pdf">Discussion 9: Policy Gradients &amp; Q-Learning.</a> (<a href="/static/discussions/dis9-sol.pdf">solution</a>)</li>
+                    
+                
+            
+                
+            
+                
+            
+                
+            
+            
+                
+            
+                
+            
+                
+                    
+                    <li><a href="https://github.com/cs182sp21/hw3_public">Homework 3: Natural Language Processing.</a> </li>
+                    
+                
+            
+                
+                    
+                    <li><a href="https://github.com/cs182sp21/hw4_student">Homework 4: Deep Reinforcement Learning.</a> </li>
+                    
+                
+            
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+                    
+                    <li><a href="/static/slides/lec-17.pdf">Lecture 17: Autoencoders &amp; Latent Variable Models.</a></li>
+                    
+                
+            
+                
+                    
+                    <li><a href="/static/slides/lec-18.pdf">Lecture 18: Variational Autoencoders &amp; Invertible Models.</a></li>
+                    
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+            </ul>
+            
+            <i class="fa fa-angle-left prev animate-3 prev-week-overview"></i>
+            
+            
+            <i class="fa fa-angle-right next animate-3 next-week-overview"></i>
+            
+        </div>
+    </section>
+        
+    
+        
+    <section class="highlighted-text week-overview wrap-container inactive" data-number="11">
+        <div class="wrap">
+            <h3 class="highlighted-subtitle">Week 11
+                Overview</h3>
+            <h2 class="highlighted-title">Generative Models II</h2>
+            <p class="highlighted-byline">Monday, April 5 - Friday, April 9</p>
+            <span class="dividing-bar"></span>
+            <ul class="lists two-col">
+            
+                
+            
+                
+            
+                
+                <li><a href="/midterm2">Midterm 2 Practice</a></li>
+                
+            
+                
+            
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+                    
+                    <li><a href="/static/discussions/dis10.pdf">Discussion 10: Generative Models.</a> (<a href="/static/discussions/dis10-sol.pdf">solution</a>)</li>
+                    
+                
+            
+                
+            
+                
+            
+            
+                
+            
+                
+            
+                
+            
+                
+                    
+                    <li><a href="https://github.com/cs182sp21/hw4_student">Homework 4: Deep Reinforcement Learning.</a> </li>
+                    
+                
+            
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+                    
+                    <li><a href="/static/slides/lec-19.pdf">Lecture 19: Generative Adversarial Networks.</a></li>
+                    
+                
+            
+                
+                    
+                    <li><a href="/static/slides/lec-20.pdf">Lecture 20: Adversarial Examples.</a></li>
+                    
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+            </ul>
+            
+            <i class="fa fa-angle-left prev animate-3 prev-week-overview"></i>
+            
+            
+            <i class="fa fa-angle-right next animate-3 next-week-overview"></i>
+            
+        </div>
+    </section>
+        
+    
+        
+    <section class="highlighted-text week-overview wrap-container inactive" data-number="12">
+        <div class="wrap">
+            <h3 class="highlighted-subtitle">Week 12
+                Overview</h3>
+            <h2 class="highlighted-title">Meta Learning</h2>
+            <p class="highlighted-byline">Monday, April 12 - Friday, April 16</p>
+            <span class="dividing-bar"></span>
+            <ul class="lists two-col">
+            
+                
+            
+                
+            
+                
+                <li><a href="/midterm2">Midterm 2 Practice</a></li>
+                
+            
+                
+                <li><a href="/midterm2">Midterm 2</a></li>
+                
+            
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+                    
+                    <li><a href="/static/discussions/dis11.pdf">Discussion 11: GANs &amp; Adversarial Attacks.</a> (<a href="/static/discussions/dis11-sol.pdf">solution</a>)</li>
+                    
+                
+            
+                
+            
+            
+                
+            
+                
+            
+                
+            
+                
+                    
+                    <li><a href="https://github.com/cs182sp21/hw4_student">Homework 4: Deep Reinforcement Learning.</a> </li>
+                    
+                
+            
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+                    
+                    <li><a href="/static/slides/lec-21.pdf">Lecture 21: Meta Learning.</a></li>
+                    
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+            </ul>
+            
+            <i class="fa fa-angle-left prev animate-3 prev-week-overview"></i>
+            
+            
+            <i class="fa fa-angle-right next animate-3 next-week-overview"></i>
+            
+        </div>
+    </section>
+        
+    
+        
+    <section class="highlighted-text week-overview wrap-container inactive" data-number="13">
+        <div class="wrap">
+            <h3 class="highlighted-subtitle">Week 13
+                Overview</h3>
+            <h2 class="highlighted-title">Guest Lectures</h2>
+            <p class="highlighted-byline">Monday, April 19 - Friday, April 23</p>
+            <span class="dividing-bar"></span>
+            <ul class="lists two-col">
+            
+                
+            
+                
+            
+                
+            
+                
+            
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+                    
+                    <li><a href="/static/discussions/dis12.pdf">Discussion 12: Meta Learning.</a> (<a href="/static/discussions/dis12-sol.pdf">solution</a>)</li>
+                    
+                
+            
+            
+                
+            
+                
+            
+                
+            
+                
+                    
+                    <li><a href="https://github.com/cs182sp21/hw4_student">Homework 4: Deep Reinforcement Learning.</a> </li>
+                    
+                
+            
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+                    
+                    <li class="inactive">Lecture 22: Guest Lecture.</li>
+                    
+                
+            
+                
+                    
+                    <li class="inactive">Lecture 23: Guest Lecture.</li>
+                    
+                
+            
+                
+            
+                
+            
+            </ul>
+            
+            <i class="fa fa-angle-left prev animate-3 prev-week-overview"></i>
+            
+            
+            <i class="fa fa-angle-right next animate-3 next-week-overview"></i>
+            
+        </div>
+    </section>
+        
+    
+        
+    <section class="highlighted-text week-overview wrap-container" data-number="14">
+        <div class="wrap">
+            <h3 class="highlighted-subtitle">Week 14
+                Overview</h3>
+            <h2 class="highlighted-title">Guest Lectures</h2>
+            <p class="highlighted-byline">Monday, April 26 - Friday, April 30</p>
+            <span class="dividing-bar"></span>
+            <ul class="lists two-col">
+            
+                
+            
+                
+            
+                
+            
+                
+            
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+            
+                
+            
+                
+            
+                
+            
+                
+            
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+                    
+                    <li class="inactive">Lecture 24: Guest Lecture.</li>
+                    
+                
+            
+                
+                    
+                    <li class="inactive">Lecture 25: Guest Lecture.</li>
+                    
+                
+            
+            </ul>
+            
+            <i class="fa fa-angle-left prev animate-3 prev-week-overview"></i>
+            
+            
+        </div>
+    </section>
+        
+    
+    <section class="standard-text wrap-container">
+        <div class="wrap">
+            <h2 class="standard-title">Discussions</h2>
+            <p>The discussion sections will not cover new material, but rather will give you additional practice solving problems. You can attend any discussion section you like. However, if there are less crowded sections that fit your schedule, those offer more opportunities for you to interact with your TA. See <a href="/syllabus#materials">Syllabus</a> for more information.</p>
+            <ul class="lists two-col animate-3" resource="discussions" style="overflow: hidden; height: 169px;">
+            
+                
+                
+                
+                <li><a href="/static/discussions/dis1.pdf">Discussion 1: Introduction &amp; Logistics.</a> (<a href="/static/discussions/dis1-sol.pdf">solution</a>)</li>
+                
+            
+                
+                
+                
+                <li><a href="/static/discussions/dis2.pdf">Discussion 2: Matrix Calc &amp; Optimization.</a> (<a href="/static/discussions/dis2-sol.pdf">solution</a>)</li>
+                
+            
+                
+                
+                
+                <li><a href="/static/discussions/dis3.pdf">Discussion 3: Backpropagation &amp; CNNs.</a> (<a href="/static/discussions/dis3-sol.pdf">solution</a>)</li>
+                
+            
+                
+                
+                
+                <li><a href="/static/discussions/dis4.pdf">Discussion 4: CNN Architectures &amp; Dropout.</a> (<a href="/static/discussions/dis4-sol.pdf">solution</a>)</li>
+                
+            
+                
+                
+                
+                <li><a href="/static/discussions/dis5.pdf">Discussion 5: Review of Vision Problems.</a> (<a href="/static/discussions/dis5-sol.pdf">solution</a>)</li>
+                
+            
+                
+                
+                
+                <li><a href="/static/discussions/dis6.pdf">Discussion 6: Recurrent Neural Networks.</a> (<a href="/static/discussions/dis6-sol.pdf">solution</a>)</li>
+                
+            
+                
+                
+                
+                <li><a href="/static/discussions/dis7.pdf">Discussion 7: Attention &amp; Transformers.</a> (<a href="/static/discussions/dis7-sol.pdf">solution</a>)</li>
+                
+            
+                
+                
+                
+                <li><a href="/static/discussions/dis8.pdf">Discussion 8: Pretraining &amp; Imitation.</a> (<a href="/static/discussions/dis8-sol.pdf">solution</a>)</li>
+                
+            
+                
+                
+                
+                <li><a href="/static/discussions/dis9.pdf">Discussion 9: Policy Gradients &amp; Q-Learning.</a> (<a href="/static/discussions/dis9-sol.pdf">solution</a>)</li>
+                
+            
+                
+                
+                
+                <li><a href="/static/discussions/dis10.pdf">Discussion 10: Generative Models.</a> (<a href="/static/discussions/dis10-sol.pdf">solution</a>)</li>
+                
+            
+                
+                
+                
+                <li><a href="/static/discussions/dis11.pdf">Discussion 11: GANs &amp; Adversarial Attacks.</a> (<a href="/static/discussions/dis11-sol.pdf">solution</a>)</li>
+                
+            
+                
+                
+                
+                <li><a href="/static/discussions/dis12.pdf">Discussion 12: Meta Learning.</a> (<a href="/static/discussions/dis12-sol.pdf">solution</a>)</li>
+                
+            
+            </ul>
+            <div class="trigger" resource="discussions">Expand</div>
+        </div>
+    </section>
+    <section class="standard-text wrap-container">
+        <div class="wrap">
+            <h2 class="standard-title">Homeworks</h2>
+            <p>All homeworks are graded for accuracy and it is highly-recommended that you do them. You are given a total of 5 slip days for use only on homeworks. These slip days are intended for emergency use, and as such we employ a strict late policy. There is no additional slack beyond slip days available. See <a href="/syllabus#materials">Syllabus</a> for more information.</p>
+            <ul class="lists two-col animate-3" resource="homeworks" style="overflow: hidden; height: 56px;">
+            
+                
+                
+                
+                <li><a href="/static/homeworks/hw1.zip">Homework 1: Neural Networks &amp; Backprop.</a> </li>
+                
+            
+                
+                
+                
+                <li><a href="https://github.com/cs182sp21/cs182_hw2_student">Homework 2: RNNs &amp; Conv Nets.</a> </li>
+                
+            
+                
+                
+                
+                <li><a href="https://github.com/cs182sp21/hw3_public">Homework 3: Natural Language Processing.</a> </li>
+                
+            
+                
+                
+                
+                <li><a href="https://github.com/cs182sp21/hw4_student">Homework 4: Deep Reinforcement Learning.</a> </li>
+                
+            
+            </ul>
+            <div class="trigger" resource="homeworks">Expand</div>
+        </div>
+    </section>
+    <section class="standard-text wrap-container">
+        <div class="wrap">
+            <h2 class="standard-title">Lecture Slides</h2>
+            <p>Lecture videos are provided via the course Piazza. See <a href="/syllabus#materials">Syllabus</a> for more information.</p>
+            <ul class="lists two-col animate-3" resource="slides" style="overflow: hidden; height: 366px;">
+            
+                
+                
+                
+                <li><a href="/static/slides/lec-1.pdf">Lecture 1</a>: Introduction. </li>
+                
+            
+                
+                
+                
+                <li><a href="/static/slides/lec-2.pdf">Lecture 2</a>: ML Basics 1. </li>
+                
+            
+                
+                
+                
+                <li><a href="/static/slides/lec-3.pdf">Lecture 3</a>: ML Basics 2. </li>
+                
+            
+                
+                
+                
+                <li><a href="/static/slides/lec-4.pdf">Lecture 4</a>: Optimization. </li>
+                
+            
+                
+                
+                
+                <li><a href="/static/slides/lec-5.pdf">Lecture 5</a>: Backpropagation. </li>
+                
+            
+                
+                
+                
+                <li><a href="/static/slides/lec-6.pdf">Lecture 6</a>: Convolutional Nets. </li>
+                
+            
+                
+                
+                
+                <li><a href="/static/slides/lec-7.pdf">Lecture 7</a>: Getting Neural Nets to Train. </li>
+                
+            
+                
+                
+                
+                <li><a href="/static/slides/lec-8.pdf">Lecture 8</a>: Computer Vision. </li>
+                
+            
+                
+                
+                
+                <li><a href="/static/slides/lec-9.pdf">Lecture 9</a>: Generating Images from CNNs. </li>
+                
+            
+                
+                
+                
+                <li><a href="/static/slides/lec-10.pdf">Lecture 10</a>: Recurrent Neural Networks. </li>
+                
+            
+                
+                
+                
+                <li><a href="/static/slides/lec-11.pdf">Lecture 11</a>: Sequence To Sequence Models. </li>
+                
+            
+                
+                
+                
+                <li><a href="/static/slides/lec-12.pdf">Lecture 12</a>: Transformers. </li>
+                
+            
+                
+                
+                
+                <li><a href="/static/slides/lec-13.pdf">Lecture 13</a>: Applications: NLP. </li>
+                
+            
+                
+                
+                
+                <li><a href="/static/slides/lec-14.pdf">Lecture 14</a>: Learning-Based Control &amp; Imitation. </li>
+                
+            
+                
+                
+                
+                <li><a href="/static/slides/lec-15.pdf">Lecture 15</a>: Reinforcement Learning. </li>
+                
+            
+                
+                
+                
+                <li><a href="/static/slides/lec-16.pdf">Lecture 16</a>: Q-Learning. </li>
+                
+            
+                
+                
+                
+                <li><a href="/static/slides/lec-17.pdf">Lecture 17</a>: Autoencoders &amp; Latent Variable Models. </li>
+                
+            
+                
+                
+                
+                <li><a href="/static/slides/lec-18.pdf">Lecture 18</a>: Variational Autoencoders &amp; Invertible Models. </li>
+                
+            
+                
+                
+                
+                <li><a href="/static/slides/lec-19.pdf">Lecture 19</a>: Generative Adversarial Networks. </li>
+                
+            
+                
+                
+                
+                <li><a href="/static/slides/lec-20.pdf">Lecture 20</a>: Adversarial Examples. </li>
+                
+            
+                
+                
+                
+                <li><a href="/static/slides/lec-21.pdf">Lecture 21</a>: Meta Learning. </li>
+                
+            
+                
+                
+                
+                <li class="inactive">Lecture 22: Guest Lecture.</li>
+                
+            
+                
+                
+                
+                <li class="inactive">Lecture 23: Guest Lecture.</li>
+                
+            
+                
+                
+                
+                <li class="inactive">Lecture 24: Guest Lecture.</li>
+                
+            
+                
+                
+                
+                <li class="inactive">Lecture 25: Guest Lecture.</li>
+                
+            
+            </ul>
+            <div class="trigger" resource="slides">Expand</div>
+        </div>
+    </section>
+</main>
+
+        <footer class="footer-links wrap-container">
+    <div class="wrap">
+                <div class="col col-md-3">
+            <h3><a href="/calendar">Calendar</a></h3>
+        </div>
+        <div class="col col-md-3">
+            <h3><a href="/resources">Resources</a></h3>
+            <ul class="lists">
+                <li><a href="/resources#videos">Videos</a></li>
+                <li><a href="/resources#extras">Extras</a></li>
+                <li><a href="/resources#latex">LaTeX</a></li>
+                <li><a href="/resources#tips">Tips</a></li>
+            </ul>
+        </div>
+        <div class="col col-md-3">
+            <h3><a href="/syllabus">Syllabus</a></h3>
+            <ul class="lists">
+                <li><a href="/syllabus#technology">Technology</a></li>
+                <li><a href="/syllabus#exams">Exams</a></li>
+                <li><a href="/syllabus#piazza-etiquette">Piazza
+                    Etiquette</a></li>
+                <li><a href="/syllabus#materials">Materials</a></li>
+                <li><a href="/syllabus#cheating">Cheating</a></li>
+                <li><a href="/syllabus#grading">Grading</a></li>
+                <li><a href="/syllabus#faqs">FAQs</a></li>
+            </ul>
+        </div>
+        <div class="col col-md-3">
+            <h3><a href="/staff">Staff</a></h3>
+        </div>
+    </div>
+</footer>
+    
+</body></html>

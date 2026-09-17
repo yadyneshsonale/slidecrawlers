@@ -1,0 +1,445 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>10-707 Spring 2023 : Advanced Deep Learning</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+  <link rel="stylesheet" href="./style/bootstrap-theme.min.css">
+  <link href="./style/10707.css" rel="stylesheet" type="text/css">
+
+</head><body>
+  <nav class="navbar navbar-expand-md navbar-dark">
+    <a href="./index.html">
+      <img src="./static/img/ml-logo.gif" style="height:40px; float: left; margin-left: 20px; margin-right: 20px;"></a>
+    <a class="navbar-brand" href="./index.html">
+      <font color="black">CMU 10-707</font>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item"><a class="nav-link" href="./index.html#announcement">
+            <font color="black">Home</font>
+          </a></li>
+        <!--         <li class="nav-item"><a class="nav-link" href="./syllabus.html"><font color="black">Schedule/Calendar</font></a></li> -->
+        <li class="nav-item"><a class="nav-link" href="./syllabus.html">
+            <font color="black">Syllabus</font>
+          </a></li>
+        <li class="nav-item"><a class="nav-link" href="./calendar.html">
+            <font color="black">Schedule</font>
+          </a></li>
+        <li class="nav-item"><a class="nav-link" href="./index.html#info">
+            <font color="black">Course Outline</font>
+          </a></li>
+        <li class="nav-item"><a class="nav-link" href="./index.html#logistics">
+            <font color="black">Logistics</font>
+          </a></li>
+        <li class="nav-item"><a class="nav-link" href="./index.html#policies">
+            <font color="black">Policies</font>
+          </a></li>
+        <li class="nav-item"><a class="nav-link" href="https://piazza.com/class/lcow370iclm3aj">
+            <font color="black">Piazza</font>
+          </a></li>
+      </ul>
+    </div>
+  </nav>
+
+
+
+
+  <div class="sechighlight">
+    <div class="container sec" style="margin-top: 5em">
+      <h2>Syllabus and Course Schedule</h2>
+      <p>
+        <b>Time and Location</b>:
+        Monday, Wednesday 11:00AM - 12:20PM, Tepper 1403. See <a href="./index.html#logistics">Logistics</a> for more
+        details.<br>
+        <strong>Class Videos</strong>:
+        Class videos will be available on <a href="https://scs.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx#folderID=%22bf3de0e8-1c6f-43b3-9a24-af86011cd624%22">Panopto</a>.
+      </p>
+
+      <br>
+    </div>
+  </div>
+
+  <!-- <div class="container">
+<p>Schedule will be uploaded soon!</p>
+</div> -->
+  <!-- <div width="100%" >
+<center>
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQs2KaRF_aOkB7ty1aNB9j2HCq87YRuOcitH4NThQhSUFNisoJzFC8f-Jppt1jBtIfhB0Zn3GIa_KlJ/pubhtml?gid=1383849365&amp;single=true&amp;widget=true&amp;headers=false"
+   style="width:75%;height:800px;"></iframe>
+</center>
+</div> -->
+  <div class="container">
+    <table id="schedule" class="table table-bordered no-more-tables">
+      <thead class="active" style="background-color:#f9f9f9">
+        <tr>
+          <th>Date</th>
+          <th>Event</th>
+          <th>Description</th>
+          <th>Materials</th>
+          <th>Announcements*</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="background-color:#fcf0f0;">
+          <td>Monday, Jan 16</td>
+          <td></td>
+          <td>NO CLASS (Martin Luther King Day)</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Wednesday, Jan 18</td>
+          <td>Lecture 1</td>
+          <td>Introduction to Machine Learning, Regression</td>
+          <td>Readings: Bishop (Chapter 1, Chapter 3: 3.1-3.2), Deep Learning Book (Chapter 4, Chapter 5)<br>Lecture:
+            <a href="slides/lecture1.pdf" target="_blank">slides</a>, <a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=498255d1-a1ed-48b9-8b79-af8e01048cfa" target="_blank">recording</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Friday, Jan 20</td>
+          <td>Recitation 1</td>
+          <td>TBD</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Monday, Jan 23</td>
+          <td>Lecture 2</td>
+          <td>Continue Introduction to Machine Learning, Regression</td>
+          <td>Readings: Bishop (Chapter 1, Chapter 3: 3.1-3.2), Deep Learning Book (Chapter 4, Chapter 5)<br>Lecture:
+            <a href="slides/lecture2.pdf">slides</a>, <a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=9c3846eb-1583-40d4-9999-af9301219fa4">recording</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Wednesday, Jan 25</td>
+          <td>Lecture 3</td>
+          <td>Neural Networks I</td>
+          <td>Readings: Bishop (Chapter 5: 5.1-5.4), Deep Learning Book (Chapter 6)<br>Lecture: <a href="slides/lecture3.pdf">slides</a>, <a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=90abbc5a-d98d-4c62-913a-af9501281165">recording</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Friday, Jan 27</td>
+          <td>Recitation 2</td>
+          <td>Probability Distributions</td>
+          <td>Recitation: <a href="slides/probability_recitation.pdf">slides</a>, <a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=372a6589-d8f3-4963-8cba-af97011224c7">recording</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Monday, Jan 30</td>
+          <td>Lecture 4</td>
+          <td>Neural Networks II</td>
+          <td>Readings: Bishop (Chapter 5: 5.1-5.4), Deep Learning Book (Chapter 7)<br>Lecture: <a href="slides/lecture4.pdf">slides</a>, <a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=86812488-a46d-4cf5-ad80-af9a01219ab8">recording</a></td>
+          <td>Course add deadline</td>
+        </tr>
+        <tr>
+          <td>Wednesday, Feb 1</td>
+          <td>Lecture 5</td>
+          <td>Convolutional Neural Networks I</td>
+          <td>Readings: Deep Learning Book (Chapter 9)<br>Lecture: <a href="slides/lecture5.pdf">slides</a>, <a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=cd3a4968-4a5d-4a5a-b7c0-af9c0121056b">recording</a></td>
+          <td>HW1 out</td>
+        </tr>
+        <tr>
+          <td>Friday, Feb 3</td>
+          <td>Recitation 3</td>
+          <td>Homework 1 Recitation</td>
+          <td>Recitation: <a href="slides/hw1_recitation.pdf">slides</a>, <a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=233d6d39-575c-47bc-8cf6-af9e0116e16c">recording</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Monday, Feb 6</td>
+          <td>Lecture 6</td>
+          <td>Convolutional Neural Networks II / Start Graphical Models</td>
+          <td>Readings: Deep Learning Book (Chapter 9)<br>Lecture: <a href="slides/lecture6.pdf">slides</a>, recording</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Wednesday, Feb 8</td>
+          <td>Lecture 7</td>
+          <td>Graphical Models: Directed Graphs</td>
+          <td>Readings: Bishop (Chapter 8)<br>Lecture: <a href="slides/lecture7.pdf">slides</a>, recording</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Friday, Feb 10</td>
+          <td>Recitation 4</td>
+          <td>Pytorch and AWS</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Monday, Feb 13</td>
+          <td>Lecture 8</td>
+          <td>Graphical Models, Undirected Graphs / RBMs</td>
+          <td>Readings: Bishop (Chapter 8)<br>Lecture: <a href="slides/lecture8.pdf">slides</a>, recording</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Wednesday, Feb 15</td>
+          <td>Lecture 9</td>
+          <td>Restricted Boltzmann Machines (RBMs)</td>
+          <td>Readings: Deep Learning Book (Chapter 20.3)<br>Lecture: <a href="slides/lecture9.pdf">slides</a>, recording</td>
+          <td>HW1 due; HW 2 out</td>
+        </tr>
+        <tr>
+          <td>Friday, Feb 17</td>
+          <td>Lecture 10</td>
+          <td>Deep Belief Networks</td>
+          <td>Readings: Deep Learning Book (Chapter 20.3)<br>Lecture: <a href="slides/lecture10.pdf">slides</a>, recording</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Monday, Feb 20</td>
+          <td>Recitation 5</td>
+          <td>Homework 2 Recitation</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Wednesday, Feb 22</td>
+          <td>Lecture 11</td>
+          <td>Autoencoders</td>
+          <td>Readings: Deep Learning Book (Chapter 14)<br>Lecture: <a href="slides/lecture11.pdf">slides</a>, recording</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Friday, Feb 24</td>
+          <td>-</td>
+          <td>-</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Monday, Feb 27</td>
+          <td>Lecture 12</td>
+          <td>Graph Neural Networks: Guest Lecture from <a href="https://minjiyoon.xyz">Minji Yoon</a></td>
+          <td>Lecture: <a href="slides/introduction_deep_graph_learning_minji_yoon.pdf">slides</a>, recording</td>
+          <td>Semester course drop deadline</td>
+        </tr>
+        <tr>
+          <td>Wednesday, Mar 1</td>
+          <td>Lecture 13</td>
+          <td>Language Modeling</td>
+          <td>Readings: Deep Learning Book (Chapter 10 and Chapter 12: 12.4)<br>Lecture: <a href="slides/lecture13.pdf">slides</a>, recording</td>
+          <td>HW2 due</td>
+        </tr>
+        <tr>
+          <td>Friday, Mar 3</td>
+          <td>Recitation 6</td>
+          <td>TBD</td>
+          <td></td>
+          <td>Midway report due</td>
+        </tr>
+        <tr style="background-color:#fcf0f0;">
+          <td>Monday, Mar 6</td>
+          <td></td>
+          <td>NO CLASS (Spring Break)</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr style="background-color:#fcf0f0;">
+          <td>Wednesday, Mar 8</td>
+          <td></td>
+          <td>NO CLASS (Spring Break)</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr style="background-color:#fcf0f0;">
+          <td>Friday, Mar 10</td>
+          <td></td>
+          <td>NO CLASS (Spring Break)</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Monday, Mar 13</td>
+          <td>Lecture 14</td>
+          <td>Sequence Models (Part 1) and Mid-term Review</td>
+          <td>Readings: Deep Learning Book (Chapter 10)<br>Lecture: <a href="slides/lecture14.pdf">slides (MCMC)</a>, <a href="slides/mid_review.pdf">slides (review)</a>, recording</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Wednesday, Mar 15</td>
+          <td>Lecture 15</td>
+          <td>Sequence Models (Part 2), Transformers</td>
+          <td>Readings: Deep Learning Book (Chapter 10)<br>Lecture: <a href="slides/lecture15.pdf">slides</a>, recording</td>
+          <td></td>
+        </tr>
+        <tr style="background-color:#e0ebff;">
+          <td>Friday, Mar 17</td>
+          <td>Recitation 7</td>
+          <td>Recitation time used for mid-term exam</td>
+          <td></td>
+          <td>Mid-term exam</td>
+        </tr>
+        <tr>
+          <td>Monday, Mar 20</td>
+          <td>Lecture 16</td>
+          <td>Variational Inference</td>
+          <td>Readings: Deep Learning Book (Chapter 19)<br>Lecture: <a href="slides/lecture16.pdf">slides</a>, recording</td>
+          <td>HW3P1 out</td>
+        </tr>
+        <tr>
+          <td>Wednesday, Mar 22</td>
+          <td>Lecture 17</td>
+          <td>Multi-Modal Learning: Guest Lecture from <a href="https://www.cs.cmu.edu/~pliang/">Paul Pu Liang</a></td>
+          <td>Readings: TBA<br>Lecture: <a href="slides/cmu_dl_guest_2023.pdf">slides</a>, recording</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Friday, Mar 24</td>
+          <td>Recitation 8</td>
+          <td>Homework 3 Part 1 Recitation</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Monday, Mar 27</td>
+          <td>Lecture 18</td>
+          <td>Variational Autoencoders</td>
+          <td>Readings: Deep Learning Book (Chapter 20)<br>Lecture: <a href="slides/lecture17.pdf">slides</a>, recording</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Wednesday, Mar 29</td>
+          <td>Lecture 19</td>
+          <td>Markov Chain Monte Carlo</td>
+          <td>Readings: TBD<br>Lecture: <a href="slides/lecture18.pdf">slides</a>, recording</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Friday, Mar 31</td>
+          <td>Recitation 9</td>
+          <td>TBD</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Monday, Apr 3</td>
+          <td>Lecture 20</td>
+          <td>Generative Adversarial Networks / Normalizing Flows</td>
+          <td>Readings: Deep Learning Book (Chapter 20: 20.10)<br>Lecture: <a href="slides/lecture20.pdf">slides</a>, recording</td>
+          <td>HW3P1 due; Pass/Fail grade option deadline</td>
+        </tr>
+        <tr>
+          <td>Wednesday, Apr 5</td>
+          <td>Lecture 21</td>
+          <td>Diffusion Models</td>
+          <td>Readings: TBD<br>Lecture: <a href="slides/lecture21.pdf">slides</a>, recording</td>
+          <td>HW3P2 out</td>
+        </tr>
+        <tr>
+          <td>Friday, Apr 7</td>
+          <td>Recitation 10</td>
+          <td>Homework 3 Part 2 Recitation</td>
+          <td>Readings: TBD<br>Lecture: slides, recording</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Monday, Apr 10</td>
+          <td>Lecture 22</td>
+          <td>Representation Learning for Reading Comprehension</td>
+          <td>Readings: TBD<br>Lecture: <a href="slides/lecture22.pdf">slides</a>, recording</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Wednesday, Apr 12</td>
+          <td>Lecture 23</td>
+          <td>Embodied AI: Language and Perception</td>
+          <td>Readings: TBD<br>Lecture: <a href="slides/lecture23.pdf">slides</a>, recording</td>
+          <td></td>
+        </tr>
+        <tr style="background-color:#fcf0f0;">
+          <td>Friday, Apr 14</td>
+          <td></td>
+          <td>NO CLASS (Carnival April 13th-15th)</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Monday, Apr 17</td>
+          <td>Lecture 24</td>
+          <td>Integrating Domain-Knowledge into Deep Learning</td>
+          <td>Readings: TBD<br>Lecture: <a href="slides/lecture24.pdf">slides</a>, recording</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Wednesday, Apr 19</td>
+          <td>Lecture 25</td>
+          <td>Generative Models for Data Augmentation</td>
+          <td>Readings: TBD<br>Lecture: <a href="slides/lecture25.pdf">slides</a>, recording</td>
+          <td>HW3P2 due</td>
+        </tr>
+        <tr>
+          <td>Friday, Apr 21</td>
+          <td>Recitation 11</td>
+          <td>TBD</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Monday, Apr 24</td>
+          <td>Lecture 26</td>
+          <td>Capsules</td>
+          <td>Readings: TBD<br>Lecture: <a href="slides/lecture26.pdf">slides</a>, recording</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Wednesday, Apr 26</td>
+          <td>Lecture 27</td>
+          <td>Introduction to Reinforcement Learning</td>
+          <td></td>
+          <td>Final report due</td>
+        </tr>
+        <tr>
+          <td>Friday, Apr 28</td>
+          <td>TBA</td>
+          <td>TBA</td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="container">
+      <p>* all announcement dates are tentative and subject to change</p>
+    </div>
+  </div>
+
+  <!-- <div class="sechighlight"> -->
+  <div class="container sec" style="margin-top: 2em">
+    <h2>Resources</h2>
+    <b>Books</b>
+    <ul>
+      <li>Ian Goodfellow and Yoshua Bengio and Aaron Courville (2016) <a href="http://www.deeplearningbook.org/">Deep
+          Learning Book&nbsp;</a><a href="https://github.com/janishar/mit-deep-learning-book-pdf/blob/master/complete-book-pdf/deeplearningbook.pdf">PDF-GitHub</a>
+      </li>
+      <li>Christopher M. Bishop (2006) <a href="https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf">Pattern Recognition and Machine
+          Learning,&nbsp;</a>Springer.</li>
+    </ul>
+    <b>Additional references</b>
+    <ul>
+      <li>Machine Learning: A Probabilistic Perspective, by Kevin P. Murphy.</li>
+      <li>Trevor Hastie, Robert Tibshirani, Jerome Friedman (2009) <a href="http://www-stat.stanford.edu/~tibs/ElemStatLearn/">The Elements of Statistical Learning</a></li>
+      <li>David MacKay (2003) <a href="http://www.inference.phy.cam.ac.uk/mackay/itila/book.html">Information Theory,
+          Inference, and Learning Algorithms</a></li>
+    </ul>
+
+    <br>
+    <br>
+  </div>
+  <!-- </div> -->
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+  <script> var shiftWindow = function () { scrollBy(0, -35) };
+    if (location.hash) shiftWindow();
+    window.addEventListener("hashchange", shiftWindow); </script>
+
+
+</body></html>

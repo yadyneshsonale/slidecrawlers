@@ -1,0 +1,505 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Introduction to Machine Learning - Lecture Slides</title>
+
+  <style>
+    :root{
+      --border:#e0e0e0;
+      --head:#f6f6f6;
+      --link:#1565c0;
+      --title:#1a237e;
+      --text:#222;
+    }
+    body{
+      margin:0;
+      padding:18px 14px 40px;
+      font-family: Arial, sans-serif;
+      color:var(--text);
+      background:#fff;
+    }
+    .wrap{
+      max-width:1200px;
+      margin:0 auto;
+    }
+    h1{
+      font-size:22px;
+      margin:6px 0 10px;
+      color:#000;
+    }
+    .sub{
+      margin:0 0 14px;
+      color:#444;
+      font-size:14px;
+      line-height:1.45;
+    }
+
+    table{
+      width:100%;
+      border-collapse:collapse;
+      table-layout:fixed;
+    }
+    th, td{
+      border:1px solid var(--border);
+      padding:10px 12px;
+      vertical-align:top;
+      font-size:14px;
+      line-height:1.35;
+      word-wrap:break-word;
+      overflow-wrap:anywhere;
+    }
+    th{
+      background:var(--head);
+      text-align:left;
+    }
+    .lec{
+      font-weight:700;
+      color:var(--title);
+      white-space:nowrap;
+      width:90px;
+    }
+    .title{
+      font-weight:700;
+      width:240px;
+    }
+    .topics{
+      width:auto;
+    }
+    .ref{
+      width:260px;
+      color:#333;
+    }
+    .pdf{
+      width:110px;
+      white-space:nowrap;
+    }
+    .btn{
+      display:inline-block;
+      padding:7px 10px;
+      border:1px solid var(--link);
+      border-radius:6px;
+      text-decoration:none;
+      color:var(--link);
+      font-weight:700;
+      background:#fff;
+    }
+    .btn:hover{
+      background:#f3f7ff;
+    }
+
+    /* Mobile layout */
+    @media (max-width: 900px){
+      table, thead, tbody, th, td, tr { display:block; }
+      thead{ display:none; }
+      tr{
+        border:1px solid var(--border);
+        margin:0 0 12px;
+        border-radius:10px;
+        overflow:hidden;
+      }
+      td{
+        border:none;
+        border-top:1px solid var(--border);
+      }
+      td:first-child{
+        border-top:none;
+      }
+      td::before{
+        content: attr(data-label);
+        display:block;
+        font-size:12px;
+        color:#666;
+        margin-bottom:4px;
+        font-weight:700;
+        text-transform:uppercase;
+        letter-spacing:0.02em;
+      }
+      .lec,.title,.ref,.pdf{ width:auto; white-space:normal; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <h1>Introduction to Machine Learning - Lecture Slides</h1>
+
+    <table>
+      <thead>
+        <tr>
+          <th class="lec">Lecture</th>
+          <th class="title">Title</th>
+          <th class="topics">Topics Covered</th>
+          <th class="ref">Reference</th>
+          <th class="pdf">PDF</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td class="lec" data-label="Lecture">Lec 1</td>
+          <td class="title" data-label="Title">Probability and Events</td>
+          <td class="topics" data-label="Topics Covered">
+            Sample space; Events; Axioms of probability; Union bound; Inclusion-Exclusion principle; Conditional probability;
+            Independence; Bayes rule.
+          </td>
+          <td class="ref" data-label="Reference">ProbabilityCourse.com - Chapters 1-2</td>
+          <td class="pdf" data-label="PDF"><a class="btn" href="Lecture01.pdf">View</a></td>
+        </tr>
+
+        <tr>
+          <td class="lec" data-label="Lecture">Lec 2</td>
+          <td class="title" data-label="Title">Random Variables</td>
+          <td class="topics" data-label="Topics Covered">
+            Discrete and continuous RVs; PMF, PDF, CDF; Joint and marginal;
+            Independence; Correlation; Mean; Variance.
+          </td>
+          <td class="ref" data-label="Reference">ProbabilityCourse.com - Chapter 3</td>
+          <td class="pdf" data-label="PDF"><a class="btn" href="Lecture02.pdf">View</a></td>
+        </tr>
+
+        <tr>
+          <td class="lec" data-label="Lecture">Lec 3</td>
+          <td class="title" data-label="Title">Random Variables (Cont.)</td>
+          <td class="topics" data-label="Topics Covered">
+            Properties of variance; Laws of total expectation and variance;
+            Entropy; Cross-entropy; Covariance matrix; Multivariate Gaussian.
+          </td>
+          <td class="ref" data-label="Reference">ProbabilityCourse.com - Chapters 4-5</td>
+          <td class="pdf" data-label="PDF"><a class="btn" href="Lecture03.pdf">View</a></td>
+        </tr>
+
+        <tr>
+          <td class="lec" data-label="Lecture">Lec 4</td>
+          <td class="title" data-label="Title">Linear Algebra</td>
+          <td class="topics" data-label="Topics Covered">
+            Norms; Inner products; Linear independence; Orthogonality;
+            Span; Basis; Matrix multiplication as linear combination.
+          </td>
+          <td class="ref" data-label="Reference">
+            Strang, Linear Algebra and Learning from Data (2019) - Chapter 1
+          </td>
+          <td class="pdf" data-label="PDF"><a class="btn" href="Lecture04.pdf">View</a></td>
+        </tr>
+
+        <tr>
+          <td class="lec" data-label="Lecture">Lec 5</td>
+          <td class="title" data-label="Title">Linear Algebra (Matrices)</td>
+          <td class="topics" data-label="Topics Covered">
+            Linear maps; Column and null spaces; Rank-nullity;
+            Orthogonal matrices; Eigenvalues and eigenvectors.
+          </td>
+          <td class="ref" data-label="Reference">
+            Strang, Linear Algebra and Learning from Data (2019) - Chapter 1
+          </td>
+          <td class="pdf" data-label="PDF"><a class="btn" href="Lecture05.pdf">View</a></td>
+        </tr>
+
+        <tr>
+          <td class="lec" data-label="Lecture">Lec 6</td>
+          <td class="title" data-label="Title">Linear Algebra (EVD and SVD)</td>
+          <td class="topics" data-label="Topics Covered">
+            Orthonormal eigen-basis; Coordinate transforms; Eigenvalue decomposition; 
+             Singular value decomposition.
+          </td>
+          <td class="ref" data-label="Reference">
+            Strang, Linear Algebra and Learning from Data (2019) - Chapter 1
+          </td>
+          <td class="pdf" data-label="PDF"><a class="btn" href="Lecture06.pdf">View</a></td>
+        </tr>
+
+        <tr>
+          <td class="lec" data-label="Lecture">Lec 7</td>
+          <td class="title" data-label="Title">ML Paradigms and Metrics</td>
+          <td class="topics" data-label="Topics Covered">
+            Supervised, unsupervised and reinforcement learning;
+            MSE; MAE; R2; Accuracy; Precision; Recall; F-score.
+          </td>
+          <td class="ref" data-label="Reference">
+            Murphy, Probabilistic Machine Learning: An Introduction - Section 5.1
+          </td>
+          <td class="pdf" data-label="PDF"><a class="btn" href="Lecture07.pdf">View</a></td>
+        </tr>
+
+        <tr>
+          <td class="lec" data-label="Lecture">Lec 8</td>
+          <td class="title" data-label="Title">Hypothesis Class and Bias-Variance</td>
+          <td class="topics" data-label="Topics Covered">
+            Hypothesis class; Inductive bias; Generalization;
+            Bias-variance decomposition; Bias-variance trade-off.
+          </td>
+          <td class="ref" data-label="Reference">
+            ISL (An Introduction to Statistical Learning) - Chapter 2
+          </td>
+          <td class="pdf" data-label="PDF"><a class="btn" href="Lecture08.pdf">View</a></td>
+        </tr>
+
+	<tr>
+          <td class="lec" data-label="Lecture">Lec 9</td>
+          <td class="title" data-label="Title">Linear Regression</td>
+          <td class="topics" data-label="Topics Covered">
+            One-hot and ordinal encoding; feature scaling (standardization, min-max); 
+	    gradients and the chain rule; Least squares and its geometric interpretation (projection).
+          </td>
+          <td class="ref" data-label="Reference">
+            Hastie et al., The Elements of Statistical Learning (ESL), Sec. 3.2
+          </td>
+          <td class="pdf" data-label="PDF"><a class="btn" href="Lecture09.pdf">View</a></td>
+        </tr>
+
+	<tr>
+          <td class="lec" data-label="Lecture">Lec 10</td>
+          <td class="title" data-label="Title">Regularized Least Squares</td>
+          <td class="topics" data-label="Topics Covered">
+            Feature expansion; L2 Regularization (Ridge Regression);
+	    L1 Regularization (LASSO); Cross-validation.
+          </td>
+          <td class="ref" data-label="Reference">
+            Hastie et al., The Elements of Statistical Learning (ESL book), Sec. 3.4.1 and 3.4.2
+          </td>
+          <td class="pdf" data-label="PDF"><a class="btn" href="Lecture10.pdf">View</a></td>
+        </tr>
+
+	<tr>
+          <td class="lec" data-label="Lecture">Lec 11</td>
+          <td class="title" data-label="Title">Logistic Regression</td>
+          <td class="topics" data-label="Topics Covered">
+            Bayes Optimal Classifier; Sigmoid function; Maximum Likelihood;
+	    Cross-entropy; Gradient Descent.
+          </td>
+          <td class="ref" data-label="Reference">
+            Hastie et al., The Elements of Statistical Learning (ESL book), Sec. 4.1
+          </td>
+          <td class="pdf" data-label="PDF"><a class="btn" href="Lecture11.pdf">View</a></td>
+        </tr>
+
+	<tr>
+          <td class="lec" data-label="Lecture">Lec 12</td>
+          <td class="title" data-label="Title">Softmax Regression and Support Vector Machines</td>
+          <td class="topics" data-label="Topics Covered">
+            Softmax Regression;
+	    MAP Estimation;
+           Gaussian Prior and L2 Regularization;
+           Maximum-Margin Classification.
+          </td>
+          <td class="ref" data-label="Reference">
+             Murphy, Probabilistic Machine Learning: An Introduction, Sec. 10.3
+          </td>
+          <td class="pdf" data-label="PDF"><a class="btn" href="Lecture12.pdf">View</a></td>
+        </tr>
+
+<tr>
+  <td class="lec" data-label="Lecture">Lec 13</td>
+  <td class="title" data-label="Title">
+    Support Vector Machines
+  </td>
+  <td class="topics" data-label="Topics Covered">
+    Soft-Margin SVM;
+    Hinge Loss and Regularization Parameter C; SVM Dual;
+    Kernel Trick;
+  </td>
+  <td class="ref" data-label="Reference">
+    Murphy, Probabilistic Machine Learning: An Introduction, Sec. 17.3
+  </td>
+  <td class="pdf" data-label="PDF">
+    <a class="btn" href="Lecture13.pdf">View</a>
+  </td>
+</tr>
+
+<tr>
+  <td class="lec" data-label="Lecture">Lec 14</td>
+  <td class="title" data-label="Title">
+    Decision Trees
+  </td>
+  <td class="topics" data-label="Topics Covered">
+    Classification Trees;
+    Regression Trees; Entropy;
+    Gini Index;
+  </td>
+  <td class="ref" data-label="Reference">
+    Murphy, Probabilistic Machine Learning: An Introduction, Sec. 18.1
+  </td>
+  <td class="pdf" data-label="PDF">
+    <a class="btn" href="Lecture14.pdf">View</a>
+  </td>
+</tr>
+
+<tr>
+  <td class="lec" data-label="Lecture">Lec 15</td>
+  <td class="title" data-label="Title">
+    Ensemble Methods: Bagging and Random Forests
+  </td>
+  <td class="topics" data-label="Topics Covered">
+    Cost-Complexity Pruning;
+    Stacking; Committee of Experts;
+    Bagging; Random Forests
+  </td>
+  <td class="ref" data-label="Reference">
+    Murphy, Probabilistic Machine Learning: An Introduction, Sec. 18.2 to 18.4
+  </td>
+  <td class="pdf" data-label="PDF">
+    <a class="btn" href="Lecture15.pdf">View</a>
+  </td>
+</tr>
+
+<tr>
+  <td class="lec" data-label="Lecture">Lec 16</td>
+  <td class="title" data-label="Title">
+    Ensemble Methods: Boosting Techniques
+  </td>
+  <td class="topics" data-label="Topics Covered">
+    AdaBoost;
+    Least Squares Boosting; Gradient Boosting
+  </td>
+  <td class="ref" data-label="Reference">
+    Murphy, Probabilistic Machine Learning: An Introduction, Sec. 18.5
+  </td>
+  <td class="pdf" data-label="PDF">
+    <a class="btn" href="Lecture16.pdf">View</a>
+  </td>
+</tr>
+
+<tr>
+  <td class="lec" data-label="Lecture">Lec 17</td>
+  <td class="title" data-label="Title">
+    Dimensionality Reduction
+  </td>
+  <td class="topics" data-label="Topics Covered">
+    Prinicipal Component Analysis (PCA)
+  </td>
+  <td class="ref" data-label="Reference">
+    Murphy, Probabilistic Machine Learning: An Introduction, Chapter 20
+  </td>
+  <td class="pdf" data-label="PDF">
+    <a class="btn" href="Lecture17.pdf">View</a>
+  </td>
+</tr>
+
+<tr>
+  <td class="lec" data-label="Lecture">Lec 18</td>
+  <td class="title" data-label="Title">
+    Clustering Techniques
+  </td>
+  <td class="topics" data-label="Topics Covered">
+    K-Means; Hierarchical Clustering
+  </td>
+  <td class="ref" data-label="Reference">
+    Murphy, Probabilistic Machine Learning: An Introduction, Chapter 21
+  </td>
+  <td class="pdf" data-label="PDF">
+    <a class="btn" href="Lecture18.pdf">View</a>
+  </td>
+</tr>
+
+<tr>
+  <td class="lec" data-label="Lecture">Lec 19</td>
+  <td class="title" data-label="Title">
+    Gaussian Mixture Model
+  </td>
+  <td class="topics" data-label="Topics Covered">
+    MLE; GMM; EM Algorithm
+  </td>
+  <td class="ref" data-label="Reference">
+    Murphy, Probabilistic Machine Learning: An Introduction, Chapter 21
+  </td>
+  <td class="pdf" data-label="PDF">
+    <a class="btn" href="Lecture19.pdf">View</a>
+  </td>
+</tr>
+
+<tr>
+  <td class="lec" data-label="Lecture">Lec 20</td>
+  <td class="title" data-label="Title">
+    Deep Neural Networks: Multi Layer Perceptron
+  </td>
+  <td class="topics" data-label="Topics Covered">
+    MLP Architecture; Activation Function; Back Propogation;
+  </td>
+  <td class="ref" data-label="Reference">
+    Murphy, Probabilistic Machine Learning: An Introduction, Chapter 13
+  </td>
+  <td class="pdf" data-label="PDF">
+    <a class="btn" href="Lecture20.pdf">View</a>
+  </td>
+</tr>
+
+<tr>
+  <td class="lec" data-label="Lecture">Lec 21</td>
+  <td class="title" data-label="Title">
+    Practical Aspects of Training Deep Neural Networks
+  </td>
+  <td class="topics" data-label="Topics Covered">
+    SGD and its variants; Initialization; Batch Normalization
+  </td>
+  <td class="ref" data-label="Reference">
+    Murphy, Probabilistic Machine Learning: An Introduction, Chapter 13
+  </td>
+  <td class="pdf" data-label="PDF">
+    <a class="btn" href="Lecture21.pdf">View</a>
+  </td>
+</tr>
+
+<tr>
+  <td class="lec" data-label="Lecture">Lec 22</td>
+  <td class="title" data-label="Title">
+    Convolutional Neural Network (CNN)
+  </td>
+  <td class="topics" data-label="Topics Covered">
+    Convolution; Pooling; CNN architecture; 
+  </td>
+  <td class="ref" data-label="Reference">
+    Murphy, Probabilistic Machine Learning: An Introduction, Chapter 14
+  </td>
+  <td class="pdf" data-label="PDF">
+    <a class="btn" href="Lecture22.pdf">View</a>
+  </td>
+</tr>
+
+<tr>
+  <td class="lec" data-label="Lecture">Lec 23</td>
+  <td class="title" data-label="Title">
+    Recurrent Neural Network (RNN)
+  </td>
+  <td class="topics" data-label="Topics Covered">
+    word embeddings; RNN; Bi-directional RNN; Encoder-Decoder Architecture
+  </td>
+  <td class="ref" data-label="Reference">
+    Murphy, Probabilistic Machine Learning: An Introduction, Chapter 15
+  </td>
+  <td class="pdf" data-label="PDF">
+    <a class="btn" href="Lecture23.pdf">View</a>
+  </td>
+</tr>
+
+<tr>
+  <td class="lec" data-label="Lecture">Lec 24</td>
+  <td class="title" data-label="Title">
+    Attention Mechanism and Transformer Architecture
+  </td>
+  <td class="topics" data-label="Topics Covered">
+    Multi-Head Attention; Transformer Architecture 
+  </td>
+  <td class="ref" data-label="Reference">
+    Murphy, Probabilistic Machine Learning: An Introduction, Chapter 15
+  </td>
+  <td class="pdf" data-label="PDF">
+    <a class="btn" href="Lecture24.pdf">View</a>
+  </td>
+</tr>
+
+
+
+
+
+
+
+
+
+
+      </tbody>
+    </table>
+  </div>
+
+
+</body></html>

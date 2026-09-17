@@ -1,0 +1,577 @@
+<!DOCTYPE html><html lang="en"><head><title>CS626</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+.fa-anchor,.fa-coffee {font-size:200px}
+
+</style>
+
+<script>
+var newwindow;
+function poptastic(url)
+{
+  newwindow=window.open(url,'name','height=600,width=400');
+  if (window.focus) {newwindow.focus()}
+}
+</script>
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;border-color:#93a1a1;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:1px 1px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#93a1a1;color:#002b36;background-color:#fdf6e3;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:2px 1px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#93a1a1;color:#fdf6e3;background-color:#657b83;}
+.tg .tg-lboi{font-size:18px;border-color:inherit;text-align:center;vertical-align:middle}
+.tg .tg-0pky{font-size:15px;border-color:inherit;text-align:center;vertical-align:top}
+</style>
+
+
+</head><body>
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-light-blue w3-card w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-blue-grey" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
+    <a href="#instructor" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Instructors</a>
+    <a href="#materials" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Course Materials</a>
+   <!--  <a href="javascript:poptastic('web_resource/cs561-group.html');" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Groups</a> -->
+    <a href="#ta" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">TAs</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Contact Us</a>
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+    <a href="#about" class="w3-bar-item w3-button w3-padding-large">Home</a>
+    <a href="#instructor" class="w3-bar-item w3-button w3-padding-large">Instructors</a>
+    <a href="#materials" class="w3-bar-item w3-button w3-padding-large">Course Materials</a>
+    <a href="#ta" class="w3-bar-item w3-button w3-padding-large">TAs</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-padding-large">Contact Us</a>
+  </div>
+</div>
+
+<section name="about" id="about">
+<div class="w3-row-padding w3-container">
+    <div class="w3-content">
+    <center>
+        <br><br>
+        <h1>
+            <b>CS626: Speech, Natural Language Processing and the Web</b>
+        </h1>
+    </center>
+        <h1>Announcement</h1>
+        <ul>
+            <li>
+                <font color="red">The first assignment is uploaded on teams, moodle and course page.</font>
+            </li>
+	    <li>
+                <font color="red">Assignment2 is uploaded</font>
+            </li>
+	    <li>
+                <font color="red">Assignment3 is uploaded</font>
+            </li>
+	    <li>
+                <font color="red">Solutions for sample quiz </font> <font color="blue"><a href="Quiz/sample-quiz-paper-4-questions-20sep20.pdf">Sample quiz solution</a></font>
+            </li>
+	    <li>
+                <font color="red">Solutions for quiz1 </font> <font color="blue"><a href="Quiz/quiz-1-24sep20.pdf">Quiz1 solution</a></font>
+            </li>
+	    <li>
+                <font color="red">Solutions for Midsem </font> <font color="blue"><a href="Resources/cs626-midsem-5oct20-model-answers.pdf">Midsem solution</a></font>
+            </li>
+	    
+	    
+            <!--<li>
+                <font color="red">The first interaction happened on Thursday 10:30 AM (13 August 2020)</font>
+            </li>-->
+        </ul>
+        <hr>
+        <h1>Course Details</h1>
+        <h5>
+        <b>CS626: Speech and Natural Language Processing and the Web </b> <br>
+        Department of Computer Science and Engineering <br>
+        <a href="http://iitb.ac.in/">Indian Institute of Technology Bombay</a>
+        </h5>
+
+        <h3>Time Table and Venue</h3>
+        <h8>
+            <ul>
+                <li> <b>Monday</b>:  8:30 AM to 9:25 AM</li>
+                <li> <b>Tuesday</b>: 9:30 AM to 10:25 AM</li>
+                <li>  <b>Thursday</b>:  10:35 PM to 11:30 AM</li>
+            </ul>
+        </h8>
+        <h3>Course Description</h3>
+        The general approach in the course will be covering (i) a language phenomenon, (ii) the corresponding language processing task, and (iii) techniques based on deep learning, classical machine learning and knowledge base. On one hand we will understand the language processing task in detail using linguistics, cognitive science, utility etc., on the other hand we will delve deep into techniques for solving the problem.
+        The topics are given now.
+        <ul>
+            <li>
+                Sound: Biology of Speech Processing; Place and Manner of Articulation; Peculiarities of Vowels and Consonants; Word Boundary Detection; Argmax based computations; Hidden Markov Model and Speech Recognition; deep neural nets for speech processing.
+            </li>
+            <li>
+                Morphology: Morphology fundamentals; Isolating, Inflectional, Agglutinative morphology; Infix, Prefix and Postfix Morphemes, Morphological Diversity of Indian Languages; Morphology Paradigms; Rule Based Morphological Analysis: Finite State Machine Based Morphology; Automatic Morphology Learning; Deep Learning based morphology analysis.
+            </li>
+            <li>
+                Shallow Parsing: Part of Speech (POS) Tagging; HMM based POS tagging; Maximum Entropy Models and POS; Random Fields and POS; DNN for POS.
+            </li>
+            <li>
+                Parsing: Constituency and Dependency Parsing; Theories of Parsing; Scope Ambiguity and Attachment Ambiguity Resolution; Rule Based Parsing Algorithms; Probabilistic Parsing; Neural Parsing.
+            </li>
+            <li>
+                Meaning: Lexical Knowledge Networks, Wordnet Theory and Indian Language Wordnets; Semantic Roles; Word Sense Disambiguation; Metaphors.
+            </li>
+            <li>
+                Discourse and Pragmatics: Coreference Resolution; Cohesion and Coherence.
+            </li>
+            <li>
+                Applications: Machine Translation; Sentiment and Emotion Analysis; Text Entailment; Question Answering; Code Mixing; Analytics and Social Networks, Information Retrieval and Cross Lingual Information Retrieval (IR and CLIR)
+            </li>
+        </ul>
+
+        <h3>References</h3>
+        <ul>
+            <li>
+               Allen, James, Natural Language Understanding, Second Edition, Benjamin/Cumming, 1995.
+            </li>
+            <li>
+               Charniack, Eugene, Statistical Language Learning, MIT Press, 1993
+            </li>
+            <li>
+               Jurafsky, Dan and Martin, James, Speech and Language Processing, Speech and Language Processing (3rd ed. draft), Draft chapters in progress, October 16, 2019.
+            </li>
+            <li>
+                Manning, Christopher and Heinrich, Schutze, Foundations of Statistical Natural Language Processing, MIT Press, 1999.
+            </li>
+            <li>
+                Jacob Eisenstein, Introduction to Natural Language Processing, MIT Press, 2019.
+            </li>
+            <li>
+                Deep Learning, Ian Goodfellow, Yoshua Bengio, and Aaron Courville, MIT Press, 2016.
+            </li>
+            <li>
+                Radford, Andrew et. al., Linguistics, an Introduction, Cambridge University Press, 1999.
+            </li>
+            <li>
+                Pushpak Bhattacharyya, Machine Translation, CRC Press, 2017.
+            </li>
+        </ul>
+        <h8>
+            <ul>
+                <li>
+                    Journals: Computational Linguistics, Natural Language Engineering, Machine Learning, Machine Translation, Artificial Intelligence
+                </li>
+                <li>
+                    Conferences: Annual Meeting of the Association of Computational Linguistics (ACL), Computational Linguistics (COLING), European ACL (EACL), Empirical Methods in NLP (EMNLP), Annual Meeting of the Special Interest Group in Information Retrieval (SIGIR), Human Language Technology (HLT).
+                </li>
+            </ul>
+        </h8>
+        <h3>Pre-requisites</h3>
+            Data Structures and Algorithms, Python (or similar language) Programming skill
+
+        <hr>
+    </div>
+</div>
+
+</section>
+
+
+<section name="instructor" id="instructor">
+<div class="w3-content">
+<h3>Course Instructors</h3>
+<ul>
+  <li>
+      <h8>
+          <a href="https://www.cse.iitb.ac.in/~pb/"><font color="teal">Prof. Pushpak Bhattacharyya</font></a>
+      </h8>
+  </li>
+</ul>
+</div>
+</section>
+
+<section name="ta" id="ta">
+<div class="w3-content">
+<h3>Teaching Assistants</h3>
+
+<ul>
+    <li>
+        <h8>
+            <a href="http://dipteshkanojia.github.io/">Diptesh Kanojia</a>&nbsp;(dipteshkanojia@gmail.com)
+        </h8>
+    </li>
+    <li>
+        <h8>
+            Jyotsana Khatri (jyotsanak@cse.iitb.ac.in)
+        </h8>
+    </li>
+    <li>
+        <h8>
+            Prashant Sharma (prashaantsharmaa@gmail.com)
+        </h8>
+    </li>
+    <li>
+        <h8>
+            Satyam Behera (satyam.behera154@gmail.com)
+        </h8>
+    </li>
+</ul>
+    <hr <="" div="">
+</div></section>
+
+
+<section name="materials" id="materials">
+<div class="w3-content">
+<h1>Lecture Slides</h1>
+
+<table class="schedule" _base_target="_blank" style="margin-top: 10px; margin-bottom: 10px;" border="1" cellspacing="0">
+    <colgroup> <col style="vertical-align: top; text-align:center;" width="13%"> <col style="vertical-align: top; text-align:center;" width="40%"> <col style="vertical-align: top; text-align: left;" width="15%"> <col style="vertical-align: top;text-align: left;" width="10%"> </colgroup>
+        <tbody _base_target="_blank">
+            <tr _base_target="_blank">
+                <th style="text-align: center;" _base_target="_blank">Lecture</th>
+                <th style="text-align: center;" _base_target="_blank">Topics</th>
+                <th style="text-align: center;" _base_target="_blank">Readings and useful links</th>
+                <th style="text-align: center;" _base_target="_blank">Handouts</th>
+            </tr>
+            <tr>
+                <td style="text-align: center;"> Course Overview <br>
+                </td>
+                <td style="text-align: left;">
+                    <ul>
+                        <li> Introduction </li>
+                        <li> Motivation </li>
+                    </ul>
+                </td>
+                <td style="text-align: left;">
+                    <ul>
+                        <a href="Lectures/1.Introduction.pdf">Lecture1</a>
+                    </ul>
+                </td>
+                <td style="text-align: center;"><br></td>
+            </tr>
+            <tr>
+                <td style="text-align: center;"> Lecture2,3,4 (Week of 17th August) <br>
+                </td>
+                <td style="text-align: left;">
+                    <ul>
+                        <li> POS Tagging (Rule based POS tagging, Mathematics of POS tagging) </li>
+                    </ul>
+                </td>
+                <td style="text-align: left;">
+                    <ul>
+                        <a href="Lectures/cs626-week-of-17aug20.pdf">Lecture2</a>
+                    </ul>
+                </td>
+                <td style="text-align: center;"><br></td>
+            </tr>
+            <tr>
+                <td style="text-align: center;"> Lecture5,6,7 (Week of 24th August) <br>
+                </td>
+                <td style="text-align: left;">
+                    <ul>
+                        <li> POS Tagging (HMM, Viterbi decoding) </li>
+                    </ul>
+                </td>
+                <td style="text-align: left;">
+                    <ul>
+                        <a href="Lectures/cs626-week-of-24aug20.pdf">Lecture5</a>
+                    </ul>
+                </td>
+                <td style="text-align: center;"><br></td>
+            </tr>
+	    <tr>
+                <td style="text-align: center;"> Lecture8,9,10 (Week of 31st August) <br>
+                </td>
+                <td style="text-align: left;">
+                    <ul>
+                        <li> Shallow parsing, CRF, Morphology brief </li>
+                    </ul>
+                </td>
+                <td style="text-align: left;">
+                    <ul>
+                        <a href="Lectures/cs626-week-of-31aug20_final.pdf">Lecture8</a>
+                    </ul>
+                </td>
+                <td style="text-align: center;"><br></td>
+            </tr>
+			<tr>
+				<td style="text-align:center;"> Lecture 11,12,13 (Week of 7th September) <br>
+				</td>
+				<td style="text-align: left;">
+					<ul>
+						<li> MEMM, CRF, Feature Engineering</li>
+					</ul>
+				</td>
+				<td style="text-align: left;">
+					<ul>
+						<a href="Lectures/cs626-week-of-7sep20_final.pdf">Lecture11_final</a>
+					</ul>
+				</td>
+				<td style="text-align: center;"><br></td>
+
+			</tr>
+			<tr>
+				<td style="text-align:center;"> Lecture 14,15,16 (Week of 14th September) <br>
+				</td>
+				<td style="text-align: left;">
+					<ul>
+						<li> Deep parsing</li>
+					</ul>
+				</td>
+				<td style="text-align: left;">
+					<ul>
+						<a href="Lectures/cs626-week-of-14sep20_final.pdf">Lecture14_final</a>
+					</ul>
+				</td>
+				<td style="text-align: center;"><br></td>
+
+			</tr>
+			<tr>
+				<td style="text-align:center;"> Lecture 17,18,19 (Week of 21st September) <br>
+				</td>
+				<td style="text-align: left;">
+					<ul>
+						<li> Deep parsing</li>
+					</ul>
+				</td>
+				<td style="text-align: left;">
+					<ul>
+						<a href="Lectures/cs626-week-of-21sep20_final.pdf">Lecture17_final</a>
+					</ul>
+				</td>
+				<td style="text-align: center;"><br></td>
+			</tr>
+			<tr>
+				<td style="text-align:center;"> Lecture 20,21,22 (Week of 28th September) <br>
+				</td>
+				<td style="text-align: left;">
+					<ul>
+						<li> Dependency Parsing, Technique of Probabilistic Parsing, Difficult Parsing Phenomena</li>
+					</ul>
+				</td>
+				<td style="text-align: left;">
+					<ul>
+						<a href="Lectures/cs626-week-of-28sep20_final.pdf">Lecture20_final</a>
+					</ul>
+				</td>
+				<td style="text-align: center;"><br></td>
+			</tr>
+			<tr>
+				<td style="text-align:center;"> Lecture 23,24,25 (Week of 12th October) <br>
+				</td>
+				<td style="text-align: left;">
+					<ul>
+						<li> Start of Neural Network</li>
+					</ul>
+				</td>
+				<td style="text-align: left;">
+					<ul>
+						<a href="Lectures/cs626-week-of-12oct20_v1.pdf">Lecture23_v1</a>
+					</ul>
+				</td>
+				<td style="text-align: center;"><br></td>
+			</tr>
+			<tr>
+				<td style="text-align:center;"> Lecture 26,27,28 (Week of 19th October) <br>
+				</td>
+				<td style="text-align: left;">
+					<ul>
+						<li> Neural Network</li>
+					</ul>
+				</td>
+				<td style="text-align: left;">
+					<ul>
+						<a href="Lectures/cs626-week-of-19oct20_final.pdf">Lecture26_final</a>
+					</ul>
+				</td>
+				<td style="text-align: center;"><br></td>
+			</tr>
+			<tr>
+				<td style="text-align:center;"> Lecture 29,30,31 (Week of 26th October) <br>
+				</td>
+				<td style="text-align: left;">
+					<ul>
+						<li>Softmax FFNN-BP and Neural Dependency Parsing</li>
+					</ul>
+				</td>
+				<td style="text-align: left;">
+					<ul>
+						<a href="Lectures/cs626-week-of-26oct20_final.pdf">Lecture29_final</a>
+					</ul>
+				</td>
+				<td style="text-align: center;"><br></td>
+			</tr>
+			<tr>
+				<td style="text-align:center;"> Lecture 32,33,34 (Week of 2nd November) <br>
+				</td>
+				<td style="text-align: left;">
+					<ul>
+						<li>Deeper into Projectivity and Neural Dependency Parsing</li>
+					</ul>
+				</td>
+				<td style="text-align: left;">
+					<ul>
+						<a href="Lectures/cs626-week-of-2nov20.pdf">Lecture32_final</a>
+					</ul>
+				</td>
+				<td style="text-align: center;"><br></td>
+			</tr>
+
+			<tr>
+				<td style="text-align:center;"> Lecture 35,36,37 (Week of 9th November) <br>
+				</td>
+				<td style="text-align: left;">
+					<ul>
+						<li>RNN, Seq2seq, Machine Translation</li>
+					</ul>
+				</td>
+				<td style="text-align: left;">
+					<ul>
+						<a href="Lectures/cs626-week-of-9nov20_final.pdf">Lecture35_final</a>
+						<a href="Lectures/CS626_ Machine Translation (10th November).pdf">Lecture36_MachineTranslation</a>
+					</ul>
+				</td>
+				<td style="text-align: center;"><br></td>
+			</tr>
+			<tr>
+				<td style="text-align:center;"> Lecture 38,39,40 (Week of 16th November) <br>
+				</td>
+				<td style="text-align: left;">
+					<ul>
+						<li>RNN, Seq2seq, Data Driven Machine Translation (SMT and NMT)</li>
+					</ul>
+				</td>
+				<td style="text-align: left;">
+					<ul>
+						<li><a href="Lectures/cs626-week-of-16nov20_v1.pdf">Lecture38_v1</a></li>
+						<li><a href="Lectures/cs626-week-of-16nov20_final.pdf">Lecture38_final</a></li>
+					</ul>
+				</td>
+				<td style="text-align: center;"><br></td>
+			</tr>
+        </tbody>
+</table>
+
+    <h1>Lecture videos</h1>
+
+Lecture videos are regularly uploaded on MSTeams.
+
+<h1 id="assignments" ,="" name="assignment">Assignments</h1>
+<table width="100%" class="schedule" _base_target="_blank" style="margin-top: 10px; margin-bottom: 10px;" border="1" cellspacing="0">
+    <colgroup> <col style="vertical-align: top; text-align:
+                          center;" width="15%"> <col style="vertical-align: top; text-align:
+                          center;" width="15%"> <col style="vertical-align: top; text-align:
+                          center;" width="40%"> <col style="vertical-align: top; text-align: left;" width="15%"> <col style="vertical-align: top;
+                          text-align: left;" width="10%"> </colgroup>
+    <tbody _base_target="_blank">
+        <tr _base_target="_blank">
+            <th style="text-align: center;" _base_target="_blank">Date</th>
+            <th style="text-align: center;" _base_target="_blank">Assignment#</th>
+            <th style="text-align: center;" _base_target="_blank">Topic</th>
+            <th style="text-align: center;" _base_target="_blank"> Deadline</th>
+            <th style="text-align: center;" _base_target="_blank">Link</th>
+        </tr>
+        <tr>
+            <td style="text-align: center;"> 23/08/2020 </td>
+            <td style="text-align: center;"> Assignment1 </td>
+            <td style="text-align: center;"> POS Tagging</td>
+            <td style="text-align: center;"> 15/09/2020 11:59 PM</td>
+            <td style="text-align: center;"> <a href="Assignments/CS626%20Assignment1.pdf">Assignment1</a></td>
+        </tr>
+	<tr>
+            <td style="text-align: center;"> 14 September 2020 </td>
+            <td style="text-align: center;"> Assignment2 </td>
+            <td style="text-align: center;"> Chunking</td>
+            <td style="text-align: center;"> No deadline </td>
+            <td style="text-align: center;"> <a href="https://docs.google.com/document/d/1oX3BKXIYYG7lS5JE04W1gWnLXsMdxIYR5LR1RV6lSR0/edit?usp=sharing">Assignment2</a></td>
+        </tr>
+	<tr>
+            <td style="text-align: center;"> 27 September 2020 </td>
+            <td style="text-align: center;"> Assignment3 </td>
+            <td style="text-align: center;"> Parsing</td>
+            <td style="text-align: center;"> No deadline </td>
+            <td style="text-align: center;"> <a href="Assignments/CS626_Assignment3.pdf">Assignment3</a></td>
+        </tr>
+    </tbody>
+</table>
+</div></section>
+
+<hr>
+
+<section name="reading_list" id="reading_list">
+<div class="w3-content">
+<h1>ReadingList</h1>
+    <ul>
+        <li>
+            Sag, Ivan A., Timothy Baldwin, Francis Bond, Ann Copestake, and Dan Flickinger. "Multiword expressions: A pain in the neck for NLP." In International conference on intelligent text processing and computational linguistics, pp. 1-15. Springer, Berlin, Heidelberg, 2002.
+        </li>
+        <li>
+            Mitchell P. Marcus, Mary Ann Marcinkiewicz, and Beatrice Santorini. 1993. Building a Large Annotated Corpus of English: The Penn Treebank. Comput. Linguist., 19(2):313–330, June.
+        </li>
+        <li>
+            Xuezhe Ma and Eduard H. Hovy. 2016. End-to-end Sequence Labeling via Bi-directional LSTM-CNNs-CRF. CoRR, abs/1603.01354. (comment: POS and NER)
+        </li>
+        <li>
+            Anders Søgaard and Yoav Goldberg. 2016. Deep multi-task learning with low level tasks supervised at lower layers. In Proceedings of the 54th Annual Meeting of the Association for Computational Linguistics (Volume 2: Short Papers), pages 231–235, Berlin, Germany, August. Association for Computational Linguistics.
+        </li>
+        <li>
+            Chapter2 of Machine Translation by Professor Pushpak
+        </li>
+        <li>
+            Smoothing from Manning and Schutz, "Foundations of Statistical Natural Language Processing", Page 199 (general) and Page 354 (POS specific).
+        </li>
+        <li>
+            Sha, Fei, and Fernando Pereira. "Shallow parsing with conditional random fields." In Proceedings of the 2003 Human Language Technology Conference of the North American Chapter of the Association for Computational Linguistics, pp. 213-220. 2003.
+        </li>
+        <li>
+            Ratnaparkhi, Adwait. "A maximum entropy model for part-of-speech tagging." In Conference on empirical methods in natural language processing. 1996.
+        </li>
+	<li>
+		Harshada Gune, Mugdha Bapat, Mitesh Khapra and Pushpak Bhattacharyya, Verbs are where all the Action Lies: Experiences of Shallow Parsing of a Morphologically Rich Language, Computational Linguistics Conference (COLING 2010), Beijing, China, August 2010.
+	</li>
+	<li>
+		Erik F. Tjong Kim Sang and Sabine Buchholz, Introduction to the CoNLL-2000 Shared Task: Chunking. In: Proceedings of CoNLL-2000, Lisbon, Portugal, 2000.
+	</li>
+	<li>
+		John Lafferty, Andrew McCallum, and Fernando C.N. Pereira, "Conditional Random Fields: Probabilistic Models for Segmenting and Labeling Sequence Data", ICML 2001.
+	</li>
+	<li>
+		 Toutanova, Kristina; Manning, Christopher D. (2000). "Enriching the Knowledge Sources Used in a Maximum Entropy Part-of-Speech Tagger". Proc. J. SIGDAT Conf. on Empirical Methods in NLP and Very Large Corpora (EMNLP/VLC-2000). pp. 63–70.
+	</li>	
+    </ul>
+    <hr>
+</div>
+</section>
+<section name="contact" id="contact">
+<div class="w3-content">
+<h1>Contact Us</h1>
+<a href="http://www.cfilt.iitb.ac.in/"><font color="blue">CFILT Lab</font></a> <br>
+Room Number: 401, 4th Floor, new CC building <br>
+Department of Computer Science and Engineering <br>
+Indian Institute of Technology Bombay <br>
+Mumbai 400076, India
+</div>
+</section>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity">
+    Template credits to Deepak Gupta, IITP <br>
+    Credit to <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3schools.com</a>
+</footer>
+
+<script>
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+
+
+
+</body></html>

@@ -1,0 +1,592 @@
+<!DOCTYPE html><html lang="en"><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Fall 2019 : Artificial Intelligence</title>
+
+  <!-- bootstrap -->
+   <link rel="stylesheet" href="./style/bootstrap.min.css" type="text/css">
+  <link rel="stylesheet" href="./style/iitp01.css" type="text/css">
+
+  </head><body>
+  <nav class="navbar navbar-expand-md navbar-dark">
+    <a href="https://www.lti.cs.cmu.edu">
+      <img src="./static/ltilogo.png" style="height:50px; float: left; margin-left: 20px; margin-right: 20px;"></a>
+      <a class="navbar-brand" href="#"><span class="font-color">CMU-IITP-01</span></a>
+
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item"><a class="nav-link" href="#overview"><span class="font-color" size="4%">Overview</span></a></li>
+        <li class="nav-item"><a class="nav-link" href="#schedule"><span class="font-color" size="4%">Schedule</span></a></li>
+        <li class="nav-item"><a class="nav-link" href="#exams"><span class="font-color" size="4%">Exams</span></a></li>
+        <li class="nav-item"><a class="nav-link" href="#assignments"><span class="font-color" size="4%">Assignments</span></a></li>
+        <li class="nav-item"><a class="nav-link" href="#policies"><span class="font-color" size="4%">Policies</span></a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container jumbotron">
+      <div class="row">
+        <div class="col-lg-2">
+            <img class="course-img" src="static/brain.jpg">
+        </div>
+        <div class="course-title col-lg-10">
+            <h1> Fall 2019, IITP Executive Education Course </h1>
+            <h2><span class="font-color">Artificial Intelligence: Representation and Problem Solving</span></h2>
+        </div>
+      </div>
+      <br>
+  </div>
+
+  <section id="overview">
+    <div class="container">
+    <h2>Overview</h2>
+        <dt>Lecture</dt> <dd>Monday + Wednesday 5:00 - 6:20pm <a href="https://bit.ly/30uBvPm">WEH 2302</a></dd>
+        <dt>Recitation</dt> <dd>Friday 5:00 - 6:00pm <a href="https://bit.ly/30uBvPm">WEH 2302</a></dd>
+        <dt>Instructors</dt>
+      <div class="row">
+        <div>
+          <a href="https://www.cs.cmu.edu/directory/gvns">
+            <img class="instructor-img" src="static/mgr.jpeg">
+            <div style="text-align:center;font-size: 100%; margin-left: 1%">Dr. Madhavi Ganapathiraju</div>
+          </a>
+          <p style="padding:2%; margin-left: 10%"> madhavi [at] cs [dot] cmu [dot] edu </p>
+        </div>
+
+          <div>
+          <a href="https://www.cs.cmu.edu/~jgc/">
+            <img class="instructor-img" src="static/jgc.jpeg">
+            <div style="text-align:center;font-size: 100%;">Dr. Jaime Carbonell</div>
+          </a>
+	      <p style="padding:2%; margin-left: 15%"> jgc [at] cs [dot] cmu [dot] edu </p>
+        </div>
+
+      </div>
+
+      <dt>Teaching Assistants</dt>
+      <div class="row">
+        <div>
+          <a href="https://www.cs.cmu.edu/~svmehta">
+            <img class="instructor-img" src="static/svm.jpeg" style="text-align:center; margin-top: 5%">
+            <div style="text-align:center;font-size: 100%; margin-left: 10%; margin-top:5%; margin-bottom:10%">Sanket Vaibhav Mehta</div>
+          </a>
+        </div>
+      </div>
+
+        <dt>Grading</dt> <dd>Midterm (20%), Final (20%), Written homework (30%), Programming homework (30%)</dd>
+
+        <dt>Course Materials</dt>
+    <dd>We recommend <a href="http://aima.cs.berkeley.edu/">
+        Artificial Intelligence: A Modern Approach, Third Edition </a> (R&amp;N) textbook for this course. Slides will be posted periodically <a href="#schedule">here</a></dd>
+
+
+        <dt>Announcements + Q&amp;A</dt>
+        <dd>We will use <a href="https://piazza.com/class/jy615af437wd3">Piazza</a> for questions and any course announcements. </dd>
+
+        <dt>Submitting Assignments</dt>
+        <dd>Students will turn in their homework electronically using <a href="https://www.gradescope.com/">Gradescope</a>.</dd>
+        <br>
+    </div>
+    
+
+ </section>
+
+  <section id="schedule">
+    <div class="container">
+      <h2>Schedule</h2>
+    <table id="schedule1" class="table table-bordered no-more-tables">
+    <thead class="active" style="background-color:#f9f9f9">
+      <tr><th>Lecture</th><th>Date</th><th>Topic</th><th>Instructor</th><th>Reading and Slides</th>
+    </tr></thead>
+
+  <tbody>
+  <tr>
+    <td>Lecture&nbsp;1 </td>
+    <td> Aug 28 </td>
+    <td>
+     Introduction
+    </td>
+      <td>Madhavi</td>
+    <td>
+    <b>Reading:</b> R&amp;N Chapters 1 &amp; 2 |
+        <b>Slides</b> [<a href="https://piazza.com/cmu_language_technologie_institute_executive_education/fall2019/iitp01/resources">pdf</a>]
+    </td>
+  </tr>
+
+  <tr>
+      <td> </td>
+      <td>Sept 2</td>
+      <td>Holiday: No class</td>
+      <td></td>
+      <td></td>
+    </tr>
+
+  <tr>
+    <td>Lecture&nbsp;2 </td>
+    <td>Sept 4</td>
+    <td>
+    Uninformed Search
+    </td>
+      <td>Madhavi</td>
+    <td>
+    <b>Reading:</b> R&amp;N Chapters 3.1-3.4 |
+        <b>Slides</b> [<a href="https://piazza.com/cmu_language_technologie_institute_executive_education/fall2019/iitp01/resources">pdf</a>]
+    </td>
+  </tr>
+
+
+
+  <tr>
+    <td>Lecture&nbsp;3</td>
+    <td>Sept 9</td>
+    <td>
+    Uninformed, Informed Search
+    </td>
+      <td>Madhavi</td>
+    <td>
+    <b>Reading:</b> R&amp;N Chapters 3.5-3.6 |
+        <b>Slides</b> [<a href="https://piazza.com/cmu_language_technologie_institute_executive_education/fall2019/iitp01/resources">pdf</a>]
+    </td>
+  </tr>
+
+  <tr>
+    <td>Lecture&nbsp;4</td>
+    <td>Sept 11</td>
+    <td>
+    Informed Search </td>
+      <td>Madhavi</td>
+    <td>
+    <b>Reading:</b> R&amp;N Chapters 3.5-3.6 |
+        <b>Slides</b> [<a href="https://piazza.com/cmu_language_technologie_institute_executive_education/fall2019/iitp01/resources">pdf</a>]
+    </td>
+  </tr>
+
+  <tr>
+    <td>Lecture&nbsp;5</td>
+    <td>Sept 16</td>
+    <td>
+        Adversarial Search
+    </td>
+      <td>Madhavi</td>
+    <td>
+    <b>Reading:</b> R&amp;N Chapters 5.1-5.2 |
+        <b>Slides</b> [<a href="https://piazza.com/cmu_language_technologie_institute_executive_education/fall2019/iitp01/resources">pdf</a>]
+    </td>
+  </tr>
+
+  <tr>
+    <td>Lecture&nbsp;6</td>
+    <td>Sept 18</td>
+    <td>
+    Adversarial Search
+    </td>
+      <td>Madhavi</td>
+    <td>
+    <b>Reading:</b> R&amp;N Chapters 5.3-5.5 |
+        <b>Slides</b> [<a href="https://piazza.com/cmu_language_technologie_institute_executive_education/fall2019/iitp01/resources">pdf</a>]
+    </td>
+  </tr>
+
+  <tr>
+	<td>Lecture&nbsp;7</td>
+	<td>Sept 23 </td>
+	<td>
+        <b>Pioneers in AI@CMU (Talk 1):</b> <br>
+        Knowledge-Based AI for Common Sense <br>and Language Understanding
+	</td>
+      <td><a href="https://www.cs.cmu.edu/~sef/">Prof. Scott Fahlman</a></td>
+    <td>
+    <b>Reading:</b> |
+        <b>Slides</b> [<a href="#">pdf</a>]
+    </td>
+  </tr>
+
+  <tr>
+	<td>Lecture&nbsp;8</td>
+	<td>Sept 25 </td>
+	<td>
+        Constraint Satisfaction Problems
+	</td>
+      <td>Madhavi</td>
+    <td>
+    <b>Reading:</b> R&amp;N Chapters 6.1-6.4 |
+        <b>Slides</b> [<a href="#">pdf</a>]
+    </td>
+  </tr>
+
+  <tr>
+	<td>Lecture&nbsp;9</td>
+	<td>Sept 30 </td>
+	<td>
+        Logical Agents, Propositional Logic
+	<!--Classical Planning-->
+	</td>
+      <td>Madhavi</td>
+	<td>
+    <b>Reading:</b> R&amp;N Chapters 7.1-7.5 |
+        <b>Slides</b> [<a href="#">pdf</a>]
+    </td>
+     </tr>
+
+  <tr>
+	<td>Lecture 10</td>
+	<td>Oct 2 </td>
+	<td>
+        <b>Pioneers in AI@CMU (Talk 2)</b>
+	</td>
+      <td><a href="http://www.rr.cs.cmu.edu/">Prof. Raj Reddy</a></td>
+	<td>
+    </td>
+     </tr>
+
+  <tr>
+	<td>Lecture&nbsp;11</td>
+	<td>Oct 7 </td>
+	<td>
+	First Order Logic
+	</td>
+      <td>Madhavi</td>
+	<td>
+    <b>Reading:</b> R&amp;N Chapters 8.1-8.3 |
+        <b>Slides</b> [<a href="#">pdf</a>]
+    </td>
+     </tr>
+
+  <tr>
+	<td>Lecture&nbsp;12</td>
+	<td>Oct 9 </td>
+	<td>
+	Review of Material for Midterm
+	</td>
+      <td>Madhavi/ Sanket</td>
+	<td>
+	</td>
+     </tr>
+
+  <tr>
+	<td></td>
+	<td>Oct 14 </td>
+	<td>
+        <b>MIDTERM EXAM</b>
+	</td>
+      <td></td>
+	<td>
+    </td>
+     </tr>
+
+  <tr>
+	<td>Lecture&nbsp;13</td>
+	<td>Oct 16 </td>
+	<td>
+	Knowledge Representation: Ontologies
+	</td>
+      <td>Madhavi</td>
+    <td>
+    <b>Reading:</b> R&amp;N Chapters 12 |
+        <b>Slides</b> [<a href="#">pdf</a>]
+    </td>
+  </tr>
+
+  <tr>
+	<td>Lecture&nbsp;14</td>
+	<td>Oct 21 </td>
+	<td>
+	Probabilistic Reasoning
+	</td>
+      <td>Madhavi</td>
+    <td>
+    <b>Reading:</b> |
+        <b>Slides</b> [<a href="#">pdf</a>]
+    </td>
+  </tr>
+
+
+  <tr>
+	<td>Lecture&nbsp;15</td>
+	<td>Oct 23 </td>
+	<td>
+	Machine Learning
+	</td>
+      <td>Jaime</td>
+	<td>
+    <b>Reading:</b> <br>
+      Class Notes [<a href="#">pdf</a>]
+    </td>
+     </tr>
+
+  <tr>
+	<td>Lecture&nbsp;16</td>
+	<td>Oct 28 </td>
+	<td>
+	Machine Learning, continued
+	</td>
+      <td>Madhavi</td>
+	<td>
+    <b>Reading:</b> |
+        <b>Slides</b> [<a href="#">pdf</a>]
+    </td>
+     </tr>
+
+  <tr>
+	<td>Lecture&nbsp;17</td>
+	<td>Oct 30 </td>
+	<td>
+	Bayesian Networks
+	</td>
+      <td>Madhavi</td>
+	<td>
+    <b>Reading:</b> |
+        <b>Slides</b> [<a href="#">pdf</a>]
+    </td>
+     </tr>
+
+  <tr>
+	<td>Lecture&nbsp;18</td>
+	<td>Nov 4</td>
+	<td>
+	Bayesian Networks, continued
+	</td>
+      <td>Madhavi</td>
+	<td>
+    <b>Reading:</b> |
+        <b>Slides</b> [<a href="#">pdf</a>]
+    </td>
+     </tr>
+
+  <tr>
+	<td>Lecture&nbsp;19</td>
+	<td>Nov 6</td>
+	<td>
+	Markov Decision Process
+	</td>
+      <td>Madhavi</td>
+	<td>
+    <b>Reading:</b> |
+        <b>Slides</b>[<a href="#">pdf</a>]
+    </td>
+     </tr>
+
+  <tr>
+	<td>Lecture&nbsp;20</td>
+	<td>Nov 11 </td>
+	<td>
+	Hidden Markov Models
+	</td>
+      <td>Madhavi</td>
+	<td>
+    <b>Reading:</b> |
+        <b>Slides</b> [<a href="#">pdf</a>]
+    </td>
+     </tr>
+
+  <tr>
+	<td>Lecture&nbsp;21</td>
+	<td>Nov 13 </td>
+	<td>
+	Reinforcement Learning
+	</td>
+      <td>Madhavi/ Sanket</td>
+	<td>
+    <b>Reading:</b> |
+        <b>Slides</b> [<a href="#">pdf</a>]
+    </td>
+     </tr>
+
+  <tr>
+	<td>Lecture&nbsp;22</td>
+	<td>Nov 18 </td>
+	<td>
+	Ruled-Based Systems
+	</td>
+      <td>Jaime</td>
+	<td>
+    <b>Reading:</b> |
+        <b>Slides</b> [<a href="#">pdf</a>]
+    </td>
+     </tr>
+
+    <tr>
+	<td>Lecture&nbsp;23</td>
+	<td>Nov 20 </td>
+	<td>
+    <b>Pioneers in AI@CMU (Talk 3)</b>
+	</td>
+        <td><a href="http://www.cs.cmu.edu/~jgc/">Prof. Jaime Carbonell</a></td>
+	<td>
+    <b>Reading:</b> <br>
+      Class Notes [<a href="#">pdf</a>]
+    </td>
+     </tr>
+
+  <tr>
+	<td>Lecture&nbsp;24</td>
+	<td>Nov 25 </td>
+	<td>
+	 Explainable AI: Review of Recent papers
+	</td>
+      <td></td>
+    <td>
+    <b>Reading:</b> |
+        <b>Slides</b> [<a href="#">pdf</a>]
+    </td>
+     </tr>
+
+  <tr>
+	<td></td>
+	<td>Nov 27 </td>
+	<td>
+	 Holiday: No class
+	</td>
+      <td></td>
+	<td>
+	</td>
+     </tr>
+
+
+  <tr>
+	<td>Lecture&nbsp;25</td>
+	<td>Dec 2 </td>
+	<td>
+	Transfer Learning and Active Learning
+	</td>
+      <td>Jaime</td>
+	<td>
+    <b>Reading:</b> |
+        <b>Slides</b> [<a href="#">pdf</a>]
+    </td>
+     </tr>
+
+  <tr>
+	<td>Lecture&nbsp;26</td>
+	<td>Dec 4 </td>
+	<td>
+	 Review of Material for Final
+	</td>
+      <td>Madhavi/ Sanket</td>
+	<td>
+	</td>
+     </tr>
+
+  <tr>
+	<td></td>
+	<td>Dec 8 </td>
+	<td>
+        <b>FINAL EXAM</b>
+	</td>
+      <td></td>
+	<td>
+	</td>
+     </tr>
+
+    <tr>
+        <td colspan="5">
+        <h3> Tentative Assignment Dates: </h3>
+        Check Piazza for updates:
+        <ul>
+        <li> Assigment 1: Out: Sept 4th -- Due Sept 18th
+        </li><li> Assigment 2: Out: Sept 24th -- Due Oct 8th
+        </li><li> Assigment 3: Out: Oct 21st -- Due Nov 4th
+        </li><li> Assigment 4: Out: Nov 11th -- Due Nov 25th
+        </li></ul>
+        </td>
+    </tr>
+
+    </tbody>
+    </table>
+
+
+    </div>
+  </section>
+
+<section id="exams">
+    <div class="container">
+    <h2>Exams</h2>
+        <dd>The course includes a midterm exam <b>(Oct 14)</b> and a final exam <b>(Dec 11)</b>. Both the exams will be in class.</dd>
+    </div>
+</section>
+
+<section id="assignments">
+    <div class="container">
+    <h2>Assignments</h2>
+    <dd>There will be <b>four</b> assignments for the course with tentative due dates as mentioned above.
+<br>    Please write all assignments in LaTeX using the provided style file (check Piazza).
+        <b>60%</b> of course grades will be based on 4 assignments (<b>15%</b> each). <br>
+      <!--<dt> Homework Assignments </dt>-->
+	The assignments are to be done by each student individually.  You may discuss the general idea of the questions with anyone you like, but your discussion may not include the specific answers to any of the problems.
+<br>
+    </dd></div>
+</section>
+
+    <section id="policies">
+<div class="container">
+<h2>Policies</h2>
+<h3> Late Submission Policy </h3>
+Each student will be allowed 5 total late days without penalty for the entire
+semester. No more than 3 late days can be used on any single assignment. Weekends and holidays are also counted as late days. Late submissions are automatically considered as using late days.
+    <br> <b> NOTE: Any assignment submitted more than 3 days past the deadline will get zero credit.</b>
+<br> <br>
+
+<h4>Extensions</h4>
+<p>In general, we do not grant extensions on assignments. We expect late days to help you with sufficient accommodation. However, in the case of severe medical or family emergencies, you may request an extension <strong>by
+emailing the TA at svmehta [a] cs [dot] cmu [dot] edu  – also copy instructors in the email </strong>. The email should be sent as soon as you are
+aware of the conflict.
+
+
+</p><h3>Academic Integrity Policies</h3>
+
+<p>(The following policies are adapted from Prof. Roni Rosenfeld’s <a href="http://www.cs.cmu.edu/~roni/10601/">10-601 Spring 2016</a> Course Policies.)</p>
+
+<h4>Collaboration among Students</h4>
+
+<ul>
+    <li> The purpose of student collaboration is to facilitate learning, not to circumvent it. Studying the material in groups is strongly encouraged. It is also allowed to seek help from other students in understanding the material needed to solve a particular assignment problem, provided no written notes are shared, or are taken at that time. <b>The actual solution must be done by each student alone</b>. <b>You must indicate on each assignment with whom you collaborated and on what part of the assignment.</b></li>
+    <li>The purpose of programming assignments in this course is to make sure you truly understand the relevant techniques. For this reason, <b>in the case of programming assignments all code must be written by each student alone and must be implemented "from scratch".</b>  We will strictly enforce this policy, by carefully inspecting your code using sophisticated detection techniques.</li>
+  <li>Collaboration without full disclosure will be handled severely, in compliance with <a href="https://www.cmu.edu/policies/student-and-student-life/academic-integrity.html">CMU’s Policy on Academic Integrity</a>.</li>
+</ul>
+
+<h4>Previously Used Assignments</h4>
+
+<p>Some of the homework assignments used in this class may have been used in prior versions of AI class at CMU, or in classes at other institutions, or elsewhere. Solutions to them may be available on the internet. It is explicitly forbidden to search for these problems or their solutions on the internet.  You must solve the homework assignments completely on your own. We will be actively monitoring your compliance. Collaboration with other students who are currently taking the class is allowed, but only under the conditions stated above.</p>
+
+<h4>Duty to Protect One’s Work</h4>
+
+    <p>Students are responsible for pro-actively protecting their work from copying and misuse by other students. If a student's work is copied by another student, the original author is also considered to be at fault and in gross violation of the course policies. It does not matter whether the author allowed the work to be copied or was merely negligent in preventing it from being copied. <b>When overlapping work is submitted by different students, both students will be punished.</b> To protect future students, do not post your solutions publicly, neither during the course nor afterwards.</p>
+
+<h4>Penalties for Violations of Course Policies</h4>
+
+<p>Any violation of course policies will always be
+reported to the respective authorities (your Program Head, etc.) as an official Academic Integrity Violation and will carry severe penalties.</p>
+
+<ol>
+  <li>
+    The penalty for the first violation is a one-and-a-half letter
+grade reduction. For example, if your final letter grade for the
+course was to be an A, it would become a B-.
+  </li>
+  <li>
+    The penalty for the second violation is failure in the course, and
+can even lead to dismissal from the university.
+  </li>
+</ol>
+
+<h3>Accommodations for Students with Disabilities:</h3>
+
+    <p>If you have a disability and have an accommodations letter from the
+    Disability Resources office, we encourage you to discuss your
+    accommodations and needs with us as early in the semester as
+    possible. We will work with you to ensure that accommodations are
+    provided as appropriate. If you suspect that you may have a disability
+    and would benefit from accommodations but are not yet registered with
+    the Office of Disability Resources, we encourage you to contact them at
+    <a href="mailto:access@andrew.cmu.edu">access@andrew.cmu.edu</a>.</p>
+
+<h3>Statement of Support for Students’ Health &amp; Well-being</h3>
+
+<p>Take care of yourself.  Do your best to maintain a healthy lifestyle this semester by eating well, exercising, avoiding drugs and alcohol, getting enough sleep and taking some time to relax. This will help you achieve your goals and cope with stress. <br>
+ All of us benefit from support during times of struggle. You are not alone. There are many helpful resources available on campus and an important part of the college experience is learning how to ask for help. Asking for support sooner rather than later is often helpful. <br>
+  If you or anyone you know experiences any academic stress, difficult life events, or feelings like anxiety or depression, we strongly encourage you to seek support. Counseling and Psychological Services (CaPS) is here to help: call 412-268-2922 and visit their website at <a href="http://www.cmu.edu/counseling/">http://www.cmu.edu/counseling/</a>. Consider reaching out to a friend, faculty or family member you trust for help getting connected to the support that can help. </p><p>If you have questions about this or your coursework, please let us know. Thank you, and have a great semester.</p>
+  </div>
+  </section>
+  
+
+</body></html>

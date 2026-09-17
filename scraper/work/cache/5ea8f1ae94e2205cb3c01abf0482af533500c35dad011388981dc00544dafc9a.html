@@ -1,0 +1,383 @@
+<html><head>
+<title>COL774: Machine Learning</title>
+<style type="text/css">
+        BODY {font-family: Verdana, Helvetica, sans-serif;}
+        H1 {font-family: Verdana, Helvetica, sans-serif; color: #36648b}
+        H4.black {font-family: Verdana, Helvetica, sans-serif; color: #000000}
+        H4.counter {font-family: Verdana, Helvetica, sans-serif; color: #b0c4de;                  line-height:8pt}
+        H4 {font-family: Verdana, Helvetica, sans-serif; color: #4a708b}
+        H2 {font-family: Verdana, Helvetica, sans-serif;}
+        H5 {font-family: Arial,Geneva,sans-serif;}
+        H5 {color: #8B5A00;}
+        H5.black {color: #000000;}
+        SUP {font-size: x-small; color: #666666;}
+        DIV.endnote P {text-indent: -1em; color: #333333;}
+        .link {text-decoration: underline;}
+</style></head>
+
+
+<body bgcolor="#ffffff" text="#000000" topmargin="20" leftmargin="30" marginwidth="0" marginheight="0" link="#0000BB" vlink="#55188A" alink="#FF0000">
+
+<table>
+<tbody><tr><td>&nbsp;&nbsp;</td>
+<td>
+<br><br>
+<center><h1> 
+COL774: Machine Learning 
+<br>
+</h1></center>
+<p><br><br>
+<!--
+This is the course page for <b>CSL864: Special Topics in Artificial Intelligence: Machine Learning</b>, for Semester I, 
+2012-2013, being taught by <a href="http://www.cse.iitd.ac.in/~parags">Parag Singla</a> (parags AT cse.iitd.ac.in)
+at the <a href="http://www.cse.iitd.ac.in">Department of Computer Science and Engineering</a>, 
+<a href="http://www.iitd.ernet.in">IIT, New Delhi</a>.
+<p>
+-->
+
+<a name="info"></a></p><h4><a name="info">General Information</a></h4>
+<b>Semester:</b> Sem I, 2023-24.
+<br>
+<br>
+<b>Instructor: </b><a href="http://www.cse.iitd.ac.in/~parags">Parag Singla</a> (email: parags AT cse.iitd.ac.in)
+<br>
+<br>
+<b>Class Timings (Slot C):</b>
+<ul>
+<li>Tue, 8:00 am - 8:50am</li>
+<li>Wed, 8:00 am - 8:50am</li>
+<li>Fri, 8:00 am - 8:50am</li>
+</ul>
+<b>Venue:</b> LHC 418 
+<br><br>
+
+<a href="https://piazza.com/iitd.ac.in/fall2023/col774"><b>Sign up for Piazza</b></a>
+
+<br>
+Code: As (will be) announced in class. 
+<br>
+<br>
+<b>Sign up for Enrolling in the Course (If not already enrolled):  (vacancy has been increased!)</b><a href="https://docs.google.com/forms/d/e/1FAIpQLSc1ndQ9TJ0DQ6XUb7Jib-YI8H9JxKWZAjY0y1iTqu-zAftq1A/viewform">Click here.</a>
+<br>
+Notes: 
+<ol>
+<li>Only students from CSE/EE/Maths/SIT/ScAI should fill this (unless I have confirmed an exception over email). 
+</li><li>Students who are only planning to sit through this course Should NOT fill this form.
+</li></ol>
+<br>
+
+<b>TA Assignment:</b><a href="https://docs.google.com/spreadsheets/d/1V8b-pXVl1Ql7ULtWh-mFdlqIfp-L5fd7/edit#gid=511638218">Click here</a>
+
+<a name="announcements"><h4>Announcements</h4></a>
+<li>[Oct 21, 2023] Assignment 3 (Both Parts) is out! Due Date (for both parts): Tuesday October 31st, 11:50 pm.
+</li><li>[Oct 8, 2023] Assignment 3 (Part I) is out! Due Date (for both parts): Sunday October 29th, 11:50 pm.
+</li><li>[Sep 26, 2023] Assignment 2 (Complete) is out! Due Date: Wednesday Oct 4, 11:50 pm.
+</li><li>[Sep 6, 2023] Assignment 2 (Part I) is out! Due Date: Wednesday Oct 4, 11:50 pm.
+</li><li>[Aug 25, 2023] TA assignment has beein posted on the website!
+</li><li>[Aug 13, 2023] Assignment 1 is out! Due Date: Friday Sep 1,11:50 pm. 
+</li><li> [July 25, 2023]: Course Website has been updated!
+<p>
+<a name="content"></a></p><h4><a name="content">Course Objectives</a></h4>
+(a) To familiarize with/develop the understanding of fundamental concepts of Machine 
+Learning (ML) <br>
+(b) To develop the understanding of working of a variety of ML algorithms (both
+supervised as well as unsupervised) <br>
+(c) To learn to apply ML algorithms to real world 
+data/problems <br>
+(d) To update with some of the latest advances in the field
+<br>
+<a name="content"><h4>Course Content</h4></a>
+NOTE: The exact list of topics below is tentative (until we are past that week). 
+We will update it as we go through the lectures in each week. So, stay tuned!
+<br>
+<b>
+</b><br><table bordercolor="BLACK" rules="COLS" cellpadding="5" cellspacing="5">
+<tbody><tr><td><b>Week</b></td>
+<td><b>Topic</b></td>
+<td><b>Supplementary Notes <br>(by Andrew Ng and Others)</b></td>
+<td><b>Class Notes/Other Resources</b></td>
+
+</tr><tr><td>1 </td> <td> Introduction </td> <td> </td> 
+<td><a href="lecture_notes/col774-july25.pdf">July 25</a>, <a href="lecture_notes/col774-july26.pdf">July 26</a>, <a href="lecture_notes/col774-july28.pdf">July 28</a> </td>
+
+</tr><tr><td>2 </td> <td> Supervised Learning Basics - Linear Regression, Gradient Descent</td>
+<td> <a href="supp_material/lin-log-reg.pdf">lin-log-reg.pdf</a> 
+</td><td>  <a href="lecture_notes/col774-aug1.pdf">Aug 1</a>, <a href="lecture_notes/col774-aug2.pdf">Aug 2</a>, <a href="lecture_notes/col774-aug4.pdf">Aug 4</a></td>
+<td> </td>
+
+</tr><tr><td>3 </td> <td> Gradient Descent (Including Convergence Properties), Stochastic Gradient Descent </td>
+<td> <a href="supp_material/lin-log-reg.pdf">lin-log-reg.pdf</a><br>
+</td><td> <a href="lecture_notes/col774-aug8.pdf">Aug 8</a>, <a href="lecture_notes/col774-aug9.pdf">Aug 9</a>, <a href="lecture_notes/col774-aug11.pdf">Aug 11</a>, 
+<a href="lecture_notes/col774-aug16.pdf">Aug 16</a>, <a href="lecture_notes/col774-aug18.pdf">Aug 18</a></td>
+<td></td>
+
+</tr><tr><td>4 </td> <td> Linear Regression - alternate intepretation (probabilistic), Logistic Regression, GLMs</td>
+<td> <a href="supp_material/lin-log-reg.pdf">lin-log-reg.pdf</a><br>
+</td>
+<td> <a href="lecture_notes/col774-aug19.pdf">Aug 19</a>, <a href="lecture_notes/col774-aug22.pdf">Aug 22</a>, <a href="lecture_notes/col774-aug23.pdf">Aug 23</a></td>
+<td> </td>
+
+</tr><tr><td>5</td> <td> Gaussian Discriminant Analysis (GDA)</td>
+<td><a href="supp_material/gda.pdf">gda_nb.pdf</a></td>
+<td> <a href="lecture_notes/col774-aug25.pdf">Aug 25</a>, <a href="lecture_notes/col774-aug29.pdf">Aug 29</a>, <a href="lecture_notes/col774-aug30.pdf">Aug 30</a> 
+</td><td> </td> 
+
+</tr><tr><td>6 </td> <td> Naive Bayes</td>
+<td><a href="supp_material/gda_nb.pdf">gda_nb.pdf</a><br>
+</td><td> <a href="lecture_notes/col774-sep1.pdf">Sep 1</a>, <a href="lecture_notes/col774-sep5.pdf">Sep 5</a>, <a href="lecture_notes/col774-sep6.pdf">Sep 6</a>, 
+</td><td></td>
+
+</tr><tr><td>7,8 </td> <td> Support Vector Machines</td>
+<td><a href="supp_material/svm.pdf">svm.pdf</a><br> 
+</td><td> <a href="lecture_notes/col774-sep19.pdf">Sep 19</a>, <a href="lecture_notes/col774-sep20.pdf">Sep 20</a>, 
+<a href="lecture_notes/col774-sep22.pdf">Sep 22</a>,<br> 
+<a href="lecture_notes/col774-sep26.pdf">Sep 26</a>, <a href="lecture_notes/col774-sep29.pdf">Sep 29</a> 
+</td><td> </td>
+
+</tr><tr><td>9</td> <td> Decision Trees, Random Forests </td>
+<td> 
+Mitchell, Chapter 3. <br>
+<a href="supp_material/dtrees.pdf">dtrees.pdf</a>. 
+<br>Online Resources: 
+<a href="https://www.stat.berkeley.edu/~breiman/RandomForests/cc_home.htm">Random Forests</a>, <br>
+Gradient Boosting - <a href="https://en.wikipedia.org/wiki/Gradient_boosting">Wikipedia</a>, </td>
+<td>
+<a href="lecture_notes/col774-oct10.pdf">Oct 10</a>, <a href="lecture_notes/col774-oct11.pdf">Oct 11</a> 
+<a href="lecture_notes/col774-oct13.pdf">Oct 13</a>, <a href="lecture_notes/col774-oct14.pdf">Oct 14</a> 
+<br>
+<a href="https://projecteuclid.org/journals/annals-of-statistics/volume-29/issue-5/Greedy-function-approximation-A-gradient-boostingmachine/10.1214/aos/1013203451.full">Paper by Friedman (2001)</a> (up to Section 4.5)
+
+</td>
+
+</tr><tr><td>10</td> <td> Neural Networks</td>
+<td> 
+Mitchell, Chapter 4. <br>
+<a href="supp_material/nnets.pdf">nnets.pdf</a> 
+<a href="supp_material/nnets-hw.pdf">nnets-hw.pdf</a> 
+</td>
+<td>
+<a href="lecture_notes/col774-oct17.pdf">Oct 17</a>, <a href="lecture_notes/col774-oct18.pdf">Oct 18</a> 
+<a href="lecture_notes/col774-oct20.pdf">Oct 20</a>
+<br>
+
+</td></tr><tr><td>11 </td> <td> Deep Learning</td>
+<td> 
+<a href="supp_material/cnn.pdf">
+cnn.pdf</a>
+Online Resource: 
+<br> 
+<a href="http://cs231n.github.io/convolutional-networks/">Convolutional Neural Networks</a></td>
+<td> 
+<a href="lecture_notes/col774-oct25.pdf">Oct 25</a>, <a href="lecture_notes/col774-oct27.pdf">Oct 27</a>, 
+<a href="lecture_notes/col774-oct28_slides.pdf">Oct 28-slides</a>, <a href="lecture_notes/col774-oct28_notes.pdf">Oct 28-notes</a>
+</td>
+
+<!--
+<tr><td>8,9</td> <td> Naive Bayes, Bayesian Statistics</td>
+<td> Mitchell, Chapter 6</td>
+<td><a href=supp_material/gda.pdf>nb.pdf</a>,
+<a href="supp_material/bayes.pdf">bayes.pdf</a> 
+<a href=http://en.wikipedia.org/wiki/Conjugate_prior>Conjugate Prior</a>
+<br>
+<a href="supp_material/map.pdf">map.pdf</a>
+<a href="supp_material/model.pdf">model.pdf</a> </td>
+-->
+</tr><tr><td>12</td> <td> K-Means, Gaussian Mixture Models</td>
+<td> <a href="supp_material/kmeans.pdf">kmeans.pdf</a> 
+<a href="supp_material/gmm.pdf">gmm.pdf</a>
+</td><td>
+<a href="lecture_notes/col774-oct31.pdf">Oct 31</a>, <a href="lecture_notes/col774-nov1.pdf">Nov 1</a>,
+<a href="lecture_notes/col774-nov3.pdf">Nov 3</a>
+</td>
+
+</tr><tr><td>13 </td> <td>Expectation Maximiation (EM), Principal Component Analysis (PCA)</td>
+<td>
+<a href="supp_material/em.pdf">em.pdf</a>
+<a href="supp_material/pca.pdf">pca.pdf</a> </td>
+<td> 
+<a href="lecture_notes/col774-nov7.pdf">Nov 7</a>, <a href="lecture_notes/col774-nov8.pdf">Nov 8</a>,
+<a href="lecture_notes/col774-nov10.pdf">Nov 10</a>
+
+</td>
+
+</tr><tr><td>14 </td> <td> Learning Theory, Model Selection </td>
+<td> Mitchell, Chapter 7. <br>
+<a href="supp_material/theory.pdf">theory.pdf</a>
+<a href="supp_material/model.pdf">model.pdf</a> </td>
+<td> 
+<a href="lecture_notes/col774-nov14.pdf">Nov 14</a>, <a href="lecture_notes/col774-nov15.pdf">Nov 15</a>,
+<a href="lecture_notes/col774-nov17.pdf">Nov 17</a>
+
+</td>
+
+<!--
+<tr><td>14 </td> <td> Advanced Topics</td>
+<td> </td>
+<td> </td>
+-->
+</tr></tbody></table>
+
+<h4><a name="class_notes">Class Notes/Videos (Date-Wise):</a></h4>
+For week-wise notes, see the Content Table Above. 
+<br>Video Lectures:
+<a href="https://drive.google.com/file/d/1fximyKNfOn0jCGwjsk3BpMw4gRAET9d-/view?usp=drive_link">Aug 30</a>,
+<a href="https://drive.google.com/file/d/1p2RBGUAQybGfHGmxKEBDUJKyQk8KxOJX/view?usp=drive_link">Sep 1</a>,
+<a href="https://drive.google.com/file/d/1p2RBGUAQybGfHGmxKEBDUJKyQk8KxOJX/view?usp=drive_link">Sep 5</a>,
+<a href="https://drive.google.com/file/d/1EwZK_X9yZGEOTueW-hogjH7GW60CuZ0i/view?usp=drive_link">Sep 6</a>,
+<a href="https://drive.google.com/file/d/1HFkLOP4Y12LLEQUkMGg3pML18zTZtO6o/view?usp=drive_link">Sep 19</a>,
+<a href="https://drive.google.com/file/d/1TfuoaMjDZv6hN5R02nBmqQiBrNxhKOr2/view?usp=drive_link">Sep 20</a>,
+<a href="https://drive.google.com/file/d/1nJZc8S-MmnwkRKq4XSuYUkvkmD3HHAKV/view?usp=drive_link">Sep 22</a>
+<a href="https://drive.google.com/file/d/1pGZCXdbVW1Y0v5-J1deAZb3bB7zh4pcI/view?usp=drive_link">Sep 26</a>,
+<a href="https://drive.google.com/file/d/1blOcoL5A77JSAHQez7Zqr0v_-qUEbCRK/view?usp=drive_link">Sep 29</a>,
+<a href="https://drive.google.com/file/d/1MOiq73ZW27QyjcOsikLGgwVxl9hf-sUN/view?usp=drive_link">Oct 10</a>,
+<a href="https://drive.google.com/file/d/1nCuhEwjcqwyy7wPJkjizM9n1FZKhWdzV/view?usp=drive_link">Oct 11</a>,
+<a href="https://drive.google.com/file/d/1vOdCDocoVM5fcTMyuwW7LpUoJxFyMbp5/view?usp=sharing">Oct 13</a>,
+<a href="https://drive.google.com/file/d/1KCqYv0v7NpK8gW9f0MOg7GRLixWyCrQG/view?usp=sharing">Oct 14</a><a>,
+</a><a href="https://drive.google.com/file/d/1ZTSwkBI3NNKooTHi7GUYfz1BYt0muXvb/view?usp=drive_link">Oct 17</a>,
+<a href="https://drive.google.com/file/d/1NYn_JcevP3_-9016h9c4fL1WVrPewRLL/view?usp=drive_link">Oct 18</a>,
+<a href="https://drive.google.com/file/d/1kYNaG_IwSmMw5JoH_3TK7EXHKIaTEhRM/view?usp=sharing">Oct 20</a>,
+<a href="https://drive.google.com/file/d/1mHqmpcO95iLgmuFtz5z-QsLvPC0WMA3o/view?usp=sharing">Oct 25</a>, 
+<a href="https://drive.google.com/file/d/1X665YwevakItdvkbY_G49LjAyoY1ls_E/view?usp=sharing">Oct 27</a>,
+<a href="https://drive.google.com/file/d/1Rr_SlF8s8OU8uNX0yknW-5tYCKj19dHh/view?usp=drive_link">Oct 28 (Part a)</a>,
+<a href="https://drive.google.com/file/d/12nI6bd414oV0llrpO37Y3uhpzNy4MUP7/view?usp=drive_link">Oct 28 (Part b)</a>,
+<a href="https://drive.google.com/file/d/1rxlvFT0wagjoWFUruaN301frqOwl_ch5/view?usp=sharing">Oct 31</a>, 
+<br> 
+<a href="https://drive.google.com/file/d/1V-ehQTCTalnZh3vZj_DWSTceQ-QBblcG/view?usp=sharing">Nov 1</a>,
+<a href="https://drive.google.com/file/d/11QWfcesVCsvY4yrMvog1TRABLOPWCuT2/view?usp=sharing">Nov 3</a>, 
+<a href="https://drive.google.com/file/d/161PNy9KBNjz9PhC0jNo4jfTgKaCdOi1Z/view?usp=sharing">Nov 7</a>, 
+<a href="https://drive.google.com/file/d/1hDwkvglIw6tb2bWX5if5JI0mlQGRssC_/view?usp=sharing">Nov 8</a>,
+<a href="https://drive.google.com/file/d/1ANLLeJwjIJ9T9GO-Wm4UFhSS0wLf6YZf/view?usp=sharing">Nov 10</a>,
+<a href="https://drive.google.com/file/d/1R-g5axRI2CctGXGGuSjEJ6N52nr-iZTJ/view?usp=sharing">Nov 14</a>,
+<a href="https://drive.google.com/file/d/1lPTS98VG5cy5F4S1EpEZVHkEqaLHgLKA/view?usp=sharing">Nov 15</a>,
+<a href="https://drive.google.com/file/d/1-ZUJ5L_werse34IRg6OiNRgaNpx0H1OK/view?usp=sharing">Nov 17</a>
+<br>
+<br>
+Video Lectures from Previous offering can be acccessed here
+<a href="https://www.cse.iitd.ac.in/~parags/teaching/2021/col774/">COL 774, Sem I, 2021-22 Course Page</a> (Search for Videos)
+
+<!--
+<h4><a name="QASessions">Question-Answer Session Recordings</a></h4>
+-->
+<h4><a name="additional">Additional Resources</a></h4>
+<ul>
+<li>
+Stochastic Gradient Descent: <a href="https://www.youtube.com/watch?v=4qJaSmvhxi8"> Algorithm </a>,
+<a href="https://www.youtube.com/watch?v=-_4Zi8fCZO4">Understanding it better</a> (<i>Youtube Videos by Andrew Ng</i>)
+</li><li>
+<a href="http://ai.stanford.edu/~ang/papers/nips01-discriminativegenerative.pdf">
+On Discriminative vs. Generative Classifiers: A comparison of logistic regression and naive Bayes</a>.
+Andrew Y. Ng and Michael Jordan. NIPS 2001. 
+</li><li>
+<a href="https://www.cs.cmu.edu/~tom/mlbook/NBayesLogReg.pdf">Generative and Discrminative Classifiers: Naive Bayes
+and Logistic Regression</a>. Chapter 1, Machine Learning. Tom Mitchell.
+</li><li> 
+<a href="https://www.cs.cmu.edu/~tom/mlbook/NBayesLogReg.pdf">Generative and Discrminative Classifiers: Naive Bayes
+and Logistic Regression</a>. Chapter 1, Machine Learning. Tom Mitchell.
+</li><li> 
+<a href="http://poorvi.cse.iitd.ac.in/~parags/teaching/2016/col774/notes/dtree_pruning_mitchell.pdf">Notes on Avoiding Overfitting in Decision Trees</a>
+[This is on internal network. For students who need to access from outside IIT Delhi, you find this in resources section on Piazza.]
+</li><li><a href="http://www.deeplearningbook.org/">Deep Learning Book</a><br>
+</li></ul>
+
+<h4><a name="review"></a><h4><a name="review">Review Material</a></h4>
+<table bordercolor="BLACK" rules="COLS" cellpadding="5" cellspacing="5">
+<tbody><tr><td><b>Topic</b></td> <td><b>Notes</b></td></tr>
+<tr><td>Probability</td> <td><a href="review/prob.pdf">prob.pdf</a></td>
+</tr><tr><td>Linear Algebra</td> <td><a href="review/linalg.pdf">linalg.pdf</a></td>
+</tr><tr><td>Gaussian Distribution</td> <td><a href="review/gaussians.pdf">gaussians.pdf</a></td>
+</tr><tr><td>Convex Optimization (1) </td> <td><a href="review/convex-1.pdf">convex-1.pdf</a></td>
+</tr></tbody></table>
+
+</h4><h4><a name="references">References (latest)</a></h4>
+<ul>
+<li><b>New!</b><i><a href="https://probml.github.io/pml-book"> Probabilisitic Machine Learning: An Introduction/Advanced Topics</a></i>,
+Kevin Murphy. MIT Press, 2022/2023. (see the introductory one for this class)
+</li><li><b>New!</b><i><a href="https://www.statlearning.com/"> An Introduction to Statistical Learning</a></i>,
+Gareth James, Daniela Witten, Trevor Hastie, Robert Tibshirani (and Jonathan Taylor -- for Python version), Springer 2021/2023.
+</li></ul>
+
+<h4><a name="references">References (older)</a></h4>
+<ul>
+<li> <i> <a href="http://people.cs.bris.ac.uk/~flach/mlbook/">Machine Learning.The Art and Science of Algorithms that Make Sense of Data</a></i>
+Peter Flach, Cambridge University Press, 2012.
+</li><li> <i> <a href="http://www.cs.ubc.ca/~murphyk/MLbook">Machine Learning: A Probabilistic Perspective.</a></i> 
+Kevin Murphy. MIT Press, 2012. 
+</li><li> <i> Pattern Recognition and Machine Learning.</i> Christopher Bishop. First Edition, Springer, 2006.
+</li><li> <i> Pattern Classification.</i> Richard Duda, Peter Hart and David Stock. Second Edition, Wiley-Interscience, 2000.
+</li><li> <i> Machine Learning. </i> Tom Mitchell. First Edition, McGraw-Hill, 1997.
+</li></ul>
+
+<a name="Assignment Submission Instructions"><h4>Assignment Submission Instructions</h4></a>
+<ol>
+<li> You are free to discuss the assignment problems with other students in the class. But all your code should be 
+produced independently without looking at/referring to anyone else's code.  
+</li><li> <a href="http://www.python.org">Python</a> is the default programming
+languages for the course. You should use it for programming your
+assignments unless otherwise explicitly allowed.
+</li><li> Code should be submitted using <a href="https://moodle.iitd.ac.in">Moodle Page</a>. 
+Make sure to include commenrs for readability.
+</li><li> Create a separate directory
+for each of the questions named by the question number. For instance, for question 1,
+all your submissions files should be put in the directory named 
+Q1 (and so on for other questions). Put all the Question sub-directories in a single 
+top level directory. This directory should be named as "yourentrynumber_firstname_lastname". 
+For example, if your entry number is "2021cs19535" and your name is "Nitika Rao", your 
+submission directory should be named as "2021cs19535_nitika_rao". You should zip your 
+directory and name the resulting file as "yourentrynumber_firstname_lastname.zip" e.g. in 
+the above example it will be "2021cs19535_nitika_rao.zip". This single zip file should 
+be submitted online. 
+</li><li> <b>Honor Code: </b> Any cases of copying will be awarded a zero on the assignment and an additional penalty equal to the negative of the total 
+weightage of the assignment. More severe penalties may follow.
+</li><li> <b> Late Policy: </b> You are allowed a total of 5 late (buffer) days acorss the first 3 assignments. You are free to decide how you would like to use them. The late policy (if any) for 
+the last assignment will be announced separately.
+<b>You will get a penalty of 10% deduction in marks (per day) for every additional late day in submission used beyond the allowed 5 buffer days (applicable to first 3 assignments only).</b>
+</li></ol>
+
+<a name="practice"><h4>Practice Questions</h4></a>
+<ul>
+<li> <a href="practice/col774_major_SemI_2022-23.pdf"> Major (2022-23, Sem I offering) </a>
+</li><li> <a href="practice/col774_minor_SemI_2022-23.pdf"> Minor (2022-23, Sem I offering) </a>
+</li><li> <a href="practice/col774_major_SemI_2021-22.pdf"> Major (2021-22, Sem I offering) </a>
+</li><li> <a href="practice/col774_minor_SemI_2021-22.pdf"> Minor (2021-22, Sem I offering) </a>
+</li><li> <a href="practice/col774_major_SemI_2020-21.pdf"> Major (2020-21, Sem I offering) </a>
+</li><li> <a href="practice/col774_minor_SemI_2020-21.pdf"> Minor (2020-21, Sem I offering) </a>
+</li><li> <a href="practice/minor2_sp19.pdf"> Minor 2 (2019 offering) </a>
+</li><li> <a href="practice/major_sp19.pdf"> Major (2019 offering) </a>
+</li><li> <a href="practice/minor1_sp18.pdf"> Minor 1 (2018 offering) </a>
+</li><li> <a href="practice/minor2_sp18.pdf"> Minor 2 (2018 offering) </a>
+</li><li> <a href="practice/major_sp18.pdf"> Major (2018 offering) </a>
+</li><li> <a href="practice/minor1_sp17.pdf"> Minor 1 (2017 offering) </a>
+</li><li> <a href="practice/minor2_sp17.pdf"> Minor 2 (2017 offering) </a>
+</li><li> <a href="practice/major_sp17.pdf"> Major (2017 offering) </a>
+</li><li> <a href="practice/practice1.pdf">Pratice Questions for Minor 1 (from 2017) </a>
+</li><li> <a href="practice/practice2.pdf">Pratice Questions for Minor 2 (from 2017) </a>
+</li><li> <a href="practice/practice3.pdf">Pratice Questions for Major (from 2017) </a>
+</li></ul>
+
+<a name="assignments"><h4>Assignments</h4></a>
+<ol>
+<li> <a href="assignments/ass3/col774_ass3_v1.pdf">Assignment 3 </a> 
+<br> Starter Code and Dataset. <a href="assignments/ass3/ass3_part_a.zip">Part A</a> [<b>Updated</b>: see Piazza post for details].
+<br> Starter Code and Dataset. <a href="assignments/ass3/ass3_part_b.zip">Part B</a> 
+<br> Due Date (both parts) [<b>Updated</b>]: Tuesday Ocotber 31st. 11:50 pm. 
+</li><li> <a href="assignments/ass2/ass2_v1.pdf">Assignment 2 </a> <b>[Updated! Sep 26th, 2023] </b>
+<br> Datasets. <a href="https://drive.google.com/drive/folders/19sxFx4CpiyJ9qHUpdsp7JELJ7pbDov98">Part 1</a>,Part 2 (linked from pdf)
+<br> Due Date: Wednesday October 4, 2023. 11:50 pm
+</li><li> <a href="assignments/ass1/ass1.pdf">Assignment 1</a> 
+<br> Datasets: <a href="assignments/ass1/ass1_data.zip">ass1_data.zip</a>
+<br> Due Date: Friday September 1, 2023. 11:50 pm
+</li></ol>
+
+
+<h4><a name="grading">Grading Policy (Tentative) </a></h4>
+<table bordercolor="BLACK" rules="COLS" cellpadding="5" cellspacing="5">
+<tbody><tr><td>Assignments (4) </td> <td> Ass1: 7%. Ass2: 9%, Ass3: 9%, Ass4: 10 %. [Total Assignment Weight: 35%]</td>
+</tr><tr><td>Minor</td> <td> 25% </td>
+</tr><tr><td>Major </td> <td> 40% </td>
+</tr></tbody></table>
+<br><br><br><br>
+
+
+
+
+</li></td></tr></tbody></table></body></html>

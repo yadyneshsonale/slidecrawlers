@@ -1,0 +1,180 @@
+<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Machine Learning (CS60050)</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 20px;
+    }
+
+    h1, h2, h3 {
+      color: #007BFF;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 8px;
+    }
+
+    th {
+      background-color: #007BFF;
+      color: #fff;
+    }
+
+    th:first-child, td:first-child {
+      min-width: 100px;
+    }
+
+    a {
+      color: #007BFF;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body data-new-gr-c-s-check-loaded="14.1188.0" data-gr-ext-installed="">
+  <h1>Machine Learning (CS60050)</h1>
+  <p><strong>Instructor:</strong> Sourangshu Bhattacharya</p>
+  <p><strong>Teaching Assistants:</strong> Shubhadip Nag, Saransh Sharma, Bismay Parija, Saurabh Roy, Kale Chaitanya Hanumant Kanchan</p>
+  <p><strong>Class Schedule:</strong> Monday (8:00 - 9:55), Tuesday (12:00 - 12:55)</p>
+  <p><strong>Classroom:</strong> NR-412 (Nalanda Complex)</p>
+  
+  <h2>Announcements:</h2>
+  <ul>
+    <li>Moodle course has been created. Name: CS60021: Machine Learning (Spring 2025).,
+      URL: <a href="https://moodlecse.iitkgp.ac.in/moodle/">https://moodlecse.iitkgp.ac.in/moodle/</a>.
+    Student registration key is shared in email.</li>
+    <li> First asssignment given on moodle. Deadline: 25th January.</li>
+    <li> First class test will be held on 21st January. Syllabus till linear model.</li>
+    <li> Second asssignment given on moodle. Deadline: 15th February.</li>
+    <li> Second class test will be held on 11th February. Syllabus will be till Ensemble Models.</li>
+    <li> Third asssignment given on moodle. Deadline: 22nd March.</li>
+    <li> Third class test will be held on 18th March. Syllabus will be till Graphical Models.</li>
+  </ul>
+  
+  <h2>References:</h2>
+  <ol>
+    <li>  Thomas M. Mitchell, "Machine Learning." <i>McGraw Hill (1997).</i> -- <font color="blue">Traditional book for concept learning.</font> </li>
+    <li>   Christopher M. Bishop, "Pattern Recognition and Machine Learning." <i>Springer (2006).</i> 
+       <a href="https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf">Download Link</a> 
+      -- <font color="blue">Main book for most models.</font></li>
+    <li> Raschka, Sebastian, Yuxi Hayden Liu, and Vahid Mirjalili. <br>
+      Machine Learning with PyTorch and Scikit-Learn: 
+      Develop machine learning and deep learning models with Python. <br>
+      Packt Publishing Ltd, 2022. -- <font color="blue">Practice Programming with github code link</font> </li>
+  </ol>
+
+  <h2>Course Schedule:</h2>
+  <table border="1">
+    <tbody><tr>
+      <th>Week</th>
+      <th>Dates</th>
+      <th>Topic / Activity</th>
+      <th>Links / Material</th>
+    </tr>
+    <tr>
+      <td>Week 1</td>
+      <td>6/1, 7/1</td>
+      <td>Introduction to ML and concept learning</td>
+      <td><a href="ML25S/01-Introduction.pdf">Slides</a></td>
+    </tr>
+    
+    <tr>
+      <td>Week 2</td>
+      <td>13/1, 14/7</td>
+      <td>Linear models, regression, classification </td>
+      <td><a href="ML25S/02-linear-models.pdf">Slides </a>
+      </td>
+    </tr>
+    <tr>
+      <td>Week 3 </td>
+      <td> 20/1, 21/1</td>
+      <td> Support Vector Machines</td>
+      <td><a href="ML25S/03-svm.pdf">Slides </a>
+      </td>
+    </tr>
+    <tr>
+      <td>Week 4 </td>
+      <td>27/1, 28/1</td>
+      <td> Probabilistic model for ML</td>
+      <td><a href="ML25S/04-probabilistic-models.pdf">Slides </a>
+      </td>
+    </tr>
+   <tr>
+      <td>Week 5 </td>
+      <td> 3/2, 4/2</td>
+      <td>Decision Trees, Ensembles, Random Forests</td>
+      <td><a href="ML25S/05-DT-Ensemble.pdf">Slides </a>
+      </td>
+    </tr>
+    <tr>
+      <td>Week 6 </td>
+      <td> 10/2, 11,2</td>
+      <td> Boosting, Xgboost, Crossvalidation</td>
+      <td><a href="ML25S/06-boosting-XGboost.pdf">Slides - Boosting</a>, <a href="ML25S/07-crossvalidation.pdf">Slides - Crossvalidation</a> <br>
+      </td>
+    </tr>
+    <tr>
+      <td>Week 7 </td>
+      <td>3/3, 4/3</td>
+      <td>Clustering - K-means, GMM, Hierarchical, Spectral</td>
+      <td><a href="ML25S/08-clustering.pdf">Slides - Clustering </a>
+      </td>
+    </tr>    
+     <tr>
+      <td>Week 8 </td>
+      <td>10/3, 11/3</td>
+      <td>Graphical Models</td>
+      <td><a href="ML25S/09-graphical-models.pdf">Slides - Graphical Models </a> 
+      </td>
+    </tr>
+     <tr>
+      <td>Week 9 + 10 </td>
+      <td>17/3, 18/3, 24/3, 25/3</td>
+      <td>Neural Networks, Convolutional Neural Networks, Applications in Computer Vision</td>
+      <td><a href="ML25S/10-NN.pdf">Slides - Neural Networks </a> 
+      </td>
+    </tr>
+     <tr>
+      <td>Week 11 </td>
+      <td>1/4, 7/4, 8/4</td>
+      <td>Recurrent Neural Networks, Transformers</td>
+      <td><a href="ML25S/11-RNN-Attention-transformers.pdf">Slides - RNN, Transformers </a> 
+      </td>
+    </tr>
+    <!-- 
+    <tr>
+      <td>Week 12 </td>
+      <td>13/11, 14/11</td>
+      <td>Subset Selection</td>
+      <td><a href="sdm24a/01-ml-optim.pdf">Slides - Subset Selection, Submodular Optimization</a>
+      </td>
+    </tr> -->
+    <!-- Add more rows for other weeks as needed -->
+  </tbody></table>
+  
+  <h2>Syllabus (broad indication):</h2>
+  <ul>
+    <li>Introduction and concept learning, Linear models for classification and regression, SVMs and kernel methods</li>
+    <li>Probabilistic ML, Naive Bayes, Decision Trees, Bagging, Random forests</li>  
+    <li>Boosting, Xgboost</li>
+    <li>Clustering, Gaussian Mixture Models</li>  
+    <li>Graphical Models</li>  
+    <li>Neural Networks</li>
+    <li>Learning Theory and Metrics for problems</li>
+    <li>Active, Transfer, multi-task learning</li>
+    <li>Explainability and Trustworthiness</li>
+  </ul>
+
+ 
+
+<grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></body></html>

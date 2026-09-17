@@ -1,0 +1,455 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Stanford University CS231n: Deep Learning for Computer Vision</title>
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+    <!-- Google fonts -->
+    <link href="http://fonts.googleapis.com/css?family=Roboto:400,300" rel="stylesheet" type="text/css">
+
+    <!-- Google Analytics -->
+    <script async="" src="//www.google-analytics.com/analytics.js"></script><script>
+      (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+          (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+          m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+      ga('create', 'UA-46895817-2', 'auto');
+      ga('send', 'pageview');
+    </script>
+
+    <link rel="stylesheet" type="text/css" href="style-new.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <!-- <script src="scripts/init.js"></script>
+  <script src="scripts/in.js"></script> -->
+    <script src="convnet_demo/convnet-min.js"></script>
+    <script src="convnet_demo/convnet_demo.js"></script>
+
+    <script>
+      function page_loaded() {
+        $('#convask').click(function () {
+          $("#explain").slideToggle('fast');
+        })
+        start_convnet_demo();
+      }
+    </script>
+  </head>
+
+  <body onload="page_loaded()">
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand brand" href="index.html">CS231n Home</a>
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="schedule.html"><b>Schedule</b></a></li>
+            <li><a href="assignments.html"><b>Assignments</b></a></li>
+            <li><a href="project.html"><b>Project</b></a></li>
+            <li><a href="office_hours.html"><b>Office Hours</b></a></li>
+            <li><a href="https://canvas.stanford.edu/courses/222471/external_tools/69960"><b>Lecture Videos</b></a></li>
+            <li><a href="https://edstem.org/us/courses/97362/discussion"><b>Ed</b></a></li>
+            <li><a href="https://cs231n.github.io/"><b>Useful Notes</b></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Header -->
+    <div id="header" style="text-align:center">
+      <a href="http://svl.stanford.edu">
+        <img src="img/svl_logo.png" class="logo-left">
+      </a>
+      <a href="http://stanford.edu/">
+        <img src="img/stanfordlogo.jpg" class="logo-right">
+      </a>
+      <h1>CS231n: Deep Learning for Computer Vision</h1>
+      <h3>Stanford - Spring 2026</h3>
+      <div style="clear:both;"></div>
+    </div>
+
+    <div id="teaser">
+      <div id="convnetvis"></div>
+      <span class="glyphicon glyphicon-question-sign" id="convask"></span>
+      <div id="demomsg">
+        *This network is running live in your browser
+      </div>
+    </div>
+    <div class="container">
+      <div id="explain">
+        The Convolutional Neural Network in this example is classifying images live in your browser using Javascript, at
+        about 10 milliseconds per image. It takes an input image and transforms it through a series of functions into
+        class probabilities at the end. The transformed representations in this visualization can be loosely thought of
+        as
+        the activations of the neurons along the way. The parameters of this function are learned with backpropagation
+        on
+        a dataset of (image, label) pairs. This particular network is classifying <a href="http://www.cs.toronto.edu/~kriz/cifar.html">CIFAR-10</a> images into one of 10 classes and was trained
+        with <a href="http://cs.stanford.edu/people/karpathy/convnetjs/">ConvNetJS</a>. Its exact architecture is
+        [conv-relu-conv-relu-pool]x3-fc-softmax, for a total of 17 layers and 7000 parameters. It uses 3x3 convolutions
+        and 2x2 pooling regions. By the end of the class, you will know exactly what all these numbers mean.
+      </div>
+    </div>
+
+    <div class="sechighlight">
+      <div class="container sec">
+        <h2>Course Description</h2>
+
+        <div id="coursedesc">
+          Computer Vision has become ubiquitous in our society, with applications in search, image understanding, apps,
+          mapping, medicine, drones, and self-driving cars. Core to many of these applications are visual recognition
+          tasks such as image classification, localization and detection. Recent developments in neural network (aka
+          “deep
+          learning”) approaches have greatly advanced the performance of these state-of-the-art visual recognition
+          systems. This course is a deep dive into the details of deep learning architectures with a focus on learning
+          end-to-end models for these tasks, particularly image classification. During the 10-week course, students will
+          learn to implement and train their own neural networks and gain a detailed understanding of cutting-edge
+          research in computer vision. Additionally, the final assignment will give them the opportunity to train and
+          apply multi-million parameter networks on real-world vision problems of their choice. Through multiple
+          hands-on
+          assignments and the final course project, students will acquire the toolset for setting up deep learning tasks
+          and practical engineering tricks for training and fine-tuning deep neural networks.
+        </div>
+        <br>
+        <div class="text-center">
+          <button class="btn" data-toggle="collapse" data-target="#demo">Previous Offerings</button>
+          <div id="demo" class="collapse">
+            <a href="http://cs231n.stanford.edu/2015">[Winter 2015]</a>
+            <a href="http://cs231n.stanford.edu/2016">[Winter 2016]</a>
+            <a href="http://cs231n.stanford.edu/2017">[Spring 2017]</a>
+            <a href="http://cs231n.stanford.edu/2018">[Spring 2018]</a>
+            <a href="http://cs231n.stanford.edu/2019">[Spring 2019]</a>
+            <a href="http://cs231n.stanford.edu/2020">[Spring 2020]</a>
+            <a href="http://cs231n.stanford.edu/2021">[Spring 2021]</a>
+            <a href="http://cs231n.stanford.edu/2022">[Spring 2022]</a>
+            <a href="http://cs231n.stanford.edu/2023">[Spring 2023]</a>
+            <a href="http://cs231n.stanford.edu/2024">[Spring 2024]</a>
+            <a href="http://cs231n.stanford.edu/2025">[Spring 2025]</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container sec" id="people">
+      <div class="col-md-4" id="instructors">
+        <h3>Instructors</h3>
+        <div class="instructor">
+          <a href="https://profiles.stanford.edu/fei-fei-li" target="_blank">
+            <div class="instructorphoto">
+              <img class="img-hover" src="img/fei-fei.jpg">
+            </div>
+            <div>Fei-Fei Li</div>
+          </a>
+        </div>
+        <div class="instructor">
+          <a href="https://stanford.edu/~eadeli/" target="_blank">
+            <div class="instructorphoto">
+              <img class="img-hover" src="img/ehsan.jpg">
+            </div>
+            <div>Ehsan Adeli</div>
+          </a>
+        </div>
+        <div class="instructor">
+          <a href="https://web.eecs.umich.edu/~justincj/" target="_blank">
+            <div class="instructorphoto">
+              <img class="img-hover" src="img/justin.jpg">
+            </div>
+            <div>Justin Johnson</div>
+          </a>
+        </div>
+        <div class="instructor">
+          <a href="https://zanedurante.github.io" target="_blank">
+            <div class="instructorphoto">
+              <img class="img-hover" src="img/zane.jpg">
+            </div>
+            <div>Zane Durante</div>
+          </a>
+        </div>
+        <div class="instructor">
+          <a href="https://ai.stanford.edu/~xtiange/" target="_blank">
+            <div class="instructorphoto">
+              <img src="img/tiange.jpg">
+            </div>
+            <div>Tiange Xiang</div>
+          </a>
+        </div>
+      </div>
+
+      <div class="col-md-8" id="teaching-assistants">
+        <h3>Teaching Assistants</h3>
+        <div class="instructor">
+          <a href="https://cs.stanford.edu/~aditesh/" target="_blank">
+            <div class="instructorphoto"><img src="img/aditesh_kumar.png"></div>
+            <div>Aditesh Kumar<br>(Head CA)</div>
+          </a>
+        </div>
+        <div class="instructor">
+          <a href="http://cs.stanford.edu/~keshik/" target="_blank">
+            <div class="instructorphoto"><img src="img/keshigeyan_chandrasegaran.png"></div>
+            <div>Keshigeyan Chandrasegaran</div>
+          </a>
+        </div>
+        <div class="instructor">
+          <a href="https://web.stanford.edu/~markendo/" target="_blank">
+            <div class="instructorphoto"><img src="img/mark_endo.jpg"></div>
+            <div style="padding-top: 1.25em;">Mark Endo</div>
+          </a>
+        </div>
+        <div class="instructor">
+          <a href="https://www.linkedin.com/in/ganiket/" target="_blank">
+            <div class="instructorphoto"><img src="img/aniket_gupta.jpg"></div>
+            <div style="padding-top: 1.25em;">Aniket Gupta</div>
+          </a>
+        </div>
+        <div class="instructor">
+          <a href="https://wenlong.page/" target="_blank">
+            <div class="instructorphoto"><img src="img/Wenlong_Huang.jpg"></div>
+            <div>Wenlong Huang</div>
+          </a>
+        </div>
+        <div class="instructor" style="vertical-align: top;">
+          <a href="https://chaitanya100100.github.io/" target="_blank">
+            <div class="instructorphoto"><img src="img/chaitanya.jpg"></div>
+            <div>Chaitanya Patel</div>
+          </a>
+        </div>
+        <div class="instructor">
+          <a href="https://ynshah3.github.io" target="_blank">
+            <div class="instructorphoto"><img src="img/yash_shah.png"></div>
+            <div>Yash Shah</div>
+          </a>
+        </div>
+        <div class="instructor">
+          <a href="https://karanps.com" target="_blank">
+            <div class="instructorphoto"><img src="img/karan_singh.png"></div>
+            <div>Karan Singh</div>
+          </a>
+        </div>
+        <div class="instructor">
+          <a href="https://baileytrang.github.io/" target="_blank">
+            <div class="instructorphoto"><img src="img/baileytrang.png"></div>
+            <div>Bailey Trang</div>
+          </a>
+        </div>
+        <div class="instructor">
+          <a href="https://heng14.github.io/" target="_blank">
+            <div class="instructorphoto"><img src="img/hengyu.jpg"></div>
+            <div>Heng Yu</div>
+          </a>
+        </div>
+        <div class="instructor">
+          <a href="https://kovenyu.com" target="_blank">
+            <div class="instructorphoto"><img src="img/koven_yu.jpg"></div>
+            <div>Koven Yu</div>
+          </a>
+        </div>
+        <div class="instructor">
+          <a href="https://ceyzaguirre4.github.io/" target="_blank">
+            <div class="instructorphoto"><img src="img/cris.jpeg"></div>
+            <div>Cristóbal Eyzaguirre</div>
+          </a>
+        </div>
+        <div class="instructor">
+          <a href="https://www.linkedin.com/in/fangrui-huang-762376205" target="_blank">
+            <div class="instructorphoto"><img src="img/fangrui_huang.jpeg"></div>
+            <div>Fangrui Huang</div>
+          </a>
+        </div>
+        <div class="instructor">
+          <a href="https://eriszhang.github.io/" target="_blank">
+            <div class="instructorphoto"><img src="img/eris_zhang.jpg"></div>
+            <div>Eris Zhang</div>
+          </a>
+        </div>
+        <div class="instructor">
+          <a href="https://www.favournerrise.com/" target="_blank">
+            <div class="instructorphoto"><img src="img/favour_nerrise.jpg"></div>
+            <div>Favour Nerrise</div>
+          </a>
+        </div>
+        <div class="instructor">
+          <a href="https://www.linkedin.com/in/yalcintur/" target="_blank">
+            <div class="instructorphoto"><img src="img/yalcin_tur.jpeg"></div>
+            <div>Yalcin Tur</div>
+          </a>
+        </div>
+        <div class="instructor">
+          <a href="https://www.linkedin.com/in/yujun-june-zheng32" target="_blank">
+            <div class="instructorphoto"><img src="img/june_zheng.jpg"></div>
+            <div>June Zheng</div>
+          </a>
+        </div>
+        <div class="instructor">
+          <a href="https://y-zheng18.github.io/" target="_blank">
+            <div class="instructorphoto"><img src="img/YangZheng.jpg"></div>
+            <div>Yang Zheng</div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="sechighlight">
+      <div class="container sec" id="logistics">
+        <h2>Course Logistics</h2>
+        <br>
+        <ul>
+          <li><b>Lectures:</b> Tuesdays and Thursdays 12:00-1:20PM Pacific Time at <a href="https://goo.gl/maps/hRjQYd6MqxB2">NVIDIA Auditorium</a>.</li>
+          <li><b>Lecture Videos:</b> Will be posted on <a href="https://canvas.stanford.edu/courses/222471">Canvas</a>
+            'Panopto Course Videos' tab shortly after each lecture, accessible to enrolled Stanford students. While they
+            are not reflective of this offering CS231n, recordings from previous years are <a href="https://www.youtube.com/playlist?list=PLoROMvodv4rOmsNzYBMe0gJY2XS8AQg16">available on YouTube</a>.
+          </li>
+          <li><b>Office Hours:</b> We will be holding a mix of in-person and Zoom office hours. You can find a full list
+            of times and locations
+            <a href="office_hours.html">on the calendar</a>.
+          </li>
+          <li><b>Contact:</b> Announcements and all course-related questions will happen on the <a href="https://edstem.org/us/courses/97362/discussion">Ed</a> forum
+            - post there for the quickest response.
+            For external enquiries, emergencies, or personal matters that you don't wish to put in a private post, you
+            can email us at <a href="mailto:cs231n-staff-spr26@stanford.edu">cs231n-staff-spr26@stanford.edu</a>.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container sec" id="coursework" style="margin-top:-20px">
+      <br>
+      <h2>Coursework</h2>
+
+      <h3>Prerequisites</h3>
+      <ul>
+        <li><span class="spanh">Proficiency in Python</span><br>All class assignments will be in Python (and use numpy)
+          (we provide a tutorial <a href="http://cs231n.github.io/python-numpy-tutorial/" target="_blank">here</a> for
+          those who aren't as familiar with Python). If you have a lot of programming experience but in a different
+          language (e.g. C/C++/Matlab/Javascript) you will probably be fine.</li>
+        <li><span class="spanh">College Calculus, Linear Algebra</span> (e.g. MATH 19, MATH 51)<br> You should be
+          comfortable taking derivatives and understanding matrix vector operations and notation.</li>
+        <li><span class="spanh">Basic Probability and Statistics</span> (e.g. CS 109 or other stats course)<br>You
+          should have an intuitive understanding of basic probability, gaussian distributions, mean, standard deviation,
+          etc.</li>
+      </ul>
+
+      <h3>Assignments (45%)</h3>
+      <p>See the <a href="assignments.html">Assignments</a> page for details regarding assignments, late days and
+        collaboration policies.</p>
+
+      <h3>Midterm (20%)</h3>
+      <p>Detailed information regarding the midterm will be made available as an announcement on Ed in the coming weeks.
+      </p>
+
+      <h3>Final Project (35%)</h3>
+      <p>See the <a href="project.html">Project</a> page for more details regarding the final course project.</p>
+
+      <h3>Participation (3% extra credit)</h3>
+      <p>Active participation greatly improves the learning experience for all students! Teaching staff will make note
+        of outstanding contributions in Lecture, Section, Office Hours, on EdStem, and elsewhere. The most commended
+        student will receive 3% extra credit, and other outstanding contributors will receive a fraction of that
+        proportionate to their contribution.</p>
+
+      <h3>Regrade Requests</h3>
+      <p>If you believe that the course staff made an objective error in grading, you may submit a regrade request on
+        Gradescope within <b>3 days</b> of the grade release. Your request should briefly summarize why the original
+        grading was incorrect. Note that staff may regrade the entire submission, so it is possible for you to lose more
+        points than you gain if a mistake was overlooked in the first time.</p>
+      <h3 id="late-policy">Late Policy</h3>
+      <ul>
+        <li>All students have 4 free late days for the quarter.</li>
+        <li>You may use up to 2 late days per assignment.</li>
+        <li>Upon use, each late day provides a 24 hour extension with no penalty.</li>
+        <li>You may use late days for the assignments, project proposal, and project milestone check-ins.</li>
+        <li>You may not use late days for the final project report.</li>
+        <li>
+          Once you have exhausted your free late days, we will deduct a late penalty of 25% per additional late day.
+          <ul>
+            <li>For example: you submit A1 one day late, submit A2 three days late, and submit A3 two days late.
+              You receive no penalty for A1, and exhaust one of your free late days.
+              For A2 the first two late days exhaust two of your free late days; the third day late incurs a 25%
+              penalty.
+              For A3 the first late day exhausts your final free late day; the second late day incurs a 25% penalty.
+            </li>
+          </ul>
+        </li>
+        <li>For the project proposal and milestone, we will deduct late days from each group member independently.</li>
+      </ul>
+    </div>
+    
+
+    <div class="sechighlight">
+      <div class="container sec" style="padding-top:20px; padding-bottom:20px;">
+        <p style="margin-bottom:15px;">
+          The students receive support from
+          <a href="https://modal.com/" target="_blank">Modal</a>,
+          <a href="https://aws.amazon.com/" target="_blank">AWS</a>, and
+          <a href="https://cloud.google.com/" target="_blank">GCP</a>
+          through cloud credits for final course projects.
+        </p>
+        <div style="text-align:center; display:flex; justify-content:center; align-items:center; flex-wrap:wrap; gap:40px;">
+          <a href="https://modal.com/" target="_blank">
+            <img src="img/modal-logo.svg" alt="Modal" style="height:30px; width:auto;">
+          </a>
+          <a href="https://aws.amazon.com/" target="_blank">
+            <img src="img/aws-logo.svg" alt="AWS" style="height:30px; width:auto;">
+          </a>
+          <a href="https://cloud.google.com/" target="_blank">
+            <img src="img/gcp-logo.svg" alt="Google Cloud" style="height:30px; width:auto;">
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container sec">
+      <h3>FAQ</h3>
+        <div class="qqa">
+          <div class="qq">Academic accommodations:</div>
+          <div class="qa">If you need an academic accommodation based on a disability, you should initiate the request
+            with the <a href="https://oae.stanford.edu/">Office of Accessible Education (OAE)</a>. The OAE will evaluate
+            the request, recommend accommodations, and prepare a letter for faculty. Students should contact the OAE as
+            soon as possible and at any rate in advance of assignment deadlines, since timely notice is needed to
+            coordinate accommodations. It is the student’s responsibility to reach out to the teaching staff regarding
+            the
+            OAE letter. Please create a private post on Ed in the Accommodations category with your letter attached.
+          </div>
+        </div>
+        <div class="qqa">
+          <div class="qq">Can I take this course on credit/no cred basis?</div>
+          <div class="qa">Yes. Credit will be given to those who would have otherwise earned a C- or above.</div>
+        </div>
+        <div class="qqa">
+          <div class="qq">Can I audit or sit in?</div>
+          <div class="qa">In general we are very open to auditing if you are a member of the Stanford community
+            (registered student, staff, and/or faculty). Out of courtesy, we would appreciate that you first email us or
+            talk to the instructor after the first class you attend.</div>
+        </div>
+        <div class="qqa">
+          <div class="qq">Can I work in groups for the Final Project?</div>
+          <div class="qa">Yes, in groups of up to three people.</div>
+        </div>
+        <div class="qqa">
+          <div class="qq">I have a question about the class. What is the best way to reach the course staff?</div>
+          <div class="qa">Almost all questions should be asked on Ed. If you have a sensitive issue, you can email the
+            below address to reach the instructors and head TA directly: <a href="mailto:cs231n-staff-spr26@stanford.edu">cs231n-staff-spr26@stanford.edu</a>.</div>
+        </div>
+        <div class="qqa">
+          <div class="qq">Can I combine the Final Project with another course?</div>
+          <div class="qa"> Yes, you may. Please read the Honor Code section in the <a href="project.html">Project</a>
+            page.</div>
+        </div>
+    </div>
+
+
+    <!-- jQuery and Boostrap -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  
+
+</body></html>

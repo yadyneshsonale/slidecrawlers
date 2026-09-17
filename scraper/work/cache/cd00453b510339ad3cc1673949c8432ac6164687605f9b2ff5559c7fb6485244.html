@@ -1,0 +1,776 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Stanford University CS231n: Deep Learning for Computer Vision</title>
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+    <!-- Google fonts -->
+    <link href="http://fonts.googleapis.com/css?family=Roboto:400,300" rel="stylesheet" type="text/css">
+
+    <!-- Google Analytics -->
+    <script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-ZVR6976GJ6&amp;cx=c&amp;_slc=1"></script><script async="" src="//www.google-analytics.com/analytics.js"></script><script>
+      (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+          (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+          m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+      ga('create', 'UA-46895817-2', 'auto');
+      ga('send', 'pageview');
+    </script>
+
+    <link rel="stylesheet" type="text/css" href="style-new.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <!-- Custom CSS to override some background colors -->
+    <style>
+      .table>thead>tr>td.info,
+      .table>tbody>tr>td.info,
+      .table>tfoot>tr>td.info,
+      .table>thead>tr>th.info,
+      .table>tbody>tr>th.info,
+      .table>tfoot>tr>th.info,
+      .table>thead>tr.info>td,
+      .table>tbody>tr.info>td,
+      .table>tfoot>tr.info>td,
+      .table>thead>tr.info>th,
+      .table>tbody>tr.info>th,
+      .table>tfoot>tr.info>th {
+        background-color: rgb(151, 175, 255);
+      }
+
+      .info {
+        color: black;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand brand" href="index.html">CS231n Home</a>
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="schedule.html"><b>Schedule</b></a></li>
+            <li><a href="assignments.html"><b>Assignments</b></a></li>
+            <li><a href="project.html"><b>Project</b></a></li>
+            <li><a href="office_hours.html"><b>Office Hours</b></a></li>
+            <li><a href="https://canvas.stanford.edu/courses/222471/external_tools/69960"><b>Lecture Videos</b></a></li>
+            <li><a href="https://edstem.org/us/courses/97362/discussion"><b>Ed</b></a></li>
+            <li><a href="https://cs231n.github.io/"><b>Useful Notes</b></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Header -->
+    <div id="header" style="text-align:center">
+      <a href="http://svl.stanford.edu">
+        <img src="img/svl_logo.png" class="logo-left">
+      </a>
+      <a href="http://stanford.edu/">
+        <img src="img/stanfordlogo.jpg" class="logo-right">
+      </a>
+      <h1>CS231n: Deep Learning for Computer Vision</h1>
+      <h3>Stanford - Spring 2026</h3>
+      <div style="clear:both;"></div>
+    </div>
+
+
+    <div class="sechighlight">
+      <div class="container sec">
+        <h2>Schedule</h2>
+        <p>
+        </p><ul>
+          <li><b>Lectures</b> will occur Tuesdays and Thursdays from 12:00-1:20pm Pacific Time at <a href="https://goo.gl/maps/hRjQYd6MqxB2">NVIDIA Auditorium</a>.</li>
+          <!-- <li><b>Discussion</b> sections will (generally) occur on Fridays from 12:30-1:20pm Pacific Time at <a
+               href="https://goo.gl/maps/hRjQYd6MqxB2">NVIDIA Auditorium</a>. Check <a
+               href="https://edstem.org/us/courses/97362/discussion">Ed</a> for any exceptions.</li> -->
+          <li><b>Discussion</b> sections will (generally) occur on Fridays from 12:30-1:20pm Pacific Time at <a href="https://goo.gl/maps/hRjQYd6MqxB2">NVIDIA Auditorium</a>. Check <a href="https://edstem.org/us/courses/97362/discussion">Ed</a> for any exceptions.</li>
+        </ul>
+        Updated lecture slides will be posted here shortly before each lecture. For ease of reading, we have color-coded
+        the lecture category titles in <span style="background-color:rgb(151, 175, 255)">blue</span>, discussion
+        sections (and final project poster session) in <span style="background-color:#F5EA7F">yellow</span>, and the
+        midterm exam in <span style="background-color:rgb(205, 92, 92)">red</span>. Note that the schedule is subject to
+        change as the quarter progresses.
+        <p></p>
+      </div>
+    </div>
+
+    <div class="container sec">
+      <table class="table">
+        <colgroup><col style="width:7%">
+        <col style="width:40%">
+        <!-- <col style="width:15%"> -->
+        <col style="width:35%">
+        <col style="width:9%">
+        <col style="width:9%">
+
+        </colgroup><tbody><tr class="active">
+          <th>Date</th>
+          <th>Description</th>
+          <!-- <th>Lecturer</th> -->
+          <th>Course Materials</th>
+          <th>Events</th>
+          <th>Deadlines</th>
+        </tr>
+
+        <!-- Lecture 1 -->
+        <tr>
+          <td>Mar 31</td>
+          <td>
+            <b>Lecture 1: Introduction</b> <br>
+            Computer vision overview <br>
+            Course overview <br>
+            Course logistics <br>
+            [<a href="https://cs231n.stanford.edu/slides/2026/lecture_1_part_1.pdf" target="_blank">slides 1</a>]
+            [<a href="https://cs231n.stanford.edu/slides/2026/lecture_1_part_2.pdf" target="_blank">slides 2</a>]
+          </td>
+          <!-- <td>Fei-Fei Li, Ehsan Adeli</td> -->
+          <td>
+          </td>
+          <td>
+          </td>
+          <td>
+          </td>
+        </tr>
+
+        <tr class="info">
+          <td>———</td>
+          <td><b>Deep Learning Basics</b>
+            <!-- </td><td> -->
+          </td>
+          <td>
+          </td>
+          <td>
+          </td>
+          <td>
+          </td>
+        </tr>
+
+
+        <!-- Lecture 2 -->
+        <tr>
+          <td>Apr 02</td>
+          <td>
+            <b>Lecture 2: Image Classification with Linear Classifiers</b> <br>
+            The data-driven approach<br>
+            K-nearest neighbor<br>
+            Linear Classifiers<br>
+            Algebraic / Visual / Geometric viewpoints<br>
+            Softmax loss<br>
+            [<a href="https://cs231n.stanford.edu/slides/2026/lecture_2.pdf" target="_blank">slides</a>]
+          </td>
+          <!-- <td>Lecturer Here</td> -->
+          <td>
+            <a href="https://cs231n.github.io/classification/" target="_blank">Image Classification Problem</a><br>
+            <a href="https://cs231n.github.io/linear-classify/" target="_blank">Linear Classification</a><br>
+          </td>
+          <td>
+            Assignment 1 <b>
+              <font color="green">out</font>
+            </b>
+          </td>
+          <td></td>
+        </tr>
+
+
+        <!-- Discussion 1 and A1 -->
+        <tr class="warning">
+          <td>Apr 03</td>
+          <td>
+            Python / Numpy Review Session
+            <br>
+            [<a href="https://colab.research.google.com/github/cs231n/cs231n.github.io/blob/master/python-colab.ipynb">Colab</a>]
+            [<a href="https://cs231n.github.io/python-numpy-tutorial/">Tutorial</a>]
+          </td><td>
+            <i class="fa fa-clock-o"></i> 12:30-1:20pm PT
+          </td>
+          <!-- <td></td> -->
+          <td></td>
+          <td></td>
+        </tr>
+
+
+        <!-- Lecture 3 -->
+        <tr>
+          <td>Apr 07</td>
+          <td>
+            <b>Lecture 3: Regularization and Optimization</b> <br>
+            Regularization <br>
+            Stochastic Gradient Descent<br>
+            Momentum, AdaGrad, Adam<br>
+            Learning rate schedules<br>
+            [<a href="https://cs231n.stanford.edu/slides/2026/lecture_3.pdf" target="_blank">slides</a>]
+          </td>
+          <!-- <td>Lecturer Here</td> -->
+          <td>
+            <a href="https://cs231n.github.io/optimization-1/" target="_blank">Optimization</a><br>
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+
+
+        <!-- Lecture 4 -->
+        <tr>
+          <td>Apr 09</td>
+          <td>
+            <b>Lecture 4: Neural Networks and Backpropagation</b> <br>
+
+            Multi-layer Perceptron<br>
+            Backpropagation<br>
+            [<a href="https://cs231n.stanford.edu/slides/2026/lecture_4.pdf" target="_blank">slides</a>]
+          </td>
+          <!-- <td>Lecturer Here</td> -->
+          <td>
+            <a href="http://cs231n.github.io/optimization-2">Backprop</a><br>
+            <a href="handouts/linear-backprop.pdf">Linear backprop example</a><br>
+            Suggested Readings:
+            <ol>
+              <li><a href="https://distill.pub/2017/momentum/">Why Momentum Really Works</a></li>
+              <li><a href="handouts/derivatives.pdf">Derivatives notes</a></li>
+              <li><a href="https://cs231n.stanford.edu/papers/lecun-98b.pdf">Efficient backprop</a></li>
+              <li>More backprop references: <a href="http://colah.github.io/posts/2015-08-Backprop/">[1]</a>, <a href="http://neuralnetworksanddeeplearning.com/chap2.html">[2]</a>, <a href="https://www.youtube.com/watch?v=q0pm3BrIUFo">[3]</a></li>
+            </ol>
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+
+
+        <!-- Discussion 2 -->
+        <tr class="warning">
+          <td>Apr 10</td>
+          <td>
+            Backprop Review Session
+            <br>
+            [<a href="https://colab.research.google.com/github/cs231n/cs231n.github.io/blob/master/backprop.ipynb">Colab</a>]
+            [<a href="https://cs231n.stanford.edu/slides/2026/section_2_backprop.pdf" target="_blank">slides</a>]
+          </td><td>
+            <i class="fa fa-clock-o"></i> 12:30-1:20pm PT
+          </td>
+          <!-- <td></td> -->
+          <td></td>
+          <td></td>
+        </tr>
+
+
+        <tr class="info">
+          <td>———</td>
+          <td>
+            <b>Perceiving and Understanding the Visual World</b>
+          </td>
+          <!-- <td></td> -->
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <!-- Lecture 5 -->
+        <tr>
+          <td>Apr 14</td>
+          <td>
+            <b>Lecture 5: Image Classification with CNNs</b> <br>
+            History<br>
+            Higher-level representations, image features<br>
+            Convolution and pooling<br>
+            [<a href="https://cs231n.stanford.edu/slides/2026/lecture_5.pdf" target="_blank">slides</a>]
+          </td>
+          <!-- <td>Lecturer Here</td> -->
+          <td>
+            <a href="http://cs231n.github.io/convolutional-networks">Convolutional Networks</a><br>
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <!-- Lecture 6 -->
+        <tr>
+          <td>Apr 16</td>
+          <td>
+            <b>Lecture 6: CNN Architectures</b> <br>
+            Batch Normalization<br>
+            Transfer learning<br>
+            AlexNet, VGG, ResNet<br>
+            [<a href="https://cs231n.stanford.edu/slides/2026/lecture_6.pdf" target="_blank">slides</a>]
+          </td>
+          <!-- <td>Lecturer Here</td> -->
+          <td>
+            <a href="https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf">AlexNet</a>,
+            <a href="https://arxiv.org/abs/1409.1556">VGGNet</a>, <a href="https://arxiv.org/abs/1409.4842">GoogLeNet</a>, <a href="https://arxiv.org/abs/1512.03385">ResNet</a>
+          </td>
+          <td>
+            Project Proposal <b>
+              <font color="green">out</font>
+            </b><br>
+          </td>
+          <td>
+            Assignment 1 <b>
+              <font color="red">due</font>
+            </b><br>
+          </td>
+        </tr>
+
+        <!-- Discussion 3 -->
+        <tr class="warning">
+          <td>Apr 17</td>
+          <td>
+            Final Project Overview and Guidelines
+            <br>
+            [<a href="https://cs231n.stanford.edu/slides/2026/section_3_project.pdf" target="_blank">slides</a>]
+          </td><td>
+            <i class="fa fa-clock-o"></i> 12:30-1:20pm PT
+          </td>
+          <!-- <td></td> -->
+          <td>
+            <!-- Assignment 1 <b><font color="red">due</font></b> -->
+          </td>
+          <td></td>
+        </tr>
+
+
+        <!-- Lecture 7 -->
+        <tr>
+          <td>Apr 21</td>
+          <td>
+            <b>Lecture 7: Recurrent Neural Networks</b> <br>
+            RNN, LSTM, GRU<br>
+            Language modeling<br>
+            Image captioning<br>
+            Sequence-to-sequence<br>
+            [<a href="https://cs231n.stanford.edu/slides/2026/lecture_7.pdf" target="_blank">slides</a>]
+          </td>
+          <!-- <td>Lecturer Here</td> -->
+          <td>
+            Suggested Readings:
+            <ol>
+              <li><a href="http://www.deeplearningbook.org/contents/rnn.html">DL book RNN chapter</a><br></li>
+              <li><a href="https://colah.github.io/posts/2015-08-Understanding-LSTMs/">Understanding LSTM
+                  Networks</a><br></li>
+            </ol>
+          </td>
+          <td>
+          </td>
+          <td>
+          </td>
+        </tr>
+
+
+        <!-- Lecture 8 -->
+        <tr>
+          <td>Apr 23</td>
+          <td>
+            <b>Lecture 8: Attention and Transformers</b> <br>
+            Self-Attention <br>
+            Transformers <br>
+            [<a href="https://cs231n.stanford.edu/slides/2026/lecture_8.pdf" target="_blank">slides</a>]
+          </td>
+          <!-- <td>Fill Here</td> -->
+          <td>
+            Suggested Readings:
+            <ol>
+              <li> Attention is All You Need
+                [<a href="https://arxiv.org/abs/1706.03762">Original Transformers Paper</a>]
+                <br>
+              </li>
+              <li> Attention? Attention
+                [<a href="https://lilianweng.github.io/posts/2018-06-24-attention/">Blog by Lilian
+                  Weng</a>]
+                <br>
+              </li>
+              <li> The Illustrated Transformer
+                [<a href="http://jalammar.github.io/illustrated-transformer/">Blog by Jay Alammar</a>]
+                <br>
+              </li>
+              <li>ViT: Transformers for Image Recognition
+                [<a href="https://arxiv.org/abs/2010.11929">Paper</a>]
+                [<a href="https://ai.googleblog.com/2020/12/transformers-for-image-recognition-at.html?m=1">Blog</a>]
+                [<a href="https://www.youtube.com/watch?v=TrdevFK_am4">Video</a>]
+                <br>
+              </li>
+
+              <br>
+            </ol>
+          </td>
+          <td>
+            Assignment 2 <b>
+              <font color="green">out</font>
+            </b><br>
+          </td>
+          <td>
+            Project Proposal <b>
+              <font color="red">due</font>
+            </b><br>
+          </td>
+        </tr>
+
+        <!-- Discussion 4 -->
+        <tr class="warning">
+          <td>Apr 24</td>
+          <td>
+            PyTorch Review Session
+            <br>
+            [<a href="https://colab.research.google.com/github/cs231n/cs231n.github.io/blob/master/pytorch.ipynb">Colab</a>]
+          </td><td>
+            <i class="fa fa-clock-o"></i> 12:30-1:20pm PT
+          </td>
+          <!-- <td></td> -->
+          <td></td>
+          <td></td>
+        </tr>
+
+        <!-- Lecture 9 -->
+        <tr>
+          <td>Apr 28</td>
+          <td>
+            <b>Lecture 9: Object Detection, Image Segmentation, Visualizing and Understanding</b> <br>
+            Single-stage detectors<br>
+            Two-stage detectors<br>
+            Semantic/Instance/Panoptic segmentation<br>
+            Feature visualization and inversion <br>
+            Adversarial examples <br>
+            DeepDream and style transfer <br>
+            [<a href="https://cs231n.stanford.edu/slides/2026/lecture_9.pdf" target="_blank">slides</a>]
+          </td>
+          <!-- <td>Lecturer Here</td> -->
+          <td>
+            <ol>
+              <li><a href="https://arxiv.org/abs/1411.4038">FCN</a>, <a href="https://arxiv.org/abs/1311.2524">R-CNN</a>, <a href="https://arxiv.org/abs/1504.08083">Fast
+                  R-CNN</a>, <a href="https://arxiv.org/abs/1506.01497">Faster R-CNN</a>, <a href="https://arxiv.org/abs/1506.02640">YOLO</a></li>
+              <li>DETR: End-to-End Object Detection with Transformers
+                [<a href="https://arxiv.org/abs/2005.12872">Paper</a>]
+                [<a href="https://ai.facebook.com/blog/end-to-end-object-detection-with-transformers/">Blog</a>]
+                [<a href="https://www.youtube.com/watch?v=utxbUlo9CyY">Video</a>]</li>
+            </ol>
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <!-- Lecture 10 -->
+        <tr>
+          <td>Apr 30</td>
+          <td>
+            <b>Lecture 10: Video Understanding</b> <br>
+            Video classification<br>
+            3D CNNs<br>
+            Two-stream networks<br>
+            Multimodal video understanding<br>
+            [<a href="https://cs231n.stanford.edu/slides/2026/lecture_10.pdf" target="_blank">slides</a>]
+          </td>
+          <!-- <td>Lecturer Here</td> -->
+          <td></td>
+          <td></td>
+        </tr>
+
+        <!-- Discussion 5 -->
+        <tr class="warning">
+          <td>May 01</td>
+          <td>
+            RNNs &amp; Transformers
+            <br>
+            [<a href="https://cs231n.stanford.edu/slides/2026/section_5.pdf" target="_blank">slides</a>]
+          </td><td>
+            <i class="fa fa-clock-o"></i> 12:30-1:20pm PT
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+
+
+        <!-- Lecture 11 -->
+        <tr>
+          <td>May 05</td>
+          <td>
+            <b>Lecture 11: Large Scale Distributed Training</b> <br>
+            Utilization, Parallelism, and Activation Checkpointing<br>
+            [<a href="https://cs231n.stanford.edu/slides/2026/lecture_11.pdf" target="_blank">slides</a>]
+          </td>
+          <!-- <td>Lecturer Here</td> -->
+          <td></td>
+          <td></td>
+        </tr>
+
+
+        <tr class="info">
+          <td>———</td>
+          <td>
+            <b>Generative and Interactive Visual Intelligence</b>
+          </td>
+          <!-- <td></td> -->
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+
+        <!-- Lecture 12 -->
+        <tr>
+          <td>May 07</td>
+          <td>
+            <b>Lecture 12: Self-supervised Learning</b> <br>
+            Pretext tasks<br>
+            Contrastive learning<br>
+            Multisensory supervision<br>
+            [<a href="https://cs231n.stanford.edu/slides/2026/lecture_12.pdf" target="_blank">slides</a>]
+          </td>
+          <!-- <td>Lecturer Here</td> -->
+          <td>
+            Suggested Readings:
+            <ol>
+              <li> <a href="https://lilianweng.github.io/lil-log/2019/11/10/self-supervised-learning.html">Lilian Weng
+                  Blog Post</a><br></li>
+              <li> DINO: Emerging Properties in Self-Supervised Vision Transformers
+                [<a href="https://arxiv.org/abs/2104.14294">Paper</a>]
+                [<a href="https://ai.facebook.com/blog/dino-paws-computer-vision-with-self-supervised-transformers-and-10x-more-efficient-training">Blog</a>]
+                [<a href="https://youtu.be/h3ij3F3cPIk">Video</a>]
+                <br>
+              </li>
+            </ol>
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+
+
+
+        <!-- Discussion 6 -->
+        <tr class="warning">
+          <td>May 08</td>
+          <td>
+            Midterm Review Session
+            <br>
+          </td><td>
+            <i class="fa fa-clock-o"></i> 12:30-1:20pm PT
+          </td>
+          <!-- <td></td> -->
+          <td></td>
+          <td>
+            Assignment 2 <b>
+              <font color="red">due</font>
+            </b><br>
+          </td>
+        </tr>
+
+
+        <!-- Midterm -->
+        <tr class="danger">
+          <td>May 12</td>
+          <td>
+            <b>In-Class Midterm</b> <br>
+          </td>
+          <td>
+            <i class="fa fa-clock-o"></i> 12:00-1:20pm PT
+          </td>
+          <!-- <td></td> -->
+          <td></td>
+          <td></td>
+        </tr>
+
+
+        <!-- Lecture 13 -->
+        <tr>
+          <td>May 14</td>
+          <td>
+            <b>Lecture 13: Generative Models 1</b> <br>
+            Variational Autoencoders <br>
+            Generative Adversarial Network <br>
+            Autoregressive Models <br>
+            [<a href="https://cs231n.stanford.edu/slides/2026/lecture_13.pdf" target="_blank">slides</a>]
+          </td>
+          <!-- <td>Lecturer Here</td> -->
+          <td>
+            Suggested Readings:
+            <ol>
+              <li> <a href="https://yunfanj.com/blog/2021/01/11/ELBO.html">Blog: ELBO — What &amp; Why</a><br></li>
+            </ol>
+          </td>
+          <td>
+            Assignment 3 <b>
+              <font color="green">out</font>
+            </b><br>
+          </td>
+          <td>
+          </td>
+        </tr>
+
+
+        <tr>
+          <td>May 15</td>
+          <td></td>
+          <!-- <td></td> -->
+          <td></td>
+          <td></td>
+          <td>
+            Milestone 1 Check-In <b>
+              <font color="red">due</font>
+            </b>
+          </td>
+        </tr>
+
+
+        <!-- Lecture 14 -->
+        <tr>
+          <td>May 19</td>
+          <td>
+            <b>Lecture 14: Generative Models 2</b> <br>
+            Diffusion models <br>
+            [<a href="https://cs231n.stanford.edu/slides/2026/lecture_14.pdf" target="_blank">slides</a>]
+          </td>
+          <!-- <td>Lecturer Here</td> -->
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <!-- Lecture 15 -->
+        <tr>
+          <td>May 21</td>
+          <td>
+            <b>Lecture 15: 3D Vision</b> <br>
+            3D shape representations<br>
+            Shape reconstruction<br>
+            Neural implicit representations<br>
+            [<a href="https://cs231n.stanford.edu/slides/2026/lecture_15.pdf" target="_blank">slides</a>]
+          </td>
+          <!-- <td>Lecturer Here</td> -->
+          <td>
+          </td>
+          <td>
+            <!-- Assignment 3 <b><font color="red">due</font></b> -->
+          </td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>May 22</td>
+          <td></td>
+          <!-- <td></td> -->
+          <td></td>
+          <td></td>
+          <td>
+            Milestone 2 Check-In <b>
+              <font color="red">due</font>
+            </b>
+          </td>
+        </tr>
+
+        <!-- Lecture 16 -->
+        <tr>
+          <td>May 26</td>
+          <td>
+            <b>Lecture 16: Vision and Language </b> <br>
+            [<a href="https://cs231n.stanford.edu/slides/2026/lecture_16.pdf" target="_blank">slides</a>]
+          </td>
+          <!-- <td>Lecturer Here</td> -->
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+
+        <!-- Lecture 17 -->
+        <tr>
+          <td>May 28</td>
+          <td>
+            <b>Lecture 17: World Modeling</b> <br>
+            Guest Lecturer: Prof. Gordon Wetzstein<br>
+          </td>
+          <!-- <td>Lecturer Here</td> -->
+          <td></td>
+          <td></td>
+          <td>
+            Assignment 3 <b>
+              <font color="red">due</font>
+            </b><br>
+          </td>
+        </tr>
+
+
+        <tr>
+          <td>May 29</td>
+          <td></td>
+          <!-- <td></td> -->
+          <td></td>
+          <td></td>
+          <td>
+            Milestone 3 Check-In <b>
+              <font color="red">due</font>
+            </b>
+          </td>
+        </tr>
+
+
+        <!-- Lecture 18 -->
+        <tr>
+          <td>Jun 02</td>
+          <td>
+            <b>Lecture 18: Human-Centered AI</b><br>
+          </td>
+          <!-- <td>Lecturer Here</td> -->
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>Jun 05</td>
+          <td></td>
+          <!-- <td></td> -->
+          <td></td>
+          <td></td>
+          <td>
+            Final Report <b>
+              <font color="red">due</font>
+            </b>
+          </td>
+        </tr>
+
+
+
+
+        <!-- Final Project Poster Session -->
+        <tr class="warning">
+          <td>Jun 10</td>
+          <td>
+            <b>Final Project Poster Session</b> <br>
+            <!-- Time: 12:00 PM - 4:30 PM<br>
+        Location: AT&amp;T Patio (Gates Building First Floor)<br>
+        Session A Check-in: 12 PM - 12:15 PM <br>
+        Session A: 12:15 PM - 2:15 PM<br>
+        Session B Check-in: 2:15 PM - 2:30 PM<br>
+        Session B: 2:30 PM - 4:30 PM<br> -->
+          </td>
+          <td>
+            <i class="fa fa-clock-o"></i> 12:15-3:15 PM PT
+            <br>
+            Location: Gates Patio + HAI
+          </td>
+          <td>
+          </td>
+          <td>
+          </td>
+        </tr>
+
+      </tbody></table>
+    </div>
+
+    <!-- jQuery and Boostrap -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  
+
+</body></html>

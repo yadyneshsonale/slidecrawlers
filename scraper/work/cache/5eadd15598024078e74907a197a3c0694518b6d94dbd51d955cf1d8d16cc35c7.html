@@ -1,0 +1,1211 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
+
+  <title>Stanford CS 224N | Natural Language Processing with Deep Learning</title>
+
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+  <!-- Google fonts -->
+  <link href="http://fonts.googleapis.com/css?family=Roboto:400,300" rel="stylesheet" type="text/css">
+
+  <!-- Google Analytics -->
+  <script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-KWDQQWLR0T&amp;cx=c&amp;_slc=1"></script><script async="" src="//www.google-analytics.com/analytics.js"></script><script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-60458624-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+</head>
+
+<body>
+<!-- <script src="header.js"></script> - We just replicate navbar and header in pages as faster and better with search engines -->
+<!-- Navbar -->
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand brand" href="index.html">CS224N Home</a>
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="index.html#coursework">Coursework</a></li>
+        <li><a href="index.html#schedule">Schedule</a></li>
+        <li><a href="office_hours.html">Office Hours</a></li>
+        <li><a href="project.html">Final projects</a></li>
+        <li><a href="https://canvas.stanford.edu/courses/217005/external_tools/69960">Lecture Videos</a></li>
+        <li><a href="https://edstem.org/us/courses/90535/discussion/7488560">Ed Forum</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Header -->
+<div id="header" style="text-align:center">
+  <a href="http://nlp.stanford.edu/">
+    <img src="images/stanford-nlp-logo-new.jpg" class="logo-left">
+  </a>
+  <a href="http://stanford.edu/">
+    <img src="images/stanfordlogo.jpg" class="logo-right">
+  </a>
+  <h1>CS224N: Natural Language Processing with Deep Learning</h1>
+  <h3>Stanford / Winter 2026</h3>
+  <div style="clear:both;"></div>
+</div>
+
+<!-- Intro -->
+<div class="container sec" id="intro">
+  <!-- <p>
+  <font style="color: #8c1515; font-weight: bold">Note: In the 2023–24
+  academic year, CS224N will be taught in both Winter and
+  Spring 2024.</font>
+  </p> -->
+
+  <p>
+    Natural language processing (NLP) is a crucial part of artificial intelligence (AI), modeling how people share information.
+    In recent years, deep learning approaches have obtained very high performance on many NLP tasks.
+    In this course, students gain a thorough introduction to cutting-edge neural networks for NLP.
+  </p>
+</div>
+
+<!-- Staff Info -->
+<div class="sechighlight">
+  <div class="container sec" id="people">
+    <!-- <div class="row"> -->
+    <div class="col-md-2">
+      <h3>Instructors</h3>
+      <div class="instructor">
+        <a href="https://cs.stanford.edu/~diyiy/">
+        <div class="instructorphoto"><img src="images_w26/Diyi Yang.jpg"></div>
+        <div>Diyi Yang</div>
+        </a>
+      </div>
+      <div class="instructor">
+        <a href="https://yejinc.github.io/">
+        <div class="instructorphoto"><img src="images_w26/Yejin Choi.jpg"></div>
+        <div>Yejin Choi</div>
+        </a>
+      </div>
+      <h3>Course Staff</h3>
+      <div class="instructor">
+        <a href="mailto:johncho@stanford.edu">
+        <div class="instructorphoto"><img src="images_w26/John Cho (Course Manager).jpg"></div>
+        <div>John Cho (Course Manager)</div>
+        </a>
+      </div>
+      <div class="instructor">
+        <div class="instructorphoto"><img src="images_w26/Swati Dube Batra (Course Manager Advisor).jpg"></div>
+        <div>Swati Dube Batra (Course Manager Advisor)</div>
+      </div>
+    </div>
+    <div class="col-md-10">
+      <h3>Teaching Assistants</h3>
+      <div class="instructor">
+        <a href="https://juliekallini.com/">
+          <div class="instructorphoto"><img src="images_w26/Julie Kallini (Head TA).jpg"></div>
+          <div>Julie Kallini (Head TA)</div>
+        </a>
+      </div>
+      <div class="instructor">
+        <a href="https://ai.stanford.edu/~ahmedah/">
+          <div class="instructorphoto"><img src="images_w26/Ahmed Ahmed (TA).jpg"></div>
+          <div>Ahmed Ahmed</div>
+        </a>
+      </div>
+      <div class="instructor">
+        <a href="https://davidanugraha.github.io/">
+          <div class="instructorphoto"><img src="images_w26/David Anugraha (TA).jpg"></div>
+          <div>David Anugraha</div>
+        </a>
+      </div>
+      <div class="instructor">
+        <a href="https://lukebailey181.github.io/">
+          <div class="instructorphoto"><img src="images_w26/Luke Bailey (TA).jpg"></div>
+          <div>Luke Bailey</div>
+        </a>
+      </div>
+      <div class="instructor">
+        <a href="https://scholar.google.com/citations?user=IVnb6XQAAAAJ&amp;hl=en">
+          <div class="instructorphoto"><img src="images_w26/Sarah Chen (TA).png"></div>
+          <div>Sarah Chen</div>
+        </a>
+      </div>
+      <div class="instructor">
+        <a href="https://cchoi1.github.io/">
+          <div class="instructorphoto"><img src="images_w26/Caroline Choi (TA).jpg"></div>
+          <div>Caroline Choi</div>
+        </a>
+      </div>
+      <div class="instructor">
+        <a href="https://www.linkedin.com/in/advitdeepak/">
+          <div class="instructorphoto"><img src="images_w26/Advit Deepak (TA).jpg"></div>
+          <div>Advit Deepak</div>
+        </a>
+      </div>
+      <div class="instructor">
+        <a href="https://www.linkedin.com/in/nevingeorge4">
+          <div class="instructorphoto"><img src="images_w26/Nevin George (TA).jpg"></div>
+          <div>Nevin George</div>
+        </a>
+      </div>
+      <div class="instructor">
+        <a href="https://sekim12.github.io/">
+          <div class="instructorphoto"><img src="images_w26/Simon Kim (TA).jpg"></div>
+          <div>Simon Kim</div>
+        </a>
+      </div>
+      <div class="instructor">
+        <a href="https://www.linkedin.com/in/ali-sartaz-khan-9334011a3/">
+          <div class="instructorphoto"><img src="images_w26/Ali Sartaz Khan (TA).png"></div>
+          <div>Ali Sartaz Khan</div>
+        </a>
+      </div>
+      <div class="instructor">
+        <a href="https://arpandeep.com/">
+          <div class="instructorphoto"><img src="images_w26/Arpandeep Khatua (TA).jpg"></div>
+          <div>Arpandeep Khatua</div>
+        </a>
+      </div>
+      <div class="instructor">
+        <a href="https://www.linkedin.com/in/alisa-levin/">
+          <div class="instructorphoto"><img src="images_w26/Alisa Levin (TA).jpg"></div>
+          <div>Alisa Levin</div>
+        </a>
+      </div>
+      <div class="instructor">
+        <a href="https://george1459.github.io/">
+          <div class="instructorphoto"><img src="images_w26/Shicheng Liu (TA).jpg"></div>
+          <div>Shicheng Liu</div>
+        </a>
+      </div>
+      <div class="instructor">
+        <a href="https://liuwei283.github.io/">
+          <div class="instructorphoto"><img src="images_w26/Wei Liu (TA).jpg"></div>
+          <div>Wei Liu</div>
+        </a>
+      </div>
+      <div class="instructor">
+        <a href="https://minsik-ai.github.io/">
+          <div class="instructorphoto"><img src="images_w26/Minsik Oh (TA).jpg"></div>
+          <div>Minsik Oh</div>
+        </a>
+      </div>
+      <div class="instructor">
+        <a href="https://noviscl.github.io/">
+          <div class="instructorphoto"><img src="images_w26/Chenglei Si (TA).jpg"></div>
+          <div>Chenglei Si</div>
+        </a>
+      </div>
+      <div class="instructor">
+        <a href="https://sites.google.com/view/msuzgun">
+          <div class="instructorphoto"><img src="images_w26/Mirac Suzgun (TA).jpg"></div>
+          <div>Mirac Suzgun</div>
+        </a>
+      </div>
+      <div class="instructor">
+        <a href="http://www.tristanthrush.com/">
+          <div class="instructorphoto"><img src="images_w26/Tristan Thrush (TA).jpg"></div>
+          <div>Tristan Thrush</div>
+        </a>
+      </div>
+      <div class="instructor">
+        <a href="https://smiles724.github.io/">
+          <div class="instructorphoto"><img src="images_w26/Fang Wu (TA).jpg"></div>
+          <div>Fang Wu</div>
+        </a>
+      </div>
+      <div class="instructor">
+        <a href="https://yuqinan.github.io/">
+          <div class="instructorphoto"><img src="images_w26/Qinan Yu (TA).jpg"></div>
+          <div>Qinan Yu</div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+<!-- Logistics -->
+<div class="container sec" id="logistics">
+  <h2>Logistics</h2>
+  <ul>
+    <li><b>Lectures:</b> are on Tuesday/Thursday 4:30 PM - 5:50 PM Pacific Time in <a href="https://goo.gl/maps/hRjQYd6MqxB2">NVIDIA Auditorium</a>. The lectures will also be livestreamed on <a href="https://canvas.stanford.edu/">Canvas</a> via Panopto.
+    </li>
+    <li><b>Lecture videos for enrolled students:</b> are posted on <a href="https://canvas.stanford.edu/courses/217005/external_tools/69960">Canvas</a> (requires login) shortly after
+      each lecture ends. Unfortunately, it is not possible to make these videos viewable by non-enrolled students.
+    </li><li><b>Publicly available lecture videos and versions of the course:</b> Complete videos for the CS224N course are
+      available (free!) on
+      <a href="https://www.youtube.com/playlist?list=PLoROMvodv4rOaMFbaqxPDoLWjDaRAdP9D">the CS224N 2024 YouTube
+        playlist</a>.
+      Anyone is welcome to enroll in <a href="https://online.stanford.edu/courses/xcs224n-natural-language-processing-deep-learning">XCS224N: Natural
+        Language Processing with Deep Learning</a>, the Stanford Artificial Intelligence Professional Program version of
+      this course, throughout the year (medium fee, community TAs and certificate). Stanford students enroll normally in
+      CS224N and others can also enroll in <a href="https://online.stanford.edu/courses/cs224n-natural-language-processing-deep-learning">CS224N via Stanford
+        online</a> (high cost, limited enrollment,
+      gives Stanford credit).
+      The lecture slides and assignments are updated online each year as the course progresses. We are happy for anyone
+      to use these resources, and we are happy to get acknowledgements.
+    </li>
+    <li><b>Office hours</b>: Hybrid format with remote (over Zoom) or in person options. Information <a href="office_hours.html">here</a>.</li>
+    <li><b>Contact</b>: Students should ask <i>all</i> course-related questions in the Ed forum, where you will also
+      find announcements. You will find the course Ed on the course Canvas page or in the header link above.
+      For external enquiries, emergencies, or personal matters that you don't wish to put in a private Ed post, you can
+      email us at <i>cs224n-staff-win2526@cs.stanford.edu</i>. Please send all emails to this mailing list - do not email the instructors directly.</li>
+  </ul>
+</div>
+</div>
+
+<!-- Content -->
+<div class="container sec" id="content">
+  <h2>Content</h2>
+  <h3>What is this course about?</h3>
+  <p>
+    Natural language processing (NLP) or computational linguistics is one of the most important technologies of the
+    information age.
+    Applications of NLP are everywhere because people communicate almost everything in language: web search, advertising,
+    emails, customer service, language translation, virtual agents, medical reports, politics, etc.
+    In the 2010s, deep learning (or neural network) approaches obtained very high performance across many different NLP
+    tasks, using single end-to-end neural models that did not require traditional, task-specific feature engineering. In
+    the 2020s amazing further progress was made through the scaling of Large Language Models, such as ChatGPT. In this
+    course, students will gain a thorough introduction to both the basics of Deep Learning for NLP and the latest
+    cutting-edge research on Large Language Models (LLMs).
+    Through lectures, assignments and a final project, students will learn the necessary skills to design, implement, and
+    understand their own neural network models, using the <a href="https://pytorch.org/">Pytorch</a> framework.
+  </p>
+  <blockquote>
+    <small>
+      <i>“Take it. CS221 taught me algorithms. CS229 taught me math. CS224N taught me how to write machine learning models.”</i> – A CS224N student on Carta
+    </small>
+  </blockquote>
+  <h3>Previous offerings</h3>
+  <p>
+    Below you can find archived websites and student project reports from previous years. <b><font color="red">Disclaimer: assignments change from year to year; please do not do assignments from previous years!</font></b>
+  </p>
+  <div>
+    <table class="table">
+      <tbody><tr class="active">
+        <td>
+            <b>CS224N Websites</b>:
+            <a href="https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1254/">Winter 2025</a> /
+            <a href="https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1246">Spring 2024</a> /
+	    <a href="https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1244">Winter 2024</a> /
+            <a href="https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1234">Winter 2023</a> /
+            <a href="https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1224">Winter 2022</a> /
+            <a href="https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1214">Winter 2021</a> /
+            <a href="https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1204">Winter 2020</a> /
+            <a href="https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194">Winter 2019</a> /
+            <a href="https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1184">Winter 2018</a> /
+            <a href="https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1174">Winter 2017</a> /
+            <a href="https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1162">Autumn 2015</a> /
+            <a href="https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1152">Autumn 2014</a> /
+            <a href="https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1142">Autumn 2013</a> /
+            <a href="https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1132">Autumn 2012</a> /
+            <a href="https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1122">Autumn 2011</a> /
+            <a href="https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1114">Winter 2011</a> /
+            <a href="https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1106">Spring 2010</a> /
+            <a href="https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1096">Spring 2009</a> /
+            <a href="https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1086">Spring 2008</a> /
+            <a href="https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1076">Spring 2007</a> /
+            <a href="https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1066">Spring 2006</a> /
+            <a href="https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1056">Spring 2005</a> /
+            <a href="https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1046">Spring 2004</a> /
+            <a href="https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1036">Spring 2003</a> /
+            <a href="https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1026">Spring 2002</a> /
+            <a href="https://web.stanford.edu/class/archive/cs/cs224n/manning.499">Spring 2000</a>
+        </td>
+      </tr>
+      <tr class="active">
+        <td>
+            <b>CS224N Lecture Videos</b>:
+            <a href="https://www.youtube.com/playlist?list=PLoROMvodv4rOaMFbaqxPDoLWjDaRAdP9D">Spring 2024</a> /
+            <a href="https://www.youtube.com/playlist?list=PLoROMvodv4rMFqRtEuo6SGjY4XbRIVRd4">Winter 2023</a> / 
+            <a href="https://www.youtube.com/playlist?list=PLoROMvodv4rOSH4v6133s9LFPRHjEmbmJ">Winter 2021</a> /
+            <a href="https://www.youtube.com/playlist?list=PLoROMvodv4rOhcuXMZkNm7j3fVwBBY42z">Winter 2019</a> /
+            <a href="https://www.youtube.com/playlist?list=PL3FW7Lu3i5Jsnh1rnUwq_TcylNr7EkRe6">Winter 2017</a>
+        </td>
+      </tr>
+      <tr class="active">
+        <td>
+            <b>CS224N Reports</b>:
+            <a href="https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1244/project.html">Winter 2024</a> /
+            <a href="https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1234/project.html">Winter 2023</a> /
+            <a href="https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1224/project.html">Winter 2022</a> /
+            <a href="https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1214/project.html">Winter 2021</a> /
+            <a href="https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1204/project.html">Winter 2020</a> /
+            <a href="https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/project.html">Winter 2019</a> /
+            <a href="https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1184/reports.html">Winter 2018</a> /
+            <a href="https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1174/reports.html">Winter 2017</a> /
+            <a href="http://nlp.stanford.edu/courses/cs224n/">Autumn 2015 and earlier</a>
+        </td>
+      </tr>
+      <tr class="active">
+        <td>
+            <b>CS224d Reports</b>:
+            <a href="http://cs224d.stanford.edu/reports_2016.html">Spring 2016</a> /
+            <a href="http://cs224d.stanford.edu/reports_2015.html">Spring 2015</a>
+        </td>
+      </tr>
+    </tbody></table>
+  </div>
+  <h3>Prerequisites</h3>
+  <ul>
+      <li><b>Proficiency in Python</b>
+          <p>All class assignments will be in Python (using <a href="https://numpy.org/">NumPy</a> and <a href="https://pytorch.org">PyTorch</a>). If you need to remind yourself of Python, or you're not very familiar with NumPy, you can come to the Python review session in week 1 (listed in the <a href="#schedule">schedule</a>). If you have a lot of programming experience but in a different language (e.g. C/C++/Matlab/Java/Javascript), you will probably be fine.</p>
+      </li>
+      <li><b>College Calculus, Linear Algebra</b> (e.g. MATH 51, CME 100)
+          <p>You should be comfortable taking (multivariable) derivatives and understanding matrix/vector notation and operations.</p>
+      </li>
+      <li><b>Basic Probability and Statistics</b> (e.g. CS 109 or equivalent)
+          <p>You should know the basics of probabilities, gaussian distributions, mean, standard deviation, etc.</p>
+      </li>
+      <li><b>Foundations of Machine Learning</b> (e.g. CS221, CS229, CS230, or CS124)
+          <p>We will be formulating cost functions, taking derivatives and performing optimization with gradient descent.
+            If you already have basic machine learning and/or deep learning knowledge, the course will be easier; however it is possible to take CS224N without it. There are many introductions to ML, in webpage, book, and video form. One approachable introduction is Hal Daumé’s in-progress <a href="https://web.archive.org/web/20250114002202/http://ciml.info/dl/v0_99/ciml-v0_99-all.pdf"><i>A Course in Machine Learning</i></a>. Reading the first 5 chapters of that book would be good background. Knowing the first 7 chapters would be even better!</p>
+      </li>
+  </ul>
+  <h3>Reference Texts</h3>
+  <p>
+    The following texts are useful, but none are required. All of them can be read free online.
+  </p>
+  <ul>
+      <li>
+          Dan Jurafsky and James H. Martin. <a href="https://web.stanford.edu/~jurafsky/slp3/">Speech and Language Processing (2024 pre-release)</a>
+    </li>
+      <li>
+          Jacob Eisenstein. <a href="https://github.com/jacobeisenstein/gt-nlp-class/blob/master/notes/eisenstein-nlp-notes.pdf">Natural Language Processing</a>
+      </li>
+      <li>
+          Yoav Goldberg. <a href="http://u.cs.biu.ac.il/~yogo/nnlp.pdf">A Primer on Neural Network Models for Natural Language Processing</a>
+      </li>
+      <li>
+          Ian Goodfellow, Yoshua Bengio, and Aaron Courville. <a href="http://www.deeplearningbook.org/">Deep Learning</a>
+      </li>
+      <li>
+          Delip Rao and Brian McMahan. <a href="https://searchworks.stanford.edu/view/13241676">Natural Language Processing with PyTorch</a> (requires Stanford login).
+      </li>
+      <li>
+          Lewis Tunstall, Leandro von Werra, and Thomas Wolf. <a href="https://transformersbook.com/">Natural Language Processing with Transformers</a>
+      </li>
+    </ul>
+    <p>
+    If you have no background in neural networks but would like to take the course anyway, you might well find one of these books helpful to give you more background:
+    </p>
+    <ul>
+      <li>
+         Michael A. Nielsen. <a href="http://neuralnetworksanddeeplearning.com">Neural Networks and Deep Learning</a>
+      </li>
+      <li>
+      Eugene Charniak. <a href="https://mitpress.mit.edu/books/introduction-deep-learning">Introduction to Deep Learning</a>
+      </li>
+  </ul>
+</div>
+
+<!-- Coursework -->
+<!-- Note the margin-top:-20px and the <br> serve to make the #coursework hyperlink display correctly (with the h2 header visible) -->
+<div class="sechighlight">
+<div class="container sec" id="coursework" style="margin-top:-20px">
+<br>
+<h2>Coursework</h2>
+  <b><font color="red">Disclaimer: Coursework is tentative and subject to change!</font></b> <br>
+ 
+  <h3>Assignments (48%)</h3>
+  <p>
+    There are four weekly assignments, which will improve both your theoretical understanding and your practical skills. All assignments contain both written questions and programming parts. In office hours, TAs may look at students’ code for assignments 1 and 2, but not for assignments 3 and 4.
+  </p>
+  <ul>
+    <li><b>Credit</b>:
+      <ul>
+        <li>Assignment 1 (6%): Introduction to word vectors</li>
+        <li>Assignment 2 (14%): Neural network foundations, calculating tensor derivatives, dependency parsing</li>
+        <li>Assignment 3 (14%): Self-attention and Transformers</li>
+        <li>Assignment 4 (14%): Large language model benchmarking and evaluation</li>
+      </ul>
+    </li><li><b>Deadlines</b>: All assignments are due on either a Tuesday or a Thursday <i>before class</i> (i.e. before 4:30pm). All deadlines are listed in the <a href="#schedule">schedule</a>.</li>
+    <li><b>Submission</b>: Assignments are submitted via <a href="https://www.gradescope.com/courses/1208404">Gradescope</a>. You will be able to access the course Gradescope page on Canvas. If you need to sign up for a Gradescope account, please use your <u>@stanford.edu</u> email address. Further instructions are given in each assignment handout.
+    <i>Do not email us your assignments</i>.</li>
+    <li><b>Late start</b>: If the result gives you a higher grade, we will not use your assignment 1 score, and we will give you an assignment grade based on counting each of assignments 2–4 at 16%.</li>
+    <li><b>Collaboration</b>:
+    Study groups are allowed, but students must understand and complete their own assignments, and hand in one assignment per student.
+    If you worked in a group, please put the names of the members of your study group at the top of your assignment.
+    Please ask if you have any questions about the collaboration policy.
+    </li>
+    <li><b>Honor Code</b>:
+    We expect students to not look at solutions or implementations online. Like all other classes at Stanford, we take the student <a href="https://ed.stanford.edu/academics/masters-handbook/honor-code">Honor Code</a> seriously. We sometimes use automated methods to detect overly similar assignment solutions.
+    </li>
+  </ul>
+
+  <h3>Final Project (49%)</h3>
+    <p>
+      The Final Project offers you the chance to apply your newly acquired skills towards an in-depth application.
+      Students have two options: the <b>Default Final Project</b> (in which students tackle a predefined task, namely implementing a minimalist version of GPT-2) or a <b>Custom Final Project</b> (in which students choose their own project involving human language and deep learning). Examples of both can be seen on the <a href="https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1246/project.html">Spring 2024 website</a>. <i>Note: TAs may not look at students' code for either the default or custom final projects. The Spring 2024 Default Final Project was based on BERT and has now been replaced with GPT-2.</i>
+    </p>
+    <h4>Important information</h4>
+    <ul>
+      <li><b>Credit</b>: For both default and custom projects, credit for the final project is broken down as follows:
+        <ul>
+          <li>
+            Project proposal (8%)
+          </li>
+          <li>
+            Project milestone (6%)
+          </li>
+          <li>
+            Project poster (3%)
+          </li>
+          <li>
+            Project report (32%)
+          </li>
+        </ul>
+      </li>
+      <li><b>Deadlines</b>: The project proposal, milestone and report are all due at 4:30pm. All deadlines are listed in the <a href="#schedule">schedule</a>.</li>
+      <li><b>Default Final Project</b>: In this project, students implement parts of the GPT-2 architecture and use it to tackle 3 downstream tasks.
+      Similar to previous years, the code is in PyTorch.
+      </li>
+      <li><b>Project advice</b> [<a href="slides_w26/cs224n-2026-lecture06-final-project.pdf">lecture slides</a>] [<a href="project/custom-final-project-tips.pdf">custom project tips</a>]: The <i>Practical Tips for Final Projects</i> lecture provides guidance for choosing and planning your project.
+      To get project advice from staff members, first look at each staff member's areas of expertise on the <a href="office_hours.html#staff">office hours page</a>. This should help you find a staff member who is knowledgable about your project area.
+      </li>
+      <li><b>Ethics-related questions</b>: For guidance on projects dealing with ethical questions, or ethical questions that arise during your project, please contact Wanheng Hu (<i>wanhenghu@stanford.edu</i>) or Justin Shin (<i>justinjs@stanford.edu</i>).
+      </li>
+      <!--<li><b>Project ideas from Stanford researchers</b>: We have collected a list of <a href="https://docs.google.com/document/d/1Ytncuq6tpiSGHsJBkdzskMf0nw4_x2AJ1rZ7RvpOv5E/edit?usp=sharing">project ideas</a> from members of the Stanford AI Lab &mdash; these are a great opportunity to work on an interesting research problem with an external mentor. If you want to do these, get started early!</li>-->
+    </ul>
+    <h4>Practicalities</h4>
+    <ul>
+      <li><b>Team size</b>: Students may do final projects solo, or in teams of up to 3 people. We strongly recommend you do the final project in a team.  Larger teams are expected to do correspondingly larger projects, and you should only form a 3-person team if you are planning to do an ambitious project where every team member will have a significant contribution.</li>
+      <li><b>Contribution</b>: In the final report we ask for a statement of what each team member contributed to the project. Team members will typically get the same grade, but we may differentiate in extreme cases of unequal contribution. You can contact us in confidence in the event of unequal contribution.</li>
+      <li><b>External collaborators</b>: You can work on a project that has external (non CS224N student) collaborators, but you must make it clear in your final report which parts of the project were your work.</li>
+      <li><b>Sharing projects</b>: You can share a single project between CS224N and another class, but we expect the project to be accordingly bigger, and you must declare that you are sharing the project in your project proposal.</li>
+      <li><b>Mentors</b>: Every custom project team has a mentor, who gives feedback and advice during the project. Default project teams do not have mentors. A project may have an external (i.e., not course staff) mentor; otherwise, we will assign a CS224N staff mentor to custom project teams after project proposals.
+      </li>
+      <li><b>Computing resources</b>: All teams will receive compute credits thanks to kind donations by Google, Kimi, Modal, and Qwen!</li>
+      <li><b>Using external resources</b>: The following guidelines apply to all projects (though the default project has some more specific rules, details provided in the <i>Honor Code</i> section of the <a href="project_w25/CS_224n__Default_Final_Project__Build_GPT_2.pdf">handout</a>):
+        <ul>
+          <li>You can use any deep learning framework you like (PyTorch, TensorFlow, etc.)</li>
+          <li>More generally, you may use any existing code, libraries, etc. and consult any papers, books, online references, etc. for your project. However, you must cite your sources in your writeup and clearly indicate which parts of the project are your contribution and which parts were implemented by others.</li>
+          <li>Under no circumstances may you look at another CS224N group's code, or incorporate their code into your project.</li>
+        </ul>
+      </li>
+    </ul>
+
+  <h3>Participation (3%)</h3>
+  <p>
+    We appreciate everyone being actively involved in the class! There are several ways of earning participation credit, which is capped at 3%:
+  </p>
+  <ul>
+    <li><b>Attending guest speakers' lectures</b>:</li>
+      <ul>
+        <li>In the second half of the class, we have four invited speakers.
+          Our guest speakers make a significant effort to come lecture for us, so
+          (both to show our appreciation and to continue attracting interesting speakers)
+          we do not want them lecturing to a largely empty room.
+          As such, we encourage students to attend these virtual lectures live, and participate in Q&amp;A.</li>
+        <li>All students get 0.375% per speaker (1.5% total) for either attending the guest lecture in person, or by writing a reaction paragraph if you watched the talk remotely; details will be provided.
+            Students do not need to attend lecture live to write these reaction paragraphs; they may watch asynchronously.
+        </li>
+      </ul>
+    <li><b>Completing feedback surveys</b>: We will send out two feedback surveys (mid-quarter and end-of-quarter) to help us understand how the course is going, and how we can improve. Each of the two surveys are worth 0.5%.</li>
+    <li><b>Ed participation</b>: The top ~20 contributors to Ed will get 3%; others will get credit in proportion to the participation of the ~20th person.</li>
+    <li><b>Karma point</b>: Any other act that improves the class, like helping out another student in office hours or writing a useful guide for students on some topic, which a CS224N TA or instructor notices and deems worthy: 1%</li>
+  </ul>
+
+  <!-- <h3>Late Days</h3>
+  <ul>
+    <li>Each student has 6 late days to use. A late day extends the deadline 24 hours. You can use up to 3 late days per assignment (including all four assignments, project proposal, project milestone and project final report).</li>
+    <li>Final project teams can <b>share</b> late days between members. For example, a group of three people must have at least six late days between them to extend the deadline by two days. <em>If any late days are being shared, this must be clearly marked at the beginning of the report, and we will release a form on Ed that teams should fill out.</em>.</li>
+    <li>Once you have used all 6 late days, the penalty is 1% off the final course grade for each additional late day.</li>
+  </ul> -->
+
+  <h3>Late Days</h3>
+  <ul>
+    <li>Each student has 6 late days to use. A late day extends the deadline 24 hours. You can use up to 3 late days per assignment (including all four assignments, project proposal, project milestone, and project final report).</li>
+    <li>Once you have used all 6 late days, the penalty is 1% off the final course grade for each additional late day.</li>
+    <li><b>Project proposal and milestone (late days are NOT shared):</b> Late days are applied individually and are not pooled across the team. If a student does not have enough late days remaining, that student receives a 1% deduction to their total course grade for each late day they are short — this penalty applies only to that student.</li>
+    <li><b>Final project report (late days CAN be shared):</b> Late days may be pooled across team members. For example, in a team of three students, the team's total available late days is the sum of each member's remaining late days, divided by three to determine how many days late the team can submit. <em>At the top of your final report, you must state how many late days your team is pooling and which team members have late days remaining.</em></li>
+  </ul>
+
+
+  <h3>Regrade Requests</h3>
+  <p>
+    If you feel you deserved a better grade on an assignment, you may submit a regrade request on Gradescope within 3 days after the grades are released.
+    Your request should briefly summarize why you feel the original grade was unfair.
+    Your TA will reevaluate your assignment as soon as possible, and then issue a decision.
+    If you are still not happy, you can ask for your assignment to be regraded by an instructor.
+     <b><font color="red">Disclaimer: the course staff reserve the right to regrade your entire assignment in addition to the specific questions you request. Submit regrade requests at your own risk.</font></b>
+  </p>
+
+  <h3>Credit/No credit enrollment</h3>
+  <p>
+    If you take the class credit/no credit then you are graded in the same way as those registered for a letter grade. The only difference is that, providing you reach a C- standard in your work, it will simply be graded as CR.
+  </p>
+
+  <h3>All students welcome</h3>
+  <p>
+    We are committed to doing what we can to work for equity and to create an inclusive learning environment that actively values the diversity of backgrounds, identities, and experiences of everyone in CS224N. We also know that we will sometimes make missteps. If you notice some way that we could do better, we hope that you will let someone in the course staff know about it.
+  </p>
+
+  <h3>Well-Being and Mental Health</h3>
+  <p>
+    If you are experiencing personal, academic, or relationship problems and would like to talk to someone with training and experience, reach out to the <a href="https://vaden.stanford.edu/caps-and-wellness">Counseling and Psychological Services (CAPS)</a> on campus. CAPS is the university’s counseling center dedicated to student mental health and wellbeing. Phone assessment appointments can be made at CAPS by calling 650-723-3785, or by accessing the VadenPatient portal through the Vaden website.
+  </p>
+
+  <h3>Auditing the course</h3>
+  <p>
+    In general we are happy to have auditors if they are a member of the Stanford community (registered student, official visitor, staff, or faculty). If you are interested, email us at <i>cs224n-staff-win2526@cs.stanford.edu</i>. If you want to actually master the material of the class, we very strongly recommend that auditors do all the assignments. However, due to high enrollment, we cannot grade the work of any students who are not officially enrolled in the class.
+  </p>
+
+  <h3>Students with Documented Disabilities</h3>
+  <p>
+     We assume that all of us learn in different ways, and that the organization of the course must accommodate each student differently. We are committed to ensuring the full participation of all enrolled students in this class.
+     If you need an academic accommodation based on a disability, you should initiate the request with the <a href="https://oae.stanford.edu/">Office of Accessible Education (OAE)</a>.
+     The OAE will evaluate the request, recommend accommodations, and prepare a letter for faculty. Students should contact the OAE as soon as possible and at any rate in advance of assignment deadlines, since timely notice is needed to coordinate accommodations. Students should also send your accommodation letter to either the staff mailing list (<i>cs224n-staff-win2526@cs.stanford.edu</i>) or make a private post on Ed, as soon as possible.
+  </p>
+  <p>
+    <font color="red"><b>OAE accommodations for group projects: </b></font> OAE accommodations will not be extended to collaborative assignments.
+  </p>
+
+  <h3>AI Tools Policy</h3>
+  <p>
+    Students are required to independently submit their solutions for CS224N  homework assignments. Collaboration with generative AI tools such as Co-Pilot and ChatGPT is allowed, treating them as collaborators in the problem-solving process. However, the direct solicitation of answers or copying solutions, whether from peers or external sources, is strictly prohibited.
+  </p>
+
+  <p>
+    <b><font color="red">Employing AI tools to substantially complete assignments or exams will be considered a violation of the Honor Code.</font></b> For additional details, please refer to the Generative AI Policy Guidance <a href="https://communitystandards.stanford.edu/generative-ai-policy-guidance">here</a>.
+  </p>
+
+  <h3>Sexual violence</h3>
+  <p>
+    Academic accommodations are available for students who have experienced or are recovering from sexual violence. If you would like to talk to a confidential resource, you can schedule a meeting with the Confidential Support Team or call their 24/7 hotline at: 650-725-9955. Counseling and Psychological Services also offers confidential counseling services. Non-confidential resources include the Title IX Office, for investigation and accommodations, and the SARA Office, for healing programs. Students can also speak directly with the teaching staff to arrange accommodations. Note that university employees – including professors and TAs – are required to report what they know about incidents of sexual or relationship violence, stalking and sexual harassment to the Title IX Office. Students can learn more at <a href="are recovering from">https://vaden.stanford.edu/sexual-assault</a>.
+  </p>
+</div>
+</div>
+
+
+<!-- Schedule -->
+<!-- Note the margin-top:-20px and the <br> serve to make the #schedule hyperlink display correctly (with the h2 header visible) -->
+<div class="container sec" id="schedule" style="margin-top:-20px">
+<br>
+<h2>Schedule</h2>
+<p>
+  Updated lecture <b>slides</b> will be posted here shortly before each lecture. Lecture <b>notes</b> will be uploaded a few days after most lectures. The notes (which cover approximately the first half of the course content) give supplementary detail beyond the lectures.
+</p>
+<p>
+  <b><font color="red">Disclaimer: Schedule is tentative and subject to change!</font></b> <br>
+  <b><font color="red">Disclaimer: Assignments change; please do not do old assignments. We will give no points for doing last year's assignments.</font></b> 
+</p>
+
+<table class="table">
+  <colgroup>
+    <col style="width:10%">
+    <col style="width:20%">
+    <col style="width:40%">
+    <col style="width:10%">
+    <col style="width:10%">
+  </colgroup>
+  <thead>
+  <tr class="active">
+    <th>Date</th>
+    <th>Description</th>
+    <th>Course Materials</th>
+    <th>Events</th>
+    <th>Deadlines</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td><b><font color="#8c1515">Week 1</font></b><br><br>Tue Jan 6</td>
+    <td>History of NLP
+      <br>
+      [<a href="slides_w26/cs224n-2026-lecture01-intro.pdf">intro slides</a>]
+      [<a href="slides_w26/cs224n-2026-lecture01-history.pdf">history slides</a>]
+    </td>
+    <td>
+      Suggested Readings:
+      <ol>
+        <li><a href="https://www.amacad.org/publication/daedalus/human-language-understanding-reasoning">Human Language Understanding &amp; Reasoning</a></li>
+      </ol>
+    </td>
+    <td>
+      Assignment 1 <b><font color="green">out</font></b>
+      <br>
+      [<a href="assignments_w26/a1.zip">code</a>]
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>Thu Jan 8</td>
+    <td>Word Vectors
+      <br>
+      [<a href="slides_w26/cs224n-2026-lecture02-wordvecs.pdf">slides</a>]
+      [<a href="readings/cs224n_winter2023_lecture1_notes_draft.pdf">notes 1</a>]
+      [<a href="readings/cs224n-2019-notes02-wordvecs2.pdf">notes 2</a>]
+      <!-- [<a href="materials/gensim_2024.zip">code</a>] -->
+    </td>
+    <td>
+      Suggested Readings:
+      <ol>
+        <li><a href="http://arxiv.org/pdf/1301.3781.pdf">Efficient Estimation of Word Representations in Vector Space</a> (original word2vec paper)</li>
+        <li><a href="http://papers.nips.cc/paper/5021-distributed-representations-of-words-and-phrases-and-their-compositionality.pdf">Distributed Representations of Words and Phrases and their Compositionality</a> (negative sampling paper)</li>
+        <li><a href="http://nlp.stanford.edu/pubs/glove.pdf">GloVe: Global Vectors for Word Representation</a> (original GloVe paper)</li>
+        <li><a href="http://www.aclweb.org/anthology/Q15-1016">Improving Distributional Similarity with Lessons Learned from Word Embeddings</a></li>
+        <li><a href="http://www.aclweb.org/anthology/D15-1036">Evaluation methods for unsupervised word embeddings</a></li>
+      </ol>
+      Additional Readings:
+      <ol>
+        <li><a href="http://aclweb.org/anthology/Q16-1028">A Latent Variable Model Approach to PMI-based Word Embeddings</a></li>
+        <li><a href="https://transacl.org/ojs/index.php/tacl/article/viewFile/1346/320">Linear Algebraic Structure of Word Senses, with Applications to Polysemy</a></li>
+        <li><a href="https://papers.nips.cc/paper/7368-on-the-dimensionality-of-word-embedding.pdf">On the Dimensionality of Word Embedding</a></li>
+      </ol>
+    </td>
+    <td></td>
+    <td></td>
+  </tr>
+
+  <tr class="warning">
+    <td>Fri Jan 9</td>
+    <td>Python Review Session
+      <br>
+      [<a href="slides_w25/2024 CS224N Python Review Session Slides.pptx.pdf">slides</a>]
+      [<a href="https://colab.research.google.com/drive/1hxWtr98jXqRDs_rZLZcEmX_hUcpDLq6e?usp=sharing">colab</a>]
+    </td>
+    <td>
+      <i class="fa fa-clock-o"></i> Time 1:30pm-2:50pm <br> Location NVIDIA Auditorium
+    </td>
+    <td></td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td><b><font color="#8c1515">Week 2</font></b><br><br>Tue Jan 13</td>
+    <td>Backpropagation and Neural Network Basics
+      <br>
+      [<a href="slides_w26/cs224n-2026-lecture03-neuralnets.pdf">slides</a>]
+      [<a href="readings/cs224n-2019-notes03-neuralnets.pdf">notes</a>]
+    </td>
+    <td>
+      Suggested Readings:
+      <ol>
+        <li><a href="readings/gradient-notes.pdf">matrix calculus notes</a></li>
+        <li><a href="readings/review-differential-calculus.pdf">Review of differential calculus</a></li>
+        <li><a href="http://cs231n.github.io/neural-networks-1/">CS231n notes on network architectures</a></li>
+        <li><a href="http://cs231n.github.io/optimization-2/">CS231n notes on backprop</a></li>
+        <li><a href="http://cs231n.stanford.edu/handouts/derivatives.pdf">Derivatives, Backpropagation, and Vectorization</a></li>
+        <li><a href="http://www.iro.umontreal.ca/~vincentp/ift3395/lectures/backprop_old.pdf">Learning Representations by Backpropagating Errors</a> (seminal Rumelhart et al. backpropagation paper)</li>
+      </ol>
+      Additional Readings:
+      <ol>
+        <li><a href="https://medium.com/@karpathy/yes-you-should-understand-backprop-e2f06eab496b">Yes you should understand backprop</a></li>
+        <li><a href="http://www.jmlr.org/papers/volume12/collobert11a/collobert11a.pdf">Natural Language Processing (Almost) from Scratch</a></li>
+      </ol>
+    </td>
+    <td>
+      Assignment 2 <b><font color="green">out</font></b>
+      <br>
+      [<a href="assignments_w26/a2.zip">code</a>]
+      <br>
+      [<a href="assignments_w26/a2.pdf">handout</a>]
+      <br>
+      [<a href="assignments_w26/a2_tex.zip">latex template</a>]
+    </td>
+    <td>Assignment 1 <b><font color="red">due</font></b></td>
+  </tr>
+
+  <tr>
+    <td>Thu Jan 15</td>
+    <td>Language Models and RNNs
+      <br>
+      [<a href="slides_w26/cs224n-2026-lecture04-rnnlm.pdf">slides</a>]
+      [<a href="readings/cs224n-2019-notes05-LM_RNN.pdf">notes</a>]
+    </td>
+    <td>
+      Suggested Readings:
+      <ol>
+        <li><a href="https://ieeexplore.ieee.org/document/279181">Learning long-term dependencies with gradient descent is difficult</a> (one of the original vanishing gradient papers)</li>
+        <li><a href="https://arxiv.org/pdf/1211.5063.pdf">On the difficulty of training Recurrent Neural Networks</a> (proof of vanishing gradient problem)</li>
+        <li><a href="https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1174/lectures/vanishing_grad_example.html">Vanishing Gradients Jupyter Notebook</a> (demo for feedforward networks)</li>
+        <li><a href="https://arxiv.org/abs/1706.03762.pdf">Attention Is All You Need</a>
+      </li></ol>
+    </td>
+    <td></td>
+    <td></td>
+  </tr>
+
+  <tr class="warning">
+    <td>Fri Jan 16</td>
+    <td>PyTorch Tutorial Session
+      <br>[<a href="https://colab.research.google.com/drive/1Pz8b_h-W9zIBk1p2e6v-YFYThG1NkYeS?usp=sharing">colab</a>]
+    </td>
+    <td>
+      <i class="fa fa-clock-o"> </i> Time 1:30pm-2:50pm <br> Location NVIDIA Auditorium
+    </td>
+    <td></td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td><b><font color="#8c1515">Week 3</font></b><br><br>Tue Jan 20</td>
+    <td>Transformers
+      <br>
+        [<a href="slides_w26/cs224n-2026-lecture05-transformers.pdf">slides</a>]
+        [<a href="readings/cs224n-self-attention-transformers-2023_draft.pdf">notes</a>]
+    </td>
+    <td>
+      Suggested Readings:
+      <ol>
+        <li><a href="https://arxiv.org/abs/1706.03762.pdf">Attention Is All You Need</a>
+        </li>
+        <li><a href="https://jalammar.github.io/illustrated-transformer/">The Illustrated Transformer</a>
+        </li>
+        <li><a href="https://ai.googleblog.com/2017/08/transformer-novel-neural-network.html">Transformer (Google AI blog post)</a>
+        </li>
+        <li><a href="https://arxiv.org/pdf/1607.06450.pdf">Layer Normalization</a></li>
+        <li><a href="https://arxiv.org/pdf/1802.05751.pdf">Image Transformer</a></li>
+        <li><a href="https://arxiv.org/pdf/1809.04281.pdf">Music Transformer: Generating music with long-term structure</a></li>
+        <li><a href="https://web.stanford.edu/~jurafsky/slp3/9.pdf">Jurafsky and Martin Chapter 9 (The Transformer)</a></li>
+      </ol>
+    </td>
+  </tr>
+
+  <tr>
+    <td>Thu Jan 22</td>
+    <td>Final Projects: Custom and Default; Practical Tips
+      <br>
+      [<a href="slides_w26/cs224n-2026-lecture06-final-project.pdf">slides</a>]
+    </td>
+    <td>
+      Suggested Readings:
+      <ol>
+        <li><a href="https://www.deeplearningbook.org/contents/guidelines.html">Practical Methodology</a> (<i>Deep Learning</i> book chapter)</li>
+      </ol>
+    </td>
+    <td>Assignment 3 <b><font color="green">out</font></b>
+      <br>
+      [<a href="assignments_w26/a3.zip">code</a>]
+      <br>
+      [<a href="assignments_w26/a3.pdf">handout</a>]
+      <br>
+      [<a href="assignments_w26/a3_tex.zip">latex template</a>]
+      <br>
+    </td>
+    <td>Assignment 2 <b><font color="red">due</font></b></td>
+  </tr>
+
+  <tr>
+    <td><b><font color="#8c1515">Week 4</font></b><br><br>Tue Jan 27</td>
+     <td>Pretraining (Scaling, Systems, Data)
+    <br>
+    [<a href="slides_w26/cs224n-2026-lecture07-pretraining.pdf">slides</a>]
+    </td>
+    <td>
+      Suggested Readings:
+      <ol>
+        <li>
+          <a href="https://arxiv.org/pdf/1810.04805.pdf">BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding</a>
+        </li>
+        <li>
+           <a href="https://arxiv.org/abs/1902.06006.pdf">Contextual Word Representations: A Contextual Introduction</a>
+        </li>
+        <li><a href="http://jalammar.github.io/illustrated-bert/">The Illustrated BERT, ELMo, and co.</a></li>
+        <li><a href="https://web.stanford.edu/~jurafsky/slp3/10.pdf">Jurafsky and Martin Chapter 10 (Masked Language Models)</a></li>
+        <li><a href="https://arxiv.org/abs/2407.21783">The Llama 3 Herd of Models</a></li>
+      </ol>
+    </td>
+    <td></td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>Thu Jan 29</td>
+    <td> Post-training (RLHF, SFT, DPO) 
+      [<a href="slides_w26/cs224n-2026-lecture08-posttraining.pdf">slides</a>]
+    </td>
+    <td>
+    Suggested Readings:
+      <ol>
+        <li>
+          <a href="https://openai.com/research/instruction-following">Aligning language models to follow instructions</a>
+          </li>
+          <li>
+          <a href="https://arxiv.org/abs/2210.11416">Scaling Instruction-Finetuned Language Models</a>
+          </li>
+          <li>
+          <a href="https://arxiv.org/abs/2305.14387">AlpacaFarm: A Simulation Framework for Methods that Learn from Human Feedback</a>
+          </li>
+          <li>
+          <a href="https://arxiv.org/abs/2306.04751">How Far Can Camels Go? Exploring the State of Instruction Tuning on Open Resources</a>
+          </li>
+          <li>
+          <a href="https://arxiv.org/abs/2305.18290">Direct Preference Optimization: Your Language Model is Secretly a Reward Model</a>
+          </li>
+      </ol>
+    </td>
+    <td>Project Proposal <b><font color="green">out</font></b>
+      <br>
+      [<a href="project/Project_Proposal_Instructions.pdf">handout</a>]
+      <br><br>
+      Default Final Project <b><font color="green">out</font></b>
+      <br>
+      [<a href="project/DFP_Instructions.pdf">handout</a>]
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td><b><font color="#8c1515">Week 5</font></b><br><br>Tue Feb 3</td>
+    <td> Efficient Adaptation (Prompting + PEFT)
+      <br>
+      [<a href="slides_w26/cs224n-2026-lecture09-peft.pdf">slides</a>]
+    </td>
+    <td>
+    Suggested Readings:
+    <ol>
+      <li>
+      <a href="https://arxiv.org/abs/2005.14165">Language Models are Few-Shot Learners</a>
+      </li>
+      <li>
+      <a href="https://arxiv.org/abs/2201.11903">Chain-of-Thought Prompting Elicits Reasoning in Large Language Models</a>
+      </li>
+      <li>
+      <a href="https://arxiv.org/abs/1803.03635">The Lottery Ticket Hypothesis: Finding Sparse, Trainable Neural Networks</a>
+      </li>
+      <li>
+      <a href="https://arxiv.org/abs/2106.09685">LoRA: Low-Rank Adaptation of Large Language Models</a>
+      </li>
+      <li>
+      <a href="https://arxiv.org/abs/1902.00751">Parameter-Efficient Transfer Learning for NLP</a>
+      </li>
+    </ol>
+    </td>
+    <td></td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>Thu Feb 5</td>
+    <td> Agents, Tool Use, and RAG 
+      <br>
+      [<a href="slides_w26/cs224n-2026-lecture10-rag-agents.pdf">slides</a>]
+    </td>
+    <td>
+    Suggested Readings:
+      <ol>
+        <li>
+          <a href="https://arxiv.org/abs/2210.03629">ReAct: Synergizing Reasoning and Acting in Language Models</a>
+          </li>
+          <li>
+          <a href="https://language-agent-tutorial.github.io/">Language Agents: Foundations, Prospects, and Risks</a>
+          </li>
+          <li>
+          <a href="https://arxiv.org/abs/2005.11401">Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks</a>
+          </li>
+          <li>
+          <a href="https://arxiv.org/abs/2302.04761">Toolformer: Language Models Can Teach Themselves to Use Tools</a>
+          </li>
+      </ol>
+    </td>
+    <td>Assignment 4 <b><font color="green">out</font></b>
+      <br>
+      [<a href="assignments_w26/a4.zip">code</a>]
+      <br>
+      [<a href="assignments_w26/a4.pdf">handout</a>]
+      <br>
+      [<a href="assignments_w26/a4_tex.zip">latex template</a>]
+    </td>
+    <td>Assignment 3 <b><font color="red">due</font></b></td>
+  </tr>
+
+  <!-- TODO: Add session room and time -->
+  <tr class="warning">
+    <td>Fri Feb 6</td>
+    <td>Hugging Face Transformers Tutorial Session
+      <br>
+      [<a href="materials/hf_transformers_tutorial.pdf">slides</a>]
+      [<a href="https://colab.research.google.com/drive/1FyCMNTXfirWbJ18GuIT_JiTW0gwrxI3O?usp=sharing">colab</a>]
+    </td>
+    <td>
+      <i class="fa fa-clock-o"> </i>Time 1:30pm-2:50pm <br> Location NVIDIA Auditorium
+    </td>
+    <td></td>
+    <td></td>
+  </tr>
+  <!-- TODO: Update lecture readings and slides-->
+  <tr>
+    <td><b><font color="#8c1515">Week 6</font></b><br><br>Tue Feb 10</td>
+    <td> Benchmarking and Evaluation
+      [<a href="slides_w26/cs224n-2026-lecture11-evaluation.pdf">slides</a>]
+    </td>
+    <td>
+    Suggested Readings:
+      <ol>
+        <li>
+        <a href="https://www.ruder.io/nlp-benchmarking/">Challenges and Opportunities in NLP Benchmarking</a>
+        </li>
+        <li>
+        <a href="https://arxiv.org/abs/2009.03300">Measuring Massive Multitask Language Understanding</a>
+        </li>
+        <li>
+        <a href="https://arxiv.org/abs/2211.09110">Holistic Evaluation of Language Models</a>
+        </li>
+        <li>
+        <a href="https://tatsu-lab.github.io/alpaca_eval/">AlpacaEval</a>
+        </li>
+      </ol>
+    </td>
+    <td></td>
+    <td>Project Proposal &amp; Mentor Form <b><font color="red">due</font></b><br></td>
+  </tr>
+  <!-- TODO: Update lecture readings and slides-->
+  <tr>
+    <td>Thu Feb 12</td>
+    <td> Reasoning 1
+      <br>
+      [<a href="slides_w26/cs224n-2026-lecture12-reasoning-part1.pdf">slides</a>]
+    </td>
+    <td>
+      Suggested Readings:
+      <ol>
+        <li>
+        <a href="https://arxiv.org/abs/2201.11903">Chain-of-Thought Prompting Elicits Reasoning in Large Language Models</a>
+        </li>
+        <li>
+        <a href="https://arxiv.org/abs/2203.11171">Self-Consistency Improves Chain of Thought Reasoning in Language Models</a>
+        </li>
+        <li>
+        <a href="https://arxiv.org/abs/2501.12948">DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning</a>
+        </li>
+        <li>
+        <a href="https://arxiv.org/abs/2503.14476">DAPO: An Open-Source LLM Reinforcement Learning System at Scale</a>
+        </li>
+      </ol>
+    </td>
+    <td></td>
+    <td></td>
+  </tr>
+
+  <!-- TODO: Update lecture readings and slides-->
+  <tr>
+    <td><b><font color="#8c1515">Week 7</font></b><br><br>Tue Feb 17</td>
+    <td>Reasoning 2
+      <br>
+      [<a href="slides_w26/cs224n-2026-lecture13-reasoning-part2.pdf">slides</a>]
+    </td>
+    <td>
+      Suggested Readings:
+      <ol>
+        <li>
+        <a href="https://arxiv.org/abs/2305.20050">Let's Verify Step by Step</a>
+        </li>
+        <li>
+        <a href="https://arxiv.org/abs/2211.17192">Fast Inference from Transformers via Speculative Decoding</a>
+        </li>
+        <li>
+        <a href="https://arxiv.org/abs/2408.03314">Scaling LLM Test-Time Compute Optimally can be More Effective than Scaling Model Parameters</a>
+        </li>
+        <li>
+        <a href="https://arxiv.org/abs/2104.09864">RoFormer: Enhanced Transformer with Rotary Position Embedding</a>
+        </li>
+      </ol>
+    </td>
+    <td>Project Milestone <b><font color="green">out</font></b>
+      [<a href="project/Project_Milestone_Instructions.pdf">handout</a>]
+    </td>
+    <td>Final Project Proposals <b><font color="blue">returned</font></b></td>
+  </tr>
+
+
+  <!-- TODO: Update lecture readings and slides-->
+  <tr>
+    <td>Thu Feb 19</td>
+    <td>Guest Lecture: Tokenization and Multilinguality (by <a href="https://juliekallini.com/">Julie Kallini</a>)
+      [<a href="slides_w26/cs224n-2026-lecture14-guest-julie-tokenization-multilinguality.pdf">slides</a>]
+    </td>
+  <td>
+    Suggested readings: 
+    <ol>
+        <li>
+        <a href="https://web.stanford.edu/~jurafsky/slp3/2.pdf">Jurafsky &amp; Martin Chapter 2</a>
+        </li>
+        <li>
+        <a href="https://arxiv.org/pdf/1508.07909">Neural Machine Translation of Rare Words with Subword Units</a>
+        </li>
+        <li>
+        <a href="https://aclanthology.org/2020.acl-main.747.pdf">Unsupervised Cross-lingual Representation Learning at Scale</a>
+        </li>
+        <li>
+        <a href="https://aclanthology.org/2023.emnlp-main.614.pdf">Do All Languages Cost the Same? Tokenization in the Era of Commercial Language Models</a>
+        </li>
+      </ol>
+  </td>
+    <td></td>
+    <td>Assignment 4 <b><font color="red">due</font></b></td>
+  </tr>
+
+  <!-- TODO: Add guest speaker info -->
+  <tr>
+    <td><b><font color="#8c1515">Week 8</font></b><br><br>Tue Feb 24</td>
+    <td>Guest Lecture: Interpretability (by <a href="https://beenkim.github.io/">Been Kim</a>)
+      <!--
+      <br>
+      [<a href="slides/cs224n-spr2024-lecture15-life-after-dpo-lambert.pdf">slides</a>]
+    -->
+    </td>
+    <td>
+    Suggested readings:
+    <ol>
+      <li><a href="https://arxiv.org/abs/2506.12152">Because we have LLMs, we Can and Should Pursue Agentic Interpretability</a></li>
+      <li><a href="https://medium.com/@beenkim/the-pareto-frontier-of-human-centered-ai-54f90ba5872c">The Pareto Frontier of Human-Centered AI</a></li>
+      <li><a href="https://www.pnas.org/doi/10.1073/pnas.2406675122">Bridging the human–AI knowledge gap through concept discovery and transfer in AlphaZero</a></li>
+      <li><a href="https://arxiv.org/abs/2502.07586">We Can't Understand AI Using our Existing Vocabulary</a></li>
+      <li><a href="https://arxiv.org/abs/2510.08506">Neologism Learning for Controllability and Self-Verbalization</a></li>
+    </ol>
+    </td>
+    <td>Final Project Report Instructions <b><font color="green">out</font></b>
+      <br>[<a href="project/Project_Report_Instructions.pdf">Instructions</a>]
+    </td>
+    <td></td>
+  </tr>
+
+  <!-- TODO: Update lecture readings and slides-->
+  <tr>
+    <td>Thu Feb 26</td>
+    <td>Social and Broader Impacts of NLP (Risks)
+    <br>
+      [<a href="slides_w26/cs224n-2026-lecture16-impact-on-humanity.pdf">slides</a>]
+    </td>
+    <td>
+    </td>
+    <td></td>
+    <td>Final Project Milestone <b><font color="red">due</font></b></td>
+  </tr>
+
+  <tr class="warning">
+    <td>Fri Feb 27</td>
+    <td>
+    <br>
+  </td>
+    <td>
+    </td>
+    <td></td>
+    <td><b><font color="red">Course Withdrawal Deadline</font></b></td>
+  </tr>
+
+  <!-- TODO: Add guest speaker info -->
+  <tr>
+    <td><b><font color="#8c1515">Week 9</font></b><br><br>Tue Mar 3</td>
+    <td>Guest Lecture: Multimodality (by <a href="https://homes.cs.washington.edu/~lsz/">Luke Zettlemoyer</a>)
+      <br>
+    </td>
+    <td>Suggested readings:
+       <ol>
+      <li><a href="https://visualsketchpad.github.io/">Visual Sketchpad: Sketching as a Visual Chain of Thought for Multimodal Language Models</a></li>
+      <li><a href="https://arxiv.org/abs/2405.09818">Chameleon: Mixed-Modal Early-Fusion Foundation Models</a></li>
+      <li><a href="https://arxiv.org/abs/2408.11039">Transfusion: Predict the Next Token and Diffuse Images with One Multi-Modal Model</a></li>
+      <li><a href="https://arxiv.org/abs/2411.04996">Mixture-of-Transformers: A Sparse and Scalable Architecture for Multi-Modal Foundation Models</a></li>
+    </ol>
+      Optional readings: 
+    <ol>
+      <li><a href="https://arxiv.org/abs/2301.03728">Scaling Laws for Generative Mixed-Modal Language Models</a></li>
+      <li><a href="https://arxiv.org/abs/2309.02591">Scaling Autoregressive Multi-Modal Models: Pretraining and Instruction Tuning</a></li>
+      <li><a href="https://arxiv.org/abs/2211.12561">Retrieval Augmented Multimodal Language Modeling</a></li>
+      <li><a href="https://arxiv.org/abs/2412.15188">LMFusion: Adapting Pretrained Language Models for Multimodal Generation</a></li>
+      <li><a href="https://arxiv.org/abs/2510.03506">OneFlow: Concurrent Mixed-Modal and Interleaved Generation with Edit Flows</a></li>
+      <li><a href="https://arxiv.org/abs/2502.14191">Multimodal RewardBench: Holistic Evaluation of Reward Models for Vision Language Models</a></li>
+      <li><a href="https://arxiv.org/abs/2509.07295">Reconstruction Alignment Improves Unified Multimodal Models</a></li>
+    </ol>
+    </td>
+    <td></td>
+    <td>Final Project Milestones <b><font color="blue">returned</font></b></td>
+  </tr>
+
+  <tr>
+    <td>Thu Mar 5</td>
+    <td>Guest Lecture: Tinker and LoRA Without Regret (by <a href="http://joschu.net/">John Schulman</a>)
+    </td>
+    <td>
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td><b><font color="#8c1515">Week 10</font></b><br><br>Tue Mar 10</td>
+    <td>Open Questions in NLP 2026
+            [<a href="slides_w26/cs224n-2026-lecture19-open-questions.pdf">slides</a>]
+    </td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>Thu Mar 12</td>
+    <td>No Lecture
+    </td>
+    <td></td>
+    <td></td>
+    <td>Final project <b><font color="red">due</font></b>
+    </td>
+  </tr>
+
+  <tr class="warning">
+    <td>Mon Mar 16</td>
+    <td>Final Project Poster Session
+      <!--<br>
+      [<a href="readings/cs224n-python-review-code-updated.zip">code</a>]
+      [<a href="readings/cs224n-python-review-code-updated.pdf">preview</a>]-->
+    </td>
+    <td>
+      <i class="fa fa-clock-o"></i> Time 12:15pm-3:15pm <br> Location AOERC
+      <!-- , Time 12:15pm-3:15pm [<a href="project.html">More details</a>]<br> -->
+      <!-- Location <a href="https://rec.stanford.edu/visit/locations/stanford-campus#aoerc"> AOERC</a> <br> -->
+      <br>
+      ALL On-campus students must attend in person!
+    </td>
+    <td></td>
+    <td>[<a href="https://docs.google.com/document/d/1J8-TVVvndimSwq3jGzpMO_OtPAx_EaU9nUiiPUQdVpY">Printing guide</a>]</td>
+  </tr>
+
+  </tbody>
+</table>
+</div>
+
+<!-- Sponsors -->
+<div class="sechighlight">
+  <div class="container sec" id="sponsors">
+    <h2>Sponsors</h2>
+    <p>We are grateful to our sponsors for their generous support of CS224N.</p>
+            <div style="display: flex; justify-content: center; align-items: center; gap: 5%; flex-wrap: wrap; padding: 2% 0;">
+      <img src="images_w26/logos/sponsor_microsoft.png" alt="Microsoft" style="max-width: 20%; height: auto;">
+      <img src="images_w26/logos/sponsor_atlassian.png" alt="Atlassian" style="max-width: 22%; height: auto;">
+      <img src="images_w26/logos/sponsor_janestreet.png" alt="Jane Street" style="max-width: 14%; height: auto;">
+    </div>
+        <div style="display: flex; justify-content: center; align-items: center; gap: 5%; flex-wrap: wrap; padding: 2% 0;">
+      <img src="images_w26/logos/sponsor_neocognition.png" alt="NeoCognition" style="max-width: 27%; height: auto;">
+      <img src="images_w26/logos/sponsor_pinetwork.jpg" alt="Pi Network" style="max-width: 23%; height: auto;">
+      <img src="images_w26/logos/sponsor_tola.png" alt="Tola Capital" style="max-width: 11%; height: auto;">
+    </div>
+    <div style="display: flex; justify-content: center; align-items: center; gap: 5%; flex-wrap: wrap; padding: 2% 0;">
+      <img src="images_w26/logos/sponsor_modal.jpg" alt="Modal" style="max-width: 20%; height: auto;">
+      <img src="images_w26/logos/sponsor_gcp.png" alt="Google Cloud Platform" style="max-width: 20%; height: auto;">
+      <img src="images_w26/logos/sponsor_qwen.png" alt="Qwen" style="max-width: 16%; height: auto;">
+      <img src="images_w26/logos/sponsor_kimi.svg" alt="Kimi" style="max-width: 20%; height: auto;">
+    </div>
+  </div>
+</div>
+
+<!-- jQuery and Bootstrap -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+
+
+</body></html>

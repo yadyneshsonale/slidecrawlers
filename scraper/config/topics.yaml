@@ -1,0 +1,50 @@
+# Query vocabulary for the keyword search.
+#
+# `topics` are generic CS subjects appended to each university name to find
+# course pages even when we don't know the course code.
+#
+# `course_codes` are *seed* codes harvested from known course pages. They are
+# used ONLY to build search queries (e.g. "IIT Madras CS7015 lecture slides");
+# they are NOT hardcoded download targets. Codes paired with the right
+# university produce high-precision queries.
+
+topics:
+  - deep learning
+  - machine learning
+  - artificial intelligence
+  - natural language processing
+  - computer vision
+  - reinforcement learning
+  - operating systems
+  - computer organization
+  - computer architecture
+  - algorithms
+  - data structures
+  - computer graphics
+  - probabilistic graphical models
+  - information retrieval
+  - databases
+  - compilers
+  - computer networks
+  - theory of computation
+
+# Phrases appended to a query to bias toward downloadable lecture decks.
+slide_phrases:
+  - lecture slides
+  - course slides pdf
+  - lecture notes ppt
+  - slides
+
+# Known course codes per university slug (query seeds only, never hardcoded URLs).
+course_codes:
+  iit_madras: [CS6910, CS7015, EE2703, EE5606, CS3500]
+  iit_bombay: [CS725, CS763, CS626, CS747, CS347]
+  iit_delhi: [ELL409, COL774, COL780, COL781]
+  iit_kanpur: [CS771, CS772A]
+  iit_kharagpur: [CS60050, CS60073]
+  iit_palakkad: [CS104]
+  stanford: [CS229, CS224N, CS231N, CS25, CS330, CS221, CS228, CS276]
+  mit: ["6.036", "6.S191", "6.390", "6.0002", "6.034"]
+  harvard: [CS181, CS182, CS50]
+  uc_berkeley: [CS188, CS285, CS294, CS189, CS280]
+  cmu: ["11-785", "11-411", "10-701", "15-281"]

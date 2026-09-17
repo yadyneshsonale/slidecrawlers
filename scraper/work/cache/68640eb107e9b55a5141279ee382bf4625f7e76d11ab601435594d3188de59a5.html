@@ -1,0 +1,449 @@
+<html><head>
+<title>CS 215: Data Interpretation and Analysis, Fall 2023</title>
+</head>
+
+<body><font face="Arial">
+
+
+
+<center>
+<table cellspacing="0" cellpadding="0" width="700" border="0">
+  <tbody>
+  <tr bgcolor="#FFD580">
+    <td>
+
+      <center>
+      <h2>CS 215 - Data Interpretation and Analysis</h2>
+	<b>Instructor:</b> Ajit Rajwade and Pushpak Bhattacharya
+	<br><b>Office:</b> SIA-218, KReSIT Building
+	<br> <b>Email:</b> <img src="email.png" height="15," width="180">
+	<br><br><b>Instructor Office Hours </b>(at the Lecture Venue): Immediately after class, or by appointment via email (<b>also feel free to send queries over email or moodle</b>)
+	<br><br> <b>Teaching Assistants:</b> 
+	<ul>
+	<li>Piyush Sawarkar: piyushs AT cse DOT iitb.ac.in
+	</li><li>Bhumika Khetan: bhumikakhetan AT cse DOT iitb.ac.in
+	</li><li>Sankara Sri Raghava Ravindra Muddu: sriraghava AT cse DOT iitb.ac.in
+	</li><li>Nagakalyani Goda: nagakalyani AT cse DOT iitb.ac.in 
+	</li><li>Dhananjay Kejriwal: dhankejriwal AT cse DOT iitb.ac.in
+	</li><li>Vaibhav Raj: vaibhavraj AT cse DOT iitb.ac.in
+	</li><li>Arpon Basu: abasu AT cse DOT iitb.ac.in
+	</li><li>Yash Kumthekar: 23m0797 AT iitb DOT ac DOT in
+	</li><li>Shubajeet Dey: shubhajeet AT cse DOT iitb.ac.in
+	</li><li>Drashthi Doshi: drashthi AT cse DOT iitb.ac.in
+	</li></ul>
+	
+	</center>
+	<br>
+</td>
+</tr>
+</tbody>
+</table>
+</center>
+
+
+<font face="Arial">
+
+      <h3>Topics to be covered (tentative list)</h3>
+
+      <ul>
+	<li> Descriptive statistics
+	</li><li> Discrete and continuous probability
+	</li><li> Random variables and expectation
+	</li><li> Special random variables: Gaussian, Bernoulli, Beta, Gamma, Uniform, Poisson, Exponential, Binomial, etc.
+	</li><li> Hypothesis testing
+	</li><li> Parameter estimation
+	</li><li> Regression
+	</li><li> Probability density estimation
+      </li></ul>	
+<hr>
+
+	<h3>Intended Audience</h3>
+	2nd year BTech students from CSE
+
+      <h3>Learning Materials and Textbooks</h3>
+	<ul>
+	<li> Lecture slides that will be regularly posted. I may occasionally post links to videos, or additional material such as problem sets.
+	</li><li> We will use moodle for posting assignments and grades
+	</li><li> Course textbook: Introduction to Probability and Statistics for Engineers and Scientists: Fifth Edition (20-30 copies available in the library)
+	</li></ul>
+
+	<h3>Computational Resources</h3>
+	<ul>
+	<b>Matlab</b>
+	<li><a href="https://www.mathworks.com/academia/tah-portal/indian-institute-of-technology-bombay-40677001.html">Online MATLAB @IITB</a>, accessible through your LDAP id and password</li>
+	<li>Download MATLAB from <a href="ftp://ftp.iitb.ac.in/IITB_private/Matlab/MATHWORKS_R2015B/">here</a> (any available version is good enough).
+
+</li><li><a href="http://www.mccormick.northwestern.edu/docs/efirst/matlab.pdf">Matlab tutorial 1</a></li>
+<li><a href="http://web.eecs.umich.edu/~aey/eecs451/matlab.pdf">Matlab tutorial 2</a></li>
+<li><a href="http://www.cs.cmu.edu/~ggordon/10601/recitations/matlab/pretty_matlab_pres.pdf">Matlab tutorial 3</a></li>
+
+<li><a href="http://www.mathworks.com/academia/student_center/tutorials/launchpad.html">The MathWorks - MATLAB Tutorial</a></li>
+<li><a href="http://math.ucsd.edu/~driver/21d-s99/matlab-primer.html">Matlab
+Primer</a></li>
+<li><a href="http://www.mathworks.com/access/helpdesk/help/techdoc/matlab.shtml">On-line Matlab Help</a></li>
+<li><a href="http://www.ee.columbia.edu/~marios/matlab/Writing_Fast_MATLAB_Code.pdf">Writing
+Fast Matlab Code</a> (pdf)</li>
+<li>One more tutorial for <a href="http://home.online.no/~pjacklam/matlab/doc/mtt/doc/mtt.pdf">writing fast matlab code</a></li>
+<li><a href="http://www.mathworks.com/support/tech-notes/1100/1109.html">Code Vectorization Guide</a></li>
+<li><a href="http://www.ee.columbia.edu/~marios/matlab/MatlabStyle1p5.pdf">Matlab
+Programmin Style Guidelines</a> (pdf)</li>
+<li><a href="http://home.online.no/~pjacklam/matlab/doc/mtt/doc/mtt.pdf">Matlab array manipulation</a></li>
+</ul>
+<hr>
+
+      <h3>Grading Policy (tenative)</h3>
+      <ul>
+        <li> Mid-sem exam: 25%
+	</li><li> Final exam (cumulative): 25%
+	</li><li> Programming and written assignments (about five): 35% - all to be done in groups of 2 students. 
+	</li><li> Two pre-announced quizzes: 15% total
+</li></ul>
+<hr>     
+
+
+	<h3>Other Policies</h3>
+	<ul>
+	<li>Attendance is mandatory. <b>Students with less than 80% attendance may be given a DX grade.</b></li>
+	<li> Assignments will be given out (typically) once every two or three weeks. They must be submitted on or before the deadline. No late 
+assignments will be accepted. The programming components of the assignments will typically involve MATLAB, so you must be willing to learn it quickly.
+	</li><li> <font color="red">We will adopt a zero-tolerance policy 
+against any forms of plagiarism or any other form of cheating. Just 
+don't do it! In cases of plagiarism, givers and takers will both be considered equally responsible. </font>
+	</li><li> This course is (inherently) cumulative. The syllabus for the final exam 
+will include everything taught during the semester.
+	</li></ul>	
+
+<hr>
+
+<h2 id="Tutorials">Tutorials</h2>
+<ul> <li>See moodle</li></ul>
+
+<h2 id="Quizzes">Quizzes</h2>
+<ul> <li>See moodle</li></ul>
+
+
+
+<h2 id="schedule">Lecture Schedule: </h2>
+<br>
+<p align="center">
+<table cellpadding="10" border="1">
+<tbody><tr bgcolor="#FFD580">
+<td> <b><h3>Date</h3></b></td>
+<td> <b><h3>Content of the Lecture</h3></b></td>
+<td> <b><h3>Assignments/Readings/Notes</h3></b></td>
+</tr>
+
+<tr>
+<td>31/07</td>
+<td><ul>
+<li>Introduction, course overview and course policies</li>
+</ul>
+<ul>
+<b>Descriptive Statistics</b>
+<li>Terminology: population, sample, discrete and continuous valued attributes</li>
+<li>Frequency tables, frequency polyongs, line diagrams, pie charts, relative frequency tables</li>
+<li>Histograms with examples for image intensity histograms, image gradient histograms</li>
+<li>Histogram binning problem</li>
+</ul>
+
+</td><td>
+<ul>
+<li><a href="https://docs.google.com/presentation/d/1MJKFZ7nFKXl21dKroB4fS9KNmaAt9Z8q/edit?usp=sharing&amp;ouid=113281828352677469792&amp;rtpof=true&amp;sd=true">Slides: Course Overview</a></li> 
+<li><a href="https://docs.google.com/presentation/d/1uAYL8-XwzORiO4dKxLAIlrUrvkzcaxBw/edit?usp=sharing&amp;ouid=113281828352677469792&amp;rtpof=true&amp;sd=true">Slides: Descriptive Statistics</a></li> 
+<li>Readings: sections 2.1 and 2.2 of the textbook by Sheldon Ross</li>
+</ul>
+</td>
+</tr>
+
+
+<tr>
+<td>5/8</td>
+<td>
+<ul>
+<li>Data summarization: mean and median</li>
+<li>"Proof" that median minimizes the sum of absolute deviations - using calculus</li>
+<li>Proof that median minimizes the sum of absolute deviations, without using calculus</li>
+<li>Concept of quantile/percentile</li>
+<li>Calculation of mean and median in different ways from histogram or cumulative plots</li>
+<li>Standard deviation and variance, some applications</li>
+<li>Two-sided Chebyshev inequality with proof; One-side Chebyshev inequality (Chebyshev-Cantelli inequality)</li>
+<li>Concept of scatter plots</li>
+</ul>
+
+</td><td>
+<ul>
+<li><a href="https://docs.google.com/presentation/d/1uAYL8-XwzORiO4dKxLAIlrUrvkzcaxBw/edit?usp=sharing&amp;ouid=113281828352677469792&amp;rtpof=true&amp;sd=true">Slides: Descriptive Statistics</a></li> 
+<li>Readings: sections 2.1 and 2.2 of the textbook by Sheldon Ross</li>
+</ul>
+</td>
+</tr>
+
+
+<tr>
+<td>7/8</td>
+<td>
+<ul>
+<li>Concept of correlation coefficient and formula for it; proof that its value lies from -1 to +1</li>
+<li>Correlation coefficient: properties; uncentered correlation coefficient; limitations of correlation coefficient and Anscombe's quartet</li>
+<li>Correlation and causation</li>
+</ul>
+<ul>
+<a href="https://drive.google.com/drive/folders/1UCVbfgcsj1hEkFrV-DWfdj227kJ0mFqg?usp=sharing">MATLAB Demo Examples</a>
+</ul>
+
+
+</td><td>
+<ul>
+<li><a href="https://docs.google.com/presentation/d/1uAYL8-XwzORiO4dKxLAIlrUrvkzcaxBw/edit?usp=sharing&amp;ouid=113281828352677469792&amp;rtpof=true&amp;sd=true">Slides: Descriptive Statistics</a></li> 
+<li>Readings: sections 2.1,2.2,2.3,2.4,2.6 of the textbook by Sheldon Ross</li>
+</ul>
+</td>
+</tr>
+
+
+<tr>
+<td>10/8</td>
+<td>
+<b>Discrete Probability</b>
+<ul>
+<li>Discrete probability: sample space, event, composition of events: union, intersection, complement, exclusive or, De Morgan's laws</li>
+<li>Boole's and Bonferroni's inequalities</li>
+<li>Conditional probability, Bayes rule, False Positive Paradox</li>
+<li>Independent and mutually exclusive events</li>
+<li>Birthday paradox</li>
+</ul>
+
+</td><td>
+<ul>
+<li><a href="https://docs.google.com/presentation/d/1sx4kPl13dGTXDvzMhQHQEo_yExO7wiVE/edit?usp=sharing&amp;ouid=113281828352677469792&amp;rtpof=true&amp;sd=true">Slides: Discrete Probability</a></li> 
+<li>Readings: Chapter 3 of the textbook by Sheldon Ross</li>
+</ul>
+</td>
+</tr>
+
+
+<tr>
+<td>14/8</td>
+<td>
+<b>Random Variables</b>
+<ul>
+<li>Random variable: concept, discrete and continuous random variables</li>
+<li>Probability mass function (pmf), cumulative distribution function (cdf) and probability density function (pdf)</li>
+<li>Expected value for discrete and continuous random variables; Law of the Unconscious Statistician</li>
+<li>Standard deviation, Markov's inequality, Chebyshev's inequality; proofs of these inequalities</li>
+<li>Concept of covariance and its properties</li>
+</ul>
+
+</td><td>
+<ul>
+<li><a href="https://docs.google.com/presentation/d/1AbP5hTzHBM22NXtBcW_Rt4-dQRNbldHq/edit?usp=sharing&amp;ouid=113281828352677469792&amp;rtpof=true&amp;sd=true">Slides: Random Variables</a></li> 
+<li>Readings: Chapter 4 of the textbook by Sheldon Ross</li>
+</ul>
+</td>
+</tr>
+
+
+
+<tr>
+<td>17/8</td>
+<td>
+<ul>
+<li>Proof of the law of the unconscious statistician</li>
+<li>Weak law of large numbers and its proof using Chebyshev's inequality; statement of strong law</li>
+<li>Joint PMF, PDF, CDF with examples; marginals obtained by integration of joint PDFs, CDFs, PMFs</li>
+<li>Concept of independence of random variables</li>
+</ul>
+
+</td><td>
+<ul>
+<li><a href="https://docs.google.com/presentation/d/1AbP5hTzHBM22NXtBcW_Rt4-dQRNbldHq/edit?usp=sharing&amp;ouid=113281828352677469792&amp;rtpof=true&amp;sd=true">Slides: Random Variables</a></li> 
+<li>Readings: Chapter 4 of the textbook by Sheldon Ross</li>
+</ul>
+</td>
+</tr>
+
+
+<tr>
+<td>21/8</td>
+<td>
+<ul>
+<li>Moment generating functions: definition, genesis, properties, uniqueness proofs</li>
+<li>Conditional CDF, PDF, PMF; conditional expectation; examples</li>
+</ul>
+<hr>
+<b>Families of Random Variables</b>
+<ul>
+<li>Bernoulli random variables: mean, median, mode, variance, MGF</li>
+<li>Binomial random variables: definition</li>
+</ul>
+
+</td><td>
+<ul>
+<li><a href="https://docs.google.com/presentation/d/1AbP5hTzHBM22NXtBcW_Rt4-dQRNbldHq/edit?usp=sharing&amp;ouid=113281828352677469792&amp;rtpof=true&amp;sd=true">Slides: Random Variables</a></li> 
+<li>Readings: Chapter 4 of the textbook by Sheldon Ross</li>
+<li><a href="https://docs.google.com/presentation/d/1OvyDrNlZbAteW4EWgEZNLmS76annOqPk/edit?usp=sharing&amp;ouid=113281828352677469792&amp;rtpof=true&amp;sd=true">Slides: Families of Random Variables</a></li>
+<li>Readings: chapter 5</li>
+</ul>
+</td>
+</tr>
+
+
+<tr>
+<td>24/8</td>
+<td>
+<ul>
+<li>Binomial random variables: definition, mean, variance, mode, CDF, MGF</li>
+<li>Gaussian distribution: definition, mean, variance, verification of integration to 1</li>
+<li>Introduction to and basic statement of the central limit theorem, with examples</li>
+</ul>
+
+</td><td>
+<ul>
+<li><a href="https://docs.google.com/presentation/d/1OvyDrNlZbAteW4EWgEZNLmS76annOqPk/edit?usp=sharing&amp;ouid=113281828352677469792&amp;rtpof=true&amp;sd=true">Slides: Families of Random Variables</a></li>
+<li>Readings: chapter 5</li>
+<li><a href="https://drive.google.com/drive/folders/1tBUe_AEg8EjrsWbnwR7XALCuIwpIla0T?usp=sharing">Code for the central limit theorem</a></li>
+
+</ul>
+</td>
+</tr>
+
+<tr>
+<td>28/8</td>
+<td>
+<ul>
+<li>Properties of Gaussian: CDF and error function, MGF</li>
+<li>Proof of Central Limit Theorem</li>
+<li>Relation between CLT and Law of Large Numbers</li>
+<li>Gaussian tail bounds</li>
+<li>Distribution of sample mean and sample variance, Bessel's correction</li>
+</ul>
+
+</td><td>
+<ul>
+<li><a href="https://docs.google.com/presentation/d/1OvyDrNlZbAteW4EWgEZNLmS76annOqPk/edit?usp=sharing&amp;ouid=113281828352677469792&amp;rtpof=true&amp;sd=true">Slides: Families of Random Variables</a></li>
+<li>Readings: chapter 5</li>
+<li><a href="https://drive.google.com/drive/folders/1tBUe_AEg8EjrsWbnwR7XALCuIwpIla0T?usp=sharing">Code for the central limit theorem</a></li>
+
+</ul>
+</td>
+</tr>
+
+
+<tr>
+<td>31/8</td>
+<td>
+<ul>
+<li>Distribution of sample variance given Gaussian random variables</li>
+<li>Chi-square distribution: derivation for the case of n = 1, formula stated for general n, derivation of MGF, mean, variance</li>
+<li>Poisson distribution: genesis, mean, variance, MGF, thinning property, sum of Poisson random variables, practical application as model for image noise</li>
+<li>Multinomial PMF - generalization of the binomial, mean vector and covariance matrix for a multinomial random variable</li>
+</ul>
+
+</td><td>
+<ul>
+<li><a href="https://docs.google.com/presentation/d/1OvyDrNlZbAteW4EWgEZNLmS76annOqPk/edit?usp=sharing&amp;ouid=113281828352677469792&amp;rtpof=true&amp;sd=true">Slides: Families of Random Variables</a></li>
+<li>Readings: chapter 5</li>
+
+</ul>
+</td>
+</tr>
+
+
+<tr>
+<td>4/9</td>
+<td>
+<ul>
+<li>Multinomial PMF - derivation of MGF</li>
+<li>Hypergeometric distribution: genesis, mean, variance</li>
+<li>Applications of the hypergeometric distribution in counting of animals via the capture-recapture method</li>
+<li>Uniform distribution: mean, variance, median, MGF; applications in sampling from a pre-specified PMF; application in generating a random permutation of a given set</li>
+<li>Exponential distribution: mean, median, MGF, variance, property of memorylessness, minimum of exponential random variables</li>
+</ul>
+
+</td><td>
+<ul>
+<li><a href="https://docs.google.com/presentation/d/1OvyDrNlZbAteW4EWgEZNLmS76annOqPk/edit?usp=sharing&amp;ouid=113281828352677469792&amp;rtpof=true&amp;sd=true">Slides: Families of Random Variables</a></li>
+<li>Readings: chapter 5</li>
+
+</ul>
+</td>
+</tr>
+
+
+<tr>
+<td>7/9</td>
+<td>
+<ul>
+<li>Parameter Estimation</li>
+<li>Concept of parameter estimation (or parametric PDF/PMF estimation)</li>
+<li>Maximum likelihood estimation (MLE)</li>
+<li>MLE for parameters of Bernoulli, Poisson, Gaussian and uniform distributions</li>
+<li>Least squares line fitting as an MLE problem</li>
+<li>MLE for parameters of uniform distributions</li>
+<li>Least squares line fitting as an MLE problem</li>
+</ul>
+
+</td><td>
+<ul>
+<li><a href="https://docs.google.com/presentation/d/1ULL3VRn63Tjk-5bI3ZQ0Saht81bRQ6-S/edit?usp=sharing&amp;ouid=113281828352677469792&amp;rtpof=true&amp;sd=true">Slides: Parameter Estimation</a></li>
+<li><a href="https://www.cse.iitb.ac.in/~ajitvr/CS215_Fall2023/MLE/MLE_notes.pdf">MLE derivations</a></li>
+<li>Readings: Section 5.6 from the textbook by Sheldon Ross</li>
+<li>Readings: Sections 7.1, 7.2, 7.5, 7.7, 9.2 (for least squares line fitting) of the textbook by Sheldon Ross</li>
+
+</ul>
+</td>
+</tr>
+
+
+<tr>
+<td>11/9</td>
+<td>
+<ul>
+<li>Concept of estimator bias, mean squared error, variance</li>
+<li>Estimators for interval of uniform distribution: example of bias</li>
+<li>Concept of two-sided confidence interval and one-sided confidence interval</li>
+<li>Confidence interval for mean of a Gaussian with known standard deviation</li>
+<li>Confidence interval for variance of a Gaussian</li>
+<li>Concept of two-sided confidence interval and one-sided confidence interval</li>
+<li>Confidence interval for mean of a Gaussian with known standard deviation</li>
+<li>Confidence interval for variance of a Gaussian</li>
+</ul>
+
+</td><td>
+<ul>
+<li><a href="https://docs.google.com/presentation/d/1ULL3VRn63Tjk-5bI3ZQ0Saht81bRQ6-S/edit?usp=sharing&amp;ouid=113281828352677469792&amp;rtpof=true&amp;sd=true">Slides: Parameter Estimation</a></li>
+<li><a href="https://www.cse.iitb.ac.in/~ajitvr/CS215_Fall2023/MLE/MLE_notes.pdf">MLE derivations</a></li>
+<li>Readings: Section 5.6 from the textbook by Sheldon Ross</li>
+<li>Readings: Sections 7.1, 7.2, 7.3, 7.5, 7.7, 9.2 (for least squares line fitting) of the textbook by Sheldon Ross</li>
+
+</ul>
+</td>
+</tr>
+
+
+<tr>
+<td>14/9</td>
+<td>
+<ul>
+<li>Concept of nonparametric density estimation</li>
+<li>Concept of histogram as a probability density estimator</li>
+<li>Bias, variance and MSE for a histogram estimator for a smooth density (with bounded first derivatives) which is non-zero on a finite-sized interval; derivation of optimal number of bins (equivalently, optimal binwidth) and optimal MSE O(n^{-2/3})</li>
+</ul>
+
+</td><td>
+<ul>
+<li><a href="http://faculty.washington.edu/yenchic/18W_425/Lec6_hist_KDE.pdf">Derivation of MSE, bias, variance for a histogram</a>. Read section 6.1 only. These notes are by Prof. Yen-Chi Chen from the Univ. of Washington, Seattle. A local copy of the pdf is <a href="Lec6_hist_KDE.pdf">here</a></li>
+
+</ul>
+</td>
+</tr>
+
+
+
+
+
+
+ 
+
+
+</tbody></table></p></font></font></body></html>

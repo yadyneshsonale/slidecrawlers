@@ -1,0 +1,2646 @@
+<!DOCTYPE html><html lang="en-us" class="wf-ptsans-n7-active wf-ptsans-n4-active wf-active"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, width=device-width">
+
+        <meta property="og:image" content="https://cs50.harvard.edu/x/2026/assets/sanders.jpg">
+
+        <meta property="og:title" content="Lecture 1 - CS50x 2026">
+
+        <link href="../../favicon.ico?1780699120" rel="icon">
+
+        <!-- https://fonts.google.com/specimen/PT+Sans?query=PT+Sans&selection.family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700 -->
+        <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+
+        <!-- https://getbootstrap.com/docs/ -->
+        <script src="../../assets/jquery/dist/jquery.min.js?1780699120"></script>
+        <script src="../../assets/bootstrap/dist/js/bootstrap.bundle.min.js?1780699120"></script>
+
+        <!-- https://bootstrap-table.com/docs/getting-started/introduction/ -->
+        <link href="../../assets/bootstrap-table/dist/bootstrap-table.min.css?1780699120" rel="stylesheet">
+        <script src="../../assets/bootstrap-table/dist/bootstrap-table.min.js?1780699120"></script>
+        <script src="../../assets/bootstrap-table/dist/extensions/mobile/bootstrap-table-mobile.min.js?1780699120"></script>
+
+        <!-- https://fontawesome.com/how-to-use/on-the-web/referencing-icons/basic-use -->
+        
+        <link crossorigin="anonymous" href="https://kit.fontawesome.com/a6e66aa089.css" rel="stylesheet">
+        
+
+        <!-- https://moment.github.io/luxon/ -->
+        <script src="../../assets/luxon/build/global/luxon.min.js?1780699120"></script>
+
+        <!-- http://docs.mathjax.org/ -->
+        <!-- http://docs.mathjax.org/en/latest/options/output/chtml.html?highlight=displayAlign#the-configuration-block -->
+        <!-- https://docs.mathjax.org/en/latest/output/fonts.html -->
+        <script>
+            MathJax = {
+                loader: {
+                    paths: {
+                        'mathjax-newcm': '[mathjax]/../@mathjax/mathjax-newcm-font',
+                    }
+                },
+                output: {
+                    displayAlign: 'left'
+                }
+            };
+        </script>
+        <script src="../../assets/mathjax/tex-mml-chtml.js?1780699120"></script><style id="MJX-LE-styles">:root {
+  --mjx-fg-red: 255, 0, 0;
+  --mjx-fg-green: 0, 255, 0;
+  --mjx-fg-blue: 0, 0, 255;
+  --mjx-fg-yellow: 255, 255, 0;
+  --mjx-fg-cyan: 0, 255, 255;
+  --mjx-fg-magenta: 255, 0, 255;
+  --mjx-fg-white: 255, 255, 255;
+  --mjx-fg-black: 0, 0, 0;
+  --mjx-bg-red: 255, 0, 0;
+  --mjx-bg-green: 0, 255, 0;
+  --mjx-bg-blue: 0, 0, 255;
+  --mjx-bg-yellow: 255, 255, 0;
+  --mjx-bg-cyan: 0, 255, 255;
+  --mjx-bg-magenta: 255, 0, 255;
+  --mjx-bg-white: 255, 255, 255;
+  --mjx-bg-black: 0, 0, 0;
+  --mjx-live-bg-color: white;
+  --mjx-live-shadow-color: #888;
+  --mjx-live-border-color: #CCCCCC;
+  --mjx-bg1-color: rgba(var(--mjx-bg-blue), var(--mjx-bg-alpha));
+  --mjx-fg1-color: rgba(var(--mjx-fg-black), 1);
+  --mjx-bg2-color: rgba(var(--mjx-bg-red), 1);
+  --mjx-fg2-color: rgba(var(--mjx-fg-black), 1);
+  --mjx-bg1-alpha: 0.2;
+  --mjx-fg1-alpha: 1;
+  --mjx-bg2-alpha: 1;
+  --mjx-fg2-alpha: 1;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --mjx-bg-blue: 132, 132, 255;
+      --mjx-bg-white: 0, 0, 0;
+      --mjx-bg-black: 255, 255, 255;
+      --mjx-fg-white: 0, 0, 0;
+      --mjx-fg-black: 255, 255, 255;
+      --mjx-live-bg-color: #222025;
+      --mjx-live-shadow-color: black;
+      --mjx-live-border-color: #7C7C7C;
+      --mjx-bg1-alpha: 0.3;
+      --mjx-fg1-alpha: 1;
+      --mjx-bg2-alpha: 1;
+      --mjx-fg2-alpha: 1;
+  }
+}
+
+.MJX_LiveRegion {
+  position: absolute;
+  top: 0;
+  display: none;
+  width: auto;
+  height: auto;
+  padding: 0;
+  opacity: 1;
+  z-index: 202;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  background-color: var(--mjx-live-bg-color);
+  box-shadow: 0px 5px 20px var(--mjx-live-shadow-color);
+  border: 2px solid var(--mjx-live-border-color);
+}
+
+.MJX_LiveRegion_Show {
+  display: block;
+}
+
+.MJX_LiveRegion > div {
+  color: var(--mjx-fg1-color);
+  background-color: var(--mjx-bg1-color);
+}
+
+mjx-container [data-sre-highlight-1]:not([data-mjx-collapsed], rect) {
+  color: var(--mjx-fg1-color) ! important;
+  fill: var(--mjx-fg1-color) ! important;
+}
+
+mjx-container:not([data-mjx-clone-container]) [data-sre-highlight-1]:not([data-sre-enclosed], rect) {
+  background-color: var(--mjx-bg1-color) ! important;
+}
+
+mjx-container rect[data-sre-highlight-1]:not([data-sre-enclosed]) {
+  fill: var(--mjx-bg1-color) ! important;
+}
+
+mjx-container [data-sre-highlight-2] {
+  color: var(--mjx-fg2-color) ! important;
+  background-color: var(--mjx-bg2-color) ! important;
+  fill: var(--mjx-fg2-color) ! important;
+}
+
+mjx-container rect[data-sre-highlight-2] {
+  fill: var(--mjx-bg2-color) ! important;
+}</style><style id="MJX-RE-styles">.MJX_HoverRegion {
+  display: block;
+  position: absolute;
+  width: max-content;
+  height: auto;
+  padding: 0;
+  opacity: 1;
+  z-index: 202;
+  margin: 0 auto;
+  background-color: white;
+  line-height: 0;
+  box-shadow: 0px 10px 20px #888;
+  border: 2px solid #CCCCCC;
+}
+
+.MJX_HoverRegion > div {
+  overflow: hidden;
+  color: var(--mjx-fg1-color);
+  background-color: var(--mjx-bg1-color);
+}
+
+@media (prefers-color-scheme: dark) {
+  .MJX_HoverRegion {
+    background-color: #222025;
+      box-shadow: 0px 5px 20px #000;
+      border: 1px solid #7C7C7C;
+  }
+}
+
+mjx-container[data-mjx-clone-container] {
+  padding: 2px ! important;
+}
+
+mjx-math > mjx-mlabeledtr {
+  display: inline-block;
+  margin-right: .5em ! important;
+}
+
+mjx-math > mjx-mtd {
+  float: right;
+}</style><style id="MJX-_E-styles">.MJX_ToolTip {
+  width: auto;
+  height: auto;
+  opacity: 1;
+  text-align: center;
+  border-radius: 4px;
+  padding: 0;
+  border-bottom: 1px dotted black;
+  position: absolute;
+  display: inline-block;
+  background-color: white;
+  z-index: 202;
+}
+
+.MJX_ToolTip > div {
+  border-radius: inherit;
+  padding: 0 2px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .MJX_ToolTip {
+    background-color: #222025;
+      box-shadow: 0px 5px 20px #000;
+      border: 1px solid #7C7C7C;
+  }
+}</style><style id="MJX-Menu-styles">.CtxtMenu_Menu {
+  position: absolute;
+  background-color: white;
+  color: black;
+  width: auto;
+  padding: 5px 0px;
+  border: 1px solid #CCCCCC;
+  margin: 0;
+  cursor: default;
+  font: menu;
+  text-align: left;
+  text-indent: 0;
+  text-transform: none;
+  line-height: normal;
+  letter-spacing: normal;
+  word-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  float: none;
+  z-index: 1001;
+  border-radius: 5px;
+  box-shadow: 0px 10px 20px #808080;
+}
+.CtxtMenu_MenuItem {
+  padding: 1px 2em;
+  background: transparent;
+}
+.CtxtMenu_MenuArrow {
+  position: absolute;
+  right: 0.5em;
+  padding-top: 0.25em;
+  color: #666666;
+  font-family: null;
+  font-size: 0.75em;
+}
+.CtxtMenu_MenuActive .CtxtMenu_MenuArrow {
+  color: white;
+}
+.CtxtMenu_MenuArrow.CtxtMenu_RTL {
+  left: 0.5em;
+  right: auto;
+}
+.CtxtMenu_MenuCheck {
+  position: absolute;
+  left: 0.7em;
+  font-family: null;
+}
+.CtxtMenu_MenuCheck.CtxtMenu_RTL {
+  right: 0.7em;
+  left: auto;
+}
+.CtxtMenu_MenuRadioCheck {
+  position: absolute;
+  left: 0.7em;
+}
+.CtxtMenu_MenuRadioCheck.CtxtMenu_RTL {
+  right: 0.7em;
+  left: auto;
+}
+.CtxtMenu_MenuInputBox {
+  padding-left: 1em;
+  right: 0.5em;
+  color: #666666;
+  font-family: null;
+}
+.CtxtMenu_MenuInputBox.CtxtMenu_RTL {
+  left: 0.1em;
+}
+.CtxtMenu_MenuComboBox {
+  left: 0.1em;
+  padding-bottom: 0.5em;
+}
+.CtxtMenu_MenuSlider {
+  left: 0.1em;
+}
+.CtxtMenu_SliderValue {
+  position: absolute;
+  right: 0.1em;
+  padding-top: 0.25em;
+  color: #333333;
+  font-size: 0.75em;
+}
+.CtxtMenu_MenuActive .CtxtMenu_SliderValue {
+  color: #DDDDDD;
+}
+.CtxtMenu_SliderBar {
+  outline: none;
+  background: #D3D3D3;
+}
+.CtxtMenu_MenuLabel {
+  padding: 1px 2em 3px 1.33em;
+  font-style: italic;
+}
+.CtxtMenu_MenuRule {
+  border-top: 1px solid #DDDDDD;
+  margin: 4px 3px;
+}
+.CtxtMenu_MenuDisabled {
+  color: #999;
+}
+.CtxtMenu_MenuActive {
+  background-color: #606872;
+  color: white;
+}
+.CtxtMenu_MenuDisabled:focus {
+  background-color: #E8E8E8;
+}
+.CtxtMenu_MenuLabel:focus {
+  background-color: #E8E8E8;
+}
+.CtxtMenu_ContextMenu:focus {
+  outline: none;
+}
+.CtxtMenu_ContextMenu .CtxtMenu_MenuItem:focus {
+  outline: none;
+}
+.CtxtMenu_SelectionMenu {
+  position: relative;
+  float: left;
+  border-bottom: none;
+  box-shadow: none ! important;
+  border-radius: 0px !important;
+}
+.CtxtMenu_SelectionItem {
+  padding-right: 1em;
+}
+.CtxtMenu_Selection {
+  right: 40%;
+  width: 50%;
+}
+.CtxtMenu_SelectionBox {
+  padding: 0em;
+  max-height: 20em;
+  max-width: none;
+  background-color: #FFFFFF;
+}
+.CtxtMenu_SelectionDivider {
+  clear: both;
+  border-top: 2px solid #000000;
+}
+.CtxtMenu_Menu .CtxtMenu_MenuClose {
+  top: -10px;
+  left: -10px;
+}
+@media (prefers-color-scheme: dark) /* menu */ {
+  .CtxtMenu_Menu {
+  color: #E0E0E0;
+  background-color: #242436;
+  box-shadow: 0px 10px 20px #000;
+  border: 1px solid #808080;
+}
+  .CtxtMenu_SliderValue {
+  color: #D0D0D0;
+}
+  .CtxtMenu_MenuDisabled:focus {
+  background-color: #383838;
+}
+  .CtxtMenu_MenuLabel:focus {
+  background-color: #585858;
+}
+  .CtxtMenu_MenuRule {
+  border-top: 1px solid #808080;
+}
+  .CtxtMenu_SelectionDivider {
+  border-top: 2px solid #808080;
+};
+}
+.CtxtMenu_MenuClose {
+  position: absolute;
+  cursor: pointer;
+  display: inline-block;
+  border: 2px solid #AAA;
+  border-radius: 18px;
+  font-family:  "Courier New", Courier;
+  font-size: 24px;
+  color: #F0F0F0;
+}
+.CtxtMenu_MenuClose span {
+  display: block;
+  background-color: #AAA;
+  border: 1.5px solid;
+  border-radius: 18px;
+  line-height: 0;
+  padding: 8px 0 6px;
+}
+.CtxtMenu_MenuClose:hover {
+  color: white !important;
+  border: 2px solid #CCC !important;
+}
+.CtxtMenu_MenuClose:hover span {
+  background-color: #CCC !important;
+}
+.CtxtMenu_MenuClose:hover:focus {
+  outline: none;
+}</style>
+
+        <!-- https://github.com/verlok/vanilla-lazyload -->
+        <script src="../../assets/vanilla-lazyload/dist/lazyload.min.js?1780699120"></script>
+
+        <!-- https://iframe-resizer.com/ -->
+        <script src="../../assets/@iframe-resizer/parent/index.umd.js?1780699120"></script>
+
+        <!-- https://github.com/scratchblocks/scratchblocks/releases -->
+        <script src="../../assets/scratchblocks.min.js?1780699120"></script><style><![CDATA[.sb-label{font-family:Lucida Grande,Verdana,Arial,DejaVu Sans,sans-serif;font-weight:700;fill:#fff;font-size:10px;word-spacing:1px}.sb-obsolete{fill:#d42828}.sb-motion{fill:#4a6cd4}.sb-looks{fill:#8a55d7}.sb-sound{fill:#bb42c3}.sb-pen{fill:#0e9a6c}.sb-events{fill:#c88330}.sb-control{fill:#e1a91a}.sb-sensing{fill:#2ca5e2}.sb-operators{fill:#5cb712}.sb-variables{fill:#ee7d16}.sb-list{fill:#cc5b22}.sb-custom{fill:#632d99}.sb-custom-arg{fill:#5947b1}.sb-extension{fill:#4b4a60}.sb-grey{fill:#969696}.sb-bevel{filter:url(#bevelFilter)}.sb-input{filter:url(#inputBevelFilter)}.sb-input-number,.sb-input-number-dropdown,.sb-input-string{fill:#fff}.sb-literal-dropdown,.sb-literal-number,.sb-literal-number-dropdown,.sb-literal-string{font-weight:400;font-size:9px;word-spacing:0}.sb-literal-number,.sb-literal-number-dropdown,.sb-literal-string{fill:#000}.sb-darker{filter:url(#inputDarkFilter)}.sb-outline{stroke:#fff;stroke-opacity:.2;stroke-width:2;fill:none}.sb-comment,.sb-define-hat-cap{stroke:#632d99;stroke-width:1;fill:#8e2ec2}.sb-comment{fill:#ffffa5;stroke:#d0d1d2}.sb-comment-line{fill:#ffff80}.sb-comment-label{font-family:Helvetica,Arial,DejaVu Sans,sans-serif;font-weight:700;fill:#5c5d5f;word-spacing:0;font-size:12px}.sb-diff{fill:none;stroke:#000}.sb-diff-ins{stroke-width:2px}.sb-diff-del{stroke-width:3px}]]></style><style><![CDATA[.sb3-label{font:500 12pt Helvetica Neue,Helvetica,sans-serif;word-spacing:1pt}.sb3-literal-dropdown,.sb3-literal-number,.sb3-literal-number-dropdown,.sb3-literal-string{word-spacing:0}.sb3-diff{fill:none;stroke:#000}.sb3-diff-ins{stroke-width:2px}.sb3-diff-del{stroke-width:3px}svg .sb3-motion{fill:#4c97ff;stroke:#3373cc}svg .sb3-motion-alt{fill:#4280d7}svg .sb3-motion-dark{fill:#3373cc}svg .sb3-looks{fill:#96f;stroke:#774dcb}svg .sb3-looks-alt{fill:#855cd6}svg .sb3-looks-dark{fill:#774dcb}svg .sb3-sound{fill:#cf63cf;stroke:#bd42bd}svg .sb3-sound-alt{fill:#c94fc9}svg .sb3-sound-dark{fill:#bd42bd}svg .sb3-control{fill:#ffab19;stroke:#cf8b17}svg .sb3-control-alt{fill:#ec9c13}svg .sb3-control-dark{fill:#cf8b17}svg .sb3-events{fill:#ffbf00;stroke:#c90}svg .sb3-events-alt{fill:#e6ac00}svg .sb3-events-dark{fill:#c90}svg .sb3-sensing{fill:#5cb1d6;stroke:#2e8eb8}svg .sb3-sensing-alt{fill:#47a8d1}svg .sb3-sensing-dark{fill:#2e8eb8}svg .sb3-operators{fill:#59c059;stroke:#389438}svg .sb3-operators-alt{fill:#46b946}svg .sb3-operators-dark{fill:#389438}svg .sb3-variables{fill:#ff8c1a;stroke:#db6e00}svg .sb3-variables-alt{fill:#ff8000}svg .sb3-variables-dark{fill:#db6e00}svg .sb3-list{fill:#ff661a;stroke:#e64d00}svg .sb3-list-alt{fill:#f50}svg .sb3-list-dark{fill:#e64d00}svg .sb3-custom{fill:#ff6680;stroke:#f35}svg .sb3-custom-alt{fill:#ff4d6a}svg .sb3-custom-dark{fill:#f35}svg .sb3-extension{fill:#0fbd8c;stroke:#0b8e69}svg .sb3-extension-alt{fill:#0da57a}svg .sb3-extension-dark{fill:#0b8e69}svg .sb3-obsolete{fill:#ed4242;stroke:#ca2b2b}svg .sb3-obsolete-alt{fill:#db3333}svg .sb3-obsolete-dark{fill:#ca2b2b}svg .sb3-grey{fill:#bfbfbf;stroke:#909090}svg .sb3-grey-alt{fill:#b2b2b2}svg .sb3-grey-dark{fill:#909090}svg .sb3-label{fill:#fff}svg .sb3-input-color{stroke:#fff}svg .sb3-input-number,svg .sb3-input-string{fill:#fff}svg .sb3-literal-number,svg .sb3-literal-string{fill:#575e75}svg .sb3-custom-arg{fill:#ff6680;stroke:#f35}svg.scratchblocks-style-scratch3-high-contrast .sb3-motion{fill:#80b5ff;stroke:#3373cc}svg.scratchblocks-style-scratch3-high-contrast .sb3-motion-alt{fill:#b3d2ff}svg.scratchblocks-style-scratch3-high-contrast .sb3-motion-dark{fill:#3373cc}svg.scratchblocks-style-scratch3-high-contrast .sb3-looks{fill:#ccb3ff;stroke:#774dcb}svg.scratchblocks-style-scratch3-high-contrast .sb3-looks-alt{fill:#dcf}svg.scratchblocks-style-scratch3-high-contrast .sb3-looks-dark{fill:#774dcb}svg.scratchblocks-style-scratch3-high-contrast .sb3-sound{fill:#e19de1;stroke:#bd42bd}svg.scratchblocks-style-scratch3-high-contrast .sb3-sound-alt{fill:#ffb3ff}svg.scratchblocks-style-scratch3-high-contrast .sb3-sound-dark{fill:#bd42bd}svg.scratchblocks-style-scratch3-high-contrast .sb3-control{fill:#ffbe4c;stroke:#cf8b17}svg.scratchblocks-style-scratch3-high-contrast .sb3-control-alt{fill:#ffda99}svg.scratchblocks-style-scratch3-high-contrast .sb3-control-dark{fill:#cf8b17}svg.scratchblocks-style-scratch3-high-contrast .sb3-events{fill:#ffd966;stroke:#c90}svg.scratchblocks-style-scratch3-high-contrast .sb3-events-alt{fill:#ffecb3}svg.scratchblocks-style-scratch3-high-contrast .sb3-events-dark{fill:#c90}svg.scratchblocks-style-scratch3-high-contrast .sb3-sensing{fill:#85c4e0;stroke:#2e8eb8}svg.scratchblocks-style-scratch3-high-contrast .sb3-sensing-alt{fill:#aed8ea}svg.scratchblocks-style-scratch3-high-contrast .sb3-sensing-dark{fill:#2e8eb8}svg.scratchblocks-style-scratch3-high-contrast .sb3-operators{fill:#7ece7e;stroke:#389438}svg.scratchblocks-style-scratch3-high-contrast .sb3-operators-alt{fill:#b5e3b5}svg.scratchblocks-style-scratch3-high-contrast .sb3-operators-dark{fill:#389438}svg.scratchblocks-style-scratch3-high-contrast .sb3-variables{fill:#ffa54c;stroke:#db6e00}svg.scratchblocks-style-scratch3-high-contrast .sb3-variables-alt{fill:#fc9}svg.scratchblocks-style-scratch3-high-contrast .sb3-variables-dark{fill:#db6e00}svg.scratchblocks-style-scratch3-high-contrast .sb3-list{fill:#f96;stroke:#e64d00}svg.scratchblocks-style-scratch3-high-contrast .sb3-list-alt{fill:#ffcab0}svg.scratchblocks-style-scratch3-high-contrast .sb3-list-dark{fill:#e64d00}svg.scratchblocks-style-scratch3-high-contrast .sb3-custom{fill:#f9a;stroke:#e64d00}svg.scratchblocks-style-scratch3-high-contrast .sb3-custom-alt{fill:#ffccd5}svg.scratchblocks-style-scratch3-high-contrast .sb3-custom-dark{fill:#e64d00}svg.scratchblocks-style-scratch3-high-contrast .sb3-extension{fill:#13ecaf;stroke:#0b8e69}svg.scratchblocks-style-scratch3-high-contrast .sb3-extension-alt{fill:#75f0cd}svg.scratchblocks-style-scratch3-high-contrast .sb3-extension-dark{fill:#0b8e69}svg.scratchblocks-style-scratch3-high-contrast .sb3-obsolete{fill:#fc6666;stroke:#d32121}svg.scratchblocks-style-scratch3-high-contrast .sb3-obsolete-alt{fill:#fcb0b0}svg.scratchblocks-style-scratch3-high-contrast .sb3-obsolete-dark{fill:#d32121}svg.scratchblocks-style-scratch3-high-contrast .sb3-grey{fill:#bfbfbf;stroke:#959595}svg.scratchblocks-style-scratch3-high-contrast .sb3-grey-alt{fill:#b2b2b2}svg.scratchblocks-style-scratch3-high-contrast .sb3-grey-dark{fill:#959595}svg.scratchblocks-style-scratch3-high-contrast .sb3-label{fill:#000}svg.scratchblocks-style-scratch3-high-contrast .sb3-input-color{stroke:#fff}svg.scratchblocks-style-scratch3-high-contrast .sb3-input-number,svg.scratchblocks-style-scratch3-high-contrast .sb3-input-string{fill:#fff}svg.scratchblocks-style-scratch3-high-contrast .sb3-literal-number,svg.scratchblocks-style-scratch3-high-contrast .sb3-literal-string{fill:#000}svg.scratchblocks-style-scratch3-high-contrast .sb3-custom-arg{fill:#f9a;stroke:#e64d00}.sb3-comment{fill:#ffffa5;stroke:#d0d1d2;stroke-width:1}.sb3-comment-line{fill:#ffff80}.sb3-comment-label,.sb3-label.sb3-comment-label{font:400 12pt Helvetica Neue,Helvetica,sans-serif;fill:#000;word-spacing:0}]]></style>
+
+        <!-- https://mermaid-js.github.io/ -->
+        <script src="../../assets/mermaid/dist/mermaid.min.js?1780699120"></script>
+
+        <!-- https://github.com/twitter/twemoji -->
+        <script src="../../assets/@twemoji/api/dist/twemoji.min.js?1780699120"></script>
+
+        
+
+        <link href="../../assets/page.css?1780699120" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans%7CPT+Sans:bold%7CPT+Sans:ital" media="all"><script src="../../assets/jekyll-theme-cs50.js?1780699120"></script>
+
+        <script>
+            window.CS50 = {
+                local: {"day":"numeric","hour":"numeric","minute":"numeric","month":"long","timeZoneName":"short","weekday":"long","year":"numeric"},
+                locale: "en",
+                tz: "Etc/Zulu"
+            };
+        </script>
+
+        <title>Lecture 1 - CS50x 2026</title>
+
+
+    <meta property="og:description" content="Welcome! In our previous session, we learned about Scratch, a visual programming language. Learning computer science concepts can be quite challenging....">
+<style id="MJX-CHTML-styles">
+mjx-container[overflow="scroll"][display] {
+  overflow: auto clip;
+  min-width: initial !important;
+}
+
+mjx-container[overflow="truncate"][display] {
+  overflow: hidden clip;
+  min-width: initial !important;
+}
+
+mjx-container[display] {
+  display: block;
+  text-align: center;
+  justify-content: center;
+  margin: .7em 0;
+  padding: .3em 2px;
+}
+
+mjx-container[display][width="full"] {
+  display: flex;
+}
+
+mjx-container[justify="left"] {
+  text-align: left;
+  justify-content: left;
+}
+
+mjx-container[justify="right"] {
+  text-align: right;
+  justify-content: right;
+}
+
+mjx-container[jax="CHTML"] {
+  white-space: nowrap;
+}
+
+mjx-mo > mjx-c, mjx-mi > mjx-c, mjx-mn > mjx-c, mjx-ms > mjx-c, mjx-mtext > mjx-c {
+  clip-path: padding-box polygon(-1em -2px, calc(100% + 1em) -2px, calc(100% + 1em) calc(100% + 2px), -1em calc(100% + 2px));
+}
+
+mjx-stretchy-h {
+  clip-path: padding-box polygon(0 -2px, 100% -2px, 100% calc(100% + 2px), 0 calc(100% + 2px));
+}
+
+mjx-stretchy-v {
+  clip-path: padding-box polygon(-2px 0, calc(100% + 2px) 0, calc(100% + 2px) 100%, -2px 100%);
+}
+
+mjx-container [space="1"] {
+  margin-left: .111em;
+}
+
+mjx-container [space="2"] {
+  margin-left: .167em;
+}
+
+mjx-container [space="3"] {
+  margin-left: .222em;
+}
+
+mjx-container [space="4"] {
+  margin-left: .278em;
+}
+
+mjx-container [space="5"] {
+  margin-left: .333em;
+}
+
+mjx-container [rspace="1"] {
+  margin-right: .111em;
+}
+
+mjx-container [rspace="2"] {
+  margin-right: .167em;
+}
+
+mjx-container [rspace="3"] {
+  margin-right: .222em;
+}
+
+mjx-container [rspace="4"] {
+  margin-right: .278em;
+}
+
+mjx-container [rspace="5"] {
+  margin-right: .333em;
+}
+
+mjx-container [size="s"] {
+  font-size: 70.7%;
+}
+
+mjx-container [size="ss"] {
+  font-size: 50%;
+}
+
+mjx-container [size="Tn"] {
+  font-size: 60%;
+}
+
+mjx-container [size="sm"] {
+  font-size: 85%;
+}
+
+mjx-container [size="lg"] {
+  font-size: 120%;
+}
+
+mjx-container [size="Lg"] {
+  font-size: 144%;
+}
+
+mjx-container [size="LG"] {
+  font-size: 173%;
+}
+
+mjx-container [size="hg"] {
+  font-size: 207%;
+}
+
+mjx-container [size="HG"] {
+  font-size: 249%;
+}
+
+mjx-container [width="full"] {
+  width: 100%;
+}
+
+mjx-box {
+  display: inline-block;
+}
+
+mjx-block {
+  display: block;
+}
+
+mjx-itable {
+  display: inline-table;
+}
+
+mjx-row {
+  display: table-row;
+}
+
+mjx-row > mjx-cell, mjx-row > mjx-base, mjx-row > mjx-under, mjx-row > mjx-over, mjx-row > mjx-den {
+  display: table-cell;
+}
+
+mjx-container [inline-breaks] {
+  display: inline;
+}
+
+mjx-container .mjx-selected {
+  outline: 2px solid black;
+}
+
+@media (prefers-color-scheme: dark) {
+  mjx-container .mjx-selected {
+    outline: 2px solid #C8C8C8;
+  }
+}
+
+mjx-mtext {
+  display: inline-block;
+}
+
+mjx-mstyle {
+  display: inline-block;
+}
+
+mjx-merror {
+  display: inline-block;
+  color: red;
+  background-color: yellow;
+}
+
+mjx-mphantom {
+  visibility: hidden;
+}
+
+mjx-container[has-speech="true"] {
+  position: relative;
+  cursor: default;
+}
+
+mjx-speech {
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+
+mjx-speech:focus {
+  outline: none;
+}
+
+mjx-container a[data-mjx-href] {
+  color: LinkText;
+  cursor: pointer;
+}
+
+mjx-container a[data-mjx-href].mjx-visited {
+  color: VisitedText;
+}
+
+mjx-container > mjx-help {
+  display: none;
+  position: absolute;
+  top: -.3em;
+  right: -.5em;
+  width: .6em;
+  height: .6em;
+  cursor: pointer;
+}
+
+mjx-container[display="true"] > mjx-help {
+  position: sticky;
+  inset: -100% 0 100% 0;
+  margin: -.3em -.5em 0 -.1em;
+  right: 0;
+  top: initial;
+}
+
+mjx-help > svg {
+  stroke: black;
+  width: 100%;
+  height: 100%;
+}
+
+mjx-help > svg > circle {
+  stroke-width: 1.5px;
+  cx: 9px;
+  cy: 9px;
+  r: 9px;
+  fill: white;
+}
+
+mjx-help > svg > circle:nth-child(2) {
+  fill: var(--mjx-bg1-color);
+  r: 7px;
+}
+
+mjx-help > svg > line {
+  stroke-width: 2.5px;
+  stroke-linecap: round;
+}
+
+mjx-help:hover > svg > circle:nth-child(2) {
+  fill: white;
+}
+
+mjx-container.mjx-explorer-active > mjx-help {
+  display: inline-flex;
+  align-items: center;
+}
+
+@media (prefers-color-scheme: dark) /* explorer */ {
+  mjx-help > svg {
+    stroke: #E0E0E0;
+  }
+  mjx-help > svg > circle {
+    fill: #404040;
+  }
+  mjx-help > svg > circle:nth-child(2) {
+    fill: rgba(132, 132, 255, .3);
+  }
+  mjx-help:hover > svg > circle:nth-child(2) {
+    stroke: #AAAAAA;
+      fill: #404040;
+  }
+}
+
+mjx-container[jax="CHTML"] > mjx-math.NCM-N[breakable] > * {
+  font-family: MJX-NCM-ZERO, MJX-NCM-N;
+}
+
+.NCM-N {
+  font-family: MJX-NCM-ZERO, MJX-NCM-N;
+}
+
+.NCM-B {
+  font-family: MJX-NCM-ZERO, MJX-NCM-B;
+}
+
+.NCM-I {
+  font-family: MJX-NCM-ZERO, MJX-NCM-I;
+}
+
+.NCM-BI {
+  font-family: MJX-NCM-ZERO, MJX-NCM-BI;
+}
+
+.NCM-DS {
+  font-family: MJX-NCM-ZERO, MJX-NCM-DS;
+}
+
+.NCM-F {
+  font-family: MJX-NCM-ZERO, MJX-NCM-F;
+}
+
+.NCM-FB {
+  font-family: MJX-NCM-ZERO, MJX-NCM-FB;
+}
+
+.NCM-SS {
+  font-family: MJX-NCM-ZERO, MJX-NCM-SS;
+}
+
+.NCM-SSB {
+  font-family: MJX-NCM-ZERO, MJX-NCM-SSB;
+}
+
+.NCM-SSI {
+  font-family: MJX-NCM-ZERO, MJX-NCM-SSI;
+}
+
+.NCM-SSBI {
+  font-family: MJX-NCM-ZERO, MJX-NCM-SSBI;
+}
+
+.NCM-M {
+  font-family: MJX-NCM-ZERO, MJX-NCM-M;
+}
+
+.NCM-SO {
+  font-family: MJX-NCM-ZERO, MJX-NCM-SO;
+}
+
+.NCM-LO {
+  font-family: MJX-NCM-ZERO, MJX-NCM-LO;
+}
+
+.NCM-S3 {
+  font-family: MJX-NCM-ZERO, MJX-NCM-S3;
+}
+
+.NCM-S4 {
+  font-family: MJX-NCM-ZERO, MJX-NCM-S4;
+}
+
+.NCM-S5 {
+  font-family: MJX-NCM-ZERO, MJX-NCM-S5;
+}
+
+.NCM-S6 {
+  font-family: MJX-NCM-ZERO, MJX-NCM-S6;
+}
+
+.NCM-S7 {
+  font-family: MJX-NCM-ZERO, MJX-NCM-S7;
+}
+
+.NCM-MI {
+  font-family: MJX-NCM-ZERO, MJX-NCM-MI;
+}
+
+.NCM-C {
+  font-family: MJX-NCM-ZERO, MJX-NCM-C;
+}
+
+.NCM-CB {
+  font-family: MJX-NCM-ZERO, MJX-NCM-CB;
+}
+
+.NCM-OS {
+  font-family: MJX-NCM-ZERO, MJX-NCM-OS;
+}
+
+.NCM-OB {
+  font-family: MJX-NCM-ZERO, MJX-NCM-OB;
+}
+
+.NCM-V {
+  font-family: MJX-NCM-ZERO, MJX-NCM-V;
+}
+
+.NCM-LT {
+  font-family: MJX-NCM-ZERO, MJX-NCM-LT;
+}
+
+.NCM-RB {
+  font-family: MJX-NCM-ZERO, MJX-NCM-RB;
+}
+
+.NCM-EM {
+  font-family: MJX-NCM-ZERO, MJX-NCM-EM;
+}
+
+.NCM-B-a {
+  font-family: MJX-NCM-ZERO, MJX-NCM-B-a;
+}
+
+.NCM-U {
+  font-family: MJX-NCM-ZERO, MJX-NCM-U;
+}
+
+.NCM-U-a {
+  font-family: MJX-NCM-ZERO, MJX-NCM-U-a;
+}
+
+.NCM-S {
+  font-family: MJX-NCM-ZERO, MJX-NCM-S;
+}
+
+.NCM-SB {
+  font-family: MJX-NCM-ZERO, MJX-NCM-SB;
+}
+
+@font-face /* MJX-NCM-ZERO */ {
+  font-family: MJX-NCM-ZERO;
+  src: url("https://cs50.harvard.edu/x/assets/mathjax/../@mathjax/mathjax-newcm-font/chtml/woff2/mjx-ncm-zero.woff2") format("woff2");
+}
+
+@font-face /* MJX-BRK */ {
+  font-family: MJX-BRK;
+  src: url("https://cs50.harvard.edu/x/assets/mathjax/../@mathjax/mathjax-newcm-font/chtml/woff2/mjx-ncm-brk.woff2") format("woff2");
+}
+
+@font-face /* MJX-NCM-N */ {
+  font-family: MJX-NCM-N;
+  src: url("https://cs50.harvard.edu/x/assets/mathjax/../@mathjax/mathjax-newcm-font/chtml/woff2/mjx-ncm-n.woff2") format("woff2");
+}
+
+@font-face /* MJX-NCM-B */ {
+  font-family: MJX-NCM-B;
+  src: url("https://cs50.harvard.edu/x/assets/mathjax/../@mathjax/mathjax-newcm-font/chtml/woff2/mjx-ncm-b.woff2") format("woff2");
+}
+
+@font-face /* MJX-NCM-I */ {
+  font-family: MJX-NCM-I;
+  src: url("https://cs50.harvard.edu/x/assets/mathjax/../@mathjax/mathjax-newcm-font/chtml/woff2/mjx-ncm-i.woff2") format("woff2");
+}
+
+@font-face /* MJX-NCM-BI */ {
+  font-family: MJX-NCM-BI;
+  src: url("https://cs50.harvard.edu/x/assets/mathjax/../@mathjax/mathjax-newcm-font/chtml/woff2/mjx-ncm-bi.woff2") format("woff2");
+}
+
+@font-face /* MJX-NCM-DS */ {
+  font-family: MJX-NCM-DS;
+  src: url("https://cs50.harvard.edu/x/assets/mathjax/../@mathjax/mathjax-newcm-font/chtml/woff2/mjx-ncm-ds.woff2") format("woff2");
+}
+
+@font-face /* MJX-NCM-F */ {
+  font-family: MJX-NCM-F;
+  src: url("https://cs50.harvard.edu/x/assets/mathjax/../@mathjax/mathjax-newcm-font/chtml/woff2/mjx-ncm-f.woff2") format("woff2");
+}
+
+@font-face /* MJX-NCM-FB */ {
+  font-family: MJX-NCM-FB;
+  src: url("https://cs50.harvard.edu/x/assets/mathjax/../@mathjax/mathjax-newcm-font/chtml/woff2/mjx-ncm-fb.woff2") format("woff2");
+}
+
+@font-face /* MJX-NCM-SS */ {
+  font-family: MJX-NCM-SS;
+  src: url("https://cs50.harvard.edu/x/assets/mathjax/../@mathjax/mathjax-newcm-font/chtml/woff2/mjx-ncm-ss.woff2") format("woff2");
+}
+
+@font-face /* MJX-NCM-SSB */ {
+  font-family: MJX-NCM-SSB;
+  src: url("https://cs50.harvard.edu/x/assets/mathjax/../@mathjax/mathjax-newcm-font/chtml/woff2/mjx-ncm-ssb.woff2") format("woff2");
+}
+
+@font-face /* MJX-NCM-SSI */ {
+  font-family: MJX-NCM-SSI;
+  src: url("https://cs50.harvard.edu/x/assets/mathjax/../@mathjax/mathjax-newcm-font/chtml/woff2/mjx-ncm-ssi.woff2") format("woff2");
+}
+
+@font-face /* MJX-NCM-SSBI */ {
+  font-family: MJX-NCM-SSBI;
+  src: url("https://cs50.harvard.edu/x/assets/mathjax/../@mathjax/mathjax-newcm-font/chtml/woff2/mjx-ncm-ssbi.woff2") format("woff2");
+}
+
+@font-face /* MJX-NCM-M */ {
+  font-family: MJX-NCM-M;
+  src: url("https://cs50.harvard.edu/x/assets/mathjax/../@mathjax/mathjax-newcm-font/chtml/woff2/mjx-ncm-m.woff2") format("woff2");
+}
+
+@font-face /* MJX-NCM-SO */ {
+  font-family: MJX-NCM-SO;
+  src: url("https://cs50.harvard.edu/x/assets/mathjax/../@mathjax/mathjax-newcm-font/chtml/woff2/mjx-ncm-so.woff2") format("woff2");
+}
+
+@font-face /* MJX-NCM-LO */ {
+  font-family: MJX-NCM-LO;
+  src: url("https://cs50.harvard.edu/x/assets/mathjax/../@mathjax/mathjax-newcm-font/chtml/woff2/mjx-ncm-lo.woff2") format("woff2");
+}
+
+@font-face /* MJX-NCM-S3 */ {
+  font-family: MJX-NCM-S3;
+  src: url("https://cs50.harvard.edu/x/assets/mathjax/../@mathjax/mathjax-newcm-font/chtml/woff2/mjx-ncm-s3.woff2") format("woff2");
+}
+
+@font-face /* MJX-NCM-S4 */ {
+  font-family: MJX-NCM-S4;
+  src: url("https://cs50.harvard.edu/x/assets/mathjax/../@mathjax/mathjax-newcm-font/chtml/woff2/mjx-ncm-s4.woff2") format("woff2");
+}
+
+@font-face /* MJX-NCM-S5 */ {
+  font-family: MJX-NCM-S5;
+  src: url("https://cs50.harvard.edu/x/assets/mathjax/../@mathjax/mathjax-newcm-font/chtml/woff2/mjx-ncm-s5.woff2") format("woff2");
+}
+
+@font-face /* MJX-NCM-S6 */ {
+  font-family: MJX-NCM-S6;
+  src: url("https://cs50.harvard.edu/x/assets/mathjax/../@mathjax/mathjax-newcm-font/chtml/woff2/mjx-ncm-s6.woff2") format("woff2");
+}
+
+@font-face /* MJX-NCM-S7 */ {
+  font-family: MJX-NCM-S7;
+  src: url("https://cs50.harvard.edu/x/assets/mathjax/../@mathjax/mathjax-newcm-font/chtml/woff2/mjx-ncm-s7.woff2") format("woff2");
+}
+
+@font-face /* MJX-NCM-MI */ {
+  font-family: MJX-NCM-MI;
+  src: url("https://cs50.harvard.edu/x/assets/mathjax/../@mathjax/mathjax-newcm-font/chtml/woff2/mjx-ncm-mi.woff2") format("woff2");
+}
+
+@font-face /* MJX-NCM-C */ {
+  font-family: MJX-NCM-C;
+  src: url("https://cs50.harvard.edu/x/assets/mathjax/../@mathjax/mathjax-newcm-font/chtml/woff2/mjx-ncm-c.woff2") format("woff2");
+}
+
+@font-face /* MJX-NCM-CB */ {
+  font-family: MJX-NCM-CB;
+  src: url("https://cs50.harvard.edu/x/assets/mathjax/../@mathjax/mathjax-newcm-font/chtml/woff2/mjx-ncm-cb.woff2") format("woff2");
+}
+
+@font-face /* MJX-NCM-OS */ {
+  font-family: MJX-NCM-OS;
+  src: url("https://cs50.harvard.edu/x/assets/mathjax/../@mathjax/mathjax-newcm-font/chtml/woff2/mjx-ncm-os.woff2") format("woff2");
+}
+
+@font-face /* MJX-NCM-OB */ {
+  font-family: MJX-NCM-OB;
+  src: url("https://cs50.harvard.edu/x/assets/mathjax/../@mathjax/mathjax-newcm-font/chtml/woff2/mjx-ncm-ob.woff2") format("woff2");
+}
+
+@font-face /* MJX-NCM-V */ {
+  font-family: MJX-NCM-V;
+  src: url("https://cs50.harvard.edu/x/assets/mathjax/../@mathjax/mathjax-newcm-font/chtml/woff2/mjx-ncm-v.woff2") format("woff2");
+}
+
+@font-face /* MJX-NCM-LT */ {
+  font-family: MJX-NCM-LT;
+  src: url("https://cs50.harvard.edu/x/assets/mathjax/../@mathjax/mathjax-newcm-font/chtml/woff2/mjx-ncm-lt.woff2") format("woff2");
+}
+
+@font-face /* MJX-NCM-RB */ {
+  font-family: MJX-NCM-RB;
+  src: url("https://cs50.harvard.edu/x/assets/mathjax/../@mathjax/mathjax-newcm-font/chtml/woff2/mjx-ncm-rb.woff2") format("woff2");
+}
+
+@font-face /* MJX-NCM-EM */ {
+  font-family: MJX-NCM-EM;
+  src: url("https://cs50.harvard.edu/x/assets/mathjax/../@mathjax/mathjax-newcm-font/chtml/woff2/mjx-ncm-em.woff2") format("woff2");
+}
+
+@font-face /* MJX-NCM-B-a */ {
+  font-family: MJX-NCM-B-a;
+  src: url("https://cs50.harvard.edu/x/assets/mathjax/../@mathjax/mathjax-newcm-font/chtml/woff2/mjx-ncm-b-a.woff2") format("woff2");
+}
+
+@font-face /* MJX-NCM-U */ {
+  font-family: MJX-NCM-U;
+  src: url("https://cs50.harvard.edu/x/assets/mathjax/../@mathjax/mathjax-newcm-font/chtml/woff2/mjx-ncm-u.woff2") format("woff2");
+}
+
+@font-face /* MJX-NCM-U-a */ {
+  font-family: MJX-NCM-U-a;
+  src: url("https://cs50.harvard.edu/x/assets/mathjax/../@mathjax/mathjax-newcm-font/chtml/woff2/mjx-ncm-u-a.woff2") format("woff2");
+}
+
+@font-face /* MJX-NCM-S */ {
+  font-family: MJX-NCM-S;
+  src: url("https://cs50.harvard.edu/x/assets/mathjax/../@mathjax/mathjax-newcm-font/chtml/woff2/mjx-ncm-s.woff2") format("woff2");
+}
+
+@font-face /* MJX-NCM-SB */ {
+  font-family: MJX-NCM-SB;
+  src: url("https://cs50.harvard.edu/x/assets/mathjax/../@mathjax/mathjax-newcm-font/chtml/woff2/mjx-ncm-sb.woff2") format("woff2");
+}
+</style></head>
+
+    <body class="">
+
+        <div class="alert fixed-top mb-0 rounded-0 alert-success alert-dismissible" data-alert="success dismissible" data-hash="c817bbf2dd0768585391bff43302d9c8" id="alert" role="alert">
+            <button aria-label="Close" class="btn-close" data-bs-dismiss="alert" type="button"></button><p>This is CS50x 2026. <img draggable="false" class="emoji" alt="🎉" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/1f389.png"> Curious how your 2025 work counts toward the 2026 course? See our <a href="../../faqs/#if-i-started-cs50x-before-this-calendar-year-can-i-resume" class="alert-link">FAQs</a> if you started in 2025 or earlier. Interested in <a href="../../#how-to-take-this-course" class="alert-link">a verified certificate, a professional certificate, or transfer credit and accreditation</a>?</p>
+</div>
+        
+
+        <div class="container-fluid">
+
+            <div class="row">
+
+                <aside class="col-lg" style="height: 638px; top: 82px;">
+ 
+                    <header><h1 data-id="this-is-cs50"><a href="../..">This is CS50</a></h1>
+
+<h2 class="text-white" data-id="cs50s-introduction-to-computer-science">CS50’s Introduction to Computer Science</h2>
+
+<p>OpenCourseWare</p>
+
+<p><a class="pr-1 small" href="https://cs50.harvard.edu/donate">Donate<i aria-hidden="true" class="fas fa-external-link-alt ps-2"></i></a></p>
+
+<p><a href="https://cs.harvard.edu/malan/">David J. Malan</a>
+<br>
+<a href="mailto:malan@harvard.edu">malan@harvard.edu</a>
+<br>
+<a class="mr-1" href="https://www.facebook.com/dmalan"><i aria-hidden="true" class="fa-brands fa-facebook-f" title="Facebook"></i><span class="visually-hidden">Facebook</span></a>
+<a class="mr-1" href="https://github.com/dmalan"><i aria-hidden="true" class="fa-brands fa-github" title="GitHub"></i><span class="visually-hidden">GitHub</span></a>
+<a class="mr-1" href="https://www.instagram.com/davidjmalan/"><i aria-hidden="true" class="fa-brands fa-instagram" title="Instagram"></i><span class="visually-hidden">Instagram</span></a>
+<a class="mr-1" href="https://www.linkedin.com/in/malan/"><i aria-hidden="true" class="fa-brands fa-linkedin" title="LinkedIn"></i><span class="visually-hidden">LinkedIn</span></a>
+<a class="mr-1" href="https://www.reddit.com/user/davidjmalan"><i aria-hidden="true" class="fa-brands fa-reddit-alien" title="Reddit"></i><span class="visually-hidden">Reddit</span></a>
+<a class="mr-1" href="https://www.threads.net/@davidjmalan"><i aria-hidden="true" class="fa-brands fa-threads" title="Threads"></i><span class="visually-hidden">Threads</span></a>
+<a class="mr-1" href="https://twitter.com/davidjmalan"><i aria-hidden="true" class="fa-brands fa-twitter" title="Twitter"></i><span class="visually-hidden">Twitter</span></a></p></header>
+
+                    
+
+                    <button aria-controls="nav" aria-expanded="false" class="btn btn-sm collapsed d-lg-none" data-bs-target="aside > nav" data-bs-toggle="collapse">
+                        Menu
+                    </button>
+
+                    <nav class="collapse d-lg-block" id="nav"><hr>
+
+<ul class="fa-ul">
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span><a href="https://cs50.harvard.edu/x/puzzles/"><i class="fas fa-puzzle-piece pe-2"></i>CS50x Puzzle Day</a></li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span><a href="../../zoom/"><i class="fa-solid fa-video me-2"></i>Zoom Meetings<span class="badge ms-2 p-1 text-bg-warning">new</span></a></li>
+</ul>
+
+<!-- Tools -->
+<hr class="small">
+
+<ul class="small fa-ul">
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span><a href="https://cs50.ai/"><i class="fa-solid fa-duck pe-2 text-decoration-none"></i>CS50.ai</a></li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>
+<a href="https://cs50.edx.org/ed"><i class="fa-solid fa-comment-question pe-2 text-decoration-none"></i>Ed Discussion</a> for Q&amp;A</li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span><a href="https://cs50.dev/"><i class="fa-solid fa-laptop pe-2 text-decoration-none"></i>Visual Studio Code</a></li>
+</ul>
+
+<!-- Highlights -->
+<hr>
+
+<ul class="small fa-ul">
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span><a href="https://cs50.harvard.edu/workshop/">CS50 Educator Workshop</a></li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span><a href="../../gallery/">Gallery of Final Projects<span aria-hidden="true" class="ps-2 text-decoration-none"><img draggable="false" class="emoji" alt="🖼️" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/1f5bc.png"> </span></a></li>
+</ul>
+
+<!-- Course Nav -->
+<hr>
+
+<ul class="fa-ul">
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>
+<a href="../../weeks/0/">Week 0</a> Scratch</li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>
+<a href="../../weeks/1/">Week 1</a> C</li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>
+<a href="../../weeks/2/">Week 2</a> Arrays</li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>
+<a href="../../weeks/3/">Week 3</a> Algorithms</li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>
+<a href="../../weeks/4/">Week 4</a> Memory</li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>
+<a href="../../weeks/5/">Week 5</a> Data Structures</li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>
+<a href="../../weeks/6/">Week 6</a> Python</li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>
+<a href="../../weeks/7/">Week 7</a> SQL</li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span><a href="../../weeks/ai/" class="small">Artificial Intelligence</a></li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>
+<a href="../../weeks/8/">Week 8</a> HTML, CSS, JavaScript</li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>
+<a href="../../weeks/9/">Week 9</a> Flask</li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>
+<a href="../../weeks/10/">Week 10</a> The End</li>
+</ul>
+<ul class="small fa-ul">
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span><a href="../../practice/"><i class="fa-solid fa-rocket pe-2 text-decoration-none"></i>Additional Practice</a></li>
+</ul>
+
+<hr>
+
+<!-- Final project spec, seminars, shorts -->
+<ul class="fa-ul">
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span><a href="../../project/">Final Project</a></li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span><a href="../../gallery/">Gallery of Final Projects<span aria-hidden="true" class="ps-2 text-decoration-none"><img draggable="false" class="emoji" alt="🖼️" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/1f5bc.png"> </span></a></li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span><a href="../../seminars/">Seminars</a></li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>
+</li></ul>
+
+<!-- Items that might usually appear in an academic syllabus -->
+<hr>
+
+<ul class="fa-ul">
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span><a href="../../honesty/">Academic Honesty</a></li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span><a href="../../certificate/">CS50 Certificate</a></li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span><a href="../../faqs/">FAQs</a></li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span><a href="https://cs50.me/cs50x">Gradebook</a></li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span><a href="../../staff/">Staff</a></li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span><a href="../../syllabus/">Syllabus</a></li>
+</ul>
+
+<!-- Where to watch or take the class course -->
+<hr>
+
+<ul class="small fa-ul">
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span><a href="https://apps.apple.com/us/app/cs50/id1631064453">Apple TV</a></li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span><a href="https://cs50.edx.org/">edX</a></li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>
+  </li><li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span><a href="https://play.google.com/store/apps/details?id=edu.harvard.cs50.googletv">Google TV</a></li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span><a href="https://web.dce.harvard.edu/extension/csci/e/50">Harvard Extension School</a></li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>
+  </li><li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span><a href="https://web.dce.harvard.edu/summer/csci/s/50">Harvard Summer School</a></li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span><a href="https://channelstore.roku.com/details/e338f60adfb133abc19eac2da9e5c505:40cee2a1909355bc4496086c8fa4a86f/cs50">Roku <span class="badge ms-2 p-1 text-bg-warning">new</span></a></li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span><a href="https://www.youtube.com/playlist?list=PLhQjrBD2T380hlTqAU8HfvVepCcjCqTg6">YouTube</a></li>
+</ul>
+
+<!-- Manual page, style guide, other docs -->
+
+<hr>
+
+<ul class="small fa-ul">
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span><a href="https://manual.cs50.io/">Manual Pages</a></li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span><a href="https://cs50.readthedocs.io/style/c/">Style Guide</a></li>
+</ul>
+
+<!-- Status Page -->
+<hr>
+
+<ul class="small fa-ul">
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span><a href="https://cs50.statuspage.io/">Status Page</a></li>
+</ul>
+
+<!-- Communities -->
+<hr>
+
+<ul class="fa-ul">
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span><a href="../../communities/"><strong>Communities</strong></a></li>
+  <li data-marker="*" class="small"><span class="fa-li"><i class="fas fa-square"></i></span><a href="https://bsky.app/profile/cs50.harvard.edu">Bluesky</a></li>
+  <li data-marker="*" class="small"><span class="fa-li"><i class="fas fa-square"></i></span><a href="https://www.clubhouse.com/club/cs50">Clubhouse</a></li>
+  <li data-marker="*" class="small"><span class="fa-li"><i class="fas fa-square"></i></span>
+<a href="https://discord.gg/cs50">Discord</a> <span class="badge bg-light ms-1 py-1 rounded-pill text-dark">Q&amp;A</span>
+</li>
+  <li data-marker="*" class="small"><span class="fa-li"><i class="fas fa-square"></i></span>
+<a href="https://cs50.edx.org/ed">Ed</a> <span class="badge bg-light ms-1 py-1 rounded-pill text-dark">Q&amp;A</span>
+</li>
+  <li data-marker="*" class="small"><span class="fa-li"><i class="fas fa-square"></i></span>
+<a href="https://www.facebook.com/groups/cs50/">Facebook Group</a> <span class="badge bg-light ms-1 py-1 rounded-pill text-dark">Q&amp;A</span>
+</li>
+  <li data-marker="*" class="small"><span class="fa-li"><i class="fas fa-square"></i></span><a href="https://www.facebook.com/cs50/">Facebook Page</a></li>
+  <li data-marker="*" class="small"><span class="fa-li"><i class="fas fa-square"></i></span><a href="https://github.com/cs50">GitHub</a></li>
+  <li data-marker="*" class="small"><span class="fa-li"><i class="fas fa-square"></i></span>
+<a href="https://gitter.im/cs50/x">Gitter</a> <span class="badge bg-light ms-1 py-1 rounded-pill text-dark">Q&amp;A</span>
+</li>
+  <li data-marker="*" class="small"><span class="fa-li"><i class="fas fa-square"></i></span><a href="https://instagram.com/cs50">Instagram</a></li>
+  <li data-marker="*" class="small"><span class="fa-li"><i class="fas fa-square"></i></span><a href="https://www.linkedin.com/groups/7437240/">LinkedIn Group</a></li>
+  <li data-marker="*" class="small"><span class="fa-li"><i class="fas fa-square"></i></span><a href="https://www.linkedin.com/school/CS50/">LinkedIn Page</a></li>
+  <li data-marker="*" class="small"><span class="fa-li"><i class="fas fa-square"></i></span><a href="https://cs50.medium.com/">Medium</a></li>
+  <li data-marker="*" class="small"><span class="fa-li"><i class="fas fa-square"></i></span><a href="https://www.quora.com/topic/CS50">Quora</a></li>
+  <li data-marker="*" class="small"><span class="fa-li"><i class="fas fa-square"></i></span>
+<a href="https://www.reddit.com/r/cs50/">Reddit</a> <span class="badge bg-light ms-1 py-1 rounded-pill text-dark">Q&amp;A</span>
+</li>
+  <li data-marker="*" class="small"><span class="fa-li"><i class="fas fa-square"></i></span>
+<a href="https://cs50.edx.org/slack">Slack</a> <span class="badge bg-light ms-1 py-1 rounded-pill text-dark">Q&amp;A</span>
+</li>
+  <li data-marker="*" class="small"><span class="fa-li"><i class="fas fa-square"></i></span><a href="https://www.snapchat.com/add/cs50">Snapchat</a></li>
+  <li data-marker="*" class="small"><span class="fa-li"><i class="fas fa-square"></i></span><a href="https://soundcloud.com/cs50">SoundCloud</a></li>
+  <li data-marker="*" class="small"><span class="fa-li"><i class="fas fa-square"></i></span>
+<a href="https://cs50.stackexchange.com/">Stack Exchange</a> <span class="badge bg-light ms-1 py-1 rounded-pill text-dark">Q&amp;A</span>
+</li>
+  <li data-marker="*" class="small"><span class="fa-li"><i class="fas fa-square"></i></span><a href="https://t.me/cs50x">Telegram</a></li>
+  <li data-marker="*" class="small"><span class="fa-li"><i class="fas fa-square"></i></span><a href="https://www.tiktok.com/@cs50">TikTok</a></li>
+  <li data-marker="*" class="small"><span class="fa-li"><i class="fas fa-square"></i></span><a href="https://www.threads.net/@cs50">Threads</a></li>
+  <li data-marker="*" class="small"><span class="fa-li"><i class="fas fa-square"></i></span><a href="https://x.com/cs50">X Account</a></li>
+  <li data-marker="*" class="small"><span class="fa-li"><i class="fas fa-square"></i></span><a href="https://x.com/i/communities/1722308663522594923">X Community</a></li>
+  <li data-marker="*" class="small"><span class="fa-li"><i class="fas fa-square"></i></span><a href="https://www.youtube.com/subscription_center?add_user=cs50tv">YouTube</a></li>
+</ul>
+
+<!-- Courses -->
+<hr>
+
+<ul class="fa-ul">
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span><a href="../../courses/"><strong>Courses</strong></a></li>
+  <li data-marker="*" class="small"><span class="fa-li"><i class="fas fa-square"></i></span><a href="https://cs50.harvard.edu/x">CS50x</a></li>
+  <li data-marker="*" class="small"><span class="fa-li"><i class="fas fa-square"></i></span><a href="https://cs50.harvard.edu/games">CS50 2D</a></li>
+  <li data-marker="*" class="small"><span class="fa-li"><i class="fas fa-square"></i></span><a href="https://cs50.harvard.edu/ai">CS50 AI</a></li>
+  <li data-marker="*" class="small"><span class="fa-li"><i class="fas fa-square"></i></span><a href="https://cs50.harvard.edu/business">CS50 Business</a></li>
+  <li data-marker="*" class="small"><span class="fa-li"><i class="fas fa-square"></i></span><a href="https://cs50.harvard.edu/cybersecurity">CS50 Cybersecurity</a></li>
+  <li data-marker="*" class="small"><span class="fa-li"><i class="fas fa-square"></i></span><a href="https://cs50.harvard.edu/law">CS50 for Lawyers</a></li>
+  <li data-marker="*" class="small"><span class="fa-li"><i class="fas fa-square"></i></span><a href="https://cs50.harvard.edu/python">CS50 Python</a></li>
+  <li data-marker="*" class="small"><span class="fa-li"><i class="fas fa-square"></i></span><a href="https://cs50.harvard.edu/r">CS50 R</a></li>
+  <li data-marker="*" class="small"><span class="fa-li"><i class="fas fa-square"></i></span><a href="https://cs50.harvard.edu/scratch">CS50 Scratch</a></li>
+  <li data-marker="*" class="small"><span class="fa-li"><i class="fas fa-square"></i></span><a href="https://cs50.harvard.edu/sql">CS50 SQL</a></li>
+  <li data-marker="*" class="small"><span class="fa-li"><i class="fas fa-square"></i></span><a href="https://cs50.harvard.edu/web">CS50 Web</a></li>
+</ul>
+
+<!-- Harvard Shop -->
+<hr>
+
+<p><a href="https://cs50.harvardshop.com/"><img src="https://cs50.harvard.edu/x/2023/assets/shop.png" alt="Harvard Shop"></a></p>
+
+<!-- Legal -->
+<hr>
+
+<p><a href="../../license/" class="small"><i class="fab fa-creative-commons me-1"></i>License</a></p></nav>
+
+                    <footer></footer>
+
+                </aside>
+
+                <main class="col-lg" style="margin-bottom: 282px; margin-top: 82px;">
+
+                    <a data-id="" id="lecture-1" style="top: -82px;"></a><h1 class="no_toc"><a data-id="" href="#lecture-1">Lecture 1</a></h1>
+
+<ul id="markdown-toc">
+  <li><a href="#welcome" id="markdown-toc-welcome">Welcome!</a></li>
+  <li><a href="#source-code" id="markdown-toc-source-code">Source Code</a></li>
+  <li><a href="#visual-studio-code-for-cs50" id="markdown-toc-visual-studio-code-for-cs50">Visual Studio Code for CS50</a></li>
+  <li><a href="#hello-world" id="markdown-toc-hello-world">Hello World</a></li>
+  <li><a href="#from-scratch-to-c" id="markdown-toc-from-scratch-to-c">From Scratch to C</a></li>
+  <li><a href="#header-files-and-cs50-manual-pages" id="markdown-toc-header-files-and-cs50-manual-pages">Header Files and CS50 Manual Pages</a></li>
+  <li><a href="#hello-you" id="markdown-toc-hello-you">Hello, You</a></li>
+  <li><a href="#linux" id="markdown-toc-linux">Linux</a></li>
+  <li><a href="#conditionals" id="markdown-toc-conditionals">Conditionals</a></li>
+  <li><a href="#types" id="markdown-toc-types">Types</a></li>
+  <li><a href="#format-codes" id="markdown-toc-format-codes">Format Codes</a></li>
+  <li><a href="#variables" id="markdown-toc-variables">Variables</a></li>
+  <li><a href="#comparec" id="markdown-toc-comparec">compare.c</a></li>
+  <li><a href="#agreec" id="markdown-toc-agreec">agree.c</a></li>
+  <li><a href="#loops-and-meowc" id="markdown-toc-loops-and-meowc">Loops and meow.c</a></li>
+  <li><a href="#functions" id="markdown-toc-functions">Functions</a></li>
+  <li><a href="#correctness-design-style" id="markdown-toc-correctness-design-style">Correctness, Design, Style</a></li>
+  <li><a href="#mario" id="markdown-toc-mario">Mario</a></li>
+  <li><a href="#operators" id="markdown-toc-operators">Operators</a></li>
+  <li><a href="#summing-up" id="markdown-toc-summing-up">Summing Up</a></li>
+</ul>
+
+<a data-id="" id="welcome" style="top: -82px;"></a><h2><a data-id="" href="#welcome">Welcome!</a></h2>
+
+<ul class="fa-ul">
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>In our previous session, we learned about Scratch, a visual programming language.</li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>Learning computer science concepts can be quite challenging. Indeed, it can feel like you are drinking from a firehose. Remember: What is ultimately important is the gains you experience over these coming weeks and months through your hard work and study in this course.</li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>Indeed, all the essential programming concepts presented in Scratch will be utilized as you learn how to program any programming language. Functions, conditionals, loops, and variables found in Scratch are fundamental building blocks that you will find in any programming language.</li>
+</ul>
+
+<a data-id="" id="source-code" style="top: -82px;"></a><h2><a data-id="" href="#source-code">Source Code</a></h2>
+
+<ul class="fa-ul">
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>Recall that machines only understand binary. Where humans write <em>source code</em>, a list of instructions for the computer that is human readable, machines only understand what we can now call <em>machine code</em>. This machine code is a pattern of ones and zeros that produces a desired effect.</li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>
+    <p>It turns out that we can convert <em>source code</em> into machine code using a very special piece of software called a <em>compiler</em>. Today, we will be introducing you to a compiler that will allow you to convert source code in the programming language <em>C</em> into machine code.</p>
+
+    <div class="mermaid" data-original-code="flowchart LR
+    in[&quot;source code&quot;] --> BOX[&quot; compiler &quot;]
+    BOX --> out[&quot;machine code&quot;]
+" data-processed="true"><svg id="mermaid-1781508712849" width="100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="flowchart" style="max-width: 543.265625px;" viewBox="0 0 543.265625 70" role="graphics-document document" aria-roledescription="flowchart-v2"><style>#mermaid-1781508712849{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;fill:#333;}@keyframes edge-animation-frame{from{stroke-dashoffset:0;}}@keyframes dash{to{stroke-dashoffset:0;}}#mermaid-1781508712849 .edge-animation-slow{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 50s linear infinite;stroke-linecap:round;}#mermaid-1781508712849 .edge-animation-fast{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 20s linear infinite;stroke-linecap:round;}#mermaid-1781508712849 .error-icon{fill:#552222;}#mermaid-1781508712849 .error-text{fill:#552222;stroke:#552222;}#mermaid-1781508712849 .edge-thickness-normal{stroke-width:1px;}#mermaid-1781508712849 .edge-thickness-thick{stroke-width:3.5px;}#mermaid-1781508712849 .edge-pattern-solid{stroke-dasharray:0;}#mermaid-1781508712849 .edge-thickness-invisible{stroke-width:0;fill:none;}#mermaid-1781508712849 .edge-pattern-dashed{stroke-dasharray:3;}#mermaid-1781508712849 .edge-pattern-dotted{stroke-dasharray:2;}#mermaid-1781508712849 .marker{fill:#333333;stroke:#333333;}#mermaid-1781508712849 .marker.cross{stroke:#333333;}#mermaid-1781508712849 svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;}#mermaid-1781508712849 p{margin:0;}#mermaid-1781508712849 .label{font-family:"trebuchet ms",verdana,arial,sans-serif;color:#333;}#mermaid-1781508712849 .cluster-label text{fill:#333;}#mermaid-1781508712849 .cluster-label span{color:#333;}#mermaid-1781508712849 .cluster-label span p{background-color:transparent;}#mermaid-1781508712849 .label text,#mermaid-1781508712849 span{fill:#333;color:#333;}#mermaid-1781508712849 .node rect,#mermaid-1781508712849 .node circle,#mermaid-1781508712849 .node ellipse,#mermaid-1781508712849 .node polygon,#mermaid-1781508712849 .node path{fill:#ECECFF;stroke:#9370DB;stroke-width:1px;}#mermaid-1781508712849 .rough-node .label text,#mermaid-1781508712849 .node .label text,#mermaid-1781508712849 .image-shape .label,#mermaid-1781508712849 .icon-shape .label{text-anchor:middle;}#mermaid-1781508712849 .node .katex path{fill:#000;stroke:#000;stroke-width:1px;}#mermaid-1781508712849 .rough-node .label,#mermaid-1781508712849 .node .label,#mermaid-1781508712849 .image-shape .label,#mermaid-1781508712849 .icon-shape .label{text-align:center;}#mermaid-1781508712849 .node.clickable{cursor:pointer;}#mermaid-1781508712849 .root .anchor path{fill:#333333!important;stroke-width:0;stroke:#333333;}#mermaid-1781508712849 .arrowheadPath{fill:#333333;}#mermaid-1781508712849 .edgePath .path{stroke:#333333;stroke-width:2.0px;}#mermaid-1781508712849 .flowchart-link{stroke:#333333;fill:none;}#mermaid-1781508712849 .edgeLabel{background-color:rgba(232,232,232, 0.8);text-align:center;}#mermaid-1781508712849 .edgeLabel p{background-color:rgba(232,232,232, 0.8);}#mermaid-1781508712849 .edgeLabel rect{opacity:0.5;background-color:rgba(232,232,232, 0.8);fill:rgba(232,232,232, 0.8);}#mermaid-1781508712849 .labelBkg{background-color:rgba(232, 232, 232, 0.5);}#mermaid-1781508712849 .cluster rect{fill:#ffffde;stroke:#aaaa33;stroke-width:1px;}#mermaid-1781508712849 .cluster text{fill:#333;}#mermaid-1781508712849 .cluster span{color:#333;}#mermaid-1781508712849 div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:12px;background:hsl(80, 100%, 96.2745098039%);border:1px solid #aaaa33;border-radius:2px;pointer-events:none;z-index:100;}#mermaid-1781508712849 .flowchartTitleText{text-anchor:middle;font-size:18px;fill:#333;}#mermaid-1781508712849 rect.text{fill:none;stroke-width:0;}#mermaid-1781508712849 .icon-shape,#mermaid-1781508712849 .image-shape{background-color:rgba(232,232,232, 0.8);text-align:center;}#mermaid-1781508712849 .icon-shape p,#mermaid-1781508712849 .image-shape p{background-color:rgba(232,232,232, 0.8);padding:2px;}#mermaid-1781508712849 .icon-shape .label rect,#mermaid-1781508712849 .image-shape .label rect{opacity:0.5;background-color:rgba(232,232,232, 0.8);fill:rgba(232,232,232, 0.8);}#mermaid-1781508712849 .label-icon{display:inline-block;height:1em;overflow:visible;vertical-align:-0.125em;}#mermaid-1781508712849 .node .label-icon path{fill:currentColor;stroke:revert;stroke-width:revert;}#mermaid-1781508712849 :root{--mermaid-font-family:"trebuchet ms",verdana,arial,sans-serif;}</style><g><marker id="mermaid-1781508712849_flowchart-v2-pointEnd" class="marker flowchart-v2" viewBox="0 0 10 10" refX="5" refY="5" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowMarkerPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker><marker id="mermaid-1781508712849_flowchart-v2-pointStart" class="marker flowchart-v2" viewBox="0 0 10 10" refX="4.5" refY="5" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" orient="auto"><path d="M 0 5 L 10 10 L 10 0 z" class="arrowMarkerPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker><marker id="mermaid-1781508712849_flowchart-v2-circleEnd" class="marker flowchart-v2" viewBox="0 0 10 10" refX="11" refY="5" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="11" orient="auto"><circle cx="5" cy="5" r="5" class="arrowMarkerPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></circle></marker><marker id="mermaid-1781508712849_flowchart-v2-circleStart" class="marker flowchart-v2" viewBox="0 0 10 10" refX="-1" refY="5" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="11" orient="auto"><circle cx="5" cy="5" r="5" class="arrowMarkerPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></circle></marker><marker id="mermaid-1781508712849_flowchart-v2-crossEnd" class="marker cross flowchart-v2" viewBox="0 0 11 11" refX="12" refY="5.2" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="11" orient="auto"><path d="M 1,1 l 9,9 M 10,1 l -9,9" class="arrowMarkerPath" style="stroke-width: 2; stroke-dasharray: 1, 0;"></path></marker><marker id="mermaid-1781508712849_flowchart-v2-crossStart" class="marker cross flowchart-v2" viewBox="0 0 11 11" refX="-1" refY="5.2" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="11" orient="auto"><path d="M 1,1 l 9,9 M 10,1 l -9,9" class="arrowMarkerPath" style="stroke-width: 2; stroke-dasharray: 1, 0;"></path></marker><g class="root"><g class="clusters"></g><g class="edgePaths"><path d="M155.172,35L159.339,35C163.505,35,171.839,35,179.505,35C187.172,35,194.172,35,197.672,35L201.172,35" id="L_in_BOX_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_in_BOX_0" data-points="W3sieCI6MTU1LjE3MTg3NSwieSI6MzV9LHsieCI6MTgwLjE3MTg3NSwieSI6MzV9LHsieCI6MjA1LjE3MTg3NSwieSI6MzV9XQ==" marker-end="url(#mermaid-1781508712849_flowchart-v2-pointEnd)"></path><path d="M325.641,35L329.807,35C333.974,35,342.307,35,349.974,35C357.641,35,364.641,35,368.141,35L371.641,35" id="L_BOX_out_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_BOX_out_0" data-points="W3sieCI6MzI1LjY0MDYyNSwieSI6MzV9LHsieCI6MzUwLjY0MDYyNSwieSI6MzV9LHsieCI6Mzc1LjY0MDYyNSwieSI6MzV9XQ==" marker-end="url(#mermaid-1781508712849_flowchart-v2-pointEnd)"></path></g><g class="edgeLabels"><g class="edgeLabel"><g class="label" data-id="L_in_BOX_0" transform="translate(0, 0)"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel"><g class="label" data-id="L_BOX_out_0" transform="translate(0, 0)"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel"></span></div></foreignObject></g></g></g><g class="nodes"><g class="node default" id="flowchart-in-0" transform="translate(81.5859375, 35)"><rect class="basic label-container" style="" x="-73.5859375" y="-27" width="147.171875" height="54"></rect><g class="label" style="" transform="translate(-43.5859375, -12)"><rect></rect><foreignObject width="87.171875" height="24"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="nodeLabel"><p>source code</p></span></div></foreignObject></g></g><g class="node default" id="flowchart-BOX-1" transform="translate(265.40625, 35)"><rect class="basic label-container" style="" x="-60.234375" y="-27" width="120.46875" height="54"></rect><g class="label" style="" transform="translate(-30.234375, -12)"><rect></rect><foreignObject width="60.46875" height="24"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="nodeLabel"><p>compiler</p></span></div></foreignObject></g></g><g class="node default" id="flowchart-out-3" transform="translate(455.453125, 35)"><rect class="basic label-container" style="" x="-79.8125" y="-27" width="159.625" height="54"></rect><g class="label" style="" transform="translate(-49.8125, -12)"><rect></rect><foreignObject width="99.625" height="24"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="nodeLabel"><p>machine code</p></span></div></foreignObject></g></g></g></g></g></svg></div>
+  </li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>Today, in addition to learning how to program, you will be learning how to write good code.</li>
+</ul>
+
+<a data-id="" id="visual-studio-code-for-cs50" style="top: -82px;"></a><h2><a data-id="" href="#visual-studio-code-for-cs50">Visual Studio Code for CS50</a></h2>
+
+<ul class="fa-ul">
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>The text editor that is utilized for this course is <em>Visual Studio Code</em>, aka <em>VS Code</em>, affectionately referred to as <a href="https://cs50.dev">cs50.dev</a>, which can be accessed via that same URL.</li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>One of the most important reasons we utilize VS Code is that it has all the software required for the course already pre-loaded on it. This course and the instructions herein were designed with VS Code in mind.</li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>Manually installing the necessary software for the course on your own computer is a cumbersome headache. Best always to utilize VS Code for assignments in this course.</li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>You can open VS Code at <a href="https://cs50.dev/">cs50.dev</a>.</li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>
+    <p>The IDE can be divided into a number of regions:</p>
+
+    <p><img src="cs50Week1Slide017.png" alt="IDE" title="IDE with file explorer, text editor, and terminal">
+  Notice that there is a <em>file explorer</em> on the left side where you can find your files. Further, notice that there is a region in the middle called a <em>text editor</em> where you can edit your program. Finally, there is a <code class="language-plaintext highlighter-rouge">command line interface</code>, known as a <em>CLI</em>, <em>command line</em>, or <em>terminal window</em>, where we can send commands to the computer in the cloud.</p>
+  </li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>You will also notice in the graphical user interface (GUI) on the left-hand bar, various tools and a file explorer.</li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>Because this IDE is pre-configured with all the necessary software, you should use it to complete all assignments for this course.</li>
+</ul>
+
+<a data-id="" id="hello-world" style="top: -82px;"></a><h2><a data-id="" href="#hello-world">Hello World</a></h2>
+
+<ul class="fa-ul">
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>
+    <p>We will be using three commands to write, compile, and run our first program:</p>
+
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>code hello.c
+
+make hello
+
+./hello
+
+</code></pre></div>    </div>
+    <p>The first command, <code class="language-plaintext highlighter-rouge">code hello.c</code> creates a file and allows us to type instructions for this program. The second command, <code class="language-plaintext highlighter-rouge">make hello</code>, <em>compiles</em> the file from our instructions in C and creates an executable file called <code class="language-plaintext highlighter-rouge">hello</code>. The last command, <code class="language-plaintext highlighter-rouge">./hello</code>, runs the program called <code class="language-plaintext highlighter-rouge">hello</code>.</p>
+  </li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>
+    <p>We can build your first program in C by typing <code class="language-plaintext highlighter-rouge">code hello.c</code> into the terminal window. Notice that we deliberately lowercased the entire filename and included the <code class="language-plaintext highlighter-rouge">.c</code> extension. Then, in the text editor that appears, write code as follows:</p>
+
+    <div class="language-c highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="c1">// A program that says hello to the world</span>
+
+<span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"hello, world</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+    <p>Note that every single character above serves a purpose. If you type it incorrectly, the program will not run. <code class="language-plaintext highlighter-rouge">printf</code> is a function that can output a line of text. Notice the placement of the quotes and the semicolon. Further, notice that the <code class="language-plaintext highlighter-rouge">\n</code> creates a new line after the words <code class="language-plaintext highlighter-rouge">hello, world</code>.</p>
+  </li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>Clicking back in the terminal window, you can compile your code by executing <code class="language-plaintext highlighter-rouge">make hello</code>. Notice that we are omitting <code class="language-plaintext highlighter-rouge">.c</code>. <code class="language-plaintext highlighter-rouge">make</code> is a build tool that will compile our <code class="language-plaintext highlighter-rouge">hello.c</code> file and turn it into a program called <code class="language-plaintext highlighter-rouge">hello</code>. If executing this command results in no errors, you can proceed. If not, double-check your code to ensure it matches the above.</li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>Now, type <code class="language-plaintext highlighter-rouge">./hello</code> and your program will execute saying <code class="language-plaintext highlighter-rouge">hello, world</code>.</li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>Now, open the file explorer on the left. You will notice that there is now both a file called <code class="language-plaintext highlighter-rouge">hello.c</code> and another file called <code class="language-plaintext highlighter-rouge">hello</code>. <code class="language-plaintext highlighter-rouge">hello.c</code> contains your source code that can be read by humans and the compiler. <code class="language-plaintext highlighter-rouge">hello</code> is an executable file containing machine code that the computer can run directly.</li>
+</ul>
+
+<a data-id="" id="from-scratch-to-c" style="top: -82px;"></a><h2><a data-id="" href="#from-scratch-to-c">From Scratch to C</a></h2>
+<ul class="fa-ul">
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>In Scratch, we utilized the <code class="language-plaintext highlighter-rouge">say</code> block to display any text on the screen. Indeed, in C, we have a function called <code class="language-plaintext highlighter-rouge">printf</code> that does exactly this.</li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>
+    <p>Notice our code already invokes this function:</p>
+
+    <div class="language-c highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="n">printf</span><span class="p">(</span><span class="s">"hello, world</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+</code></pre></div>    </div>
+    <p>Notice that the printf function is called. The argument passed to printf is <code class="language-plaintext highlighter-rouge">hello, world\n</code> surrounded by double quotes. The statement of code is closed with a <code class="language-plaintext highlighter-rouge">;</code>.</p>
+  </li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>
+    <p>Errors in code are common, especially in regards to syntax like semicolons and quotes. Modify your code as follows:</p>
+
+    <div class="language-c highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="c1">// \n is missing</span>
+
+<span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"hello, world"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+    <p>Notice the <code class="language-plaintext highlighter-rouge">\n</code> is now gone.</p>
+  </li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>In your terminal window, run <code class="language-plaintext highlighter-rouge">make hello</code>. Because you changed your program, you have to re-compile your program.</li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>Typing <code class="language-plaintext highlighter-rouge">./hello</code> in the terminal window, how did your program change? This <code class="language-plaintext highlighter-rouge">\</code> character is called an <em>escape character</em> that tells the compiler that <code class="language-plaintext highlighter-rouge">\n</code> is a special instruction to create a line break.</li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>
+    <p>There are other escape characters you can use:</p>
+
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>\n  create a new line
+\r  return to the start of a line
+\"  print a double quote
+\'  print a single quote
+\\  print a backslash
+</code></pre></div>    </div>
+  </li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>
+    <p>Restore your program to the following:</p>
+
+    <div class="language-c highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="c1">// A program that says hello to the world</span>
+
+<span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"hello, world</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+    <p>Notice the semicolon and <code class="language-plaintext highlighter-rouge">\n</code> have been restored.</p>
+  </li>
+</ul>
+
+<a data-id="" id="header-files-and-cs50-manual-pages" style="top: -82px;"></a><h2><a data-id="" href="#header-files-and-cs50-manual-pages">Header Files and CS50 Manual Pages</a></h2>
+
+<ul class="fa-ul">
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>The statement at the start of the code <code class="language-plaintext highlighter-rouge">#include &lt;stdio.h&gt;</code> is a very special command that tells the compiler that you want to use the capabilities of a <em>library</em> called <code class="language-plaintext highlighter-rouge">stdio.h</code>, a <em>header file</em>. This allows you, among many other things, to utilize the <code class="language-plaintext highlighter-rouge">printf</code> function. Notice, it’s not called <em>studio</em>: it’s <code class="language-plaintext highlighter-rouge">stdio.h</code>.</li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>A <em>library</em> is a collection of code created by someone. Libraries are collections of pre-written code and functions that others have written in the past that we can utilize in our code.</li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>You can read about all the capabilities of this library on the <a href="https://manual.cs50.io">Manual Pages</a>. The Manual Pages provide a means by which to better understand what various commands do and how they function.</li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>
+    <p>It turns out that CS50 has its own library called <code class="language-plaintext highlighter-rouge">cs50.h</code>. There are numerous functions that are included that provide <em>training wheels</em> while you get started in C:</p>
+
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>get_char
+get_double
+get_float
+get_int
+get_long
+get_string
+</code></pre></div>    </div>
+  </li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>These libraries have been pre-installed for you at <a href="https://cs50.dev">cs50.dev</a>. If you were attempting to use these libraries on your own computer, you would likely have to install them. This is why you should use <a href="https://cs50.dev">cs50.dev</a> in this course, as it has all necessary software installed for you.</li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>Let’s use this library in your program.</li>
+</ul>
+
+<a data-id="" id="hello-you" style="top: -82px;"></a><h2><a data-id="" href="#hello-you">Hello, You</a></h2>
+
+<ul class="fa-ul">
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>Recall that in Scratch we had the ability to ask the user, “What’s your name?” and say “hello” with that name appended to it.</li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>
+    <p>In C, we can do the same. Modify your code as follows:</p>
+
+    <div class="language-c highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="c1">// get_string and printf with incorrect placeholder</span>
+
+<span class="cp">#include</span> <span class="cpf">&lt;cs50.h&gt;</span><span class="cp">
+#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">string</span> <span class="n">answer</span> <span class="o">=</span> <span class="n">get_string</span><span class="p">(</span><span class="s">"What's your name? "</span><span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"hello, answer</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+    <p>The <code class="language-plaintext highlighter-rouge">get_string</code> function is used to get a string from the user. Then, the variable <code class="language-plaintext highlighter-rouge">answer</code> is passed to the <code class="language-plaintext highlighter-rouge">printf</code> function.</p>
+  </li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>Running <code class="language-plaintext highlighter-rouge">make hello</code> again in the terminal window, notice that numerous errors appear.</li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>
+    <p>Looking at the errors, <code class="language-plaintext highlighter-rouge">string</code> and <code class="language-plaintext highlighter-rouge">get_string</code> are not recognized by the compiler. We need to provide the compiler with these definitions by adding a library called <code class="language-plaintext highlighter-rouge">cs50.h</code>. Also, we notice that <code class="language-plaintext highlighter-rouge">answer</code> is not provided as we intended. Modify your code as follows:</p>
+
+    <div class="language-c highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="c1">// get_string and printf with %s</span>
+
+<span class="cp">#include</span> <span class="cpf">&lt;cs50.h&gt;</span><span class="cp">
+#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">string</span> <span class="n">answer</span> <span class="o">=</span> <span class="n">get_string</span><span class="p">(</span><span class="s">"What's your name? "</span><span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"hello, %s</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">answer</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+    <p>The <code class="language-plaintext highlighter-rouge">get_string</code> function is used to get a string from the user. Then, the variable <code class="language-plaintext highlighter-rouge">answer</code> is passed to the <code class="language-plaintext highlighter-rouge">printf</code> function. <code class="language-plaintext highlighter-rouge">%s</code> tells the <code class="language-plaintext highlighter-rouge">printf</code> function to prepare itself to receive a <code class="language-plaintext highlighter-rouge">string</code>.</p>
+  </li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>Now, running <code class="language-plaintext highlighter-rouge">make hello</code> again in the terminal window, you can run your program by typing <code class="language-plaintext highlighter-rouge">./hello</code>. The program now asks for your name and then says hello with your name attached, as intended.</li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>
+<code class="language-plaintext highlighter-rouge">answer</code> is a special holding place we call a <em>variable</em>. <code class="language-plaintext highlighter-rouge">answer</code> is of type <code class="language-plaintext highlighter-rouge">string</code> and can hold any string within it. There are many <em>data types</em>, such as <code class="language-plaintext highlighter-rouge">int</code>, <code class="language-plaintext highlighter-rouge">bool</code>, <code class="language-plaintext highlighter-rouge">char</code>, and many others.</li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>
+<code class="language-plaintext highlighter-rouge">%s</code> is a placeholder called a <em>format code</em> that tells the <code class="language-plaintext highlighter-rouge">printf</code> function to prepare to receive a <code class="language-plaintext highlighter-rouge">string</code>. <code class="language-plaintext highlighter-rouge">answer</code> is the <code class="language-plaintext highlighter-rouge">string</code> being passed to <code class="language-plaintext highlighter-rouge">%s</code>.</li>
+</ul>
+
+<a data-id="" id="linux" style="top: -82px;"></a><h2><a data-id="" href="#linux">Linux</a></h2>
+
+<ul class="fa-ul">
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>We have been using the CLI to <code class="language-plaintext highlighter-rouge">make</code> and run our program.</li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>The CLI is often more useful than the GUI for executing commands and working with our files.</li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>In the terminal window, the CLI, some common commands we may use include:
+    <ul class="fa-ul">
+      <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>
+<code class="language-plaintext highlighter-rouge">cd</code>, for changing our current directory (folder)</li>
+      <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>
+<code class="language-plaintext highlighter-rouge">cp</code>, for copying files and directories</li>
+      <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>
+<code class="language-plaintext highlighter-rouge">ls</code>, for listing files in a directory</li>
+      <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>
+<code class="language-plaintext highlighter-rouge">mkdir</code>, for making a directory</li>
+      <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>
+<code class="language-plaintext highlighter-rouge">mv</code>, for moving (renaming) files and directories</li>
+      <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>
+<code class="language-plaintext highlighter-rouge">rm</code>, for removing (deleting) files</li>
+      <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>
+<code class="language-plaintext highlighter-rouge">rmdir</code>, for removing (deleting) directories</li>
+    </ul>
+  </li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>The most commonly used is <code class="language-plaintext highlighter-rouge">ls</code> which will list all the files in the current directory. Go ahead and type <code class="language-plaintext highlighter-rouge">ls</code> into the terminal window and hit <code class="language-plaintext highlighter-rouge">enter</code>. You’ll see all the files in the current folder.</li>
+</ul>
+
+<a data-id="" id="conditionals" style="top: -82px;"></a><h2><a data-id="" href="#conditionals">Conditionals</a></h2>
+
+<ul class="fa-ul">
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>Another building block you utilized within Scratch was <em>conditionals</em>. For example, you might want to do one thing if x is greater than y. Further, you might want to do something else if that condition is not met.</li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>We look at a few examples from Scratch.</li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>
+    <p>In C, you can compare two values as follows:</p>
+
+    <div class="language-c highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="c1">// Conditionals that are mutually exclusive</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="o">&lt;</span> <span class="n">y</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"x is less than y</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="k">else</span>
+<span class="p">{</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"x is not less than y</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+    <p>Notice how if <code class="language-plaintext highlighter-rouge">x &lt; y</code>, one outcome occurs. If <code class="language-plaintext highlighter-rouge">x</code> is not less than <code class="language-plaintext highlighter-rouge">y</code>, then another outcome occurs.</p>
+  </li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>
+    <p>Similarly, we can plan for three possible outcomes:</p>
+
+    <div class="language-c highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="c1">// Conditional that isn't necessary</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="o">&lt;</span> <span class="n">y</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"x is less than y</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="k">else</span> <span class="nf">if</span> <span class="p">(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="n">y</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"x is greater than y</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="k">else</span> <span class="nf">if</span> <span class="p">(</span><span class="n">x</span> <span class="o">==</span> <span class="n">y</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"x is equal to y</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+    <p>Notice that not all these lines of code are required. How could we eliminate the unnecessary calculation above?</p>
+  </li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>
+    <p>You may have guessed that we can improve this code as follows:</p>
+
+    <div class="language-c highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="c1">// Compare integers</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="o">&lt;</span> <span class="n">y</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"x is less than y</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="k">else</span> <span class="nf">if</span> <span class="p">(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="n">y</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"x is greater than y</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="k">else</span>
+<span class="p">{</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"x is equal to y</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+    <p>Notice how the final statement is replaced with <code class="language-plaintext highlighter-rouge">else</code>.</p>
+  </li>
+</ul>
+
+<a data-id="" id="types" style="top: -82px;"></a><h2><a data-id="" href="#types">Types</a></h2>
+
+<ul class="fa-ul">
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>
+    <p>There are many data types that are available within C:</p>
+
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>bool
+char
+float
+int
+long
+string
+...
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<a data-id="" id="format-codes" style="top: -82px;"></a><h2><a data-id="" href="#format-codes">Format Codes</a></h2>
+
+<ul class="fa-ul">
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>Earlier, you may recall that we used a placeholder <code class="language-plaintext highlighter-rouge">%s</code> for a string in <code class="language-plaintext highlighter-rouge">printf</code>. This placeholder is called  a <em>format code</em>.</li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>
+    <p><code class="language-plaintext highlighter-rouge">printf</code> allows for many format codes. Here is a non-comprehensive list of ones you may utilize in this course:</p>
+
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>%c
+%f
+%i
+%li
+%s
+</code></pre></div>    </div>
+    <p><code class="language-plaintext highlighter-rouge">%c</code> is used for <code class="language-plaintext highlighter-rouge">char</code> (character) variables. <code class="language-plaintext highlighter-rouge">%f</code> is used for <code class="language-plaintext highlighter-rouge">float</code> (floating-point) variables. <code class="language-plaintext highlighter-rouge">%i</code> is used for <code class="language-plaintext highlighter-rouge">int</code> or integer variables. <code class="language-plaintext highlighter-rouge">%li</code> is used for <code class="language-plaintext highlighter-rouge">long</code> integer variables. <code class="language-plaintext highlighter-rouge">%s</code> is used for <code class="language-plaintext highlighter-rouge">string</code> variables. You can find out more about this on the <a href="https://manual.cs50.io">Manual Pages</a>.</p>
+  </li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>We will be using many of C’s available data types throughout this course.</li>
+</ul>
+
+<a data-id="" id="variables" style="top: -82px;"></a><h2><a data-id="" href="#variables">Variables</a></h2>
+
+<ul class="fa-ul">
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>
+    <p>In C, you can assign a value to an <code class="language-plaintext highlighter-rouge">int</code> or integer as follows:</p>
+
+    <div class="language-c highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">counter</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</code></pre></div>    </div>
+    <p>Notice how a variable called <code class="language-plaintext highlighter-rouge">counter</code> of type <code class="language-plaintext highlighter-rouge">int</code> is assigned the value <code class="language-plaintext highlighter-rouge">0</code>.</p>
+  </li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>
+    <p>C can also be programmed to add one to <code class="language-plaintext highlighter-rouge">counter</code> as follows:</p>
+
+    <div class="language-c highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="n">counter</span> <span class="o">=</span> <span class="n">counter</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+</code></pre></div>    </div>
+    <p>Notice how <code class="language-plaintext highlighter-rouge">1</code> is added to the value of <code class="language-plaintext highlighter-rouge">counter</code>.</p>
+  </li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>
+    <p>This can be also represented as:</p>
+
+    <div class="language-c highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="n">counter</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
+</code></pre></div>    </div>
+  </li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>
+    <p>This can be further simplified to:</p>
+
+    <div class="language-c highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="n">counter</span><span class="o">++</span><span class="p">;</span>
+</code></pre></div>    </div>
+    <p>Notice how the <code class="language-plaintext highlighter-rouge">++</code> is used to add 1.</p>
+  </li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>
+    <p>You can also subtract one from <code class="language-plaintext highlighter-rouge">counter</code> as follows:</p>
+
+    <div class="language-c highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="n">counter</span><span class="o">--</span><span class="p">;</span>
+</code></pre></div>    </div>
+    <p>Notice how, in this syntax, <code class="language-plaintext highlighter-rouge">1</code> is removed from the value of <code class="language-plaintext highlighter-rouge">counter</code>.</p>
+  </li>
+</ul>
+
+<a data-id="" id="comparec" style="top: -82px;"></a><h2><a data-id="" href="#comparec">compare.c</a></h2>
+
+<ul class="fa-ul">
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>Using this new knowledge about how to assign values to variables, you can program your first conditional statement.</li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>
+    <p>In the terminal window, type <code class="language-plaintext highlighter-rouge">code compare.c</code> and write code as follows:</p>
+
+    <div class="language-c highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="c1">// Conditional, Boolean expression, relational operator</span>
+
+<span class="cp">#include</span> <span class="cpf">&lt;cs50.h&gt;</span><span class="cp">
+#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="c1">// Prompt user for integers</span>
+    <span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="n">get_int</span><span class="p">(</span><span class="s">"What's x? "</span><span class="p">);</span>
+    <span class="kt">int</span> <span class="n">y</span> <span class="o">=</span> <span class="n">get_int</span><span class="p">(</span><span class="s">"What's y? "</span><span class="p">);</span>
+
+    <span class="c1">// Compare integers</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="o">&lt;</span> <span class="n">y</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">"x is less than y</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+    <p>Notice that we create two variables, an <code class="language-plaintext highlighter-rouge">int</code> or integer called <code class="language-plaintext highlighter-rouge">x</code> and another called <code class="language-plaintext highlighter-rouge">y</code>. The values of these are populated using the <code class="language-plaintext highlighter-rouge">get_int</code> function.</p>
+  </li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>You can run your code by executing <code class="language-plaintext highlighter-rouge">make compare</code> in the terminal window, followed by <code class="language-plaintext highlighter-rouge">./compare</code>. If you get any error messages, check your code for errors.</li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>
+    <p>We can improve your program by coding as follows:</p>
+
+    <div class="language-c highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="c1">// Conditionals</span>
+
+<span class="cp">#include</span> <span class="cpf">&lt;cs50.h&gt;</span><span class="cp">
+#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="c1">// Prompt user for integers</span>
+    <span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="n">get_int</span><span class="p">(</span><span class="s">"What's x? "</span><span class="p">);</span>
+    <span class="kt">int</span> <span class="n">y</span> <span class="o">=</span> <span class="n">get_int</span><span class="p">(</span><span class="s">"What's y? "</span><span class="p">);</span>
+
+    <span class="c1">// Compare integers</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="o">&lt;</span> <span class="n">y</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">"x is less than y</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="n">y</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">"x is greater than y</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">else</span>
+    <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">"x is equal to y</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+    <p>Notice that all potential outcomes are now accounted for.</p>
+  </li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>You can re-make and re-run your program and test it out.</li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>Examining these programs in various flow charts, you can see the efficiency of our code design decisions. Nearly any block of code can be translated to visual form.</li>
+</ul>
+
+<a data-id="" id="agreec" style="top: -82px;"></a><h2><a data-id="" href="#agreec">agree.c</a></h2>
+
+<ul class="fa-ul">
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>Considering another data type called a <code class="language-plaintext highlighter-rouge">char</code>, we can start a new program by typing <code class="language-plaintext highlighter-rouge">code agree.c</code> into the terminal window.</li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>Where a <code class="language-plaintext highlighter-rouge">string</code> is a series of characters, a <code class="language-plaintext highlighter-rouge">char</code> is a single character.</li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>
+    <p>In the text editor, write code as follows:</p>
+
+    <div class="language-c highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="c1">// Comparing against lowercase char</span>
+
+<span class="cp">#include</span> <span class="cpf">&lt;cs50.h&gt;</span><span class="cp">
+#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="c1">// Prompt user to agree</span>
+    <span class="kt">char</span> <span class="n">c</span> <span class="o">=</span> <span class="n">get_char</span><span class="p">(</span><span class="s">"Do you agree? "</span><span class="p">);</span>
+
+    <span class="c1">// Check whether agreed</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">c</span> <span class="o">==</span> <span class="sc">'y'</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">"Agreed.</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">c</span> <span class="o">==</span> <span class="sc">'n'</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">"Not agreed.</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+    <p>Notice that single quotes are utilized for single characters (<code class="language-plaintext highlighter-rouge">char</code> type), while double quotes are used for strings. Further, notice that <code class="language-plaintext highlighter-rouge">==</code> ensures that something <em>is equal</em> to something else, where a single equal sign would have a very different function in C.</p>
+  </li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>You can test your code by typing <code class="language-plaintext highlighter-rouge">make agree</code> into the terminal window, followed by <code class="language-plaintext highlighter-rouge">./agree</code>.</li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>
+    <p>We can also allow for the inputting of uppercase and lowercase characters:</p>
+
+    <div class="language-c highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="c1">// Comparing against lowercase and uppercase char</span>
+
+<span class="cp">#include</span> <span class="cpf">&lt;cs50.h&gt;</span><span class="cp">
+#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="c1">// Prompt user to agree</span>
+    <span class="kt">char</span> <span class="n">c</span> <span class="o">=</span> <span class="n">get_char</span><span class="p">(</span><span class="s">"Do you agree? "</span><span class="p">);</span>
+
+    <span class="c1">// Check whether agreed</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">c</span> <span class="o">==</span> <span class="sc">'y'</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">"Agreed.</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">c</span> <span class="o">==</span> <span class="sc">'Y'</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">"Agreed.</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">else</span>
+    <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">"Not agreed.</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+    <p>Notice that additional options are offered. However, this is not efficient code.</p>
+  </li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>
+    <p>We can improve this code as follows:</p>
+
+    <div class="language-c highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="c1">// Logical operators</span>
+
+<span class="cp">#include</span> <span class="cpf">&lt;cs50.h&gt;</span><span class="cp">
+#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="c1">// Prompt user to agree</span>
+    <span class="kt">char</span> <span class="n">c</span> <span class="o">=</span> <span class="n">get_char</span><span class="p">(</span><span class="s">"Do you agree? "</span><span class="p">);</span>
+
+    <span class="c1">// Check whether agreed</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">c</span> <span class="o">==</span> <span class="sc">'Y'</span> <span class="o">||</span> <span class="n">c</span> <span class="o">==</span> <span class="sc">'y'</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">"Agreed.</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">else</span>
+    <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">"Not agreed.</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+    <p>Notice that <code class="language-plaintext highlighter-rouge">||</code> effectively means <em>or</em>.</p>
+  </li>
+</ul>
+
+<a data-id="" id="loops-and-meowc" style="top: -82px;"></a><h2><a data-id="" href="#loops-and-meowc">Loops and meow.c</a></h2>
+<ul class="fa-ul">
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>We can also utilize the loop building block from Scratch in our C programs.</li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>
+    <p>In your terminal window, type <code class="language-plaintext highlighter-rouge">code meow.c</code> and write code as follows:</p>
+
+    <div class="language-c highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="c1">// Opportunity for better design</span>
+
+<span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"meow</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"meow</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"meow</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+    <p>Notice this does as intended but has an opportunity for better design. Code is repeated over and over.</p>
+  </li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>
+    <p>We can improve our program by modifying your code as follows:</p>
+
+    <div class="language-c highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="c1">// Better design</span>
+
+<span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+    <span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">"meow</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+        <span class="n">i</span><span class="o">--</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+    <p>Notice that we create an <code class="language-plaintext highlighter-rouge">int</code> called <code class="language-plaintext highlighter-rouge">i</code> and assign it the value <code class="language-plaintext highlighter-rouge">3</code>. Then, we create a <code class="language-plaintext highlighter-rouge">while</code> loop that will run as long as <code class="language-plaintext highlighter-rouge">i &gt; 0</code>. Then, the loop runs. Every time <code class="language-plaintext highlighter-rouge">1</code> is subtracted from <code class="language-plaintext highlighter-rouge">i</code> using the <code class="language-plaintext highlighter-rouge">i--</code> statement.</p>
+  </li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>
+    <p>Similarly, we can implement a count-up of sorts by modifying our code as follows:</p>
+
+    <div class="language-c highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="c1">// Print values of i</span>
+
+<span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="o">&lt;=</span> <span class="mi">3</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">"meow</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+        <span class="n">i</span><span class="o">++</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+    <p>Notice how our counter <code class="language-plaintext highlighter-rouge">i</code> is started at <code class="language-plaintext highlighter-rouge">1</code>. Each time the loop runs, it will increment the counter by <code class="language-plaintext highlighter-rouge">1</code>. Once the counter is greater than <code class="language-plaintext highlighter-rouge">3</code>, it will stop the loop.</p>
+  </li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>
+    <p>Generally, in computer science, we count from zero. Best to revise your code as follows:</p>
+
+    <div class="language-c highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="c1">// Better design</span>
+
+<span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">"meow</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+        <span class="n">i</span><span class="o">++</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+    <p>Notice we now count from zero.</p>
+  </li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>Another tool in our toolbox for looping is a <code class="language-plaintext highlighter-rouge">for</code> loop.</li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>
+    <p>You can further improve the design of our <code class="language-plaintext highlighter-rouge">meow.c</code> program using a <code class="language-plaintext highlighter-rouge">for</code> loop. Modify your code as follows:</p>
+
+    <div class="language-c highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="c1">// Better design</span>
+
+<span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">"meow</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+    <p>Notice that the <code class="language-plaintext highlighter-rouge">for</code> loop includes three arguments. The first argument <code class="language-plaintext highlighter-rouge">int i = 0</code> starts our counter at zero. The second argument <code class="language-plaintext highlighter-rouge">i &lt; 3</code> is the condition that is being checked. Finally, the argument <code class="language-plaintext highlighter-rouge">i++</code> tells the loop to increment by one each time the loop runs.</p>
+  </li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>
+    <p>We can even loop forever using the following code:</p>
+
+    <div class="language-c highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="c1">// Infinite loop</span>
+
+<span class="cp">#include</span> <span class="cpf">&lt;cs50.h&gt;</span><span class="cp">
+#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">while</span> <span class="p">(</span><span class="nb">true</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">"meow</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+    <p>Notice that <code class="language-plaintext highlighter-rouge">true</code> will always be the case. Therefore, the code will always run. You will lose control of your terminal window by running this code. You can break from an infinite loop by hitting <code class="language-plaintext highlighter-rouge">control-C</code> on your keyboard (this sends a SIGINT signal to terminate the program).</p>
+  </li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>
+    <p>We can ask the user how many times to meow by modifying the code as follows:</p>
+
+    <div class="language-c highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="c1">// Prompts user for n.</span>
+
+<span class="cp">#include</span> <span class="cpf">&lt;cs50.h&gt;</span><span class="cp">
+#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="n">get_int</span><span class="p">(</span><span class="s">"What's n? "</span><span class="p">);</span>
+
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">"meow</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+    <p>Notice that <code class="language-plaintext highlighter-rouge">n</code> is defined by the user. Then, there are <code class="language-plaintext highlighter-rouge">n</code> meows.</p>
+  </li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>
+    <p>What happens if the user inputs something less than zero? Modify your code as follows:</p>
+
+    <div class="language-c highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="c1">// Prompts user again if need be. (Poor design.)</span>
+
+<span class="cp">#include</span> <span class="cpf">&lt;cs50.h&gt;</span><span class="cp">
+#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="n">get_int</span><span class="p">(</span><span class="s">"What's n? "</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="n">get_int</span><span class="p">(</span><span class="s">"What's n? "</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">"meow</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+    <p>Notice that this may stop the user from typing a number less than zero once. But what happens if they do it multiple times?</p>
+  </li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>
+    <p>Improve your code as follows:</p>
+
+    <div class="language-c highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="c1">// Uses a loop with continue/break.</span>
+
+<span class="cp">#include</span> <span class="cpf">&lt;cs50.h&gt;</span><span class="cp">
+#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">n</span><span class="p">;</span>
+    <span class="k">while</span> <span class="p">(</span><span class="nb">true</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="n">get_int</span><span class="p">(</span><span class="s">"What's n? "</span><span class="p">);</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">continue</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">else</span>
+        <span class="p">{</span>
+            <span class="k">break</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">"meow</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+    <p>Notice that the <code class="language-plaintext highlighter-rouge">while</code> loop will run forever until <code class="language-plaintext highlighter-rouge">n</code> is greater than or equal to zero.</p>
+  </li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>
+    <p>Still, this code could be improved further:</p>
+
+    <div class="language-c highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="c1">// Uses a loop with just break.</span>
+
+<span class="cp">#include</span> <span class="cpf">&lt;cs50.h&gt;</span><span class="cp">
+#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">n</span><span class="p">;</span>
+    <span class="k">while</span> <span class="p">(</span><span class="nb">true</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="n">get_int</span><span class="p">(</span><span class="s">"What's n? "</span><span class="p">);</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">break</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">"meow</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+    <p>Notice how our prior code is simplified, removing unnecessary lines of code.</p>
+  </li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>
+    <p>Similar to a <code class="language-plaintext highlighter-rouge">while</code> loop, we could implement this code using a <code class="language-plaintext highlighter-rouge">do-while</code> loop:</p>
+
+    <div class="language-c highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="c1">// Uses a do-while loop instead.</span>
+
+<span class="cp">#include</span> <span class="cpf">&lt;cs50.h&gt;</span><span class="cp">
+#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">n</span><span class="p">;</span>
+    <span class="k">do</span>
+    <span class="p">{</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="n">get_int</span><span class="p">(</span><span class="s">"What's n? "</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">while</span> <span class="p">(</span><span class="n">n</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">);</span>
+
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">"meow</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+    <p>Notice that the <code class="language-plaintext highlighter-rouge">do</code> will always run at least once. That portion of code will loop while <code class="language-plaintext highlighter-rouge">n</code> is less than zero.</p>
+  </li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>A critical eye may see that we could <em>abstract away</em> the portion of the code that meows.</li>
+</ul>
+
+<a data-id="" id="functions" style="top: -82px;"></a><h2><a data-id="" href="#functions">Functions</a></h2>
+
+<ul class="fa-ul">
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>
+    <p>While we will provide much more guidance later, you can create your own function within C as follows:</p>
+
+    <div class="language-c highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="nf">meow</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"meow</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+    <p>The initial <code class="language-plaintext highlighter-rouge">void</code> means that the function does not return any values. The <code class="language-plaintext highlighter-rouge">(void)</code> means that no values are being provided to the function.</p>
+  </li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>
+    <p>This function can be used in the main function as follows:</p>
+
+    <div class="language-c highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="c1">// Abstraction</span>
+
+<span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span>
+<span class="kt">void</span> <span class="nf">meow</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">meow</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// Meow once</span>
+<span class="kt">void</span> <span class="nf">meow</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"meow</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+    <p>Notice how the <code class="language-plaintext highlighter-rouge">meow</code> function is called with the <code class="language-plaintext highlighter-rouge">meow()</code> instruction. This is possible because the <code class="language-plaintext highlighter-rouge">meow</code> function is defined at the bottom of the code, and the <em>prototype</em> of the function is provided at the top of the code as <code class="language-plaintext highlighter-rouge">void meow(void)</code>.</p>
+  </li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>
+    <p>Your <code class="language-plaintext highlighter-rouge">meow</code> function can be further modified to accept input:</p>
+
+    <div class="language-c highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="c1">// Abstraction with parameterization</span>
+
+<span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span>
+<span class="kt">void</span> <span class="nf">meow</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">);</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">meow</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">// Meow some number of times</span>
+<span class="kt">void</span> <span class="nf">meow</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">"meow</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+    <p>Notice that the prototype has changed to <code class="language-plaintext highlighter-rouge">void meow(int n)</code> to show that <code class="language-plaintext highlighter-rouge">meow</code> accepts an <code class="language-plaintext highlighter-rouge">int</code> as its input.</p>
+  </li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>
+    <p>When working with variables and functions, it’s important to understand the <em>scope</em> of a variable. Consider the following code:</p>
+
+    <div class="language-c highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="c1">// Demonstrates scope</span>
+
+<span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span>
+<span class="kt">void</span> <span class="nf">meow</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">);</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+    <span class="n">meow</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">// Meow some number of times</span>
+<span class="kt">void</span> <span class="nf">meow</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">"meow</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+    <p>Notice how <code class="language-plaintext highlighter-rouge">n</code> is defined in the <code class="language-plaintext highlighter-rouge">main</code> function. Because of that, <code class="language-plaintext highlighter-rouge">n</code> is only in the scope of the <code class="language-plaintext highlighter-rouge">main</code> function. The only way that the <code class="language-plaintext highlighter-rouge">meow</code> function is able to use <code class="language-plaintext highlighter-rouge">n</code> is that a copy of <code class="language-plaintext highlighter-rouge">n</code> is passed to the <code class="language-plaintext highlighter-rouge">meow</code> function. <code class="language-plaintext highlighter-rouge">meow</code> is not using the original <code class="language-plaintext highlighter-rouge">n</code> from the <code class="language-plaintext highlighter-rouge">main</code> function. Instead, it is using its own copy of <code class="language-plaintext highlighter-rouge">n</code>.</p>
+  </li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>
+    <p>With some modification to our code, we can get user input:</p>
+
+    <div class="language-c highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="c1">// User input</span>
+
+<span class="cp">#include</span> <span class="cpf">&lt;cs50.h&gt;</span><span class="cp">
+#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span>
+<span class="kt">void</span> <span class="nf">meow</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">);</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">n</span><span class="p">;</span>
+    <span class="k">do</span>
+    <span class="p">{</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="n">get_int</span><span class="p">(</span><span class="s">"Number: "</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">while</span> <span class="p">(</span><span class="n">n</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">);</span>
+    <span class="n">meow</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">// Meow some number of times</span>
+<span class="kt">void</span> <span class="nf">meow</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">"meow</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+    <p>Notice that <code class="language-plaintext highlighter-rouge">get_int</code> is used to obtain a number from the user. <code class="language-plaintext highlighter-rouge">n</code> is passed to <code class="language-plaintext highlighter-rouge">meow</code>.</p>
+  </li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>
+    <p>We can even test to ensure that the input we get provided by the user is correct:</p>
+
+    <div class="language-c highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="c1">// Return value</span>
+
+<span class="cp">#include</span> <span class="cpf">&lt;cs50.h&gt;</span><span class="cp">
+#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span>
+<span class="kt">int</span> <span class="nf">get_positive_int</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+<span class="kt">void</span> <span class="nf">meow</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">);</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="n">get_positive_int</span><span class="p">();</span>
+    <span class="n">meow</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">// Get number of meows</span>
+<span class="kt">int</span> <span class="nf">get_positive_int</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">n</span><span class="p">;</span>
+    <span class="k">do</span>
+    <span class="p">{</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="n">get_int</span><span class="p">(</span><span class="s">"Number: "</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">while</span> <span class="p">(</span><span class="n">n</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">);</span>
+    <span class="k">return</span> <span class="n">n</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// Meow some number of times</span>
+<span class="kt">void</span> <span class="nf">meow</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">"meow</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+    <p>Notice that a new function called <code class="language-plaintext highlighter-rouge">get_positive_int</code> asks the user for an integer while <code class="language-plaintext highlighter-rouge">n &lt; 1</code>. After obtaining a positive integer, this function will <code class="language-plaintext highlighter-rouge">return n</code> back to the <code class="language-plaintext highlighter-rouge">main</code> function.</p>
+  </li>
+</ul>
+
+<a data-id="" id="correctness-design-style" style="top: -82px;"></a><h2><a data-id="" href="#correctness-design-style">Correctness, Design, Style</a></h2>
+
+<ul class="fa-ul">
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>Code can be evaluated upon three axes.</li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>First, <em>correctness</em> refers to “Does the code run as intended?” You can check the correctness of your code with <code class="language-plaintext highlighter-rouge">check50</code>.</li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>Second, <em>design</em> refers to “How well is the code designed?” You can evaluate the design of your code using <code class="language-plaintext highlighter-rouge">design50</code>.</li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>Finally, <em>style</em> refers to “How aesthetically pleasing and consistent is the code?” You can evaluate the style of your code with <code class="language-plaintext highlighter-rouge">style50</code>.</li>
+</ul>
+
+<a data-id="" id="mario" style="top: -82px;"></a><h2><a data-id="" href="#mario">Mario</a></h2>
+<ul class="fa-ul">
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>Everything we’ve discussed today has focused on various building blocks of your work as an emerging computer scientist.</li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>The following will help you orient toward working on a problem set for this class in general: How does one approach a computer science-related problem?</li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>
+    <p>Imagine we wanted to emulate the visual of the game Super Mario Bros. Considering the four question blocks pictured, how could we create code that roughly represents these four horizontal blocks?</p>
+
+    <p><img src="cs50Week1Slide123.png" alt="Mario Question Marks" title="Mario Question Marks"></p>
+  </li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>
+    <p>In the terminal window, type <code class="language-plaintext highlighter-rouge">code mario.c</code> and code as follows:</p>
+
+    <div class="language-c highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="c1">// Prints a row of 4 question marks</span>
+
+<span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"????</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+    <p>Notice that four question marks are printed.</p>
+  </li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>
+    <p>Using a loop, we can more efficiently print the question marks:</p>
+
+    <div class="language-c highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="c1">// Prints a row of 4 question marks with a loop</span>
+
+<span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">4</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">"?"</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+    <p>Notice how four question marks are printed here using a loop.</p>
+  </li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>
+    <p>Similarly, we can apply this same logic to create three vertical blocks.</p>
+
+    <p><img src="cs50Week1Slide125.png" alt="Mario Blocks" title="Mario Blocks"></p>
+  </li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>
+    <p>To accomplish this, modify your code as follows:</p>
+
+    <div class="language-c highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="c1">// Prints a column of 3 bricks with a loop</span>
+
+<span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">"#</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+    <p>Notice how three vertical bricks are printed using a loop.</p>
+  </li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>
+    <p>What if we wanted to combine these ideas to create a three-by-three group of blocks?</p>
+
+    <p><img src="cs50Week1Slide127.png" alt="Mario Grid" title="Mario Grid"></p>
+  </li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>
+    <p>We can follow the logic above, combining the same ideas. Modify your code as follows:</p>
+
+    <div class="language-c highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="c1">// Prints a 3-by-3 grid of bricks with nested loops</span>
+
+<span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">printf</span><span class="p">(</span><span class="s">"#"</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+    <p>Notice that one loop is inside another. The first loop defines what vertical row is being printed. For each row, three columns are printed. After each row, a new line is printed.</p>
+  </li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>
+    <p>What if we wanted to ensure that the number of blocks is <em>constant</em>, that is, unchangeable? Modify your code as follows:</p>
+
+    <div class="language-c highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="c1">// Prints a 3-by-3 grid of bricks with nested loops using a constant</span>
+
+<span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">const</span> <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">printf</span><span class="p">(</span><span class="s">"#"</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+    <p>Notice how <code class="language-plaintext highlighter-rouge">n</code> is now a constant. It can never be changed.</p>
+  </li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>
+    <p>As illustrated earlier in this lecture, we can <em>abstract away</em> functionality into functions. Consider the following code:</p>
+
+    <div class="language-c highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="c1">// Helper function</span>
+
+<span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span>
+<span class="kt">void</span> <span class="nf">print_row</span><span class="p">(</span><span class="kt">int</span> <span class="n">width</span><span class="p">);</span>
+  
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">const</span> <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">print_row</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">print_row</span><span class="p">(</span><span class="kt">int</span> <span class="n">width</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">width</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">"#"</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+    <p>Notice how printing a row is accomplished through a new function.</p>
+  </li>
+</ul>
+
+<a data-id="" id="operators" style="top: -82px;"></a><h2><a data-id="" href="#operators">Operators</a></h2>
+
+<ul class="fa-ul">
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>
+    <p><em>Operators</em> refer to the mathematical operations that are supported by your compiler. In C, these mathematical operators include:</p>
+
+    <ul class="fa-ul">
+      <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>
+<code class="language-plaintext highlighter-rouge">+</code> for addition</li>
+      <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>
+<code class="language-plaintext highlighter-rouge">-</code> for subtraction</li>
+      <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>
+<code class="language-plaintext highlighter-rouge">*</code> for multiplication</li>
+      <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>
+<code class="language-plaintext highlighter-rouge">/</code> for division</li>
+      <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>
+<code class="language-plaintext highlighter-rouge">%</code> for remainder</li>
+    </ul>
+  </li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>We will use all of these operators in this course.</li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>
+    <p>Let’s implement our own calculator by typing <code class="language-plaintext highlighter-rouge">code calculator.c</code> in the terminal and modifying our code as follows:</p>
+
+    <div class="language-c highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="c1">// Addition with int</span>
+
+<span class="cp">#include</span> <span class="cpf">&lt;cs50.h&gt;</span><span class="cp">
+#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="c1">// Prompt user for x</span>
+    <span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="n">get_int</span><span class="p">(</span><span class="s">"What's x? "</span><span class="p">);</span>
+
+    <span class="c1">// Prompt user for y</span>
+    <span class="kt">int</span> <span class="n">y</span> <span class="o">=</span> <span class="n">get_int</span><span class="p">(</span><span class="s">"What's y? "</span><span class="p">);</span>
+
+    <span class="c1">// Add numbers</span>
+    <span class="kt">int</span> <span class="n">z</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="p">;</span>
+
+    <span class="c1">// Perform addition</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"%i</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">z</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+    <p>Notice how we create a third variable <code class="language-plaintext highlighter-rouge">z</code> to store the sum of <code class="language-plaintext highlighter-rouge">x</code> and <code class="language-plaintext highlighter-rouge">y</code>, then print the result using <code class="language-plaintext highlighter-rouge">%i</code> (the format specifier for integers).</p>
+  </li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>
+    <p>We could write more efficient code as follows:</p>
+
+    <div class="language-c highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="c1">// Addition with int, without third variable</span>
+
+<span class="cp">#include</span> <span class="cpf">&lt;cs50.h&gt;</span><span class="cp">
+#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="c1">// Prompt user for x</span>
+    <span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="n">get_int</span><span class="p">(</span><span class="s">"What's x? "</span><span class="p">);</span>
+
+    <span class="c1">// Prompt user for y</span>
+    <span class="kt">int</span> <span class="n">y</span> <span class="o">=</span> <span class="n">get_int</span><span class="p">(</span><span class="s">"What's y? "</span><span class="p">);</span>
+
+    <span class="c1">// Perform addition</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"%i</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+    <p>Notice that we eliminated the need for the third variable <code class="language-plaintext highlighter-rouge">z</code> by performing the addition directly within the <code class="language-plaintext highlighter-rouge">printf</code> statement, making our code more concise.</p>
+  </li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>
+    <p>We could use multiplication:</p>
+
+    <div class="language-c highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="c1">// Doubles a number</span>
+
+<span class="cp">#include</span> <span class="cpf">&lt;cs50.h&gt;</span><span class="cp">
+#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="c1">// Prompt user for x</span>
+    <span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="n">get_int</span><span class="p">(</span><span class="s">"What's x? "</span><span class="p">);</span>
+
+    <span class="c1">// Double it</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"%i</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">x</span> <span class="o">*</span> <span class="mi">2</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+    <p>Notice how we use the multiplication operator <code class="language-plaintext highlighter-rouge">*</code> to double the input value, demonstrating another arithmetic operation beyond addition.</p>
+  </li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>
+    <p>Integers in <code class="language-plaintext highlighter-rouge">C</code> can only count so high. Consider the following:</p>
+
+    <div class="language-c highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="c1">// Overflow </span>
+
+<span class="cp">#include</span> <span class="cpf">&lt;cs50.h&gt;</span><span class="cp">
+#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">dollars</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="k">while</span> <span class="p">(</span><span class="nb">true</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="kt">char</span> <span class="n">c</span> <span class="o">=</span> <span class="n">get_char</span><span class="p">(</span><span class="s">"Here's $%i. Double it and give to next person? "</span><span class="p">,</span> <span class="n">dollars</span><span class="p">);</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">c</span> <span class="o">==</span> <span class="sc">'y'</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">dollars</span> <span class="o">*=</span> <span class="mi">2</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">else</span>
+        <span class="p">{</span>
+            <span class="k">break</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"Here's $%i.</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">dollars</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+    <p>Notice how the program repeatedly doubles the dollar amount. Eventually, the integer will exceed its maximum value and “overflow,” wrapping around to a negative number or zero.</p>
+  </li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>Integer overflow is when a calculation produces a value that exceeds the maximum storage capacity of the data type, causing the value to wrap around unpredictably.</li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>One of C’s challenges is that while it provides you immense control over how memory is utilized, programmers have to be very aware of the potential pitfalls of memory management.</li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>Types refer to the possible data that can be stored in a variable. For example, a <code class="language-plaintext highlighter-rouge">char</code> is designed to accommodate a single character like <code class="language-plaintext highlighter-rouge">a</code> or <code class="language-plaintext highlighter-rouge">2</code>.</li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>Types are very important because each type has specific limits. For example, because of the limits in memory, the highest value of a signed <code class="language-plaintext highlighter-rouge">int</code> is typically <code class="language-plaintext highlighter-rouge">2147483647</code>, while an unsigned <code class="language-plaintext highlighter-rouge">int</code> can reach <code class="language-plaintext highlighter-rouge">4294967295</code>. If you attempt to count an <code class="language-plaintext highlighter-rouge">int</code> higher than its maximum, an <em>integer overflow</em> will result where an incorrect value will be stored in this variable.</li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>The number of bits determines the range of values we can represent.</li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>This can have catastrophic, real-world impacts.</li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>
+    <p>We can solve this issue by using a <code class="language-plaintext highlighter-rouge">long</code> variable type:</p>
+
+    <div class="language-c highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="c1">// long</span>
+
+<span class="cp">#include</span> <span class="cpf">&lt;cs50.h&gt;</span><span class="cp">
+#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="kt">long</span> <span class="n">dollars</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="k">while</span> <span class="p">(</span><span class="nb">true</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="kt">char</span> <span class="n">c</span> <span class="o">=</span> <span class="n">get_char</span><span class="p">(</span><span class="s">"Here's $%li. Double it and give to next person? "</span><span class="p">,</span> <span class="n">dollars</span><span class="p">);</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">c</span> <span class="o">==</span> <span class="sc">'y'</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">dollars</span> <span class="o">*=</span> <span class="mi">2</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">else</span>
+        <span class="p">{</span>
+            <span class="k">break</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"Here's $%li.</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">dollars</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+    <p>Notice that we changed from <code class="language-plaintext highlighter-rouge">int</code> to <code class="language-plaintext highlighter-rouge">long</code> and use <code class="language-plaintext highlighter-rouge">%li</code> instead of <code class="language-plaintext highlighter-rouge">%i</code> in our format strings. A <code class="language-plaintext highlighter-rouge">long</code> can store much larger values than an <code class="language-plaintext highlighter-rouge">int</code>, delaying (but not eliminating) the overflow problem.</p>
+  </li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>
+    <p>You may know that integers and floating point variables have a significant difference: The ability to represent numbers less than <code class="language-plaintext highlighter-rouge">1</code>. Consider the following:</p>
+
+    <div class="language-c highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="c1">// Division with ints, demonstrating truncation</span>
+
+<span class="cp">#include</span> <span class="cpf">&lt;cs50.h&gt;</span><span class="cp">
+#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="c1">// Prompt user for x</span>
+    <span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="n">get_int</span><span class="p">(</span><span class="s">"What's x? "</span><span class="p">);</span>
+
+    <span class="c1">// Prompt user for y</span>
+    <span class="kt">int</span> <span class="n">y</span> <span class="o">=</span> <span class="n">get_int</span><span class="p">(</span><span class="s">"What's y? "</span><span class="p">);</span>
+
+    <span class="c1">// Divide x by y</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"%i</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">x</span> <span class="o">/</span> <span class="n">y</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+    <p>Notice that when dividing two integers, C performs integer division and truncates (discards) any decimal portion. For example, 7 / 2 would give 3, not 3.5.</p>
+  </li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>
+<em>Floating point imprecision</em> illustrates that there are limits to how precise computers can calculate numbers.</li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>As you are coding, pay special attention to the types of variables you are using to avoid problems within your code.</li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>
+    <p>We examined some examples of disasters that can occur through type-related errors.</p>
+  </li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>
+    <p>Similarly, we can <code class="language-plaintext highlighter-rouge">cast</code> an integer to be a <code class="language-plaintext highlighter-rouge">float</code>. Consider the following:</p>
+
+    <div class="language-c highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="c1">// Casting</span>
+
+<span class="cp">#include</span> <span class="cpf">&lt;cs50.h&gt;</span><span class="cp">
+#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="c1">// Prompt user for x</span>
+    <span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="n">get_int</span><span class="p">(</span><span class="s">"What's x? "</span><span class="p">);</span>
+
+    <span class="c1">// Prompt user for y</span>
+    <span class="kt">int</span> <span class="n">y</span> <span class="o">=</span> <span class="n">get_int</span><span class="p">(</span><span class="s">"What's y? "</span><span class="p">);</span>
+
+    <span class="c1">// Divide x by y</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"%f</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="p">(</span><span class="kt">float</span><span class="p">)</span> <span class="n">x</span> <span class="o">/</span> <span class="n">y</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+    <p>Notice how we cast <code class="language-plaintext highlighter-rouge">x</code> to a <code class="language-plaintext highlighter-rouge">float</code> before division using <code class="language-plaintext highlighter-rouge">(float) x</code>. This converts the integer to a floating-point number, allowing the division to produce a decimal result instead of truncating.</p>
+  </li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>
+    <p>We could use <code class="language-plaintext highlighter-rouge">float</code>s throughout:</p>
+
+    <div class="language-c highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="c1">// Floats</span>
+
+<span class="cp">#include</span> <span class="cpf">&lt;cs50.h&gt;</span><span class="cp">
+#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="c1">// Prompt user for x</span>
+    <span class="kt">float</span> <span class="n">x</span> <span class="o">=</span> <span class="n">get_float</span><span class="p">(</span><span class="s">"What's x? "</span><span class="p">);</span>
+
+    <span class="c1">// Prompt user for y</span>
+    <span class="kt">float</span> <span class="n">y</span> <span class="o">=</span> <span class="n">get_float</span><span class="p">(</span><span class="s">"What's y? "</span><span class="p">);</span>
+
+    <span class="c1">// Divide x by y</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"%.50f</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">x</span> <span class="o">/</span> <span class="n">y</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+    <p>Notice that we use <code class="language-plaintext highlighter-rouge">get_float</code> for input and <code class="language-plaintext highlighter-rouge">%.50f</code> to display up to 50 decimal places, revealing the limitations of floating-point precision as the result may show unexpected digits due to binary representation constraints.</p>
+  </li>
+</ul>
+
+<a data-id="" id="summing-up" style="top: -82px;"></a><h2><a data-id="" href="#summing-up">Summing Up</a></h2>
+<p>In this lesson, you learned how to apply the building blocks you learned in Scratch to the C programming language. You learned…</p>
+<ul class="fa-ul">
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>How to create your first program in C.</li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>How to use the command line.</li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>About predefined functions that come natively with C.</li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>How to use variables, conditionals, and loops.</li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>How to create your own functions to simplify and improve your code.</li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>How to evaluate your code on three axes: correctness, design, and style.</li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>How to integrate comments into your code.</li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-square"></i></span>How to utilize types and operators and the implications of your choices.</li>
+</ul>
+
+<p>See you next time!</p>
+
+
+                </main>
+
+            </div>
+
+        </div>
+
+        
+ 
+        <script src="../../assets/page.js?1780699120"></script>
+
+    
+
+
+<div class="mermaidTooltip" style="opacity: 0; position: absolute; text-align: center; max-width: 200px; padding: 2px; font-size: 12px; background: rgb(255, 255, 222); border: 1px solid rgb(51, 51, 51); border-radius: 2px; pointer-events: none; z-index: 100;"></div></body></html>

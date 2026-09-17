@@ -1,0 +1,243 @@
+<html><head><title>CS202 Lecture notes -- Sorting with the STL</title>
+</head><body bgcolor="ffffff">
+<h1>CS202 Lecture notes -- Sorting with the STL</h1>
+<li><a href="http://web.eecs.utk.edu/~jplank">James S. Plank</a>
+</li><li>Directory: <b>~jplank/cs202/notes/STL-Sorting</b>
+</li><li>Lecture notes:
+    <a href="http://web.eecs.utk.edu/~jplank/plank/classes/cs202/Notes/STL-Sorting">
+    <b>http://web.eecs.utk.edu/~jplank/plank/classes/cs202/Notes/STL-Sorting</b></a>
+</li><li> Last modification date: <i>
+Wed Sep 15 13:53:33 EDT 2021
+</i>
+<hr>
+
+
+<hr>
+<h2>Sorting using the STL</h2>
+
+This is a really small lecture.  I tell you this information in case you 
+need it with a lab or topcoder problem.
+<p>
+The standard template library supports sorting of a vector.  You need
+to include &lt;algorithm&gt;.
+Then, to sort <b>v</b>, just call <b>sort(v.begin(), v.end())</b>.
+Below I have two programs that are nearly identical.  One of them 
+(<b><a href="src/sortlines1.cpp">src/sortlines1.cpp</a></b>)
+sorts lines
+of standard input.  The other 
+(<b><a href="src/sortints.cpp">src/sortints.cpp</a></b>)
+sorts standard input when it is read in as integers.
+
+</p><p></p><center><table border="3" cellpadding="3"><tbody><tr><td><pre><font color="blue">/* This program sorts the lines of standard input 
+   using the sort() procedure from
+   the STL algorithms library. */</font>
+
+#include &lt;iostream&gt;
+#include &lt;algorithm&gt;
+#include &lt;vector&gt;
+using namespace std;
+
+int main()
+{
+  vector &lt;string&gt; lines;
+  string s;
+  size_t i;
+
+  <font color="blue">/* Read lines of standard input into the vector "lines".
+     Sort the vector using the sort() procedure, 
+     and print the sorted lines. */</font>
+
+  while (getline(cin, s)) lines.push_back(s);
+  sort(lines.begin(), lines.end());
+  for (i = 0; i &lt; lines.size(); i++) {
+    cout &lt;&lt; lines[i] &lt;&lt; endl;
+  }
+
+  return 0;
+}
+</pre></td><td><pre><font color="blue">/* This program sorts integers from standard 
+   input, using the sort() procedure from the 
+   STL algorithms library. */</font>
+
+#include &lt;iostream&gt;
+#include &lt;algorithm&gt;
+#include &lt;vector&gt;
+using namespace std;
+
+int main()
+{
+  vector &lt;int&gt; numbers;
+  int n;
+  size_t i;
+
+  <font color="blue">/* Read integers into the vector "numbers".
+     Sort the vector using the sort() procedure, 
+     and print the sorted numbers. */</font>
+
+  while (cin &gt;&gt; n) numbers.push_back(n);
+  sort(numbers.begin(), numbers.end());
+  for (i = 0; i &lt; numbers.size(); i++) {
+    cout &lt;&lt; numbers[i] &lt;&lt; endl;
+  }
+
+  return 0;
+}
+</pre></td></tr></tbody></table></center><p>
+
+By default, strings are sorted lexicographically and numbers numerically (duh):
+
+</p><p></p><center><table border="3" cellpadding="5"><tbody><tr><td><pre>UNIX&gt; <font color="darkred"><b>cat files/input-names.txt</b></font>
+Sydney Ingratiate
+Arianna Exonerate
+Sarah Charcoal
+Alexis Kaitlyn Inferential
+Cole Hunter Ourselves
+Joseph Dilatory
+Julian Fluvial
+Mia Leah Skied
+Oliver Celebrate
+Liam Trisyllable
+UNIX&gt; <font color="darkred"><b>bin/sortlines1 &lt; files/input-names.txt</b></font>
+Alexis Kaitlyn Inferential
+Arianna Exonerate
+Cole Hunter Ourselves
+Joseph Dilatory
+Julian Fluvial
+Liam Trisyllable
+Mia Leah Skied
+Oliver Celebrate
+Sarah Charcoal
+Sydney Ingratiate
+UNIX&gt; <font color="darkred"><b></b></font>
+</pre></td><td><pre>UNIX&gt; <font color="darkred"><b>cat files/input-numbers-1.txt</b></font>
+87
+76
+24
+4
+34
+27
+93
+11
+58
+54
+UNIX&gt; <font color="darkred"><b>bin/sortints &lt; files/input-numbers-1.txt</b></font>
+4
+11
+24
+27
+34
+54
+58
+76
+87
+93
+UNIX&gt; <font color="darkred"><b></b></font>
+</pre></td></tr></tbody></table></center><p>
+
+You'll note that if we sort that numerical file as strings, it will put "4" between
+"34" and "54":
+
+
+</p><p></p><center><table border="3" cellpadding="3"><tbody><tr><td><pre>UNIX&gt; <font color="darkred"><b>bin/sortlines1 &lt; files/input-numbers-1.txt</b></font>
+11
+24
+27
+34
+4
+54
+58
+76
+87
+93
+UNIX&gt; 
+</pre></td></tr></tbody></table></center><p>
+
+And remember that <b>sortlines1.cpp</b> reads strings, complete with their spaces, while
+<b>sortints.cpp</b> reads numbers:
+
+</p><p></p><center><table border="3" cellpadding="3"><tbody><tr><td valign="top"><pre>UNIX&gt; <font color="darkred"><b>cat files/input-numbers-2.txt</b></font>
+  87 76 24
+4 34 27 93
+11 58 54
+UNIX&gt; <font color="darkred"><b>bin/sortlines1 &lt; files/input-numbers-2.txt</b></font>
+  87 76 24
+11 58 54
+4 34 27 93
+UNIX&gt; 
+</pre></td><td><pre>UNIX&gt; <font color="darkred"><b>bin/sortints &lt; files/input-numbers-2.txt</b></font>
+4
+11
+24
+27
+34
+54
+58
+76
+87
+93
+UNIX&gt; 
+</pre></td></tr></tbody></table></center><p>
+
+
+If you want to sort, but you don't want to use the default sorting mechanism,
+you can provide your own comparison function.  It should take two parameters
+of the same type as the vector (preferably const and reference) and return a <b>bool</b>
+(true or false). It should return <b>true</b> if the first parameter is
+less than the second, and false otherwise.  Therefore, the
+following program 
+(<b><a href="src/sortlines2.cpp">src/sortlines2.cpp</a></b>)
+sorts standard input by the value of the second character 
+in each line:
+
+</p><p></p><center><table border="3" cellpadding="3"><tbody><tr><td><pre><font color="blue">/* This program uses a comparison function to sort a vector of strings by the
+   strings' second letters, rather than the entire strings. */</font>
+
+#include &lt;iostream&gt;
+#include &lt;algorithm&gt;
+#include &lt;vector&gt;
+#include &lt;string&gt;
+using namespace std;
+
+<font color="blue">/* Your comparison function takes as arguments, two const references to 
+   the type that is in the vector (strings). */</font>
+
+bool string_compare(const string &amp;s1, const string &amp;s2)
+{
+  if (s1[1] &lt; s2[1]) return true;         <font color="blue">/* I could have just said "return (s1[1] &lt; s2[1]);" */</font>
+  return false;
+}
+
+int main()
+{
+  vector &lt;string&gt; lines;
+  string s;
+  size_t i;
+
+  <font color="blue">/* This code is the same as before, except we pass string_compare() to the sort() procedure. */</font>
+
+  while (getline(cin, s)) lines.push_back(s);
+  sort(lines.begin(), lines.end(), string_compare);
+  for (i = 0; i &lt; lines.size(); i++) cout &lt;&lt; lines[i] &lt;&lt; endl;
+
+  return 0;
+}
+
+</pre></td></tr></tbody></table></center><p>
+I've highlighted the second characters in blue so that you can see that
+they are indeed sorted:
+
+</p><pre>UNIX&gt; <font color="darkred"><b>bin/sortlines2 &lt; files/input.txt</b></font>
+S<font color="blue"><b>a</b></font>rah Charcoal
+L<font color="blue"><b>i</b></font>am Trisyllable
+M<font color="blue"><b>i</b></font>a Leah Skied
+O<font color="blue"><b>l</b></font>iver Celebrate
+A<font color="blue"><b>l</b></font>exis Kaitlyn Inferential
+J<font color="blue"><b>o</b></font>seph Dilatory
+C<font color="blue"><b>o</b></font>le Hunter Ourselves
+A<font color="blue"><b>r</b></font>ianna Exonerate
+J<font color="blue"><b>u</b></font>lian Fluvial
+S<font color="blue"><b>y</b></font>dney Ingratiate
+UNIX&gt; <font color="darkred"><b></b></font>
+</pre>
+
+</li></body></html>

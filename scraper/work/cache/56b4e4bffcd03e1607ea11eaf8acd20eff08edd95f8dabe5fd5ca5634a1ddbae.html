@@ -1,0 +1,1283 @@
+<!DOCTYPE html><html lang="en" class="scroll-smooth"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/assets/images/favicon.png">
+    <title>404 Error | IIT Hyderabad</title>
+    <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-5RLMNF50VN&amp;cx=c&amp;gtm=4e66b0h2"></script><script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-137608318-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-137608318-1');
+    </script>
+        <style>
+/* Frutiger LT Pro – Regular */
+@font-face {
+    font-family: "FrutigerLTPro";
+    src: url("/assets/fonts/frutiger/FrutigerLTPro-Roman.otf") format("opentype");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Light */
+@font-face {
+    font-family: "FrutigerLTPro";
+    src: url("/assets/fonts/frutiger/FrutigerLTPro-Light.otf") format("opentype");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Bold */
+@font-face {
+    font-family: "FrutigerLTPro";
+    src: url("/assets/fonts/frutiger/FrutigerLTPro-Bold.otf") format("opentype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Black */
+@font-face {
+    font-family: "FrutigerLTPro";
+    src: url("/assets/fonts/frutiger/FrutigerLTPro-Black.otf") format("opentype");
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Italic */
+@font-face {
+    font-family: "FrutigerLTPro";
+    src: url("/assets/fonts/frutiger/FrutigerLTPro-Italic.otf") format("opentype");
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+
+body {
+    font-family: "FrutigerLTPro", Arial, Helvetica, sans-serif;
+    background-color: #FDFBF8;
+    color: #333333;
+}
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        .carousel-container {
+            overflow: hidden;
+        }
+        .carousel-track {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .carousel-slide {
+            min-width: 100%;
+            position: relative;
+        }
+        .nav-link {
+            position: relative;
+            padding-bottom: 4px;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #D97706; /* Amber-600 */
+            transition: width 0.3s ease-in-out;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .hero-gradient {
+            background: linear-gradient(to top, rgba(253, 251, 248, 1) 0%, rgba(253, 251, 248, 0) 100%);
+        }
+        .hero-carousel-slide img {
+            height: 60vh; /* Responsive height for hero slider */
+            max-height: 500px; /* Max height for larger screens */
+        }
+        @media (min-width: 768px) {
+            .hero-carousel-slide img {
+                height: 70vh;
+                max-height: 600px;
+            }
+        }
+
+
+/* Announcement scrolling animation */
+.announcement-track {
+    animation: scroll-announcements 25s linear infinite;
+}
+
+/* Pause on hover */
+.announcement-track:hover {
+    animation-play-state: paused;
+}
+
+@keyframes scroll-announcements {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Director image scroll animation */
+.director-photo {
+    transform: translateY(24px) scale(1.02);
+    transition:
+        opacity 0.8s ease-out,
+        transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.director-photo.is-visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+/* Track */
+.innovation-track {
+    display: flex;
+    width: max-content;
+    animation: scroll-innovations 15s linear infinite;
+}
+
+.innovation-track:hover {
+    animation-play-state: paused;
+}
+
+/* Group */
+.innovation-group {
+    display: flex;
+    gap: 1.5rem;
+}
+
+/* TRUE infinite animation */
+@keyframes scroll-innovations {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+
+/* Large card for detailed innovation */
+.innovation-card-lg {
+    min-width: 420px;
+    max-width: 420px;
+    background: white;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 10px 28px -16px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.innovation-card-lg:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px -22px rgba(0,0,0,0.3);
+}
+
+.innovation-card-lg img {
+    width: 100%;
+    aspect-ratio: 1 / 1;   /* modern browsers */
+    object-fit: cover;
+}
+
+.innovation-card-lg h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.innovation-card-lg p {
+    margin-top: 0.6rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #475569;
+}
+
+/* YouTube vertical scroll */
+
+.youtube-viewport {
+    height: 600px;        /* ≈ 3 cards */
+    overflow: hidden;
+}
+
+.youtube-track {
+    animation: scroll-youtube 20s linear infinite;
+}
+
+.youtube-track:hover {
+    animation-play-state: paused;
+}
+
+@keyframes scroll-youtube {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-50%);
+    }
+}
+
+/* Card tweaks */
+.youtube-card img {
+    flex-shrink: 0;
+}
+
+.aspect-square img {
+    transition: transform 0.4s ease;
+}
+.bg-white:hover .aspect-square img {
+    transform: scale(1.05);
+}
+
+.aspect-square {
+    position: relative;
+}
+.aspect-square::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, transparent 60%, rgba(0,0,0,0.15));
+}
+
+/* Custom Scrollbar for dropdowns */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: #f1f5f9; 
+    border-radius: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #cbd5e1; 
+    border-radius: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8; 
+}
+
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border-width:0}.invisible{visibility:hidden}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.sticky{position:sticky}.left-0{left:0px}.top-0{top:0px}.bottom-6{bottom:1.5rem}.right-6{right:1.5rem}.z-40{z-index:40}.z-50{z-index:50}.mx-auto{margin-left:auto;margin-right:auto}.ml-0{margin-left:0px}.mt-0\.5{margin-top:0.125rem}.mt-2{margin-top:0.5rem}.mb-4{margin-bottom:1rem}.mt-10{margin-top:2.5rem}.mt-14{margin-top:3.5rem}.mt-3{margin-top:0.75rem}.block{display:block}.flex{display:flex}.inline-flex{display:inline-flex}.grid{display:grid}.hidden{display:none}.h-10{height:2.5rem}.h-20{height:5rem}.h-4{height:1rem}.h-6{height:1.5rem}.h-7{height:1.75rem}.max-h-64{max-height:16rem}.max-h-96{max-height:24rem}.max-h-\[calc\(100vh-5rem\)\]{max-height:calc(100vh - 5rem)}.w-4{width:1rem}.w-56{width:14rem}.w-6{width:1.5rem}.w-64{width:16rem}.w-7{width:1.75rem}.w-auto{width:auto}.w-full{width:100%}.min-w-\[60px\]{min-width:60px}.max-w-7xl{max-width:80rem}.flex-shrink-0{flex-shrink:0}.grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.flex-col{flex-direction:column}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1{gap:0.25rem}.gap-2{gap:0.5rem}.gap-3{gap:0.75rem}.gap-5{gap:1.25rem}.gap-10{gap:2.5rem}.gap-6{gap:1.5rem}.space-x-1 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.25rem * var(--tw-space-x-reverse));margin-left:calc(0.25rem * calc(1 - var(--tw-space-x-reverse)))}.space-x-2 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.5rem * var(--tw-space-x-reverse));margin-left:calc(0.5rem * calc(1 - var(--tw-space-x-reverse)))}.space-y-1 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.25rem * var(--tw-space-y-reverse))}.space-x-3 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.75rem * var(--tw-space-x-reverse));margin-left:calc(0.75rem * calc(1 - var(--tw-space-x-reverse)))}.space-y-2 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.5rem * var(--tw-space-y-reverse))}.overflow-y-auto{overflow-y:auto}.overflow-x-hidden{overflow-x:hidden}.scroll-smooth{scroll-behavior:smooth}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-md{border-radius:0.375rem}.border{border-width:1px}.border-t{border-top-width:1px}.border-slate-700{--tw-border-opacity:1;border-color:rgb(51 65 85 / var(--tw-border-opacity, 1))}.bg-amber-600{--tw-bg-opacity:1;background-color:rgb(217 119 6 / var(--tw-bg-opacity, 1))}.bg-slate-800{--tw-bg-opacity:1;background-color:rgb(30 41 59 / var(--tw-bg-opacity, 1))}.bg-slate-900{--tw-bg-opacity:1;background-color:rgb(15 23 42 / var(--tw-bg-opacity, 1))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-white\/80{background-color:rgb(255 255 255 / 0.8)}.p-2{padding:0.5rem}.p-3{padding:0.75rem}.px-2{padding-left:0.5rem;padding-right:0.5rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-4{padding-left:1rem;padding-right:1rem}.px-5{padding-left:1.25rem;padding-right:1.25rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.py-16{padding-top:4rem;padding-bottom:4rem}.pb-4{padding-bottom:1rem}.pl-6{padding-left:1.5rem}.pt-3{padding-top:0.75rem}.pt-6{padding-top:1.5rem}.text-center{text-align:center}.text-\[11px\]{font-size:11px}.text-base{font-size:1rem;line-height:1.5rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xs{font-size:0.75rem;line-height:1rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.font-medium{font-weight:500}.font-semibold{font-weight:600}.tracking-tighter{letter-spacing:-0.05em}.tracking-wide{letter-spacing:0.025em}.text-amber-400{--tw-text-opacity:1;color:rgb(251 191 36 / var(--tw-text-opacity, 1))}.text-gray-700{--tw-text-opacity:1;color:rgb(55 65 81 / var(--tw-text-opacity, 1))}.text-slate-800{--tw-text-opacity:1;color:rgb(30 41 59 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.text-amber-700{--tw-text-opacity:1;color:rgb(180 83 9 / var(--tw-text-opacity, 1))}.text-slate-300{--tw-text-opacity:1;color:rgb(203 213 225 / var(--tw-text-opacity, 1))}.text-slate-400{--tw-text-opacity:1;color:rgb(148 163 184 / var(--tw-text-opacity, 1))}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.opacity-0{opacity:0}.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.backdrop-blur-lg{--tw-backdrop-blur:blur(16px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-200{transition-duration:200ms}.duration-300{transition-duration:300ms}.hover\:bg-amber-50:hover{--tw-bg-opacity:1;background-color:rgb(255 251 235 / var(--tw-bg-opacity, 1))}.hover\:bg-amber-700:hover{--tw-bg-opacity:1;background-color:rgb(180 83 9 / var(--tw-bg-opacity, 1))}.hover\:bg-gray-100:hover{--tw-bg-opacity:1;background-color:rgb(243 244 246 / var(--tw-bg-opacity, 1))}.hover\:text-amber-400:hover{--tw-text-opacity:1;color:rgb(251 191 36 / var(--tw-text-opacity, 1))}.hover\:text-amber-600:hover{--tw-text-opacity:1;color:rgb(217 119 6 / var(--tw-text-opacity, 1))}.hover\:shadow-md:hover{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.focus\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}.focus\:ring-1:focus{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.focus\:ring-2:focus{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.focus\:ring-inset:focus{--tw-ring-inset:inset}.focus\:ring-amber-500:focus{--tw-ring-opacity:1;--tw-ring-color:rgb(245 158 11 / var(--tw-ring-opacity, 1))}.group:hover .group-hover\:visible{visibility:visible}.group:hover .group-hover\:opacity-100{opacity:1}@media (min-width: 640px){.sm\:flex-row{flex-direction:row}.sm\:px-3{padding-left:0.75rem;padding-right:0.75rem}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}}@media (min-width: 768px){.md\:mt-0{margin-top:0px}.md\:block{display:block}.md\:hidden{display:none}.md\:grid-cols-5{grid-template-columns:repeat(5, minmax(0, 1fr))}.md\:flex-row{flex-direction:row}.md\:text-left{text-align:left}}@media (min-width: 1024px){.lg\:ml-1{margin-left:0.25rem}.lg\:h-8{height:2rem}.lg\:w-8{width:2rem}.lg\:min-w-\[72px\]{min-width:72px}.lg\:space-x-1\.5 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.375rem * var(--tw-space-x-reverse));margin-left:calc(0.375rem * calc(1 - var(--tw-space-x-reverse)))}.lg\:px-3{padding-left:0.75rem;padding-right:0.75rem}.lg\:px-8{padding-left:2rem;padding-right:2rem}.lg\:text-\[13px\]{font-size:13px}.lg\:text-base{font-size:1rem;line-height:1.5rem}.lg\:text-xs{font-size:0.75rem;line-height:1rem}}@media (min-width: 1280px){.xl\:ml-8{margin-left:2rem}.xl\:h-10{height:2.5rem}.xl\:h-9{height:2.25rem}.xl\:w-10{width:2.5rem}.xl\:min-w-\[96px\]{min-width:96px}.xl\:space-x-5 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(1.25rem * var(--tw-space-x-reverse));margin-left:calc(1.25rem * calc(1 - var(--tw-space-x-reverse)))}.xl\:px-4{padding-left:1rem;padding-right:1rem}.xl\:text-base{font-size:1rem;line-height:1.5rem}.xl\:text-lg{font-size:1.125rem;line-height:1.75rem}.xl\:text-sm{font-size:0.875rem;line-height:1.25rem}.xl\:tracking-normal{letter-spacing:0em}}</style></head>
+<body class="antialiased">
+
+
+<!-- Top Utility Bar -->
+<div class="bg-slate-900 text-white py-2 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row
+                justify-between items-center gap-3">
+
+        <!-- Left: Language Switcher -->
+        <div class="flex items-center gap-2 text-sm">
+            <i class="fa-solid fa-globe text-amber-400"></i>
+            <label for="language" class="sr-only">Language</label>
+            <select id="language" class="bg-slate-800 text-white text-sm
+                           border border-slate-700 rounded-md
+                           px-2 py-1 focus:outline-none
+                           focus:ring-1 focus:ring-amber-500">
+                <option value="en" selected="">English</option>
+                <!-- <option value="hi">हिंदी</option> -->
+            </select>
+        </div>
+
+        <!-- Right: Social Links -->
+<div class="flex items-center gap-5 text-base">
+    <a href="https://www.facebook.com/iithyderabad/" target="_blank" class="hover:text-amber-400" aria-label="Facebook">
+        <i class="fa-brands fa-facebook-f"></i>
+    </a>
+
+    <a href="https://twitter.com/IITHyderabad" target="_blank" class="hover:text-amber-400" aria-label="Twitter">
+        <i class="fa-brands fa-twitter"></i>
+    </a>
+
+    <a href="https://www.linkedin.com/school/iithyderabad/" target="_blank" class="hover:text-amber-400" aria-label="LinkedIn">
+        <i class="fa-brands fa-linkedin-in"></i>
+    </a>
+
+    <a href="https://www.instagram.com/iithyderabad/" target="_blank" class="hover:text-amber-400" aria-label="Instagram">
+        <i class="fa-brands fa-instagram"></i>
+    </a>
+
+    <a href="https://www.youtube.com/c/IITHyderabadofficial" target="_blank" class="hover:text-amber-400" aria-label="YouTube">
+        <i class="fa-brands fa-youtube"></i>
+    </a>
+</div>
+
+
+
+    </div>
+</div>
+
+
+
+
+    <!-- Main Header -->
+    <header class="bg-white/80 backdrop-blur-lg sticky top-0 z-40 shadow-sm">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex-shrink-0">
+                <a href="#" class="flex items-center space-x-2">
+                    <!-- Logo Image -->
+                    <img src="https://iith.ac.in/assets/images/horzlogolong.png" alt="University Logo" class="h-10 w-auto">
+                </a>
+                </div>
+                <div class="hidden md:block">
+
+<div class="ml-0 lg:ml-1 xl:ml-8 flex items-center space-x-1 lg:space-x-1.5 xl:space-x-5 text-xs lg:text-[13px] xl:text-base tracking-tighter xl:tracking-normal">
+
+    <!-- Home -->
+    <a href="/" class="nav-link text-gray-700 hover:text-amber-600 font-medium">
+        Home
+    </a>
+
+    <!-- About Dropdown -->
+    <div class="relative group">
+        <button class="nav-link text-gray-700 hover:text-amber-600 font-medium flex items-center gap-1">
+            Academics
+            <svg class="w-4 h-4 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+        </button>
+
+        <div class="absolute left-0 mt-2 w-56 bg-white shadow-xl rounded-lg
+                    opacity-0 invisible group-hover:opacity-100 group-hover:visible
+                    transition-all duration-200 z-50">
+            
+                
+                    <a href="/academics/index.html#admissions" class="block px-5 py-3 hover:bg-amber-50 ">Admissions</a>
+                
+            
+                
+                    <a href="/academics/programmes-offered/" class="block px-5 py-3 hover:bg-amber-50 ">Programs</a>
+                
+            
+                
+                    <a href="/academics/departments/" class="block px-5 py-3 hover:bg-amber-50 ">Departments</a>
+                
+            
+                
+                    <a href="/academics/calendars-timetables/" class="block px-5 py-3 hover:bg-amber-50 ">Calendars &amp; Timetables</a>
+                
+            
+                
+                    <a href="https://ocs.iith.ac.in/" target="_blank" class="block px-5 py-3 hover:bg-amber-50 ">Office of Career Services</a>
+                
+            
+                
+                    <a href="https://cce.iith.ac.in/" target="_blank" class="block px-5 py-3 hover:bg-amber-50 ">Centre for Continuing Education</a>
+                
+            
+            <a href="/academics/index.html" class="block px-5 py-3 hover:bg-amber-50">Office of Academic Affairs</a>
+        </div>
+    </div>
+
+    <!-- Academics Dropdown -->
+    <div class="relative group">
+        <button class="nav-link text-gray-700 hover:text-amber-600 font-medium flex items-center gap-1">
+            Research
+            <svg class="w-4 h-4 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+        </button>
+
+        <div class="absolute left-0 mt-2 w-64 bg-white shadow-xl rounded-lg
+                    opacity-0 invisible group-hover:opacity-100 group-hover:visible
+                    transition-all duration-200 z-50">
+            
+                
+                    <a href="https://scicomm.iith.ac.in/" target="_blank" class="block px-5 py-3 hover:bg-amber-50 ">Science Communication</a>
+                
+            
+                
+                    <a href="https://raiith.krc.iith.ac.in/" target="_blank" class="block px-5 py-3 hover:bg-amber-50 ">Research &amp; Publications</a>
+                
+            
+                
+                    <a href="/working-papers/" class="block px-5 py-3 hover:bg-amber-50 ">Working Papers</a>
+                
+            
+                
+                    <a href="/research-centres/" class="block px-5 py-3 hover:bg-amber-50 ">Research Centres</a>
+                
+            
+                
+                    <a href="https://itic.iith.ac.in/" target="_blank" class="block px-5 py-3 hover:bg-amber-50 ">Incubation Center</a>
+                
+            
+                
+                    <a href="https://innovationcouncil.iith.ac.in/" target="_blank" class="block px-5 py-3 hover:bg-amber-50 ">Institute Innovation Council</a>
+                
+            
+            <a href="https://research.iith.ac.in/research-infrastracture" class="block px-5 py-3 hover:bg-amber-50">Research Facilities</a>
+            <a href="https://research.iith.ac.in/" class="block px-5 py-3 hover:bg-amber-50">Office of SRC</a>
+        </div>
+    </div>
+
+    <!-- Research Dropdown -->
+    <div class="relative group">
+        <button class="nav-link text-gray-700 hover:text-amber-600 font-medium flex items-center gap-1">
+            Relations
+            <svg class="w-4 h-4 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+        </button>
+
+        <div class="absolute left-0 mt-2 w-64 bg-white shadow-xl rounded-lg
+                    opacity-0 invisible group-hover:opacity-100 group-hover:visible
+                    transition-all duration-200 z-50">
+                    
+                        
+                            <a href="https://pr.iith.ac.in/press-release" target="_blank" class="block px-5 py-3 hover:bg-amber-50 ">Press Releases</a>
+                        
+                    
+                        
+                            <a href="https://pr.iith.ac.in/newsletter/" target="_blank" class="block px-5 py-3 hover:bg-amber-50 ">Newsletter</a>
+                        
+                    
+                        
+                            <a href="/japandesk/" class="block px-5 py-3 hover:bg-amber-50 ">JICA Friendship Program</a>
+                        
+                    
+            <a href="https://pr.iith.ac.in/" class="block px-5 py-3 hover:bg-amber-50">Public Relations</a>
+            <a href="https://acr.iith.ac.in/" class="block px-5 py-3 hover:bg-amber-50">Alumni and Corporate Relations</a>
+            <a href="https://ir.iith.ac.in/" class="block px-5 py-3 hover:bg-amber-50">International Relations</a>
+        </div>
+    </div>
+
+    <!-- About Dropdown -->
+    <div class="relative group">
+        <button class="nav-link text-gray-700 hover:text-amber-600 font-medium flex items-center gap-1">
+            About
+            <svg class="w-4 h-4 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+        </button>
+
+        <div class="absolute left-0 mt-2 w-64 bg-white shadow-xl rounded-lg
+                    opacity-0 invisible group-hover:opacity-100 group-hover:visible
+                    transition-all duration-200 z-50">
+                    
+                        
+                            <a href="/about/aboutiith/" class="block px-5 py-3 hover:bg-amber-50 ">About IITH</a>
+                        
+                    
+                        
+                            <a href="https://online.fliphtml5.com/vrhdl/ljbd/" target="_blank" class="block px-5 py-3 hover:bg-amber-50 ">IITH Brochure</a>
+                        
+                    
+                        
+                            <a href="/about/aboutiith/#BoG" class="block px-5 py-3 hover:bg-amber-50 ">Board of Governors</a>
+                        
+                    
+                        
+                            <a href="/about/aboutiith/#senate" class="block px-5 py-3 hover:bg-amber-50 ">Senate</a>
+                        
+                    
+                        
+                            <a href="/people/administration/" class="block px-5 py-3 hover:bg-amber-50 ">Governance</a>
+                        
+                    
+                        
+                            <a href="/reports/" class="block px-5 py-3 hover:bg-amber-50 ">Rankings &amp; Reports</a>
+                        
+                    
+                        
+                            <a href="https://sustainability.iith.ac.in/" target="_blank" class="block px-5 py-3 hover:bg-amber-50 ">Sustainability</a>
+                        
+                    
+                        
+                            <a href="/about/iith_policies/" class="block px-5 py-3 hover:bg-amber-50 ">IITH Policies</a>
+                        
+                    
+        </div>
+    </div>
+
+    <!-- People Dropdown -->
+    <div class="relative group">
+        <button class="nav-link text-gray-700 hover:text-amber-600 font-medium flex items-center gap-1">
+            People
+            <svg class="w-4 h-4 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+        </button>
+
+        <div class="absolute left-0 mt-2 w-64 bg-white shadow-xl rounded-lg
+                    opacity-0 invisible group-hover:opacity-100 group-hover:visible
+                    transition-all duration-200 z-50">
+                    
+                        
+                            <a href="/people/faculty" class="block px-5 py-3 hover:bg-amber-50 ">Faculty</a>
+                        
+                    
+                        
+                            <a href="/people/staff" class="block px-5 py-3 hover:bg-amber-50 ">Staff</a>
+                        
+                    
+                        
+                            <a href="https://www.gymkhana.iith.ac.in" target="_blank" class="block px-5 py-3 hover:bg-amber-50 ">Students</a>
+                        
+                    
+            <a href="/about/directory/" class="block px-5 py-3 hover:bg-amber-50">Directory</a>
+        </div>
+    </div>
+
+    <!-- Administration Dropdown -->
+    <div class="relative group">
+        <button class="nav-link text-gray-700 hover:text-amber-600 font-medium flex items-center gap-1">
+            Administration
+            <svg class="w-4 h-4 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+        </button>
+
+        <div class="absolute left-0 mt-2 w-64 bg-white shadow-xl rounded-lg
+                    opacity-0 invisible group-hover:opacity-100 group-hover:visible
+                    transition-all duration-200 z-50 max-h-96 overflow-y-auto overflow-x-hidden custom-scrollbar">
+                    
+                        
+                            <a href="/director/" class="block px-5 py-3 hover:bg-amber-50 ">Director</a>
+                        
+                    
+                        
+                            <a href="/registrar/" class="block px-5 py-3 hover:bg-amber-50 ">Registrar</a>
+                        
+                    
+                        
+                            <a href="https://iith.ac.in/academics/" target="_blank" class="block px-5 py-3 hover:bg-amber-50 ">Academic Office</a>
+                        
+                    
+                        
+                            <a href="https://accounts.iith.ac.in/" target="_blank" class="block px-5 py-3 hover:bg-amber-50 ">Finance &amp; Accounts Section</a>
+                        
+                    
+                        
+                            <a href="https://iith.ac.in/hr_department_staff/" target="_blank" class="block px-5 py-3 hover:bg-amber-50 ">HR Department (Staff)</a>
+                        
+                    
+                        
+                            <a href="https://iith.ac.in/dofa/" target="_blank" class="block px-5 py-3 hover:bg-amber-50 ">Dean of Faculty Affairs office</a>
+                        
+                    
+                        
+                            <a href="https://iith.ac.in/dtx/" target="_blank" class="block px-5 py-3 hover:bg-amber-50 ">Office of Digital Transformation</a>
+                        
+                    
+                        
+                            <a href="https://research.iith.ac.in/" target="_blank" class="block px-5 py-3 hover:bg-amber-50 ">Office of SRC</a>
+                        
+                    
+                        
+                            <a href="https://iith.ac.in/stores_purchase/" target="_blank" class="block px-5 py-3 hover:bg-amber-50 ">Stores &amp; Purchase</a>
+                        
+                    
+                        
+                            <a href="https://dost.iith.ac.in/" target="_blank" class="block px-5 py-3 hover:bg-amber-50 ">Dean (Students) Office</a>
+                        
+                    
+                        
+                            <a href="https://cmd.iith.ac.in/" target="_blank" class="block px-5 py-3 hover:bg-amber-50 ">Construction and Maintenance Division</a>
+                        
+                    
+                        
+                            <a href="https://iith.ac.in/coordination_section/" target="_blank" class="block px-5 py-3 hover:bg-amber-50 ">Coordination Section</a>
+                        
+                    
+                        
+                            <a href="https://iith.ac.in/registrar_office/" target="_blank" class="block px-5 py-3 hover:bg-amber-50 ">Office of the Registrar</a>
+                        
+                    
+                        
+                            <a href="https://iith.ac.in/ms_section/" target="_blank" class="block px-5 py-3 hover:bg-amber-50 ">MS Section</a>
+                        
+                    
+        </div>
+    </div>
+
+    <!-- Events -->
+    <a href="/careers" class="nav-link text-gray-700 hover:text-amber-600 font-medium">
+        Careers
+    </a>
+
+<a href="https://giving.iith.ac.in/how-to-give" class="inline-flex items-center justify-center
+          h-7 lg:h-8 xl:h-9 min-w-[60px] lg:min-w-[72px] xl:min-w-[96px]
+          px-2 lg:px-3 xl:px-4 rounded-full
+          bg-amber-600 text-white text-[11px] lg:text-xs xl:text-sm font-semibold
+          hover:bg-amber-700
+          shadow-sm hover:shadow-md
+          transition-all duration-300">
+    Donate
+</a>
+
+<a href="/visit" class="inline-flex items-center justify-center
+          h-7 lg:h-8 xl:h-9 min-w-[60px] lg:min-w-[72px] xl:min-w-[96px]
+          px-2 lg:px-3 xl:px-4 rounded-full
+          bg-amber-600 text-white text-[11px] lg:text-xs xl:text-sm font-semibold
+          hover:bg-amber-700
+          shadow-sm hover:shadow-md
+          transition-all duration-300">
+    Visit IITH
+</a>
+<a href="/search/" aria-label="Search" class="inline-flex items-center justify-center
+          h-7 w-7 lg:h-8 lg:w-8 xl:h-10 xl:w-10 rounded-full
+          text-gray-700 hover:text-amber-600
+          hover:bg-amber-50
+          transition-all duration-300">
+    <i class="fa-solid fa-magnifying-glass text-sm lg:text-base xl:text-lg"></i>
+</a>
+
+
+
+
+</div>
+
+                </div>
+                <div class="flex items-center">
+                    <div class="md:hidden flex items-center">
+                        <button id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-amber-500" aria-controls="mobile-menu" aria-expanded="false">
+                            <span class="sr-only">Open main menu</span>
+                            <svg class="block h-6 w-6" id="menu-open-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                            <svg class="hidden h-6 w-6" id="menu-close-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="md:hidden hidden max-h-[calc(100vh-5rem)] overflow-y-auto custom-scrollbar" id="mobile-menu">
+<div class="px-2 pt-3 pb-4 space-y-1 sm:px-3 text-slate-800">
+
+    <!-- Home -->
+    <a href="/" class="block px-3 py-2 text-base font-semibold">
+        Home
+    </a>
+
+    <!-- Academics -->
+    <button class="w-full flex justify-between items-center px-3 py-2 text-base font-semibold" onclick="toggleDropdown('academics-mobile')">
+        Academics
+        <span>+</span>
+    </button>
+    <div id="academics-mobile" class="hidden pl-6 text-sm">
+        
+            
+                <a href="/academics/index.html#admissions" class="block py-2 ">Admissions</a>
+            
+        
+            
+                <a href="/academics/programmes-offered/" class="block py-2 ">Programs</a>
+            
+        
+            
+                <a href="/academics/departments/" class="block py-2 ">Departments</a>
+            
+        
+            
+                <a href="/academics/calendars-timetables/" class="block py-2 ">Calendars &amp; Timetables</a>
+            
+        
+            
+                <a href="https://ocs.iith.ac.in/" target="_blank" class="block py-2 ">Office of Career Services</a>
+            
+        
+            
+                <a href="https://cce.iith.ac.in/" target="_blank" class="block py-2 ">Centre for Continuing Education</a>
+            
+        
+        <a href="/academics/index.html" class="block py-2">Office of Academic Affairs</a>
+    </div>
+
+    <!-- Research -->
+    <button class="w-full flex justify-between items-center px-3 py-2 text-base font-semibold" onclick="toggleDropdown('research-mobile')">
+        Research
+        <span>+</span>
+    </button>
+    <div id="research-mobile" class="hidden pl-6 text-sm">
+        
+            
+                <a href="https://scicomm.iith.ac.in/" target="_blank" class="block py-2 ">Science Communication</a>
+            
+        
+            
+                <a href="https://raiith.krc.iith.ac.in/" target="_blank" class="block py-2 ">Research &amp; Publications</a>
+            
+        
+            
+                <a href="/working-papers/" class="block py-2 ">Working Papers</a>
+            
+        
+            
+                <a href="/research-centres/" class="block py-2 ">Research Centres</a>
+            
+        
+            
+                <a href="https://itic.iith.ac.in/" target="_blank" class="block py-2 ">Incubation Center</a>
+            
+        
+            
+                <a href="https://innovationcouncil.iith.ac.in/" target="_blank" class="block py-2 ">Institute Innovation Council</a>
+            
+        
+        <a href="https://research.iith.ac.in/research-infrastracture" class="block py-2">Research Facilities</a>
+        <a href="https://research.iith.ac.in/" class="block py-2">Office of SRC</a>
+    </div>
+
+    <!-- Relations -->
+    <button class="w-full flex justify-between items-center px-3 py-2 text-base font-semibold" onclick="toggleDropdown('relations-mobile')">
+        Relations
+        <span>+</span>
+    </button>
+    <div id="relations-mobile" class="hidden pl-6 text-sm">
+        
+            
+                <a href="https://pr.iith.ac.in/press-release" target="_blank" class="block py-2 ">Press Releases</a>
+            
+        
+            
+                <a href="https://pr.iith.ac.in/newsletter/" target="_blank" class="block py-2 ">Newsletter</a>
+            
+        
+            
+                <a href="/japandesk/" class="block py-2 ">JICA Friendship Program</a>
+            
+        
+        <a href="https://pr.iith.ac.in/" class="block py-2">Public Relations</a>
+        <a href="https://acr.iith.ac.in/" class="block py-2">Alumni &amp; Corporate Relations</a>
+        <a href="https://ir.iith.ac.in/" class="block py-2">International Relations</a>
+    </div>
+
+    <!-- About -->
+    <button class="w-full flex justify-between items-center px-3 py-2 text-base font-semibold" onclick="toggleDropdown('about-mobile')">
+        About
+        <span>+</span>
+    </button>
+    <div id="about-mobile" class="hidden pl-6 text-sm">
+        
+            
+                <a href="/about/aboutiith/" class="block py-2 ">About IITH</a>
+            
+        
+            
+                <a href="https://online.fliphtml5.com/vrhdl/ljbd/" target="_blank" class="block py-2 ">IITH Brochure</a>
+            
+        
+            
+                <a href="/about/aboutiith/#BoG" class="block py-2 ">Board of Governors</a>
+            
+        
+            
+                <a href="/about/aboutiith/#senate" class="block py-2 ">Senate</a>
+            
+        
+            
+                <a href="/people/administration/" class="block py-2 ">Governance</a>
+            
+        
+            
+                <a href="/reports/" class="block py-2 ">Rankings &amp; Reports</a>
+            
+        
+            
+                <a href="https://sustainability.iith.ac.in/" target="_blank" class="block py-2 ">Sustainability</a>
+            
+        
+            
+                <a href="/about/iith_policies/" class="block py-2 ">IITH Policies</a>
+            
+        
+    </div>
+
+    <!-- People -->
+    <button class="w-full flex justify-between items-center px-3 py-2 text-base font-semibold" onclick="toggleDropdown('people-mobile')">
+        People
+        <span>+</span>
+    </button>
+    <div id="people-mobile" class="hidden pl-6 text-sm">
+        
+            
+                <a href="/people/faculty" class="block py-2 ">Faculty</a>
+            
+        
+            
+                <a href="/people/staff" class="block py-2 ">Staff</a>
+            
+        
+            
+                <a href="https://www.gymkhana.iith.ac.in" target="_blank" class="block py-2 ">Students</a>
+            
+        
+        <a href="/about/directory/" class="block py-2">Directory</a>
+    </div>
+
+    <!-- Administration -->
+    <button class="w-full flex justify-between items-center px-3 py-2 text-base font-semibold" onclick="toggleDropdown('admin-mobile')">
+        Administration
+        <span>+</span>
+    </button>
+    <div id="admin-mobile" class="hidden pl-6 text-sm max-h-64 overflow-y-auto custom-scrollbar">
+        
+            
+                <a href="/director/" class="block py-2 ">Director</a>
+            
+        
+            
+                <a href="/registrar/" class="block py-2 ">Registrar</a>
+            
+        
+            
+                <a href="https://iith.ac.in/academics/" target="_blank" class="block py-2 ">Academic Office</a>
+            
+        
+            
+                <a href="https://accounts.iith.ac.in/" target="_blank" class="block py-2 ">Finance &amp; Accounts Section</a>
+            
+        
+            
+                <a href="https://iith.ac.in/hr_department_staff/" target="_blank" class="block py-2 ">HR Department (Staff)</a>
+            
+        
+            
+                <a href="https://iith.ac.in/dofa/" target="_blank" class="block py-2 ">Dean of Faculty Affairs office</a>
+            
+        
+            
+                <a href="https://iith.ac.in/dtx/" target="_blank" class="block py-2 ">Office of Digital Transformation</a>
+            
+        
+            
+                <a href="https://research.iith.ac.in/" target="_blank" class="block py-2 ">Office of SRC</a>
+            
+        
+            
+                <a href="https://iith.ac.in/stores_purchase/" target="_blank" class="block py-2 ">Stores &amp; Purchase</a>
+            
+        
+            
+                <a href="https://dost.iith.ac.in/" target="_blank" class="block py-2 ">Dean (Students) Office</a>
+            
+        
+            
+                <a href="https://cmd.iith.ac.in/" target="_blank" class="block py-2 ">Construction and Maintenance Division</a>
+            
+        
+            
+                <a href="https://iith.ac.in/coordination_section/" target="_blank" class="block py-2 ">Coordination Section</a>
+            
+        
+            
+                <a href="https://iith.ac.in/registrar_office/" target="_blank" class="block py-2 ">Office of the Registrar</a>
+            
+        
+            
+                <a href="https://iith.ac.in/ms_section/" target="_blank" class="block py-2 ">MS Section</a>
+            
+        
+    </div>
+
+    <!-- Careers -->
+    <a href="/careers/" class="block px-3 py-2 text-base font-semibold">
+        Careers
+    </a>
+
+    <!-- Donate -->
+    <a href="https://giving.iith.ac.in/open-contribute" class="block px-3 py-2 text-base font-semibold text-amber-700">
+        Donate to IITH
+    </a>
+    <!-- Visit -->
+    <a href="/visit/" class="block px-3 py-2 text-base font-semibold text-amber-700">
+        Visit IITH
+    </a>
+
+    <a href="https://iith.ac.in/search/" class="flex items-center gap-2 px-3 py-2 text-base font-semibold">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    Search
+</a>
+</div>
+
+
+        </div>
+    </header>
+
+    <main>
+
+    <div class="article-post">
+    <p>The requested page could not be found.</p>
+    </div>
+
+    
+
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-300">
+    <div class="max-w-7xl mx-auto px-6 py-16">
+
+        <!-- Top Grid -->
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-10">
+
+            <!-- Academics -->
+            <div>
+                <h4 class="text-white font-semibold tracking-wide mb-4">
+                    ACADEMICS
+                </h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="https://aims.iith.ac.in/aims/" class="hover:text-amber-400">AIMS</a></li>
+                    <li><a href="https://iith.ac.in/gian/" class="hover:text-amber-400">GIAN</a></li>
+                    <li><a href="https://cce.iith.ac.in/" class="hover:text-amber-400">CCE</a></li>
+                    <li><a href="/academics/index.html" class="hover:text-amber-400">Office of Academic Affairs</a></li>
+                    <li><a href="https://raiith.krc.iith.ac.in" class="hover:text-amber-400">RAIITH</a></li>
+                </ul>
+            </div>
+
+            <!-- Facilities -->
+            <div>
+                <h4 class="text-white font-semibold tracking-wide mb-4">
+                    FACILITIES
+                </h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="https://library.iith.ac.in/" class="hover:text-amber-400">Library</a></li>
+                    <li><a href="https://comp.iith.ac.in/" class="hover:text-amber-400">Computer Centre</a></li>
+                    <li><a href="https://cws.iith.ac.in/" class="hover:text-amber-400">Central Workshop</a></li>
+                    <li><a href="https://hospital.iith.ac.in/" class="hover:text-amber-400">Medical Facilities</a></li>
+                    <li><a href="/bus_schedule/" class="hover:text-amber-400">Bus Schedule</a></li>
+                    <li><a href="https://knowledgecafe.comp.iith.ac.in/" target="_blank" class="hover:text-amber-400">IITH ICT Knowledge Cafe</a></li>
+                    <li><a href="https://paramseva.comp.iith.ac.in/" class="hover:text-amber-400">PARAM Seva HPC</a></li>
+                    <li><a href="https://gpucluster.comp.iith.ac.in/" class="hover:text-amber-400">GPU Cluster - NVIDIA A100</a></li>
+                </ul>
+            </div>
+
+            <!-- Campus Life -->
+            <div>
+                <h4 class="text-white font-semibold tracking-wide mb-4">
+                    CAMPUS LIFE
+                </h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="/about/campus_services/" class="hover:text-amber-400">Campus Services</a></li>
+                    <li><a href="/about/aboutiith/#reach" class="hover:text-amber-400">Getting Here</a></li>
+                    <li><a href="https://cins.iith.ac.in/" class="hover:text-amber-400">Campus Navigation</a></li>
+                    <li><a href="http://security.iith.ac.in/" class="hover:text-amber-400">Security</a></li>
+                    <li><a href="https://discourse.iith.ac.in/" class="hover:text-amber-400">Discourse</a></li>
+                </ul>
+            </div>
+
+            <!-- Councils -->
+            <div>
+                <h4 class="text-white font-semibold tracking-wide mb-4">
+                    COUNCILS
+                </h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="https://scstcell.iith.ac.in/" class="hover:text-amber-400">SC ST Cell</a></li>
+                    <li><a href="https://ocs.iith.ac.in/" class="hover:text-amber-400">Office of Career Services</a></li>
+                    <li><a href="https://nss.iith.ac.in/" class="hover:text-amber-400">NSS</a></li>
+                    <li><a href="https://icc.iith.ac.in/" class="hover:text-amber-400">Internal Complaints Committee</a></li>
+                    <li><a href="http://cgc.iith.ac.in/" class="hover:text-amber-400">Committee for Gender Concerns</a></li>
+                    <li><a href="https://sunshine.iith.ac.in/" class="hover:text-amber-400">Sunshine</a></li>
+                    <li><a href="https://www.gymkhana.iith.ac.in/" class="hover:text-amber-400">Gymkhana (Student Council)</a></li>
+                    <li><a href="https://ebsb.iith.ac.in/" class="hover:text-amber-400">EBSB Club</a></li>
+                    <li><a href="http://hostel.iith.ac.in/" class="hover:text-amber-400">Hostel Coordinating Unit</a></li>
+                    <li><a href="https://sites.google.com/iith.ac.in/safety" class="hover:text-amber-400">Laboratory Safety</a></li>
+                    <li><a href="https://sites.google.com/iith.ac.in/safety" class="hover:text-amber-400">Statutory Bodies (IBSC, IAEC &amp; IEC)</a></li>
+                </ul>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h4 class="text-white font-semibold tracking-wide mb-4">
+                    QUICK LINKS
+                </h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="https://disha.iith.ac.in/disha/dashboard" target="_blank" class="hover:text-amber-400">DISHA</a></li>
+                    <li><a href="/tenders/" class="hover:text-amber-400">Tender Invitations</a></li>
+                    <li><a href="https://intranet.iith.ac.in/" class="hover:text-amber-400">Intranet</a></li>
+                    <li><a href="/emergency_contacts/" class="hover:text-amber-400">Emergency Contacts</a></li>
+                    <li><a href="/web_team/" class="hover:text-amber-400">Website Team</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- Social Icons -->
+        <div class="flex justify-center gap-6 mt-14">
+            <a href="https://www.facebook.com/iithyderabad/" target="_blank" class="text-white hover:text-amber-400 text-3xl">
+                <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="https://twitter.com/IITHyderabad" target="_blank" class="text-white hover:text-amber-400 text-3xl">
+                <i class="fa-brands fa-twitter"></i>
+            </a>
+            <a href="https://www.linkedin.com/school/iithyderabad/" target="_blank" class="text-white hover:text-amber-400 text-3xl">
+                <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="https://www.instagram.com/iithyderabad/" target="_blank" class="text-white hover:text-amber-400 text-3xl">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://www.youtube.com/c/IITHyderabadofficial" target="_blank" class="text-white hover:text-amber-400 text-3xl">
+                <i class="fa-brands fa-youtube"></i>
+            </a>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="mt-10 pt-6 border-t border-slate-700
+                    flex flex-col md:flex-row justify-between items-center
+                    text-sm text-slate-400">
+
+            <p class="text-center md:text-left">
+                © 2026 Indian Institute of Technology Hyderabad, Kandi, Sangareddy,
+                Telangana, India. All rights reserved.
+            </p>
+
+            <div class="mt-3 md:mt-0 space-x-3">
+                <a href="/rti/" class="hover:text-amber-400">RTI</a>
+                <span>|</span>
+                <a href="/contact_us/" class="hover:text-amber-400">Contact us</a>
+            </div>
+
+        </div>
+
+    </div>
+</footer>
+
+  
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile Menu Toggle
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuOpenIcon = document.getElementById('menu-open-icon');
+            const menuCloseIcon = document.getElementById('menu-close-icon');
+
+            mobileMenuButton.addEventListener('click', () => {
+                const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+                mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
+                mobileMenu.classList.toggle('hidden');
+                menuOpenIcon.classList.toggle('hidden');
+                menuCloseIcon.classList.toggle('hidden');
+            });
+
+            // Generic Carousel Function
+            function setupCarousel(carouselId, prevButtonId, nextButtonId, autoSlide = false, intervalTime = 2000) {
+                const carouselContainer = document.getElementById(carouselId);
+                const track = carouselContainer.querySelector('.carousel-track');
+                const slides = Array.from(track.children);
+                const nextButton = document.getElementById(nextButtonId);
+                const prevButton = document.getElementById(prevButtonId);
+                
+                let currentIndex = 0;
+                let slideWidth = slides[0].getBoundingClientRect().width;
+                let autoSlideInterval;
+
+                const updateSlideWidth = () => {
+                    slideWidth = slides[0].getBoundingClientRect().width;
+                    track.style.transition = 'none'; // Disable transition during resize
+                    track.style.transform = 'translateX(-' + slideWidth * currentIndex + 'px)';
+                    // Re-enable transition after a short delay
+                    setTimeout(() => {
+                        track.style.transition = 'transform 0.5s ease-in-out';
+                    }, 50); 
+                };
+
+                const moveToSlide = (targetIndex) => {
+                    track.style.transform = 'translateX(-' + slideWidth * targetIndex + 'px)';
+                    currentIndex = targetIndex;
+                };
+
+                const slideNext = () => {
+                    const nextIndex = currentIndex === slides.length - 1 ? 0 : currentIndex + 1;
+                    moveToSlide(nextIndex);
+                };
+
+                const startAutoSlide = () => {
+                    if (autoSlide) {
+                        autoSlideInterval = setInterval(slideNext, intervalTime);
+                    }
+                };
+
+                const stopAutoSlide = () => {
+                    clearInterval(autoSlideInterval);
+                };
+
+                nextButton.addEventListener('click', () => {
+                    stopAutoSlide(); // Stop auto-sliding on manual interaction
+                    slideNext();
+                    startAutoSlide(); // Restart auto-sliding after manual interaction
+                });
+                
+                prevButton.addEventListener('click', () => {
+                    stopAutoSlide(); // Stop auto-sliding on manual interaction
+                    const prevIndex = currentIndex === 0 ? slides.length - 1 : currentIndex - 1;
+                    moveToSlide(prevIndex);
+                    startAutoSlide(); // Restart auto-sliding after manual interaction
+                });
+
+                window.addEventListener('resize', updateSlideWidth);
+                updateSlideWidth(); // Initial calculation
+                startAutoSlide(); // Start auto-sliding on load
+            }
+
+            // Setup Hero Carousel with auto-slide
+            setupCarousel('hero-carousel', 'hero-carousel-prev', 'hero-carousel-next', true, 2500); // Auto-slide every 5 seconds
+
+            // Setup Research Carousel (you'll need to add the HTML structure for this first if it's not there)
+            // For example, if you add a research carousel later with id="research-carousel", uncomment this:
+            // setupCarousel('research-carousel', 'research-carousel-prev', 'research-carousel-next', true, 4000); // Auto-slide every 4 seconds
+
+
+            // Animated Statistics Counter
+            const statsContainer = document.getElementById('stats-container');
+            if (statsContainer) { // Ensure the container exists before trying to animate
+                const counters = statsContainer.querySelectorAll('[data-target]');
+                const speed = 200; // Determines animation speed
+
+                const animateCounter = (counter) => {
+                    const target = +counter.getAttribute('data-target');
+                    let current = 0; // Start from 0
+                    const increment = target / speed; // Calculate increment per step
+
+                    const updateCount = () => {
+                        if (current < target) {
+                            current += increment;
+                            counter.innerText = Math.ceil(current); // Round up to show whole numbers
+                            requestAnimationFrame(updateCount); // Use requestAnimationFrame for smoother animation
+                        } else {
+                            counter.innerText = target; // Ensure it ends exactly on the target number
+                        }
+                    };
+                    updateCount();
+                };
+                const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        counters.forEach(counter => {
+                            animateCounter(counter);
+                        });
+                        observer.unobserve(entry.target); // Stop observing once animated
+                    }
+                });
+            }, { threshold: 0.5 }); // Trigger when 50% of the element is visible
+
+            observer.observe(statsContainer); // Observe the main stats container
+        }
+        });
+    </script>
+
+<script>
+function toggleDropdown(id) {
+    document.getElementById(id).classList.toggle('hidden');
+}
+</script>
+<!-- Scroll to Top Button -->
+<button id="scrollToTopBtn" aria-label="Scroll to top" class="fixed bottom-6 right-6 z-50 hidden
+           bg-amber-600 hover:bg-amber-700
+           text-white p-3 rounded-full shadow-xl
+           transition-all duration-300">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path>
+    </svg>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const scrollBtn = document.getElementById('scrollToTopBtn');
+
+    // Show / hide button based on scroll position
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 400) {
+            scrollBtn.classList.remove('hidden');
+        } else {
+            scrollBtn.classList.add('hidden');
+        }
+    });
+
+    // Scroll to top smoothly
+    scrollBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+});
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const directorPhoto = document.querySelector('.director-photo');
+    if (!directorPhoto) return;
+
+    const observer = new IntersectionObserver(
+        (entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        },
+        {
+            threshold: 0.35,
+            rootMargin: '0px 0px -50px 0px'
+        }
+    );
+
+    observer.observe(directorPhoto);
+});
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const track = document.querySelector('.research-track');
+    const slides = document.querySelectorAll('.research-slide');
+    const nextBtn = document.getElementById('research-next');
+    const prevBtn = document.getElementById('research-prev');
+
+    let index = 0;
+    const total = slides.length;
+
+    function updateSlide() {
+        track.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    nextBtn.addEventListener('click', () => {
+        index = (index + 1) % total;
+        updateSlide();
+    });
+
+    prevBtn.addEventListener('click', () => {
+        index = (index - 1 + total) % total;
+        updateSlide();
+    });
+
+    // Auto-slide (optional)
+    setInterval(() => {
+        index = (index + 1) % total;
+        updateSlide();
+    }, 7000);
+});
+</script>
+
+
+
+</body></html>

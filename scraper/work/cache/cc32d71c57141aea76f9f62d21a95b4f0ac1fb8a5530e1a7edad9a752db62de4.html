@@ -1,0 +1,351 @@
+<!DOCTYPE html><html lang="en-US"><head>
+    <meta charset="UTF-8">
+
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+    <title>CS294/194-280 Advanced Large Language Model Agents | CS 294/194-280 Advanced Large Language Model Agents</title>
+    <meta name="generator" content="Jekyll v3.10.0">
+    <meta property="og:title" content="CS294/194-280 Advanced Large Language Model Agents">
+    <meta property="og:locale" content="en_US">
+    <meta name="description" content="Spring 2025">
+    <meta property="og:description" content="Spring 2025">
+    <link rel="canonical" href="http://rdi.berkeley.edu/adv-llm-agents/sp25">
+    <meta property="og:url" content="http://rdi.berkeley.edu/adv-llm-agents/sp25">
+    <meta property="og:site_name" content="CS 294/194-280 Advanced Large Language Model Agents">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary">
+    <meta property="twitter:title" content="CS294/194-280 Advanced Large Language Model Agents">
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"WebPage","description":"Spring 2025","headline":"CS294/194-280 Advanced Large Language Model Agents","url":"http://rdi.berkeley.edu/adv-llm-agents/sp25"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;display=swap" as="style" type="text/css" crossorigin="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/adv-llm-agents/assets/css/style.css?v=8ee5fd19090450d28969c1c686e78b37a400a0f5">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+</head>
+
+<body>
+    <section class="page-header" style="padding-bottom: 2rem; padding-top: 3rem;">
+        <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+<!--         <p align="center">
+            <img width="240" src="./assets/UCBerkeley_wordmark_white.png" alt="UC Berkeley Wordmark">
+        </p> -->
+        <h1 class="project-name">CS294/194-280 <br> Advanced Large Language Model Agents</h1>
+        <h2 class="project-tagline">Spring 2025</h2>
+
+    </section>
+
+    <section class="main-content">
+
+        <h3 id="prospective-students">Prospective Students</h3>
+
+<ul>
+  <li><strong><em>Students interested in the course should first try enrolling in the course in CalCentral. The class number for CS194-280 is 33840. The class number for CS294-280 is 33841. Please join the waitlist if the class is full.</em></strong></li>
+  <li><strong><em>We plan to expand the class size to allow more students to join. Please fill in the <a href="https://forms.gle/sfWW8M2w1LDTnQWm9">petition form</a> if you are on the waitlist or can’t get added to the waitlist. You will receive an email notification around the beginning of the spring semester if you are allowed in.</em></strong></li>
+  <li><strong><em><span style="color:red">Do not email course staff or TAs. Please use <a href="https://edstem.org/us/join/QMmJkA">Edstem</a> for any questions. For private matters, post a private question on Edstem and make sure it is visable to all teaching staff.</span></em></strong></li>
+</ul>
+
+<h2 id="course-staff">Course Staff</h2>
+
+<table>
+<tbody>
+<tr>
+<td>Instructor</td>
+<td>(Guest) Co-instructor</td>
+<td>(Guest) Co-instructor</td>
+</tr>
+<tr>
+<td><img src="assets/dawn-berkeley.jpg" height="200"></td>
+<td><img src="assets/XinyunChen.jpg" height="200"></td>
+<td><img src="assets/KaiyuYang.jpg" height="200"></td>
+</tr>
+<tr>
+<td><a href="https://people.eecs.berkeley.edu/~dawnsong/">Dawn Song</a></td>
+<td>Xinyun Chen</td>
+<td>Kaiyu Yang</td>
+</tr><tr>
+<td>Professor, UC Berkeley</td>
+<td>Research Scientist, <br> Google DeepMind</td>
+<td>Research Scientist, <br> Meta FAIR</td>
+</tr>
+
+</tbody>
+</table>
+
+<p>Teaching Staff: Alex Pan, Tara Pande, Ashwin Dara, Jason Yan</p>
+
+<h2 id="class-time-and-location">Class Time and Location</h2>
+
+<p>Lecture: 4-6pm PT Monday at Anthro/Art Building 160</p>
+
+<h2 id="course-description">Course Description</h2>
+
+<p>Large language model (LLM) agents have been an important frontier in AI, however, they still fall short critical skills, such as complex reasoning and planning, for solving hard problems and enabling end-to-end applications in real-world scenarios. Building on our <a href="https://llmagents-learning.org/f24">previous course</a>, this course dives deeper into advanced topics in LLM agents, focusing on reasoning, AI for mathematics, code generation, and program verification. We begin by introducing advanced inference and post-training techniques for building LLM agents that can search and plan. Then, we focus on two application domains: mathematics and programming. We study how LLMs can be used to prove mathematical theorems, as well as generate and reason about computer programs. Specifically, we will cover the following topics:</p>
+<ul>
+  <li>Inference-time techniques for reasoning</li>
+  <li>Post-training methods for reasoning</li>
+  <li>Search and planning</li>
+  <li>Agentic workflow, tool use, and functional calling</li>
+  <li>LLMs for code generation and verification</li>
+  <li>LLMs for mathematics: data curation, continual pretraining, and finetuning</li>
+  <li>LLM agents for theorem proving and autoformalization</li>
+</ul>
+
+<h2 id="syllabus">Syllabus</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Guest Lecture <br> (4:00PM-6:00PM PT)</th>
+      <th>Supplemental Readings</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Jan 27th</td>
+      <td><strong>Inference-Time Techniques for LLM Reasoning</strong> <br> Xinyun Chen, Google DeepMind <br> <a href="https://www.youtube.com/live/g0Dwtf3BH-0">Recording</a> <a href="https://rdi.berkeley.edu/adv-llm-agents/slides/llm-agents-berkeley-intro-sp25.pdf">Intro</a> <a href="https://rdi.berkeley.edu/adv-llm-agents/slides/inference_time_techniques_lecture_sp25.pdf">Slides</a></td>
+      <td>- <a href="https://arxiv.org/abs/2309.03409">Large Language Models as Optimizers</a> <br> - <a href="https://arxiv.org/abs/2310.01798">Large Language Models Cannot Self-Correct Reasoning Yet</a> <br> - <a href="https://arxiv.org/abs/2304.05128">Teaching Large Language Models to Self-Debug</a> <br> <em>All readings are optional this week.</em></td>
+    </tr>
+    <tr>
+      <td>Feb 3rd</td>
+      <td><strong>Learning to reason with LLMs</strong> <br> Jason Weston, Meta <br> <a href="https://www.youtube.com/live/_MNlLhU33H0">Recording</a> <a href="https://rdi.berkeley.edu/adv-llm-agents/slides/Jason-Weston-Reasoning-Alignment-Berkeley-Talk.pdf">Slides</a></td>
+      <td>- <a href="https://arxiv.org/abs/2305.18290">Direct Preference Optimization: Your Language Model is Secretly a Reward Model</a> <br> - <a href="https://arxiv.org/abs/2404.19733">Iterative Reasoning Preference Optimization</a> <br> - <a href="https://arxiv.org/abs/2309.11495">Chain-of-Verification Reduces Hallucination in Large Language Models</a></td>
+    </tr>
+    <tr>
+      <td>Feb 10th</td>
+      <td><strong>On Reasoning, Memory, and Planning of Language Agents</strong> <br> Yu Su, Ohio State University <br> <a href="https://www.youtube.com/live/zvI4UN2_i-w">Recording</a> <a href="https://rdi.berkeley.edu/adv-llm-agents/slides/language_agents_YuSu_Berkeley.pdf">Slides</a></td>
+      <td>- <a href="https://arxiv.org/abs/2405.15071">Grokked Transformers are Implicit Reasoners: A Mechanistic Journey to the Edge of Generalization</a> <br> - <a href="https://arxiv.org/abs/2405.14831">HippoRAG: Neurobiologically Inspired Long-Term Memory for Large Language Models</a> <br> - <a href="https://arxiv.org/abs/2411.06559">Is Your LLM Secretly a World Model of the Internet? Model-Based Planning for Web Agents</a></td>
+    </tr>
+    <tr>
+      <td>Feb 17th</td>
+      <td><em>No Class - Presidents’ Day</em></td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>Feb 24th</td>
+      <td><strong>Open Training Recipes for Reasoning in Language Models</strong> <br> Hanna Hajishirzi, University of Washington <br> <a href="https://www.youtube.com/live/cMiu3A7YBks">Recording</a> <a href="https://rdi.berkeley.edu/adv-llm-agents/slides/OLMo-Tulu-Reasoning-Hanna.pdf">Slides</a></td>
+      <td>- <a href="https://arxiv.org/abs/2411.15124">Tulu 3: Pushing Frontiers in Open Language Model Post-Training</a> <br> - <a href="https://arxiv.org/abs/2406.09279">Unpacking DPO and PPO: Disentangling Best Practices for Learning from Preference Feedback</a> <br> - <a href="https://arxiv.org/abs/2411.14199">OpenScholar: Synthesizing Scientific Literature with Retrieval-augmented LMs</a></td>
+    </tr>
+    <tr>
+      <td>Mar 3rd</td>
+      <td><strong>Coding Agents and AI for Vulnerability Detection</strong> <br> Charles Sutton, Google DeepMind <br> <a href="https://www.youtube.com/live/JCk6qJtaCSU">Recording</a> <a href="https://rdi.berkeley.edu/adv-llm-agents/slides/Code Agents and AI for Vulnerability Detection.pdf">Slides</a></td>
+      <td>- <a href="https://arxiv.org/abs/2409.16165">Interactive Tools Substantially Assist LM Agents in Finding Security Vulnerabilities</a> <br> - <a href="https://googleprojectzero.blogspot.com/2024/10/from-naptime-to-big-sleep.html">From Naptime to Big Sleep: Using Large Language Models To Catch Vulnerabilities In Real-World Code</a></td>
+    </tr>
+    <tr>
+      <td>Mar 10th</td>
+      <td><strong>Multimodal Autonomous AI Agents</strong> <br> Ruslan Salakhutdinov, CMU/Meta <br> <a href="https://www.youtube.com/live/RPINOYM12RU">Recording</a> <a href="https://rdi.berkeley.edu/adv-llm-agents/slides/ruslan-multimodal.pdf">Slides</a></td>
+      <td>- <a href="https://arxiv.org/abs/2306.06070">Mind2Web: Towards a Generalist Agent for the Web</a> <br> - <a href="https://arxiv.org/abs/2307.13854">WebArena: A Realistic Web Environment for Building Autonomous Agents</a> <br> - <a href="https://jykoh.com/vwa">VisualWebArena: Evaluating Multimodal Agents on Realistic Visual Web Tasks</a> <br> - <a href="https://jykoh.com/search-agents">Tree Search for Language Model Agents</a></td>
+    </tr>
+    <tr>
+      <td>Mar 17th</td>
+      <td><strong>Multimodal Agents – From Perception to Action</strong> <br> Caiming Xiong, Salesforce AI Research <br> <a href="https://www.youtube.com/live/n__Tim8K2IY">Recording</a> <a href="https://rdi.berkeley.edu/adv-llm-agents/slides/Multimodal_Agent_caiming.pdf">Slides</a></td>
+      <td>- <a href="https://arxiv.org/pdf/2404.07972">OSWORLD: Benchmarking Multimodal Agents for Open-Ended Tasks in Real Computer Environments</a> <br> - <a href="https://arxiv.org/pdf/2412.04454">AGUVIS: Unified Pure Vision Agents For Autonomous GUI Interaction</a></td>
+    </tr>
+    <tr>
+      <td>Mar 24th</td>
+      <td><em>No Class - Spring Recess</em></td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>Mar 31st</td>
+      <td><strong>AlphaProof: when reinforcement learning meets formal mathematics</strong> <br> Thomas Hubert, Google DeepMind <br> <span style="color:red">10am-noon PT</span> <br> <a href="https://www.youtube.com/live/3gaEMscOMAU">Recording</a> <a href="https://rdi.berkeley.edu/adv-llm-agents/slides/alphaproof.pdf">Slides</a></td>
+      <td>- <a href="https://deepmind.google/discover/blog/ai-solves-imo-problems-at-silver-medal-level/">AI achieves silver-medal standard solving International Mathematical Olympiad problems</a> <br> - <a href="https://arxiv.org/pdf/1712.01815">Mastering Chess and Shogi by Self-Play with a General Reinforcement Learning Algorithm</a> <br> - <a href="https://www.youtube.com/watch?v=Dp-mQ3HxgDE">The Future of Mathematics?</a> <br> - <a href="https://www.quantamagazine.org/building-the-mathematical-library-of-the-future-20201001/">Building the Mathematical Library of the Future</a></td>
+    </tr>
+    <tr>
+      <td>Apr 7th</td>
+      <td><strong>Language models for autoformalization and theorem proving</strong> <br> Kaiyu Yang, Meta FAIR <br> <a href="https://www.youtube.com/live/cLhWEyMQ4mQ">Recording</a> <a href="https://rdi.berkeley.edu/adv-llm-agents/slides/mathverification.pdf">Slides</a></td>
+      <td>- <a href="https://arxiv.org/abs/2306.15626">LeanDojo: Theorem Proving with Retrieval-Augmented Language Models</a> <br> - <a href="https://arxiv.org/abs/2205.12615">Autoformalization with Large Language Models</a> <br> - <a href="https://arxiv.org/abs/2405.17216">Autoformalizing Euclidean Geometry</a></td>
+    </tr>
+    <tr>
+      <td>Apr 14th</td>
+      <td><strong>Advanced topics in theorem proving</strong> <br> Sean Welleck, CMU <br> <a href="https://www.youtube.com/live/Gy5Nm17l9oo">Recording</a> <a href="https://rdi.berkeley.edu/adv-llm-agents/slides/welleck2025_berkeley_bridging.pdf">Slides</a></td>
+      <td>- <a href="https://arxiv.org/abs/2210.12283">Draft, Sketch, and Prove: Guiding Formal Theorem Provers with Informal Proofs</a> <br> - <a href="https://www.arxiv.org/pdf/2408.03350">miniCTX: Neural Theorem Proving with Long-Contexts</a> <br> - <a href="https://arxiv.org/abs/2407.10040">Lean-STaR: Learning to Interleave Thinking and Proving</a> <br> - <a href="https://arxiv.org/abs/2410.04753">ImProver: Agent-Based Automated Proof Optimization</a></td>
+    </tr>
+    <tr>
+      <td>Apr 21st</td>
+      <td><strong>Abstraction and Discovery with Large Language Model Agents</strong> <br> Swarat Chaudhuri, UT Austin <br> <span style="color:red">10am-noon PT</span> <br> <a href="https://www.youtube.com/live/IHc0TEMrEdY">Recording</a> <a href="https://rdi.berkeley.edu/adv-llm-agents/slides/swarat.pdf">Slides</a></td>
+      <td>- <a href="https://arxiv.org/abs/2310.04353">An In-Context Learning Agent for Formal Theorem-Proving</a> <br> - <a href="https://arxiv.org/abs/2409.09359">Symbolic Regression with a Learned Concept Library</a></td>
+    </tr>
+    <tr>
+      <td>Apr 28th</td>
+      <td><strong>Towards building safe and secure agentic AI</strong> <br> Dawn Song, UC Berkeley <br> <a href="https://www.youtube.com/live/ti6yPE2VPZc">Recording</a> <a href="https://rdi.berkeley.edu/adv-llm-agents/slides/dawn-agentic-ai.pdf">Slides</a></td>
+      <td>- <a href="https://dawnsong.io/papers/privtrans.pdf">Privtrans: Automatically Partitioning Programs for Privilege Separation</a> <br> - <a href="https://arxiv.org/abs/2504.11358">DataSentinel: A Game-Theoretic Detection of Prompt Injection Attacks</a> <br> - <a href="https://arxiv.org/abs/2407.12784">AgentPoison: Red-teaming LLM Agents via Poisoning Memory or Knowledge Bases</a> <br> - <a href="https://arxiv.org/html/2504.11703v1">Progent: Programmable Privilege Control for LLM Agents</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="enrollment-and-grading">Enrollment and Grading</h2>
+
+<p><strong><em>Prerequisites:</em></strong> <strong>Students are strongly encouraged to have had experience and basic understanding of Machine Learning and Deep Learning before taking this class, e.g., have taken courses such as CS182, CS188, and CS189.</strong></p>
+
+<p><strong><em>Please fill out the <a href="https://forms.gle/sfWW8M2w1LDTnQWm9">petition form</a> if you are on the waitlist or can’t get added to the waitlist.</em></strong></p>
+
+<p>This is a variable-unit course. All enrolled students are expected to participate in lectures in person and complete weekly reading summaries related to the course content. Students enrolling in one unit are expected to submit an article that summarizes one of the lectures. Students enrolling in more than one unit are expected to submit a lab assignment and a project instead of the article.
+For students enrolling in 2 units, the project should have a written report, which can be a survey in a certain area related to LLMs. For students enrolling in 3 or 4 units, projects will follow either an applications track or a research track:</p>
+<ul>
+  <li><strong>Applications Track:</strong> Projects in this track focus on applied use cases of LLMs and do not necessarily need to contribute novel research. Students in this track will work in groups of 3-4. The project for 3-unit students should include an implementation (coding) component that programmatically interacts with LLMs, while 4-unit students must complete a more substantial implementation with the potential for real-world impact.</li>
+  <li><strong>Research Track:</strong> Students in this track will conduct novel research under the supervision of postdocs and graduate students, with the goal of publishing in a workshop or conference. Research track projects must be completed in groups of 2-3, and students must apply to participate via a forthcoming Google form. The expectations for implementation and intellectual contributions will align with the project requirements for 3- and 4-unit students.</li>
+</ul>
+
+<p>The grade breakdowns for students enrolled in different units are the following:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>&nbsp;</th>
+      <th>1 unit</th>
+      <th>2 units</th>
+      <th>3/4 units</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Participation</td>
+      <td>40%</td>
+      <td>16%</td>
+      <td>8%</td>
+    </tr>
+    <tr>
+      <td>Reading Summaries</td>
+      <td>10%</td>
+      <td>4%</td>
+      <td>2%</td>
+    </tr>
+    <tr>
+      <td>Quizzes</td>
+      <td>10%</td>
+      <td>4%</td>
+      <td>2%</td>
+    </tr>
+    <tr>
+      <td>Article</td>
+      <td>40%</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>Lab</td>
+      <td>&nbsp;</td>
+      <td>16%</td>
+      <td>8%</td>
+    </tr>
+    <tr>
+      <td>Project</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>&nbsp;&nbsp;<em>Proposal</em></td>
+      <td>&nbsp;</td>
+      <td>10%</td>
+      <td>10%</td>
+    </tr>
+    <tr>
+      <td>&nbsp;&nbsp;<em>Milestone</em></td>
+      <td>&nbsp;</td>
+      <td>10%</td>
+      <td>10%</td>
+    </tr>
+    <tr>
+      <td>&nbsp;&nbsp;<em>Poster Presentation</em></td>
+      <td>&nbsp;</td>
+      <td>10%</td>
+      <td>10%</td>
+    </tr>
+    <tr>
+      <td>&nbsp;&nbsp;<em>Presentation Recording</em></td>
+      <td>&nbsp;</td>
+      <td>10%</td>
+      <td>5%</td>
+    </tr>
+    <tr>
+      <td>&nbsp;&nbsp;<em>Report</em></td>
+      <td>&nbsp;</td>
+      <td>20%</td>
+      <td>20%</td>
+    </tr>
+    <tr>
+      <td>&nbsp;&nbsp;<em>Implementation</em></td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>25%</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="lab-and-project-timeline">Lab and Project Timeline</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>&nbsp;</th>
+      <th>Released</th>
+      <th>Due</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Project group formation</td>
+      <td>1/27</td>
+      <td>2/24</td>
+    </tr>
+    <tr>
+      <td>Project proposal</td>
+      <td>2/3</td>
+      <td>2/24</td>
+    </tr>
+    <tr>
+      <td>Project milestone</td>
+      <td>2/24</td>
+      <td>3/31</td>
+    </tr>
+    <tr>
+      <td>Lab</td>
+      <td>3/31</td>
+      <td>4/28</td>
+    </tr>
+    <tr>
+      <td>Project final poster presentation</td>
+      <td>4/28</td>
+      <td>5/5</td>
+    </tr>
+    <tr>
+      <td>Project final presentation recording</td>
+      <td>4/28</td>
+      <td>5/16</td>
+    </tr>
+    <tr>
+      <td>Project final report</td>
+      <td>4/28</td>
+      <td>5/16</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="office-hours">Office Hours</h2>
+<ul>
+  <li>Alex: 6-7pm on Mondays on <a href="https://berkeley.zoom.us/j/2012565201">Zoom</a></li>
+</ul>
+
+
+        <footer class="site-footer">
+
+            <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub
+                    Pages</a>.</span>
+        </footer>
+
+    </section>
+
+<script async="" src="”https://siteimproveanalytics.com/js/siteanalyze_6294756.js”"></script>
+
+
+
+</body></html>

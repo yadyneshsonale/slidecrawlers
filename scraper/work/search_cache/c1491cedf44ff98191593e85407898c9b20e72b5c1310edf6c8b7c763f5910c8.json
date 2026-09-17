@@ -1,0 +1,52 @@
+[
+{
+"url": "https://www.robots.ox.ac.uk/~dwm/Courses/4CV_2015/4CV-N1.pdf",
+"title": "[PDF] C18 Computer Vision",
+"description": "C18 2015 39 / 64 Summary of steps from Scene to Image Move scene point is (XW , 1)\u22a4into camera coord frame by a 4 \u00d7 4 extrinsic Euclidean transformation: \u0014 XC 1 \u0015 = \u0014 R t 0\u22a4 1 \u0015 \u0014 XW 1 \u0015 Project into an ideal camera (f = 1, \u03b3 = 1, s = 0, uo = vo = 0) via a vanilla perspective transformation: \u0014 x\u2032 1 \u0015 P = [I|0] \u0014 XC 1 \u0015 Map the ideal image into the real image using the intrinsic matrix: \u0014 x 1 \u0015 = K \u0014 x\u2032 1 \u0015 NB: the equals sign \u2014 the bottom right element of K is K33 = 1."
+},
+{
+"url": "https://cs.nyu.edu/~fergus/teaching/vision/1_Intro.pdf",
+"title": "[PDF] Computer Vision \u2013 Lecture 1",
+"description": "We presen Flickr tags, GPS locations, and camera ty number of faces for different resolutions (c above that resolution, we add them al different people with high probabilit this process (choosing the second, the from each user), until a suf\ufb01cient num bl d B d i t f Advanced Photo Search \u2022 Text-based image search \u2013 (that actually looks at image) http://clarifai-blog.s3.amazonaws.com/wp-content/uploads/2015/12/pic1.jpg Self-Driving Cars \u2022 Mobileye: Vision systems in high-end BMW, GM, Volvo models \u2022 Very stringent accuracy requirements (not yet met) Source: A. Syllabus \u2022 High-level vision \u2013 Introduction to neural nets \u2013 Convolutional nets (ConvNets) \u2013 Object recognition \u2013 Face recognition \u2013 Video recognition \u2022 Low-level vision \u2013 Edge, corner, feature detection \u2013 Stereo reconstruction \u2013 Structure from motion, optical flow \u2022 Other topics \u2013 Image processing tasks \u2013 Recurrent nets (images + text) \u2013 Generative models \u2013 Unsupervised learning What the course will NOT cover \u2022 Biology relating to vision \u2013 Go to CNS \u2022 Huge detail on stereo reconstruction \u2013 Cool topic, but could easily be course of its own \u2022 How to capture & enhance images \u2013 See Computational Photography course Likely Deviations \u2022 May have guest lecturers give some classes End of Admin Interlude Computer Vision: A whole series of problems \u2022 What is in the image ?"
+},
+{
+"url": "https://www.youtube.com/watch?v=xJzgdaIOk5Y",
+"title": "Computer Vision: 1st lecture (introduction, pixels and filters) - YouTube",
+"description": "Topics discussed: - Introduction: applications, computational models for vision, perception and prior knowledge, levels of vision,"
+},
+{
+"url": "https://comp3204.ecs.soton.ac.uk/part1.html",
+"title": "COMP3204 Computer Vision - University of Southampton",
+"description": "Welcome to the homepage for the first half of COMP3204. Here is a list of materials available to you to complement the lectures in this half of the course."
+},
+{
+"url": "http://6.869.csail.mit.edu/fa12/materials.html",
+"title": "6.869 Course Materials - mit csail",
+"description": "Class Notes and Slides ; Lecture 1, A Simple Vision System, Lecture notes (Sep 6, 2012) Slides: ppt | pdf ; Lecture 2, Linear Filters, No note. Refer to Chapter 3"
+},
+{
+"url": "https://sites.cs.ucsb.edu/~yfwang/courses/cs290i_mvg/lecture.html",
+"title": "Lecture Notes and Slides - UCSB Computer Science",
+"description": "Lecture Notes and Slides. We will follow the text book \"Multiple View Geometry in Computer Vision\" closely. An excellent set of Powerpoint slides of the book"
+},
+{
+"url": "http://16385.courses.cs.cmu.edu/fall2024/lectures",
+"title": "Lectures and Readings : Computer Vision : Fall 2024",
+"description": "Lecture 1: Course Introduction. (Overview of computer vision) \u00b7 Lecture 2: Image Filtering \u00b7 Lecture 3: Image Pyramids and Frequency Domain \u00b7 Lecture 4: Hough"
+},
+{
+"url": "https://www.youtube.com/watch?v=_DRvIHSkHDA",
+"title": "Lecture 1 - Introduction to Computer Vision - YouTube",
+"description": "Topics covered in this video What is Computer Vision? Visual Perception Vision vs Computer Vision Vision and Image Understanding Goal of"
+},
+{
+"url": "https://www.robots.ox.ac.uk/~victor/teaching/pdfs/4C18-Computer-Vision-L5-Slides-Prisacariu.pdf",
+"title": "[PDF] C18 Computer Vision",
+"description": "5.1 Introduction Aim in geometric computation vision is to take a number of 2D images, and obtain an understanding of the 3D environment; what is in it; and how it evolves over time. 5.2 The perspective camera as a geometric device This is (a picture of) my cat Cat nose x 520 520 0 x = 295 308 My cat lives in a 3D world \ud835\udc17= \ud835\udc4b1 \ud835\udc4b2 \ud835\udc4b3 \ud835\udc31= \ud835\udc651 \ud835\udc652 The point \ud835\udc17in world space projects to the point \ud835\udc31in image space Going from X in 3D to x in 2D \ud835\udc17= \ud835\udc4b1 \ud835\udc4b2 \ud835\udc4b3 \ud835\udc31= \ud835\udc651 \ud835\udc652 ?"
+},
+{
+"url": "https://github.com/sairclass/cse473s23",
+"title": "Slides for CSE573 Intro to Computer Vision & Image Processing ...",
+"description": "Many materials are derived from Prof. David Doermann's course slides. We give special thanks to Prof. Junsong Yuan and Prof. Nalini Ratha for providing"
+}
+]

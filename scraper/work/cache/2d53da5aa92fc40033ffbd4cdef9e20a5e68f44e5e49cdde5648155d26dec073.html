@@ -1,0 +1,1266 @@
+<html><head>
+		<title>
+			CS5691: Pattern Recognition and Machine Learning
+		</title>
+		<style type="text/css">
+			<!--
+			.deepsea, .deepsea TD, .deepsea TH
+			{
+			background: black url(./images/bg.png) repeat-x center left;
+			background-color:blue;
+			color:white;
+			font: bold 14px Arial;
+			font-weight:600;
+			}
+
+			.courseName {
+			color: #ffffff;
+			display: block;
+			padding: 2px 0;
+			padding-left: 19px; /*link text is indented 19px*/
+			text-decoration: none;
+			font-weight: bold;
+			font: bold 20px Arial;
+			font-size: 90%;
+			}
+			
+			.semName {
+			color: #ff0000;
+			display: block;
+			padding: 2px 0;
+			padding-left: 19px; /*link text is indented 19px*/
+			text-decoration: none;
+			font-weight: bold;
+			font: bold 25px Arial;
+			font-size: 90%;
+			}
+			.semDate {
+			color: #ffffff;
+			display: block;
+			padding: 2px 0;
+			padding-left: 19px; /*link text is indented 19px*/
+			text-decoration: none;
+			font-weight: bold;
+			font: bold 25px Arial;
+			font-size: 90%;
+			}
+.semDate1 {
+			color: #ffffff;
+			/*display: block;
+*/
+			padding: 2px 0;
+			padding-left: 19px; /*link text is indented 19px*/
+			text-decoration: none;
+			font-weight: bold;
+			font: bold 25px Arial;
+			font-size: 90%;
+			}
+
+			.slideName {
+			color: #fdd017;
+			display: block;
+			padding: 2px 0;
+			padding-left: 19px; /*link text is indented 19px*/
+			text-decoration: none;
+			font-weight: bold;
+			font: bold 20px Arial;
+			font-size: 90%;
+			}
+			
+			.sesName {
+			color: #736f6e;
+			display: block;
+			padding: 2px 0;
+			padding-left: 19px; /*link text is indented 19px*/
+			text-decoration: none;
+			font-weight: bold;
+			font: bold 20px Arial;
+			font-size: 90%;
+			}
+			
+			.journalName {
+			color: #99CC00;
+			display: block;
+			padding: 2px 0;
+			padding-left: 19px; /*link text is indented 19px*/
+			text-decoration: none;
+			font-weight: bold;
+			border-bottom: 1px solid #dadada;
+			font: bold 14px Arial;
+			font-size: 90%;
+			}
+
+			.slNo {
+			color: #fe7a05;
+			display: block;
+			padding: 2px 0;
+			padding-left: 19px; /*link text is indented 19px*/
+			text-decoration: none;
+			font-weight: bold;
+			border-bottom: 1px solid #dadada;
+			font: bold 14px Arial;
+			font-size: 90%;
+			}
+	.slNo1 {
+			color: #fe7a05;
+			/*display: block;*/
+			padding: 2px 0;
+			padding-left: 19px; /*link text is indented 19px*/
+			text-decoration: none;
+			font-weight: bold;
+			border-bottom: 1px solid #dadada;
+			font: bold 14px Arial;
+			font-size: 90%;
+			}
+			
+			.slNoPdf {
+			color: #ffffff;
+			display: block;
+			padding: 2px 0;
+			padding-left: 19px; /*link text is indented 19px*/
+			text-decoration: none;
+			font-weight: bold;
+			font: bold 14px Arial;
+			font-size: 90%;
+			}
+			.tableHeader {
+			color: #ffffff;
+			display: block;
+			padding: 2px 0;
+			padding-left: 19px; /*link text is indented 19px*/
+			text-decoration: none;
+			font-weight: bold;
+			border-bottom: 1px solid #dadada;
+			font: bold 16px Arial;
+			font-size: 90%;
+			}
+
+			.impact {
+			color: #CC66FF;
+
+			display: block;
+			padding: 2px 0;
+			padding-left: 19px; /*link text is indented 19px*/
+			text-decoration: none;
+			font-weight: bold;
+			border-bottom: 1px solid #dadada;
+			font: bold 14px Arial;
+			font-size: 90%;
+			}
+			
+			
+
+
+			.bookName {
+			color: #addfff;
+			/* display: block; */
+			/* padding: 2px 0;
+			padding-left: 19px; /*link text is indented 19px*/ 
+			text-decoration: none;
+			font: 14px Arial;
+			font-size: 90%;
+			border-bottom: 1px solid #646060;
+			}
+.bookName1 {
+			color: #addfff;
+			/* display: block; */
+			/* padding: 2px 0;
+			padding-left: 19px; /*link text is indented 19px*/ 
+			text-decoration: none;
+			font: 14px Arial;
+			font-size: 90%;
+			/*border-bottom: 1px solid #646060;*/
+			}
+
+
+			.textContent {
+			color: #addfff;
+			display: block;
+			padding: 2px 0;
+			padding-left: 19px; /*link text is indented 19px*/
+			text-decoration: none;
+			font: 12px Arial;
+			font-size: 90%;
+			
+			}
+			
+			.textContent2 {
+			color: #addfff;
+			display: block;
+			padding: 2px 0;
+			padding-left: 19px; /*link text is indented 19px*/
+			text-decoration: none;
+			font: 14px Arial;
+			font-size: 100%;
+			
+			}
+			.textContent3 {
+			color: #addfff;
+			display: block;
+			padding: 2px 0;
+			padding-left: 19px; /*link text is indented 19px*/
+			text-decoration: none;
+			font: 24px Arial;
+			font-size: 100%;
+			
+			}
+			
+			
+			
+.syllabusheads {
+	color: #FF0;
+			
+			padding: 2px 0;
+			/*padding-left: 19px; /*link text is indented 19px*/
+			
+			font: 14px Arial;
+			font-size: 100%;
+}
+
+.syllabusheads1 {
+	color: #FFF;
+			
+			padding: 2px 0;
+			/*padding-left: 19px; /*link text is indented 19px*/
+			
+			font: 14px Arial;
+			font-size: 100%;
+}
+			-->
+		</style>
+		
+<script type="text/javascript" src="tabber.js"></script>
+		<link rel="stylesheet" href="example.css" type="text/css" media="screen">
+		<link rel="stylesheet" href="example-print.css" type="text/css" media="print">
+
+		<script type="text/javascript">
+
+			/* Optional: Temporarily hide the "tabber" class so it does not "flash"
+			   on the page as plain HTML. After tabber runs, the class is changed
+			   to "tabberlive" and it will appear. */
+
+			document.write('<style type="text/css">.tabber{display:none;}<\/style>');
+		</script><style type="text/css">.tabber{display:none;}</style>
+	</head>
+<body bgcolor="#000000">
+		<table border="0" cellspacing="0" cellpadding="0" valign="top" align="center">
+			<tbody><tr>
+				<td><a href="http://www.cse.iitm.ac.in/~vplab/"><img src="images/vplab.gif"></a></td>
+				<td align="center"><img src="images/banner.gif" width="750" height="115"></td>
+				<td><a href="http://www.cse.iitm.ac.in/"><img src="images/iitm.gif"></a></td>
+			</tr>
+		</tbody></table>
+		<br>
+		<table border="0" bordercolor="#3399cc" cellspacing="0" cellpadding="0" valign="top" align="center" width="100%">
+				<tbody><tr>
+					<td align="center" class="courseName"><h2>CS5691: Pattern Recognition and Machine Learning</h2></td><td>
+				</td></tr>
+				<tr>
+					<td align="center" class="sesName"><h3>
+				    Jan. - May 2026
+				    </h3><h3></h3></td>
+				</tr>
+		</tbody></table>
+		<div class="tabber">
+       
+        
+        
+<div class="tabbertab">
+	<h2>Course Contents</h2>
+          
+
+<p>                </p><p class="bookName">
+	Handout
+	<a href="courses/PRML/PRML_handout_updated_2026.pdf" target="new"> 
+ 	<img src="./pdf.png" height="32" width="32" alt="Download Slide" border="0">
+	</a>
+</p>
+
+
+                
+<p>                
+
+
+
+
+
+
+</p><ul class="sideHeading">
+
+  <li class="syllabusheads">Basics of Linear Algebra, Probability Theory and Optimization 
+    <ul><li class="textContent2">
+	Vectors, Inner product, Outer product, Inverse of a matrix, Eigenanalysis, Singular value decomposition, Probability distributions - Discrete distributions and Continuous distributions; Independence of events, Conditional probability distribution and Joint probability distribution, Bayes theorem, Unconstrained optimization, Constrained optimization - Lagrangian multiplier method. 
+
+</li></ul>
+</li><br>
+
+<li class="syllabusheads">Methods for Function Approximation: 
+  <ul>
+   <li class="textContent2">
+Linear models for regression, Parameter estimation methods - Maximum likelihood method and Maximum a posteriori method; Regularization, Ridge regression, Lasso, Bias-Variance decomposition, Bayesian linear regression. 
+
+</li></ul>
+</li><br>
+
+<li class="syllabusheads">Probabilistic Models for Classification
+  <ul>
+   <li class="textContent2">
+Bayesian decision theory, Bayes classifier, Minimum error-rate classification, Normal (Gaussian) density - Discriminant functions, Decision surfaces, Maximum-Likelihood estimation, Maximum a posteriori estimation; Gaussian mixture models -- Expectation-Maximization method for parameter estimation; Naive Bayes classifier, Non-parametric techniques for density estimation -- Parzen-window method, K-nearest neighbors method, Hidden Markov models (HMMs) for sequential pattern classification -- Discrete HMMs and Continuous density HMMs.
+
+</li></ul>
+</li><br>
+
+<li class="syllabusheads">Discriminative Learning based Models for Classification
+  <ul>
+   <li class="textContent2">
+ Logistic regression, Perceptron, Multilayer feedforward neural network - Gradient descent method, Error backpropagation method; Support vector machine. 
+
+</li></ul>
+</li><br>
+
+<li class="syllabusheads">Dimensionality Reduction Techniques
+  <ul>
+   <li class="textContent2">
+Principal component analysis, Fisher discriminant analysis, Multiple discriminant analysis. 
+
+</li></ul>
+</li><br>
+
+<li class="syllabusheads">Non-Metric Methods for Classification
+  <ul>
+   <li class="textContent2">
+Decision trees, CART. 
+
+</li></ul>
+</li><br>
+
+<li class="syllabusheads">Ensemble Methods for Classification
+  <ul>
+   <li class="textContent2">
+Bagging, Boosting, Gradient boosting. 
+
+</li></ul>
+</li><br>
+
+<li class="syllabusheads">Pattern Clustering
+  <ul>
+   <li class="textContent2">
+Criterion functions for clustering, Techniques for clustering -- K-means clustering, Hierarchical clustering, Density based clustering and Spectral clustering; Cluster validation. 
+
+</li></ul>
+</li><br>
+
+<br>
+
+</ul>
+
+
+<p></p>
+
+    
+          
+
+          
+	    </div>
+			<div class="tabbertab">
+				<h2>References </h2>  
+
+                <p>
+					<table border="0">
+						<tbody><tr>
+							<td class="slideName">
+								Textbooks
+							</td>
+						</tr>
+                        <tr>
+                        <td class="bookName">
+								Christopher M. Bishop, Pattern recognition and machine learning, Springer, 2006. </td>
+                                </tr><tr>
+                                <td class="bookName">
+								T. Hastie, R.Tibshirani, J. Friedman, The El- ements of Statistical Learning: Data Mining, Inference and Prediction, Springer Series in Statistics, 2009.  </td>
+                                
+						</tr>
+						
+						
+                        
+						
+						
+                        
+
+
+						
+							<tr><td class="slideName">
+								<br>
+							</td>
+						</tr>
+					</tbody></table>
+
+				</p>
+                
+               
+              
+			</div>
+
+
+
+
+			<div class="tabbertab">
+
+
+				<h2>Lecture Slides </h2>
+
+
+<p>
+					<table border="1" align="center" cellspacing="0" cellpadding="0" bordercolor="#5e767e"> 
+						<tbody><tr> 
+							<td height="19" width="16" class="slNoPdf"> 
+								1 
+							</td> 
+							<td height="19" width="423" class="bookName"> 
+								Introduction&nbsp; 
+							</td> 
+							<td align="center" height="19" width="23"> 
+								<a href="courses/PRML/Slides_2026/INTRO_PRML_CS5691-26.pdf">
+									<img src="./pdf.png" height="32" width="32" alt="Download Slide" border="0">
+								</a> 
+							</td> 
+						</tr>
+
+						<!--<tr> 
+							<td height="19" width="16" class="slNoPdf"> 
+								2 
+							</td> 
+							<td height="19" width="423" class="bookName"> 
+								Introduction(Part-2)&nbsp; 
+							</td> 
+							<td align="center" height="19" width="23"> 
+								<a href="courses/PRML/2.pdf">
+									<img src="./pdf.png" height="32" width="32" alt="Download Slide" border="0" >
+								</a> 
+							</td> 
+						</tr>-->
+
+<tr> 
+							<td height="19" width="16" class="slNoPdf"> 
+								2 
+							</td> 
+							<td height="19" width="423" class="bookName"> 
+								Overview of supervised learning (Part-1)&nbsp; 
+							</td> 
+							<td align="center" height="19" width="23"> 
+								<a href="courses/PRML/Slides_2026/OverviewofSupervisedLearning_part1.pdf">
+									<img src="./pdf.png" height="32" width="32" alt="Download Slide" border="0">
+								</a> 
+							</td> 
+						</tr>
+
+<tr> 
+							<td height="19" width="16" class="slNoPdf"> 
+								3 
+							</td> 
+							<td height="19" width="423" class="bookName"> 
+								Overview of supervised learning (Part-2)&nbsp; 
+							</td> 
+							<td align="center" height="19" width="23"> 
+								<a href="courses/PRML/Slides_2026/OverviewofSupervisedLearning_Part2.pdf">
+									<img src="./pdf.png" height="32" width="32" alt="Download Slide" border="0">
+								</a> 
+							</td> 
+						</tr>
+
+
+<tr> 
+							<td height="19" width="16" class="slNoPdf"> 
+								4 
+							</td> 
+							<td height="19" width="423" class="bookName"> 
+								Linear least square regression&nbsp; 
+							</td> 
+							<td align="center" height="19" width="23"> 
+								<a href="courses/PRML/Slides_2026/LSQ_REGR_PRML_2026.pdf">
+									<img src="./pdf.png" height="32" width="32" alt="Download Slide" border="0">
+								</a> 
+							</td> 
+						</tr>
+
+<tr> 
+							<td height="19" width="16" class="slNoPdf"> 
+								5 
+							</td> 
+							<td height="19" width="423" class="bookName"> 
+								Linear Algebra basics&nbsp; 
+							</td> 
+							<td align="center" height="19" width="23"> 
+								<a href="courses/PRML/Slides_2026/PRML_LIN_ALG_Basics-26.pdf">
+									<img src="./pdf.png" height="32" width="32" alt="Download Slide" border="0">
+								</a> 
+							</td> 
+						</tr>
+
+
+<tr> 
+							<td height="19" width="16" class="slNoPdf"> 
+								6 
+							</td> 
+							<td height="19" width="423" class="bookName"> 
+								Probability theory and Statistics&nbsp; 
+							</td> 
+							<td align="center" height="19" width="23"> 
+								<a href="courses/PRML/Slides_2026/PRML-stat_THEOREMS+Prob_SEL_2026.pdf">
+									<img src="./pdf.png" height="32" width="32" alt="Download Slide" border="0">
+								</a> 
+							</td> 
+						</tr>
+
+<tr> 
+							<td height="19" width="16" class="slNoPdf"> 
+								7 
+							</td> 
+							<td height="19" width="423" class="bookName"> 
+								Linear methods for regression (part-1)&nbsp; 
+							</td> 
+							<td align="center" height="19" width="23"> 
+								<a href="courses/PRML/Slides_2026/PRML_Chap-3-partA - Hastie-Linear Methods for Regression_2026.pdf">
+									<img src="./pdf.png" height="32" width="32" alt="Download Slide" border="0">
+								</a> 
+							</td> 
+						</tr>
+
+<tr> 
+							<td height="19" width="16" class="slNoPdf"> 
+								8 
+							</td> 
+							<td height="19" width="423" class="bookName"> 
+								Linear methods for regression (part-2)&nbsp; 
+							</td> 
+							<td align="center" height="19" width="23"> 
+								<a href="courses/PRML/Slides_2026/PRML_Chap-3-Part-B-Hastie-Linear Methods for Regression_2026.pdf">
+									<img src="./pdf.png" height="32" width="32" alt="Download Slide" border="0">
+								</a> 
+							</td> 
+						</tr>
+						<tr> 
+							<td height="19" width="16" class="slNoPdf"> 
+								9 
+							</td> 
+							<td height="19" width="423" class="bookName"> 
+								Unbiased  Estimator&nbsp; 
+							</td> 
+							<td align="center" height="19" width="23"> 
+								<a href="courses/PRML/Slides_2026/BLUE_OLS-2026.pdf">
+									<img src="./pdf.png" height="32" width="32" alt="Download Slide" border="0">
+								</a> 
+							</td> 
+						</tr>
+
+<tr> 
+							<td height="19" width="16" class="slNoPdf"> 
+								10 
+							</td> 
+							<td height="19" width="423" class="bookName"> 
+								Pattern Classification&nbsp; 
+							</td> 
+							<td align="center" height="19" width="23"> 
+								<a href="courses/PRML/Slides_2026/PRML_PAT_RECOGN-26.pdf">
+									<img src="./pdf.png" height="32" width="32" alt="Download Slide" border="0">
+								</a> 
+							</td> 
+						</tr>
+
+<tr> 
+							<td height="19" width="16" class="slNoPdf"> 
+								11 
+							</td> 
+							<td height="19" width="423" class="bookName"> 
+								Maximum Likelihood Estimation (MLE)&nbsp; 
+							</td> 
+							<td align="center" height="19" width="23"> 
+								<a href="courses/PRML/MLE.pdf">
+									<img src="./pdf.png" height="32" width="32" alt="Download Slide" border="0">
+								</a> 
+							</td> 
+						</tr>
+
+
+<tr> 
+							<td height="19" width="16" class="slNoPdf"> 
+								12 
+							</td> 
+							<td height="19" width="423" class="bookName"> 
+								Maximum a Posteriori Estimation (MAP) &nbsp; 
+							</td> 
+							<td align="center" height="19" width="23"> 
+								<a href="courses/PRML/MAP.pdf">
+									<img src="./pdf.png" height="32" width="32" alt="Download Slide" border="0">
+								</a> 
+							</td> 
+						</tr>
+
+<tr> 
+							<td height="19" width="16" class="slNoPdf"> 
+								13 
+							</td> 
+							<td height="19" width="423" class="bookName"> 
+								Gaussian Mixture Model (GMM) &nbsp; 
+							</td> 
+							<td align="center" height="19" width="23"> 
+								<a href="courses/PRML/Slides_2026/Gaussian Mixture Model (GMM) - EM.pdf">
+									<img src="./pdf.png" height="32" width="32" alt="Download Slide" border="0">
+								</a> 
+							</td> 
+						</tr>
+
+<tr> 
+							<td height="19" width="16" class="slNoPdf"> 
+								14 
+							</td> 
+							<td height="19" width="423" class="bookName"> 
+								Clustering Methods &nbsp; 
+							</td> 
+							<td align="center" height="19" width="23"> 
+								<a href="courses/PRML/Slides_2026/PRML-CLUSTERING_Apr-26.pdf">
+									<img src="./pdf.png" height="32" width="32" alt="Download Slide" border="0">
+								</a> 
+							</td> 
+						</tr>
+
+<tr> 
+							<td height="19" width="16" class="slNoPdf"> 
+								15 
+							</td> 
+							<td height="19" width="423" class="bookName"> 
+								Spectral Clustering &nbsp; 
+							</td> 
+							<td align="center" height="19" width="23"> 
+								<a href="courses/PRML/Slides_2026/PRML_Spectral_Clustering_26.pdf">
+									<img src="./pdf.png" height="32" width="32" alt="Download Slide" border="0">
+								</a> 
+							</td> 
+						</tr>
+
+<tr> 
+							<td height="19" width="16" class="slNoPdf"> 
+								16 
+							</td> 
+							<td height="19" width="423" class="bookName"> 
+								Logistic regression &nbsp; 
+							</td> 
+							<td align="center" height="19" width="23"> 
+								<a href="courses/PRML/logistic_regression.pdf">
+									<img src="./pdf.png" height="32" width="32" alt="Download Slide" border="0">
+								</a> 
+							</td> 
+						</tr>
+
+<tr> 
+							<td height="19" width="16" class="slNoPdf"> 
+								17 
+							</td> 
+							<td height="19" width="423" class="bookName"> 
+								CART &nbsp; 
+							</td> 
+							<td align="center" height="19" width="23"> 
+								<a href="courses/PRML/Slides_2026/PRML_CART-DT-2026-New-VER.pdf">
+									<img src="./pdf.png" height="32" width="32" alt="Download Slide" border="0">
+								</a> 
+							</td> 
+						</tr>
+
+<tr> 
+							<td height="19" width="16" class="slNoPdf"> 
+								18 
+							</td> 
+							<td height="19" width="423" class="bookName"> 
+								Ensemble Methods &nbsp; 
+							</td> 
+							<td align="center" height="19" width="23"> 
+								<a href="courses/PRML/Slides_2026/PRML_ensemble_methods-04-26.pdf">
+									<img src="./pdf.png" height="32" width="32" alt="Download Slide" border="0">
+								</a> 
+							</td> 
+						</tr>
+
+<tr> 
+							<td height="19" width="16" class="slNoPdf"> 
+								19 
+							</td> 
+							<td height="19" width="423" class="bookName"> 
+								Support Vector machines &nbsp; 
+							</td> 
+							<td align="center" height="19" width="23"> 
+								<a href="courses/PRML/Slides_2026/PRML_SD_svm_v6_APR-2026-V2.pdf">
+									<img src="./pdf.png" height="32" width="32" alt="Download Slide" border="0">
+								</a> 
+							</td> 
+						</tr>
+
+
+<tr> 
+							<td height="19" width="16" class="slNoPdf"> 
+								20 
+							</td> 
+							<td height="19" width="423" class="bookName"> 
+								ANN (updated 2026) &nbsp; 
+							</td> 
+							<td align="center" height="19" width="23"> 
+								<a href="courses/PRML/Slides_2026/PRML_ANN-26-New-VER.pdf">
+									<img src="./pdf.png" height="32" width="32" alt="Download Slide" border="0">
+								</a> 
+							</td> 
+						</tr>
+
+
+
+
+<!--
+
+<tr> 
+							<td height="19" width="16" class="slNoPdf"> 
+								5 
+							</td> 
+							<td height="19" width="423" class="bookName"> 
+								Ch-4:Threads & Concurrency&nbsp; 
+							</td> 
+							<td align="center" height="19" width="23"> 
+								<a href="courses/OS/Ch-4.pdf">
+									<img src="./pdf.png" height="32" width="32" alt="Download Slide" border="0" >
+								</a> 
+							</td> 
+						</tr>
+
+<tr> 
+							<td height="19" width="16" class="slNoPdf"> 
+								6 
+							</td> 
+							<td height="19" width="423" class="bookName"> 
+								Fork vs Thread&nbsp; 
+							</td> 
+							<td align="center" height="19" width="23"> 
+								<a href="courses/OS/fvt_2.pdf">
+									<img src="./pdf.png" height="32" width="32" alt="Download Slide" border="0" >
+								</a> 
+							</td> 
+						</tr>
+
+<tr> 
+							<td height="19" width="16" class="slNoPdf"> 
+								7 
+							</td> 
+							<td height="19" width="423" class="bookName"> 
+								Ch-5:CPU Scheduling&nbsp; 
+							</td> 
+							<td align="center" height="19" width="23"> 
+								<a href="courses/OS/Ch-5.pdf">
+									<img src="./pdf.png" height="32" width="32" alt="Download Slide" border="0" >
+								</a> 
+							</td> 
+						</tr>
+
+
+<tr> 
+							<td height="19" width="16" class="slNoPdf"> 
+								8 
+							</td> 
+							<td height="19" width="423" class="bookName"> 
+								Ch-6:Process Synchronization&nbsp; 
+							</td> 
+							<td align="center" height="19" width="23"> 
+								<a href="courses/OS/Ch-6.pdf">
+									<img src="./pdf.png" height="32" width="32" alt="Download Slide" border="0" >
+								</a> 
+							</td> 
+						</tr>
+
+<tr> 
+							<td height="19" width="16" class="slNoPdf"> 
+								9 
+							</td> 
+							<td height="19" width="423" class="bookName"> 
+								Ch-7:Process Synchronization (Part 2)&nbsp; 
+							</td> 
+							<td align="center" height="19" width="23"> 
+								<a href="courses/OS/Ch-7.pdf">
+									<img src="./pdf.png" height="32" width="32" alt="Download Slide" border="0" >
+								</a> 
+							</td> 
+						</tr>
+
+
+<tr> 
+							<td height="19" width="16" class="slNoPdf"> 
+								10 
+							</td> 
+							<td height="19" width="423" class="bookName"> 
+								Ch-8:Deadlock&nbsp; 
+							</td> 
+							<td align="center" height="19" width="23"> 
+								<a href="courses/OS/Ch-8.pdf">
+									<img src="./pdf.png" height="32" width="32" alt="Download Slide" border="0" >
+								</a> 
+							</td> 
+						</tr>
+
+
+
+<tr> 
+							<td height="19" width="16" class="slNoPdf"> 
+								11 
+							</td> 
+							<td height="19" width="423" class="bookName"> 
+								Ch-9:Main Memory (Part I)&nbsp; 
+							</td> 
+							<td align="center" height="19" width="23"> 
+								<a href="courses/OS/Ch-9A.pdf">
+									<img src="./pdf.png" height="32" width="32" alt="Download Slide" border="0" >
+								</a> 
+							</td> 
+						</tr>
+
+<tr> 
+							<td height="19" width="16" class="slNoPdf"> 
+								12 
+							</td> 
+							<td height="19" width="423" class="bookName"> 
+								Ch-9:Main Memory (Part II)&nbsp; 
+							</td> 
+							<td align="center" height="19" width="23"> 
+								<a href="courses/OS/Ch-9B.pdf">
+									<img src="./pdf.png" height="32" width="32" alt="Download Slide" border="0" >
+								</a> 
+							</td> 
+						</tr>
+
+
+<tr> 
+							<td height="19" width="16" class="slNoPdf"> 
+								13 
+							</td> 
+							<td height="19" width="423" class="bookName"> 
+								Ch-10:Virtual Memory (Part I)&nbsp; 
+							</td> 
+							<td align="center" height="19" width="23"> 
+								<a href="courses/OS/Ch-10a.pdf">
+									<img src="./pdf.png" height="32" width="32" alt="Download Slide" border="0" >
+								</a> 
+							</td> 
+						</tr>
+
+
+<tr> 
+							<td height="19" width="16" class="slNoPdf"> 
+								14 
+							</td> 
+							<td height="19" width="423" class="bookName"> 
+								Ch-10:Virtual Memory (Part II)&nbsp; 
+							</td> 
+							<td align="center" height="19" width="23"> 
+								<a href="courses/OS/Ch-10b.pdf">
+									<img src="./pdf.png" height="32" width="32" alt="Download Slide" border="0" >
+								</a> 
+							</td> 
+						</tr>
+
+
+<tr> 
+							<td height="19" width="16" class="slNoPdf"> 
+								15 
+							</td> 
+							<td height="19" width="423" class="bookName"> 
+								Ch-11:Mass storage systems&nbsp; 
+							</td> 
+							<td align="center" height="19" width="23"> 
+								<a href="courses/OS/Ch-11.pdf">
+									<img src="./pdf.png" height="32" width="32" alt="Download Slide" border="0" >
+								</a> 
+							</td> 
+						</tr>
+
+
+
+<tr> 
+							<td height="19" width="16" class="slNoPdf"> 
+								16 
+							</td> 
+							<td height="19" width="423" class="bookName"> 
+								Ch-12:I/O Systems&nbsp; 
+							</td> 
+							<td align="center" height="19" width="23"> 
+								<a href="courses/OS/Ch-12.pdf">
+									<img src="./pdf.png" height="32" width="32" alt="Download Slide" border="0" >
+								</a> 
+							</td> 
+						</tr>
+
+
+
+<tr> 
+
+
+
+<tr> 
+							<td height="19" width="16" class="slNoPdf"> 
+								17 
+							</td> 
+							<td height="19" width="423" class="bookName"> 
+								Ch-13:File-System interface&nbsp; 
+							</td> 
+							<td align="center" height="19" width="23"> 
+								<a href="courses/OS/Ch-13.pdf">
+									<img src="./pdf.png" height="32" width="32" alt="Download Slide" border="0" >
+								</a> 
+							</td> 
+						</tr>
+
+
+
+<tr> 
+							<td height="19" width="16" class="slNoPdf"> 
+								18 
+							</td> 
+							<td height="19" width="423" class="bookName"> 
+								Ch-14:File-System implementation&nbsp; 
+							</td> 
+							<td align="center" height="19" width="23"> 
+								<a href="courses/OS/Ch-14.pdf">
+									<img src="./pdf.png" height="32" width="32" alt="Download Slide" border="0" >
+								</a> 
+							</td> 
+						</tr>
+
+
+
+<tr> 
+							<td height="19" width="16" class="slNoPdf"> 
+								19 
+							</td> 
+							<td height="19" width="423" class="bookName"> 
+								Ch-15:File-System internals&nbsp; 
+							</td> 
+							<td align="center" height="19" width="23"> 
+								<a href="courses/OS/Ch-15.pdf">
+									<img src="./pdf.png" height="32" width="32" alt="Download Slide" border="0" >
+								</a> 
+							</td> 
+						</tr>
+
+<tr> 
+							<td height="19" width="16" class="slNoPdf"> 
+								20 
+							</td> 
+							<td height="19" width="423" class="bookName"> 
+								Ch-16:OS Security&nbsp; 
+							</td> 
+							<td align="center" height="19" width="23"> 
+								<a href="courses/OS/Ch-16.pdf">
+									<img src="./pdf.png" height="32" width="32" alt="Download Slide" border="0" >
+								</a> 
+							</td> 
+						</tr>
+
+-->
+
+</tbody></table>
+
+</p>
+
+
+
+			</div>
+
+<div class="tabbertab">
+
+
+				<h2>Additional Resources </h2>
+<li class="syllabusheads">Basic Python/Numpy programming Resources
+    <ol>
+<br>
+<li type="a"><a href="https://cs231n.github.io/python-numpy-tutorial/" target="_new" class="textContent2">https://cs231n.github.io/python-numpy-tutorial/ </a></li>
+<li type="a"><a href="https://www.tutorialspoint.com/numpy/index.htm" target="_new" class="textContent2">https://www.tutorialspoint.com/numpy/index.htm</a></li>
+<li type="a"><a href="http://www.astro.up.pt/~sousasag/Python_For_Astronomers/Python_qr.pdf" target="_new" class="textContent2">http://www.astro.up.pt/~sousasag/Python_For_Astronomers/Python_qr.pdf</a></li>
+<li type="a"><a href="https://developers.google.com/edu/python/" target="_new" class="textContent2">https://developers.google.com/edu/python/</a></li>
+  </ol>
+</li>
+
+<li class="syllabusheads"> Coding resources
+    <ol>
+<br>
+<li type="a"><a href="https://www.freecodecamp.org/news/google-colaboratory-python-code-in-your-google-drive/#:~:text=To%20run%20the%20code%20in,having%20to%20install%20them%20first." target="_new" class="textContent2">Google Colab tutorial </a></li>
+<li type="a"><a href="https://www.kaggle.com/code/prashant111/k-means-clustering-with-python" target="_new" class="textContent2">K-means clustering in python</a></li>
+<li type="a"><a href="https://bagheri365.github.io/blog/Principal-Component-Analysis-from-Scratch/" target="_new" class="textContent2">Principal Component Analysis (PCA) from Scratch </a></li>
+  </ol>
+</li>
+
+<p></p>
+
+
+
+			</div>
+<!--
+<div class="tabbertab">
+				<h2>Exam Dates</h2>
+	
+	<table>
+						<tr>
+							<td class="semDate1"> 
+								Name
+							</td> 
+							
+							<td class="semDate1"> 
+								Date
+							</td> 
+							<td class="semDate1"> 
+								Time
+							</td> 
+	
+							
+						</tr>
+						<tr>
+							<td class="bookName">
+								Tutorial 1
+							</td>
+							<td class="slNo1">24/08/2022 &nbsp;  </td> 
+							<td class="slNo1">09:00-10:00 &nbsp; </td> 
+							
+						</tr>
+						<tr>
+							<td class="bookName">
+								Tutorial 2
+							</td>
+							<td class="slNo1">14/09/2022 </td> 
+			    				<td class="slNo1">09:00-10:00</td>  
+							
+						</tr>
+<tr>
+							<td class="bookName">
+								Mid Sem
+							</td>
+							<td class="slNo1">24/09/2022 </td> 
+			    				<td class="slNo1">10:00-11:00</td>  
+							
+						</tr>
+						
+	    </table>
+
+			
+			</div> 
+
+
+
+
+-->
+
+
+<!--
+			<div class="tabbertab">
+				<h2>Assignment</h2>
+	<p class="syllabusheads1">To be updated soon</p>   	
+			</div>
+
+-->
+
+<div class="tabbertab">
+				<h2>Schedule</h2>
+
+
+
+						
+				<p class="slNo">
+				Tentative Grading Policy:
+				</p><ul>
+				<strong>
+					<li class="bookName">MID-SEM (50 mins)   : 15-20%</li> 
+					<li class="bookName">End Sem Exam (120-150 mins):  35-40%</li> 
+					<li class="bookName">Assignments 	  : 25-30%</li> 
+					<li class="bookName">Tutorials(2 short exams)        : 5-10%</li> 
+					<li class="bookName">Attendance 	  : 5-10%</li>
+					</strong>
+				</ul>
+				<p></p>
+
+<p class="slNo">
+				Tentative Tutorial Dates
+				</p><ul>
+				<strong>
+					<li class="bookName">Tutorial 1 : 25-02-2026 </li>
+					<li class="bookName">Tutorial 2 : 22-04-2026</li>
+			</strong>
+				</ul>
+				<p></p>
+
+<p class="slNo">
+				Tentative Assignments Dates
+				</p><ul>
+				<strong>
+					<li class="bookName">Assignment 1 release:  04-02-2026</li>
+					<li class="bookName">Assignment 1 deadline : 28-02-2026 5 PM</li>
+					<li class="bookName">Assignment 2 release : 05-03-2026</li>
+					<li class="bookName">Assignment 2 deadline : 31-03-2026</li>
+					<li class="bookName">Assignment 3 release : 01-04-2026</li>
+					<li class="bookName">Assignment 3 deadline : 02-05-2026</li>
+			</strong>
+				</ul>
+				<p></p>
+
+<table>
+						<tbody><tr colspan="2" align="center">
+							<td class="slideName">Important Dates</td>
+						</tr><tr>
+							<td class="bookName">
+
+						</td></tr><tr>
+							<td class="bookName">
+								 Mid Semester Exam: 05-03-2026<br>
+							</td>
+							
+						</tr>	
+						<tr>
+							<td class="bookName">
+								End Semester Exam: 14-05-2026<br>
+							</td>
+							
+						</tr>	
+
+							
+					
+	    </tbody></table>
+
+
+
+				
+				
+<!--
+			
+<table>
+						<tr colspan="2" align="center">
+							<td class="slideName">Schedule (Class slot: G):</td>
+					  </tr>
+						<tr>
+							<td class="bookName"> Monday
+								<br><br>
+							</td>
+							<td class="slNo">11:00 to 11:50</td>   
+						</tr>
+						<tr>
+                        			<tr>
+							<td class="bookName">Tuesday<br>
+							</td>
+							<td class="slNo">10:00 to 10:50</td> 
+						</tr>
+						<tr>
+							<td class="bookName">Wednesday<br>
+							</td>
+							<td class="slNo">9:00 to 9:50 (If required)</td> 
+						</tr>
+						<tr>
+							<td class="bookName">Thursday<br>
+							</td>
+							<td class="slNo">1:00 to 1:50</td> 
+						</tr>
+<tr>
+							<td class="bookName">Friday<br>
+							</td>
+							<td class="slNo">2:00 to 4:45 (Lab)</td> 
+						</tr>
+					</table>
+
+
+
+
+
+-->		  
+	
+                       
+				
+			</div>
+
+
+
+
+<!--				
+
+			<div class="tabbertab">
+				<h2>Announcement</h2>
+
+<p class="syllabusheads1">To be updated soon</p>   
+
+				<p class="slNo">
+
+				Tentative schedule for the Jan-May 2022 Semester 
+				
+
+	
+				</p>
+
+
+				</p>
+
+
+				<p class="slNo">
+				Marks Distribution
+				<ul >
+				<strong>
+					
+					<li class="bookName">Seminars  : 40</li>
+					<li class="bookName">TPA : 25</li>
+					<li class="bookName">Tutorials : 10</li>
+					<li class="bookName">End Sem      : 25-30</li>
+					</strong>
+				</ul>
+				</p>
+
+
+			<p class="slNo">
+				Tutorial Dates
+				<ul >
+				<strong>
+					<li class="bookName">Tutorial1 : TBD</li>
+					<li class="bookName">Tutorial2 : TBD</li>
+					
+					</strong>
+				</ul>
+				</p> 
+
+
+				<p class="slNo">
+				Seminar Dates:
+
+				<ul >
+		
+					<strong>
+					<li class="bookName">TBD</li>
+					
+					</strong>
+				</ul> 
+				</p>
+				
+	
+				<p class="slNo">
+				TPA Deadline
+				<ul >
+				<strong>
+					<li class="bookName">TBD</li>
+					
+					</strong>
+				</ul> 
+				</p>
+
+
+				<p class="slNo">
+				Exams
+				<ul >
+				<strong>
+					<li class="bookName">End-sem Exam : May 09, 2022</li>
+					</strong>
+				</ul>
+				</p>
+
+-->
+
+			
+			
+	
+			</div>
+		
+	
+
+</body></html>

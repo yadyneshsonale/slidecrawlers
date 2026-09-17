@@ -1,0 +1,52 @@
+[
+{
+"url": "https://www.cs.cmu.edu/~mgormley/courses/10601/schedule.html",
+"title": "Introduction to Machine Learning | 10-301 + 10-601 | Spring 2026",
+"description": "| Mon, 12-Jan | Lecture 1 : Course Overview  [Slides] [Slides (Inked)] | * *Command Line and File I/O Tutorial*. | Wed, 14-Jan | Lecture 2 : Machine Learning as Function Approximation  [Slides] [Slides (Inked)] | * *10601 Notation Crib Sheet*. | Wed, 21-Jan | Lecture 3 : Decision Trees  [Slides] [Slides (Inked)] [Poll] | * *Visual Information Theory*. | HW1 Slot A Feedback Out |. | Wed, 28-Jan | Lecture 5 : k-Nearest Neighbor and Model Selection  [Slides] [Slides (Inked)] [Poll] | * *Limits of Learning*. | Thu, 5-Feb |  |  | HW 2 Slot A Feedback Out (tentative) |. | Fri, 6-Feb | Quiz 1 (HW1/HW2) + Recitation: HW3  [Handout] [Solutions] |  | Exam 1 Practice Problems out |. | Sun, 8-Feb |  |  | HW 2 Slot B Due (tentative) |. | Wed, 25-Feb | Lecture 14 : Societal Impacts of ML  [Slides] [Slides (Inked)] [Poll] |  | HW4 Slot A Due  HW5 Out (L11-L13) |."
+},
+{
+"url": "http://www.cs.cmu.edu/~ninamf/courses/601sp15/lectures.shtml",
+"title": "Machine Learning 10-601: Lectures",
+"description": "| Date | Lecture | Topics | Readings and useful links | Handouts | | Jan 12 | Intro to ML Decision Trees | * Machine learning examples * Well defined machine learning problem * Decision tree learning | Mitchell: Ch 3 Bishop: Ch 14.4 The Discipline of Machine Learning | Slides Video | | Jan 14 | Decision Tree learning Review of Probability | * The big picture * Overfitting * Random variables and probabilities | Mitchell: Ch 3 Andrew Moore's Basic Probability Tutorial | Slides Annotated Slides Video | | Jan 21 | Probability and Estimation | * Bayes rule * MLE * MAP | Mitchell: Estimating Probabilities | Slides Annotated Slides Video | | Jan 26 | Naive Bayes | * Conditional Independence * Naive Bayes: why and how | Mitchell: Naive Bayes and Logistic Regression | Slides Annotated Slides Video | | Jan 28 | Gaussian Naive Bayes | * Gaussian Bayes classifiers * Document Classification * Brain image classification * Form of decision surfaces | Mitchell: Naive Bayes and Logistic Regression | Slides Annotated Slides Video | | Feb 2 | Logistic Regression | * Naive Bayes - the big picture * Logistic Regression: Maximizing conditional likelihood * Gradient ascent as a general learning/optimization method | Mitchell: Naive Bayes and Logistic Regression | Slides Annotated Slides Video | | Feb 4 | Linear Regression | * Generative/Discriminative models * Minimizing squared error and maximizing data likelihood * Regularization * Bias-variance decomposition | | Slides Annotated Slides Video | | Feb 9 | Learning Theory I | * Distributional Learning * PAC and Statistical Learning Theory * Sample Complexity | Mitchell: Ch 7 Notes on Generalization Guarantees | Slides Video | | Feb 11 | Learning Theory II | * Sample Complexity * Shattering and VC Dimension * Sauer's Lemma | Mitchell: Ch 7 Notes on Generalization Guarantees | Slides Video | | Feb 16 |"
+},
+{
+"url": "https://www.cs.cmu.edu/~ninamf/courses/401sp18/lectures.shtml",
+"title": "Introduction to Machine Learning 10-401: Lectures",
+"description": "| Date | Lecture | Topics | Readings and useful links | Handouts | | Jan 17 | Course Overview | * Intro, admin * Machine Learning Examples * Decision Tree Learning | | Slides | | Jan 22 | Decision Tree Learning | * Decision Tree Learning * The Big Picture * Overfitting | * Mitchell Chapters 1,2,6.1-6.3 * Murphy Chapter 2 * Bishop Chapter 1,2 | Slides | | Jan 24 | Learning Linear Separators | * Learning Linear Separators * The Perceptron Algorithm * Margins | * Mitchell Chapters 4.1.2 and 4.4.1 * Bishop Chapter 4.1.7 * Daume: The Perceptron | Slides | | Jan 29 | Estimating Probabilities from Data | * Bayes Rule * MLE * MAP | Mitchell: Estimating Probabilities | Slides | | Jan 31 | Naive Bayes | * Conditional Independence * Naive Bayes: Why and How | Mitchell: Naive Bayes and Logistic Regression | Slides | | Feb 5 | Naive Bayes | * Naive Bayes: Why and How * Bag of Words | Mitchell: Naive Bayes and Logistic Regression | Slides | | Feb 7 | Logistic Regression | * Logistic Regression: Maximizing Conditional Likelihood * Gradient Descent | * Weinberger: Gradient Descent * Mitchell: Naive Bayes and Logistic Regression | Slides | | Feb 12 | Logistic Regression | | * Mitchell: Naive Bayes and Logistic Regression * Elkan Logistic Regression | Slides | | Feb 14 | Application Area: Computer Vision | * Problems and Challenges in Computer Vision * Deep Learning in Computer Vision | Lectures 8-11 from Jitendra Malik's course on computer vision | Slides | | Feb 19 | Kernels | * Kernels * Kernelizing Algorithms * Kernelizing Perceptron | Bishop 6.1-6.2 | Slides | | Feb 21 | Support Vector Machines | * Geometric Margins * SVM: Primal and Dual Forms * Kernelizing SVM | Notes on SVM by Andrew Ng | Slides |"
+},
+{
+"url": "http://www.cs.cmu.edu/~tom/mlbook-chapter-slides.html",
+"title": "Machine Learning textbook slides",
+"description": "## Machine Learning, Tom Mitchell, McGraw-Hill. ## Slides for instructors:. The following slides are made available for instructors teaching from the textbook  Machine Learning, Tom Mitchell, McGraw-Hill. Slides are available in both postscript, and in latex source. If you take the latex, be sure to also take the accomanying  style files, postscript figures, etc. ( postscript  3.8Meg), ( gzipped postscript  317k) (pdf ) ( latex source ). see also  slides on learning Bayesian networks  by Friedman and Goldszmidt. (  postscript  261k)\u00a0 (pdf ) \u00a0 ( latex source ). Combining Inductive and Analytical Learning. ## Additional homework and exam questions:. Check out the  homework assignments and exam questions  from the Fall 1998 CMU Machine Learning course (also includes pointers to earlier and later offerings of the course). ## Additional tutorial materials:. ### Support Vector Machines:. * Tutorial information on Support vector machines. * Freeware implementation : SVM Light by Thorsten Joachims. An introduction to kernel-based learning algorithms. IEEE Neural Networks, 12(2):181-201, May 2001."
+},
+{
+"url": "http://www.cs.cmu.edu/~tom/10701_sp11/lectures.shtml",
+"title": "Machine Learning 10-701/15-781: Lectures",
+"description": "Jordan | HW3 due  HW4 out | | Feb 24 | Computational  Learning  Theory  annotated slides   video | * PAC Learning | Mitchell: Ch. 7 | | Mar 1 | Midterm Review   PAC learning slides    midterm review slides   video | HW4 due | | Mar 3 | Midterm Exam | * in class * open notes, open book, no internet | Midterm  Solution | | Mar 15 | Computational  Learning  Theory  annotated slides   video | * Mistake bounds * Weighted Majority Algorithm | Mitchell: Ch. 7 | | Mar 17 | Semi-Supervised  Learning  slides:  CoTraining    NELL   video | * CoTraining / Multi-view Learning * Never ending learning (NELL) | * Cotraining: Blum & Mitchell * NELL: Carlson et al., 2010 | | Mar 22 | Hidden Markov Models  annotated slides | * Markov models * HMM's and Bayes Nets * Other probabilistic time series models | Bishop Ch. 13 | | Mar 24 | Neural Networks  slides    video | * Non-linear regression * Backpropagation and Gradient descent * Learning hidden layer representations | Mitchell Ch. 4   Bishop Ch. 5 | Project proposals due | | Mar 29 | Learning Representations I  slides    video | * Artificial neural networks * PCA | Bishop Ch. 12 through 12.1   A Tutorial on PCA, J."
+},
+{
+"url": "https://www.youtube.com/watch?v=DPkwjgaRvyI",
+"title": "Lecture 1.1 - Introduction (CMU Multimodal Machine Learning, Fall 2023)",
+"description": "Lecture 1.1 - Introduction (CMU Multimodal Machine Learning, Fall 2023)\nLP Morency\n6110 subscribers\n353 likes\n23066 views\n22 Feb 2024\nLecture 1.1 - Introduction (CMU Multimodal Machine Learning, Fall 2023)\n\nTopics: multimodal core challenges, core syllabus\n\n----------------------------------------------------------------------------------------------------------------\nCarnegie Mellon University, 11-777 Multimodal Machine Learning, 2023 Fall\nWebsite: https://cmu-multicomp-lab.github.io/mmml-course/fall2023/ \nInstructor: Louis-Philippe Morency\nCo-lecturer: Paul Liang\n\nThis revised version of CMU Multimodal Machine Learning course presents the fundamental mathematical concepts in machine learning and deep learning relevant to the six main challenges in multimodal research: (1) representation, (2) alignment, (3) reasoning, (4) generation, (5) transference and (6) quantification. This revised course is based on the new taxonomy introduced in this survey paper: https://arxiv.org/abs/2209.03430\n\n"
+},
+{
+"url": "https://www.youtube.com/watch?v=GEopUIvfJmA",
+"title": "10-601 Machine Learning Fall 2017 - Lecture 01 - YouTube",
+"description": "Course Introduction; History of AI Lecturer: Roni Rosenfeld http://www.cs.cmu.edu/~roni/10601-f17/"
+},
+{
+"url": "https://www.youtube.com/playlist?list=PLCSO71HhvyTzU-LsMYLvjxHjOFw2V9rhC",
+"title": "Machine Learning Lectures - YouTube",
+"description": "Machine Learning Lectures ; CMU Machine Learning Lecture - May 6, 2013 \u00b7 328 views ; CMU Machine Learning Lecture - April 22, 2013 \u00b7 281 views ; CMU Machine Learning"
+},
+{
+"url": "https://github.com/Andrew-Ng-s-number-one-fan/Multimodal-Machine-Learning",
+"title": "Andrew-Ng-s-number-one-fan/Multimodal-Machine-Learning - GitHub",
+"description": "Topics, Readings. Lecture - 01: Course Introduction [Video] [Slides], Research and technical challenges. Course syllabus and requirements, None."
+},
+{
+"url": "https://dlsyscourse.org/lectures",
+"title": "Lectures - Deep Learning Systems",
+"description": "| 9/4 | 4 - Automatic Differentiation | Chen | pdf | YouTube |. | 9/9 | 5 - Automatic Differentiation Implementation | Chen | ipynb | YouTube |. | 9/11 | 6 - Optimization | Dettmers | pdf | YouTube |. | 9/18 | 8 - Normalization, Dropout, + Implementation | Dettmers | pdf | YouTube |. | 9/23 | 9 - NN Library Implementation | Chen | ipynb | YouTube |. | 9/25 | 10 - Convolutional Networks | Dettmers | pdf | YouTube |. | 9/30 | 11 - Hardware Acceleration for Linear Algebra | Chen | pdf | YouTube |. | 10/7 | 13 - Hardware Acceleration Implementation | Chen | ipynb | YouTube |. | 10/23 | 16 - Sequence Modeling Implementation | Dettmers | ipynb | YouTube |. | 10/30 | 18 - Transformers Implementation | Dettmers | ipynb | Youtube |. | 11/13 | 21 - Generative Models Implementation | Chen | ipynb | YouTube |."
+}
+]

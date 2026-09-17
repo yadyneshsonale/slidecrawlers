@@ -1,0 +1,332 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>IIT Kharagpur CS60010: Deep Learning</title>
+
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <!-- Google fonts -->
+  <link href="http://fonts.googleapis.com/css?family=Roboto:400,300" rel="stylesheet" type="text/css">
+
+  <link rel="stylesheet" type="text/css" href="coursestyle.css">
+
+</head>
+
+<body>
+
+<div id="header">
+
+  <a href="dl_spr2021.php">
+    <h1>CS60010: Deep Learning</h1>
+  </a>
+  <div class="text-center">
+    <h4>IIT Kharagpur</h4>
+    <h4>Spring 2021</h4>
+  </div>
+
+  <div style="clear:both;"></div>
+</div>
+
+
+<div class="sechighlight">
+<div class="container sec">
+
+  <h2>Schedule and Syllabus</h2>
+
+  <br>
+  This course meets Mondays (8:00am - 9:55am) and Tuesdays (from 12:00 - 12:55pm)
+  <br>
+  <i>Note: GBC = "Deep Learning", I Goodfellow, Y Bengio and A Courville, 1st Edition <a href="http://www.deeplearningbook.org/">Link</a></i><br>
+
+</div>
+</div>
+
+<!-- <tr class="warning">    <tr class="danger">    <tr class="info"> -->
+
+<div class="container sec">
+<table class="table">
+  <tbody><tr class="alert alert-secondary" role="alert">
+    <th>Module</th><th>Event Type</th><th>Date</th><th>Description</th><th>Course Materials</th>
+  </tr>
+  <tr>
+    <td rowspan="3">Module 01</td>
+    <td>Lecture 1</td>
+    <td>Monday<br> Jan 04</td>
+    <td>
+      <b>Introduction, Linear Algebra Primer</b> <br>
+      Course logistics and overview. Linear Algebra review.
+    </td>
+    <td>
+      <a href="./slides/01_Introduction.pptx">[slides (pptx)]</a>
+    </td>
+  </tr>
+  <tr>
+    <td>Lecture 2</td>
+    <td>Tuesday<br> Jan 05</td>
+    <td>
+      <b>Linear Algebra Primer (contd.) Vector Calculus Review</b><br>
+      Brief review of concepts from Vector Calculus.
+    </td>
+    <td>
+      <a href="./slides/02_Lin_Alg.pptx">[slides (pptx)]</a>
+    </td>
+  </tr>
+  <tr>
+    <td>Lecture 3</td>
+    <td>Monday<br> Jan 11</td>
+    <td rowspan="1">
+      <b>Optimization</b> <br>
+      Types of errors, bias-variance trade-off, overfitting-underfitting, brief review of concepts from optimization, variants of gradient descent, momentum based methods.
+    </td>
+    <td rowspan="1">
+      <a href="./slides/03_Optimization.pptx">[slides (pptx)]</a>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="5" style="color:blue;"><center>Class test-I on Module 01 on Jan 19 (Tuesday)</center></td>
+  </tr>
+  <tr>
+    <td rowspan="3">Module 02</td>
+    <td>Lecture 4</td>
+    <td>Tuesday<br> Jan 12</td>
+    <td rowspan="3">
+      <b>Artificial Neural Networks</b> <br>
+      Linear and Logistic Regression. Basic concepts of artificial neurons, single and multi layer perceptrons, perceptron learning algorithm, its convergence proof, different activation functions, softmax cross entropy loss function.
+    </td>
+    <td rowspan="3">
+      <a href="./slides/04_LinearModels.pdf">[slides (pdf)]</a> <br>
+      <a href="./slides/05_LogisticRegression-18-Jan-21.pdf">[slides (pdf)]</a> <br>
+      <a href="./slides/06_IntroMLP-18-Jan-21.pdf">[slides (pdf)]</a> <br>
+      <a href="./slides/07_MLP-4-NN-part2.pdf">[slides (pdf)]</a>
+    </td>
+  </tr>
+  <tr>
+    <td>Lecture 5</td>
+    <td>Monday<br> Jan 18</td>
+  </tr>
+  <tr>
+    <td>Lecture 6</td>
+    <td>Monday<br> Jan 25</td>
+  </tr>
+  <tr>
+    <td rowspan="3">Module 03</td>
+    <td>Lecture 7</td>
+    <td>Monday<br> Feb 01</td>
+    <td rowspan="3">
+      <b>ConvNets</b> <br>
+      ConvNets: Basic concepts of Convolutional Neural Networks starting from filetering. Convolution and pooling operation and arithmatics of these. ConvNet Architectures: Discussions on famous convnet architectures - AlexNet, ZFNet, VGG, C3D, GoogLeNet, ResNet, MobileNet-v1, EfficientNet <br>
+      Discussion on regularization, Dropout, Batchnorm etc.
+    </td>
+    <td rowspan="3">
+      <a href="./slides/08_ConvNets.pptx">[slides (pptx)]<br>
+      </a><a href="./slides/09_ConvNet_Architectures.pdf">[slides (pdf)]</a><br>
+      <a href="./slides/10_Regu_opt.pptx">[slides (pptx)]</a>
+    </td>
+  </tr>
+  <tr>
+    <td>Lecture 8</td>
+    <td>Tuesday<br> Feb 02</td>
+  </tr>
+  <tr>
+    <td>Lecture 9</td>
+    <td>Monday<br> Feb 08</td>
+  </tr>
+  <tr>
+    <td colspan="5" style="color:blue;"><center>Class test-II on Module 02 and first part of Module 03 on Feb 09 (Tuesday)</center></td>
+  </tr>
+  <tr>
+    <td rowspan="2">Module 04</td>
+    <td>Lecture 10</td>
+    <td>Monday<br> Feb 15</td>
+    <td rowspan="2">
+      <b>Recurrent Architectures</b> <br>
+      Discussion on Recurrent Neural Networks (RNNs), Long-Short Term Memory (LSTM) architectures, Attention.
+    </td>
+    <td rowspan="2">
+      <a href="./slides/11_RNN_Slides.zip">[slides (zip)]</a>
+    </td>
+  </tr>
+  <tr>
+    <td>Lecture 11</td>
+    <td>Monday<br> Feb 22</td>
+  </tr>
+  <tr>
+    <td rowspan="2">Module 05</td>
+    <td>Lecture 12</td>
+    <td>Tuesday<br> Mar 08</td>
+    <td rowspan="2">
+      <b>Applications: Detection and Segmentation</b> <br>
+      Discussion on detection, segmentation problem definition, challenges, Evaluation, Datasets and Localization by regression. Discussion on detection as classificaion, region proposals, RCNN and YOLO architectures, fully convolutional segmentations, Mask-RCNNs.
+    </td>
+    <td rowspan="2">
+      <a href="./slides/12_Detection_Segmentation_PartI.pdf">[slides (pdf)]<br>
+      </a><a href="./slides/13_Detection_Segmentation_PartII.pdf">[slides (pdf)]</a>
+    </td>
+  </tr>
+  <tr>
+    <td>Lecture 13</td>
+    <td>Monday<br> Mar 15</td>
+  </tr>
+  <tr>
+    <td colspan="5" style="color:blue;"><center>Class test-III on second part of Module 03 and Module 04 on Mar 09 (Tuesday)</center></td>
+  </tr>
+  <tr>
+    <td rowspan="3">Module 06</td>
+    <td>Lecture 14</td>
+    <td>Monday<br> Mar 16</td>
+    <td rowspan="3">
+      <b>NLP Basics and Transformers</b> <br>
+       word2vec, Transformers and Applications to NLP
+    </td>
+    <td rowspan="3">
+      <a href="./slides/14_transformer-16-Mar-21.pdf">[slides (pdf)]<br>
+      </a><a href="./slides/15_Bert-22-Mar-2021.pdf">[slides (pdf)]</a>
+    </td>
+  </tr>
+  <tr>
+    <td>Lecture 15</td>
+    <td>Tuesday<br> Mar 22</td>
+  </tr>
+  <tr>
+    <td>Lecture 16</td>
+    <td>Monday<br> Mar 23</td>
+  </tr>
+  <tr>
+    <td colspan="5" style="color:blue;"><center>Class test-IV on Module 06 on Mar 30 (Tuesday)</center></td>
+  </tr>
+  <tr>
+    <td rowspan="2">Module 07</td>
+    <td>Lecture 17</td>
+    <td>Monday<br> Apr 05</td>
+    <td rowspan="2">
+      <b>Explainability and Bias</b> <br>
+       Discussion on explainability and bias in Deep Learning system. The need for explanation, introspection vs justification, activation maximization and activation map based explanation generation, Black-box explanation generation etc. Bias in AI and in image captioning task.
+    </td>
+    <td rowspan="2">
+      <!-- <a href="#">[slides (pptx)]</a> -->
+    </td>
+  </tr>
+  <tr>
+    <td>Lecture 18</td>
+    <td>Tuesday<br> Apr 06</td>
+  </tr>
+  <tr>
+    <td rowspan="2">Module 08</td>
+    <td>Lecture 19</td>
+    <td>Monday<br> Apr 12</td>
+    <td rowspan="2">
+      <b>GAN</b> <br>
+       Stochastic AE, VAE, GAN
+    </td>
+    <td rowspan="2">
+      <!-- <a href="#">[slides (pptx)]</a> -->
+    </td>
+  </tr>
+  <tr>
+    <td>Lecture 20</td>
+    <td>Tuesday<br> Apr 13</td>
+  </tr>
+  <!--<tr>
+    <td rowspan="2">Module 09</td>
+    <td>Lecture 21</td>
+    <td>Monday<br> Apr 12</td>
+    <td rowspan="2">
+      <b>Semi and Self-Supervised Learning</b> <br>
+       Semi and self-supervised learning: Autoencoders, MoCo, Contrastive Learning, FixMatch, SimClr in Images and Videos.
+    </td>
+    <td rowspan="2">
+      <a href="#">[slides (pptx)]</a>
+    </td>
+  </tr>
+  <tr>
+    <td>Lecture 22</td>
+    <td>Tuesday<br> Apr 13</td>
+  </tr> -->
+  <!-- <tr>
+    <td>Lecture 4</td>
+    <td>Thursday<br> Jan 09</td>
+  </tr>
+  <tr>
+    <td>Lecture 5</td>
+    <td>Friday<br> Jan 10</td>
+  </tr>
+  <tr>
+    <td>Lecture 6</td>
+    <td>Wednesday<br> Jan 15</td>
+  </tr>
+  <tr>
+    <td>Lecture 7</td>
+    <td>Friday<br> Jan 17</td>
+  </tr> -->
+  <!-- <tr>
+    <td>Lecture 8</td>
+    <td>Wednesday<br> Jan 22</td>
+    <td rowspan="3">
+      <b>Logistic Regression</b> <br>
+      Basic concepts of rgression and classification problems, linear models addressing regression and classification, maximum likelihood, logistic regression classifiers.
+    </td>
+    <td rowspan="3"></td>
+    <td rowspan="3">
+      <a href="./slides/04_Logistic_Regression.pdf">[slides (pdf)]</a>
+    </td>
+  </tr>
+  <tr>
+    <td>Lecture 9</td>
+    <td>Thursday<br> Jan 23</td>
+  </tr>
+  <tr>
+    <td>Lecture 10</td>
+    <td>Friday<br> Jan 24</td>
+  </tr>
+  <tr>
+    <td>Lecture 11</td>
+    <td>Thursday<br> Jan 30</td>
+    <td rowspan="3">
+      <b>Neural Networks</b> <br>
+      Basic concepts of artificial neurons, single and multi layer perceptrons, perceptron learning algorithm, its convergence proof, different activation functions, softmax cross entropy loss function.
+    </td>
+    <td rowspan="3"></td>
+    <td rowspan="3">
+      <a href="./slides/05_Neural_Network.pptx">[slides (pptx)]</a>
+    </td>
+  </tr>
+  <tr>
+    <td>Lecture 12</td>
+    <td>Friday<br> Jan 31</td>
+  </tr>
+  <tr>
+    <td>Lecture 13</td>
+    <td>Wednesday<br> Feb 05</td>
+  </tr>
+  <tr>
+    <td>Lecture 14</td>
+    <td>Thursday<br> Feb 06</td>
+    <td rowspan="1">
+      <b>ConvNets</b> <br>
+      Basic concepts of Convolutional Neural Networks starting from filetering. Convolution and pooling operation and arithmatics of these.
+    </td>
+    <td rowspan="1"></td>
+    <td rowspan="1">
+      <a href="./slides/06_ConvNets.pptx">[slides (pptx)]</a>
+    </td>
+  </tr> -->
+
+</tbody></table>
+</div>
+
+<div class="sechighlight">
+  <div id="footer">
+    <div id="footermsg">Website design inspired by the <a href="http://cs231n.stanford.edu/">Stanford CS231 course page</a></div>
+  </div>
+</div>
+
+<!-- jQuery and Boostrap -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+
+</body></html>

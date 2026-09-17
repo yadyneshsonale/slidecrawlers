@@ -1,0 +1,472 @@
+<!DOCTYPE html><html lang="en"><head>
+        <title>Schedule Years | Course Explorer</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link type="image/x-icon" href="https://cis-data.cis.techservices.illinois.edu/images/favicon.ico" rel="icon">
+        
+    
+        
+
+
+
+<script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-X7QVZSEF1K&amp;cx=c&amp;gtm=4e66a1"></script><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-52702852-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-52702852-2');
+</script>
+
+<link rel="stylesheet" href="/static/css/cis/cis.min.css">
+
+<!--[if lte IE 9]>
+    <script src="/static/bootstrap/common/html5shiv.min.js"></script>
+    <script src="/static/bootstrap/common/respond.js"></script>
+ <![endif]-->
+
+<script src="/static/js/cis.min.js"></script>
+
+
+
+
+
+    
+    
+        
+    
+
+    </head>
+    <body>
+        
+        
+        <noscript><div id="noscript-padding"></div></noscript>
+        
+        
+        <div id="wrap">
+            
+            
+            <div role="banner">
+    <div id="header-wrap">
+        <div id="header-container" class="container">
+            <div class="row">
+                <div id="header" class="span12 hidden-xs">
+                    <a id="header-title" href="http://illinois.edu/" target="_blank">University of Illinois Urbana-Champaign</a>
+                    <ul id="login-info" class="list-unstyled list-inline pull-right">
+                        <li><b>Hello Guest</b></li>
+                        <!--<li><a href="https://illinois.edu/fb/sec/2080949">Contact Us</a></li>-->
+                        <li>
+                            
+                                <a href="/login/oidc">Login</a>
+                            
+                            
+                        </li>
+                    </ul>
+                </div>
+                <div id="header-mobile" class="span12 visible-xs-block">
+                    <a id="header-title" href="http://illinois.edu/" target="_blank">University of Illinois Urbana-Champaign</a>
+                    <br>
+                    <ul id="login-info" class="list-unstyled list-inline">
+                        <li><b>Hello Guest</b></li>
+                        <!--<li><a href="https://illinois.edu/fb/sec/2080949">Contact Us</a></li>-->
+                        <li>
+                            
+                                <a href="/login/oidc">Login</a>
+                            
+                             
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>    
+    <div id="header-brand-wrap" class="hidden-xs">
+        <div class="container">
+            <div class="row">
+                <div id="header-brand" class="col-xs-6">
+                    <a target="_blank" href="http://illinois.edu">
+                        <img alt="Illinois logo" src="https://cis-data.cis.techservices.illinois.edu/images/Illinois-Logo.png">
+                    </a>
+                    <a id="header-brand-title" class="noxs" href="/">Course Explorer</a>
+                </div>
+                <div id="header-brand" class="col-xs-6 easy-autocomplete" style="padding-top: 15px;">
+                    <form id="subjectAutoJump-form" action="/schedule/subjectjump" class="form-inline pull-right" method="post">
+                        <div class="form-group">
+                            <label id="cb1-label" for="subjectAutoJump" class="sr-only">Enter and go to subject for the enrolling term</label>
+                            <div class="easy-autocomplete" style="width: 255px;"><input id="subjectAutoJump" class="form-control" name="subjectAutoJump" placeholder="Go to subject..." role="combobox" aria-labelledby="cb1-label" aria-autocomplete="list" aria-owns="subject-jump-list" aria-readonly="false" autocomplete="off"><div class="easy-autocomplete-container" id="eac-container-subjectAutoJump"><ul id="subject-jump-list" tabindex="-1" role="listbox" aria-hidden="true" class="cb_list"></ul></div></div>
+                        </div>
+                        <button type="submit" class="btn btn-default">Go!</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="header-brand-wrap-xs" class="visible-xs-block">            
+        <div class="container">
+            <div class="row">
+                <div id="header-brand" class="span12">
+                    <a id="header-brand-title-xs" href="/">Course Explorer</a>
+                </div>
+            </div>    
+        </div>
+    </div>
+</div>
+            
+            
+            <div class="container">
+
+
+
+
+
+
+
+
+
+
+
+
+                
+                <div id="app-main-nav" class="navbar navbar-default" role="navigation" aria-label="primary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+    </div>
+    
+    <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <ul class="nav navbar-nav nav-justified">
+            
+            
+                
+                
+                    <li><a href="/">Home</a></li>
+                
+            
+                
+            
+                
+                    <li class="navbar-text">Schedule</li>
+                
+                
+            
+                
+            
+                
+                
+                    <li><a href="/gened/DEFAULT/DEFAULT">GenEd&nbsp;REQs</a></li>
+                
+            
+                
+            
+                
+                
+                    <li><a href="/search/form">Search</a></li>
+                
+            
+                
+            
+                
+                
+                    <li><a href="/resources">Resources</a></li>
+                
+                
+            
+            
+        </ul>
+        
+    </div> 
+</div> 
+
+
+
+<div id="app-content" role="main">
+    
+    
+    
+
+    <ol class="breadcrumb app-breadcrumb" role="navigation" aria-label="breadcrumbs">
+        <li class="active">schedule</li>
+    </ol>
+    
+    <h1 class="lead app-table-lead">Schedule Years</h1>
+
+    <div class="row">
+        <div class="col-sm-9">
+            
+
+            
+
+            <div id="years-dt_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer"><div class="row clearfix"><div class="col-sm-12 clearfix"><div id="years-dt_filter" class="dataTables_filter"><label><input type="search" class="form-control input-sm" placeholder="Search Table..." aria-controls="years-dt"></label></div><div class="dataTables_info" id="years-dt_info" role="status" aria-live="polite">23 entries</div></div></div><table id="years-dt" class="table table-striped table-bordered table-condensed dataTable no-footer" aria-describedby="years-dt_info" role="grid">
+                <thead>
+                    <tr role="row"><th class="sorting_desc" tabindex="0" aria-controls="years-dt" rowspan="1" colspan="1" aria-sort="descending" aria-label="YEAR: activate to sort column ascending">YEAR</th></tr>
+                </thead>
+                <tbody>
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                <tr role="row" class="odd">
+                            <td class="sorting_1">
+                                <a href="/schedule/2026">2026</a>
+                            </td>
+                        </tr><tr role="row" class="even">
+                            <td class="sorting_1">
+                                <a href="/schedule/2025">2025</a>
+                            </td>
+                        </tr><tr role="row" class="odd">
+                            <td class="sorting_1">
+                                <a href="/schedule/2024">2024</a>
+                            </td>
+                        </tr><tr role="row" class="even">
+                            <td class="sorting_1">
+                                <a href="/schedule/2023">2023</a>
+                            </td>
+                        </tr><tr role="row" class="odd">
+                            <td class="sorting_1">
+                                <a href="/schedule/2022">2022</a>
+                            </td>
+                        </tr><tr role="row" class="even">
+                            <td class="sorting_1">
+                                <a href="/schedule/2021">2021</a>
+                            </td>
+                        </tr><tr role="row" class="odd">
+                            <td class="sorting_1">
+                                <a href="/schedule/2020">2020</a>
+                            </td>
+                        </tr><tr role="row" class="even">
+                            <td class="sorting_1">
+                                <a href="/schedule/2019">2019</a>
+                            </td>
+                        </tr><tr role="row" class="odd">
+                            <td class="sorting_1">
+                                <a href="/schedule/2018">2018</a>
+                            </td>
+                        </tr><tr role="row" class="even">
+                            <td class="sorting_1">
+                                <a href="/schedule/2017">2017</a>
+                            </td>
+                        </tr><tr role="row" class="odd">
+                            <td class="sorting_1">
+                                <a href="/schedule/2016">2016</a>
+                            </td>
+                        </tr><tr role="row" class="even">
+                            <td class="sorting_1">
+                                <a href="/schedule/2015">2015</a>
+                            </td>
+                        </tr><tr role="row" class="odd">
+                            <td class="sorting_1">
+                                <a href="/schedule/2014">2014</a>
+                            </td>
+                        </tr><tr role="row" class="even">
+                            <td class="sorting_1">
+                                <a href="/schedule/2013">2013</a>
+                            </td>
+                        </tr><tr role="row" class="odd">
+                            <td class="sorting_1">
+                                <a href="/schedule/2012">2012</a>
+                            </td>
+                        </tr><tr role="row" class="even">
+                            <td class="sorting_1">
+                                <a href="/schedule/2011">2011</a>
+                            </td>
+                        </tr><tr role="row" class="odd">
+                            <td class="sorting_1">
+                                <a href="/schedule/2010">2010</a>
+                            </td>
+                        </tr><tr role="row" class="even">
+                            <td class="sorting_1">
+                                <a href="/schedule/2009">2009</a>
+                            </td>
+                        </tr><tr role="row" class="odd">
+                            <td class="sorting_1">
+                                <a href="/schedule/2008">2008</a>
+                            </td>
+                        </tr><tr role="row" class="even">
+                            <td class="sorting_1">
+                                <a href="/schedule/2007">2007</a>
+                            </td>
+                        </tr><tr role="row" class="odd">
+                            <td class="sorting_1">
+                                <a href="/schedule/2006">2006</a>
+                            </td>
+                        </tr><tr role="row" class="even">
+                            <td class="sorting_1">
+                                <a href="/schedule/2005">2005</a>
+                            </td>
+                        </tr><tr role="row" class="odd">
+                            <td class="sorting_1">
+                                <a href="/schedule/2004">2004</a>
+                            </td>
+                        </tr></tbody>
+            </table><div class="row"><div class="col-sm-12"></div></div></div>
+
+        </div> <!-- end col-sm-9 -->
+        
+        <div class="col-sm-3">
+            <div class="panel-group" id="accordionQuick">
+                <div class="panel panel-default" role="navigation" aria-label="Resources">
+    <div class="panel-heading">
+        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordionQuick" href="#collapseRes" aria-expanded="false" aria-controls="collapseRes">
+            <span class="right-caret"></span> Resources
+        </a>
+    </div>
+    <div id="collapseRes" class="panel-collapse collapse ql-tog-event" aria-hidden="true">
+        <div class="panel-body">
+            <ul class="list-unstyled">
+                <li><a target="_BLANK" href="https://apps.uillinois.edu/selfservice">Self-Service</a></li>
+                <li><a target="_BLANK" href="http://catalog.illinois.edu/">Academic Catalog</a></li>
+                <li><a target="_BLANK" href="https://go.illinois.edu/ChangingMajors">Changing Majors</a></li>
+                <li><a target="_BLANK" href="https://myillini.illinois.edu/IdentityManagement/Login">myillini</a></li>
+                <li><a target="_BLANK" href="https://registrar.illinois.edu/courses-grades/course-information/">Course Explorer Tips</a></li>
+            </ul>
+        </div>    
+    </div>
+</div>
+            </div>
+            <hr>
+<div role="navigation" aria-label="Registration Resources">
+    <ul class="list-unstyled">
+        <li>
+            <a href="http://catalog.illinois.edu/" class="btn btn-large app-btn-link">
+                Academic Catalog
+            </a>
+        </li>
+        <li>
+            <a href="http://registrar.illinois.edu/" class="btn btn-large app-btn-link app-margtop15">
+                Office <small>of the</small> Registrar
+            </a>
+        </li>
+        <li>
+            <a href="https://go.illinois.edu/RegisterForClasses" class="btn btn-large app-btn-link app-margtop15">
+                Register for Classes
+            </a>
+        </li>
+        <li>
+            <a href="https://myillini.illinois.edu/IdentityManagement/Login" class="btn btn-large app-btn-link app-margtop15">
+                myillini
+            </a>
+        </li>
+        <li>
+            <a href="https://registrar.illinois.edu/courses-grades/course-information/" class="btn btn-large app-btn-link app-margtop15">
+                Course Explorer Tips
+            </a>
+        </li>
+    </ul>
+</div>
+
+        </div> <!-- end col-sm-3 -->
+        
+    </div> <!-- end row -->
+
+    
+</div> 
+
+
+    </div> 
+
+    
+    <div id="push"></div>
+
+    </div> 
+
+    
+    <footer id="footer" role="contentinfo">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-1">
+                <a target="_blank" href="http://illinois.edu" class="pull-right">
+                    <img alt="Illinois logo" src="https://cis-data.cis.techservices.illinois.edu/images/Illinois-Logo-footer.png">
+                </a>
+            </div>
+            <div class="col-sm-11">
+                <p>
+                    <strong>
+                        <a href="http://registrar.illinois.edu/">OFFICE OF THE REGISTRAR</a>
+                    </strong> | 901 W. Illinois Street, Suite 140, Urbana, Illinois 61801</p>
+                <p>
+                    Site developed by: <strong>
+                        <a target="_blank" href="http://techservices.illinois.edu/">Technology Services at Illinois</a>
+                    </strong>  |  
+                    <a target="_blank" href="http://illinois.edu/">UNIVERSITY OF ILLINOIS URBANA-CHAMPAIGN</a>
+                </p>
+                <p>1102 Digital Computer Laboratory | MC-256 | Urbana, IL 61801 
+                    | phone <a href="tel:2172447000">217-244-7000</a> 
+                    | email <a href="https://illinois.edu/fb/sec/2080949">Course Explorer Feedback</a>
+                </p>
+                <p>
+                    <a href="https://www.vpaa.uillinois.edu/resources/web_privacy">Web Privacy Notice</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <!--OneTrust Cookies Settings button start -->
+
+    <!--OneTrust Cookies Settings button end -->
+</footer>
+
+
+<script src="https://cis-data.cis.techservices.illinois.edu/js/application.js"></script>
+
+
+
+
+
+    
+    
+    <noscript>
+        <div id="noscript-warning">Course Explorer works best with JavaScript enabled</div>
+    </noscript>
+
+    
+
+    <!--OneTrust Cookies Consent Notice (Production CDN, illinois.edu, en-GB) end -->
+
+</body></html>

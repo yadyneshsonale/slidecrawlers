@@ -1,0 +1,817 @@
+<!DOCTYPE html><html lang="en"><head>
+<title>CS626-2024</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body, h1, h2, h3, h4, h5, h6 {font-family: "Roboto", sans-serif}
+.w3-bar, h1, button {font-family: "Roboto", sans-serif}
+.fa-anchor,.fa-coffee {font-size:200px}
+.tg  {border-collapse:collapse;border-spacing:0;border-color:#ee0808;}
+.tg td{font-family:Helvetica, sans-serif;font-size:14px;padding:1px 1px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#93a1a1;color:#002b36;background-color:#fdf6e3;}
+.tg th{font-family:Helvetica, sans-serif;font-size:14px;font-weight:normal;padding:2px 1px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#93a1a1;color:#fdf6e3;background-color:#657b83;}
+.tg .tg-lboi{font-size:18px;border-color:inherit;text-align:center;vertical-align:middle}
+.tg .tg-0pky{font-size:15px;border-color:inherit;text-align:center;vertical-align:top}
+
+header {
+  color: white;
+  margin-bottom: 0;
+  padding: 40px 16px; /* Reduced padding */
+}
+
+.header-text {
+  background: white;
+  margin-bottom: 0;
+}
+
+.gradient-text {
+  background: linear-gradient(to right, #1506df, #0f9c24);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #1506df, #0f9c24);
+  padding: 10px 0;
+}
+.navbar a {
+  padding: 14px 20px;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+}
+.announcement {
+  font-size: 1.2em; /* Slightly reduced font size */
+  padding: 10px; /* Reduced padding */
+  background-color: #f9f9f9;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+  margin-top: 10px; /* Added small margin-top */
+}
+.announcement:hover {
+  background-color: #e0e0e0;
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.course-details {
+  font-size: 1.2em; /* Adjust the font size as needed */
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.course-details h1, .course-details h3 {
+  margin-top: 0;
+}
+
+.course-details p {
+  margin: 5px 0;
+}
+
+.course-details ul {
+  padding-left: 20px;
+}
+.course-description {
+  font-size: 1.2em; /* Adjust the font size as needed */
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.course-description h1, .course-description h3 {
+  margin-top: 0;
+}
+
+.course-description p {
+  margin: 5px 0;
+}
+
+.course-description ul {
+  padding-left: 20px;
+}
+.course-references {
+  font-size: 1.2em; /* Adjust the font size as needed */
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.course-references h1, .course-references h3 {
+  margin-top: 0;
+}
+
+.course-references p {
+  margin: 5px 0;
+}
+
+.course-references ul {
+  padding-left: 20px;
+}
+.course-pr {
+  font-size: 1.2em; /* Adjust the font size as needed */
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.course-pr h1, .course-pr h3 {
+  margin-top: 0;
+}
+
+.course-pr p {
+  margin: 5px 0;
+}
+
+.course-pr ul {
+  padding-left: 20px;
+}
+.course-instructor {
+  font-size: 1.2em; /* Adjust the font size as needed */
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.course-instructor h1, .course-instructor h3 {
+  margin-top: 0;
+}
+
+.course-instructor p {
+  margin: 5px 0;
+}
+
+.course-instructor ul {
+  padding-left: 20px;
+}
+.course-tas {
+  font-size: 1.2em; /* Adjust the font size as needed */
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.course-tas h1, .course-tas h3 {
+  margin-top: 0;
+}
+
+.course-tas p {
+  margin: 5px 0;
+}
+
+.course-tas ul {
+  padding-left: 20px;
+}
+
+.course-contact, .course-footer {
+  font-size: 1.2em; /* Adjust the font size as needed */
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.course-contact h2, .course-footer h2 {
+  margin-top: 0;
+}
+
+.course-contact ul, .course-footer ul {
+  padding-left: 20px;
+}
+
+.gradient-text {
+  background: linear-gradient(to right, #1506df, #0f9c24);
+  -webkit-background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+
+/* Flexbox for TAs */
+.course-tas .ta-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.course-tas .ta-wrapper .ta {
+  text-align: center;
+  flex: 1 1 150px;
+  max-width: 150px;
+}
+
+.course-tas .ta-wrapper .ta img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
+@media (max-width: 600px) {
+  .navbar a {padding: 10px; font-size: 14px;}
+}
+</style>
+<script>
+var newwindow;
+function poptastic(url)
+{
+  newwindow=window.open(url,'name','height=600,width=400');
+  if (window.focus) {newwindow.focus()}
+}
+
+function scrollToSection(id) {
+  var element = document.getElementById(id);
+  var headerOffset = 70;
+  var elementPosition = element.getBoundingClientRect().top;
+  var offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+  window.scrollTo({
+    top: offsetPosition,
+    behavior: "smooth"
+  });
+}
+</script>
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="navbar w3-card">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="javascript:scrollToSection('about')" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
+    <a href="javascript:scrollToSection('instructor')" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Instructor</a>
+    <a href="javascript:scrollToSection('materials')" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Course Materials</a>
+    <a href="javascript:scrollToSection('ta')" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">TAs</a>
+    <a href="javascript:scrollToSection('office-hour')" class="w3-bar-item w3-button w3-padding-large">Office Hours</a>
+    <a href="javascript:scrollToSection('contact')" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Contact Us</a>
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+    <a href="javascript:scrollToSection('about')" class="w3-bar-item w3-button w3-padding-large">Home</a>
+    <a href="javascript:scrollToSection('instructor')" class="w3-bar-item w3-button w3-padding-large">Instructor</a>
+    <a href="javascript:scrollToSection('materials')" class="w3-bar-item w3-button w3-padding-large">Course Materials</a>
+    <a href="javascript:scrollToSection('ta')" class="w3-bar-item w3-button w3-padding-large">TAs</a>
+    <a href="javascript:scrollToSection('office-hour')" class="w3-bar-item w3-button w3-padding-large">Office Hours</a>
+    <a href="javascript:scrollToSection('contact')" class="w3-bar-item w3-button w3-padding-large">Contact Us</a>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="w3-container w3-center header-text" style="padding:60px 2.5px; background: white;">
+    <h1 class="w3-margin w3-jumbo gradient-text"><b>CS626: Speech, Natural Language Processing and the Web</b></h1>
+    <p class="w3-xxlarge gradient-text"><b>Autumn, 2024</b></p>
+</header>
+
+<!-- About Section -->
+<section id="about" class="w3-row-padding w3-container">
+  <div class="w3-content">
+    <div class="announcement">
+        <h1 class="gradient-text"><b>Announcements</b></h1>
+        <p><span style="color: blue;">Join the MS Teams using the code (Use IITB ID): <b>74m0vuk</b></span></p>
+        <p><span style="color: red;">Previous iterations of the course: 
+          <a href="https://www.cfilt.iitb.ac.in/~cs626_2023/" style="color: rgb(8, 139, 58);" target="_blank">2023</a> |
+          <a href="https://www.cse.iitb.ac.in/~cs626/2022/" style="color: teal;" target="_blank">2022</a> |
+          <a href="https://www.cfilt.iitb.ac.in/~cs626-2021/" style="color: teal;" target="_blank">2021</a> |
+        </span></p>
+    </div>
+    <hr>
+    <div class="course-details">
+        <h2 class="gradient-text"><b>Course Details:</b></h2>
+        <p><b>CS626: Speech, Natural Language Processing and the Web (Autumn, 2024)</b></p>
+        <p>Department of Computer Science and Engineering</p>
+        <p><a href="http://iitb.ac.in/" target="_blank">Indian Institute of Technology Bombay</a></p>
+        <h2 class="gradient-text"><b>Time Table and Venue:</b></h2>
+        <ul>
+          <li><b>Slot:</b> 12</li>
+          <li><b>Venue:</b> LA001</li>
+          <li><b>Monday</b>:  17:30  to 19:00 </li>
+          <li><b>Thursday</b>:  17:30  to 19:00 </li>
+        </ul>
+    </div>
+    <hr>
+    <div class="course-description">
+        <h2 class="gradient-text"><b>Course Description:</b></h2>
+        <p>The general approach in the course will be covering the following:</p>
+        <ol>
+            <li>A language phenomenon.</li>
+            <li>The corresponding language processing task.</li>
+            <li>Techniques based on deep learning, classical machine learning, and knowledge base.</li>
+        </ol>
+        <p>On one hand we will understand the language processing task in detail using linguistics, cognitive science, utility etc., on the other hand we will delve deep into techniques for solving the problem. In keeping with current trends, the lectures will make heavy reference to Large Language Models. The topics are given below - </p>
+        <hr>
+        <ul>
+            <li>Sound: Biology of Speech Processing; Place and Manner of Articulation; Peculiarities of Vowels and Consonants; Word Boundary Detection; Argmax based computations; Hidden Markov Model and Speech Recognition; deep neural nets for speech processing.</li>
+            <li>Morphology: Morphology fundamentals; Isolating, Inflectional, Agglutinative morphology; Infix, Prefix and Postfix Morphemes, Morphological Diversity of Indian Languages; Morphology Paradigms; Rule Based Morphological Analysis: Finite State Machine Based Morphology; Automatic Morphology Learning; Deep Learning based morphology analysis.</li>
+            <li>Shallow Parsing: Part of Speech (POS) Tagging; HMM based POS tagging; Maximum Entropy Models and POS; Random Fields and POS; DNN for POS.</li>
+            <li>Parsing: Constituency and Dependency Parsing; Theories of Parsing; Scope Ambiguity and Attachment Ambiguity Resolution; Rule Based Parsing Algorithms; Probabilistic Parsing; Neural Parsing.</li>
+            <li>Meaning: Lexical Knowledge Networks, Wordnet Theory and Indian Language Wordnets; Semantic Roles; Word Sense Disambiguation; Metaphors.</li>
+            <li>Discourse and Pragmatics: Coreference Resolution; Cohesion and Coherence.</li>
+            <li>Applications: Machine Translation; Sentiment and Emotion Analysis; Text Entailment; Question Answering; Code Mixing; Analytics and Social Networks, Information Retrieval and Cross Lingual Information Retrieval (IR and CLIR).</li>
+        </ul>
+    </div>
+    <hr>
+    <div class="course-references">
+        <h2 class="gradient-text"><b>References:</b></h2>
+        <ul>
+            <li>Pushpak Bhattacharyya and Aditya Madhav Joshi, Natural Language Processing, Print ISBN: 978-93-5746-283-9 eISBN: 978-93-5746-239-6, Wiley India, 2023.</li>
+            <li>Allen, James, Natural Language Understanding, Second Edition, Benjamin/Cumming, 1995.</li>
+            <li>Charniack, Eugene, Statistical Language Learning, MIT Press, 1993.</li>
+            <li>Jurafsky, Dan and Martin, James, Speech and Language Processing, Speech and Language Processing (3rd ed. draft), Draft chapters in progress, October 16, 2019.</li>
+            <li>Manning, Christopher and Heinrich, Schutze, Foundations of Statistical Natural Language Processing, MIT Press, 1999.</li>
+            <li>Jacob Eisenstein, Introduction to Natural Language Processing, MIT Press, 2019.</li>
+            <li>Deep Learning, Ian Goodfellow, Yoshua Bengio, and Aaron Courville, MIT Press, 2016.</li>
+            <li>Radford, Andrew et. al., Linguistics, an Introduction, Cambridge University Press, 1999.</li>
+            <li>Pushpak Bhattacharyya, Machine Translation, CRC Press, 2017.</li>
+            <li>Journals: Computational Linguistics, Natural Language Engineering, Machine Learning, Machine Translation, Artificial Intelligence.</li>
+            <li>Conferences: Annual Meeting of the Association of Computational Linguistics (ACL), Computational Linguistics (COLING), European ACL (EACL), Empirical Methods in NLP (EMNLP), Annual Meeting of the Special Interest Group in Information Retrieval (SIGIR), Human Language Technology (HLT).</li>
+        </ul>
+    </div>
+    <hr>
+    <div class="course-pr">    
+        <h2 class="gradient-text"><b>Pre-requisites</b></h2>
+        <ul>
+            <li>Data Structures and Algorithms</li>
+            <li>Python (or similar language) Programming skill</li>
+        </ul>
+    </div>
+    <hr>
+</div></section>
+
+<!-- Instructors Section -->
+<section id="instructor" class="w3-row-padding w3-container">
+    <div class="w3-content">
+		<div class="course-instructor">
+            <h2 class="gradient-text"><b>Course Instructor</b></h2>
+            <div style="text-align: left;">
+                <img src="images/p.png" alt="Prof. Pushpak Bhattacharyya" style="width:150px;height:150px;border-radius:50%;"><br>
+                <a href="https://www.cse.iitb.ac.in/~pb/" target="_blank"><font color="teal">Prof. Pushpak Bhattacharyya</font></a>
+            </div>
+    </div>    
+</div></section>
+<hr>
+
+<!-- TAs Section -->
+
+<section id="ta" class="w3-row-padding w3-container">
+	<div class="w3-content">
+        <div class="course-tas">
+            <h2 class="gradient-text"><b>Teaching Assistants</b></h2>
+            <div class="ta-wrapper">
+                <div class="ta">
+                    <img src="images/ta1.jpg" alt="Settaluri Sravanthi"><br>
+                    <a href="https://www.linkedin.com/in/sravanthi-settaluri-83a48714/" target="_blank"><font color="teal">Settaluri Sravanthi</font></a>
+                </div>
+                <div class="ta">
+                    <img src="images/ta2.jpg" alt="Nihar Ranjan Sahoo"><br>
+                    <a href="https://sahoonihar.github.io/" target="_blank"><font color="teal">Nihar Ranjan Sahoo</font></a>
+                </div>
+                <div class="ta">
+                    <img src="https://yourarnav.github.io/cs626-website/1.jpg" alt="Arnav Attri"><br>
+                    <a href="https://cuteasduck.notion.site/TA-CS-626-d5d96ce8cc464f5dae095273f881d6eb" target="_blank"><font color="teal">Arnav Attri</font></a>
+                </div>
+                <div class="ta">
+                    <img src="https://yourarnav.github.io/cs626-website/4.jpg" alt="Anuj Attri"><br>
+                    <a href="https://cuteasduck.notion.site/Anuj-TA-CS-626-81f4facc5f02455f871aa5eaed2435e8" target="_blank"><font color="teal">Anuj Attri</font></a>
+                </div>
+                <div class="ta">
+                    <img src="images/harshvivek.jpg" alt="Harshvivek Kashid"><br>
+                    <a href="https://www.linkedin.com/in/harshvivek-kashid" target="_blank"><font color="teal">Harshvivek Kashid</font></a>
+                </div>
+                <div class="ta">
+                    <img src="images/sneha.jpeg" alt="Sneha Oram"><br>
+                    <a href="https://www.linkedin.com/in/sneha-oram-a85b2866" target="_blank"><font color="teal">Sneha Oram</font></a>
+                </div>
+                <div class="ta">
+                    <img src="images/aashay.jpeg" alt="Aashay Sandansing"><br>
+                    <a href="https://www.linkedin.com/in/aashay-sandansing" target="_blank"><font color="teal">Aashay Sandansing</font></a>
+                </div>
+                <div class="ta">
+                    <img src="images/satyam.jpeg" alt="Satyam Kumar"><br>
+                    <a href="https://satyamkumarr.github.io/" target="_blank"><font color="teal">Satyam Kumar</font></a>
+                </div>
+                <div class="ta">
+                    <img src="images/manishit.jpg" alt="Manishit Kundu"><br>
+                    <a href="https://www.linkedin.com/in/manishit-kundu-508395221" target="_blank"><font color="teal">Manishit Kundu</font></a>
+                </div>
+                <div class="ta">
+                    <img src="images/anshul.jpeg" alt="Anshul"><br>
+                    <a href="https://www.cse.iitb.ac.in/~anshulchavda/" target="_blank"><font color="teal">Anshul Chavda</font></a>
+                </div>
+                <div class="ta">
+                    <img src="images/aditya.jpeg" alt="Aditya Tomar"><br>
+                    <a href="https://www.linkedin.com/in/aditya20t/" target="_blank"><font color="teal">Aditya Tomar</font></a>
+                </div>
+
+
+                <div class="ta">
+                    <img src="images/tousin.jpg" alt="Md. Tousin Akhter"><br>
+                    <a href="https://www.linkedin.com/in/tousinakhter" target="_blank"><font color="teal">Md. Tousin Akhter</font></a>
+                </div>
+                <div class="ta">
+                    <img src="images/kishan.jpeg" alt="kishan-maharaj"><br>
+                    <a href="https://www.linkedin.com/in/kishan-maharaj" target="_blank"><font color="teal">Kishan Maharaj</font></a>
+                </div>
+                <div class="ta">
+                    <img src="images/hk.jpeg" alt="Hemnath"><br>
+                    <a href="https://www.linkedin.com/in/kotaprolu-hemanth-582b511a6" target="_blank"><font color="teal">Hemanth Kotaprolu</font></a>
+                </div>
+                <div class="ta">
+                    <img src="images/spandan.jpeg" alt="Spandan"><br>
+                    <a href="https://www.linkedin.com/in/spandan-anaokar-043918251" target="_blank"><font color="teal">Spandan Anaokar</font></a>
+                </div>
+                <div class="ta">
+                    <img src="images/shinde.jpeg" alt="Abhishek"><br>
+                    <a href="https://www.linkedin.com/in/abhishek-shinde-942a67195/" target="_blank"><font color="teal">Abhishek Shinde</font></a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<hr>
+
+
+
+  
+<section id="office-hour" class="w3-row-padding w3-container">
+  <div class="w3-content">
+    <div style="font-family: Arial, sans-serif; padding: 20px;">
+      <h2 class="gradient-text"><b>Office Hours Schedule</b></h2>
+  
+      <div style="margin-bottom: 20px;">
+          <strong>Professor Pushpak Bhattacharyya:</strong> 
+          <span>Tuesday, 15:00 - 16:00, New CSE 510</span>
+      </div>
+  
+      <h3>TAs Office Hours:</h3>
+  
+      <ul style="list-style-type: none; padding: 0;">
+          <li style="margin-bottom: 10px;"><strong>Tousin &amp; Harsh:</strong> Monday, 14:00 - 15:00, CFILT</li>
+          <li style="margin-bottom: 10px;"><strong>Manishit &amp; Hemanth:</strong> Friday, 15:45 - 16:45, CFILT</li>
+          <li style="margin-bottom: 10px;"><strong>Anshul &amp; Nihar:</strong> Friday, 13:00 - 14:00, CFILT</li>
+          <li style="margin-bottom: 10px;"><strong>Kishan &amp; Yash:</strong> Thursday, 14:00 - 15:00, CFILT</li>
+          <li style="margin-bottom: 10px;"><strong>Sravanthi &amp; Abishek:</strong> Thursday, 15:00 - 16:00, CFILT</li>
+          <li style="margin-bottom: 10px;"><strong>Spandan &amp; Shrey:</strong> Friday, 11:30 - 12:30, CFILT</li>
+          <li style="margin-bottom: 10px;"><strong>Sneha &amp; Aditya:</strong> Wednesday, 16:00 - 17:00, CFILT</li>
+          <li style="margin-bottom: 10px;"><strong>Aashay &amp; Anuj:</strong> Friday, 14:30 - 15:30, CFILT</li>
+          <li style="margin-bottom: 10px;"><strong>Satyam &amp; Arnav:</strong> Friday, 14:30 - 15:30, CFILT</li>
+      </ul>
+  
+      <div style="margin-top: 20px;">
+          <strong>CFILT LAB:</strong> Room Number 401, 4th Floor, New CC Building
+      </div>
+  </div>
+  
+  </div>
+</section>
+<hr>
+
+
+
+<section id="materials" class="w3-row-padding w3-container">
+	<div class="w3-content">
+		 <div class="materials" "="">
+            <h2 class="gradient-text"><b>Course Materials</b></h2>
+
+            <table class="schedule" _base_target="_blank" style="margin-top: 10px; margin-bottom: 10px;" border="1" cellspacing="0">
+                <colgroup> <col style="vertical-align: top; text-align:center;" width="13%"> <col style="vertical-align: top; text-align:center;" width="40%"> <col style="vertical-align: top; text-align: left;" width="15%">  </colgroup>
+                    <tbody _base_target="_blank">
+                        <tr _base_target="_blank">
+                            <th style="text-align: center;" _base_target="_blank">Lecture</th>
+                            <th style="text-align: center;" _base_target="_blank">Topics</th>
+                            <th style="text-align: center;" _base_target="_blank">Slide links</th>
+                            <th style="text-align: center;" _base_target="_blank">Video Links</th>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;"> Week 1<br>(Week of 29th July) <br>
+                            </td>
+                            <td style="text-align: left;">
+                                <ul>
+                                    <li>  Introduction &amp; Course Logistics </li>
+                                    <li>  Language Modelling </li>
+                                </ul>
+                            </td>
+                            <td style="text-align: center;">
+                                <a target="_blank" style="text-align: center;" href="Lectures/cs626-intro-baby-language-lm-week-of-29jul24.pdf">Week 1</a>
+                            </td>
+                            <td style="text-align: center;">
+                                <a target="_blank" style="text-align: center;" href="https://youtu.be/ppsWukGQUFU?si=u2CUc6p37kE0WEOb">Lecture 1</a>
+                                <br>
+                                <a target="_blank" style="text-align: center;" href="https://youtu.be/TXNKr_fbdY8?si=5Eg8vWmSyMJDRUcZ">Lecture 2</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;"> Week 2<br>(Week of 5th Aug) <br>
+                            </td>
+                            <td style="text-align: left;">
+                                <ul>
+                                    <li>  POS Tagging (PART-1) </li>
+                                    <li>  POS Tagging (PART-2) | Hidden Markov Model </li>
+                                </ul>
+                            </td>
+                            <td style="text-align: center;">
+                                <a target="_blank" style="text-align: center;" href="Lectures/2-cs626-pos-hmm-bayes-week-of-5aug24.pdf">Week 2</a>
+                            </td>
+                            <td style="text-align: center;">
+                                <a target="_blank" style="text-align: center;" href="https://youtu.be/fdHLGsQa9Kw">Lecture 3</a>
+                                <br>
+                                <a target="_blank" style="text-align: center;" href="https://youtu.be/Ckqx1uRiQ2k">Lecture 4</a>
+                            </td>
+                        </tr>
+
+                        <tr>
+                          <td style="text-align: center;"> Week 3<br>(Week of 12th Aug) <br>
+                          </td>
+                          <td style="text-align: left;">
+                              <ul>
+                                  <li>  POS Tagging (PART-3) | Viterbi Algorithm </li>
+                                 
+                              </ul>
+                          </td>
+                          <td style="text-align: center;">
+                              <a target="_blank" style="text-align: center;" href="Lectures/3-cs626-pos-cntd-P-R-week-of-12aug24.pdf">Week 3</a>
+                          </td>
+                          <td style="text-align: center;">
+                              <a target="_blank" style="text-align: center;" href="https://youtu.be/NRv8hELscp0">Lecture 5</a>
+                              <!-- <br> -->
+                              <!-- <a  target="_blank" style="text-align: center;" href="https://youtu.be/Ckqx1uRiQ2k?si=Ouf7xqOY4rhLePJ7">Lecture 4</a> -->
+                          </td>
+                      </tr>
+
+                      <tr>
+                        <td style="text-align: center;"> Week 4<br>(Week of 19th Aug) <br>
+                        </td>
+                        <td style="text-align: left;">
+                            <ul>
+                                <li>  Discriminative POS Tagging </li>
+                                <li>  POS Tagging using Conditional Random Fields (CRF)</li>
+                               
+                            </ul>
+                        </td>
+                        <td style="text-align: center;">
+                            <a target="_blank" style="text-align: center;" href="Lectures/4-cs626-discriminative-pos-crf-need-for-pos-week-of-19aug24.pdf">Week 4</a>
+                        </td>
+                        <td style="text-align: center;">
+                  
+                            <a target="_blank" style="text-align: center;" href="https://www.youtube.com/watch?v=mVKoRBgiayo">Lecture 6</a>
+                            <br>
+                            <a target="_blank" style="text-align: center;" href="https://www.youtube.com/watch?v=XDEh_9OptQk">Lecture 7</a>
+                        </td>
+                    </tr>
+
+                    <tr>
+                      <td style="text-align: center;"> Week 5<br>(Week of 26th Aug) <br>
+                      </td>
+                      <td style="text-align: left;">
+                          <ul>
+                              <li>  Parsing | Constituency &amp; Dependency Parsing </li>
+                              <!-- <li>  Constituency & Dependency Parsing | CYK Algo </li> -->
+                             
+                          </ul>
+                      </td>
+                      <td style="text-align: center;">
+                          <a target="_blank" style="text-align: center;" href="Lectures/5-cs626-parsing-start-week-of-26aug24.pdf">Week 5</a>
+                      </td>
+                      <td style="text-align: center;">
+                          <a target="_blank" style="text-align: center;" href="https://youtu.be/ysFgt71kHSU?si=8Gckj9D70ZO6AAc-">Lecture 8</a> 
+                    
+                      </td>
+                  </tr>
+
+                  <tr>
+                    <td style="text-align: center;"> Week 6<br>(Week of 2nd Sept) <br>
+                    </td>
+                    <td style="text-align: left;">
+                        <ul>
+                            <li>  Constituency &amp; Dependency Parsing | CYK Algo </li>
+                            <li>  Grammar and Parsing Algorithms | Probabilistic Parsing </li>                           
+                        </ul>
+                    </td>
+                    <td style="text-align: center;">
+                        <a target="_blank" style="text-align: center;" href="Lectures/6-cs626-probabilistic-parsing-week-of-2sep24.pdf">Week 6</a>
+                    </td>
+                    <td style="text-align: center;">
+                      <a target="_blank" style="text-align: center;" href="https://youtu.be/3uU07pOOyuA?si=CRBd99M5uJpAn8CG">Lecture 9</a>
+                       <br>
+                      <a target="_blank" style="text-align: center;" href="https://youtu.be/jLxxuWIWGjY?si=xcTlVpql7LS7g4u_">Lecture 10</a> 
+                    </td>
+                </tr>
+
+                <tr>
+                  <td style="text-align: center;"> Week 7<br>(Week of 9th Sept) <br>
+                  </td>
+                  <td style="text-align: left;">
+                      <ul>
+                          <li>  Probabilistic Parsing Cont'd | Expectation Maximization </li>
+                          <li>  Probabilistic Parsing Cont'd | Inside-Outside Algorithm</li>                           
+                      </ul>
+                  </td>
+                  <td style="text-align: center;">
+                      <a target="_blank" style="text-align: center;" href="Lectures/7-cs626-probabilistic-parsing-em-week-of-9sep24.pdf">Week 7</a>
+                  </td>
+                  <td style="text-align: center;">
+                    <a target="_blank" style="text-align: center;" href="https://youtu.be/cDfT70xn_VM?si=U_VDJ9do_W25ZkdV">Lecture 11</a>
+                     <br>
+                    <a target="_blank" style="text-align: center;" href="https://youtu.be/qdEgnvz6Os8?si=FlddhcfHqzdA0491">Lecture 12</a> 
+                  </td>
+              </tr>
+
+              <tr>
+                <td style="text-align: center;"> Week 8<br>(Week of 23rd Sept) <br>
+                </td>
+                <td style="text-align: left;">
+                    <ul>
+                        <li>  Introduction to Machine Translation by Sourabh Deoghare </li>
+                        <li>  Machine Translation and Evaluation</li>                           
+                    </ul>
+                </td>
+                <td style="text-align: center;">
+                    <a target="_blank" style="text-align: center;" href="Lectures/8-cs626-mt-intro-and-paradigms-week-of-23sep24.pdf">Week 8</a>
+                </td>
+                <td style="text-align: center;">
+                  <a target="_blank" style="text-align: center;" href="https://youtu.be/PEeprMyj9E0?si=0ax_TR9BqN6_pqXn">Lecture 13</a>
+                   <br>
+                  <a target="_blank" style="text-align: center;" href="https://youtu.be/8BTk9ERyEKI?si=4Hagu6eIWdcCmWDZ">Lecture 14</a> 
+                </td>
+            </tr>
+            <tr>
+              <td style="text-align: center;"> Week 9<br>(Week of 30th Sept) <br>
+              </td>
+              <td style="text-align: left;">
+                  <ul>
+                      <li>   Machine Translation - Language Divergence and Evaluation </li>
+                      <li>  Machine Translation - Evaluation </li>                           
+                  </ul>
+              </td>
+              <td style="text-align: center;">
+                  <a target="_blank" style="text-align: center;" href="Lectures/9-cs626-mt-ld-evaluation-bridge-problem-week-of-30sep24.pdf">Week 9</a>
+              </td>
+              <td style="text-align: center;">
+                <a target="_blank" style="text-align: center;" href="https://youtu.be/nH7YEhRrmww?si=g1jvoMNacCpqEdi-">Lecture 15</a>
+                 <br>
+                <a target="_blank" style="text-align: center;" href="https://youtu.be/624qq08s3t0?si=PRGnnvp__mESgHxL">Lecture 16</a> 
+              </td>
+          </tr>
+              
+          <tr>
+            <td style="text-align: center;"> Week 10<br>(Week of 7th Oct) <br>
+            </td>
+            <td style="text-align: left;">
+                <ul>
+                    <li>   Bias Detection, Mitigation &amp; Metrics by Nihar Ranjan Sahoo </li>
+                    <li>  Bias &amp; Hypothesis Testing </li>                           
+                </ul>
+            </td>
+            <td style="text-align: center;">
+                <a target="_blank" style="text-align: center;" href="Lectures/10-cs626-bias-ht-week-of-7oct24.pdf">Week 10</a>
+            </td>
+            <td style="text-align: center;">
+              <a target="_blank" style="text-align: center;" href="https://youtu.be/UakPjtRIfj4?si=kvzRuIel_vq7E3Tn">Lecture 17</a>
+               <br>
+              <a target="_blank" style="text-align: center;" href="https://youtu.be/iRuk2yjA_1U?si=k-MhlLnjiySYk0d9">Lecture 18</a> 
+            </td>
+        </tr>
+
+        <tr>
+          <td style="text-align: center;"> Week 11<br>(Week of 14th Oct) <br>
+          </td>
+          <td style="text-align: left;">
+              <ul>
+                  <li>   Hypothesis Testing </li>
+                  <li>  Hypothesis Testing (PART 2) </li>                           
+              </ul>
+          </td>
+          <td style="text-align: center;">
+              <a target="_blank" style="text-align: center;" href="Lectures/11-cs626-hypothesis-testing-week-of-14oct24.pdf">Week 11</a>
+          </td>
+          <td style="text-align: center;">
+            <a target="_blank" style="text-align: center;" href="https://youtu.be/EfJSbSVg1dg?si=S0qSm_u7IJXTwAja">Lecture 19</a>
+             <br>
+            <a target="_blank" style="text-align: center;" href="https://youtu.be/qmYdEjXUZIc?si=Dke0GpjkyixdvCjV">Lecture 20</a> 
+          </td>
+      </tr>
+
+      <tr>
+        <td style="text-align: center;"> Week 12<br>(Week of 21st Oct) <br>
+        </td>
+        <td style="text-align: left;">
+            <ul>
+                <li>   PROMPT, Central Limit Theorem </li>
+                <!-- <li>  Hypothesis Testing (PART 2) </li>                            -->
+            </ul>
+        </td>
+        <td style="text-align: center;">
+            <a target="_blank" style="text-align: center;" href="Lectures/12-cs626-chatgpt-pramaana-clt-loln-dp-week-of-21oct24.pdf">Week 12</a>
+        </td>
+        <td style="text-align: center;">
+          <a target="_blank" style="text-align: center;" href="https://www.youtube.com/watch?v=LsZ8FOJnv8Y">Lecture 21</a>
+           <!-- <br>
+          <a  target="_blank" style="text-align: center;" href="https://youtu.be/qmYdEjXUZIc?si=Dke0GpjkyixdvCjV">Lecture 20</a>  -->
+        </td>
+    </tr>
+
+    <tr>
+      <td style="text-align: center;"> Week 13<br>(Week of 28th Oct) <br>
+      </td>
+      <td style="text-align: left;">
+          <ul>
+              <li> Parsing Cont'd | Dependency Tree | Projectivity </li>
+              <li>  Universal Dependency Tree | Named-Entity Recognition (NER) </li> 
+              <li>Named-Entity Recognition (NER) | Lexical Knowledge Network </li>
+              <li>Wordnet | Course Recap</li>
+          </ul>
+      </td>
+      <td style="text-align: center;">
+          <a target="_blank" style="text-align: center;" href="Lectures/13-cs626-dp-ner-knowledge-nw-week-of-28oct24.pdf">Week 13</a>
+      </td>
+      <td style="text-align: center;">
+        <a target="_blank" style="text-align: center;" href="https://youtu.be/76xnui79GrM?si=pTZFCVFTYxXAvVXl">Lecture 22</a>
+         <br>
+        <a target="_blank" style="text-align: center;" href="https://youtu.be/MvF11mwjeVk?si=wucVt9Hex2355xKA">Lecture 23</a> 
+        <br>
+        <a target="_blank" style="text-align: center;" href="https://youtu.be/C6xOw1jRZ9w?si=47lvAwGuIbrKiTmL">Lecture 24</a> 
+
+        <br>
+        <a target="_blank" style="text-align: center;" href="https://youtu.be/pMJvS_VVDzs?si=ofo49DtAd20Fw5GR">Lecture 25</a> 
+
+      </td>
+  </tr>
+
+              </tbody>
+            </table>
+              
+        </div> 
+    </div>
+</section>
+
+
+
+
+<hr>
+
+<!-- Contact Section -->
+<section id="contact" class="w3-row-padding w3-container">
+    <div class="w3-content">
+	    <div class="course-contact">
+            <h2 class="gradient-text"><b>Contact Us</b></h2>
+            <ul>
+                <li><a href="http://www.cfilt.iitb.ac.in/" target="_blank"><font color="blue">CFILT Lab</font></a></li>
+                <li>Room Number: 401, 4th Floor, new CC building</li>
+                <li>Department of Computer Science and Engineering</li>
+                <li>Indian Institute of Technology Bombay</li>
+                <li>Mumbai 400076, India</li>
+            </ul>
+        </div>
+    </div>        
+</section>
+<hr>
+
+<footer class="w3-container w3-padding-64 w3-center w3-opacity">
+    🌲 Designed by <i>Arnav Attri &amp; Anuj Attri</i> 🌲<br>
+    🌲 Managed by <i> Harshvivek Kashid</i> 🌲<br>
+    Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3schools.com</a>
+</footer>
+<script>
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+
+
+
+</body></html>

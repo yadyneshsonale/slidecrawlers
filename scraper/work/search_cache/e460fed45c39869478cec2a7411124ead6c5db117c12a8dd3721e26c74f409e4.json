@@ -1,0 +1,52 @@
+[
+{
+"url": "https://www.cse.iitk.ac.in/users/sigml/lec/Slides/Ram.pdf",
+"title": "[PDF] Introduction to Deep Learning - CSE - IIT Kanpur",
+"description": "\u2022 Inspiration from mammal brain \u2022 Multiple Layers of \u201cneurons\u201d (Rumelhart et al 1986) \u2022 Train each layer to compose the representations of the previous layer to learn a higher level abstraction \u2022 Ex: Pixels \uf0e0Edges \uf0e0Contours \uf0e0Object parts \uf0e0Object categories \u2022 Local Features \uf0e0Global Features \u2022 Train the layers one-by-one (Hinton et al 2006) \u2022 Greedy strategy 7 Multilayer Perceptron with Back-propagation First deep learning model (Rumelhart, Hinton, Williams 1986) input vector hidden layers outputs Back-propagate error signal to get derivatives for learning Compare outputs with correct answer to get error signal Source: Hinton\u2019s 2009 tutorial on Deep Belief Networks 8 Drawbacks of Back-propagation based Deep Neural Networks \u2022 They are discriminative models \u2022 Get all the information from the labels \u2022 And the labels don\u2019t give so much of information \u2022 Need a substantial amount of labeled data \u2022 Gradient descent with random initialization leads to poor local minima Hand-written digit recognition \u2022 Classification of MNIST hand-written digits \u2022 10 digit classes \u2022 Input image: 28x28 gray scale \u2022 784 dimensional input A Deeper Look at the Problem \u2022 One hidden layer with 500 neurons => 784 * 500 + 500 * 10 \u2248 0.4 million weights \u2022 Fitting a model that best explains the training data is an optimization problem in a 0.4 million dimensional space \u2022 It\u2019s almost impossible for Gradient descent with random initialization to arrive at the global optimum A Solution \u2013 Deep Belief Networks (Hinton et al."
+},
+{
+"url": "https://www.youtube.com/watch?v=Uq-LONPtlWQ",
+"title": "Lecture 25 : Part 1 - Deep Learning Methods-I - YouTube",
+"description": "Lecture 25 : Part 1 - Deep Learning Methods-I. 1.1K views \u00b7 1 year ago ...more. IIT KANPUR-NPTEL. 105K. Subscribe. 4. Share. Save."
+},
+{
+"url": "https://www.youtube.com/watch?v=8UCi5ErK6sQ",
+"title": "Lecture 34 : Part 1 - Advanced Deep Learning-I - YouTube",
+"description": "Lecture 34 : Part 1 - Advanced Deep Learning-I. 833 views \u00b7 1 year ago ...more. IIT KANPUR-NPTEL. 104K. Subscribe. 4. Share. Save."
+},
+{
+"url": "https://www.youtube.com/watch?v=6OVF9oHOhrA",
+"title": "Lecture 34 : Part 2 - Advanced Deep Learning-II - YouTube",
+"description": "Lecture 34 : Part 2 - Advanced Deep Learning-II. 595 views \u00b7 1 year ago ...more. IIT KANPUR-NPTEL. 104K. Subscribe. 2. Share. Save."
+},
+{
+"url": "https://www.scribd.com/document/736529026/IITK-PCC-GenAI-AIML",
+"title": "IIT Kanpur Generative AI & ML Course - Artificial Intelligence - Scribd",
+"description": "Learn how to apply machine learning and deep learning techniques to NLP. Execute text-to-speech conversion with automated speech recognition."
+},
+{
+"url": "https://www.slideshare.net/slideshow/deep-learningpptx-258697551/258697551",
+"title": "Deep learning.pptx",
+"description": "The document discusses deep learning as a subset of machine learning based on artificial neural networks, explaining its architecture, the learning process,"
+},
+{
+"url": "https://www.cse.iitm.ac.in/~miteshk/CS6910.html",
+"title": "CS6910/CS7015: Deep Learning - CSE IIT Madras",
+"description": "| Anushka Singh | AI4Bharat | cs22s015@smail.iitm.ac.in | 3-4 pm | Tuesday, Thursday |. | Bibhuti Majhi | AI4Bharat | cs22m031@smail.iitm.ac.in | 2-4 pm | Wednesday |. | Sarthak Naithani | AI4Bharat | cs22m078@smail.iitm.ac.in | 3-4 pm | Tuesday, Wednesday |. | Ravi Prakash Singh | AI4Bharat | cs22m069@smail.iitm.ac.in | 1-2 pm | Tuesday, Friday |. | Amit Kumar | - | cs22m010@smail.iitm.ac.in | 2-4 pm | Wednesday |. | Lecture 1 | (Partial) History of Deep Learning, Deep Learning Success Stories | Slides | M1 | M2| M3 | M4 | M5 | Juergen Schmidhuber, Deep Learning in Neural Networks: An Overview. | Lecture 3 | Sigmoid Neurons, Gradient Descent, Feedforward Neural Networks, Representation Power of Feedforward Neural Networks | Slides | M1 | M2| M3 | M4 | M5| M6 | M7| M8 |  |. | Assignment 2 ( **Ungraded** ) | Convolutional Neural Networks | Link | 03-Mar-2024 | 03-Apr-2024 |."
+},
+{
+"url": "https://www.cse.iitk.ac.in/users/piyush/courses/ml-autumn23/index.html",
+"title": "Introduction to Machine Learning (CS771A) - Autumn 2023",
+"description": "This course will be an introduction to the design (and some analysis) of Machine Learning algorithms, with a modern outlook, focusing on the recent advances."
+},
+{
+"url": "https://m2dsupsdlclass.github.io/lectures-labs",
+"title": "Deep Learning course: lecture slides and lab notebooks | lectures-labs",
+"description": "## Slides and Jupyter notebooks for the Deep Learning lectures at Master Year 2 Data Science from Institut Polytechnique de Paris. # Deep Learning course: lecture slides and lab notebooks. This course is being taught at as part of Master Year 2 Data Science IP-Paris. The course covers the basics of Deep Learning, with a focus on applications. * Convolutional Neural Networks for Image Classification. * Deep Learning for Object Detection and Image Segmentation. The Jupyter notebooks for the labs can be found in the `labs` folder of the github repository:. #### Lab 1: Intro to Deep Learning. * Intro to MLP with Keras. #### Lab 2: Neural Networks and Backpropagation. * Backpropagation in Neural Networks using Numpy. * Short Intro to Embeddings with Keras. * Neural Recommender Systems with Implicit Feedback and the Triplet Loss. #### Lab 4: Convolutional Neural Networks for Image Classification. #### Lab 5: Deep Learning for Object Dection and Image Segmentation. #### Lab 6: Text Classification, Word Embeddings and Language Models."
+},
+{
+"url": "https://introtodeeplearning.com/slides/6S191_MIT_DeepLearning_L1.pdf",
+"title": "[PDF] MIT Slides - IntroToDeepLearning.com",
+"description": "AUDIO. O VISION. Page 7. iT. ARTIFICIAL. What is Deep Learning? INTELLIGENCE. Any technique that enables computers to mimic human behavior."
+}
+]

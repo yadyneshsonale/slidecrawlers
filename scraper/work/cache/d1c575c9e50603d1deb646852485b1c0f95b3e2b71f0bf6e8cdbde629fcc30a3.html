@@ -1,0 +1,852 @@
+<html><head>
+<meta name="AUTHOR" content="Kevin Wayne">
+<meta name="KEYWORDS" content="theory of algorithms, stable marriage, shortest path, maximum 
+flow, dynamic programming, divide and conquer, greed, MST, FFT, reductions, NP-completeness, 
+reduction, negative cycle, approximation algorithms, linear time selection, fibonacci heap,
+binomial heap, powerpoint"> 
+<meta name="DESCRIPTION" content="Princeton COS 423: Theroy of Algorithms lecture notes"> 
+<meta name="GENERATOR" content="https://www.internet-tips.net (Internet tips and secrets)">
+<meta name="ROBOTS" content="INDEX,FOLLOW">
+ 
+<title>Princeton COS 423 Analysis of Algorithms Lectures</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<p><br>
+
+<table border="0" cellpadding="3" cellspacing="0" width="100%">
+<tbody><tr align="left">
+<td bgcolor="#000000">
+<font size="+1" face="helvetica" color="#FFFFFF">
+COS 423 Analysis of Algorithms Lectures, Spring 2001
+</font>
+</td>
+</tr>
+</tbody></table>
+
+
+</p><p>
+The following table contains links to whatever electronic slides or
+demos were used in class. 
+Note that not all of this material was actually covered in Spring 2001.
+
+</p><p>
+Here is a link to a more recent version of some of these
+<a href="/~wayne/kleinberg-tardos">lecture slides</a> that
+supplement the textbook by Jon Kleinberg and 
+Éva Tardos.
+
+</p><p><br>
+
+</p><center><table border="2" cellspacing="0" width="600" bgcolor="#FFFFFF">
+
+<tbody><tr bgcolor="d0d0ff">
+
+<td align="center" width="33%"><b>Topic</b></td>
+<td align="center" width="13%"><b>Slides</b></td>
+<td align="center" width="25%"><b>In-class Demos</b></td>
+<td align="center" width="33%"><b>Reading</b></td>
+</tr>
+
+
+<!-------------------------------------------------------->
+<tr>
+<td colspan="4" align="center" bgcolor="#ffffff">
+&nbsp;
+</td>
+</tr>
+<tr>
+<td colspan="4" align="center" bgcolor="#ffd0d0">
+<b>Introduction</b>
+</td>
+</tr>
+<tr>
+<td colspan="4" align="center" bgcolor="#ffffff">
+&nbsp;
+</td>
+</tr>
+<!-------------------------------------------------------->
+
+<tr>
+<td align="center">
+Stable matching
+</td>
+
+<td align="center">
+<a href="lectures/intro-marriage-4up.pdf">
+pdf</a>
+</td>
+
+<td align="center">
+  <a href="lectures/demo-propose-and-reject.ppt">Gale-Shapley</a>
+</td>
+
+<td align="center">
+&nbsp;
+</td>
+</tr>
+
+
+<!-------------------------------------------------------->
+<tr>
+<td colspan="4" align="center" bgcolor="#ffffff">
+&nbsp;
+</td>
+</tr>
+<tr>
+<td colspan="4" align="center" bgcolor="#d0d0ff">
+<b>Greedy algorithms</b>
+</td>
+</tr>
+<tr>
+<td colspan="4" align="center" bgcolor="#ffffff">
+&nbsp;
+</td>
+</tr>
+<!-------------------------------------------------------->
+
+
+<tr>
+
+<td align="center">
+Greed
+</td>
+
+
+<td align="center">
+<a href="lectures/greed-4up.pdf">
+pdf</a>
+</td>
+
+<td align="center">
+  <a href="lectures/demo-activity-selection.ppt">
+Activity selection</a>
+<br>
+  <a href="lectures/greed-is-good.wav">Greed is good</a>
+</td>
+<td align="center">
+CLR, Chapter 17
+</td>
+</tr>
+
+
+<tr>
+<td align="center">
+Shortest path
+</td>
+
+<td align="center">
+<a href="lectures/shortest-path-4up.pdf">
+pdf</a>
+</td>
+
+
+<td align="center">
+  &nbsp;
+</td>
+<td align="center">
+CLR, Chapter 25
+</td>
+</tr>
+
+
+<tr>
+<td align="center">
+Minimum spanning tree
+</td>
+
+<td align="center">
+<a href="lectures/mst-4up.pdf">
+pdf</a>
+</td>
+
+
+<td align="center">
+  <a href="lectures/demo-red-blue.ppt">Red rule, blue rule</a>
+</td>
+<td align="center">
+CLR, Chapter 24
+</td>
+
+</tr>
+
+<!-------------------------------------------------------->
+<tr>
+<td colspan="4" align="center" bgcolor="#ffffff">
+&nbsp;
+</td>
+</tr>
+<tr>
+<td colspan="4" align="center" bgcolor="#ffd0d0">
+<b>Divide-and-conquer paradigm</b>
+</td>
+</tr>
+<tr>
+<td colspan="4" align="center" bgcolor="#ffffff">
+&nbsp;
+</td>
+
+</tr>
+<!-------------------------------------------------------->
+
+<tr>
+<td align="center">
+Divide and conquer
+</td>
+
+<td align="center">
+<a href="lectures/divide-and-conquer-4up.pdf">
+pdf</a>
+</td>
+
+<td align="center">
+  <a href="lectures/demo-merge-invert.ppt">Counting inversions</a>
+</td>
+<td align="center">
+CLR, Chapter 4, 8<br>
+31.2, 35.4
+</td>
+</tr>
+
+
+<!-------------------------------------------------------->
+
+<tr>
+<td align="center">
+Linear time selection
+</td>
+
+<td align="center">
+<a href="lectures/selection-4up.pdf">
+pdf</a>
+</td>
+
+<td align="center">
+&nbsp;
+</td>
+<td align="center">
+CLR 10.3
+</td>
+</tr>
+
+
+<!-------------------------------------->
+<tr>
+<td align="center">
+Fast Fourier transform
+</td>
+
+<td align="center">
+<a href="lectures/fft-4up.pdf">
+pdf</a>
+</td>
+
+<td align="center">
+  &nbsp;
+</td>
+<td align="center">
+CLR, Chapter 32
+</td>
+</tr>
+
+
+<!-------------------------------------------------------->
+<tr>
+<td colspan="4" align="center" bgcolor="#ffffff">
+&nbsp;
+</td>
+</tr>
+<tr>
+<td colspan="4" align="center" bgcolor="#d0d0ff">
+<b>Dynamic programming</b>
+</td>
+</tr>
+<tr>
+<td colspan="4" align="center" bgcolor="#ffffff">
+&nbsp;
+</td>
+</tr>
+<!-------------------------------------------------------->
+
+<tr>
+<td align="center">
+Dynamic programming
+</td>
+
+<td align="center">
+<a href="lectures/dynamic-programming-4up.pdf">
+pdf</a>
+</td>
+
+<td align="center">
+  &nbsp;
+</td>
+<td align="center">
+CLR, Chapter 16
+</td>
+
+</tr>
+
+<!-------------------------------------->
+<tr>
+<td align="center">
+Negative cycle
+</td>
+
+<td align="center">
+<a href="lectures/bellman-ford-4up.pdf">
+pdf</a>
+</td>
+
+<td align="center">
+  &nbsp;
+</td>
+<td align="center">
+CLR, Chapter 26
+</td>
+</tr>
+
+<!-------------------------------------------------------->
+<tr>
+<td colspan="4" align="center" bgcolor="#ffffff">
+&nbsp;
+</td>
+</tr>
+<tr>
+<td colspan="4" align="center" bgcolor="#ffd0d0">
+<b>Reductions</b>
+</td>
+</tr>
+<tr>
+<td colspan="4" align="center" bgcolor="#ffffff">
+&nbsp;
+</td>
+</tr>
+
+<!-------------------------------------------------------->
+
+<tr>
+<td align="center">
+Linear time reductions
+</td>
+
+<td align="center">
+<a href="lectures/reductions-4up.pdf">
+pdf</a>
+</td>
+
+<td align="center">
+  &nbsp;
+</td>
+<td align="center">
+CLR, Chapter 31.5
+</td>
+</tr>
+
+<tr>
+<td align="center">
+Maximum flow
+</td>
+
+<td align="center">
+<a href="lectures/max-flow-4up.pdf">
+pdf</a>
+</td>
+
+<td align="center">
+  <a href="lectures/demo-max-flow.ppt">Augmenting path <br>
+  </a><a href="lectures/demo-bfs.ppt">Breadth-first search
+
+</a></td>
+<td align="center">
+CLR, Chapter 27.1, 27.2
+</td>
+
+</tr>
+
+
+<tr>
+<td align="center">
+Reductions to max flow
+</td>
+
+<td align="center">
+<a href="lectures/max-flow-applications-4up.pdf">
+pdf</a>
+</td>
+
+<td align="center">
+  &nbsp;
+</td>
+<td align="center">
+CLR, Chapter 27.3
+</td>
+</tr>
+
+<tr>
+<td align="center">
+Polynomial time reductions
+</td>
+
+<td align="center">
+<a href="lectures/reductions-poly-4up.pdf">
+pdf</a>
+</td>
+
+
+<td align="center">
+  &nbsp;
+</td>
+<td align="center">
+CLR, Chapter 36
+</td>
+</tr>
+
+
+
+<!-------------------------------------------------------->
+<tr>
+<td colspan="4" align="center" bgcolor="#ffffff">
+&nbsp;
+</td>
+</tr>
+<tr>
+<td colspan="4" align="center" bgcolor="#d0d0ff">
+<b>Intractability and coping with intractability</b>
+</td>
+</tr>
+<tr>
+<td colspan="4" align="center" bgcolor="#ffffff">
+&nbsp;
+</td>
+</tr>
+
+
+<!-------------------------------------------------------->
+
+<tr>
+<td align="center">
+NP completeness
+</td>
+
+<td align="center">
+<a href="lectures/np-complete-4up.pdf">
+pdf</a>
+</td>
+
+<td align="center">
+<a href="lectures/longest-path.mp3">Longest path song</a>
+by Daniel Barrett
+</td>
+
+<td align="center">
+CLR, Chapter 36
+</td>
+
+</tr>
+
+<tr>
+<td align="center">
+Approximation algorithms
+</td>
+
+<td align="center">
+<a href="lectures/approx-alg-4up.pdf">
+pdf</a>
+</td>
+
+<td align="center">
+<a href="lectures/demo-list-schedule.ppt">
+List scheduling</a><br>
+</td>
+
+<td align="center">
+CLR, Chapter 37<br>
+<a href="https://www.orie.cornell.edu/~shmoys/dimacs.ps">
+survey paper</a> (optional)
+
+</td>
+
+</tr>
+
+
+<tr>
+<td align="center">
+Linear programming
+</td>
+
+<td align="center">
+<a href="lectures/lp-4up.pdf">
+pdf</a>
+</td>
+
+<td align="center">
+  &nbsp;
+</td>
+<td align="center">
+Scientific American handout
+</td>
+</tr>
+
+<!-------------------------------------------------------->
+
+<tr>
+<td colspan="4" align="center" bgcolor="#ffffff">
+&nbsp;
+</td>
+</tr>
+<tr>
+<td colspan="4" align="center" bgcolor="#ffd0d0">
+<b>Beyond worst case complexity</b>
+</td>
+</tr>
+
+<tr>
+<td colspan="4" align="center" bgcolor="#ffffff">
+&nbsp;
+</td>
+</tr>
+
+<!-------------------------------------------------------->
+
+<tr>
+<td align="center">
+Average case analysis
+</td>
+
+<td align="center">
+<a href="lectures/avg-case-4up.pdf">
+pdf</a>
+</td>
+
+<td align="center">
+  &nbsp;
+</td>
+
+<td align="center">
+CLR, Chapter 8
+</td>
+</tr>
+
+<tr>
+<td align="center">
+Amortized analysis
+</td>
+
+<td align="center">
+<a href="lectures/amortized-4up.pdf">
+pdf</a>
+</td>
+
+<td align="center">
+  <a href="lectures/demo-dynamic-table.ppt">
+Dynamic table</a><br>
+  <a href="splay/splay.html">
+Splay trees</a>
+</td>
+<td align="center">
+CLR, Chapter 13-15, 18<br>
+<a href="splay.ps">
+Splay handout</a> from
+<a href="https://www.cs.duke.edu/education/courses/cps130/spring01/lectures.html">
+Duke</a>
+</td>
+
+
+</tr>
+
+
+<tr>
+<td align="center">
+Competitive analysis
+</td>
+
+<td align="center">
+<a href="lectures/competitive-4up.pdf">
+pdf</a>
+</td>
+
+<td align="center">
+Paging
+</td>
+
+<td align="center">
+&nbsp;
+</td>
+
+</tr>
+<!-------------------------------------------------------->
+
+<tr>
+<td colspan="4" align="center" bgcolor="#ffffff">
+&nbsp;
+</td>
+</tr>
+<tr>
+<td colspan="4" align="center" bgcolor="#d0d0ff">
+<b>Conclusions</b>
+</td>
+</tr>
+
+<tr>
+<td colspan="4" align="center" bgcolor="#ffffff">
+&nbsp;
+</td>
+</tr>
+
+<!-------------------------------------------------------->
+
+<tr>
+<td align="center">
+Wrapup
+</td>
+
+<td align="center">
+<a href="lectures/wrapup-4up.pdf">
+pdf</a>
+</td>
+
+<td align="center">
+&nbsp;
+</td>
+
+<td align="center">
+<a href="topten.pdf">
+Top 10 algorithms
+</a>
+</td>
+</tr>
+
+
+<tr>
+<td align="center">
+Acknowledgments
+</td>
+
+<td align="center">
+<a href="lectures/acknowledgments-4up.pdf">
+pdf</a>
+</td>
+
+<td align="center">
+&nbsp;
+</td>
+
+<td align="center">
+&nbsp;
+</td>
+</tr>
+
+<!-------------------------------------------------------->
+
+<tr>
+<td colspan="4" align="center" bgcolor="#ffffff">
+&nbsp;
+</td>
+</tr>
+<tr>
+<td colspan="4" align="center" bgcolor="#ffd0d0">
+<b>Data Structures</b>
+</td>
+</tr>
+
+<tr>
+<td colspan="4" align="center" bgcolor="#ffffff">
+&nbsp;
+</td>
+</tr>
+
+<!-------------------------------------------------------->
+
+<tr>
+<td align="center">
+Binary and binomial heaps
+</td>
+
+<td align="center">
+<a href="lectures/heaps.ppt">
+ppt</a>
+&nbsp;
+<a href="lectures/heaps-4up.pdf">
+pdf</a>
+</td>
+
+<td align="center">
+&nbsp;
+</td>
+
+<td align="center">
+<a href="binomial_heap/bheap.html">
+Binomial heap applet
+</a>
+</td>
+</tr>
+
+
+<!-------------------------------------------------------->
+
+<tr>
+<td align="center">
+Fibonacci heaps
+</td>
+
+<td align="center">
+<a href="lectures/fibonacci.ppt">
+ppt</a>
+&nbsp;
+<a href="lectures/fibonacci-4up.pdf">
+pdf</a>
+</td>
+
+<td align="center">
+&nbsp;
+</td>
+
+<td align="center">
+CLR Chapter 20
+
+</td>
+</tr>
+
+
+<!-------------------------------------------------------->
+
+
+</tbody></table></center>
+
+
+<p><br>
+<table border="0" cellpadding="2" cellspacing="0" width="100%">
+<tbody><tr align="center">
+<td bgcolor="#C0C0C0">
+<font size="+0" face="helvetica" color="#000000">
+<b>How to read and print the files</b>
+</font>
+</td></tr></tbody></table>
+</p><ul>
+
+<p></p><li>Acrobat: to view Acrobat (.pdf) files, you can use
+<a href="https://www.adobe.com/products/acrobat/readstep2.html">
+Acrobat Reader</a>.<br>
+
+<p></p></li><li>Java: to run Java applets, use a browser that supports
+Java 1.2 or download the latest
+<a href="https://java.sun.com/j2se/1.3/jre/download-windows.html">
+Java plug-in</a>.<br>
+
+<p></p></li><li>Powerpoint: to view PowerPoint files (.ppt), use a browser
+that supports viewing them, or download a free
+<a href="https://microsoft.com/downloads">
+PowerPoint viewer</a>. If the equations don't view properly,
+be sure you have the
+<a href="lectures/symbol.ttf">Symbol</a> and 
+<a href="lectures/mtextra.ttf">MT Extra</a> fonts.
+Installing the Microsoft Equation Editor (from Windows setup)
+will accomplish this.
+
+<p></p></li><li>To print the PowerPoint files, we recommend printing 4 or 6
+to the page. To get the best results, don't use the PowerPoint
+"Print -&gt; Handout" option. Instead, use "Print -&gt; Properties -&gt; Advanced -&gt;
+Pages Per Sheet -&gt; 6 Landscape." Also, we recommend selecting
+"Print -&gt; Properties -&gt; Page Setup -&gt; Color" and deselecting
+"Print -&gt; Grayscale", even if you have a black and white printer.
+
+<p></p></li><li>The style file used to print the slides is
+<a href="lectures/cs423-handouts.pot">cs423-handouts.pot</a>;
+the style file used to to display the slides in lecture
+is
+<a href="lectures/cs423-cos104.pot">cs423-cos104.pot</a>.
+
+</li></ul>
+
+
+<p><br>
+<table border="0" cellpadding="2" cellspacing="0" width="100%">
+<tbody><tr align="center">
+<td bgcolor="#C0C0C0">
+<font size="+0" face="helvetica" color="#000000">
+<b>Acknowledgments</b>
+</font>
+</td></tr></tbody></table>
+</p><p>
+These lecture notes were heavily influenced by the unpublished manuscript
+<em>Introduction to Algorithms</em>, written by Jon Kleinberg and
+Éva Tardos.
+The lecture notes also adapt material from the following sources.
+</p><ul>
+<li>A. Aho, J. Hopcroft, J. Ullman. <em>The Design and Analysis of
+Computer
+Algorithms</em>. Addison-Wesley, 1974. </li>
+
+<li> R. K. Ahuja, T. L. Magnanti, J. B. Orlin. <em>Network Flows</em>.
+Prentice-Hall, 1993.
+
+</li><li>G. Brassard, P. Bratley. <em>Fundamentals of Algorithmics</em>.
+Prentice-Hall, 1996.</li>
+
+<li>T. Cormen, C. Leiserson, R. Rivest.
+<a href="https://library.books24x7.com/toc.asp?bookid=3444">Introduction to
+Algorithms</a>. McGraw-Hill, 2001.</li>
+
+<li>M. Garey and D. Johnson. <em>Computers and Intractability: A
+Guide to the Theory of NP-Completeness</em>. W.H. Freeman, 1979.</li>
+
+<li>D. Gusfield and R. Irving. <em>The Stable Marriage Problem</em>.
+MIT Press, 1989.</li>
+
+<li> U. Manber. <em>Introduction to Algorithms -- A Creative Approach</em>.
+Addison Wessley, 1989.
+
+</li><li>D. Kozen. <em>The Design and Analysis of Algorithms</em>.
+Springer-Verlag, 1992.</li>
+
+<li> R. E. Tarjan. <em>Data Structures and Network Algorithms</em>.
+SIAM, 1983.
+
+</li></ul>
+Instructors:  if you use these slides in class,
+please provide a link back to this page.
+<!--
+<p><br>
+<TABLE BORDER = 0 CELLPADDING = 2 CELLSPACING = 0 WIDTH = "100%">
+<tr align = center>
+<td bgcolor="#C0C0C0">
+<font size = "+0" face = "helvetica" color = "#000000">
+<b>Copyright</b>
+</font>
+</table>
+<p>
+
+All rights reserved. None of this material may be reproduced, stored in a
+retrieval system, or transmitted, in any form or by any means, electronic,
+mechanical, photocopying, recording or otherwise without prior written permission. 
+Permission is granted if you are using this material for nonprofit
+educational purposes.
+-->
+
+<p><br>
+<table border="0" cellpadding="2" cellspacing="0" width="100%">
+<tbody><tr align="center">
+<td bgcolor="#C0C0C0">
+<font size="+0" face="helvetica" color="#000000">
+<b>Errata</b>
+</font>
+</td></tr></tbody></table>
+</p><p>
+
+These lecture notes are being used for the first time this semester.
+If you discover any typos or errors, I would be grateful if you let me
+know via <a href="mailto:wayne@cs.princeton.edu">email</a>.
+
+</p><p>
+
+
+</p><hr>
+<address>
+<!-- Copyright &copy; 2001,-->
+<a href="https://www.cs.princeton.edu/~wayne/">Kevin
+Wayne</a></address>
+
+
+</body></html>

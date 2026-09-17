@@ -1,0 +1,2113 @@
+<html lang="en"><head>
+        <meta charset="UTF-8">
+        <title>CS 294-112</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css?family=Nothing+You+Could+Do|Raleway:300|Work+Sans:400,500" rel="stylesheet">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        <script src="//cdn.jsdelivr.net/jquery.marquee/1.4.0/jquery.marquee.min.js" type="text/javascript"></script>
+
+        <link href="/deeprlcourse-fa18/css/style.min.css" rel="stylesheet">
+        <script src="/deeprlcourse-fa18/js/script.min.js"></script>
+        
+        
+    </head>
+    <body>
+        
+<header class="wrap-container">
+    <div class="wrap">
+        <h1 class="header-title col-md-3 col-xs-3"><a href="/deeprlcourse-fa18/">CS294-112</a></h1>
+        <nav class="col-md-9 col-xs-9">
+            <ul class="hidden-sm hidden-xs">
+                <li><a href="/deeprlcourse-fa18/calendar">Calendar</a></li>
+                <li><a href="/deeprlcourse-fa18/resources">Resources</a></li>
+                <li><a href="/deeprlcourse-fa18/syllabus">Syllabus</a></li>
+                <li><a href="/deeprlcourse-fa18/staff">Staff</a></li>
+                <li><a class="menu">Menu
+                    <span class="bars">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </span>
+                </a></li>
+            </ul>
+            <ul class="hidden-xs hidden-md hidden-lg">
+                <li><a href="/deeprlcourse-fa18/calendar">Calendar</a></li>
+                <li><a href="/deeprlcourse-fa18/resources">Resources</a></li>
+                <li><a class="menu">Menu
+                    <span class="bars">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </span>
+                </a></li>
+            </ul>
+            <ul class="hidden-sm hidden-md hidden-lg">
+                <li><a href="/deeprlcourse-fa18/resources">Resources</a></li>
+                <li><a class="menu">Menu
+                    <span class="bars">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </span>
+                </a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<aside class="animate-5 drawer wrap-container">
+    <div class="wrap">
+        <div class="col-md-12 x-container">
+            <div class="animate-3 x">
+                <span class="outer bar"><span class="bar inner"></span></span>
+            </div>
+        </div>
+                <div class="col col-md-3">
+            <h3><a href="/deeprlcourse-fa18/calendar">Calendar</a></h3>
+        </div>
+        <div class="col col-md-3">
+            <h3><a href="/deeprlcourse-fa18/resources">Resources</a></h3>
+            <ul class="lists">
+                <li><a href="/deeprlcourse-fa18/resources#prevoffs">Previous Offerings</a></li>
+                <li><a href="/deeprlcourse-fa18/resources#courses">Courses</a></li>
+                <li><a href="/deeprlcourse-fa18/resources#textbooks">Relevant Textbooks</a></li>
+                <li><a href="/deeprlcourse-fa18/resources#misclinks">Misc Links</a></li>
+            </ul>
+        </div>
+        <div class="col col-md-3">
+            <h3><a href="/deeprlcourse-fa18/syllabus">Syllabus</a></h3>
+            <ul class="lists">
+                <li><a href="/deeprlcourse-fa18/syllabus#prereqs">Prerequisites</a></li>
+                <li><a href="/deeprlcourse-fa18/syllabus#technology">Technology</a></li>
+                <li><a href="/deeprlcourse-fa18/syllabus#materials">Materials</a></li>
+                <li><a href="/deeprlcourse-fa18/syllabus#collaboration">Collaboration</a></li>
+                <li><a href="/deeprlcourse-fa18/syllabus#late">Late Policy</a></li>
+                <li><a href="/deeprlcourse-fa18/syllabus#grading">Grading</a></li>
+            </ul>
+        </div>
+        <div class="col col-md-3">
+            <h3>Meta</h3>
+            <ul class="lists">
+                <li><a href="/deeprlcourse-fa18/staff">Staff</a></li>
+            </ul>
+        </div>
+    </div>
+</aside>
+        
+<main class="index-page">
+    <section class="page-head wrap-container">
+        <div class="wrap">
+            <div class="head-decor">
+                <p class="head-subtitle">CS 294-112 at UC Berkeley</p>
+                <h1 class="head-title">Deep Reinforcement Learning</h1>
+                <p class="head-subtitle">Lectures: Wed/Fri 10-11:30 a.m., Soda Hall, Room 306</p>
+                <br>
+                <p>The lectures will be <a href="https://www.youtube.com/c/CalESG/live">streamed</a> and <a href="https://www.youtube.com/playlist?list=PLkFD6_40KJIxJMR-j5A1mkxK26gh_qg37">recorded</a>. The course is <b>not</b> being offered as an online course, and the videos are provided only for your personal informational and entertainment purposes. They are not part of any course requirement or degree-bearing university program.</p>
+                <br>
+                <p>
+                <!--If you are a UC Berkeley undergraduate student or non-EECS graduate student and want to enroll in the course for fall 2018, please fill out <a href="https://goo.gl/forms/GLYEVi6Nh94VaDxh2">this application form</a>. We will select students from this list in August based on space availability and prerequisites.-->
+                Enrollment is now closed. If you are not officially enrolled through CalCentral, please direct your questions to <a href="https://www.reddit.com/r/berkeleydeeprlcourse-fa18/">the subreddit</a>.
+                </p>
+                <br>
+                <p>
+                Materials from previous offerings of this course are available <a href="/deeprlcourse-fa18/resources#prev-off">here</a>.
+                </p>
+            </div>
+            <div class="head-people">
+              <ul class="lists">
+                
+                <li>
+                  <div class="person col-md-6 col-sm-12 col-xs-12">
+                      <div class="person-thumbnail">
+                          <div class="person-avatar">
+                              <span class="person-image" style="background: url('https://people.eecs.berkeley.edu/~svlevine/images/portrait_lab_small.png'); background-size:cover;"></span>
+                          </div>
+                      </div>
+                      <div class="person-text">
+                          <h2 class="person-name">Instructor
+                              <a href="https://people.eecs.berkeley.edu/~svlevine/">Sergey Levine</a>
+                          </h2>
+                          <p><span>svlevine@eecs.berkeley.edu</span></p>
+                          <p>Office Hours: Wed 11:30am - 12:30pm (Soda 341B)</p>
+                      </div>
+                  </div>
+                </li>
+                
+                
+                
+                <li>
+                  <div class="person col-md-6 col-sm-12 col-xs-12">
+                      <div class="person-thumbnail">
+                          <div class="person-avatar">
+                              <span class="person-image" style="background: url('/deeprlcourse-fa18/static/images/kate_kauai.png'); background-size:cover;"></span>
+                          </div>
+                      </div>
+                      <div class="person-text">
+                          <h2 class="person-name">Head GSI
+                              <a href="https://people.eecs.berkeley.edu/~rakelly/">Kate Rakelly</a>
+                          </h2>
+                          <p><span>rakelly@eecs.berkeley.edu</span></p>
+                          
+                            <p>Office Hours: Tue 11am - 12pm (Soda 651)</p>
+                          
+                      </div>
+                  </div>
+                </li>
+                
+                <li>
+                  <div class="person col-md-6 col-sm-12 col-xs-12">
+                      <div class="person-thumbnail">
+                          <div class="person-avatar">
+                              <span class="person-image" style="background: url('https://people.eecs.berkeley.edu/~gregoryk/images/portrait.jpg'); background-size:cover;"></span>
+                          </div>
+                      </div>
+                      <div class="person-text">
+                          <h2 class="person-name">GSI
+                              <a href="https://people.eecs.berkeley.edu/~gregoryk/">Gregory Kahn</a>
+                          </h2>
+                          <p><span>gkahn@berkeley.edu</span></p>
+                          
+                            <p>Office Hours: Thu 1pm - 2pm (Soda 411)</p>
+                          
+                      </div>
+                  </div>
+                </li>
+                
+                <li>
+                  <div class="person col-md-6 col-sm-12 col-xs-12">
+                      <div class="person-thumbnail">
+                          <div class="person-avatar">
+                              <span class="person-image" style="background: url('https://people.eecs.berkeley.edu/~reddy/files/189pic.jpg'); background-size:cover;"></span>
+                          </div>
+                      </div>
+                      <div class="person-text">
+                          <h2 class="person-name">GSI
+                              <a href="https://people.eecs.berkeley.edu/~reddy/">Sid Reddy</a>
+                          </h2>
+                          <p><span>sgr@berkeley.edu</span></p>
+                          
+                            <p>Office Hours: Fri 3pm - 4pm (Soda 411)</p>
+                          
+                      </div>
+                  </div>
+                </li>
+                
+                <li>
+                  <div class="person col-md-6 col-sm-12 col-xs-12">
+                      <div class="person-thumbnail">
+                          <div class="person-avatar">
+                              <span class="person-image" style="background: url('http://mbchang.github.io/assets/profile-circle-10.png'); background-size:cover;"></span>
+                          </div>
+                      </div>
+                      <div class="person-text">
+                          <h2 class="person-name">GSI
+                              <a href="http://mbchang.github.io/">Michael Chang</a>
+                          </h2>
+                          <p><span>mbchang@berkeley.edu</span></p>
+                          
+                            <p>Office Hours: Mon 5pm - 6pm (Soda 341B)</p>
+                          
+                      </div>
+                  </div>
+                </li>
+                
+                <li>
+                  <div class="person col-md-6 col-sm-12 col-xs-12">
+                      <div class="person-thumbnail">
+                          <div class="person-avatar">
+                              <span class="person-image" style="background: url('http://snasiriany.me/files/profile.png'); background-size:cover;"></span>
+                          </div>
+                      </div>
+                      <div class="person-text">
+                          <h2 class="person-name">uGSI
+                              <a href="http://snasiriany.me">Soroush Nasiriany</a>
+                          </h2>
+                          <p><span>snasiriany@berkeley.edu</span></p>
+                          
+                          
+                      </div>
+                  </div>
+                </li>
+                
+              </ul>
+            </div>
+        </div>
+    </section>
+    
+        
+    <section class="highlighted-text week-overview wrap-container inactive" data-number="1">
+        <div class="wrap">
+            <h3 class="highlighted-subtitle">Week 1
+                Overview</h3>
+            <h2 class="highlighted-title">Course Introduction, Imitation Learning</h2>
+            <p class="highlighted-byline">Wednesday, August 22 - Friday, August 24</p>
+            <span class="dividing-bar"></span>
+            <ul class="lists two-col animate-3">
+            
+                
+                    
+                    <li><a href="/deeprlcourse-fa18/static/homeworks/hw1.pdf">Homework 1: Imitation Learning</a></li>
+                    
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+            
+                
+                    
+                    <li>
+                      <a href="/deeprlcourse-fa18/static/slides/lec-1.pdf">Lecture 1: Introduction and Course Overview</a>
+                      
+                      
+                    </li>
+                    
+                
+            
+                
+                    
+                    <li>
+                      <a href="/deeprlcourse-fa18/static/slides/lec-2.pdf">Lecture 2: Supervised Learning and Imitation</a>
+                      
+                      
+                    </li>
+                    
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+            </ul>
+            
+            <i class="fa fa-angle-left prev animate-3 prev-week-overview"></i>
+            
+            
+            <i class="fa fa-angle-right next animate-3 next-week-overview"></i>
+            
+        </div>
+    </section>
+        
+    
+        
+    <section class="highlighted-text week-overview wrap-container inactive" data-number="2">
+        <div class="wrap">
+            <h3 class="highlighted-subtitle">Week 2
+                Overview</h3>
+            <h2 class="highlighted-title">Intro to RL</h2>
+            <p class="highlighted-byline">Monday, August 27 - Friday, August 31</p>
+            <span class="dividing-bar"></span>
+            <ul class="lists two-col animate-3">
+            
+                
+                    
+                    <li><a href="/deeprlcourse-fa18/static/homeworks/hw1.pdf">Homework 1: Imitation Learning</a></li>
+                    
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+            
+                
+            
+                
+            
+                
+                    
+                    <li>
+                      <a href="/deeprlcourse-fa18/static/slides/lec-3.pdf">Lecture 3: TensorFlow and Neural Nets Review Session</a>
+                      
+                      <a href="/deeprlcourse-fa18/static/misc/TF_lecture.ipynb">(notebook)</a>
+                      
+                    </li>
+                    
+                
+            
+                
+                    
+                    <li>
+                      <a href="/deeprlcourse-fa18/static/slides/lec-4.pdf">Lecture 4: Reinforcement Learning Introduction</a>
+                      
+                      
+                    </li>
+                    
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+            </ul>
+            
+            <i class="fa fa-angle-left prev animate-3 prev-week-overview"></i>
+            
+            
+            <i class="fa fa-angle-right next animate-3 next-week-overview"></i>
+            
+        </div>
+    </section>
+        
+    
+        
+    <section class="highlighted-text week-overview wrap-container inactive" data-number="3">
+        <div class="wrap">
+            <h3 class="highlighted-subtitle">Week 3
+                Overview</h3>
+            <h2 class="highlighted-title">Policy Gradients and Actor Critic</h2>
+            <p class="highlighted-byline">Monday, September 3 - Friday, September 7</p>
+            <span class="dividing-bar"></span>
+            <ul class="lists two-col animate-3">
+            
+                
+                    
+                    <li><a href="/deeprlcourse-fa18/static/homeworks/hw1.pdf">Homework 1: Imitation Learning</a></li>
+                    
+                
+            
+                
+                    
+                    <li><a href="/deeprlcourse-fa18/static/homeworks/hw2.pdf">Homework 2: Policy Gradients</a></li>
+                    
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+                    
+                    <li>
+                      <a href="/deeprlcourse-fa18/static/slides/lec-5.pdf">Lecture 5: Policy Gradients Introduction</a>
+                      
+                      
+                    </li>
+                    
+                
+            
+                
+                    
+                    <li>
+                      <a href="/deeprlcourse-fa18/static/slides/lec-6.pdf">Lecture 6: Actor-Critic Introduction</a>
+                      
+                      
+                    </li>
+                    
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+            </ul>
+            
+            <i class="fa fa-angle-left prev animate-3 prev-week-overview"></i>
+            
+            
+            <i class="fa fa-angle-right next animate-3 next-week-overview"></i>
+            
+        </div>
+    </section>
+        
+    
+        
+    <section class="highlighted-text week-overview wrap-container inactive" data-number="4">
+        <div class="wrap">
+            <h3 class="highlighted-subtitle">Week 4
+                Overview</h3>
+            <h2 class="highlighted-title">Q-Learning</h2>
+            <p class="highlighted-byline">Monday, September 9 - Friday, September 14</p>
+            <span class="dividing-bar"></span>
+            <ul class="lists two-col animate-3">
+            
+                
+            
+                
+                    
+                    <li><a href="/deeprlcourse-fa18/static/homeworks/hw2.pdf">Homework 2: Policy Gradients</a></li>
+                    
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+                    
+                    <li>
+                      <a href="/deeprlcourse-fa18/static/slides/lec-7.pdf">Lecture 7: Value Functions and Q-Learning</a>
+                      
+                      
+                    </li>
+                    
+                
+            
+                
+                    
+                    <li>
+                      <a href="/deeprlcourse-fa18/static/slides/lec-8.pdf">Lecture 8: Advanced Q-Learning Algorithms</a>
+                      
+                      
+                    </li>
+                    
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+            </ul>
+            
+            <i class="fa fa-angle-left prev animate-3 prev-week-overview"></i>
+            
+            
+            <i class="fa fa-angle-right next animate-3 next-week-overview"></i>
+            
+        </div>
+    </section>
+        
+    
+        
+    <section class="highlighted-text week-overview wrap-container inactive" data-number="5">
+        <div class="wrap">
+            <h3 class="highlighted-subtitle">Week 5
+                Overview</h3>
+            <h2 class="highlighted-title">Advanced Policy Gradients and Control</h2>
+            <p class="highlighted-byline">Monday, September 17 - Friday, September 21</p>
+            <span class="dividing-bar"></span>
+            <ul class="lists two-col animate-3">
+            
+                
+            
+                
+                    
+                    <li><a href="/deeprlcourse-fa18/static/homeworks/hw2.pdf">Homework 2: Policy Gradients</a></li>
+                    
+                
+            
+                
+                    
+                    <li><a href="/deeprlcourse-fa18/static/homeworks/hw3.pdf">Homework 3: Q-Learning and Actor-Critic</a></li>
+                    
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+                    
+                    <li>
+                      <a href="/deeprlcourse-fa18/static/slides/lec-9.pdf">Lecture 9: Advanced Policy Gradients</a>
+                      
+                      
+                    </li>
+                    
+                
+            
+                
+                    
+                    <li>
+                      <a href="/deeprlcourse-fa18/static/slides/lec-10.pdf">Lecture 10: Optimal Control and Planning</a>
+                      
+                      
+                    </li>
+                    
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+            </ul>
+            
+            <i class="fa fa-angle-left prev animate-3 prev-week-overview"></i>
+            
+            
+            <i class="fa fa-angle-right next animate-3 next-week-overview"></i>
+            
+        </div>
+    </section>
+        
+    
+        
+    <section class="highlighted-text week-overview wrap-container inactive" data-number="6">
+        <div class="wrap">
+            <h3 class="highlighted-subtitle">Week 6
+                Overview</h3>
+            <h2 class="highlighted-title">Model Based Reinforcement Learning</h2>
+            <p class="highlighted-byline">Monday, September 23 - Friday, September 28</p>
+            <span class="dividing-bar"></span>
+            <ul class="lists two-col animate-3">
+            
+                
+            
+                
+            
+                
+                    
+                    <li><a href="/deeprlcourse-fa18/static/homeworks/hw3.pdf">Homework 3: Q-Learning and Actor-Critic</a></li>
+                    
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+                    
+                    <li>
+                      <a href="/deeprlcourse-fa18/static/slides/lec-11.pdf">Lecture 11: Model-Based Reinforcement Learning</a>
+                      
+                      
+                    </li>
+                    
+                
+            
+                
+                    
+                    <li>
+                      <a href="/deeprlcourse-fa18/static/slides/lec-12.pdf">Lecture 12: Advanced Model Learning and Images</a>
+                      
+                      
+                    </li>
+                    
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+            </ul>
+            
+            <i class="fa fa-angle-left prev animate-3 prev-week-overview"></i>
+            
+            
+            <i class="fa fa-angle-right next animate-3 next-week-overview"></i>
+            
+        </div>
+    </section>
+        
+    
+        
+    <section class="highlighted-text week-overview wrap-container inactive" data-number="7">
+        <div class="wrap">
+            <h3 class="highlighted-subtitle">Week 7
+                Overview</h3>
+            <h2 class="highlighted-title">Model Based RL and Probabilistic Models</h2>
+            <p class="highlighted-byline">Monday, October 1 - Friday, October 5</p>
+            <span class="dividing-bar"></span>
+            <ul class="lists two-col animate-3">
+            
+                
+            
+                
+            
+                
+                    
+                    <li><a href="/deeprlcourse-fa18/static/homeworks/hw3.pdf">Homework 3: Q-Learning and Actor-Critic</a></li>
+                    
+                
+            
+                
+                    
+                    <li><a href="/deeprlcourse-fa18/static/homeworks/hw4.pdf">Homework 4: Model-Based RL</a></li>
+                    
+                
+            
+                
+            
+                
+            
+                
+            
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+                    
+                    <li>
+                      <a href="/deeprlcourse-fa18/static/slides/lec-13.pdf">Lecture 13: Learning Policies by Imitating Other Policies</a>
+                      
+                      
+                    </li>
+                    
+                
+            
+                
+                    
+                    <li>
+                      <a href="/deeprlcourse-fa18/static/slides/lec-14.pdf">Lecture 14: Probability and Variational Inference Primer</a>
+                      
+                      
+                    </li>
+                    
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+            </ul>
+            
+            <i class="fa fa-angle-left prev animate-3 prev-week-overview"></i>
+            
+            
+            <i class="fa fa-angle-right next animate-3 next-week-overview"></i>
+            
+        </div>
+    </section>
+        
+    
+        
+    <section class="highlighted-text week-overview wrap-container inactive" data-number="8">
+        <div class="wrap">
+            <h3 class="highlighted-subtitle">Week 8
+                Overview</h3>
+            <h2 class="highlighted-title">Probabilistic Modeling of Behavior</h2>
+            <p class="highlighted-byline">Monday, October 8 - Friday, October 12</p>
+            <span class="dividing-bar"></span>
+            <ul class="lists two-col animate-3">
+            
+                
+            
+                
+            
+                
+                    
+                    <li><a href="/deeprlcourse-fa18/static/homeworks/hw3.pdf">Homework 3: Q-Learning and Actor-Critic</a></li>
+                    
+                
+            
+                
+                    
+                    <li><a href="/deeprlcourse-fa18/static/homeworks/hw4.pdf">Homework 4: Model-Based RL</a></li>
+                    
+                
+            
+                
+            
+                
+            
+                
+            
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+                    
+                    <li>
+                      <a href="/deeprlcourse-fa18/static/slides/lec-15.pdf">Lecture 15: Connection between Inference and Control</a>
+                      
+                      
+                    </li>
+                    
+                
+            
+                
+                    
+                    <li>
+                      <a href="/deeprlcourse-fa18/static/slides/lec-16.pdf">Lecture 16: Inverse Reinforcement Learning</a>
+                      
+                      
+                    </li>
+                    
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+            </ul>
+            
+            <i class="fa fa-angle-left prev animate-3 prev-week-overview"></i>
+            
+            
+            <i class="fa fa-angle-right next animate-3 next-week-overview"></i>
+            
+        </div>
+    </section>
+        
+    
+        
+    <section class="highlighted-text week-overview wrap-container inactive" data-number="9">
+        <div class="wrap">
+            <h3 class="highlighted-subtitle">Week 9
+                Overview</h3>
+            <h2 class="highlighted-title">Exploration</h2>
+            <p class="highlighted-byline">Monday, October 15 - Friday, October 19</p>
+            <span class="dividing-bar"></span>
+            <ul class="lists two-col animate-3">
+            
+                
+            
+                
+            
+                
+            
+                
+                    
+                    <li><a href="/deeprlcourse-fa18/static/homeworks/hw4.pdf">Homework 4: Model-Based RL</a></li>
+                    
+                
+            
+                
+                    
+                    <li><a href="/deeprlcourse-fa18/static/homeworks/hw5a.pdf">Homework 5a: Advanced Topics - Exploration</a></li>
+                    
+                
+            
+                
+                    
+                    <li><a href="/deeprlcourse-fa18/static/homeworks/hw5b.pdf">Homework 5b: Advanced Topics - Soft Actor-Critic</a></li>
+                    
+                
+            
+                
+                    
+                    <li><a href="/deeprlcourse-fa18/static/homeworks/hw5c.pdf">Homework 5c: Advanced Topics - Meta-Learning</a></li>
+                    
+                
+            
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+                    
+                    <li>
+                      <a href="/deeprlcourse-fa18/static/slides/lec-17.pdf">Lecture 17: Exploration: Part 1</a>
+                      
+                      
+                    </li>
+                    
+                
+            
+                
+                    
+                    <li>
+                      <a href="/deeprlcourse-fa18/static/slides/lec-18.pdf">Lecture 18: Exploration: Part 2</a>
+                      
+                      
+                    </li>
+                    
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+            </ul>
+            
+            <i class="fa fa-angle-left prev animate-3 prev-week-overview"></i>
+            
+            
+            <i class="fa fa-angle-right next animate-3 next-week-overview"></i>
+            
+        </div>
+    </section>
+        
+    
+        
+    <section class="highlighted-text week-overview wrap-container inactive" data-number="10">
+        <div class="wrap">
+            <h3 class="highlighted-subtitle">Week 10
+                Overview</h3>
+            <h2 class="highlighted-title">Exploration, Transfer, and Multi-task Learning</h2>
+            <p class="highlighted-byline">Monday, October 22 - Friday, Ocober 26</p>
+            <span class="dividing-bar"></span>
+            <ul class="lists two-col animate-3">
+            
+                
+            
+                
+            
+                
+            
+                
+                    
+                    <li><a href="/deeprlcourse-fa18/static/homeworks/hw4.pdf">Homework 4: Model-Based RL</a></li>
+                    
+                
+            
+                
+                    
+                    <li><a href="/deeprlcourse-fa18/static/homeworks/hw5a.pdf">Homework 5a: Advanced Topics - Exploration</a></li>
+                    
+                
+            
+                
+                    
+                    <li><a href="/deeprlcourse-fa18/static/homeworks/hw5b.pdf">Homework 5b: Advanced Topics - Soft Actor-Critic</a></li>
+                    
+                
+            
+                
+                    
+                    <li><a href="/deeprlcourse-fa18/static/homeworks/hw5c.pdf">Homework 5c: Advanced Topics - Meta-Learning</a></li>
+                    
+                
+            
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+                    
+                    <li>
+                      <a href="/deeprlcourse-fa18/static/slides/lec-19.pdf">Lecture 19: Transfer Learning and Multi-Task Learning</a>
+                      
+                      
+                    </li>
+                    
+                
+            
+                
+                    
+                    <li>
+                      <a href="/deeprlcourse-fa18/static/slides/lec-20.pdf">Lecture 20: Meta-Learning</a>
+                      
+                      
+                    </li>
+                    
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+            </ul>
+            
+            <i class="fa fa-angle-left prev animate-3 prev-week-overview"></i>
+            
+            
+            <i class="fa fa-angle-right next animate-3 next-week-overview"></i>
+            
+        </div>
+    </section>
+        
+    
+        
+    <section class="highlighted-text week-overview wrap-container inactive" data-number="11">
+        <div class="wrap">
+            <h3 class="highlighted-subtitle">Week 11
+                Overview</h3>
+            <h2 class="highlighted-title">RL Systems, Advanced Imitation, and Open Problems</h2>
+            <p class="highlighted-byline">Monday, October 29 - Friday, November 2</p>
+            <span class="dividing-bar"></span>
+            <ul class="lists two-col animate-3">
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+                    
+                    <li><a href="/deeprlcourse-fa18/static/homeworks/hw5a.pdf">Homework 5a: Advanced Topics - Exploration</a></li>
+                    
+                
+            
+                
+                    
+                    <li><a href="/deeprlcourse-fa18/static/homeworks/hw5b.pdf">Homework 5b: Advanced Topics - Soft Actor-Critic</a></li>
+                    
+                
+            
+                
+                    
+                    <li><a href="/deeprlcourse-fa18/static/homeworks/hw5c.pdf">Homework 5c: Advanced Topics - Meta-Learning</a></li>
+                    
+                
+            
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+                    
+                    <li>
+                      <a href="/deeprlcourse-fa18/static/slides/lec-21.pdf">Lecture 21: Parallelism and RL System Design</a>
+                      
+                      
+                    </li>
+                    
+                
+            
+                
+                    
+                    <li>
+                      <a href="/deeprlcourse-fa18/static/slides/lec-22.pdf">Lecture 22: Advanced Imitation Learning and Open Problems</a>
+                      
+                      
+                    </li>
+                    
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+            </ul>
+            
+            <i class="fa fa-angle-left prev animate-3 prev-week-overview"></i>
+            
+            
+            <i class="fa fa-angle-right next animate-3 next-week-overview"></i>
+            
+        </div>
+    </section>
+        
+    
+        
+    <section class="highlighted-text week-overview wrap-container inactive" data-number="12">
+        <div class="wrap">
+            <h3 class="highlighted-subtitle">Week 12
+                Overview</h3>
+            <h2 class="highlighted-title">Guest Lectures</h2>
+            <p class="highlighted-byline">Monday, November 5 - Friday, November 9</p>
+            <span class="dividing-bar"></span>
+            <ul class="lists two-col animate-3">
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+                    
+                    <li><a href="/deeprlcourse-fa18/static/homeworks/hw5a.pdf">Homework 5a: Advanced Topics - Exploration</a></li>
+                    
+                
+            
+                
+                    
+                    <li><a href="/deeprlcourse-fa18/static/homeworks/hw5b.pdf">Homework 5b: Advanced Topics - Soft Actor-Critic</a></li>
+                    
+                
+            
+                
+                    
+                    <li><a href="/deeprlcourse-fa18/static/homeworks/hw5c.pdf">Homework 5c: Advanced Topics - Meta-Learning</a></li>
+                    
+                
+            
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+                    
+                    <li class="inactive">Lecture 23: Guest Lecture: Craig Boutilier</li>
+                    
+                
+            
+                
+                    
+                    <li>
+                      <a href="/deeprlcourse-fa18/static/slides/lec-24.pdf">Lecture 24: Guest Lecture: Gregory Kahn</a>
+                      
+                      
+                    </li>
+                    
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+            </ul>
+            
+            <i class="fa fa-angle-left prev animate-3 prev-week-overview"></i>
+            
+            
+            <i class="fa fa-angle-right next animate-3 next-week-overview"></i>
+            
+        </div>
+    </section>
+        
+    
+        
+    <section class="highlighted-text week-overview wrap-container" data-number="13">
+        <div class="wrap">
+            <h3 class="highlighted-subtitle">Week 13
+                Overview</h3>
+            <h2 class="highlighted-title">Guest Lectures</h2>
+            <p class="highlighted-byline">Monday, November 12 - Friday, November 16</p>
+            <span class="dividing-bar"></span>
+            <ul class="lists two-col animate-3">
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+                    
+                    <li><a href="/deeprlcourse-fa18/static/homeworks/hw5a.pdf">Homework 5a: Advanced Topics - Exploration</a></li>
+                    
+                
+            
+                
+                    
+                    <li><a href="/deeprlcourse-fa18/static/homeworks/hw5b.pdf">Homework 5b: Advanced Topics - Soft Actor-Critic</a></li>
+                    
+                
+            
+                
+                    
+                    <li><a href="/deeprlcourse-fa18/static/homeworks/hw5c.pdf">Homework 5c: Advanced Topics - Meta-Learning</a></li>
+                    
+                
+            
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+                    
+                    <li>
+                      <a href="/deeprlcourse-fa18/static/slides/lec-25.pdf">Lecture 25: Guest Lecture: Quoc Le &amp; Barret Zoph</a>
+                      
+                      
+                    </li>
+                    
+                
+            
+                
+                    
+                    <li class="inactive">Lecture 26: Guest Lecture: Karol Hausman (Canceled)</li>
+                    
+                
+            
+                
+            
+                
+            
+            </ul>
+            
+            <i class="fa fa-angle-left prev animate-3 prev-week-overview"></i>
+            
+            
+        </div>
+    </section>
+        
+    
+    <section class="standard-text wrap-container">
+        <div class="wrap">
+            <h2 class="standard-title">Homeworks</h2>
+            <p> See <a href="/deeprlcourse-fa18/syllabus#materials">Syllabus</a> for more information.</p>
+            <ul class="lists two-col animate-3" resource="homeworks">
+            
+                
+                
+                
+                <li><a href="/deeprlcourse-fa18/static/homeworks/hw1.pdf">Homework 1: Imitation Learning</a></li>
+                
+            
+                
+                
+                
+                <li><a href="/deeprlcourse-fa18/static/homeworks/hw2.pdf">Homework 2: Policy Gradients</a></li>
+                
+            
+                
+                
+                
+                <li><a href="/deeprlcourse-fa18/static/homeworks/hw3.pdf">Homework 3: Q-Learning and Actor-Critic</a></li>
+                
+            
+                
+                
+                
+                <li><a href="/deeprlcourse-fa18/static/homeworks/hw4.pdf">Homework 4: Model-Based RL</a></li>
+                
+            
+                
+                
+                
+                <li><a href="/deeprlcourse-fa18/static/homeworks/hw5a.pdf">Homework 5a: Advanced Topics - Exploration</a></li>
+                
+            
+                
+                
+                
+                <li><a href="/deeprlcourse-fa18/static/homeworks/hw5b.pdf">Homework 5b: Advanced Topics - Soft Actor-Critic</a></li>
+                
+            
+                
+                
+                
+                <li><a href="/deeprlcourse-fa18/static/homeworks/hw5c.pdf">Homework 5c: Advanced Topics - Meta-Learning</a></li>
+                
+            
+            <li><a href="/deeprlcourse-fa18/static/homeworks/project_assignment.pdf">Project</a></li>
+            </ul>
+            <!--<div class="trigger" resource="homeworks">Expand</div>-->
+        </div>
+    </section>
+    <section class="standard-text wrap-container">
+        <div class="wrap">
+            <h2 class="standard-title">Lecture Slides</h2>
+            <p> See <a href="/deeprlcourse-fa18/syllabus#materials">Syllabus</a> for more information.</p>
+            <ul class="lists two-col animate-3" resource="slides">
+            
+                
+                
+                
+                  <li>
+                    <a href="/deeprlcourse-fa18/static/slides/lec-1.pdf">Lecture 1: Introduction and Course Overview</a>
+                    
+                    
+                  </li>
+                
+            
+                
+                
+                
+                  <li>
+                    <a href="/deeprlcourse-fa18/static/slides/lec-2.pdf">Lecture 2: Supervised Learning and Imitation</a>
+                    
+                    
+                  </li>
+                
+            
+                
+                
+                
+                  <li>
+                    <a href="/deeprlcourse-fa18/static/slides/lec-3.pdf">Lecture 3: TensorFlow and Neural Nets Review Session</a>
+                    
+                    <a href="/deeprlcourse-fa18/static/misc/TF_lecture.ipynb">(notebook)</a>
+                    
+                  </li>
+                
+            
+                
+                
+                
+                  <li>
+                    <a href="/deeprlcourse-fa18/static/slides/lec-4.pdf">Lecture 4: Reinforcement Learning Introduction</a>
+                    
+                    
+                  </li>
+                
+            
+                
+                
+                
+                  <li>
+                    <a href="/deeprlcourse-fa18/static/slides/lec-5.pdf">Lecture 5: Policy Gradients Introduction</a>
+                    
+                    
+                  </li>
+                
+            
+                
+                
+                
+                  <li>
+                    <a href="/deeprlcourse-fa18/static/slides/lec-6.pdf">Lecture 6: Actor-Critic Introduction</a>
+                    
+                    
+                  </li>
+                
+            
+                
+                
+                
+                  <li>
+                    <a href="/deeprlcourse-fa18/static/slides/lec-7.pdf">Lecture 7: Value Functions and Q-Learning</a>
+                    
+                    
+                  </li>
+                
+            
+                
+                
+                
+                  <li>
+                    <a href="/deeprlcourse-fa18/static/slides/lec-8.pdf">Lecture 8: Advanced Q-Learning Algorithms</a>
+                    
+                    
+                  </li>
+                
+            
+                
+                
+                
+                  <li>
+                    <a href="/deeprlcourse-fa18/static/slides/lec-9.pdf">Lecture 9: Advanced Policy Gradients</a>
+                    
+                    
+                  </li>
+                
+            
+                
+                
+                
+                  <li>
+                    <a href="/deeprlcourse-fa18/static/slides/lec-10.pdf">Lecture 10: Optimal Control and Planning</a>
+                    
+                    
+                  </li>
+                
+            
+                
+                
+                
+                  <li>
+                    <a href="/deeprlcourse-fa18/static/slides/lec-11.pdf">Lecture 11: Model-Based Reinforcement Learning</a>
+                    
+                    
+                  </li>
+                
+            
+                
+                
+                
+                  <li>
+                    <a href="/deeprlcourse-fa18/static/slides/lec-12.pdf">Lecture 12: Advanced Model Learning and Images</a>
+                    
+                    
+                  </li>
+                
+            
+                
+                
+                
+                  <li>
+                    <a href="/deeprlcourse-fa18/static/slides/lec-13.pdf">Lecture 13: Learning Policies by Imitating Other Policies</a>
+                    
+                    
+                  </li>
+                
+            
+                
+                
+                
+                  <li>
+                    <a href="/deeprlcourse-fa18/static/slides/lec-14.pdf">Lecture 14: Probability and Variational Inference Primer</a>
+                    
+                    
+                  </li>
+                
+            
+                
+                
+                
+                  <li>
+                    <a href="/deeprlcourse-fa18/static/slides/lec-15.pdf">Lecture 15: Connection between Inference and Control</a>
+                    
+                    
+                  </li>
+                
+            
+                
+                
+                
+                  <li>
+                    <a href="/deeprlcourse-fa18/static/slides/lec-16.pdf">Lecture 16: Inverse Reinforcement Learning</a>
+                    
+                    
+                  </li>
+                
+            
+                
+                
+                
+                  <li>
+                    <a href="/deeprlcourse-fa18/static/slides/lec-17.pdf">Lecture 17: Exploration: Part 1</a>
+                    
+                    
+                  </li>
+                
+            
+                
+                
+                
+                  <li>
+                    <a href="/deeprlcourse-fa18/static/slides/lec-18.pdf">Lecture 18: Exploration: Part 2</a>
+                    
+                    
+                  </li>
+                
+            
+                
+                
+                
+                  <li>
+                    <a href="/deeprlcourse-fa18/static/slides/lec-19.pdf">Lecture 19: Transfer Learning and Multi-Task Learning</a>
+                    
+                    
+                  </li>
+                
+            
+                
+                
+                
+                  <li>
+                    <a href="/deeprlcourse-fa18/static/slides/lec-20.pdf">Lecture 20: Meta-Learning</a>
+                    
+                    
+                  </li>
+                
+            
+                
+                
+                
+                  <li>
+                    <a href="/deeprlcourse-fa18/static/slides/lec-21.pdf">Lecture 21: Parallelism and RL System Design</a>
+                    
+                    
+                  </li>
+                
+            
+                
+                
+                
+                  <li>
+                    <a href="/deeprlcourse-fa18/static/slides/lec-22.pdf">Lecture 22: Advanced Imitation Learning and Open Problems</a>
+                    
+                    
+                  </li>
+                
+            
+                
+                
+                
+                <li class="inactive">Lecture 23: Guest Lecture: Craig Boutilier</li>
+                
+            
+                
+                
+                
+                  <li>
+                    <a href="/deeprlcourse-fa18/static/slides/lec-24.pdf">Lecture 24: Guest Lecture: Gregory Kahn</a>
+                    
+                    
+                  </li>
+                
+            
+                
+                
+                
+                  <li>
+                    <a href="/deeprlcourse-fa18/static/slides/lec-25.pdf">Lecture 25: Guest Lecture: Quoc Le &amp; Barret Zoph</a>
+                    
+                    
+                  </li>
+                
+            
+                
+                
+                
+                <li class="inactive">Lecture 26: Guest Lecture: Karol Hausman (Canceled)</li>
+                
+            
+                
+                
+                
+                <li class="inactive">Lecture 27: Final Project Presentations: Part 1 (No Slides)</li>
+                
+            
+                
+                
+                
+                <li class="inactive">Lecture 28: Final Project Presentations: Part 2 (No Slides)</li>
+                
+            
+            </ul>
+            <!--<div class="trigger" resource="slides">Expand</div>-->
+        </div>
+    </section>
+</main>
+
+        <footer class="footer-links wrap-container">
+    <div class="wrap">
+                <div class="col col-md-3">
+            <h3><a href="/deeprlcourse-fa18/calendar">Calendar</a></h3>
+        </div>
+        <div class="col col-md-3">
+            <h3><a href="/deeprlcourse-fa18/resources">Resources</a></h3>
+            <ul class="lists">
+                <li><a href="/deeprlcourse-fa18/resources#prevoffs">Previous Offerings</a></li>
+                <li><a href="/deeprlcourse-fa18/resources#courses">Courses</a></li>
+                <li><a href="/deeprlcourse-fa18/resources#textbooks">Relevant Textbooks</a></li>
+                <li><a href="/deeprlcourse-fa18/resources#misclinks">Misc Links</a></li>
+            </ul>
+        </div>
+        <div class="col col-md-3">
+            <h3><a href="/deeprlcourse-fa18/syllabus">Syllabus</a></h3>
+            <ul class="lists">
+                <li><a href="/deeprlcourse-fa18/syllabus#prereqs">Prerequisites</a></li>
+                <li><a href="/deeprlcourse-fa18/syllabus#technology">Technology</a></li>
+                <li><a href="/deeprlcourse-fa18/syllabus#materials">Materials</a></li>
+                <li><a href="/deeprlcourse-fa18/syllabus#collaboration">Collaboration</a></li>
+                <li><a href="/deeprlcourse-fa18/syllabus#late">Late Policy</a></li>
+                <li><a href="/deeprlcourse-fa18/syllabus#grading">Grading</a></li>
+            </ul>
+        </div>
+        <div class="col col-md-3">
+            <h3>Meta</h3>
+            <ul class="lists">
+                <li><a href="/deeprlcourse-fa18/staff">Staff</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+    
+</body></html>

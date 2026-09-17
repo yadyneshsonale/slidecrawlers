@@ -1,0 +1,598 @@
+<html><head><title>Lectures on Operating Systems</title>
+ 
+</head><body bgcolor="#FFFFFA"><center>
+<h2>Lectures on Operating Systems</h2>
+
+
+<center><h4><a href="https://www.cse.iitb.ac.in/~mythili/">Mythili Vutukuru</a><br>
+Department of Computer Science and Engineering, IIT Bombay</h4></center>
+
+ 
+
+ 
+ 
+
+<hr>
+
+
+<center>
+<table cellspacing="0" cellpadding="10" width="90%"> 
+<tbody><tr> 
+<td> 
+
+<p>This page serves as a reference for teaching/learning operating systems (OS). The material consists of video
+lectures, slides, practice problems with solutions, programming lab assignments, and additional reading material for reference.
+
+
+</p><p>The content is broadly divided into the following parts. 
+
+</p><ul type="square">
+<li style="margin-bottom: 10px;"><b>Parts A, B, C, D (lectures 1-20)</b> cover <b>basic concepts of operating systems</b> that are taught in a regular UG OS course in a CS curriculum. This material is mostly based off the excellent online textbook <a href="http://pages.cs.wisc.edu/~remzi/OSTEP/">Operating Systems: Three Easy Pieces (OSTEP)</a>, with pointers to the relevant chapters of the textbook provided against each lecture. A brief video lecture introduces the concepts from the textbook, and students are strongly encouraged to read the book chapters (that are freely available online) for a more in-depth understanding of the concepts. 
+
+</li><li style="margin-bottom: 10px;"><b>Part X (lectures 21-32)</b> contains an in-depth discussion of OS concepts using the <b>xv6 operating system</b> as an example. The <a href="https://github.com/mit-pdos/xv6-public">xv6 teaching operating system</a> comes with concise source code and a textbook/commentary, and is a great resource to understand fundamental concepts using a simple OS. Here are links to the <a href="./references/xv6-rev11.pdf">PDF formatted xv6 source code</a> and the accompanying <a href="./references/book-rev11.pdf">xv6 book</a> for the latest x86 version of xv6 that is used in the lectures.   Here are <a href="./xv6.html">instructions to install xv6</a>.
+
+
+</li><li style="margin-bottom: 10px;"><b>Part Z (lectures 33-35)</b> provides an overview of some advanced systems topics related to operating systems, e.g., the networking subsystem in Linux, performance engineering, virtualization.
+
+</li></ul>
+
+<b>Recommended usage:</b> Students and instructors are free to use this material for academic purposes. There are two broad ways to navigate through the video lectures. One can cover the basic concept video lectures based on OSTEP (lectures 1-20) first, followed by a deeper dive into operating systems using xv6 (lectures 21-32). It is also possible to do the basics and xv6 parts together (studying one concept in OSTEP and following it up with understanding the same concept in xv6) by viewing the lectures in this order: Processes (1, 21, 2, 22, 3, 23, 4, 24-26, 5-6), Memory management (7-11, 27-28), Concurrency (12-16, 29-30), and Filesystems (17-20, 31-32). 
+
+<br><br>
+<b>Related video courses:</b> Links to other related courses for which I have made lecture videos available:
+<ul>
+<li><a href="https://www.cse.iitb.ac.in/~mythili/virtcc/">Virtualization and Cloud Computing</a></li>
+<li><a href="https://www.cse.iitb.ac.in/~mythili/decs/">Design and Engineering of Computer Systems</a></li>
+</ul>
+
+<b>Other textbooks:</b> Besides OSTEP, the following online/physical textbooks give a good end-to-end understanding of computer systems.
+
+<ul>
+<li><a href="https://diveintosystems.org/book/index.html">Dive into Systems</a>, by Suzanne J. Matthews, Tia Newhall, and Kevin C. Webb.
+
+</li><li><a href="http://csapp.cs.cmu.edu/">Computer Systems: A Programmer's Perspective</a>, by Randal E. Bryant and David R. O'Hallaron.
+</li></ul> 
+
+<b>Credits:</b> Thanks to the OSTEP textbook authors for allowing me to use material from their book in my slides. Thanks also to the xv6 authors for making the xv6 OS available for teaching. Thanks to my TAs over the years who have helped me come up with the various labs and videos.
+
+<br><br>
+
+<b>Feedback:</b> If you have found the material useful, or have suggestions on how it can be improved, I will be happy to hear from you. Please email me at mythili@cse.iitb.ac.in.
+
+<br><br>
+
+<b>Some fun:</b> Here are some silly <a href="./poems.html">poems on operating systems</a> that I have written for use in my lectures.
+
+
+
+</td>
+</tr>
+</tbody></table>
+</center>
+
+<br><hr><br>
+
+<h4><a href="https://www.youtube.com/playlist?list=PLDW872573QAb4bj0URobvQTD41IV6gRkx">YouTube playlist with all videos below</a></h4>
+
+<center>
+<table rules="all" cellspacing="10" cellpadding="10" width="90%" style="border:1px solid black;"> 
+  <tbody><tr bgcolor="eca89a">
+<td width="5%" style="border:1px solid black;"> <b>Lecture#</b></td>
+<td width="15%" style="border:1px solid black;"> <b>Topics</b></td>
+<td width="10%" style="border:1px solid black;"> <b>YouTube Videos &amp; Annotated Slides</b></td>
+<td width="15%" style="border:1px solid black;"> <b>Slides from IITB lectures</b></td>
+<td width="15%" style="border:1px solid black;"> <b>References</b></td>
+<td width="15%" style="border:1px solid black;"> <b>Programming Exercises</b></td>
+<td width="10%" style="border:1px solid black;"> <b>Practice Problems</b></td>
+</tr>
+
+<tr bgcolor="f7e2de">
+<td colspan="7"> <b><i>PART A: Processes</i></b></td>
+</tr>
+
+<tr>
+<td>1</td>
+<td>Introduction to operating systems</td>
+
+<td><a href="https://youtu.be/aCJ3YgoolHQ">video</a> / <a href="./anno_slides/lecture1.pdf">slides</a> </td>
+
+<td><a href="./iitb_slides/os-background.pdf">os-background</a>
+<br><br>
+<a href="./iitb_slides/os-intro.pdf">os-intro</a>
+</td>
+
+<td><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/intro.pdf">OSTEP Ch. 2</a></td>
+
+<td rowspan="6">
+<a href="./labs/lab-intro/intro.pdf">Lab: Introduction to Linux Tools</a> (<a href="./labs/lab-intro/intro-code.tgz">code</a>)
+<br><br>
+<a href="./labs/lab-shell/shell.pdf">Lab: Shell</a> (<a href="./labs/lab-shell/shell-code.tgz">code</a>)
+<br><br>
+<a href="./labs/lab-ipc/ipc.pdf">Lab: Inter-process communication</a> (<a href="./labs/lab-ipc/ipc-code.tgz">code</a>)</td>
+
+<td rowspan="6"> <a href="./ps/proc/ps-proc.pdf">problems on processes</a></td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>Process abstraction</td>
+
+<td><a href="https://youtu.be/lIZN6UgoxOc">video</a> / <a href="./anno_slides/lecture2.pdf">slides</a> </td>
+
+<td><a href="./iitb_slides/process-intro.pdf">process-intro</a></td>
+
+<td><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-intro.pdf">OSTEP Ch. 4</a></td>
+
+</tr>
+
+<tr>
+<td>3</td>
+<td>System calls for process management</td>
+
+<td><a href="https://youtu.be/8ad4DzlZwgI">video</a> / <a href="./anno_slides/lecture3.pdf">slides</a> </td>
+
+<td><a href="./iitb_slides/process-syscall.pdf">process-syscall</a></td>
+
+<td><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-api.pdf">OSTEP Ch. 5</a></td>
+</tr>
+
+<tr>
+<td>4</td>
+<td>Process execution mechanisms</td>
+
+<td><a href="https://youtu.be/RxLJvh-nzQ8">video</a> / <a href="./anno_slides/lecture4.pdf">slides</a> </td>
+
+<td><a href="./iitb_slides/trap-switch.pdf">trap-switch</a></td>
+
+<td><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-mechanisms.pdf">OSTEP Ch. 6</a><br><br>
+
+</td>
+
+</tr>
+
+<tr>
+<td>5</td>
+<td>Scheduling policies</td>
+
+<td><a href="https://youtu.be/c1I99E1S3QA">video</a> / <a href="./anno_slides/lecture5.pdf">slides</a> </td>
+
+<td><a href="./iitb_slides/scheduling.pdf">scheduling</a></td>
+
+<td><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-sched.pdf">OSTEP Ch. 7</a>, <a href="http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-sched-mlfq.pdf">OSTEP Ch. 8</a></td>
+</tr>
+
+<tr>
+<td>6</td>
+<td>Inter-process communication</td>
+
+<td> <a href="https://youtu.be/UbXGJDWNK9c">video</a> / <a href="./anno_slides/lecture6.pdf">slides</a></td>
+
+<td><a href="./iitb_slides/ipc.pdf">ipc</a></td>
+
+<td><a href="./notes/notes-ipc.txt">Notes on IPC mechanisms</a><br><br>
+A sample <a href="http://tldp.org/LDP/lpg/node7.html">tutorial</a> on Linux IPC mechanisms.</td>
+</tr>
+
+<tr bgcolor="f7e2de">
+<td colspan="7"> <b><i>PART B: Memory</i></b></td>
+</tr>
+
+<tr>
+<td>7</td>
+<td>Introduction to virtual memory</td>
+
+<td> <a href="https://youtu.be/2Xj2V8kYNWM">video</a> / <a href="./anno_slides/lecture7.pdf">slides</a></td>
+
+<td rowspan="2"><a href="./iitb_slides/memory-intro.pdf">memory-intro</a></td>
+
+<td><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/vm-intro.pdf">OSTEP Ch. 13</a> , <a href="http://pages.cs.wisc.edu/~remzi/OSTEP/vm-api.pdf">OSTEP Ch. 14</a></td>
+
+<td rowspan="5"><a href="./labs/lab-malloc/malloc.pdf">Lab: Dynamic memory management</a> (<a href="./labs/lab-malloc/malloc-code.tgz">code</a>)</td>
+
+<td rowspan="5"><a href="./ps/memory/ps-memory.pdf">problems on memory management</a></td>
+</tr>
+
+<tr>
+<td>8</td>
+<td>Mechanism of address translation</td>
+
+<td> <a href="https://youtu.be/mYxkp5vpyqc">video</a> / <a href="./anno_slides/lecture8.pdf">slides</a></td>
+
+<td><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/vm-mechanism.pdf">OSTEP Ch. 15</a> </td>
+</tr>
+
+<tr>
+<td>9</td>
+<td>Paging</td>
+
+<td><a href="https://youtu.be/PTh2kL8ENzU"> video</a> / <a href="./anno_slides/lecture9.pdf">slides</a></td>
+
+<td><a href="./iitb_slides/paging.pdf">paging</a></td>
+
+<td><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/vm-paging.pdf">OSTEP Ch. 18</a>, <a href="http://pages.cs.wisc.edu/~remzi/OSTEP/vm-smalltables.pdf">OSTEP Ch. 20</a> </td>
+</tr>
+
+<tr>
+<td>10</td>
+<td>Demand paging</td>
+
+<td> <a href="https://youtu.be/r9NwqtqS2Ac">video</a> / <a href="./anno_slides/lecture10.pdf">slides</a></td>
+
+<td><a href="./iitb_slides/demand-paging.pdf">demand-paging</a></td>
+
+<td><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/vm-beyondphys.pdf">OSTEP Ch. 21</a>, <a href="http://pages.cs.wisc.edu/~remzi/OSTEP/vm-beyondphys-policy.pdf">OSTEP Ch. 22</a></td>
+</tr>
+
+<tr>
+<td>11</td>
+<td>Memory allocation and free space management algorithms</td>
+
+<td> <a href="https://youtu.be/bq3_uT5Z424">video</a> / <a href="./anno_slides/lecture11.pdf">slides</a></td>
+
+<td><a href="./iitb_slides/memory-syscall.pdf">memory-syscall</a></td>
+
+<td><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/vm-freespace.pdf">OSTEP Ch. 17</a></td>
+</tr>
+
+<tr bgcolor="f7e2de">
+<td colspan="7"> <b><i>PART C: Concurrency</i></b></td>
+</tr>
+
+<tr>
+<td>12</td>
+<td>Introduction to threads and concurrency</td>
+
+<td><a href="https://youtu.be/SVHLonf5AGY">video</a> / <a href="./anno_slides/lecture12.pdf">slides</a></td>
+
+<td><a href="./iitb_slides/threads.pdf">threads</a></td>
+
+<td><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/threads-intro.pdf">OSTEP Ch. 26</a></td>
+
+<td rowspan="5"><a href="./labs/lab-pthreads-sync/pthreads-sync.pdf">Lab: Pthreads synchronization</a> (<a href="./labs/lab-pthreads-sync/pthreads-sync-code.tgz">code</a>)<br><br>
+
+A detailed introduction to the pthreads API is here: <a href="http://pages.cs.wisc.edu/~remzi/OSTEP/threads-api.pdf">OSTEP Ch. 27</a>. You can also find several tutorials like <a href="https://computing.llnl.gov/tutorials/pthreads/">this</a> online.
+  
+</td>
+<td rowspan="5"><a href="./ps/concurrency/ps-concurrency.pdf">problems on concurrency</a></td>
+</tr>
+
+<tr>
+<td>13</td>
+<td>Locks</td>
+
+<td><a href="https://youtu.be/EBevKfTDXUI">video</a> / <a href="./anno_slides/lecture13.pdf">slides</a></td>
+
+<td><a href="./iitb_slides/locks.pdf">locks</a></td>
+
+<td><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/threads-locks.pdf">OSTEP Ch. 28</a> </td>
+</tr>
+
+<tr>
+<td>14</td>
+<td>Condition variables</td>
+
+<td><a href="https://youtu.be/rMpOfbaP2PQ">video</a> / <a href="./anno_slides/lecture14.pdf">slides</a><br>
+<a href="./errata.txt">(errata)</a>
+</td>
+
+<td><a href="./iitb_slides/condition-variables.pdf">condition-variables</a></td>
+
+<td><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/threads-cv.pdf">OSTEP Ch. 30</a> </td>
+</tr>
+
+<tr>
+<td>15</td>
+<td>Semaphores</td>
+
+<td><a href="https://youtu.be/XN2P60BcowI">video</a> / <a href="./anno_slides/lecture15.pdf">slides</a><br>
+<a href="./errata.txt">(errata)</a>
+</td>
+
+<td><a href="./iitb_slides/semaphores.pdf">semaphores</a></td>
+
+<td><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/threads-sema.pdf">OSTEP Ch. 31</a><br><br>
+<a href="./references/LittleBookOfSemaphores.pdf">Little Book of Semaphores</a> has many interesting synchronization problems
+</td>
+
+</tr>
+
+<tr>
+<td>16</td>
+<td>Concurrency bugs</td>
+<td><a href="https://youtu.be/qnU7CHiJXTE">video</a> / <a href="./anno_slides/lecture16.pdf">slides</a></td>
+
+<td></td>
+
+<td><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/threads-bugs.pdf">OSTEP Ch. 32</a></td>
+</tr>
+
+<tr bgcolor="f7e2de">
+<td colspan="7"> <b><i>PART D: I/O and Filesystems</i></b></td>
+</tr>
+
+<tr>
+<td>17</td>
+<td>Communication with I/O devices</td>
+
+<td> <a href="https://youtu.be/7F4qQOSJGDw">video</a> / <a href="./anno_slides/lecture17.pdf">slides</a></td>
+
+<td><a href="./iitb_slides/io.pdf">io</a></td>
+
+<td><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/file-devices.pdf">OSTEP Ch. 36</a> </td>
+
+<td rowspan="4"><a href="./labs/lab-simplefs/simplefs.pdf">Lab: A simple filesystem</a> (<a href="./labs/lab-simplefs/simplefs-code.tgz">code</a>)
+</td>
+
+<td rowspan="4"><a href="./ps/file/ps-file.pdf">problems on I/O and filesystems</a></td>
+</tr>
+
+<tr>
+<td>18</td>
+<td>Files and directories</td>
+
+<td><a href="https://youtu.be/sBQeOJvbOvw">video</a> / <a href="./anno_slides/lecture18.pdf">slides</a></td>
+
+<td><a href="./iitb_slides/files.pdf">files</a></td>
+
+<td><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/file-intro.pdf">OSTEP Ch. 39</a> </td>
+</tr>
+
+<tr>
+<td>19</td>
+<td>File system implementation </td>
+
+<td> <a href="https://youtu.be/JoTIG_ElTyY">video</a> / <a href="./anno_slides/lecture19.pdf">slides</a></td>
+
+<td><a href="./iitb_slides/filesystems.pdf">filesystems</a></td>
+
+<td><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/file-implementation.pdf">OSTEP Ch. 40</a>, <a href="http://pages.cs.wisc.edu/~remzi/OSTEP/file-journaling.pdf">OSTEP Ch. 42</a></td>
+</tr>
+
+<tr>
+<td>20</td>
+<td>Hard disk internals</td>
+
+<td><a href="https://youtu.be/-ZFINyHshqo">video</a> / <a href="./anno_slides/lecture20.pdf">slides</a></td>
+
+<td></td>
+
+<td><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/file-disks.pdf">OSTEP Ch. 37</a></td>
+</tr>
+
+<tr bgcolor="f7e2de">
+<td colspan="7"> <b><i>PART X: The xv6 operating system</i></b></td>
+</tr>
+
+<tr>
+<td>21</td>
+<td>Introduction to x86 hardware</td>
+<td> <a href="https://youtu.be/S407guTtmFI">video</a> / <a href="./anno_slides/lecture21.pdf">slides</a> </td>
+
+<td><a href="./iitb_slides/xv6-intro.pdf">xv6-intro</a></td>
+
+<td> Appendix A of <a href="./references/book-rev11.pdf">xv6 book</a>
+<br><br>
+Chapters 3,4 from <a href="./references/ProgrammingGroundUp.pdf">Programming from the Ground Up</a>
+</td>
+
+<td rowspan="12">
+  Here are <a href="./xv6.html">instructions to install xv6</a> for the programming assignments below.
+
+  <br><br>
+
+  Here is our <a href="./labs/cs236-xv6-linux.tgz">xv6 tarball for linux lab machines</a> that you can use to solve the labs below.
+
+  
+  <br><br>
+  
+  <a href="./labs/lab-xv6-proc/xv6-proc.pdf">Lab: Process management in xv6</a>, (<a href="./labs/lab-xv6-proc/xv6-proc-code.tgz">code</a>)
+
+<br><br>
+
+<a href="./labs/lab-xv6-mem/xv6-mem.pdf">Lab: Memory management in xv6</a>, (<a href="./labs/lab-xv6-mem/xv6-mem-code.tgz">code</a>)
+
+<br><br>
+
+<a href="./labs/lab-xv6-threads-sync/xv6-threads-sync.pdf">Lab: Threads and Synchronization in xv6</a>, (<a href="./labs/lab-xv6-threads-sync/xv6-threads-sync-code.tgz">code</a>)
+
+
+ </td>
+
+<td rowspan="12"><a href="./ps/xv6/ps-xv6-proc.pdf">problems on xv6 process management</a>
+<br><br>
+<a href="./ps/xv6/ps-xv6-mem.pdf">problems on xv6 memory management</a>
+<br><br>
+<a href="./ps/xv6/ps-xv6-sync.pdf">problems on xv6 synchronization</a>
+<br><br>
+<a href="./ps/xv6/ps-xv6-file.pdf">problems on xv6 filesystems</a>
+
+</td>
+</tr>
+
+<tr>
+<td>22</td>
+<td>Processes in xv6</td>
+<td> <a href="https://youtu.be/vxBD5YjQq7Q">video</a> / <a href="./anno_slides/lecture22.pdf">slides</a> </td>
+
+<td><a href="./iitb_slides/xv6-process.pdf">xv6-process</a></td>
+
+<td> <a href="./references/xv6-rev11.pdf">xv6 code</a>, 
+Pages 21,22 of <a href="./references/book-rev11.pdf">xv6 book</a>
+</td>
+</tr>
+
+<tr>
+<td>23</td>
+<td>Process management system calls in xv6</td>
+<td> <a href="https://youtu.be/arrUtofRrxU">video</a> / <a href="./anno_slides/lecture23.pdf">slides</a> </td>
+
+<td><a href="./iitb_slides/xv6-process-syscall.pdf">xv6-process-syscall</a></td>
+
+<td> <a href="./references/xv6-rev11.pdf">xv6 code</a>, Pages 7-10 of <a href="./references/book-rev11.pdf">xv6 book</a>
+ </td>
+</tr>
+
+<tr>
+<td>24</td>
+<td>Trap handling in xv6</td>
+<td> <a href="https://youtu.be/bU2tw1jk4pE">video</a> / <a href="./anno_slides/lecture24.pdf">slides</a> </td>
+
+<td><a href="./iitb_slides/xv6-trap.pdf">xv6-trap</a></td>
+
+<td> <a href="./references/xv6-rev11.pdf">xv6 code</a>, Pages 39-44 of <a href="./references/book-rev11.pdf">xv6 book</a>
+</td>
+</tr>
+
+<tr>
+<td>25</td>
+<td>Scheduling and context switching in xv6</td>
+<td> <a href="https://youtu.be/fEnWqibCwo0">video</a> / <a href="./anno_slides/lecture25.pdf">slides</a> </td>
+
+<td rowspan="2"><a href="./iitb_slides/xv6-switch.pdf">xv6-switch</a></td>
+
+<td> <a href="./references/xv6-rev11.pdf">xv6 code</a>, Pages 61-64 of <a href="./references/book-rev11.pdf">xv6 book</a>
+</td>
+</tr>
+
+<tr>
+<td>26</td>
+<td>User process creation in xv6</td>
+<td> <a href="https://youtu.be/txVjk8Wa-IE">video</a> / <a href="./anno_slides/lecture26.pdf">slides</a> </td>
+<td> <a href="./references/xv6-rev11.pdf">xv6 code</a>, Pages 23-26 of <a href="./references/book-rev11.pdf">xv6 book</a>
+</td>
+</tr>
+
+<tr>
+<td>27</td>
+<td>Virtual memory and paging in xv6</td>
+<td> <a href="https://youtu.be/67Q7tfUk6pI">video</a> / <a href="./anno_slides/lecture27.pdf">slides</a> </td>
+
+<td rowspan="2"><a href="./iitb_slides/xv6-memory.pdf">xv6-memory</a></td>
+
+<td> <a href="./references/xv6-rev11.pdf">xv6 code</a>, Pages 29-33 of <a href="./references/book-rev11.pdf">xv6 book</a>
+</td>
+</tr>
+
+<tr>
+<td>28</td>
+<td>Memory management for user processes in xv6</td>
+<td> <a href="https://youtu.be/8V2YkO7lfvs">video</a> / <a href="./anno_slides/lecture28.pdf">slides</a> </td>
+<td> <a href="./references/xv6-rev11.pdf">xv6 code</a>, Pages 34-36 of <a href="./references/book-rev11.pdf">xv6 book</a>
+</td>
+</tr>
+
+<tr>
+<td>29</td>
+<td>Locking in xv6</td>
+<td> <a href="https://youtu.be/icLsJLGbLuA">video</a> / <a href="./anno_slides/lecture29.pdf">slides</a> </td>
+
+<td><a href="./iitb_slides/xv6-locks.pdf">xv6-locks</a></td>
+
+<td> <a href="./references/xv6-rev11.pdf">xv6 code</a>, Pages 51-60 of <a href="./references/book-rev11.pdf">xv6 book</a>
+</td>
+</tr>
+
+<tr>
+<td>30</td>
+<td>Sleep/wakeup functionality in xv6</td>
+<td> <a href="https://youtu.be/hLkkEKmvBMc">video</a> / <a href="./anno_slides/lecture30.pdf">slides </a></td>
+
+<td><a href="./iitb_slides/xv6-sleep-wakeup.pdf">xv6-sleep-wakeup</a></td>
+
+<td> <a href="./references/xv6-rev11.pdf">xv6 code</a>, Pages 65-73 of <a href="./references/book-rev11.pdf">xv6 book</a>
+</td>
+</tr>
+
+<tr>
+<td>31</td>
+<td>Device driver and block I/O in xv6</td>
+<td> <a href="https://youtu.be/YGiuurOWkgA">video</a> / <a href="./anno_slides/lecture31.pdf">slides</a> </td>
+
+<td></td>
+
+<td> <a href="./references/xv6-rev11.pdf">xv6 code</a>, Pages 46-48,75-81 of <a href="./references/book-rev11.pdf">xv6 book</a>
+</td>
+</tr>
+
+<tr>
+<td>32</td>
+<td>Filesystem in xv6</td>
+<td> <a href="https://youtu.be/FrUw2tF1cPg">video</a> / <a href="./anno_slides/lecture32.pdf">slides</a></td>
+
+<td></td>
+
+<td> <a href="./references/xv6-rev11.pdf">xv6 code</a>, Pages 81-90 of <a href="./references/book-rev11.pdf">xv6 book</a>
+</td>
+</tr>
+
+
+<tr bgcolor="f7e2de">
+<td colspan="7"> <b><i>PART Z: Advanced topics</i></b></td>
+</tr>
+
+<tr>
+<td>33</td>
+<td>Network I/O using sockets</td>
+<td> <a href="https://youtu.be/2TrQXSFgqBY">video</a> / <a href="./anno_slides/lecture33.pdf">slides</a></td>
+
+<td><a href="./iitb_slides/network-io-sockets.pdf">network-io-sockets</a></td>
+
+<td><a href="http://pages.cs.wisc.edu/~remzi/OSTEP/threads-events.pdf">OSTEP Ch. 33</a>
+</td>
+
+<td rowspan="4"><a href="./labs/lab-kvserver/kvserver.pdf">Lab: Key-value server</a> 
+<br><br> Simple TCP <a href="./labs/lab-kvserver/simple-client.c">client</a> and <a href="./labs/lab-kvserver/simple-server.c">server</a> socket programs. <br><br>
+TCP <a href="./labs/lab-kvserver/epoll-server.c">server with epoll</a>.<br>
+</td>
+
+<td rowspan="4"><a href="./ps/nwperf/ps-nw-perf.pdf">problems on networking and performance engineering</a></td>
+</tr>
+
+<tr><td>34</td>
+<td>Network I/O subsystem in Linux</td>
+
+<td></td>
+
+<td><a href="./iitb_slides/network-io-linux.pdf">network-io-linux</a></td>
+
+
+<td>
+<!--Video on <a href="https://youtu.be/MpjlWt7fvrw">Linux kernel network stack and kernel bypass techniques</a> by former PhD students Rinku Shah and Priyanka Naik, <a href="./anno_slides/network_stack_kernel_bypass_slides.pdf">slides</a> with embedded links to references
+<br>
+Video on <a href="https://youtu.be/VJ8CVN3oXMw">DPDK</a> by former MTech students Diptyaroop Maji and Nilesh Unhale, 
+<a href="./anno_slides/DPDK_deep_dive_slides.pdf">slides</a> with embedded links to references-->
+</td>
+
+</tr>
+
+<tr>
+<td>35</td>
+<td>Performance engineering</td>
+<td></td>
+
+<td><a href="./iitb_slides/performance.pdf">performance</a></td>
+
+
+<td></td>
+</tr>
+
+<tr>
+<td>36</td>
+<td>Virtualization</td>
+<td></td>
+
+<td><a href="./iitb_slides/virtualization.pdf">virtualization</a></td>
+
+
+<td></td>
+</tr>
+
+</tbody></table>
+</center>
+
+<hr>
+
+
+
+
+</center></body></html>

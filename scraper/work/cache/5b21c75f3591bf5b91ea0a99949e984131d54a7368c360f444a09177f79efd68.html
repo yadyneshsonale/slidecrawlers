@@ -1,0 +1,1340 @@
+<!DOCTYPE html><html dir="ltr" lang="en" xml:lang="en" class="yui3-js-enabled"><head>
+    <title>Course: Introduction to University Mathematics (2022-23) | Mathematical Institute</title>
+    <link rel="shortcut icon" href="https://courses.maths.ox.ac.uk/theme/image.php/boost/theme/1780950349/favicon">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="keywords" content="moodle, Course: Introduction to University Mathematics (2022-23) | Mathematical Institute">
+<link rel="stylesheet" type="text/css" href="https://courses.maths.ox.ac.uk/theme/yui_combo.php?rollup/3.18.1/yui-moodlesimple-min.css"><script charset="utf-8" id="yui_3_18_1_1_1781516721155_9" src="https://courses.maths.ox.ac.uk/theme/yui_combo.php?3.18.1/anim-base/anim-base-min.js&amp;3.18.1/anim-color/anim-color-min.js&amp;3.18.1/anim-xy/anim-xy-min.js&amp;3.18.1/anim-curve/anim-curve-min.js&amp;3.18.1/anim-easing/anim-easing-min.js&amp;3.18.1/anim-node-plugin/anim-node-plugin-min.js&amp;3.18.1/anim-scroll/anim-scroll-min.js" async=""></script><script id="firstthemesheet" type="text/css">/** Required in order to fix style inclusion problems in IE with YUI **/</script><link rel="stylesheet" type="text/css" href="https://courses.maths.ox.ac.uk/theme/styles.php/boost/1780950349_1/all">
+<script>
+//<![CDATA[
+var M = {}; M.yui = {};
+M.pageloadstarttime = new Date();
+M.cfg = {"wwwroot":"https:\/\/courses.maths.ox.ac.uk","apibase":"https:\/\/courses.maths.ox.ac.uk\/r.php\/api","homeurl":{},"sesskey":"jgcDY2fFK9","sessiontimeout":"604800","sessiontimeoutwarning":"1200","themerev":"1780950349","slasharguments":1,"theme":"boost","iconsystemmodule":"core\/icon_system_fontawesome","jsrev":"1780950349","admin":"admin","svgicons":true,"usertimezone":"Europe\/London","language":"en","courseId":1051,"courseContextId":30895,"contextid":30895,"contextInstanceId":1051,"langrev":1780950349,"templaterev":"1780950349","siteId":1,"userId":1};var yui1ConfigFn = function(me) {if(/-skin|reset|fonts|grids|base/.test(me.name)){me.type='css';me.path=me.path.replace(/\.js/,'.css');me.path=me.path.replace(/\/yui2-skin/,'/assets/skins/sam/yui2-skin')}};
+var yui2ConfigFn = function(me) {var parts=me.name.replace(/^moodle-/,'').split('-'),component=parts.shift(),module=parts[0],min='-min';if(/-(skin|core)$/.test(me.name)){parts.pop();me.type='css';min=''}
+if(module){var filename=parts.join('-');me.path=component+'/'+module+'/'+filename+min+'.'+me.type}else{me.path=component+'/'+component+'.'+me.type}};
+YUI_config = {"debug":false,"base":"https:\/\/courses.maths.ox.ac.uk\/lib\/yuilib\/3.18.1\/","comboBase":"https:\/\/courses.maths.ox.ac.uk\/theme\/yui_combo.php?","combine":true,"filter":null,"insertBefore":"firstthemesheet","groups":{"yui2":{"base":"https:\/\/courses.maths.ox.ac.uk\/lib\/yuilib\/2in3\/2.9.0\/build\/","comboBase":"https:\/\/courses.maths.ox.ac.uk\/theme\/yui_combo.php?","combine":true,"ext":false,"root":"2in3\/2.9.0\/build\/","patterns":{"yui2-":{"group":"yui2","configFn":yui1ConfigFn}}},"moodle":{"name":"moodle","base":"https:\/\/courses.maths.ox.ac.uk\/theme\/yui_combo.php?m\/1780950349\/","combine":true,"comboBase":"https:\/\/courses.maths.ox.ac.uk\/theme\/yui_combo.php?","ext":false,"root":"m\/1780950349\/","patterns":{"moodle-":{"group":"moodle","configFn":yui2ConfigFn}},"filter":null,"modules":{"moodle-core-actionmenu":{"requires":["base","event","node-event-simulate"]},"moodle-core-lockscroll":{"requires":["plugin","base-build"]},"moodle-core-dragdrop":{"requires":["base","node","io","dom","dd","event-key","event-focus","moodle-core-notification"]},"moodle-core-maintenancemodetimer":{"requires":["base","node"]},"moodle-core-blocks":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification"]},"moodle-core-chooserdialogue":{"requires":["base","panel","moodle-core-notification"]},"moodle-core-event":{"requires":["event-custom"]},"moodle-core-handlebars":{"condition":{"trigger":"handlebars","when":"after"}},"moodle-core-notification":{"requires":["moodle-core-notification-dialogue","moodle-core-notification-alert","moodle-core-notification-confirm","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-core-notification-dialogue":{"requires":["base","node","panel","escape","event-key","dd-plugin","moodle-core-widget-focusafterclose","moodle-core-lockscroll"]},"moodle-core-notification-alert":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-confirm":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-exception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-ajaxexception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core_availability-form":{"requires":["base","node","event","event-delegate","panel","moodle-core-notification-dialogue","json"]},"moodle-course-categoryexpander":{"requires":["node","event-key"]},"moodle-course-management":{"requires":["base","node","io-base","moodle-core-notification-exception","json-parse","dd-constrain","dd-proxy","dd-drop","dd-delegate","node-event-delegate"]},"moodle-course-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-course-coursebase","moodle-course-util"]},"moodle-course-util":{"requires":["node"],"use":["moodle-course-util-base"],"submodules":{"moodle-course-util-base":{},"moodle-course-util-section":{"requires":["node","moodle-course-util-base"]},"moodle-course-util-cm":{"requires":["node","moodle-course-util-base"]}}},"moodle-form-shortforms":{"requires":["node","base","selector-css3","moodle-core-event"]},"moodle-form-dateselector":{"requires":["base","node","overlay","calendar"]},"moodle-question-searchform":{"requires":["base","node"]},"moodle-question-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-availability_cohort-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_completion-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_date-form":{"requires":["base","node","event","io","moodle-core_availability-form"]},"moodle-availability_grade-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_group-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_grouping-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_mobileapp-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_profile-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-mod_assign-history":{"requires":["node","transition"]},"moodle-mod_attendance-groupfilter":{"requires":["base","node"]},"moodle-mod_quiz-autosave":{"requires":["base","node","event","event-valuechange","node-event-delegate","io-form","datatype-date-format"]},"moodle-mod_quiz-toolboxes":{"requires":["base","node","event","event-key","io","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-slot","moodle-core-notification-ajaxexception"]},"moodle-mod_quiz-questionchooser":{"requires":["moodle-core-chooserdialogue","moodle-mod_quiz-util","querystring-parse"]},"moodle-mod_quiz-quizbase":{"requires":["base","node"]},"moodle-mod_quiz-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-base","moodle-mod_quiz-util-page","moodle-mod_quiz-util-slot","moodle-course-util"]},"moodle-mod_quiz-util":{"requires":["node","moodle-core-actionmenu"],"use":["moodle-mod_quiz-util-base"],"submodules":{"moodle-mod_quiz-util-base":{},"moodle-mod_quiz-util-slot":{"requires":["node","moodle-mod_quiz-util-base"]},"moodle-mod_quiz-util-page":{"requires":["node","moodle-mod_quiz-util-base"]}}},"moodle-mod_quiz-modform":{"requires":["base","node","event"]},"moodle-message_airnotifier-toolboxes":{"requires":["base","node","io"]},"moodle-editor_atto-editor":{"requires":["node","transition","io","overlay","escape","event","event-simulate","event-custom","node-event-html5","node-event-simulate","yui-throttle","moodle-core-notification-dialogue","moodle-editor_atto-rangy","handlebars","timers","querystring-stringify"]},"moodle-editor_atto-plugin":{"requires":["node","base","escape","event","event-outside","handlebars","event-custom","timers","moodle-editor_atto-menu"]},"moodle-editor_atto-menu":{"requires":["moodle-core-notification-dialogue","node","event","event-custom"]},"moodle-editor_atto-rangy":{"requires":[]},"moodle-report_eventlist-eventfilter":{"requires":["base","event","node","node-event-delegate","datatable","autocomplete","autocomplete-filters"]},"moodle-report_loglive-fetchlogs":{"requires":["base","event","node","io","node-event-delegate"]},"moodle-gradereport_history-userselector":{"requires":["escape","event-delegate","event-key","handlebars","io-base","json-parse","moodle-core-notification-dialogue"]},"moodle-qbank_editquestion-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-tool_lp-dragdrop-reorder":{"requires":["moodle-core-dragdrop"]},"moodle-assignfeedback_editpdf-editor":{"requires":["base","event","node","io","graphics","json","event-move","event-resize","transition","querystring-stringify-simple","moodle-core-notification-dialog","moodle-core-notification-alert","moodle-core-notification-warning","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-atto_accessibilitychecker-button":{"requires":["color-base","moodle-editor_atto-plugin"]},"moodle-atto_accessibilityhelper-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_align-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_bold-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_charmap-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_clear-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_collapse-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emojipicker-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emoticon-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_equation-button":{"requires":["moodle-editor_atto-plugin","moodle-core-event","io","event-valuechange","tabview","array-extras"]},"moodle-atto_h5p-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_html-codemirror":{"requires":["moodle-atto_html-codemirror-skin"]},"moodle-atto_html-beautify":{},"moodle-atto_html-button":{"requires":["promise","moodle-editor_atto-plugin","moodle-atto_html-beautify","moodle-atto_html-codemirror","event-valuechange"]},"moodle-atto_image-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_indent-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_italic-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_link-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_managefiles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_managefiles-usedfiles":{"requires":["node","escape"]},"moodle-atto_media-button":{"requires":["moodle-editor_atto-plugin","moodle-form-shortforms"]},"moodle-atto_noautolink-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_orderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_panoptobutton-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_recordrtc-button":{"requires":["moodle-editor_atto-plugin","moodle-atto_recordrtc-recording"]},"moodle-atto_recordrtc-recording":{"requires":["moodle-atto_recordrtc-button"]},"moodle-atto_rtl-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_strike-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_subscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_superscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_table-button":{"requires":["moodle-editor_atto-plugin","moodle-editor_atto-menu","event","event-valuechange"]},"moodle-atto_teamsmeeting-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_title-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_underline-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_undo-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_unorderedlist-button":{"requires":["moodle-editor_atto-plugin"]}}},"gallery":{"name":"gallery","base":"https:\/\/courses.maths.ox.ac.uk\/lib\/yuilib\/gallery\/","combine":true,"comboBase":"https:\/\/courses.maths.ox.ac.uk\/theme\/yui_combo.php?","ext":false,"root":"gallery\/1780950349\/","patterns":{"gallery-":{"group":"gallery"}}}},"modules":{"core_filepicker":{"name":"core_filepicker","fullpath":"https:\/\/courses.maths.ox.ac.uk\/lib\/javascript.php\/1780950349\/repository\/filepicker.js","requires":["base","node","node-event-simulate","json","async-queue","io-base","io-upload-iframe","io-form","yui2-treeview","panel","cookie","datatable","datatable-sort","resize-plugin","dd-plugin","escape","moodle-core_filepicker","moodle-core-notification-dialogue"]},"core_comment":{"name":"core_comment","fullpath":"https:\/\/courses.maths.ox.ac.uk\/lib\/javascript.php\/1780950349\/comment\/comment.js","requires":["base","io-base","node","json","yui2-animation","overlay","escape"]}},"logInclude":[],"logExclude":[],"logLevel":null};
+M.yui.loader = {modules: {}};
+
+//]]>
+</script>
+
+<script src="https://unpkg.com/@ungap/custom-elements-builtin"></script>
+ <script type="module" src="https://unpkg.com/x-frame-bypass"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-NKVYQHQSEP"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-NKVYQHQSEP');
+</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="core/first" src="https://courses.maths.ox.ac.uk/lib/requirejs.php/1780950349/core/first.js"></script></head>
+<body id="page-course-view-topics" class="format-topics limitedwidth  path-course path-course-view chrome dir-ltr lang-en yui-skin-sam yui3-skin-sam courses-maths-ox-ac-uk pagelayout-course course-1051 context-30895 category-118 theme uses-drawers drawer-open-index jsenabled">
+<div class="toast-wrapper mx-auto py-0 fixed-top" role="status" aria-live="polite"></div>
+<div id="page-wrapper" class="d-print-block">
+
+    <div>
+    <a class="sr-only sr-only-focusable" href="#maincontent">Skip to main content</a>
+</div><script src="https://courses.maths.ox.ac.uk/lib/javascript.php/1780950349/lib/polyfills/polyfill.js"></script>
+<script src="https://courses.maths.ox.ac.uk/theme/yui_combo.php?rollup/3.18.1/yui-moodlesimple-min.js"></script><script src="https://courses.maths.ox.ac.uk/lib/javascript.php/1780950349/lib/javascript-static.js"></script>
+<script>
+//<![CDATA[
+document.body.className += ' jsenabled';
+//]]>
+</script>
+
+
+
+    <nav class="navbar fixed-top navbar-light bg-white navbar-expand" aria-label="Site navigation">
+        <div class="container-fluid">
+            <button class="navbar-toggler aabtn d-block d-md-none px-1 my-1 border-0" data-toggler="drawers" data-action="toggle" data-target="theme_boost-drawers-primary">
+                <span class="navbar-toggler-icon"></span>
+                <span class="sr-only">Side panel</span>
+            </button>
+    
+            <a href="https://courses.maths.ox.ac.uk/" class="navbar-brand d-none d-md-flex align-items-center m-0 me-4 p-0 aabtn">
+    
+                    <img src="https://courses.maths.ox.ac.uk/pluginfile.php/1/core_admin/logocompact/300x300/1780950349/oxlogo.png" class="logo me-1" alt="Mathematical Institute">
+            </a>
+                <div class="primary-navigation">
+                    <nav class="moremenu navigation">
+                        <ul id="moremenu-6a2fc9b0d9eab-navbar-nav" role="menubar" class="nav more-nav navbar-nav">
+                                    <li data-key="home" class="nav-item" role="none" data-forceintomoremenu="false">
+                                                <a role="menuitem" class="nav-link  " href="https://courses.maths.ox.ac.uk/" data-disableactive="true" tabindex="-1">
+                                                    Home
+                                                </a>
+                                    </li>
+                                    <li data-key="calendar" class="nav-item" role="none" data-forceintomoremenu="false">
+                                                <a role="menuitem" class="nav-link  " href="https://courses.maths.ox.ac.uk/calendar/view.php?view=month" data-disableactive="true" tabindex="-1">
+                                                    Calendar
+                                                </a>
+                                    </li>
+                                    <li data-key="" class="nav-item" role="none" data-forceintomoremenu="false">
+                                                <a role="menuitem" class="nav-link  " href="https://www.maths.ox.ac.uk/members/it/faqs/moodle-courses-system" data-disableactive="true" tabindex="-1">
+                                                    Help
+                                                </a>
+                                    </li>
+                            <li role="none" class="nav-item dropdown dropdownmoremenu d-none" data-region="morebutton">
+                                <a class="dropdown-toggle nav-link " href="#" id="moremenu-dropdown-6a2fc9b0d9eab" role="menuitem" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" tabindex="-1">
+                                    More
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-left" data-region="moredropdown" aria-labelledby="moremenu-dropdown-6a2fc9b0d9eab" role="menu">
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+    
+    
+            <div id="usernavigation" class="navbar-nav ms-auto h-100">
+                
+                <div class="d-flex align-items-stretch usermenu-container" data-region="usermenu">
+                        <div class="usermenu">
+                                <span class="login ps-2">
+                                        You are currently using guest access
+                                        <div class="divider border-start h-75 align-self-center mx-2"></div>
+                                        <a href="https://courses.maths.ox.ac.uk/login/index.php">Log in with SSO</a>
+                                </span>
+                        </div>
+                </div>
+                
+            </div>
+        </div>
+    </nav>
+    
+
+<div class="drawer drawer-left drawer-primary d-print-none not-initialized" data-region="fixed-drawer" id="theme_boost-drawers-primary" data-preference="" data-state="show-drawer-primary" data-forceopen="0" data-close-on-resize="1">
+    <div class="drawerheader">
+        <button class="btn drawertoggle icon-no-margin hidden" data-toggler="drawers" data-action="closedrawer" data-target="theme_boost-drawers-primary" data-toggle="tooltip" data-placement="right" title="Close drawer">
+            <i class="icon fa fa-xmark fa-fw " aria-hidden="true"></i>
+        </button>
+                <a href="https://courses.maths.ox.ac.uk/" title="Mathematical Institute" data-region="site-home-link" class="aabtn text-reset d-flex align-items-center py-1 h-100">
+                <img src="https://courses.maths.ox.ac.uk/pluginfile.php/1/core_admin/logocompact/300x300/1780950349/oxlogo.png" class="logo py-1 h-100" alt="Mathematical Institute">
+        </a>
+
+        <div class="drawerheadercontent hidden">
+            
+        </div>
+    </div>
+    <div class="drawercontent drag-container" data-usertour="scroller">
+                <div class="list-group">
+                <a href="https://courses.maths.ox.ac.uk/" class="list-group-item list-group-item-action  ">
+                    Home
+                </a>
+                <a href="https://courses.maths.ox.ac.uk/calendar/view.php?view=month" class="list-group-item list-group-item-action  ">
+                    Calendar
+                </a>
+                <a href="https://www.maths.ox.ac.uk/members/it/faqs/moodle-courses-system" class="list-group-item list-group-item-action  ">
+                    Help
+                </a>
+        </div>
+
+    </div>
+</div>
+        <div class="drawer drawer-left show d-print-none not-initialized" data-region="fixed-drawer" id="theme_boost-drawers-courseindex" data-preference="drawer-open-index" data-state="show-drawer-left" data-forceopen="0" data-close-on-resize="0">
+    <div class="drawerheader">
+        <button class="btn drawertoggle icon-no-margin hidden" data-toggler="drawers" data-action="closedrawer" data-target="theme_boost-drawers-courseindex" data-toggle="tooltip" data-placement="right" title="Close course index">
+            <i class="icon fa fa-xmark fa-fw " aria-hidden="true"></i>
+        </button>
+        
+        <div class="drawerheadercontent hidden">
+                            <div id="courseindexdrawercontrols" class="dropdown">
+                    <button class="btn btn-icon rounded-circle mx-2" id="courseindexdrawercontrolsmenubutton" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Course index options" aria-label="Course index options" aria-controls="courseindexdrawercontrolsmenu">
+                        <i class="icon fa fa-ellipsis-v fa-fw m-0" aria-hidden="true"></i>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right" role="menu" id="courseindexdrawercontrolsmenu" aria-labelledby="courseindexdrawercontrolsmenubutton">
+                        <a class="dropdown-item" href="#" data-action="expandallcourseindexsections" role="menuitem">
+                            <i class="icon fa fa-angles-down fa-fw " aria-hidden="true"></i>
+                            Expand all
+                        </a>
+                        <a class="dropdown-item" href="#" data-action="collapseallcourseindexsections" role="menuitem">
+                            <span class="dir-rtl-hide"><i class="icon fa fa-angles-right fa-fw " aria-hidden="true"></i></span>
+                            <span class="dir-ltr-hide"><i class="icon fa fa-angles-left fa-fw " aria-hidden="true"></i></span>
+                            Collapse all
+                        </a>
+                    </div>
+                </div>
+
+        </div>
+    </div>
+    <div class="drawercontent drag-container" data-usertour="scroller">
+                        <nav id="courseindex" class="courseindex">
+    <div id="courseindex-content">
+        <div data-region="loading-placeholder-content" aria-hidden="true" id="course-index-placeholder">
+            <ul class="placeholders list-unstyled px-5">
+                <li>
+                    <div class="col-md-6 p-0 d-flex align-items-center">
+                        <div class="bg-pulse-grey rounded-circle me-2"></div>
+                        <div class="bg-pulse-grey w-100"></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="col-md-6 p-0 d-flex align-items-center">
+                        <div class="bg-pulse-grey rounded-circle me-2"></div>
+                        <div class="bg-pulse-grey w-100"></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="col-md-6 p-0 d-flex align-items-center">
+                        <div class="bg-pulse-grey rounded-circle me-2"></div>
+                        <div class="bg-pulse-grey w-100"></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="col-md-6 p-0 d-flex align-items-center">
+                        <div class="bg-pulse-grey rounded-circle me-2"></div>
+                        <div class="bg-pulse-grey w-100"></div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    </div>
+</div>
+        <div class="drawer drawer-right d-print-none not-initialized" data-region="fixed-drawer" id="theme_boost-drawers-blocks" data-preference="drawer-open-block" data-state="show-drawer-right" data-forceopen="" data-close-on-resize="1">
+    <div class="drawerheader">
+        <button class="btn drawertoggle icon-no-margin hidden" data-toggler="drawers" data-action="closedrawer" data-target="theme_boost-drawers-blocks" data-toggle="tooltip" data-placement="left" title="Close block drawer">
+            <i class="icon fa fa-xmark fa-fw " aria-hidden="true"></i>
+        </button>
+        
+        <div class="drawerheadercontent hidden">
+            
+        </div>
+    </div>
+    <div class="drawercontent drag-container" data-usertour="scroller">
+                        <div class="d-print-none">
+                    
+                    <aside id="block-region-side-pre" class="block-region" data-blockregion="side-pre" data-droptarget="1" aria-labelledby="side-pre-block-region-heading"><h2 class="sr-only" id="side-pre-block-region-heading">Blocks</h2><a href="#sb-1" class="sr-only sr-only-focusable">Skip Panopto</a>
+
+<section id="inst18536" class=" block_panopto block  card mb-3" role="region" data-block="panopto" data-instance-id="18536" aria-labelledby="instance-18536-header">
+
+    <div class="card-body p-3">
+
+            <h3 id="instance-18536-header" class="h5 card-title d-inline">Panopto</h3>
+
+
+        <div class="card-text content mt-3">
+            <div id="block_panopto_content" courseid="1051"><font id="loading_text">Fetching Panopto content...</font></div><script type="text/javascript">function panopto_launchNotes(url) {var notesWindow = window.open("", "PanoptoNotes", "width=500,height=800,resizable=1,scrollbars=0,status=0,location=0");document.SSO.action = url;document.SSO.target = "PanoptoNotes";document.SSO.submit();notesWindow.focus();}function panopto_startSSO(linkElem) {document.SSO.action = linkElem.href;document.SSO.target = "_blank";document.SSO.submit();return false;}function panopto_toggleHiddenLectures() {var showAllToggle = document.getElementById("showAllToggle");var hiddenLecturesDiv = document.getElementById("hiddenLecturesDiv");if (hiddenLecturesDiv.style.display == "block") {hiddenLecturesDiv.style.display = "none";showAllToggle.innerHTML = "Show all";} else {hiddenLecturesDiv.style.display = "block";showAllToggle.innerHTML = "Show less";}}</script>
+            <div class="footer"></div>
+            
+        </div>
+
+    </div>
+
+</section>
+
+  <span id="sb-1"></span><a href="#sb-2" class="sr-only sr-only-focusable">Skip Upcoming events</a>
+
+<section id="inst13835" class=" block_calendar_upcoming block  card mb-3" role="region" data-block="calendar_upcoming" data-instance-id="13835" aria-labelledby="instance-13835-header">
+
+    <div class="card-body p-3">
+
+            <h3 id="instance-13835-header" class="h5 card-title d-inline">Upcoming events</h3>
+
+
+        <div class="card-text content mt-3">
+            <div id="calendar-upcoming-block-6a2fc9b0b34466a2fc9b0b34481" data-template="core_calendar/upcoming_mini">
+    <div class="card-text content calendarwrapper" id="month-upcoming-mini-6a2fc9b0b34466a2fc9b0b34481" data-context-id="0" data-courseid="1051" data-categoryid="118">
+        <span class="overlay-icon-container hidden" data-region="overlay-icon-container">
+            <span class="loading-icon icon-no-margin"><i class="icon fa fa-spinner fa-spin fa-fw " title="Loading" role="img" aria-label="Loading"></i></span>
+        </span>
+            There are no upcoming events
+    </div>
+</div>
+            <div class="footer"><div class="gotocal"><a href="https://courses.maths.ox.ac.uk/calendar/view.php?view=upcoming&amp;course=1051">Go to calendar...</a></div></div>
+            
+        </div>
+
+    </div>
+
+</section>
+
+  <span id="sb-2"></span></aside>
+                </div>
+
+    </div>
+</div>
+    <div id="page" data-region="mainpage" data-usertour="scroller" class="drawers show-drawer-left  drag-container">
+        <div id="topofscroll" class="main-inner">
+            <div class="drawer-toggles d-flex">
+                    <div class="drawer-toggler drawer-left-toggle open-nav d-print-none">
+                        <button class="btn icon-no-margin" data-toggler="drawers" data-action="toggle" data-target="theme_boost-drawers-courseindex" data-toggle="tooltip" data-placement="right" title="Open course index">
+                            <span class="sr-only">Open course index</span>
+                            <i class="icon fa fa-list fa-fw " aria-hidden="true"></i>
+                        </button>
+                    </div>
+                    <div class="drawer-toggler drawer-right-toggle ms-auto d-print-none">
+                        <button class="btn icon-no-margin" data-toggler="drawers" data-action="toggle" data-target="theme_boost-drawers-blocks" data-toggle="tooltip" data-placement="right" title="Open block drawer">
+                            <span class="sr-only">Open block drawer</span>
+                            <span class="dir-rtl-hide"><i class="icon fa fa-chevron-left fa-fw " aria-hidden="true"></i></span>
+                            <span class="dir-ltr-hide"><i class="icon fa fa-chevron-right fa-fw " aria-hidden="true"></i></span>
+                        </button>
+                    </div>
+            </div>
+            <header id="page-header" class="header-maxwidth d-print-none">
+    <div class="w-100">
+        <div class="d-flex flex-wrap">
+            <div id="page-navbar">
+                <nav aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <a href="https://courses.maths.ox.ac.uk/course/index.php">
+                        Courses
+                    </a>
+                </li>
+        
+                <li class="breadcrumb-item">
+                    <a href="https://courses.maths.ox.ac.uk/course/index.php?categoryid=25">
+                        Archive
+                    </a>
+                </li>
+        
+                <li class="breadcrumb-item">
+                    <a href="https://courses.maths.ox.ac.uk/course/index.php?categoryid=734">
+                        Year 2022-23
+                    </a>
+                </li>
+        
+                <li class="breadcrumb-item">
+                    <a href="https://courses.maths.ox.ac.uk/course/index.php?categoryid=99">
+                        Undergraduate
+                    </a>
+                </li>
+        
+                <li class="breadcrumb-item">
+                    <a href="https://courses.maths.ox.ac.uk/course/index.php?categoryid=103">
+                        Prelims
+                    </a>
+                </li>
+        
+                <li class="breadcrumb-item">
+                    <a href="https://courses.maths.ox.ac.uk/course/index.php?categoryid=118">
+                        Michaelmas
+                    </a>
+                </li>
+        
+                <li class="breadcrumb-item">
+                    <span>
+                        Introduction to University Mathematics (2022-23)
+                    </span>
+                </li>
+        </ol>
+</nav>
+            </div>
+            <div class="ms-auto d-flex">
+                
+            </div>
+            <div id="course-header">
+                
+            </div>
+        </div>
+        <div class="d-flex align-items-center">
+            <div class="me-auto d-flex flex-column">
+                <div>
+                    <div class="page-context-header d-flex flex-wrap align-items-center mb-2">
+    <div class="page-header-headings">
+        <h1 class="h2 mb-0">Introduction to University Mathematics (2022-23)</h1>
+    </div>
+</div>
+                </div>
+                <div>
+                </div>
+            </div>
+            <div class="header-actions-container ms-auto" data-region="header-actions-container">
+            </div>
+        </div>
+    </div>
+</header>
+            <div id="page-content" class="pb-3 d-print-block">
+                <div id="region-main-box">
+                    <div id="region-main">
+
+                        <section id="block-region-content" class="block-region" data-blockregion="content" data-droptarget="1" aria-labelledby="content-block-region-heading"><h2 class="sr-only" id="content-block-region-heading">Main content blocks</h2><section id="inst110" class=" block_html block  card mb-3" role="region" data-block="html" data-instance-id="110" aria-label="Text">
+
+    <div class="card-body p-3">
+
+
+
+        <div class="card-text content mt-3">
+            <div class="no-overflow"><p></p><ul class="fc-coursecontacts list-unstyled ml-0 pl-0"><li><span class="fc-coursecontactroles">Lecturer: </span><i class="fa fa-user-o" aria-hidden="true"></i> <a href="https://courses.maths.ox.ac.uk/user/profile.php?id=841&amp;course=1051"><span class="sr-only">Profile: </span>Ian Hewitt</a></li></ul>
+
+<div id="collapsible-0" class="collapsibleregion collapsablefiltered collapsed"><div id="collapsible-0_sizer"><div id="collapsible-0_caption" class="collapsibleregioncaption">Course information </div><div id="collapsible-0_inner" class="collapsibleregioninner">
+<br><span class="filter_mathjaxloader_equation"><div class="customfield customfield_select customfield_course_term">
+        <span class="customfieldname">Course term</span><span class="customfieldseparator">: </span><span class="customfieldvalue">Michaelmas</span>
+    </div><div class="customfield customfield_text customfield_course_lecture_info">
+        <span class="customfieldname">Course lecture information</span><span class="customfieldseparator">: </span><span class="customfieldvalue">There will be 8 introductory lectures provided as videos.</span>
+    </div><div class="customfield customfield_textarea customfield_course_overview">
+        <span class="customfieldname">Course overview</span><span class="customfieldseparator">: </span><span class="customfieldvalue">The purpose of these introductory lectures is to establish some of the basic language and notation of university mathematics, and to introduce the elements of naïve set theory and the nature of formal proof.</span>
+    </div><div class="customfield customfield_textarea customfield_learning_outcomes">
+        <span class="customfieldname">Learning outcomes</span><span class="customfieldseparator">: </span><span class="customfieldvalue"></span><div class="text_to_html">Students should:<br>
+<br>
+(i) have the ability to describe, manipulate, and prove results about sets and functions using standard mathematical notation;<br>
+(ii) know and be able to use simple relations;<br>
+(iii) develop sound reasoning skills;<br>
+(iv) have the ability to follow and to construct simple proofs, including proofs by mathematical induction (including strong induction, minimal counterexample) and proofs by contradiction;<br>
+(v) learn how to write clear and rigorous mathematics.</div>
+    </div><div class="customfield customfield_textarea customfield_course_synopsis">
+        <span class="customfieldname">Course synopsis</span><span class="customfieldseparator">: </span><span class="customfieldvalue"><span class="filter_mathjaxloader_equation"></span></span><div class="text_to_html">The natural numbers and their ordering. Induction as a method of proof, including a proof of the binomial theorem with non-negative integral coefficients.<br>
+<br>
+Sets. Examples including <span class="nolink"><span class="nolink">\(\mathbb{N}, \mathbb{Z}, \mathbb{Q}, \mathbb{R}, \mathbb{C}\)</span></span>, and intervals in <span class="nolink"><span class="nolink">\(\mathbb{R}\)</span></span>. Inclusion, union, intersection, power set, ordered pairs and cartesian product of sets. Relations. Definition of an equivalence relation. Examples.<br>
+<br>
+Functions: composition, restriction; injective (one-to-one), surjective (onto) and invertible functions; images and preimages.<br>
+<br>
+Writing mathematics. The language of mathematical reasoning; quantifiers: "for all", "there exists". Formulation of mathematical statements with examples.<br>
+<br>
+Proofs and refutations: standard techniques for constructing proofs; counter-examples. Example of proof by contradiction and more on proof by induction.<br>
+<br>
+Problem-solving in mathematics: experimentation, conjecture, confirmation, followed by explaining the solution precisely.</div>
+    </div></span>
+</div></div></div>
+<p></p>
+<p></p>
+<p></p></div>
+            <div class="footer"></div>
+            
+        </div>
+
+    </div>
+
+</section></section> 
+                        <span class="notifications" id="user-notifications"></span>
+                        <div role="main"><span id="maincontent"></span><div class="course-content"><div id="course-format-6a2fc9b0f10756a2fc9b0b34484">
+    <h2 class="accesshide">Section outline</h2>
+    
+    <ul class="topics" data-for="course_sectionlist">
+                <li id="section-0" class="section course-section main  clearfix
+                             
+                            " data-sectionid="0" data-sectionreturnnum="" data-for="section" data-id="2182" data-number="0" data-sectionname="General">
+                    <div class="section-item">
+                            <div class="course-section-header d-flex" data-for="section_title" data-id="2182" data-number="0">
+                                            <div class="bulkselect align-self-center d-none" data-for="sectionBulkSelect">
+                                                <input id="sectionCheckbox2182" type="checkbox" data-id="2182" data-action="toggleSelectionSection" data-bulkcheckbox="1">
+                                                <label class="sr-only" for="sectionCheckbox2182">
+                                                     Select section General 
+                                                </label>
+                                            </div>
+                                                    <div class="d-flex align-items-center position-relative">
+                                                        <a role="button" data-toggle="collapse" data-for="sectiontoggler" href="#coursecontentcollapseid2182" id="collapsesectionid2182" aria-expanded="true" aria-controls="coursecontentcollapseid2182" class="btn btn-icon me-3 icons-collapse-expand justify-content-center
+                                                                " aria-label="General">
+                                                        <span class="expanded-icon icon-no-margin p-2" title="Collapse">
+                                                            <i class="icon fa fa-chevron-down fa-fw " aria-hidden="true"></i>
+                                                            <span class="sr-only">Collapse</span>
+                                                        </span>
+                                                        <span class="collapsed-icon icon-no-margin p-2" title="Expand">
+                                                            <span class="dir-rtl-hide"><i class="icon fa fa-chevron-right fa-fw " aria-hidden="true"></i></span>
+                                                            <span class="dir-ltr-hide"><i class="icon fa fa-chevron-left fa-fw " aria-hidden="true"></i></span>
+                                                            <span class="sr-only">Expand</span>
+                                                        </span>
+                                                        </a>
+                                                        <h3 class="h4 sectionname course-content-item d-flex align-self-stretch align-items-center mb-0" id="sectionid-2182-title" data-for="section_title" data-id="2182" data-number="0">
+                                                            <a href="https://courses.maths.ox.ac.uk/course/section.php?id=2182">General</a>
+                                                        </h3>
+                                                    </div>
+                                <div data-region="sectionbadges" class="sectionbadges d-flex align-items-center">
+                                </div>
+                                        <div class="flex-fill d-flex justify-content-end me-2 align-self-start mt-2">
+                                            <a id="collapsesections" class="section-collapsemenu" href="#" aria-expanded="true" role="button" data-toggle="toggleall">
+                                                <span class="collapseall text-nowrap">Collapse all</span>
+                                                <span class="expandall text-nowrap">Expand all</span>
+                                            </a>
+                                        </div>
+                            </div>
+                            <div id="coursecontentcollapseid2182" class="content course-content-item-content collapse show">
+                                <div class=" my-3" data-for="sectioninfo">
+                                            <div class="section_availability">
+                                            </div>
+                                </div>
+                                        <ul class="section m-0 p-0 img-text  d-block " data-for="cmlist">
+                                                    <li class="activity activity-wrapper forum modtype_forum   " id="module-8108" data-for="cmitem" data-id="8108">
+                                                            <div class="activity-item focus-control " data-activityname="Announcements" data-region="activity-card">
+                                                                        <div class="bulkselect d-none" data-for="cmBulkSelect">
+                                                                            <input id="cmCheckbox8108" type="checkbox" data-id="8108" data-action="toggleSelectionCm" data-bulkcheckbox="1">
+                                                                            <label class="sr-only" for="cmCheckbox8108">
+                                                                                Select activity Announcements
+                                                                            </label>
+                                                                        </div>
+
+                                                                    <div class="activity-grid ">
+                                                                    
+                                                                                                <div class="activity-icon activityiconcontainer smaller collaboration  courseicon align-self-start me-2">
+                                                                                                    <img src="https://courses.maths.ox.ac.uk/theme/image.php/boost/forum/1780950349/monologo?filtericon=1" class="activityicon " data-region="activity-icon" data-id="8108" alt="">
+                                                                                                </div>
+                                                                                    
+                                                                                        <div class="activity-name-area activity-instance d-flex flex-column me-2">
+                                                                                            <div class="activitytitle  modtype_forum position-relative align-self-start">
+                                                                                                <div class="activityname">
+                                                                                                                <a href="https://courses.maths.ox.ac.uk/mod/forum/view.php?id=8108" class=" aalink stretched-link" onclick="">        <span class="instancename">Announcements <span class="accesshide "> Forum</span></span>    </a>
+                                                                                                            
+                                                                                                            <span class="ms-1">
+                                                                                                                <span class="activitybadge badge rounded-pill ">
+                                                                                                                        
+                                                                                                                </span>
+                                                                                                            </span>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    </div>
+                                                            </div>
+                                                    </li>
+                                                    <li class="activity activity-wrapper lti modtype_lti   " id="module-8109" data-for="cmitem" data-id="8109">
+                                                            <div class="activity-item focus-control " data-activityname="Lecture Videos" data-region="activity-card">
+                                                                        <div class="bulkselect d-none" data-for="cmBulkSelect">
+                                                                            <input id="cmCheckbox8109" type="checkbox" data-id="8109" data-action="toggleSelectionCm" data-bulkcheckbox="1">
+                                                                            <label class="sr-only" for="cmCheckbox8109">
+                                                                                Select activity Lecture Videos
+                                                                            </label>
+                                                                        </div>
+
+                                                                    <div class="activity-grid ">
+                                                                    
+                                                                                                <div class="activity-icon activityiconcontainer smaller other  courseicon align-self-start me-2">
+                                                                                                    <img src="https://static-contents.panopto.com/prod/panopto_logo_moodle_tool_60x60.png" class="activityicon nofilter" data-region="activity-icon" data-id="8109" alt="">
+                                                                                                </div>
+                                                                                    
+                                                                                        <div class="activity-name-area activity-instance d-flex flex-column me-2">
+                                                                                            <div class="activitytitle  modtype_lti position-relative align-self-start">
+                                                                                                <div class="activityname">
+                                                                                                                <a href="https://courses.maths.ox.ac.uk/mod/lti/view.php?id=8109" class=" aalink stretched-link" onclick="window.open('https://courses.maths.ox.ac.uk/mod/lti/launch.php?id=8109', 'lti-8109'); return false;">        <span class="instancename">Lecture Videos <span class="accesshide "> External tool</span></span>    <i class="fa fa-external-link ms-1" aria-label="Opens in new window" role="img" title="Opens in new window"></i></a>
+                                                                                                            
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    </div>
+                                                            </div>
+                                                    </li>
+                                                    <li class="activity activity-wrapper resource modtype_resource   " id="module-51108" data-for="cmitem" data-id="51108">
+                                                            <div class="activity-item focus-control " data-activityname="Prelims Mathematics Syllabus" data-region="activity-card">
+                                                                        <div class="bulkselect d-none" data-for="cmBulkSelect">
+                                                                            <input id="cmCheckbox51108" type="checkbox" data-id="51108" data-action="toggleSelectionCm" data-bulkcheckbox="1">
+                                                                            <label class="sr-only" for="cmCheckbox51108">
+                                                                                Select activity Prelims Mathematics Syllabus
+                                                                            </label>
+                                                                        </div>
+
+                                                                    <div class="activity-grid ">
+                                                                    
+                                                                                                <div class="activity-icon activityiconcontainer smaller content  courseicon align-self-start me-2">
+                                                                                                    <img src="https://courses.maths.ox.ac.uk/theme/image.php/boost/core/1780950349/f/pdf?filtericon=1" class="activityicon " data-region="activity-icon" data-id="51108" alt="">
+                                                                                                </div>
+                                                                                    
+                                                                                        <div class="activity-name-area activity-instance d-flex flex-column me-2">
+                                                                                            <div class="activitytitle  modtype_resource position-relative align-self-start">
+                                                                                                <div class="activityname">
+                                                                                                                <a href="https://courses.maths.ox.ac.uk/mod/resource/view.php?id=51108" class=" aalink stretched-link" onclick="">        <span class="instancename">Prelims Mathematics Syllabus <span class="accesshide "> File</span></span>    </a>
+                                                                                                            
+                                                                                                            <span class="ms-1">
+                                                                                                                <span class="activitybadge badge rounded-pill ">
+                                                                                                                        
+                                                                                                                </span>
+                                                                                                            </span>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    </div>
+                                                            </div>
+                                                    </li>
+                                                    <li class="activity activity-wrapper resource modtype_resource   " id="module-51128" data-for="cmitem" data-id="51128">
+                                                            <div class="activity-item focus-control " data-activityname="Mathematics and Philosophy Syllabus" data-region="activity-card">
+                                                                        <div class="bulkselect d-none" data-for="cmBulkSelect">
+                                                                            <input id="cmCheckbox51128" type="checkbox" data-id="51128" data-action="toggleSelectionCm" data-bulkcheckbox="1">
+                                                                            <label class="sr-only" for="cmCheckbox51128">
+                                                                                Select activity Mathematics and Philosophy Syllabus
+                                                                            </label>
+                                                                        </div>
+
+                                                                    <div class="activity-grid ">
+                                                                    
+                                                                                                <div class="activity-icon activityiconcontainer smaller content  courseicon align-self-start me-2">
+                                                                                                    <img src="https://courses.maths.ox.ac.uk/theme/image.php/boost/core/1780950349/f/pdf?filtericon=1" class="activityicon " data-region="activity-icon" data-id="51128" alt="">
+                                                                                                </div>
+                                                                                    
+                                                                                        <div class="activity-name-area activity-instance d-flex flex-column me-2">
+                                                                                            <div class="activitytitle  modtype_resource position-relative align-self-start">
+                                                                                                <div class="activityname">
+                                                                                                                <a href="https://courses.maths.ox.ac.uk/mod/resource/view.php?id=51128" class=" aalink stretched-link" onclick="">        <span class="instancename">Mathematics and Philosophy Syllabus <span class="accesshide "> File</span></span>    </a>
+                                                                                                            
+                                                                                                            <span class="ms-1">
+                                                                                                                <span class="activitybadge badge rounded-pill ">
+                                                                                                                        
+                                                                                                                </span>
+                                                                                                            </span>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    </div>
+                                                            </div>
+                                                    </li>
+                                            </ul>
+                                
+                            </div>
+                    </div>
+                
+                </li>
+                <li id="section-1" class="section course-section main  clearfix
+                             
+                            " data-sectionid="1" data-sectionreturnnum="" data-for="section" data-id="2183" data-number="1" data-sectionname="Course Materials">
+                    <div class="section-item">
+                            <div class="course-section-header d-flex" data-for="section_title" data-id="2183" data-number="1">
+                                            <div class="bulkselect align-self-center d-none" data-for="sectionBulkSelect">
+                                                <input id="sectionCheckbox2183" type="checkbox" data-id="2183" data-action="toggleSelectionSection" data-bulkcheckbox="1">
+                                                <label class="sr-only" for="sectionCheckbox2183">
+                                                     Select section Course Materials 
+                                                </label>
+                                            </div>
+                                                    <div class="d-flex align-items-center position-relative">
+                                                        <a role="button" data-toggle="collapse" data-for="sectiontoggler" href="#coursecontentcollapseid2183" id="collapsesectionid2183" aria-expanded="true" aria-controls="coursecontentcollapseid2183" class="btn btn-icon me-3 icons-collapse-expand justify-content-center
+                                                                " aria-label="Course Materials">
+                                                        <span class="expanded-icon icon-no-margin p-2" title="Collapse">
+                                                            <i class="icon fa fa-chevron-down fa-fw " aria-hidden="true"></i>
+                                                            <span class="sr-only">Collapse</span>
+                                                        </span>
+                                                        <span class="collapsed-icon icon-no-margin p-2" title="Expand">
+                                                            <span class="dir-rtl-hide"><i class="icon fa fa-chevron-right fa-fw " aria-hidden="true"></i></span>
+                                                            <span class="dir-ltr-hide"><i class="icon fa fa-chevron-left fa-fw " aria-hidden="true"></i></span>
+                                                            <span class="sr-only">Expand</span>
+                                                        </span>
+                                                        </a>
+                                                        <h3 class="h4 sectionname course-content-item d-flex align-self-stretch align-items-center mb-0" id="sectionid-2183-title" data-for="section_title" data-id="2183" data-number="1">
+                                                            <a href="https://courses.maths.ox.ac.uk/course/section.php?id=2183">Course Materials</a>
+                                                        </h3>
+                                                    </div>
+                                <div data-region="sectionbadges" class="sectionbadges d-flex align-items-center">
+                                </div>
+                            </div>
+                            <div id="coursecontentcollapseid2183" class="content course-content-item-content collapse show">
+                                <div class=" my-3" data-for="sectioninfo">
+                                            <div class="section_availability">
+                                            </div>
+                                </div>
+                                        <ul class="section m-0 p-0 img-text  d-block " data-for="cmlist">
+                                                    <li class="activity activity-wrapper resource modtype_resource   " id="module-8114" data-for="cmitem" data-id="8114">
+                                                            <div class="activity-item focus-control " data-activityname="Lecture notes" data-region="activity-card">
+                                                                        <div class="bulkselect d-none" data-for="cmBulkSelect">
+                                                                            <input id="cmCheckbox8114" type="checkbox" data-id="8114" data-action="toggleSelectionCm" data-bulkcheckbox="1">
+                                                                            <label class="sr-only" for="cmCheckbox8114">
+                                                                                Select activity Lecture notes
+                                                                            </label>
+                                                                        </div>
+
+                                                                    <div class="activity-grid ">
+                                                                    
+                                                                                                <div class="activity-icon activityiconcontainer smaller content  courseicon align-self-start me-2">
+                                                                                                    <img src="https://courses.maths.ox.ac.uk/theme/image.php/boost/core/1780950349/f/pdf?filtericon=1" class="activityicon " data-region="activity-icon" data-id="8114" alt="">
+                                                                                                </div>
+                                                                                    
+                                                                                        <div class="activity-name-area activity-instance d-flex flex-column me-2">
+                                                                                            <div class="activitytitle  modtype_resource position-relative align-self-start">
+                                                                                                <div class="activityname">
+                                                                                                                <a href="https://courses.maths.ox.ac.uk/mod/resource/view.php?id=8114" class=" aalink stretched-link" onclick="">        <span class="instancename">Lecture notes <span class="accesshide "> File</span></span>    </a>
+                                                                                                            
+                                                                                                            <span class="ms-1">
+                                                                                                                <span class="activitybadge badge rounded-pill ">
+                                                                                                                        
+                                                                                                                </span>
+                                                                                                            </span>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                            <div class="activity-altcontent text-break activity-description">
+                                                                                <div class="no-overflow"><div class="no-overflow"><p dir="ltr" style="text-align: left;">The primary course materials are these pdf lecture notes and the Panopto <a class="autolink" title="Lecture Videos" href="https://courses.maths.ox.ac.uk/mod/lti/view.php?id=8109">lecture videos</a> (easiest to access via the direct links to the right, under Panopto/Completed recordings, once the site has recognised you as having access).&nbsp;</p><p dir="ltr" style="text-align: left;"><span style="font-size: 0.9375rem; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, &quot;Liberation Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;;">There are 16 videos, mostly around 20-25 mins.&nbsp; I recommend watching at x1.25 speed.&nbsp; The notes and videos contain more or less the same material, occasionally in a slightly different order.&nbsp; The rough correspondence is:</span><br></p><p dir="ltr" style="text-align: left;">Lecture 1 - The natural numbers and induction (Sections 1.1,1.2)</p><p dir="ltr" style="text-align: left;">Lecture 2 - The binomial theorem and introduction to sets (Sections 1.3,2.1)</p><p dir="ltr" style="text-align: left;">Lecture 3 - Algebra of sets, cardinality (Sections 2.2,2.3,2.4)</p><p dir="ltr" style="text-align: left;">Lecture 4 - Logical notation, relations, and equivalence relations (Sections 5.1,3.1,3.2,3.3)</p><p dir="ltr" style="text-align: left;">Lecture 5 - Functions (Sections 4.1,4.2,4.3)</p><p dir="ltr" style="text-align: left;">Lecture 6 - Handling logical notation and quantifiers (Sections 5.1,5.2)</p><p dir="ltr" style="text-align: left;">Lecture 7 - Constructing mathematical statements and proofs (Sections 5.3,6.1,6.2)</p><p dir="ltr" style="text-align: left;">Lecture 8 - Problem solving examples (Section 6.3)</p></div></div>
+                                                                            </div>
+                                                                    
+                                                                    
+                                                                    </div>
+                                                            </div>
+                                                    </li>
+                                                    <li class="activity activity-wrapper assign modtype_assign   " id="module-8115" data-for="cmitem" data-id="8115">
+                                                            <div class="activity-item focus-control " data-activityname="Sheet 1" data-region="activity-card">
+                                                                        <div class="bulkselect d-none" data-for="cmBulkSelect">
+                                                                            <input id="cmCheckbox8115" type="checkbox" data-id="8115" data-action="toggleSelectionCm" data-bulkcheckbox="1">
+                                                                            <label class="sr-only" for="cmCheckbox8115">
+                                                                                Select activity Sheet 1
+                                                                            </label>
+                                                                        </div>
+
+                                                                    <div class="activity-grid ">
+                                                                    
+                                                                                                <div class="activity-icon activityiconcontainer smaller assessment  courseicon align-self-start me-2">
+                                                                                                    <img src="https://courses.maths.ox.ac.uk/theme/image.php/boost/assign/1780950349/monologo?filtericon=1" class="activityicon " data-region="activity-icon" data-id="8115" alt="">
+                                                                                                </div>
+                                                                                    
+                                                                                        <div class="activity-name-area activity-instance d-flex flex-column me-2">
+                                                                                            <div class="activitytitle  modtype_assign position-relative align-self-start">
+                                                                                                <div class="activityname">
+                                                                                                                <a href="https://courses.maths.ox.ac.uk/mod/assign/view.php?id=8115" class=" aalink stretched-link" onclick="">        <span class="instancename">Sheet 1 <span class="accesshide "> Assignment</span></span>    </a>
+                                                                                                            
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                            <div class="activity-altcontent text-break activity-description">
+                                                                                <div class="no-overflow"><div class="no-overflow"><p dir="ltr" style="text-align: left;">Covers lectures 1-4.&nbsp;&nbsp;<span style="font-size: 0.9375rem; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, &quot;Liberation Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;;">The following would be a sensible order to do things:</span></p><p dir="ltr" style="text-align: left;">Lectures 1 and 2. Questions 1,2</p><p dir="ltr" style="text-align: left;">Lecture 3. Questions 3,4</p><p dir="ltr" style="text-align: left;">Lecture 4. Questions 5,6,7</p></div></div>
+                                                                            </div>
+                                                                    
+                                                                    
+                                                                    </div>
+                                                            </div>
+                                                    </li>
+                                                    <li class="activity activity-wrapper assign modtype_assign   " id="module-8116" data-for="cmitem" data-id="8116">
+                                                            <div class="activity-item focus-control " data-activityname="Sheet 2" data-region="activity-card">
+                                                                        <div class="bulkselect d-none" data-for="cmBulkSelect">
+                                                                            <input id="cmCheckbox8116" type="checkbox" data-id="8116" data-action="toggleSelectionCm" data-bulkcheckbox="1">
+                                                                            <label class="sr-only" for="cmCheckbox8116">
+                                                                                Select activity Sheet 2
+                                                                            </label>
+                                                                        </div>
+
+                                                                    <div class="activity-grid ">
+                                                                    
+                                                                                                <div class="activity-icon activityiconcontainer smaller assessment  courseicon align-self-start me-2">
+                                                                                                    <img src="https://courses.maths.ox.ac.uk/theme/image.php/boost/assign/1780950349/monologo?filtericon=1" class="activityicon " data-region="activity-icon" data-id="8116" alt="">
+                                                                                                </div>
+                                                                                    
+                                                                                        <div class="activity-name-area activity-instance d-flex flex-column me-2">
+                                                                                            <div class="activitytitle  modtype_assign position-relative align-self-start">
+                                                                                                <div class="activityname">
+                                                                                                                <a href="https://courses.maths.ox.ac.uk/mod/assign/view.php?id=8116" class=" aalink stretched-link" onclick="">        <span class="instancename">Sheet 2 <span class="accesshide "> Assignment</span></span>    </a>
+                                                                                                            
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                            <div class="activity-altcontent text-break activity-description">
+                                                                                <div class="no-overflow"><div class="no-overflow"><p dir="ltr" style="text-align: left;">Covers lectures 5-8.&nbsp; The following would be a sensible order to do things:</p><p dir="ltr" style="text-align: left;">Lecture 5. Questions 1,2</p><p dir="ltr" style="text-align: left;">Lecture 6. Questions 3,4,5</p><p dir="ltr" style="text-align: left;">Lectures 7 and 8. Questions 6,7,8</p></div></div>
+                                                                            </div>
+                                                                    
+                                                                    
+                                                                    </div>
+                                                            </div>
+                                                    </li>
+                                                    <li class="activity activity-wrapper quiz modtype_quiz   " id="module-8117" data-for="cmitem" data-id="8117">
+                                                            <div class="activity-item focus-control " data-activityname="Lecture 1 Quiz" data-region="activity-card">
+                                                                        <div class="bulkselect d-none" data-for="cmBulkSelect">
+                                                                            <input id="cmCheckbox8117" type="checkbox" data-id="8117" data-action="toggleSelectionCm" data-bulkcheckbox="1">
+                                                                            <label class="sr-only" for="cmCheckbox8117">
+                                                                                Select activity Lecture 1 Quiz
+                                                                            </label>
+                                                                        </div>
+
+                                                                    <div class="activity-grid ">
+                                                                    
+                                                                                                <div class="activity-icon activityiconcontainer smaller assessment  courseicon align-self-start me-2">
+                                                                                                    <img src="https://courses.maths.ox.ac.uk/theme/image.php/boost/quiz/1780950349/monologo?filtericon=1" class="activityicon " data-region="activity-icon" data-id="8117" alt="">
+                                                                                                </div>
+                                                                                    
+                                                                                        <div class="activity-name-area activity-instance d-flex flex-column me-2">
+                                                                                            <div class="activitytitle  modtype_quiz position-relative align-self-start">
+                                                                                                <div class="activityname">
+                                                                                                                <a href="https://courses.maths.ox.ac.uk/mod/quiz/view.php?id=8117" class=" aalink stretched-link" onclick="">        <span class="instancename">Lecture 1 Quiz </span>    </a>
+                                                                                                            
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                            <div class="activity-altcontent text-break activity-description">
+                                                                                <div class="no-overflow"><div class="no-overflow"><p dir="ltr" style="text-align: left;"><span style="font-size: 0.9375rem; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, &quot;Liberation Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;;"><strong>NB: If you have difficulty accessing these quizzes or the videos, it may be that you need to 'enrol' in this course, see&nbsp;<a href="https://www.maths.ox.ac.uk/members/it/faqs/moodle-courses-system">here</a>.</strong></span></p><p dir="ltr" style="text-align: left;"><span style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, &quot;Liberation Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;; font-size: 0.9375rem;">The quizzes contain short questions to recap ideas from each lecture and to check your understanding.&nbsp; &nbsp;I recommend taking a few minutes to do them as you work through the videos or notes.&nbsp;&nbsp;</span><br></p><p dir="ltr" style="text-align: left;"><span style="font-size: 0.9375rem; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, &quot;Liberation Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;;">Some of these should be quite straightforward, while others require careful thought.&nbsp; Getting them wrong doesn't matter at all - you may even learn more by getting them wrong.&nbsp; (You can try the questions as many times as you like - don't be put off by things the system says about grading - these don't count for anything!)</span><br></p><p dir="ltr" style="text-align: left;">Click 'Attempt quiz now' to start.&nbsp; &nbsp;Click 'Check' to check your answers, 'Try another question like this one' to have another go (it really just means 'Try again' but I can't change what it says), and 'Next Page' to move to the next question.</p></div></div>
+                                                                            </div>
+                                                                    
+                                                                    
+                                                                    </div>
+                                                            </div>
+                                                    </li>
+                                                    <li class="activity activity-wrapper quiz modtype_quiz   " id="module-8118" data-for="cmitem" data-id="8118">
+                                                            <div class="activity-item focus-control " data-activityname="Lecture 2 Quiz" data-region="activity-card">
+                                                                        <div class="bulkselect d-none" data-for="cmBulkSelect">
+                                                                            <input id="cmCheckbox8118" type="checkbox" data-id="8118" data-action="toggleSelectionCm" data-bulkcheckbox="1">
+                                                                            <label class="sr-only" for="cmCheckbox8118">
+                                                                                Select activity Lecture 2 Quiz
+                                                                            </label>
+                                                                        </div>
+
+                                                                    <div class="activity-grid ">
+                                                                    
+                                                                                                <div class="activity-icon activityiconcontainer smaller assessment  courseicon align-self-start me-2">
+                                                                                                    <img src="https://courses.maths.ox.ac.uk/theme/image.php/boost/quiz/1780950349/monologo?filtericon=1" class="activityicon " data-region="activity-icon" data-id="8118" alt="">
+                                                                                                </div>
+                                                                                    
+                                                                                        <div class="activity-name-area activity-instance d-flex flex-column me-2">
+                                                                                            <div class="activitytitle  modtype_quiz position-relative align-self-start">
+                                                                                                <div class="activityname">
+                                                                                                                <a href="https://courses.maths.ox.ac.uk/mod/quiz/view.php?id=8118" class=" aalink stretched-link" onclick="">        <span class="instancename">Lecture 2 Quiz </span>    </a>
+                                                                                                            
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    </div>
+                                                            </div>
+                                                    </li>
+                                                    <li class="activity activity-wrapper quiz modtype_quiz   " id="module-8119" data-for="cmitem" data-id="8119">
+                                                            <div class="activity-item focus-control " data-activityname="Lecture 3 Quiz" data-region="activity-card">
+                                                                        <div class="bulkselect d-none" data-for="cmBulkSelect">
+                                                                            <input id="cmCheckbox8119" type="checkbox" data-id="8119" data-action="toggleSelectionCm" data-bulkcheckbox="1">
+                                                                            <label class="sr-only" for="cmCheckbox8119">
+                                                                                Select activity Lecture 3 Quiz
+                                                                            </label>
+                                                                        </div>
+
+                                                                    <div class="activity-grid ">
+                                                                    
+                                                                                                <div class="activity-icon activityiconcontainer smaller assessment  courseicon align-self-start me-2">
+                                                                                                    <img src="https://courses.maths.ox.ac.uk/theme/image.php/boost/quiz/1780950349/monologo?filtericon=1" class="activityicon " data-region="activity-icon" data-id="8119" alt="">
+                                                                                                </div>
+                                                                                    
+                                                                                        <div class="activity-name-area activity-instance d-flex flex-column me-2">
+                                                                                            <div class="activitytitle  modtype_quiz position-relative align-self-start">
+                                                                                                <div class="activityname">
+                                                                                                                <a href="https://courses.maths.ox.ac.uk/mod/quiz/view.php?id=8119" class=" aalink stretched-link" onclick="">        <span class="instancename">Lecture 3 Quiz </span>    </a>
+                                                                                                            
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    </div>
+                                                            </div>
+                                                    </li>
+                                                    <li class="activity activity-wrapper quiz modtype_quiz   " id="module-8120" data-for="cmitem" data-id="8120">
+                                                            <div class="activity-item focus-control " data-activityname="Lecture 4 Quiz" data-region="activity-card">
+                                                                        <div class="bulkselect d-none" data-for="cmBulkSelect">
+                                                                            <input id="cmCheckbox8120" type="checkbox" data-id="8120" data-action="toggleSelectionCm" data-bulkcheckbox="1">
+                                                                            <label class="sr-only" for="cmCheckbox8120">
+                                                                                Select activity Lecture 4 Quiz
+                                                                            </label>
+                                                                        </div>
+
+                                                                    <div class="activity-grid ">
+                                                                    
+                                                                                                <div class="activity-icon activityiconcontainer smaller assessment  courseicon align-self-start me-2">
+                                                                                                    <img src="https://courses.maths.ox.ac.uk/theme/image.php/boost/quiz/1780950349/monologo?filtericon=1" class="activityicon " data-region="activity-icon" data-id="8120" alt="">
+                                                                                                </div>
+                                                                                    
+                                                                                        <div class="activity-name-area activity-instance d-flex flex-column me-2">
+                                                                                            <div class="activitytitle  modtype_quiz position-relative align-self-start">
+                                                                                                <div class="activityname">
+                                                                                                                <a href="https://courses.maths.ox.ac.uk/mod/quiz/view.php?id=8120" class=" aalink stretched-link" onclick="">        <span class="instancename">Lecture 4 Quiz </span>    </a>
+                                                                                                            
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    </div>
+                                                            </div>
+                                                    </li>
+                                                    <li class="activity activity-wrapper quiz modtype_quiz   " id="module-8121" data-for="cmitem" data-id="8121">
+                                                            <div class="activity-item focus-control " data-activityname="Lecture 5 Quiz" data-region="activity-card">
+                                                                        <div class="bulkselect d-none" data-for="cmBulkSelect">
+                                                                            <input id="cmCheckbox8121" type="checkbox" data-id="8121" data-action="toggleSelectionCm" data-bulkcheckbox="1">
+                                                                            <label class="sr-only" for="cmCheckbox8121">
+                                                                                Select activity Lecture 5 Quiz
+                                                                            </label>
+                                                                        </div>
+
+                                                                    <div class="activity-grid ">
+                                                                    
+                                                                                                <div class="activity-icon activityiconcontainer smaller assessment  courseicon align-self-start me-2">
+                                                                                                    <img src="https://courses.maths.ox.ac.uk/theme/image.php/boost/quiz/1780950349/monologo?filtericon=1" class="activityicon " data-region="activity-icon" data-id="8121" alt="">
+                                                                                                </div>
+                                                                                    
+                                                                                        <div class="activity-name-area activity-instance d-flex flex-column me-2">
+                                                                                            <div class="activitytitle  modtype_quiz position-relative align-self-start">
+                                                                                                <div class="activityname">
+                                                                                                                <a href="https://courses.maths.ox.ac.uk/mod/quiz/view.php?id=8121" class=" aalink stretched-link" onclick="">        <span class="instancename">Lecture 5 Quiz </span>    </a>
+                                                                                                            
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    </div>
+                                                            </div>
+                                                    </li>
+                                                    <li class="activity activity-wrapper quiz modtype_quiz   " id="module-8122" data-for="cmitem" data-id="8122">
+                                                            <div class="activity-item focus-control " data-activityname="Lecture 6 Quiz" data-region="activity-card">
+                                                                        <div class="bulkselect d-none" data-for="cmBulkSelect">
+                                                                            <input id="cmCheckbox8122" type="checkbox" data-id="8122" data-action="toggleSelectionCm" data-bulkcheckbox="1">
+                                                                            <label class="sr-only" for="cmCheckbox8122">
+                                                                                Select activity Lecture 6 Quiz
+                                                                            </label>
+                                                                        </div>
+
+                                                                    <div class="activity-grid ">
+                                                                    
+                                                                                                <div class="activity-icon activityiconcontainer smaller assessment  courseicon align-self-start me-2">
+                                                                                                    <img src="https://courses.maths.ox.ac.uk/theme/image.php/boost/quiz/1780950349/monologo?filtericon=1" class="activityicon " data-region="activity-icon" data-id="8122" alt="">
+                                                                                                </div>
+                                                                                    
+                                                                                        <div class="activity-name-area activity-instance d-flex flex-column me-2">
+                                                                                            <div class="activitytitle  modtype_quiz position-relative align-self-start">
+                                                                                                <div class="activityname">
+                                                                                                                <a href="https://courses.maths.ox.ac.uk/mod/quiz/view.php?id=8122" class=" aalink stretched-link" onclick="">        <span class="instancename">Lecture 6 Quiz </span>    </a>
+                                                                                                            
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    </div>
+                                                            </div>
+                                                    </li>
+                                                    <li class="activity activity-wrapper quiz modtype_quiz   " id="module-8123" data-for="cmitem" data-id="8123">
+                                                            <div class="activity-item focus-control " data-activityname="Lecture 7 Quiz" data-region="activity-card">
+                                                                        <div class="bulkselect d-none" data-for="cmBulkSelect">
+                                                                            <input id="cmCheckbox8123" type="checkbox" data-id="8123" data-action="toggleSelectionCm" data-bulkcheckbox="1">
+                                                                            <label class="sr-only" for="cmCheckbox8123">
+                                                                                Select activity Lecture 7 Quiz
+                                                                            </label>
+                                                                        </div>
+
+                                                                    <div class="activity-grid ">
+                                                                    
+                                                                                                <div class="activity-icon activityiconcontainer smaller assessment  courseicon align-self-start me-2">
+                                                                                                    <img src="https://courses.maths.ox.ac.uk/theme/image.php/boost/quiz/1780950349/monologo?filtericon=1" class="activityicon " data-region="activity-icon" data-id="8123" alt="">
+                                                                                                </div>
+                                                                                    
+                                                                                        <div class="activity-name-area activity-instance d-flex flex-column me-2">
+                                                                                            <div class="activitytitle  modtype_quiz position-relative align-self-start">
+                                                                                                <div class="activityname">
+                                                                                                                <a href="https://courses.maths.ox.ac.uk/mod/quiz/view.php?id=8123" class=" aalink stretched-link" onclick="">        <span class="instancename">Lecture 7 Quiz </span>    </a>
+                                                                                                            
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    </div>
+                                                            </div>
+                                                    </li>
+                                                    <li class="activity activity-wrapper resource modtype_resource   " id="module-8124" data-for="cmitem" data-id="8124">
+                                                            <div class="activity-item focus-control " data-activityname="Slides from lectures 1-4" data-region="activity-card">
+                                                                        <div class="bulkselect d-none" data-for="cmBulkSelect">
+                                                                            <input id="cmCheckbox8124" type="checkbox" data-id="8124" data-action="toggleSelectionCm" data-bulkcheckbox="1">
+                                                                            <label class="sr-only" for="cmCheckbox8124">
+                                                                                Select activity Slides from lectures 1-4
+                                                                            </label>
+                                                                        </div>
+
+                                                                    <div class="activity-grid ">
+                                                                    
+                                                                                                <div class="activity-icon activityiconcontainer smaller content  courseicon align-self-start me-2">
+                                                                                                    <img src="https://courses.maths.ox.ac.uk/theme/image.php/boost/core/1780950349/f/pdf?filtericon=1" class="activityicon " data-region="activity-icon" data-id="8124" alt="">
+                                                                                                </div>
+                                                                                    
+                                                                                        <div class="activity-name-area activity-instance d-flex flex-column me-2">
+                                                                                            <div class="activitytitle  modtype_resource position-relative align-self-start">
+                                                                                                <div class="activityname">
+                                                                                                                <a href="https://courses.maths.ox.ac.uk/mod/resource/view.php?id=8124" class=" aalink stretched-link" onclick="">        <span class="instancename">Slides from lectures 1-4 <span class="accesshide "> File</span></span>    </a>
+                                                                                                            
+                                                                                                            <span class="ms-1">
+                                                                                                                <span class="activitybadge badge rounded-pill ">
+                                                                                                                        
+                                                                                                                </span>
+                                                                                                            </span>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    </div>
+                                                            </div>
+                                                    </li>
+                                                    <li class="activity activity-wrapper resource modtype_resource   " id="module-8125" data-for="cmitem" data-id="8125">
+                                                            <div class="activity-item focus-control " data-activityname="Slides from lectures 5-8" data-region="activity-card">
+                                                                        <div class="bulkselect d-none" data-for="cmBulkSelect">
+                                                                            <input id="cmCheckbox8125" type="checkbox" data-id="8125" data-action="toggleSelectionCm" data-bulkcheckbox="1">
+                                                                            <label class="sr-only" for="cmCheckbox8125">
+                                                                                Select activity Slides from lectures 5-8
+                                                                            </label>
+                                                                        </div>
+
+                                                                    <div class="activity-grid ">
+                                                                    
+                                                                                                <div class="activity-icon activityiconcontainer smaller content  courseicon align-self-start me-2">
+                                                                                                    <img src="https://courses.maths.ox.ac.uk/theme/image.php/boost/core/1780950349/f/pdf?filtericon=1" class="activityicon " data-region="activity-icon" data-id="8125" alt="">
+                                                                                                </div>
+                                                                                    
+                                                                                        <div class="activity-name-area activity-instance d-flex flex-column me-2">
+                                                                                            <div class="activitytitle  modtype_resource position-relative align-self-start">
+                                                                                                <div class="activityname">
+                                                                                                                <a href="https://courses.maths.ox.ac.uk/mod/resource/view.php?id=8125" class=" aalink stretched-link" onclick="">        <span class="instancename">Slides from lectures 5-8 <span class="accesshide "> File</span></span>    </a>
+                                                                                                            
+                                                                                                            <span class="ms-1">
+                                                                                                                <span class="activitybadge badge rounded-pill ">
+                                                                                                                        
+                                                                                                                </span>
+                                                                                                            </span>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    </div>
+                                                            </div>
+                                                    </li>
+                                            </ul>
+                                
+                            </div>
+                    </div>
+                
+                </li>
+    </ul>
+</div></div></div>
+                        
+                        
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <footer id="page-footer" class="footer-popover bg-white">
+            <div data-region="footer-container-popover">
+                <button class="btn btn-icon bg-secondary icon-no-margin btn-footer-popover" data-action="footer-popover" aria-label="Show footer">
+                    <i class="icon fa fa-question fa-fw " aria-hidden="true"></i>
+                </button>
+            </div>
+            <div class="footer-content-popover container" data-region="footer-content-popover">
+                    <div class="footer-section p-3 border-bottom">
+        
+        
+                            <div class="footer-support-link"><a href="https://www.maths.ox.ac.uk/members/it/faqs/moodle-courses-system" target="blank"><i class="icon fa-regular fa-envelope fa-fw " aria-hidden="true"></i>Contact site support<i class="icon fa fa-arrow-up-right-from-square fa-fw ms-1" aria-hidden="true"></i></a></div>
+                    </div>
+                <div class="footer-section p-3 border-bottom">
+                    <div class="logininfo">
+                        <div class="logininfo">You are currently using guest access (<a href="https://courses.maths.ox.ac.uk/login/index.php">Log in with SSO</a>)</div>
+                    </div>
+                    <div class="tool_usertours-resettourcontainer">
+                    </div>
+        
+                    <div><a class="mobilelink" href="https://download.moodle.org/mobile?version=2024100712&amp;lang=en&amp;iosappid=633359593&amp;androidappid=com.moodle.moodlemobile&amp;siteurl=https%3A%2F%2Fcourses.maths.ox.ac.uk">Get the mobile app</a></div>
+                    
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Add an icon to module links that open in a new tab
+    document.querySelectorAll('ul.topics .activitytitle a[onclick^="window.open("]').forEach(function(link) {
+        var icon = document.createElement('i');
+        icon.className = 'fa fa-external-link ms-1';
+        icon.setAttribute('aria-label', 'Opens in new window');
+        icon.setAttribute('role', 'img');
+        icon.setAttribute('title', 'Opens in new window');
+        link.appendChild(icon);
+    });
+});
+</script><script>
+//<![CDATA[
+var require = {
+    baseUrl : 'https://courses.maths.ox.ac.uk/lib/requirejs.php/1780950349/',
+    // We only support AMD modules with an explicit define() statement.
+    enforceDefine: true,
+    skipDataMain: true,
+    waitSeconds : 0,
+
+    paths: {
+        jquery: 'https://courses.maths.ox.ac.uk/lib/javascript.php/1780950349/lib/jquery/jquery-3.7.1.min',
+        jqueryui: 'https://courses.maths.ox.ac.uk/lib/javascript.php/1780950349/lib/jquery/ui-1.13.2/jquery-ui.min',
+        jqueryprivate: 'https://courses.maths.ox.ac.uk/lib/javascript.php/1780950349/lib/requirejs/jquery-private'
+    },
+
+    // Custom jquery config map.
+    map: {
+      // '*' means all modules will get 'jqueryprivate'
+      // for their 'jquery' dependency.
+      '*': { jquery: 'jqueryprivate' },
+
+      // 'jquery-private' wants the real jQuery module
+      // though. If this line was not here, there would
+      // be an unresolvable cyclic dependency.
+      jqueryprivate: { jquery: 'jquery' }
+    }
+};
+
+//]]>
+</script>
+<script src="https://courses.maths.ox.ac.uk/lib/javascript.php/1780950349/lib/requirejs/require.min.js"></script>
+<script>
+//<![CDATA[
+M.util.js_pending("core/first");
+require(['core/first'], function() {
+require(['core/prefetch'])
+;
+M.util.js_pending('filter_mathjaxloader/loader'); require(['filter_mathjaxloader/loader'], function(amd) {amd.configure({"mathjaxconfig":"MathJax.Hub.Config({\r\n    config: [\"Accessible.js\", \"Safe.js\"],\r\n    errorSettings: { message: [\"!\"] },\r\n    tex2jax: {\r\n      \/\/inlineMath: [ ['$','$'], ['\\\\(','\\\\)'] ],\r\n      processEscapes: true\r\n    },\r\n    skipStartupTypeset: true,\r\n    messageStyle: \"none\"\r\n});\r\n","lang":"en"}); M.util.js_complete('filter_mathjaxloader/loader');});;
+
+require([
+    'jquery',
+    'core_calendar/selectors',
+    'core_calendar/events',
+], function(
+    $,
+    CalendarSelectors,
+    CalendarEvents
+) {
+    var root = $('#month-upcoming-mini-6a2fc9b0b34466a2fc9b0b34481');
+
+    $('body').on(CalendarEvents.filterChanged, function(e, data) {
+        M.util.js_pending("month-upcoming-mini-6a2fc9b0b34466a2fc9b0b34481-filterChanged");
+
+        // A filter value has been changed.
+        // Find all matching cells in the popover data, and hide them.
+        var target = $("#month-upcoming-mini-6a2fc9b0b34466a2fc9b0b34481").find(CalendarSelectors.eventType[data.type]);
+
+        var transitionPromise = $.Deferred();
+        if (data.hidden) {
+            transitionPromise.then(function() {
+                return target.slideUp('fast').promise();
+            });
+        } else {
+            transitionPromise.then(function() {
+                return target.slideDown('fast').promise();
+            });
+        }
+
+        transitionPromise.then(function() {
+            M.util.js_complete("month-upcoming-mini-6a2fc9b0b34466a2fc9b0b34481-filterChanged");
+
+            return;
+        });
+
+        transitionPromise.resolve();
+    });
+});
+;
+
+require(['jquery', 'core_calendar/calendar_view'], function($, CalendarView) {
+    CalendarView.init($("#calendar-upcoming-block-6a2fc9b0b34466a2fc9b0b34481"), 'upcoming');
+});
+;
+M.util.js_pending('core_courseformat/courseeditor'); require(['core_courseformat/courseeditor'], function(amd) {amd.setViewFormat("1051", {"editing":false,"supportscomponents":true,"statekey":"1780950349_1781516720","overriddenStrings":[]}); M.util.js_complete('core_courseformat/courseeditor');});;
+
+require(['core_courseformat/local/courseindex/placeholder'], function(component) {
+    component.init('course-index-placeholder');
+});
+;
+
+require(['core_courseformat/local/courseindex/drawer'], function(component) {
+    component.init('courseindex');
+});
+;
+M.util.js_pending('filter_mathjaxloader/loader'); require(['filter_mathjaxloader/loader'], function(amd) {amd.typeset(); M.util.js_complete('filter_mathjaxloader/loader');});;
+M.util.js_pending('filter_mathjaxloader/loader'); require(['filter_mathjaxloader/loader'], function(amd) {amd.typeset(); M.util.js_complete('filter_mathjaxloader/loader');});;
+
+    require(['core/moremenu'], function(moremenu) {
+        moremenu(document.querySelector('#moremenu-6a2fc9b0d9eab-navbar-nav'));
+    });
+;
+
+    require(['core/usermenu'], function(UserMenu) {
+        UserMenu.init();
+    });
+;
+
+M.util.js_pending('theme_boost/drawers:load');
+require(['theme_boost/drawers'], function() {
+    M.util.js_complete('theme_boost/drawers:load');
+});
+;
+
+    require(['theme_boost/courseindexdrawercontrols'], function(component) {
+    component.init('courseindexdrawercontrols');
+    });
+;
+
+M.util.js_pending('theme_boost/drawers:load');
+require(['theme_boost/drawers'], function() {
+    M.util.js_complete('theme_boost/drawers:load');
+});
+;
+
+M.util.js_pending('theme_boost/drawers:load');
+require(['theme_boost/drawers'], function() {
+    M.util.js_complete('theme_boost/drawers:load');
+});
+;
+
+require(['theme_boost/footer-popover'], function(FooterPopover) {
+    FooterPopover.init();
+});
+;
+
+M.util.js_pending('theme_boost/loader');
+require(['theme_boost/loader', 'theme_boost/drawer'], function(Loader, Drawer) {
+    Drawer.init();
+    M.util.js_complete('theme_boost/loader');
+});
+;
+M.util.js_pending('core_courseformat/courseeditor'); require(['core_courseformat/courseeditor'], function(amd) {amd.setViewFormat("1051", {"editing":false,"supportscomponents":true,"statekey":"1780950349_1781516720","overriddenStrings":[]}); M.util.js_complete('core_courseformat/courseeditor');});;
+M.util.js_pending('format_topics/mutations'); require(['format_topics/mutations'], function(amd) {amd.init(); M.util.js_complete('format_topics/mutations');});;
+M.util.js_pending('format_topics/section'); require(['format_topics/section'], function(amd) {amd.init(); M.util.js_complete('format_topics/section');});;
+
+require(['core_courseformat/local/content'], function(component) {
+    component.init(
+        'page', {}, null, null
+    );
+});
+;
+M.util.js_pending('core/notification'); require(['core/notification'], function(amd) {amd.init(30895, []); M.util.js_complete('core/notification');});;
+M.util.js_pending('core/log'); require(['core/log'], function(amd) {amd.setConfig({"level":"warn"}); M.util.js_complete('core/log');});;
+M.util.js_pending('core/page_global'); require(['core/page_global'], function(amd) {amd.init(); M.util.js_complete('core/page_global');});;
+M.util.js_pending('core/utility'); require(['core/utility'], function(amd) {M.util.js_complete('core/utility');});;
+M.util.js_pending('core/storage_validation'); require(['core/storage_validation'], function(amd) {amd.init(null); M.util.js_complete('core/storage_validation');});
+    M.util.js_complete("core/first");
+});
+//]]>
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?delayStartupUntil=configured"></script>
+<script>
+//<![CDATA[
+M.str = {"moodle":{"lastmodified":"Last modified","name":"Name","error":"Error","info":"Information","yes":"Yes","no":"No","cancel":"Cancel","confirm":"Confirm","areyousure":"Are you sure?","closebuttontitle":"Close","unknownerror":"Unknown error","file":"File","url":"URL","collapseall":"Collapse all","expandall":"Expand all"},"repository":{"type":"Type","size":"Size","invalidjson":"Invalid JSON string","nofilesattached":"No files attached","filepicker":"File picker","logout":"Logout","nofilesavailable":"No files available","norepositoriesavailable":"Sorry, none of your current repositories can return files in the required format.","fileexistsdialogheader":"File exists","fileexistsdialog_editor":"A file with that name has already been attached to the text you are editing.","fileexistsdialog_filemanager":"A file with that name has already been attached","renameto":"Rename to \"{$a}\"","referencesexist":"There are {$a} links to this file","select":"Select"},"admin":{"confirmdeletecomments":"Are you sure you want to delete the selected comment(s)?","confirmation":"Confirmation"},"debug":{"debuginfo":"Debug info","line":"Line","stacktrace":"Stack trace"},"langconfig":{"labelsep":": "}};
+//]]>
+</script>
+<script>
+//<![CDATA[
+(function() {Y.on('domready', function() { Y.use("moodle-block_panopto-asyncload",function() {M.block_panopto.asyncload.init({"id":"block_panopto_content","courseid":"1051"});
+}); });
+M.util.init_collapsible_region(Y, "collapsible-0", false, "Click to expand or collapse");
+M.util.help_popups.setup(Y);
+ M.util.js_pending('random6a2fc9b0b34485'); Y.on('domready', function() { M.util.js_complete("init");  M.util.js_complete('random6a2fc9b0b34485'); });
+})();
+//]]>
+</script>
+
+                </div>
+                <div class="footer-section p-3">
+                    <div>Powered by <a href="https://moodle.com">Moodle</a></div>
+                </div>
+            </div>
+        
+            <div class="footer-content-debugging footer-dark bg-dark text-light">
+                <div class="container-fluid footer-dark-inner">
+                    
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+</div><div id="yui3-css-stamp" style="position: absolute !important; visibility: hidden !important" class=""></div>
+
+
+</body></html>

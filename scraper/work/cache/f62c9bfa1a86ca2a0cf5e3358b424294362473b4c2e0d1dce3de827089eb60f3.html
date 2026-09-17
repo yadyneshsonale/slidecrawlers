@@ -1,0 +1,406 @@
+<html><head>
+<title>COL774: Machine Learning</title>
+<style type="text/css">
+        BODY {font-family: Verdana, Helvetica, sans-serif;}
+        H1 {font-family: Verdana, Helvetica, sans-serif; color: #36648b}
+        H4.black {font-family: Verdana, Helvetica, sans-serif; color: #000000}
+        H4.counter {font-family: Verdana, Helvetica, sans-serif; color: #b0c4de;                  line-height:8pt}
+        H4 {font-family: Verdana, Helvetica, sans-serif; color: #4a708b}
+        H2 {font-family: Verdana, Helvetica, sans-serif;}
+        H5 {font-family: Arial,Geneva,sans-serif;}
+        H5 {color: #8B5A00;}
+        H5.black {color: #000000;}
+        SUP {font-size: x-small; color: #666666;}
+        DIV.endnote P {text-indent: -1em; color: #333333;}
+        .link {text-decoration: underline;}
+</style></head>
+
+
+<body bgcolor="#ffffff" text="#000000" topmargin="20" leftmargin="30" marginwidth="0" marginheight="0" link="#0000BB" vlink="#55188A" alink="#FF0000">
+
+<table>
+<tbody><tr><td>&nbsp;&nbsp;</td>
+<td>
+<br><br>
+<center><h1> 
+COL774: Machine Learning 
+<br>
+</h1></center>
+<p><br><br>
+<!--
+This is the course page for <b>CSL864: Special Topics in Artificial Intelligence: Machine Learning</b>, for Semester I, 
+2012-2013, being taught by <a href="http://www.cse.iitd.ac.in/~parags">Parag Singla</a> (parags AT cse.iitd.ac.in)
+at the <a href="http://www.cse.iitd.ac.in">Department of Computer Science and Engineering</a>, 
+<a href="http://www.iitd.ernet.in">IIT, New Delhi</a>.
+<p>
+-->
+
+<a name="info"></a></p><h4><a name="info">General Information</a></h4>
+<b>Semester:</b> Sem II, 2019-20.
+<br>
+<br>
+<b>Instructor: </b><a href="http://www.cse.iitd.ac.in/~parags">Parag Singla</a> (email: parags AT cse.iitd.ac.in)
+<br>
+<br>
+<b>Class Timings (Slot C):</b>
+<ul>
+<li>Tue, 8:00 am - 8:50am</li>
+<li>Wed, 8:00 am - 8:50am</li>
+<li>Fri, 8:00 am - 8:50am</li>
+</ul>
+<b>Venue:</b> <b>LHC 316 </b>
+<br><br>
+<a href="https://docs.google.com/spreadsheets/d/1soHESdiy4S6Zn95p-wJiJ-FnHEJQegdVyjho6dX_UzA/edit#gid=0">
+<b>TA Assignment Details</b></a>
+<br><br>
+
+<br><br>
+<a href="https://piazza.com/iitd.ac.in/spring2020/col774"><b>Sign up for Piazza</b></a>
+<br>
+Code: As announced in class.
+<br>
+<br>
+<a name="announcements"><h4>Announcements</h4></a>
+<li> [Aug 16, 2020]: Assignment 4 is out. Due Date: Saturday Sep 5, 2020, 11:50 pm.
+</li><li> [Mar 7, 2020]: Assignment 3 (part A) is out. Due Date (for both parts): Tuesday Mar 31, 2020, 11:50 pm.
+</li><li> [Mar 6, 2020]: Assignment 2: Updated Due Date: Sunday Mar 8, 11:50 pm.
+</li><li> [Feb 27, 2020]: Assignment 2 - Part B is out! Due Date (for both parts): Friday Mar 6, 11:50 pm.
+</li><li> [Feb 12, 2020]: Assignment 2 is out! Due Date: Wednesday Mar 4, 11:50 pm.
+</li><li> [Jan 21, 2020]: Assignment 1 is out! Due Date: Monday Feb 10, 11:50 pm.
+</li><li> [Dec 31, 2019]: Welcome! First Class: Today.
+<p>
+
+<a name="content"></a></p><h4><a name="content">Course Objectives</a></h4>
+(a) To familiarize with/develop the understanding of fundamental concepts of Machine 
+Learning (ML) <br>
+(b) To develop the understanding of working of a variety of ML algorithms (both
+supervised as well as unsupervised) <br>
+(c) To learn to apply ML algorithms to real world 
+data/problems <br>
+(d) To update with some of the latest advances in the field
+<br>
+<a name="content"><h4>Course Content</h4></a>
+NOTE: The exact list of topics below is tentative (until we are past that week). 
+We will update it as we go through the lectures in each week. So, stay tuned!
+<br>
+<b>
+</b><table bordercolor="BLACK" rules="COLS" cellpadding="5" cellspacing="5">
+<tbody><tr><td><b>Week</b></td>
+<td><b>Topic</b></td>
+<td><b>Supplementary Notes</b></td>
+<td><b>Book Chapters</b></td>
+
+</tr><tr><td>1 </td> <td> Introduction </td> <td> </td> <td> </td>
+
+</tr><tr><td>2,3 </td> <td> Linear Regression (and Its Variants) </td>
+<td> <a href="http://poorvi.cse.iitd.ac.in/~parags/teaching/2012/au12/csl865/notes/lin-log-reg.pdf">lin-log-reg.pdf</a> 
+</td><td> Bishop, Chapter 3.1</td>
+
+</tr><tr><td>4 </td> <td> Logistic Regression, Generalized Linear Models </td>
+<td> <a href="http://poorvi.cse.iitd.ac.in/~parags/teaching/2012/au12/csl865/notes/lin-log-reg.pdf">lin-log-reg.pdf</a> 
+</td><td> Bishop, Chapter 3.1</td>
+
+</tr><tr><td>5</td> <td> Gaussian Discriminant Analysis (GDA), Naive Bayes </td>
+<td><a href="http://poorvi.cse.iitd.ac.in/~parags/teaching/2012/au12/csl865/notes/gda.pdf">gda_nb.pdf</a></td>
+<td>Bishop, Chapter 4 </td> 
+
+</tr><tr><td>6,7 </td> <td> Support Vector Machines</td>
+<td><a href="http://poorvi.cse.iitd.ac.in/~parags/teaching/2012/au12/csl865/notes/svm.pdf">svm.pdf</a></td>
+<td> Bishop, Chapter 7.1</td>
+
+</tr><tr><td>8</td> <td> Decision Trees, Random Forests </td>
+<td> <a href="http://poorvi.cse.iitd.ac.in/~parags/teaching/2012/au12/csl865/notes/dtrees.pdf">dtrees.pdf</a>
+</td><td> Mitchell, Chapter 3. 
+Online Resource: 
+<a href="https://www.stat.berkeley.edu/~breiman/RandomForests/cc_home.htm">Random Forests</a></td>
+
+
+</tr><tr><td>9</td> <td> Neural Networks</td>
+<td> 
+<a href="http://poorvi.cse.iitd.ac.in/~parags/teaching/2012/au12/csl865/notes/nnets.pdf">nnets.pdf</a> 
+<a href="http://poorvi.cse.iitd.ac.in/~parags/teaching/2012/au12/csl865/notes/nnets-hw.pdf">nnets-hw.pdf</a> 
+</td>
+<td> Mitchell, Chapter 4</td>
+
+</tr><tr><td>10 </td> <td> Deep Learning</td>
+<td> 
+<a href="http://poorvi.cse.iitd.ac.in/~parags/teaching/2017/col774/notes/deep_learning_slides.pdf">
+deep_learning_slides.pdf</a>
+<br>
+<a href="http://poorvi.cse.iitd.ac.in/~parags/teaching/2017/col774/notes/cnn.pdf">
+cnn.pdf</a>
+</td>
+<td> <br>Online Resource: 
+<br> 
+<a href="http://cs231n.github.io/convolutional-networks/">Convolutional Neural Networks</a></td>
+
+<!--
+<tr><td>8,9</td> <td> Naive Bayes, Bayesian Statistics</td>
+<td> Mitchell, Chapter 6</td>
+<td><a href=http://poorvi.cse.iitd.ac.in/~parags/teaching/2012/au12/csl865/notes/gda.pdf>nb.pdf</a>,
+<a href="http://poorvi.cse.iitd.ac.in/~parags/teaching/2012/au12/csl865/notes/bayes.pdf">bayes.pdf</a> 
+<a href=http://en.wikipedia.org/wiki/Conjugate_prior>Conjugate Prior</a>
+<br>
+<a href="http://poorvi.cse.iitd.ac.in/~parags/teaching/col774/notes/map.pdf">map.pdf</a>
+<a href="http://poorvi.cse.iitd.ac.in/~parags/teaching/2012/au12/csl865/notes/model.pdf">model.pdf</a> </td>
+-->
+</tr><tr><td>11</td> <td> K-Means, Gaussian Mixture Models</td>
+<td> <a href="http://poorvi.cse.iitd.ac.in/~parags/teaching/2012/au12/csl865/notes/kmeans.pdf">kmeans.pdf</a> 
+<a href="http://poorvi.cse.iitd.ac.in/~parags/teaching/2012/au12/csl865/notes/gmm.pdf">gmm.pdf</a> 
+<a href="http://poorvi.cse.iitd.ac.in/~parags/teaching/2012/au12/csl865/notes/em.pdf">em.pdf</a>
+<a href="http://poorvi.cse.iitd.ac.in/~parags/teaching/2012/au12/csl865/notes/pca.pdf">pca.pdf</a> </td>
+<td> </td>
+
+</tr><tr><td>12 </td> <td>Expectation Maximiation (EM), Principal Component Analysis (PCA)</td>
+<td> <a href="http://poorvi.cse.iitd.ac.in/~parags/teaching/2012/au12/csl865/notes/kmeans.pdf">kmeans.pdf</a> 
+<a href="http://poorvi.cse.iitd.ac.in/~parags/teaching/2012/au12/csl865/notes/gmm.pdf">gmm.pdf</a> 
+<a href="http://poorvi.cse.iitd.ac.in/~parags/teaching/2012/au12/csl865/notes/em.pdf">em.pdf</a>
+<a href="http://poorvi.cse.iitd.ac.in/~parags/teaching/2012/au12/csl865/notes/pca.pdf">pca.pdf</a> </td>
+<td> </td>
+
+</tr><tr><td>13 </td> <td> Learning Theory, Model Selection </td>
+<td> <a href="http://poorvi.cse.iitd.ac.in/~parags/teaching/2012/au12/csl865/notes/theory.pdf">theory.pdf</a>
+<a href="http://poorvi.cse.iitd.ac.in/~parags/teaching/2012/au12/csl865/notes/model.pdf">model.pdf</a> </td>
+<td> Mitchell, Chapter 7</td>
+
+</tr><tr><td>14 </td> <td> Advanced Topics</td>
+<td> </td>
+<td> </td>
+</tr></tbody></table>
+
+<h4><a name="class_notes"></a><h4><a name="class_notes">Class Notes (Date-Wise)</a></h4>
+<a href="http://poorvi.cse.iitd.ac.in/~parags/teaching/col774/class_notes/dec31.pdf">dec31.pdf</a>,
+<a href="http://poorvi.cse.iitd.ac.in/~parags/teaching/col774/class_notes/jan1.pdf">jan1.pdf</a>,
+<a href="http://poorvi.cse.iitd.ac.in/~parags/teaching/col774/class_notes/jan3.pdf">jan3.pdf</a>,
+<a href="http://poorvi.cse.iitd.ac.in/~parags/teaching/col774/class_notes/jan7.pdf">jan7.pdf</a>,
+<a href="http://poorvi.cse.iitd.ac.in/~parags/teaching/col774/class_notes/jan8.pdf">jan8.pdf</a>,
+<a href="http://poorvi.cse.iitd.ac.in/~parags/teaching/col774/class_notes/jan10.pdf">jan10.pdf</a>
+<a href="http://poorvi.cse.iitd.ac.in/~parags/teaching/col774/class_notes/jan14.pdf">jan14.pdf</a>
+<a href="http://poorvi.cse.iitd.ac.in/~parags/teaching/col774/class_notes/jan17.pdf">jan17.pdf</a>
+<a href="http://poorvi.cse.iitd.ac.in/~parags/teaching/col774/class_notes/jan21.pdf">jan21.pdf</a>
+<a href="http://poorvi.cse.iitd.ac.in/~parags/teaching/col774/class_notes/jan22.pdf">jan22.pdf</a>
+<a href="http://poorvi.cse.iitd.ac.in/~parags/teaching/col774/class_notes/jan24.pdf">jan24.pdf</a>
+<a href="http://poorvi.cse.iitd.ac.in/~parags/teaching/col774/class_notes/jan28.pdf">jan28.pdf</a>
+<a href="http://poorvi.cse.iitd.ac.in/~parags/teaching/col774/class_notes/jan29.pdf">jan29.pdf</a>
+<a href="http://poorvi.cse.iitd.ac.in/~parags/teaching/col774/class_notes/jan31.pdf">jan31.pdf</a>
+<a href="http://poorvi.cse.iitd.ac.in/~parags/teaching/col774/class_notes/feb7.pdf">feb7.pdf</a>
+<a href="http://poorvi.cse.iitd.ac.in/~parags/teaching/col774/class_notes/feb11.pdf">feb11.pdf</a>
+<a href="http://poorvi.cse.iitd.ac.in/~parags/teaching/col774/class_notes/feb12.pdf">feb12.pdf</a>
+<a href="http://poorvi.cse.iitd.ac.in/~parags/teaching/col774/class_notes/feb18.pdf">feb18.pdf</a>
+<a href="http://poorvi.cse.iitd.ac.in/~parags/teaching/col774/class_notes/feb19.pdf">feb19.pdf</a>
+<a href="http://poorvi.cse.iitd.ac.in/~parags/teaching/col774/class_notes/feb21.pdf">feb21.pdf</a>
+<a href="http://poorvi.cse.iitd.ac.in/~parags/teaching/col774/class_notes/feb25.pdf">feb25.pdf</a>
+<a href="http://poorvi.cse.iitd.ac.in/~parags/teaching/col774/class_notes/feb26.pdf">feb26.pdf</a>
+<a href="http://poorvi.cse.iitd.ac.in/~parags/teaching/col774/class_notes/feb28.pdf">feb28.pdf</a>
+<br>
+</h4><h4><a name="class_notes_1"></a><h4><a name="class_notes_1">Class Notes (Date-Wise) for Recorded Lectures</a></h4>
+
+<br><table bordercolor="BLACK" rules="COLS">
+
+<tbody><tr><td><b>PPT</b> </td> <td><b> PDF </b> </td><td> <b>Video </b></td>
+</tr><tr>
+<td><a href="class_notes/mar31_nn.ppt">mar31_nn.ppt</a> </td>
+<td><a href="class_notes/mar31_nn.pdf">mar31_nn.pdf</a> </td>
+<td><a href="videos/mar31_nn.mkv">mar31_nn.mkv</a> </td>
+</tr><tr>
+<td><a href="class_notes/apr1_nn.pptx">apr1_nn.ppt</a></td>
+<td><a href="class_notes/apr1_nn.pdf">apr1_nn.pdf</a></td>
+<td><a href="videos/apr1_nn.mkv">apr1_nn.mkv</a></td>
+</tr><tr>
+<td><a href="class_notes/apr3_dnn.pptx">apr3_dnn.ppt</a></td>
+<td><a href="class_notes/apr3_dnn.pdf">apr3_dnn.pdf</a></td>
+<td><a href="videos/apr3_dnn.mkv">apr3_dnn.mkv</a></td>
+</tr><tr>
+<td><a href="class_notes/apr7_dnn.pptx">apr7_dnn.ppt</a></td>
+<td><a href="class_notes/apr7_dnn.pdf">apr7_dnn.pdf</a></td>
+<td><a href="videos/apr7_dnn.mkv">apr7_dnn.mkv</a></td>
+</tr><tr>
+<td><a href="class_notes/apr8_dnn.pptx">apr8_dnn.ppt</a></td>
+<td><a href="class_notes/apr8_dnn.pdf">apr8_dnn.pdf</a></td>
+<td><a href="videos/apr8_dnn.mkv">apr8_dnn.mkv</a></td>
+</tr><tr>
+<td><a href="class_notes/apr10_dnn_unsup.pptx">apr10_dnn.ppt</a></td>
+<td><a href="class_notes/apr10_dnn_unsup.pdf">apr10_dnn.pdf</a></td>
+<td><a href="videos/apr10_dnn_unsup.mkv">apr10_dnn.mkv</a></td>
+</tr><tr>
+<td><a href="class_notes/apr14_kmeans.pptx">apr14_kmeans.ppt</a></td>
+<td><a href="class_notes/apr14_kmeans.pdf">apr14_kmeans.pdf</a></td>
+<td><a href="videos/apr14_kmeans.mkv">apr14_kmeans.mkv</a></td>
+</tr><tr>
+<td><a href="class_notes/apr15_gmm.pptx">apr15_gmm.ppt</a></td>
+<td><a href="class_notes/apr15_gmm.pdf">apr15_gmm.pdf</a></td>
+<td><a href="videos/apr15_gmm.mkv">apr15_gmm.mkv</a></td>
+</tr><tr>
+</tr><tr>
+<td><a href="class_notes/apr17_em.pptx">apr17_em.ppt</a></td>
+<td><a href="class_notes/apr17_em.pdf">apr17_em.pdf</a></td>
+<td><a href="videos/apr17_em.mkv">apr17_em.mkv</a></td>
+</tr><tr>
+<td><a href="class_notes/apr21_em.pptx">apr21_em.ppt</a></td>
+<td><a href="class_notes/apr21_em.pdf">apr21_em.pdf</a></td>
+<td><a href="videos/apr21_em.mkv">apr21_em.mkv</a></td>
+</tr><tr>
+<td><a href="class_notes/apr22_em_pca.pptx">apr22_em_pca.ppt</a></td>
+<td><a href="class_notes/apr22_em_pca.pdf">apr22_em_pca.pdf</a></td>
+<td><a href="videos/apr22_em_pca.mkv">apr22_em_pca.mkv</a></td>
+</tr><tr>
+<td><a href="class_notes/apr24_pca.pptx">apr24_pca.ppt</a></td>
+<td><a href="class_notes/apr24_pca.pdf">apr24_pca.pdf</a></td>
+<td><a href="videos/apr24_pca.mkv">apr24_pca.mkv</a></td>
+</tr><tr>
+<td><a href="class_notes/apr28_pca_learntheory.pptx">apr28_pca_learntheory.ppt</a></td>
+<td><a href="class_notes/apr28_pca_learntheory.pdf">apr28_pca_learntheory.pdf</a></td>
+<td><a href="videos/apr28_pca_learntheory.mkv">apr28_pca_learntheory.mkv</a></td>
+</tr><tr>
+<td><a href="class_notes/apr29_learntheory.pptx">apr29_learntheory.ppt</a></td>
+<td><a href="class_notes/apr29_learntheory.pdf">apr29_learntheory.pdf</a></td>
+<td><a href="videos/apr29_learntheory.mkv">apr29_learntheory.mkv</a></td>
+</tr><tr>
+<td><a href="class_notes/may1_learntheory.pptx">may1_learntheory.ppt</a></td>
+<td><a href="class_notes/may1_learntheory.pdf">may1_learntheory.pdf</a></td>
+<td><a href="videos/may1_learntheory.mkv">may1_learntheory.mkv</a></td>
+</tr><tr>
+<td><a href="class_notes/may2_learntheory.pptx">may2_learntheory.ppt</a></td>
+<td><a href="class_notes/may2_learntheory.pdf">may2_learntheory.pdf</a></td>
+<td><a href="videos/may2_learntheory.mkv">may2_learntheory.mkv</a></td>
+</tr>
+</tbody></table>
+
+</h4><h4><a name="HelpSessions">Help Session Recordings</a></h4>
+<a href="helpSessions/aug12_pytorch.mp4">Pytorch Help Seesion (Aug 12)</a> (approx size 350 MB)
+
+<h4><a name="QASessions">Question-Answer Session Recordings</a></h4>
+<b>April 12</b> (Logistics, Neural Networks And Deep Learning):
+<a href="QASessions/apr12_qa.mp4">apr12_video.mp4</a> (approx size 1.1 GB),
+<a href="QASessions/apr12_qa.m4a">apr12_audio.m4a</a> (approx size 46 MB)
+<br>
+<b>April 19 </b>(Logistics, K-Means, GMM, EM and Earlier):
+apr19_video.mp4 (coming soon), apr19_audio.m4a (coming soon)
+<br>
+<b>April 26</b> (Logistics, EM, PCA and Earlier):
+<a href="QASessions/apr26_qa.mp4">apr26_video.mp4</a> (approx size 63 MB),
+<a href="QASessions/apr26_qa.m4a">apr26_audio.m4a</a> (approx size 15 MB)
+<br>
+<b>May 3</b> (Logistics, PCA, Learning Theory and Earlier):
+<a href="QASessions/may3_qa.mp4">may3_video.mp4</a> (approx size 50 MB) 
+<a href="QASessions/may3_qa.m4a">may3_audio.m4a</a> (approx size 11 MB)
+<br>
+<b>May 10</b> (Logistics, All Online Material):
+
+
+<h4><a name="additional"></a><h4><a name="additional">Additional Resources</a></h4>
+<ul>
+<li>
+Stochastic Gradient Descent: <a href="https://www.youtube.com/watch?v=W9iWNJNFzQI">Algorithm</a>,
+<a href="https://www.youtube.com/watch?v=G3EIMNuKcDE">On Convergence</a> (<i>Youtube Videos by Andrew Ng</i>)
+</li><li>
+<a href="http://ai.stanford.edu/~ang/papers/nips01-discriminativegenerative.pdf">
+On Discriminative vs. Generative Classifiers: A comparison of logistic regression and naive Bayes</a>.
+Andrew Y. Ng and Michael Jordan. NIPS 2001. 
+</li><li>
+<a href="https://www.cs.cmu.edu/~tom/mlbook/NBayesLogReg.pdf">Generative and Discrminative Classifiers: Naive Bayes
+and Logistic Regression</a>. Chapter 1, Machine Learning. Tom Mitchell.
+</li><li> 
+<a href="http://poorvi.cse.iitd.ac.in/~parags/teaching/2016/col774/notes/dtree_pruning_mitchell.pdf">Notes on Avoiding Overfitting in Decision Trees</a>
+</li><li><a href="http://www.deeplearningbook.org/">Deep Learning Book</a><br>
+</li></ul>
+
+</h4><h4><a name="review"></a><h4><a name="review">Review Material</a></h4>
+<table bordercolor="BLACK" rules="COLS" cellpadding="5" cellspacing="5">
+<tbody><tr><td><b>Topic</b></td> <td><b>Notes</b></td></tr>
+<tr><td>Probability</td> <td><a href="http://poorvi.cse.iitd.ac.in/~parags/teaching/2012/au12/csl865/review/prob.pdf">prob.pdf</a></td>
+</tr><tr><td>Linear Algebra</td> <td><a href="http://poorvi.cse.iitd.ac.in/~parags/teaching/2012/au12/csl865/review/linalg.pdf">linalg.pdf</a></td>
+</tr><tr><td>Gaussian Distribution</td> <td><a href="http://poorvi.cse.iitd.ac.in/~parags/teaching/2012/au12/csl865/review/gaussians.pdf">gaussians.pdf</a></td>
+</tr><tr><td>Convex Optimization (1) </td> <td><a href="http://poorvi.cse.iitd.ac.in/~parags/teaching/2012/au12/csl865/review/convex-1.pdf">convex-1.pdf</a></td>
+</tr></tbody></table>
+
+</h4><h4><a name="references">References</a></h4>
+<ol>
+<li> <i> <a href="http://www.cs.ubc.ca/~murphyk/MLbook">Machine Learning: A Probabilistic Perspective.</a></i> 
+Kevin Murphy. MIT Press, 2012.
+</li><li> <i> Pattern Recognition and Machine Learning.</i> Christopher Bishop. First Edition, Springer, 2006.
+</li><li> <i> Pattern Classification.</i> Richard Duda, Peter Hart and David Stock. Second Edition, Wiley-Interscience, 2000.
+</li><li> <i> Machine Learning. </i> Tom Mitchell. First Edition, McGraw-Hill, 1997.
+</li></ol>
+
+<a name="Assignment Submission Instructions"><h4>Assignment Submission Instructions</h4></a>
+<ol>
+<li> You are free to discuss the assignment problems with other students in the class. But all your code should be 
+produced independently without looking at/referring to anyone else's code.  
+</li><li> <a href="http://www.python.org">Python</a> is the default programming
+languages for the course. You should use it for programming your
+assignments unless otherwise explicitly allowed.
+</li><li> Code should be submitted using <a href="https://moodle.iitd.ac.in">Moodle Page</a>. 
+Make sure to include commenrs for readability.
+</li><li> Create a separate directory
+for each of the questions named by the question number. For instance, for question 1,
+all your submissions files should be put in the directory named 
+Q1 (and so on for other questions). Put all the Question sub-directories in a single 
+top level directory. This directory should be named as "yourentrynumber_firstname_lastname". 
+For example, if your entry number is "2017anz7535" and your name is "Nitika Rao", your 
+submission directory should be named as "2017anz7535_nitika_rao". You should zip your 
+directory and name the resulting file as "yourentrynumber_firstname_lastname.zip" e.g. in 
+the above example it will be "2017anz7535_nitika_rao.zip". This single zip file should 
+be submitted online. 
+</li><li> <b>Honor Code: </b> Any cases of copying will be awarded a zero on the assignment and a 
+penalty of -10. More severe penalties may follow.
+</li><li> <b> Late Policy: </b> You are allowed a total of 5 late days acorss all the assignments. You are 
+free to decide how you would like to use them. You will get a zero on an assignment once you exceed the 
+(total) allowed exemption of 5 days. This applies to the first 3 assignments in the course
+(i.e., leaving out the last assigment based on a competition).
+</li></ol>
+
+<a name="practice"><h4>Practice Questions</h4></a>
+<ul>
+<li> <a href="practice/minor1_sp19.pdf"> Minor 1 (2019 offering) </a>
+</li><li> <a href="practice/minor2_sp19.pdf"> Minor 2 (2019 offering) </a>
+</li><li> <a href="practice/major_sp19.pdf"> Major (2019 offering) </a>
+</li><li> <a href="practice/minor1_sp18.pdf"> Minor 1 (2018 offering) </a>
+</li><li> <a href="practice/minor2_sp18.pdf"> Minor 2 (2018 offering) </a>
+</li><li> <a href="practice/major_sp18.pdf"> Major (2018 offering) </a>
+</li><li> <a href="practice/minor1_sp17.pdf"> Minor 1 (2017 offering) </a>
+</li><li> <a href="practice/minor2_sp17.pdf"> Minor 2 (2017 offering) </a>
+</li><li> <a href="practice/major_sp17.pdf"> Major (2017 offering) </a>
+</li><li> <a href="practice/practice1.pdf">Pratice Questions for Minor 1 (from 2017) </a>
+</li><li> <a href="practice/practice2.pdf">Pratice Questions for Minor 2 (from 2017) </a>
+</li><li> <a href="practice/practice3.pdf">Pratice Questions for Major (from 2017) </a>
+<!--
+<li> <a href=practice/practice2.pdf>Pratice Questions for Minor 2</a>
+-->
+</li></ul>
+
+<a name="assignments"><h4>Assignments</h4></a>
+<ol>
+<li> <a href="assignments/ass4/ass4.pdf">Assignment 4</a> [<b>Updated</b>: Saturday Sep 5,2020]
+<br> Due Date: Saturday September <b>6</b>, 2020. 11:50 pm
+</li><li> <a href="assignments/ass3/ass3_part_a_b_v1.pdf">Assignment 3 (Both Parts)</a> [<b>Updated</b>: Sunday Apr 19,2020].
+<br> Datasets (Part B): <a href="assignments/ass3/datasets/alphabet.zip">alphabet.zip</a>
+<br> Due Date for Part B: Friday April 24, 2020. 11:50 pm
+</li><li> <a href="assignments/ass3/ass3_parta.pdf">Assignment 3 (Part A)</a>
+<br> Datasets (Part A): <a href="assignments/ass3/datasets/virus.zip">virus.zip</a>
+<br> Due Date for Part A [Updated]: Friday Mar 27, 2020. 11:50 pm
+</li><li> <a href="assignments/ass2/ass2.pdf">Assignment 2 (Part A)</a>,
+<a href="assignments/ass2/ass2_partb.pdf">Assignment 2 (Part B)</a>
+<br> Datasets: <a href="assignments/ass2/datasets/fashion_mnist.zip">fashion_mnist.zip</a> (Part B)
+<br> Due Date (Updated on Mar 6): Sunday March 8, 2020. 11:50 pm
+</li><li> <a href="assignments/ass1/ass1_v1.pdf">Assignment 1</a> [<b>Updated: Jan 29, 2020</b>]
+<br> Datasets: <a href="assignments/ass1/ass1_data.zip">ass1_data.zip</a>
+<br> Due Date: Monday February 10, 2020. 11:50 pm
+</li></ol>
+
+<h4><a name="grading">Grading Policy (Tentative) </a></h4>
+<table bordercolor="BLACK" rules="COLS" cellpadding="5" cellspacing="5">
+<tbody><tr><td>Assignments </td> <td>Ass 1: 7%, Ass 2: 8.5%, Ass 3: 8.5%, Ass 4: 10%. Total: 34%   </td>
+</tr><tr><td>Minors</td> <td> Minor 1: 17.5%, Minor 2: 17.5%. Total: 35%
+</td></tr><tr><td></td> <td> [Minor 2 to be possibly held along with Major due to COVID].
+</td></tr><tr><td>Major </td> <td> 31% </td>
+</tr></tbody></table>
+<br><br><br><br>
+
+
+
+
+
+
+
+</li></td></tr></tbody></table></body></html>

@@ -1,0 +1,52 @@
+[
+{
+"url": "https://www.cs.princeton.edu/courses/archive/spr97/cs126/slides.html",
+"title": "Lecture Slides - COS 126 - cs.Princeton",
+"description": "Browse all of the slides at once in one PDF file (624K). This file includes bookmarks for all of the lectures."
+},
+{
+"url": "https://www.cs.princeton.edu/courses/archive/fall09/cos318",
+"title": "COS 318: Operating Systems - cs.Princeton",
+"description": "Topics include operating system structure, processes, threads, synchronizations, concurrent programming, interprocess communications, virtual memory, I/O device"
+},
+{
+"url": "https://www.cs.princeton.edu/courses/archive/fall08/cos318/lectures/Lec4-ProcessesAndThreads.pdf",
+"title": "[PDF] COS 318: Operating Systems Processes and Threads - cs.Princeton",
+"description": "Process management info \" State \u2022 Ready: ready to run \u2022 Running: currently running \u2022 Blocked: waiting for resources \" Registers, EFLAGS, and other CPU state \" Stack, code and data segment \" Parents, etc ! \u2022 CISC machines have a special instruction to save and restore all registers on stack \u2022 RISC: reserve registers for kernel or have way to carefully save one and then continue 14 Process State Transition Running Blocked Ready Scheduler dispatch Wait for resource Resource becomes available Create Terminate 15 Threads ! Thread concurrency \" Easier to program I/O overlapping with threads than signals \" Users often like to do several things at a time: Web browser \" A server (e.g. file server) serves multiple requests \" Multiple CPUs sharing the same memory 16 Thread Control Block (TCB) \" State \u2022 Ready: ready to run \u2022 Running: currently running \u2022 Blocked: waiting for resources \" Registers \" Status (EFLAGS) \" Program counter (EIP) \" Stack \" Code 17 Typical Thread API !"
+},
+{
+"url": "https://www.cs.princeton.edu/courses/archive/fall04/cos318",
+"title": "COS 318: Operating systems - cs.Princeton",
+"description": "This course studies the design and implementation of operating systems. The topics include: processes, mutual exclusion, synchronization, memory management,"
+},
+{
+"url": "https://www.scribd.com/document/359520624/COS-318-Fall-2015-General-Information",
+"title": "COS 318: Operating Systems Overview - Computer Science - Scribd",
+"description": "This document provides information about the Computer Science 318 Operating Systems course offered at Princeton University in the Fall 2015 semester."
+},
+{
+"url": "https://users.cms.caltech.edu/~donnie/cs124/lectures",
+"title": "CS124 Spring 2024 - Lecture Slides",
+"description": "Slides are made available as PDF files. Operating systems: general principles, history from 1950s to present. communication, accounting, error detection,"
+},
+{
+"url": "https://www.youtube.com/watch?v=55FeqGGzE5Q",
+"title": "Operating Systems - Lecture 1 - YouTube",
+"description": "This lecture covers an overview of the Operating Systems class. It only provides an introduction and starts with Chapter 1 which is simply"
+},
+{
+"url": "https://www.os-book.com/OS10/slide-dir/index.html",
+"title": "slides - Operating System Concepts",
+"description": "The slides below are copyright Silberschatz, Galvin and Gagne, 2018. The slides are authorized for personal use, and for use in conjunction with a course for which Operating System Concepts is the prescribed text. Paper copies of the slides may be sold strictly at the price of reproduction, to students of courses where the book is the prescribed text. Any use that differs from the above, and any for profit sale of the slides (in any form) requires the consent of the copyright owners; contact Avi Silberschatz (avi@cs.yale.edu) to obtain the copyright owners consent. Operating-System Services | pptx | February 15, 2020 |. Synchronization Examples | pptx | February 15, 2020 |. Deadlocks | pptx | February 15, 2020 |. Virtual Memory | pptx | February 15, 2020 |. Security | pptx | February 15, 2020 |. Protection | pptx | February 15, 2020 |. The Linux System | pptx | February 15, 2020 |. Windows 10 | pptx | February 15, 2020 |."
+},
+{
+"url": "https://www.slideshare.net/slideshow/principles-of-operating-system/60679215",
+"title": "Principles of operating system | PPTX - Slideshare",
+"description": "The document provides an overview of operating systems and some of their key concepts. It discusses why operating systems are needed, defining them as"
+},
+{
+"url": "https://www.reddit.com/r/compsci/comments/g6l55w/excellent_operating_system_class_notes",
+"title": "Excellent Operating system class notes : r/compsci",
+"description": "# Excellent Operating system class notes : r/compsci. Skip to main contentExcellent Operating system class notes : r/compsci. Sign UpSign up for RedditLog InLog in to Reddit. Image 1 Go to compsci. # Excellent Operating system class notes. Well structured notes of the 9th edition of \"Operating System Concept\" from UIC, made by a Professor. I find it much easier to understand than typical course slides since it has more detailed explanation. Wish I knew about this when I was taking the course -.-. Image 3: Thumbnail image: Your data's evolving, your database should too. Does anybody know where I can a whole bunch of resources similar to this for math and other cs classes? 2.   the subheading, numbering (e.g. 7.5.1 etc) and indentation make it easier to form a tree like mental framework of the contents, which is especially helpful for a course like OS with so much contents. 3.   sometimes the slides from my professor only have a bunch of keywords without much explanation, that's why I find the website helpful."
+}
+]

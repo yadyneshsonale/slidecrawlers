@@ -1,0 +1,560 @@
+<!DOCTYPE html><html><head>
+	<title>COS429: Computer Vision</title>
+	<link rel="stylesheet" type="text/css" href="/web/pvg.css">
+</head>
+<body>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script src="http://vision.princeton.edu/courses/COS429/2014fa/bibtex_js.js"></script>
+
+<script src="/web/header.js"></script><div><a href="http://3dvision.princeton.edu" target="_self"><img src="http://3dvision.princeton.edu/logo/PrincetonVisionRobotics_logo.svg" style="margin-top: 5px;" height="80px" width="289px"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<div class="icon"><a href="http://3dvision.princeton.edu/"><img src="http://3dvision.princeton.edu/web/icon/home.svg">Home</a></div><div class="icon"><a href="http://3dvision.princeton.edu/research.html"><img src="http://3dvision.princeton.edu/web/icon/research.svg">Research</a></div><div class="icon"><a href="http://3dvision.princeton.edu/publications.html"><img src="http://3dvision.princeton.edu/web/icon/publications.svg">Publications</a></div><div class="icon"><a href="http://3dvision.princeton.edu/datasets.html"><img src="http://3dvision.princeton.edu/web/icon/dataset.jpg">Datasets</a></div><div class="icon"><a href="http://3dvision.princeton.edu/courses.html"><img src="http://3dvision.princeton.edu/web/icon/courses.svg">Courses</a></div><div class="icon"><a href="http://3dvision.princeton.edu/people.html"><img src="http://3dvision.princeton.edu/web/icon/people.svg">People</a></div></div>
+<script>
+$( document ).ready(function() {
+    $( ".bibtex" ).each(function( index ) {
+      (new BibtexDisplay()).displayBibtex($(this));
+    });
+});
+</script>
+
+<style>
+#schedule
+{
+margin-top: 10px;
+width:100%;
+border-collapse:collapse;
+}
+#schedule td, #schedule th 
+{
+border:1px solid #000;
+padding:3px 7px 2px 7px;
+}
+#schedule th 
+{
+text-align:left;
+padding-top:5px;
+padding-bottom:4px;
+background-color:#777;
+color:#fff;
+}
+.evenweek{
+  background-color:#DDD;
+}
+.google img{
+  height: 14px;
+}
+.scholar img{
+  height: 14px;
+}
+.bibtex
+{
+  padding-left: 1.5em;
+  list-style-type: none;
+}
+.deadline{
+  font-weight: bold;
+  color: #F00;
+}
+.topic{
+  
+}
+</style>
+
+
+<div id="class" style="width: 100%; margin-top: 40px; ">
+
+<h1 style="text-align: center; margin: 30px;">COS429 Fall 2014: Computer Vision</h1>
+
+<!--<img src="http://vision.princeton.edu/slide/sun.jpg" style="width: 100%;"/>-->
+
+<a href="http://kirkh.deviantart.com/art/BioMech-Eye-168367549">
+    <img style="float: right; padding-left: 10px; " width="470" alt="Computer Vision, art by kirkh.deviantart.com" src="http://vision.princeton.edu/courses/COS429/2014fa/comp_vision_teaser_by_kirkh.jpg">
+</a>
+
+
+<h2>Overview:</h2>
+<p>
+On your one-minute walk from the coffee machine to your desk each morning, you pass by dozens of scenes – a kitchen, an elevator, your office – and you effortlessly recognize them and perceive their 3D structure. But this one-minute scene-understanding problem has been an open challenge in computer vision, since the field was first established 50 years ago. 
+In this class, we will learn the state-of-the-art algorithms,
+and study how to build computer systems that automatically understand visual scenes, 
+both inferring the semantics and extracting 3D structure. 
+<!--
+An introduction to the concepts of 2D and 3D computer vision. Topics include low-level image processing methods such as filtering and edge detection; segmentation and clustering; optical flow and tracking; shape reconstruction from stereo, motion, texture, and shading. 
+Throughout the course, there will also be examination of aspects of human vision and perception that guide and inspire computer vision techniques.
+-->
+</p>
+
+<p>
+This course requires programming experience as well as basic linear algebra. Previous knowledge of visual computing will be helpful. 
+</p>
+
+
+
+
+<ul>
+<li><b>Instructor:</b> <a href="http://vision.princeton.edu/people/xj/">Jianxiong Xiao</a></li>
+<li><b>TAs:</b> 
+  <ul>
+  <li><a href="http://www.cs.princeton.edu/~bmatejek/">Brian Matejek</a> (bmatejek [at] princeton ) </li>
+  <li>Pingmei Xu (pingmeix [at] princeton ) </li>
+  <li><a href="http://vision.princeton.edu/people/shurans/">Shuran Song</a>  (shurans [at] princeton ) </li>
+  </ul>
+</li>
+<li><b>Time:</b> Tuesday,Thursday, 3:00PM - 4:20PM</li>
+<li><b>Location for Lecture:</b> Friend Center 006</li>
+<li><b>Office Hour:</b> Friday 1-2PM (Location CS003)</li>
+<li><b>Online Discussion:</b> <a href="http://piazza.com">http://piazza.com</a></li>
+<li><b>Registrar Link:</b> <a href="http://registrar.princeton.edu/course-offerings/course_details.xml?courseid=009123&amp;term=1152">Class Number 20663</a>
+</li></ul>
+
+
+
+
+<h2>Assignments:</h2>
+<ul>
+<li><a href="ps/ps1.pdf"><b style="color: blue;">PS1: Building a Camera</b></a></li>
+<li><a href="ps/ps2/"><b style="color: blue;">PS2: Reconstructing a Simpler World</b></a></li>
+<li><a href="ps/ps3/"><b style="color: blue;">PS3: Stitching a Panorama</b></a></li>
+<li><a href="ps/ps4/"><b style="color: blue;">PS4: Cloning Yourself</b></a></li>
+<li><a href="ps/ps5/"><b style="color: blue;">PS5: Finding Nemo</b></a></li>
+</ul>
+
+<h2>Schedule:</h2>
+
+<p>Many of the following slides are modified from 
+the excellent class notes of similar courses offered by Prof.
+<a href="http://people.csail.mit.edu/fredo/">Fredo Durand</a>,
+<a href="http://www.cs.cmu.edu/%7Eefros">Alexei Efros</a>,
+<a href="http://cs.nyu.edu/~fergus/pmwiki/pmwiki.php">Rob Fergus</a>,
+<a href="http://people.csail.mit.edu/billf/">William Freeman</a>,
+<a href="http://www.cs.princeton.edu/~funk/">Thomas Funkhouser</a>,
+<a href="http://cs.brown.edu/people/hays/">James Hays</a>,
+<a href="http://www.cs.utexas.edu/~grauman/">Kristen Grauman</a>,
+<a href="http://www.cs.unc.edu/~lazebnik/">Svetlana Lazebnik</a>,
+<a href="http://vision.stanford.edu/">Fei-fei Li</a>,
+<a href="http://www.cs.cmu.edu/%7Esrinivas/">Srinivasa Narasimhan</a>,
+<a href="http://cvcl.mit.edu/audeoliva.html">Aude Oliva</a>,
+<a href="http://www.cs.princeton.edu/~smr/">Szymon Rusinkiewicz</a>,
+<a href="http://cvgl.stanford.edu/silvio/">Silvio Savarese</a>,
+<a href="http://www.cs.washington.edu/homes/seitz">Steve Seitz</a>, 
+<a href="http://www.cs.cornell.edu/~snavely/">Noah Snavely</a>,
+<a href="http://research.microsoft.com/%7Eszeliski/">Richard Szeliski</a>, 
+<a href="http://web.mit.edu/torralba/www/">Antonio Torralba</a>, 
+<a href="http://www.cs.huji.ac.il/~yweiss/">Yair Weiss</a>,
+and <a href="http://pages.cs.wisc.edu/~lizhang/">Li Zhang</a>. 
+We are extremely grateful to them.</p>
+
+
+<p>The following schedule is preliminary and subject to change as the term evolves.</p>
+
+<table id="schedule" style="padding: 0px;">
+<tbody><tr><th style="width: 20px;">W</th><th style="width: 20px;">L</th><th style="width: 80px;">Date</th><th style="width: 400px;">Topic</th><th style="width: 155px;">Slide </th><th>Reading</th><th style="width: 85px;">Deadline</th></tr>
+<tr><td>1</td><td>1</td><td>Thu Sep 11</td><td class="topic">How to save the world?</td><td><a href="slides/01_introduction/" style="color: blue;">Introduction</a></td><td><a href="http://szeliski.org/Book/" style="color: blue;">Sz1</a></td><td></td></tr>
+<tr class="evenweek"><td rowspan="3">2</td><td>2</td><td>Tue Sep 16</td><td class="topic">What is a camera? Accidental pinhole!</td><td><a href="slides/02_camera/" style="color: blue;">Image Formulation</a></td><td><a href="http://szeliski.org/Book/" style="color: blue;">Sz2</a>
+<a href="http://people.csail.mit.edu/torralba/research/accidentalcameras/" style="color: blue;">Acc</a></td><td></td></tr>
+<tr class="evenweek"><td>3</td><td>Thu Sep 18</td><td class="topic">What color is the sky?</td><td><a href="slides/03_color/" style="color: blue;">Color</a></td><td><a href="http://szeliski.org/Book/" style="color: blue;">Sz2</a></td><td></td></tr>
+<tr class="evenweek"><td></td><td>Fri Sep 19</td><td class="topic">Precept 1 [Friend Center 006 12:00-1:00]</td><td><a href="slides/precept01/" style="color: blue;">Precept1</a></td><td></td><td></td></tr>
+<tr><td rowspan="2">3</td><td>4</td><td>Tue Sep 23</td><td class="topic">Let's test your beer goggles</td><td><a href="slides/04_filtering/" style="color: blue;">Filtering</a></td><td><a href="http://szeliski.org/Book/" style="color: blue;">Sz3</a></td><td></td></tr>
+<tr><td>5</td><td>Thu Sep 25</td><td class="topic">Natural image statistics</td><td><a href="slides/05_image_statistics/" style="color: blue;">Statistics</a></td><td>
+<a href="http://szeliski.org/Book/" style="color: blue;">Sz10</a>
+</td><td></td></tr>
+<tr class="evenweek"><td rowspan="2">4</td><td>6</td><td>Tue Sep 30</td><td class="topic">Let's make the world simpler.</td><td><a href="slides/06_simple_world/" style="color: blue;">Edges and Lines</a></td><td></td><td><span class="deadline"><b>PS1 due</b></span></td></tr>
+<tr class="evenweek"><td>7</td><td>Thu Oct  2</td><td class="topic">Where have all the flowers gone? (<a href="http://www.linkedin.com/pub/andras-ferencz/8/643/7a2">Andras Ferencz @ Mobileye</a>)</td><td><a href="slides/07_tracking/" style="color: blue;">Tracking</a></td><td>
+<a href="http://szeliski.org/Book/" style="color: blue;">Sz8</a></td><td></td></tr>
+<tr><td rowspan="3">5</td><td>8</td><td>Tue Oct  7</td><td class="topic">Superman vision: revealing invisible changes in the world</td><td><a href="slides/08_motion/" style="color: blue;">Motion</a></td><td>
+<a href="http://szeliski.org/Book/" style="color: blue;">Sz8</a>
+<a href="http://people.csail.mit.edu/tfxue/proj/fluidflow/" style="color: blue;">Wig</a>
+<a href="http://people.csail.mit.edu/mrub/vidmag/" style="color: blue;">Mag</a>
+<a href="http://people.csail.mit.edu/mrub/VisualMic/" style="color: blue;">Mic</a>
+</td><td></td></tr>
+<tr><td>9</td><td>Thu Oct  9</td><td class="topic">Life story of a 3D point</td><td><a href="slides/09_geometry/" style="color: blue;">Geometry</a></td><td>
+<a href="http://szeliski.org/Book/" style="color: blue;">Sz2</a>
+<a href="http://szeliski.org/Book/" style="color: blue;">Sz7</a>
+</td><td></td></tr>
+<tr><td></td><td>Fri Oct  10</td><td class="topic">Precept 2 [CS105 12:20-1:30]</td><td><a href="slides/precept02/" style="color: blue;">Precept2</a></td><td></td><td></td></tr>
+<tr class="evenweek"><td rowspan="2">6</td><td>10</td><td>Tue Oct 14</td><td class="topic">Life story of a 3D point (continued)</td><td></td><td>
+</td><td></td></tr>
+<tr class="evenweek"><td>11</td><td>Thu Oct 16</td><td class="topic">The fundamental matrix song</td><td rowspan="2"><a href="slides/10_mvg/" style="color: blue;">Multi-view Geometry</a></td><td rowspan="2">
+<a href="http://szeliski.org/Book/" style="color: blue;">Sz2</a>
+<a href="http://szeliski.org/Book/" style="color: blue;">Sz7</a>
+<a href="http://szeliski.org/Book/" style="color: blue;">Sz4</a>
+<a href="http://szeliski.org/Book/" style="color: blue;">Sz6</a>
+<a href="http://szeliski.org/Book/" style="color: blue;">Sz9</a>
+</td><td><span class="deadline"><b>PS2 due</b></span></td></tr>
+<tr><td rowspan="3">7</td><td>12</td><td>Tue Oct 21</td><td class="topic">The fundamental matrix song (continue) </td><td></td></tr>
+<tr><td></td><td>Wed Oct 22</td><td class="topic">Precept 3 [COS105 12:30-13:30]</td><td><a href="slides/precept03/" style="color: blue;">Precept3</a></td><td></td><td></td></tr>
+<tr><td>13</td><td>Thu Oct 23</td><td class="topic">Building rome in a day</td><td><a href="slides/11_sfm/" style="color: blue;">Structure From Motion</a></td><td>
+<a href="http://szeliski.org/Book/" style="color: blue;">Sz11</a>
+<a href="http://szeliski.org/Book/" style="color: blue;">Sz12</a>
+</td><td></td></tr>
+<tr class="evenweek"><td rowspan="2">8</td><td>  </td><td>Tue Oct 28</td><td>No class (Fall Recess)</td><td></td><td></td><td></td></tr>
+<tr class="evenweek"><td>  </td><td>Thu Oct 30</td><td>No class (Fall Recess)</td><td></td><td></td><td></td></tr>
+<tr><td rowspan="2">9</td><td>14</td><td>Tue Nov  4</td><td class="topic">Where is "the birth of venus"?</td><td><a href="slides/11_sfm/" style="color: blue;">Image-based Modeling</a></td><td><a href="http://szeliski.org/Book/" style="color: blue;">Sz13</a></td><td><span class="deadline"><b>PS3 due</b></span></td></tr>
+<tr><td>15</td><td>Thu Nov  6</td><td class="topic">What is a chair?</td><td><a href="slides/12_object/" style="color: blue;">Object Detection</a></td><td><a href="http://szeliski.org/Book/" style="color: blue;">Sz14</a></td><td></td></tr>
+<tr class="evenweek"><td rowspan="2">10</td><td>16</td><td>Tue Nov 11</td><td class="topic">Guest lecture (<a href="https://sites.google.com/site/skevinzhou/home">Kevin Zhou @ Siemens</a>)</td><td>Medical Image Parsing</td><td></td><td></td></tr>
+<tr class="evenweek"><td>17</td><td>Thu Nov 13</td><td class="topic">Guest lecture (<a href="https://sites.google.com/site/skevinzhou/home">Kevin Zhou @ Siemens</a>)</td><td>Medical Image Parsing</td><td></td><td></td></tr>
+<tr><td rowspan="3">11</td><td></td><td>Mon Nov  17</td><td class="topic">Precept 4 [CS105 12:20-1:30]</td><td><a href="slides/precept04/" style="color: blue;">Precept4</a></td><td></td><td></td></tr>
+<tr><td>18</td><td>Tue Nov 18</td><td class="topic">Using the forest to see the trees</td><td rowspan="2"><a href="slides/13_scene/" style="color: blue;">Scene Understanding</a></td><td rowspan="2"><a href="http://szeliski.org/Book/" style="color: blue;">Sz14</a></td><td></td></tr>
+<tr><td>19</td><td>Thu Nov 20</td><td class="topic">Using the forest to see the trees (continued)</td><td></td></tr>
+<tr class="evenweek"><td rowspan="2">12</td><td>20</td><td>Tue Nov 25</td><td class="topic">The unreasonable effectiveness of big visual data</td><td><a href="slides/14_data/" style="color: blue;">Data-driven Brute-force</a></td><td></td><td><span class="deadline"><b>PS4 due</b></span></td></tr>
+<tr class="evenweek"><td></td><td>Thu Nov 27</td><td>No class (Thanksgiving Recess)</td><td></td><td></td><td></td></tr>
+<tr><td rowspan="3">13</td><td>21</td><td>Tue Dec  2</td><td class="topic">RGB-D object recognition (<a href="http://vision.princeton.edu/people/shurans/">Shuran Song</a>)</td><td>
+<a href="slides/RGBD/" style="color: blue;">RGB-D Recognition</a>
+</td><td>
+<a href="http://slidingshapes.cs.princeton.edu" style="color: blue;">Sliding Shapes</a>
+</td><td></td></tr>
+<tr><td></td><td>Wed Dec  3</td><td class="topic">Precept 5 [CS105 12:20-1:30]</td><td>
+<a href="slides/precept05/" style="color: blue;">Precept5</a>
+</td><td></td><td></td></tr>
+<tr><td>22</td><td>Thu Dec  4</td><td class="topic"><span class="deadline"><b>Final project proposal presentation</b></span></td><td></td><td></td><td><span class="deadline"><b>Proposal due</b></span></td></tr>
+<tr class="evenweek"><td rowspan="2">14</td><td>23</td><td>Tue Dec  9</td><td class="topic">Shape Matching (<a href="http://www.cs.princeton.edu/~funk/">Prof. Tom Funkhouser</a>)</td><td>
+<a href="slides/ShapeMatching/" style="color: blue;">Shape Matching</a>
+</td><td></td><td></td></tr>
+<tr class="evenweek"><td>24</td><td>Thu Dec 11</td><td class="topic">This is how the brain really works + <span class="deadline"><b>Quiz</b></span></td><td><a href="slides/15_deep_learning/" style="color: blue;">Deep Learning</a></td><td></td><td><span class="deadline"><b>PS5 due</b></span></td></tr>
+<tr><td></td><td></td><td>Tue Jan 13</td><td colspan="4"><span class="deadline"><b>Final report due</b></span></td></tr>
+
+</tbody></table>
+
+
+<h2>Matlab Workshop:</h2>
+
+<p>We will use Matlab as our programming language in this class, 
+  which is very simple and you should be able to pick it up in 1-2 hours. 
+  Princeton OIT provides Matlab for <b><a href="http://www.princeton.edu/software/licenses/software/matlab/">installation</a></b> (Please install the latest version R2014a with all available toolboxes.)
+If you have no experience in Matlab, please attend the following Matlab training workshop by Keller Center (<b>Registration Required</b>).</p>
+
+<ul>
+<li><b>Date:</b> September 15-17, 2014</li>
+<li><b>Time:</b> 6:30 - 9 p.m.</li>
+<li><b>Location:</b> Friend Center Auditorium (101)</li>
+<li><b>Registration:</b> Required</li>
+<li><b>Information:</b> <a href="https://commons.princeton.edu/kellercenter/2014/08/matlab-and-r-eworkshop-to-be-held-september-15-17.html">https://commons.princeton.edu/kellercenter/2014/08/matlab-and-r-eworkshop-to-be-held-september-15-17.html</a></li>
+</ul>
+
+
+
+<h2>Requirements/Grading:</h2>
+
+Grading will be based on our assessment of your understanding of the class material, and will be roughly comprised of:
+
+<ul>
+<li><b>Design Project - 30%</b></li>
+<li><b>Programming Assignments - 60%</b></li>
+<li><b>Class/Precept Participation (In-class Quizzes) - 10%</b></li>
+</ul>
+
+
+<h2>Final Project:</h2>
+The final project will allow you to explore in depth a topic covered in class which you found interesting and like to know more about. 
+<b>Projects can be performed in teams of 1-3 students.</b>
+During the semester we will propose ideas for projects in the problem sets and lectures, 
+and we also encourage the students to come up with their own ideas that entice them. 
+The topic for the final project and its scope should be approved by the class staff.
+Overall, the final project is comprised of 
+(a) a project proposal, 
+(b) a class presentation for your proposal, 
+and (c) a report (and source code) documenting your work, results and conclusions. 
+You are encouraged to be <b>as creative as possible</b>.
+
+<h2>Final Project Report:</h2>
+
+<p>
+We expect the report to be between 2-8 pages. If you have more members
+in your team, we expect your report to be longer.
+Your report should be written using the CVPR latex template and compiled into a PDF file.
+(downloaded from <a href="http://www.pamitc.org/cvpr15/files/cvpr2015AuthorKit.zip">http://www.pamitc.org/cvpr15/files/cvpr2015AuthorKit.zip</a>).
+</p>
+
+<p>
+Here is a guideline for the report writing:<br>
+1. Define the problem:
+What is the input?
+What is the output?<br>
+
+2. Motivation:
+Why do this?
+What makes it difficult?<br>
+
+3. Related work:
+What has been done? What are the problems?<br>
+
+4. Algorithm:
+What did you try? What are the alternatives? Why you choose to try
+this? Justify your design decision.<br>
+
+5. Result:
+Visualization of your result: screen capture, plot, example outputs. 
+Add figures into your report.<br>
+
+6. Evaluation:
+Does it work? How well it works?<br>
+
+7. Analysis:
+Why it works or doesn't work?
+Can we make it better? How?<br>
+
+8. [For 2 or 3 person teams] Contribution division: Who did what?
+</p>
+
+
+<h2>Communication:</h2>
+All the course information, announcements and material will be available on this class website. 
+Announcements will also be sent to the class email list  COS429_F2014 [the at sign] princeton.edu  (make sure you are registered).
+piazza.com is used as a discussion forum for the class. 
+We encourage students to post questions and remarks about the material and assignments in that forum.
+
+<h2>Late Policy:</h2>
+
+Assignments are due at 11:59PM on the due date, as determined by the file date of the file upload. Late assignments are marked down 1/4 of the full grade per day. One minute late is the same as one day late. 
+An up to one-week late submission is allowed once, no questions asked, and you can use it at your discretion (don't use it needlessly). 
+Any additional unapproved late submission will be considered as unsubmitted work. 
+Late submission is not allowed for the final project, class presentation and quiz.
+
+<h2>Extra Credit Policy:</h2>
+
+Most assignments will include an opportunity for "extra credit." Please note that we will not explicitly award extra points to the assignment score for this extra credit -- i.e.,, it is not possible to receive more than 100% on any assignment. However, we will consider extra credit when assigning grades to students near a grade boundary (e.g., it might push a borderline B+ up to an A-, or from A to A+).
+
+<h2>Academic Integrity:</h2>
+
+All students pledge to adhere to the Honor Code in the conduct of all assignments, quizzes and final projects that take place in class. We took this <b>very seriously</b>.
+Your submission will be checked both manually by the TAs and automatically by the state-of-the-art computer software.
+We will use an automatic program to run your code and compare your code with other students' 
+(including both this year and all previous years) and public available implementations (e.g. from Google, Bing, Github),
+to verify your result and <b>detect plagiarism</b> to make sure there is no cheating.
+The computer software is very powerful and we will have zero tolerance policy on plagiarism.
+For more information, please refer to 
+<a href="http://www.princeton.edu/pr/pub/integrity/pages/intro/index.htm"><b>the university policy here</b></a>.
+
+
+<h2>Collaboration Policy</h2>
+<p><em>The COS 429 assignment collaboration policy is derived from that of Princeton's COS 217 ...</em></p>
+
+<h3>Concerning receiving help from others...</h3>
+
+<p>Programming is an individual creative process much like composition. You must reach your own understanding of the problem and discover a path to its solution. During this time, discussions with other people are permitted and encouraged. However, when the time comes to write code that solves the problem, such discussions (except with course staff members) are no longer appropriate: the code must be your own work. If you have a question about how to use some feature of C, Unix, etc., you certainly can ask your friends or the teaching assistants, but specific questions about code you have written must be treated more carefully.</p>
+
+<p>For each assignment you <em>must</em> specifically state, in your <code>writeup</code> file, the names of any individuals from whom you received help, and the nature of the help that you received. That includes help from friends, classmates, lab TAs, course staff members, etc.</p>
+
+<p><em>Do not, under any circumstances, copy another person's code.</em> Incorporating someone else's code into your code in any form is a violation of academic regulations. This includes adapting solutions or partial solutions to assignments from any offering of this course or any other course. There is one exception to the code-sharing rule: You may adapt code from the COS 429 course materials provided that you explain what code you use, and cite its source in your <code>writeup</code> file.</p>
+
+<p>Copying and transforming someone else's code (by rearranging independent code, renaming variables, rewording comments, etc.) is plagiarism. Some inexperienced programmers have the misconception that detecting such plagiarism is difficult. Actually, detecting such plagiarism is quite easy. Not only does such plagiarism quickly identify itself during the grading process, but also we can (and do) use software packages, such as Alex Aiken's renowned MOSS software, for automated help.</p>
+
+<p>If we suspect a student of plagiarism on an assignment, then we will refer the case to the Committee on Discipline. If the Committee on Discipline finds the student guilty of plagiarism, then the standard penalty is automatic failure of the COS 429 course. The Committee on Discipline may impose additional penalties.</p>
+
+<h3>Concerning providing help to others...</h3>
+
+<p>For each assignment you <em>must</em> specifically state, in your <code>writeup</code> file, the names of any individuals to whom you provided help, and the nature of the help that you provided.</p>
+
+<p>Abetting plagiarism or unauthorized collaboration by "sharing" your code is prohibited. Sharing code in digital form is an especially egregious violation. Do not e-mail your code or make your code available to anyone. Do not share your code with anyone even after the due date/time of the assignment.</p>
+
+<p>You are responsible for keeping your solutions to the COS 429 programming assignments away from prying eyes. If someone else copies your code, we have no way to determine who is the owner and who is the copier; the Committee on Discipline decides. If you are working on a public cluster computer, make sure that you <em>do not leave the computer unattended</em>, and that you delete your local files and logout before leaving.</p>
+
+<p>You should store all of your assignment files in a private directory. You can create a private directory using commands similar to these:</p>
+
+<blockquote>
+<pre>$ mkdir cos429
+$ chmod 700 cos429
+</pre>
+</blockquote>
+
+<h3>Concerning electronic communication...</h3>
+
+<p>If you have a question or comment that will be helpful to other students, and you need not reveal any parts of your work to express the question or comment properly, then you should post it to the course's <a href="https://piazza.com/princeton/fall2013/cos429/home">Piazza</a> page. One of the course's instructors will reply as soon as possible. We welcome replies from other students, and may "endorse" a student's response instead of composing an instructor's response.</p>
+
+<p>If you have a question or comment that will not be helpful to other students, or if you must reveal parts of your work to express your question or comment adequately, then you should post it privately to the appropriate preceptor on Piazza.</p><p>
+
+</p><h3>Final note</h3>
+
+Please do not publish solutions to programming assignments in a way that could compromise their utility as pedagogical tools. At Princeton, this is a violation of the basic rights, rules and responsibilities of members of the university community. 
+
+
+
+
+
+<h2>Books:</h2>
+
+
+  <h3><a name="books" id="books"></a>Reference Books</h3>
+  <p>There is no textbook for this class. The main reference book and reading assingment will be mainly based on:</p>
+
+  <ul>
+    <li><b><strong>[Sz]</strong> Szeliski, <em><a href="http://www.amazon.com/Computer-Vision-Algorithms-Applications-Science/dp/1848829345/">Computer Vision: Algorithms and Applications</a>, </em>Springer, 2010 (<a href="http://szeliski.org/Book/" style="color: red;">Free Online Draft Available Here</a>)</b></li>
+  </ul>
+
+  <p>Other references:</p>
+  <p>Vision:</p>
+  <ul>
+    <li> <strong>[HZ]</strong> Hartley and Zisserman, <em><a href="http://www.amazon.com/Multiple-View-Geometry-Computer-Vision/dp/0521540518">Multiple View Geometry in Computer Vision</a></em>, Cambridge University Press, 2004</li>
+    <li><strong>[FP]</strong> Forsyth and Ponce, <em><a href="http://www.amazon.com/Computer-Vision-Approach-David-Forsyth/dp/0130851981">Computer Vision: A Modern Approach</a></em>, Prentice Hall, 2002</li>
+    <li><strong>[Pa]</strong> Palmer, <a href="http://www.amazon.com/Vision-Science-Phenomenology-Stephen-Palmer/dp/0262161834/">Vision Science</a>, MIT Press, 1999</li>
+  </ul>
+  <p>Learning:</p>
+  <ul>
+    <li><strong>[BGC]</strong> Bengio, Goodfellow and Courville, <em><a href="http://www.iro.umontreal.ca/~bengioy/dlbook/">Deep Learning</a>, </em>MIT Press, 2014</li>
+    <li><strong>[Mi]</strong> Mitchel, <em><a href="http://www.amazon.com/Machine-Learning-Tom-M-Mitchell/dp/0070428077/">Machine Learning</a>, </em>McGraw-Hill, 1997</li>
+    <li><strong>[DHS]</strong> Duda, Hart and Stork, <em><a href="http://www.amazon.com/Pattern-Classification-2nd-Richard-Duda/dp/0471056693">Pattern Classification (2nd Edition)</a></em>, Wiley-Interscience, 2000</li>
+  </ul>
+  <p>Graphical models:</p>
+  <ul>
+    <li><strong>[KF]</strong> Koller and Friedman, <a href="http://www.amazon.com/Probabilistic-Graphical-Models-Principles-Computation/dp/0262013193/">Probabilistic Graphical Models: Principles and Techniques</a>, MIT Press, 2009</li>
+  </ul>
+
+<h2>Resources:</h2>
+<h3>Related Courses:</h3>
+  <p>Computer Vision Class at Princeton</p>
+  <ul>
+  <li><a href="http://www.cs.princeton.edu/courses/archive/fall13/cos429/">Fall 2013</a></li>
+  <li><a href="http://www.cs.princeton.edu/courses/archive/fall11/cos429/">Fall 2011</a></li>
+  </ul>
+
+  	<p>By Antonio Torralba at MIT:</p>
+  	<ul>
+  	<li><a href="http://6.869.csail.mit.edu/fa12/">Advances in Computer Vision</a></li>
+  	<li><a href="http://people.csail.mit.edu/torralba/courses/6.870_2011f/6.870.grounding.html">Grounding Object Recognition and Scene Understanding</a></li>
+  	<li><a href="http://people.csail.mit.edu/torralba/courses/6.870/6.870.recognition.htm">Object Recognition and Scene Understanding</a></li>
+	</ul>
+    
+    <p>By Alyosha Efros at CMU/Berkeley:</p>
+    <ul>
+	<li><a href="http://graphics.cs.cmu.edu/courses/15-463/2012_fall/463.html">Computational Photography</a></li>
+	<li><a href="https://docs.google.com/document/pub?id=1jGBn7zPDEaU33fJwi3YI_usWS-U6gpSSJotV_2gDrL0">Learning-based Methods in Vision</a></li>
+	<li><a href="http://graphics.cs.cmu.edu/courses/15-463/2011_fall/463.html">Computational Photography</a></li>
+	<li><a href="http://graphics.cs.cmu.edu/courses/P2P/">Pixels to Percepts: Human Visual Perception for Vision and Graphics</a></li>
+	<li><a href="http://graphics.cs.cmu.edu/courses/15-463/2010_fall/">Computational Photography</a></li>
+	<li><a href="http://graphics.cs.cmu.edu/courses/15-463/2010_spring/">Computational Photography</a></li>
+	<li><a href="http://www.cs.cmu.edu/~efros/courses/LBMV09/">Learning-based Methods in Vision</a></li>
+	<li><a href="http://graphics.cs.cmu.edu/courses/15-463/2008_fall/">Computational Photography</a></li>
+	<li><a href="http://graphics.cs.cmu.edu/courses/15-463/2007_fall/">Computational Photography</a></li>
+	<li><a href="http://graphics.cs.cmu.edu/nsp/course/15-462/Fall07/">Computer Graphics</a></li>
+	<li><a href="http://www.cs.cmu.edu/~efros/courses/LBMV07/">Learning-based Methods in Vision</a></li>
+	<li><a href="http://graphics.cs.cmu.edu/courses/15-463/2006_fall/www/463.html">Computational Photography</a></li>
+	<li><a href="courses/AP06/">Advanced Machine Perception</a></li>
+	<li><a href="http://graphics.cs.cmu.edu/courses/15-463/2005_fall/www/463.html">Computational Photography</a></li>
+	<li><a href="http://graphics.cs.cmu.edu/courses/15-463/2004_fall/www/463.html">Rendering and Image Processing</a></li>
+	</ul>
+
+	<p>By James Hays at Brown:</p>
+	<ul>
+  	<li><a href="http://cs.brown.edu/courses/csci1430/">Introduction to Computer Vision</a></li>
+  	<li><a href="http://cs.brown.edu/courses/csci2951-b/">Data-Driven Vision and Graphics</a></li>
+	</ul>
+
+  <p>By Noah Snavely at Cornell:</p>
+  <ul>
+    <li><a href="http://www.cs.cornell.edu/courses/cs4670/2013fa/">Introduction to Computer Vision</a></li>
+    <li><a href="http://www.cs.cornell.edu/courses/cs4670/2012fa/">Introduction to Computer Vision</a></li>
+  </ul>
+
+  <p>By Steven Seitz at UW:</p>
+  <ul>
+    <li><a href="http://courses.cs.washington.edu/courses/cse455/12wi/">Computer Vision</a></li>
+  </ul>
+
+
+  	<p>By others:</p>
+  	<ul>
+    <li><a href="http://www.iro.umontreal.ca/~bengioy/talks/KDD2014-tutorial.pdf">Deep Learning Tutorial</a>, by Yoshua Bengio</li>
+    <li><a href="http://homepages.inf.ed.ac.uk/rbf/AVINVERTED/main_av.htm">Advanced Vision</a>, by Bob Fisher</li>
+  	<li><a href="https://www.ipam.ucla.edu/schedule.aspx?pc=gss2012">Deep Learning Summer School 2012</a></li>
+    <li><a href="http://www.cs.unc.edu/~marc/mvg/slides.html">Multiple View Geometry</a>, by Marc Pollefeys</li>
+    <li><a href="http://www.robots.ox.ac.uk/~az/lectures/index.html">Geometry</a>, by Andrew Zisserman</li>
+    <li><a href="http://www.cs.berkeley.edu/~malik/cs294.html">Recognizing People, Objects and Actions</a>, by Jitendra Malik</li>
+    <li><a href="http://www.cs.brown.edu/courses/cs143/">Introduction to Computer Vision</a>, by Michael Black</li>
+    <li><a href="http://www.cs.utexas.edu/%7Egrauman/courses/fall2009/main.htm">Computer Vision</a>, by Kristen Grauman</li>
+    <li><a href="http://www.cs.nyu.edu/%7Efergus/">Computer Vision</a>, by Rob Fergus</li>
+    <li><a href="http://vision.stanford.edu/teaching/cs223b/">Introduction to Computer Vision</a>, by Fei-Fei Li</li>
+    <li><a href="http://www.cs.ubc.ca/spider/lowe/vision.html">The Computer Vision Industry</a></li>
+  	</ul>
+
+<h3>Code and Datasets</h3>
+  <ul>
+    <li><a href="http://sundatabase.mit.edu">SUN database</a></li>
+    <li><a href="http://sun360.mit.edu/">SUN360 panorama database</a></li>
+    <li><a href="http://people.csail.mit.edu/jxiao/SUN/explore/">Scene Classification Benchmark</a></li>
+    <li><a href="http://www.cns.nyu.edu/%7Eeero/STEERPYR/">The Steerable Pyramid</a></li>
+    <li><a href="http://people.csail.mit.edu/jxiao/DrawMe/">DrawMe: a light-weight Javascript library for line drawing on a picture.</a></li>
+    <li><a href="http://mit.edu/jxiao/Public/software/OnlineStructuralSVM/">Structural SVM</a></li>
+    <li><a href="http://mit.edu/jxiao/Public/software/templateMatching/">Template Matching</a></li>
+    <li><a href="http://www.cns.nyu.edu/%7Elcv/texture/">Representation and Synthesis of Visual Texture</a>, Portilla &amp; Simoncelli</li>
+    <li><a href="http://www.cs.berkeley.edu/%7Efowlkes/BSE/">Berkeley Segmentation</a></li>
+    <li><a href="http://www.eecs.berkeley.edu/Research/Projects/CS/vision/grouping/">Pb</a></li>
+    <li><a href="http://ttic.uchicago.edu/%7Exren/research/superpixel/">Superpixels</a></li>
+    <li><a href="http://phototour.cs.washington.edu/applet/index.html">Structure             from Motion for Unordered Image Collections</a></li>
+    <li>Peter Kovesi's <a href="http://www.csse.uwa.edu.au/%7Epk/Research/MatlabFns/">Functions for Computer Vision</a></li>
+    <li><a href="http://vision.ucla.edu/%7Evedaldi/code/sift/sift.html">SIFT             implementation</a> by Andrea Vedaldi</li>
+    <li><a href="http://www.robots.ox.ac.uk/%7Evgg/research/affine/index.html">Affine             Covariant Features</a></li>
+    <li><a href="http://people.csail.mit.edu/torralba/shortCourseRLOC/boosting/boosting.html">A simple object detector with boosting</a></li>
+    <li><a href="http://opencv.willowgarage.com/wiki/">OpenCV</a></li>
+  </ul>
+
+
+<h3>Resource collection by Bob Fisher</h3>
+<ul>
+
+<li><a href="http://homepages.inf.ed.ac.uk/rbf/AVINVERTED/main_av.htm">Video lectures - 15 hours of video in c. 10 minute blocks.</a></li>
+
+<p>Including PDF slides, links to supplementary reading, a drill question for each video
+The site contains a set of video lectures on a subset of computer vision. It is
+intended for viewers who have an understanding of the nature of images and some
+understanding of how they can be processed. The course is more like
+Computer Vision 102, introducing a range of standard and acccepted
+methods, rather than the latest research advances.</p>
+
+<li><a href="http://homepages.inf.ed.ac.uk/rbf/CVonline/">CVonline is a free WWW-based set of introductions to topics in computer vision.</a></li>
+
+<p>Because of the improvements in the content available in Wikipedia,
+it is now possible to find content for more than 50% of CVonline's 2000 topics.
+CVonline groups together the topics into a sensible topic hierarchy, but tries
+to exploit the advancing quality and breadth of wikipedia's content.</p>
+
+<li>CVonline has a variety of supplemental information useful to students and researchers,
+namely lists of: </li>
+
+<ul>
+<li><a href="http://homepages.inf.ed.ac.uk/rbf/CVonline/books.htm">online and hardcopy books</a></li>
+<li><a href="http://homepages.inf.ed.ac.uk/rbf/CVonline/Imagedbase.htm">datasets for research and student projects</a></li>
+<li><a href="http://homepages.inf.ed.ac.uk/rbf/CVonline/SWEnvironments.htm">useful software packages</a></li>
+<li><a ref="http://homepages.inf.ed.ac.uk/rbf/CVonline/applic.htm">application areas</a></li>
+</ul>
+
+<li><a href="http://homepages.inf.ed.ac.uk/rbf/IAPR/">The education resources of the Int. Assoc. for Pattern Recognition</a></li>
+
+<p>contain many links to Tutorials and Surveys, Explanations, Online Demos,
+Datasets, Books, Code for:
+Symbolic pattern recognition, Statistical pattern recognition, Machine learning,
+1D Signal pattern recognition and 2D Image analysis and computer vision.</p>
+
+<li><a href="http://homepages.inf.ed.ac.uk/rbf/HIPR2/">HIPR2: free WWW-based Image Processing Teaching Materials with JAVA</a></li>
+
+<p>HIPR2 is a free www-based set of tutorial materials for the 50 most commonly
+used image processing operators. It contains tutorial text, sample results
+and JAVA demonstrations of individual operators and collections.</p>
+
+
+<li><a href="http://homepages.inf.ed.ac.uk/rbf/CVDICT/">CVDICT: Dictionary of Computer Vision and Image Processing</a></li>
+
+<p>This are the free view terms A..G from the the first version of the
+Dictionary, published by John Wiley and Sons. (Note there there a second
+edition currently on sale).</p>
+
+</ul>
+
+
+<!--
+<h3>Songs</h3>
+<ul>
+<li><a href="http://danielwedge.com/fmatrix/">The Fundamental Matrix Song</a></li>
+<li><a href="http://danielwedge.com/ransac/">The RANSAC Song</a></li>
+<li><a href="https://www.youtube.com/watch?v=DQWI1kvmwRg">Overfitting Thriller!</a></li>
+</ul>
+-->
+
+</div>
+
+<div class="bibtex_template" style="display: none;">
+<li>
+<a class="google"><img src="http://vision.princeton.edu/courses/COS429/2014fa/google.ico"></a>&nbsp;<a class="scholar"><img src="http://vision.princeton.edu/courses/COS429/2014fa/scholar.ico"></a> <a class="url">[<span class="key"></span>] <span class="title"></span></a>. 
+</li>
+</div>
+
+<script type="text/javascript" src="/web/footer.js"></script><div style="text-align: center; width: 100%; margin-top: 25px; "><p style="color: #999; font-size: 9pt; ">© <script>document.write(new Date().getFullYear())</script>2026 Princeton Vision &amp; Robotics Labs ‒ <a href="http://www.cs.princeton.edu/" style="color:#EE7F2D;">Department of Computer Science</a> @ <a href="http://www.princeton.edu/" style="color:#EE7F2D;">Princeton University</a> ‒ 35 Olden Street, Princeton, NJ 08540.</p></div>
+
+</body></html>

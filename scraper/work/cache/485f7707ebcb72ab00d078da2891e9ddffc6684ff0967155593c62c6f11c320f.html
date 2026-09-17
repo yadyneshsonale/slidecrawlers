@@ -1,0 +1,2649 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de" lang="de" class="js pl"><head>
+
+<meta charset="utf-8">
+<!-- 
+	This website is powered by TYPO3 - inspiring people to share!
+	TYPO3 is a free open source Content Management Framework initially created by Kasper Skaarhoj and licensed under GNU/GPL.
+	TYPO3 is copyright 1998-2026 of Kasper Skaarhoj. Extensions are copyright of their respective owners.
+	Information and contribution at https://typo3.org/
+-->
+
+
+<link rel="icon" href="/fileadmin/site-templates/logos/ai-institute/logo_core.png" type="image/png">
+
+<meta name="generator" content="TYPO3 CMS">
+<meta name="robots" content="index,follow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:site_name" content="Leibniz Universität Hannover">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="stylesheet" href="/typo3conf/ext/t3luhpublications/Resources/Public/Css/t3luhpublications-min.css?1778155773" media="all">
+<link rel="stylesheet" href="/typo3conf/ext/t3luhresprojects/Resources/Public/Css/t3luhresproject-min.css?1772624216" media="all">
+<link rel="stylesheet" href="/typo3conf/ext/t3luhepv/Resources/Public/Css/t3luhepv-min.css?1781245299" media="all">
+<link rel="stylesheet" href="/typo3conf/ext/t3luhunisearch/Resources/Public/css/t3luhunisearch-min.css?1780922433" media="all">
+<link rel="stylesheet" href="/typo3conf/ext/t3luhunisearch/Resources/Public/css/rag.css?1780922433" media="all">
+<link rel="stylesheet" href="/typo3conf/ext/luh_website/Resources/Public/Build/Css/faculty_elektrotechnik_informatik.min.css?1778582851" media="all">
+<link rel="stylesheet" href="/typo3conf/ext/univie_pure/Resources/Public/Css/univie_pure.css?1776148851" media="all">
+<link rel="stylesheet" href="/typo3conf/ext/opencast/Resources/Public/Css/embed-responsive.css?1772623682" media="all">
+
+
+
+<script async="" src="https://www.webstats-etinf.uni-hannover.de/matomo.js"></script><script src="/typo3conf/ext/luh_website/Resources/Public/Build/JavaScript/app.min.js?1778582851"></script><meta class="foundation-mq" name="foundation-mq" content="">
+
+
+<title>Lecture Introduction to NLP&nbsp;–&nbsp;Institut für Künstliche Intelligenz&nbsp;–&nbsp;Leibniz Universität Hannover</title>
+<link rel="apple-touch-icon" href="/fileadmin/site-templates/logos/ai-institute/logo_core.png">
+<link rel="canonical" href="https://www.ai.uni-hannover.de/teaching/courses/inlp">
+<style type="text/css">[responsive-image] > img, [data-responsive-image] {overflow: hidden; padding: 0; } [responsive-image] > img, [data-responsive-image] > img { width: 100%;}</style></head>
+<body>
+
+
+<div class="off-canvas-wrapper">
+		<div class="off-canvas-content" data-off-canvas-content="">
+
+		
+
+
+		<div class="o-shaded">
+			
+	<div class="row c-topbar c-topbar--big" style="position: static">
+		<div class="column c-topbar__element">
+			
+
+			
+				
+						<a href="https://www.uni-hannover.de" title="Leibniz Universität Hannover" class="c-topbar__item">
+							<img class="c-logo__image" alt="Leibniz Universität Hannover" src="/typo3conf/ext/luh_website/Resources/Public/Images/Logo/luh_logo.svg">
+						</a>
+					
+			
+
+			
+
+			
+
+
+	
+
+			<a href="https://www.et-inf.uni-hannover.de" class="c-link u-icon u-icon--arrow-right show-for-small-only c-topbar__item c-topbar__link c-topbar__link--theme">
+				<span>
+					Fakultät
+				</span>
+			</a>
+
+			<a href="https://www.et-inf.uni-hannover.de" title="Fakultät für Elektrotechnik und Informatik" class="c-link u-icon u-icon--arrow-right show-for-medium c-topbar__item c-topbar__link c-topbar__link--theme">
+				<span>Fakultät für Elektrotechnik und Informatik</span>
+			</a>
+
+		
+
+
+			
+
+			
+		</div>
+
+		<div class="columns shrink c-topbar__element c-topbar__element--right align-right">
+			
+				
+
+
+		
+				
+
+
+    
+        
+            <span></span>
+        
+    
+
+			
+	
+			
+
+			
+	<div class="c-topbar__item c-topbar__item--align-right" role="search">
+		<form method="get" name="searchform" action="/suche">
+
+			<label for="search-open" class="c-searchbox__label c-topbar__link u-icon u-icon--search hide-for-medium" aria-label="Suche öffnen" tabindex="-1"></label>
+
+			<input id="search-open" class="c-searchbox--icon" aria-label="Suche öffnen" type="checkbox">
+
+			<div class="c-searchbox o-brand">
+				<input class="c-searchbox__input searchfield t3luhunisearch_textfield" placeholder="Suche" type="text" name="tx_t3luhunisearch_search[input_name_searchstring]">
+				<button type="submit" class="c-searchbox__button" aria-label="Suche starten">Start</button>
+			</div>
+		</form>
+	</div>
+
+
+
+			
+				<a href="/institut/kontakt-und-anfahrt" class="c-link c-topbar__item c-topbar__item--align-right show-for-xlarge c-topbar__link c-link--contact"><span>Kontakt</span></a>
+			
+
+			
+
+
+		
+				
+
+
+    
+        
+            <span></span>
+        
+    
+
+			
+	
+		</div>
+	</div>
+
+		</div>
+	
+
+
+
+
+
+
+		<header class="row">
+	<div class="column small-12">
+		<div class="c-header c-header--decentral">
+
+			<div class="c-identity">
+				
+					<div class="c-identity__title small-order-2">
+						
+		<a href="/" class="c-identity__square c-identity__square--empty
+			
+			c-identity__square--hide">
+		</a>
+	
+
+
+
+		<a href="/" class="c-identity__text">
+			Institut für Künstliche Intelligenz
+		</a>
+	
+
+					</div>
+				
+
+				
+					
+	<a href="/" class="c-identity__logo small-order-1 xlarge-order-2">
+		<img class="c-identity__image" title="Logo Institut für Künstliche Intelligenz" alt="Logo Institut für Künstliche Intelligenz" src="/fileadmin/site-templates/logos/ai-institute/logo_core.png" width="449" height="437">
+	</a>
+
+				
+			</div>
+
+			<div class="c-header__menu">
+				<a href="#" class="c-burger c-burger--decentral" data-toggle="offCanvas" aria-label="Menü öffnen" tabindex="0" aria-expanded="false" aria-controls="offCanvas">
+	<svg role="img" shape-rendering="crispEdges">
+		<use xlink:href="/typo3conf/ext/luh_website/Resources/Public/Images/Icon/menu7.svg#icon-menu7"></use>
+	</svg>
+</a>
+
+				
+
+
+		<nav class="c-navigation-main c-navigation-main--full-width">
+			
+	
+		
+			
+					
+							<div class="c-navigation-main__item is-first   " data-dropdown-trigger="main-navigation-6129" tabindex="0" aria-haspopup="true">
+								<span class="c-navigation-main__link">Institut</span>
+							</div>
+							<div class="c-dropdown c-dropdown--menu o-shaded show-for-large" data-dropdown-selector="main-navigation-6129" aria-label="submenu">
+								<div class="c-dropdown__container">
+									<div class="c-section-menu__header">
+										<div class="row c-section-menu__header-content">
+											<div class="column medium-3 c-section-menu">
+												<div class="c-dropdown__title">Institut</div>
+											</div>
+											<div class="column medium-3 c-section-menu">
+												<a href="/institut" class="c-link--overview u-icon u-icon--stack-empty"><span>Zur Übersicht</span></a>
+											</div>
+											<div class="column medium-3 c-section-menu"></div>
+											<div class="column medium-3 c-section-menu">
+												<button class="c-button--close float-right" data-dropdown-close="main-navigation" tabindex="-1">
+													Menü schließen
+												</button>
+											</div>
+											<div class="c-section-menu__border"></div>
+										</div>
+									</div>
+
+									<div class="row c-section-menu__content">
+										
+											
+<div class="columns small-3 c-section-menu">
+	
+		
+			<a href="/institut/team" tabindex="0" class="c-section-menu__link u-text--hyphens">
+				<span>Team</span>
+			</a>
+		
+	
+		
+	
+		
+	
+		
+	
+		
+			<a href="/institut/veranstaltungen" tabindex="0" class="c-section-menu__link u-text--hyphens">
+				<span>Veranstaltungen</span>
+			</a>
+		
+	
+		
+	
+		
+	
+		
+	
+</div>
+											
+<div class="columns small-3 c-section-menu">
+	
+		
+	
+		
+			<a href="/institut/arbeitsgruppen" tabindex="0" class="c-section-menu__link u-text--hyphens">
+				<span>Arbeitsgruppen</span>
+			</a>
+		
+	
+		
+	
+		
+	
+		
+	
+		
+			<a href="/institut/open-positions" tabindex="0" class="c-section-menu__link u-text--hyphens">
+				<span>Open Positions</span>
+			</a>
+		
+	
+		
+	
+		
+	
+</div>
+											
+<div class="columns small-3 c-section-menu">
+	
+		
+	
+		
+	
+		
+			<a href="/institut/luhai-principles" tabindex="0" class="c-section-menu__link u-text--hyphens">
+				<span>LUHAI Principles</span>
+			</a>
+		
+	
+		
+	
+		
+	
+		
+	
+		
+			<a href="/institut/code-of-conduct" tabindex="0" class="c-section-menu__link u-text--hyphens">
+				<span>Code of Conduct</span>
+			</a>
+		
+	
+		
+	
+</div>
+											
+<div class="columns small-3 c-section-menu">
+	
+		
+	
+		
+	
+		
+	
+		
+			<a href="/institut/neuigkeiten" tabindex="0" class="c-section-menu__link u-text--hyphens">
+				<span>Neuigkeiten</span>
+			</a>
+		
+	
+		
+	
+		
+	
+		
+	
+		
+			<a href="/institut/kontakt-und-anfahrt" tabindex="0" class="c-section-menu__link u-text--hyphens">
+				<span>Kontakt und Anfahrt</span>
+			</a>
+		
+	
+</div>
+										
+									</div>
+								</div>
+							</div>
+						
+				
+		
+			
+					
+							<div class="c-navigation-main__item    c-navigation-main__item--is-active" data-dropdown-trigger="main-navigation-6114" tabindex="0" aria-haspopup="true">
+								<span class="c-navigation-main__link">Lehre</span>
+							</div>
+							<div class="c-dropdown c-dropdown--menu o-shaded show-for-large" data-dropdown-selector="main-navigation-6114" aria-label="submenu">
+								<div class="c-dropdown__container">
+									<div class="c-section-menu__header">
+										<div class="row c-section-menu__header-content">
+											<div class="column medium-3 c-section-menu">
+												<div class="c-dropdown__title">Lehre</div>
+											</div>
+											<div class="column medium-3 c-section-menu">
+												<a href="/lehre" class="c-link--overview u-icon u-icon--stack-empty"><span>Zur Übersicht</span></a>
+											</div>
+											<div class="column medium-3 c-section-menu"></div>
+											<div class="column medium-3 c-section-menu">
+												<button class="c-button--close float-right" data-dropdown-close="main-navigation" tabindex="-1">
+													Menü schließen
+												</button>
+											</div>
+											<div class="c-section-menu__border"></div>
+										</div>
+									</div>
+
+									<div class="row c-section-menu__content">
+										
+											
+<div class="columns small-3 c-section-menu">
+	
+		
+			<a href="/lehre/lehrveranstaltungen" tabindex="0" class="c-section-menu__link u-text--hyphens c-section-menu__link--is-active">
+				<span>Lehrveranstaltungen</span>
+			</a>
+		
+	
+		
+	
+		
+	
+		
+	
+		
+			<a href="/lehre/robot-lab-luhai" tabindex="0" class="c-section-menu__link u-text--hyphens">
+				<span>Robot Lab @ LUHAI</span>
+			</a>
+		
+	
+		
+	
+		
+	
+</div>
+											
+<div class="columns small-3 c-section-menu">
+	
+		
+	
+		
+			<a href="/lehre/studien-abschlussarbeiten" tabindex="0" class="c-section-menu__link u-text--hyphens">
+				<span>Abschlussarbeiten AutoML</span>
+			</a>
+		
+	
+		
+	
+		
+	
+		
+	
+		
+			<a href="/lehre/tutorials" tabindex="0" class="c-section-menu__link u-text--hyphens">
+				<span>Tutorials</span>
+			</a>
+		
+	
+		
+	
+</div>
+											
+<div class="columns small-3 c-section-menu">
+	
+		
+	
+		
+	
+		
+			<a href="/lehre/abschlussarbeiten-nlp" tabindex="0" class="c-section-menu__link u-text--hyphens">
+				<span>Abschlussarbeiten NLP</span>
+			</a>
+		
+	
+		
+	
+		
+	
+		
+	
+		
+			<a href="/lehre/ki-kurse-an-der-fei" tabindex="0" class="c-section-menu__link u-text--hyphens">
+				<span>KI Kurse an der FEI</span>
+			</a>
+		
+	
+</div>
+											
+<div class="columns small-3 c-section-menu">
+	
+		
+	
+		
+	
+		
+	
+		
+			<a href="/lehre/ressourcen-fuer-studierende" tabindex="0" class="c-section-menu__link u-text--hyphens">
+				<span>Ressourcen für Studierende</span>
+			</a>
+		
+	
+		
+	
+		
+	
+		
+	
+</div>
+										
+									</div>
+								</div>
+							</div>
+						
+				
+		
+			
+					
+							<div class="c-navigation-main__item  is-last  " data-dropdown-trigger="main-navigation-6109" tabindex="0" aria-haspopup="true">
+								<span class="c-navigation-main__link">Forschung</span>
+							</div>
+							<div class="c-dropdown c-dropdown--menu o-shaded show-for-large" data-dropdown-selector="main-navigation-6109" aria-label="submenu">
+								<div class="c-dropdown__container">
+									<div class="c-section-menu__header">
+										<div class="row c-section-menu__header-content">
+											<div class="column medium-3 c-section-menu">
+												<div class="c-dropdown__title">Forschung</div>
+											</div>
+											<div class="column medium-3 c-section-menu">
+												<a href="/forschung" class="c-link--overview u-icon u-icon--stack-empty"><span>Zur Übersicht</span></a>
+											</div>
+											<div class="column medium-3 c-section-menu"></div>
+											<div class="column medium-3 c-section-menu">
+												<button class="c-button--close float-right" data-dropdown-close="main-navigation" tabindex="-1">
+													Menü schließen
+												</button>
+											</div>
+											<div class="c-section-menu__border"></div>
+										</div>
+									</div>
+
+									<div class="row c-section-menu__content">
+										
+											
+<div class="columns small-3 c-section-menu">
+	
+		
+			<a href="/forschung/publikationen" tabindex="0" class="c-section-menu__link u-text--hyphens">
+				<span>Publikationen</span>
+			</a>
+		
+	
+		
+	
+		
+	
+		
+	
+		
+			<a href="/forschung/software" tabindex="0" class="c-section-menu__link u-text--hyphens">
+				<span>Software</span>
+			</a>
+		
+	
+		
+	
+</div>
+											
+<div class="columns small-3 c-section-menu">
+	
+		
+	
+		
+			<a href="/forschung/projects" tabindex="0" class="c-section-menu__link u-text--hyphens">
+				<span>Projects</span>
+			</a>
+		
+	
+		
+	
+		
+	
+		
+	
+		
+			<a href="/forschung/ailuh" tabindex="0" class="c-section-menu__link u-text--hyphens">
+				<span>AI@LUH</span>
+			</a>
+		
+	
+</div>
+											
+<div class="columns small-3 c-section-menu">
+	
+		
+	
+		
+	
+		
+			<a href="/forschung/awards" tabindex="0" class="c-section-menu__link u-text--hyphens">
+				<span>Awards</span>
+			</a>
+		
+	
+		
+	
+		
+	
+		
+	
+</div>
+											
+<div class="columns small-3 c-section-menu">
+	
+		
+	
+		
+	
+		
+	
+		
+			<a href="/forschung/software-1" tabindex="0" class="c-section-menu__link u-text--hyphens">
+				<span>Data</span>
+			</a>
+		
+	
+		
+	
+		
+	
+</div>
+										
+									</div>
+								</div>
+							</div>
+						
+				
+		
+		
+			
+		
+			
+		
+			
+		
+	
+
+		</nav>
+	
+
+
+
+
+			</div>
+		</div>
+	</div>
+</header>
+
+		
+			
+					
+
+
+
+<div class="c-breadcrumb__wrap show-for-large">
+    <div class="c-breadcrumb">
+        <div class="row">
+            <div class="column">
+                <div class="c-breadcrumb-list">
+                    <div class="c-breadcrumb-list__items">
+                        <div class="c-breadcrumb-list__item c-breadcrumb-list__item--pre show-for-medium" style="max-width: 25%;">&nbsp;</div>
+                        <a href="/" class="c-breadcrumb-list__item c-breadcrumb-list__item--home show-for-large show-for-medium" style="max-width: 25%;"><span class="c-breadcrumb-list__wrap u-icon u-icon--home2">Institut für Künstliche Intelligenz LUHAI</span></a>
+                        
+                            
+                                    <a href="/lehre" target="" class="c-breadcrumb-list__item" title="Lehre" style="max-width: 25%;">
+                                        <span class="c-breadcrumb-list__wrap">Lehre</span>
+                                    </a>
+                                    
+                                    
+                                
+                        
+                            
+                                    <a href="/lehre/lehrveranstaltungen" target="" class="c-breadcrumb-list__item" title="Lehrveranstaltungen" style="max-width: 25%;">
+                                        <span class="c-breadcrumb-list__wrap">Lehrveranstaltungen</span>
+                                    </a>
+                                    
+                                
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+					
+
+
+
+				</div>
+			
+
+		
+			<div class="c-section__introduction">
+				
+
+		
+				
+				
+						
+								<div id="c76387" class="c-section">
+									<div class="row">
+										<div class="column">
+											
+													
+															
+
+	
+		
+				
+			
+
+		
+
+		<h1 class="c-headline c-headline--h1 u-text--hyphens">
+        Introduction to Natural Language Processing
+    </h1>
+	
+
+
+		
+
+		
+
+
+
+
+		
+				
+			
+	
+
+
+														
+												
+											
+    
+
+	
+
+
+
+											
+
+
+										</div>
+									</div>
+								</div>
+							
+					
+			
+
+	
+
+
+			</div>
+		
+
+		<main class="c-section__wrapper">
+			
+				
+
+		
+				
+				
+						
+								<div id="c76398" class="c-section">
+									<div class="row">
+										<div class="column">
+											
+													
+
+	
+
+
+												
+											
+	
+
+		<div class="row align-center c-section__grid-indent">
+			
+				
+						<div class="small-12 medium-8 column c-section-grid__column">
+							
+								
+
+		
+				<div id="c76397" class="c-section__element">
+					
+							<div class="c-headline__equalizer" data-mh="ce-headline-76398" style="">
+								
+
+	
+		
+				
+			
+
+		
+
+		<h3 class="c-headline c-headline--h3 u-text--hyphens">
+        Overview
+    </h3>
+	
+
+
+		
+
+		
+
+
+
+
+		
+				
+			
+	
+
+
+							</div>
+						
+					
+	<div class="c-text-media ">
+		
+				
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			
+		
+			<div class="c-text-media__text">
+				<figure class="table"><div class="table-scroll"><table class="contenttable"><tbody><tr><td>Semester</td><td>Summer 2026</td></tr><tr><td>ECTS</td><td>5</td></tr><tr><td>Level</td><td>Bachelor</td></tr><tr><td>Language</td><td>English</td></tr></tbody></table></div></figure>
+			</div>
+		
+	</div>
+
+					
+
+
+				</div>
+			
+
+	
+
+
+							
+						</div>
+					
+			
+				
+						<div class="small-12 medium-8 column c-section-grid__column">
+							
+								
+
+		
+				<div id="c76396" class="c-section__element">
+					
+							<div class="c-headline__equalizer" data-mh="ce-headline-76398" style="">
+								
+
+	
+		
+				
+			
+
+		
+
+		<h3 class="c-headline c-headline--h3 u-text--hyphens">
+        General
+    </h3>
+	
+
+
+		
+
+		
+
+
+
+
+		
+				
+			
+	
+
+
+							</div>
+						
+					
+	<div class="c-text-media ">
+		
+				
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			
+		
+			<div class="c-text-media__text">
+				<figure class="table"><div class="table-scroll"><table class="contenttable"><tbody><tr><td><p><span><strong>Lectures</strong></span></p><ul><li><span><strong>Instructor</strong></span><strong>.&nbsp;</strong>Henning <span>Wachsmuth</span></li><li><span><strong>Location</strong></span><strong>.</strong>Schneiderberg 32, 031</li><li><strong>Time.&nbsp;</strong>Thursday 13:00–14:30</li><li><strong>First </strong><span><strong>date</strong></span><strong>.</strong>&nbsp;April 9, 2026</li><li><strong>Last </strong><span><strong>date</strong></span><strong>.</strong>&nbsp;July 16, 2026</li></ul></td><td><p><span><strong>Tutorials</strong></span></p><ul><li><span><strong>Instructors</strong></span><strong>. </strong>Timon Ziegenbein</li><li><span><strong>Location</strong></span><strong>.&nbsp;</strong>Welfengarten 1, F138</li><li><strong>Time.&nbsp;</strong>Tuesday 10:30–12:00</li><li><strong>First </strong><span><strong>date</strong></span><strong>.</strong>&nbsp;April 14, 2026</li><li><strong>Last </strong><span><strong>date</strong></span><strong>.</strong>&nbsp;July 14, 2026</li></ul></td></tr></tbody></table></div></figure><p>&nbsp;</p>
+<p>&nbsp;</p>
+			</div>
+		
+	</div>
+
+					
+
+
+				</div>
+			
+
+	
+
+
+							
+						</div>
+					
+			
+		</div>
+	
+
+											
+
+
+										</div>
+									</div>
+								</div>
+							
+					
+			
+
+	
+
+
+
+		
+				
+				
+						
+								<div id="c76395" class="c-section">
+									<div class="row">
+										<div class="column">
+											
+													
+
+	
+
+
+												
+											
+	
+
+		<div class="row align-center c-section__grid-indent">
+			
+				
+						<div class="small-12 medium-8 column c-section-grid__column">
+							
+								
+
+		
+				<div id="c76393" class="c-section__element">
+					
+							<div class="c-headline__equalizer" data-mh="ce-headline-76395" style="">
+								
+
+	
+		
+				
+			
+
+		
+
+		<h3 class="c-headline c-headline--h3 u-text--hyphens">
+        Description
+    </h3>
+	
+
+
+		
+
+		
+
+
+
+
+		
+				
+			
+	
+
+
+							</div>
+						
+					
+	<div class="c-text-media ">
+		
+				
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			
+		
+			<div class="c-text-media__text">
+				<p><span>This course teaches students basic skills needed to tackle analysis and generation tasks in natural language processing (NLP) with knowledge-based methods. Starting from fundamentals of linguistics and empirical methods, the course introduces rule-based and basic statistical techniques. The application of these techniques is exemplified for fundamental NLP tasks, including text segmentation, syntactic parsing, and entity recognition. Students learn to design, implement, and evaluate respective NLP methods, both theoretically and in practical assignments. Besides the topical content, the course aims to educate students in how to conduct data-driven scientific experiments.&nbsp;</span></p>
+			</div>
+		
+	</div>
+
+					
+
+
+				</div>
+			
+
+	
+
+
+							
+						</div>
+					
+			
+				
+						<div class="small-12 medium-8 column c-section-grid__column">
+							
+								
+
+		
+				<div id="c76394" class="c-section__element">
+					
+							<div class="c-headline__equalizer" data-mh="ce-headline-76395" style="">
+								
+
+	
+		
+				
+			
+
+		
+
+		<h3 class="c-headline c-headline--h3 u-text--hyphens">
+        Topics
+    </h3>
+	
+
+
+		
+
+		
+
+
+
+
+		
+				
+			
+	
+
+
+							</div>
+						
+					
+	<div class="c-text-media ">
+		
+				
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			
+		
+			<div class="c-text-media__text">
+				<ul><li><span>Overview of Natural Language Processing</span></li><li><span>Basics of Linguistics</span></li><li><span>NLP using Rules</span></li><li><span>NLP using Lexicons</span></li><li><span>Basics of Empirical Methods</span></li><li><span>NLP using Grammars</span></li><li><span>NLP using Language Models</span></li><li><span>NLP using Clustering</span></li><li><span>Practical Issues</span></li></ul>
+			</div>
+		
+	</div>
+
+					
+
+
+				</div>
+			
+
+	
+
+
+							
+						</div>
+					
+			
+		</div>
+	
+
+											
+
+
+										</div>
+									</div>
+								</div>
+							
+					
+			
+
+	
+
+
+
+		
+				
+				
+						
+								<div id="c76392" class="c-section">
+									<div class="row">
+										<div class="column">
+											
+													
+
+
+												
+											
+	
+
+		<div class="row align-center c-section__grid-indent">
+			
+				
+						<div class="small-12 medium-8 column c-section-grid__column">
+							
+								
+
+		
+				<div id="c76391" class="c-section__element">
+					
+							<div class="c-headline__equalizer" data-mh="ce-headline-76392" style="">
+								
+
+	
+		
+				
+			
+
+		
+
+		<h3 class="c-headline c-headline--h3 u-text--hyphens">
+        Recommended pre-requisites
+    </h3>
+	
+
+
+		
+
+		
+
+
+
+
+		
+				
+			
+	
+
+
+							</div>
+						
+					
+	<div class="c-text-media ">
+		
+				
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			
+		
+			<div class="c-text-media__text">
+				<ul> 	<li><span>Basics of statistics</span></li> 	<li><span>Knowledge of programming, ideally Python</span></li> </ul>
+			</div>
+		
+	</div>
+
+					
+
+
+				</div>
+			
+
+	
+
+
+							
+						</div>
+					
+			
+				
+						<div class="small-12 medium-8 column c-section-grid__column">
+							
+								
+
+		
+				<div id="c76390" class="c-section__element">
+					
+							<div class="c-headline__equalizer" data-mh="ce-headline-76392" style="">
+								
+
+	
+		
+				
+			
+
+		
+
+		<h3 class="c-headline c-headline--h3 u-text--hyphens">
+        Recommended Literature
+    </h3>
+	
+
+
+		
+
+		
+
+
+
+
+		
+				
+			
+	
+
+
+							</div>
+						
+					
+	<div class="c-text-media ">
+		
+				
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			
+		
+			<div class="c-text-media__text">
+				<ul> 	<li>Daniel Jurafsky and James H. Martin. 2009. Speech and Language Processing: An Introduction to Natural Language Processing, Speech Recognition, and Computational Linguistics. Prentice-Hall, 2nd edition.&nbsp;<strong>Free draft of third edition:&nbsp;</strong><a href="https://web.stanford.edu/~jurafsky/slp3/" target="_blank" rel="noreferrer">Speech and Language Processing</a></li> </ul>
+			</div>
+		
+	</div>
+
+					
+
+
+				</div>
+			
+
+	
+
+
+							
+						</div>
+					
+			
+		</div>
+	
+
+											
+
+
+										</div>
+									</div>
+								</div>
+							
+					
+			
+
+	
+
+
+
+		
+				
+				
+						
+								<div id="c76389" class="c-section">
+									<div class="row">
+										<div class="column">
+											
+													
+
+	
+
+
+												
+											
+	
+
+		<div class="row align-center c-section__grid-indent">
+			
+				
+						<div class="small-12 medium-8 column c-section-grid__column">
+							
+								
+
+		
+				<div id="c76388" class="c-section__element">
+					
+							<div class="c-headline__equalizer" data-mh="ce-headline-76389">
+								
+
+	
+		
+				
+			
+
+		
+
+		<h3 class="c-headline c-headline--h3 u-text--hyphens">
+        Material
+    </h3>
+	
+
+
+		
+
+		
+
+
+
+
+		
+				
+			
+	
+
+
+							</div>
+						
+					
+	<div class="c-text-media ">
+		
+				
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			
+		
+			<div class="c-text-media__text">
+				<p><strong>Lecture slides</strong></p><ul><li>Part I – Overview (<a href="/fileadmin/ai/teaching/inlp-26s/part01-overview.pdf" class="c-link--file">slides</a>)</li><li>Part II – Basics of Linguistics&nbsp;(<a href="/fileadmin/ai/teaching/inlp-26s/part02-linguistics.pdf" class="c-link--file">slides</a>)</li><li>Part III&nbsp;– NLP using Rules (<a href="/fileadmin/ai/teaching/inlp-26s/part03-rules.pdf" class="c-link--file">slides</a>)</li><li>Part IV – NLP using Lexicons&nbsp;(<a href="/fileadmin/ai/teaching/inlp-26s/part04-lexicons.pdf" class="c-link--file">slides</a>)</li><li>Part V&nbsp;– Basics of Empirical Methods (<a href="/fileadmin/ai/teaching/inlp-26s/part05-empirical-methods.pdf" class="c-link--file">slides</a>)</li><li>Part VI – NLP using Grammars &nbsp;(<a href="/fileadmin/ai/teaching/inlp-26s/part06-grammars.pdf" class="c-link--file">slides</a>)</li><li>Part VII – NLP using Language Models&nbsp;(<a href="/fileadmin/ai/teaching/inlp-25s/part08-lm.pdf">slides last year</a>)</li><li>Part VIII –&nbsp;NLP using Clustering (new)</li><li>Part IX – Practical Issues&nbsp;(<a href="/fileadmin/ai/teaching/inlp-25s/part09-practice.pdf">slides last year</a>)</li></ul><p><strong>Organizational information</strong></p><ul><li>General course Information&nbsp;(<a href="/fileadmin/ai/teaching/inlp-26s/orga01-organizational.pdf" class="c-link--file">slides</a>)</li></ul>
+			</div>
+		
+	</div>
+
+					
+
+
+				</div>
+			
+
+	
+
+
+							
+						</div>
+					
+			
+		</div>
+	
+
+											
+
+
+										</div>
+									</div>
+								</div>
+							
+					
+			
+
+	
+
+
+
+		
+		
+				<div id="c76386" class="c-section">
+				
+
+	
+			
+					<div>
+				
+		
+
+	<div class="row">
+		<div class="column">
+			
+			
+				
+
+		
+				<div id="c76385" class="c-section__element">
+					
+							<div class="c-headline__equalizer" data-mh="ce-headline-76386">
+								
+
+	
+		
+				
+			
+
+		
+
+		<h2 class="c-headline c-headline--h2 u-text--hyphens" style="text-transform: uppercase">
+        Related Links
+    </h2>
+	
+
+
+		
+
+		
+
+
+
+
+		
+				
+			
+	
+
+
+							</div>
+						
+					
+	<div class="row c-section-grid--33-33-33">
+		<div class="column small-12 medium-4 large-4 c-section-grid__column  ">
+			
+
+		
+				<div id="c76382" class="c-section__element">
+					
+							<div class="c-headline__equalizer" data-mh="ce-headline-76385" style="height: 0px;">
+								
+
+	
+
+
+							</div>
+						
+					
+
+		
+
+	
+
+	
+			
+					
+						<a href="https://qis.verwaltung.uni-hannover.de/qisserver/servlet/de.his.servlet.RequestDispatcherServlet?state=user&amp;type=0&amp;application=lsf" target="_blank" class="c-card c-card--linked c-card--icon" rel="noreferrer"><div class="c-card__image-wrap c-card__spacer-h">
+			<div class="c-card__icon u-icon u-icon--display"></div>
+			<img role="presentation" class="c-card__image" src="/typo3conf/ext/luh_website/Resources/Public/Images/icon_background.gif" width="16" height="9" alt="">
+		</div>
+		
+<div class="c-card__text-content" data-mh="ce-image-card-76385" style="height: 84px;">
+	
+	
+		
+				
+						
+								<div class="c-card__title u-icon-after u-icon-after--new-tab">
+        Exam registration
+    </div>
+							
+					
+            
+	
+	
+		<div class="c-card__subtitle c-card__text-content__text--last">
+        QIS
+    </div>
+	
+	
+</div></a>
+					
+				
+		
+
+	
+
+	
+
+	
+
+
+
+
+	
+					
+
+
+				</div>
+			
+
+	
+
+
+		</div>
+		<div class="column small-12 medium-4 large-4 c-section-grid__column  ">
+			
+
+		
+				<div id="c76383" class="c-section__element">
+					
+							<div class="c-headline__equalizer" data-mh="ce-headline-76385" style="height: 0px;">
+								
+
+	
+
+
+							</div>
+						
+					
+
+		
+
+	
+
+	
+			
+					
+						<a href="https://studip.uni-hannover.de" target="_blank" class="c-card c-card--linked c-card--icon" rel="noreferrer"><div class="c-card__image-wrap c-card__spacer-h">
+			<div class="c-card__icon u-icon u-icon--reading"></div>
+			<img role="presentation" class="c-card__image" src="/typo3conf/ext/luh_website/Resources/Public/Images/icon_background.gif" width="16" height="9" alt="">
+		</div>
+		
+<div class="c-card__text-content" data-mh="ce-image-card-76385" style="height: 84px;">
+	
+	
+		
+				
+						
+								<div class="c-card__title u-icon-after u-icon-after--new-tab">
+        My Courses
+    </div>
+							
+					
+            
+	
+	
+		<div class="c-card__subtitle c-card__text-content__text--last">
+        Stud.IP
+    </div>
+	
+	
+</div></a>
+					
+				
+		
+
+	
+
+	
+
+	
+
+
+
+
+	
+					
+
+
+				</div>
+			
+
+	
+
+
+		</div>
+		<div class="column small-12 medium-4 large-4 c-section-grid__column  ">
+			
+
+		
+				<div id="c76384" class="c-section__element">
+					
+							<div class="c-headline__equalizer" data-mh="ce-headline-76385" style="height: 0px;">
+								
+
+	
+
+
+							</div>
+						
+					
+
+		
+
+	
+
+	
+			
+					
+						<a href="https://www.uni-hannover.de/de/studium/im-studium/pruefungsinfos-fachberatung/" target="_blank" class="c-card c-card--linked c-card--icon" rel="noreferrer"><div class="c-card__image-wrap c-card__spacer-h">
+			<div class="c-card__icon u-icon u-icon--info2"></div>
+			<img role="presentation" class="c-card__image" src="/typo3conf/ext/luh_website/Resources/Public/Images/icon_background.gif" width="16" height="9" alt="">
+		</div>
+		
+<div class="c-card__text-content" data-mh="ce-image-card-76385" style="height: 84px;">
+	
+	
+		
+				
+						
+								<div class="c-card__title u-icon-after u-icon-after--new-tab">
+        Exam informationen
+    </div>
+							
+					
+            
+	
+	
+		<div class="c-card__subtitle c-card__text-content__text--last">
+        Leibniz University
+    </div>
+	
+	
+</div></a>
+					
+				
+		
+
+	
+
+	
+
+	
+
+
+
+
+	
+					
+
+
+				</div>
+			
+
+	
+
+
+		</div>
+	</div>
+
+					
+
+
+				</div>
+			
+
+	
+
+
+			
+		</div>
+	</div>
+	</div>
+
+				
+
+
+				</div>
+			
+	
+
+
+			
+
+			
+					
+				
+		</main>
+
+		
+
+<div class="o-footer__wrap">
+
+	<div class="row">
+		<div class="column small-12">
+			<p class="c-text--copyright">
+				Letzte Änderung:
+				
+						04.06.26
+					
+				
+						<span class="c-print u-icon u-icon--printer" onclick="javascript:window.print()">
+								<span class=" o-footer__link c-print__link">
+									Druckversion
+								</span>
+						</span>
+					
+
+			</p>
+
+		</div>
+	</div>
+
+	<div class="o-footer">
+
+		
+			<div class="row o-footer__section">
+				<div class="column small-12">
+					
+
+		
+				
+				
+						
+								<div id="c67460" class="c-section">
+									<div class="row">
+										<div class="column">
+											
+													
+
+	
+
+
+												
+											
+	<div class="row c-section-grid--33-33-33">
+		<div class="column small-12 medium-4 large-4 c-section-grid__column  ">
+			
+
+<div class="row">
+	<div class="column">
+		
+
+	
+
+
+		
+	
+	<div class="c-element-slider" data-element-slider-container="">
+		<div class="swiper c-footer-slider swiper-initialized swiper-horizontal swiper-backface-hidden" data-element-slider="">
+			<div class="swiper-wrapper" id="swiper-wrapper-cde459d1cdc8d83a" aria-live="polite">
+				
+					<div class="swiper-slide swiper-slide-active swiper-slide-next" role="group" aria-label="1 / 1" data-swiper-slide-index="0" style="width: 211px; margin-right: 30px;">
+						
+								<a href="http://www.tu9.de/" class="c-element-slider__item c-footer-slider__item">
+									
+	<span class="grayscale-wrapper">
+		
+			
+					<img class="c-element-slider__image c-footer-slider__image" src="/fileadmin/ai/footer/tu9-4c.svg" width="112" height="80" alt="">
+					
+						<img class="c-element-slider__image c-element-slider__image--grayscale c-footer-slider__image" src="/fileadmin/ai/footer/tu9-bw.svg" width="112" height="80" alt="">
+					
+				
+		
+	</span>
+
+								</a>
+							
+					</div>
+				
+			</div>
+		<span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+		<button data-element-slider-prev="" class="c-element-slider__prev swiper-button-lock" type="button" title="Previous slide" role="button" tabindex="0" aria-label="Previous slide" aria-controls="swiper-wrapper-cde459d1cdc8d83a"></button>
+		<button data-element-slider-next="" class="c-element-slider__next swiper-button-lock" type="button" title="Next slide" role="button" tabindex="0" aria-label="Next slide" aria-controls="swiper-wrapper-cde459d1cdc8d83a"></button>
+	</div>
+
+		
+
+
+	</div>
+</div>
+
+
+		</div>
+		<div class="column small-12 medium-4 large-4 c-section-grid__column  ">
+			
+
+<div class="row">
+	<div class="column">
+		
+
+	
+
+
+		
+	
+	<div class="c-element-slider" data-element-slider-container="">
+		<div class="swiper c-footer-slider swiper-initialized swiper-horizontal swiper-backface-hidden" data-element-slider="">
+			<div class="swiper-wrapper" id="swiper-wrapper-cd558f2195dbfa3a" aria-live="polite">
+				
+					<div class="swiper-slide swiper-slide-active swiper-slide-next" role="group" aria-label="1 / 1" data-swiper-slide-index="0" style="width: 211px; margin-right: 30px;">
+						
+								<div class="c-element-slider__item c-footer-slider__item">
+									
+	<span class="grayscale-wrapper">
+		
+			
+					<img class="c-element-slider__image c-footer-slider__image" src="/fileadmin/_processed_/5/d/csm_L3s-New_f8b654386b.jpg" width="114" height="80" alt="">
+					
+						<img class="c-element-slider__image c-element-slider__image--grayscale c-footer-slider__image" src="/fileadmin/_processed_/5/d/csm_L3s-New_f8b654386b.jpg" width="114" height="80" alt="">
+					
+				
+		
+	</span>
+
+								</div>
+							
+					</div>
+				
+			</div>
+		<span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+		<button data-element-slider-prev="" class="c-element-slider__prev swiper-button-lock" type="button" title="Previous slide" role="button" tabindex="0" aria-label="Previous slide" aria-controls="swiper-wrapper-cd558f2195dbfa3a"></button>
+		<button data-element-slider-next="" class="c-element-slider__next swiper-button-lock" type="button" title="Next slide" role="button" tabindex="0" aria-label="Next slide" aria-controls="swiper-wrapper-cd558f2195dbfa3a"></button>
+	</div>
+
+		
+
+
+	</div>
+</div>
+
+
+		</div>
+		<div class="column small-12 medium-4 large-4 c-section-grid__column  ">
+			
+
+<div class="row">
+	<div class="column">
+		
+
+	
+
+
+		
+	
+	<div class="c-element-slider" data-element-slider-container="">
+		<div class="swiper c-footer-slider swiper-initialized swiper-horizontal swiper-backface-hidden" data-element-slider="">
+			<div class="swiper-wrapper" id="swiper-wrapper-9e9c5e10968e46788" aria-live="polite">
+				
+					<div class="swiper-slide swiper-slide-active swiper-slide-next" role="group" aria-label="1 / 1" data-swiper-slide-index="0" style="width: 211px; margin-right: 30px;">
+						
+								<a href="https://www.service-fuer-familien.uni-hannover.de/" class="c-element-slider__item c-footer-slider__item">
+									
+	<span class="grayscale-wrapper">
+		
+			
+					<img class="c-element-slider__image c-footer-slider__image" src="/fileadmin/_processed_/4/0/csm_fgh-4c_9cc3f4aa63.png" width="85" height="80" alt="">
+					
+						<img class="c-element-slider__image c-element-slider__image--grayscale c-footer-slider__image" src="/fileadmin/_processed_/6/2/csm_fgh-bw_e3c5047dad.png" width="85" height="80" alt="">
+					
+				
+		
+	</span>
+
+								</a>
+							
+					</div>
+				
+			</div>
+		<span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+		<button data-element-slider-prev="" class="c-element-slider__prev swiper-button-lock" type="button" title="Previous slide" role="button" tabindex="0" aria-label="Previous slide" aria-controls="swiper-wrapper-9e9c5e10968e46788"></button>
+		<button data-element-slider-next="" class="c-element-slider__next swiper-button-lock" type="button" title="Next slide" role="button" tabindex="0" aria-label="Next slide" aria-controls="swiper-wrapper-9e9c5e10968e46788"></button>
+	</div>
+
+		
+
+
+	</div>
+</div>
+
+
+		</div>
+	</div>
+
+											
+
+
+										</div>
+									</div>
+								</div>
+							
+					
+			
+
+	
+
+
+
+		
+				
+				
+						
+								<div id="c76313" class="c-section">
+									<div class="row">
+										<div class="column">
+											
+													
+
+	
+		
+				
+			
+
+		
+
+		<h2 class="c-headline c-headline--h2 u-text--hyphens" style="text-transform: uppercase">
+        Gefördert vom
+    </h2>
+	
+
+
+		
+
+		
+
+
+
+
+		
+				
+			
+	
+
+
+												
+											
+	<div class="row c-section-grid--33-33-33">
+		<div class="column small-12 medium-4 large-4 c-section-grid__column  ">
+			
+
+<div class="row">
+	<div class="column">
+		
+
+	
+
+
+		
+	
+	<div class="c-element-slider" data-element-slider-container="">
+		<div class="swiper c-footer-slider swiper-initialized swiper-horizontal swiper-backface-hidden" data-element-slider="">
+			<div class="swiper-wrapper" id="swiper-wrapper-14821c8385af7148" aria-live="polite">
+				
+					<div class="swiper-slide swiper-slide-active swiper-slide-next" role="group" aria-label="1 / 1" data-swiper-slide-index="0" style="width: 211px; margin-right: 30px;">
+						
+								<div class="c-element-slider__item c-footer-slider__item">
+									
+	<span class="grayscale-wrapper">
+		
+			
+					<img class="c-element-slider__image c-footer-slider__image c-footer-slider__image--show-always" src="/fileadmin/_processed_/a/3/csm_MWK_svg_19dfc26040.png" width="70" height="80" alt="">
+				
+		
+	</span>
+
+								</div>
+							
+					</div>
+				
+			</div>
+		<span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+		<button data-element-slider-prev="" class="c-element-slider__prev swiper-button-lock" type="button" title="Previous slide" role="button" tabindex="0" aria-label="Previous slide" aria-controls="swiper-wrapper-14821c8385af7148"></button>
+		<button data-element-slider-next="" class="c-element-slider__next swiper-button-lock" type="button" title="Next slide" role="button" tabindex="0" aria-label="Next slide" aria-controls="swiper-wrapper-14821c8385af7148"></button>
+	</div>
+
+		
+
+
+	</div>
+</div>
+
+
+		</div>
+		<div class="column small-12 medium-4 large-4 c-section-grid__column  ">
+			
+
+<div class="row">
+	<div class="column">
+		
+
+	
+
+
+		
+	
+	<div class="c-element-slider" data-element-slider-container="">
+		<div class="swiper c-footer-slider swiper-initialized swiper-horizontal swiper-backface-hidden" data-element-slider="">
+			<div class="swiper-wrapper" id="swiper-wrapper-7106a29934d8833e5" aria-live="polite">
+				
+					<div class="swiper-slide swiper-slide-active swiper-slide-next" role="group" aria-label="1 / 1" data-swiper-slide-index="0" style="width: 211px; margin-right: 30px;">
+						
+								<div class="c-element-slider__item c-footer-slider__item">
+									
+	<span class="grayscale-wrapper">
+		
+			
+					<img class="c-element-slider__image c-footer-slider__image c-footer-slider__image--show-always" src="/fileadmin/_processed_/2/d/csm_DFG_svg_42af99e02e.png" width="450" height="80" alt="">
+				
+		
+	</span>
+
+								</div>
+							
+					</div>
+				
+			</div>
+		<span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+		<button data-element-slider-prev="" class="c-element-slider__prev swiper-button-lock" type="button" title="Previous slide" role="button" tabindex="0" aria-label="Previous slide" aria-controls="swiper-wrapper-7106a29934d8833e5"></button>
+		<button data-element-slider-next="" class="c-element-slider__next swiper-button-lock" type="button" title="Next slide" role="button" tabindex="0" aria-label="Next slide" aria-controls="swiper-wrapper-7106a29934d8833e5"></button>
+	</div>
+
+		
+
+
+	</div>
+</div>
+
+
+		</div>
+		<div class="column small-12 medium-4 large-4 c-section-grid__column  ">
+			
+
+<div class="row">
+	<div class="column">
+		
+
+	
+
+
+		
+	
+	<div class="c-element-slider" data-element-slider-container="">
+		<div class="swiper c-footer-slider swiper-initialized swiper-horizontal swiper-backface-hidden" data-element-slider="">
+			<div class="swiper-wrapper" id="swiper-wrapper-64e0c500e10b714eb" aria-live="polite">
+				
+					<div class="swiper-slide swiper-slide-active swiper-slide-next" role="group" aria-label="1 / 1" data-swiper-slide-index="0" style="width: 211px; margin-right: 30px;">
+						
+								<div class="c-element-slider__item c-footer-slider__item">
+									
+	<span class="grayscale-wrapper">
+		
+			
+					<img class="c-element-slider__image c-footer-slider__image c-footer-slider__image--show-always" src="/fileadmin/_processed_/4/f/csm_ERC_svg_b1e6367413.png" width="80" height="80" alt="">
+				
+		
+	</span>
+
+								</div>
+							
+					</div>
+				
+			</div>
+		<span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+		<button data-element-slider-prev="" class="c-element-slider__prev swiper-button-lock" type="button" title="Previous slide" role="button" tabindex="0" aria-label="Previous slide" aria-controls="swiper-wrapper-64e0c500e10b714eb"></button>
+		<button data-element-slider-next="" class="c-element-slider__next swiper-button-lock" type="button" title="Next slide" role="button" tabindex="0" aria-label="Next slide" aria-controls="swiper-wrapper-64e0c500e10b714eb"></button>
+	</div>
+
+		
+
+
+	</div>
+</div>
+
+
+		</div>
+	</div>
+
+											
+
+
+										</div>
+									</div>
+								</div>
+							
+					
+			
+
+	
+
+
+
+		
+				
+				
+						
+								<div id="c76321" class="c-section">
+									<div class="row">
+										<div class="column">
+											
+													
+
+	
+
+
+												
+											
+	<div class="row c-section-grid--33-33-33">
+		<div class="column small-12 medium-4 large-4 c-section-grid__column  ">
+			
+
+<div class="row">
+	<div class="column">
+		
+
+	
+
+
+		
+	
+	<div class="c-element-slider" data-element-slider-container="">
+		<div class="swiper c-footer-slider swiper-initialized swiper-horizontal swiper-backface-hidden" data-element-slider="">
+			<div class="swiper-wrapper" id="swiper-wrapper-619ee64a1ed5e9ba" aria-live="polite">
+				
+					<div class="swiper-slide swiper-slide-active swiper-slide-next" role="group" aria-label="1 / 1" data-swiper-slide-index="0" style="width: 211px; margin-right: 30px;">
+						
+								<div class="c-element-slider__item c-footer-slider__item">
+									
+	<span class="grayscale-wrapper">
+		
+			
+					<img class="c-element-slider__image c-footer-slider__image c-footer-slider__image--show-always" src="/fileadmin/ai/footer/SVG/BMFTR_Logo.svg" width="64" height="64" alt="">
+				
+		
+	</span>
+
+								</div>
+							
+					</div>
+				
+			</div>
+		<span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+		<button data-element-slider-prev="" class="c-element-slider__prev swiper-button-lock" type="button" title="Previous slide" role="button" tabindex="0" aria-label="Previous slide" aria-controls="swiper-wrapper-619ee64a1ed5e9ba"></button>
+		<button data-element-slider-next="" class="c-element-slider__next swiper-button-lock" type="button" title="Next slide" role="button" tabindex="0" aria-label="Next slide" aria-controls="swiper-wrapper-619ee64a1ed5e9ba"></button>
+	</div>
+
+		
+
+
+	</div>
+</div>
+
+
+		</div>
+		<div class="column small-12 medium-4 large-4 c-section-grid__column  ">
+			
+
+<div class="row">
+	<div class="column">
+		
+
+	
+
+
+		
+	
+	<div class="c-element-slider" data-element-slider-container="">
+		<div class="swiper c-footer-slider swiper-initialized swiper-horizontal swiper-backface-hidden" data-element-slider="">
+			<div class="swiper-wrapper" id="swiper-wrapper-1a137e0258a7e133" aria-live="polite">
+				
+					<div class="swiper-slide swiper-slide-active swiper-slide-next" role="group" aria-label="1 / 1" data-swiper-slide-index="0" style="width: 211px; margin-right: 30px;">
+						
+								<div class="c-element-slider__item c-footer-slider__item">
+									
+	<span class="grayscale-wrapper">
+		
+			
+					<img class="c-element-slider__image c-footer-slider__image c-footer-slider__image--show-always" src="/fileadmin/_processed_/0/6/csm_bmukn_logo_de_62df4f13ab.jpg" width="305" height="80" alt="">
+				
+		
+	</span>
+
+								</div>
+							
+					</div>
+				
+			</div>
+		<span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+		<button data-element-slider-prev="" class="c-element-slider__prev swiper-button-lock" type="button" title="Previous slide" role="button" tabindex="0" aria-label="Previous slide" aria-controls="swiper-wrapper-1a137e0258a7e133"></button>
+		<button data-element-slider-next="" class="c-element-slider__next swiper-button-lock" type="button" title="Next slide" role="button" tabindex="0" aria-label="Next slide" aria-controls="swiper-wrapper-1a137e0258a7e133"></button>
+	</div>
+
+		
+
+
+	</div>
+</div>
+
+
+		</div>
+		<div class="column small-12 medium-4 large-4 c-section-grid__column  ">
+			
+
+<div class="row">
+	<div class="column">
+		
+
+	
+
+
+		
+	
+	<div class="c-element-slider" data-element-slider-container="">
+		<div class="swiper c-footer-slider swiper-initialized swiper-horizontal swiper-backface-hidden" data-element-slider="">
+			<div class="swiper-wrapper" id="swiper-wrapper-d66e859a97ce4b8e" aria-live="polite">
+				
+					<div class="swiper-slide swiper-slide-active swiper-slide-next" role="group" aria-label="1 / 1" data-swiper-slide-index="0" style="width: 211px; margin-right: 30px;">
+						
+								<div class="c-element-slider__item c-footer-slider__item">
+									
+	<span class="grayscale-wrapper">
+		
+			
+					<img class="c-element-slider__image c-footer-slider__image c-footer-slider__image--show-always" src="/fileadmin/ai/footer/SVG/BMWi.svg" width="64" height="64" alt="">
+				
+		
+	</span>
+
+								</div>
+							
+					</div>
+				
+			</div>
+		<span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+		<button data-element-slider-prev="" class="c-element-slider__prev swiper-button-lock" type="button" title="Previous slide" role="button" tabindex="0" aria-label="Previous slide" aria-controls="swiper-wrapper-d66e859a97ce4b8e"></button>
+		<button data-element-slider-next="" class="c-element-slider__next swiper-button-lock" type="button" title="Next slide" role="button" tabindex="0" aria-label="Next slide" aria-controls="swiper-wrapper-d66e859a97ce4b8e"></button>
+	</div>
+
+		
+
+
+	</div>
+</div>
+
+
+		</div>
+	</div>
+
+											
+
+
+										</div>
+									</div>
+								</div>
+							
+					
+			
+
+	
+
+
+
+		
+				
+				
+						
+								<div id="c77216" class="c-section">
+									<div class="row">
+										<div class="column">
+											
+													
+
+	
+
+
+												
+											
+	<div class="row c-section-grid--33-33-33">
+		<div class="column small-12 medium-4 large-4 c-section-grid__column c-section-grid__column--no-child ">
+			
+		</div>
+		<div class="column small-12 medium-4 large-4 c-section-grid__column  ">
+			
+
+<div class="row">
+	<div class="column">
+		
+
+	
+
+
+		
+	
+	<div class="c-element-slider" data-element-slider-container="">
+		<div class="swiper c-footer-slider swiper-initialized swiper-horizontal swiper-backface-hidden" data-element-slider="">
+			<div class="swiper-wrapper" id="swiper-wrapper-9d2de2473ef0f17a" aria-live="polite">
+				
+					<div class="swiper-slide swiper-slide-active swiper-slide-next" role="group" aria-label="1 / 1" data-swiper-slide-index="0" style="width: 211px; margin-right: 30px;">
+						
+								<div class="c-element-slider__item c-footer-slider__item">
+									
+	<span class="grayscale-wrapper">
+		
+			
+					<img class="c-element-slider__image c-footer-slider__image c-footer-slider__image--show-always" src="/fileadmin/_processed_/3/a/csm_DAAD_Logo.svg_bba0e3c2ad.png" width="260" height="80" alt="">
+				
+		
+	</span>
+
+								</div>
+							
+					</div>
+				
+			</div>
+		<span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+		<button data-element-slider-prev="" class="c-element-slider__prev swiper-button-lock" type="button" title="Previous slide" role="button" tabindex="0" aria-label="Previous slide" aria-controls="swiper-wrapper-9d2de2473ef0f17a"></button>
+		<button data-element-slider-next="" class="c-element-slider__next swiper-button-lock" type="button" title="Next slide" role="button" tabindex="0" aria-label="Next slide" aria-controls="swiper-wrapper-9d2de2473ef0f17a"></button>
+	</div>
+
+		
+
+
+	</div>
+</div>
+
+
+		</div>
+		<div class="column small-12 medium-4 large-4 c-section-grid__column c-section-grid__column--no-child ">
+			
+		</div>
+	</div>
+
+											
+
+
+										</div>
+									</div>
+								</div>
+							
+					
+			
+
+	
+
+
+				</div>
+			</div>
+		
+
+		<div class="row o-footer__section">
+			<div class="columns small-12 medium-12 shrink align-self-top">
+				<div class="c-headline c-headline--normal">So erreichen Sie uns</div>
+
+				
+					<div class="show-for-small-only">
+						
+	<a href="/institut/kontakt-und-anfahrt" class="c-button c-button--footer">
+		<span class="u-icon u-icon--envelop5">Kontakt</span>
+	</a>
+
+					</div>
+				
+
+				<ul class="c-simple-list c-simple-list--horizontal c-footer__list--buttons">
+					
+						<li class="show-for-medium">
+	<a href="/institut/kontakt-und-anfahrt" class="c-button c-button--footer">
+		<span class="u-icon u-icon--envelop5">Kontakt</span>
+	</a>
+</li>
+					
+
+					
+
+					
+
+					
+						
+	<li class="c-footer__list--socials">
+		<a href="https://www.youtube.com/channel/UCeCWLd9Oepx93yhWZ3Fc8dQ/featured" target="_blank" rel="noreferrer" title="Besuche uns auf YouTube">
+			<img class="c-footer__list--social-icon c-footer__list--social-icon--youtube" alt="Besuche uns auf YouTube" src="/typo3conf/ext/luh_website/Resources/Public/Images/Icon/youtube.svg" width="27" height="27">
+		</a>
+	</li>
+
+					
+
+					
+
+					
+
+					
+
+					
+						
+	<li class="c-footer__list--socials">
+		<a href="https://www.linkedin.com/company/luh-ai/posts/?feedView=all" target="_blank" rel="noreferrer" title="Besuche uns auf Linkedin">
+			<img class="c-footer__list--social-icon c-footer__list--social-icon--linkedin" alt="Besuche uns auf Linkedin" src="/typo3conf/ext/luh_website/Resources/Public/Images/Icon/linkedin.svg" width="64" height="64">
+		</a>
+	</li>
+
+					
+
+					
+
+					
+
+				</ul>
+			</div>
+
+			<div class="columns small-12 medium-12 large-expand align-self-bottom">
+				<ul class="c-simple-list c-simple-list--horizontal c-footer__list--menu">
+					
+						<li>
+							
+	© 2026:&nbsp;
+	<a href="https://www.uni-hannover.de/de/copyright/" class="o-footer__link">
+		Leibniz Universität Hannover
+	</a>
+
+						</li>
+					
+
+					
+
+					
+						<li>
+							<a href="/impressum" title="Impressum" class="o-footer__link">
+								Impressum
+							</a>
+						</li>
+					
+
+					
+						<li>
+							<a href="https://www.uni-hannover.de/de/datenschutzerklaerung/" title="Datenschutz" class="o-footer__link">
+								Datenschutz
+							</a>
+						</li>
+					
+					
+						
+							<li>
+								<a href="/barrierefreiheit" title="Barrierefreiheit" class="o-footer__link">
+									Barrierefreiheit
+								</a>
+							</li>
+						
+							<li>
+								<a href="/sitemap" title="Sitemap" class="o-footer__link">
+									Sitemap
+								</a>
+							</li>
+						
+					
+				</ul>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+<div id="top-button" class="js-hidden" style="bottom: -56px;">
+	<div class="c-button c-button--to-top u-icon--arrow-up js-scroll-to-top"></div>
+</div>
+
+
+
+
+
+
+
+
+	</div>
+
+	
+		
+
+
+<div id="offCanvas" class="off-canvas position-right is-transition-push is-closed" data-off-canvas="cnsa29-off-canvas" data-auto-focus="true" xmlns:f="http://www.w3.org/1999/html" aria-hidden="true"><div class="o-shaded offcanvas"><div class="is-drilldown" style="min-height: 521.062px; max-width: 250px;"><ul class="vertical menu offcanvas-menu drilldown" data-drilldown="g4eqka-drilldown" data-parent-link="true" role="menubar" data-offcanvas-content="" aria-multiselectable="false" data-mutate="8ij7j9-drilldown"><li data-off-canvas-xhr-item="" role="none"><div class="offcanvas__head row column"><div class="c-offcanvas-bm__backlink js-drilldown-back"><a tabindex="0" data-offcanvas-trigger="true" href="/?tx_luhwebsite_mobilenav%5Baction%5D=show&amp;tx_luhwebsite_mobilenav%5Bcontroller%5D=OffCanvas&amp;tx_luhwebsite_mobilenav%5Buid%5D=6054&amp;type=1513087837&amp;cHash=81fafa8857c60943e9313efae258f73a" role="menuitem"></a></div><div class="c-headline c-headline--medium"><div class="c-offcanvas-bm__title current-layer-name" data-offcanvas-title="">
+                                                                Lehre
+
+                                                            </div></div></div></li><li data-off-canvas-xhr-item="" class="offcanvas-menu__item offcanvas-menu__item--primary" role="none"><a tabindex="0" class="c-link" href="/lehre" role="menuitem"><span>Allgemeine Übersicht Lehre</span></a></li><li data-off-canvas-xhr-item="" class=" offcanvas-menu__item offcanvas-menu__item--primary" role="none"><a tabindex="0" class="c-link    offcanvas-menu__link--active" href="/lehre/lehrveranstaltungen" role="menuitem"><span>Lehrveranstaltungen</span></a></li><li data-off-canvas-xhr-item="" class="offcanvas-menu__has-children offcanvas-menu__item offcanvas-menu__item--primary" role="none"><a tabindex="0" data-offcanvas-trigger="true" class="c-link   " href="/?tx_luhwebsite_mobilenav%5Baction%5D=show&amp;tx_luhwebsite_mobilenav%5Bcontroller%5D=OffCanvas&amp;tx_luhwebsite_mobilenav%5Buid%5D=6119&amp;type=1513087837&amp;cHash=5a6cb56d6a8cad303d9e40f87e3b4975" role="menuitem"><span>Abschlussarbeiten AutoML</span></a></li><li data-off-canvas-xhr-item="" class=" offcanvas-menu__item offcanvas-menu__item--primary" role="none"><a tabindex="0" class="c-link   " href="/lehre/abschlussarbeiten-nlp" role="menuitem"><span>Abschlussarbeiten NLP</span></a></li><li data-off-canvas-xhr-item="" class="offcanvas-menu__has-children offcanvas-menu__item offcanvas-menu__item--primary" role="none"><a tabindex="0" data-offcanvas-trigger="true" class="c-link   " href="/?tx_luhwebsite_mobilenav%5Baction%5D=show&amp;tx_luhwebsite_mobilenav%5Bcontroller%5D=OffCanvas&amp;tx_luhwebsite_mobilenav%5Buid%5D=9453&amp;type=1513087837&amp;cHash=3eda95359c341cb929403fe9a4fd1f57" role="menuitem"><span>Ressourcen für Studierende</span></a></li><li data-off-canvas-xhr-item="" class=" offcanvas-menu__item offcanvas-menu__item--primary" role="none"><a tabindex="0" class="c-link   " href="/lehre/robot-lab-luhai" role="menuitem"><span>Robot Lab @ LUHAI</span></a></li><li data-off-canvas-xhr-item="" class=" offcanvas-menu__item offcanvas-menu__item--primary" role="none"><a tabindex="0" class="c-link   " href="/lehre/tutorials" role="menuitem"><span>Tutorials</span></a></li><li data-off-canvas-xhr-item="" class=" offcanvas-menu__item offcanvas-menu__item--primary offcanvas-menu__item--last" role="none"><a tabindex="0" class="c-link   " href="/lehre/ki-kurse-an-der-fei" role="menuitem"><span>KI Kurse an der FEI</span></a></li><li class="offcanvas-menu__spacer" role="none"></li><li class="offcanvas-menu__item offcanvas-menu__item--secondary" role="none"><a href="https://www.et-inf.uni-hannover.de" tabindex="0" class="c-link u-icon u-icon--home2" role="menuitem"><span>Fakultät für Elektrotechnik und Informatik</span></a></li><li class="offcanvas-menu__item offcanvas-menu__item--secondary" role="none"><a href="/institut/kontakt-und-anfahrt" tabindex="0" class="c-link c-link--contact" role="menuitem"><span>Kontakt</span></a></li></ul></div></div></div><div class="js-off-canvas-overlay is-overlay-fixed"></div>
+	
+</div><!-- Matomo -->
+<script>
+  var _paq = window._paq = window._paq || [];
+  var keyword, category, searchCount;
+  if (window.location.href.indexOf("tx_t3luhunisearch") > -1) {
+    var params = new URLSearchParams(document.location.search);
+    keyword = params.get("tx_t3luhunisearch_search[input_name_searchstring]");
+    category = params.get("tx_t3luhunisearch_search[rrznunisearch_input_sitename]");
+    if (document.getElementsByClassName("no_results")[0]){
+      searchCount = 0;
+    } else {
+      searchCount = 1; // 1 == results were found
+    }
+   _paq.push(['trackSiteSearch', keyword, category, searchCount]);
+
+  // Check for Vademecum search
+  } else if (window.location.href.indexOf("/de/vademecum") > -1) {
+     var vademecumInput = document.getElementsByName("tx_rrznvademecum_vademecum[searchString]")[0];
+     keyword = vademecumInput ? vademecumInput.value : "";
+     category = "vademecum";
+     if (document.getElementsByClassName("no_results")[0]){
+       searchCount = 0;
+     } else {
+       searchCount = 1;
+     }
+     _paq.push(['trackSiteSearch', keyword, category, searchCount ]);
+
+  // Check for TDS Form
+  } else if (window.location.pathname.includes("/tds/angebote/") && window.location.pathname.includes("/filter-")) {
+    try {
+      var path = window.location.pathname;
+      var filterBase64 = path.substring(path.indexOf("/filter-") + "/filter-".length);
+
+      // Remove potential trailing slash or query string part from the base64 string
+      if (filterBase64.includes('?')) {
+          filterBase64 = filterBase64.split('?')[0];
+      }
+      if (filterBase64.endsWith('/')) {
+          filterBase64 = filterBase64.slice(0, -1);
+      }
+
+      var filterJsonString = atob(filterBase64); // First decode
+      var filterParams = JSON.parse(filterJsonString);
+
+      if (filterParams && filterParams.keywords) {
+        keyword = atob(filterParams.keywords); // Second decode for the actual keyword
+      } else {
+        keyword = ""; // Fallback if keywords property is missing
+      }
+
+      category = "t3luhtds";
+
+      // The TDS form also uses the "no_results" class
+      if (document.getElementsByClassName("no_results")[0]){
+        searchCount = 0;
+      } else {
+        searchCount = 1;
+      }
+      _paq.push(['trackSiteSearch', keyword, category, searchCount]);
+
+    } catch (e) {
+      console.error("Matomo TDS Tracking Error: ", e);
+      // Fallback to a generic page view if parsing fails
+      // _paq.push(['trackPageView']);
+    }
+  // For all other pages
+  } else {
+     _paq.push(['trackPageView']);
+  }
+
+  _paq.push(["disableCookies"]);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="https://www.webstats-etinf.uni-hannover.de/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '38']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p><img src="https://www.webstats-etinf.uni-hannover.de/matomo.php?idsite=38&amp;rec=1" style="border:0;" alt="" /></p></noscript>
+<!-- End Matomo Code -->
+<script src="/typo3conf/ext/t3luhunisearch/Resources/Public/JavaScript/t3luhunisearch-min.js?1780922433"></script>
+<script src="/typo3conf/ext/powermail/Resources/Public/JavaScript/Powermail/Form.min.js?1772622834" defer="defer"></script>
+<script src="/typo3conf/ext/t3luhpublications/Resources/Public/JavaScript/filter.js?1778155773"></script>
+<script src="/typo3conf/ext/t3luhresprojects/Resources/Public/JavaScript/filter.js?1772624216"></script>
+<script src="/typo3conf/ext/t3luhepv/Resources/Public/JavaScript/t3luhepv-min.js?1781245299"></script>
+
+
+
+<div class="spinner" style="display: none;"></div></body></html>

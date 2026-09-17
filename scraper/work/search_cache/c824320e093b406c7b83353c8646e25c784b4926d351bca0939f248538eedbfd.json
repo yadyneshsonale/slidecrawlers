@@ -1,0 +1,52 @@
+[
+{
+"url": "https://lileicc.github.io/course/11737mnlp23fa",
+"title": "Multilingual NLP",
+"description": "# CMU 11-737: Multilingual Natural Language Processing. CMU 11-737 is an advanced graduate-level course on natural language processing techniques applicable to many languages. This includes understanding and mitigating the difficulties posed by lack of data in low-resourced languages or language varieties, and the necessity to model particular properties of the language of interest such as complex morphology or syntax. The course will introduce modeling solutions to these issues such as multilingual or cross-lingual methods, linguistically informed NLP models, and methods for effectively bootstrapping systems with limited data or human intervention. The assignments for the class will be done by creating neural network models, and examples will be provided using PyTorch. * *Lecture:* The first part of the class with feature a lecture to overview the topic of the day, in which you can ask questions to clarify about any of the material. * *Language in 10:* Groups in the class will make a 10-minute presentation of one of the languages of the world."
+},
+{
+"url": "https://www.youtube.com/watch?v=6NeTO61qc4M",
+"title": "CMU Advanced NLP 2024 (1): Introduction to NLP - YouTube",
+"description": "This lecture (by Graham Neubig) for CMU CS 11-711, Advanced NLP (Spring 2024) covers: * What is natural language processing?"
+},
+{
+"url": "https://www.youtube.com/watch?v=MgggZi5lL2c",
+"title": "CMU Advanced NLP Spring 2025 (1): Introduction to NLP - YouTube",
+"description": "This lecture (by Sean Welleck) for CMU CS 11-711, Advanced NLP (Spring 2025) covers: - What is natural language processing?"
+},
+{
+"url": "https://www.youtube.com/watch?v=MM48kc5Zq8A",
+"title": "CMU Advanced NLP Fall 2024 (1): Introduction to NLP - YouTube",
+"description": "This lecture (by Graham Neubig) for CMU CS 11-711, Advanced NLP (Fall 2024) covers: * What is natural language processing?"
+},
+{
+"url": "https://www.andrew.cmu.edu/user/ko/downloads/11-411-Natural-Language-Processing-Slides.pdf",
+"title": "[PDF] 11-411 Natural Language Processing - andrew.cmu.ed",
+"description": "35/60 Neural Networks for Classi\ufb01cation \u25b6Predict Class: one output per class \u25b6Training data output is a \u201cone-hot-vector\u201d, e.g., y = [0, 0, 1]T \u25b6Prediction: \u25b6predicted class is output node i with the highest value yi \u25b6obtain posterior probability distribution by softmax softmax(yi) = eyi P j eyj 36/60 Problems with Gradient Descent Training 37/60 Problems with Gradient Descent Training 38/60 Problems with Gradient Descent Training 39/60 Speed-up: Momentum \u25b6Updates may move a weight slowly in one direction \u25b6We can keep up a memory if prior updates \u2206wkj(n \u22121) \u25b6and add these to any new updates with a decay factor \u03c1 \u2206wkj(n) = \u00b5 \u03b4j hk + \u03c1\u2206wkj(n \u22121) 40/60 Dropout \u25b6A general problem of machine learning: over\ufb01tting to training data (very good on train, bad on unseen test) \u25b6Solution: regularization, e.g., keeping weights from having extreme values \u25b6Dropout: randomly remove some hidden units during training \u25b6mask: set of hidden units dropped \u25b6randomly generate, say, 10 \u2013 20 masks \u25b6alternate between the masks during training 41/60 Mini Batches \u25b6Each training example yields a set of weight updates \u2206wij \u25b6Batch up several training examples \u25b6Accumulate their updates \u25b6Apply sum to the model \u2013 one big step instead of many small steps \u25b6Mostly done for speed reasons 42/60 Matrix Vector Formulation \u25b6Forward computation s = W h \u25b6Activation computation y = sigmoid(s) \u25b6Error Term: \u03b4 = (t \u2212y) \u00b7 sigmoid\u2032(s) \u25b6Propagation of error term: \u03b4i = W\u03b4i+1 \u00b7 sigmoid\u2032(s) \u25b6Weight updates: \u2206W ="
+},
+{
+"url": "https://www.phontron.com/class/anlp2024",
+"title": "CMU CS 11-711: Advanced NLP - Graham Neubig",
+"description": "In it, we describe fundamental tasks in natural language processing such as syntactic, semantic, and discourse analysis, as well as methods to solve these tasks"
+},
+{
+"url": "https://cmu-l3.github.io/anlp-fall2025",
+"title": "Advanced Natural Language Processing / Fall 2025 - L3 Lab at CMU",
+"description": "# Advanced Natural Language Processing / Fall 2025. Advanced natural language processing is an introductory graduate-level course on natural language processing aimed at students who are interested in doing cutting-edge research in the field. In it, we describe fundamental tasks in natural language processing as well as methods to solve these tasks. The course focuses on modern methods using neural networks, and covers the basic modeling, learning, and inference algorithms required therefore. The class culminates in a project in which students attempt to reimplement and improve upon a research paper in a topic of their choosing. * The final grades will be determined based on the weighted average of the quizzes, assignments, and project. * Assignments: There will be 4 assignments (the final one being the project), worth respectively 15%, 15%, 20%, 30% of the grade. + Natural Language Understanding with Distributed Representation (Ch. 5 up to 5.4.2) (Cho 2015)  Additional references."
+},
+{
+"url": "https://www.youtube.com/playlist?list=PL8PYTP1V4I8DZprnWryM4nR8IZl1ZXDjg",
+"title": "CMU Advanced NLP Spring 2024 - YouTube",
+"description": "CMU Advanced NLP 2024 (1): Introduction to NLP \u00b7 CMU Advanced NLP 2024 (2): Word Representation and Text Classification \u00b7 CMU Advanced NLP 2024 (3): Language"
+},
+{
+"url": "https://execonline.cs.cmu.edu/natural-language-processing",
+"title": "NLP Online Course at Carnegie Mellon University SCS Exec Ed",
+"description": "Natural Language Processing, a 10-week online program available through the Executive Education program from Carnegie Mellon University School of Computer"
+},
+{
+"url": "https://www.scribd.com/presentation/946000325/NLP-Subject-Orientation-Slides-Copy",
+"title": "Natural Language Processing Course Overview | PDF - Scribd",
+"description": "It covers key topics such as word level analysis, syntax analysis, semantic analysis, and practical applications of NLP. Additionally, it includes information"
+}
+]

@@ -1,0 +1,52 @@
+[
+{
+"url": "https://rail.eecs.berkeley.edu/deeprlcourse-fa23",
+"title": "Deep Reinforcement Learning - CS 285 - UC Berkeley",
+"description": "Lecture Slides. See Syllabus for more information. Lecture 1: Introduction and Course Overview \u00b7 Lecture 2: Supervised Learning of Behaviors \u00b7 Lecture 3:"
+},
+{
+"url": "https://github.com/jscriptcoder/Deep-Reinforcement-Learning-by-UC-Berkeley",
+"title": "jscriptcoder/Deep-Reinforcement-Learning-by-UC-Berkeley - GitHub",
+"description": "CS 285 at UC Berkeley, Deep Reinforcement Learning, 2019. Lectures. Introduction and Course Overview. Lecture | Slides; Supervised Learning of Behaviors."
+},
+{
+"url": "https://www.youtube.com/playlist?list=PL_iWQOsE6TfXxKgI1GgyV1B_Xa0DxE5eH",
+"title": "Deep Reinforcement Learning: CS 285 Fall 2021 (UC Berkeley)",
+"description": "4 hours Lectures for UC Berkeley CS 285: Deep Reinforcement Learning for Fall 2021. CS 285: Lecture 1, Part 1 RAIL"
+},
+{
+"url": "https://rail.eecs.berkeley.edu/deeprlcourse-fa19",
+"title": "CS 285",
+"description": "# Deep Reinforcement Learning. Lectures: Mon/Wed 10-11:30 a.m., Soda Hall, Room 306. The course is **not** being offered as an online course, and the videos are provided only for your personal informational and entertainment purposes. **Looking for deep RL course materials from past years?**. Office Hours: Wed 11.30-12.30pm, Soda 347 alcove. Office Hours: Thurs 9-10am, Soda 347 alcove. Office Hours: Fri 10-11am, Soda 347 alcove. ## Course Introduction, Imitation Learning. * Lecture 1: Introduction and Course Overview. ## Imitation Learning. * Lecture 4: Introduction to Reinforcement Learning. ## Policy Gradients and Actor Critic. ## Value Functions and Q-learning. * Lecture 8: Deep RL with Q-functions. ## Advanced Policy Gradients and Model-based learning. Monday, September 30 - Friday, October 4. ## Advanced Model Learning and Imitating Optimal Controllers. * Lecture 11: Model-based Reinforcement Learning. * Homework 4: Model-based RL. * Lecture 12: Model-based Policy Learning. ## Inverse Reinforcement Learning and multi-task learning. Monday, October 28 - Friday, November 1."
+},
+{
+"url": "http://rail.eecs.berkeley.edu/deeprlcourse/resources",
+"title": "CS 185/285 Resources",
+"description": "The primary resources for this course are the lecture slides and homework assignments on the front page. Lecture videos from Fall 2021 are available here;"
+},
+{
+"url": "https://rail.eecs.berkeley.edu/deeprlcourse/static/slides/lec-5.pdf",
+"title": "[PDF] Policy Gradients - CS 185/285",
+"description": "Example: preset position chess What we want: positive multipliers on good moves, negative multipliers on bad moves R = +1 for winning, -1 for losing What we get: positive multipliers on lucky starts, negative multipliers on unlucky starts negative multipliers on good moves when you made a mistake later positive multipliers on bad moves when your opponent randomly made a mistake later these issues \u201caverage out\u201d with enough samples, but we might need a very large number of samples to get there \u201chigh variance\u201d Part 3: Variance reduction What is wrong with the policy gradient? Example: preset position chess What we want: positive multipliers on good moves, negative multipliers on bad moves R = +1 for winning, -1 for losing What we get: positive multipliers on lucky starts, negative multipliers on unlucky starts negative multipliers on good moves when you made a mistake later positive multipliers on bad moves when your opponent randomly made a mistake later these issues \u201caverage out\u201d with enough samples, but we might need a very large number of samples to get there \u201chigh variance\u201d Baselines but\u2026 are we allowed to do that??"
+},
+{
+"url": "https://www.youtube.com/watch?v=SupFHGbytvA",
+"title": "CS 285: Lecture 1, Introduction. Part 1",
+"description": "CS 285: Lecture 1, Introduction. Part 1\nRAIL\n24900 subscribers\n715 likes\n97692 views\n21 Aug 2023\n\n10 comments\n"
+},
+{
+"url": "https://www.youtube.com/watch?v=NV4oSWe1H9o",
+"title": "CS 285: Lecture 15, Part 1: Offline Reinforcement Learning - YouTube",
+"description": "Share your videos with friends, family, and the world."
+},
+{
+"url": "https://rail.eecs.berkeley.edu/deeprlcourse",
+"title": "CS 185/285",
+"description": "# Deep Reinforcement Learning. Lectures: 9 - 10 am on Wednesdays and 8 - 10 am on Fridays, both in Hearst Annex A1. **Announcement**: The default final project options are now available: Offline-to-Online RL Default Final Project and LLM RL Default Final Project. **Announcement**: The final project outline has been released. **Looking for deep RL course materials from past years?**. Office Hours: Wednesdays 8 - 9 AM in Hearst Annex A1. Office Hours: Tue 4p-5p in Berkeley Way West 1204. Office Hours: Tue 9a-10a in Berkeley Way West 1212. Office Hours: Thursday 4p-5p Berkeley Way West 1204. ## Imitation Learning & RL Basics. ## Policy Gradients & Actor Critic. ## Value-Based RL. * Section 3: Policy Gradients and Actor Critic. * Lecture 9: Advanced Policy Gradients Part 1. ## Model-Based RL. * Lecture 15: Model-Based RL Part 1. * Section 8: Model-Based RL. * Lecture 17: Offline RL Part 1. * Offline-to-Online RL Default Final Project. * LLM RL Default Final Project."
+},
+{
+"url": "https://mandi-zhao.gitbook.io/deeprl-notes",
+"title": "CS285: Deep RL Notes | DeepRL - GitBook",
+"description": "These are my personal notes and wordy explanations on the core topics covered in this course, it's meant to be a reference and sanity check."
+}
+]

@@ -1,0 +1,629 @@
+<html><head>
+    <title> CS 763 Computer Vision </title>
+    <script type="text/javascript" src="moment.js"></script>
+    <style>
+    body {font-family: sans-serif,arial;}
+    h5 { color: #887254; }
+    .emph { color: purple; background-color: yellow; font-weight: bolder; }
+  </style>
+  </head>
+
+  <body>
+    <h2>
+      CS 763 Computer Vision (Even Sem, Jan 2026)</h2>
+
+    <table width="100%">
+      <tbody><tr>
+	<td>Quick Links:
+	  <br><a href="#topics">Topics</a>
+	  <br><a href="#assignments">Tasks</a>
+	  <br><a href="grades/">All Scores </a>
+	  <!-- <img src="new.gif">  -->
+	  <br><a href="#evaluation">Evaluation</a>
+	  <br><a href="#announceinfo">Announcements</a>
+	  <br><a href="#texts">Resources</a>
+	  <br><a href="#courseeval">Midsemester Course Eval</a>
+	</td>
+
+	<td align="right"><b>Instructor: </b>Sharat. Do NOT 
+	  send email. Use piazza (should be ntegrated with moodle).
+	  <br><b>Office: </b> Rekhi Bldg, A202
+	  <br><b>Office Hours: </b> Tue 13:30 to 14:00
+	  <br><b>Lecture hours: </b> W/F 11:00 AM (Slot 6)
+	  <br><b>Lab: </b> There is no lab.
+	  <br><b>Venue: </b> KR225
+	  <br><b>Teaching Assistants</b>: You know who they are! 
+        </td>
+      </tr>
+    </tbody></table>
+
+    <table cellspacing="0" width="100%" bgcolor="#ffffff">
+      <tbody><tr bgcolor="thistle">
+        <td>
+          <ul>
+            <li>
+              Recent Announcements
+              (Last modified approximately
+              <script>
+                document.write(moment(document.lastModified).fromNow());
+              </script>3 months ago
+              at
+              <script>
+                document.write(document.lastModified);
+              </script>03/08/2026 13:27:48
+              )
+              <ol>
+                <li>Welcome to the course. Most links will not work yet.</li>
+                <li>
+                  Our first class is on Wed, Jan 7 in KR225.
+                  Please be seated by 10:55 AM.
+                </li>
+                <li>
+                  Some registrations require instructor approval.
+                </li>
+                <li>
+                  All announcements will move to
+                  <a href="https://piazza.com/iitb.ac.in/other/cs763/home">Piazza</a>.
+                </li>
+              </ol>
+            </li>
+          </ul>
+        </td>
+      </tr>
+
+  <tr bgcolor="wheat">
+	<td> <ul>
+		<li>
+		  <b>Informal Course Overview: </b> In this course we
+		  build on what you have learnt (or learned:-) in an
+		  earlier digital imaging processing course. (Some of
+		  you may have been unable to take the class in the
+		  odd semester 2022-2023, we will see what we can do,
+		  if you have some good rason).
+
+		  Given the above, in this course we will cover a
+		  <strong> proper </strong> subset of (in no particular order) [We will
+		  do "old CV" and "new CV" similar to last offerings
+		  ("deep learning") .]
+		  <ul>
+		        <li> Human face and human body
+			</li><li> Features
+			</li><li> Single and Multi-view geometry 
+			</li><li> Optical Flow and  Motion 
+			</li><li> Shape from Shading 
+			</li><li> Segmentation and region growing
+			</li><li> Reading and presenting research papers.  
+			</li><li> Knowledge representation and inference
+			</li><li> Object recognition (quickly) and tracking
+			(hopefully) 
+			</li><li> Texture classification and recognition
+			(in passing?)
+			</li><li> Activity recognition (in passing?)
+			</li><li> Computational Photography and
+			super-resolution (maybe)
+		  </li></ul>
+		</li>
+		<li>
+			<b>Course Prerequisites (aka "who is
+			allowed"): </b>
+			<ol>
+			  <li> The primary (informal) prequisite is that you
+			  should be a student, not a
+			  test-taker. (What's the difference?)
+			  </li><li> CS663 (Digital Image Processing) or equivalent
+				offered by EE/ CSE is a declared
+				prerequisite (will be relaxed only
+				under special or exceptional circumstancs)
+			  </li><li> In addition, students are expected to
+				have basic programming skills
+				(programming with loops, pointers,
+				structures, recursion), linear algebra
+				and matrix methods.  (We will freshen
+				up as required.)
+			  </li><li> Audits are discouraged for all and
+				prohibited for 
+				non-PhD candidates.
+			  </li><li> The course is open (modulo the above)
+			    to any UG/PG in CSE (and folks who are
+			    going into IDDDP in CMInDS)
+			  </li><li> That said, the general goal is to
+				"enable" all students who wish to be
+				part of this course. Please note that
+				we are talking about students, and not
+				test-takers.
+			  </li><li> Non-CSE (e.g. EE) will be
+				considered. However, it's not kosher
+				to repeat this course again (say after
+				doing in EE) to jack up CPI.
+			  </li>
+			</ol>
+	</li></ul></td>
+</tr>
+
+  <tr bgcolor="thistle"><td>
+      <ul>
+		<li> What I will discuss next
+		  <ol>
+			<li> Face Recognition. 
+		  </li></ol>
+      </li></ul>
+  </td></tr>
+
+  <!-- Begin topics to be covered -->
+  <tr bgcolor="wheat">  <td>
+      <ul>	<li> <a name="topics"> Topics and some key points:
+      This is just a stub from last time. Monitor Piazza for the
+      current offering.
+<table>
+  <tbody>
+    <tr bgcolor="olive">
+      <th>Date</th>
+      <th>Topic</th>
+      <th>Some key points</th>
+    </tr>
+
+    <!-- Keep 07 Jan exactly as is -->
+    <tr bgcolor="wheat">
+      <td>07 Jan</td>
+      <td>Course Logistics, Policies, Intro to course</td>
+      <td>
+        <a href="notes/lec01.pdf">Slides</a><br>
+        Read course web page carefully
+      </td>
+    </tr>
+
+    <!-- Standard lecture format (as per 09 Jan) -->
+    <tr bgcolor="lightblue">
+      <td>09 Jan</td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr bgcolor="wheat">
+      <td>14 Jan</td>
+      <td></td>
+      <td><a href="notes/lec02.pdf">Slides</a></td>
+    </tr>
+
+    <tr bgcolor="lightblue">
+      <td>16 Jan</td>
+      <td></td>
+      <td>
+        Read
+        <a href="https://www.cse.iitb.ac.in/~paragc/teaching/2019/cs475/lectures/05_transformations_2.pdf">
+          Slides 1â€“17
+        </a>
+      </td>
+    </tr>
+
+    <tr bgcolor="wheat">
+      <td>21 Jan</td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr bgcolor="lightblue">
+      <td>23 Jan</td>
+      <td>TBD</td>
+      <td></td>
+    </tr>
+
+    <tr bgcolor="wheat">
+      <td>28 Jan</td>
+      <td></td>
+      <td><a href="notes/lec04.pdf">Slides</a></td>
+    </tr>
+
+    <tr bgcolor="lightblue">
+      <td>30 Jan</td>
+      <td></td>
+      <td><a href="notes/lec05.pdf">Slides</a></td>
+    </tr>
+
+    <tr bgcolor="wheat">
+      <td>04 Feb</td>
+      <td></td>
+      <td><a href="notes/lec07.pdf">Slides</a></td>
+    </tr>
+
+    <tr bgcolor="lightblue">
+      <td>11 Feb</td>
+      <td></td>
+      <td><a href="notes/lec09.pdf">Slides</a></td>
+    </tr>
+
+    <tr bgcolor="wheat">
+      <td>18 Feb</td>
+      <td>TBD</td>
+      <td><a href="notes/lec10.pdf">Slides</a></td>
+    </tr>
+
+    <tr bgcolor="lightblue">
+      <td>20 Feb</td>
+      <td>TBD</td>
+      <td><a href="notes/lec10.pdf">Slides</a></td>
+    </tr>
+
+    <!-- Exams -->
+    <tr bgcolor="lightpink">
+      <td>25 Feb</td>
+      <td>Midsem Exam</td>
+      <td>No slides</td>
+    </tr>
+
+    <tr bgcolor="lightpink">
+      <td>27 Feb</td>
+      <td>Midsem exams continue</td>
+      <td>No slides</td>
+    </tr>
+
+    <!-- State holidays -->
+    <tr bgcolor="lightgreen">
+      <td>04 Mar</td>
+      <td>Holi!</td>
+      <td></td>
+    </tr>
+
+    <tr bgcolor="wheat">
+      <td>06 Mar</td>
+      <td></td>
+      <td><a href="view">Slides</a></td>
+    </tr>
+
+    <tr bgcolor="lightblue">
+      <td>11 Mar</td>
+      <td></td>
+      <td><a href="sharing">Slides</a></td>
+    </tr>
+
+    <tr bgcolor="wheat">
+      <td>13 Mar</td>
+      <td></td>
+      <td><a href="view?usp=sharing">Slides</a></td>
+    </tr>
+
+    <tr bgcolor="lightblue">
+      <td>18 Mar</td>
+      <td></td>
+      <td><a href="keynote.pdf">Slides</a></td>
+    </tr>
+
+    <tr bgcolor="wheat">
+      <td>20 Mar</td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr bgcolor="lightblue">
+      <td>25 Mar</td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr bgcolor="wheat">
+      <td>27 Mar</td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr bgcolor="lightblue">
+      <td>01 Apr</td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr bgcolor="lightgreen">
+      <td>03 Apr</td>
+      <td>Good Friday</td>
+      <td></td>
+    </tr>
+
+    <tr bgcolor="wheat">
+      <td>08 Apr</td>
+      <td></td>
+      <td>See link above</td>
+    </tr>
+
+    <tr bgcolor="lightblue">
+      <td>10 Apr</td>
+      <td></td>
+      <td>See link above</td>
+    </tr>
+
+    <tr bgcolor="wheat">
+      <td>15 Apr</td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr bgcolor="lightblue">
+      <td>17 Apr</td>
+      <td></td>
+      <td><a href="notes/May28.pdf">Slides</a></td>
+    </tr>
+	      <!-- <tr bgcolor="lightblue"> -->
+	      <!-- 	<td> ?? Apr</td> -->
+	      <!-- 	<td> 8 point algorithm, Correspondence-1 </td> -->
+	      <!-- 	<td> <a href="notes/May30.pdf">Slides</a>  -->
+	      <!-- 	<br> <a href="notes/May30PartTwo.pdf">Slides</a> </td> -->
+	      <!-- </tr> -->
+	      <!-- <tr bgcolor="wheat"> -->
+	      <!-- 	<td> ?? Apr</td> -->
+	      <!-- 	<td> Fundamental matrix</td> -->
+	      <!-- 	<td></td> -->
+	      <!-- </tr> -->
+	      <!-- <tr bgcolor="lightblue"> -->
+	      <!-- 	<td> ?? Apr</td> -->
+	      <!-- 	<td> Camera Matrices <br> Stereo correspondence -->
+	      <!-- 	from Calculus of Variations </td> -->
+	      <!-- 	<td> <a href="notes/June1.pdf">Slides</a> -->
+	      <!-- 	<br> <a href="notes/June1PartTwo.pdf">Slides</a> </td> -->
+	      <!-- </tr> -->
+	      <!-- <tr bgcolor="wheat"> -->
+	      <!-- 	<td> ?? Apr</td> -->
+	      <!-- 	<td> Camera matrices from F <br> Stereo correspondence -->
+	      <!-- 	via DP</td> -->
+	      <!-- 	<td> <a href="notes/June3.pdf">Slides</a> </td> -->
+	      <!-- 	<br> <a href="notes/June3PartTwo.pdf">Slides</a> </td> -->
+	      <!-- </tr> -->
+	      <!-- <tr bgcolor="lightblue"> -->
+	      <!-- 	<td> ?? Apr</td> -->
+	      <!-- 	<td> Essential Matrix and Rectification</td> -->
+	      <!-- 	<td> <a href="notes/June4.pdf">Slides</a> -->
+	      <!-- 	<br> <a href="notes/Lec25June5.pdf">Slides</a> </td> -->
+	      <!-- </tr> -->
+	      <!-- <tr bgcolor="wheat"> -->
+	      <!-- 	<td> ?? Apr</td> -->
+	      <!-- 	<td> Shape from shading </td> -->
+	      <!-- 	<td> <a href="notes/ssOne.pdf">Slides</a> </td> -->
+	      <!-- </tr> -->
+	      <!-- <tr bgcolor="lightblue"> -->
+	      <!-- 	<td> ?? Apr</td> -->
+	      <!-- 	<td> Shape from shading </td> -->
+	      <!-- 	<td> <a href="notes/ssTwo.pdf">Slides</a> </td> -->
+	      <!-- </tr> -->
+  </tbody>
+</table>
+
+  </a></li><a name="topics"> </a></ul><a name="topics"> </a></td> </tr>
+  <tr bgcolor="thistle"><td>
+      <ul><li> <a name="assignments"></a>Tasks. Assignments are not
+		  optional. Piazza will have the latest on these
+		  tasks. (The following is a stub from previous offerings).
+		  <ol>		   
+			<li> Upload assignments to moodle. For group
+			  assignment, lowest (lexicographic) roll
+			  number submits inlab. <p> In the situation that
+			  moodle is down around the deadline, make a
+			  copy, and upload it to Google drive or
+			  Dropbox, and send link.  Do not send the
+			    assignment via email. All assignments  will be posted on Piazza
+			 </p></li><li>  <a href="https://www.cse.iitb.ac.in/~sharat/current/cs763/tasks/lab00/html/index.html">Lab
+			 zero</a> To be posted
+			 </li><li>  <a>Task Two:  </a> 
+			 </li><li>  <a>Task Three:</a> 
+			 </li><li>  <a>Task Four: </a> 
+			 </li><li>  <a>Task Five: </a> 
+			 </li><li>  <a>Lab: </a> Project PartA	   
+			 </li><li>  <a>Lab: </a> Project PartB	   
+  </li></ol>  </li> </ul> </td> </tr>
+
+
+<tr bgcolor="wheat"><td>
+<ul>
+<li><a name="evaluation"></a>Notes on evaluation.  
+<ol>
+<li>Grading.   This is  <b> tentative</b>.
+  The final version will be available on Piazza. The following can be
+  safely discarded after drop/add deadline.
+  <ul>
+  <li> Class participation (Viva): Pass/Not Pass (5%-10%)  (starts after course
+  drop/add).  
+  </li><li> Tasks X: 0--2 programming "project": (approx x%)
+  </li><li> Regular Tasks Y: 1--3 home work: (approx y%, where x + y ~= (20))
+  </li><li> Two pen-paper exam/quiz/ remaining percentage
+  </li><li> Instructor Viva (not for everyone) to ensure you understand what you are
+  doing. Viva can reduce marks for some people in group assignments.
+  </li><li> Piazza Points: This will be used for generously tipping you when you are
+  on the grade border.  
+  </li></ul>							      
+
+</li><li> <b> This is important </b>.  By <i>default</i>, I will assume that
+    you will adhere to the following pledge (aka honour code)
+<p>
+<strong>
+I pledge on my honour that I have not given or received any
+unauthorized assistance on this assignment or any previous task.
+</strong>
+</p><p>
+and will write and sign this on EVERY submission that carries points.
+(You can use (Gita/Koran/Bible/Torah/Tanakh/Mother/BFF/<your choice="">) (pick any one) instead of
+"honour" in the above line.
+
+If you are not clear what unauthorized assistance means, please talk
+to me. 
+							      
+</your></p></li><li>Collaboration:
+  By default, i.e., unless specified otherwise, you may discuss
+    general ideas behind tasks with people <b> in </b> the course. 
+    <b> What does this mean? </b>
+  <ul>
+  <li> In any case, you are not to discuss this with external people
+    -- anyone other than TA -- outside your course.
+  </li><li> Needless to say, you are not allowed to take previous year's
+  question papers or assignments. This will also apply in the future
+  after you finish with this course when your juniors ask you.
+  </li><li> Any electronic discussion must happen via Piazza. No WA. 
+  </li><li> <strong> By default </strong>, please feel free to take things from the
+  LLM/Internet but do not plagiarize from the Internet, i.e., if you do
+  end up having to use external sources you MUST cite these clearly
+  </li><li> For SOME tasks, you may be expressly prohibited to look for
+    solutions from the Internet. In such cases,
+    finding answers to problems on the Web or from other outside
+    sources (these include anyone not enrolled in the class) is
+    strictly forbidden. (Typically this is the general idea behind
+    midsemester and final exams.)
+  </li><li> Some tasks will be in groups. You can discuss within this group,
+  i.e., for these tasks, the group is the unit
+  </li><li> In <b> all </b> cases, you cannot borrow something for which you claim
+  points. More specifically, if you submit something, and out of the
+  100% you submitted, 80% is from the Internet, that is fine -- only if you
+  give proper acknowledgment. You will be entitled to be graded out of
+  100% even if your work of 20% is purely yours.
+  But if you do not include acknowledgment for the 80% but you
+    acknowledging only 30%, then you are falsely claiming credit
+    <br>
+    The same situation if you are discussing your task with people on,
+    say, WA.
+  </li></ul>
+  <p> Violation of this policy is considered serious.  By signing up
+  for this course, and reading these lines, you agree to these terms
+  :-)
+
+</p></li><li> Even if you miss the task deadline, you have to submit your
+assignment to prevent getting a fail grade.  (There is no guarantee
+  that you will get any credit for it.)
+
+  </li><li> If you miss a submission deadline or an exam, your marks will
+   be rescaled (based on other assignments) ONLY in exceptional
+   circumstances (medical reason for example). These must be approved
+   by me BEFORE the due date in writing or via email. The default is
+   that you get zero.
+							      
+</li><li> The following is true for all electronic submissions. Late
+submission carry a leaky exponential penalty. Assignments submitted
+within the first 29 minutes after the deadline are considered 'on
+  time'.  However any 
+assignment that is late by more than 29 minutes will attract the
+penalty (table is as follows, intervals are semi-closed, i.e. open on
+the right).  Thus an assignment submitted 31 minutes late w.r.t. the
+original, stated submission deadline will attract 20% penalty.
+							      
+<table border="2" cellpadding="4" cellspacing="4" valign="top">	      
+<tbody><tr><td>Late submission in				      
+hours</td><td>1-2</td><td>2-4</td><td>4-6</td><td>6-8</td><td>8-10</td><td>10-14</td><td>14-24</td><td>late for more
+than 24 hours</td></tr>					      
+<tr><td>Penalty</td><td>20%</td><td>25%</td><td>30%</td><td>35%</td><td>52%</td><td>65%</td><td>85%</td><td>100% (You still have to submit it)</td></tr>
+</tbody></table>						      
+
+<!-- <li> Latedays: -->
+<!-- <ul> -->
+<!-- <li> Each student gets 3 latedays in total over the entire duration of -->
+<!-- the course. If a student chooses to use a lateday for a submission the -->
+<!-- late submission penalty will not apply (for that day only). -->
+<!-- <br> This means, for example, if you turn in three assignments one day -->
+<!-- late, they could all be counted as on-time. Or, if you turn in a -->
+<!-- single assignment four days late, it could be considered only one day -->
+<!-- late. -->
+<!-- <li> Latedays are not divisible; as soon as a submission is 1 minute -->
+<!-- late, you must use a full lateday. If you are working on a task in a -->
+<!-- group, then every lateday you take will cost each partner one lateday. -->
+<!-- <li> When submitting an assignment, a student must state whether she -->
+<!-- is using free latedays, and if so, how many. This should be stated in -->
+<!-- the README file. If you do not state it, we will assume that you are -->
+<!-- going to use the lateday elsewhere and want to take the usual penalty -->
+<!-- scheme. -->
+<!-- <li> The usual penalty scheme will follow (as stated in the table) -->
+<!-- once the lateday is not applied on a day. -->
+<!-- <li>  Unused latedays are not available for cashing, or for donation to a -->
+<!-- needy soul. -->
+<!-- </ul> -->
+
+							      
+</li><li> Grade revision policy: Students have a habit for asking for more
+points on their exams. This is understandable.  Please use the
+following policy for clarification of corrected papers:	      
+  <ul>							      
+  <li> If you have any questions on the grading, you must bring
+    it to the attention of the professor concerned within 72 hours of
+    receipt or the next lecture, whichever is earlier.	      
+							      
+   </li><li> Please study the model answers before you question a decision.
+    If you need to appeal a decision, please note that the instructor
+    now has the ability to review prior marking, and thus continues to
+    have the right to revise the marks of questions other than the
+    ones you are debating.
+							      
+    </li><li> I request that you do not ask frivolous questions. In
+particular, questions of the form "I think I should be given partial
+credit" are not welcome.  You must instead use the objective criterion
+"Model answer states 2 marks for this step; I have written this step;
+please reevaluate".					      
+							      
+</li></ul></li></ol></li></ul></td></tr>					      
+
+<tr bgcolor="thistle"><td>
+<ul>
+<li><a name="texts"></a>Texts/References 
+<ol>
+<li> Reference Text: Computer Vision by Ponce and Forsyth
+</li><li> Reference Text: Understanding Deep Learning by Simon Prince
+</li><li> Reference Text: Foundations of Computer Vision by Torralba, Isola and Freeman
+
+</li><li> Other References in no particular order
+    <ul>
+    <li> Trucco &amp; Verri. Introductory Techniques for 3-D Computer
+    Vision
+    </li><li> <a href="http://szeliski.org/Book/">Rick Szeliski.</a>
+    Computer Vision: Algorithms &amp; Applications
+    (available free)
+    </li><li> Hartley and Zissmeran.  Multiple view geometry
+    </li></ul></li></ol>
+</li></ul></td> </tr>
+
+							      
+<tr bgcolor="wheat"><td>				      
+<ul><li><a name="announceinfo"></a>Old Announcements</li>     
+<ol>					
+<li> 
+<!-- <li> People <a -->
+<!-- href="http://asc.iitb.ac.in/academic/utility/CourseList.jsp?crseCd=CS+763&div=%20%20%20&enter=Enter">in -->
+<!-- the </a> course. -->
+
+</li></ol></ul></td></tr>
+
+<tr bgcolor="thistle"><td>
+<ul><li><a name="solutions"> Solutions</a> I used to post solutions,
+but nowadays I hand them 
+out in class. Solutions may be occasionally posted and deleted asynchronously
+(in order that students from other courses do not suffer/benefit).&nbsp;</li>
+
+</ul></td></tr>
+
+<tr bgcolor="wheat"><td>
+<ul><li>
+<a name="courseeval"></a>Student Driven Course Evaluation.
+<ol>
+<li>
+The anonymous
+<!-- <a href="http://www.cse.iitb.ac.in/~sharat/cgi-bin/index.cgi"> -->
+<a href="questions.html"> midterm course </a> evaluation process 
+should happen week after midsem.
+</li></ol>
+<!-- <li> Thank you for your feedback.  The evaluation process -->
+<!-- has been completed (About 36% people responded. Let me know if you still want -->
+<!-- to say something though).  Here are the results -->
+<!-- <ol> -->
+<!-- <li> <a -->
+<!-- href="http://www.cse.iitb.ac.in/~sharat/cgi-bin/results.cgi">Overall -->
+<!-- </a> what the students thought. -->
+<!-- <li> <a -->
+<!-- href="http://www.cse.iitb.ac.in/~sharat/cgi-bin/overall.cgi"> The -->
+<!-- </a> course organization. -->
+<!-- <li> Individual <a -->
+<!-- href="http://www.cse.iitb.ac.in/~sharat/cgi-bin/microview.cgi">Responses -->
+<!-- </a> what the students thought.  Look for yours here!  Also comments -->
+<!-- appear only on this page. -->
+<!-- <li> The <a -->
+<!-- href="http://www.cse.iitb.ac.in/~sharat/cgi-bin/macroview.cgi">average -->
+<!-- </a> response.  Look for towers on the right. -->
+<!-- <li> The bane for students: <a -->
+<!-- href="http://www.cse.iitb.ac.in/~sharat/cgi-bin/homework.cgi">Evaluation -->
+<!-- </a> and faculty alike! -->
+<!-- <li> And how were the lectures <a -->
+<!-- href="http://www.cse.iitb.ac.in/~sharat/cgi-bin/interaction.cgi">handled -->
+<!-- </a>  by the professor? -->
+<!-- </ol> -->
+</li></ul></td></tr>
+</tbody></table>
+</body></html>

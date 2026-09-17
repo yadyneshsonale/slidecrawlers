@@ -1,0 +1,1443 @@
+<!DOCTYPE html><html lang="en-US" itemscope="" itemtype="http://schema.org/WebPage"><head>
+	<meta charset="UTF-8">
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<title>Reinforcement Learning @FAU2022 – Machine Learning and Positioning Systems</title>
+<meta name="robots" content="max-image-preview:large">
+<meta name="viewport" content="width=device-width, initial-scale=1"><script>
+window.koko_analytics = {"url":"https:\/\/cmutschler.de\/","site_url":"https:\/\/cmutschler.de","post_id":2356,"path":"\/reinforcement-learning-fau2022","method":"cookie","use_cookie":true};
+</script>
+<link rel="alternate" type="application/rss+xml" title="Machine Learning and Positioning Systems » Feed" href="https://cmutschler.de/feed">
+<link rel="alternate" type="application/rss+xml" title="Machine Learning and Positioning Systems » Comments Feed" href="https://cmutschler.de/comments/feed">
+<link rel="alternate" type="text/calendar" title="Machine Learning and Positioning Systems » iCal Feed" href="https://cmutschler.de/events/?ical=1">
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://cmutschler.de/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcmutschler.de%2Freinforcement-learning-fau2022">
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://cmutschler.de/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcmutschler.de%2Freinforcement-learning-fau2022&amp;format=xml">
+<style id="wp-img-auto-sizes-contain-inline-css">
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<style id="wp-emoji-styles-inline-css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<style id="wp-block-library-inline-css">
+:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}:root .has-text-align-center{text-align:center}:root .has-text-align-left{text-align:left}:root .has-text-align-right{text-align:right}.has-fit-text{white-space:nowrap!important}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{word-wrap:normal!important;border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style*=border-color]){border-style:solid}html :where([style*=border-top-color]){border-top-style:solid}html :where([style*=border-right-color]){border-right-style:solid}html :where([style*=border-bottom-color]){border-bottom-style:solid}html :where([style*=border-left-color]){border-left-style:solid}html :where([style*=border-width]){border-style:solid}html :where([style*=border-top-width]){border-top-style:solid}html :where([style*=border-right-width]){border-right-style:solid}html :where([style*=border-bottom-width]){border-bottom-style:solid}html :where([style*=border-left-width]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+
+/*# sourceURL=/wp-includes/css/dist/block-library/common.min.css */
+</style>
+<style id="wp-block-heading-inline-css">
+h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-background,h3:where(.wp-block-heading).has-background,h4:where(.wp-block-heading).has-background,h5:where(.wp-block-heading).has-background,h6:where(.wp-block-heading).has-background{padding:1.25em 2.375em}h1.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h1.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h2.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h2.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h3.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h3.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h4.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h4.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h5.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h5.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h6.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h6.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]){rotate:180deg}
+/*# sourceURL=https://cmutschler.de/wp-includes/blocks/heading/style.min.css */
+</style>
+<style id="wp-block-image-inline-css">
+.wp-block-image>a,.wp-block-image>figure>a{display:inline-block}.wp-block-image img{box-sizing:border-box;height:auto;max-width:100%;vertical-align:bottom}@media not (prefers-reduced-motion){.wp-block-image img.hide{visibility:hidden}.wp-block-image img.show{animation:show-content-image .4s}}.wp-block-image[style*=border-radius] img,.wp-block-image[style*=border-radius]>a{border-radius:inherit}.wp-block-image.has-custom-border img{box-sizing:border-box}.wp-block-image.aligncenter{text-align:center}.wp-block-image.alignfull>a,.wp-block-image.alignwide>a{width:100%}.wp-block-image.alignfull img,.wp-block-image.alignwide img{height:auto;width:100%}.wp-block-image .aligncenter,.wp-block-image .alignleft,.wp-block-image .alignright,.wp-block-image.aligncenter,.wp-block-image.alignleft,.wp-block-image.alignright{display:table}.wp-block-image .aligncenter>figcaption,.wp-block-image .alignleft>figcaption,.wp-block-image .alignright>figcaption,.wp-block-image.aligncenter>figcaption,.wp-block-image.alignleft>figcaption,.wp-block-image.alignright>figcaption{caption-side:bottom;display:table-caption}.wp-block-image .alignleft{float:left;margin:.5em 1em .5em 0}.wp-block-image .alignright{float:right;margin:.5em 0 .5em 1em}.wp-block-image .aligncenter{margin-left:auto;margin-right:auto}.wp-block-image :where(figcaption){margin-bottom:1em;margin-top:.5em}.wp-block-image.is-style-circle-mask img{border-radius:9999px}@supports ((-webkit-mask-image:none) or (mask-image:none)) or (-webkit-mask-image:none){.wp-block-image.is-style-circle-mask img{border-radius:0;-webkit-mask-image:url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="50"/></svg>');mask-image:url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="50"/></svg>');mask-mode:alpha;-webkit-mask-position:center;mask-position:center;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-size:contain;mask-size:contain}}:root :where(.wp-block-image.is-style-rounded img,.wp-block-image .is-style-rounded img){border-radius:9999px}.wp-block-image figure{margin:0}.wp-lightbox-container{display:flex;flex-direction:column;position:relative}.wp-lightbox-container img{cursor:zoom-in}.wp-lightbox-container img:hover+button{opacity:1}.wp-lightbox-container button{align-items:center;backdrop-filter:blur(16px) saturate(180%);background-color:#5a5a5a40;border:none;border-radius:4px;cursor:zoom-in;display:flex;height:20px;justify-content:center;opacity:0;padding:0;position:absolute;right:16px;text-align:center;top:16px;width:20px;z-index:100}@media not (prefers-reduced-motion){.wp-lightbox-container button{transition:opacity .2s ease}}.wp-lightbox-container button:focus-visible{outline:3px auto #5a5a5a40;outline:3px auto -webkit-focus-ring-color;outline-offset:3px}.wp-lightbox-container button:hover{cursor:pointer;opacity:1}.wp-lightbox-container button:focus{opacity:1}.wp-lightbox-container button:focus,.wp-lightbox-container button:hover,.wp-lightbox-container button:not(:hover):not(:active):not(.has-background){background-color:#5a5a5a40;border:none}.wp-lightbox-overlay{box-sizing:border-box;cursor:zoom-out;height:100vh;left:0;overflow:hidden;position:fixed;top:0;visibility:hidden;width:100%;z-index:100000}.wp-lightbox-overlay .wp-lightbox-close-button{align-items:center;cursor:pointer;display:flex;font-family:inherit;gap:8px;justify-content:center;line-height:1;min-height:40px;min-width:40px;padding:0 4px;position:absolute;right:calc(env(safe-area-inset-right) + 16px);top:calc(env(safe-area-inset-top) + 16px);z-index:5000000}.wp-lightbox-overlay .wp-lightbox-close-button:focus,.wp-lightbox-overlay .wp-lightbox-close-button:hover,.wp-lightbox-overlay .wp-lightbox-close-button:not(:hover):not(:active):not(.has-background){background:none;border:none}.wp-lightbox-overlay .wp-lightbox-close-button:has(.wp-lightbox-close-text:not([hidden])) .wp-lightbox-close-icon svg{height:1em;width:1em}.wp-lightbox-overlay .wp-lightbox-close-icon svg{display:block}.wp-lightbox-overlay .wp-lightbox-navigation-button-next,.wp-lightbox-overlay .wp-lightbox-navigation-button-prev{align-items:center;bottom:16px;cursor:pointer;display:flex;font-family:inherit;gap:4px;justify-content:center;line-height:1;min-height:40px;min-width:40px;padding:0 8px;position:absolute;z-index:2000002}.wp-lightbox-overlay .wp-lightbox-navigation-button-next[hidden],.wp-lightbox-overlay .wp-lightbox-navigation-button-prev[hidden]{display:none}@media (min-width:960px){.wp-lightbox-overlay .wp-lightbox-navigation-button-next,.wp-lightbox-overlay .wp-lightbox-navigation-button-prev{bottom:50%;transform:translateY(-50%)}}.wp-lightbox-overlay .wp-lightbox-navigation-button-next:focus,.wp-lightbox-overlay .wp-lightbox-navigation-button-next:hover,.wp-lightbox-overlay .wp-lightbox-navigation-button-next:not(:hover):not(:active):not(.has-background),.wp-lightbox-overlay .wp-lightbox-navigation-button-prev:focus,.wp-lightbox-overlay .wp-lightbox-navigation-button-prev:hover,.wp-lightbox-overlay .wp-lightbox-navigation-button-prev:not(:hover):not(:active):not(.has-background){background:none;border:none;padding:0 8px}.wp-lightbox-overlay .wp-lightbox-navigation-button-next:has(.wp-lightbox-navigation-text:not([hidden])) .wp-lightbox-navigation-icon svg,.wp-lightbox-overlay .wp-lightbox-navigation-button-prev:has(.wp-lightbox-navigation-text:not([hidden])) .wp-lightbox-navigation-icon svg{display:block;height:1.5em;width:1.5em}.wp-lightbox-overlay .wp-lightbox-navigation-button-prev{left:calc(env(safe-area-inset-left) + 16px)}.wp-lightbox-overlay .wp-lightbox-navigation-button-next{right:calc(env(safe-area-inset-right) + 16px)}.wp-lightbox-overlay .wp-lightbox-navigation-icon svg{vertical-align:middle}.wp-lightbox-overlay .lightbox-image-container{height:var(--wp--lightbox-container-height);left:50%;overflow:hidden;position:absolute;top:50%;transform:translate(-50%,-50%);transform-origin:top left;width:var(--wp--lightbox-container-width);z-index:2000001}.wp-lightbox-overlay .wp-block-image{align-items:center;box-sizing:border-box;display:flex;height:100%;justify-content:center;margin:0;position:relative;transform-origin:0 0;width:100%;z-index:3000000}.wp-lightbox-overlay .wp-block-image img{height:var(--wp--lightbox-image-height);min-height:var(--wp--lightbox-image-height);min-width:var(--wp--lightbox-image-width);width:var(--wp--lightbox-image-width)}.wp-lightbox-overlay .wp-block-image figcaption{display:none}.wp-lightbox-overlay button{background:none;border:none}.wp-lightbox-overlay .scrim{background-color:#fff;height:100%;opacity:.9;position:absolute;width:100%;z-index:2000000}.wp-lightbox-overlay.active{visibility:visible}@media not (prefers-reduced-motion){.wp-lightbox-overlay.active{animation:turn-on-visibility .25s both}.wp-lightbox-overlay.active img{animation:turn-on-visibility .35s both}.wp-lightbox-overlay.show-closing-animation:not(.active){animation:turn-off-visibility .35s both}.wp-lightbox-overlay.show-closing-animation:not(.active) img{animation:turn-off-visibility .25s both}.wp-lightbox-overlay.zoom.active{animation:none;opacity:1;visibility:visible}.wp-lightbox-overlay.zoom.active .lightbox-image-container{animation:lightbox-zoom-in .4s}.wp-lightbox-overlay.zoom.active .lightbox-image-container img{animation:none}.wp-lightbox-overlay.zoom.active .scrim{animation:turn-on-visibility .4s forwards}.wp-lightbox-overlay.zoom.show-closing-animation:not(.active){animation:none}.wp-lightbox-overlay.zoom.show-closing-animation:not(.active) .lightbox-image-container{animation:lightbox-zoom-out .4s}.wp-lightbox-overlay.zoom.show-closing-animation:not(.active) .lightbox-image-container img{animation:none}.wp-lightbox-overlay.zoom.show-closing-animation:not(.active) .scrim{animation:turn-off-visibility .4s forwards}}@keyframes show-content-image{0%{visibility:hidden}99%{visibility:hidden}to{visibility:visible}}@keyframes turn-on-visibility{0%{opacity:0}to{opacity:1}}@keyframes turn-off-visibility{0%{opacity:1;visibility:visible}99%{opacity:0;visibility:visible}to{opacity:0;visibility:hidden}}@keyframes lightbox-zoom-in{0%{transform:translate(calc((-100vw + var(--wp--lightbox-scrollbar-width))/2 + var(--wp--lightbox-initial-left-position)),calc(-50vh + var(--wp--lightbox-initial-top-position))) scale(var(--wp--lightbox-scale))}to{transform:translate(-50%,-50%) scale(1)}}@keyframes lightbox-zoom-out{0%{transform:translate(-50%,-50%) scale(1);visibility:visible}99%{visibility:visible}to{transform:translate(calc((-100vw + var(--wp--lightbox-scrollbar-width))/2 + var(--wp--lightbox-initial-left-position)),calc(-50vh + var(--wp--lightbox-initial-top-position))) scale(var(--wp--lightbox-scale));visibility:hidden}}
+/*# sourceURL=https://cmutschler.de/wp-includes/blocks/image/style.min.css */
+</style>
+<style id="wp-block-image-theme-inline-css">
+:root :where(.wp-block-image figcaption){color:#555;font-size:13px;text-align:center}.is-dark-theme :root :where(.wp-block-image figcaption){color:#ffffffa6}.wp-block-image{margin:0 0 1em}
+/*# sourceURL=https://cmutschler.de/wp-includes/blocks/image/theme.min.css */
+</style>
+<style id="wp-block-list-inline-css">
+ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:1.25em 2.375em}
+/*# sourceURL=https://cmutschler.de/wp-includes/blocks/list/style.min.css */
+</style>
+<style id="wp-block-paragraph-inline-css">
+.is-small-text{font-size:.875em}.is-regular-text{font-size:1em}.is-large-text{font-size:2.25em}.is-larger-text{font-size:3em}.has-drop-cap:not(:focus):first-letter{float:left;font-size:8.4em;font-style:normal;font-weight:100;line-height:.68;margin:.05em .1em 0 0;text-transform:uppercase}body.rtl .has-drop-cap:not(:focus):first-letter{float:none;margin-left:.1em}p.has-drop-cap.has-background{overflow:hidden}:root :where(p.has-background){padding:1.25em 2.375em}:where(p.has-text-color:not(.has-link-color)) a{color:inherit}p.has-text-align-left[style*="writing-mode:vertical-lr"],p.has-text-align-right[style*="writing-mode:vertical-rl"]{rotate:180deg}
+/*# sourceURL=https://cmutschler.de/wp-includes/blocks/paragraph/style.min.css */
+</style>
+<style id="wp-block-columns-inline-css">
+.wp-block-columns{box-sizing:border-box;display:flex;flex-wrap:wrap!important}@media (min-width:782px){.wp-block-columns{flex-wrap:nowrap!important}}.wp-block-columns{align-items:normal!important}.wp-block-columns.are-vertically-aligned-top{align-items:flex-start}.wp-block-columns.are-vertically-aligned-center{align-items:center}.wp-block-columns.are-vertically-aligned-bottom{align-items:flex-end}@media (max-width:781px){.wp-block-columns:not(.is-not-stacked-on-mobile)>.wp-block-column{flex-basis:100%!important}}@media (min-width:782px){.wp-block-columns:not(.is-not-stacked-on-mobile)>.wp-block-column{flex-basis:0;flex-grow:1}.wp-block-columns:not(.is-not-stacked-on-mobile)>.wp-block-column[style*=flex-basis]{flex-grow:0}}.wp-block-columns.is-not-stacked-on-mobile{flex-wrap:nowrap!important}.wp-block-columns.is-not-stacked-on-mobile>.wp-block-column{flex-basis:0;flex-grow:1}.wp-block-columns.is-not-stacked-on-mobile>.wp-block-column[style*=flex-basis]{flex-grow:0}:where(.wp-block-columns){margin-bottom:1.75em}:where(.wp-block-columns.has-background){padding:1.25em 2.375em}.wp-block-column{flex-grow:1;min-width:0;overflow-wrap:break-word;word-break:break-word}.wp-block-column.is-vertically-aligned-top{align-self:flex-start}.wp-block-column.is-vertically-aligned-center{align-self:center}.wp-block-column.is-vertically-aligned-bottom{align-self:flex-end}.wp-block-column.is-vertically-aligned-stretch{align-self:stretch}.wp-block-column.is-vertically-aligned-bottom,.wp-block-column.is-vertically-aligned-center,.wp-block-column.is-vertically-aligned-top{width:100%}
+/*# sourceURL=https://cmutschler.de/wp-includes/blocks/columns/style.min.css */
+</style>
+
+<style id="classic-theme-styles-inline-css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+
+<style id="global-styles-inline-css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:where(body) { margin: 0; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+<link rel="stylesheet" id="better-recent-comments-css" href="https://cmutschler.de/wp-content/plugins/better-recent-comments/assets/css/better-recent-comments.min.css?ver=7.0" media="all">
+<link rel="stylesheet" id="plyr-css-css" href="https://cmutschler.de/wp-content/plugins/easy-video-player/lib/plyr.css?ver=7.0" media="all">
+<link rel="stylesheet" id="bg-shce-genericons-css" href="https://cmutschler.de/wp-content/plugins/show-hidecollapse-expand/assets/css/genericons/genericons.css?ver=7.0" media="all">
+<link rel="stylesheet" id="bg-show-hide-css" href="https://cmutschler.de/wp-content/plugins/show-hidecollapse-expand/assets/css/bg-show-hide.css?ver=7.0" media="all">
+<link rel="stylesheet" id="sm-style-css" href="https://cmutschler.de/wp-content/plugins/wp-show-more/wpsm-style.css?ver=7.0" media="all">
+<link rel="stylesheet" id="sinatra-styles-css" href="https://cmutschler.de/wp-content/themes/sinatra/assets/css/style.min.css?ver=1.3" media="all">
+<link rel="stylesheet" id="sinatra-dynamic-styles-css" href="https://cmutschler.de/wp-content/uploads/sinatra/dynamic-styles.css?ver=1780693444" media="all">
+<link rel="stylesheet" id="simple-social-icons-font-css" href="https://cmutschler.de/wp-content/plugins/simple-social-icons/css/style.css?ver=4.0.0" media="all">
+<link rel="stylesheet" id="tablepress-default-css" href="https://cmutschler.de/wp-content/tablepress-combined.min.css?ver=96" media="all">
+<link rel="stylesheet" id="popup-maker-site-css" href="//cmutschler.de/wp-content/uploads/pum/pum-site-styles.css?generated=1755151475&amp;ver=1.22.0" media="all">
+<link rel="stylesheet" id="jquery-lazyloadxt-spinner-css-css" href="//cmutschler.de/wp-content/plugins/a3-lazy-load/assets/css/jquery.lazyloadxt.spinner.css?ver=7.0" media="all">
+<script id="jquery-core-js" src="https://cmutschler.de/wp-includes/js/jquery/jquery.min.js?ver=3.7.1"></script>
+<script id="jquery-migrate-js" src="https://cmutschler.de/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1"></script>
+<script id="plyr-js-js-extra">
+var easy_video_player = {"plyr_iconUrl":"https://cmutschler.de/wp-content/plugins/easy-video-player/lib/plyr.svg","plyr_blankVideo":"https://cmutschler.de/wp-content/plugins/easy-video-player/lib/blank.mp4"};
+//# sourceURL=plyr-js-js-extra
+</script>
+<script id="plyr-js-js" src="https://cmutschler.de/wp-content/plugins/easy-video-player/lib/plyr.js?ver=7.0"></script>
+<link rel="https://api.w.org/" href="https://cmutschler.de/wp-json/"><link rel="alternate" title="JSON" type="application/json" href="https://cmutschler.de/wp-json/wp/v2/pages/2356"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://cmutschler.de/xmlrpc.php?rsd">
+<meta name="generator" content="WordPress 7.0">
+<link rel="canonical" href="https://cmutschler.de/reinforcement-learning-fau2022">
+<link rel="shortlink" href="https://cmutschler.de/?p=2356">
+<meta name="tec-api-version" content="v1"><meta name="tec-api-origin" content="https://cmutschler.de"><link rel="alternate" href="https://cmutschler.de/wp-json/tribe/events/v1/"><meta name="theme-color" content="#1df900"><link rel="icon" href="https://cmutschler.de/wp-content/uploads/2026/06/cropped-cropped-mlps-logo_utn-scaled-1-32x32.png" sizes="32x32">
+<link rel="icon" href="https://cmutschler.de/wp-content/uploads/2026/06/cropped-cropped-mlps-logo_utn-scaled-1-192x192.png" sizes="192x192">
+<link rel="apple-touch-icon" href="https://cmutschler.de/wp-content/uploads/2026/06/cropped-cropped-mlps-logo_utn-scaled-1-180x180.png">
+<meta name="msapplication-TileImage" content="https://cmutschler.de/wp-content/uploads/2026/06/cropped-cropped-mlps-logo_utn-scaled-1-270x270.png">
+        <style type="text/css" id="rmwr-dynamic-css">
+        .read-link {
+            font-weight: normal;
+            color: #000000;
+            background: #ffffff;
+            padding: 0px;
+            border-bottom: 1px solid #000000;
+            -webkit-box-shadow: none !important;
+            box-shadow: none !important;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            transition: color 0.3s ease, background-color 0.3s ease;
+        }
+        
+        .read-link:hover,
+        .read-link:focus {
+            color: #191919;
+            text-decoration: none;
+            outline: 2px solid #000000;
+            outline-offset: 2px;
+        }
+        
+        .read-link:focus {
+            outline: 2px solid #000000;
+            outline-offset: 2px;
+        }
+        
+        .read_div {
+            margin-top: 10px;
+        }
+        
+        .read_div[data-animation="fade"] {
+            transition: opacity 0.3s ease;
+        }
+        
+        /* Print optimization (Free feature) */
+                @media print {
+            .read_div[style*="display: none"] {
+                display: block !important;
+            }
+            .read-link {
+                display: none !important;
+            }
+        }
+                </style>
+        <style id="core-block-supports-inline-css">
+.wp-container-core-columns-is-layout-8f761849{flex-wrap:nowrap;}
+/*# sourceURL=core-block-supports-inline-css */
+</style>
+<link rel="stylesheet" id="wps-footer-inline-popup-style-css" href="https://cmutschler.de/wp-content/plugins/inline-text-popup/src/style.css?ver=7.0" media="all">
+
+</head>
+
+<body class="wp-singular page-template-default page page-id-2356 wp-custom-logo wp-embed-responsive wp-theme-sinatra tribe-js sinatra-topbar__separators-regular sinatra-layout__fw-contained sinatra-header-layout-1 sinatra-menu-animation-underline sinatra-header__separators-none si-page-title-align-left sinatra-no-sidebar entry-media-hover-style-1 si-input-supported validate-comment-form si-menu-accessibility si-sticky-header" style="--si-sticky-h-offset: 121px; --si-screen-width: 1280px;">
+
+
+<div id="page" class="hfeed site">
+	<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+
+	
+	<header id="masthead" class="site-header" role="banner" itemtype="https://schema.org/WPHeader" itemscope="itemscope">
+		<div id="sinatra-header" data-scroll-listener="true" data-resize-listener="true">
+		<div id="sinatra-header-inner">
+	
+<div class="si-container si-header-container">
+
+	
+<div class="sinatra-logo si-header-element" itemtype="https://schema.org/Organization" itemscope="itemscope">
+	<div class="logo-inner"><a href="https://cmutschler.de/" rel="home" class="" itemprop="url">
+					<img src="https://cmutschler.de/wp-content/uploads/2026/06/cropped-mlps-logo_utn-scaled-1.png" alt="Machine Learning and Positioning Systems" width="2560" height="368" class="" itemprop="logo">
+				</a></div></div><!-- END .sinatra-logo -->
+
+<nav class="site-navigation main-navigation sinatra-primary-nav sinatra-nav si-header-element" role="navigation" itemtype="https://schema.org/SiteNavigationElement" itemscope="itemscope" aria-label="Site Navigation" aria-haspopup="true">
+<ul id="sinatra-primary-nav" class="menu"><li id="menu-item-3303" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-3303"><a href="https://cmutschler.de/"><span>Home</span></a></li>
+<li id="menu-item-3074" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3074" aria-haspopup="true"><a href="https://cmutschler.de/team"><span>Team</span><svg class="si-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path d="M24.958 10.483c-0.534-0.534-1.335-0.534-1.868 0l-7.074 7.074-7.074-7.074c-0.534-0.534-1.335-0.534-1.868 0s-0.534 1.335 0 1.868l8.008 8.008c0.267 0.267 0.667 0.4 0.934 0.4s0.667-0.133 0.934-0.4l8.008-8.008c0.534-0.534 0.534-1.335 0-1.868z"></path></svg></a>
+<ul class="sub-menu">
+	<li id="menu-item-3308" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3308"><a href="https://cmutschler.de/application-guidelines"><span>Application Guidelines</span></a></li>
+</ul>
+</li>
+<li id="menu-item-2970" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2970"><a href="https://cmutschler.de/publications"><span>Publications</span></a></li>
+<li id="menu-item-2639" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2639" aria-haspopup="true"><a href="#"><span>Projects</span><svg class="si-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path d="M24.958 10.483c-0.534-0.534-1.335-0.534-1.868 0l-7.074 7.074-7.074-7.074c-0.534-0.534-1.335-0.534-1.868 0s-0.534 1.335 0 1.868l8.008 8.008c0.267 0.267 0.667 0.4 0.934 0.4s0.667-0.133 0.934-0.4l8.008-8.008c0.534-0.534 0.534-1.335 0-1.868z"></path></svg></a>
+<ul class="sub-menu">
+	<li id="menu-item-1750" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1750"><a href="https://cmutschler.de/thesis"><span>Thesis</span></a></li>
+	<li id="menu-item-2642" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2642"><a href="https://cmutschler.de/projects"><span>Projects</span></a></li>
+	<li id="menu-item-848" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-848 opens-left" aria-haspopup="true"><a href="#"><span>Datasets</span><svg class="si-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path d="M24.958 10.483c-0.534-0.534-1.335-0.534-1.868 0l-7.074 7.074-7.074-7.074c-0.534-0.534-1.335-0.534-1.868 0s-0.534 1.335 0 1.868l8.008 8.008c0.267 0.267 0.667 0.4 0.934 0.4s0.667-0.133 0.934-0.4l8.008-8.008c0.534-0.534 0.534-1.335 0-1.868z"></path></svg></a>
+	<ul class="sub-menu">
+		<li id="menu-item-849" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-849"><a href="https://cmutschler.de/datasets/debs-2013-grand-challenge-soccer-monitoring"><span>Soccer Tracking Data</span></a></li>
+		<li id="menu-item-850" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-850"><a href="https://cmutschler.de/datasets/warehouse-dataset"><span>Warehouse Dataset</span></a></li>
+		<li id="menu-item-897" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-897"><a href="https://cmutschler.de/datasets/tool-tracking-dataset"><span>Tool Tracking Dataset</span></a></li>
+		<li id="menu-item-1058" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1058"><a href="https://cmutschler.de/datasets/onhw-online-handwriting-dataset"><span>OnHW: Online Handwriting Dataset</span></a></li>
+		<li id="menu-item-1651" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1651"><a href="https://cmutschler.de/datasets/channel-impulse-responses"><span>Channel Impulse Responses</span></a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li id="menu-item-577" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor menu-item-has-children menu-item-577 opens-left" aria-haspopup="true"><a href="#"><span>Teaching</span><svg class="si-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path d="M24.958 10.483c-0.534-0.534-1.335-0.534-1.868 0l-7.074 7.074-7.074-7.074c-0.534-0.534-1.335-0.534-1.868 0s-0.534 1.335 0 1.868l8.008 8.008c0.267 0.267 0.667 0.4 0.934 0.4s0.667-0.133 0.934-0.4l8.008-8.008c0.534-0.534 0.534-1.335 0-1.868z"></path></svg></a>
+<ul class="sub-menu">
+	<li id="menu-item-1897" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children menu-item-1897 opens-left" aria-haspopup="true"><a href="#"><span>Archive</span><svg class="si-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path d="M24.958 10.483c-0.534-0.534-1.335-0.534-1.868 0l-7.074 7.074-7.074-7.074c-0.534-0.534-1.335-0.534-1.868 0s-0.534 1.335 0 1.868l8.008 8.008c0.267 0.267 0.667 0.4 0.934 0.4s0.667-0.133 0.934-0.4l8.008-8.008c0.534-0.534 0.534-1.335 0-1.868z"></path></svg></a>
+	<ul class="sub-menu">
+		<li id="menu-item-2926" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2926"><a href="https://cmutschler.de/rl"><span>RL@FAU2025</span></a></li>
+		<li id="menu-item-2826" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2826"><a href="https://cmutschler.de/reinforcement-learning-fau2024"><span>RL@FAU2024</span></a></li>
+		<li id="menu-item-2693" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2693"><a href="https://cmutschler.de/reinforcement-learning-fau2023"><span>RL@FAU2023</span></a></li>
+		<li id="menu-item-2369" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-2356 current_page_item menu-item-2369"><a href="https://cmutschler.de/reinforcement-learning-fau2022" aria-current="page"><span>RL@FAU2022</span></a></li>
+		<li id="menu-item-1909" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1909"><a href="https://cmutschler.de/reinforcement-learning-fau2021"><span>RL@FAU2021</span></a></li>
+		<li id="menu-item-415" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-415"><a href="https://cmutschler.de/reinforcement-learning-lmu2020"><span>RL@LMU2020</span></a></li>
+		<li id="menu-item-1015" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1015"><a href="https://cmutschler.de/datafest-tool-tracking-with-machine-learning"><span>DataFest: Tool-Tracking with Machine Learning</span></a></li>
+	</ul>
+</li>
+</ul>
+</li>
+</ul></nav><!-- END .sinatra-nav -->
+<div class="si-header-widgets si-header-element sinatra-widget-location-right"></div><!-- END .si-header-widgets -->
+	<span class="si-header-element si-mobile-nav">
+				<button class="si-hamburger hamburger--spin si-hamburger-sinatra-primary-nav" aria-label="Menu" aria-controls="sinatra-primary-nav" type="button">
+
+			
+			<span class="hamburger-box">
+				<span class="hamburger-inner"></span>
+			</span>
+
+		</button>
+			</span>
+
+</div><!-- END .si-container -->
+	</div><!-- END #sinatra-header-inner -->
+	<div id="si-sticky-placeholder" style="height: 100.984px;"></div></div><!-- END #sinatra-header -->
+		
+<div class="page-header si-has-page-title">
+	<div class="si-container">
+
+	
+	
+		<div class="si-page-header-wrapper">
+
+			<div class="si-page-header-title">
+				<h1 class="page-title" itemprop="headline">Reinforcement Learning @FAU2022</h1>			</div>
+
+			
+					</div>
+
+	
+	
+	</div>
+</div>
+	</header><!-- #masthead .site-header -->
+
+	
+		<div id="main" class="site-main">
+
+		
+<div class="si-container">
+
+	<div id="primary" class="content-area">
+
+		
+		<main id="content" class="site-content" role="main" itemtype="http://schema.org/WebPageElement" itemprop="mainContentOfPage">
+
+			
+<article id="post-2356" class="post-2356 page type-page status-publish has-post-thumbnail hentry" itemscope="" itemtype="https://schema.org/CreativeWork">
+
+<div class="post-thumb entry-media thumbnail"><img width="1280" height="198" src="https://cmutschler.de/wp-content/uploads/2020/04/maze-2264-e1586505237143.jpg" data-lazy-type="image" data-src="https://cmutschler.de/wp-content/uploads/2020/04/maze-2264-e1586505237143.jpg" class="lazy-hidden attachment-full size-full wp-post-image" alt="Reinforcement Learning @FAU2022" data-srcset="" srcset="https://cmutschler.de/wp-content/uploads/2020/04/maze-2264-e1586505237143.jpg 1280w, https://cmutschler.de/wp-content/uploads/2020/04/maze-2264-e1586505237143-300x46.jpg 300w, https://cmutschler.de/wp-content/uploads/2020/04/maze-2264-e1586505237143-1024x158.jpg 1024w, https://cmutschler.de/wp-content/uploads/2020/04/maze-2264-e1586505237143-768x119.jpg 768w"><noscript><img width="1280" height="198" src="https://cmutschler.de/wp-content/uploads/2020/04/maze-2264-e1586505237143.jpg" class="attachment-full size-full wp-post-image" alt="Reinforcement Learning @FAU2022" /></noscript></div>
+<div class="entry-content si-entry">
+	
+<p style="text-align: justify;">Reinforcement Learning (RL) is an area of Machine Learning that has recently made large advances and has been publicly visible by reaching and surpassing human skill levels in games like Go and Starcraft. These successes show that RL has the potential to transform many areas of research and industry by automatizing the development of processes that once needed to be engineered explicitly.</p>
+<p style="text-align: justify;">In contrast to other machine learning paradigms, which require the presence of (labeled or unlabeled) data, RL considers an agent that takes actions in an environment and learns from resulting feedback. The agent maximizes a reward signal that it receives for desirable outcomes, while at the same time trying to explore the world in which it operates to find yet unknown, potentially more rewarding action sequences–a dilemma known as the exploration-exploitation tradeoff. Recent advances in machine learning based on deep learning have made RL methods particularly powerful since they allow for agents with particularly well performing models of the world.</p>
+
+
+
+<h2 class="wp-block-heading">Lecturers &amp; Course Instructors</h2>
+
+
+
+<h2 class="wp-block-heading"><p style="text-align: justify;"></p></h2>
+
+
+
+<div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-8f761849 wp-block-columns-is-layout-flex">
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:100%">
+<div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-8f761849 wp-block-columns-is-layout-flex">
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow"><div class="wp-block-image is-style-rounded">
+<figure class="aligncenter size-full is-resized"><img decoding="async" src="//cmutschler.de/wp-content/plugins/a3-lazy-load/assets/images/lazy_placeholder.gif" data-lazy-type="image" data-src="https://cmutschler.de/wp-content/uploads/2022/04/mutschler.png" alt="" class="lazy-hidden wp-image-2428" style="width:181px;height:179px" width="181" height="179"><noscript><img decoding="async" src="https://cmutschler.de/wp-content/uploads/2022/04/mutschler.png" alt="" class="wp-image-2428" style="width:181px;height:179px" width="181" height="179"/></noscript><figcaption class="wp-element-caption"><a href="mailto:christopher.mutschler@iis.fraunhofer.de">Christopher Mutschler</a><br>(course instructor)</figcaption></figure>
+</div></div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow"><div class="wp-block-image is-style-rounded">
+<figure class="aligncenter size-large is-resized"><img decoding="async" src="//cmutschler.de/wp-content/plugins/a3-lazy-load/assets/images/lazy_placeholder.gif" data-lazy-type="image" data-src="https://cmutschler.de/wp-content/uploads/2022/04/rietsch-edited.png" alt="" class="lazy-hidden wp-image-2423" style="width:181px;height:179px" width="181" height="179"><noscript><img decoding="async" src="https://cmutschler.de/wp-content/uploads/2022/04/rietsch-edited.png" alt="" class="wp-image-2423" style="width:181px;height:179px" width="181" height="179"/></noscript><figcaption class="wp-element-caption"><a href="mailto:sebastian.rietsch@iis.fraunhofer.de">Sebastian Rietsch</a><br>(teaching assistant / exercises)</figcaption></figure>
+</div></div>
+</div>
+</div>
+</div>
+
+
+
+<p class="wp-block-paragraph">The lectures will be recorded and provided on YouTube before the lecture slot. The lecture slot can be used as a consultation hour and if you give me a short ping we can organise an ad-hoc zoom meeting. The Q&amp;A session for the lecture content will take place at the beginning of the exercise session.</p>
+
+
+
+<h2 class="wp-block-heading">Course Material</h2>
+
+
+
+<p>We compiled a YouTube playlist for this summer term <a href="https://www.youtube.com/playlist?list=PLmmS6L8GBdcfwKPlNPWDkxyDicLKhUoQe" target="_blank" rel="noopener">here</a>. However, you can also access the videos directly below, or if you are curious, you can have a look on the <a href="https://cmutschler.de/reinforcement-learning-fau2021" data-type="page" data-id="1899">previous year’s edition</a> as we will only occasionally record new content. However, exercises will change a bit.</p>
+<p>&nbsp;</p>
+<table style="width: 100%; border-collapse: collapse; height: 1232px;">
+<thead>
+<tr style="height: 22px;">
+<td style="width: 7.87878787878788%; height: 22px;">&nbsp;</td>
+<td style="width: 46.515151515151516%; height: 22px;">Topic</td>
+<td style="width: 12.316017316017316%; text-align: center; height: 22px;">Video</td>
+<td style="width: 13.29004329004329%; text-align: center; height: 22px;">Duration</td>
+<td style="width: 20%; text-align: center; height: 22px;">Material</td>
+</tr>
+</thead>
+<tbody>
+<tr style="height: 22px;">
+<td style="height: 22px; width: 66.70995670995671%;" colspan="3"><em><strong>28.04.2022: Lecture 1: Introduction to Reinforcement Learning</strong></em><em><strong><br></strong></em></td>
+<td style="width: 13.29004329004329%; text-align: center; height: 22px;">&nbsp;</td>
+<td style="width: 20%; height: 22px;"><em><strong>&nbsp;</strong></em></td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 7.87878787878788%; height: 22px;">1.00/01</td>
+<td style="width: 46.515151515151516%; height: 22px;">Opening Remarks &amp; Introduction to RL</td>
+<td style="width: 12.316017316017316%; text-align: center; height: 22px;">live/zoom</td>
+<td style="width: 13.29004329004329%; text-align: center; height: 22px;">–</td>
+<td style="width: 20%; text-align: center; height: 22px;"><a href="http://download.cmutschler.de/lectures/FAU_RL_2022/slides/1-01_02_Remarks+Intro_RL.pdf">slides (pdf)</a></td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 7.87878787878788%; height: 22px;">1.02</td>
+<td style="width: 46.515151515151516%; height: 22px;">Markov Decision Processes</td>
+<td style="width: 12.316017316017316%; text-align: center; height: 22px;"><a href="https://youtu.be/JeDY8uECPgk">link</a></td>
+<td style="width: 13.29004329004329%; text-align: center; height: 22px;">37:49</td>
+<td style="width: 20%; text-align: center; height: 22px;"><a href="http://download.cmutschler.de/lectures/FAU_RL_2021/slides/1-02_MDPs.pdf">slides (pdf)</a></td>
+</tr>
+<tr style="height: 22px;">
+<td style="height: 22px; width: 66.70995670995671%;" colspan="3"><em><strong>05.05.2022:</strong></em><em><strong> Q&amp;A on Lecture 2: Dynamic Programming (</strong></em><a href="https://download.cmutschler.de/lectures/FAU_RL_2022/slides/Q&amp;A_2022-05-05.pdf"><em><strong>slides</strong></em></a>, <a href="https://owncloud.fraunhofer.de/index.php/s/Q2HKcgj69i4Ki7R"><em><strong>video</strong></em></a>)<em><strong><br></strong></em></td>
+<td style="width: 13.29004329004329%; text-align: center; height: 22px;"><em><strong>&nbsp;1:47:05</strong></em></td>
+<td style="width: 20%; height: 22px;"><em><strong>&nbsp;</strong></em></td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 7.87878787878788%; height: 22px;">2.01</td>
+<td style="width: 46.515151515151516%; height: 22px;">Introduction to Dynamic Programming</td>
+<td style="width: 12.316017316017316%; text-align: center; height: 22px;"><a href="https://youtu.be/NNbSWM_1css">link</a></td>
+<td style="width: 13.29004329004329%; text-align: center; height: 22px;">24:48</td>
+<td style="width: 20%; text-align: center; height: 22px;"><a href="http://download.cmutschler.de/lectures/FAU_RL_2021/slides/2-01_Dynamic_Programming_Intro.pdf">slides (pdf)</a></td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 7.87878787878788%; height: 22px;">2.02</td>
+<td style="width: 46.515151515151516%; height: 22px;">Dynamic Programming: Value Iteration</td>
+<td style="width: 12.316017316017316%; text-align: center; height: 22px;"><a href="https://youtu.be/VQUwgVLlVvM">link</a></td>
+<td style="width: 13.29004329004329%; text-align: center; height: 22px;">28:14</td>
+<td style="width: 20%; text-align: center; height: 22px;"><a href="http://download.cmutschler.de/lectures/FAU_RL_2021/slides/2-02_DP_Value_Iteration.pdf">slides (pdf)</a></td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 7.87878787878788%; height: 22px;">2.03</td>
+<td style="width: 46.515151515151516%; height: 22px;">Dynamic Programming: Policy Iteration</td>
+<td style="width: 12.316017316017316%; text-align: center; height: 22px;"><a href="https://youtu.be/8XA6AlNc1Ac">link</a></td>
+<td style="width: 13.29004329004329%; text-align: center; height: 22px;">25:45</td>
+<td style="width: 20%; text-align: center; height: 22px;"><a href="http://download.cmutschler.de/lectures/FAU_RL_2021/slides/2-03_DP_Policy_Iteration.pdf">slides (pdf)</a></td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 7.87878787878788%; height: 22px;">2.04</td>
+<td style="width: 46.515151515151516%; height: 22px;">Summary</td>
+<td style="width: 12.316017316017316%; text-align: center; height: 22px;"><a href="https://youtu.be/Xt3rPwfqzF4">link</a></td>
+<td style="width: 13.29004329004329%; text-align: center; height: 22px;">12:03</td>
+<td style="width: 20%; text-align: center; height: 22px;"><a href="http://download.cmutschler.de/lectures/FAU_RL_2021/slides/2-04_Summary.pdf">slides (pdf)</a></td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 7.87878787878788%; height: 22px;">2.05</td>
+<td style="width: 46.515151515151516%; height: 22px;">Hands-On: DP on Frozen Lake</td>
+<td style="width: 12.316017316017316%; text-align: center; height: 22px;"><a href="https://www.youtube.com/watch?v=-iiXtQm6F9E">link</a></td>
+<td style="width: 13.29004329004329%; text-align: center; height: 22px;">16:15</td>
+<td style="width: 20%; text-align: center; height: 22px;"><a href="http://download.cmutschler.de/lectures/FAU_RL_2021/slides/2-05_HandsOn_DP_FrozenLake.zip">code (zip)</a></td>
+</tr>
+<tr style="height: 22px;">
+<td style="height: 22px; width: 66.70995670995671%;" colspan="3"><em><strong>12.05.2022:</strong></em><em><strong> Q&amp;A on Lecture 3: Model-free Prediction (<a href="https://download.cmutschler.de/lectures/FAU_RL_2022/slides/Q&amp;A_2022-05-12.pdf">slides</a>, <a href="https://owncloud.fraunhofer.de/index.php/s/FeUtcABjLeFcEMf/download">video</a>)</strong></em><em><strong><br></strong></em></td>
+<td style="width: 13.29004329004329%; text-align: center; height: 22px;"><em><strong>&nbsp;1:39:06</strong></em></td>
+<td style="width: 20%; height: 22px;"><em><strong>&nbsp;</strong></em></td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 7.87878787878788%; height: 22px;">3.01</td>
+<td style="width: 46.515151515151516%; height: 22px;">Introduction to Model-free Reinforcement Learning</td>
+<td style="width: 12.316017316017316%; text-align: center; height: 22px;"><a href="https://www.youtube.com/watch?v=n-6FwD37N-0">link</a></td>
+<td style="width: 13.29004329004329%; text-align: center; height: 22px;">7:45</td>
+<td style="width: 20%; text-align: center; height: 22px;"><a href="http://download.cmutschler.de/lectures/FAU_RL_2021/slides/3-01_Intro_to_Model-free_RL.pdf">slides (pdf)</a></td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 7.87878787878788%; height: 22px;">3.02</td>
+<td style="width: 46.515151515151516%; height: 22px;">Model-free Prediction with Monte Carlo</td>
+<td style="width: 12.316017316017316%; text-align: center; height: 22px;"><a href="https://www.youtube.com/watch?v=cby-Zs5H4xA">link</a></td>
+<td style="width: 13.29004329004329%; text-align: center; height: 22px;">31:19</td>
+<td style="width: 20%; text-align: center; height: 22px;"><a href="http://download.cmutschler.de/lectures/FAU_RL_2021/slides/3-02_Model-free_Prediction_MC.pdf">slides (pdf)</a></td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 7.87878787878788%; height: 22px;">3.03</td>
+<td style="width: 46.515151515151516%; height: 22px;">Model-free Prediction with Time-Difference Learning</td>
+<td style="width: 12.316017316017316%; text-align: center; height: 22px;"><a href="https://www.youtube.com/watch?v=ues6ynwomCY">link</a></td>
+<td style="width: 13.29004329004329%; text-align: center; height: 22px;">47:49</td>
+<td style="width: 20%; text-align: center; height: 22px;"><a href="http://download.cmutschler.de/lectures/FAU_RL_2021/slides/3-03_Model-free_Prediction_TD.pdf">slides (pdf)</a></td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 7.87878787878788%; height: 22px;">3.04</td>
+<td style="width: 46.515151515151516%; height: 22px;">Hands-On: TD Learning on Frozen Lake</td>
+<td style="width: 12.316017316017316%; text-align: center; height: 22px;"><a href="https://youtu.be/lDKAWswqkgU">link</a></td>
+<td style="width: 13.29004329004329%; text-align: center; height: 22px;">12:13</td>
+<td style="width: 20%; text-align: center; height: 22px;"><a href="http://download.cmutschler.de/lectures/FAU_RL_2021/slides/3-04_HandsOn_TD_FrozenLake.zip">code (zip)</a></td>
+</tr>
+<tr style="height: 22px;">
+<td style="height: 22px; width: 66.70995670995671%;" colspan="3"><em><strong>19.05.2022: Q&amp;A on Lecture 4: Model-free Control (<a href="https://download.cmutschler.de/lectures/FAU_RL_2022/slides/Q&amp;A_2022-05-19.pdf">slides</a>, <a href="https://owncloud.fraunhofer.de/index.php/s/pNeQzsFZWFfWDga">video</a>)</strong></em><em><strong><br></strong></em></td>
+<td style="width: 13.29004329004329%; text-align: center; height: 22px;"><em><strong>&nbsp;1:51:17</strong></em></td>
+<td style="width: 20%; height: 22px;"><em><strong>&nbsp;</strong></em></td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 7.87878787878788%; height: 22px;">4.01</td>
+<td style="width: 46.515151515151516%; height: 22px;">Model-free Control</td>
+<td style="width: 12.316017316017316%; text-align: center; height: 22px;"><a href="https://www.youtube.com/watch?v=Ps1S2kmBq10">link</a></td>
+<td style="width: 13.29004329004329%; text-align: center; height: 22px;">58:33</td>
+<td style="width: 20%; text-align: center; height: 22px;"><a href="http://download.cmutschler.de/lectures/FAU_RL_2021/slides/4-01_Model-free_Control.pdf">slides (pdf)</a></td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 7.87878787878788%; height: 22px;">4.02</td>
+<td style="width: 46.515151515151516%; height: 22px;">Hands-On: OpenAI Gym Intro</td>
+<td style="width: 12.316017316017316%; text-align: center; height: 22px;"><a href="https://www.youtube.com/watch?v=MadIKPKFP6k">link</a></td>
+<td style="width: 13.29004329004329%; text-align: center; height: 22px;">&nbsp;14:37</td>
+<td style="width: 20%; text-align: center; height: 22px;"><a href="http://download.cmutschler.de/lectures/FAU_RL_2021/slides/4-02_IntroGym.zip">code (zip)</a></td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 7.87878787878788%; height: 22px;">4.03</td>
+<td style="width: 46.515151515151516%; height: 22px;">Hands-On: Q-Learning on Frozen lake</td>
+<td style="width: 12.316017316017316%; text-align: center; height: 22px;"><a href="https://youtu.be/WLOUElrYvyo">link</a></td>
+<td style="width: 13.29004329004329%; text-align: center; height: 22px;">&nbsp;15:15</td>
+<td style="width: 20%; text-align: center; height: 22px;"><a href="http://download.cmutschler.de/lectures/FAU_RL_2021/slides/4-03_HandsOn_Q-Learning_FrozenLake.zip">code (zip)</a></td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 7.87878787878788%; height: 22px;">4.04</td>
+<td style="width: 46.515151515151516%; height: 22px;">Summary on Model-free Reinforcement Learning</td>
+<td style="width: 12.316017316017316%; text-align: center; height: 22px;"><a href="https://www.youtube.com/watch?v=xYc32nqmwqs">link</a></td>
+<td style="width: 13.29004329004329%; text-align: center; height: 22px;">22:52</td>
+<td style="width: 20%; text-align: center; height: 22px;"><a href="http://download.cmutschler.de/lectures/FAU_RL_2021/slides/4-04_Model-free_RL_Summary.pdf">slides (pdf)</a></td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 100%; text-align: left; height: 22px;" colspan="5"><em><strong>26.05.2021: Holiday/Vacation</strong></em></td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 66.70995670995671%; height: 22px;" colspan="3"><b style="font-style: italic;">02.06.2022: Q&amp;A on Lecture 5: Value Function Approximation<em><strong> (<a href="https://download.cmutschler.de/lectures/FAU_RL_2022/slides/Q&amp;A_2022-06-02.pdf">slides</a>, <a href="https://owncloud.fraunhofer.de/index.php/s/7ObneDLO58WVb2r">video</a>)</strong></em></b><b style="font-style: italic;"><br></b></td>
+<td style="width: 13.29004329004329%; text-align: center; height: 22px;"><b style="font-style: italic;">2:04:39</b></td>
+<td style="width: 20%; height: 22px;"><b style="font-style: italic;">&nbsp;</b></td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 7.87878787878788%; height: 22px;">5.01</td>
+<td style="width: 46.515151515151516%; height: 22px;">Value Function Approximation</td>
+<td style="width: 12.316017316017316%; text-align: center; height: 22px;"><a href="https://youtu.be/ZhosjIHv_lw">link</a></td>
+<td style="width: 13.29004329004329%; text-align: center; height: 22px;">14:11</td>
+<td style="width: 20%; text-align: center; height: 22px;"><a href="http://download.cmutschler.de/lectures/FAU_RL_2021/slides/5-01_Value_Function_Approximation.pdf">slides (pdf)</a></td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 7.87878787878788%; height: 22px;">5.02</td>
+<td style="width: 46.515151515151516%; height: 22px;">Linear Value Function Approximation</td>
+<td style="width: 12.316017316017316%; text-align: center; height: 22px;"><a href="https://youtu.be/TpXMBBDzhx4">link</a></td>
+<td style="width: 13.29004329004329%; text-align: center; height: 22px;">34:26</td>
+<td style="width: 20%; text-align: center; height: 22px;"><a href="http://download.cmutschler.de/lectures/FAU_RL_2021/slides/5-02_Linear_Function_Approximation.pdf">slides (pdf)</a></td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 7.87878787878788%; height: 22px;">5.03</td>
+<td style="width: 46.515151515151516%; height: 22px;">Deep Q-Networks (error on slide #15 corrected in pdf)</td>
+<td style="width: 12.316017316017316%; text-align: center; height: 22px;"><a href="https://youtu.be/Ukrq2inknEA">link</a></td>
+<td style="width: 13.29004329004329%; text-align: center; height: 22px;">44:13</td>
+<td style="width: 20%; text-align: center; height: 22px;"><a href="http://download.cmutschler.de/lectures/FAU_RL_2021/slides/5-03_DQNs.pdf">slides (pdf)</a></td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 7.87878787878788%; height: 22px;">5.04</td>
+<td style="width: 46.515151515151516%; height: 22px;">Hands-On: DQN on Cartpole</td>
+<td style="width: 12.316017316017316%; text-align: center; height: 22px;"><a href="https://youtu.be/MvGr5iXbgIU">link</a></td>
+<td style="width: 13.29004329004329%; text-align: center; height: 22px;">&nbsp;22:51</td>
+<td style="width: 20%; text-align: center; height: 22px;"><a href="http://download.cmutschler.de/lectures/FAU_RL_2021/slides/5-04_HandsOn_DQN.zip">code (ipynb)</a></td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 7.87878787878788%; height: 22px;">5.05</td>
+<td style="width: 46.515151515151516%; height: 22px;">Summary</td>
+<td style="width: 12.316017316017316%; text-align: center; height: 22px;"><a href="https://youtu.be/BWoq8BTVcwg">link</a></td>
+<td style="width: 13.29004329004329%; text-align: center; height: 22px;">8:58</td>
+<td style="width: 20%; text-align: center; height: 22px;"><a href="http://download.cmutschler.de/lectures/FAU_RL_2021/slides/5-05_Summary.pdf">slides (pdf)</a></td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 66.70995670995671%; height: 22px;" colspan="3"><em><strong>09.06.2022:</strong></em><em><strong>&nbsp;Q&amp;A on Lecture 6: Policy-based RL – Part 1 (<a href="https://download.cmutschler.de/lectures/FAU_RL_2022/slides/Q&amp;A_2022-06-09.pdf">slides</a>, <a href="https://owncloud.fraunhofer.de/index.php/s/cttv8197P6yNTYl">video</a>)</strong></em><em><strong><br></strong></em></td>
+<td style="width: 13.29004329004329%; text-align: center; height: 22px;"><em><strong>2:03:41</strong></em></td>
+<td style="width: 20%; height: 22px;"><em><strong>&nbsp;</strong></em></td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 7.87878787878788%; height: 22px;">6.01</td>
+<td style="width: 46.515151515151516%; height: 22px;">Introduction to Policy-based RL</td>
+<td style="width: 12.316017316017316%; text-align: center; height: 22px;"><a href="https://youtu.be/6LcS-b_Z4lQ">link</a></td>
+<td style="width: 13.29004329004329%; text-align: center; height: 22px;">54:44</td>
+<td style="width: 20%; text-align: center; height: 22px;"><a href="http://download.cmutschler.de/lectures/FAU_RL_2021/slides/6-01_Policy-based_RL.pdf">slides (pdf)</a></td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 7.87878787878788%; height: 22px;">6.02</td>
+<td style="width: 46.515151515151516%; height: 22px;">Policy Gradients&nbsp;</td>
+<td style="width: 12.316017316017316%; text-align: center; height: 22px;"><a href="https://youtu.be/MLqLIJk4jco">link</a></td>
+<td style="width: 13.29004329004329%; text-align: center; height: 22px;">&nbsp;54:49</td>
+<td style="width: 20%; text-align: center; height: 22px;"><a href="http://download.cmutschler.de/lectures/FAU_RL_2021/slides/6-02_Policy_Gradients.pdf">slides (pdf)</a></td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 7.87878787878788%; height: 22px;">6.03</td>
+<td style="width: 46.515151515151516%; height: 22px;">Hands-On: Monte-Carlo Policy Gradient</td>
+<td style="width: 12.316017316017316%; text-align: center; height: 22px;"><a href="https://youtu.be/zpIvXGHVMyc">link</a></td>
+<td style="width: 13.29004329004329%; text-align: center; height: 22px;">14:08</td>
+<td style="width: 20%; text-align: center; height: 22px;"><a href="http://download.cmutschler.de/lectures/FAU_RL_2021/slides/6-03_Monte-Carlo_Policy_Gradient.zip">code (zip)</a></td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 100%; height: 22px;" colspan="5"><em><strong>16.06.2021:</strong></em><em><strong> Holiday/Vacation</strong></em></td>
+</tr>
+<tr style="height: 22px;">
+<td style="height: 22px; width: 66.70995670995671%;" colspan="3"><em><strong>23.06.2022: Q&amp;A on Lecture 7: Policy-based RL – Part 2 (<a href="https://download.cmutschler.de/lectures/FAU_RL_2022/slides/Q&amp;A_2022-06-23.pdf">slides</a>, <a href="https://owncloud.fraunhofer.de/index.php/s/F5wy696lj4UORlQ">video</a>)</strong></em><em><strong><br></strong></em></td>
+<td style="width: 13.29004329004329%; height: 22px; text-align: center;"><em><strong>2:01:05</strong></em></td>
+<td style="width: 20%; height: 22px;"><em><strong>&nbsp;</strong></em></td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 7.87878787878788%; height: 22px;">7.01</td>
+<td style="width: 46.515151515151516%; height: 22px;">Actor-Critics</td>
+<td style="width: 12.316017316017316%; text-align: center; height: 22px;"><a href="https://youtu.be/NM0xr3d3RUI">link</a></td>
+<td style="width: 13.29004329004329%; text-align: center; height: 22px;">21:48</td>
+<td style="width: 20%; text-align: center; height: 22px;"><a href="http://download.cmutschler.de/lectures/FAU_RL_2021/slides/7-01_Actor-Critics.pdf">slides (pdf)</a></td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 7.87878787878788%; height: 22px;">7.02</td>
+<td style="width: 46.515151515151516%; height: 22px;">Trust-Region Policy Optimization (TRPO)</td>
+<td style="width: 12.316017316017316%; text-align: center; height: 22px;"><a href="https://youtu.be/61lhJNDt2QY">link</a></td>
+<td style="width: 13.29004329004329%; text-align: center; height: 22px;">&nbsp;1:06:09</td>
+<td style="width: 20%; text-align: center; height: 22px;"><a href="http://download.cmutschler.de/lectures/FAU_RL_2021/slides/7-02_TRPO.pdf">slides (pdf)</a></td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 7.87878787878788%; height: 22px;">7.03</td>
+<td style="width: 46.515151515151516%; height: 22px;">Proximal Policy Optimization (PPO)</td>
+<td style="width: 12.316017316017316%; text-align: center; height: 22px;"><a href="https://youtu.be/46mgHcttnic">link</a></td>
+<td style="width: 13.29004329004329%; text-align: center; height: 22px;">&nbsp;17:50</td>
+<td style="width: 20%; text-align: center; height: 22px;"><a href="http://download.cmutschler.de/lectures/FAU_RL_2021/slides/7-03_PPO.pdf">slides (pdf)</a></td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 7.87878787878788%; height: 22px;">7.04</td>
+<td style="width: 46.515151515151516%; height: 22px;">Deep Deterministic Policy Gradient (DDPG)</td>
+<td style="width: 12.316017316017316%; text-align: center; height: 22px;"><a href="https://youtu.be/oqyr9rQC6y4">link</a></td>
+<td style="width: 13.29004329004329%; text-align: center; height: 22px;">&nbsp;15:18</td>
+<td style="width: 20%; text-align: center; height: 22px;"><a href="http://download.cmutschler.de/lectures/FAU_RL_2021/slides/7-04_DDPG.pdf">slides (pdf)</a></td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 66.70995670995671%; height: 22px;" colspan="3"><em><strong>30.06.2022:</strong></em><em><strong> Q&amp;A on Model-based RL – Part 1 (<a href="https://download.cmutschler.de/lectures/FAU_RL_2022/slides/Q&amp;A_2022-06-30.pdf">slides</a>, <a href="https://owncloud.fraunhofer.de/index.php/s/UDIDpp6vUDEJSk5">video</a>)</strong></em></td>
+<td style="width: 13.29004329004329%; text-align: center; height: 22px;">&nbsp;<strong><em>1:38:05</em></strong></td>
+<td style="width: 20%; text-align: center; height: 22px;">&nbsp;</td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 7.87878787878788%; height: 22px;">8.01&nbsp;</td>
+<td style="width: 46.515151515151516%; height: 22px;">Introduction to Model-based RL&nbsp;</td>
+<td style="width: 12.316017316017316%; text-align: center; height: 22px;"><a href="https://youtu.be/68J5B7FeiIU">link</a></td>
+<td style="width: 13.29004329004329%; text-align: center; height: 22px;">33:01</td>
+<td style="width: 20%; text-align: center; height: 22px;"><a href="http://download.cmutschler.de/lectures/FAU_RL_2021/slides/8-01_Introduction_to_Model-based_RL.pdf">slides (pdf)</a></td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 7.87878787878788%; height: 22px;">8.02</td>
+<td style="width: 46.515151515151516%; height: 22px;">Background Planning</td>
+<td style="width: 12.316017316017316%; text-align: center; height: 22px;"><a href="https://youtu.be/JLF7xTNxpew">link</a></td>
+<td style="width: 13.29004329004329%; text-align: center; height: 22px;">19:22</td>
+<td style="width: 20%; text-align: center; height: 22px;"><a href="http://download.cmutschler.de/lectures/FAU_RL_2021/slides/8-02_Background_Planning.pdf">slides (pdf)</a></td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 7.87878787878788%; height: 22px;">8.03</td>
+<td style="width: 46.515151515151516%; height: 22px;">Online Planning with Discrete Actions</td>
+<td style="width: 12.316017316017316%; text-align: center; height: 22px;"><a href="https://youtu.be/ImulHawPRlA">link</a></td>
+<td style="width: 13.29004329004329%; text-align: center; height: 22px;">45:42</td>
+<td style="width: 20%; text-align: center; height: 22px;"><a href="http://download.cmutschler.de/lectures/FAU_RL_2021/slides/8-03_Online_Planning_-_Discrete.pdf">slides (pdf)</a></td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 66.70995670995671%; height: 22px;" colspan="3"><em><strong>07.07.2022:</strong></em><em><strong> Q&amp;A on Model-based RL – Part 2 (<a href="https://download.cmutschler.de/lectures/FAU_RL_2022/slides/Q&amp;A_2022-07-07.pdf">slides</a>, <a href="https://owncloud.fraunhofer.de/index.php/s/QWqrhsnHWKpBGNx">video</a>)</strong></em></td>
+<td style="width: 13.29004329004329%; text-align: center; height: 22px;"><em><strong>1:08:05</strong></em></td>
+<td style="width: 20%; text-align: center; height: 22px;">&nbsp;</td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 7.87878787878788%; height: 22px;">9.01</td>
+<td style="width: 46.515151515151516%; height: 22px;">Online Planning with Continuous Actions</td>
+<td style="width: 12.316017316017316%; text-align: center; height: 22px;"><a href="https://youtu.be/QQKfL5aLOaQ">link</a></td>
+<td style="width: 13.29004329004329%; text-align: center; height: 22px;">22:09</td>
+<td style="width: 20%; text-align: center; height: 22px;"><a href="http://download.cmutschler.de/lectures/FAU_RL_2021/slides/9-01_Online_Planning_-_Continuous.pdf">slides (pdf)</a></td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 7.87878787878788%; height: 22px;">9.02</td>
+<td style="width: 46.515151515151516%; height: 22px;">Real-World Application: Uncertainty in Model-based RL</td>
+<td style="width: 12.316017316017316%; text-align: center; height: 22px;"><a href="https://youtu.be/eH9nAKP2ay0">link</a></td>
+<td style="width: 13.29004329004329%; text-align: center; height: 22px;">&nbsp;39:25</td>
+<td style="width: 20%; text-align: center; height: 22px;"><a href="http://download.cmutschler.de/lectures/FAU_RL_2021/slides/9-02_Uncertainty.pdf">slides (pdf)</a></td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 7.87878787878788%; height: 22px;">9.03</td>
+<td style="width: 46.515151515151516%; height: 22px;">Summary on Model-based RL</td>
+<td style="width: 12.316017316017316%; text-align: center; height: 22px;"><a href="https://youtu.be/vWqPoF4Coj4">link</a></td>
+<td style="width: 13.29004329004329%; text-align: center; height: 22px;">6:31</td>
+<td style="width: 20%; text-align: center; height: 22px;"><a href="http://download.cmutschler.de/lectures/FAU_RL_2021/slides/9-03_Summary.pdf">slides (pdf)</a></td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 66.70995670995671%; height: 22px;" colspan="3"><em><strong>1</strong></em><em><strong>4.07.2022: Q&amp;A on Exploration Strategies (<a href="https://download.cmutschler.de/lectures/FAU_RL_2022/slides/Q&amp;A_2022-07-14.pdf">slides</a>, <a href="https://owncloud.fraunhofer.de/index.php/s/SDDz5kacRBAMsPc">video</a>)</strong></em></td>
+<td style="width: 13.29004329004329%; text-align: center; height: 22px;"><em><strong>1:32:20</strong></em></td>
+<td style="width: 20%; text-align: center; height: 22px;">&nbsp;</td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 7.87878787878788%; height: 22px;">10.01</td>
+<td style="width: 46.515151515151516%; height: 22px;">Motivation, Multi-Armed Bandits, Regret</td>
+<td style="width: 12.316017316017316%; text-align: center; height: 22px;"><a href="https://youtu.be/JNfJayB5xxM">link</a></td>
+<td style="width: 13.29004329004329%; text-align: center; height: 22px;">33:45</td>
+<td style="width: 20%; text-align: center; height: 22px;"><a href="http://download.cmutschler.de/lectures/FAU_RL_2021/slides/10-01_Motivation_Bandits_Regret.pdf">slides (pdf)</a></td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 7.87878787878788%; height: 22px;">10.02&nbsp;</td>
+<td style="width: 46.515151515151516%; height: 22px;">Classic Exploration Strategies</td>
+<td style="width: 12.316017316017316%; text-align: center; height: 22px;"><a href="https://youtu.be/vgrlgMazQlo">link</a></td>
+<td style="width: 13.29004329004329%; text-align: center; height: 22px;">58:35</td>
+<td style="width: 20%; text-align: center; height: 22px;"><a href="http://download.cmutschler.de/lectures/FAU_RL_2021/slides/10-02_Classic_Exploration_Strategies.pdf">slides (pdf)</a></td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 66.70995670995671%; height: 22px;" colspan="3"><em><strong>21.07.2022:</strong></em><em><strong> Q&amp;A on Exploration in Deep RL (<a href="https://download.cmutschler.de/lectures/FAU_RL_2022/slides/Q&amp;A_2022-07-21.pdf">slides</a>, <a href="https://owncloud.fraunhofer.de/index.php/s/EPmtCNMTeJaKTJ9">video</a>)</strong></em></td>
+<td style="width: 13.29004329004329%; text-align: center; height: 22px;"><em><strong>2:07:43</strong></em></td>
+<td style="width: 20%; text-align: center; height: 22px;">&nbsp;</td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 7.87878787878788%; height: 22px;">11.01</td>
+<td style="width: 46.515151515151516%; height: 22px;">Count-based Exploration</td>
+<td style="width: 12.316017316017316%; text-align: center; height: 22px;"><a href="https://youtu.be/ouELz45pvIs">link</a></td>
+<td style="width: 13.29004329004329%; text-align: center; height: 22px;">32:32</td>
+<td style="width: 20%; text-align: center; height: 22px;"><a href="http://download.cmutschler.de/lectures/FAU_RL_2021/slides/11-01_DeepRL_Count-based.pdf">slides (pdf)</a></td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 7.87878787878788%; height: 22px;">11.02</td>
+<td style="width: 46.515151515151516%; height: 22px;">Prediction-based Exploration</td>
+<td style="width: 12.316017316017316%; text-align: center; height: 22px;"><a href="https://youtu.be/Yvz9miYOOFE">link</a></td>
+<td style="width: 13.29004329004329%; text-align: center; height: 22px;">56:25</td>
+<td style="width: 20%; text-align: center; height: 22px;"><a href="http://download.cmutschler.de/lectures/FAU_RL_2021/slides/11-02_DeepRL_Prediction-based.pdf">slides (pdf)</a></td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 7.87878787878788%; height: 22px;">11.03</td>
+<td style="width: 46.515151515151516%; height: 22px;">Memory-based Exploration</td>
+<td style="width: 12.316017316017316%; text-align: center; height: 22px;"><a href="https://youtu.be/g89shrS2yFA">link</a></td>
+<td style="width: 13.29004329004329%; text-align: center; height: 22px;">38:46</td>
+<td style="width: 20%; text-align: center; height: 22px;"><a href="http://download.cmutschler.de/lectures/FAU_RL_2021/slides/11-03_DeepRL_Memory-based.pdf">slides (pdf)</a></td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 66.70995670995671%; height: 22px;" colspan="3"><b style="font-style: italic;">28.07.2022:</b><b style="font-style: italic;"> Course Wrap-Up (<a href="https://owncloud.fraunhofer.de/index.php/s/FXxBs5ro6JkpwGi/download">slides</a>, <a href="https://owncloud.fraunhofer.de/index.php/s/pBbuyKBTqqhGj6F">video</a>)</b></td>
+<td style="width: 13.29004329004329%; text-align: center; height: 22px;"><span style="color: #999999;">&nbsp;</span></td>
+<td style="width: 20%; text-align: center; height: 22px;">&nbsp;</td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 7.87878787878788%; height: 22px;">&nbsp;</td>
+<td style="width: 46.515151515151516%; height: 22px;">Summary on Content</td>
+<td style="width: 12.316017316017316%; text-align: center; height: 22px;">&nbsp;</td>
+<td style="width: 13.29004329004329%; text-align: center; height: 22px;"><span style="color: #999999;">&nbsp;</span></td>
+<td style="width: 20%; text-align: center; height: 22px;"><span style="color: #999999;">&nbsp;</span></td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 7.87878787878788%; height: 22px;">&nbsp;</td>
+<td style="width: 46.515151515151516%; height: 22px;">Discussion of Course Evaluation Results</td>
+<td style="width: 12.316017316017316%; text-align: center; height: 22px;">&nbsp;</td>
+<td style="width: 13.29004329004329%; text-align: center; height: 22px;"><span style="color: #999999;">&nbsp;</span></td>
+<td style="width: 20%; text-align: center; height: 22px;"><span style="color: #999999;">&nbsp;</span></td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 7.87878787878788%; height: 22px;">&nbsp;</td>
+<td style="width: 46.515151515151516%; height: 22px;">Q&amp;A on the Exam</td>
+<td style="width: 12.316017316017316%; text-align: center; height: 22px;">&nbsp;</td>
+<td style="width: 13.29004329004329%; text-align: center; height: 22px;"><span style="color: #999999;">&nbsp;</span></td>
+<td style="width: 20%; text-align: center; height: 22px;"><span style="color: #999999;">&nbsp;</span></td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+
+
+
+<h2 class="wp-block-heading">Exercises</h2>
+
+
+
+<p>&nbsp;</p>
+<table style="border-collapse: collapse; width: 100%; height: 396px;">
+<tbody>
+<tr style="height: 22px;">
+<td style="width: 6.060606060606062%; height: 22px;">&nbsp;</td>
+<td style="width: 2.7326839826839833%; height: 22px;">#</td>
+<td style="width: 16.477272727272727%; height: 22px;">Topic</td>
+<td style="width: 16.63961038961039%; height: 22px;">Material</td>
+<td style="width: 8.08982683982684%; height: 22px;">Due Date</td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 6.060606060606062%; height: 24px;">28.04.2022</td>
+<td style="width: 2.7326839826839833%; height: 24px;">1</td>
+<td style="width: 16.477272727272727%; height: 24px;">Markov Decision Processes</td>
+<td style="width: 16.63961038961039%; height: 24px;"><a href="https://download.cmutschler.de/lectures/FAU_RL_2022/exercises/ex1/ex1.pdf" target="_blank" rel="noopener">ex1.pdf</a></td>
+<td style="width: 8.08982683982684%; height: 24px;">05.05.2022</td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 6.060606060606062%; height: 22px;">05.05.2022</td>
+<td style="width: 2.7326839826839833%; height: 22px;">2</td>
+<td style="width: 16.477272727272727%; height: 22px;">Dynamic Programming</td>
+<td style="width: 16.63961038961039%; height: 22px;"><a href="https://download.cmutschler.de/lectures/FAU_RL_2022/exercises/ex2/ex2.pdf">ex2.pdf</a> | <a href="https://download.cmutschler.de/lectures/FAU_RL_2022/exercises/ex2/ex2_skeleton.zip">ex2_skeleton.zip</a></td>
+<td style="width: 8.08982683982684%; height: 22px;">12.05.2022</td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 6.060606060606062%; height: 22px;">12.05.2022</td>
+<td style="width: 2.7326839826839833%; height: 22px;">3</td>
+<td style="width: 16.477272727272727%; height: 22px;">OpenAI Gym &amp; TD-Learning</td>
+<td style="width: 16.63961038961039%; height: 22px;"><a href="https://download.cmutschler.de/lectures/FAU_RL_2022/exercises/ex3/ex3.pdf">ex3.pdf</a> | <a href="https://download.cmutschler.de/lectures/FAU_RL_2022/exercises/ex3/ex3_skeleton.zip">ex3_skeleton.zip</a></td>
+<td style="width: 8.08982683982684%; height: 22px;">19.05.2022</td>
+</tr>
+<tr style="height: 22px;">
+<td style="height: 44px; width: 6.060606060606062%;">19.05.2022</td>
+<td style="width: 2.7326839826839833%; height: 44px;">4</td>
+<td style="width: 16.477272727272727%; height: 44px;">TD Control</td>
+<td style="width: 16.63961038961039%; height: 44px;"><a href="https://download.cmutschler.de/lectures/FAU_RL_2022/exercises/ex4/ex4.pdf">ex4.pdf</a> | <a href="https://download.cmutschler.de/lectures/FAU_RL_2022/exercises/ex4/ex4_skeleton.zip">ex4_skeleton.zip</a></td>
+<td style="width: 8.08982683982684%; height: 44px;">02.06.2022</td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 6.060606060606062%; height: 22px;">19.05.2022</td>
+<td style="width: 2.7326839826839833%; height: 22px;">5</td>
+<td style="width: 16.477272727272727%; height: 22px;">PyTorch</td>
+<td style="width: 16.63961038961039%; height: 22px;"><a href="https://download.cmutschler.de/lectures/FAU_RL_2022/exercises/ex5/ex5.pdf">ex5.pdf</a> | <a href="https://download.cmutschler.de/lectures/FAU_RL_2022/exercises/ex5/ex5_skeleton.zip">ex5_skeleton.zip</a></td>
+<td style="width: 8.08982683982684%; height: 22px;">02.06.2022</td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 6.060606060606062%; height: 22px;">26.05.2022</td>
+<td style="width: 43.93939393939394%; height: 22px; text-align: center;" colspan="4">no exercises / holiday</td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 6.060606060606062%; height: 22px;">02.06.2022</td>
+<td style="width: 2.7326839826839833%; height: 22px;">6</td>
+<td style="width: 16.477272727272727%; height: 22px;">DQNs v0.2 on Cartpole</td>
+<td style="width: 16.63961038961039%; height: 22px;"><a href="https://download.cmutschler.de/lectures/FAU_RL_2022/exercises/ex6/ex6.pdf">ex6.pdf</a> | <a href="https://download.cmutschler.de/lectures/FAU_RL_2022/exercises/ex6/ex6_skeleton.zip">ex6_skeleton.zip</a></td>
+<td style="width: 8.08982683982684%; height: 22px;">09.06.2022</td>
+</tr>
+<tr style="height: 22px;">
+<td style="height: 32px; width: 6.060606060606062%;">09.06.2022</td>
+<td style="width: 2.7326839826839833%; height: 32px;">7</td>
+<td style="width: 16.477272727272727%; height: 32px;">DDQNs on Atari</td>
+<td style="width: 16.63961038961039%; height: 32px;"><a href="https://download.cmutschler.de/lectures/FAU_RL_2022/exercises/ex7/ex7.pdf">ex7.pdf (Update)</a><a href="http://download.cmutschler.de/lectures/FAU_RL_2022/exercises/ex7/ex7.pdf">&nbsp;| </a><a href="https://download.cmutschler.de/lectures/FAU_RL_2022/exercises/ex7/ex7_skeleton.zip">ex7_skeleton.zip</a></td>
+<td style="width: 8.08982683982684%; height: 32px;">23.06.2022</td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 6.060606060606062%; height: 22px;">09.06.2022</td>
+<td style="width: 2.7326839826839833%; height: 22px;">8</td>
+<td style="width: 16.477272727272727%; height: 22px;">VPG</td>
+<td style="width: 16.63961038961039%; height: 22px;"><a href="https://download.cmutschler.de/lectures/FAU_RL_2022/exercises/ex8/ex8.pdf">ex8.pdf</a> | <a href="https://download.cmutschler.de/lectures/FAU_RL_2022/exercises/ex8/ex8_skeleton.zip">ex8_skeleton.zip</a></td>
+<td style="width: 8.08982683982684%; height: 22px;">23.06.2022</td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 6.060606060606062%; height: 22px;">16.06.2022</td>
+<td style="width: 43.93939393939394%; height: 22px; text-align: center;" colspan="4">no exercises / holiday</td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 6.060606060606062%; height: 10px;">23.06.2022</td>
+<td style="width: 2.7326839826839833%; height: 10px;">9</td>
+<td style="width: 16.477272727272727%; height: 10px;">A2C</td>
+<td style="width: 16.63961038961039%; height: 10px;"><a href="https://download.cmutschler.de/lectures/FAU_RL_2022/exercises/ex9/ex9.pdf">ex9.pdf</a> | <a href="https://download.cmutschler.de/lectures/FAU_RL_2022/exercises/ex9/ex9_skeleton.zip">ex9_skeleton.zip</a></td>
+<td style="width: 8.08982683982684%; height: 10px;">07.07.2022</td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 6.060606060606062%; height: 22px;">30.06.2022</td>
+<td style="width: 2.7326839826839833%; height: 22px;">10</td>
+<td style="width: 16.477272727272727%; height: 22px;">MCTS</td>
+<td style="width: 16.63961038961039%; height: 22px;"><a href="https://download.cmutschler.de/lectures/FAU_RL_2022/exercises/ex10/ex10.pdf">ex10.pdf</a> | <a href="https://download.cmutschler.de/lectures/FAU_RL_2022/exercises/ex10/ex10_skeleton.zip">ex10_skeleton.zip</a></td>
+<td style="width: 8.08982683982684%; height: 22px;">14.07.2022</td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 6.060606060606062%; height: 22px;">07.07.2022</td>
+<td style="width: 2.7326839826839833%; height: 22px;">&nbsp;</td>
+<td style="width: 16.477272727272727%; height: 22px;">&nbsp;</td>
+<td style="width: 16.63961038961039%; height: 22px;">&nbsp;</td>
+<td style="width: 8.08982683982684%; height: 22px;">&nbsp;</td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 6.060606060606062%; height: 22px;">14.07.2022</td>
+<td style="width: 2.7326839826839833%; height: 22px;">11</td>
+<td style="width: 16.477272727272727%; height: 22px;">Bandits</td>
+<td style="width: 16.63961038961039%; height: 22px;"><a href="https://download.cmutschler.de/lectures/FAU_RL_2022/exercises/ex11/ex11.pdf">ex11.pdf</a> | <a href="https://download.cmutschler.de/lectures/FAU_RL_2022/exercises/ex11/ex11_skeleton.zip">ex11_skeleton.zip</a></td>
+<td style="width: 8.08982683982684%; height: 22px;">21.07.2022</td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 6.060606060606062%; height: 22px;">21.07.2022</td>
+<td style="width: 2.7326839826839833%; height: 22px;">12</td>
+<td style="width: 16.477272727272727%; height: 22px;">RND &amp; ICM on MountainCar</td>
+<td style="width: 16.63961038961039%; height: 22px;"><a href="https://download.cmutschler.de/lectures/FAU_RL_2022/exercises/ex12/ex12.pdf">ex12.pdf</a> | <a href="https://download.cmutschler.de/lectures/FAU_RL_2022/exercises/ex12/ex12_skeleton.zip">ex12_skeleton.zip</a></td>
+<td style="width: 8.08982683982684%; height: 22px;">28.07.2022</td>
+</tr>
+<tr style="height: 22px;">
+<td style="width: 6.060606060606062%; height: 22px;">28.07.2022</td>
+<td style="width: 2.7326839826839833%; height: 22px;">&nbsp;</td>
+<td style="width: 16.477272727272727%; height: 22px;">&nbsp;</td>
+<td style="width: 16.63961038961039%; height: 22px;">&nbsp;</td>
+<td style="width: 8.08982683982684%; height: 22px;">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+
+
+
+<h2 class="wp-block-heading">Course Evaluation</h2>
+
+
+
+<p class="wp-block-paragraph">The evaluation of the lecture can be found <a href="https://download.cmutschler.de/lectures/FAU_RL_2022/SS22_Mutschler_22s-RL.pdf">here</a> and the evaluation of the exercises <a href="https://download.cmutschler.de/lectures/FAU_RL_2022/SS22_Mutschler_22s-RL-UE.pdf">here</a>.</p>
+
+
+
+<h2 class="wp-block-heading">Literature</h2>
+
+
+
+<ul class="wp-block-list">
+<li>Richard S. Sutton and Andrew G. Barto. 2018. Reinforcement Learning: An Introduction. A Bradford Book, Cambridge, MA, USA. [<a href="https://web.stanford.edu/class/psych209/Readings/SuttonBartoIPRLBook2ndEd.pdf" target="_blank" rel="noreferrer noopener">link</a>]</li>
+
+
+
+<li>Bellman, R.E. 1957. Dynamic Programming. Princeton University Press, Princeton, NJ. Republished 2003: Dover, ISBN 0-486-42809-5.</li>
+
+
+
+<li>UC Berkeley CS188: Intro to AI [<a href="http://ai.berkeley.edu/lecture_slides.html" target="_blank" rel="noreferrer noopener">link</a>]</li>
+
+
+
+<li>University College London Course on RL [<a href="http://www0.cs.ucl.ac.uk/staff/d.silver/web/Teaching.html" target="_blank" rel="noreferrer noopener">link</a>]</li>
+
+
+
+<li>Advanced Deep Learning and Reinforcement Learning (UCL + DeepMind) [<a href="https://github.com/enggen/DeepMind-Advanced-Deep-Learning-and-Reinforcement-Learning" target="_blank" rel="noreferrer noopener">link</a>]</li>
+
+
+
+<li>https://cs.stanford.edu/people/karpathy/reinforcejs/gridworld_dp.html</li>
+
+
+
+<li>https://cs.stanford.edu/people/karpathy/reinforcejs/gridworld_td.html</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">Interesting talks, articles, and blog-posts:</p>
+
+
+
+<ul class="wp-block-list">
+<li>Joelle Pineau: Reproducible, Reusable, and Robust Reinforcement Learning [<a href="https://www.youtube.com/watch?v=Kee4ch3miVA" target="_blank" rel="noreferrer noopener">youtube</a>]</li>
+
+
+
+<li>David Silver: AlphaGo, AlphaZero, and Deep Reinforcement Learning | AI Podcast #86 with Lex Fridman [<a href="https://www.youtube.com/watch?v=uPUEq8d73JI" target="_blank" rel="noreferrer noopener">youtube</a>]</li>
+
+
+
+<li>Technion Research: Why does reinforcement learning not work (for you)? [<a href="https://rlrl.net.technion.ac.il/2020/01/27/why-does-reinforcement-learning-not-work-for-you/">link</a>]</li>
+
+
+
+<li>RL algorithms quick overview [<a href="https://medium.com/@jonathan_hui/rl-reinforcement-learning-algorithms-quick-overview-6bf69736694d">link</a>]</li>
+</ul>
+
+
+
+<p class="wp-block-paragraph">Code examples and exercises:</p>
+
+
+
+<ul class="wp-block-list">
+<li>GitHub Repo of Denny Britz: https://github.com/dennybritz/reinforcement-learning/tree/master/DP</li>
+</ul>
+</div><!-- END .entry-content -->
+
+
+</article><!-- #post-2356 -->
+
+		</main><!-- #content .site-content -->
+
+		
+	</div><!-- #primary .content-area -->
+
+	
+</div><!-- END .si-container -->
+
+			
+	</div><!-- #main .site-main -->
+	
+	
+	
+	
+</div><!-- END #page -->
+
+<a href="#" id="si-scroll-top" class="si-smooth-scroll" title="Scroll to Top">
+	<span class="si-scroll-icon" aria-hidden="true">
+		<svg class="si-icon top-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path d="M24.958 18.491l-8.008-8.008c-0.534-0.534-1.335-0.534-1.868 0l-8.008 8.008c-0.534 0.534-0.534 1.335 0 1.868s1.335 0.534 1.868 0l7.074-7.074 7.074 7.074c0.267 0.267 0.667 0.4 0.934 0.4s0.667-0.133 0.934-0.4c0.534-0.534 0.534-1.335 0-1.868z"></path></svg>		<svg class="si-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path d="M24.958 18.491l-8.008-8.008c-0.534-0.534-1.335-0.534-1.868 0l-8.008 8.008c-0.534 0.534-0.534 1.335 0 1.868s1.335 0.534 1.868 0l7.074-7.074 7.074 7.074c0.267 0.267 0.667 0.4 0.934 0.4s0.667-0.133 0.934-0.4c0.534-0.534 0.534-1.335 0-1.868z"></path></svg>	</span>
+	<span class="screen-reader-text">Scroll to Top</span>
+</a><!-- END #sinatra-scroll-to-top -->
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/sinatra/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+		<script>
+		( function ( body ) {
+			'use strict';
+			body.className = body.className.replace( /\btribe-no-js\b/, 'tribe-js' );
+		} )( document.body );
+		</script>
+		<div id="pum-1127" role="dialog" aria-modal="false" class="pum pum-overlay pum-theme-475 pum-theme-lightbox popmake-overlay click_open" data-popmake="{&quot;id&quot;:1127,&quot;slug&quot;:&quot;twr-rtt&quot;,&quot;theme_id&quot;:475,&quot;cookies&quot;:[],&quot;triggers&quot;:[{&quot;type&quot;:&quot;click_open&quot;,&quot;settings&quot;:{&quot;extra_selectors&quot;:&quot;&quot;,&quot;cookie_name&quot;:null}}],&quot;mobile_disabled&quot;:null,&quot;tablet_disabled&quot;:null,&quot;meta&quot;:{&quot;display&quot;:{&quot;stackable&quot;:false,&quot;overlay_disabled&quot;:false,&quot;scrollable_content&quot;:false,&quot;disable_reposition&quot;:false,&quot;size&quot;:&quot;medium&quot;,&quot;responsive_min_width&quot;:&quot;0%&quot;,&quot;responsive_min_width_unit&quot;:false,&quot;responsive_max_width&quot;:&quot;100%&quot;,&quot;responsive_max_width_unit&quot;:false,&quot;custom_width&quot;:&quot;640px&quot;,&quot;custom_width_unit&quot;:false,&quot;custom_height&quot;:&quot;380px&quot;,&quot;custom_height_unit&quot;:false,&quot;custom_height_auto&quot;:false,&quot;location&quot;:&quot;center top&quot;,&quot;position_from_trigger&quot;:false,&quot;position_top&quot;:&quot;100&quot;,&quot;position_left&quot;:&quot;0&quot;,&quot;position_bottom&quot;:&quot;0&quot;,&quot;position_right&quot;:&quot;0&quot;,&quot;position_fixed&quot;:false,&quot;animation_type&quot;:&quot;fade&quot;,&quot;animation_speed&quot;:&quot;350&quot;,&quot;animation_origin&quot;:&quot;center top&quot;,&quot;overlay_zindex&quot;:false,&quot;zindex&quot;:&quot;1999999999&quot;},&quot;close&quot;:{&quot;text&quot;:&quot;&quot;,&quot;button_delay&quot;:&quot;0&quot;,&quot;overlay_click&quot;:false,&quot;esc_press&quot;:false,&quot;f4_press&quot;:false},&quot;click_open&quot;:[]}}">
+
+	<div id="popmake-1127" class="pum-container popmake theme-475 pum-responsive pum-responsive-medium responsive size-medium">
+
+				
+				
+		
+				<div class="pum-content popmake-content" tabindex="0">
+			<p><span style="color: #000000;">There is also a different way to go on from here. Alternatively we can estimate the distances of the mobile tag to the receiver units using &nbsp;two-way ranging (TWR). TWR uses the most simplistic idea: we exchange messages between the mobile tag and the stationary receiver and measure the round trip time (RTT) of the message. From this RTT we can directly calculate the distance between those two. The hardware footprint is low as we do not need to precisely synchronize the clocks of the receiver and the mobile tag. We only need to synchronize the channel access. However, here also lies the general drawback of this approach: to estimate a single position we need to send 2 messages (back and forth) between 4 receivers and the mobile tag (= 8 messages). As the channel is potentially shared to localise several mobile objects the positioning update rate quickly drops.</span></p>
+		</div>
+
+				
+							<button type="button" class="pum-close popmake-close" aria-label="Close">
+			×			</button>
+		
+	</div>
+
+</div>
+<div id="pum-737" role="dialog" aria-modal="false" class="pum pum-overlay pum-theme-475 pum-theme-lightbox popmake-overlay pum-click-to-close click_open" data-popmake="{&quot;id&quot;:737,&quot;slug&quot;:&quot;rlsem19&quot;,&quot;theme_id&quot;:475,&quot;cookies&quot;:[],&quot;triggers&quot;:[{&quot;type&quot;:&quot;click_open&quot;,&quot;settings&quot;:{&quot;extra_selectors&quot;:&quot;&quot;,&quot;cookie_name&quot;:null}}],&quot;mobile_disabled&quot;:null,&quot;tablet_disabled&quot;:null,&quot;meta&quot;:{&quot;display&quot;:{&quot;stackable&quot;:false,&quot;overlay_disabled&quot;:false,&quot;scrollable_content&quot;:false,&quot;disable_reposition&quot;:false,&quot;size&quot;:&quot;medium&quot;,&quot;responsive_min_width&quot;:&quot;0%&quot;,&quot;responsive_min_width_unit&quot;:false,&quot;responsive_max_width&quot;:&quot;100%&quot;,&quot;responsive_max_width_unit&quot;:false,&quot;custom_width&quot;:&quot;640px&quot;,&quot;custom_width_unit&quot;:false,&quot;custom_height&quot;:&quot;380px&quot;,&quot;custom_height_unit&quot;:false,&quot;custom_height_auto&quot;:false,&quot;location&quot;:&quot;center top&quot;,&quot;position_from_trigger&quot;:false,&quot;position_top&quot;:&quot;100&quot;,&quot;position_left&quot;:&quot;0&quot;,&quot;position_bottom&quot;:&quot;0&quot;,&quot;position_right&quot;:&quot;0&quot;,&quot;position_fixed&quot;:false,&quot;animation_type&quot;:&quot;fade&quot;,&quot;animation_speed&quot;:&quot;350&quot;,&quot;animation_origin&quot;:&quot;center top&quot;,&quot;overlay_zindex&quot;:false,&quot;zindex&quot;:&quot;1999999999&quot;},&quot;close&quot;:{&quot;text&quot;:&quot;&quot;,&quot;button_delay&quot;:&quot;0&quot;,&quot;overlay_click&quot;:&quot;1&quot;,&quot;esc_press&quot;:&quot;1&quot;,&quot;f4_press&quot;:false},&quot;click_open&quot;:[]}}">
+
+	<div id="popmake-737" class="pum-container popmake theme-475 pum-responsive pum-responsive-medium responsive size-medium">
+
+				
+				
+		
+				<div class="pum-content popmake-content" tabindex="0">
+			<p>Literature for <strong>DD-PPO: Near-Perfect PointGoal Navigators</strong>:<cite class="data"></cite></p>
+<ul>
+<li>https://arxiv.org/abs/1911.00357</li>
+<li>https://ai.facebook.com/blog/near-perfect-point-goal-navigation-from-25-billion-frames-of-experience/</li>
+</ul>
+		</div>
+
+				
+							<button type="button" class="pum-close popmake-close" aria-label="Close">
+			×			</button>
+		
+	</div>
+
+</div>
+<div id="pum-733" role="dialog" aria-modal="false" class="pum pum-overlay pum-theme-475 pum-theme-lightbox popmake-overlay pum-click-to-close click_open" data-popmake="{&quot;id&quot;:733,&quot;slug&quot;:&quot;rlsem16&quot;,&quot;theme_id&quot;:475,&quot;cookies&quot;:[],&quot;triggers&quot;:[{&quot;type&quot;:&quot;click_open&quot;,&quot;settings&quot;:{&quot;extra_selectors&quot;:&quot;&quot;,&quot;cookie_name&quot;:null}}],&quot;mobile_disabled&quot;:null,&quot;tablet_disabled&quot;:null,&quot;meta&quot;:{&quot;display&quot;:{&quot;stackable&quot;:false,&quot;overlay_disabled&quot;:false,&quot;scrollable_content&quot;:false,&quot;disable_reposition&quot;:false,&quot;size&quot;:&quot;medium&quot;,&quot;responsive_min_width&quot;:&quot;0%&quot;,&quot;responsive_min_width_unit&quot;:false,&quot;responsive_max_width&quot;:&quot;100%&quot;,&quot;responsive_max_width_unit&quot;:false,&quot;custom_width&quot;:&quot;640px&quot;,&quot;custom_width_unit&quot;:false,&quot;custom_height&quot;:&quot;380px&quot;,&quot;custom_height_unit&quot;:false,&quot;custom_height_auto&quot;:false,&quot;location&quot;:&quot;center top&quot;,&quot;position_from_trigger&quot;:false,&quot;position_top&quot;:&quot;100&quot;,&quot;position_left&quot;:&quot;0&quot;,&quot;position_bottom&quot;:&quot;0&quot;,&quot;position_right&quot;:&quot;0&quot;,&quot;position_fixed&quot;:false,&quot;animation_type&quot;:&quot;fade&quot;,&quot;animation_speed&quot;:&quot;350&quot;,&quot;animation_origin&quot;:&quot;center top&quot;,&quot;overlay_zindex&quot;:false,&quot;zindex&quot;:&quot;1999999999&quot;},&quot;close&quot;:{&quot;text&quot;:&quot;&quot;,&quot;button_delay&quot;:&quot;0&quot;,&quot;overlay_click&quot;:&quot;1&quot;,&quot;esc_press&quot;:&quot;1&quot;,&quot;f4_press&quot;:false},&quot;click_open&quot;:[]}}">
+
+	<div id="popmake-733" class="pum-container popmake theme-475 pum-responsive pum-responsive-medium responsive size-medium">
+
+				
+				
+		
+				<div class="pum-content popmake-content" tabindex="0">
+			<p>Literature for <strong>Curiosity</strong>:</p>
+<ul>
+<li>https://arxiv.org/abs/1705.05363</li>
+<li>https://pathak22.github.io/large-scale-curiosity/resources/largeScaleCuriosity2018.pdf</li>
+<li>https://pathak22.github.io/large-scale-curiosity/</li>
+</ul>
+		</div>
+
+				
+							<button type="button" class="pum-close popmake-close" aria-label="Close">
+			×			</button>
+		
+	</div>
+
+</div>
+<div id="pum-730" role="dialog" aria-modal="false" class="pum pum-overlay pum-theme-475 pum-theme-lightbox popmake-overlay pum-click-to-close click_open" data-popmake="{&quot;id&quot;:730,&quot;slug&quot;:&quot;rlsem15&quot;,&quot;theme_id&quot;:475,&quot;cookies&quot;:[],&quot;triggers&quot;:[{&quot;type&quot;:&quot;click_open&quot;,&quot;settings&quot;:{&quot;extra_selectors&quot;:&quot;&quot;,&quot;cookie_name&quot;:null}}],&quot;mobile_disabled&quot;:null,&quot;tablet_disabled&quot;:null,&quot;meta&quot;:{&quot;display&quot;:{&quot;stackable&quot;:false,&quot;overlay_disabled&quot;:false,&quot;scrollable_content&quot;:false,&quot;disable_reposition&quot;:false,&quot;size&quot;:&quot;medium&quot;,&quot;responsive_min_width&quot;:&quot;0%&quot;,&quot;responsive_min_width_unit&quot;:false,&quot;responsive_max_width&quot;:&quot;100%&quot;,&quot;responsive_max_width_unit&quot;:false,&quot;custom_width&quot;:&quot;640px&quot;,&quot;custom_width_unit&quot;:false,&quot;custom_height&quot;:&quot;380px&quot;,&quot;custom_height_unit&quot;:false,&quot;custom_height_auto&quot;:false,&quot;location&quot;:&quot;center top&quot;,&quot;position_from_trigger&quot;:false,&quot;position_top&quot;:&quot;100&quot;,&quot;position_left&quot;:&quot;0&quot;,&quot;position_bottom&quot;:&quot;0&quot;,&quot;position_right&quot;:&quot;0&quot;,&quot;position_fixed&quot;:false,&quot;animation_type&quot;:&quot;fade&quot;,&quot;animation_speed&quot;:&quot;350&quot;,&quot;animation_origin&quot;:&quot;center top&quot;,&quot;overlay_zindex&quot;:false,&quot;zindex&quot;:&quot;1999999999&quot;},&quot;close&quot;:{&quot;text&quot;:&quot;&quot;,&quot;button_delay&quot;:&quot;0&quot;,&quot;overlay_click&quot;:&quot;1&quot;,&quot;esc_press&quot;:&quot;1&quot;,&quot;f4_press&quot;:false},&quot;click_open&quot;:[]}}">
+
+	<div id="popmake-730" class="pum-container popmake theme-475 pum-responsive pum-responsive-medium responsive size-medium">
+
+				
+				
+		
+				<div class="pum-content popmake-content" tabindex="0">
+			<p>Literature for <strong>Multi-Agent Reinforcement Learning</strong>:</p>
+<ul>
+<li><a class="" href="https://rlss.inria.fr/files/2019/07/RLSS_Multiagent.pdf">https://rlss.inria.fr/files/2019/07/RLSS_Multiagent.pdf</a>&nbsp;(This is a very good intro to understand the problem, game theory problem, symbols, etc.; but don’t look into the algorithms described here)</li>
+<li>Multiagent Cooperation and Competition with Deep Reinforcement Learning:&nbsp;<a class="" href="https://arxiv.org/abs/1511.08779">https://arxiv.org/abs/1511.08779</a></li>
+<li>Emergent Complexity via Multi-Agent Competition:&nbsp;<a class="" href="https://arxiv.org/abs/1710.03748">https://arxiv.org/abs/1710.03748</a></li>
+<li>Emergent Tool Use From Multi-Agent Autocurricula:&nbsp;<a class="" href="https://arxiv.org/abs/1909.07528">https://arxiv.org/abs/1909.07528</a></li>
+</ul>
+		</div>
+
+				
+							<button type="button" class="pum-close popmake-close" aria-label="Close">
+			×			</button>
+		
+	</div>
+
+</div>
+<div id="pum-728" role="dialog" aria-modal="false" class="pum pum-overlay pum-theme-475 pum-theme-lightbox popmake-overlay pum-click-to-close click_open" data-popmake="{&quot;id&quot;:728,&quot;slug&quot;:&quot;rlsem14&quot;,&quot;theme_id&quot;:475,&quot;cookies&quot;:[],&quot;triggers&quot;:[{&quot;type&quot;:&quot;click_open&quot;,&quot;settings&quot;:{&quot;extra_selectors&quot;:&quot;&quot;,&quot;cookie_name&quot;:null}}],&quot;mobile_disabled&quot;:null,&quot;tablet_disabled&quot;:null,&quot;meta&quot;:{&quot;display&quot;:{&quot;stackable&quot;:false,&quot;overlay_disabled&quot;:false,&quot;scrollable_content&quot;:false,&quot;disable_reposition&quot;:false,&quot;size&quot;:&quot;medium&quot;,&quot;responsive_min_width&quot;:&quot;0%&quot;,&quot;responsive_min_width_unit&quot;:false,&quot;responsive_max_width&quot;:&quot;100%&quot;,&quot;responsive_max_width_unit&quot;:false,&quot;custom_width&quot;:&quot;640px&quot;,&quot;custom_width_unit&quot;:false,&quot;custom_height&quot;:&quot;380px&quot;,&quot;custom_height_unit&quot;:false,&quot;custom_height_auto&quot;:false,&quot;location&quot;:&quot;center top&quot;,&quot;position_from_trigger&quot;:false,&quot;position_top&quot;:&quot;100&quot;,&quot;position_left&quot;:&quot;0&quot;,&quot;position_bottom&quot;:&quot;0&quot;,&quot;position_right&quot;:&quot;0&quot;,&quot;position_fixed&quot;:false,&quot;animation_type&quot;:&quot;fade&quot;,&quot;animation_speed&quot;:&quot;350&quot;,&quot;animation_origin&quot;:&quot;center top&quot;,&quot;overlay_zindex&quot;:false,&quot;zindex&quot;:&quot;1999999999&quot;},&quot;close&quot;:{&quot;text&quot;:&quot;&quot;,&quot;button_delay&quot;:&quot;0&quot;,&quot;overlay_click&quot;:&quot;1&quot;,&quot;esc_press&quot;:&quot;1&quot;,&quot;f4_press&quot;:false},&quot;click_open&quot;:[]}}">
+
+	<div id="popmake-728" class="pum-container popmake theme-475 pum-responsive pum-responsive-medium responsive size-medium">
+
+				
+				
+		
+				<div class="pum-content popmake-content" tabindex="0">
+			<p>Literature for <strong>Explainable RL</strong>:</p>
+<ul>
+<li>Gunning, D. (2017). Explainable artificial intelligence (xai).&nbsp;Defense Advanced Research Projects Agency (DARPA), nd Web:&nbsp;<a href="https://www.darpa.mil/attachments/XAIProgramUpdate.pdf">https://www.darpa.mil/attachments/XAIProgramUpdate.pdf</a></li>
+<li>Ribeiro, M. T., Singh, S., &amp; Guestrin, C. (2016, August). Why should i trust you?: Explaining the predictions of any classifier. In&nbsp;Proceedings of the 22nd ACM SIGKDD international conference on knowledge discovery and data mining&nbsp;(pp. 1135-1144). ACM:&nbsp;<a href="https://arxiv.org/pdf/1602.04938.pdf">https://arxiv.org/pdf/1602.04938.pdf</a></li>
+<li><a href="http://www.heatmapping.org/">http://www.heatmapping.org</a></li>
+<li>Bastani, O., Kim, C., &amp; Bastani, H. (2017). Interpreting blackbox models via model extraction.&nbsp;arXiv preprint arXiv:1705.08504:&nbsp;<a href="https://arxiv.org/abs/1705.08504">https://arxiv.org/abs/1705.08504</a></li>
+<li>Bastani, O., Pu, Y., &amp; Solar-Lezama, A. (2018). Verifiable Reinforcement Learning via Policy Extraction.&nbsp;arXiv preprint arXiv:1805.08328:&nbsp;<a href="https://arxiv.org/pdf/1805.08328.pdf">https://arxiv.org/pdf/1805.08328.pdf</a>&nbsp;+&nbsp;<a href="https://obastani.github.io/docs/viper-presentation.pdf">https://obastani.github.io/docs/viper-presentation.pdf</a></li>
+</ul>
+		</div>
+
+				
+							<button type="button" class="pum-close popmake-close" aria-label="Close">
+			×			</button>
+		
+	</div>
+
+</div>
+<div id="pum-726" role="dialog" aria-modal="false" class="pum pum-overlay pum-theme-475 pum-theme-lightbox popmake-overlay pum-click-to-close click_open" data-popmake="{&quot;id&quot;:726,&quot;slug&quot;:&quot;rlsem13&quot;,&quot;theme_id&quot;:475,&quot;cookies&quot;:[],&quot;triggers&quot;:[{&quot;type&quot;:&quot;click_open&quot;,&quot;settings&quot;:{&quot;extra_selectors&quot;:&quot;&quot;,&quot;cookie_name&quot;:null}}],&quot;mobile_disabled&quot;:null,&quot;tablet_disabled&quot;:null,&quot;meta&quot;:{&quot;display&quot;:{&quot;stackable&quot;:false,&quot;overlay_disabled&quot;:false,&quot;scrollable_content&quot;:false,&quot;disable_reposition&quot;:false,&quot;size&quot;:&quot;medium&quot;,&quot;responsive_min_width&quot;:&quot;0%&quot;,&quot;responsive_min_width_unit&quot;:false,&quot;responsive_max_width&quot;:&quot;100%&quot;,&quot;responsive_max_width_unit&quot;:false,&quot;custom_width&quot;:&quot;640px&quot;,&quot;custom_width_unit&quot;:false,&quot;custom_height&quot;:&quot;380px&quot;,&quot;custom_height_unit&quot;:false,&quot;custom_height_auto&quot;:false,&quot;location&quot;:&quot;center top&quot;,&quot;position_from_trigger&quot;:false,&quot;position_top&quot;:&quot;100&quot;,&quot;position_left&quot;:&quot;0&quot;,&quot;position_bottom&quot;:&quot;0&quot;,&quot;position_right&quot;:&quot;0&quot;,&quot;position_fixed&quot;:false,&quot;animation_type&quot;:&quot;fade&quot;,&quot;animation_speed&quot;:&quot;350&quot;,&quot;animation_origin&quot;:&quot;center top&quot;,&quot;overlay_zindex&quot;:false,&quot;zindex&quot;:&quot;1999999999&quot;},&quot;close&quot;:{&quot;text&quot;:&quot;&quot;,&quot;button_delay&quot;:&quot;0&quot;,&quot;overlay_click&quot;:&quot;1&quot;,&quot;esc_press&quot;:&quot;1&quot;,&quot;f4_press&quot;:false},&quot;click_open&quot;:[]}}">
+
+	<div id="popmake-726" class="pum-container popmake theme-475 pum-responsive pum-responsive-medium responsive size-medium">
+
+				
+				
+		
+				<div class="pum-content popmake-content" tabindex="0">
+			<p>Literature for <strong>Simulation-to-Reality Transfer</strong>:<cite class="data"></cite></p>
+<ul>
+<li>Peng, X. B., Andrychowicz, M., Zaremba, W., &amp; Abbeel, P. (2018, May). Sim-to-real transfer of robotic control with dynamics randomization. In&nbsp;2018 IEEE International Conference on Robotics and Automation (ICRA)&nbsp;(pp. 1-8). IEEE.:&nbsp;<a href="https://arxiv.org/pdf/1710.06537.pdf">https://arxiv.org/pdf/1710.06537.pdf</a></li>
+<li>Tobin, J., Fong, R., Ray, A., Schneider, J., Zaremba, W., &amp; Abbeel, P. (2017, September). Domain randomization for transferring deep neural networks from simulation to the real world. In&nbsp;Intelligent Robots and Systems (IROS), 2017 IEEE/RSJ International Conference on&nbsp;(pp. 23-30). IEEE:&nbsp;<a href="https://arxiv.org/pdf/1703.06907.pdf">https://arxiv.org/pdf/1703.06907.pdf</a></li>
+<li>Rusu, A. A., Vecerik, M., Rothörl, T., Heess, N., Pascanu, R., &amp; Hadsell, R. (2016). Sim-to-real robot learning from pixels with progressive nets.&nbsp;arXiv preprint arXiv:1610.04286:&nbsp;<a href="https://arxiv.org/abs/1610.04286">https://arxiv.org/abs/1610.04286</a></li>
+<li>Sadeghi, F., &amp; Levine, S. (2016). CAD2RL: Real single-image flight without a single real image.&nbsp;arXiv preprint arXiv:1611.04201:&nbsp;<a href="https://arxiv.org/pdf/1611.04201.pdf">https://arxiv.org/pdf/1611.04201.pdf</a></li>
+<li>Bousmalis, K., Irpan, A., Wohlhart, P., Bai, Y., Kelcey, M., Kalakrishnan, M., … &amp; Levine, S. (2018, May). Using simulation and domain adaptation to improve efficiency of deep robotic grasping. In&nbsp;2018 IEEE International Conference on Robotics and Automation (ICRA)&nbsp;(pp. 4243-4250). IEEE:&nbsp;<a href="https://arxiv.org/pdf/1709.07857.pdf">https://arxiv.org/pdf/1709.07857.pdf</a></li>
+<li>Rajeswaran, A., Ghotra, S., Ravindran, B., &amp; Levine, S. (2016). Epopt: Learning robust neural network policies using model ensembles.&nbsp;arXiv preprint arXiv:1610.01283:&nbsp;<a href="https://arxiv.org/pdf/1610.01283.pdf">https://arxiv.org/pdf/1610.01283.pdf</a></li>
+</ul>
+		</div>
+
+				
+							<button type="button" class="pum-close popmake-close" aria-label="Close">
+			×			</button>
+		
+	</div>
+
+</div>
+<div id="pum-724" role="dialog" aria-modal="false" class="pum pum-overlay pum-theme-475 pum-theme-lightbox popmake-overlay pum-click-to-close click_open" data-popmake="{&quot;id&quot;:724,&quot;slug&quot;:&quot;rlsem12&quot;,&quot;theme_id&quot;:475,&quot;cookies&quot;:[],&quot;triggers&quot;:[{&quot;type&quot;:&quot;click_open&quot;,&quot;settings&quot;:{&quot;extra_selectors&quot;:&quot;&quot;,&quot;cookie_name&quot;:null}}],&quot;mobile_disabled&quot;:null,&quot;tablet_disabled&quot;:null,&quot;meta&quot;:{&quot;display&quot;:{&quot;stackable&quot;:false,&quot;overlay_disabled&quot;:false,&quot;scrollable_content&quot;:false,&quot;disable_reposition&quot;:false,&quot;size&quot;:&quot;medium&quot;,&quot;responsive_min_width&quot;:&quot;0%&quot;,&quot;responsive_min_width_unit&quot;:false,&quot;responsive_max_width&quot;:&quot;100%&quot;,&quot;responsive_max_width_unit&quot;:false,&quot;custom_width&quot;:&quot;640px&quot;,&quot;custom_width_unit&quot;:false,&quot;custom_height&quot;:&quot;380px&quot;,&quot;custom_height_unit&quot;:false,&quot;custom_height_auto&quot;:false,&quot;location&quot;:&quot;center top&quot;,&quot;position_from_trigger&quot;:false,&quot;position_top&quot;:&quot;100&quot;,&quot;position_left&quot;:&quot;0&quot;,&quot;position_bottom&quot;:&quot;0&quot;,&quot;position_right&quot;:&quot;0&quot;,&quot;position_fixed&quot;:false,&quot;animation_type&quot;:&quot;fade&quot;,&quot;animation_speed&quot;:&quot;350&quot;,&quot;animation_origin&quot;:&quot;center top&quot;,&quot;overlay_zindex&quot;:false,&quot;zindex&quot;:&quot;1999999999&quot;},&quot;close&quot;:{&quot;text&quot;:&quot;&quot;,&quot;button_delay&quot;:&quot;0&quot;,&quot;overlay_click&quot;:&quot;1&quot;,&quot;esc_press&quot;:&quot;1&quot;,&quot;f4_press&quot;:false},&quot;click_open&quot;:[]}}">
+
+	<div id="popmake-724" class="pum-container popmake theme-475 pum-responsive pum-responsive-medium responsive size-medium">
+
+				
+				
+		
+				<div class="pum-content popmake-content" tabindex="0">
+			<p>Literature for <strong>MAML</strong>:</p>
+<ul>
+<li>https://arxiv.org/abs/1703.03400</li>
+<li>https://towardsdatascience.com/model-agnostic-meta-learning-maml-8a245d9bc4ac</li>
+<li>https://medium.com/towards-artificial-intelligence/how-to-train-maml-model-agnostic-meta-learning-90aa093f8e46</li>
+</ul>
+		</div>
+
+				
+							<button type="button" class="pum-close popmake-close" aria-label="Close">
+			×			</button>
+		
+	</div>
+
+</div>
+<div id="pum-722" role="dialog" aria-modal="false" class="pum pum-overlay pum-theme-475 pum-theme-lightbox popmake-overlay pum-click-to-close click_open" data-popmake="{&quot;id&quot;:722,&quot;slug&quot;:&quot;rlsem11&quot;,&quot;theme_id&quot;:475,&quot;cookies&quot;:[],&quot;triggers&quot;:[{&quot;type&quot;:&quot;click_open&quot;,&quot;settings&quot;:{&quot;extra_selectors&quot;:&quot;&quot;,&quot;cookie_name&quot;:null}}],&quot;mobile_disabled&quot;:null,&quot;tablet_disabled&quot;:null,&quot;meta&quot;:{&quot;display&quot;:{&quot;stackable&quot;:false,&quot;overlay_disabled&quot;:false,&quot;scrollable_content&quot;:false,&quot;disable_reposition&quot;:false,&quot;size&quot;:&quot;medium&quot;,&quot;responsive_min_width&quot;:&quot;0%&quot;,&quot;responsive_min_width_unit&quot;:false,&quot;responsive_max_width&quot;:&quot;100%&quot;,&quot;responsive_max_width_unit&quot;:false,&quot;custom_width&quot;:&quot;640px&quot;,&quot;custom_width_unit&quot;:false,&quot;custom_height&quot;:&quot;380px&quot;,&quot;custom_height_unit&quot;:false,&quot;custom_height_auto&quot;:false,&quot;location&quot;:&quot;center top&quot;,&quot;position_from_trigger&quot;:false,&quot;position_top&quot;:&quot;100&quot;,&quot;position_left&quot;:&quot;0&quot;,&quot;position_bottom&quot;:&quot;0&quot;,&quot;position_right&quot;:&quot;0&quot;,&quot;position_fixed&quot;:false,&quot;animation_type&quot;:&quot;fade&quot;,&quot;animation_speed&quot;:&quot;350&quot;,&quot;animation_origin&quot;:&quot;center top&quot;,&quot;overlay_zindex&quot;:false,&quot;zindex&quot;:&quot;1999999999&quot;},&quot;close&quot;:{&quot;text&quot;:&quot;&quot;,&quot;button_delay&quot;:&quot;0&quot;,&quot;overlay_click&quot;:&quot;1&quot;,&quot;esc_press&quot;:&quot;1&quot;,&quot;f4_press&quot;:false},&quot;click_open&quot;:[]}}">
+
+	<div id="popmake-722" class="pum-container popmake theme-475 pum-responsive pum-responsive-medium responsive size-medium">
+
+				
+				
+		
+				<div class="pum-content popmake-content" tabindex="0">
+			<p>Literature for <strong>Hierarchical Reinforcement Learning</strong>:</p>
+<ul>
+<li>https://thegradient.pub/the-promise-of-hierarchical-reinforcement-learning/</li>
+<li>https://papers.nips.cc/paper/6233-hierarchical-deep-reinforcement-learning-integrating-temporal-abstraction-and-intrinsic-motivation.pdf</li>
+<li>https://arxiv.org/abs/1805.08296</li>
+</ul>
+		</div>
+
+				
+							<button type="button" class="pum-close popmake-close" aria-label="Close">
+			×			</button>
+		
+	</div>
+
+</div>
+<div id="pum-720" role="dialog" aria-modal="false" class="pum pum-overlay pum-theme-475 pum-theme-lightbox popmake-overlay pum-click-to-close click_open" data-popmake="{&quot;id&quot;:720,&quot;slug&quot;:&quot;rlsem10&quot;,&quot;theme_id&quot;:475,&quot;cookies&quot;:[],&quot;triggers&quot;:[{&quot;type&quot;:&quot;click_open&quot;,&quot;settings&quot;:{&quot;extra_selectors&quot;:&quot;&quot;,&quot;cookie_name&quot;:null}}],&quot;mobile_disabled&quot;:null,&quot;tablet_disabled&quot;:null,&quot;meta&quot;:{&quot;display&quot;:{&quot;stackable&quot;:false,&quot;overlay_disabled&quot;:false,&quot;scrollable_content&quot;:false,&quot;disable_reposition&quot;:false,&quot;size&quot;:&quot;medium&quot;,&quot;responsive_min_width&quot;:&quot;0%&quot;,&quot;responsive_min_width_unit&quot;:false,&quot;responsive_max_width&quot;:&quot;100%&quot;,&quot;responsive_max_width_unit&quot;:false,&quot;custom_width&quot;:&quot;640px&quot;,&quot;custom_width_unit&quot;:false,&quot;custom_height&quot;:&quot;380px&quot;,&quot;custom_height_unit&quot;:false,&quot;custom_height_auto&quot;:false,&quot;location&quot;:&quot;center top&quot;,&quot;position_from_trigger&quot;:false,&quot;position_top&quot;:&quot;100&quot;,&quot;position_left&quot;:&quot;0&quot;,&quot;position_bottom&quot;:&quot;0&quot;,&quot;position_right&quot;:&quot;0&quot;,&quot;position_fixed&quot;:false,&quot;animation_type&quot;:&quot;fade&quot;,&quot;animation_speed&quot;:&quot;350&quot;,&quot;animation_origin&quot;:&quot;center top&quot;,&quot;overlay_zindex&quot;:false,&quot;zindex&quot;:&quot;1999999999&quot;},&quot;close&quot;:{&quot;text&quot;:&quot;&quot;,&quot;button_delay&quot;:&quot;0&quot;,&quot;overlay_click&quot;:&quot;1&quot;,&quot;esc_press&quot;:&quot;1&quot;,&quot;f4_press&quot;:false},&quot;click_open&quot;:[]}}">
+
+	<div id="popmake-720" class="pum-container popmake theme-475 pum-responsive pum-responsive-medium responsive size-medium">
+
+				
+				
+		
+				<div class="pum-content popmake-content" tabindex="0">
+			<p>Literature for <strong>Option Critics</strong>:</p>
+<ul>
+<li>https://arxiv.org/pdf/1609.05140.pdf</li>
+<li>https://alversafa.github.io/blog/2018/11/28/optncrtc.html</li>
+<li>https://papers.nips.cc/paper/8243-learning-abstract-options.pdf</li>
+<li></li>
+</ul>
+		</div>
+
+				
+							<button type="button" class="pum-close popmake-close" aria-label="Close">
+			×			</button>
+		
+	</div>
+
+</div>
+<div id="pum-717" role="dialog" aria-modal="false" class="pum pum-overlay pum-theme-475 pum-theme-lightbox popmake-overlay pum-click-to-close click_open" data-popmake="{&quot;id&quot;:717,&quot;slug&quot;:&quot;rlsem9&quot;,&quot;theme_id&quot;:475,&quot;cookies&quot;:[],&quot;triggers&quot;:[{&quot;type&quot;:&quot;click_open&quot;,&quot;settings&quot;:{&quot;extra_selectors&quot;:&quot;&quot;,&quot;cookie_name&quot;:null}}],&quot;mobile_disabled&quot;:null,&quot;tablet_disabled&quot;:null,&quot;meta&quot;:{&quot;display&quot;:{&quot;stackable&quot;:false,&quot;overlay_disabled&quot;:false,&quot;scrollable_content&quot;:false,&quot;disable_reposition&quot;:false,&quot;size&quot;:&quot;medium&quot;,&quot;responsive_min_width&quot;:&quot;0%&quot;,&quot;responsive_min_width_unit&quot;:false,&quot;responsive_max_width&quot;:&quot;100%&quot;,&quot;responsive_max_width_unit&quot;:false,&quot;custom_width&quot;:&quot;640px&quot;,&quot;custom_width_unit&quot;:false,&quot;custom_height&quot;:&quot;380px&quot;,&quot;custom_height_unit&quot;:false,&quot;custom_height_auto&quot;:false,&quot;location&quot;:&quot;center top&quot;,&quot;position_from_trigger&quot;:false,&quot;position_top&quot;:&quot;100&quot;,&quot;position_left&quot;:&quot;0&quot;,&quot;position_bottom&quot;:&quot;0&quot;,&quot;position_right&quot;:&quot;0&quot;,&quot;position_fixed&quot;:false,&quot;animation_type&quot;:&quot;fade&quot;,&quot;animation_speed&quot;:&quot;350&quot;,&quot;animation_origin&quot;:&quot;center top&quot;,&quot;overlay_zindex&quot;:false,&quot;zindex&quot;:&quot;1999999999&quot;},&quot;close&quot;:{&quot;text&quot;:&quot;&quot;,&quot;button_delay&quot;:&quot;0&quot;,&quot;overlay_click&quot;:&quot;1&quot;,&quot;esc_press&quot;:&quot;1&quot;,&quot;f4_press&quot;:false},&quot;click_open&quot;:[]}}">
+
+	<div id="popmake-717" class="pum-container popmake theme-475 pum-responsive pum-responsive-medium responsive size-medium">
+
+				
+				
+		
+				<div class="pum-content popmake-content" tabindex="0">
+			<p>Literature for <strong>Batch Reinforcement Learning</strong>:</p>
+<ul>
+<li>Lange, S., Gabel, T., &amp; Riedmiller, M. (2012). Batch reinforcement learning. In&nbsp;Reinforcement learning&nbsp;(pp. 45-73). Springer, Berlin, Heidelberg:&nbsp;<a href="http://ml.informatik.uni-freiburg.de/former/_media/publications/langegabelriedmiller2011chapter.pdf">http://ml.informatik.uni-freiburg.de/former/_media/publications/langegabelriedmiller2011chapter.pdf</a></li>
+<li>Lagoudakis, M. G., &amp; Parr, R. (2003). Least-squares policy iteration.&nbsp;Journal of machine learning research,&nbsp;4(Dec), 1107-1149: &nbsp;<a href="http://www.jmlr.org/papers/volume4/lagoudakis03a/lagoudakis03a.pdf">http://www.jmlr.org/papers/volume4/lagoudakis03a/lagoudakis03a.pdf</a>&nbsp;+&nbsp;<a href="http://www.intelligence.tuc.gr/~lagoudakis/DOCS/thesis.pdf">http://www.intelligence.tuc.gr/~lagoudakis/DOCS/thesis.pdf</a></li>
+<li>Ernst, D., Geurts, P., &amp; Wehenkel, L. (2005). Tree-based batch mode reinforcement learning.&nbsp;Journal of Machine Learning Research,&nbsp;6(Apr), 503-556:&nbsp;<a href="http://www.jmlr.org/papers/volume6/ernst05a/ernst05a.pdf">http://www.jmlr.org/papers/volume6/ernst05a/ernst05a.pdf</a></li>
+<li>Riedmiller, M. (2005, October). Neural fitted Q iteration–first experiences with a data efficient neural reinforcement learning method. In&nbsp;European Conference on Machine Learning&nbsp;(pp. 317-328). Springer, Berlin, Heidelberg:&nbsp;<a href="http://ml.informatik.uni-freiburg.de/former/_media/publications/rieecml05.pdf">http://ml.informatik.uni-freiburg.de/former/_media/publications/rieecml05.pdf</a></li>
+</ul>
+		</div>
+
+				
+							<button type="button" class="pum-close popmake-close" aria-label="Close">
+			×			</button>
+		
+	</div>
+
+</div>
+<div id="pum-715" role="dialog" aria-modal="false" class="pum pum-overlay pum-theme-475 pum-theme-lightbox popmake-overlay pum-click-to-close click_open" data-popmake="{&quot;id&quot;:715,&quot;slug&quot;:&quot;rlsem8&quot;,&quot;theme_id&quot;:475,&quot;cookies&quot;:[],&quot;triggers&quot;:[{&quot;type&quot;:&quot;click_open&quot;,&quot;settings&quot;:{&quot;extra_selectors&quot;:&quot;&quot;,&quot;cookie_name&quot;:null}}],&quot;mobile_disabled&quot;:null,&quot;tablet_disabled&quot;:null,&quot;meta&quot;:{&quot;display&quot;:{&quot;stackable&quot;:false,&quot;overlay_disabled&quot;:false,&quot;scrollable_content&quot;:false,&quot;disable_reposition&quot;:false,&quot;size&quot;:&quot;medium&quot;,&quot;responsive_min_width&quot;:&quot;0%&quot;,&quot;responsive_min_width_unit&quot;:false,&quot;responsive_max_width&quot;:&quot;100%&quot;,&quot;responsive_max_width_unit&quot;:false,&quot;custom_width&quot;:&quot;640px&quot;,&quot;custom_width_unit&quot;:false,&quot;custom_height&quot;:&quot;380px&quot;,&quot;custom_height_unit&quot;:false,&quot;custom_height_auto&quot;:false,&quot;location&quot;:&quot;center top&quot;,&quot;position_from_trigger&quot;:false,&quot;position_top&quot;:&quot;100&quot;,&quot;position_left&quot;:&quot;0&quot;,&quot;position_bottom&quot;:&quot;0&quot;,&quot;position_right&quot;:&quot;0&quot;,&quot;position_fixed&quot;:false,&quot;animation_type&quot;:&quot;fade&quot;,&quot;animation_speed&quot;:&quot;350&quot;,&quot;animation_origin&quot;:&quot;center top&quot;,&quot;overlay_zindex&quot;:false,&quot;zindex&quot;:&quot;1999999999&quot;},&quot;close&quot;:{&quot;text&quot;:&quot;&quot;,&quot;button_delay&quot;:&quot;0&quot;,&quot;overlay_click&quot;:&quot;1&quot;,&quot;esc_press&quot;:&quot;1&quot;,&quot;f4_press&quot;:false},&quot;click_open&quot;:[]}}">
+
+	<div id="popmake-715" class="pum-container popmake theme-475 pum-responsive pum-responsive-medium responsive size-medium">
+
+				
+				
+		
+				<div class="pum-content popmake-content" tabindex="0">
+			<p>Literature for <strong>World Models</strong>:</p>
+<ol>
+<li>David Ha, Jürgen Schmidhuber: Recurrent World Models Facilitate Policy Evaluation. NeurIPS 2018: 2455-2467.</li>
+<li>https://arxiv.org/abs/1803.10122</li>
+<li>https://worldmodels.github.io</li>
+<li>https://medium.com/@SmartLabAI/world-models-a-reinforcement-learning-story-cdcc86093c5</li>
+</ol>
+		</div>
+
+				
+							<button type="button" class="pum-close popmake-close" aria-label="Close">
+			×			</button>
+		
+	</div>
+
+</div>
+<div id="pum-713" role="dialog" aria-modal="false" class="pum pum-overlay pum-theme-475 pum-theme-lightbox popmake-overlay pum-click-to-close click_open" data-popmake="{&quot;id&quot;:713,&quot;slug&quot;:&quot;rlsem7&quot;,&quot;theme_id&quot;:475,&quot;cookies&quot;:[],&quot;triggers&quot;:[{&quot;type&quot;:&quot;click_open&quot;,&quot;settings&quot;:{&quot;extra_selectors&quot;:&quot;&quot;,&quot;cookie_name&quot;:null}}],&quot;mobile_disabled&quot;:null,&quot;tablet_disabled&quot;:null,&quot;meta&quot;:{&quot;display&quot;:{&quot;stackable&quot;:false,&quot;overlay_disabled&quot;:false,&quot;scrollable_content&quot;:false,&quot;disable_reposition&quot;:false,&quot;size&quot;:&quot;medium&quot;,&quot;responsive_min_width&quot;:&quot;0%&quot;,&quot;responsive_min_width_unit&quot;:false,&quot;responsive_max_width&quot;:&quot;100%&quot;,&quot;responsive_max_width_unit&quot;:false,&quot;custom_width&quot;:&quot;640px&quot;,&quot;custom_width_unit&quot;:false,&quot;custom_height&quot;:&quot;380px&quot;,&quot;custom_height_unit&quot;:false,&quot;custom_height_auto&quot;:false,&quot;location&quot;:&quot;center top&quot;,&quot;position_from_trigger&quot;:false,&quot;position_top&quot;:&quot;100&quot;,&quot;position_left&quot;:&quot;0&quot;,&quot;position_bottom&quot;:&quot;0&quot;,&quot;position_right&quot;:&quot;0&quot;,&quot;position_fixed&quot;:false,&quot;animation_type&quot;:&quot;fade&quot;,&quot;animation_speed&quot;:&quot;350&quot;,&quot;animation_origin&quot;:&quot;center top&quot;,&quot;overlay_zindex&quot;:false,&quot;zindex&quot;:&quot;1999999999&quot;},&quot;close&quot;:{&quot;text&quot;:&quot;&quot;,&quot;button_delay&quot;:&quot;0&quot;,&quot;overlay_click&quot;:&quot;1&quot;,&quot;esc_press&quot;:&quot;1&quot;,&quot;f4_press&quot;:false},&quot;click_open&quot;:[]}}">
+
+	<div id="popmake-713" class="pum-container popmake theme-475 pum-responsive pum-responsive-medium responsive size-medium">
+
+				
+				
+		
+				<div class="pum-content popmake-content" tabindex="0">
+			<p>Literature for <strong>Model-Based RL</strong>:<cite class="data"></cite></p>
+<ul>
+<li>Deisenroth, M., &amp; Rasmussen, C. E. (2011). PILCO: A model-based and data-efficient approach to policy search. In&nbsp;Proceedings of the 28th International Conference on machine learning (ICML-11)&nbsp;(pp. 465-472):&nbsp;<a href="https://www.ias.informatik.tu-darmstadt.de/uploads/Publications/Deisenroth_ICML_2011.pdf">https://www.ias.informatik.tu-darmstadt.de/uploads/Publications/Deisenroth_ICML_2011.pdf</a></li>
+<li>Deisenroth, M. P., Fox, D., &amp; Rasmussen, C. E. (2015). Gaussian processes for data-efficient learning in robotics and control.&nbsp;IEEE transactions on pattern analysis and machine intelligence,&nbsp;37(2), 408-423:&nbsp;<a href="http://robotics.caltech.edu/wiki/images/d/d2/GPsDataEfficientLearning.pdf">http://robotics.caltech.edu/wiki/images/d/d2/GPsDataEfficientLearning.pdf</a></li>
+<li>Deisenroth, M. P. (2010).&nbsp;Efficient reinforcement learning using Gaussian processes&nbsp;(Vol. 9). KIT Scientific Publishing:&nbsp;<a href="https://pdfs.semanticscholar.org/c9f2/1b84149991f4d547b3f0f625f710750ad8d9.pdf">https://pdfs.semanticscholar.org/c9f2/1b84149991f4d547b3f0f625f710750ad8d9.pdf</a></li>
+<li>Gal, Y., McAllister, R., &amp; Rasmussen, C. E. (2016, April). Improving PILCO with Bayesian neural network dynamics models. In&nbsp;Data-Efficient Machine Learning workshop, ICML:&nbsp;<a href="http://mlg.eng.cam.ac.uk/yarin/website/PDFs/DeepPILCO.pdf">http://mlg.eng.cam.ac.uk/yarin/website/PDFs/DeepPILCO.pdf</a></li>
+<li>Punjani, A., &amp; Abbeel, P. (2015, May). Deep learning helicopter dynamics models. In&nbsp;Robotics and Automation (ICRA), 2015 IEEE International Conference on&nbsp;(pp. 3223-3230). IEEE:&nbsp;<a href="https://people.eecs.berkeley.edu/~pabbeel/papers/2015-ICRA-deep-learning-heli.pdf">https://people.eecs.berkeley.edu/~pabbeel/papers/2015-ICRA-deep-learning-heli.pdf</a></li>
+<li>Chua, K., Calandra, R., McAllister, R., &amp; Levine, S. (2018). Deep Reinforcement Learning in a Handful of Trials using Probabilistic Dynamics Models.&nbsp;arXiv preprint arXiv:1805.12114:&nbsp;<a href="https://arxiv.org/abs/1805.12114">https://arxiv.org/abs/1805.12114</a></li>
+</ul>
+		</div>
+
+				
+							<button type="button" class="pum-close popmake-close" aria-label="Close">
+			×			</button>
+		
+	</div>
+
+</div>
+<div id="pum-711" role="dialog" aria-modal="false" class="pum pum-overlay pum-theme-475 pum-theme-lightbox popmake-overlay pum-click-to-close click_open" data-popmake="{&quot;id&quot;:711,&quot;slug&quot;:&quot;rlsem6&quot;,&quot;theme_id&quot;:475,&quot;cookies&quot;:[],&quot;triggers&quot;:[{&quot;type&quot;:&quot;click_open&quot;,&quot;settings&quot;:{&quot;extra_selectors&quot;:&quot;&quot;,&quot;cookie_name&quot;:null}}],&quot;mobile_disabled&quot;:null,&quot;tablet_disabled&quot;:null,&quot;meta&quot;:{&quot;display&quot;:{&quot;stackable&quot;:false,&quot;overlay_disabled&quot;:false,&quot;scrollable_content&quot;:false,&quot;disable_reposition&quot;:false,&quot;size&quot;:&quot;medium&quot;,&quot;responsive_min_width&quot;:&quot;0%&quot;,&quot;responsive_min_width_unit&quot;:false,&quot;responsive_max_width&quot;:&quot;100%&quot;,&quot;responsive_max_width_unit&quot;:false,&quot;custom_width&quot;:&quot;640px&quot;,&quot;custom_width_unit&quot;:false,&quot;custom_height&quot;:&quot;380px&quot;,&quot;custom_height_unit&quot;:false,&quot;custom_height_auto&quot;:false,&quot;location&quot;:&quot;center top&quot;,&quot;position_from_trigger&quot;:false,&quot;position_top&quot;:&quot;100&quot;,&quot;position_left&quot;:&quot;0&quot;,&quot;position_bottom&quot;:&quot;0&quot;,&quot;position_right&quot;:&quot;0&quot;,&quot;position_fixed&quot;:false,&quot;animation_type&quot;:&quot;fade&quot;,&quot;animation_speed&quot;:&quot;350&quot;,&quot;animation_origin&quot;:&quot;center top&quot;,&quot;overlay_zindex&quot;:false,&quot;zindex&quot;:&quot;1999999999&quot;},&quot;close&quot;:{&quot;text&quot;:&quot;&quot;,&quot;button_delay&quot;:&quot;0&quot;,&quot;overlay_click&quot;:&quot;1&quot;,&quot;esc_press&quot;:&quot;1&quot;,&quot;f4_press&quot;:false},&quot;click_open&quot;:[]}}">
+
+	<div id="popmake-711" class="pum-container popmake theme-475 pum-responsive pum-responsive-medium responsive size-medium">
+
+				
+				
+		
+				<div class="pum-content popmake-content" tabindex="0">
+			<p>Literature for <strong>Generative Adversarial Reinforcement Learning</strong>:</p>
+<ul>
+<li>https://arxiv.org/abs/1606.03476</li>
+<li>https://hollygrimm.com/rl_gail</li>
+<li>https://medium.com/@sanketgujar95/generative-adversarial-imitation-learning-266f45634e60</li>
+<li>http://proceedings.mlr.press/v70/baram17a.html</li>
+<li>https://arxiv.org/abs/1612.02179</li>
+</ul>
+		</div>
+
+				
+							<button type="button" class="pum-close popmake-close" aria-label="Close">
+			×			</button>
+		
+	</div>
+
+</div>
+<div id="pum-709" role="dialog" aria-modal="false" class="pum pum-overlay pum-theme-475 pum-theme-lightbox popmake-overlay pum-click-to-close click_open" data-popmake="{&quot;id&quot;:709,&quot;slug&quot;:&quot;rlsem5&quot;,&quot;theme_id&quot;:475,&quot;cookies&quot;:[],&quot;triggers&quot;:[{&quot;type&quot;:&quot;click_open&quot;,&quot;settings&quot;:{&quot;extra_selectors&quot;:&quot;&quot;,&quot;cookie_name&quot;:null}}],&quot;mobile_disabled&quot;:null,&quot;tablet_disabled&quot;:null,&quot;meta&quot;:{&quot;display&quot;:{&quot;stackable&quot;:false,&quot;overlay_disabled&quot;:false,&quot;scrollable_content&quot;:false,&quot;disable_reposition&quot;:false,&quot;size&quot;:&quot;medium&quot;,&quot;responsive_min_width&quot;:&quot;0%&quot;,&quot;responsive_min_width_unit&quot;:false,&quot;responsive_max_width&quot;:&quot;100%&quot;,&quot;responsive_max_width_unit&quot;:false,&quot;custom_width&quot;:&quot;640px&quot;,&quot;custom_width_unit&quot;:false,&quot;custom_height&quot;:&quot;380px&quot;,&quot;custom_height_unit&quot;:false,&quot;custom_height_auto&quot;:false,&quot;location&quot;:&quot;center top&quot;,&quot;position_from_trigger&quot;:false,&quot;position_top&quot;:&quot;100&quot;,&quot;position_left&quot;:&quot;0&quot;,&quot;position_bottom&quot;:&quot;0&quot;,&quot;position_right&quot;:&quot;0&quot;,&quot;position_fixed&quot;:false,&quot;animation_type&quot;:&quot;fade&quot;,&quot;animation_speed&quot;:&quot;350&quot;,&quot;animation_origin&quot;:&quot;center top&quot;,&quot;overlay_zindex&quot;:false,&quot;zindex&quot;:&quot;1999999999&quot;},&quot;close&quot;:{&quot;text&quot;:&quot;&quot;,&quot;button_delay&quot;:&quot;0&quot;,&quot;overlay_click&quot;:&quot;1&quot;,&quot;esc_press&quot;:&quot;1&quot;,&quot;f4_press&quot;:false},&quot;click_open&quot;:[]}}">
+
+	<div id="popmake-709" class="pum-container popmake theme-475 pum-responsive pum-responsive-medium responsive size-medium">
+
+				
+				
+		
+				<div class="pum-content popmake-content" tabindex="0">
+			<p>Literature for <strong>Imitation Learning</strong>:</p>
+<ul>
+<li>Pomerleau, D. A. (1989). Alvinn: An autonomous land vehicle in a neural network. In&nbsp;Advances in neural information processing systems&nbsp;(pp. 305-313):&nbsp;<a href="https://papers.nips.cc/paper/95-alvinn-an-autonomous-land-vehicle-in-a-neural-network">https://papers.nips.cc/paper/95-alvinn-an-autonomous-land-vehicle-in-a-neural-network</a></li>
+<li>Giusti, A., Guzzi, J., Ciresan, D. C., He, F. L., Rodríguez, J. P., Fontana, F., … &amp; Scaramuzza, D. (2016). A Machine Learning Approach to Visual Perception of Forest Trails for Mobile Robots.&nbsp;IEEE Robotics and Automation Letters,&nbsp;1(2), 661-667:&nbsp;<a href="http://rpg.ifi.uzh.ch/docs/RAL16_Giusti.pdf">http://rpg.ifi.uzh.ch/docs/RAL16_Giusti.pdf</a></li>
+<li>Bojarski, M., Del Testa, D., Dworakowski, D., Firner, B., Flepp, B., Goyal, P., … &amp; Zhang, X. (2016). End to end learning for self-driving cars.&nbsp;arXiv preprint arXiv:1604.07316:&nbsp;<a href="https://arxiv.org/abs/1604.07316">https://arxiv.org/abs/1604.07316</a></li>
+<li>Ross, S., Gordon, G., &amp; Bagnell, D. (2011, June). A reduction of imitation learning and structured prediction to no-regret online learning. In&nbsp;Proceedings of the fourteenth international conference on artificial intelligence and statistics&nbsp;(pp. 627-635):&nbsp;<a href="https://arxiv.org/abs/1011.0686">https://arxiv.org/abs/1011.0686</a></li>
+<li>Ross, S., Melik-Barkhudarov, N., Shankar, K. S., Wendel, A., Dey, D., Bagnell, J. A., &amp; Hebert, M. (2013, May). Learning monocular reactive uav control in cluttered natural environments. In&nbsp;2013 IEEE international conference on robotics and automation&nbsp;(pp. 1765-1772). IEEE:&nbsp;<a href="https://arxiv.org/abs/1211.1690">https://arxiv.org/abs/1211.1690</a></li>
+</ul>
+		</div>
+
+				
+							<button type="button" class="pum-close popmake-close" aria-label="Close">
+			×			</button>
+		
+	</div>
+
+</div>
+<div id="pum-707" role="dialog" aria-modal="false" class="pum pum-overlay pum-theme-475 pum-theme-lightbox popmake-overlay pum-click-to-close click_open" data-popmake="{&quot;id&quot;:707,&quot;slug&quot;:&quot;rlsem4&quot;,&quot;theme_id&quot;:475,&quot;cookies&quot;:[],&quot;triggers&quot;:[{&quot;type&quot;:&quot;click_open&quot;,&quot;settings&quot;:{&quot;extra_selectors&quot;:&quot;&quot;,&quot;cookie_name&quot;:null}}],&quot;mobile_disabled&quot;:null,&quot;tablet_disabled&quot;:null,&quot;meta&quot;:{&quot;display&quot;:{&quot;stackable&quot;:false,&quot;overlay_disabled&quot;:false,&quot;scrollable_content&quot;:false,&quot;disable_reposition&quot;:false,&quot;size&quot;:&quot;medium&quot;,&quot;responsive_min_width&quot;:&quot;0%&quot;,&quot;responsive_min_width_unit&quot;:false,&quot;responsive_max_width&quot;:&quot;100%&quot;,&quot;responsive_max_width_unit&quot;:false,&quot;custom_width&quot;:&quot;640px&quot;,&quot;custom_width_unit&quot;:false,&quot;custom_height&quot;:&quot;380px&quot;,&quot;custom_height_unit&quot;:false,&quot;custom_height_auto&quot;:false,&quot;location&quot;:&quot;center top&quot;,&quot;position_from_trigger&quot;:false,&quot;position_top&quot;:&quot;100&quot;,&quot;position_left&quot;:&quot;0&quot;,&quot;position_bottom&quot;:&quot;0&quot;,&quot;position_right&quot;:&quot;0&quot;,&quot;position_fixed&quot;:false,&quot;animation_type&quot;:&quot;fade&quot;,&quot;animation_speed&quot;:&quot;350&quot;,&quot;animation_origin&quot;:&quot;center top&quot;,&quot;overlay_zindex&quot;:false,&quot;zindex&quot;:&quot;1999999999&quot;},&quot;close&quot;:{&quot;text&quot;:&quot;&quot;,&quot;button_delay&quot;:&quot;0&quot;,&quot;overlay_click&quot;:&quot;1&quot;,&quot;esc_press&quot;:&quot;1&quot;,&quot;f4_press&quot;:false},&quot;click_open&quot;:[]}}">
+
+	<div id="popmake-707" class="pum-container popmake theme-475 pum-responsive pum-responsive-medium responsive size-medium">
+
+				
+				
+		
+				<div class="pum-content popmake-content" tabindex="0">
+			<p>Literature for <strong>Deep Deterministic Policy Gradient</strong>:</p>
+<ul>
+<li>https://arxiv.org/abs/1509.02971</li>
+<li>http://proceedings.mlr.press/v32/silver14.pdf</li>
+<li>https://spinningup.openai.com/en/latest/algorithms/ddpg.html</li>
+<li>https://spinningup.openai.com/en/latest/algorithms/td3.html</li>
+<li>https://arxiv.org/abs/1802.09477</li>
+</ul>
+		</div>
+
+				
+							<button type="button" class="pum-close popmake-close" aria-label="Close">
+			×			</button>
+		
+	</div>
+
+</div>
+<div id="pum-705" role="dialog" aria-modal="false" class="pum pum-overlay pum-theme-475 pum-theme-lightbox popmake-overlay pum-click-to-close click_open" data-popmake="{&quot;id&quot;:705,&quot;slug&quot;:&quot;rlsem3&quot;,&quot;theme_id&quot;:475,&quot;cookies&quot;:[],&quot;triggers&quot;:[{&quot;type&quot;:&quot;click_open&quot;,&quot;settings&quot;:{&quot;extra_selectors&quot;:&quot;&quot;,&quot;cookie_name&quot;:null}}],&quot;mobile_disabled&quot;:null,&quot;tablet_disabled&quot;:null,&quot;meta&quot;:{&quot;display&quot;:{&quot;stackable&quot;:false,&quot;overlay_disabled&quot;:false,&quot;scrollable_content&quot;:false,&quot;disable_reposition&quot;:false,&quot;size&quot;:&quot;medium&quot;,&quot;responsive_min_width&quot;:&quot;0%&quot;,&quot;responsive_min_width_unit&quot;:false,&quot;responsive_max_width&quot;:&quot;100%&quot;,&quot;responsive_max_width_unit&quot;:false,&quot;custom_width&quot;:&quot;640px&quot;,&quot;custom_width_unit&quot;:false,&quot;custom_height&quot;:&quot;380px&quot;,&quot;custom_height_unit&quot;:false,&quot;custom_height_auto&quot;:false,&quot;location&quot;:&quot;center top&quot;,&quot;position_from_trigger&quot;:false,&quot;position_top&quot;:&quot;100&quot;,&quot;position_left&quot;:&quot;0&quot;,&quot;position_bottom&quot;:&quot;0&quot;,&quot;position_right&quot;:&quot;0&quot;,&quot;position_fixed&quot;:false,&quot;animation_type&quot;:&quot;fade&quot;,&quot;animation_speed&quot;:&quot;350&quot;,&quot;animation_origin&quot;:&quot;center top&quot;,&quot;overlay_zindex&quot;:false,&quot;zindex&quot;:&quot;1999999999&quot;},&quot;close&quot;:{&quot;text&quot;:&quot;&quot;,&quot;button_delay&quot;:&quot;0&quot;,&quot;overlay_click&quot;:&quot;1&quot;,&quot;esc_press&quot;:&quot;1&quot;,&quot;f4_press&quot;:false},&quot;click_open&quot;:[]}}">
+
+	<div id="popmake-705" class="pum-container popmake theme-475 pum-responsive pum-responsive-medium responsive size-medium">
+
+				
+				
+		
+				<div class="pum-content popmake-content" tabindex="0">
+			<p>Literature for <strong>Asynchronous Advantage Actor-Critic (A3C) (+ A2C)</strong>:</p>
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li>https://arxiv.org/abs/1602.01783</li>
+<li>https://medium.com/emergent-future/simple-reinforcement-learning-with-tensorflow-part-8-asynchronous-actor-critic-agents-a3c-c88f72a5e9f2</li>
+<li>https://arxiv.org/pdf/1611.05397.pdf</li>
+</ul>
+</li>
+</ul>
+		</div>
+
+				
+							<button type="button" class="pum-close popmake-close" aria-label="Close">
+			×			</button>
+		
+	</div>
+
+</div>
+<div id="pum-696" role="dialog" aria-modal="false" class="pum pum-overlay pum-theme-475 pum-theme-lightbox popmake-overlay pum-click-to-close click_open" data-popmake="{&quot;id&quot;:696,&quot;slug&quot;:&quot;rlsem1&quot;,&quot;theme_id&quot;:475,&quot;cookies&quot;:[],&quot;triggers&quot;:[{&quot;type&quot;:&quot;click_open&quot;,&quot;settings&quot;:{&quot;extra_selectors&quot;:&quot;&quot;,&quot;cookie_name&quot;:null}}],&quot;mobile_disabled&quot;:null,&quot;tablet_disabled&quot;:null,&quot;meta&quot;:{&quot;display&quot;:{&quot;stackable&quot;:false,&quot;overlay_disabled&quot;:false,&quot;scrollable_content&quot;:false,&quot;disable_reposition&quot;:false,&quot;size&quot;:&quot;medium&quot;,&quot;responsive_min_width&quot;:&quot;0%&quot;,&quot;responsive_min_width_unit&quot;:false,&quot;responsive_max_width&quot;:&quot;100%&quot;,&quot;responsive_max_width_unit&quot;:false,&quot;custom_width&quot;:&quot;640px&quot;,&quot;custom_width_unit&quot;:false,&quot;custom_height&quot;:&quot;380px&quot;,&quot;custom_height_unit&quot;:false,&quot;custom_height_auto&quot;:false,&quot;location&quot;:&quot;center top&quot;,&quot;position_from_trigger&quot;:false,&quot;position_top&quot;:&quot;100&quot;,&quot;position_left&quot;:&quot;0&quot;,&quot;position_bottom&quot;:&quot;0&quot;,&quot;position_right&quot;:&quot;0&quot;,&quot;position_fixed&quot;:false,&quot;animation_type&quot;:&quot;fade&quot;,&quot;animation_speed&quot;:&quot;350&quot;,&quot;animation_origin&quot;:&quot;center top&quot;,&quot;overlay_zindex&quot;:false,&quot;zindex&quot;:&quot;1999999999&quot;},&quot;close&quot;:{&quot;text&quot;:&quot;&quot;,&quot;button_delay&quot;:&quot;0&quot;,&quot;overlay_click&quot;:&quot;1&quot;,&quot;esc_press&quot;:&quot;1&quot;,&quot;f4_press&quot;:false},&quot;click_open&quot;:[]}}">
+
+	<div id="popmake-696" class="pum-container popmake theme-475 pum-responsive pum-responsive-medium responsive size-medium">
+
+				
+				
+		
+				<div class="pum-content popmake-content" tabindex="0">
+			<p>Literature for <strong>Trust-Region Policy Optimization (TRPO)</strong>:</p>
+<ul>
+<li>https://arxiv.org/abs/1506.02438</li>
+<li>https://arxiv.org/abs/1502.05477</li>
+<li>https://www.youtube.com/watch?v=jcF-HaBz0Vw</li>
+<li>https://spinningup.openai.com/en/latest/algorithms/trpo.html</li>
+<li>https://medium.com/@jonathan_hui/rl-trust-region-policy-optimization-trpo-explained-a6ee04eeeee9</li>
+</ul>
+		</div>
+
+				
+							<button type="button" class="pum-close popmake-close" aria-label="Close">
+			×			</button>
+		
+	</div>
+
+</div>
+<div id="pum-687" role="dialog" aria-modal="false" class="pum pum-overlay pum-theme-475 pum-theme-lightbox popmake-overlay pum-click-to-close click_open" data-popmake="{&quot;id&quot;:687,&quot;slug&quot;:&quot;rlsem2&quot;,&quot;theme_id&quot;:475,&quot;cookies&quot;:[],&quot;triggers&quot;:[{&quot;type&quot;:&quot;click_open&quot;,&quot;settings&quot;:{&quot;extra_selectors&quot;:&quot;&quot;,&quot;cookie_name&quot;:null}}],&quot;mobile_disabled&quot;:null,&quot;tablet_disabled&quot;:null,&quot;meta&quot;:{&quot;display&quot;:{&quot;stackable&quot;:false,&quot;overlay_disabled&quot;:false,&quot;scrollable_content&quot;:false,&quot;disable_reposition&quot;:false,&quot;size&quot;:&quot;medium&quot;,&quot;responsive_min_width&quot;:&quot;0%&quot;,&quot;responsive_min_width_unit&quot;:false,&quot;responsive_max_width&quot;:&quot;100%&quot;,&quot;responsive_max_width_unit&quot;:false,&quot;custom_width&quot;:&quot;640px&quot;,&quot;custom_width_unit&quot;:false,&quot;custom_height&quot;:&quot;380px&quot;,&quot;custom_height_unit&quot;:false,&quot;custom_height_auto&quot;:false,&quot;location&quot;:&quot;center&quot;,&quot;position_from_trigger&quot;:false,&quot;position_top&quot;:&quot;100&quot;,&quot;position_left&quot;:&quot;0&quot;,&quot;position_bottom&quot;:&quot;0&quot;,&quot;position_right&quot;:&quot;0&quot;,&quot;position_fixed&quot;:false,&quot;animation_type&quot;:&quot;fade&quot;,&quot;animation_speed&quot;:&quot;350&quot;,&quot;animation_origin&quot;:&quot;center top&quot;,&quot;overlay_zindex&quot;:false,&quot;zindex&quot;:&quot;1999999999&quot;},&quot;close&quot;:{&quot;text&quot;:&quot;&quot;,&quot;button_delay&quot;:&quot;0&quot;,&quot;overlay_click&quot;:&quot;1&quot;,&quot;esc_press&quot;:&quot;1&quot;,&quot;f4_press&quot;:false},&quot;click_open&quot;:[]}}">
+
+	<div id="popmake-687" class="pum-container popmake theme-475 pum-responsive pum-responsive-medium responsive size-medium">
+
+				
+				
+		
+				<div class="pum-content popmake-content" tabindex="0">
+			<p>Literature for <strong>Proximal Policy Optimization (PPO)</strong>:</p>
+<ul>
+<li>https://arxiv.org/abs/1707.06347</li>
+<li>https://openai.com/blog/openai-baselines-ppo/</li>
+<li>https://www.youtube.com/watch?v=5P7I-xPq8u8</li>
+<li>https://spinningup.openai.com/en/latest/algorithms/ppo.html</li>
+<li>https://arxiv.org/abs/1506.02438</li>
+<li>https://arxiv.org/abs/1707.02286</li>
+</ul>
+		</div>
+
+				
+							<button type="button" class="pum-close popmake-close" aria-label="Close">
+			×			</button>
+		
+	</div>
+
+</div>
+<div id="pum-481" role="dialog" aria-modal="false" aria-labelledby="pum_popup_title_481" class="pum pum-overlay pum-theme-477 pum-theme-hello-box popmake-overlay click_open" data-popmake="{&quot;id&quot;:481,&quot;slug&quot;:&quot;lecture2-05&quot;,&quot;theme_id&quot;:477,&quot;cookies&quot;:[],&quot;triggers&quot;:[{&quot;type&quot;:&quot;click_open&quot;,&quot;settings&quot;:{&quot;extra_selectors&quot;:&quot;&quot;,&quot;cookie_name&quot;:null}}],&quot;mobile_disabled&quot;:null,&quot;tablet_disabled&quot;:null,&quot;meta&quot;:{&quot;display&quot;:{&quot;stackable&quot;:false,&quot;overlay_disabled&quot;:false,&quot;scrollable_content&quot;:false,&quot;disable_reposition&quot;:false,&quot;size&quot;:&quot;medium&quot;,&quot;responsive_min_width&quot;:&quot;0%&quot;,&quot;responsive_min_width_unit&quot;:false,&quot;responsive_max_width&quot;:&quot;100%&quot;,&quot;responsive_max_width_unit&quot;:false,&quot;custom_width&quot;:&quot;640px&quot;,&quot;custom_width_unit&quot;:false,&quot;custom_height&quot;:&quot;380px&quot;,&quot;custom_height_unit&quot;:false,&quot;custom_height_auto&quot;:false,&quot;location&quot;:&quot;center top&quot;,&quot;position_from_trigger&quot;:false,&quot;position_top&quot;:&quot;100&quot;,&quot;position_left&quot;:&quot;0&quot;,&quot;position_bottom&quot;:&quot;0&quot;,&quot;position_right&quot;:&quot;0&quot;,&quot;position_fixed&quot;:false,&quot;animation_type&quot;:&quot;fade&quot;,&quot;animation_speed&quot;:&quot;350&quot;,&quot;animation_origin&quot;:&quot;center top&quot;,&quot;overlay_zindex&quot;:false,&quot;zindex&quot;:&quot;1999999999&quot;},&quot;close&quot;:{&quot;text&quot;:&quot;&quot;,&quot;button_delay&quot;:&quot;0&quot;,&quot;overlay_click&quot;:false,&quot;esc_press&quot;:false,&quot;f4_press&quot;:false},&quot;click_open&quot;:[]}}">
+
+	<div id="popmake-481" class="pum-container popmake theme-477 pum-responsive pum-responsive-medium responsive size-medium">
+
+				
+							<div id="pum_popup_title_481" class="pum-title popmake-title">
+				2.05 Summary			</div>
+		
+		
+				<div class="pum-content popmake-content" tabindex="0">
+			
+    <div>        
+    <div tabindex="0" class="plyr plyr--full-ui plyr--video plyr--html5 plyr--fullscreen-enabled plyr--paused plyr--stopped plyr--pip-supported"><div class="plyr__controls"><button class="plyr__controls__item plyr__control" type="button" data-plyr="play" aria-label="Play"><svg class="icon--pressed" aria-hidden="true" focusable="false"><use xlink:href="https://cmutschler.de/wp-content/plugins/easy-video-player/lib/plyr.svg#plyr-pause"></use></svg><svg class="icon--not-pressed" aria-hidden="true" focusable="false"><use xlink:href="https://cmutschler.de/wp-content/plugins/easy-video-player/lib/plyr.svg#plyr-play"></use></svg><span class="label--pressed plyr__sr-only">Pause</span><span class="label--not-pressed plyr__sr-only">Play</span></button><div class="plyr__controls__item plyr__progress__container"><div class="plyr__progress"><input data-plyr="seek" type="range" min="0" max="100" step="0.01" value="0" autocomplete="off" role="slider" aria-label="Seek" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="plyr-seek-4880" aria-valuetext="00:00 of 00:00" style="--value: 0%;"><progress class="plyr__progress__buffer" min="0" max="100" value="0" role="progressbar" aria-hidden="true">% buffered</progress><span class="plyr__tooltip">00:00</span></div></div><div class="plyr__controls__item plyr__time--current plyr__time" aria-label="Current time">00:00</div><div class="plyr__controls__item plyr__volume"><button type="button" class="plyr__control" data-plyr="mute"><svg class="icon--pressed" aria-hidden="true" focusable="false"><use xlink:href="https://cmutschler.de/wp-content/plugins/easy-video-player/lib/plyr.svg#plyr-muted"></use></svg><svg class="icon--not-pressed" aria-hidden="true" focusable="false"><use xlink:href="https://cmutschler.de/wp-content/plugins/easy-video-player/lib/plyr.svg#plyr-volume"></use></svg><span class="label--pressed plyr__sr-only">Unmute</span><span class="label--not-pressed plyr__sr-only">Mute</span></button><input data-plyr="volume" type="range" min="0" max="1" step="0.05" value="1" autocomplete="off" role="slider" aria-label="Volume" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100" id="plyr-volume-4880" aria-valuetext="100.0%" style="--value: 100%;"></div><button class="plyr__controls__item plyr__control" type="button" data-plyr="captions"><svg class="icon--pressed" aria-hidden="true" focusable="false"><use xlink:href="https://cmutschler.de/wp-content/plugins/easy-video-player/lib/plyr.svg#plyr-captions-on"></use></svg><svg class="icon--not-pressed" aria-hidden="true" focusable="false"><use xlink:href="https://cmutschler.de/wp-content/plugins/easy-video-player/lib/plyr.svg#plyr-captions-off"></use></svg><span class="label--pressed plyr__sr-only">Disable captions</span><span class="label--not-pressed plyr__sr-only">Enable captions</span></button><div class="plyr__controls__item plyr__menu"><button aria-haspopup="true" aria-controls="plyr-settings-4880" aria-expanded="false" type="button" class="plyr__control" data-plyr="settings"><svg aria-hidden="true" focusable="false"><use xlink:href="https://cmutschler.de/wp-content/plugins/easy-video-player/lib/plyr.svg#plyr-settings"></use></svg><span class="plyr__sr-only">Settings</span></button><div class="plyr__menu__container" id="plyr-settings-4880" hidden=""><div><div id="plyr-settings-4880-home"><div role="menu"><button data-plyr="settings" type="button" class="plyr__control plyr__control--forward" role="menuitem" aria-haspopup="true" hidden=""><span>Captions<span class="plyr__menu__value">Disabled</span></span></button><button data-plyr="settings" type="button" class="plyr__control plyr__control--forward" role="menuitem" aria-haspopup="true" hidden=""><span>Quality<span class="plyr__menu__value">undefined</span></span></button><button data-plyr="settings" type="button" class="plyr__control plyr__control--forward" role="menuitem" aria-haspopup="true"><span>Speed<span class="plyr__menu__value">Normal</span></span></button></div></div><div id="plyr-settings-4880-captions" hidden=""><button type="button" class="plyr__control plyr__control--back"><span aria-hidden="true">Captions</span><span class="plyr__sr-only">Go back to previous menu</span></button><div role="menu"></div></div><div id="plyr-settings-4880-quality" hidden=""><button type="button" class="plyr__control plyr__control--back"><span aria-hidden="true">Quality</span><span class="plyr__sr-only">Go back to previous menu</span></button><div role="menu"></div></div><div id="plyr-settings-4880-speed" hidden=""><button type="button" class="plyr__control plyr__control--back"><span aria-hidden="true">Speed</span><span class="plyr__sr-only">Go back to previous menu</span></button><div role="menu"><button data-plyr="speed" type="button" role="menuitemradio" class="plyr__control" aria-checked="false" value="0.5"><span>0.5×</span></button><button data-plyr="speed" type="button" role="menuitemradio" class="plyr__control" aria-checked="false" value="0.75"><span>0.75×</span></button><button data-plyr="speed" type="button" role="menuitemradio" class="plyr__control" aria-checked="true" value="1"><span>Normal</span></button><button data-plyr="speed" type="button" role="menuitemradio" class="plyr__control" aria-checked="false" value="1.25"><span>1.25×</span></button><button data-plyr="speed" type="button" role="menuitemradio" class="plyr__control" aria-checked="false" value="1.5"><span>1.5×</span></button><button data-plyr="speed" type="button" role="menuitemradio" class="plyr__control" aria-checked="false" value="1.75"><span>1.75×</span></button><button data-plyr="speed" type="button" role="menuitemradio" class="plyr__control" aria-checked="false" value="2"><span>2×</span></button><button data-plyr="speed" type="button" role="menuitemradio" class="plyr__control" aria-checked="false" value="4"><span>4×</span></button></div></div></div></div></div><button class="plyr__controls__item plyr__control" type="button" data-plyr="pip"><svg aria-hidden="true" focusable="false"><use xlink:href="https://cmutschler.de/wp-content/plugins/easy-video-player/lib/plyr.svg#plyr-pip"></use></svg><span class="plyr__sr-only">PIP</span></button><button class="plyr__controls__item plyr__control" type="button" data-plyr="fullscreen"><svg class="icon--pressed" aria-hidden="true" focusable="false"><use xlink:href="https://cmutschler.de/wp-content/plugins/easy-video-player/lib/plyr.svg#plyr-exit-fullscreen"></use></svg><svg class="icon--not-pressed" aria-hidden="true" focusable="false"><use xlink:href="https://cmutschler.de/wp-content/plugins/easy-video-player/lib/plyr.svg#plyr-enter-fullscreen"></use></svg><span class="label--pressed plyr__sr-only">Exit fullscreen</span><span class="label--not-pressed plyr__sr-only">Enter fullscreen</span></button></div><div class="plyr__video-wrapper plyr__video-wrapper--fixed-ratio"><video id="plyr6a2faffee002a" class="easy-video-player">
+       <source src="https://owncloud.fraunhofer.de/index.php/s/YVfCobmTIcuJx3E/download" type="video/mp4">
+    </video><div class="plyr__poster"></div></div><div class="plyr__captions"></div><button type="button" class="plyr__control plyr__control--overlaid" data-plyr="play" aria-label="Play"><svg aria-hidden="true" focusable="false"><use xlink:href="https://cmutschler.de/wp-content/plugins/easy-video-player/lib/plyr.svg#plyr-play"></use></svg><span class="plyr__sr-only">Play</span></button></div>
+    </div>    <script>
+        const evplayerplyr6a2faffee002a = new Plyr(document.getElementById('plyr6a2faffee002a'));
+        evplayerplyr6a2faffee002a.ratio = '16:9';
+        evplayerplyr6a2faffee002a.iconUrl = 'https://cmutschler.de/wp-content/plugins/easy-video-player/lib/plyr.svg';
+        evplayerplyr6a2faffee002a.blankVideo = 'https://cmutschler.de/wp-content/plugins/easy-video-player/lib/blank.mp4';  
+    </script>
+		</div>
+
+				
+							<button type="button" class="pum-close popmake-close" aria-label="Close">
+			×			</button>
+		
+	</div>
+
+</div>
+<style type="text/css" media="screen"></style><script> /* <![CDATA[ */var tribe_l10n_datatables = {"aria":{"sort_ascending":": activate to sort column ascending","sort_descending":": activate to sort column descending"},"length_menu":"Show _MENU_ entries","empty_table":"No data available in table","info":"Showing _START_ to _END_ of _TOTAL_ entries","info_empty":"Showing 0 to 0 of 0 entries","info_filtered":"(filtered from _MAX_ total entries)","zero_records":"No matching records found","search":"Search:","all_selected_text":"All items on this page were selected. ","select_all_link":"Select all pages","clear_selection":"Clear Selection.","pagination":{"all":"All","next":"Next","previous":"Previous"},"select":{"rows":{"0":"","_":": Selected %d rows","1":": Selected 1 row"}},"datepicker":{"dayNames":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"dayNamesShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"dayNamesMin":["S","M","T","W","T","F","S"],"monthNames":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesShort":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesMin":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"nextText":"Next","prevText":"Prev","currentText":"Today","closeText":"Done","today":"Today","clear":"Clear"}};/* ]]> */ </script>
+<!-- Koko Analytics v2.4.0 - https://www.kokoanalytics.com/ -->
+<script>
+(()=>{var e=window.koko_analytics,c=["utm_source","utm_medium","utm_campaign"];function d(){let t={},a=new URLSearchParams(window.location.search),s=new URLSearchParams(window.location.hash.substring(1));return c.forEach(i=>{let n=a.get(i)||s.get(i);n&&(t[i]=n)}),t}e.trackPageview=function(t,a){if(/bot|crawl|spider|seo|lighthouse|facebookexternalhit|preview|prerender/i.test(navigator.userAgent)||window._phantom||window.__nightmare||window.navigator.webdriver||window.Cypress){console.debug("Koko Analytics: Ignoring call to trackPageview because user agent is a bot or this is a headless browser.");return}navigator.sendBeacon(e.url,new URLSearchParams({action:"koko_analytics_collect",pa:t,po:a,r:document.referrer.indexOf(e.site_url)==0?"":document.referrer,m:e.use_cookie?"c":e.method[0],...d()}))};function o(){e.trackPageview(e.path,e.post_id)}function r(){e.autotracked||(o(),e.autotracked=!0)}document.visibilityState==="hidden"||document.visibilityState==="prerender"?document.addEventListener("visibilitychange",()=>{document.visibilityState==="visible"&&r()}):r();window.addEventListener("pageshow",t=>{t.persisted&&o()});})();
+</script>
+
+	<script>
+	!function(){var e=-1<navigator.userAgent.toLowerCase().indexOf("webkit"),t=-1<navigator.userAgent.toLowerCase().indexOf("opera"),n=-1<navigator.userAgent.toLowerCase().indexOf("msie");(e||t||n)&&document.getElementById&&window.addEventListener&&window.addEventListener("hashchange",function(){var e,t=location.hash.substring(1);/^[A-z0-9_-]+$/.test(t)&&(e=document.getElementById(t))&&(/^(?:a|select|input|button|textarea)$/i.test(e.tagName)||(e.tabIndex=-1),e.focus())},!1)}();
+	</script>
+	<script id="tec-user-agent-js" src="https://cmutschler.de/wp-content/plugins/the-events-calendar/common/build/js/user-agent.js?ver=da75d0bdea6dde3898df"></script>
+<script id="jquery-effects-core-js" src="https://cmutschler.de/wp-includes/js/jquery/ui/effect.min.js?ver=1.13.3"></script>
+<script id="jquery-effects-slide-js" src="https://cmutschler.de/wp-includes/js/jquery/ui/effect-slide.min.js?ver=1.13.3"></script>
+<script id="jquery-effects-highlight-js" src="https://cmutschler.de/wp-includes/js/jquery/ui/effect-highlight.min.js?ver=1.13.3"></script>
+<script id="jquery-effects-fold-js" src="https://cmutschler.de/wp-includes/js/jquery/ui/effect-fold.min.js?ver=1.13.3"></script>
+<script id="jquery-effects-blind-js" src="https://cmutschler.de/wp-includes/js/jquery/ui/effect-blind.min.js?ver=1.13.3"></script>
+<script id="bg-show-hide-script-js-extra">
+var BG_SHCE_USE_EFFECTS = "0";
+var BG_SHCE_TOGGLE_SPEED = "50";
+var BG_SHCE_TOGGLE_OPTIONS = "none";
+var BG_SHCE_TOGGLE_EFFECT = "blind";
+//# sourceURL=bg-show-hide-script-js-extra
+</script>
+<script id="bg-show-hide-script-js" src="https://cmutschler.de/wp-content/plugins/show-hidecollapse-expand/assets/js/bg-show-hide.js?ver=7.0"></script>
+<script id="sm-script-js" src="https://cmutschler.de/wp-content/plugins/wp-show-more/wpsm-script.js?ver=1.0.1"></script>
+<script id="rmwr-frontend-js-extra">
+var rmwrSettings = {"enableAnalytics":"","animationDefault":"fade","printExpand":"1","loadingText":"Loading..."};
+//# sourceURL=rmwr-frontend-js-extra
+</script>
+<script id="rmwr-frontend-js" src="https://cmutschler.de/wp-content/plugins/read-more-without-refresh/js/frontend.js?ver=4.0.0"></script>
+<script id="sinatra-js-js-extra">
+var sinatra_vars = {"ajaxurl":"https://cmutschler.de/wp-admin/admin-ajax.php","nonce":"2a92f74b1c","responsive-breakpoint":"960","sticky-header":{"enabled":true,"hide_on":[""]},"strings":{"comments_toggle_show":"Leave a Comment","comments_toggle_hide":"Hide Comments"}};
+//# sourceURL=sinatra-js-js-extra
+</script>
+<script id="sinatra-js-js" src="https://cmutschler.de/wp-content/themes/sinatra/assets/js/sinatra.min.js?ver=1.3"></script>
+<script id="jquery-ui-core-js" src="https://cmutschler.de/wp-includes/js/jquery/ui/core.min.js?ver=1.13.3"></script>
+<script id="wp-hooks-js" src="https://cmutschler.de/wp-includes/js/dist/hooks.min.js?ver=7496969728ca0f95732d"></script>
+<script id="popup-maker-site-js-extra">
+var pum_vars = {"version":"1.22.0","pm_dir_url":"https://cmutschler.de/wp-content/plugins/popup-maker/","ajaxurl":"https://cmutschler.de/wp-admin/admin-ajax.php","restapi":"https://cmutschler.de/wp-json/pum/v1","rest_nonce":null,"default_theme":"475","debug_mode":"1","disable_tracking":"","home_url":"/","message_position":"top","core_sub_forms_enabled":"1","popups":[],"cookie_domain":"","paramNames":{"popup_id":"pid","cta":"cta","notrack":"notrack"},"analytics_enabled":"1","analytics_route":"analytics","analytics_api":"https://cmutschler.de/wp-json/pum/v1"};
+var pum_debug_vars = {"debug_mode_enabled":"Popup Maker: Debug Mode Enabled","debug_started_at":"Debug started at:","debug_more_info":"For more information on how to use this information visit https://wppopupmaker.com/docs/?utm_medium=js-debug-info&utm_campaign=contextual-help&utm_source=browser-console&utm_content=more-info","global_info":"Global Information","localized_vars":"Localized variables","popups_initializing":"Popups Initializing","popups_initialized":"Popups Initialized","single_popup_label":"Popup: #","theme_id":"Theme ID: ","label_method_call":"Method Call:","label_method_args":"Method Arguments:","label_popup_settings":"Settings","label_triggers":"Triggers","label_cookies":"Cookies","label_delay":"Delay:","label_conditions":"Conditions","label_cookie":"Cookie:","label_settings":"Settings:","label_selector":"Selector:","label_mobile_disabled":"Mobile Disabled:","label_tablet_disabled":"Tablet Disabled:","label_event":"Event: %s","triggers":{"click_open":"Click Open","auto_open":"Time Delay / Auto Open","form_submission":"Form Submission","exit_intent":"Exit Intent \ud83d\udd12 Pro","scroll":"Scroll Trigger \ud83d\udd12 Pro","time_on_site":"Time on Site \ud83d\udd12 Pro"},"cookies":{"on_popup_close":"On Popup Close","on_popup_open":"On Popup Open","on_popup_conversion":"On Popup Conversion","form_submission":"Form Submission","pum_sub_form_success":"Subscription Form: Successful","pum_sub_form_already_subscribed":"Subscription Form: Already Subscribed","manual":"Manual"}};
+var pum_sub_vars = {"ajaxurl":"https://cmutschler.de/wp-admin/admin-ajax.php","message_position":"top"};
+var pum_popups = {"pum-1127":{"triggers":[],"cookies":[],"disable_on_mobile":false,"disable_on_tablet":false,"atc_promotion":null,"explain":null,"type_section":null,"theme_id":"475","size":"medium","responsive_min_width":"0%","responsive_max_width":"100%","custom_width":"640px","custom_height_auto":false,"custom_height":"380px","scrollable_content":false,"animation_type":"fade","animation_speed":"350","animation_origin":"center top","open_sound":"none","custom_sound":"","location":"center top","position_top":"100","position_bottom":"0","position_left":"0","position_right":"0","position_from_trigger":false,"position_fixed":false,"overlay_disabled":false,"stackable":false,"disable_reposition":false,"zindex":"1999999999","close_button_delay":"0","fi_promotion":null,"close_on_form_submission":false,"close_on_form_submission_delay":"0","close_on_overlay_click":false,"close_on_esc_press":false,"close_on_f4_press":false,"disable_form_reopen":false,"disable_accessibility":false,"theme_slug":"lightbox","id":1127,"slug":"twr-rtt"},"pum-737":{"triggers":[],"cookies":[],"disable_on_mobile":false,"disable_on_tablet":false,"atc_promotion":null,"explain":null,"type_section":null,"theme_id":"475","size":"medium","responsive_min_width":"0%","responsive_max_width":"100%","custom_width":"640px","custom_height_auto":false,"custom_height":"380px","scrollable_content":false,"animation_type":"fade","animation_speed":"350","animation_origin":"center top","open_sound":"none","custom_sound":"","location":"center top","position_top":"100","position_bottom":"0","position_left":"0","position_right":"0","position_from_trigger":false,"position_fixed":false,"overlay_disabled":false,"stackable":false,"disable_reposition":false,"zindex":"1999999999","close_button_delay":"0","fi_promotion":null,"close_on_form_submission":false,"close_on_form_submission_delay":"0","close_on_overlay_click":true,"close_on_esc_press":true,"close_on_f4_press":false,"disable_form_reopen":false,"disable_accessibility":false,"theme_slug":"lightbox","id":737,"slug":"rlsem19"},"pum-733":{"triggers":[],"cookies":[],"disable_on_mobile":false,"disable_on_tablet":false,"atc_promotion":null,"explain":null,"type_section":null,"theme_id":"475","size":"medium","responsive_min_width":"0%","responsive_max_width":"100%","custom_width":"640px","custom_height_auto":false,"custom_height":"380px","scrollable_content":false,"animation_type":"fade","animation_speed":"350","animation_origin":"center top","open_sound":"none","custom_sound":"","location":"center top","position_top":"100","position_bottom":"0","position_left":"0","position_right":"0","position_from_trigger":false,"position_fixed":false,"overlay_disabled":false,"stackable":false,"disable_reposition":false,"zindex":"1999999999","close_button_delay":"0","fi_promotion":null,"close_on_form_submission":false,"close_on_form_submission_delay":"0","close_on_overlay_click":true,"close_on_esc_press":true,"close_on_f4_press":false,"disable_form_reopen":false,"disable_accessibility":false,"theme_slug":"lightbox","id":733,"slug":"rlsem16"},"pum-730":{"triggers":[],"cookies":[],"disable_on_mobile":false,"disable_on_tablet":false,"atc_promotion":null,"explain":null,"type_section":null,"theme_id":"475","size":"medium","responsive_min_width":"0%","responsive_max_width":"100%","custom_width":"640px","custom_height_auto":false,"custom_height":"380px","scrollable_content":false,"animation_type":"fade","animation_speed":"350","animation_origin":"center top","open_sound":"none","custom_sound":"","location":"center top","position_top":"100","position_bottom":"0","position_left":"0","position_right":"0","position_from_trigger":false,"position_fixed":false,"overlay_disabled":false,"stackable":false,"disable_reposition":false,"zindex":"1999999999","close_button_delay":"0","fi_promotion":null,"close_on_form_submission":false,"close_on_form_submission_delay":"0","close_on_overlay_click":true,"close_on_esc_press":true,"close_on_f4_press":false,"disable_form_reopen":false,"disable_accessibility":false,"theme_slug":"lightbox","id":730,"slug":"rlsem15"},"pum-728":{"triggers":[],"cookies":[],"disable_on_mobile":false,"disable_on_tablet":false,"atc_promotion":null,"explain":null,"type_section":null,"theme_id":"475","size":"medium","responsive_min_width":"0%","responsive_max_width":"100%","custom_width":"640px","custom_height_auto":false,"custom_height":"380px","scrollable_content":false,"animation_type":"fade","animation_speed":"350","animation_origin":"center top","open_sound":"none","custom_sound":"","location":"center top","position_top":"100","position_bottom":"0","position_left":"0","position_right":"0","position_from_trigger":false,"position_fixed":false,"overlay_disabled":false,"stackable":false,"disable_reposition":false,"zindex":"1999999999","close_button_delay":"0","fi_promotion":null,"close_on_form_submission":false,"close_on_form_submission_delay":"0","close_on_overlay_click":true,"close_on_esc_press":true,"close_on_f4_press":false,"disable_form_reopen":false,"disable_accessibility":false,"theme_slug":"lightbox","id":728,"slug":"rlsem14"},"pum-726":{"triggers":[],"cookies":[],"disable_on_mobile":false,"disable_on_tablet":false,"atc_promotion":null,"explain":null,"type_section":null,"theme_id":"475","size":"medium","responsive_min_width":"0%","responsive_max_width":"100%","custom_width":"640px","custom_height_auto":false,"custom_height":"380px","scrollable_content":false,"animation_type":"fade","animation_speed":"350","animation_origin":"center top","open_sound":"none","custom_sound":"","location":"center top","position_top":"100","position_bottom":"0","position_left":"0","position_right":"0","position_from_trigger":false,"position_fixed":false,"overlay_disabled":false,"stackable":false,"disable_reposition":false,"zindex":"1999999999","close_button_delay":"0","fi_promotion":null,"close_on_form_submission":false,"close_on_form_submission_delay":"0","close_on_overlay_click":true,"close_on_esc_press":true,"close_on_f4_press":false,"disable_form_reopen":false,"disable_accessibility":false,"theme_slug":"lightbox","id":726,"slug":"rlsem13"},"pum-724":{"triggers":[],"cookies":[],"disable_on_mobile":false,"disable_on_tablet":false,"atc_promotion":null,"explain":null,"type_section":null,"theme_id":"475","size":"medium","responsive_min_width":"0%","responsive_max_width":"100%","custom_width":"640px","custom_height_auto":false,"custom_height":"380px","scrollable_content":false,"animation_type":"fade","animation_speed":"350","animation_origin":"center top","open_sound":"none","custom_sound":"","location":"center top","position_top":"100","position_bottom":"0","position_left":"0","position_right":"0","position_from_trigger":false,"position_fixed":false,"overlay_disabled":false,"stackable":false,"disable_reposition":false,"zindex":"1999999999","close_button_delay":"0","fi_promotion":null,"close_on_form_submission":false,"close_on_form_submission_delay":"0","close_on_overlay_click":true,"close_on_esc_press":true,"close_on_f4_press":false,"disable_form_reopen":false,"disable_accessibility":false,"theme_slug":"lightbox","id":724,"slug":"rlsem12"},"pum-722":{"triggers":[],"cookies":[],"disable_on_mobile":false,"disable_on_tablet":false,"atc_promotion":null,"explain":null,"type_section":null,"theme_id":"475","size":"medium","responsive_min_width":"0%","responsive_max_width":"100%","custom_width":"640px","custom_height_auto":false,"custom_height":"380px","scrollable_content":false,"animation_type":"fade","animation_speed":"350","animation_origin":"center top","open_sound":"none","custom_sound":"","location":"center top","position_top":"100","position_bottom":"0","position_left":"0","position_right":"0","position_from_trigger":false,"position_fixed":false,"overlay_disabled":false,"stackable":false,"disable_reposition":false,"zindex":"1999999999","close_button_delay":"0","fi_promotion":null,"close_on_form_submission":false,"close_on_form_submission_delay":"0","close_on_overlay_click":true,"close_on_esc_press":true,"close_on_f4_press":false,"disable_form_reopen":false,"disable_accessibility":false,"theme_slug":"lightbox","id":722,"slug":"rlsem11"},"pum-720":{"triggers":[],"cookies":[],"disable_on_mobile":false,"disable_on_tablet":false,"atc_promotion":null,"explain":null,"type_section":null,"theme_id":"475","size":"medium","responsive_min_width":"0%","responsive_max_width":"100%","custom_width":"640px","custom_height_auto":false,"custom_height":"380px","scrollable_content":false,"animation_type":"fade","animation_speed":"350","animation_origin":"center top","open_sound":"none","custom_sound":"","location":"center top","position_top":"100","position_bottom":"0","position_left":"0","position_right":"0","position_from_trigger":false,"position_fixed":false,"overlay_disabled":false,"stackable":false,"disable_reposition":false,"zindex":"1999999999","close_button_delay":"0","fi_promotion":null,"close_on_form_submission":false,"close_on_form_submission_delay":"0","close_on_overlay_click":true,"close_on_esc_press":true,"close_on_f4_press":false,"disable_form_reopen":false,"disable_accessibility":false,"theme_slug":"lightbox","id":720,"slug":"rlsem10"},"pum-717":{"triggers":[],"cookies":[],"disable_on_mobile":false,"disable_on_tablet":false,"atc_promotion":null,"explain":null,"type_section":null,"theme_id":"475","size":"medium","responsive_min_width":"0%","responsive_max_width":"100%","custom_width":"640px","custom_height_auto":false,"custom_height":"380px","scrollable_content":false,"animation_type":"fade","animation_speed":"350","animation_origin":"center top","open_sound":"none","custom_sound":"","location":"center top","position_top":"100","position_bottom":"0","position_left":"0","position_right":"0","position_from_trigger":false,"position_fixed":false,"overlay_disabled":false,"stackable":false,"disable_reposition":false,"zindex":"1999999999","close_button_delay":"0","fi_promotion":null,"close_on_form_submission":false,"close_on_form_submission_delay":"0","close_on_overlay_click":true,"close_on_esc_press":true,"close_on_f4_press":false,"disable_form_reopen":false,"disable_accessibility":false,"theme_slug":"lightbox","id":717,"slug":"rlsem9"},"pum-715":{"triggers":[],"cookies":[],"disable_on_mobile":false,"disable_on_tablet":false,"atc_promotion":null,"explain":null,"type_section":null,"theme_id":"475","size":"medium","responsive_min_width":"0%","responsive_max_width":"100%","custom_width":"640px","custom_height_auto":false,"custom_height":"380px","scrollable_content":false,"animation_type":"fade","animation_speed":"350","animation_origin":"center top","open_sound":"none","custom_sound":"","location":"center top","position_top":"100","position_bottom":"0","position_left":"0","position_right":"0","position_from_trigger":false,"position_fixed":false,"overlay_disabled":false,"stackable":false,"disable_reposition":false,"zindex":"1999999999","close_button_delay":"0","fi_promotion":null,"close_on_form_submission":false,"close_on_form_submission_delay":"0","close_on_overlay_click":true,"close_on_esc_press":true,"close_on_f4_press":false,"disable_form_reopen":false,"disable_accessibility":false,"theme_slug":"lightbox","id":715,"slug":"rlsem8"},"pum-713":{"triggers":[],"cookies":[],"disable_on_mobile":false,"disable_on_tablet":false,"atc_promotion":null,"explain":null,"type_section":null,"theme_id":"475","size":"medium","responsive_min_width":"0%","responsive_max_width":"100%","custom_width":"640px","custom_height_auto":false,"custom_height":"380px","scrollable_content":false,"animation_type":"fade","animation_speed":"350","animation_origin":"center top","open_sound":"none","custom_sound":"","location":"center top","position_top":"100","position_bottom":"0","position_left":"0","position_right":"0","position_from_trigger":false,"position_fixed":false,"overlay_disabled":false,"stackable":false,"disable_reposition":false,"zindex":"1999999999","close_button_delay":"0","fi_promotion":null,"close_on_form_submission":false,"close_on_form_submission_delay":"0","close_on_overlay_click":true,"close_on_esc_press":true,"close_on_f4_press":false,"disable_form_reopen":false,"disable_accessibility":false,"theme_slug":"lightbox","id":713,"slug":"rlsem7"},"pum-711":{"triggers":[],"cookies":[],"disable_on_mobile":false,"disable_on_tablet":false,"atc_promotion":null,"explain":null,"type_section":null,"theme_id":"475","size":"medium","responsive_min_width":"0%","responsive_max_width":"100%","custom_width":"640px","custom_height_auto":false,"custom_height":"380px","scrollable_content":false,"animation_type":"fade","animation_speed":"350","animation_origin":"center top","open_sound":"none","custom_sound":"","location":"center top","position_top":"100","position_bottom":"0","position_left":"0","position_right":"0","position_from_trigger":false,"position_fixed":false,"overlay_disabled":false,"stackable":false,"disable_reposition":false,"zindex":"1999999999","close_button_delay":"0","fi_promotion":null,"close_on_form_submission":false,"close_on_form_submission_delay":"0","close_on_overlay_click":true,"close_on_esc_press":true,"close_on_f4_press":false,"disable_form_reopen":false,"disable_accessibility":false,"theme_slug":"lightbox","id":711,"slug":"rlsem6"},"pum-709":{"triggers":[],"cookies":[],"disable_on_mobile":false,"disable_on_tablet":false,"atc_promotion":null,"explain":null,"type_section":null,"theme_id":"475","size":"medium","responsive_min_width":"0%","responsive_max_width":"100%","custom_width":"640px","custom_height_auto":false,"custom_height":"380px","scrollable_content":false,"animation_type":"fade","animation_speed":"350","animation_origin":"center top","open_sound":"none","custom_sound":"","location":"center top","position_top":"100","position_bottom":"0","position_left":"0","position_right":"0","position_from_trigger":false,"position_fixed":false,"overlay_disabled":false,"stackable":false,"disable_reposition":false,"zindex":"1999999999","close_button_delay":"0","fi_promotion":null,"close_on_form_submission":false,"close_on_form_submission_delay":"0","close_on_overlay_click":true,"close_on_esc_press":true,"close_on_f4_press":false,"disable_form_reopen":false,"disable_accessibility":false,"theme_slug":"lightbox","id":709,"slug":"rlsem5"},"pum-707":{"triggers":[],"cookies":[],"disable_on_mobile":false,"disable_on_tablet":false,"atc_promotion":null,"explain":null,"type_section":null,"theme_id":"475","size":"medium","responsive_min_width":"0%","responsive_max_width":"100%","custom_width":"640px","custom_height_auto":false,"custom_height":"380px","scrollable_content":false,"animation_type":"fade","animation_speed":"350","animation_origin":"center top","open_sound":"none","custom_sound":"","location":"center top","position_top":"100","position_bottom":"0","position_left":"0","position_right":"0","position_from_trigger":false,"position_fixed":false,"overlay_disabled":false,"stackable":false,"disable_reposition":false,"zindex":"1999999999","close_button_delay":"0","fi_promotion":null,"close_on_form_submission":false,"close_on_form_submission_delay":"0","close_on_overlay_click":true,"close_on_esc_press":true,"close_on_f4_press":false,"disable_form_reopen":false,"disable_accessibility":false,"theme_slug":"lightbox","id":707,"slug":"rlsem4"},"pum-705":{"triggers":[],"cookies":[],"disable_on_mobile":false,"disable_on_tablet":false,"atc_promotion":null,"explain":null,"type_section":null,"theme_id":"475","size":"medium","responsive_min_width":"0%","responsive_max_width":"100%","custom_width":"640px","custom_height_auto":false,"custom_height":"380px","scrollable_content":false,"animation_type":"fade","animation_speed":"350","animation_origin":"center top","open_sound":"none","custom_sound":"","location":"center top","position_top":"100","position_bottom":"0","position_left":"0","position_right":"0","position_from_trigger":false,"position_fixed":false,"overlay_disabled":false,"stackable":false,"disable_reposition":false,"zindex":"1999999999","close_button_delay":"0","fi_promotion":null,"close_on_form_submission":false,"close_on_form_submission_delay":"0","close_on_overlay_click":true,"close_on_esc_press":true,"close_on_f4_press":false,"disable_form_reopen":false,"disable_accessibility":false,"theme_slug":"lightbox","id":705,"slug":"rlsem3"},"pum-696":{"triggers":[],"cookies":[],"disable_on_mobile":false,"disable_on_tablet":false,"atc_promotion":null,"explain":null,"type_section":null,"theme_id":"475","size":"medium","responsive_min_width":"0%","responsive_max_width":"100%","custom_width":"640px","custom_height_auto":false,"custom_height":"380px","scrollable_content":false,"animation_type":"fade","animation_speed":"350","animation_origin":"center top","open_sound":"none","custom_sound":"","location":"center top","position_top":"100","position_bottom":"0","position_left":"0","position_right":"0","position_from_trigger":false,"position_fixed":false,"overlay_disabled":false,"stackable":false,"disable_reposition":false,"zindex":"1999999999","close_button_delay":"0","fi_promotion":null,"close_on_form_submission":false,"close_on_form_submission_delay":"0","close_on_overlay_click":true,"close_on_esc_press":true,"close_on_f4_press":false,"disable_form_reopen":false,"disable_accessibility":false,"theme_slug":"lightbox","id":696,"slug":"rlsem1"},"pum-687":{"triggers":[],"cookies":[],"disable_on_mobile":false,"disable_on_tablet":false,"atc_promotion":null,"explain":null,"type_section":null,"theme_id":"475","size":"medium","responsive_min_width":"0%","responsive_max_width":"100%","custom_width":"640px","custom_height_auto":false,"custom_height":"380px","scrollable_content":false,"animation_type":"fade","animation_speed":"350","animation_origin":"center top","open_sound":"none","custom_sound":"","location":"center","position_top":"100","position_bottom":"0","position_left":"0","position_right":"0","position_from_trigger":false,"position_fixed":false,"overlay_disabled":false,"stackable":false,"disable_reposition":false,"zindex":"1999999999","close_button_delay":"0","fi_promotion":null,"close_on_form_submission":false,"close_on_form_submission_delay":"0","close_on_overlay_click":true,"close_on_esc_press":true,"close_on_f4_press":false,"disable_form_reopen":false,"disable_accessibility":false,"theme_slug":"lightbox","id":687,"slug":"rlsem2"},"pum-481":{"triggers":[],"cookies":[],"disable_on_mobile":false,"disable_on_tablet":false,"atc_promotion":null,"explain":null,"type_section":null,"theme_id":"477","size":"medium","responsive_min_width":"0%","responsive_max_width":"100%","custom_width":"640px","custom_height_auto":false,"custom_height":"380px","scrollable_content":false,"animation_type":"fade","animation_speed":"350","animation_origin":"center top","open_sound":"none","custom_sound":"","location":"center top","position_top":"100","position_bottom":"0","position_left":"0","position_right":"0","position_from_trigger":false,"position_fixed":false,"overlay_disabled":false,"stackable":false,"disable_reposition":false,"zindex":"1999999999","close_button_delay":"0","fi_promotion":null,"close_on_form_submission":false,"close_on_form_submission_delay":"0","close_on_overlay_click":false,"close_on_esc_press":false,"close_on_f4_press":false,"disable_form_reopen":false,"disable_accessibility":false,"theme_slug":"hello-box","id":481,"slug":"lecture2-05"}};
+//# sourceURL=popup-maker-site-js-extra
+</script>
+<script id="popup-maker-site-js" src="//cmutschler.de/wp-content/uploads/pum/pum-site-scripts.js?defer&amp;generated=1755151475&amp;ver=1.22.0"></script>
+<script id="jquery-lazyloadxt-js-extra">
+var a3_lazyload_params = {"apply_images":"1","apply_videos":"1"};
+//# sourceURL=jquery-lazyloadxt-js-extra
+</script>
+<script id="jquery-lazyloadxt-js" src="//cmutschler.de/wp-content/plugins/a3-lazy-load/assets/js/jquery.lazyloadxt.extra.min.js?ver=2.7.8"></script>
+<script id="jquery-lazyloadxt-srcset-js" src="//cmutschler.de/wp-content/plugins/a3-lazy-load/assets/js/jquery.lazyloadxt.srcset.min.js?ver=2.7.8"></script>
+<script id="jquery-lazyloadxt-extend-js-extra">
+var a3_lazyload_extend_params = {"edgeY":"0","horizontal_container_classnames":""};
+//# sourceURL=jquery-lazyloadxt-extend-js-extra
+</script>
+<script id="jquery-lazyloadxt-extend-js" src="//cmutschler.de/wp-content/plugins/a3-lazy-load/assets/js/jquery.lazyloadxt.extend.js?ver=2.7.8"></script>
+<script id="wps-footer-inline-popup-script-js" src="https://cmutschler.de/wp-content/plugins/inline-text-popup/src/function.js?ver=7.0"></script>
+<script id="wp-emoji-settings" type="application/json">
+{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://cmutschler.de/wp-includes/js/wp-emoji-release.min.js?ver=7.0"}}
+</script>
+<script type="module">
+/*! This file is auto-generated */
+const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(window._wpemojiSettings=a,"wpEmojiSettingsSupports"),s=["flag","emoji"];function i(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function c(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0);const a=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);return t.every((e,t)=>e===a[t])}function p(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var n=e.getImageData(16,16,1,1);for(let e=0;e<n.data.length;e++)if(0!==n.data[e])return!1;return!0}function u(e,t,n,a){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!a(e,"\ud83e\u1fac8")}return!1}function f(e,t,n,a){let r;const o=(r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):document.createElement("canvas")).getContext("2d",{willReadFrequently:!0}),s=(o.textBaseline="top",o.font="600 32px Arial",{});return e.forEach(e=>{s[e]=t(o,e,n,a)}),s}function r(e){var t=document.createElement("script");t.src=e,t.defer=!0,document.head.appendChild(t)}a.supports={everything:!0,everythingExceptFlag:!0},new Promise(t=>{let n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),c.toString(),p.toString()].join(",")+"));",a=new Blob([e],{type:"text/javascript"});const r=new Worker(URL.createObjectURL(a),{name:"wpTestEmojiSupports"});return void(r.onmessage=e=>{i(n=e.data),r.terminate(),t(n)})}catch(e){}i(n=f(s,u,c,p))}t(n)}).then(e=>{for(const n in e)a.supports[n]=e[n],a.supports.everything=a.supports.everything&&a.supports[n],"flag"!==n&&(a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&a.supports[n]);var t;a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&!a.supports.flag,a.supports.everything||((t=a.source||{}).concatemoji?r(t.concatemoji):t.wpemoji&&t.twemoji&&(r(t.twemoji),r(t.wpemoji)))});
+//# sourceURL=https://cmutschler.de/wp-includes/js/wp-emoji-loader.min.js
+</script>
+
+
+
+</body></html>

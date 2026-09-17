@@ -1,0 +1,812 @@
+<!DOCTYPE html><html lang="en"><head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        
+        
+            <title>Harvard CS50 – Free Computer Science University Course</title>
+        
+        <meta name="HandheldFriendly" content="True">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-FKVJ4HT3MH&amp;cx=c&amp;gtm=4e66a1"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-5D6RKKP"></script><script>
+            (function() {
+                var theme = localStorage.getItem('theme');
+                if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                    document.documentElement.classList.add('dark-mode');
+                }
+            })();
+        </script>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&amp;family=Roboto+Mono:wght@400;700&amp;display=swap">
+        
+
+        
+        
+    <link id="prism-theme-light" rel="stylesheet" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://cdn.freecodecamp.org/news-assets/prism/1.29.0/themes/prism.min.css">
+<noscript>
+  <link rel="stylesheet" href="https://cdn.freecodecamp.org/news-assets/prism/1.29.0/themes/prism.min.css">
+</noscript>
+<link id="prism-theme-dark" rel="stylesheet" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://cdn.freecodecamp.org/news-assets/prism/1.29.0/themes/prism-dark.min.css" disabled="">
+<noscript>
+  <link rel="stylesheet" href="https://cdn.freecodecamp.org/news-assets/prism/1.29.0/themes/prism-dark.min.css">
+</noscript>
+<script>
+  (function() {
+    var isDark = document.documentElement.classList.contains('dark-mode');
+    var light = document.getElementById('prism-theme-light');
+    var dark = document.getElementById('prism-theme-dark');
+    if (isDark) {
+      light.disabled = true;
+    } else {
+      dark.disabled = true;
+    }
+  })();
+</script>
+<link rel="stylesheet" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://cdn.freecodecamp.org/news-assets/prism/1.29.0/plugins/unescaped-markup/prism-unescaped-markup.min.css">
+<noscript>
+  <link rel="stylesheet" href="https://cdn.freecodecamp.org/news-assets/prism/1.29.0/plugins/unescaped-markup/prism-unescaped-markup.min.css">
+</noscript>
+
+<script defer="" src="https://cdn.freecodecamp.org/news-assets/prism/1.29.0/components/prism-core.min.js"></script>
+<script defer="" src="https://cdn.freecodecamp.org/news-assets/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+
+
+
+        
+        <link rel="stylesheet" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/news/assets/css/global-f141287a91.css">
+        <link rel="stylesheet" type="text/css" href="/news/assets/css/variables-54e5c7c52a.css">
+        <link rel="stylesheet" type="text/css" href="/news/assets/css/print-118c07de60.css">
+        <link rel="stylesheet" type="text/css" href="/news/assets/css/screen-7856be7c95.css">
+        <link rel="stylesheet" type="text/css" href="/news/assets/css/search-bar-beba8d2b76.css">
+
+        
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/fontawesome.min.css">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/solid.min.css">
+
+        
+        <script defer="" src="https://cdn.freecodecamp.org/news-assets/algolia/algoliasearch/5.46.3/lite/browser.umd.js"></script>
+        <script defer="" src="https://cdn.freecodecamp.org/news-assets/algolia/autocomplete/1.19.4/index.production.min.js"></script>
+
+        
+        <script defer="" src="https://cdn.freecodecamp.org/news-assets/dayjs/1.10.4/dayjs.min.js"></script>
+        <script defer="" src="https://cdn.freecodecamp.org/news-assets/dayjs/1.10.4/localizedFormat.min.js"></script>
+        <script defer="" src="https://cdn.freecodecamp.org/news-assets/dayjs/1.10.4/relativeTime.min.js"></script>
+
+        
+        
+            <script defer="" src="https://cdn.freecodecamp.org/news-assets/dayjs/1.10.4/locale/en.min.js"></script>
+        
+
+        
+        <script>document.addEventListener("DOMContentLoaded",async()=>{const{liteClient:e}=window["algoliasearch/lite"],{autocomplete:t,getAlgoliaResults:n}=window["@algolia/autocomplete-js"],a=e("QMJYL5WYTI","89770b24481654192d7a5c402c6ad9a0"),s=window.screen.width>=767&&window.screen.height>=768?8:5,o=((e,t)=>{let n;return(...a)=>(n&&clearTimeout(n),new Promise(s=>{n=setTimeout(()=>s(e(...a)),t)}))})(e=>Promise.resolve(e),200),r=e=>t({container:e,panelContainer:e,stallThreshold:500,detachedMediaQuery:"none",debug:!0,placeholder:Number("12600")<100?"Search our news articles, tutorials, and books":"Search 12,600+ news articles, tutorials, and books",getSources:()=>o([{sourceId:"links",getItemUrl:({item:e})=>e.url,getItems:({query:e})=>n({searchClient:a,queries:[{indexName:"news",params:{query:e,hitsPerPage:s}}]}),templates:{item:({item:e,components:t,html:n})=>n`<a class="aa-ItemLink" href=${e.url}>
+                  <div class="aa-ItemContent">
+                    <div class="aa-ItemContentBody">
+                      <div class="aa-ItemContentTitle">
+                        ${t.Highlight({hit:e,attribute:"title",tagName:"mark"})}
+                      </div>
+                    </div>
+                  </div>
+                </a>`,footer({state:e,html:t}){const n=e?.query,a=e?.collections[0]?.items;if(a.length)return t`<a
+                    class="aa-ItemLink"
+                    href="https://www.freecodecamp.org/news/search?query=${n}"
+                    ><div class="aa-ItemContent">
+                      See all results for ${n}
+                    </div></a
+                  >`},noResults:()=>"No results found"}}])}),i=r("#nav-left-search-container");r("#nav-right-search-container");const d=document.querySelectorAll(".fcc-search-container");document.addEventListener("keydown",e=>{e.target instanceof HTMLInputElement||e.target instanceof HTMLTextAreaElement||e.target.isContentEditable||"/"!==e.key&&"s"!==e.key||(e.preventDefault(),d.forEach(e=>{e.checkVisibility()&&e.querySelector("input").focus()}))}),d.forEach(e=>{e.addEventListener("submit",t=>{t.preventDefault();const n=e.querySelector("input").value.trim(),a=e.querySelector(".aa-List");n&&a&&window.location.assign(`https://www.freecodecamp.org/news/search?query=${n}`)})}),document.addEventListener("click",e=>{e.target!==document.querySelector("#nav-left-search-container .aa-Form")&&i.setIsOpen(!1)})}),document.addEventListener("DOMContentLoaded",()=>{dayjs.extend(dayjs_plugin_localizedFormat),dayjs.extend(dayjs_plugin_relativeTime),dayjs.locale("en")});const isAuthenticated=document.cookie.split(";").some(e=>e.trim().startsWith("jwt_access_token=")),isDonor=document.cookie.split(";").some(e=>e.trim().startsWith("isDonor=true"));document.addEventListener("DOMContentLoaded",()=>{document.getElementById("toggle-button-nav").addEventListener("click",function(){const e=document.getElementById("menu-dropdown"),t=document.getElementById("toggle-button-nav");e.classList.toggle("display-menu"),t.ariaExpanded="true"==t.ariaExpanded?"false":"true"})}),document.addEventListener("DOMContentLoaded",()=>{const e=document.getElementById("toggle-dark-mode");if(!e)return;const t=e.querySelector("i"),n=document.getElementById("prism-theme-light"),a=document.getElementById("prism-theme-dark"),s=e=>{t&&(t.classList.toggle("fa-square-check",e),t.classList.toggle("fa-square",!e))},o=e=>{n&&(n.disabled=e),a&&(a.disabled=!e)},r=(t,{persist:n=!0}={})=>{document.documentElement.classList.toggle("dark-mode",t),e.setAttribute("aria-pressed",String(t)),s(t),o(t),n&&localStorage.setItem("theme",t?"dark":"light")},i=document.documentElement.classList.contains("dark-mode");e.setAttribute("aria-pressed",String(i)),s(i),o(i),e.addEventListener("click",()=>{const e=!document.documentElement.classList.contains("dark-mode");r(e)});const d=window.matchMedia("(prefers-color-scheme: dark)"),c=e=>{localStorage.getItem("theme")||r(e.matches,{persist:!1})};"function"==typeof d.addEventListener?d.addEventListener("change",c):"function"==typeof d.addListener&&d.addListener(c)});</script>
+
+        
+            <script src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" crossorigin="anonymous" async=""></script>
+        
+
+        
+        
+    
+        
+            <script>
+document.addEventListener('DOMContentLoaded', function() {
+    var sidebar = document.querySelector('.sidebar');
+    var isSideBarDisplayed = window.getComputedStyle(sidebar).display !== 'none';
+    function prepareAdSlot(elementId) {
+        // Get the element by ID
+        const targetElement = document.getElementById(elementId);
+
+        // Ensure the element exists before proceeding
+        if (!targetElement) {
+            console.error(`Element with ID ${elementId} not found`);
+            return;
+        }
+
+        const parentElement = targetElement.parentElement;
+        // Change the background color of the parent element
+
+        if (parentElement) {
+            console.log(elementId)
+
+            if (elementId === 'gam-ad-bottom' ) {
+                parentElement.style.backgroundColor = '#eeeef0';
+                if(getComputedStyle(parentElement).visibility === 'hidden') {
+                    parentElement.style.visibility = 'inherit'; 
+                }
+            }
+
+            // Get the sibling elements
+            const siblingElements = parentElement.children;
+
+            for (let i = 0; i < siblingElements.length; i++) {
+                const sibling = siblingElements[i];
+
+                // Skip the element itself
+                if (sibling === targetElement) continue;
+
+                // Log the sibling or perform any other action
+                console.log('Found sibling:', sibling);
+
+                // Check visibility
+                if(getComputedStyle(sibling).visibility === 'hidden') {
+                    sibling.style.visibility = 'inherit'; 
+                }
+
+                // Check if display is 'none', then change it to 'block'
+                if (getComputedStyle(sibling).display === 'none') {
+                    sibling.style.display = 'block'; 
+                }
+            }
+        } else {
+            console.warn('No parent element found');
+        }
+    }
+
+    
+    window.googletag = window.googletag || {cmd: []};
+    googletag.cmd.push(function() {
+
+        if(isSideBarDisplayed){
+            var sidebarHeight = sidebar.offsetHeight;
+            var adTextSideBarHeight = 0;
+            var sideBarAdContainert = 600 + 17;
+        
+            var styles = window.getComputedStyle(sidebar);
+            var avaiableSideAdSpace = sidebarHeight - adTextSideBarHeight - parseFloat(styles.paddingTop) - parseFloat(styles.paddingBottom);
+            var numSideElements = Math.floor(avaiableSideAdSpace / sideBarAdContainert);
+            for (var i = 0; i < numSideElements; i++) {
+                // container element
+                var containerElement = document.createElement('div');
+                containerElement.classList.add('ad-wrapper');
+
+                //text element
+                var textElement = document.createElement('div');
+                textElement.classList.add('ad-text');
+                textElement.innerText = localizedAdText;
+
+                // ad element
+                var adElement = document.createElement('div');
+                var sideAdElementId = 'side-gam-ad-' + i;
+                adElement.id = sideAdElementId;
+                adElement.classList.add('side-bar-ad-slot');
+
+                // finalize setup
+                containerElement.appendChild(textElement);
+                containerElement.appendChild(adElement);
+                sidebar.appendChild(containerElement);
+                googletag.defineSlot('/23075930536/post-side', [[292, 30], [240, 400], [300, 75], [216, 54], [250, 360], [300, 50], 'fluid', [300, 31], [120, 20], [300, 250], [120, 30], [180, 150], [200, 446], [168, 42], [200, 200], [160, 600], [120, 90], [125, 125], [240, 133], [120, 60], [1, 1], [120, 240], [220, 90], [216, 36], [250, 250], [168, 28], [234, 60], [120, 600], [300, 600], [88, 31], [300, 100]], sideAdElementId).addService(googletag.pubads());
+            }
+        }
+
+        // Define bottom ad
+        googletag.defineSlot('/23075930536/post-bottom', ['fluid'], 'gam-ad-bottom').addService(googletag.pubads());
+
+        // Enable lazy loading with default settings.
+        googletag.pubads().enableLazyLoad();
+
+        googletag.pubads().addEventListener("slotRequested", (event) => {
+            console.log(`Slot ${event.slot.getSlotElementId()} fetched`);
+        });
+
+        googletag.pubads().addEventListener("slotOnload", (event) => {
+            const elementId = event.slot.getSlotElementId();
+            prepareAdSlot(elementId);
+            console.log(`Slot ${event.slot.getSlotElementId()} rendered`);
+        });
+
+        googletag.pubads().enableSingleRequest();
+        googletag.enableServices();
+
+
+        // Trigger lazy loading
+        googletag.display('gam-ad-bottom');
+
+    });
+});
+</script>
+
+        
+    
+
+
+        
+            <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5D6RKKP');</script>
+
+        
+
+        
+        
+    
+        
+    
+        
+    
+
+
+        
+        
+        
+
+        
+        
+
+        <link rel="icon" href="https://cdn.freecodecamp.org/universal/favicons/favicon.ico" type="image/png">
+        
+        
+            <link rel="canonical" href="https://www.freecodecamp.org/news/harvard-cs50/">
+        
+        <meta name="referrer" content="no-referrer-when-downgrade">
+
+        
+
+        
+    <meta name="description" content="Harvard University's CS50 is one of the most popular beginner computer science courses in the world.  We just released the entire CS50 course–all 25 hours–on the freeCodeCamp.org YouTube channel. David J. Malan is widely considered to be one of the b...">
+
+    
+    <meta property="og:site_name" content="freeCodeCamp.org">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Harvard CS50 – Free Computer Science University Course">
+    
+        <meta property="og:description" content="Harvard University's CS50 is one of the most popular beginner computer science courses in the world.  We just released the entire CS50 course–all 25 hours–on the freeCodeCamp.org YouTube channel. David J. Malan is widely considered to be one of the b...">
+    
+    <meta property="og:url" content="https://www.freecodecamp.org/news/harvard-cs50/">
+    <meta property="og:image" content="https://www.freecodecamp.org/news/content/images/2022/10/cs502.png">
+    <meta property="article:published_time" content="2022-10-19T14:07:23.000Z">
+    <meta property="article:modified_time" content="2022-10-19T14:07:23.000Z">
+    
+        <meta property="article:tag" content="Computer Science">
+    
+        <meta property="article:tag" content="youtube">
+    
+    <meta property="article:publisher" content="https://www.facebook.com/freecodecamp">
+    
+
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Harvard CS50 – Free Computer Science University Course">
+    
+        <meta name="twitter:description" content="Harvard University's CS50 is one of the most popular beginner computer science courses in the world.  We just released the entire CS50 course–all 25 hours–on the freeCodeCamp.org YouTube channel. David J. Malan is widely considered to be one of the b...">
+    
+    <meta name="twitter:url" content="https://www.freecodecamp.org/news/harvard-cs50/">
+    <meta name="twitter:image" content="https://www.freecodecamp.org/news/content/images/2022/10/cs502.png">
+    <meta name="twitter:label1" content="Written by">
+    <meta name="twitter:data1" content="Beau Carnes">
+    <meta name="twitter:label2" content="Filed under">
+    <meta name="twitter:data2" content="Computer Science, youtube">
+    <meta name="twitter:site" content="@freecodecamp">
+    
+
+    <meta property="og:image:width" content="600">
+    <meta property="og:image:height" content="400">
+
+
+        
+    <script type="application/ld+json">{
+	"@context": "https://schema.org",
+	"@type": "Article",
+	"publisher": {
+		"@type": "Organization",
+		"name": "freeCodeCamp.org",
+		"url": "https://www.freecodecamp.org/news/",
+		"logo": {
+			"@type": "ImageObject",
+			"url": "https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg",
+			"width": 2100,
+			"height": 240
+		}
+	},
+	"image": {
+		"@type": "ImageObject",
+		"url": "https://www.freecodecamp.org/news/content/images/2022/10/cs502.png",
+		"width": 600,
+		"height": 400
+	},
+	"url": "https://www.freecodecamp.org/news/harvard-cs50/",
+	"mainEntityOfPage": {
+		"@type": "WebPage",
+		"@id": "https://www.freecodecamp.org/news/"
+	},
+	"datePublished": "2022-10-19T14:07:23.000Z",
+	"dateModified": "2022-10-19T14:07:23.000Z",
+	"keywords": "Computer Science, youtube",
+	"description": "Harvard University&#x27;s CS50 is one of the most popular beginner computer science courses in the world. \nWe just released the entire CS50 course–all 25 hours–on the freeCodeCamp.org YouTube channel.\nDavid J. Malan is widely considered to be one of the b...",
+	"headline": "Harvard CS50 – Free Computer Science University Course",
+	"author": {
+		"@type": "Person",
+		"name": "Beau Carnes",
+		"url": "https://www.freecodecamp.org/news/author/beaucarnes/",
+		"sameAs": [],
+		"image": {
+			"@type": "ImageObject",
+			"url": "https://cdn.hashnode.com/res/hashnode/image/upload/v1713211849730/O5mmKs5h0.jpg",
+			"width": 2164,
+			"height": 2305
+		}
+	}
+}</script>
+
+
+        <meta name="generator" content="Eleventy">
+        <link rel="alternate" type="application/rss+xml" title="freeCodeCamp.org" href="https://www.freecodecamp.org/news/rss/">
+
+        
+        
+
+        
+  <meta name="x-fcc-source" data-test-label="x-fcc-source" content="Hashnode">
+
+    <meta http-equiv="origin-trial" content="AlK2UR5SkAlj8jjdEc9p3F3xuFYlF6LYjAML3EOqw1g26eCwWPjdmecULvBH5MVPoqKYrOfPhYVL71xAXI1IBQoAAAB8eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3NTgwNjcxOTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="Amm8/NmvvQfhwCib6I7ZsmUxiSCfOxWxHayJwyU1r3gRIItzr7bNQid6O8ZYaE1GSQTa69WwhPC9flq/oYkRBwsAAACCeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3NTgwNjcxOTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="A9nrunKdU5m96PSN1XsSGr3qOP0lvPFUB2AiAylCDlN5DTl17uDFkpQuHj1AFtgWLxpLaiBZuhrtb2WOu7ofHwEAAACKeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiQUlQcm9tcHRBUElNdWx0aW1vZGFsSW5wdXQiLCJleHBpcnkiOjE3NzQzMTA0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A93bovR+QVXNx2/38qDbmeYYf1wdte9EO37K9eMq3r+541qo0byhYU899BhPB7Cv9QqD7wIbR1B6OAc9kEfYCA4AAACQeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiQUlQcm9tcHRBUElNdWx0aW1vZGFsSW5wdXQiLCJleHBpcnkiOjE3NzQzMTA0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A1S5fojrAunSDrFbD8OfGmFHdRFZymSM/1ss3G+NEttCLfHkXvlcF6LGLH8Mo5PakLO1sCASXU1/gQf6XGuTBgwAAACQeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiQUlQcm9tcHRBUElNdWx0aW1vZGFsSW5wdXQiLCJleHBpcnkiOjE3NzQzMTA0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><script src="https://securepubads.g.doubleclick.net/pagead/managed/js/gpt/m202606090101/pubads_impl.js?cb=31099090" async="" crossorigin="anonymous"></script><link href="https://securepubads.g.doubleclick.net/pagead/managed/dict/m202606110101/gpt" rel="compression-dictionary"><script async="" src="https://fundingchoicesmessages.google.com/i/23075930536?ers=3"></script></head>
+
+    
+        <body class="home-template">
+    
+
+    
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5D6RKKP" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    
+
+        <div class="site-wrapper">
+            <nav class="site-nav nav-padding universal-nav">
+    <div class="site-nav-left">
+        <div id="nav-left-search-container" class="fcc-search-container" data-test-label="fcc-search-container"><div class="aa-Autocomplete" role="combobox" aria-expanded="false" aria-haspopup="listbox" aria-labelledby="autocomplete-0-label"><form class="aa-Form" action="" novalidate="" role="search"><div class="aa-InputWrapperPrefix"><label class="aa-Label" aria-label="Submit" for="autocomplete-0-input" id="autocomplete-0-label"><button class="aa-SubmitButton" type="submit" title="Submit"><svg class="aa-SubmitIcon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M16.041 15.856c-0.034 0.026-0.067 0.055-0.099 0.087s-0.060 0.064-0.087 0.099c-1.258 1.213-2.969 1.958-4.855 1.958-1.933 0-3.682-0.782-4.95-2.050s-2.050-3.017-2.050-4.95 0.782-3.682 2.050-4.95 3.017-2.050 4.95-2.050 3.682 0.782 4.95 2.050 2.050 3.017 2.050 4.95c0 1.886-0.745 3.597-1.959 4.856zM21.707 20.293l-3.675-3.675c1.231-1.54 1.968-3.493 1.968-5.618 0-2.485-1.008-4.736-2.636-6.364s-3.879-2.636-6.364-2.636-4.736 1.008-6.364 2.636-2.636 3.879-2.636 6.364 1.008 4.736 2.636 6.364 3.879 2.636 6.364 2.636c2.125 0 4.078-0.737 5.618-1.968l3.675 3.675c0.391 0.391 1.024 0.391 1.414 0s0.391-1.024 0-1.414z"></path></svg></button></label><div class="aa-LoadingIndicator" hidden=""><svg class="aa-LoadingIcon" viewBox="0 0 100 100" width="20" height="20"><circle cx="50" cy="50" fill="none" r="35" stroke="currentColor" stroke-dasharray="164.93361431346415 56.97787143782138" stroke-width="6">
+  <animateTransform attributeName="transform" type="rotate" repeatCount="indefinite" dur="1s" values="0 50 50;90 50 50;180 50 50;360 50 50" keyTimes="0;0.40;0.65;1"></animateTransform>
+</circle></svg></div></div><div class="aa-InputWrapper"><input class="aa-Input" aria-autocomplete="both" aria-labelledby="autocomplete-0-label" id="autocomplete-0-input" autocomplete="off" autocorrect="off" autocapitalize="off" enterkeyhint="search" spellcheck="false" placeholder="Search 12,600+ news articles, tutorials, and books" maxlength="512" type="search"></div><div class="aa-InputWrapperSuffix"><button class="aa-ClearButton" type="reset" title="Clear" hidden=""><svg class="aa-ClearIcon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M5.293 6.707l5.293 5.293-5.293 5.293c-0.391 0.391-0.391 1.024 0 1.414s1.024 0.391 1.414 0l5.293-5.293 5.293 5.293c0.391 0.391 1.024 0.391 1.414 0s0.391-1.024 0-1.414l-5.293-5.293 5.293-5.293c0.391-0.391 0.391-1.024 0-1.414s-1.024-0.391-1.414 0l-5.293 5.293-5.293-5.293c-0.391-0.391-1.024-0.391-1.414 0s-0.391 1.024 0 1.414z"></path></svg></button></div></form></div></div>
+    </div>
+    <div class="site-nav-middle">
+        <a class="site-nav-logo" href="https://www.freecodecamp.org/news/" data-test-label="site-nav-logo"><img src="https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg" alt="freeCodeCamp.org"></a>
+    </div>
+    <div class="site-nav-right">
+        <div class="nav-group">
+            <button aria-expanded="false" class="exposed-button-nav" id="toggle-button-nav" data-test-label="header-menu-button">
+              <span class="sr-only">Menu</span>
+              <span class="menu-btn-text">Menu</span>
+            </button>
+            <ul id="menu-dropdown" class="nav-list" aria-labelledby="toggle-button-nav" data-test-label="header-menu">
+                <li>
+                    <div id="nav-right-search-container" class="fcc-search-container" data-test-label="fcc-search-container"><div class="aa-Autocomplete" role="combobox" aria-expanded="false" aria-haspopup="listbox" aria-labelledby="autocomplete-1-label"><form class="aa-Form" action="" novalidate="" role="search"><div class="aa-InputWrapperPrefix"><label class="aa-Label" aria-label="Submit" for="autocomplete-1-input" id="autocomplete-1-label"><button class="aa-SubmitButton" type="submit" title="Submit"><svg class="aa-SubmitIcon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M16.041 15.856c-0.034 0.026-0.067 0.055-0.099 0.087s-0.060 0.064-0.087 0.099c-1.258 1.213-2.969 1.958-4.855 1.958-1.933 0-3.682-0.782-4.95-2.050s-2.050-3.017-2.050-4.95 0.782-3.682 2.050-4.95 3.017-2.050 4.95-2.050 3.682 0.782 4.95 2.050 2.050 3.017 2.050 4.95c0 1.886-0.745 3.597-1.959 4.856zM21.707 20.293l-3.675-3.675c1.231-1.54 1.968-3.493 1.968-5.618 0-2.485-1.008-4.736-2.636-6.364s-3.879-2.636-6.364-2.636-4.736 1.008-6.364 2.636-2.636 3.879-2.636 6.364 1.008 4.736 2.636 6.364 3.879 2.636 6.364 2.636c2.125 0 4.078-0.737 5.618-1.968l3.675 3.675c0.391 0.391 1.024 0.391 1.414 0s0.391-1.024 0-1.414z"></path></svg></button></label><div class="aa-LoadingIndicator" hidden=""><svg class="aa-LoadingIcon" viewBox="0 0 100 100" width="20" height="20"><circle cx="50" cy="50" fill="none" r="35" stroke="currentColor" stroke-dasharray="164.93361431346415 56.97787143782138" stroke-width="6">
+  <animateTransform attributeName="transform" type="rotate" repeatCount="indefinite" dur="1s" values="0 50 50;90 50 50;180 50 50;360 50 50" keyTimes="0;0.40;0.65;1"></animateTransform>
+</circle></svg></div></div><div class="aa-InputWrapper"><input class="aa-Input" aria-autocomplete="both" aria-labelledby="autocomplete-1-label" id="autocomplete-1-input" autocomplete="off" autocorrect="off" autocapitalize="off" enterkeyhint="search" spellcheck="false" placeholder="Search 12,600+ news articles, tutorials, and books" maxlength="512" type="search"></div><div class="aa-InputWrapperSuffix"><button class="aa-ClearButton" type="reset" title="Clear" hidden=""><svg class="aa-ClearIcon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M5.293 6.707l5.293 5.293-5.293 5.293c-0.391 0.391-0.391 1.024 0 1.414s1.024 0.391 1.414 0l5.293-5.293 5.293 5.293c0.391 0.391 1.024 0.391 1.414 0s0.391-1.024 0-1.414l-5.293-5.293 5.293-5.293c0.391-0.391 0.391-1.024 0-1.414s-1.024-0.391-1.414 0l-5.293 5.293-5.293-5.293c-0.391-0.391-1.024-0.391-1.414 0s-0.391 1.024 0 1.414z"></path></svg></button></div></form></div></div>
+                </li>
+                <li><a class="nav-link nav-link-flex" id="nav-forum" rel="noopener noreferrer" href="https://forum.freecodecamp.org/" target="_blank" data-test-label="forum-button">Forum</a></li>
+              <li><a class="nav-link nav-link-flex" id="nav-learn" rel="noopener noreferrer" href="https://www.freecodecamp.org/learn" target="_blank" data-test-label="learn-button">Curriculum</a></li>
+            <li><button class="nav-link nav-link-flex" id="toggle-dark-mode" aria-pressed="false" data-test-label="dark-mode-button">
+            <span>Night Mode</span><i class="fa-regular fa-square"></i></button></li>
+            </ul>
+            <a class="toggle-button-nav" id="nav-donate" rel="noopener noreferrer" href="https://www.freecodecamp.org/donate/" target="_blank" data-test-label="donate-button">Donate</a>
+        </div>
+
+    </div>
+</nav>
+
+
+            
+            <a class="banner" id="banner" data-test-label="banner" rel="noopener noreferrer" target="_blank" href="https://www.freecodecamp.org/" text-variation="default">
+    <p id="banner-text">Learn to code — <span>free 3,000-hour curriculum</span></p>
+</a>
+
+
+    
+    <script>document.addEventListener("DOMContentLoaded",()=>{const e=document.getElementById("banner"),t=document.getElementById("banner-text");if(isAuthenticated){t.innerHTML=isDonor?"Thank you for supporting freeCodeCamp through <span>your donations</span>.":"Support our charity and our mission. <span>Donate to freeCodeCamp.org</span>.",e.href=isDonor?"https://www.freecodecamp.org/news/how-to-donate-to-free-code-camp/":"https://www.freecodecamp.org/donate";const o=isDonor?"donor":"authenticated";e.setAttribute("text-variation",o)}else t.innerHTML="Learn to code — <span>free 3,000-hour curriculum</span>",e.href="https://www.freecodecamp.org/",e.setAttribute("text-variation","default")});</script>
+
+
+            <div id="error-message"></div>
+
+            
+    <main id="site-main" class="post-template site-main outer">
+        <div class="inner ad-layout">
+            <article class="post-full post">
+                <header class="post-full-header">
+                    <section class="post-full-meta">
+                        <time class="post-full-meta-date" data-test-label="post-full-meta-date" datetime="2022-10-19T14:07:23.000Z">
+                            October 19, 2022
+                        </time>
+                        
+                            <span class="date-divider">/</span>
+                            <a dir="ltr" href="/news/tag/computer-science/">
+                                #Computer Science
+                            </a>
+                        
+                    </section>
+                    <h1 class="post-full-title" data-test-label="post-full-title">Harvard CS50 – Free Computer Science University Course</h1>
+                </header>
+                
+                    <div class="post-full-author-header" data-test-label="author-header-no-bio">
+                        
+                            
+    
+    
+    
+
+    <section class="author-card" data-test-label="author-card">
+        
+            
+    <img srcset="https://cdn.hashnode.com/res/hashnode/image/upload/v1713211849730/O5mmKs5h0.jpg 60w" sizes="60px" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1713211849730/O5mmKs5h0.jpg" class="author-profile-image" alt="Beau Carnes" width="2164" height="2305" onerror="this.style.display='none'" data-test-label="profile-image">
+  
+        
+
+        <section class="author-card-content author-card-content-no-bio">
+            <span class="author-card-name">
+                <a href="/news/author/beaucarnes/" data-test-label="profile-link">
+                    
+                        Beau Carnes
+                    
+                </a>
+            </span>
+            
+        </section>
+    </section>
+
+                        
+                    </div>
+                
+                <figure class="post-full-image">
+                    
+    <picture>
+      <source media="(max-width: 700px)" sizes="1px" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 1w">
+      <source media="(min-width: 701px)" sizes="(max-width: 800px) 400px, (max-width: 1170px) 700px, 1400px" srcset="https://www.freecodecamp.org/news/content/images/size/w300/2022/10/cs502.png 300w, https://www.freecodecamp.org/news/content/images/size/w600/2022/10/cs502.png 600w, https://www.freecodecamp.org/news/content/images/size/w1000/2022/10/cs502.png 1000w, https://www.freecodecamp.org/news/content/images/size/w2000/2022/10/cs502.png 2000w">
+      <img onerror="this.style.display='none'" src="https://www.freecodecamp.org/news/content/images/size/w2000/2022/10/cs502.png" alt="Harvard CS50 – Free Computer Science University Course" ,="" width="600" height="400" data-test-label="feature-image">
+    </picture>
+  
+                </figure>
+                <section class="post-full-content">
+                    <div class="post-and-sidebar">
+                        <section class="post-content " data-test-label="post-content">
+                            
+<p>Harvard University's CS50 is one of the most popular beginner computer science courses in the world. </p>
+<p>We just released the entire CS50 course–all 25 hours–on the freeCodeCamp.org YouTube channel.</p>
+<p>David J. Malan is widely considered to be one of the best computer science instructors. He teaches this course.</p>
+<p>This course provides an introduction to the intellectual enterprises of computer science and the art of programming. This course teaches students how to think algorithmically and solve problems efficiently.</p>
+<p>Topics include abstraction, algorithms, data structures, encapsulation, resource management, security, software engineering, and web programming. Languages include C, Python, and SQL plus HTML, CSS, and JavaScript. </p>
+<p>Among the overarching goals of this course are to inspire students to explore unfamiliar waters, without fear of failure, create an intensive, shared experience, accessible to all students, and build community among students.</p>
+<p><img src="https://www.freecodecamp.org/news/content/images/2022/10/image-122.png" alt="Image" width="600" height="400" loading="lazy">
+<em>David J. Malan teaching CS50.</em></p>
+<p>Here are the lectures included in this course:</p>
+<ul>
+<li>Lecture 0 - Scratch</li>
+<li>Lecture 1 - C</li>
+<li>Lecture 2 - Arrays</li>
+<li>Lecture 3 - Algorithms</li>
+<li>Lecture 4 - Memory</li>
+<li>Lecture 5 - Data Structures</li>
+<li>Lecture 6 - Python</li>
+<li>Lecture 7 - SQL</li>
+<li>Lecture 8 - HTML, CSS, JavaScript</li>
+<li>Lecture 9 - Flask</li>
+<li>Lecture 10 - Emoji</li>
+<li>Cybersecurity  </li>
+</ul>
+<p>Watch the full course on <a target="_blank" href="https://www.youtube.com/watch?v=8mAITcNt710">the freeCodeCamp.org YouTube channel</a> (25-hour watch).</p>
+<div class="embed-wrapper">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/8mAITcNt710" style="aspect-ratio: 16 / 9; width: 100%; height: auto;" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="" loading="lazy"></iframe></div>
+
+
+                        </section>
+                        
+                            <div class="sidebar">
+                                
+                                    
+                                    <script>var localizedAdText = "ADVERTISEMENT";</script>
+                                
+                            <div class="ad-wrapper"><div class="ad-text">ADVERTISEMENT</div><div id="side-gam-ad-0" class="side-bar-ad-slot"></div></div><div class="ad-wrapper"><div class="ad-text">ADVERTISEMENT</div><div id="side-gam-ad-1" class="side-bar-ad-slot"></div></div><div class="ad-wrapper"><div class="ad-text">ADVERTISEMENT</div><div id="side-gam-ad-2" class="side-bar-ad-slot"></div></div><div class="ad-wrapper"><div class="ad-text">ADVERTISEMENT</div><div id="side-gam-ad-3" class="side-bar-ad-slot"></div></div></div>
+                        
+                    </div>
+                    <hr>
+                    
+                        <div class="post-full-author-header" data-test-label="author-header-with-bio">
+                            
+                                
+    
+    
+    
+
+    <section class="author-card" data-test-label="author-card">
+        
+            
+    <img srcset="https://cdn.hashnode.com/res/hashnode/image/upload/v1713211849730/O5mmKs5h0.jpg 60w" sizes="60px" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1713211849730/O5mmKs5h0.jpg" class="author-profile-image" alt="Beau Carnes" width="2164" height="2305" onerror="this.style.display='none'" loading="lazy" data-test-label="profile-image">
+  
+        
+
+        <section class="author-card-content ">
+            <span class="author-card-name">
+                <a href="/news/author/beaucarnes/" data-test-label="profile-link">
+                    
+                        Beau Carnes
+                    
+                </a>
+            </span>
+            
+                
+                    <p data-test-label="author-bio">I'm a teacher and developer with freeCodeCamp.org. I run the freeCodeCamp.org YouTube channel.
+</p>
+                
+            
+        </section>
+    </section>
+
+                            
+                        </div>
+                        <hr>
+                    
+
+                    
+                    
+                        
+    
+
+
+<p data-test-label="social-row-cta" class="social-row">
+    If this article was helpful, <button id="tweet-btn" class="cta-button" data-test-label="tweet-button" onclick="window.open(
+    'https://x.com/intent/post?text=Harvard%20CS50%20%E2%80%93%20Free%20Computer%20Science%20University%20Course%0A%0Ahttps://www.freecodecamp.org/news/harvard-cs50',
+    'share-twitter',
+    'width=550, height=235'
+  ); return false;">share it</button>.
+</p>
+
+
+    
+    <script>document.addEventListener("DOMContentLoaded",()=>{const t=document.getElementById("tweet-btn"),e=window.location,n="Harvard%20CS50%20%E2%80%93%20Free%20Computer%20Science%20University%20Course".replace(/&#39;/g,"%27"),o="",r="",i=Boolean("");let s;if(i&&(o||r)){const t={originalPostAuthor:"",currentPostAuthor:"Beau Carnes"};s=encodeURIComponent(`Thank you ${o||t.originalPostAuthor} for writing this helpful article, and ${r||t.currentPostAuthor} for translating it.`)}else!i&&r&&(s=encodeURIComponent(`Thank you ${r} for writing this helpful article.`));const a=`window.open(\n    '${s?`https://x.com/intent/post?text=${s}%0A%0A${n}%0A%0A${e}`:`https://x.com/intent/post?text=${n}%0A%0A${e}`}',\n    'share-twitter',\n    'width=550, height=235'\n  ); return false;`;t.setAttribute("onclick",a)});</script>
+
+
+                        
+
+<div class="learn-cta-row" data-test-label="learn-cta-row">
+    <p>
+        Learn to code for free. freeCodeCamp's open source curriculum has helped more than 40,000 people get jobs as developers. <a href="https://www.freecodecamp.org/learn" class="cta-button" id="learn-to-code-cta" rel="noopener noreferrer" target="_blank">Get started</a>
+    </p>
+</div>
+
+                    
+                </section>
+                
+                    <div class="banner-ad-bottom">
+                        
+                            
+
+<div class="ad-text" data-test-label="ad-text">ADVERTISEMENT</div>
+<div style="display: block; height: auto" id="gam-ad-bottom">
+</div>
+
+                        
+                    </div>
+                
+            </article>
+        </div>
+    </main>
+
+
+            
+
+
+<footer class="site-footer">
+    <div class="footer-top">
+        <div class="footer-desc-col">
+            <p data-test-label="tax-exempt-status">freeCodeCamp is a donor-supported tax-exempt 501(c)(3) charity organization (United States Federal Tax Identification Number: 82-0779546)</p>
+            <p data-test-label="mission-statement">Our mission: to help people learn to code for free. We accomplish this by creating thousands of videos, articles, and interactive coding lessons - all freely available to the public.</p>
+            <p data-test-label="donation-initiatives">Donations to freeCodeCamp go toward our education initiatives, and help pay for servers, services, and staff.</p>
+            <p class="footer-donation" data-test-label="donate-text">
+                You can <a href="https://www.freecodecamp.org/donate/" class="inline" rel="noopener noreferrer" target="_blank">make a tax-deductible donation here</a>.
+            </p>
+        </div>
+        <div class="trending-guides" data-test-label="trending-guides">
+            <h2 id="trending-guides" class="col-header">Trending Books and Handbooks</h2>
+            <ul class="trending-guides-articles" aria-labelledby="trending-guides">
+                <li>
+                    <a href="https://www.freecodecamp.org/news/build-consume-and-document-a-rest-api/" rel="noopener noreferrer" target="_blank">REST APIs
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.freecodecamp.org/news/how-to-write-clean-code/" rel="noopener noreferrer" target="_blank">Clean Code
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.freecodecamp.org/news/learn-typescript-with-react-handbook/" rel="noopener noreferrer" target="_blank">TypeScript
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.freecodecamp.org/news/learn-javascript-for-beginners/" rel="noopener noreferrer" target="_blank">JavaScript
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.freecodecamp.org/news/how-to-build-an-ai-chatbot-with-redis-python-and-gpt/" rel="noopener noreferrer" target="_blank">AI Chatbots
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.freecodecamp.org/news/command-line-for-beginners/" rel="noopener noreferrer" target="_blank">Command Line
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.freecodecamp.org/news/building-consuming-and-documenting-a-graphql-api/" rel="noopener noreferrer" target="_blank">GraphQL APIs
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.freecodecamp.org/news/complete-guide-to-css-transform-functions-and-properties/" rel="noopener noreferrer" target="_blank">CSS Transforms
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.freecodecamp.org/news/how-to-build-scalable-access-control-for-your-web-app/" rel="noopener noreferrer" target="_blank">Access Control
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.freecodecamp.org/news/rest-api-design-best-practices-build-a-rest-api/" rel="noopener noreferrer" target="_blank">REST API Design
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.freecodecamp.org/news/the-php-handbook/" rel="noopener noreferrer" target="_blank">PHP
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.freecodecamp.org/news/the-java-handbook/" rel="noopener noreferrer" target="_blank">Java
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.freecodecamp.org/news/learn-linux-for-beginners-book-basic-to-advanced/" rel="noopener noreferrer" target="_blank">Linux
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.freecodecamp.org/news/react-for-beginners-handbook/" rel="noopener noreferrer" target="_blank">React
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.freecodecamp.org/news/learn-continuous-integration-delivery-and-deployment/" rel="noopener noreferrer" target="_blank">CI/CD
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.freecodecamp.org/news/the-docker-handbook/" rel="noopener noreferrer" target="_blank">Docker
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.freecodecamp.org/news/learn-golang-handbook/" rel="noopener noreferrer" target="_blank">Golang
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.freecodecamp.org/news/the-python-handbook/" rel="noopener noreferrer" target="_blank">Python
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.freecodecamp.org/news/get-started-with-nodejs/" rel="noopener noreferrer" target="_blank">Node.js
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.freecodecamp.org/news/build-crud-operations-with-dotnet-core-handbook/" rel="noopener noreferrer" target="_blank">Todo APIs
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.freecodecamp.org/news/how-to-use-classes-in-javascript-handbook/" rel="noopener noreferrer" target="_blank">JavaScript Classes
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.freecodecamp.org/news/front-end-javascript-development-react-angular-vue-compared/" rel="noopener noreferrer" target="_blank">Front-End Libraries
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.freecodecamp.org/news/the-express-handbook/" rel="noopener noreferrer" target="_blank">Express and Node.js
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.freecodecamp.org/news/python-code-examples-sample-script-coding-tutorial-for-beginners/" rel="noopener noreferrer" target="_blank">Python Code Examples
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.freecodecamp.org/news/clustering-in-python-a-machine-learning-handbook/" rel="noopener noreferrer" target="_blank">Clustering in Python
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.freecodecamp.org/news/an-introduction-to-software-architecture-patterns/" rel="noopener noreferrer" target="_blank">Software Architecture
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.freecodecamp.org/news/what-is-programming-tutorial-for-beginners/" rel="noopener noreferrer" target="_blank">Programming Fundamentals
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.freecodecamp.org/news/learn-to-code-book/" rel="noopener noreferrer" target="_blank">Coding Career Preparation
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.freecodecamp.org/news/become-a-full-stack-developer-and-get-a-job/" rel="noopener noreferrer" target="_blank">Full-Stack Developer Guide
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.freecodecamp.org/news/learn-python-for-javascript-developers-handbook/" rel="noopener noreferrer" target="_blank">Python for JavaScript Devs
+                    </a>
+                </li>
+            </ul>
+            <div class="spacer" style="padding: 15px 0;"></div>
+            <div>
+                <h2 id="mobile-app" class="col-header">
+                    Mobile App
+                </h2>
+                <div class="min-h-[1px] px-[15px] md:w-2/3 md:ml-[16.6%]">
+                    <ul aria-labelledby="mobile-app" class="mobile-app-container">
+                        <li>
+                            <a href="https://apps.apple.com/us/app/freecodecamp/id6446908151?itsct=apps_box_link&amp;itscg=30200" rel="noopener noreferrer" target="_blank">
+                                <img src="https://cdn.freecodecamp.org/platform/universal/apple-store-badge.svg" lang="en" alt="Download on the App Store">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://play.google.com/store/apps/details?id=org.freecodecamp" rel="noopener noreferrer" target="_blank">
+                                <img src="https://cdn.freecodecamp.org/platform/universal/google-play-badge.svg" lang="en" alt="Get it on Google Play">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <h2 class="col-header" data-test-label="our-nonprofit">Our Charity</h2>
+        <div class="our-nonprofit">
+
+            <a href="https://hashnode.com/" rel="noopener noreferrer" target="_blank" data-test-label="powered-by">
+                Publication powered by Hashnode
+            </a>
+            <a href="https://www.freecodecamp.org/news/about/" rel="noopener noreferrer" target="_blank" data-test-label="about">
+                About
+            </a>
+            <a href="https://www.linkedin.com/school/free-code-camp/people/" rel="noopener noreferrer" target="_blank" data-test-label="alumni">
+                Alumni Network
+            </a>
+            <a href="https://github.com/freeCodeCamp/" rel="noopener noreferrer" target="_blank" data-test-label="open-source">
+                Open Source
+            </a>
+            <a href="https://www.freecodecamp.org/news/shop/" rel="noopener noreferrer" target="_blank" data-test-label="shop">
+                Shop
+            </a>
+            <a href="https://www.freecodecamp.org/news/support/" rel="noopener noreferrer" target="_blank" data-test-label="support">
+                Support
+            </a>
+            <a href="https://www.freecodecamp.org/news/sponsors/" rel="noopener noreferrer" target="_blank" data-test-label="sponsors">
+                Sponsors
+            </a>
+            <a href="https://www.freecodecamp.org/news/academic-honesty-policy/" rel="noopener noreferrer" target="_blank" data-test-label="honesty">
+                Academic Honesty
+            </a>
+            <a href="https://www.freecodecamp.org/news/code-of-conduct/" rel="noopener noreferrer" target="_blank" data-test-label="coc">
+                Code of Conduct
+            </a>
+            <a href="https://www.freecodecamp.org/news/privacy-policy/" rel="noopener noreferrer" target="_blank" data-test-label="privacy">
+                Privacy Policy
+            </a>
+            <a href="https://www.freecodecamp.org/news/terms-of-service/" rel="noopener noreferrer" target="_blank" data-test-label="tos">
+                Terms of Service
+            </a>
+            <a href="https://www.freecodecamp.org/news/copyright-policy/" rel="noopener noreferrer" target="_blank" data-test-label="copyright">
+                Copyright Policy
+            </a>
+        </div>
+    </div>
+</footer>
+
+        </div>
+
+        
+        
+        
+
+        
+        
+    <script defer="" src="https://static.cloudflareinsights.com/beacon.min.js/v833ccba57c9e4d2798f2e76cebdd09a11778172276447" integrity="sha512-57MDmcccJXYtNnH+ZiBwzC4jb2rvgVCEokYN+L/nLlmO8rfYT/gIpW2A569iJ/3b+0UEasghjuZH/ma3wIs/EQ==" data-cf-beacon="{&quot;version&quot;:&quot;2024.11.0&quot;,&quot;token&quot;:&quot;bdb993c6dde44e178aabd9555e75e4f4&quot;,&quot;server_timing&quot;:{&quot;name&quot;:{&quot;cfCacheStatus&quot;:true,&quot;cfEdge&quot;:true,&quot;cfExtPri&quot;:true,&quot;cfL4&quot;:true,&quot;cfOrigin&quot;:true,&quot;cfSpeedBrain&quot;:true},&quot;location_startswith&quot;:null}}" crossorigin="anonymous"></script>
+
+
+<iframe name="googlefcPresent" style="display: none; width: 0px; height: 0px; border: none; z-index: -1000; left: -1000px; top: -1000px;"></iframe></body></html>

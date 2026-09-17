@@ -1,0 +1,696 @@
+<!DOCTYPE html><html><head>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="generator" content="MarkBind 2.15.2">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CS2103/T - Admin: Lectures</title>
+    <link rel="stylesheet" href="../markbind/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../markbind/css/bootstrap-vue.min.css">
+    <link rel="stylesheet" href="../markbind/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
+    <link rel="stylesheet" href="../markbind/css/octicons.css">
+    <link rel="stylesheet" href="../markbind/css/github.min.css">
+    <link rel="stylesheet" href="../markbind/css/markbind.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"><link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="../markbind/layouts/default/styles.css"><link rel="stylesheet" href="../markbind/css/site-nav.css"><link rel="stylesheet" href="../markbind/css/page-nav.css"><link rel="stylesheet" href="/website/css/main.css">
+    <link rel="stylesheet" href="/website/css/admin.css"><link rel="icon" href="/website/favicon.ico"><style type="text/css">
+.secret[data-v-6149e08a] {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  margin: -1px;
+  height: 1px;
+  width: 1px;
+  padding: 0;
+  border: 0;
+}
+.btn-with-before[data-v-6149e08a] {
+  padding-left: 0.2rem;
+  padding-right: 0.4rem;
+}
+.dropdown-toggle[data-v-6149e08a] {
+  cursor: pointer;
+}
+</style><style type="text/css">
+@media (max-width: 767px) {
+.navbar-collapse[data-v-4378c549] {
+    max-height: 80vh !important;
+    overflow-x: hidden !important;
+    overflow-y: scroll !important;
+}
+}
+.navbar-fixed[data-v-4378c549] {
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+</style><style type="text/css">
+.collapse-button {
+    font-size: 10px !important;
+    float: right;
+    padding: 3px 8px !important;
+    margin-left: 3px;
+    margin-top: 2px;
+}
+</style><style type="text/css">
+.card-collapse[data-v-030655b4] {
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+}
+.seamless-button[data-v-030655b4] {
+    opacity: 0;
+    transition: 0.3s opacity;
+}
+.card-header:hover .seamless-button[data-v-030655b4] {
+    opacity: 1;
+}
+</style><style type="text/css">
+.card-heading {
+    width: 100%;
+}
+.card-title {
+    display: inline-block;
+    font-size: 1em;
+    margin: 0;
+    vertical-align: middle;
+}
+.card-title * {
+    margin: 0px !important;
+}
+.caret-wrapper {
+    float: left;
+    display: inline-block;
+    width: 32px;
+}
+.header-wrapper {
+    display: inline-block;
+    width: calc(100% - 32px - 96px);
+}
+.button-wrapper {
+    float: right;
+    display: inline-block;
+    width: 96px;
+}
+.header-toggle {
+    cursor: pointer;
+}
+.expandable-card {
+    margin-bottom: 0 !important;
+    margin-top: 5px;
+}
+.card-group > .card-container > .expandable-card {
+    margin-top: 0!important;
+}
+.card-seamless {
+    padding: 0;
+}
+.card.card-seamless {
+    box-shadow: none;
+    border: none;
+}
+.card-seamless > .card-heading {
+    padding: 0;
+}
+.card-seamless > .card-collapse > hr {
+    margin: 0;
+    width: calc(100% - 27px);
+}
+.card-seamless > .card-collapse > .card-body {
+    padding: 10px 0;
+}
+.card-seamless > .card-collapse > .card-body > .collapse-button {
+    position: relative;
+    top: 22px;
+}
+.card-body > .collapse-button {
+    margin-bottom: 13px;
+    margin-top: 5px;
+    opacity: 0.2;
+}
+.card-body > .collapse-button:hover {
+    opacity: 1;
+}
+.close-button {
+    font-size: 10px !important;
+    float: right;
+    padding: 3px 8px !important;
+    margin-left: 3px;
+    margin-top: 2px;
+}
+.popup-button {
+    font-size: 10px !important;
+    float: right;
+    margin-top: 2px;
+    padding: 3px 8px !important;
+}
+.morph {
+    display: inline-block;
+}
+.morph-display-wrapper {
+    white-space: normal;
+}
+
+/* Bootstrap extra small(xs) responsive breakpoint */
+@media (max-width: 575.98px) {
+.caret-wrapper {
+        float: left;
+        display: inline-block;
+        width: 32px;
+}
+.header-wrapper {
+        display: inline-block;
+        width: calc(100% - 32px - 32px);
+}
+.button-wrapper {
+        float: right;
+        display: inline-block;
+        width: 32px;
+}
+.card-body {
+        padding: 0.5rem;
+}
+.card-collapse > hr {
+        margin-top: 1.5rem;
+}
+.card-header {
+        padding: 0.5rem;
+}
+}
+</style><style type="text/css">
+.morph-title[data-v-cd41574c] {
+  padding: 0 0.3em;
+  color: rgba(0, 0, 0, 0.5);
+  border-color: rgba(0, 0, 0, 0.5);
+  background-color: transparent;
+  vertical-align: top;
+}
+.morph-title[data-v-cd41574c]:hover, .morph-title[data-v-cd41574c]:active, .morph-title[data-v-cd41574c]:focus {
+  color: black;
+  border-color: black;
+  background-color: rgba(244, 244, 244, 0.3);
+}
+.card-collapse[data-v-cd41574c] {
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+}
+.card-flex[data-v-cd41574c] {
+  display: flex;
+  flex-direction: column;
+  border: 0;
+  margin: 0;
+}
+.card-title-transparent[data-v-cd41574c] {
+  opacity: 0.5;
+  transition: opacity 0.5s;
+}
+.card:hover .card-title-transparent[data-v-cd41574c] {
+  opacity: 1;
+}
+.header-fade-enter[data-v-cd41574c] {
+  opacity: 0;
+}
+.header-fade-leave-active[data-v-cd41574c] {
+  position: absolute;
+}
+.header-fade-leave-to[data-v-cd41574c] {
+  opacity: 0 !important;
+}
+.card-title-inline[data-v-cd41574c] {
+  display: inline-block;
+}
+.card-body[data-v-cd41574c] {
+  padding: 0;
+}
+.header-wrapper[data-v-cd41574c] {
+  width: 100%;
+  display: inline-block;
+  background-color: white;
+}
+.header-wrapper-bottom[data-v-cd41574c] {
+  order: 1;
+}
+.ellipses[data-v-cd41574c]::before {
+  position: relative;
+  bottom: 3px;
+  content: '...';
+  font-weight: 900;
+  margin-right: 4px;
+}
+.button-wrapper[data-v-cd41574c] {
+  padding-left: 2px;
+  border-width: 0 0 0 1px;
+  border-color: rgba(150, 150, 150, 0.2);
+  border-style: solid;
+  margin-left: 2px;
+  width: auto;
+  float: none;
+  opacity: 0;
+  transition: opacity 0.5s;
+  vertical-align: text-top;
+}
+.button-wrapper-expanded[data-v-cd41574c] {
+  padding-left: 0;
+  border: 0;
+  margin-left: 0;
+}
+.card:hover .button-wrapper[data-v-cd41574c] {
+  opacity: 1;
+}
+.header-toggle[data-v-cd41574c] {
+  cursor: pointer;
+}
+.minimal-button[data-v-cd41574c] {
+  padding: 0 3px;
+  border: 0;
+  color: rgb(150, 150, 150);
+  background-color: transparent;
+  cursor: pointer;
+}
+.minimal-button[data-v-cd41574c]:hover, .minimal-button[data-v-cd41574c]:active, .minimal-button[data-v-cd41574c]:focus {
+  color: rgb(30, 30, 30);
+}
+.minimal-popup-button[data-v-cd41574c] {
+  top: 1px;
+  font-size: 9px;
+}
+.minimal-menu-up[data-v-cd41574c] {
+  top: 3px;
+  font-size: 13px;
+}
+.minimal-menu-down[data-v-cd41574c] {
+  top: 1px;
+  font-size: 13px;
+}
+.minimal-close-button[data-v-cd41574c] {
+  top: 2px;
+  font-size: 11px;
+}
+
+/* Bootstrap extra small(xs) responsive breakpoint */
+@media (max-width: 575.98px) {
+.button-wrapper-expanded[data-v-cd41574c] {
+    padding-left: 0;
+    border: 0;
+    margin-left: 0;
+    opacity: 0.15;
+}
+.button-wrapper-visible[data-v-cd41574c] {
+    opacity: 1;
+}
+}
+</style><style type="text/css">
+.image-wrapper {
+    display: inline-block;
+    text-align: center;
+    padding: 4px;
+}
+</style><style type="text/css">
+.quiz-container[data-v-aa7c42e0] {
+    overflow: hidden;
+}
+.intro-outro-card[data-v-aa7c42e0] {
+    transition: opacity 0.5s;
+    box-shadow: 0 2px 7px 5px rgba(210, 210, 210, 0.2);
+}
+.intro-outro-card-enter-active[data-v-aa7c42e0],
+.intro-outro-card-leave-to[data-v-aa7c42e0] {
+    opacity: 0;
+}
+.intro-outro-card > .card-body[data-v-aa7c42e0] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.score[data-v-aa7c42e0] {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+.score-circle[data-v-aa7c42e0] {
+    stroke-dasharray: 264;
+    fill: none;
+    stroke: rgba(132, 215, 255, 0.8);
+    stroke-width: 8;
+    transition: stroke-dashoffset 1.5s ease-out, stroke 1.5s linear;
+}
+.score-background-circle[data-v-aa7c42e0] {
+    fill: none;
+    stroke: rgba(227, 226, 226, 0.5);
+    stroke-width: 8;
+}
+.btn[data-v-aa7c42e0] {
+    border-radius: 2em;
+}
+
+</style><style type="text/css">
+.result-icon[data-v-71c4fe21] {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 2em;
+    width: 2em;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 2em;
+}
+.question[data-v-71c4fe21] {
+    margin-bottom: 1rem;
+    transition: transform 0.5s ease-out, opacity 0.5s linear;
+    box-shadow: 0 2px 7px 5px rgba(210, 210, 210, 0.2);
+}
+.question-enter-active[data-v-71c4fe21] {
+    opacity: 0;
+    transform: translateX(-100%);
+}
+.question-leave-to[data-v-71c4fe21] {
+    opacity: 0;
+    transform: translateX(100%);
+}
+.q-btn[data-v-71c4fe21] {
+    border-radius: 2.5em;
+    transition: opacity 0.5s, transform 0.7s;
+}
+.q-btn-enter[data-v-71c4fe21] {
+    opacity: 0;
+    transform: translateY(30px);
+}
+.q-btn-leave-to[data-v-71c4fe21] {
+    opacity: 0;
+    transform: translateX(calc(-100% - 0.25rem));
+}
+.q-btn-leave-active[data-v-71c4fe21] {
+    position: absolute;
+}
+.card-header[data-v-71c4fe21] {
+    font-size: 1.05em;
+    font-weight: 500;
+}
+
+/* For accomodating block markdown nicely */
+.card-header[data-v-71c4fe21] > :last-child,
+.answer[data-v-71c4fe21] > :last-child {
+    margin-bottom: 0;
+}
+@keyframes shake-data-v-71c4fe21 {
+20% { transform: translate(-1px, -1px);
+}
+40% { transform: translate(1px, 1px);
+}
+60% { transform: translate(0, 0);
+}
+80% { transform: translate(-1px, 1px);
+}
+100% { transform: translate(1px, -1px);
+}
+}
+.shake[data-v-71c4fe21] {
+    animation: shake-data-v-71c4fe21 0.25s;
+    animation-iteration-count: 2;
+}
+
+/* text question text area */
+textarea.form-control[data-v-71c4fe21] {
+    height: auto;
+    min-height: 75px;
+    margin-bottom: 10px;
+}
+</style><style type="text/css">
+.fa-check[data-v-91c02e4a],
+.fa-times[data-v-91c02e4a] {
+    font-size: 1.2em;
+}
+
+/* For accomodating block markdown nicely */
+.reason[data-v-91c02e4a] :last-child,
+.content[data-v-91c02e4a] :last-child {
+    margin-bottom: 0;
+}
+.reason[data-v-91c02e4a] {
+    padding: 0 0.5rem;
+}
+.checkbox-label[data-v-91c02e4a] {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 0;
+    vertical-align: text-bottom;
+}
+.form-control[data-v-91c02e4a] {
+    height: auto;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.form-control.success[data-v-91c02e4a],
+.form-control.success > .checkbox-label[data-v-91c02e4a],
+.form-control.danger[data-v-91c02e4a],
+.form-control.danger > .checkbox-label[data-v-91c02e4a] {
+    cursor: default;
+}
+.disabled[data-v-91c02e4a] {
+    opacity: 0.9;
+}
+.radio-svg[data-v-91c02e4a] {
+    width: 1em;
+    height: 1em;
+}
+.checkbox[data-v-91c02e4a] {
+    width: 1em;
+    height: 1em;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+.row[data-v-91c02e4a] {
+    margin: 0.2rem 0 0 0;
+    align-items: center;
+}
+</style><style type="text/css">
+.dropdown-menu > li > a {
+  cursor: pointer;
+}
+</style><style type="text/css">
+.mark[data-v-2a2cd7a4] {
+  padding: 0 !important;
+}
+.heading[data-v-2a2cd7a4] {
+  padding: 0 0 0.1rem 0.2rem;
+}
+.heading-text[data-v-2a2cd7a4] {
+  display: inline-block;
+  width: 40%;
+  white-space: normal;
+  vertical-align: top;
+}
+.heading-text-items[data-v-2a2cd7a4] {
+  display: inline-block;
+  width: calc(60% - 0.7rem);
+  white-space: normal;
+  border-left: 1px solid #ddd;
+  padding-left: 0.5rem;
+}
+.page-title[data-v-2a2cd7a4] {
+  font-size: 1.05rem;
+  font-weight: bold;
+}
+.page-headings-separator[data-v-2a2cd7a4] {
+  margin: 0.2rem 0;
+}
+</style><style type="text/css">
+.search-dropdown-menu {
+  min-width: 30em;
+  max-height: 30em;
+  overflow-y: scroll;
+}
+@media screen and (max-width: 768px) {
+.search-dropdown-menu {
+    min-width: auto;
+    max-height: 30em;
+    overflow-y: scroll;
+}
+}
+</style><style type="text/css">
+.tab-pane > hr {
+    margin: 0;
+}
+.fade-enter-active {
+  transition: opacity .5s;
+}
+.fade-leave-active {
+  transition: opacity 0s;
+}
+</style><style type="text/css">
+.nav-tabs[data-v-7d86c3e3] {
+  margin-bottom: 15px;
+}
+</style><style type="text/css">
+.nav-tabs[data-v-69d36b66] {
+  margin-bottom: 15px;
+}
+</style><style type="text/css">
+.thumb-wrapper {
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+}
+.thumb-circle {
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+}
+.thumb-image {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+}
+</style><style type="text/css">
+.box-container[data-v-a902572e] {
+    width: 100%;
+    padding: 0;
+    border-radius: 6px;
+}
+.box-header-wrapper[data-v-a902572e] {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    padding: 0.4rem 1.25rem 0.28rem 1.25rem;
+    border-radius: 6px 6px 0 0;
+}
+.box-body-wrapper[data-v-a902572e] {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 0.75rem 1.25rem;
+}
+.box-container.seamless > .box-body-wrapper[data-v-a902572e] {
+    padding: 0.75rem 0.5rem;
+}
+.box-container.seamless > div.box-body-wrapper > .contents[data-v-a902572e] {
+    padding-left: 12px;
+}
+.heading[data-v-a902572e] {
+    display: inline;
+    float: right;
+    font-weight: normal;
+    color: inherit;
+    background-color: rgba(240, 240, 240, 0.6);
+    width: auto;
+    padding: 3px 5px 4px 5px;
+    border-width: 0;
+    border-radius: 0 6px 0 6px;
+    margin: -13px -27px 0 15px;
+}
+.box-body-wrapper-with-heading[data-v-a902572e] {
+    padding-top: 0.5rem;
+}
+.alert-dismissible[data-v-a902572e] {
+    padding-right: 4rem;
+}
+.box-header[data-v-a902572e] {
+    font-weight: 500;
+}
+.icon-wrapper[data-v-a902572e] {
+    display: inline;
+    text-align: center;
+    margin-right: 0.5em;
+    min-width: 1em;
+}
+.close-with-heading[data-v-a902572e] {
+    top: auto;
+    padding: 0 1.25rem;
+}
+.close-with-heading > span[data-v-a902572e] {
+    vertical-align: text-top;
+}
+.contents[data-v-a902572e] {
+    padding: 0 6px;
+    width: 100%;
+}
+.contents[data-v-a902572e] > :last-child {
+    margin-bottom: 0;
+}
+.alert-default[data-v-a902572e] {
+    color: #24292e;
+    background-color: #f6f8fa;
+    border-color: #e8ebef;
+}
+.alert-border-left[data-v-a902572e] {
+    background-color: #f9f8f8;
+    border-left: solid;
+    border-width: 0px 0px 0px 5px;
+}
+.vertical-divider[data-v-a902572e] {
+    width: 4px;
+}
+.horizontal-divider[data-v-a902572e] {
+    margin: 0 auto;
+    width: calc(100% - 2.5rem);
+    height: 3px;
+}
+.no-background[data-v-a902572e] {
+  background: none;
+}
+.no-border[data-v-a902572e] {
+  border: none;
+}
+</style><style type="text/css">
+div.box-header > * {
+    margin-bottom: 0;
+}
+</style><style>span.anchor {
+    position: relative;
+    top: calc(-102px - 1rem)
+    }</style><style>span.card-container::before {
+        display: block;
+        content: '';
+        margin-top: calc(-102px - 1rem);
+        height: calc(102px + 1rem);
+      }</style></head>
+<body data-spy="scroll" data-target="#page-nav" data-offset="100">
+<div id="app"><header fixed=""><div class="w-100 p-1 bg-warning text-center"><span><strong>This site is from a past semester! The current version will be <a href="http://www.comp.nus.edu.sg/~cs2103">here</a> when the new semester starts.</strong></span></div> <nav data-v-4378c549="" class="navbar navbar-expand-md navbar-dark bg-dark" placement="top"><div data-v-4378c549="" class="container-fluid"><div data-v-4378c549="" class="navbar-brand"><a data-v-4378c549="" href="/website/index.html" title="Home" class="navbar-brand"><span data-v-4378c549="" class="badge badge-pill badge-success">CS2103/T <small data-v-4378c549="">2020 Aug-Dec</small></span></a></div> <button data-v-4378c549="" type="button" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"><span data-v-4378c549="" class="navbar-toggler-icon"></span> </button> <div data-v-4378c549="" class="navbar-collapse collapse"><ul data-v-4378c549="" class="navbar-nav mr-auto mt-2 mt-lg-0"> <li data-v-6149e08a="" class="nav-link algolia-no-index dropdown" data-v-4378c549=""><a data-v-6149e08a="" role="button" class="dropdown-toggle"><strong data-v-6149e08a="">Schedule</strong></a> <ul data-v-6149e08a="" class="dropdown-menu"> <li data-v-6149e08a=""><a data-v-6149e08a="" href="/website/schedule/timeline.html" class="dropdown-item"><span data-v-6149e08a=""><strong data-v-6149e08a="">Full Timeline</strong></span></a></li> <li data-v-6149e08a=""><a data-v-6149e08a="" href="/website/schedule/week1/index.html" class="dropdown-item"><span data-v-6149e08a=""><strong data-v-6149e08a="">Week 1</strong> [Mon, Aug 10th] </span></a></li> <li data-v-6149e08a=""><a data-v-6149e08a="" href="/website/schedule/week2/index.html" class="dropdown-item"><span data-v-6149e08a=""><strong data-v-6149e08a="">Week 2</strong> [Fri, Aug 14th] </span></a></li> <li data-v-6149e08a=""><a data-v-6149e08a="" href="/website/schedule/week3/index.html" class="dropdown-item"><span data-v-6149e08a=""><strong data-v-6149e08a="">Week 3</strong> [Fri, Aug 21st] </span></a></li> <li data-v-6149e08a=""><a data-v-6149e08a="" href="/website/schedule/week4/index.html" class="dropdown-item"><span data-v-6149e08a=""><strong data-v-6149e08a="">Week 4</strong> [Fri, Aug 28th] </span></a></li> <li data-v-6149e08a=""><a data-v-6149e08a="" href="/website/schedule/week5/index.html" class="dropdown-item"><span data-v-6149e08a=""><strong data-v-6149e08a="">Week 5</strong> [Fri, Sep 4th] </span></a></li> <li data-v-6149e08a=""><a data-v-6149e08a="" href="/website/schedule/week6/index.html" class="dropdown-item"><span data-v-6149e08a=""><strong data-v-6149e08a="">Week 6</strong> [Fri, Sep 11th] </span></a></li> <li data-v-6149e08a=""><a data-v-6149e08a="" href="/website/schedule/week7/index.html" class="dropdown-item"><span data-v-6149e08a=""><strong data-v-6149e08a="">Week 7</strong> [Fri, Sep 18th] </span></a></li> <li data-v-6149e08a=""><a data-v-6149e08a="" href="/website/schedule/week8/index.html" class="dropdown-item"><span data-v-6149e08a=""><strong data-v-6149e08a="">Week 8</strong> [Fri, Oct 2nd] </span></a></li> <li data-v-6149e08a=""><a data-v-6149e08a="" href="/website/schedule/week9/index.html" class="dropdown-item"><span data-v-6149e08a=""><strong data-v-6149e08a="">Week 9</strong> [Fri, Oct 9th] </span></a></li> <li data-v-6149e08a=""><a data-v-6149e08a="" href="/website/schedule/week10/index.html" class="dropdown-item"><span data-v-6149e08a=""><strong data-v-6149e08a="">Week 10</strong> [Fri, Oct 16th] </span></a></li> <li data-v-6149e08a=""><a data-v-6149e08a="" href="/website/schedule/week11/index.html" class="dropdown-item"><span data-v-6149e08a=""><strong data-v-6149e08a="">Week 11</strong> [Fri, Oct 23rd] </span></a></li> <li data-v-6149e08a=""><a data-v-6149e08a="" href="/website/schedule/week12/index.html" class="dropdown-item"><span data-v-6149e08a=""><strong data-v-6149e08a="">Week 12</strong> [Fri, Oct 30th] </span></a></li> <li data-v-6149e08a=""><a data-v-6149e08a="" href="/website/schedule/week13/index.html" class="dropdown-item"><span data-v-6149e08a=""><strong data-v-6149e08a="">Week 13</strong> [Fri, Nov 6th] </span></a></li></ul></li> <li data-v-4378c549=""><a data-v-4378c549="" href="/website/se-book-adapted/index.html" class="nav-link"><span data-v-4378c549=""><strong data-v-4378c549="">Textbook</strong></span></a></li> <li data-v-4378c549=""><a data-v-4378c549="" href="/website/admin/index.html" class="nav-link"><span data-v-4378c549=""><strong data-v-4378c549="">Admin Info</strong></span></a></li> <li data-v-4378c549="" tags="m--cs2103 m--cs2113 m--tic4001"><a data-v-4378c549="" href="https://nus-cs2103-ay2021s1.github.io/dashboards" target="_blank" class="nav-link"><span data-v-4378c549=""><strong data-v-4378c549="">Dashboards</strong></span></a></li> <li data-v-6149e08a="" class="nav-link algolia-no-index dropdown" data-v-4378c549=""><a data-v-6149e08a="" role="button" class="dropdown-toggle"><strong data-v-6149e08a="">Project Links</strong></a> <ul data-v-6149e08a="" class="dropdown-menu"> <span data-v-6149e08a=""><strong data-v-6149e08a="">&nbsp;Individual Project (iP):</strong></span> <li data-v-6149e08a=""><a data-v-6149e08a="" href="/website/admin/ip-overview.html" class="dropdown-item"><span data-v-6149e08a=""><span data-v-6149e08a=""><span data-v-6149e08a="" aria-hidden="true" class="fas fa-drafting-compass"></span></span> Individual Project Info</span></a></li> <li data-v-6149e08a=""><a data-v-6149e08a="" href="https://github.com/nus-cs2103-AY2021S1/ip" target="_blank" class="dropdown-item"><span data-v-6149e08a=""><span data-v-6149e08a=""><span data-v-6149e08a="" aria-hidden="true" class="fas fa-code-branch"></span></span> iP Upstream Repo</span></a></li> <li data-v-6149e08a=""><a data-v-6149e08a="" href="/website/admin/ip-showcase.html" class="dropdown-item"><span data-v-6149e08a=""><span data-v-6149e08a="" aria-hidden="true" class="glyphicon glyphicon-list-alt"></span> iP Showcase</span></a></li> <li data-v-6149e08a=""><a data-v-6149e08a="" href="https://nus-cs2103-ay2021s1.github.io/ip-dashboard/#sort=groupTitle&amp;groupSelect=groupByAuthors" target="_blank" class="dropdown-item"><span data-v-6149e08a=""><span data-v-6149e08a="" aria-hidden="true" class="fas fa-chart-area"></span> iP Code Dashboard</span></a></li> <li data-v-6149e08a=""><a data-v-6149e08a="" href="https://nus-cs2103-ay2021s1.github.io/dashboards/contents/ip-progress.html" target="_blank" class="dropdown-item text-success"><span data-v-6149e08a=""><span data-v-6149e08a="" aria-hidden="true" class="fas fa-trophy"></span> iP Progress Dashboard</span></a></li> <hr data-v-6149e08a=""> <span data-v-6149e08a=""><strong data-v-6149e08a="">&nbsp;Team Project (tP):</strong></span> <li data-v-6149e08a=""><a data-v-6149e08a="" href="/website/admin/tp-expectations.html" class="dropdown-item"><span data-v-6149e08a=""><span data-v-6149e08a=""><span data-v-6149e08a="" aria-hidden="true" class="fas fa-drafting-compass"></span></span> Team Project Info</span></a></li> <li data-v-6149e08a="" tags="m--cs2103"><a data-v-6149e08a="" href="https://github.com/nus-cs2103-AY2021S1/tp" target="_blank" class="dropdown-item"><span data-v-6149e08a=""><span data-v-6149e08a=""><span data-v-6149e08a="" aria-hidden="true" class="fas fa-code-branch"></span></span> Addressbook-level3</span></a></li> <li data-v-6149e08a=""><a data-v-6149e08a="" href="/website/admin/teamList.html" class="dropdown-item"><span data-v-6149e08a=""><span data-v-6149e08a="" aria-hidden="true" class="glyphicon glyphicon-list-alt"></span> Team List</span></a></li> <li data-v-6149e08a=""><a data-v-6149e08a="" href="https://nus-cs2103-ay2021s1.github.io/tp-dashboard/#breakdown=true" target="_blank" class="dropdown-item"><span data-v-6149e08a=""><span data-v-6149e08a="" aria-hidden="true" class="fas fa-chart-area"></span> tP Code Dashboard</span></a></li> <li data-v-6149e08a=""><a data-v-6149e08a="" href="https://nus-cs2103-ay2021s1.github.io/dashboards/contents/tp-progress.html" target="_blank" class="dropdown-item text-success"><span data-v-6149e08a=""><span data-v-6149e08a="" aria-hidden="true" class="fas fa-trophy"></span> tP Progress Dashboard</span></a></li></ul></li> <li data-v-6149e08a="" class="nav-link algolia-no-index dropdown" data-v-4378c549=""><a data-v-6149e08a="" role="button" class="dropdown-toggle"><strong data-v-6149e08a="">Other Links</strong></a> <ul data-v-6149e08a="" class="dropdown-menu"> <li data-v-6149e08a="" tags="m--cs2103 m--cs2113 m--tic4001"><a data-v-6149e08a="" href="https://github.com/nus-cs2103-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span data-v-6149e08a=""><span data-v-6149e08a="" aria-hidden="true" class="fas fa-bug"></span> Report Bugs</span></a></li> <li data-v-6149e08a=""><a data-v-6149e08a="" href="https://github.com/nus-cs2103-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span data-v-6149e08a=""><span data-v-6149e08a="" aria-hidden="true" class="fas fa-comment"></span> Forum</span></a></li> <li data-v-6149e08a="" tags="m--cs2113 m--cs2103 m--tic4001"><a data-v-6149e08a="" href="https://gitter.im/nus-cs2103-AY2021S1/community" target="_blank" class="dropdown-item"><span data-v-6149e08a=""><span data-v-6149e08a="" aria-hidden="true" class="fab fa-gitter"></span> Gitter (Chat)</span></a></li> <li data-v-6149e08a=""><a data-v-6149e08a="" href="/website/admin/instructors.html" class="dropdown-item"><span data-v-6149e08a=""><span data-v-6149e08a="" aria-hidden="true" class="fas fa-user-tie"></span> Instructors</span></a></li> <li data-v-6149e08a=""><a data-v-6149e08a="" href="https://luminus.nus.edu.sg/modules/5aee78b3-3927-432e-85a5-27be5f6a00fd/announcements/active" target="_blank" class="dropdown-item"><span data-v-6149e08a=""><span data-v-6149e08a="" aria-hidden="true" class="glyphicon glyphicon-bullhorn"></span> Announcements</span></a></li> <li data-v-6149e08a=""><a data-v-6149e08a="" href="https://luminus.nus.edu.sg/modules/5aee78b3-3927-432e-85a5-27be5f6a00fd/files" target="_blank" class="dropdown-item"><span data-v-6149e08a=""><span data-v-6149e08a="" aria-hidden="true" class="fas fa-file-upload"></span> Files</span></a></li> <li data-v-6149e08a="" tags="m--cs2113 m--cs2103"><a data-v-6149e08a="" href="/website/admin/tutorials.html" class="dropdown-item"><span data-v-6149e08a=""><span data-v-6149e08a="" aria-hidden="true" class="glyphicon glyphicon-calendar"></span> Tutorial Schedule</span></a></li> <li data-v-6149e08a="" tags="m--cs2103 m--cs2113 m--tic2002 m--tic4001"><a data-v-6149e08a="" href="https://se-education.org/guides/conventions/java/intermediate.html" target="_blank" class="dropdown-item"><span data-v-6149e08a=""><span data-v-6149e08a="" aria-hidden="true" class="fas fa-code"></span> Java Coding Standard</span></a></li> <li data-v-6149e08a="" tags="m--cs2103 m--cs2113 m--tic4001"><a data-v-6149e08a="" href="https://se-education.org/guides/conventions/git.html" target="_blank" class="dropdown-item"><span data-v-6149e08a=""><span data-v-6149e08a="" aria-hidden="true" class="fab fa-git-square"></span> Git Conventions</span></a></li> <li data-v-6149e08a="" tags="m--cs2103 m--cs2113"><a data-v-6149e08a="" href="https://nus-cs2103-ay2021s1.github.io/dashboards/contents/forum-activities.html" class="dropdown-item"><span data-v-6149e08a=""><span data-v-6149e08a="" aria-hidden="true" class="fas fa-trophy"></span> Forum Activities Dashboard</span></a></li> <li data-v-6149e08a=""><a data-v-6149e08a="" href="https://nus-cs2103-ay2021s1.github.io/dashboards/contents/participation.html" target="_blank" class="dropdown-item text-success"><span data-v-6149e08a=""><span data-v-6149e08a="" aria-hidden="true" class="fas fa-trophy"></span> Participation Dashboard</span></a></li></ul></li> </ul> <ul data-v-4378c549="" class="navbar-nav navbar-right"><li data-v-4378c549="" class="nav-link"><form data-v-4378c549="" class="navbar-form"><div data-v-4378c549="" style="position: relative;"><input type="text" placeholder="Search" autocomplete="off" class="form-control"> <ul class="dropdown-menu search-dropdown-menu dropdown-menu-right"></ul></div></form></li></ul></div></div></nav></header><div id="flex-body"><nav id="site-nav" class="navbar navbar-light bg-transparent"><div class="border-right-grey nav-inner position-sticky slim-scroll" style="padding-top: calc(102px + 1rem);"><ul class="site-nav-list site-nav-list-root"><li><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0"><a href="/website/admin/moduleOverview.html">Module Overview</a></div></li> <li><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0"><a href="/website/admin/usingThisWebsite.html"><mark>Using this Website</mark></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-danger">1<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li> <li><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0"><a href="/website/admin/moduleExpectations.html">Module Expectations</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li> <li><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0">Module Structure 
+<i onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();" class="site-nav-dropdown-btn-icon site-nav-rotate-icon"><span aria-hidden="true" class="glyphicon glyphicon-menu-down"></span></i></div><ul class="site-nav-dropdown-container site-nav-dropdown-container-open site-nav-list"><li><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1"><a href="/website/admin/weeklySchedule.html"><small>Weekly Schedule</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-info">3<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li> <li><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1"><a href="/website/admin/lectures.html" class="current"><small>Lectures</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-info">3<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li> <li><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1"><a href="/website/admin/tutorials.html"><small>Tutorials</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li></ul></li> <li><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0"><a href="/website/admin/instructors.html">Instructors</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-success">4<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li> <li><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0"><a href="/website/admin/textbooks.html">Textbooks</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li> <li><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0"><a href="/website/admin/programmingLanguages.html">Programming Language</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li> <li><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0"><a href="/website/admin/standardsAndConventions.html">Standards/Conventions</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li> <li><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0">Individual Project (iP)
+<i onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();" class="site-nav-dropdown-btn-icon"><span aria-hidden="true" class="glyphicon glyphicon-menu-down"></span></i></div><ul class="site-nav-dropdown-container site-nav-list"><li><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1"><a href="/website/admin/ip-overview.html"><small>iP (Individual Project): Overview</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li> <li><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1"><a href="/website/admin/ip-w2.html"><small>iP: Week 2</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li> <li><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1"><a href="/website/admin/ip-w3.html"><small>iP: Week 3</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li> <li><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1"><a href="/website/admin/ip-w4.html"><small>iP: Week 4</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li> <li><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1"><a href="/website/admin/ip-w5.html"><small>iP: Week 5</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li> <li><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1"><a href="/website/admin/ip-w6.html"><small>iP: Week 6</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-danger">1<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li> <li><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1"><a href="/website/admin/ip-w7.html"><small>iP: Week 7</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-success">4<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li> <li><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1"><a href="/website/admin/ip-w8.html"><small>iP: Week 8</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-danger">1<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li> <li><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1"><a href="/website/admin/ip-grading.html"><small>iP: Grading</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li></ul></li> <li><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0">Team Project (tP)
+<i onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();" class="site-nav-dropdown-btn-icon"><span aria-hidden="true" class="glyphicon glyphicon-menu-down"></span></i></div><ul class="site-nav-dropdown-container site-nav-list"><li><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1"><a href="/website/admin/tp-expectations.html"><small>tP (team project): Expectations</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li> <li><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1"><a href="/website/admin/tp-timeline.html"><small>tP: Timeline</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-info">3<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li> <li><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1"><a href="/website/admin/tp-constraints.html"><small>tP: Constraints</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li> <li><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1"><a href="/website/admin/tp-teams.html"><small>tP: Forming Teams</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li> <li><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1"><a href="/website/admin/tp-w3.html"><small>tP week 3: Kickoff</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li> <li><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1"><a href="/website/admin/tp-w4.html"><small>tP week 4: Set direction</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-info">3<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li> <li><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1"><a href="/website/admin/tp-w5.html"><small>tP week 5: Gather requirements</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li> <li><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1"><a href="/website/admin/tp-w6.html"><small>tP week 6: Conceptualize the product</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li> <li><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1"><a href="/website/admin/tp-w7.html"><small>tP week 7: Get ready for iterations</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li> <li><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1"><a href="/website/admin/tp-w8.html"><small>tP week 8: mid-v1.2</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-info">3<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li> <li><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1"><a href="/website/admin/tp-w9.html"><small>tP week 9: v1.2</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li> <li><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1"><a href="/website/admin/tp-w10.html"><small>tP week 10: mid-v1.3</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li> <li><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1"><a href="/website/admin/tp-w11.html"><small>tP week 11: v1.3</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li> <li><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1"><a href="/website/admin/tp-w12.html"><small>tP week 12: mid-v1.4</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-info">3<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li> <li><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1"><a href="/website/admin/tp-w13.html"><small>tP week 13: v1.4</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li> <li><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1"><a href="/website/admin/tp-deliverables.html"><small>tP: Deliverables</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li> <li><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1"><a href="/website/admin/tp-pe.html"><small>tP: Practical Exam</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li> <li><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1"><a href="/website/admin/tp-grading.html"><small>tP: Grading</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li> <li><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1"><a href="/website/admin/tp-supervision.html"><small>tP: Supervision</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li></ul></li> <li><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0"><a href="/website/admin/peerEvaluations.html">Peer Evaluations</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li> <li><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0"><a href="/website/admin/tools.html">Tools</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-info">3<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li> <li><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0"><a href="/website/admin/exams.html">Exams</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li> <li><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0"><a href="/website/admin/participation.html">Participation Marks</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li> <li><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0"><a href="/website/admin/gradeBreakdown.html">Grade Breakdown</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li> <li><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0">Appendices 
+<i onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();" class="site-nav-dropdown-btn-icon site-nav-rotate-icon"><span aria-hidden="true" class="glyphicon glyphicon-menu-down"></span></i></div><ul class="site-nav-dropdown-container site-nav-dropdown-container-open site-nav-list"><li><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1"><a href="/website/admin/appendixA-principles.html"><small>Apdx A: Module Principles</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-success">4<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li> <li><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1"><a href="/website/admin/appendixB-policies.html"><small>Apdx B: Module Policies</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-danger">1<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li> <li><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1"><a href="/website/admin/appendixC-faq.html"><small>Apdx C: FAQ</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-danger">1<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li> <li><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1"><a href="/website/admin/appendixD-help.html"><small>Apdx D: Getting Help</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li> <li><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1"><a href="/website/admin/appendixE-gitHub.html"><small>Apdx E: Using GitHub</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-danger">1<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li> <li><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1"><a href="/website/admin/appendixF-teamworkIssues.html"><small>Apdx F: Handling Team Issues</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-success">4<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li></ul></li></ul></div></nav> <div id="content-wrapper" style="padding-top: calc(102px);"><div class="website-content"><p><span class="float-left algolia-no-index"><a target="_self" href="/website/admin/weeklySchedule.html" class="btn btn-light"><span><span aria-hidden="true" class="far fa-arrow-alt-circle-left"></span> Weekly Schedule</span></a></span><span class="float-right algolia-no-index"><a target="_self" href="/website/admin/tutorials.html" class="btn btn-light"><span>Tutorials <span aria-hidden="true" class="far fa-arrow-alt-circle-right"></span></span></a></span></p> <br> <h1><span class="display-4">Lectures</span> <span class="text-muted text-light" style="font-size: 15px;"><span class="badge badge-pill badge-light text-primary"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></span><span id="lectures" class="anchor"></span><a href="#lectures" onclick="event.stopPropagation()" class="fa fa-anchor"></a></h1> <div id="main"><img src="/website/admin/images/Lecture photo.png" width="100%"> <p><strong><strong>Timing/venue</strong></strong>:</p> <p><span></span></p> <div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead><tr><th>Module</th> <th>Venue</th> <th>Time</th></tr></thead> <tbody><tr><td>CS2103</td> <td><s>LT19</s></td> <td>Friday <strong>1200</strong>-1400</td></tr> <tr><td>CS2103T</td> <td><s>LT19</s></td> <td>Friday <strong>1600</strong>-1800</td></tr></tbody></table></div><ul><li>As the lectures are repeats of each other, <mark>you may attend any of the two, except in weeks</mark> the lecture is used for the practical exam (PE) or the PE dry run.</li> <li>As Zoom has a limitation of 300 participants (and CS2103T has more than 300 students while CS2103 has ~90 students), <mark>CS2103T students are encouraged to attend the earlier lecture</mark> (except in weeks mentioned above) if you are free during that time. If you can't join the Zoom lecture because it already has 300 participants, we'll make the lecture recording available to you the same day.
+</li></ul> <div tags="m--cs2103 m--cs2113"><p>Lectures start on time sharp and end around 15 minutes before official end time.</p></div> <p><strong><strong>Mode</strong></strong>:</p> <ul><li>Will be done using Zoom. More information coming soon.</li></ul> <div tags="m--cs2103 m--tic4001"><ul><li>Some topics come with pre-recorded lecture videos.</li></ul></div> <div id="tip-about-lecture-videos" class="indented"><div data-v-a902572e="" class="alert box-container seamless"><!----> <!----> <div data-v-a902572e="" class="box-body-wrapper"><div data-v-a902572e="" class="icon-wrapper  text-success"><i data-v-a902572e="" class="fas fa-lightbulb"></i></div> <div data-v-a902572e="" aria-hidden="true" class="vertical-divider alert-success"></div> <div data-v-a902572e="" class="contents"><h5 data-v-a902572e="">Tips for watching lecture videos<span data-v-a902572e="" id="tips-for-watching-lecture-videos" class="anchor"></span><a data-v-a902572e="" href="#tips-for-watching-lecture-videos" onclick="event.stopPropagation()" class="fa fa-anchor"></a></h5> <ul data-v-a902572e=""><li data-v-a902572e=""><mark data-v-a902572e="">You can watch video lectures at faster speeds</mark> (<code data-v-a902572e="">x1.25</code> or even <code data-v-a902572e="">x1.5</code>) to save time.</li> <li data-v-a902572e="">Lecture videos require NUSNET login.
+</li></ul></div> <!----></div></div></div> <p><strong><strong>Attendance</strong></strong>: Attendance for the <mark>first lecture is compulsory</mark>.</p> <p><strong><strong>Handouts</strong></strong>: There are no handouts. All learning materials are organized around topics, are given in Web format, can be found in the <a href="/website/se-book-adapted/index.html">Textbook</a> section (organized by topics), and are also embedded in the <span><a href="/website/schedule/index.html">Schedule page</a></span> (organized by order of coverage).</p> <p><strong><strong>Slides</strong></strong>: Our lecture slides are not suited for printing or to be used as a reference during the lecture/exams. They are only an aid for lecture delivery. Slides will be uploaded to LumiNUS <em>after</em> the lecture.</p></div> <br> <p><span class="float-left algolia-no-index"><a target="_self" href="/website/admin/weeklySchedule.html" class="btn btn-light"><span><span aria-hidden="true" class="far fa-arrow-alt-circle-left"></span> Weekly Schedule</span></a></span><span class="float-right algolia-no-index"><a target="_self" href="/website/admin/tutorials.html" class="btn btn-light"><span>Tutorials <span aria-hidden="true" class="far fa-arrow-alt-circle-right"></span></span></a></span></p></div></div> <nav id="page-nav" class="navbar navbar-light bg-transparent"><div class="border-left-grey nav-inner position-sticky slim-scroll" style="padding-top: calc(102px + 1rem);"><nav class="nav nav-pills flex-column my-0 small no-flex-wrap"><a href="#lectures" class="nav-link py-1 active">Lectures ‎</a></nav></div></nav></div> <footer><div class="text-center"><small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.15.2</a>, generated on Mon, 14 Dec 2020, 23:23:37 GMT+8]</small></div></footer></div>
+
+<script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-BBLVVRB92D&amp;cx=c&amp;gtm=4e66a1"></script><script src="../markbind/js/vue.min.js"></script>
+<script src="../markbind/js/components.min.js"></script>
+<script src="../markbind/js/bootstrap-utility.min.js"></script>
+<script src="../markbind/js/polyfill.min.js"></script>
+<script src="../markbind/js/bootstrap-vue.min.js"></script>
+<script>
+  const baseUrl = '/website'
+  const enableSearch = true
+</script>
+<script src="../markbind/js/setup.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+    <script>
+    function initAlgolia() {
+      docsearch({
+        apiKey: "0b1e4ae12d54a6114a4c5d131a850c2b",
+        indexName: "nus-cs2103-ay1920s1",
+        inputSelector: "#algolia-search-input",
+        algoliaOptions: {"hitsPerPage":10},
+        debug: false,
+      });
+    }
+    MarkBind.afterSetup(initAlgolia);
+  </script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-122519234-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-122519234-1');
+    </script>
+<script src="../markbind/layouts/default/scripts.js"></script>
+
+</body></html>

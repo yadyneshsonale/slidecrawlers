@@ -1,0 +1,2466 @@
+<!DOCTYPE html><html lang="en"><head><link type="text/css" rel="stylesheet" href="https://cscript-cdn-use.asu.edu/templates/2/template.min.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>error page</title>
+    <!-- Google Tag Manager ASU Universal-->
+    <script type="text/javascript" id="www-widgetapi-script" src="https://www.youtube.com/s/player/5b27766f/www-widgetapi.vflset/www-widgetapi.js" async=""></script><script src="//www.youtube.com/iframe_api"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-TEHJR60KD9&amp;cx=c&amp;gtm=4e66o1"></script><script async="" src="//www.googletagmanager.com/gtm.js?id=GTM-KDWN8Z"></script><script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    '//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-KDWN8Z');</script>
+    <!--<link rel="stylesheet" href="bootstrap-asu.css">-->
+    <style>
+        :focus {
+            outline: 0;
+            -webkit-box-shadow: 0 0 8px #00baff !important;
+            box-shadow: 0 0 8px #00baff !important;
+        }
+
+        body {
+            font-family: Arial, Helvetica, "Nimbus Sans L", "Liberation Sans", FreeSans, sans-serif;
+            font-weight: 400;
+            color: #191919;
+        }
+
+        :root {
+            --white: #ffffff;
+            --gray: #6c757d;
+            --gold: #ffc627;
+            --maroon: #8c1d40;
+            --bluefocus: #00baff;
+            --darkgold: #7f6227;
+            --darkmaroon: #440e22;
+            --success: #78be20;
+            --info: #00a3e0;
+            --warning: #ff7f32;
+            --danger: #cc2f2f;
+            --light: #e8e8e8;
+            --dark: #191919;
+            --gold: #ffc627;
+            --maroon: #8c1d40;
+            --gray: #bfbfbf;
+            --gray-1: #fafafa;
+            --gray-2: #e8e8e8;
+            --gray-3: #d0d0d0;
+            --gray-4: #bfbfbf;
+            --gray-5: #747474;
+            --gray-6: #484848;
+            --gray-7: #191919;
+            --breakpoint-xs: 0;
+            --breakpoint-sm: 576px;
+            --breakpoint-md: 768px;
+            --breakpoint-lg: 992px;
+            --breakpoint-xl: 1260px;
+            --font-family-sans-serif: Arial, Helvetica, "Nimbus Sans L", "Liberation Sans", FreeSans, sans-serif;
+            --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+        }
+
+        *,
+        *::before,
+        *::after {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-family: sans-serif;
+            line-height: 1.15;
+            -webkit-text-size-adjust: 100%;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        }
+
+        footer,
+        header,
+        nav {
+            display: block;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, "Nimbus Sans L", "Liberation Sans", FreeSans, sans-serif;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #191919;
+            text-align: left;
+            background-color: #ffffff;
+        }
+
+        [tabindex="-1"]:focus:not(:focus-visible) {
+            outline: 0 !important;
+        }
+
+        h1,
+        h4 {
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+        }
+
+        a {
+            color: #8c1d40;
+            text-decoration: underline;
+            background-color: transparent;
+        }
+
+        a:hover {
+            color: #8c1d40;
+            text-decoration: none;
+        }
+
+        img {
+            vertical-align: middle;
+            border-style: none;
+        }
+
+        label {
+            display: inline-block;
+            margin-bottom: 0.5rem;
+        }
+
+        button {
+            border-radius: 0;
+        }
+
+        button:focus:not(:focus-visible) {
+            outline: 0;
+        }
+
+        input,
+        button {
+            margin: 0;
+            font-family: inherit;
+            font-size: inherit;
+            line-height: inherit;
+        }
+
+        button,
+        input {
+            overflow: visible;
+        }
+
+        button {
+            text-transform: none;
+        }
+
+        button,
+        [type=button] {
+            -webkit-appearance: button;
+        }
+
+        button:not(:disabled),
+        [type=button]:not(:disabled),
+        [type=reset]:not(:disabled),
+        [type=submit]:not(:disabled) {
+            cursor: pointer;
+        }
+
+        button::-moz-focus-inner,
+        [type=button]::-moz-focus-inner {
+            padding: 0;
+            border-style: none;
+        }
+
+        [type=search] {
+            outline-offset: -2px;
+            -webkit-appearance: none;
+        }
+
+        [type=search]::-webkit-search-decoration {
+            -webkit-appearance: none;
+        }
+
+        ::-webkit-file-upload-button {
+            font: inherit;
+            -webkit-appearance: button;
+        }
+
+        h1,
+        h4 {
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            line-height: 1.2;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        h4 {
+            font-size: 1.5rem;
+        }
+
+        .container,
+        .container-xl {
+            width: 100%;
+            padding-right: 12px;
+            padding-left: 12px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        @media (min-width: 576px) {
+            .container {
+                max-width: 540px;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                max-width: 768px;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .container {
+                max-width: 992px;
+            }
+        }
+
+        @media (min-width: 1260px) {
+
+            .container-xl,
+            .container {
+                max-width: 1224px;
+            }
+        }
+
+        .row {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            margin-right: -12px;
+            margin-left: -12px;
+        }
+
+        .no-gutters {
+            margin-right: 0;
+            margin-left: 0;
+        }
+
+        .no-gutters>.col {
+            padding-right: 0;
+            padding-left: 0;
+        }
+
+        .col,
+        .col-12 {
+            position: relative;
+            width: 100%;
+            padding-right: 12px;
+            padding-left: 12px;
+        }
+
+        .col {
+            -ms-flex-preferred-size: 0;
+            flex-basis: 0;
+            -webkit-box-flex: 1;
+            -ms-flex-positive: 1;
+            flex-grow: 1;
+            max-width: 100%;
+        }
+
+        .col-12 {
+            -webkit-box-flex: 0;
+            -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+
+        .form-control {
+            display: block;
+            width: 100%;
+            height: auto;
+            padding: 0.5rem 0.5rem;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #495057;
+            background-color: #ffffff;
+            background-clip: padding-box;
+            border: 1px solid #ced4da;
+            border-radius: 0;
+            -webkit-transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+            transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+            -o-transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+            transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+            transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .form-control {
+                -webkit-transition: none;
+                -o-transition: none;
+                transition: none;
+            }
+        }
+
+        .form-control::-ms-expand {
+            background-color: transparent;
+            border: 0;
+        }
+
+        .form-control:focus {
+            color: #495057;
+            background-color: #ffffff;
+            border-color: #da4e7a;
+            outline: 0;
+            -webkit-box-shadow: 0 0 0 0.2rem rgba(140, 29, 64, 0.25);
+            box-shadow: 0 0 0 0.2rem rgba(140, 29, 64, 0.25);
+        }
+
+        .form-control::-webkit-input-placeholder {
+            color: #747474;
+            opacity: 1;
+        }
+
+        .form-control::-moz-placeholder {
+            color: #747474;
+            opacity: 1;
+        }
+
+        .form-control:-ms-input-placeholder {
+            color: #747474;
+            opacity: 1;
+        }
+
+        .form-control::-ms-input-placeholder {
+            color: #747474;
+            opacity: 1;
+        }
+
+        .form-control:disabled {
+            background-color: #e9ecef;
+            opacity: 1;
+        }
+
+        .was-validated .custom-control-input:valid:focus:not(:checked)~.custom-control-label::before,
+        .custom-control-input.is-valid:focus:not(:checked)~.custom-control-label::before {
+            border-color: #446d12;
+        }
+
+        .was-validated .custom-control-input:invalid:focus:not(:checked)~.custom-control-label::before,
+        .custom-control-input.is-invalid:focus:not(:checked)~.custom-control-label::before {
+            border-color: #b72a2a;
+        }
+
+        .form-inline {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+            -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+        }
+
+        @media (min-width: 576px) {
+            .form-inline label {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                justify-content: center;
+                margin-bottom: 0;
+            }
+
+            .form-inline .form-control {
+                display: inline-block;
+                width: auto;
+                vertical-align: middle;
+            }
+        }
+
+        .btn:not(:disabled):not(.disabled),
+        .uds-modal-close-btn:not(:disabled):not(.disabled) {
+            cursor: pointer;
+        }
+
+        .btn-success:not(:disabled):not(.disabled):active,
+        .btn-success:not(:disabled):not(.disabled).active {
+            color: #ffffff;
+            background-color: #5c9219;
+            border-color: #568717;
+        }
+
+        .btn-success:not(:disabled):not(.disabled):active:focus,
+        .btn-success:not(:disabled):not(.disabled).active:focus {
+            -webkit-box-shadow: 0 0 0 0.2rem rgba(107, 167, 33, 0.5);
+            box-shadow: 0 0 0 0.2rem rgba(107, 167, 33, 0.5);
+        }
+
+        .btn-info:not(:disabled):not(.disabled):active,
+        .btn-info:not(:disabled):not(.disabled).active {
+            color: #ffffff;
+            background-color: #007ead;
+            border-color: #0075a0;
+        }
+
+        .btn-info:not(:disabled):not(.disabled):active:focus,
+        .btn-info:not(:disabled):not(.disabled).active:focus {
+            -webkit-box-shadow: 0 0 0 0.2rem rgba(38, 177, 229, 0.5);
+            box-shadow: 0 0 0 0.2rem rgba(38, 177, 229, 0.5);
+        }
+
+        .btn-warning:not(:disabled):not(.disabled):active,
+        .btn-warning:not(:disabled):not(.disabled).active {
+            color: #ffffff;
+            background-color: #fe5f00;
+            border-color: #f15b00;
+        }
+
+        .btn-warning:not(:disabled):not(.disabled):active:focus,
+        .btn-warning:not(:disabled):not(.disabled).active:focus {
+            -webkit-box-shadow: 0 0 0 0.2rem rgba(222, 114, 49, 0.5);
+            box-shadow: 0 0 0 0.2rem rgba(222, 114, 49, 0.5);
+        }
+
+        .btn-danger:not(:disabled):not(.disabled):active,
+        .btn-danger:not(:disabled):not(.disabled).active {
+            color: #ffffff;
+            background-color: #a32525;
+            border-color: #982323;
+        }
+
+        .btn-danger:not(:disabled):not(.disabled):active:focus,
+        .btn-danger:not(:disabled):not(.disabled).active:focus {
+            -webkit-box-shadow: 0 0 0 0.2rem rgba(212, 78, 78, 0.5);
+            box-shadow: 0 0 0 0.2rem rgba(212, 78, 78, 0.5);
+        }
+
+        .btn-light:not(:disabled):not(.disabled):active,
+        .btn-light:not(:disabled):not(.disabled).active {
+            color: #212529;
+            background-color: #cfcfcf;
+            border-color: #c8c8c8;
+        }
+
+        .btn-light:not(:disabled):not(.disabled):active:focus,
+        .btn-light:not(:disabled):not(.disabled).active:focus {
+            -webkit-box-shadow: 0 0 0 0.2rem rgba(202, 203, 203, 0.5);
+            box-shadow: 0 0 0 0.2rem rgba(202, 203, 203, 0.5);
+        }
+
+        .btn-dark:not(:disabled):not(.disabled):active,
+        .btn-dark:not(:disabled):not(.disabled).active {
+            color: #ffffff;
+            background-color: black;
+            border-color: black;
+        }
+
+        .btn-dark:not(:disabled):not(.disabled):active:focus,
+        .btn-dark:not(:disabled):not(.disabled).active:focus {
+            -webkit-box-shadow: 0 0 0 0.2rem rgba(60, 60, 60, 0.5);
+            box-shadow: 0 0 0 0.2rem rgba(60, 60, 60, 0.5);
+        }
+
+        .btn-gold:not(:disabled):not(.disabled):active,
+        .btn-gold:not(:disabled):not(.disabled).active {
+            color: #212529;
+            background-color: #f3b300;
+            border-color: #e6a900;
+        }
+
+        .btn-gold:not(:disabled):not(.disabled):active:focus,
+        .btn-gold:not(:disabled):not(.disabled).active:focus {
+            -webkit-box-shadow: 0 0 0 0.2rem rgba(222, 174, 39, 0.5);
+            box-shadow: 0 0 0 0.2rem rgba(222, 174, 39, 0.5);
+        }
+
+        .btn-maroon:not(:disabled):not(.disabled):active,
+        .btn-maroon:not(:disabled):not(.disabled).active {
+            color: #ffffff;
+            background-color: #62142d;
+            border-color: #571228;
+        }
+
+        .btn-maroon:not(:disabled):not(.disabled):active:focus,
+        .btn-maroon:not(:disabled):not(.disabled).active:focus {
+            -webkit-box-shadow: 0 0 0 0.2rem rgba(157, 63, 93, 0.5);
+            box-shadow: 0 0 0 0.2rem rgba(157, 63, 93, 0.5);
+        }
+
+        .btn-gray:not(:disabled):not(.disabled):active,
+        .btn-gray:not(:disabled):not(.disabled).active {
+            color: #212529;
+            background-color: #a6a6a6;
+            border-color: #9f9f9f;
+        }
+
+        .btn-gray:not(:disabled):not(.disabled):active:focus,
+        .btn-gray:not(:disabled):not(.disabled).active:focus {
+            -webkit-box-shadow: 0 0 0 0.2rem rgba(167, 168, 169, 0.5);
+            box-shadow: 0 0 0 0.2rem rgba(167, 168, 169, 0.5);
+        }
+
+        .btn-gray-1:not(:disabled):not(.disabled):active,
+        .btn-gray-1:not(:disabled):not(.disabled).active {
+            color: #212529;
+            background-color: #e1e1e1;
+            border-color: #dadada;
+        }
+
+        .btn-gray-1:not(:disabled):not(.disabled):active:focus,
+        .btn-gray-1:not(:disabled):not(.disabled).active:focus {
+            -webkit-box-shadow: 0 0 0 0.2rem rgba(217, 218, 219, 0.5);
+            box-shadow: 0 0 0 0.2rem rgba(217, 218, 219, 0.5);
+        }
+
+        .btn-gray-2:not(:disabled):not(.disabled):active,
+        .btn-gray-2:not(:disabled):not(.disabled).active {
+            color: #212529;
+            background-color: #cfcfcf;
+            border-color: #c8c8c8;
+        }
+
+        .btn-gray-2:not(:disabled):not(.disabled):active:focus,
+        .btn-gray-2:not(:disabled):not(.disabled).active:focus {
+            -webkit-box-shadow: 0 0 0 0.2rem rgba(202, 203, 203, 0.5);
+            box-shadow: 0 0 0 0.2rem rgba(202, 203, 203, 0.5);
+        }
+
+        .btn-gray-3:not(:disabled):not(.disabled):active,
+        .btn-gray-3:not(:disabled):not(.disabled).active {
+            color: #212529;
+            background-color: #b7b7b7;
+            border-color: #b0b0b0;
+        }
+
+        .btn-gray-3:not(:disabled):not(.disabled):active:focus,
+        .btn-gray-3:not(:disabled):not(.disabled).active:focus {
+            -webkit-box-shadow: 0 0 0 0.2rem rgba(182, 182, 183, 0.5);
+            box-shadow: 0 0 0 0.2rem rgba(182, 182, 183, 0.5);
+        }
+
+        .btn-gray-4:not(:disabled):not(.disabled):active,
+        .btn-gray-4:not(:disabled):not(.disabled).active {
+            color: #212529;
+            background-color: #a6a6a6;
+            border-color: #9f9f9f;
+        }
+
+        .btn-gray-4:not(:disabled):not(.disabled):active:focus,
+        .btn-gray-4:not(:disabled):not(.disabled).active:focus {
+            -webkit-box-shadow: 0 0 0 0.2rem rgba(167, 168, 169, 0.5);
+            box-shadow: 0 0 0 0.2rem rgba(167, 168, 169, 0.5);
+        }
+
+        .btn-gray-5:not(:disabled):not(.disabled):active,
+        .btn-gray-5:not(:disabled):not(.disabled).active {
+            color: #ffffff;
+            background-color: #5b5b5b;
+            border-color: #545454;
+        }
+
+        .btn-gray-5:not(:disabled):not(.disabled):active:focus,
+        .btn-gray-5:not(:disabled):not(.disabled).active:focus {
+            -webkit-box-shadow: 0 0 0 0.2rem rgba(137, 137, 137, 0.5);
+            box-shadow: 0 0 0 0.2rem rgba(137, 137, 137, 0.5);
+        }
+
+        .btn-gray-6:not(:disabled):not(.disabled):active,
+        .btn-gray-6:not(:disabled):not(.disabled).active {
+            color: #ffffff;
+            background-color: #2f2f2f;
+            border-color: #282828;
+        }
+
+        .btn-gray-6:not(:disabled):not(.disabled):active:focus,
+        .btn-gray-6:not(:disabled):not(.disabled).active:focus {
+            -webkit-box-shadow: 0 0 0 0.2rem rgba(99, 99, 99, 0.5);
+            box-shadow: 0 0 0 0.2rem rgba(99, 99, 99, 0.5);
+        }
+
+        .btn-gray-7:not(:disabled):not(.disabled):active,
+        .btn-gray-7:not(:disabled):not(.disabled).active {
+            color: #ffffff;
+            background-color: black;
+            border-color: black;
+        }
+
+        .btn-gray-7:not(:disabled):not(.disabled):active:focus,
+        .btn-gray-7:not(:disabled):not(.disabled).active:focus {
+            -webkit-box-shadow: 0 0 0 0.2rem rgba(60, 60, 60, 0.5);
+            box-shadow: 0 0 0 0.2rem rgba(60, 60, 60, 0.5);
+        }
+
+        .btn-outline-success:not(:disabled):not(.disabled):active,
+        .btn-outline-success:not(:disabled):not(.disabled).active {
+            color: #212529;
+            background-color: #78be20;
+            border-color: #78be20;
+        }
+
+        .btn-outline-success:not(:disabled):not(.disabled):active:focus,
+        .btn-outline-success:not(:disabled):not(.disabled).active:focus {
+            -webkit-box-shadow: 0 0 0 0.2rem rgba(120, 190, 32, 0.5);
+            box-shadow: 0 0 0 0.2rem rgba(120, 190, 32, 0.5);
+        }
+
+        .btn-outline-info:not(:disabled):not(.disabled):active,
+        .btn-outline-info:not(:disabled):not(.disabled).active {
+            color: #ffffff;
+            background-color: #00a3e0;
+            border-color: #00a3e0;
+        }
+
+        .btn-outline-info:not(:disabled):not(.disabled):active:focus,
+        .btn-outline-info:not(:disabled):not(.disabled).active:focus {
+            -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 163, 224, 0.5);
+            box-shadow: 0 0 0 0.2rem rgba(0, 163, 224, 0.5);
+        }
+
+        .btn-outline-warning:not(:disabled):not(.disabled):active,
+        .btn-outline-warning:not(:disabled):not(.disabled).active {
+            color: #212529;
+            background-color: #ff7f32;
+            border-color: #ff7f32;
+        }
+
+        .btn-outline-warning:not(:disabled):not(.disabled):active:focus,
+        .btn-outline-warning:not(:disabled):not(.disabled).active:focus {
+            -webkit-box-shadow: 0 0 0 0.2rem rgba(255, 127, 50, 0.5);
+            box-shadow: 0 0 0 0.2rem rgba(255, 127, 50, 0.5);
+        }
+
+        .btn-outline-danger:not(:disabled):not(.disabled):active,
+        .btn-outline-danger:not(:disabled):not(.disabled).active {
+            color: #ffffff;
+            background-color: #cc2f2f;
+            border-color: #cc2f2f;
+        }
+
+        .btn-outline-danger:not(:disabled):not(.disabled):active:focus,
+        .btn-outline-danger:not(:disabled):not(.disabled).active:focus {
+            -webkit-box-shadow: 0 0 0 0.2rem rgba(204, 47, 47, 0.5);
+            box-shadow: 0 0 0 0.2rem rgba(204, 47, 47, 0.5);
+        }
+
+        .btn-outline-light:not(:disabled):not(.disabled):active,
+        .btn-outline-light:not(:disabled):not(.disabled).active {
+            color: #212529;
+            background-color: #e8e8e8;
+            border-color: #e8e8e8;
+        }
+
+        .btn-outline-light:not(:disabled):not(.disabled):active:focus,
+        .btn-outline-light:not(:disabled):not(.disabled).active:focus {
+            -webkit-box-shadow: 0 0 0 0.2rem rgba(232, 232, 232, 0.5);
+            box-shadow: 0 0 0 0.2rem rgba(232, 232, 232, 0.5);
+        }
+
+        .btn-outline-dark:not(:disabled):not(.disabled):active,
+        .btn-outline-dark:not(:disabled):not(.disabled).active {
+            color: #ffffff;
+            background-color: #191919;
+            border-color: #191919;
+        }
+
+        .btn-outline-dark:not(:disabled):not(.disabled):active:focus,
+        .btn-outline-dark:not(:disabled):not(.disabled).active:focus {
+            -webkit-box-shadow: 0 0 0 0.2rem rgba(25, 25, 25, 0.5);
+            box-shadow: 0 0 0 0.2rem rgba(25, 25, 25, 0.5);
+        }
+
+        .btn-outline-gold:not(:disabled):not(.disabled):active,
+        .btn-outline-gold:not(:disabled):not(.disabled).active {
+            color: #212529;
+            background-color: #ffc627;
+            border-color: #ffc627;
+        }
+
+        .btn-outline-gold:not(:disabled):not(.disabled):active:focus,
+        .btn-outline-gold:not(:disabled):not(.disabled).active:focus {
+            -webkit-box-shadow: 0 0 0 0.2rem rgba(255, 198, 39, 0.5);
+            box-shadow: 0 0 0 0.2rem rgba(255, 198, 39, 0.5);
+        }
+
+        .btn-outline-maroon:not(:disabled):not(.disabled):active,
+        .btn-outline-maroon:not(:disabled):not(.disabled).active {
+            color: #ffffff;
+            background-color: #8c1d40;
+            border-color: #8c1d40;
+        }
+
+        .btn-outline-maroon:not(:disabled):not(.disabled):active:focus,
+        .btn-outline-maroon:not(:disabled):not(.disabled).active:focus {
+            -webkit-box-shadow: 0 0 0 0.2rem rgba(140, 29, 64, 0.5);
+            box-shadow: 0 0 0 0.2rem rgba(140, 29, 64, 0.5);
+        }
+
+        .btn-outline-gray:not(:disabled):not(.disabled):active,
+        .btn-outline-gray:not(:disabled):not(.disabled).active {
+            color: #212529;
+            background-color: #bfbfbf;
+            border-color: #bfbfbf;
+        }
+
+        .btn-outline-gray:not(:disabled):not(.disabled):active:focus,
+        .btn-outline-gray:not(:disabled):not(.disabled).active:focus {
+            -webkit-box-shadow: 0 0 0 0.2rem rgba(191, 191, 191, 0.5);
+            box-shadow: 0 0 0 0.2rem rgba(191, 191, 191, 0.5);
+        }
+
+        .btn-outline-gray-1:not(:disabled):not(.disabled):active,
+        .btn-outline-gray-1:not(:disabled):not(.disabled).active {
+            color: #212529;
+            background-color: #fafafa;
+            border-color: #fafafa;
+        }
+
+        .btn-outline-gray-1:not(:disabled):not(.disabled):active:focus,
+        .btn-outline-gray-1:not(:disabled):not(.disabled).active:focus {
+            -webkit-box-shadow: 0 0 0 0.2rem rgba(250, 250, 250, 0.5);
+            box-shadow: 0 0 0 0.2rem rgba(250, 250, 250, 0.5);
+        }
+
+        .btn-outline-gray-2:not(:disabled):not(.disabled):active,
+        .btn-outline-gray-2:not(:disabled):not(.disabled).active {
+            color: #212529;
+            background-color: #e8e8e8;
+            border-color: #e8e8e8;
+        }
+
+        .btn-outline-gray-2:not(:disabled):not(.disabled):active:focus,
+        .btn-outline-gray-2:not(:disabled):not(.disabled).active:focus {
+            -webkit-box-shadow: 0 0 0 0.2rem rgba(232, 232, 232, 0.5);
+            box-shadow: 0 0 0 0.2rem rgba(232, 232, 232, 0.5);
+        }
+
+        .btn-outline-gray-3:not(:disabled):not(.disabled):active,
+        .btn-outline-gray-3:not(:disabled):not(.disabled).active {
+            color: #212529;
+            background-color: #d0d0d0;
+            border-color: #d0d0d0;
+        }
+
+        .btn-outline-gray-3:not(:disabled):not(.disabled):active:focus,
+        .btn-outline-gray-3:not(:disabled):not(.disabled).active:focus {
+            -webkit-box-shadow: 0 0 0 0.2rem rgba(208, 208, 208, 0.5);
+            box-shadow: 0 0 0 0.2rem rgba(208, 208, 208, 0.5);
+        }
+
+        .btn-outline-gray-4:not(:disabled):not(.disabled):active,
+        .btn-outline-gray-4:not(:disabled):not(.disabled).active {
+            color: #212529;
+            background-color: #bfbfbf;
+            border-color: #bfbfbf;
+        }
+
+        .btn-outline-gray-4:not(:disabled):not(.disabled):active:focus,
+        .btn-outline-gray-4:not(:disabled):not(.disabled).active:focus {
+            -webkit-box-shadow: 0 0 0 0.2rem rgba(191, 191, 191, 0.5);
+            box-shadow: 0 0 0 0.2rem rgba(191, 191, 191, 0.5);
+        }
+
+        .btn-outline-gray-5:not(:disabled):not(.disabled):active,
+        .btn-outline-gray-5:not(:disabled):not(.disabled).active {
+            color: #ffffff;
+            background-color: #747474;
+            border-color: #747474;
+        }
+
+        .btn-outline-gray-5:not(:disabled):not(.disabled):active:focus,
+        .btn-outline-gray-5:not(:disabled):not(.disabled).active:focus {
+            -webkit-box-shadow: 0 0 0 0.2rem rgba(116, 116, 116, 0.5);
+            box-shadow: 0 0 0 0.2rem rgba(116, 116, 116, 0.5);
+        }
+
+        .btn-outline-gray-6:not(:disabled):not(.disabled):active,
+        .btn-outline-gray-6:not(:disabled):not(.disabled).active {
+            color: #ffffff;
+            background-color: #484848;
+            border-color: #484848;
+        }
+
+        .btn-outline-gray-6:not(:disabled):not(.disabled):active:focus,
+        .btn-outline-gray-6:not(:disabled):not(.disabled).active:focus {
+            -webkit-box-shadow: 0 0 0 0.2rem rgba(72, 72, 72, 0.5);
+            box-shadow: 0 0 0 0.2rem rgba(72, 72, 72, 0.5);
+        }
+
+        .btn-outline-gray-7:not(:disabled):not(.disabled):active,
+        .btn-outline-gray-7:not(:disabled):not(.disabled).active {
+            color: #ffffff;
+            background-color: #191919;
+            border-color: #191919;
+        }
+
+        .btn-outline-gray-7:not(:disabled):not(.disabled):active:focus,
+        .btn-outline-gray-7:not(:disabled):not(.disabled).active:focus {
+            -webkit-box-shadow: 0 0 0 0.2rem rgba(25, 25, 25, 0.5);
+            box-shadow: 0 0 0 0.2rem rgba(25, 25, 25, 0.5);
+        }
+
+        .collapse:not(.show) {
+            display: none;
+        }
+
+        .custom-control-input:focus:not(:checked)~.custom-control-label::before {
+            border-color: #da4e7a;
+        }
+
+        .custom-control-input:not(:disabled):active~.custom-control-label::before {
+            color: #ffffff;
+            background-color: #e3789a;
+            border-color: #e3789a;
+        }
+
+        .nav {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            padding-left: 0;
+            margin-bottom: 0;
+            list-style: none;
+        }
+
+        .nav-link {
+            display: block;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+        }
+
+        .nav-link:hover,
+        .nav-link:focus {
+            text-decoration: none;
+        }
+
+        .navbar {
+            position: relative;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+            padding: 0.5rem 1rem;
+        }
+
+        .navbar-brand {
+            display: inline-block;
+            padding-top: 0.3125rem;
+            padding-bottom: 0.3125rem;
+            margin-right: 1rem;
+            font-size: 1.25rem;
+            line-height: inherit;
+            white-space: nowrap;
+        }
+
+        .navbar-brand:hover,
+        .navbar-brand:focus {
+            text-decoration: none;
+        }
+
+        .navbar-collapse {
+            -ms-flex-preferred-size: 100%;
+            flex-basis: 100%;
+            -webkit-box-flex: 1;
+            -ms-flex-positive: 1;
+            flex-grow: 1;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+        }
+
+        .navbar-toggler {
+            padding: 0.25rem 0.75rem;
+            font-size: 1.25rem;
+            line-height: 1;
+            background-color: transparent;
+            border: 1px solid transparent;
+            border-radius: 400rem;
+        }
+
+        .navbar-toggler:hover,
+        .navbar-toggler:focus {
+            text-decoration: none;
+        }
+
+        @media (min-width: 1260px) {
+            .navbar-expand-xl {
+                -webkit-box-orient: horizontal;
+                -webkit-box-direction: normal;
+                -ms-flex-flow: row nowrap;
+                flex-flow: row nowrap;
+                -webkit-box-pack: start;
+                -ms-flex-pack: start;
+                justify-content: flex-start;
+            }
+
+            .navbar-expand-xl .navbar-collapse {
+                display: -webkit-box !important;
+                display: -ms-flexbox !important;
+                display: flex !important;
+                -ms-flex-preferred-size: auto;
+                flex-basis: auto;
+            }
+
+            .navbar-expand-xl .navbar-toggler {
+                display: none;
+            }
+        }
+
+        .close:not(:disabled):not(.disabled):hover,
+        .close:not(:disabled):not(.disabled):focus {
+            opacity: 0.75;
+        }
+
+        .d-flex {
+            display: -webkit-box !important;
+            display: -ms-flexbox !important;
+            display: flex !important;
+        }
+
+        .justify-content-between {
+            -webkit-box-pack: justify !important;
+            -ms-flex-pack: justify !important;
+            justify-content: space-between !important;
+        }
+
+        .fixed-top {
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            z-index: 1030;
+        }
+
+        @supports (position: sticky) {}
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        .sr-only-focusable:active,
+        .sr-only-focusable:focus {
+            position: static;
+            width: auto;
+            height: auto;
+            overflow: visible;
+            clip: auto;
+            white-space: normal;
+        }
+
+        .w-100 {
+            width: 100% !important;
+        }
+
+        @media print {
+
+            *,
+            *::before,
+            *::after {
+                text-shadow: none !important;
+                -webkit-box-shadow: none !important;
+                box-shadow: none !important;
+            }
+
+            a:not(.btn):not(.uds-modal-close-btn) {
+                text-decoration: underline;
+            }
+
+            img {
+                page-break-inside: avoid;
+            }
+
+            @page {
+                size: a3;
+            }
+
+            body {
+                min-width: 992px !important;
+            }
+
+            .container {
+                min-width: 992px !important;
+            }
+
+            .navbar {
+                display: none;
+            }
+        }
+
+        label {
+            font-weight: bold;
+            font-size: 0.85em;
+        }
+
+        .sr-only:not(:focus):not(:active) {
+            clip: rect(0 0 0 0);
+            -webkit-clip-path: inset(100%);
+            clip-path: inset(100%);
+            height: 1px;
+            overflow: hidden;
+            position: absolute;
+            white-space: nowrap;
+            width: 1px;
+        }
+
+        button:focus,
+        a:focus,
+        input:focus {
+            outline: none !important;
+            -webkit-box-shadow: 0px 0px 0px 2px #ffffff, 0px 0px 0px 4px #191919 !important;
+            box-shadow: 0px 0px 0px 2px #ffffff, 0px 0px 0px 4px #191919 !important;
+        }
+
+        .btn-success:not(:disabled):not(.disabled):active,
+        .btn-success:not(:disabled):not(.disabled).active {
+            color: #212529;
+            background-color: #78be20;
+            border-color: #78be20;
+        }
+
+        .btn-success:not(:disabled):not(.disabled):active:focus,
+        .btn-success:not(:disabled):not(.disabled).active:focus {
+            -webkit-box-shadow: 0 0 0 0.2rem rgba(107, 167, 33, 0.5);
+            box-shadow: 0 0 0 0.2rem rgba(107, 167, 33, 0.5);
+        }
+
+        .btn-info:not(:disabled):not(.disabled):active,
+        .btn-info:not(:disabled):not(.disabled).active {
+            color: #ffffff;
+            background-color: #00a3e0;
+            border-color: #00a3e0;
+        }
+
+        .btn-info:not(:disabled):not(.disabled):active:focus,
+        .btn-info:not(:disabled):not(.disabled).active:focus {
+            -webkit-box-shadow: 0 0 0 0.2rem rgba(38, 177, 229, 0.5);
+            box-shadow: 0 0 0 0.2rem rgba(38, 177, 229, 0.5);
+        }
+
+        .btn-warning:not(:disabled):not(.disabled):active,
+        .btn-warning:not(:disabled):not(.disabled).active {
+            color: #212529;
+            background-color: #ff7f32;
+            border-color: #ff7f32;
+        }
+
+        .btn-warning:not(:disabled):not(.disabled):active:focus,
+        .btn-warning:not(:disabled):not(.disabled).active:focus {
+            -webkit-box-shadow: 0 0 0 0.2rem rgba(222, 114, 49, 0.5);
+            box-shadow: 0 0 0 0.2rem rgba(222, 114, 49, 0.5);
+        }
+
+        .btn-danger:not(:disabled):not(.disabled):active,
+        .btn-danger:not(:disabled):not(.disabled).active {
+            color: #ffffff;
+            background-color: #cc2f2f;
+            border-color: #cc2f2f;
+        }
+
+        .btn-danger:not(:disabled):not(.disabled):active:focus,
+        .btn-danger:not(:disabled):not(.disabled).active:focus {
+            -webkit-box-shadow: 0 0 0 0.2rem rgba(212, 78, 78, 0.5);
+            box-shadow: 0 0 0 0.2rem rgba(212, 78, 78, 0.5);
+        }
+
+        .btn-light:not(:disabled):not(.disabled):active,
+        .btn-light:not(:disabled):not(.disabled).active {
+            color: #212529;
+            background-color: #e8e8e8;
+            border-color: #e8e8e8;
+        }
+
+        .btn-light:not(:disabled):not(.disabled):active:focus,
+        .btn-light:not(:disabled):not(.disabled).active:focus {
+            -webkit-box-shadow: 0 0 0 0.2rem rgba(202, 203, 203, 0.5);
+            box-shadow: 0 0 0 0.2rem rgba(202, 203, 203, 0.5);
+        }
+
+        .btn-dark:not(:disabled):not(.disabled):active,
+        .btn-dark:not(:disabled):not(.disabled).active {
+            color: #ffffff;
+            background-color: #191919;
+            border-color: #191919;
+        }
+
+        .btn-dark:not(:disabled):not(.disabled):active:focus,
+        .btn-dark:not(:disabled):not(.disabled).active:focus {
+            -webkit-box-shadow: 0 0 0 0.2rem rgba(60, 60, 60, 0.5);
+            box-shadow: 0 0 0 0.2rem rgba(60, 60, 60, 0.5);
+        }
+
+        .btn-gold:not(:disabled):not(.disabled):active,
+        .btn-gold:not(:disabled):not(.disabled).active {
+            color: #212529;
+            background-color: #ffc627;
+            border-color: #ffc627;
+        }
+
+        .btn-gold:not(:disabled):not(.disabled):active:focus,
+        .btn-gold:not(:disabled):not(.disabled).active:focus {
+            -webkit-box-shadow: 0 0 0 0.2rem rgba(222, 174, 39, 0.5);
+            box-shadow: 0 0 0 0.2rem rgba(222, 174, 39, 0.5);
+        }
+
+        .btn-maroon:not(:disabled):not(.disabled):active,
+        .btn-maroon:not(:disabled):not(.disabled).active {
+            color: #ffffff;
+            background-color: #8c1d40;
+            border-color: #8c1d40;
+        }
+
+        .btn-maroon:not(:disabled):not(.disabled):active:focus,
+        .btn-maroon:not(:disabled):not(.disabled).active:focus {
+            -webkit-box-shadow: 0 0 0 0.2rem rgba(157, 63, 93, 0.5);
+            box-shadow: 0 0 0 0.2rem rgba(157, 63, 93, 0.5);
+        }
+
+        .btn-gray:not(:disabled):not(.disabled):active,
+        .btn-gray:not(:disabled):not(.disabled).active {
+            color: #212529;
+            background-color: #bfbfbf;
+            border-color: #bfbfbf;
+        }
+
+        .btn-gray:not(:disabled):not(.disabled):active:focus,
+        .btn-gray:not(:disabled):not(.disabled).active:focus {
+            -webkit-box-shadow: 0 0 0 0.2rem rgba(167, 168, 169, 0.5);
+            box-shadow: 0 0 0 0.2rem rgba(167, 168, 169, 0.5);
+        }
+
+        .btn-gray-1:not(:disabled):not(.disabled):active,
+        .btn-gray-1:not(:disabled):not(.disabled).active {
+            color: #212529;
+            background-color: #fafafa;
+            border-color: #fafafa;
+        }
+
+        .btn-gray-1:not(:disabled):not(.disabled):active:focus,
+        .btn-gray-1:not(:disabled):not(.disabled).active:focus {
+            -webkit-box-shadow: 0 0 0 0.2rem rgba(217, 218, 219, 0.5);
+            box-shadow: 0 0 0 0.2rem rgba(217, 218, 219, 0.5);
+        }
+
+        .btn-gray-2:not(:disabled):not(.disabled):active,
+        .btn-gray-2:not(:disabled):not(.disabled).active {
+            color: #212529;
+            background-color: #e8e8e8;
+            border-color: #e8e8e8;
+        }
+
+        .btn-gray-2:not(:disabled):not(.disabled):active:focus,
+        .btn-gray-2:not(:disabled):not(.disabled).active:focus {
+            -webkit-box-shadow: 0 0 0 0.2rem rgba(202, 203, 203, 0.5);
+            box-shadow: 0 0 0 0.2rem rgba(202, 203, 203, 0.5);
+        }
+
+        .btn-gray-3:not(:disabled):not(.disabled):active,
+        .btn-gray-3:not(:disabled):not(.disabled).active {
+            color: #212529;
+            background-color: #d0d0d0;
+            border-color: #d0d0d0;
+        }
+
+        .btn-gray-3:not(:disabled):not(.disabled):active:focus,
+        .btn-gray-3:not(:disabled):not(.disabled).active:focus {
+            -webkit-box-shadow: 0 0 0 0.2rem rgba(182, 182, 183, 0.5);
+            box-shadow: 0 0 0 0.2rem rgba(182, 182, 183, 0.5);
+        }
+
+        .btn-gray-4:not(:disabled):not(.disabled):active,
+        .btn-gray-4:not(:disabled):not(.disabled).active {
+            color: #212529;
+            background-color: #bfbfbf;
+            border-color: #bfbfbf;
+        }
+
+        .btn-gray-4:not(:disabled):not(.disabled):active:focus,
+        .btn-gray-4:not(:disabled):not(.disabled).active:focus {
+            -webkit-box-shadow: 0 0 0 0.2rem rgba(167, 168, 169, 0.5);
+            box-shadow: 0 0 0 0.2rem rgba(167, 168, 169, 0.5);
+        }
+
+        .btn-gray-5:not(:disabled):not(.disabled):active,
+        .btn-gray-5:not(:disabled):not(.disabled).active {
+            color: #ffffff;
+            background-color: #747474;
+            border-color: #747474;
+        }
+
+        .btn-gray-5:not(:disabled):not(.disabled):active:focus,
+        .btn-gray-5:not(:disabled):not(.disabled).active:focus {
+            -webkit-box-shadow: 0 0 0 0.2rem rgba(137, 137, 137, 0.5);
+            box-shadow: 0 0 0 0.2rem rgba(137, 137, 137, 0.5);
+        }
+
+        .btn-gray-6:not(:disabled):not(.disabled):active,
+        .btn-gray-6:not(:disabled):not(.disabled).active {
+            color: #ffffff;
+            background-color: #484848;
+            border-color: #484848;
+        }
+
+        .btn-gray-6:not(:disabled):not(.disabled):active:focus,
+        .btn-gray-6:not(:disabled):not(.disabled).active:focus {
+            -webkit-box-shadow: 0 0 0 0.2rem rgba(99, 99, 99, 0.5);
+            box-shadow: 0 0 0 0.2rem rgba(99, 99, 99, 0.5);
+        }
+
+        .btn-gray-7:not(:disabled):not(.disabled):active,
+        .btn-gray-7:not(:disabled):not(.disabled).active {
+            color: #ffffff;
+            background-color: #191919;
+            border-color: #191919;
+        }
+
+        .btn-gray-7:not(:disabled):not(.disabled):active:focus,
+        .btn-gray-7:not(:disabled):not(.disabled).active:focus {
+            -webkit-box-shadow: 0 0 0 0.2rem rgba(60, 60, 60, 0.5);
+            box-shadow: 0 0 0 0.2rem rgba(60, 60, 60, 0.5);
+        }
+
+        /*--------------------------------------------------------------
+0 to SM breakpoint included
+--------------------------------------------------------------*/
+
+        /*--------------------------------------------------------------
+LG and up
+--------------------------------------------------------------*/
+
+        /*--------------------------------------------------------------
+Mobile
+--------------------------------------------------------------*/
+
+        /*------------------------------------------------------------------
+Cards - Table of Contents
+
+1. Basic badge styles
+2. Badges within cards
+-------------------------------------------------------------------*/
+        /*------------------------------------------------------------------
+1. Basic Cards
+--------------------------------------------------------------------*/
+
+        /*--------------------------------------------------------------
+# Content Image Overlap
+
+1. Mobile
+2. Desktop lg
+3. Desktop xl
+--------------------------------------------------------------*/
+
+        /*------------------------------------------------------------------
+2. Desktop, large
+------------------------------------------------------------------- */
+
+        /*------------------------------------------------------------------
+Cards - Table of Contents
+
+1. Basic Cards
+2. Degree Cards
+3. Story Cards
+4. Event Cards
+5. Foldable Cards
+6. Foldable - Desktop Disable
+7. Accordion
+8. Checkbox Stacked Cards
+9. Checkbox Inline Cards
+10. Checkbox Inline Cards
+11. Generic Header Image Overlay
+-------------------------------------------------------------------*/
+
+        /*------------------------------------------------------------------
+1. Basic Cards
+--------------------------------------------------------------------*/
+
+        /*------------------------------------------------------------------
+2. Degree Cards
+--------------------------------------------------------------------*/
+
+        /*------------------------------------------------------------------
+3. Story Cards
+--------------------------------------------------------------------*/
+
+        /*------------------------------------------------------------------
+4. Event Cards
+--------------------------------------------------------------------*/
+
+        /*------------------------------------------------------------------
+5. Foldable Cards
+--------------------------------------------------------------------*/
+
+        /*------------------------------------------------------------------
+6. Foldable - Desktop Disable
+--------------------------------------------------------------------*/
+
+        /*------------------------------------------------------------------
+7. Accordion
+--------------------------------------------------------------------*/
+
+        /*------------------------------------------------------------------
+8. Checkbox Stacked Cards
+--------------------------------------------------------------------*/
+
+        /*------------------------------------------------------------------
+9. Checkbox Inline Cards
+--------------------------------------------------------------------*/
+
+        /*------------------------------------------------------------------
+10. Checkbox Inline Cards
+--------------------------------------------------------------------*/
+
+        /*------------------------------------------------------------------
+11. Generic Header Image Overlay
+--------------------------------------------------------------------*/
+
+        h1,
+        h4 {
+            font-weight: 700;
+            text-align: left;
+            opacity: 1;
+            margin: 1rem 0;
+            line-height: calc(100% + .12em);
+        }
+
+        h1 {
+            font-size: 4rem;
+            line-height: 4.25rem;
+            letter-spacing: -0.14rem;
+        }
+
+        @media (max-width: 577px) {
+            h1 {
+                font-size: 2.25rem;
+                line-height: 2.5rem;
+                letter-spacing: -0.078rem;
+            }
+        }
+
+        h4 {
+            font-size: 1.25rem;
+            line-height: 1.625rem;
+            letter-spacing: -0.01875rem;
+        }
+
+        /*--------------------------------------------------------------
+# Heroes
+
+0. Local variables
+1. Mixins
+2. Hero, Mobile first
+3. Hero, Tablet
+4. Hero, Desktop
+5. Story Hero, Mobile
+6. Story Hero, Desktop
+--------------------------------------------------------------*/
+        /*--------------------------------------------------------------
+0. Local variables
+--------------------------------------------------------------*/
+        /*--------------------------------------------------------------
+1. Mixins
+--------------------------------------------------------------*/
+        /*--------------------------------------------------------------
+2. Hero, Mobile first
+--------------------------------------------------------------*/
+
+        /*--------------------------------------------------------------
+3. Hero, Tablet
+--------------------------------------------------------------*/
+
+        /*--------------------------------------------------------------
+4. Hero, Desktop
+--------------------------------------------------------------*/
+
+        /*--------------------------------------------------------------
+5. Story Hero, Mobile
+--------------------------------------------------------------*/
+
+        /*--------------------------------------------------------------
+6. Story Hero, Desktop
+--------------------------------------------------------------*/
+
+        /*------------------------------------------------------------------
+Sidebar Navigation
+
+1. Component Mixins
+2. Sidebar
+-------------------------------------------------------------------*/
+        /*------------------------------------------------------------------
+2. Sidebar
+--------------------------------------------------------------------*/
+
+        /*------------------------------------------------------------------
+Footer - Table of Contents
+
+1. Component Level Mixins
+2. Global Footer Rules
+3. Wrapper Base Colors
+4. Endorsed Footer (#endorsed-footer)
+5. Footer Columns (#footer-columns)
+6. Footer Innovation (#footer-innovation)
+7. Footer Colophon (#footer-colophon)
+-------------------------------------------------------------------*/
+        /*------------------------------------------------------------------
+1. Component Level Mixins
+--------------------------------------------------------------------*/
+        /*------------------------------------------------------------------
+2. Global Footer Rules
+--------------------------------------------------------------------*/
+        /*------------------------------------------------------------------
+3. Wrapper Base Colors
+--------------------------------------------------------------------*/
+
+        #wrapper-footer-innovation {
+            background-color: #ffc627;
+        }
+
+        #wrapper-footer-innovation a {
+            margin-right: 1.5rem;
+            text-decoration: none;
+            color: #191919;
+        }
+
+        #wrapper-footer-colophon {
+            background-color: #e8e8e8;
+        }
+
+        #wrapper-footer-colophon a {
+            margin-right: 1.5rem;
+            text-decoration: none;
+            color: #191919;
+        }
+
+        /*------------------------------------------------------------------
+4. Endorsed Footer (#endorsed-footer)
+--------------------------------------------------------------------*/
+
+        /*------------------------------------------------------------------
+5. Footer Columns (#footer-columns)
+--------------------------------------------------------------------*/
+
+        /*------------------------------------------------------------------
+6. Footer Innovation (#footer-innovation)
+--------------------------------------------------------------------*/
+        #footer-innovation .footer-innovation-links {
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            font-weight: 700;
+        }
+
+        #footer-innovation .footer-innovation-links .img-link {
+            -webkit-box-ordinal-group: 3;
+            -ms-flex-order: 2;
+            order: 2;
+            margin-right: 0;
+            -webkit-transform: translate(1.5rem, 0);
+            -ms-transform: translate(1.5rem, 0);
+            transform: translate(1.5rem, 0);
+        }
+
+        #footer-innovation .footer-innovation-links .img-link img {
+            height: 100px;
+            width: auto;
+        }
+
+        #footer-innovation .footer-innovation-links .nav-link {
+            padding: 0;
+        }
+
+        @media (max-width: 991.98px) {
+            #footer-innovation .footer-innovation-links {
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                flex-direction: column;
+                padding: 0.5rem 0 0.5rem 0;
+            }
+
+            #footer-innovation .footer-innovation-links .img-link {
+                margin-right: 0;
+                -webkit-transform: none;
+                -ms-transform: none;
+                transform: none;
+            }
+
+            #footer-innovation .footer-innovation-links .img-link img {
+                width: 100%;
+                height: auto;
+                -webkit-box-ordinal-group: 0;
+                -ms-flex-order: -1;
+                order: -1;
+            }
+
+            #footer-innovation .footer-innovation-links .nav {
+                display: grid;
+                grid-template-rows: 1fr 1fr 1fr;
+                grid-auto-flow: column;
+                justify-items: start;
+                width: 100%;
+            }
+
+            #footer-innovation .footer-innovation-links .nav-link {
+                margin-right: 0;
+                padding: 0.5rem 0;
+            }
+
+            #footer-innovation .footer-innovation-links .nav-link:nth-child(n+4) {
+                justify-self: end;
+            }
+        }
+
+        /*------------------------------------------------------------------
+7. Footer Colophon (#footer-colophon)
+--------------------------------------------------------------------*/
+        #wrapper-footer-colophon .colophon {
+            margin: 1rem 0;
+        }
+
+        #footer-colophon .nav-link {
+            padding: 0;
+        }
+
+        @media (max-width: 991.98px) {
+            #footer-colophon .nav {
+                display: grid;
+                grid-template-rows: 1fr 1fr 1fr;
+                grid-auto-flow: column;
+                justify-items: start;
+                width: 100%;
+            }
+
+            #footer-colophon .nav-link {
+                margin-right: 0;
+                padding: 0.5rem 0;
+            }
+
+            #footer-colophon .nav-link:nth-child(n+4) {
+                justify-self: end;
+            }
+        }
+
+        /*--------------------------------------------------------------
+# Blockquotes Alt
+
+1. Reset of various elements.
+2. New Blockquote, mobile
+3. New Blockquote, desktop
+--------------------------------------------------------------*/
+
+        /*------------------------------------------------------------------
+2. Blockquote, mobile
+------------------------------------------------------------------- */
+
+        /*------------------------------------------------------------------
+3. Blockquote, mobile only
+------------------------------------------------------------------- */
+
+        /*------------------------------------------------------------------
+4. Blockquote, desktop
+------------------------------------------------------------------- */
+
+        /*------------------------------------------------------------------
+5. Alt Citation.
+-  Produces a gold bar above the cite elements.
+------------------------------------------------------------------- */
+
+        /*------------------------------------------------------------------
+5. Testimonial
+-  Vertically centered alignment of a standard blockquote.
+------------------------------------------------------------------- */
+
+        /*--------------------------------------------------------------
+# Global Header
+
+1. Wrapper Definitions, Global Mixins, Variables
+2. Top Menu
+3. Scrolled, Mobile
+4. Scrolled, Desktop
+5. Main Menu, Mobile
+6. Main Menu, Mobile Only
+7. Main Menu, Desktop
+8. Page Content
+--------------------------------------------------------------*/
+
+        /*--------------------------------------------------------------
+2. Top Menu
+--------------------------------------------------------------*/
+        #wrapper-header-top {
+            background-color: #e8e8e8;
+            height: 24px;
+            -webkit-transition: 0.5s cubic-bezier(0.19, 1, 0.19, 1);
+            -o-transition: 0.5s cubic-bezier(0.19, 1, 0.19, 1);
+            transition: 0.5s cubic-bezier(0.19, 1, 0.19, 1);
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            -webkit-box-pack: start;
+            -ms-flex-pack: start;
+            justify-content: flex-start;
+            height: 24px;
+        }
+
+        #header-top {
+            background-color: #e8e8e8;
+            height: 24px;
+            -webkit-transition: 0.5s cubic-bezier(0.19, 1, 0.19, 1);
+            -o-transition: 0.5s cubic-bezier(0.19, 1, 0.19, 1);
+            transition: 0.5s cubic-bezier(0.19, 1, 0.19, 1);
+        }
+
+        #header-top .nav {
+            -webkit-box-pack: end;
+            -ms-flex-pack: end;
+            justify-content: flex-end;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+        }
+
+        #header-top .nav-link {
+            color: #484848;
+            font-size: 0.75rem;
+            font-family: Arial, Helvetica, "Nimbus Sans L", "Liberation Sans", FreeSans, sans-serif;
+            line-height: 0.75rem;
+            padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+            margin-right: 0.5rem;
+            white-space: nowrap;
+        }
+
+        #header-top .nav-link:hover {
+            text-decoration: underline;
+        }
+
+        #header-top .nav-link.sr-only {
+            justify-self: flex-start;
+        }
+
+        #header-top .nav-link:focus {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+
+        #header-top .login-status {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            margin-right: 0.5rem;
+        }
+
+        #header-top .login-status>a {
+            padding: 0;
+            margin: 0;
+            color: #484848;
+            text-decoration: none;
+        }
+
+        #header-top .login-status>a.name {
+            font-weight: 700;
+        }
+
+        #header-top .login-status>a.signout:before {
+            content: "(";
+            margin-left: 4px;
+        }
+
+        #header-top .login-status>a.signout:after {
+            content: ") ";
+        }
+
+        #header-top .form-inline label {
+            position: relative;
+            right: 72px;
+            margin-left: -95px;
+            font-weight: 400;
+            -webkit-transition: all 0.5s;
+            -o-transition: all 0.5s;
+            transition: all 0.5s;
+            color: #747474;
+        }
+
+        #header-top input[type=search] {
+            background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cGF0aCBmaWxsPSIjNDg0ODQ4IiBkPSJNNTA1IDQ0Mi43TDQwNS4zIDM0M2MtNC41LTQuNS0xMC42LTctMTctN0gzNzJjMjcuNi0zNS4zIDQ0LTc5LjcgNDQtMTI4QzQxNiA5My4xIDMyMi45IDAgMjA4IDBTMCA5My4xIDAgMjA4czkzLjEgMjA4IDIwOCAyMDhjNDguMyAwIDkyLjctMTYuNCAxMjgtNDR2MTYuM2MwIDYuNCAyLjUgMTIuNSA3IDE3bDk5LjcgOTkuN2M5LjQgOS40IDI0LjYgOS40IDMzLjkgMGwyOC4zLTI4LjNjOS40LTkuNCA5LjQtMjQuNi4xLTM0ek0yMDggMzM2Yy03MC43IDAtMTI4LTU3LjItMTI4LTEyOCAwLTcwLjcgNTcuMi0xMjggMTI4LTEyOCA3MC43IDAgMTI4IDU3LjIgMTI4IDEyOCAwIDcwLjctNTcuMiAxMjgtMTI4IDEyOHoiLz48L3N2Zz4K") no-repeat 10px 50%;
+            background-size: 12px;
+            width: 32px;
+            cursor: pointer;
+            font-size: 0.75rem;
+            line-height: 0.75rem;
+            border: 0;
+            border-radius: 0;
+            padding: 0.25rem;
+            -webkit-transition: all 0.5s;
+            -o-transition: all 0.5s;
+            transition: all 0.5s;
+            height: 1.5rem;
+            margin: 0;
+        }
+
+        #header-top input[type=search]+label {
+            display: none;
+        }
+
+        #header-top input[type=search]:focus {
+            background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cGF0aCBmaWxsPSIjNDg0ODQ4IiBkPSJNNTA1IDQ0Mi43TDQwNS4zIDM0M2MtNC41LTQuNS0xMC42LTctMTctN0gzNzJjMjcuNi0zNS4zIDQ0LTc5LjcgNDQtMTI4QzQxNiA5My4xIDMyMi45IDAgMjA4IDBTMCA5My4xIDAgMjA4czkzLjEgMjA4IDIwOCAyMDhjNDguMyAwIDkyLjctMTYuNCAxMjgtNDR2MTYuM2MwIDYuNCAyLjUgMTIuNSA3IDE3bDk5LjcgOTkuN2M5LjQgOS40IDI0LjYgOS40IDMzLjkgMGwyOC4zLTI4LjNjOS40LTkuNCA5LjQtMjQuNi4xLTM0ek0yMDggMzM2Yy03MC43IDAtMTI4LTU3LjItMTI4LTEyOCAwLTcwLjcgNTcuMi0xMjggMTI4LTEyOCA3MC43IDAgMTI4IDU3LjIgMTI4IDEyOCAwIDcwLjctNTcuMiAxMjgtMTI4IDEyOHoiLz48L3N2Zz4K");
+            width: 200px;
+            color: #747474;
+            background-color: #fff;
+            cursor: auto;
+            margin: 0.75rem 0;
+            padding-left: 2rem;
+        }
+
+        #header-top input[type=search]:focus+label {
+            display: block;
+        }
+
+        #header-top input[type=search]:focus:valid+label {
+            display: none;
+        }
+
+        #header-top input:-moz-placeholder {
+            color: transparent;
+        }
+
+        #header-top input::-webkit-input-placeholder {
+            color: transparent;
+        }
+
+        /*--------------------------------------------------------------
+3. Scrolled, Mobile
+--------------------------------------------------------------*/
+        #asu-header .navbar,
+        #asu-header .navbar-brand .horiz,
+        #asu-header .navbar-brand .vert,
+        #asu-header .title {
+            -webkit-transition: 0.5s cubic-bezier(0.19, 1, 0.19, 1);
+            -o-transition: 0.5s cubic-bezier(0.19, 1, 0.19, 1);
+            transition: 0.5s cubic-bezier(0.19, 1, 0.19, 1);
+        }
+
+        /*--------------------------------------------------------------
+4. Scrolled, Desktop
+--------------------------------------------------------------*/
+
+        /*--------------------------------------------------------------
+5. Main Menu, Mobile
+--------------------------------------------------------------*/
+        #wrapper-header-top {
+            display: none;
+        }
+
+        #wrapper-header-main {
+            border-bottom: 1px solid #d0d0d0;
+            background-color: #ffffff;
+        }
+
+        #wrapper-header-main .container-xl {
+            padding-left: 12px;
+            padding-right: 12px;
+        }
+
+        #header-main {
+            padding: 0;
+        }
+
+        #header-main .navbar {
+            padding: 1.5rem 0 0 0;
+            -webkit-box-align: start;
+            -ms-flex-align: start;
+            align-items: flex-start;
+        }
+
+        #header-main .navbar-brand {
+            padding: 0;
+            margin: 0;
+        }
+
+        #header-main .navbar-brand .vert {
+            display: none;
+        }
+
+        #header-main .navbar-brand .horiz {
+            display: block;
+            height: 32px;
+            width: auto;
+            margin-bottom: 1rem;
+            margin-left: 2rem;
+        }
+
+        #header-main .navbar-toggler {
+            color: #191919;
+            border: 0;
+            margin-right: 0.5rem;
+            padding: 0;
+            margin-right: 2rem;
+            height: -webkit-max-content;
+            height: -moz-max-content;
+            height: max-content;
+        }
+
+        #header-main .navbar-toggler:focus {
+            outline: 0;
+        }
+
+        #header-main .navbar-toggler .fa-stack {
+            height: 2rem;
+            width: 2rem;
+        }
+
+        #header-main .navbar-toggler.collapsed {
+            border-radius: 0;
+        }
+
+        #header-main .navbar-toggler.collapsed .fa-stack {
+            display: none;
+        }
+
+        #header-main .navbar-toggler.collapsed .fa-bars {
+            display: inline-block;
+        }
+
+        #header-main .navbar-container {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            -webkit-box-align: start;
+            -ms-flex-align: start;
+            align-items: flex-start;
+            width: 100%;
+        }
+
+        #header-main .title {
+            line-height: 1;
+            font-size: 1rem;
+            font-weight: 700;
+            letter-spacing: -0.035em;
+            padding: 0 2rem 1.5rem 2rem;
+        }
+
+        #header-main .title>a {
+            color: #191919;
+            text-decoration: none;
+        }
+
+        #header-main .title>a:visited {
+            color: #191919;
+        }
+
+        #header-main .title>a:hover {
+            text-decoration: underline;
+        }
+
+        #header-main .navbar-mobile-footer {
+            background-color: #e8e8e8;
+        }
+
+        #header-main .navbar-mobile-footer .navbar-mobile-search {
+            padding: 1rem 2rem;
+            width: 100%;
+            border-top: 1px solid #d0d0d0;
+        }
+
+        #header-main .navbar-mobile-footer .navbar-mobile-search input {
+            width: 100%;
+            background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cGF0aCBmaWxsPSIjNDg0ODQ4IiBkPSJNNTA1IDQ0Mi43TDQwNS4zIDM0M2MtNC41LTQuNS0xMC42LTctMTctN0gzNzJjMjcuNi0zNS4zIDQ0LTc5LjcgNDQtMTI4QzQxNiA5My4xIDMyMi45IDAgMjA4IDBTMCA5My4xIDAgMjA4czkzLjEgMjA4IDIwOCAyMDhjNDguMyAwIDkyLjctMTYuNCAxMjgtNDR2MTYuM2MwIDYuNCAyLjUgMTIuNSA3IDE3bDk5LjcgOTkuN2M5LjQgOS40IDI0LjYgOS40IDMzLjkgMGwyOC4zLTI4LjNjOS40LTkuNCA5LjQtMjQuNi4xLTM0ek0yMDggMzM2Yy03MC43IDAtMTI4LTU3LjItMTI4LTEyOCAwLTcwLjcgNTcuMi0xMjggMTI4LTEyOCA3MC43IDAgMTI4IDU3LjIgMTI4IDEyOCAwIDcwLjctNTcuMiAxMjgtMTI4IDEyOHoiLz48L3N2Zz4K") no-repeat 10px 50%;
+            background-size: 16px;
+            background-color: #ffffff;
+            border: 0;
+            border-radius: 0;
+            padding-left: 32px;
+        }
+
+        #header-main .navbar-mobile-footer .nav-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-auto-flow: row;
+            justify-items: start;
+            width: 100%;
+        }
+
+        #header-main .navbar-mobile-footer .nav-grid .nav-link {
+            color: #191919;
+            margin-right: 0;
+            text-align: center;
+            width: 100%;
+            font-size: 0.875rem;
+            padding: 1rem 1.5rem;
+            border-top: 1px solid #d0d0d0;
+            white-space: nowrap;
+        }
+
+        #header-main .navbar-mobile-footer .nav-grid .nav-link:nth-child(even) {
+            border-left: 1px solid #d0d0d0;
+        }
+
+        /*--------------------------------------------------------------
+6. Main Menu, Mobile Only
+--------------------------------------------------------------*/
+
+        /*--------------------------------------------------------------
+7. Main Menu, Desktop
+--------------------------------------------------------------*/
+        /* Breakpoint at which the mobile menu is triggered */
+        @media (min-width: 1260px) {
+            #wrapper-header-top {
+                display: block;
+            }
+
+            #header-main {
+                padding-left: 12px;
+                padding-right: 12px;
+            }
+
+            #header-main .navbar {
+                padding: 0;
+                -webkit-box-align: start;
+                -ms-flex-align: start;
+                align-items: flex-start;
+            }
+
+            #header-main .navbar-brand .vert {
+                display: block;
+                height: 72px;
+                width: auto;
+                margin: 20px 1rem 20px 0;
+            }
+
+            #header-main .navbar-brand .horiz {
+                display: none;
+            }
+
+            #header-main .title {
+                line-height: 1;
+                margin: 1rem 0 0.5rem 0;
+                font-weight: 700;
+                padding: 0;
+            }
+
+            #header-main .title.subdomain-name {
+                font-size: 2rem;
+                margin: 1.5rem 0 1rem 0;
+                font-weight: 700;
+            }
+
+            #header-main .title.subdomain-name a {
+                color: #191919;
+                text-decoration: none;
+            }
+
+            #header-main .title.subdomain-name a:hover {
+                text-decoration: underline;
+            }
+
+            #header-main .no-links {
+                margin-top: 2.5rem;
+                -webkit-box-orient: horizontal;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                flex-direction: row;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+            }
+
+            #header-main .no-links .title.subdomain-name {
+                margin: 0;
+                width: 50%;
+            }
+
+            #header-main .no-links #menubar {
+                -webkit-box-pack: end !important;
+                -ms-flex-pack: end !important;
+                justify-content: flex-end !important;
+                width: 50% !important;
+            }
+
+            #header-main .navbar-mobile-footer {
+                display: none;
+            }
+        }
+
+        /*--------------------------------------------------------------
+8. Page Wrapper
+--------------------------------------------------------------*/
+        #asu-header+div {
+            -webkit-transition: 0.5s cubic-bezier(0.19, 1, 0.19, 1);
+            -o-transition: 0.5s cubic-bezier(0.19, 1, 0.19, 1);
+            transition: 0.5s cubic-bezier(0.19, 1, 0.19, 1);
+            margin-top: 145px;
+        }
+
+        @media (max-width: 1259.98px) {
+            #asu-header+div {
+                -webkit-transition: 0.5s cubic-bezier(0.19, 1, 0.19, 1);
+                -o-transition: 0.5s cubic-bezier(0.19, 1, 0.19, 1);
+                transition: 0.5s cubic-bezier(0.19, 1, 0.19, 1);
+                margin-top: 110px;
+            }
+        }
+
+        /*
+We need to easily and consistently align
+the content of full width components with
+the content of the header
+*/
+
+        /*--------------------------------------------------------------
+# UDS Grid Links
+
+1. Mobile
+2. Desktop modifiers
+--------------------------------------------------------------*/
+        /*--------------------------------------------------------------
+1. Mobile
+--------------------------------------------------------------*/
+
+        /*--------------------------------------------------------------
+2. Desktop modifiers
+--------------------------------------------------------------*/
+
+        /*--------------------------------------------------------------
+Desktop styles
+--------------------------------------------------------------*/
+
+        /*--------------------------------------------------------------
+Mobile Styles
+--------------------------------------------------------------*/
+
+        /* -----------------------------------------------------
+Container/ row / column padding adjustments for mobile.
+
+Bootstrap doesn't natively provide åa way to alter the behavior
+its native grid elements based on a media query. This overrides
+that behavior at screens <= 575px. (The small breakpoint.)
+
+Should be included after @import scss/grid. Registered here for clarity.
+------------------------------------------------------ */
+        @media (max-width: 991.98px) {
+
+            .container,
+            .container-xl {
+                padding-left: 2rem;
+                padding-right: 2rem;
+            }
+        }
+
+        #filldiv {
+            height: calc(100vh - 505px);
+            min-height: 350px;
+        }
+
+        @media (max-width:767px) {
+            #filldiv {
+
+                min-height: 400px;
+            }
+        }
+
+        @media (max-width:577px) {
+            #filldiv {
+
+                min-height: 250px;
+            }
+        }
+
+        @media (max-width:362px) {
+            #filldiv {
+
+                min-height: 300px;
+            }
+        }
+        @media (max-width:325px) {
+            #filldiv {
+
+                min-height: 400px;
+            }
+        }
+
+        .center {
+            width: 50%;
+            /* Set the width of the div */
+            margin: 0 auto;
+            /* Center the div horizontally */
+            margin-top: 10%;
+        }
+
+        /* header mid */
+        #header-mid .form-inline label {
+            position: relative;
+            right: 72px;
+            margin-left: -95px;
+            font-weight: 400;
+            -webkit-transition: all 0.5s;
+            -o-transition: all 0.5s;
+            transition: all 0.5s;
+            color: #747474;
+        }
+
+        #header-mid input[type=search] {
+            background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cGF0aCBmaWxsPSIjNDg0ODQ4IiBkPSJNNTA1IDQ0Mi43TDQwNS4zIDM0M2MtNC41LTQuNS0xMC42LTctMTctN0gzNzJjMjcuNi0zNS4zIDQ0LTc5LjcgNDQtMTI4QzQxNiA5My4xIDMyMi45IDAgMjA4IDBTMCA5My4xIDAgMjA4czkzLjEgMjA4IDIwOCAyMDhjNDguMyAwIDkyLjctMTYuNCAxMjgtNDR2MTYuM2MwIDYuNCAyLjUgMTIuNSA3IDE3bDk5LjcgOTkuN2M5LjQgOS40IDI0LjYgOS40IDMzLjkgMGwyOC4zLTI4LjNjOS40LTkuNCA5LjQtMjQuNi4xLTM0ek0yMDggMzM2Yy03MC43IDAtMTI4LTU3LjItMTI4LTEyOCAwLTcwLjcgNTcuMi0xMjggMTI4LTEyOCA3MC43IDAgMTI4IDU3LjIgMTI4IDEyOCAwIDcwLjctNTcuMiAxMjgtMTI4IDEyOHoiLz48L3N2Zz4K") no-repeat 10px 50%;
+            background-size: 12px;
+            /* font-size: 0.75rem; */
+            line-height: 0.75rem;
+            border-radius: 0;
+            padding: 0.25rem;
+            -webkit-transition: all 0.5s;
+            -o-transition: all 0.5s;
+            transition: all 0.5s;
+            height: 2rem;
+            margin: 0;
+            width: 100%;
+            box-shadow: 0px 0px 0px 2px #ffffff00, 0px 0px 0px 2px #191919;
+            padding-left: 2rem;
+        }
+
+        #header-mid input[type=search]:focus+label {
+            display: block;
+        }
+
+        /* Cloudfare Styles */
+        #cf-background {
+            background-color: #1e1e1e;
+            width: 100%;
+        }
+
+        #cf500 {
+            color: #ffffff;
+            padding-top: 30px;
+            padding-bottom: 30px;
+            text-align: center;
+        }
+
+        #cf500 h1 {
+            font-size: 1.5em;
+            text-align: center;
+        }
+
+        #cf500 p {
+            font-size: 1em !important;
+            line-height: 1;
+        }
+
+        #cf500 li {
+            font-weight: 100;
+            list-style-type: none;
+            line-height: 1.8;
+        }
+    </style>
+<script src="https://cscript-cdn-use.asu.edu/loader.js"></script><script>
+
+   //////////////////////////
+   // START Set ucs cookie //
+   //////////////////////////
+ 
+function updateUCS(position,value){
+    let ucs = getCookie('ucs');
+    if(ucs == null) {
+        setCookie('ucs','0|0|0',365);
+    }
+else {
+if(ucs.includes(",")) {
+ucs = ucs.replace(",", "|")
+}
+        const parts = ucs.split('|');
+        parts[position] = value;
+        const newUCS = parts.join('|');
+        setCookie('ucs',newUCS,365);
+    }
+}
+   function setCookie(cname, cvalue, exdays) {
+      var d = new Date();
+      d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+	  var expires = "expires=" + d.toUTCString();
+	  var hostname = window.location.hostname;
+	  var domainParts = hostname.split('.').slice(-2);
+	  var baseDomain = domainParts.join('.'); 
+	  var domainPart = ";domain=" + (hostname === baseDomain ? "." + baseDomain : baseDomain);
+	  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/" + domainPart;
+	  }
+
+	function getCookie(name) {
+	  const nameEQ = name + "=";
+	  const ca = document.cookie.split(';');
+	  for (let i = 0; i < ca.length; i++) {
+		let c = ca[i];
+		while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+			if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+	  }
+	  return   
+	 null;
+	}
+   
+if (!CassieWidgetLoader.Widget.hasConsent()) {
+      console.log('No existing consent');
+      setCookie('ucs','0|0|0',365);
+   }
+   ///////////////////////////
+   // FINISH Set ucs cookie //
+   ///////////////////////////
+
+   ////////////////////////////////////////
+   // START non standard banner behavior //
+   ////////////////////////////////////////
+	
+	addWidgetListeners();
+
+	function addWidgetListeners() {
+		document.addEventListener('CassieTemplateInitialized', () => {
+			HideShowDescriptions();
+			HideShowDescriptionsSN();		
+		});
+	}
+
+	// Allow drilldown into strictly necessary description
+	function HideShowDescriptionsSN() {
+		const icon = document.getElementById('cassie_strictly_necessary_expand_icon');
+		const targetElement = document.getElementById('cassie_expand_strictly_necessary');
+		const otherElement = document.getElementById('cassie_strictly_necessary_description');
+		const ClassUpdate = 'cassie-expand-cookies--icon--open';
+		targetElement.addEventListener('click', () => {
+		  if (otherElement.classList.contains(ClassUpdate)) {
+			otherElement.classList.remove(ClassUpdate);
+		  } else {
+			otherElement.classList.add(ClassUpdate);
+		  }
+		});
+		// Expand when page first loads
+		otherElement.classList.add(ClassUpdate);
+		icon.classList.add('cassie-expand-cookies--icon--open');
+	}
+
+	// Allow drilldown into Non-Strictly Necessary descriptions
+	function HideShowDescriptions() {
+	//Get all the category name IDs
+		const expandCookieContainers = document.querySelectorAll('div[id^="cassie_expand_cookies_container_"]');
+		const ClassUpdate = 'cassie-expandable-description--show';			
+
+		// Loop through each
+		expandCookieContainers.forEach(container => {
+			const pId = container.id.replace('cassie_expand_cookies_container_', 'cassie_cookie_group_description_');
+
+			// Add a click event listener to each name element
+			container.addEventListener('click', () => {
+				const p = document.getElementById(pId);
+				if (p.classList.contains(ClassUpdate)) {
+                    p.classList.remove(ClassUpdate);
+                } else {
+                    p.classList.add(ClassUpdate);  
+                }  
+            });
+        });
+    }
+
+function GetTranslatedPrefCat () {
+const CategoryID = 14;
+let consentData = CassieWidgetLoader.Widget.widgetTemplate.Categories;
+let CategoryName;
+	consentData.forEach(channel => {
+		if (channel.ChannelID === CategoryID) {
+			CategoryName = channel.ChannelTypeParent;
+			return false;
+		}
+	});
+	return CategoryName;
+}
+    /////////////////////////////////////////
+    // FINISH non standard banner behavior //
+    /////////////////////////////////////////
+</script></head>
+
+<body><div id="cassie-widget" class="syrenis-cookie-widget" style="display: none; --prebanner-background-color: #FFFFFF; --prebanner-secondary-color: #4f4f50; --prebanner-text-color: #000000; --prebanner-accept-all-button-color: #0679ab; --prebanner-accept-all-button-text-color: #000000; --prebanner-reject-all-button-color: #0679ab; --prebanner-reject-all-button-text-color: #000000; --prebanner-customise-all-button-color: #0679ab; --prebanner-customise-all-button-text-color: #000000; --prebanner-border-color: #4f4f50; --accept-all-button-background-color: #0679ab; --accept-all-button-text-color: #000000; --accept-all-button-border-color: #0679ab; --reject-all-button-background-color: #0679ab; --reject-all-button-border-color: #0679ab; --view-all-button-background-color: #0679ab; --view-all-button-text-color: #000000; --view-all-button-border-color: #0679ab; --view-all-button-icon-color: #000000; --banner-background-color: #FFFFFF; --banner-secondary-color: #FFFFFF; --banner-text-color: #191919; --banner-submit-preferences-button-color: #191919; --banner-submit-preferences-button-text-color: #000000; --banner-slider-background-off: #000000; --banner-slider-background-on: #78BE20; --banner-slider-toggle: #FFFFFF; --scrollbar-background-color: #FFFFFF; --scrollbar-thumb-color: #191919; --scrollbar-thumb-hover-color: #FFFFFF; --cookie-modal-background-color: #FFFFFF; --cookie-modal-text-color: #191919; --close-modal-button-color: #FFFFFF; --header-content-top-border-color: #FFFFFF; --main-content-border-colour: #FFFFFF; --tab-button-background-color: #FFFFFF; --tab-button-text-color: #191919; --tab-button-border-color: #FFFFFF; --active-button-border-color: #FFFFFF; --cookie-group-bottom-border-colour: #FFFFFF; --expand-cookies-icon-color: #FFFFFF; --cookie-children-container-background-color: #191919; --cookie-children-container-text-color: #FFFFFF; --slider-background-colour-unchecked: #000000; --toggle-background-color: #FFFFFF; --slider-background-colour-checked: #78BE20; --manage-cookies-button-background-color: #FFFFFF; --manage-cookies-button-text-color: #191919; ----manage-cookies-button-border-color: #FFFFFF;">  <meta name="cassie-viewport" content="width=device-width, initial-scale=1">   <div class="cassie-cookie-module cassie-d-none" role="region" aria-label="Cookie Preferences" data-nosnippet=""> <div class="cassie-overlay" style="display: none;"></div> <div class="cassie-pre-banner cassie-bottom" role="dialog" aria-modal="true" aria-label="Cookie consent modal" aria-describedby="We use cookies to improve your experience and our services. This includes understanding your preferences and analyzing network usage." style="display: none;"> <p class="cassie-pre-banner--text" id="cassie_pre_banner_text"><p>We use cookies to improve your experience and our services. This includes understanding your preferences and analyzing network usage. For more details, see our <a href="https://www.asu.edu/about/privacy" target="_self" title="privacy statements">privacy statements</a>.</p><button class="close-button" aria-label="Close cookie consent banner"><i class="fas fa-times"></i></button></p> <div class="cassie-pre-banner--button--container"> <button class="cassie-pre-banner--button cassie-accept-all" id="cassie_accept_all_pre_banner">Accept all cookies</button> <button class="cassie-pre-banner--button cassie-reject-all" id="cassie_reject_all_pre_banner">Accept only required cookies</button> <button class="cassie-pre-banner--button cassie-view-all"> <span class="cassie-view-all--button--icon"> <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="16" viewBox="0 0 24 24" width="16"> <g> <path d="M0,0h24v24H0V0z" fill="none"></path> <path class="cassie-view-all--button--icon" d="M19.14,12.94c0.04-0.3,0.06-0.61,0.06-0.94c0-0.32-0.02-0.64-0.07-0.94l2.03-1.58c0.18-0.14,0.23-0.41,0.12-0.61 l-1.92-3.32c-0.12-0.22-0.37-0.29-0.59-0.22l-2.39,0.96c-0.5-0.38-1.03-0.7-1.62-0.94L14.4,2.81c-0.04-0.24-0.24-0.41-0.48-0.41 h-3.84c-0.24,0-0.43,0.17-0.47,0.41L9.25,5.35C8.66,5.59,8.12,5.92,7.63,6.29L5.24,5.33c-0.22-0.08-0.47,0-0.59,0.22L2.74,8.87 C2.62,9.08,2.66,9.34,2.86,9.48l2.03,1.58C4.84,11.36,4.8,11.69,4.8,12s0.02,0.64,0.07,0.94l-2.03,1.58 c-0.18,0.14-0.23,0.41-0.12,0.61l1.92,3.32c0.12,0.22,0.37,0.29,0.59,0.22l2.39-0.96c0.5,0.38,1.03,0.7,1.62,0.94l0.36,2.54 c0.05,0.24,0.24,0.41,0.48,0.41h3.84c0.24,0,0.44-0.17,0.47-0.41l0.36-2.54c0.59-0.24,1.13-0.56,1.62-0.94l2.39,0.96 c0.22,0.08,0.47,0,0.59-0.22l1.92-3.32c0.12-0.22,0.07-0.47-0.12-0.61L19.14,12.94z M12,15.6c-1.98,0-3.6-1.62-3.6-3.6 s1.62-3.6,3.6-3.6s3.6,1.62,3.6,3.6S13.98,15.6,12,15.6z"></path> </g> </svg> </span> <span id="cassie_view_all_pre_banner">Manage cookies</span> </button> </div> </div> <div class="cassie-pre-banner cassie-gpc-pre-banner cassie-d-none-important cassie-gpc-bottom" id="cassie_gpc_pre_banner" role="dialog" aria-modal="true" style="display:none"> <div class="cassie-gpc-pre-banner--text-container"> <h3 class="cassie-gpc-pre-banner-heading--text" id="gpc_banner_title">GPC Detected</h3> <p class="cassie-pre-banner--text" id="cassie_gpc_pre_banner_text">We have detected a Global Privacy Control (GPC) signal, please confirm if you wish to accept all cookies including or excluding those flagged as GPC.</p> <button class="close-button" aria-label="Close cookie consent banner"><i class="fas fa-times"></i></button></div> <div class="cassie-pre-banner--button--container"> <button class="cassie-pre-banner--button cassie-gpc-accept-all" id="cassie_gpc_accept_all_pre_banner" aria-label="Accept All">Accept All</button> <button class="cassie-pre-banner--button cassie-gpc-accept-all-excluding" id="cassie_gpc_accept_all_excluding_pre_banner" aria-label="Accept All Excluding GPC">Accept All Excluding GPC</button> <button class="cassie-pre-banner--button cassie-gpc-back" id="cassie_gpc_back_pre_banner" aria-label="Back">Back</button> </div> </div> <div class="cassie-cookie-modal cassie-cookie-modal--center" role="dialog" aria-modal="true" style="display: none;"> <div class="cassie-cookie-modal--header"> <div class="cassie-cookie-modal--top-header"> <h2 class="cassie-cookie-modal--header-image" id="cassie_header_image"></h2> <span class="cassie-close-modal--container"> <button class="cassie-close-modal-button" id="cassie_close_modal_button">×</button> </span> </div> <p class="cassie-cookie-modal--header--content" id="cassie_header_content"><h3 class="cassie-cookie-group--heading">Your privacy settings</h3><p class="cookieHeadersmall">On this website, we use cookies which allow our advertising partners to display ads tailored to your interests based on how you browse our site.</p></p> <div class="cassie-cookie-modal--accept-all" id="cassie_accept_all_cookies"> <span class="cassie-cookie-modal--accept-all--text" id="cassie_accept_all_cookies_text" for="cassie_accept_all_toggle_switch">Accept All</span> <div class="cassie-accept-all--toggle-switch cassie-toggle-switch" id="cassie_accept_all_toggle_switch" name="cassie_accept_all_toggle_switch" role="switch" aria-checked="true" tabindex="0" aria-label="Accept All"> <span aria-hidden="true" class="cassie-accept-all--toggle-switch--status cassie-toggle-switch--status" id="cassie_accept_all_toggle_switch_status">On</span> <span aria-hidden="false" class="cassie-accept-all--toggle-switch--slider cassie-toggle-switch--slider cassie-toggle-switch--slider--active" id="cassie_accept_all_toggle_slider"></span> </div> </div> </div> <div class="cassie-cookie-modal--main"> <div class="cassie-cookie-modal--cookies--container" id="cassie_cookie_modal_cookies_container"> <div class="cassie-cookie-modal--tabs--container" aria-hidden="true" style="display: none;"> <button class="cassie-tab--button cassie-active--button" id="cassie_consent_button" name="user consent tab button" aria-label="User Consent">User Consent</button> <button class="cassie-tab--button" id="cassie_legitimate_interests_button" name="legitimate interest tab button" aria-label="Legitimate Interests">Legitimate Interests</button> </div> <div class="cassie-cookie-modal--tab-group" id="cassie_consent_tab_cookies"> <div class="cassie-cookie-modal--strictly-necessary cassie-cookie-modal--group" id="cassie_strictly_necessary"> <div class="cassie-cookie-modal--group-head-container"> <div class="cassie-strictly-necessary--expand cassie-expand-cookies--container" tabindex="0" role="button" id="cassie_expand_strictly_necessary"> <span> <svg id="cassie_strictly_necessary_expand_icon" class="cassie-expand-cookies--icon cassie-expand-cookies--icon--open" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="18px" height="18px"> <path d="M0 0h24v24H0z" fill="none"></path> <path class="cassie-expand-cookies--icon" d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"></path></svg> </span> <h3 class="cassie-strictly-necessary--heading cassie-cookie-group--heading" id="cassie_strictly_necessary_heading">Strictly Necessary Cookies</h3> </div> <p class="cassie-strictly-necessary--description cassie-cookie-group--description cassie-expand-cookies--icon--open" id="cassie_strictly_necessary_description"><p>These cookies are essential for you to browse the website and use its features, such as accessing secure areas of the site. Cookies that allow web shops to hold your items in your cart while you are shopping online are an example of strictly necessary cookies.</p><p>Examples:</p><ul><li>Maintain user state during a website visit.<ul><li>login information or session view of cart.</li></ul></li><li>Enable navigation through website pages.</li><li>Verify user identity and provide access to protected content.</li><li>Protect website data and user information from unauthorized access.</li><li>Detect and prevent fraudulent activity.</li><li>Distribute traffic across multiple servers for optimal performance.</li></ul></p> </div> <div class="cassie-strictly-necessary--children--container cassie-cookie-children--container" id="cassie_strictly_necessary_children_container" hidden="" aria-hidden="true">  <div class="cassie-strictly-necessary--child-cookie cassie-cookie--child" id="cassie_strictly_necessary_child_cookie_strictly_necessary cookie"><h4 class="cassie-strictly-necessary--child--heading cassie-cookie--child--heading" id="cassie_strictly_necessary_heading_strictly_necessary cookie">Strictly necessary cookie</h4><p class="cassie-strictly-necessary--child--description cassie-cookie--child--description" id="cassie_strictly_necessary_description_strictly_necessary cookie"><p><span style="color: rgb(65, 65, 65); font-family: Poppins, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: 0.1px; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">These cookies are necessary for website functions such as setting your privacy preferences, logging in or completing forms. By using this site, you agree we may place these cookies on your device.</span></p></p></div></div> </div> <div class="cassie-cookie-modal--group cassie-cookie-modal--select--group" id="cassie_cookie_modal_group_14"> <div class="cassie-cookie-modal--group-head-container" id="cassie_cookie_group_header_14"> <div class="cassie-expand-cookies--container" tabindex="0" role="button" id="cassie_expand_cookies_container_14"> <span> <svg id="cassie_expand_cookies_icon_14" class="cassie-expand-cookies--icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="18px" height="18px"> <path d="M0 0h24v24H0z" fill="none"></path> <path class="cassie-expand-cookies--icon" d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"></path></svg> </span> <h3 class="cassie-cookie-group--heading" id="cassie_cookie_group_heading_14" for="cassie_cookie_group_toggle_switch_14">Marketing cookies</h3> </div><div class="cassie-toggle-switch cassie-cookie-group--toggle-switch" id="cassie_cookie_group_toggle_switch_14" name="cassie_cookie_group_toggle_switch_14" role="switch" aria-checked="true" tabindex="0" aria-label="Marketing cookies"> <span aria-hidden="true" class="cassie-toggle-switch--status cassie-cookie-group--toggle-switch--status" id="cassie_cookie_group_toggle_switch_status_14">On</span> <span aria-hidden="false" class="cassie-toggle-switch--slider cassie-cookie-group--toggle-switch--slider cassie-toggle-switch--slider--active" id="cassie_cookie_group_toggle_switch_slider_14"></span> </div> <p class="cassie-cookie-group--description" id="cassie_cookie_group_description_14"><p>These cookies track your online activity to help advertisers deliver more relevant advertising or to limit how many times you see an ad. These cookies can share that information with other organizations or advertisers.</p><p>Examples:</p><ul><li>Display ads for products or services a user has previously viewed on a website.</li><li>Track referrals and attribute sales to specific affiliates.</li><li>Track user interactions with social media platforms and websites.</li><li>Track user actions after clicking on an ad, such as making a purchase.</li><li>Personalize website content.</li></ul></p> </div> <div class="cassie-cookie-children--container" id="cassie_children_cookies_container_14" hidden="" aria-hidden="true">  <div class="cassie-cookie--child" id="cassie_cookie_child_14_27"> <h4 class="cassie-cookie--child--heading" id="cassie_cookie_child_heading_14_27" for="cassie_child_cookie_toggle_switch_27">Ad user data</h4><div class="cassie-toggle-switch cassie-child-cookie--toggle-switch" id="cassie_child_cookie_toggle_switch_27" name="cassie_child_cookie_toggle_switch_27" role="switch" aria-checked="true" tabindex="0" aria-label="Ad user data"> <span aria-hidden="true" class="cassie-toggle-switch--status cassie-child-cookie--toggle-switch--status" id="cassie_child_cookie_toggle_switch_status_27">On</span> <span aria-hidden="false" class="cassie-toggle-switch--slider cassie-child-cookie--toggle-switch--slider cassie-toggle-switch--slider--active" id="cassie_child_cookie_toggle_switch_slider_27" data-channel-id="20" data-statement-id="27"></span> </div> <p class="cassie-cookie--child--description" id="cassie_cookie_child_description_14_27"><p><span style="color: rgb(65, 65, 65); font-family: Poppins, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: 0.1px; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">Ad User Data</span></p></p> </div><div class="cassie-cookie--child" id="cassie_cookie_child_14_26"> <h4 class="cassie-cookie--child--heading" id="cassie_cookie_child_heading_14_26" for="cassie_child_cookie_toggle_switch_26">Ad personalization</h4><div class="cassie-toggle-switch cassie-child-cookie--toggle-switch" id="cassie_child_cookie_toggle_switch_26" name="cassie_child_cookie_toggle_switch_26" role="switch" aria-checked="true" tabindex="0" aria-label="Ad personalization"> <span aria-hidden="true" class="cassie-toggle-switch--status cassie-child-cookie--toggle-switch--status" id="cassie_child_cookie_toggle_switch_status_26">On</span> <span aria-hidden="false" class="cassie-toggle-switch--slider cassie-child-cookie--toggle-switch--slider cassie-toggle-switch--slider--active" id="cassie_child_cookie_toggle_switch_slider_26" data-channel-id="19" data-statement-id="26"></span> </div> <p class="cassie-cookie--child--description" id="cassie_cookie_child_description_14_26"><p><span style="color: rgb(65, 65, 65); font-family: Poppins, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: 0.1px; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">Ad Personalization</span></p></p> </div><div class="cassie-cookie--child" id="cassie_cookie_child_14_24"> <h4 class="cassie-cookie--child--heading" id="cassie_cookie_child_heading_14_24" for="cassie_child_cookie_toggle_switch_24">Marketing cookie</h4><div class="cassie-toggle-switch cassie-child-cookie--toggle-switch" id="cassie_child_cookie_toggle_switch_24" name="cassie_child_cookie_toggle_switch_24" role="switch" aria-checked="true" tabindex="0" aria-label="Marketing cookie"> <span aria-hidden="true" class="cassie-toggle-switch--status cassie-child-cookie--toggle-switch--status" id="cassie_child_cookie_toggle_switch_status_24">On</span> <span aria-hidden="false" class="cassie-toggle-switch--slider cassie-child-cookie--toggle-switch--slider cassie-toggle-switch--slider--active" id="cassie_child_cookie_toggle_switch_slider_24" data-channel-id="17" data-statement-id="24"></span> </div> <p class="cassie-cookie--child--description" id="cassie_cookie_child_description_14_24"><p><span style="color: rgb(65, 65, 65); font-family: Poppins, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: 0.1px; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">We use targeting/advertising cookies to create profiles and personalize content. We may use third party products, such as Google Analytics, to market ASU’s services to you on third party websites. For example, if you visit ASU websites, you may then see advertisements for ASU on other websites.</span></p></p> </div></div> </div></div> <div class="cassie-cookie-modal--tab-group" id="cassie_legitimate_interests_tab_cookies" aria-hidden="true" style="display: none;"></div> </div> </div> <div class="cassie-cookie-modal--footer" id="cassie_cookie_footer"> <p class="cassie-cookie-modal--footer-content" id="cassie_cookie_footer_content"><p>For more details, see our <a id="privacy-policy-cassie" href="https://www.asu.edu/privacy" title="privacy statements">privacy statements</a>.</p></p> <div class="cassie-cookie-modal--footer-extra"> <div class="cassie-cookie-modal--save-preferences--container"> <button class="cassie-cookie-modal--save-preferences" id="cassie_save_preferences" name="save preferences button" aria-label="Submit preferences">Submit preferences</button> </div> <div class="cassie-cookie-modal--footer-image--container"> <a href="https://syrenis.com/" target="_blank" rel="noopener"> <img class="cassie-cookie-modal--footer-image" alt="Powered by Syrenis" src="https://cscript-cdn-use.asu.edu/templates/2/Images/powered-by-syrenis-black.svg"> </a> </div> </div> </div> </div> </div>  <div class="cassie-manage-cookies--container cassie-d-none" data-nosnippet="" style="display: none;"> <button class="cassie-manage-cookies--button" id="cassie_manage_cookies_button">Open Cookie Settings</button> <div class="cassie-arrow-down--hover"></div> </div>   </div>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-KDWN8Z" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager ASU Universal -->
+    <!--globalheader-->
+    <div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <react.fragment key=".0">
+                        <header class="fixed-top" data-elastic-exclude="data-elastic-exclude" id="asu-header">
+                            <div id="wrapper-header-top">
+                                <div class="container-xl">
+                                    <div class="row">
+                                        <div class="col-12" id="header-top">
+                                            <nav aria-label="ASU" class="nav"> <a class="nav-link sr-only sr-only-focusable" href="#skip-to-content">
+                                                    Skip to main content </a> <a class="nav-link sr-only sr-only-focusable" href="http://asu.edu/accessibility/feedback?a11yref=unity-design-system">
+                                                    Report an accessibility problem </a> <a class="nav-link" data-ga-header="asu home" data-ga-header-section="topbar" href="https://asu.edu"> ASU Home </a> <a class="nav-link" data-ga-header="my asu" data-ga-header-section="topbar" href="https://my.asu.edu"> My ASU </a> <a class="nav-link" data-ga-header="colleges and schools" data-ga-header-section="topbar" href="https://www.asu.edu/academics/colleges-schools"> Colleges and
+                                                    Schools </a>
+                                                <div class="nav-link login-status"> <a class="name" href="#"> Sparky
+                                                    </a> <a class="signout" data-ga-header="sign out" data-ga-header-section="topbar" href="#"> Sign Out </a> </div>
+                                                <form action="https://search.asu.edu/search" class="form-inline" method="get" name="gs">
+                                                    <input aria-labelledby="header-top-search" class="form-control" data-ga-input-header-event="search" name="q" required="" type="search">
+                                                    <label id="header-top-search"> Search asu.edu </label>
+                                                    <input name="site" type="hidden" value="default_collection">
+                                                    <input name="sort" type="hidden" value="date:D:L:d1">
+                                                    <input name="output" type="hidden" value="xml_no_dtd">
+                                                    <input name="ie" type="hidden" value="UTF-8">
+                                                    <input name="oe" type="hidden" value="UTF-8">
+                                                    <input name="client" type="hidden" value="asu_frontend">
+                                                    <input name="proxystylesheet" type="hidden" value="asu_frontend">
+                                                </form>
+                                            </nav>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="wrapper-header-main">
+                                <div class="container-xl">
+                                    <div class="row">
+                                        <div class="col-12" id="header-main">
+                                            <div class="navbar navbar-expand-xl"> <a class="navbar-brand" data-ga-header="asu logo" href="https://www.asu.edu/"> <img alt="Arizona State University" class="vert" decoding="async" fetchpriority="high" height="234" src="data:image/png;base64,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" width="303"> <img alt="Arizona State University" class="horiz" decoding="async" fetchpriority="high" height="72" src="data:image/png;base64,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" width="400"> </a>
+                                                <button aria-controls="menubar" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler collapsed" data-ga-header="menu button label" data-ga-header-event="collapse" data-ga-header-type="click" data-target="#menubar" data-toggle="collapse" type="button"> <span alt="" class="fa fa-bars" title="Open mobile menu"> <span class="fa-stack" title="Close mobile menu">
+                                                        <!-- <i alt="" class="fa fa-circle fa-stack-2x" />
+                                                        <i alt="" class="fa fa-times fa-stack-1x" /> -->
+                                                    </span> </span></button>
+                                                <div class="navbar-container no-links">
+                                                    <div class="title subdomain-name"> <a data-ga-header="Subdomain name" href="https://www.asu.edu/" title="Arizona State University home page"> Arizona State
+                                                            University
+                                                        </a> </div>
+                                                    <div class="collapse navbar-collapse w-100 justify-content-between" id="menubar">
+                                                        <div class="navbar-mobile-footer pinned">
+                                                            <form action="https://search.asu.edu/search" class=" form-inline navbar-mobile-search" method="get" name="gs">
+                                                                <input aria-label="Search" class="form-control" name="q" placeholder="Search asu.edu" type="search">
+                                                                <input name="site" type="hidden" value="default_collection">
+                                                                <input name="sort" type="hidden" value="date:D:L:d1">
+                                                                <input name="output" type="hidden" value="xml_no_dtd">
+                                                                <input name="ie" type="hidden" value="UTF-8">
+                                                                <input name="oe" type="hidden" value="UTF-8">
+                                                                <input name="client" type="hidden" value="asu_frontend">
+                                                                <input name="proxystylesheet" type="hidden" value="asu_frontend">
+                                                            </form>
+                                                            <div class="nav-grid"> <a class="nav-link" data-ga-header="asu home" data-ga-header-section="topbar" href="https://asu.edu"> ASU Home </a> <a class="nav-link" data-ga-header="my asu" data-ga-header-section="topbar" href="https://my.asu.edu"> My ASU </a> <a class="nav-link" data-ga-header="colleges and schools" data-ga-header-section="topbar" href="https://www.asu.edu/academics/colleges-schools">
+                                                                    Colleges and Schools </a> <a class="nav-link" data-ga-header="sign in" data-ga-header-section="topbar" href="https://weblogin.asu.edu/cgi-bin/login"> Sign
+                                                                    In </a> </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </header>
+                        <div class="wrapper" id="page-wrapper">
+                            <div class="sr-only" id="skip-to-content">
+                        </div>
+                    
+                </div>
+            </react.fragment></div>
+        </div>
+    </div>
+    <!--globalheader end-->
+
+    <div id="filldiv">
+        <div class="container">
+            <div id="skip-to-content" class="page__content">
+                <div id="header-mid" class="center">
+                    <h1>Hmm, we can't find that page</h1>
+                    <h4> Search all of ASU </h4>
+                    <div class="navbar-mobile-footer pinned">
+                        <form action="https://search.asu.edu/search" class="form-inline navbar-mobile-search" method="get" name="gs">
+                            <input aria-label="header-mid-search" class="form-control" name="q" placeholder="Search asu.edu" type="search">
+                            <!-- <label id="header-mid-search">Search asu.edu</label> -->
+                            <input name="site" type="hidden" value="default_collection">
+                            <input name="sort" type="hidden" value="date:D:L:d1">
+                            <input name="output" type="hidden" value="xml_no_dtd">
+                            <input name="ie" type="hidden" value="UTF-8">
+                            <input name="oe" type="hidden" value="UTF-8">
+                            <input name="client" type="hidden" value="asu_frontend">
+                            <input name="proxystylesheet" type="hidden" value="asu_frontend">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--globalfooter start-->
+    <div>
+        <div>
+            <div class="row no-gutters">
+                <div class="col uds-full-width">
+                    <footer data-elastic-exclude="data-elastic-exclude" id="asu-footer" role="contentinfo">
+                        <div class="wrapper" id="wrapper-footer-innovation">
+                            <div class="container" id="footer-innovation">
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="d-flex footer-innovation-links">
+                                            <nav aria-label="University Services" class="nav"> <a class="nav-link" data-ga-footer="maps and locations" data-ga-footer-section="secondary footer" data-ga-footer-type="internal link" href="https://www.asu.edu/about/locations-maps"> Maps and Locations
+                                                </a> <a class="nav-link" data-ga-footer="jobs" data-ga-footer-section="secondary footer" data-ga-footer-type="internal link" href="https://www.asu.edu/asujobs"> Jobs </a> <a class="nav-link" data-ga-footer="directory" data-ga-footer-section="secondary footer" data-ga-footer-type="internal link" href="https://isearch.asu.edu/">
+                                                    Directory </a> <a class="nav-link" data-ga-footer="contact asu" data-ga-footer-section="secondary footer" data-ga-footer-type="internal link" href="https://www.asu.edu/about/contact"> Contact ASU </a> <a class="nav-link" data-ga-footer="my asu" data-ga-footer-section="secondary footer" data-ga-footer-type="internal link" href="https://my.asu.edu/"> My
+                                                    ASU </a> </nav>
+                                            <a class="img-link" data-ga-footer="#1 in the u.s. for innovation" data-ga-footer-section="secondary footer" data-ga-footer-type="internal link" href="https://www.asu.edu/rankings">
+                                                <img alt="Number one in the U.S. for innovation. #1 ASU, #2 Stanford, #3 MIT. - U.S. News and World Report, 5 years, 2016-2023" decoding="async" height="100" loading="lazy" src="data:image/png;base64,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" width="459"> </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wrapper" id="wrapper-footer-colophon">
+                            <div class="container" id="footer-colophon">
+                                <div class="row">
+                                    <div class="col">
+                                        <nav aria-label="University Legal and Compliance" class="nav colophon"> <a class="nav-link" data-ga-footer="copyright and trademark" data-ga-footer-section="tertiary footer" data-ga-footer-type="internal link" href="https://www.asu.edu/about/copyright-trademark"> Copyright and
+                                                Trademark </a> <a class="nav-link" data-ga-footer="accessibility" data-ga-footer-section="tertiary footer" data-ga-footer-type="internal link" href="https://www.asu.edu/accessibility/"> Accessibility </a> <a class="nav-link" data-ga-footer="privacy" data-ga-footer-section="tertiary footer" data-ga-footer-type="internal link" href="https://www.asu.edu/about/privacy"> Privacy </a> <a class="nav-link" data-ga-footer="terms of use" data-ga-footer-section="tertiary footer" data-ga-footer-type="internal link" href="https://www.asu.edu/about/terms-of-use"> Terms of Use </a> <a class="nav-link" data-ga-footer="emergency" data-ga-footer-section="tertiary footer" data-ga-footer-type="internal link" href="https://www.asu.edu/emergency/"> Emergency </a> <a class="nav-link" data-ga-footer="covid-19 information" data-ga-footer-section="tertiary footer" data-ga-footer-type="internal link" href="https://eoss.asu.edu/health/announcements/coronavirus"> COVID-19
+                                                Information </a> <button id="manualConsentoptout">Manage my privacy settings</button></nav>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--globalfooter end-->
+<script defer="" src="https://static.cloudflareinsights.com/beacon.min.js/v833ccba57c9e4d2798f2e76cebdd09a11778172276447" integrity="sha512-57MDmcccJXYtNnH+ZiBwzC4jb2rvgVCEokYN+L/nLlmO8rfYT/gIpW2A569iJ/3b+0UEasghjuZH/ma3wIs/EQ==" data-cf-beacon="{&quot;version&quot;:&quot;2024.11.0&quot;,&quot;token&quot;:&quot;e64fdfc25a574723a13d1f77e07bc18c&quot;,&quot;server_timing&quot;:{&quot;name&quot;:{&quot;cfCacheStatus&quot;:true,&quot;cfEdge&quot;:true,&quot;cfExtPri&quot;:true,&quot;cfL4&quot;:true,&quot;cfOrigin&quot;:true,&quot;cfSpeedBrain&quot;:true},&quot;location_startswith&quot;:null}}" crossorigin="anonymous"></script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a11ba6886b0c2efb',t:'MTc4MjQ3MTAyMA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+
+</div><iframe height="1" width="1" style="position: absolute; top: 0px; left: 0px; border: none; visibility: hidden;" data-gtm-yt-inspected-11="true" data-gtm-yt-inspected-658644_1548="true"></iframe><script id="" text="" charset="" type="text/javascript" src="https://cassie.web.asu.edu/cassie-fullwidth.js"></script>
+<iframe height="0" width="0" style="display: none; visibility: hidden;" data-gtm-yt-inspected-11="true" data-gtm-yt-inspected-658644_1548="true"></iframe><link rel="stylesheet" type="text/css" href="https://cassie.web.asu.edu/cassie-fullwidth.css"><script type="text/javascript" id="gtm-youtube-tracking" charset="">(function(h,f,k){function m(){var b=[].slice.call(h.getElementsByTagName("iframe")).concat([].slice.call(h.getElementsByTagName("embed"))),a;for(a=0;a<b.length;a++){var d=n(b[a]);if(d){d=b[a];var e=f.location,c=h.createElement("a");c.href=d.src;c.hostname="www.youtube.com";c.protocol=e.protocol;var g="/"===c.pathname.charAt(0)?c.pathname:"/"+c.pathname;-1<c.search.indexOf("enablejsapi")||(c.search=(0<c.search.length?c.search+"\x26":"")+"enablejsapi\x3d1");if(!(-1<c.search.indexOf("origin"))&&-1===
+e.hostname.indexOf("localhost")){var w=e.port?":"+e.port:"";e=e.protocol+"%2F%2F"+e.hostname+w;c.search=c.search+"\x26origin\x3d"+e}"application/x-shockwave-flash"===d.type&&(e=h.createElement("iframe"),e.height=d.height,e.width=d.width,g=g.replace("/v/","/embed/"),d.parentNode.parentNode.replaceChild(e,d.parentNode),d=e);c.pathname=g;d.src!==c.href+c.hash&&(d.src=c.href+c.hash);p(d)}}"addEventListener"in h&&h.addEventListener("load",x,!0)}function n(b){b=b.src||"";return-1<b.indexOf("youtube.com/embed/")||
+-1<b.indexOf("youtube.com/v/")?!0:!1}function p(b){var a=YT.get(b.id);a||(a=new YT.Player(b,{}));"undefined"===typeof b.pauseFlag&&(b.pauseFlag=!1,a.addEventListener("onStateChange",function(a){y(a,b)}))}function z(b){var a={};g.events["Watch to End"]&&(a["Watch to End"]=Math.min(b-3,Math.floor(.99*b)));if(g.percentageTracking){var d=[],e;g.percentageTracking.each&&(d=d.concat(g.percentageTracking.each));if(g.percentageTracking.every){var c=parseInt(g.percentageTracking.every,10),f=100/c;for(e=1;e<
+f;e++)d.push(e*c)}for(e=0;e<d.length;e++)f=d[e],c=f+"%",f=b*f/100,a[c]=Math.floor(f)}return a}function y(b,a){var d=b.data,e=b.target,c=e.getVideoUrl();c=c.match(/[?&]v=([^&#]*)/)[1];var f=e.getPlayerState(),g=Math.floor(e.getDuration()),h=z(g);g={1:"Play",2:"Pause"};g=g[d];a.playTracker=a.playTracker||{};1!==f||a.timer?(clearInterval(a.timer),a.timer=!1):(clearInterval(a.timer),a.timer=setInterval(function(){var b=e,d=h,c=a.videoId,g=b.getCurrentTime(),f;b[c]=b[c]||{};for(f in d)d[f]<=g&&!b[c][f]&&
+(b[c][f]=!0,q(c,f))},1E3));1===d&&(a.playTracker[c]=!0,a.videoId=c,a.pauseFlag=!1);if(!a.playTracker[a.videoId])return!1;if(2===d){if(a.pauseFlag)return!1;a.pauseFlag=!0}r[g]&&q(a.videoId,g)}function q(b,a){var d="https://www.youtube.com/watch?v\x3d"+b,e=f.GoogleAnalyticsObject;if("undefined"===typeof f[t]||g.forceSyntax)if("function"===typeof f[e]&&"function"===typeof f[e].getAll&&2!==g.forceSyntax)f[e]("send","event","Videos",a,d);else"undefined"!==typeof f._gaq&&1!==A&&f._gaq.push(["_trackEvent",
+"Videos",a,d]);else f[t].push({event:"youTubeTrack",attributes:{videoUrl:d,videoAction:a}})}function u(b,a,d){if(b.addEventListener)b.addEventListener(a,d);else if(b.attachEvent)b.attachEvent("on"+a,function(a){a.target=a.target||a.srcElement;d.call(b,a)});else if("undefined"===typeof b["on"+a]||null===b["on"+a])b["on"+a]=function(a){a.target=a.target||a.srcElement;d.call(b,a)}}function x(b){b=b.target||b.srcElement;var a=n(b);"IFRAME"===b.tagName&&a&&-1<b.src.indexOf("enablejsapi")&&-1<b.src.indexOf("origin")&&
+p(b)}var g=k||{},A=g.forceSyntax||0,t=g.dataLayerName||"dataLayer",r={Play:!0,Pause:!0,"Watch to End":!0},l;k=h.createElement("script");k.src="//www.youtube.com/iframe_api";var v=h.getElementsByTagName("script")[0];v.parentNode.insertBefore(k,v);for(l in g.events)g.events.hasOwnProperty(l)&&(r[l]=g.events[l]);f.onYouTubeIframeAPIReady=function(){var b=f.onYouTubeIframeAPIReady;return function(){b&&b.apply(this,arguments);navigator.userAgent.match(/MSIE [67]\./gi)||("loading"!==h.readyState?m():h.addEventListener?
+u(h,"DOMContentLoaded",m):u(f,"load",m))}}()})(document,window,{events:{Play:!0,Pause:!0,"Watch to End":!0},percentageTracking:{every:25,each:[10,90]}});</script><script type="text/javascript" id="" charset="">(function(){if(window.dataLayer){var c=window.dataLayer=window.dataLayer||[],a=window.SI_dataLayer=window.SI_dataLayer||[];a.push=function(){for(var a=0;a<arguments.length;a++)c.push(arguments[a]);return Array.prototype.push.apply(this,arguments)};for(var b=0;b<a.length;b++)c.push(a[b])}})();</script><script src="https://cscript-cdn-use.asu.edu/versions/4/widget.js"></script><script src="https://cscript-cdn-use.asu.edu/templates/2/template.min.js"></script></body></html>

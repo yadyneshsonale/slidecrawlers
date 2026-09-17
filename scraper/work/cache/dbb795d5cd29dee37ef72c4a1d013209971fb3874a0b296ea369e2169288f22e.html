@@ -1,0 +1,698 @@
+<html><head>
+<link rel="stylesheet" type="text/css" href="./style.css">
+<title>CS 747: Spring 2025</title>
+</head>
+
+<body>
+
+<br>
+<center>
+<h1>
+CS 747: Foundations of Intelligent and Learning Agents<br><font size="6"><span style="font-weight:normal">(Spring 2025)</span></font>
+</h1>
+</center>
+
+
+<p align="center">
+<img src="./monarch-butterflies.jpg" width="400px">
+</p>
+<p align="center">
+  <font size="1">(Picture source: <a href="https://www.pexels.com/photo/monarch-butterflies-near-a-pinki-flower-13132850/">https://www.pexels.com/photo/monarch-butterflies-near-a-pinki-flower-13132850/</a>)</font>
+</p>
+
+
+<p align="center">(Page last edited <script>document.write( document.lastModified );</script>05/02/2025 13:58:15.)</p>
+
+<h3>Instructor</h3> 
+
+&nbsp;&nbsp;<a href="http://www.cse.iitb.ac.in/~shivaram">Shivaram Kalyanakrishnan</a><br>
+&nbsp;&nbsp;Office: 220, CC Building<br>
+&nbsp;&nbsp;Phone: 7704<br>
+&nbsp;&nbsp;E-mail: shivaram@cse.iitb.ac.in<br>
+
+<h3>Teaching Assistants</h3> 
+
+&nbsp;&nbsp;<a>Sandarbh Yadav</a><br>
+&nbsp;&nbsp;E-mail: 22d0374@iitb.ac.in<br>
+<br>
+&nbsp;&nbsp;<a>Anvay Shah</a><br>
+&nbsp;&nbsp;E-mail: anvay@cse.iitb.ac.in<br>
+<br>
+&nbsp;&nbsp;<a>Vedang Gupta</a><br>
+&nbsp;&nbsp;E-mail: 200100166@iitb.ac.in<br>
+<br>
+&nbsp;&nbsp;<a>Sarvesh Gharat</a><br>
+&nbsp;&nbsp;E-mail: sarvesh.gharat@iitb.ac.in<br>
+<br>
+&nbsp;&nbsp;<a>Vedant Goswami</a><br>
+&nbsp;&nbsp;E-mail: vedantg@cse.iitb.ac.in<br>
+<br>
+&nbsp;&nbsp;<a>Vivek Kumar</a><br>
+&nbsp;&nbsp;E-mail: 23m0816@iitb.ac.in<br>
+<br>
+
+
+
+<h3>Meetings</h3> 
+
+<p>Meetings will be held during Slot 12: 5.30 p.m. – 6.55
+  p.m. Mondays and Thursdays in LA 001. The instructor will be
+  available for consultation immediately following class, up to 7.30
+  p.m., on both Mondays and Thursdays. He will also hold office hours
+  (220, CC Building) 9.00 a.m. – 10.00 a.m. Tuesdays.</p>
+
+<h3>Course Description</h3> 
+
+<p>Today's computing systems are increasingly adaptive and autonomous:
+they are akin to intelligent, decision-making "agents". With its roots
+in artificial intelligence and machine learning, this course covers
+the foundational principles of designing such agents. Topics covered
+include: (1) agency, intelligence, and learning; (2) exploration and
+multi-armed bandits; (3) Markov Decision Problems and planning; (4)
+reinforcement learning; (5) multi-agent systems and multi-agent
+learning; and (6) case studies.</p>
+
+<p>The course will adopt a "hands-on" approach, with programming
+assignments designed to highlight the relationship between theory and
+practice. Case studies will offer an end-to-end view of deployed
+agents. It is hoped that students can apply the learnings from this
+course to the benefit of their respective pursuits in various areas of
+computer science and related fields.</p>
+
+<p>The Spring 2025 offering of the course will run in the <b>flipped
+    classroom</b> format. After initial meetings to introduce the
+    course, each "week" will begin with video lectures (of length
+    2–3 hours) being made available for the students to
+    watch. Students are expected to view the lectures and go through
+    reading material that is provided alongside. The first meeting of
+    the week will be a "review and tutorial" session, in which the
+    contents of the lectures will be reviewed and questions from the
+    students addressed. The instructor will also take up
+    problem-solving and/or programming exercises in this session to
+    demonstrate and reinforce the concepts covered in the lectures. The
+    second meeting of the week will be for a test based on the week's
+    lectures.</p>
+
+<h3>Eligibility</h3> 
+
+<p>The course is open to all Ph.D. students, all masters students, and
+undergraduate/dual-degree students in their fourth or higher year of
+study. The course is also open to undergraduate/dual-degree students
+in their third year of study, provided their CPI is <b>8.50</b> or
+higher. The instructor regrets having to deny registration to many
+interested undergraduate/dual-degree students in their third year; the
+restriction is necessary to keep the class strength within the
+capacity of the largest available classroom on campus. Note that the
+CPI threshold of 8.50 may be increased during the first week of
+classes in case the registration count exceeds the cap imposed by the
+institute―if so third-year undergraduate/dual-degree students who
+do not meet the updated threshold must drop the course. Note that no
+exceptions will be made.</p>
+
+<h3>Prerequisites</h3> 
+
+<p>The course does not formally have other courses as
+prerequisites. However, lectures and assignments will assume that the
+student is comfortable with probability and
+algorithms. <a href="https://math.dartmouth.edu/~prob/prob/prob.pdf">Introduction
+to Probability</a> by Grinstead and Snell is an excellent resource on
+basic probability. Any student who is not comfortable with the
+contents of chapters 1 through 7 (and is unable to solve the
+exercises) is advised against taking CS 747.</p>
+
+<p>The course has an intensive programming component: based on ideas
+discussed in class, the student must be able to independently design,
+implement, and evaluate programs in <code>python</code>. The student
+must be prepared to spend a significant amount of time on the
+programming component of the course.</p>
+
+<p>Students who are unsure about their preparedness for taking the
+course are strongly advised to watch the lectures from week 1, 2, and
+3 from
+the <a href="https://www.cse.iitb.ac.in/~shivaram/teaching/old/cs747-a2020/index.html">Autumn
+2020 offering</a>, to attempt the quizzes from those weeks, and also
+to go through Programming Assignment 1. If they are unable to get a
+reasonable grasp of the material or to negotiate the quizzes and
+programming assignment, they are advised against taking CS 747.</p>
+
+
+
+
+<h3>Evaluation</h3> 
+
+<p>Grades will be based on (1) weekly tests, together contributing 24
+  marks; (2) three programming assignments, each worth 12 marks; (3) a
+  mid-semester examination worth 15 marks; and (4) an end-semester
+  examination worth 25 marks. All assessments will be based on
+  individual work.</p>
+
+<p>There will be 10 or more weekly tests, each for 3 marks. The 8 best
+scores from these tests will count towards the aggregate of 24.</p>
+
+<p>The programming assignments must be turned in through Moodle. Late
+submissions will not be evaluated; they will receive no marks.</p>
+
+<p>Students auditing the course must score 50 or more marks in the
+course to be awarded an "AU" grade.</p>
+
+<p>Evaluation will be contingent on the student agreeing to comply
+with the course policies on academic honesty and submissions.</p>
+
+<h3>Make-up Test</h3> 
+
+<p>Students who encounter any medical issues during the course must
+  write to the instructor as soon as possible with an official record
+  of their sickness. If they are unable to appear in either of the
+  exams, or to submit any of the three programming assignments, due to
+  sickness, they may request to be re-evaluated.</p>
+
+<p>Weekly tests that are missed due to medical issues will not be
+  compensated, unless a student has fewer than 8 tests for which they
+  were medically fit. Hence, for example, if 11 weekly tests were
+  conducted, of which the student was medically fit for 9, then they
+  will not have a make-up for the weekly tests. On the other hand, a
+  student who was medically fit for only 5 tests can make up for 3
+  tests.</p>
+
+<p>A single make-up test will be given to deal with all re-evaluation
+  requests. Questions will be drawn from the entire syllabus, rather
+  than the specific portion(s) a student has missed. This test will be
+  held after the end-semester exams are completed for the semester,
+  and on or before the date marked "Last date for showing evaluated
+  answer scripts" in the academic calendar. Students who wish to take
+  this test must plan/arrange to be physically present until the "Last
+  date for showing evaluated answer scripts".</p>
+
+<h3>Moodle</h3>
+
+<p>Moodle will be the primary course management system. Marks for the
+  assessments will be maintained on the class Moodle page; discussion
+  fora will also be hosted on Moodle. Students who do not have an
+  account on Moodle for the course must send TA Sarvesh Gharat a
+  request by e-mail, specifying the roll number/employee number for
+  account creation.</p>
+
+
+<h3>Academic Honesty</h3> 
+
+<p>Students are expected to adhere to the highest standards of
+  integrity and academic honesty. Academic violations, as detailed
+  below, will be dealt with strictly, in accordance with the
+  institute's <a href="http://www.iitb.ac.in/newacadhome/procedures201521July.pdf">procedures</a>
+  and <a href="http://www.iitb.ac.in/newacadhome/punishments201521July.pdf">disciplinary
+  actions</a> for academic malpractice.</p>
+
+<p>Students are expected to work alone on all the programming
+  assignments and the examinations. While they are free to discuss the
+  material presented in class with their peers, they must not discuss
+  the contents of the programming assignments (neither the questions, nor the
+  solutions) with classmates (or anybody other than the instructor and
+  TAs). They must not share code, even if it only pertains to
+  operations that are perceived not to be relevant to the core
+  logic of the assessment (for example, file-handling and
+  plotting). They also may not look at solutions to the given
+  quiz/assignment or related ones on the Internet. Violations will be
+  considered acts of dishonesty.</p>
+
+  <p>Students are allowed to use resources on the Internet for
+  programming (say to understand a particular command or a data
+  structure), and also to understand concepts (so a Wikipedia page or
+  someone's lecture notes or a textbook can certainly be
+  consulted). It is also okay to use libraries or code snippets for
+  portions unrelated to the core logic of the
+  assignment—typically for operations such as moving data,
+  network communication, etc. Querying LLMs for code snippets is
+  discouraged, but acceptable for portions unrelated to the core logic
+  of the assignment, as illustrated above. However, students must
+  cite <i>every</i> resource consulted or used, whatever be the
+  reason, in a file named <code>references.txt</code>, which must be
+  included in the submission. If LLMs have been queried, each query
+  must be reported verbatim, along with a link to the LLM user
+  interface. Failure to list any resource or record LLM usage as
+  detailed above will be considered an academic violation.
+  </p>
+
+<p>Copying or consulting any external sources during the examination
+will be treated as cheating.</p>
+
+<p>If in any doubt as to what is legitimate collaboration and what is
+not, students must ask the instructor.</p>
+
+
+<h3>Texts and References</h3> 
+
+<p>Artificial Intelligence: Foundations of Computational Agents, David
+  L. Poole and Alan K. Mackworth, 3<sup>rd</sup> edition, Cambridge
+  University Press,
+  2023. <a href="https://artint.info/3e/html/ArtInt3e.html">On-line
+  version</a>.</p>
+
+<p>Reinforcement Learning: An Introduction, Richard S. Sutton and
+Andrew G. Barto, 2<sup>nd</sup> edition, MIT Press,
+  2018. <a href="http://incompleteideas.net/book/RLbook2020.pdf">On-line
+version</a>.</p>
+
+<p>Algorithms for Reinforcement Learning, Csaba Szepesvári,
+Morgan &amp; Claypool,
+2009. <a href="http://www.ualberta.ca/~szepesva/papers/RLAlgsInMDPs.pdf"> On-line
+version</a>.
+</p>
+
+<p>Selected research papers.</p>
+
+<ul>
+
+  <li class="plain">
+<a href="https://www.jstor.org/stable/2332286?seq=1#metadata_info_tab_contents">On the Likelihood that One Unknown Probability Exceeds Another in View of the Evidence of Two Samples</a><br>
+William R. Thompson, 1933<br>
+</li>
+
+<li class="plain">
+<a href="http://people.csail.mit.edu/brooks/idocs/Samuel.pdf">Some Studies in Machine Learning Using the Game of Checkers</a><br>
+Arthur L. Samuel, 1959<br>
+</li>
+
+  <li class="plain">
+<a href="https://citeseerx.ist.psu.edu/document?repid=rep1&amp;type=pdf&amp;doi=572379c1d56e7e19422ae38218ee228c61aefb2f">Asymptotically
+Efficient Adaptive Allocation Rules</a><br>
+T. L. Lai and Herbert Robbins, 1985<br>
+</li>
+
+<li class="plain">
+<a href="http://www.incompleteideas.net/lin-92.pdf">Self-Improving Reactive Agents Based On Reinforcement Learning, Planning and Teaching</a><br>
+Long-ji Lin, 1992<br>
+</li>
+
+  <li class="plain">
+<a href="https://proceedings.neurips.cc/paper_files/paper/1991/file/68ce199ec2c5517597ce0a4d89620f55-Paper.pdf">Practical Issues in Temporal Difference Learning</a><br>
+Gerald Tesauro, 1992<br> 
+</li>
+
+<li class="plain">
+<a href="https://people.cs.umass.edu/~barto/courses/cs687/williams92simple.pdf">Simple Statistical Gradient-Following Algorithms for Connectionist Reinforcement Learning</a><br>
+Ronald J. Williams, 1992<br>
+</li>
+
+  <li class="plain">
+<a href="https://proceedings.neurips.cc/paper_files/paper/1991/file/68ce199ec2c5517597ce0a4d89620f55-Paper.pdf">Average Reward Reinforcement Learning: Foundations, Algorithms, and Empirical Results</a><br>
+Sridhar Mahadevan, 1996<br> 
+</li>
+
+<li class="plain">
+  <a href="https://link.springer.com/article/10.1023/A:1018012322525">Reinforcement Learning with Replacing Eligibility Traces</a><br>
+Satinder P. Singh and Richard S. Sutton, 1996<br> 
+</li>
+
+<li class="plain">
+  <a href="https://citeseerx.ist.psu.edu/document?repid=rep1&amp;type=pdf&amp;doi=db3dd93699cb1c27edfaa430a93c7ab1d8a14275">Elevator Group Control Using Multiple
+    Reinforcement Learning Agents</a><br>
+Robert H. Crites and Andrew G. Barto, 1998<br>
+</li>
+
+<li class="plain">
+<a href="https://pdfs.semanticscholar.org/1a49/99c918c6206cd9804c48f7dce1bac6ec5b4a.pdf">Learning to Trade via Direct Reinforcment</a><br>
+John Moody and Matthew Saffell, 2001<br>
+</li>
+
+  <li class="plain">
+<a href="https://cesa-bianchi.di.unimi.it/Pubblicazioni/ml-02.pdf">Finite-time
+Analysis of the Multiarmed Bandit Problem</a><br>
+Peter Auer,  Nicolò Cesa-Bianchi, and  Paul Fischer, 2002<br>
+</li>
+
+<li class="plain">
+  <a href="https://people.eecs.berkeley.edu/~jordan/papers/ng-etal03.pdf">Autonomous helicopter flight via reinforcement learning</a><br>
+Andrew Y. Ng, H. Jin Kim, Michael I. Jordan, and Shankar Sastry, 2003<br>
+</li>
+
+<li class="plain">
+<a href="http://www.jmlr.org/papers/volume6/ernst05a/ernst05a.pdf">Tree-based Batch Mode Reinforcement Learning</a><br>
+Damien Ernst, Pierre Geurts, and Louis Wehenkel, 2005<br>
+</li>
+
+ <li class="plain">
+<a href="http://www.sztaki.hu/~szcsaba/papers/ecml06.pdf">Bandit based Monte-Carlo Planning</a><br>
+Levente Kocsis and Csaba Szepesvári, 2006<br>
+</li>
+
+  <li class="plain">
+  <a href="http://www.cse.iitb.ac.in/~shivaram/papers/ks_aamas_2007.pdf">Batch Reinforcement Learning
+    in a Complex Domain</a><br>
+Shivaram Kalyanakrishnan and Peter Stone, 2007<br> 
+</li>
+
+  <li class="plain">
+<a href="https://www.cs.mcgill.ca/~jpineau/files/guez-iaai08.pdf">Adaptive Treatment of Epilepsy via Batch-mode Reinforcement Learning</a><br>
+Arthur Guez, Robert D. Vincent, Massimo Avoli, and Joelle Pineau, 2008<br>
+</li>
+
+  <li class="plain">
+<a href="http://users.ece.cmu.edu/~omutlu/pub/rlmc_isca08.pdf">Self-Optimizing Memory Controllers: A Reinforcement Learning Approach</a><br>
+Engin İpek, Onur Mutlu, José F. Martínez, and Rich Caruana, 2008<br>
+</li>
+
+<li class="plain">
+<a href="https://www.ias.informatik.tu-darmstadt.de/uploads/Publications/Publications/Neural-Netw-2008-21-682_4867[0].pdf">Reinforcement learning of motor skills with policy gradients</a><br>
+Jan Peters and Stefan Schaal, 2008<br>
+</li>
+
+  <li class="plain">
+<a href="https://papers.nips.cc/paper/4321-an-empirical-evaluation-of-thompson-sampling.pdf">An Empirical Evaluation of Thompson Sampling</a><br>
+Olivier Chapelle and Lihong Li, 2011<br>
+</li>
+
+  <li class="plain">
+<a href="http://arxiv.org/pdf/1102.2490v5.pdf">The KL-UCB Algorithm for Bounded Stochastic Bandits and Beyond</a><br>
+Aurélien Garivier and Olivier Cappé, 2011<br> 
+</li>
+
+  <li class="plain">
+<a href="https://www.cse.iitb.ac.in/~shivaram/papers/k_diss_2011.pdf">Learning Methods for Sequential Decision Making with Imperfect Representations</a><br>
+Shivaram Kalyanakrishnan, 2011<br> 
+</li>
+
+  <li class="plain">
+  <a href="https://www.cse.iitb.ac.in/~shivaram/papers/umkbs_aamas_2011.pdf">On Optimizing Interdependent Skills: A Case Study in Simulated 3D Humanoid Robot Soccer</a><br>
+  Daniel Urieli, Patrick MacAlpine, Shivaram Kalyanakrishnan, Yinon Bentor, and Peter Stone, 2011<br>
+</li>
+
+  <li class="plain">
+<a href="https://arxiv.org/pdf/1205.4217.pdf">Thompson Sampling: An Asymptotically Optimal Finite-Time Analysis</a><br>
+Emilie Kaufmann, Nathaniel Korda, and Rémi Munos, 2012<br> 
+</li>
+
+  <li class="plain">
+<a href="https://www.nature.com/nature/journal/v518/n7540/pdf/nature14236.pdf">Human-level control through deep reinforcement learning</a><br>
+Volodymyr Mnih, Koray Kavukcuoglu, David Silver, Andrei A. Rusu, Joel
+Veness, Marc G. Bellemare, Alex Graves, Martin Riedmiller, Andreas
+K. Fidjeland, Georg Ostrovski, Stig Petersen, Charles Beattie, Amir
+Sadik, Ioannis Antonoglou, Helen King, Dharshan Kumaran, Daan
+Wierstra, Shane Legg, and Demis Hassabis, 2015<br>
+</li>
+
+<li class="plain">
+<a href="http://www.nature.com/nature/journal/v529/n7587/pdf/nature16961.pdf">Mastering the game of Go with deep neural networks and tree search</a><br>
+David Silver, Aja Huang, Chris J. Maddison, Arthur Guez, Laurent Sifre, George van den Driessche, Julian Schrittwieser, Ioannis Antonoglou, Veda Panneershelvam, Marc Lanctot, Sander Dieleman, Dominik Grewe, John Nham, Nal Kalchbrenner, Ilya Sutskever, Timothy Lillicrap, Madeleine Leach, Koray Kavukcuoglu, Thore Graepel, and Demis Hassabis, 2016<br>
+</li>
+
+<li class="plain">
+<a href="https://www.sciencedirect.com/science/article/pii/S1389934116304749">Spatial interactions and optimal forest management on a fire-threatened landscape</a><br>
+Christopher J. Lauer, Claire A. Montgomery, and Thomas G. Dietterich, 2017<br> 
+</li>
+
+<li class="plain">
+  <a href="https://science.sciencemag.org/content/sci/362/6419/1140.full.pdf">A general reinforcement learning algorithm that masters chess, shogi, and Go through self-play</a><br>
+David Silver, Thomas Hubert, Julian Schrittwieser, Ioannis Antonoglou, Matthew Lai, Arthur Guez, Marc Lanctot, Laurent Sifre, Dharshan Kumaran, Thore Graepel, Timothy Lillicrap, Karen Simonyan, and Demis Hassabis, 2018.<br>
+</li>  
+
+<li class="plain">
+<a href="https://ala2020.vub.ac.be/papers/ALA2020_paper_29.pdf">Optimising a Real-time Scheduler for Railway Lines using Policy Search</a><br>
+Rohit Prasad, Harshad Khadilkar, Shivaram Kalyanakrishnan, 2020<br>
+</li>
+
+<li class="plain">
+<a href="https://arxiv.org/pdf/2002.00444.pdf">Deep Reinforcement Learning for Autonomous Driving: A Survey</a><br>
+B Ravi Kiran, Ibrahim Sobh, Victor Talpaert, Patrick Mannion, Ahmad A. Al Sallab, Senthil Yogamani, Patrick Pérez, 2021<br>
+</li>
+
+
+</ul>
+
+<h3>Communication</h3> 
+
+<p>This page will serve as the primary source of information regarding
+the course, the schedule, and related announcements. The Moodle page
+for the course will primarily be used for recording grades.</p>
+
+<p>E-mail to the instructor must contain "[CS747]" in the header.</p>
+
+<p>Course videos are available through CDEEP; IIT Bombay students are
+  encouraged to log in and watch them
+  through <a href="https://www.cdeep.iitb.ac.in/">this site</a>.</p>
+
+<h3>Schedule</h3> 
+
+<ul>
+
+<li>
+<b><u>Week 0</u></b><br><br>
+Monday, January 6: Welcome; Introduction to the course.<br>
+Lecture 0: <a href="./lectures/cs747s2025-l00.pdf">Slides</a>.<br><br>
+Thursday, January 9: Problem-solving related to probability, algorithms, programming.<br>
+Code: <a href="./resources/bulls-eye.py">bulls-eye.py</a>.<br><br>
+</li>
+
+<li>
+<b><u>Week 1</u></b><br><br>
+Lecture 1: <a href="https://youtu.be/A-PF96udZF4">Video</a>; <a href="./lectures/cs747a2022l01.pdf">Slides</a>.<br>
+Summary: Coin-tossing game; Definition of stochastic multi-armed bandit; Definition of algorithm, ε-first and ε-greedy algorithms.<br>
+Reading: Sections 2, 2.1, 2.2, 2.3, Sutton and Barto (2018).<br>
+Code and data: <a href="./resources/coins.py">coins.py</a>, <a href="./resources/biases.txt">biases.txt</a>, <a href="./resources/eg.py">eg.py</a> (two bugs in the code demo-ed in the lecture are fixed in this version).<br>
+Practice question: Question 1 in <a href="https://www.cse.iitb.ac.in/~shivaram/teaching/old/cs747-a2017/resources/cs747-a2016-midsem.pdf">2016 mid-semester paper</a>.<br><br>
+
+Lecture 2: <a href="https://youtu.be/CJHV0yaVkgs">Video</a>; <a href="./lectures/cs747a2022l02.pdf">Slides</a>.<br>
+Summary: Graph of E[r<sup>t</sup>] versus t; Definition of regret; Achieving sublinear regret with GLIE sampling; Lai and Robbins's lower bound on regret.<br>
+References: <a href="./resources/classnote-1.pdf">Class Note 1</a>; Theorem 1, Lai and Robbins (1985).<br>
+Practice question: Question 1 in <a href="https://www.cse.iitb.ac.in/~shivaram/teaching/old/cs747-a2018/resources/midsem.pdf">2018 mid-semester paper</a>.<br><br>
+</li>
+
+Monday, January 13: Review and tutorial.<br><br>
+Thursday, January 16: <a href="./tests/week-1-test.pdf">Test</a> (graded by Anvay Shah).<br><br>
+
+
+
+<li>
+<b><u>Week 2</u></b><br><br>
+Lecture 1: <a href="https://youtu.be/pVxF2EhNXJQ">Video</a>; <a href="./lectures/cs747a2022l03.pdf">Slides</a>.<br>
+Summary: UCB, KL-UCB, Thompson Sampling algorithms. (Section on concentration bounds in slides not covered in video.)<br>
+Reading: Section 1, Figure 1, Theorem 1, Auer et al. (2002); Sections 1–3, Garivier and Cappé (2011); Chapelle and Li (2011).<br>
+References: Thompson (1933), Kaufmann et al. (2012).<br>
+Practice question: Part a from Week 3 question in <a href="https://www.cse.iitb.ac.in/~shivaram/teaching/old/cs747-a2021/resources/cs747_a2021_quizzes.pdf">2021 weekly quizzes</a>.<br><br>
+
+Lecture 2: <a href="https://youtu.be/zjghW1ZGPEk">Video</a>; <a href="./lectures/cs747a2022l04.pdf">Slides</a>. <b>(See only Section 1 on concentration bounds. Skip the proof of UCB's regret upper bound.)</b><br>
+Summary: Hoeffding's Inequality, "KL" Inequality.<br>
+Reading: <a href="https://en.wikipedia.org/wiki/Hoeffding%27s_inequality">Wikipedia page</a> on Hoeffding's Inequality.<br>
+References: Hoeffding (1963); Mulzer (2019).<br>
+Practice question: Question 1 in <a href="https://www.cse.iitb.ac.in/~shivaram/teaching/old/cs747-a2017/resources/cs747-a2017-midsem.pdf">2017 mid-semester paper</a>.<br><br>
+
+Monday, January 20: Review and tutorial.<br><br>
+Thursday, January 23: <a href="./tests/week-2-test.pdf">Test</a> (graded by Vedang Gupta).<br><br>
+</li>
+
+
+<li>
+<b><u>Week 3</u></b><br><br>
+Lecture 1: <a href="https://youtu.be/zjghW1ZGPEk">Video</a>; <a href="./lectures/cs747a2022l04.pdf">Slides</a>.<br>
+Summary: Proof of upper bound on the regret of UCB. <b>(See only Section 2 on the proof of UCB's regret upper bound.)</b><br>
+Reading: Proof of Theorem 1, Auer et al. (2002).<br><br>
+
+Lecture 2: <a href="https://youtu.be/EGacIqCRw30">Video</a>; <a href="./lectures/cs747a2022l05.pdf">Slides</a>.<br>
+Summary: Interpretation of Thompson Sampling; Survey of bandit formulations.<br>
+Reference: <a href="https://en.wikipedia.org/wiki/Bayesian_inference">Wikipedia page</a> on Bayesian inference.<br>
+Practice question: Week 3 question in <a href="https://www.cse.iitb.ac.in/~shivaram/teaching/old/cs747-a2020/resources/cs747_a2020_quizzes.pdf">2020 weekly quizzes</a>.<br><br>
+
+Monday, January 27: Review and tutorial.<br><br>
+Thursday, January 30: <a href="./tests/week-3-test.pdf">Test</a> (graded by Sarvesh Gharat).<br><br>
+</li>
+
+
+<li>
+<b><u>Week 4</u></b><br><br>
+Lecture 1: <a href="https://youtu.be/0L4IpQU0Rjs">Video</a>; <a href="./lectures/cs747a2022l06.pdf">Slides</a>.<br>
+Summary: Definition of Markov Decision Problem, policy, and value function; Existence of optimal policy; MDP planning problem; Bellman equations.<br>
+Reading: Chapter 3, Sutton and Barto (2018).<br>
+Practice question: Question 3 in <a href="https://www.cse.iitb.ac.in/~shivaram/teaching/old/cs747-a2017/resources/cs747-a2015-midsem.pdf">2015 mid-semester paper</a>.<br><br>
+
+Lecture 2: <a href="https://youtu.be/Lo_GOtL_D-A">Video</a>; <a href="./lectures/cs747a2022l07.pdf">Slides</a>.<br>
+Summary: Continuing and episodic tasks; Infinite-discounted, total,
+finite-horizon, and average reward structures; Applications of MDPs<br>
+References: Section 2.2, Mahadevan (1996); Ng et al. (2003); Lauer et al. (2017).<br>
+Practice question: Question 7 in <a href="https://www.cse.iitb.ac.in/~shivaram/teaching/old/cs747-a2018/resources/endsem.pdf">2018 end-semester paper</a>.<br><br>
+
+Monday, February 3: Review and tutorial.<br>
+Code: <a href="./resources/mdp-simulate.py">mdp-simulate.py</a>.<br><br>
+Thursday, February 6: <a href="./tests/week-4-test.pdf">Test</a> (graded by Sandarbh Yadav).<br><br>
+</li>
+
+<li>
+<b><u>Week 5</u></b><br><br>
+Lecture 1: <a href="https://youtu.be/_zzYiSNKYmg">Video</a>; <a href="./lectures/cs747a2022l08.pdf">Slides</a>.<br>
+Summary: Banach's Fixed-point Theorem; Bellman optimality operator; Proof of contraction under max norm; Value iteration.<br>
+Reading: Appendix A, Szepesvári (2009).<br>
+Practice question: Week 5 question in <a href="https://www.cse.iitb.ac.in/~shivaram/teaching/old/cs747-a2021/resources/cs747_a2021_quizzes.pdf">2021 weekly quizzes</a>.<br><br>
+
+Lecture 2: <a href="https://youtu.be/W5uQ7bUuqQk">Video</a>; <a href="./lectures/cs747a2022l09.pdf">Slides</a>. There is a typo in constraint C2 of the LP example. See Slide 4 in the <a href="https://www.cse.iitb.ac.in/~shivaram/teaching/old/cs747-a2023/lectures/cs747a2023l09.pdf">2023 slides</a> for the correct version.<br>
+Summary: Linear programming and its application to MDP planning.<br>
+Reference: Littman et al. (1995).<br>
+Practice question: Question 4 in <a href="https://www.cse.iitb.ac.in/~shivaram/teaching/old/cs747-a2020/resources/cs747_a2020_end-sem.pdf">2020 end-semester paper</a>.<br><br>
+
+Monday, February 10: Review and tutorial.<br>
+Code: <a href="./resources/vi.py">vi.py</a>.<br><br>
+
+Thursday, February 13: <a href="./tests/week-5-test.pdf">Test</a> (graded by Anvay Shah).<br><br>
+</li>
+
+<li>
+<b><u>Week 6</u></b><br><br>
+Lecture 1: <a href="https://youtu.be/LC2XtpepkC0">Video</a>; <a href="./lectures/cs747a2022l10.pdf">Slides</a>.<br>
+Summary: Action value function; Policy improvement; Bellman operator; Proof of Policy improvement theorem; Policy Iteration family of algorithms; Effect of history and stochasticity.<br>
+Reading: Sections 1 and 2, Kalyanakrishnan et al. (2016).<br>
+Reference:  <a href="./resources/classnote-2.pdf">Class Note 2</a>.<br>
+Practice question: Week 6 question in <a href="https://www.cse.iitb.ac.in/~shivaram/teaching/old/cs747-a2020/resources/cs747_a2020_quizzes.pdf">2020 weekly quizzes</a>.<br>
+
+Lecture 2: <a href="https://youtu.be/HmcM2LBN2JM">Video</a>; <a href="./lectures/cs747a2022l11.pdf">Slides</a>.<br>
+Summary: Complexity bounds for MDP planning; Analysis of Howard's PI and Batch-switching PI.<br>
+References: Howard (1960); Melekopoglou and Condon (1994); Mansour and
+Singh (1999); Hollanders (2012); Hansen et al. (2014); Hollanders et
+al. (2014); Gerencsér et al. (2015) Kalyanakrishnan et
+al. (2016); Kalyanakrishnan et al. (2016a); Gupta and Kalyanakrishnan
+(2017); Taraviya and Kalyanakrishnan (2019); Ashutosh et
+al. (2020).<br><br>
+
+Monday, February 17: Review and tutorial.<br><br>
+Thursday, February 20: <a href="./tests/week-6-test.pdf">Test</a> (graded by Vedang Gupta).<br><br>
+</li>
+
+<li>
+<b><a href="./tests/mid-semester.pdf">Mid-semester examination</a></b><br>
+6.00 p.m.  – 8.00 p.m., Thursday, February 27. LA 001 and LA 002.<br><br>
+</li>
+
+<li>
+<b><u>Week 7</u></b><br><br>
+
+Monday, March 3: Lecture 1 (in class). <a href="./lectures/cs747a2022l12.pdf">Slides</a>.<br>
+Summary: The Reinforcement Learning problem; Upcoming topics; Applications.<br>
+References: Tesauro (1992); Silver et al. (2018); Ng et al. (2003); Mnih et al. (2015); İpek et al. (2008); Guez et al. (2008); Moody and Saffell (2001).<br><br>
+
+Thursday, March 6: Lecture 2 (in class). <a href="./lectures/cs747a2023l13.pdf">Slides</a>.<br>
+Summary: Prediction and control problems; Ergodic MDPs; Model-based algorithm for acting optimally in the limit.<br>
+Reading: <a href="./resources/classnote-3.pdf">Class Note 3</a>.<br>
+Reference: Wikipedia page on <a href="https://en.wikipedia.org/wiki/Markov_chain#Ergodicity">Ergodic Markov chains</a>.<br>
+Practice question: Question 3d in <a href="https://www.cse.iitb.ac.in/~shivaram/teaching/old/cs747-a2017/resources/cs747-a2015-midsem.pdf">2015 mid-semester paper</a>.<br><br>
+</li>
+
+<li>
+<b><u>Week 8</u></b><br><br>
+
+Monday, March 10: Lecture 1 (in class). <a href="./lectures/cs747a2022l14.pdf">Slides</a>.<br>
+Reading: Sections 5, 5.1, Sutton and Barto (2018).<br>
+References: Robbins and Monro (1951), Singh and Sutton (1996).<br>
+Code: <a href="./resources/montecarlo.py">montecarlo.py</a>.<br>
+Practice question: Question 2 in <a href="https://www.cse.iitb.ac.in/~shivaram/teaching/old/cs747-a2017/resources/cs747-a2015-endsem.pdf">2015 end-semester paper</a>.<br><br>
+</li>
+
+Thursday, March 13: <a href="./tests/week-8-test.pdf">Test</a> (graded by Sandarbh Yadav).<br><br>
+
+
+<li>
+<b><u>Week 9</u></b><br><br>
+Lecture 1: <a href="https://www.youtube.com/watch?v=5hSFVmQT0bA">Video</a>; <a href="./lectures/cs747a2022l15.pdf">Slides</a>.<br>
+Summary: Maximum likelihood estimates and least squares estimates;
+Bootstrapping; TD(0) algorithm; Convergence of Monte Carlo and batch
+TD(0) algorithms.<br>
+Reading: Sections 6, 6.1, 6.2, 6.3, Sutton and Barto (2018).<br>
+Practice question: Question 5 in <a href="https://www.cse.iitb.ac.in/~shivaram/teaching/old/cs747-a2020/resources/cs747_a2020_end-sem.pdf">2020 end-semester paper</a>.<br><br>
+
+Lecture 2: <a href="https://youtu.be/j8BVEBS3qHs">Video</a>; <a href="./lectures/cs747a2022l16.pdf">Slides</a>.<br>
+Summary: n-step returns; TD(λ) algorithm; Model-free control: Q-learning, Sarsa, Expected
+Sarsa.<br>
+Reading: 6.4, 6.5, 6.6, 7, 7.1, Sutton and Barto (2018).<br>
+Practice question: Question 1 in <a href="https://www.cse.iitb.ac.in/~shivaram/teaching/old/cs747-a2017/resources/cs747-a2017-endsem.pdf">2017 end-semester paper</a>.<br><br>
+
+Monday, March 17: Review and tutorial.<br><br>
+Thursday, March 20: <a href="./tests/week-9-test.pdf">Test</a> (graded by Sarvesh Gharat).<br><br>
+</li>
+
+<li>
+<b><u>Week 10</u></b><br><br>
+Lecture 1: <a href="https://youtu.be/FpfMO3kqAtU">Video</a>; <a href="./lectures/cs747a2022l17.pdf">Slides</a>.<br>
+Summary: Need for generalisation in practice; Soccer as illustrative example; Linear function approximation and geometric view; Linear TD(λ).<br>
+Reading: Sections 9, 9.1, 9.2, 9.3, 9.4, 12, 12.1, 12.2,
+Sutton and Barto (2018).<br>
+References: Tsitsiklis and Van Roy (1997), Kalyanakrishnan et al. (2007).<br>
+Practice question: Question 6 in <a href="https://www.cse.iitb.ac.in/~shivaram/teaching/old/cs747-a2017/resources/cs747-a2015-endsem.pdf">2015 end-semester paper</a>.<br><br>
+
+Lecture 2: <a href="https://youtu.be/PYFvYVQFVok">Video</a>; <a href="./lectures/cs747a2022l18.pdf">Slides</a>.<br>
+Summary: Tile coding; Control with function approximation; Tsitsiklis and Van Roy's counterexample.<br>
+Reading: 9.5, 9.6, 9.7, 11, 11.1, 11.2, 11.3, Sutton and Barto (2018).<br>
+Practice question: Question 3 in <a href="https://www.cse.iitb.ac.in/~shivaram/teaching/old/cs747-a2019/resources/endsem.pdf">2019 end-semester paper</a>.<br><br>
+
+Monday, March 24: Review and tutorial.<br>
+Reference: Crites and Barto (1998).<br><br>
+Thursday, March 27: <a href="./tests/week-10-test.pdf">Test</a> (graded by Anvay Shah).<br><br>
+</li>
+
+
+<li>
+<b><u>Week 11</u></b><br><br>
+Lecture 1: <a href="https://youtu.be/hzLQ4mMjS-8">Video</a>; <a href="./lectures/cs747a2022l19.pdf">Slides</a>.<br>
+Summary: Policy search; Case studies: humanoid robot soccer, railway scheduling.<br>
+References: Urieli et al. (2011), Prasad et al. (2020).<br>
+Practice question: Week 10 question in <a href="https://www.cse.iitb.ac.in/~shivaram/teaching/old/cs747-a2021/resources/cs747_a2021_quizzes.pdf">2021 weekly quizzes</a>.<br><br>
+
+Lecture 2: <a href="https://youtu.be/-OF_6L3-NcY">Video</a>; <a href="./lectures/cs747a2022l20.pdf">Slides</a>.<br>
+Summary: Policy gradient methods; Policy gradient theorem; REINFORCE; REINFORCE with a baseline; Actor-critic methods.<br>
+Reading: Sections 13, 13.1, 13.2, 13.3, 13.4, 13.5, Sutton and Barto (2018).<br>
+References: Williams (1992), Moody and Saffell (2001), Peters and Schaal (2008), Silver et al. (2016), Ravi Kiran et al. (2021).<br>
+Practice question: Question 6 in <a href="https://www.cse.iitb.ac.in/~shivaram/teaching/old/cs747-a2020/resources/cs747_a2020_end-sem.pdf">2020 end-semester paper</a>.<br><br>
+
+Monday, March 31: Holiday; no class.<br><br>
+Thursday, April 3: Review and tutorial.<br>
+Reference: Chapter 4, Kalyanakrishnan (2011).<br><br>
+Monday, April 7: <a href="./tests/week-11-test.pdf">Test</a> (graded by Sandarbh Yadav).<br><br>
+Thursday, March 10: Holiday; no class.<br><br>
+</li>
+
+
+<li>
+<b><u>Week 12</u></b><br><br>
+Lecture 1: <a href="https://youtu.be/m1_edr5hjHY">Video</a>; <a href="./lectures/cs747a2022l21.pdf">Slides</a>.<br>
+Summary: Batch RL; Experience replay; Fitted Q Iteration.<br>
+Reading: Kalyanakrishnan and Stone (2007).<br>
+References: Lin (1992), Ernst et al. (2005).<br>
+Practice question: Week 12 question in <a href="https://www.cse.iitb.ac.in/~shivaram/teaching/old/cs747-a2020/resources/cs747_a2020_quizzes.pdf">2020 weekly quizzes</a>.<br><br>
+
+Lecture 2: <a href="https://youtu.be/zeT9ZU-qqDY">Video</a>; <a href="./lectures/cs747a2022l22.pdf">Slides</a>.<br>
+Summary: Dyna-Q; Application of model-based RL to helicopter control.<br> 
+Reading: Sections 8, 8.1, 8.2, 8.3, 8.4, Sutton and Barto (2018); Ng et al. (2003).<br>
+Practice question: Week 4 question in <a href="https://www.cse.iitb.ac.in/~shivaram/teaching/old/cs748-s2021/resources/cs748_s2021_quizzes.pdf">CS 748 2021 weekly quizzes</a>.<br><br>
+
+Lecture 3: <a href="https://youtu.be/2Wo7z22PyMI">Video</a>; <a href="./lectures/cs747a2022l25.pdf">Slides</a>.<br>
+Summary: Game trees, Decision-time planning.<br>
+Reading:  Sections 8, 8.1, 8.8, 8.9, 8.10, 8.11, Sutton and Barto (2018).<br>
+References: Samuel (1959);  Kocsis and Szepesvári (2006).<br>
+Practice question: Question 4 in <a href="https://www.cse.iitb.ac.in/~shivaram/teaching/old/cs747-a2023/resources/cs747a2023-end-semester.pdf">2023 end-semester paper</a>.<br><br>
+
+Monday, April 14: Holiday; no class.<br><br>
+Thursday, April 17: <a href="./tests/week-12-test.pdf">Test</a> (graded by Vedang Gupta). <br><br>
+</li>
+
+<li>
+<b><a href="./tests/end-semester.pdf">End-semester examination</a></b><br>
+9.00 a.m. – 12.00 p.m., Thursday, April 24. LA 001 and LT 004.<br><br>
+</li>
+
+<li>
+<b>Make-up test</b><br>
+9.00 a.m. – 12.00 p.m., Friday, May 2. CC 220.<br><br>
+</li>
+
+</ul>
+
+
+<h3>Assignments</h3>
+
+<ul class="plain">
+    <li> <a href="./undertaking/cs747s2025-undertaking.pdf">Undertaking</a>, due 11.59 p.m. Sunday, January 19.</li>
+    <li> <a href="./pa-1/pa1.html">Programming Assignment 1</a>, due 11.59 p.m. Tuesday, February 18.</li>
+    <li> <a href="./pa-2/pa2.html">Programming Assignment 2</a>, due 11.59 p.m. Tuesday, March 18.</li>
+    <li> <a href="./pa-3/pa3.html">Programming Assignment 3</a>, due 11.59 p.m. Sunday, Aptil 13.</li>
+</ul>
+
+<hr>
+<hr>
+
+
+
+</body></html>

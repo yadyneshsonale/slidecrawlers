@@ -1,0 +1,406 @@
+<!DOCTYPE html><html><head>
+  <title> OS &amp; Networking</title>
+  <meta http-equiv="content-type" content="text/html">
+  <link rel="stylesheet" type="text/css" href="style/style.css" title="style">
+
+  <style>
+    span.code{
+      background-color: rgb(231, 231, 231);
+      font-family: "Courier New",Courier,monospace;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="main">
+    <div id="header">
+      <div id="logo">
+        <div id="logo_text">
+          <h1><span class="logo_colour"> Operating Systems and Networks</span></h1>
+          <h2>	Spring Semester 2016</h2>
+        </div>
+      </div>
+      <div id="menubar">
+        <ul id="menu">
+          <li><a href="#about">About</a></li>
+          <li><a href="#details">Schedules</a></li>
+          <li><a href="#assignments">Assignments</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#resources">Resources</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="site_content">
+      <div class="sidebar">
+
+<h5>March 3rd, '16</h5>
+<span class="news">New slides available (Synchronization)</span>
+<h5>March 2nd, '16</h5>
+<span class="news">Updated Git Tutorial, new slides available (Scheduling)</span>
+<h5>Feb 23rd, '16</h5>
+<span class="news">Website updated.</span>
+
+
+</div>
+
+<div id="about">
+  <h3>Instructors</h3>
+		  <table>
+			  <tbody><tr>
+				  <td><img src="./img/torsten.jpg" height="180" width="155" alt="Torsten"></td>
+				  <td><img src="./img/perrig.jpg" height="180" width="145" alt="Adrian"></td>
+			  </tr>
+			  <tr>
+				  <td>Torsten Hoefler</td>
+				  <td>Adrian Perrig</td>
+			  </tr>
+		  </tbody></table>
+
+
+<h3>About this course</h3>
+This course is intended as an introduction to both computer networking
+and operating systems for computer scientists. Students will get a
+comprehensive overview of the key protocols and the general
+architecture of the Internet, as one example of more general principles in
+network design, and acquire hands-on experience in programming
+different aspects of a computer network. In addition, the course
+provides a full introduction to modern operating system design, including
+memory management, scheduling, I/O, protection, and so on. The
+architecture of Unix-like operating systems (such as Linux) is used as
+an example of more general principles in OS design.
+
+
+
+<h3>Basic Course Information</h3>
+<ul>
+<li>Course Number: 252-0062-00L, 8 Credits</li>
+<li>Spring 2016, <b>Lectures</b>: <br>
+  Thu (08-10): CAB G 61 <br>
+  Fri (10-12): CAB G 61 <br>
+<a href="http://www.vvz.ethz.ch/Vorlesungsverzeichnis/lerneinheitPre.do?semkez=2016S&amp;lang=en&amp;ansicht=KATALOGDATEN&amp;lerneinheitId=105030">Course Details</a>
+</li>
+<li> <b>Exercise sessions</b>: <br>
+  Tue (15-18): HG D 3.1 (Chris/Taeho), HG D 3.3 (Raphael; in German if desired)<br>
+  Thu (15-18): ML H 41.1 (David) <br>
+  Fri (13-16): CAB G 57 (David), CHN D 42 (Raphael; in German if desired)
+</li>
+</ul>
+
+
+<h3>Tentative schedule of lectures:</h3>
+    a
+    <table>
+  <tbody><tr>
+    <th>Week</th>
+    <th>Thursday</th>
+    <th>Friday</th>
+  </tr>
+
+  <tr>
+    <td colspan="3" style="text-align: center; background-color: gray; color: white; font-weight: bold;"> Operating Systems </td>
+  </tr>
+
+  <tr>
+    <td>0</td>
+    <td>25.02.: OS Introduction <a href="lectures/os_1_1s.pdf">(slides_1pp)</a> <a href="lectures/os_1_6s.pdf">(slides_6pp)</a></td>
+    <td>26.02.: Processes  <a href="lectures/os_2_1s.pdf">(slides_1pp)</a> <a href="lectures/os_2_6s.pdf">(slides_6pp)</a> </td>
+  </tr>
+
+  <tr>
+    <td>1</td>
+    <td>03.03.: Scheduling <a href="lectures/os_3_1s.pdf">(slides_1pp)</a> <a href="lectures/os_3_6s.pdf">(slides_6pp)</a></td>
+    <td>04.03.: Synchronization <a href="lectures/os_4_1s.pdf">(slides_1pp)</a> <a href="lectures/os_4_6s.pdf">(slides_6pp)</a></td>
+  </tr>
+
+  <tr>
+    <td>2</td>
+    <td>10.03.: Memory Management <a href="lectures/os_5_1s.pdf">(slides_1pp)</a> <a href="lectures/os_5_6s.pdf">(slides_6pp)</a></td>
+    <td>11.03.: Demand Paging <a href="lectures/os_6_1s.pdf">(slides 1pp)</a> <a href="lectures/os_6_6s.pdf">(slides 6pp)</a></td>
+  </tr>
+
+  <tr>
+    <td>3</td>
+    <td>17.03.: Filesystem Abstractions <a href="lectures/os_7_1s.pdf">(slides_1pp)</a> <a href="lectures/os_7_6s.pdf">(slides_6pp)</a></td>
+    <td>18.03.: Filesystem Implementation <a href="lectures/os_8_1s.pdf">(slides_1pp)</a> <a href="lectures/os_8_6s.pdf">(slides_6pp)</a></td>
+  </tr>
+
+  <tr>
+    <td>4</td>
+    <td>07.04.: IO <a href="lectures/os_9_1s.pdf">(slides_1pp)</a> <a href="lectures/os_9_6s.pdf">(slides_6pp)</a></td>
+    <td>08.04.: IO (2) <a href="lectures/os_10_1s.pdf">(slides_1pp)</a> <a href="lectures/os_10_6s.pdf">(slides_6pp)</a></td>
+  </tr>
+
+  <tr>
+    <td>5</td>
+    <td>14.04.: Virtual Machine Monitors <a href="lectures/os_11_1s.pdf">(slides_1pp)</a> <a href="lectures/os_11_6s.pdf">(slides_6pp)</a></td>
+    <td>15.04.: Reliable Storage, NUMA &amp; The Future <a href="lectures/os_12_1s.pdf">(slides_1pp)</a> <a href="lectures/os_12_6s.pdf">(slides_6pp)</a></td>
+  </tr>
+
+  <tr>
+    <td colspan="3" style="text-align: center; background-color: gray; color: white; font-weight: bold;"> Networking </td>
+  </tr>
+
+
+  <tr>
+    <td>6</td>
+    <td>21.04.: Network Introduction, OSI model<br>
+      <a href="lectures/net_1_1s.pdf">(slides_1pp)</a>
+      <a href="lectures/net_1_6s.pdf">(slides_6pp)</a>
+    </td>
+    <td>22.04.: Physical layer<br>
+      <a href="lectures/net_2_1s.pdf">(slides_1pp)</a>
+      <a href="lectures/net_2_6s.pdf">(slides_6pp)</a>
+    </td>
+  </tr>
+
+  <tr>
+    <td>7</td>
+    <td>28.04.: Data Link Layer 1 <br>
+      <a href="lectures/net_3_1s.pdf">(slides_1pp)</a>
+      <a href="lectures/net_3_6s.pdf">(slides_6pp)</a>
+    </td>
+    <td>29.04.: Data Link Layer 2 <br>
+      <a href="lectures/net_4_1s.pdf">(slides_1pp)</a>
+      <a href="lectures/net_4_6s.pdf">(slides_6pp)</a>
+    </td>
+  </tr>
+
+  <tr>
+    <td>8</td>
+    <td>05.05.: <p style="color: gray; display: inline;">no class</p> </td>
+    <td>06.05.: Data Link Layer (contd.) <br>
+    </td>
+  </tr>
+
+  <tr>
+    <td>9</td>
+    <td>12.05: Network Layer 1 <br>
+      <a href="lectures/net_5_1s.pdf">(slides_1pp)</a>
+      <a href="lectures/net_5_6s.pdf">(slides_6pp)</a>
+    </td>
+    <td>13.05: Network Layer 1 (contd.)
+    </td>
+  </tr>
+
+  <tr>
+    <td>10</td>
+    <td>19.05: Network Layer 2<br>
+        <a href="lectures/net_6_1s.pdf">(slides_1pp)</a>
+        <a href="lectures/net_6_6s.pdf">(slides_6pp)</a>
+    </td>
+    <td>20.05: Network Layer 2 (contd.)
+    </td>
+  </tr>
+
+  <tr>
+    <td>11</td><td>26.05: Transport Layer <br>
+        <a href="lectures/net_7_1s.pdf">(slides_1pp)</a>
+        <a href="lectures/net_7_6s.pdf">(slides_6pp)</a>
+        <a href="lectures/tcp_sum_1s.pdf">(TCP summary_1pp)</a><br>
+        <a href="lectures/tcp_sum_6s.pdf">(TCP summary_6pp)</a>
+    </td>
+    <td>27.05: Congestion Control <br>
+        <a href="lectures/net_8_1s.pdf">(slides_1pp)</a>
+        <a href="lectures/net_8_6s.pdf">(slides_6pp)</a>
+    </td>
+  </tr>
+
+  <tr>
+    <td>12</td>
+    <td>02.06: Application Layer<br>
+        <a href="lectures/net_12_1s.pdf">(slides_1pp)</a>
+        <a href="lectures/net_12_6s.pdf">(slides_6pp)</a>
+    </td>
+    <td>03.06: Application Layer (contd.) <br>
+    </td>
+  </tr>
+
+
+
+
+
+</tbody></table>
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="assignments">
+	<h3>Assignments</h3>
+<table>
+<tbody>
+
+<tr>
+  <th>Ass.</th>
+  <th>Out</th>
+  <th>Description</th>
+  <th>Solutions</th>
+</tr>
+
+  <tr>
+    <td colspan="4" style="text-align: center; background-color: gray; color: white; font-weight: bold;"> Operating Systems </td>
+  </tr>
+<tr>
+ <td><a href="assignments/assignment1.pdf">Assignment 1</a></td>
+ <td>1.3.2016</td>
+ <td>Introduction and Fork </td>
+ <td><a href="assignments/solution1.tgz">Solution</a></td>
+</tr>
+<tr>
+ <td><a href="assignments/assignment2.pdf">Assignment 2</a> <a href="assignments/threads.h.skeleton">thread.h.skeleton</a>, <a href="assignments/main.c">thread-main.c</a></td>
+ <td>7.3.2016</td>
+ <td>Scheduling</td>
+ <td><a href="assignments/solution2.tgz">Solution</a></td>
+</tr>
+<tr>
+ <td><a href="assignments/assignment3.pdf">Assignment 3</a></td>
+ <td>15.3.2016</td>
+ <td>Memory Management</td>
+ <td><a href="assignments/solution3.tgz">Solution</a></td>
+</tr>
+<tr>
+ <td><a href="assignments/assignment4.pdf">Assignment 4</a></td>
+ <td>22.3.2016</td>
+ <td>Paging / Thrashing</td>
+ <td><a href="assignments/solution4.pdf">Solution</a></td>
+</tr>
+<tr>
+ <td><a href="assignments/assignment5.pdf">Assignment 5</a></td>
+ <td>12.4.2016</td>
+ <td>File Systems</td>
+ <td><a href="assignments/solution5.tgz">Solution</a></td>
+</tr>
+  <tr>
+    <td colspan="4" style="text-align: center; background-color: gray; color: white; font-weight: bold;"> Networking </td>
+  </tr>
+<tr>
+ <td><a href="assignments/assignment06.pdf">Assignment 6</a> / Project 1</td>
+ <td>28.4.2016</td>
+ <td></td>
+ <td><a href="assignments/solution06.pdf">Solution</a></td>
+</tr>
+<tr>
+ <td><a href="assignments/assignment07.pdf">Assignment 7</a></td>
+ <td>4.5.2016</td>
+ <td></td>
+ <td><a href="assignments/solution07.pdf">Solution</a></td>
+</tr>
+<tr>
+ <td><a href="assignments/assignment08.pdf">Assignment 8</a></td>
+ <td>12.5.2016</td>
+ <td></td>
+ <td><a href="assignments/solution08.pdf">Solution</a></td>
+</tr>
+<tr>
+ <td><a href="assignments/assignment09.pdf">Assignment 9</a> (updated 24.05.2016)</td>
+ <td>19.5.2016</td>
+ <td></td>
+ <td><a href="assignments/solution09.pdf">Solution</a></td>
+</tr>
+<tr>
+ <td><a href="assignments/assignment10.pdf">Assignment 10</a></td>
+ <td>27.5.2016</td>
+ <td></td>
+ <td><a href="assignments/solution10.pdf">Solution</a></td>
+</tr>
+<tr>
+ <td><a href="assignments/assignment11.pdf">Assignment 11</a></td>
+ <td>31.5.2016</td>
+ <td></td>
+ <td><a href="assignments/solution11.pdf">Solution</a></td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>Note: </strong> The assignments must be handed in using Git (if you want to receive feedback). Create a new folder for each assignment. This <a href="git.html">tutorial</a> explains how the hand-in procedure works in detail.</p>
+<p>Sometimes, some of the TAs use slides in the recitation sessions. Ercan puts his slides <a href="https://people.inf.ethz.ch/eucan/teaching/osnet16/">here</a>.</p>
+</div>
+
+
+<div id="projects">
+	<h3>Projects</h3>
+<table>
+<tbody>
+
+<tr>
+  <th>Project</th>
+  <th>Out</th>
+  <th>Description</th>
+  <th>Source</th>
+  <th>Slides</th>
+</tr>
+
+<tr>
+ <td><a href="projects/project1.pdf">Project1</a></td>
+ <td>22. 4. 2016</td>
+ <td>Reliable Transport</td>
+ <td><a href="projects/project1.tar.gz">src</a></td>
+ <td><a href="projects/project1_pres.pdf">Slides</a></td>
+</tr>
+<tr>
+ <td><a href="projects/project2.pdf">Project2</a></td>
+ <td>30. 05. 2016</td>
+ <td>Dynamic Routing</td>
+ <td><a href="projects/project2_handout.tar.gz">src</a></td>
+ <td><a href="projects/project2-1.pdf">Slides</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+
+<div id="resources">
+<h3>Resources:</h3>
+		  <table>
+			  <tbody><tr>
+				  <td><img src="./img/os.jpg" height="180" width="150" alt="OS"></td>
+				  <td><img src="./img/net.jpg" height="180" width="150" alt="Networking"></td>
+			  </tr>
+		  </tbody></table>
+</div>
+
+
+<div id="contact">
+	<h3>Contact Information</h3>
+<table>
+	<tbody><tr>
+		<td><b>Lecturer</b></td><td><b>Email</b></td>
+	</tr>
+		<tr>
+		<td>Torsten Hoefler</td><td>htor at inf, CAB F 75</td>
+	</tr>
+		<tr>
+		<td>Adrian Perrig</td><td> adrian.perrig at inf, CAB F 85.1</td>
+	</tr>
+		<tr>
+		<td><b>TA</b></td><td><b>Email</b></td>
+	</tr>
+		<tr> <td>Timo Schneider</td><td>timos at inf.ethz.ch</td></tr>
+		<tr> <td>Salvatore Di Girolamo</td><td>salvatore.digirolamo at inf.ethz.ch</td></tr>
+        <tr> <td>Ercan Ucan</td><td>ercan.ucan at inf.ethz.ch</td></tr>
+	
+</tbody></table>
+<!-- <h4>Please subscribe to the mailing list <a href="https://spcl.inf.ethz.ch/cgi-bin/mailman/listinfo/osnet15">here</a></h4> -->
+</div>
+    </div>
+
+<div id="git-tut">
+    <h3>Git tutorial <a href="git.html">here</a></h3>
+</div>
+    <div id="footer">
+      <a href="http://spcl.inf.ethz.ch/">SPCL</a>|<a href="http://www.netsec.ethz.ch/about/index">Network Security</a>
+    </div>
+  </div>
+
+
+</div></body></html>

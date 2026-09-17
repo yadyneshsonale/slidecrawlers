@@ -1,0 +1,52 @@
+[
+{
+"url": "https://davidstarsilver.wordpress.com/teaching",
+"title": "Teaching \u2013 David Silver",
+"description": "# Teaching. Advanced Topics\u00a0 2015 (COMPM050/COMPGI13). Lecture 1:\u00a0Introduction to Reinforcement Learning. Lecture 2:\u00a0Markov Decision Processes. Lecture 3:\u00a0Planning by Dynamic Programming. Lecture 4:\u00a0Model-Free Prediction. Lecture 5:\u00a0Model-Free Control. Lecture 6:\u00a0Value Function Approximation. Lecture 7:\u00a0Policy Gradient Methods. Lecture 8:\u00a0Integrating Learning and Planning. Lecture 9:\u00a0Exploration and Exploitation. Lecture 10:\u00a0Case Study: RL in Classic Games. Previous RL exam\u00a0questions\u00a0and\u00a0answers. All of the above material is made available under CC-BY-NC 4.0. Some content comes from third parties and is not included in the license."
+},
+{
+"url": "https://web.stanford.edu/class/cs234/modules.html",
+"title": "CS234: Reinforcement Learning Winter 2026",
+"description": "# CS234: Reinforcement Learning Winter 2026. # Lecture Materials. | Introduction to Reinforcement Learning | 1. Lecture 1 Draft Slides  2. Additional Materials:  * High level introduction: SB (Sutton and Barto) Chp 1* Linear Algebra Review   * Probability Review   * Python Tutorial | |. Lecture 2 Slides (pre-class)  2. Additional Materials:  * SB (Sutton and Barto) Chp 3, 4.1-4.4 | |. | Tabular RL policy evaluation |  | 1. Lecture 4 Slides (preclass)  (post class with annotations) 2. <| Imitation Learning and Learning from Human Input and Batch RL |  | 1. Additional Materials:  * Bandit Algorithms Book Section 7.1 || Ethics and Society Guest Lecture |  | 1. Lecture 10 Part Guest Slides (see latter half of slides)- Lecture 14 Guest Slides Part 2 |  Monte Carlo Tree Search and Conquering Go |  | 1. Lecture 13 Draft slides  - Lecture 14 Draft slides    | | RL Guest Lecture |  | 1. Shane Gu: World of World Modeling | |."
+},
+{
+"url": "https://www.youtube.com/watch?v=TCCjZe0y4Qc",
+"title": "DeepMind x UCL RL Lecture Series - YouTube",
+"description": "Research Scientist Hado van Hasselt introduces the reinforcement learning course and explains how reinforcement learning relates to AI. Slides"
+},
+{
+"url": "https://www.reddit.com/r/MachineLearning/comments/lqrek7/n_20_hours_of_new_lectures_on_deep_learning_and",
+"title": "[N] 20 hours of new lectures on Deep Learning and Reinforcement ...",
+"description": "# [N] 20 hours of new lectures on Deep Learning and Reinforcement Learning with lots of examples : r/MachineLearning. Skip to main content[N] 20 hours of new lectures on Deep Learning and Reinforcement Learning with lots of examples : r/MachineLearning. # [N] 20 hours of new lectures on Deep Learning and Reinforcement Learning with lots of examples. If anyone's interested in a Deep Learning and Reinforcement Learning series, I uploaded 20 hours of lectures on YouTube yesterday. Compared to other lectures, I think this gives quite a broad/compact overview of the fields with lots of minimal examples to build on. *   Lecture 10: Meta and manifold learning. What are the prereqs for learning reinforcement learning? 2.   Not for the main theory behind the fundamental RL algorithms, but when you start trying to scale up the methods with function approximators, it's useful to have had some practice in building DL models, especially CNNs & RNNs. Image 8: u/zeec123 avatar."
+},
+{
+"url": "https://www.cs.ubc.ca/~lsigal/532L/Lecture12b.pdf",
+"title": "[PDF] Lecture 12: Deep Reinforcement Learning - UBC Computer Science",
+"description": "Model \u2014 Agent\u2019s representation of the environment * slide from Dhruv Batra Approaches to RL: Taxonomy Value-based RL \u2014 Estimate the optimal action-value function \u2014 No policy (implicit) Policy-based RL \u2014 Search directly for the optima policy \u2014 No value function Model-based RL \u2014 Build a model of the world \u2014 Plan (e.g., by look-ahead) using model Q\u21e4(s, a) \u21e1\u21e4 Model-free RL * slide from Dhruv Batra Approaches to RL: Taxonomy Value-based RL \u2014 Estimate the optimal action-value function \u2014 No policy (implicit) Policy-based RL \u2014 Search directly for the optima policy \u2014 No value function Model-based RL \u2014 Build a model of the world \u2014 Plan (e.g., by look-ahead) using model Q\u21e4(s, a) \u21e1\u21e4 Actor-critic RL \u2014 Value function \u2014 Policy function Model-free RL * slide from Dhruv Batra Deep RL Value-based RL \u2014 Use neural nets to represent Q function Policy-based RL \u2014 Use neural nets to represent the policy Model-based RL \u2014 Use neural nets to represent and learn the model * slide from Dhruv Batra Approaches to RL Value-based RL \u2014 Estimate the optimal action-value function \u2014 No policy (implicit) Q\u21e4(s, a) * slide from Dhruv Batra Optimal Value Function Optimal Q-function is the maximum achievable value * slide from David Silver Optimal Value Function Optimal Q-function is the maximum achievable value Once we have it, we can act optimally * slide from David Silver Optimal Value Function Optimal Q-function is the maximum achievable value Once we have it, we can act optimally Optimal value maximizes over all future decisions * slide from David Silver Optimal Value Function Optimal Q-function is the maximum achievable value Once we have it, we can act optimally Optimal value maximizes over all future decisions Formally, Q* satis\ufb01ed Bellman Equations * slide from David Silver Solving for the Optimal Policy Value iteration algorithm: Use Bellman equation as an iterative update Qi will converge to Q* as i -> infinity * slide"
+},
+{
+"url": "https://rlseminar.github.io/resource.html",
+"title": "Resources - RL Seminar",
+"description": "* CSE 691 Reinforcement Learning and Optimal Control Winter 2019 at ASU by Dimitri P. > Deep reinforcement learning is the combination of reinforcement learning (RL) and deep learning. Thus, deep RL opens up many new applications in domains such as healthcare, robotics, smart grids, finance, and many more. Bellemare and Joelle Pineau (2018), \u201cAn Introduction to Deep Reinforcement Learning\u201d, in Foundations and Trends in Machine Learning: Vol. 11, No. 3-4. Another recent survey Deep Reinforcement Learning by Yuxi Li Under review for Morgan & Claypool: Synthesis Lectures in Artificial Intelligence and Machine Learning draw a comprehensive blueprint on modern (Deep) Reinforcement Learning. * Reinforcement Learning and Optimal Control by the Awesome Dimitri P. * Advanced Deep Learning and Reinforcement Learning at UCL(2018 Spring) taught by DeepMind\u2019s Research Scientists. * Infer to Control: Workshop on Probabilistic Reinforcement Learning and Structured Control at NeurIPS 2018. * Deep Reinforcement Learning Workshop at NeurIPS 2018. * Workshop on Causal Learning at NeurIPS 2018."
+},
+{
+"url": "https://www.cs.ox.ac.uk/people/nando.defreitas/machinelearning",
+"title": "Machine Learning",
+"description": "University of Oxford Department of Computer Science. ## Machine Learning:\u00a02014-2015. ## Course materials. ## Lectures. ## Practicals. Please click on Timetables on the right hand side of this page for time and location of the practicals. The instructors are Brendan Shillingford and Marcin Moczulsky. Practicals will use Torch, a powerful programming framework for deep learning that is very popular at Google and Facebook research. ## Classes. Please click on Timetables on the right hand side of this page for time and location of the classes. The exercises appear below and are due Thursdays at 1pm on the specified week. ## Student Space. /people/nando.defreitas/machinelearning/index.html."
+},
+{
+"url": "https://github.com/zyxue/youtube_RL_course_by_David_Silver",
+"title": "zyxue/youtube_RL_course_by_David_Silver: Collection of Slides for ...",
+"description": "## Navigation Menu. # Provide feedback. We read every piece of feedback, and take your input very seriously. # Saved searches. ## Use saved searches to filter your results more quickly. # zyxue/youtube\\_RL\\_course\\_by\\_David\\_Silver. ## Folders and files. | Name | | Name | Last commit message | Last commit date |. | Latest commit   History4 Commits   4 Commits | | |. | L1-intro\\_RL.pdf | | L1-intro\\_RL.pdf |  |  |. | L10-games.pdf | | L10-games.pdf |  |  |. | L2-MDP.pdf | | L2-MDP.pdf |  |  |. | L3-dynamic-programming.pdf | | L3-dynamic-programming.pdf |  |  |. | L4-model-free-prediction.pdf | | L4-model-free-prediction.pdf |  |  |. | L5-model-free-control.pdf | | L5-model-free-control.pdf |  |  |. | L6-value-function-approximation.pdf | | L6-value-function-approximation.pdf |  |  |. | L7-policy-gradient-methods.pdf | | L7-policy-gradient-methods.pdf |  |  |. | L8-integrating-learning-and-planning.pdf | | L8-integrating-learning-and-planning.pdf |  |  |. | L9-exploration-and-exploitation.pdf | | L9-exploration-and-exploitation.pdf |  |  |. ## Latest commit. ## Footer. ## Repository files navigation. Collection of Slides for David Silver's Reinforcement Learning Course on Youtube. ### Footer navigation."
+},
+{
+"url": "https://www.youtube.com/watch?v=WsvFL-LjA6U",
+"title": "Stanford CS234 Reinforcement Learning I Introduction to Reinforcement Learning I 2024 I Lecture 1",
+"description": "Stanford CS234 Reinforcement Learning I Introduction to Reinforcement Learning I 2024 I Lecture 1\nStanford Online\n1150000 subscribers\n2238 likes\n160353 views\n30 Oct 2024\nFor more information about Stanford's Artificial Intelligence programs visit: https://stanford.io/ai\n\nTo follow along with the course, visit the course website: \nhttps://web.stanford.edu/class/cs234/\n\nEmma Brunskill\nAssociate Professor of Computer Science at Stanford University\nhttps://cs.stanford.edu/people/ebrun/\n\nLearn more about the course and how to enroll: https://online.stanford.edu/courses/cs234-reinforcement-learning\n\nTo view all online courses and programs offered by Stanford, visit: http://online.stanford.edu\n49 comments\n"
+},
+{
+"url": "https://www.youtube.com/watch?v=EvHRQhMX7_w",
+"title": "Stanford CS224R Deep Reinforcement Learning | Spring 2025",
+"description": "To learn more about enrolling in the graduate course, visit: https://online.stanford.edu/courses/cs224r-deep-reinforcement-learning April 2,"
+}
+]

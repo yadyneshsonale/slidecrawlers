@@ -1,0 +1,807 @@
+<!DOCTYPE html><html dir="ltr" lang="en" xml:lang="en" class="yui3-js-enabled"><head>
+    <title>Course categories | Mathematical Institute</title>
+    <link rel="shortcut icon" href="https://courses.maths.ox.ac.uk/theme/image.php/boost/theme/1780950349/favicon">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="keywords" content="moodle, Course categories | Mathematical Institute">
+<link rel="stylesheet" type="text/css" href="https://courses.maths.ox.ac.uk/theme/yui_combo.php?rollup/3.18.1/yui-moodlesimple-min.css"><script charset="utf-8" id="yui_3_18_1_1_1781516741937_8" src="https://courses.maths.ox.ac.uk/theme/yui_combo.php?m/1780950349/course/categoryexpander/categoryexpander-min.js" async=""></script><script id="firstthemesheet" type="text/css">/** Required in order to fix style inclusion problems in IE with YUI **/</script><link rel="stylesheet" type="text/css" href="https://courses.maths.ox.ac.uk/theme/styles.php/boost/1780950349_1/all">
+<script>
+//<![CDATA[
+var M = {}; M.yui = {};
+M.pageloadstarttime = new Date();
+M.cfg = {"wwwroot":"https:\/\/courses.maths.ox.ac.uk","apibase":"https:\/\/courses.maths.ox.ac.uk\/r.php\/api","homeurl":{},"sesskey":"jgcDY2fFK9","sessiontimeout":"604800","sessiontimeoutwarning":"1200","themerev":"1780950349","slasharguments":1,"theme":"boost","iconsystemmodule":"core\/icon_system_fontawesome","jsrev":"1780950349","admin":"admin","svgicons":true,"usertimezone":"Europe\/London","language":"en","courseId":1,"courseContextId":2,"contextid":1,"contextInstanceId":0,"langrev":1780950349,"templaterev":"1780950349","siteId":1,"userId":1};var yui1ConfigFn = function(me) {if(/-skin|reset|fonts|grids|base/.test(me.name)){me.type='css';me.path=me.path.replace(/\.js/,'.css');me.path=me.path.replace(/\/yui2-skin/,'/assets/skins/sam/yui2-skin')}};
+var yui2ConfigFn = function(me) {var parts=me.name.replace(/^moodle-/,'').split('-'),component=parts.shift(),module=parts[0],min='-min';if(/-(skin|core)$/.test(me.name)){parts.pop();me.type='css';min=''}
+if(module){var filename=parts.join('-');me.path=component+'/'+module+'/'+filename+min+'.'+me.type}else{me.path=component+'/'+component+'.'+me.type}};
+YUI_config = {"debug":false,"base":"https:\/\/courses.maths.ox.ac.uk\/lib\/yuilib\/3.18.1\/","comboBase":"https:\/\/courses.maths.ox.ac.uk\/theme\/yui_combo.php?","combine":true,"filter":null,"insertBefore":"firstthemesheet","groups":{"yui2":{"base":"https:\/\/courses.maths.ox.ac.uk\/lib\/yuilib\/2in3\/2.9.0\/build\/","comboBase":"https:\/\/courses.maths.ox.ac.uk\/theme\/yui_combo.php?","combine":true,"ext":false,"root":"2in3\/2.9.0\/build\/","patterns":{"yui2-":{"group":"yui2","configFn":yui1ConfigFn}}},"moodle":{"name":"moodle","base":"https:\/\/courses.maths.ox.ac.uk\/theme\/yui_combo.php?m\/1780950349\/","combine":true,"comboBase":"https:\/\/courses.maths.ox.ac.uk\/theme\/yui_combo.php?","ext":false,"root":"m\/1780950349\/","patterns":{"moodle-":{"group":"moodle","configFn":yui2ConfigFn}},"filter":null,"modules":{"moodle-core-actionmenu":{"requires":["base","event","node-event-simulate"]},"moodle-core-lockscroll":{"requires":["plugin","base-build"]},"moodle-core-dragdrop":{"requires":["base","node","io","dom","dd","event-key","event-focus","moodle-core-notification"]},"moodle-core-maintenancemodetimer":{"requires":["base","node"]},"moodle-core-blocks":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification"]},"moodle-core-chooserdialogue":{"requires":["base","panel","moodle-core-notification"]},"moodle-core-event":{"requires":["event-custom"]},"moodle-core-handlebars":{"condition":{"trigger":"handlebars","when":"after"}},"moodle-core-notification":{"requires":["moodle-core-notification-dialogue","moodle-core-notification-alert","moodle-core-notification-confirm","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-core-notification-dialogue":{"requires":["base","node","panel","escape","event-key","dd-plugin","moodle-core-widget-focusafterclose","moodle-core-lockscroll"]},"moodle-core-notification-alert":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-confirm":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-exception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-ajaxexception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core_availability-form":{"requires":["base","node","event","event-delegate","panel","moodle-core-notification-dialogue","json"]},"moodle-course-categoryexpander":{"requires":["node","event-key"]},"moodle-course-management":{"requires":["base","node","io-base","moodle-core-notification-exception","json-parse","dd-constrain","dd-proxy","dd-drop","dd-delegate","node-event-delegate"]},"moodle-course-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-course-coursebase","moodle-course-util"]},"moodle-course-util":{"requires":["node"],"use":["moodle-course-util-base"],"submodules":{"moodle-course-util-base":{},"moodle-course-util-section":{"requires":["node","moodle-course-util-base"]},"moodle-course-util-cm":{"requires":["node","moodle-course-util-base"]}}},"moodle-form-shortforms":{"requires":["node","base","selector-css3","moodle-core-event"]},"moodle-form-dateselector":{"requires":["base","node","overlay","calendar"]},"moodle-question-searchform":{"requires":["base","node"]},"moodle-question-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-availability_cohort-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_completion-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_date-form":{"requires":["base","node","event","io","moodle-core_availability-form"]},"moodle-availability_grade-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_group-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_grouping-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_mobileapp-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_profile-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-mod_assign-history":{"requires":["node","transition"]},"moodle-mod_attendance-groupfilter":{"requires":["base","node"]},"moodle-mod_quiz-autosave":{"requires":["base","node","event","event-valuechange","node-event-delegate","io-form","datatype-date-format"]},"moodle-mod_quiz-toolboxes":{"requires":["base","node","event","event-key","io","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-slot","moodle-core-notification-ajaxexception"]},"moodle-mod_quiz-questionchooser":{"requires":["moodle-core-chooserdialogue","moodle-mod_quiz-util","querystring-parse"]},"moodle-mod_quiz-quizbase":{"requires":["base","node"]},"moodle-mod_quiz-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-base","moodle-mod_quiz-util-page","moodle-mod_quiz-util-slot","moodle-course-util"]},"moodle-mod_quiz-util":{"requires":["node","moodle-core-actionmenu"],"use":["moodle-mod_quiz-util-base"],"submodules":{"moodle-mod_quiz-util-base":{},"moodle-mod_quiz-util-slot":{"requires":["node","moodle-mod_quiz-util-base"]},"moodle-mod_quiz-util-page":{"requires":["node","moodle-mod_quiz-util-base"]}}},"moodle-mod_quiz-modform":{"requires":["base","node","event"]},"moodle-message_airnotifier-toolboxes":{"requires":["base","node","io"]},"moodle-editor_atto-editor":{"requires":["node","transition","io","overlay","escape","event","event-simulate","event-custom","node-event-html5","node-event-simulate","yui-throttle","moodle-core-notification-dialogue","moodle-editor_atto-rangy","handlebars","timers","querystring-stringify"]},"moodle-editor_atto-plugin":{"requires":["node","base","escape","event","event-outside","handlebars","event-custom","timers","moodle-editor_atto-menu"]},"moodle-editor_atto-menu":{"requires":["moodle-core-notification-dialogue","node","event","event-custom"]},"moodle-editor_atto-rangy":{"requires":[]},"moodle-report_eventlist-eventfilter":{"requires":["base","event","node","node-event-delegate","datatable","autocomplete","autocomplete-filters"]},"moodle-report_loglive-fetchlogs":{"requires":["base","event","node","io","node-event-delegate"]},"moodle-gradereport_history-userselector":{"requires":["escape","event-delegate","event-key","handlebars","io-base","json-parse","moodle-core-notification-dialogue"]},"moodle-qbank_editquestion-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-tool_lp-dragdrop-reorder":{"requires":["moodle-core-dragdrop"]},"moodle-assignfeedback_editpdf-editor":{"requires":["base","event","node","io","graphics","json","event-move","event-resize","transition","querystring-stringify-simple","moodle-core-notification-dialog","moodle-core-notification-alert","moodle-core-notification-warning","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-atto_accessibilitychecker-button":{"requires":["color-base","moodle-editor_atto-plugin"]},"moodle-atto_accessibilityhelper-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_align-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_bold-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_charmap-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_clear-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_collapse-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emojipicker-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emoticon-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_equation-button":{"requires":["moodle-editor_atto-plugin","moodle-core-event","io","event-valuechange","tabview","array-extras"]},"moodle-atto_h5p-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_html-codemirror":{"requires":["moodle-atto_html-codemirror-skin"]},"moodle-atto_html-beautify":{},"moodle-atto_html-button":{"requires":["promise","moodle-editor_atto-plugin","moodle-atto_html-beautify","moodle-atto_html-codemirror","event-valuechange"]},"moodle-atto_image-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_indent-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_italic-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_link-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_managefiles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_managefiles-usedfiles":{"requires":["node","escape"]},"moodle-atto_media-button":{"requires":["moodle-editor_atto-plugin","moodle-form-shortforms"]},"moodle-atto_noautolink-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_orderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_panoptobutton-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_recordrtc-button":{"requires":["moodle-editor_atto-plugin","moodle-atto_recordrtc-recording"]},"moodle-atto_recordrtc-recording":{"requires":["moodle-atto_recordrtc-button"]},"moodle-atto_rtl-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_strike-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_subscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_superscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_table-button":{"requires":["moodle-editor_atto-plugin","moodle-editor_atto-menu","event","event-valuechange"]},"moodle-atto_teamsmeeting-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_title-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_underline-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_undo-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_unorderedlist-button":{"requires":["moodle-editor_atto-plugin"]}}},"gallery":{"name":"gallery","base":"https:\/\/courses.maths.ox.ac.uk\/lib\/yuilib\/gallery\/","combine":true,"comboBase":"https:\/\/courses.maths.ox.ac.uk\/theme\/yui_combo.php?","ext":false,"root":"gallery\/1780950349\/","patterns":{"gallery-":{"group":"gallery"}}}},"modules":{"core_filepicker":{"name":"core_filepicker","fullpath":"https:\/\/courses.maths.ox.ac.uk\/lib\/javascript.php\/1780950349\/repository\/filepicker.js","requires":["base","node","node-event-simulate","json","async-queue","io-base","io-upload-iframe","io-form","yui2-treeview","panel","cookie","datatable","datatable-sort","resize-plugin","dd-plugin","escape","moodle-core_filepicker","moodle-core-notification-dialogue"]},"core_comment":{"name":"core_comment","fullpath":"https:\/\/courses.maths.ox.ac.uk\/lib\/javascript.php\/1780950349\/comment\/comment.js","requires":["base","io-base","node","json","yui2-animation","overlay","escape"]}},"logInclude":[],"logExclude":[],"logLevel":null};
+M.yui.loader = {modules: {}};
+
+//]]>
+</script>
+
+<script src="https://unpkg.com/@ungap/custom-elements-builtin"></script>
+ <script type="module" src="https://unpkg.com/x-frame-bypass"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-NKVYQHQSEP"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-NKVYQHQSEP');
+</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="core/first" src="https://courses.maths.ox.ac.uk/lib/requirejs.php/1780950349/core/first.js"></script></head>
+<body id="page-course-index-category" class="limitedwidth format-site  path-course path-course-index chrome dir-ltr lang-en yui-skin-sam yui3-skin-sam courses-maths-ox-ac-uk pagelayout-coursecategory course-1 context-1 theme uses-drawers drawer-open-index jsenabled">
+<div class="toast-wrapper mx-auto py-0 fixed-top" role="status" aria-live="polite"></div>
+<div id="page-wrapper" class="d-print-block">
+
+    <div>
+    <a class="sr-only sr-only-focusable" href="#maincontent">Skip to main content</a>
+</div><script src="https://courses.maths.ox.ac.uk/lib/javascript.php/1780950349/lib/polyfills/polyfill.js"></script>
+<script src="https://courses.maths.ox.ac.uk/theme/yui_combo.php?rollup/3.18.1/yui-moodlesimple-min.js"></script><script src="https://courses.maths.ox.ac.uk/lib/javascript.php/1780950349/lib/javascript-static.js"></script>
+<script>
+//<![CDATA[
+document.body.className += ' jsenabled';
+//]]>
+</script>
+
+
+
+    <nav class="navbar fixed-top navbar-light bg-white navbar-expand" aria-label="Site navigation">
+        <div class="container-fluid">
+            <button class="navbar-toggler aabtn d-block d-md-none px-1 my-1 border-0" data-toggler="drawers" data-action="toggle" data-target="theme_boost-drawers-primary">
+                <span class="navbar-toggler-icon"></span>
+                <span class="sr-only">Side panel</span>
+            </button>
+    
+            <a href="https://courses.maths.ox.ac.uk/" class="navbar-brand d-none d-md-flex align-items-center m-0 me-4 p-0 aabtn">
+    
+                    <img src="https://courses.maths.ox.ac.uk/pluginfile.php/1/core_admin/logocompact/300x300/1780950349/oxlogo.png" class="logo me-1" alt="Mathematical Institute">
+            </a>
+                <div class="primary-navigation">
+                    <nav class="moremenu navigation">
+                        <ul id="moremenu-6a2fc9c5b987f-navbar-nav" role="menubar" class="nav more-nav navbar-nav">
+                                    <li data-key="home" class="nav-item" role="none" data-forceintomoremenu="false">
+                                                <a role="menuitem" class="nav-link active " href="https://courses.maths.ox.ac.uk/" aria-current="true" data-disableactive="true">
+                                                    Home
+                                                </a>
+                                    </li>
+                                    <li data-key="calendar" class="nav-item" role="none" data-forceintomoremenu="false">
+                                                <a role="menuitem" class="nav-link  " href="https://courses.maths.ox.ac.uk/calendar/view.php?view=month" data-disableactive="true" tabindex="-1">
+                                                    Calendar
+                                                </a>
+                                    </li>
+                                    <li data-key="" class="nav-item" role="none" data-forceintomoremenu="false">
+                                                <a role="menuitem" class="nav-link  " href="https://www.maths.ox.ac.uk/members/it/faqs/moodle-courses-system" data-disableactive="true" tabindex="-1">
+                                                    Help
+                                                </a>
+                                    </li>
+                            <li role="none" class="nav-item dropdown dropdownmoremenu d-none" data-region="morebutton">
+                                <a class="dropdown-toggle nav-link " href="#" id="moremenu-dropdown-6a2fc9c5b987f" role="menuitem" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" tabindex="-1">
+                                    More
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-left" data-region="moredropdown" aria-labelledby="moremenu-dropdown-6a2fc9c5b987f" role="menu">
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+    
+    
+            <div id="usernavigation" class="navbar-nav ms-auto h-100">
+                
+                <div class="d-flex align-items-stretch usermenu-container" data-region="usermenu">
+                        <div class="usermenu">
+                                <span class="login ps-2">
+                                        You are currently using guest access
+                                        <div class="divider border-start h-75 align-self-center mx-2"></div>
+                                        <a href="https://courses.maths.ox.ac.uk/login/index.php">Log in with SSO</a>
+                                </span>
+                        </div>
+                </div>
+                
+            </div>
+        </div>
+    </nav>
+    
+
+<div class="drawer drawer-left drawer-primary d-print-none not-initialized" data-region="fixed-drawer" id="theme_boost-drawers-primary" data-preference="" data-state="show-drawer-primary" data-forceopen="0" data-close-on-resize="1">
+    <div class="drawerheader">
+        <button class="btn drawertoggle icon-no-margin hidden" data-toggler="drawers" data-action="closedrawer" data-target="theme_boost-drawers-primary" data-toggle="tooltip" data-placement="right" title="Close drawer">
+            <i class="icon fa fa-xmark fa-fw " aria-hidden="true"></i>
+        </button>
+                <a href="https://courses.maths.ox.ac.uk/" title="Mathematical Institute" data-region="site-home-link" class="aabtn text-reset d-flex align-items-center py-1 h-100">
+                <img src="https://courses.maths.ox.ac.uk/pluginfile.php/1/core_admin/logocompact/300x300/1780950349/oxlogo.png" class="logo py-1 h-100" alt="Mathematical Institute">
+        </a>
+
+        <div class="drawerheadercontent hidden">
+            
+        </div>
+    </div>
+    <div class="drawercontent drag-container" data-usertour="scroller">
+                <div class="list-group">
+                <a href="https://courses.maths.ox.ac.uk/" class="list-group-item list-group-item-action active " aria-current="true">
+                    Home
+                </a>
+                <a href="https://courses.maths.ox.ac.uk/calendar/view.php?view=month" class="list-group-item list-group-item-action  ">
+                    Calendar
+                </a>
+                <a href="https://www.maths.ox.ac.uk/members/it/faqs/moodle-courses-system" class="list-group-item list-group-item-action  ">
+                    Help
+                </a>
+        </div>
+
+    </div>
+</div>
+    <div id="page" data-region="mainpage" data-usertour="scroller" class="drawers   drag-container">
+        <div id="topofscroll" class="main-inner">
+            <div class="drawer-toggles d-flex">
+            </div>
+            <header id="page-header" class="header-maxwidth d-print-none">
+    <div class="w-100">
+        <div class="d-flex flex-wrap">
+            <div id="page-navbar">
+                
+            </div>
+            <div class="ms-auto d-flex">
+                
+            </div>
+            <div id="course-header">
+                
+            </div>
+        </div>
+        <div class="d-flex align-items-center">
+            <div class="me-auto d-flex flex-column">
+                <div>
+                    <div class="page-context-header d-flex flex-wrap align-items-center mb-2">
+    <div class="page-header-headings">
+        <h1 class="h2 mb-0">Mathematical Institute</h1>
+    </div>
+</div>
+                </div>
+                <div>
+                </div>
+            </div>
+            <div class="header-actions-container ms-auto" data-region="header-actions-container">
+            </div>
+        </div>
+    </div>
+</header>
+            <div id="page-content" class="pb-3 d-print-block">
+                <div id="region-main-box">
+                    <div id="region-main">
+
+                         
+                        <span class="notifications" id="user-notifications"></span>
+                        <div role="main"><span id="maincontent"></span><span></span><div class="container-fluid tertiary-navigation" id="action_bar">
+    <div class="row">
+            <div class="navitem">
+                <div class="urlselect text-truncate w-100">
+                    <form method="post" action="https://courses.maths.ox.ac.uk/course/jumpto.php" class="d-flex flex-wrap align-items-center" id="url_select_f6a2fc9c5adf001">
+                        <input type="hidden" name="sesskey" value="jgcDY2fFK9">
+                            <label for="url_select6a2fc9c5adf002" class="sr-only">
+                                Course categories
+                            </label>
+                        <select id="url_select6a2fc9c5adf002" class="custom-select urlselect text-truncate w-100" name="jump">
+                                    <option value="/course/index.php?categoryid=874">Course Documentation</option>
+                                    <option value="/course/index.php?categoryid=876">Undergraduate</option>
+                                    <option value="/course/index.php?categoryid=877">Undergraduate / Induction</option>
+                                    <option value="/course/index.php?categoryid=878">Undergraduate / Prelims</option>
+                                    <option value="/course/index.php?categoryid=879">Undergraduate / Prelims / Michaelmas</option>
+                                    <option value="/course/index.php?categoryid=880">Undergraduate / Prelims / Hilary</option>
+                                    <option value="/course/index.php?categoryid=881">Undergraduate / Prelims / Trinity</option>
+                                    <option value="/course/index.php?categoryid=882">Undergraduate / Part A</option>
+                                    <option value="/course/index.php?categoryid=885">Undergraduate / Part A / Michaelmas</option>
+                                    <option value="/course/index.php?categoryid=884">Undergraduate / Part A / Hilary</option>
+                                    <option value="/course/index.php?categoryid=883">Undergraduate / Part A / Trinity</option>
+                                    <option value="/course/index.php?categoryid=886">Undergraduate / Part B</option>
+                                    <option value="/course/index.php?categoryid=887">Undergraduate / Part B / Michaelmas</option>
+                                    <option value="/course/index.php?categoryid=888">Undergraduate / Part B / Hilary</option>
+                                    <option value="/course/index.php?categoryid=890">Undergraduate / Part C</option>
+                                    <option value="/course/index.php?categoryid=891">Undergraduate / Part C / Michaelmas</option>
+                                    <option value="/course/index.php?categoryid=892">Undergraduate / Part C / Hilary</option>
+                                    <option value="/course/index.php?categoryid=894">Undergraduate / Maths and Philosophy</option>
+                                    <option value="/course/index.php?categoryid=895">Undergraduate / Maths and Philosophy / Prelims</option>
+                                    <option value="/course/index.php?categoryid=896">Undergraduate / Maths and Philosophy / Prelims / Michaelmas</option>
+                                    <option value="/course/index.php?categoryid=897">Undergraduate / Maths and Philosophy / Prelims / Hilary</option>
+                                    <option value="/course/index.php?categoryid=898">Undergraduate / Maths and Philosophy / Prelims / Trinity</option>
+                                    <option value="/course/index.php?categoryid=899">Undergraduate / Maths and Philosophy / Part A</option>
+                                    <option value="/course/index.php?categoryid=900">Undergraduate / Maths and Philosophy / Part A / Michaelmas</option>
+                                    <option value="/course/index.php?categoryid=901">Undergraduate / Maths and Philosophy / Part A / Michaelmas / Core</option>
+                                    <option value="/course/index.php?categoryid=902">Undergraduate / Maths and Philosophy / Part A / Michaelmas / Options</option>
+                                    <option value="/course/index.php?categoryid=903">Undergraduate / Maths and Philosophy / Part A / Hilary</option>
+                                    <option value="/course/index.php?categoryid=904">Undergraduate / Maths and Philosophy / Part A / Trinity</option>
+                                    <option value="/course/index.php?categoryid=905">Undergraduate / Maths and Philosophy / Part B</option>
+                                    <option value="/course/index.php?categoryid=906">Undergraduate / Maths and Philosophy / Part B / Michaelmas</option>
+                                    <option value="/course/index.php?categoryid=907">Undergraduate / Maths and Philosophy / Part B / Hilary</option>
+                                    <option value="/course/index.php?categoryid=908">Undergraduate / Maths and Philosophy / Part B / Schedule 2</option>
+                                    <option value="/course/index.php?categoryid=909">Undergraduate / Maths and Philosophy / Part C</option>
+                                    <option value="/course/index.php?categoryid=910">Undergraduate / Maths and Philosophy / Part C / Michaelmas</option>
+                                    <option value="/course/index.php?categoryid=911">Undergraduate / Maths and Philosophy / Part C / Hilary</option>
+                                    <option value="/course/index.php?categoryid=912">Graduate</option>
+                                    <option value="/course/index.php?categoryid=913">Graduate / CDT in Mathematics of Random Systems</option>
+                                    <option value="/course/index.php?categoryid=914">Graduate / CDT in Mathematics of Random Systems / Michaelmas</option>
+                                    <option value="/course/index.php?categoryid=915">Graduate / CDT in Mathematics of Random Systems / Michaelmas / Electives</option>
+                                    <option value="/course/index.php?categoryid=916">Graduate / CDT in Mathematics of Random Systems / Hilary</option>
+                                    <option value="/course/index.php?categoryid=917">Graduate / CDT in Mathematics of Random Systems / Trinity</option>
+                                    <option value="/course/index.php?categoryid=918">Graduate / CDT in Mathematics of Random Systems / Foundation Courses</option>
+                                    <option value="/course/index.php?categoryid=931">Graduate / MMathPhys/MSc in Mathematical and Theoretical Physics (MTP)</option>
+                                    <option value="/course/index.php?categoryid=932">Graduate / MMathPhys/MSc in Mathematical and Theoretical Physics (MTP) / Michaelmas</option>
+                                    <option value="/course/index.php?categoryid=933">Graduate / MMathPhys/MSc in Mathematical and Theoretical Physics (MTP) / Michaelmas / MTP Induction</option>
+                                    <option value="/course/index.php?categoryid=934">Graduate / MMathPhys/MSc in Mathematical and Theoretical Physics (MTP) / Michaelmas / DPhil application Q&amp;A</option>
+                                    <option value="/course/index.php?categoryid=935">Graduate / MMathPhys/MSc in Mathematical and Theoretical Physics (MTP) / Michaelmas / Exam Briefing</option>
+                                    <option value="/course/index.php?categoryid=936">Graduate / MMathPhys/MSc in Mathematical and Theoretical Physics (MTP) / Hilary</option>
+                                    <option value="/course/index.php?categoryid=937">Graduate / MMathPhys/MSc in Mathematical and Theoretical Physics (MTP) / Trinity</option>
+                                    <option value="/course/index.php?categoryid=938">Graduate / MSc in Mathematical and Computational Finance (MCF)</option>
+                                    <option value="/course/index.php?categoryid=939">Graduate / MSc in Mathematical and Computational Finance (MCF) / Michaelmas</option>
+                                    <option value="/course/index.php?categoryid=940">Graduate / MSc in Mathematical and Computational Finance (MCF) / Hilary</option>
+                                    <option value="/course/index.php?categoryid=941">Graduate / MSc in Mathematical and Computational Finance (MCF) / Trinity</option>
+                                    <option value="/course/index.php?categoryid=919">Graduate / MSc in Mathematical Modelling and Scientific Computing (MMSC)</option>
+                                    <option value="/course/index.php?categoryid=920">Graduate / MSc in Mathematical Modelling and Scientific Computing (MMSC) / Michaelmas</option>
+                                    <option value="/course/index.php?categoryid=921">Graduate / MSc in Mathematical Modelling and Scientific Computing (MMSC) / Hilary</option>
+                                    <option value="/course/index.php?categoryid=922">Graduate / MSc in Mathematical Modelling and Scientific Computing (MMSC) / Trinity</option>
+                                    <option value="/course/index.php?categoryid=928">Graduate / MSc in Mathematical Sciences (OMMS)</option>
+                                    <option value="/course/index.php?categoryid=929">Graduate / MSc in Mathematical Sciences (OMMS) / Michaelmas</option>
+                                    <option value="/course/index.php?categoryid=930">Graduate / MSc in Mathematical Sciences (OMMS) / Hilary</option>
+                                    <option value="/course/index.php?categoryid=923">Graduate / MSc in Mathematics and Foundations of Computer Science (MFoCS)</option>
+                                    <option value="/course/index.php?categoryid=924">Graduate / MSc in Mathematics and Foundations of Computer Science (MFoCS) / Michaelmas</option>
+                                    <option value="/course/index.php?categoryid=925">Graduate / MSc in Mathematics and Foundations of Computer Science (MFoCS) / Michaelmas / Induction</option>
+                                    <option value="/course/index.php?categoryid=926">Graduate / MSc in Mathematics and Foundations of Computer Science (MFoCS) / Hilary</option>
+                                    <option value="/course/index.php?categoryid=927">Graduate / MSc in Mathematics and Foundations of Computer Science (MFoCS) / Trinity</option>
+                                    <option value="/course/index.php?categoryid=942">Graduate / Other</option>
+                                    <option value="/course/index.php?categoryid=943">Special Lectures/Courses</option>
+                                    <option value="/course/index.php?categoryid=25">Archive</option>
+                                    <option value="/course/index.php?categoryid=875">Archive / Year 2024-25</option>
+                                    <option value="/course/index.php?categoryid=804">Archive / Year 2024-25 / Undergraduate</option>
+                                    <option value="/course/index.php?categoryid=805">Archive / Year 2024-25 / Undergraduate / Induction</option>
+                                    <option value="/course/index.php?categoryid=806">Archive / Year 2024-25 / Undergraduate / Prelims</option>
+                                    <option value="/course/index.php?categoryid=807">Archive / Year 2024-25 / Undergraduate / Prelims / Michaelmas</option>
+                                    <option value="/course/index.php?categoryid=808">Archive / Year 2024-25 / Undergraduate / Prelims / Hilary</option>
+                                    <option value="/course/index.php?categoryid=809">Archive / Year 2024-25 / Undergraduate / Prelims / Trinity</option>
+                                    <option value="/course/index.php?categoryid=810">Archive / Year 2024-25 / Undergraduate / Part A</option>
+                                    <option value="/course/index.php?categoryid=813">Archive / Year 2024-25 / Undergraduate / Part A / Michaelmas</option>
+                                    <option value="/course/index.php?categoryid=812">Archive / Year 2024-25 / Undergraduate / Part A / Hilary</option>
+                                    <option value="/course/index.php?categoryid=811">Archive / Year 2024-25 / Undergraduate / Part A / Trinity</option>
+                                    <option value="/course/index.php?categoryid=814">Archive / Year 2024-25 / Undergraduate / Part B</option>
+                                    <option value="/course/index.php?categoryid=815">Archive / Year 2024-25 / Undergraduate / Part B / Michaelmas</option>
+                                    <option value="/course/index.php?categoryid=816">Archive / Year 2024-25 / Undergraduate / Part B / Hilary</option>
+                                    <option value="/course/index.php?categoryid=817">Archive / Year 2024-25 / Undergraduate / Part C</option>
+                                    <option value="/course/index.php?categoryid=818">Archive / Year 2024-25 / Undergraduate / Part C / Michaelmas</option>
+                                    <option value="/course/index.php?categoryid=819">Archive / Year 2024-25 / Undergraduate / Part C / Hilary</option>
+                                    <option value="/course/index.php?categoryid=820">Archive / Year 2024-25 / Undergraduate / Maths and Philosophy</option>
+                                    <option value="/course/index.php?categoryid=821">Archive / Year 2024-25 / Undergraduate / Maths and Philosophy / Prelims</option>
+                                    <option value="/course/index.php?categoryid=822">Archive / Year 2024-25 / Undergraduate / Maths and Philosophy / Prelims / Michaelmas</option>
+                                    <option value="/course/index.php?categoryid=823">Archive / Year 2024-25 / Undergraduate / Maths and Philosophy / Prelims / Hilary</option>
+                                    <option value="/course/index.php?categoryid=824">Archive / Year 2024-25 / Undergraduate / Maths and Philosophy / Prelims / Trinity</option>
+                                    <option value="/course/index.php?categoryid=825">Archive / Year 2024-25 / Undergraduate / Maths and Philosophy / Part A</option>
+                                    <option value="/course/index.php?categoryid=826">Archive / Year 2024-25 / Undergraduate / Maths and Philosophy / Part A / Michaelmas</option>
+                                    <option value="/course/index.php?categoryid=827">Archive / Year 2024-25 / Undergraduate / Maths and Philosophy / Part A / Michaelmas / Core</option>
+                                    <option value="/course/index.php?categoryid=828">Archive / Year 2024-25 / Undergraduate / Maths and Philosophy / Part A / Michaelmas / Options</option>
+                                    <option value="/course/index.php?categoryid=829">Archive / Year 2024-25 / Undergraduate / Maths and Philosophy / Part A / Hilary</option>
+                                    <option value="/course/index.php?categoryid=830">Archive / Year 2024-25 / Undergraduate / Maths and Philosophy / Part A / Trinity</option>
+                                    <option value="/course/index.php?categoryid=831">Archive / Year 2024-25 / Undergraduate / Maths and Philosophy / Part B</option>
+                                    <option value="/course/index.php?categoryid=832">Archive / Year 2024-25 / Undergraduate / Maths and Philosophy / Part B / Michaelmas</option>
+                                    <option value="/course/index.php?categoryid=833">Archive / Year 2024-25 / Undergraduate / Maths and Philosophy / Part B / Hilary</option>
+                                    <option value="/course/index.php?categoryid=834">Archive / Year 2024-25 / Undergraduate / Maths and Philosophy / Part B / Schedule 2</option>
+                                    <option value="/course/index.php?categoryid=835">Archive / Year 2024-25 / Undergraduate / Maths and Philosophy / Part C</option>
+                                    <option value="/course/index.php?categoryid=836">Archive / Year 2024-25 / Undergraduate / Maths and Philosophy / Part C / Michaelmas</option>
+                                    <option value="/course/index.php?categoryid=837">Archive / Year 2024-25 / Undergraduate / Maths and Philosophy / Part C / Hilary</option>
+                                    <option value="/course/index.php?categoryid=838">Archive / Year 2024-25 / Graduate</option>
+                                    <option value="/course/index.php?categoryid=839">Archive / Year 2024-25 / Graduate / CDT in Mathematics of Random Systems</option>
+                                    <option value="/course/index.php?categoryid=840">Archive / Year 2024-25 / Graduate / CDT in Mathematics of Random Systems / Michaelmas</option>
+                                    <option value="/course/index.php?categoryid=841">Archive / Year 2024-25 / Graduate / CDT in Mathematics of Random Systems / Michaelmas / Electives</option>
+                                    <option value="/course/index.php?categoryid=842">Archive / Year 2024-25 / Graduate / CDT in Mathematics of Random Systems / Hilary</option>
+                                    <option value="/course/index.php?categoryid=843">Archive / Year 2024-25 / Graduate / CDT in Mathematics of Random Systems / Trinity</option>
+                                    <option value="/course/index.php?categoryid=844">Archive / Year 2024-25 / Graduate / CDT in Mathematics of Random Systems / Foundation Courses</option>
+                                    <option value="/course/index.php?categoryid=857">Archive / Year 2024-25 / Graduate / MMathPhys/MSc in Mathematical and Theoretical Physics (MTP)</option>
+                                    <option value="/course/index.php?categoryid=858">Archive / Year 2024-25 / Graduate / MMathPhys/MSc in Mathematical and Theoretical Physics (MTP) / Michaelmas</option>
+                                    <option value="/course/index.php?categoryid=859">Archive / Year 2024-25 / Graduate / MMathPhys/MSc in Mathematical and Theoretical Physics (MTP) / Michaelmas / MTP Induction</option>
+                                    <option value="/course/index.php?categoryid=860">Archive / Year 2024-25 / Graduate / MMathPhys/MSc in Mathematical and Theoretical Physics (MTP) / Michaelmas / DPhil application Q&amp;A</option>
+                                    <option value="/course/index.php?categoryid=861">Archive / Year 2024-25 / Graduate / MMathPhys/MSc in Mathematical and Theoretical Physics (MTP) / Michaelmas / Exam Briefing</option>
+                                    <option value="/course/index.php?categoryid=862">Archive / Year 2024-25 / Graduate / MMathPhys/MSc in Mathematical and Theoretical Physics (MTP) / Hilary</option>
+                                    <option value="/course/index.php?categoryid=863">Archive / Year 2024-25 / Graduate / MMathPhys/MSc in Mathematical and Theoretical Physics (MTP) / Trinity</option>
+                                    <option value="/course/index.php?categoryid=864">Archive / Year 2024-25 / Graduate / MSc in Mathematical and Computational Finance (MCF)</option>
+                                    <option value="/course/index.php?categoryid=865">Archive / Year 2024-25 / Graduate / MSc in Mathematical and Computational Finance (MCF) / Michaelmas</option>
+                                    <option value="/course/index.php?categoryid=866">Archive / Year 2024-25 / Graduate / MSc in Mathematical and Computational Finance (MCF) / Hilary</option>
+                                    <option value="/course/index.php?categoryid=867">Archive / Year 2024-25 / Graduate / MSc in Mathematical and Computational Finance (MCF) / Trinity</option>
+                                    <option value="/course/index.php?categoryid=845">Archive / Year 2024-25 / Graduate / MSc in Mathematical Modelling and Scientific Computing (MMSC)</option>
+                                    <option value="/course/index.php?categoryid=846">Archive / Year 2024-25 / Graduate / MSc in Mathematical Modelling and Scientific Computing (MMSC) / Michaelmas</option>
+                                    <option value="/course/index.php?categoryid=847">Archive / Year 2024-25 / Graduate / MSc in Mathematical Modelling and Scientific Computing (MMSC) / Hilary</option>
+                                    <option value="/course/index.php?categoryid=848">Archive / Year 2024-25 / Graduate / MSc in Mathematical Modelling and Scientific Computing (MMSC) / Trinity</option>
+                                    <option value="/course/index.php?categoryid=854">Archive / Year 2024-25 / Graduate / MSc in Mathematical Sciences (OMMS)</option>
+                                    <option value="/course/index.php?categoryid=855">Archive / Year 2024-25 / Graduate / MSc in Mathematical Sciences (OMMS) / Michaelmas</option>
+                                    <option value="/course/index.php?categoryid=856">Archive / Year 2024-25 / Graduate / MSc in Mathematical Sciences (OMMS) / Hilary</option>
+                                    <option value="/course/index.php?categoryid=849">Archive / Year 2024-25 / Graduate / MSc in Mathematics and Foundations of Computer Science (MFoCS)</option>
+                                    <option value="/course/index.php?categoryid=850">Archive / Year 2024-25 / Graduate / MSc in Mathematics and Foundations of Computer Science (MFoCS) / Michaelmas</option>
+                                    <option value="/course/index.php?categoryid=851">Archive / Year 2024-25 / Graduate / MSc in Mathematics and Foundations of Computer Science (MFoCS) / Michaelmas / Induction</option>
+                                    <option value="/course/index.php?categoryid=852">Archive / Year 2024-25 / Graduate / MSc in Mathematics and Foundations of Computer Science (MFoCS) / Hilary</option>
+                                    <option value="/course/index.php?categoryid=853">Archive / Year 2024-25 / Graduate / MSc in Mathematics and Foundations of Computer Science (MFoCS) / Trinity</option>
+                                    <option value="/course/index.php?categoryid=869">Archive / Year 2024-25 / Special Lectures/Courses</option>
+                                    <option value="/course/index.php?categoryid=803">Archive / Year 2023-24</option>
+                                    <option value="/course/index.php?categoryid=735">Archive / Year 2023-24 / Undergraduate</option>
+                                    <option value="/course/index.php?categoryid=737">Archive / Year 2023-24 / Undergraduate / Prelims</option>
+                                    <option value="/course/index.php?categoryid=738">Archive / Year 2023-24 / Undergraduate / Prelims / Michaelmas</option>
+                                    <option value="/course/index.php?categoryid=739">Archive / Year 2023-24 / Undergraduate / Prelims / Hilary</option>
+                                    <option value="/course/index.php?categoryid=740">Archive / Year 2023-24 / Undergraduate / Prelims / Trinity</option>
+                                    <option value="/course/index.php?categoryid=741">Archive / Year 2023-24 / Undergraduate / Part A</option>
+                                    <option value="/course/index.php?categoryid=744">Archive / Year 2023-24 / Undergraduate / Part A / Michaelmas</option>
+                                    <option value="/course/index.php?categoryid=743">Archive / Year 2023-24 / Undergraduate / Part A / Hilary</option>
+                                    <option value="/course/index.php?categoryid=742">Archive / Year 2023-24 / Undergraduate / Part A / Trinity</option>
+                                    <option value="/course/index.php?categoryid=745">Archive / Year 2023-24 / Undergraduate / Part B</option>
+                                    <option value="/course/index.php?categoryid=746">Archive / Year 2023-24 / Undergraduate / Part B / Michaelmas</option>
+                                    <option value="/course/index.php?categoryid=747">Archive / Year 2023-24 / Undergraduate / Part B / Hilary</option>
+                                    <option value="/course/index.php?categoryid=748">Archive / Year 2023-24 / Undergraduate / Part C</option>
+                                    <option value="/course/index.php?categoryid=749">Archive / Year 2023-24 / Undergraduate / Part C / Michaelmas</option>
+                                    <option value="/course/index.php?categoryid=750">Archive / Year 2023-24 / Undergraduate / Part C / Hilary</option>
+                                    <option value="/course/index.php?categoryid=751">Archive / Year 2023-24 / Undergraduate / Maths and Philosophy</option>
+                                    <option value="/course/index.php?categoryid=752">Archive / Year 2023-24 / Undergraduate / Maths and Philosophy / Prelims</option>
+                                    <option value="/course/index.php?categoryid=753">Archive / Year 2023-24 / Undergraduate / Maths and Philosophy / Prelims / Michaelmas</option>
+                                    <option value="/course/index.php?categoryid=754">Archive / Year 2023-24 / Undergraduate / Maths and Philosophy / Prelims / Hilary</option>
+                                    <option value="/course/index.php?categoryid=755">Archive / Year 2023-24 / Undergraduate / Maths and Philosophy / Prelims / Trinity</option>
+                                    <option value="/course/index.php?categoryid=756">Archive / Year 2023-24 / Undergraduate / Maths and Philosophy / Part A</option>
+                                    <option value="/course/index.php?categoryid=757">Archive / Year 2023-24 / Undergraduate / Maths and Philosophy / Part A / Michaelmas</option>
+                                    <option value="/course/index.php?categoryid=758">Archive / Year 2023-24 / Undergraduate / Maths and Philosophy / Part A / Michaelmas / Core</option>
+                                    <option value="/course/index.php?categoryid=759">Archive / Year 2023-24 / Undergraduate / Maths and Philosophy / Part A / Michaelmas / Options</option>
+                                    <option value="/course/index.php?categoryid=760">Archive / Year 2023-24 / Undergraduate / Maths and Philosophy / Part A / Hilary</option>
+                                    <option value="/course/index.php?categoryid=761">Archive / Year 2023-24 / Undergraduate / Maths and Philosophy / Part A / Trinity</option>
+                                    <option value="/course/index.php?categoryid=762">Archive / Year 2023-24 / Undergraduate / Maths and Philosophy / Part B</option>
+                                    <option value="/course/index.php?categoryid=763">Archive / Year 2023-24 / Undergraduate / Maths and Philosophy / Part B / Michaelmas</option>
+                                    <option value="/course/index.php?categoryid=764">Archive / Year 2023-24 / Undergraduate / Maths and Philosophy / Part B / Hilary</option>
+                                    <option value="/course/index.php?categoryid=765">Archive / Year 2023-24 / Undergraduate / Maths and Philosophy / Part B / Schedule 2</option>
+                                    <option value="/course/index.php?categoryid=766">Archive / Year 2023-24 / Undergraduate / Maths and Philosophy / Part C</option>
+                                    <option value="/course/index.php?categoryid=767">Archive / Year 2023-24 / Undergraduate / Maths and Philosophy / Part C / Michaelmas</option>
+                                    <option value="/course/index.php?categoryid=768">Archive / Year 2023-24 / Undergraduate / Maths and Philosophy / Part C / Hilary</option>
+                                    <option value="/course/index.php?categoryid=770">Archive / Year 2023-24 / Graduate</option>
+                                    <option value="/course/index.php?categoryid=771">Archive / Year 2023-24 / Graduate / CDT in Mathematics of Random Systems</option>
+                                    <option value="/course/index.php?categoryid=772">Archive / Year 2023-24 / Graduate / CDT in Mathematics of Random Systems / Michaelmas</option>
+                                    <option value="/course/index.php?categoryid=773">Archive / Year 2023-24 / Graduate / CDT in Mathematics of Random Systems / Michaelmas / Electives</option>
+                                    <option value="/course/index.php?categoryid=774">Archive / Year 2023-24 / Graduate / CDT in Mathematics of Random Systems / Hilary</option>
+                                    <option value="/course/index.php?categoryid=775">Archive / Year 2023-24 / Graduate / CDT in Mathematics of Random Systems / Trinity</option>
+                                    <option value="/course/index.php?categoryid=776">Archive / Year 2023-24 / Graduate / CDT in Mathematics of Random Systems / Foundation Courses</option>
+                                    <option value="/course/index.php?categoryid=777">Archive / Year 2023-24 / Graduate / MSc in Mathematical Modelling and Scientific Computing</option>
+                                    <option value="/course/index.php?categoryid=778">Archive / Year 2023-24 / Graduate / MSc in Mathematical Modelling and Scientific Computing / Michaelmas</option>
+                                    <option value="/course/index.php?categoryid=779">Archive / Year 2023-24 / Graduate / MSc in Mathematical Modelling and Scientific Computing / Hilary</option>
+                                    <option value="/course/index.php?categoryid=781">Archive / Year 2023-24 / Graduate / MSc in Mathematics and Foundations of Computer Science</option>
+                                    <option value="/course/index.php?categoryid=782">Archive / Year 2023-24 / Graduate / MSc in Mathematics and Foundations of Computer Science / Michaelmas</option>
+                                    <option value="/course/index.php?categoryid=784">Archive / Year 2023-24 / Graduate / MSc in Mathematics and Foundations of Computer Science / Hilary</option>
+                                    <option value="/course/index.php?categoryid=785">Archive / Year 2023-24 / Graduate / MSc in Mathematics and Foundations of Computer Science / Trinity</option>
+                                    <option value="/course/index.php?categoryid=786">Archive / Year 2023-24 / Graduate / MSc in Mathematical Sciences</option>
+                                    <option value="/course/index.php?categoryid=787">Archive / Year 2023-24 / Graduate / MSc in Mathematical Sciences / Michaelmas</option>
+                                    <option value="/course/index.php?categoryid=788">Archive / Year 2023-24 / Graduate / MSc in Mathematical Sciences / Hilary</option>
+                                    <option value="/course/index.php?categoryid=790">Archive / Year 2023-24 / Graduate / Mathematical and Theoretical Physics</option>
+                                    <option value="/course/index.php?categoryid=791">Archive / Year 2023-24 / Graduate / Mathematical and Theoretical Physics / Michaelmas</option>
+                                    <option value="/course/index.php?categoryid=792">Archive / Year 2023-24 / Graduate / Mathematical and Theoretical Physics / Michaelmas / MTP Induction</option>
+                                    <option value="/course/index.php?categoryid=793">Archive / Year 2023-24 / Graduate / Mathematical and Theoretical Physics / Michaelmas / DPhil application Q&amp;A</option>
+                                    <option value="/course/index.php?categoryid=794">Archive / Year 2023-24 / Graduate / Mathematical and Theoretical Physics / Michaelmas / Exam Briefing</option>
+                                    <option value="/course/index.php?categoryid=795">Archive / Year 2023-24 / Graduate / Mathematical and Theoretical Physics / Hilary</option>
+                                    <option value="/course/index.php?categoryid=796">Archive / Year 2023-24 / Graduate / Mathematical and Theoretical Physics / Trinity</option>
+                                    <option value="/course/index.php?categoryid=797">Archive / Year 2023-24 / Graduate / MSc in Mathematical and Computational Finance</option>
+                                    <option value="/course/index.php?categoryid=798">Archive / Year 2023-24 / Graduate / MSc in Mathematical and Computational Finance / Michaelmas</option>
+                                    <option value="/course/index.php?categoryid=799">Archive / Year 2023-24 / Graduate / MSc in Mathematical and Computational Finance / Hilary</option>
+                                    <option value="/course/index.php?categoryid=800">Archive / Year 2023-24 / Graduate / MSc in Mathematical and Computational Finance / Trinity</option>
+                                    <option value="/course/index.php?categoryid=802">Archive / Year 2023-24 / Special Lectures/Courses</option>
+                                    <option value="/course/index.php?categoryid=734">Archive / Year 2022-23</option>
+                                    <option value="/course/index.php?categoryid=99">Archive / Year 2022-23 / Undergraduate</option>
+                                    <option value="/course/index.php?categoryid=103">Archive / Year 2022-23 / Undergraduate / Prelims</option>
+                                    <option value="/course/index.php?categoryid=118">Archive / Year 2022-23 / Undergraduate / Prelims / Michaelmas</option>
+                                    <option value="/course/index.php?categoryid=119">Archive / Year 2022-23 / Undergraduate / Prelims / Hilary</option>
+                                    <option value="/course/index.php?categoryid=120">Archive / Year 2022-23 / Undergraduate / Prelims / Trinity</option>
+                                    <option value="/course/index.php?categoryid=104">Archive / Year 2022-23 / Undergraduate / Part A</option>
+                                    <option value="/course/index.php?categoryid=165">Archive / Year 2022-23 / Undergraduate / Part A / Michaelmas</option>
+                                    <option value="/course/index.php?categoryid=164">Archive / Year 2022-23 / Undergraduate / Part A / Hilary</option>
+                                    <option value="/course/index.php?categoryid=163">Archive / Year 2022-23 / Undergraduate / Part A / Trinity</option>
+                                    <option value="/course/index.php?categoryid=105">Archive / Year 2022-23 / Undergraduate / Part B</option>
+                                    <option value="/course/index.php?categoryid=124">Archive / Year 2022-23 / Undergraduate / Part B / Michaelmas</option>
+                                    <option value="/course/index.php?categoryid=125">Archive / Year 2022-23 / Undergraduate / Part B / Hilary</option>
+                                    <option value="/course/index.php?categoryid=106">Archive / Year 2022-23 / Undergraduate / Part C</option>
+                                    <option value="/course/index.php?categoryid=126">Archive / Year 2022-23 / Undergraduate / Part C / Michaelmas</option>
+                                    <option value="/course/index.php?categoryid=127">Archive / Year 2022-23 / Undergraduate / Part C / Hilary</option>
+                                    <option value="/course/index.php?categoryid=107">Archive / Year 2022-23 / Undergraduate / Maths and Philosophy</option>
+                                    <option value="/course/index.php?categoryid=167">Archive / Year 2022-23 / Undergraduate / Maths and Philosophy / Prelims</option>
+                                    <option value="/course/index.php?categoryid=168">Archive / Year 2022-23 / Undergraduate / Maths and Philosophy / Prelims / Michaelmas</option>
+                                    <option value="/course/index.php?categoryid=169">Archive / Year 2022-23 / Undergraduate / Maths and Philosophy / Prelims / Hilary</option>
+                                    <option value="/course/index.php?categoryid=170">Archive / Year 2022-23 / Undergraduate / Maths and Philosophy / Prelims / Trinity</option>
+                                    <option value="/course/index.php?categoryid=171">Archive / Year 2022-23 / Undergraduate / Maths and Philosophy / Part A</option>
+                                    <option value="/course/index.php?categoryid=172">Archive / Year 2022-23 / Undergraduate / Maths and Philosophy / Part A / Michaelmas</option>
+                                    <option value="/course/index.php?categoryid=175">Archive / Year 2022-23 / Undergraduate / Maths and Philosophy / Part A / Michaelmas / Core</option>
+                                    <option value="/course/index.php?categoryid=176">Archive / Year 2022-23 / Undergraduate / Maths and Philosophy / Part A / Michaelmas / Options</option>
+                                    <option value="/course/index.php?categoryid=173">Archive / Year 2022-23 / Undergraduate / Maths and Philosophy / Part A / Hilary</option>
+                                    <option value="/course/index.php?categoryid=174">Archive / Year 2022-23 / Undergraduate / Maths and Philosophy / Part A / Trinity</option>
+                                    <option value="/course/index.php?categoryid=177">Archive / Year 2022-23 / Undergraduate / Maths and Philosophy / Part B</option>
+                                    <option value="/course/index.php?categoryid=178">Archive / Year 2022-23 / Undergraduate / Maths and Philosophy / Part B / Michaelmas</option>
+                                    <option value="/course/index.php?categoryid=179">Archive / Year 2022-23 / Undergraduate / Maths and Philosophy / Part B / Hilary</option>
+                                    <option value="/course/index.php?categoryid=180">Archive / Year 2022-23 / Undergraduate / Maths and Philosophy / Part B / Schedule 2</option>
+                                    <option value="/course/index.php?categoryid=181">Archive / Year 2022-23 / Undergraduate / Maths and Philosophy / Part C</option>
+                                    <option value="/course/index.php?categoryid=182">Archive / Year 2022-23 / Undergraduate / Maths and Philosophy / Part C / Michaelmas</option>
+                                    <option value="/course/index.php?categoryid=183">Archive / Year 2022-23 / Undergraduate / Maths and Philosophy / Part C / Hilary</option>
+                                    <option value="/course/index.php?categoryid=128">Archive / Year 2022-23 / Graduate</option>
+                                    <option value="/course/index.php?categoryid=129">Archive / Year 2022-23 / Graduate / CDT in Mathematics of Random Systems</option>
+                                    <option value="/course/index.php?categoryid=130">Archive / Year 2022-23 / Graduate / CDT in Mathematics of Random Systems / Michaelmas</option>
+                                    <option value="/course/index.php?categoryid=131">Archive / Year 2022-23 / Graduate / CDT in Mathematics of Random Systems / Michaelmas / Electives</option>
+                                    <option value="/course/index.php?categoryid=132">Archive / Year 2022-23 / Graduate / CDT in Mathematics of Random Systems / Hilary</option>
+                                    <option value="/course/index.php?categoryid=133">Archive / Year 2022-23 / Graduate / CDT in Mathematics of Random Systems / Trinity</option>
+                                    <option value="/course/index.php?categoryid=134">Archive / Year 2022-23 / Graduate / CDT in Mathematics of Random Systems / Foundation Courses</option>
+                                    <option value="/course/index.php?categoryid=135">Archive / Year 2022-23 / Graduate / MSc in Mathematical Modelling and Scientific Computing</option>
+                                    <option value="/course/index.php?categoryid=136">Archive / Year 2022-23 / Graduate / MSc in Mathematical Modelling and Scientific Computing / Michaelmas</option>
+                                    <option value="/course/index.php?categoryid=137">Archive / Year 2022-23 / Graduate / MSc in Mathematical Modelling and Scientific Computing / Hilary</option>
+                                    <option value="/course/index.php?categoryid=138">Archive / Year 2022-23 / Graduate / MSc in Mathematical Modelling and Scientific Computing / Trinity</option>
+                                    <option value="/course/index.php?categoryid=139">Archive / Year 2022-23 / Graduate / MSc in Mathematics and Foundations of Computer Science</option>
+                                    <option value="/course/index.php?categoryid=140">Archive / Year 2022-23 / Graduate / MSc in Mathematics and Foundations of Computer Science / Michaelmas</option>
+                                    <option value="/course/index.php?categoryid=142">Archive / Year 2022-23 / Graduate / MSc in Mathematics and Foundations of Computer Science / Hilary</option>
+                                    <option value="/course/index.php?categoryid=143">Archive / Year 2022-23 / Graduate / MSc in Mathematics and Foundations of Computer Science / Trinity</option>
+                                    <option value="/course/index.php?categoryid=144">Archive / Year 2022-23 / Graduate / MSc in Mathematical Sciences</option>
+                                    <option value="/course/index.php?categoryid=145">Archive / Year 2022-23 / Graduate / MSc in Mathematical Sciences / Michaelmas</option>
+                                    <option value="/course/index.php?categoryid=146">Archive / Year 2022-23 / Graduate / MSc in Mathematical Sciences / Hilary</option>
+                                    <option value="/course/index.php?categoryid=147">Archive / Year 2022-23 / Graduate / MSc in Mathematical Sciences / Trinity</option>
+                                    <option value="/course/index.php?categoryid=148">Archive / Year 2022-23 / Graduate / Mathematical and Theoretical Physics</option>
+                                    <option value="/course/index.php?categoryid=149">Archive / Year 2022-23 / Graduate / Mathematical and Theoretical Physics / Michaelmas</option>
+                                    <option value="/course/index.php?categoryid=150">Archive / Year 2022-23 / Graduate / Mathematical and Theoretical Physics / Michaelmas / MTP Induction</option>
+                                    <option value="/course/index.php?categoryid=151">Archive / Year 2022-23 / Graduate / Mathematical and Theoretical Physics / Michaelmas / DPhil application Q&amp;A</option>
+                                    <option value="/course/index.php?categoryid=152">Archive / Year 2022-23 / Graduate / Mathematical and Theoretical Physics / Michaelmas / Exam Briefing</option>
+                                    <option value="/course/index.php?categoryid=153">Archive / Year 2022-23 / Graduate / Mathematical and Theoretical Physics / Hilary</option>
+                                    <option value="/course/index.php?categoryid=154">Archive / Year 2022-23 / Graduate / Mathematical and Theoretical Physics / Trinity</option>
+                                    <option value="/course/index.php?categoryid=155">Archive / Year 2022-23 / Graduate / MSc in Mathematical and Computational Finance</option>
+                                    <option value="/course/index.php?categoryid=156">Archive / Year 2022-23 / Graduate / MSc in Mathematical and Computational Finance / Michaelmas</option>
+                                    <option value="/course/index.php?categoryid=157">Archive / Year 2022-23 / Graduate / MSc in Mathematical and Computational Finance / Hilary</option>
+                                    <option value="/course/index.php?categoryid=158">Archive / Year 2022-23 / Graduate / MSc in Mathematical and Computational Finance / Trinity</option>
+                                    <option value="/course/index.php?categoryid=101">Archive / Year 2022-23 / Fridays@2</option>
+                                    <option value="/course/index.php?categoryid=10">Archive / Year 2021-22</option>
+                                    <option value="/course/index.php?categoryid=9">Archive / Year 2021-22 / Undergraduate</option>
+                                    <option value="/course/index.php?categoryid=68">Archive / Year 2021-22 / Undergraduate / Induction</option>
+                                    <option value="/course/index.php?categoryid=2">Archive / Year 2021-22 / Undergraduate / Prelims</option>
+                                    <option value="/course/index.php?categoryid=11">Archive / Year 2021-22 / Undergraduate / Prelims / Michaelmas</option>
+                                    <option value="/course/index.php?categoryid=12">Archive / Year 2021-22 / Undergraduate / Prelims / Hilary</option>
+                                    <option value="/course/index.php?categoryid=13">Archive / Year 2021-22 / Undergraduate / Prelims / Trinity</option>
+                                    <option value="/course/index.php?categoryid=4">Archive / Year 2021-22 / Undergraduate / Part A</option>
+                                    <option value="/course/index.php?categoryid=14">Archive / Year 2021-22 / Undergraduate / Part A / Michaelmas</option>
+                                    <option value="/course/index.php?categoryid=15">Archive / Year 2021-22 / Undergraduate / Part A / Hilary</option>
+                                    <option value="/course/index.php?categoryid=16">Archive / Year 2021-22 / Undergraduate / Part A / Trinity</option>
+                                    <option value="/course/index.php?categoryid=6">Archive / Year 2021-22 / Undergraduate / Part B</option>
+                                    <option value="/course/index.php?categoryid=17">Archive / Year 2021-22 / Undergraduate / Part B / Michaelmas</option>
+                                    <option value="/course/index.php?categoryid=18">Archive / Year 2021-22 / Undergraduate / Part B / Hilary</option>
+                                    <option value="/course/index.php?categoryid=8">Archive / Year 2021-22 / Undergraduate / Part C</option>
+                                    <option value="/course/index.php?categoryid=20">Archive / Year 2021-22 / Undergraduate / Part C / Michaelmas</option>
+                                    <option value="/course/index.php?categoryid=21">Archive / Year 2021-22 / Undergraduate / Part C / Hilary</option>
+                                    <option value="/course/index.php?categoryid=88">Archive / Year 2021-22 / Undergraduate / Maths and Philosophy</option>
+                                    <option value="/course/index.php?categoryid=71">Archive / Year 2021-22 / Undergraduate / Maths and Philosophy / Prelims</option>
+                                    <option value="/course/index.php?categoryid=77">Archive / Year 2021-22 / Undergraduate / Maths and Philosophy / Prelims / Michaelmas</option>
+                                    <option value="/course/index.php?categoryid=73">Archive / Year 2021-22 / Undergraduate / Maths and Philosophy / Prelims / Hilary</option>
+                                    <option value="/course/index.php?categoryid=78">Archive / Year 2021-22 / Undergraduate / Maths and Philosophy / Prelims / Trinity</option>
+                                    <option value="/course/index.php?categoryid=79">Archive / Year 2021-22 / Undergraduate / Maths and Philosophy / Part A</option>
+                                    <option value="/course/index.php?categoryid=80">Archive / Year 2021-22 / Undergraduate / Maths and Philosophy / Part A / Michaelmas</option>
+                                    <option value="/course/index.php?categoryid=81">Archive / Year 2021-22 / Undergraduate / Maths and Philosophy / Part A / Hilary</option>
+                                    <option value="/course/index.php?categoryid=82">Archive / Year 2021-22 / Undergraduate / Maths and Philosophy / Part A / Trinity</option>
+                                    <option value="/course/index.php?categoryid=74">Archive / Year 2021-22 / Undergraduate / Maths and Philosophy / Part B</option>
+                                    <option value="/course/index.php?categoryid=75">Archive / Year 2021-22 / Undergraduate / Maths and Philosophy / Part B / Michaelmas</option>
+                                    <option value="/course/index.php?categoryid=76">Archive / Year 2021-22 / Undergraduate / Maths and Philosophy / Part B / Hilary</option>
+                                    <option value="/course/index.php?categoryid=83">Archive / Year 2021-22 / Undergraduate / Maths and Philosophy / Part C</option>
+                                    <option value="/course/index.php?categoryid=84">Archive / Year 2021-22 / Undergraduate / Maths and Philosophy / Part C / Michaelmas</option>
+                                    <option value="/course/index.php?categoryid=85">Archive / Year 2021-22 / Undergraduate / Maths and Philosophy / Part C / Hilary</option>
+                                    <option value="/course/index.php?categoryid=23">Archive / Year 2021-22 / Graduate</option>
+                                    <option value="/course/index.php?categoryid=26">Archive / Year 2021-22 / Graduate / CDT in Mathematics of Random Systems</option>
+                                    <option value="/course/index.php?categoryid=58">Archive / Year 2021-22 / Graduate / CDT in Mathematics of Random Systems / Foundation Courses</option>
+                                    <option value="/course/index.php?categoryid=55">Archive / Year 2021-22 / Graduate / CDT in Mathematics of Random Systems / Michaelmas</option>
+                                    <option value="/course/index.php?categoryid=60">Archive / Year 2021-22 / Graduate / CDT in Mathematics of Random Systems / Michaelmas / Electives</option>
+                                    <option value="/course/index.php?categoryid=56">Archive / Year 2021-22 / Graduate / CDT in Mathematics of Random Systems / Hilary</option>
+                                    <option value="/course/index.php?categoryid=57">Archive / Year 2021-22 / Graduate / CDT in Mathematics of Random Systems / Trinity</option>
+                                    <option value="/course/index.php?categoryid=27">Archive / Year 2021-22 / Graduate / MSc in Mathematical Modelling and Scientific Computing</option>
+                                    <option value="/course/index.php?categoryid=40">Archive / Year 2021-22 / Graduate / MSc in Mathematical Modelling and Scientific Computing / Michaelmas</option>
+                                    <option value="/course/index.php?categoryid=41">Archive / Year 2021-22 / Graduate / MSc in Mathematical Modelling and Scientific Computing / Hilary</option>
+                                    <option value="/course/index.php?categoryid=42">Archive / Year 2021-22 / Graduate / MSc in Mathematical Modelling and Scientific Computing / Trinity</option>
+                                    <option value="/course/index.php?categoryid=30">Archive / Year 2021-22 / Graduate / MSc in Mathematics and Foundations of Computer Science</option>
+                                    <option value="/course/index.php?categoryid=49">Archive / Year 2021-22 / Graduate / MSc in Mathematics and Foundations of Computer Science / Michaelmas</option>
+                                    <option value="/course/index.php?categoryid=64">Archive / Year 2021-22 / Graduate / MSc in Mathematics and Foundations of Computer Science / Michaelmas / Induction</option>
+                                    <option value="/course/index.php?categoryid=50">Archive / Year 2021-22 / Graduate / MSc in Mathematics and Foundations of Computer Science / Hilary</option>
+                                    <option value="/course/index.php?categoryid=51">Archive / Year 2021-22 / Graduate / MSc in Mathematics and Foundations of Computer Science / Trinity</option>
+                                    <option value="/course/index.php?categoryid=31">Archive / Year 2021-22 / Graduate / MSc in Mathematical Sciences</option>
+                                    <option value="/course/index.php?categoryid=52">Archive / Year 2021-22 / Graduate / MSc in Mathematical Sciences / Michaelmas</option>
+                                    <option value="/course/index.php?categoryid=53">Archive / Year 2021-22 / Graduate / MSc in Mathematical Sciences / Hilary</option>
+                                    <option value="/course/index.php?categoryid=54">Archive / Year 2021-22 / Graduate / MSc in Mathematical Sciences / Trinity</option>
+                                    <option value="/course/index.php?categoryid=32">Archive / Year 2021-22 / Graduate / Mathematical and Theoretical Physics</option>
+                                    <option value="/course/index.php?categoryid=37">Archive / Year 2021-22 / Graduate / Mathematical and Theoretical Physics / Michaelmas</option>
+                                    <option value="/course/index.php?categoryid=67">Archive / Year 2021-22 / Graduate / Mathematical and Theoretical Physics / Michaelmas / MTP Induction</option>
+                                    <option value="/course/index.php?categoryid=89">Archive / Year 2021-22 / Graduate / Mathematical and Theoretical Physics / Michaelmas / DPhil application Q&amp;A</option>
+                                    <option value="/course/index.php?categoryid=90">Archive / Year 2021-22 / Graduate / Mathematical and Theoretical Physics / Michaelmas / Exam Briefing</option>
+                                    <option value="/course/index.php?categoryid=38">Archive / Year 2021-22 / Graduate / Mathematical and Theoretical Physics / Hilary</option>
+                                    <option value="/course/index.php?categoryid=39">Archive / Year 2021-22 / Graduate / Mathematical and Theoretical Physics / Trinity</option>
+                                    <option value="/course/index.php?categoryid=33">Archive / Year 2021-22 / Graduate / MSc in Mathematical and Computational Finance</option>
+                                    <option value="/course/index.php?categoryid=34">Archive / Year 2021-22 / Graduate / MSc in Mathematical and Computational Finance / Michaelmas</option>
+                                    <option value="/course/index.php?categoryid=35">Archive / Year 2021-22 / Graduate / MSc in Mathematical and Computational Finance / Hilary</option>
+                                    <option value="/course/index.php?categoryid=36">Archive / Year 2021-22 / Graduate / MSc in Mathematical and Computational Finance / Trinity</option>
+                                    <option value="/course/index.php?categoryid=63">Archive / Year 2021-22 / Graduate / Other</option>
+                                    <option value="/course/index.php?categoryid=69">Archive / Year 2021-22 / Fridays@2</option>
+                                    <option value="/course/index.php?categoryid=653">Archive / Year 2020-21</option>
+                                    <option value="/course/index.php?categoryid=654">Archive / Year 2020-21 / Undergraduate</option>
+                                    <option value="/course/index.php?categoryid=655">Archive / Year 2020-21 / Undergraduate / Prelims</option>
+                                    <option value="/course/index.php?categoryid=656">Archive / Year 2020-21 / Undergraduate / Prelims / Michaelmas</option>
+                                    <option value="/course/index.php?categoryid=657">Archive / Year 2020-21 / Undergraduate / Prelims / Hilary</option>
+                                    <option value="/course/index.php?categoryid=658">Archive / Year 2020-21 / Undergraduate / Part A</option>
+                                    <option value="/course/index.php?categoryid=659">Archive / Year 2020-21 / Undergraduate / Part A / Michaelmas</option>
+                                    <option value="/course/index.php?categoryid=660">Archive / Year 2020-21 / Undergraduate / Part A / Hilary</option>
+                                    <option value="/course/index.php?categoryid=661">Archive / Year 2020-21 / Undergraduate / Part A / Trinity</option>
+                                    <option value="/course/index.php?categoryid=662">Archive / Year 2020-21 / Undergraduate / Part B</option>
+                                    <option value="/course/index.php?categoryid=663">Archive / Year 2020-21 / Undergraduate / Part B / Michaelmas</option>
+                                    <option value="/course/index.php?categoryid=664">Archive / Year 2020-21 / Undergraduate / Part B / Hilary</option>
+                                    <option value="/course/index.php?categoryid=665">Archive / Year 2020-21 / Undergraduate / Part C</option>
+                                    <option value="/course/index.php?categoryid=666">Archive / Year 2020-21 / Undergraduate / Part C / Michaelmas</option>
+                                    <option value="/course/index.php?categoryid=667">Archive / Year 2020-21 / Undergraduate / Part C / Hilary</option>
+                                    <option value="/course/index.php?categoryid=668">Archive / Year 2020-21 / Undergraduate / Part A Mathematics &amp; Philosophy</option>
+                                    <option value="/course/index.php?categoryid=669">Archive / Year 2020-21 / Undergraduate / Part A Mathematics &amp; Philosophy / Michaelmas</option>
+                                    <option value="/course/index.php?categoryid=670">Archive / Year 2020-21 / Undergraduate / Part A Mathematics &amp; Philosophy / Hilary</option>
+                                    <option value="/course/index.php?categoryid=671">Archive / Year 2020-21 / Undergraduate / Part A Mathematics &amp; Philosophy / Trinity</option>
+                                    <option value="/course/index.php?categoryid=672">Archive / Year 2020-21 / Undergraduate / Prelims Mathematics &amp; Philosophy</option>
+                                    <option value="/course/index.php?categoryid=673">Archive / Year 2020-21 / Undergraduate / Prelims Mathematics &amp; Philosophy / Michaelmas</option>
+                                    <option value="/course/index.php?categoryid=674">Archive / Year 2020-21 / Undergraduate / Prelims Mathematics &amp; Philosophy / Hilary</option>
+                                    <option value="/course/index.php?categoryid=675">Archive / Year 2020-21 / Undergraduate / Prelims Mathematics &amp; Philosophy / Trinity</option>
+                                    <option value="/course/index.php?categoryid=676">Archive / Year 2020-21 / Graduate</option>
+                                    <option value="/course/index.php?categoryid=677">Archive / Year 2020-21 / Graduate / CDT in Mathematics of Random Systems</option>
+                                    <option value="/course/index.php?categoryid=678">Archive / Year 2020-21 / Graduate / CDT in Mathematics of Random Systems / Michaelmas</option>
+                                    <option value="/course/index.php?categoryid=679">Archive / Year 2020-21 / Graduate / CDT in Mathematics of Random Systems / Hilary</option>
+                                    <option value="/course/index.php?categoryid=680">Archive / Year 2020-21 / Graduate / Industrially Focused Mathematical Modelling</option>
+                                    <option value="/course/index.php?categoryid=681">Archive / Year 2020-21 / Graduate / Industrially Focused Mathematical Modelling / Michaelmas</option>
+                                    <option value="/course/index.php?categoryid=682">Archive / Year 2020-21 / Graduate / Industrially Focused Mathematical Modelling / Hilary</option>
+                                    <option value="/course/index.php?categoryid=695">Archive / Year 2020-21 / Graduate / MSc in Mathematical Modelling and Scientific Computing</option>
+                                    <option value="/course/index.php?categoryid=696">Archive / Year 2020-21 / Graduate / MSc in Mathematical Modelling and Scientific Computing / Michaelmas</option>
+                                    <option value="/course/index.php?categoryid=697">Archive / Year 2020-21 / Graduate / MSc in Mathematical Modelling and Scientific Computing / Hilary</option>
+                                    <option value="/course/index.php?categoryid=698">Archive / Year 2020-21 / Graduate / MSc in Mathematical Modelling and Scientific Computing / Trinity</option>
+                                    <option value="/course/index.php?categoryid=702">Archive / Year 2020-21 / Graduate / MSc in Mathematics and Foundations of Computer Science</option>
+                                    <option value="/course/index.php?categoryid=703">Archive / Year 2020-21 / Graduate / MSc in Mathematics and Foundations of Computer Science / Michaelmas</option>
+                                    <option value="/course/index.php?categoryid=704">Archive / Year 2020-21 / Graduate / MSc in Mathematics and Foundations of Computer Science / Hilary</option>
+                                    <option value="/course/index.php?categoryid=705">Archive / Year 2020-21 / Graduate / MSc in Mathematics and Foundations of Computer Science / Trinity</option>
+                                    <option value="/course/index.php?categoryid=699">Archive / Year 2020-21 / Graduate / MSc in Mathematical Sciences</option>
+                                    <option value="/course/index.php?categoryid=700">Archive / Year 2020-21 / Graduate / MSc in Mathematical Sciences / Michaelmas</option>
+                                    <option value="/course/index.php?categoryid=701">Archive / Year 2020-21 / Graduate / MSc in Mathematical Sciences / Hilary</option>
+                                    <option value="/course/index.php?categoryid=683">Archive / Year 2020-21 / Graduate / Mathematical and Theoretical Physics</option>
+                                    <option value="/course/index.php?categoryid=684">Archive / Year 2020-21 / Graduate / Mathematical and Theoretical Physics / Michaelmas</option>
+                                    <option value="/course/index.php?categoryid=685">Archive / Year 2020-21 / Graduate / Mathematical and Theoretical Physics / Hilary</option>
+                                    <option value="/course/index.php?categoryid=686">Archive / Year 2020-21 / Graduate / Mathematical and Theoretical Physics / Trinity</option>
+                                    <option value="/course/index.php?categoryid=687">Archive / Year 2020-21 / Graduate / MSc in Mathematical and Computational Finance</option>
+                                    <option value="/course/index.php?categoryid=688">Archive / Year 2020-21 / Graduate / MSc in Mathematical and Computational Finance / Michaelmas</option>
+                                    <option value="/course/index.php?categoryid=689">Archive / Year 2020-21 / Graduate / MSc in Mathematical and Computational Finance / Hilary</option>
+                                    <option value="/course/index.php?categoryid=690">Archive / Year 2020-21 / Graduate / MSc in Mathematical and Computational Finance / Trinity</option>
+                                    <option value="/course/index.php?categoryid=691">Archive / Year 2020-21 / Graduate / MSc in Mathematical Finance (28m)</option>
+                                    <option value="/course/index.php?categoryid=692">Archive / Year 2020-21 / Graduate / MSc in Mathematical Finance (28m) / Michaelmas</option>
+                                    <option value="/course/index.php?categoryid=693">Archive / Year 2020-21 / Graduate / MSc in Mathematical Finance (28m) / Hilary</option>
+                                    <option value="/course/index.php?categoryid=694">Archive / Year 2020-21 / Graduate / MSc in Mathematical Finance (28m) / Trinity</option>
+                                    <option value="/course/index.php?categoryid=596">Archive / Year 2019-20</option>
+                                    <option value="/course/index.php?categoryid=597">Archive / Year 2019-20 / Undergraduate</option>
+                                    <option value="/course/index.php?categoryid=598">Archive / Year 2019-20 / Undergraduate / Prelims</option>
+                                    <option value="/course/index.php?categoryid=599">Archive / Year 2019-20 / Undergraduate / Prelims / Michaelmas</option>
+                                    <option value="/course/index.php?categoryid=600">Archive / Year 2019-20 / Undergraduate / Prelims / Hilary</option>
+                                    <option value="/course/index.php?categoryid=601">Archive / Year 2019-20 / Undergraduate / Prelims / Trinity</option>
+                                    <option value="/course/index.php?categoryid=602">Archive / Year 2019-20 / Undergraduate / Part A</option>
+                                    <option value="/course/index.php?categoryid=603">Archive / Year 2019-20 / Undergraduate / Part A / Michaelmas</option>
+                                    <option value="/course/index.php?categoryid=604">Archive / Year 2019-20 / Undergraduate / Part A / Hilary</option>
+                                    <option value="/course/index.php?categoryid=605">Archive / Year 2019-20 / Undergraduate / Part A / Trinity</option>
+                                    <option value="/course/index.php?categoryid=606">Archive / Year 2019-20 / Undergraduate / Part B</option>
+                                    <option value="/course/index.php?categoryid=607">Archive / Year 2019-20 / Undergraduate / Part B / Michaelmas</option>
+                                    <option value="/course/index.php?categoryid=608">Archive / Year 2019-20 / Undergraduate / Part B / Hilary</option>
+                                    <option value="/course/index.php?categoryid=609">Archive / Year 2019-20 / Undergraduate / Part C</option>
+                                    <option value="/course/index.php?categoryid=610">Archive / Year 2019-20 / Undergraduate / Part C / Michaelmas</option>
+                                    <option value="/course/index.php?categoryid=611">Archive / Year 2019-20 / Undergraduate / Part C / Hilary</option>
+                                    <option value="/course/index.php?categoryid=612">Archive / Year 2019-20 / Undergraduate / Part A Mathematics &amp; Philosophy</option>
+                                    <option value="/course/index.php?categoryid=613">Archive / Year 2019-20 / Undergraduate / Part A Mathematics &amp; Philosophy / Michaelmas</option>
+                                    <option value="/course/index.php?categoryid=614">Archive / Year 2019-20 / Undergraduate / Part A Mathematics &amp; Philosophy / Hilary</option>
+                                    <option value="/course/index.php?categoryid=615">Archive / Year 2019-20 / Undergraduate / Part A Mathematics &amp; Philosophy / Trinity</option>
+                                    <option value="/course/index.php?categoryid=616">Archive / Year 2019-20 / Undergraduate / Prelims Mathematics &amp; Philosophy</option>
+                                    <option value="/course/index.php?categoryid=617">Archive / Year 2019-20 / Undergraduate / Prelims Mathematics &amp; Philosophy / Michaelmas</option>
+                                    <option value="/course/index.php?categoryid=618">Archive / Year 2019-20 / Undergraduate / Prelims Mathematics &amp; Philosophy / Hilary</option>
+                                    <option value="/course/index.php?categoryid=619">Archive / Year 2019-20 / Undergraduate / Prelims Mathematics &amp; Philosophy / Trinity</option>
+                                    <option value="/course/index.php?categoryid=620">Archive / Year 2019-20 / Graduate</option>
+                                    <option value="/course/index.php?categoryid=627">Archive / Year 2019-20 / Graduate / Industrially Focused Mathematical Modelling</option>
+                                    <option value="/course/index.php?categoryid=628">Archive / Year 2019-20 / Graduate / Industrially Focused Mathematical Modelling / Michaelmas</option>
+                                    <option value="/course/index.php?categoryid=629">Archive / Year 2019-20 / Graduate / Industrially Focused Mathematical Modelling / Hilary</option>
+                                    <option value="/course/index.php?categoryid=624">Archive / Year 2019-20 / Graduate / Graduate Courses</option>
+                                    <option value="/course/index.php?categoryid=625">Archive / Year 2019-20 / Graduate / Graduate Courses / Michaelmas</option>
+                                    <option value="/course/index.php?categoryid=626">Archive / Year 2019-20 / Graduate / Graduate Courses / Hilary</option>
+                                    <option value="/course/index.php?categoryid=642">Archive / Year 2019-20 / Graduate / MSc in Mathematical Modelling and Scientific Computing</option>
+                                    <option value="/course/index.php?categoryid=643">Archive / Year 2019-20 / Graduate / MSc in Mathematical Modelling and Scientific Computing / Michaelmas</option>
+                                    <option value="/course/index.php?categoryid=644">Archive / Year 2019-20 / Graduate / MSc in Mathematical Modelling and Scientific Computing / Hilary</option>
+                                    <option value="/course/index.php?categoryid=645">Archive / Year 2019-20 / Graduate / MSc in Mathematical Modelling and Scientific Computing / Trinity</option>
+                                    <option value="/course/index.php?categoryid=649">Archive / Year 2019-20 / Graduate / MSc in Mathematics and Foundations of Computer Science</option>
+                                    <option value="/course/index.php?categoryid=650">Archive / Year 2019-20 / Graduate / MSc in Mathematics and Foundations of Computer Science / Michaelmas</option>
+                                    <option value="/course/index.php?categoryid=651">Archive / Year 2019-20 / Graduate / MSc in Mathematics and Foundations of Computer Science / Hilary</option>
+                                    <option value="/course/index.php?categoryid=652">Archive / Year 2019-20 / Graduate / MSc in Mathematics and Foundations of Computer Science / Trinity</option>
+                                    <option value="/course/index.php?categoryid=646">Archive / Year 2019-20 / Graduate / MSc in Mathematical Sciences</option>
+                                    <option value="/course/index.php?categoryid=647">Archive / Year 2019-20 / Graduate / MSc in Mathematical Sciences / Michaelmas</option>
+                                    <option value="/course/index.php?categoryid=648">Archive / Year 2019-20 / Graduate / MSc in Mathematical Sciences / Hilary</option>
+                                    <option value="/course/index.php?categoryid=630">Archive / Year 2019-20 / Graduate / Mathematical and Theoretical Physics</option>
+                                    <option value="/course/index.php?categoryid=631">Archive / Year 2019-20 / Graduate / Mathematical and Theoretical Physics / Michaelmas</option>
+                                    <option value="/course/index.php?categoryid=632">Archive / Year 2019-20 / Graduate / Mathematical and Theoretical Physics / Hilary</option>
+                                    <option value="/course/index.php?categoryid=633">Archive / Year 2019-20 / Graduate / Mathematical and Theoretical Physics / Trinity</option>
+                                    <option value="/course/index.php?categoryid=634">Archive / Year 2019-20 / Graduate / MSc in Mathematical and Computational Finance</option>
+                                    <option value="/course/index.php?categoryid=635">Archive / Year 2019-20 / Graduate / MSc in Mathematical and Computational Finance / Michaelmas</option>
+                                    <option value="/course/index.php?categoryid=636">Archive / Year 2019-20 / Graduate / MSc in Mathematical and Computational Finance / Hilary</option>
+                                    <option value="/course/index.php?categoryid=637">Archive / Year 2019-20 / Graduate / MSc in Mathematical and Computational Finance / Trinity</option>
+                                    <option value="/course/index.php?categoryid=638">Archive / Year 2019-20 / Graduate / MSc in Mathematical Finance (28m)</option>
+                                    <option value="/course/index.php?categoryid=639">Archive / Year 2019-20 / Graduate / MSc in Mathematical Finance (28m) / Michaelmas</option>
+                                    <option value="/course/index.php?categoryid=640">Archive / Year 2019-20 / Graduate / MSc in Mathematical Finance (28m) / Hilary</option>
+                                    <option value="/course/index.php?categoryid=641">Archive / Year 2019-20 / Graduate / MSc in Mathematical Finance (28m) / Trinity</option>
+                                    <option value="/course/index.php?categoryid=166">Other</option>
+                        </select>
+                            <noscript>
+                                <input type="submit" class="btn btn-secondary ms-1" value="Go">
+                            </noscript>
+                    </form>
+                </div>
+            </div>
+            <div class="navitem">
+                <div class="simplesearchform ">
+                    <form autocomplete="off" action="https://courses.maths.ox.ac.uk/course/search.php" method="get" accept-charset="utf-8" class="mform d-flex flex-wrap align-items-center simplesearchform">
+                    <div class="input-group">
+                        <label for="searchinput-6a2fc9c5af0346a2fc9c5adf003">
+                            <span class="sr-only">Search courses</span>
+                        </label>
+                        <input type="text" id="searchinput-6a2fc9c5af0346a2fc9c5adf003" class="form-control" placeholder="Search courses" aria-label="Search courses" name="search" data-region="input" autocomplete="off" value="">
+                        <div class="input-group-append">
+                            <button type="submit" class="btn  btn-primary search-icon">
+                                <i class="icon fa fa-magnifying-glass fa-fw " aria-hidden="true"></i>
+                                <span class="sr-only">Search courses</span>
+                            </button>
+                        </div>
+                
+                    </div>
+                    </form>
+                </div>            </div>
+    </div>
+</div><div class="course_category_tree clearfix category-browse category-browse-0"><div class="collapsible-actions"><a class="collapseexpand aabtn" href="#">Expand all</a></div><div class="content"><div class="subcategories"><div class="category notloaded with_children collapsed" data-categoryid="874" data-depth="1" data-showcourses="15" data-type="0"><div class="info"><h3 class="categoryname aabtn"><a href="https://courses.maths.ox.ac.uk/course/index.php?categoryid=874">Course Documentation</a></h3></div><div class="content"></div></div><div class="category notloaded with_children collapsed" data-categoryid="876" data-depth="1" data-showcourses="15" data-type="0"><div class="info"><h3 class="categoryname aabtn"><a href="https://courses.maths.ox.ac.uk/course/index.php?categoryid=876">Undergraduate</a></h3></div><div class="content"></div></div><div class="category notloaded with_children collapsed" data-categoryid="912" data-depth="1" data-showcourses="15" data-type="0"><div class="info"><h3 class="categoryname aabtn"><a href="https://courses.maths.ox.ac.uk/course/index.php?categoryid=912">Graduate</a></h3></div><div class="content"></div></div><div class="category notloaded with_children collapsed" data-categoryid="943" data-depth="1" data-showcourses="15" data-type="0"><div class="info"><h3 class="categoryname aabtn"><a href="https://courses.maths.ox.ac.uk/course/index.php?categoryid=943">Special Lectures/Courses</a></h3></div><div class="content"></div></div><div class="category notloaded with_children collapsed" data-categoryid="25" data-depth="1" data-showcourses="15" data-type="0"><div class="info"><h3 class="categoryname aabtn"><a href="https://courses.maths.ox.ac.uk/course/index.php?categoryid=25">Archive</a></h3></div><div class="content"></div></div><div class="category notloaded with_children collapsed" data-categoryid="166" data-depth="1" data-showcourses="15" data-type="0"><div class="info"><h3 class="categoryname aabtn"><a href="https://courses.maths.ox.ac.uk/course/index.php?categoryid=166">Other</a></h3></div><div class="content"></div></div></div></div></div></div>
+                        
+                        
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <footer id="page-footer" class="footer-popover bg-white">
+            <div data-region="footer-container-popover">
+                <button class="btn btn-icon bg-secondary icon-no-margin btn-footer-popover" data-action="footer-popover" aria-label="Show footer">
+                    <i class="icon fa fa-question fa-fw " aria-hidden="true"></i>
+                </button>
+            </div>
+            <div class="footer-content-popover container" data-region="footer-content-popover">
+                    <div class="footer-section p-3 border-bottom">
+        
+        
+                            <div class="footer-support-link"><a href="https://www.maths.ox.ac.uk/members/it/faqs/moodle-courses-system" target="blank"><i class="icon fa-regular fa-envelope fa-fw " aria-hidden="true"></i>Contact site support<i class="icon fa fa-arrow-up-right-from-square fa-fw ms-1" aria-hidden="true"></i></a></div>
+                    </div>
+                <div class="footer-section p-3 border-bottom">
+                    <div class="logininfo">
+                        <div class="logininfo">You are currently using guest access (<a href="https://courses.maths.ox.ac.uk/login/index.php">Log in with SSO</a>)</div>
+                    </div>
+                    <div class="tool_usertours-resettourcontainer">
+                    </div>
+        
+                    <div><a class="mobilelink" href="https://download.moodle.org/mobile?version=2024100712&amp;lang=en&amp;iosappid=633359593&amp;androidappid=com.moodle.moodlemobile&amp;siteurl=https%3A%2F%2Fcourses.maths.ox.ac.uk">Get the mobile app</a></div>
+                    
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Add an icon to module links that open in a new tab
+    document.querySelectorAll('ul.topics .activitytitle a[onclick^="window.open("]').forEach(function(link) {
+        var icon = document.createElement('i');
+        icon.className = 'fa fa-external-link ms-1';
+        icon.setAttribute('aria-label', 'Opens in new window');
+        icon.setAttribute('role', 'img');
+        icon.setAttribute('title', 'Opens in new window');
+        link.appendChild(icon);
+    });
+});
+</script><script>
+//<![CDATA[
+var require = {
+    baseUrl : 'https://courses.maths.ox.ac.uk/lib/requirejs.php/1780950349/',
+    // We only support AMD modules with an explicit define() statement.
+    enforceDefine: true,
+    skipDataMain: true,
+    waitSeconds : 0,
+
+    paths: {
+        jquery: 'https://courses.maths.ox.ac.uk/lib/javascript.php/1780950349/lib/jquery/jquery-3.7.1.min',
+        jqueryui: 'https://courses.maths.ox.ac.uk/lib/javascript.php/1780950349/lib/jquery/ui-1.13.2/jquery-ui.min',
+        jqueryprivate: 'https://courses.maths.ox.ac.uk/lib/javascript.php/1780950349/lib/requirejs/jquery-private'
+    },
+
+    // Custom jquery config map.
+    map: {
+      // '*' means all modules will get 'jqueryprivate'
+      // for their 'jquery' dependency.
+      '*': { jquery: 'jqueryprivate' },
+
+      // 'jquery-private' wants the real jQuery module
+      // though. If this line was not here, there would
+      // be an unresolvable cyclic dependency.
+      jqueryprivate: { jquery: 'jquery' }
+    }
+};
+
+//]]>
+</script>
+<script src="https://courses.maths.ox.ac.uk/lib/javascript.php/1780950349/lib/requirejs/require.min.js"></script>
+<script>
+//<![CDATA[
+M.util.js_pending("core/first");
+require(['core/first'], function() {
+require(['core/prefetch'])
+;
+M.util.js_pending('filter_mathjaxloader/loader'); require(['filter_mathjaxloader/loader'], function(amd) {amd.configure({"mathjaxconfig":"MathJax.Hub.Config({\r\n    config: [\"Accessible.js\", \"Safe.js\"],\r\n    errorSettings: { message: [\"!\"] },\r\n    tex2jax: {\r\n      \/\/inlineMath: [ ['$','$'], ['\\\\(','\\\\)'] ],\r\n      processEscapes: true\r\n    },\r\n    skipStartupTypeset: true,\r\n    messageStyle: \"none\"\r\n});\r\n","lang":"en"}); M.util.js_complete('filter_mathjaxloader/loader');});;
+
+        require(['jquery', 'core/custom_interaction_events'], function($, CustomEvents) {
+            CustomEvents.define('#url_select6a2fc9c5adf002', [CustomEvents.events.accessibleChange]);
+            $('#url_select6a2fc9c5adf002').on(CustomEvents.events.accessibleChange, function() {
+                if ($(this).val()) {
+                    $('#url_select_f6a2fc9c5adf001').submit();
+                }
+            });
+        });
+    ;
+
+    require(['core/moremenu'], function(moremenu) {
+        moremenu(document.querySelector('#moremenu-6a2fc9c5b987f-navbar-nav'));
+    });
+;
+
+    require(['core/usermenu'], function(UserMenu) {
+        UserMenu.init();
+    });
+;
+
+M.util.js_pending('theme_boost/drawers:load');
+require(['theme_boost/drawers'], function() {
+    M.util.js_complete('theme_boost/drawers:load');
+});
+;
+
+require(['theme_boost/footer-popover'], function(FooterPopover) {
+    FooterPopover.init();
+});
+;
+
+M.util.js_pending('theme_boost/loader');
+require(['theme_boost/loader', 'theme_boost/drawer'], function(Loader, Drawer) {
+    Drawer.init();
+    M.util.js_complete('theme_boost/loader');
+});
+;
+M.util.js_pending('core/notification'); require(['core/notification'], function(amd) {amd.init(1, []); M.util.js_complete('core/notification');});;
+M.util.js_pending('core/log'); require(['core/log'], function(amd) {amd.setConfig({"level":"warn"}); M.util.js_complete('core/log');});;
+M.util.js_pending('core/page_global'); require(['core/page_global'], function(amd) {amd.init(); M.util.js_complete('core/page_global');});;
+M.util.js_pending('core/utility'); require(['core/utility'], function(amd) {M.util.js_complete('core/utility');});;
+M.util.js_pending('core/storage_validation'); require(['core/storage_validation'], function(amd) {amd.init(null); M.util.js_complete('core/storage_validation');});
+    M.util.js_complete("core/first");
+});
+//]]>
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?delayStartupUntil=configured"></script>
+<script>
+//<![CDATA[
+M.str = {"moodle":{"lastmodified":"Last modified","name":"Name","error":"Error","info":"Information","yes":"Yes","no":"No","collapseall":"Collapse all","expandall":"Expand all","cancel":"Cancel","confirm":"Confirm","areyousure":"Are you sure?","closebuttontitle":"Close","unknownerror":"Unknown error","file":"File","url":"URL"},"repository":{"type":"Type","size":"Size","invalidjson":"Invalid JSON string","nofilesattached":"No files attached","filepicker":"File picker","logout":"Logout","nofilesavailable":"No files available","norepositoriesavailable":"Sorry, none of your current repositories can return files in the required format.","fileexistsdialogheader":"File exists","fileexistsdialog_editor":"A file with that name has already been attached to the text you are editing.","fileexistsdialog_filemanager":"A file with that name has already been attached","renameto":"Rename to \"{$a}\"","referencesexist":"There are {$a} links to this file","select":"Select"},"admin":{"confirmdeletecomments":"Are you sure you want to delete the selected comment(s)?","confirmation":"Confirmation"},"debug":{"debuginfo":"Debug info","line":"Line","stacktrace":"Stack trace"},"langconfig":{"labelsep":": "}};
+//]]>
+</script>
+<script>
+//<![CDATA[
+(function() {Y.use("moodle-course-categoryexpander",function() {Y.Moodle.course.categoryexpander.init();
+});
+M.util.help_popups.setup(Y);
+ M.util.js_pending('random6a2fc9c5adf005'); Y.on('domready', function() { M.util.js_complete("init");  M.util.js_complete('random6a2fc9c5adf005'); });
+})();
+//]]>
+</script>
+
+                </div>
+                <div class="footer-section p-3">
+                    <div>Powered by <a href="https://moodle.com">Moodle</a></div>
+                </div>
+            </div>
+        
+            <div class="footer-content-debugging footer-dark bg-dark text-light">
+                <div class="container-fluid footer-dark-inner">
+                    
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+</div><div id="yui3-css-stamp" style="position: absolute !important; visibility: hidden !important" class=""></div>
+
+
+</body></html>

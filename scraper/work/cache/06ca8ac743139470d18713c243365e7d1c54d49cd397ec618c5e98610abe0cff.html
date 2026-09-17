@@ -1,0 +1,133 @@
+<!DOCTYPE html><html lang="en"><head>
+  <title>15-210 S26 — Parallel and Sequential Data Structures and Algorithms</title>
+  <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+
+
+
+<body>
+  
+    <div id="header">
+    <ul id="nav">
+    <li id="home" class="current">
+        <a href="index.html">15210</a>
+      </li>
+    <li>
+        <a href="schedule.html">Schedule</a>
+    </li>
+    <li>
+      <a href="staff.html">Staff</a>
+    </li>
+
+    <li>
+      <a href="resources/index.html">Resources</a>
+    </li>
+    <li>
+      <a href="policies.html">Policies</a>
+    </li>
+    
+      
+    </ul>
+    <ol id="semesters">
+      <li><a href="https://www.cs.cmu.edu/afs/cs/academic/class/15210-s18/www-s18">S18</a></li>
+      <li><a href="https://www.cs.cmu.edu/afs/cs/academic/class/15210-f18/www">F18</a></li>
+      <li><a href="https://www.cs.cmu.edu/afs/cs/academic/class/15210-s19/s19_www">S19</a></li>
+      <li><a href="https://www.cs.cmu.edu/afs/cs/academic/class/15210-s19/f19_www">F19</a></li>
+      <li><a href="https://www.cs.cmu.edu/afs/cs/academic/class/15210-s19/s20_www">S20</a></li>
+      <li><a href="https://www.cs.cmu.edu/afs/cs/academic/class/15210-f20/www/">F20</a></li>
+      <li><a href="https://www.cs.cmu.edu/afs/cs/academic/class/15210-s21/www/">S21</a></li>
+      <li><a href="https://www.cs.cmu.edu/afs/cs/academic/class/15210-f21/www-f21/">F21</a></li>
+      <li><a href="https://www.cs.cmu.edu/afs/cs/academic/class/15210-s23/www/">S23</a></li>
+      <li><a href="https://www.cs.cmu.edu/afs/cs/academic/class/15210-f23/www/">F23</a></li>
+      <li><a href="https://www.cs.cmu.edu/afs/cs/academic/class/15210-f24/www/">F24</a></li>
+      <li><a href="https://www.cs.cmu.edu/afs/cs/academic/class/15210-f24/www-s25/">S25</a></li>
+      <li><a href="https://www.cs.cmu.edu/afs/cs/academic/class/15210-f25/www/index.html">F25</a></li>
+      <li class="current"><a href="#">Spring 26</a></li>
+    </ol>
+  </div>
+  <h1>Parallel and Sequential Data Structures and Algorithms</h1>
+
+
+  <h2>Ed</h2>
+  <p>
+    Course discussion and questions are available
+    on <a target="_blank" href="https://edstem.org/us/courses/90704/discussion">Ed</a>
+    for students in the class.  This is also where the syllabus (class
+    policies), labs, and recitation notes are kept.
+  </p>
+
+  <h2>Web Page</h2>
+  <p>The class schedule, list of staff, and other resources are availabe from the tabs above.
+    The <strong>schedule</strong> includes lecture dates, lecture notes,
+    lecture slides, and due dates.
+    The schedule goes to the end of the semester and <strong>you
+    should review it to ensure you don't have conflicts</strong> with
+    due dates, and especially with exams.
+</p>
+    
+  <h2>Course Calendar </h2>
+<p> Class, recitation, office hour, and review times.  Please check the schedule to double check if there is a lecture on the Friday.</p>
+
+<iframe src="https://calendar.google.com/calendar/embed?height=500&amp;wkst=1&amp;ctz=America%2FNew_York&amp;showPrint=0&amp;mode=WEEK&amp;src=c_bee38b13d3ebd2821f0ce848555eef524b9622fb4ac8562bbcbc63afdbc2dbeb%40group.calendar.google.com&amp;color=%237cb342" style="border:solid 1px #777" width="860" height="500" frameborder="0" scrolling="no"></iframe>
+
+
+  <h2>Overview</h2>
+  <p>
+    15-210 aims to teach methods for designing, analyzing, and programming
+    sequential and parallel algorithms and data structures. The emphasis is on
+    teaching fundamental concepts applicable across a wide variety of problem
+    domains, and transferable across a reasonably broad set of programming
+    languages and computer architectures. This course also includes a
+    significant programming component in which students will program concrete
+    examples from domains such as engineering, scientific computing, graphics,
+    data mining, and information retrieval (web search).
+  </p>
+  <p>
+    Unlike a traditional
+    introduction to algorithms and data structures, this course puts an emphasis
+    on <em>parallel thinking</em> — i.e., thinking about how algorithms
+    can do multiple things at once instead of one at a time. The course follows
+    up on material learned in 15-122 and 15-150 but goes into significantly more
+    depth on algorithmic issues. Concepts covered in this class include:
+  </p>
+  <ul id="concepts" class="clearfix">
+    <li>
+      <h3>Problem vs. Algorithm</h3>
+      <p>
+        A <em>problem</em> defines an interface while an <em>algorithm</em>
+        defines a particular method to solve the problem. For example, quicksort
+        is an algorithm to solve the sorting problem. Being able to cleanly define
+        a problem is key in the process of putting together large programs and in
+        reusing their components.
+      </p>
+    </li>
+    <li>
+      <h3>Asymptotic Analysis</h3>
+      <p>
+        In this class, we analyze performance in terms of work,
+        span, and space using <em>big-O</em> analysis. We cover a variety of
+        techniques for analyzing asymptotic performance including solving
+        recurrences, randomized analysis, and various counting arguments.
+      </p>
+    </li>
+    <li>
+      <h3>Techniques in Algorithm Design</h3>
+      <p>
+        We cover techniques that play a key role in the design of most algorithms
+        and data structures, including: collections (sets, sequences, priority
+        queues, ...), divide-and-conquer, contraction, the greedy method,
+        balanced trees, hashing, sparse matrices, and dynamic programming.
+      </p>
+    </li>
+  </ul>
+
+    <div id="footer">
+  The development of this course was supported in part by generous gifts from
+  Intel's Higher Education Program, Microsoft Research, and IBM Research.
+  </div>
+
+
+
+</body></html>

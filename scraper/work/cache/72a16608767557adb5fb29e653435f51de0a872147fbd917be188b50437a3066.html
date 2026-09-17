@@ -1,0 +1,1589 @@
+<html><head>
+		<title>
+			CS5011: Machine Learning (Elective)
+		</title>
+		<style type="text/css">
+			<!--
+			.deepsea, .deepsea TD, .deepsea TH
+			{
+			background: black url(./images/bg.png) repeat-x center left;
+			background-color:blue;
+			color:white;
+			font: bold 14px Arial;
+			font-weight:600;
+			}
+
+			.courseName {
+			color: #ffffff;
+			/* display: block; */
+			padding: 2px 0;
+			padding-left: 19px; /*link text is indented 19px*/
+			text-decoration: none;
+			font-weight: bold;
+			font: bold 20px Arial;
+			font-size: 90%;
+			}
+			
+			.semName {
+			color: #ff0000;
+			/* display: block; */
+			padding: 2px 0;
+			padding-left: 19px; /*link text is indented 19px*/
+			text-decoration: none;
+			font-weight: bold;
+			font: bold 25px Arial;
+			font-size: 90%;
+			}
+			.semDate {
+			color: #ffffff;
+			/* display: block; */
+			padding: 2px 0;
+			padding-left: 19px; /*link text is indented 19px*/
+			text-decoration: none;
+			font-weight: bold;
+			font: bold 25px Arial;
+			font-size: 90%;
+			}
+			.slideName {
+			color: #fdd017;
+			/* display: block; */
+			padding: 2px 0;
+			padding-left: 19px; /*link text is indented 19px*/
+			text-decoration: none;
+			font-weight: bold;
+			font: bold 20px Arial;
+			font-size: 90%;
+			}
+			
+			.sesName {
+			color: #736f6e;
+			/* display: block; */
+			padding: 2px 0;
+			padding-left: 19px; /*link text is indented 19px*/
+			text-decoration: none;
+			font-weight: bold;
+			font: bold 20px Arial;
+			font-size: 90%;
+			}
+			
+			.journalName {
+			color: #99CC00;
+			/* display: block; */
+			padding: 2px 0;
+			padding-left: 19px; /*link text is indented 19px*/
+			text-decoration: none;
+			font-weight: bold;
+			border-bottom: 1px solid #dadada;
+			font: bold 14px Arial;
+			font-size: 90%;
+			}
+
+			.slNo {
+			color: #fe7a05;
+			/* display: block; */
+			padding: 2px 0;
+			padding-left: 19px; /*link text is indented 19px*/
+			text-decoration: none;
+			font-weight: bold;
+			border-bottom: 1px solid #dadada;
+			font: bold 14px Arial;
+			font-size: 90%;
+			}
+			
+			.slNoPdf {
+			color: #ffffff;
+			 /* display: block; */ 
+			padding: 2px 0;
+			padding-left: 19px; /*link text is indented 19px*/
+			text-decoration: none;
+			font-weight: bold;
+			font: bold 14px Arial;
+			font-size: 90%;
+			}
+			.tableHeader {
+			color: #ffffff;
+			/* display: block; */
+			padding: 2px 0;
+			padding-left: 19px; /*link text is indented 19px*/
+			text-decoration: none;
+			font-weight: bold;
+			border-bottom: 1px solid #dadada;
+			font: bold 16px Arial;
+			font-size: 90%;
+			}
+
+			.impact {
+			color: #CC66FF;
+
+			/* display: block; */
+			padding: 2px 0;
+			padding-left: 19px; /*link text is indented 19px*/
+			text-decoration: none;
+			font-weight: bold;
+			border-bottom: 1px solid #dadada;
+			font: bold 14px Arial;
+			font-size: 90%;
+			}
+			
+			.bookName {
+			color: #addfff;
+			/* display: block; */
+			/* padding: 2px 0;
+			padding-left: 19px; /*link text is indented 19px*/ */
+			text-decoration: none;
+			font: 14px Arial;
+			font-size: 90%;
+			border-bottom: 1px solid #646060;
+			}
+
+			.bookName2 {
+			color: #fe7a05;
+			/* display: block; */
+			/* padding: 2px 0;
+			padding-left: 19px; /*link text is indented 19px*/ */
+			text-decoration: none;
+			font: bold 14px Arial;
+			font-size: 90%;
+			border-bottom: 1px solid #646060;
+			}
+
+			.textContent {
+			color: #addfff;
+			/* display: block; */
+			padding: 2px 0;
+			padding-left: 19px; /*link text is indented 19px*/
+			text-decoration: none;
+			font: 12px Arial;
+			font-size: 90%;
+			
+			}
+			
+			.textContent2 {
+			color: #addfff;
+			display: block; 
+			padding: 2px 0;
+			padding-left: 19px; /*link text is indented 19px*/
+			text-decoration: none;
+			font: 14px Arial;
+			font-size: 100%;
+			
+			}
+			
+			
+			
+.syllabusheads {
+	color: #FF0;
+			
+			padding: 2px 0;
+			/*padding-left: 19px; /*link text is indented 19px*/
+			
+			font: 14px Arial;
+			font-size: 100%;
+}
+.syllabusheads1 {
+	color: #FFF;
+			
+			padding: 2px 0;
+			/*padding-left: 19px; /*link text is indented 19px*/
+			
+			font: 14px Arial;
+			font-size: 100%;
+}
+			-->
+		</style>
+		
+<script type="text/javascript" src="tabber.js"></script>
+		<link rel="stylesheet" href="example.css" type="text/css" media="screen">
+		<link rel="stylesheet" href="example-print.css" type="text/css" media="print">
+
+		<script type="text/javascript">
+
+			/* Optional: Temporarily hide the "tabber" class so it does not "flash"
+			   on the page as plain HTML. After tabber runs, the class is changed
+			   to "tabberlive" and it will appear. */
+
+			document.write('<style type="text/css">.tabber{display:none;}<\/style>');
+		</script><style type="text/css">.tabber{display:none;}</style>
+	</head>
+<body bgcolor="#000000">
+		<table border="0" cellspacing="0" cellpadding="0" valign="top" align="center">
+			<tbody><tr>
+				<td><a href="http://www.cse.iitm.ac.in/~vplab/"><img src="images/vplab.gif"></a></td>
+				<td align="center"><img src="images/banner.gif" width="750" height="115"></td>
+				<td><a href="http://www.cse.iitm.ac.in/"><img src="images/iitm.gif"></a></td>
+			</tr>
+		</tbody></table>
+		<br>
+		<table border="0" bordercolor="#3399cc" cellspacing="0" cellpadding="0" valign="top" align="center" width="100%">
+				<tbody><tr>
+					<td align="center" class="courseName"><h2>CS5011: Machine Learning (Elective)</h2></td><td>
+				</td></tr>
+				<tr>
+					<td align="center" class="sesName"><h3>January - May, 2021					  </h3><h3></h3></td>
+				</tr>
+		</tbody></table>
+		<div class="tabber">
+			<div class="tabbertab">
+				<h2>Course Contents</h2>
+                
+
+                
+              <p>                
+
+<!-- <li class="syllabusheads1">Objectives:  
+    <ul><li class="textContent2">
+Computer Vision focuses on development of algorithms and techniques to analyze and interpret the visible world around us. This requires understanding of the fundamental concepts related to multi-dimensional signal processing, feature extraction, pattern analysis visual geometric modeling, stochastic optimization etc. Knowledge of these concepts is necessary in this field, to explore and contribute to research and further developments in the field of computer vision. Applications range from Biometrics, Medical diagnosis, document processing, mining of visual content, to surveillance, advanced rendering etc.
+
+</li></ul>
+</li>
+
+-->
+</p><ul class="sideHeading">
+  <li class="syllabusheads">Unit 1 - Basics
+    <ul><li class="textContent2">
+Introduction to machine learning - different forms of learning; Basics of probability theory,
+linear algebra and optimization. 
+</li></ul>
+</li>
+
+<br>
+<li class="syllabusheads">Unit 2 – Regression Analysis
+  <ul>
+   <li class="textContent2">
+Linear regression, ridge regression, Lasso, Bayesian regression, regression with basis
+functions.    </li>
+  </ul>
+</li><br>
+<li class="syllabusheads">Unit 3 – Classification Methods 
+<ul><li class="textContent2">
+Linear Discriminant Analysis, Logistic regression, Perceptrons, Large margin classification,
+Kernel methods, Support Vector Machines, Classification and Regression Trees, Multilayer Perceptrons and Back propagation. 
+
+</li></ul>
+</li>
+<br>
+<li class="syllabusheads">Unit 4 - Graphical Models 
+<ul><li class="textContent2"> 
+Bayesian Belief Networks, Markov Random Fields, Exact inference methods, approximate
+inference methods. 
+
+
+</li></ul>
+</li>
+
+<br>
+<li class="syllabusheads">Unit 5 – Ensemble Methods 
+  <ul>
+   <li class="textContent2">
+Boosting - Adaboost, Gradient Boosting; Bagging - Simple methods, Random Forest. 
+   </li>
+  </ul>
+</li><br>
+<li class="syllabusheads">Unit 6 – Computational Learning Theory 
+<ul><li class="textContent2">
+PAC Learning, VC Dimension, Bias/Variance Tradeoff. 
+
+</li></ul>
+</li>
+<br>
+<li class="syllabusheads">Unit 7 – Clustering
+<ul><li class="textContent2">
+Partitional Clustering - k-means, k-medoids; Hierarchical Clustering - Agglomerative,
+Divisive, Distance measures; Density based clustering - DBScan; Spectral clustering 
+
+</li></ul>
+</li>
+<br>
+<li class="syllabusheads">Unit 8 – Frequent Pattern Mining
+<ul><li class="textContent2">
+Apriori Algorithm; FP-Growth 
+
+</li></ul>
+</li>
+<br>
+
+</ul>
+
+
+<p></p>
+
+                
+	    </div>
+			<div class="tabbertab">
+				<h2>References </h2>
+				
+                <p>
+					<table border="0">
+						<tbody><tr>
+							<td class="slideName">
+								Textbooks
+							</td>
+						</tr>
+						<tr>
+                        <td class="bookName">
+								T. Hastie, R.Tibshirani, J. Friedman, "The Elements of Statistical Learning: Data Mining, Inference and Prediction", 2nd Edition, Springer Series in Statistics, 2009.
+                            </td></tr><tr>
+							<td class="bookName">
+							  <p> C. M. Bishop. "Pattern Recognition and Machine Learning," Springer, 2006.  <br>
+							  </p></td>
+                            </tr>
+							<tr><td class="bookName">
+							  <p> J. Han and M. Kamber. "Data Mining: Tools and Techniques," 3rd Edition, Morgan Kaufmann Press, 2012.  <br>
+							  </p></td>
+                            </tr>
+						                                <tr>
+                                <td class="bookName">
+								K. R. Murphy. "Machine Learning - A Probabilistic Perspective", 1st Edition, The MIT Press, 2012.  </td>
+						</tr>
+						
+						 
+<!--						<tr>
+							<td class="slideName">
+								References
+							</td>
+						</tr>
+												<tr>
+							
+						</tr>
+						<tr>
+							<td class="bookName">
+							    Richard Hartley and Andrew Zisserman, Multiple View  Geometry in Computer Vision, Second Edition, Cambridge University Press, March  2004.
+					        </td>
+						</tr>
+						<tr>	
+							<td class="bookName">
+                            K. Fukunaga; Introduction to Statistical Pattern  Recognition, Second Edition, Academic Press, Morgan Kaufmann, 1990.							  </td>
+						</tr>
+						<tr>
+							<td class="bookName">R.C. Gonzalez and R.E. Woods, Digital Image Processing, Addison&#45; Wesley, 1992.</td>
+						</tr>
+
+
+						<tr>
+							<td class="slideName">
+								<br/>
+							</td>
+						</tr>
+						<tr>
+							<td class="slideName">
+								Journals
+							</td>
+						</tr>
+						<tr>
+							<td class="bookName">
+								IEEE&#45;T&#45;PAMI (IEEE Transactions on Pattern Analysis and Machine Intelligence).</td>
+						</tr>
+						<tr>
+							<td class="bookName">
+								IJCV (International Journal of Computer Vision) &#45; Springer.</td>
+						</tr> 
+						<tr>
+							<td class="slideName">
+								<br/>
+							</td>
+						</tr>-->
+					</tbody></table>
+
+				</p>
+              
+			</div>
+
+
+
+
+			<div class="tabbertab">
+				<h2>Lecture Slides </h2>
+<!-- <p class="bookName">
+					Topic-Wise References 
+                     <a href="courses/CV_DIP/PDF/REF.pdf">
+									 <img src="./images/new_icon.gif">
+								</a> 
+                                </p>-->
+                                
+       
+				<p>
+					<table border="1" align="center" height="40" width="487" cellspacing="0" cellpadding="0" bordercolor="#5e767e"> 
+						<tbody><tr>
+							<td height="10" width="16" class="slNoPdf"> 
+								1 
+							</td> 
+							<td height="32" width="423" class="bookName"> 
+								Introduction&nbsp; 
+							</td> 
+							<td align="left" height="32" width="23"> 
+								<a href="courses/ML/PDF/INTRO_ML_E.pdf">
+									<img src="./pdf.png" height="32" width="32" alt="Download Slide" border="0">
+								</a> 
+							</td> 
+						</tr>
+												<tr>
+							<td height="10" width="16" class="slNoPdf"> 
+								2 
+							</td> 
+							<td height="32" width="423" class="bookName"> 
+								Machine Learning - Definitions&nbsp; 
+							</td> 
+							<td align="left" height="32" width="23"> 
+								<a href="courses/ML/PDF/ML_DEFN_01-19.pdf">
+									<img src="./pdf.png" height="32" width="32" alt="Download Slide" border="0">
+								</a> 
+							</td> 
+						</tr>
+						<tr>
+							<td height="10" width="16" class="slNoPdf"> 
+								3 
+							</td> 
+							<td height="32" width="423" class="bookName"> 
+								Least Square Regression&nbsp; 
+							</td> 
+							<td align="left" height="32" width="23"> 
+								<a href="courses/ML/PDF/LSQ_REGR_ML_E.pdf">
+									<img src="./pdf.png" height="32" width="32" alt="Download Slide" border="0">
+								</a> 
+							</td> 
+						</tr>
+												<tr>
+							<td height="10" width="16" class="slNoPdf"> 
+								4 
+							</td> 
+							<td height="32" width="423" class="bookName"> 
+								Overview of Supervised Learning - Part I&nbsp; 
+							</td> 
+							<td align="left" height="32" width="23"> 
+								<a href="courses/ML/PDF/sup_lrn1.pdf">
+									<img src="./pdf.png" height="32" width="32" alt="Download Slide" border="0">
+								</a> 
+							</td> 
+						</tr>
+						<tr>
+							<td height="10" width="16" class="slNoPdf"> 
+								5 
+							</td> 
+							<td height="32" width="423" class="bookName"> 
+								Overview of Supervised Learning - Part II&nbsp; 
+							</td> 
+							<td align="left" height="32" width="23"> 
+								<a href="courses/ML/PDF/sup_lrn2.pdf">
+									<img src="./pdf.png" height="32" width="32" alt="Download Slide" border="0">
+								</a> 
+							</td> 
+						</tr>
+						<tr>
+							<td height="10" width="16" class="slNoPdf"> 
+								6 
+							</td> 
+							<td height="32" width="423" class="bookName"> 
+								Linear Regression and Shrinkage methods &nbsp; 
+							</td> 
+							<td align="center" height="32" width="23"> 
+								<a href="courses/ML/PDF/Chap3_hastie.pdf">
+									<img src="./pdf.png" height="32" width="32" alt="Download Slide" border="0">
+								</a> 
+							</td> 
+						</tr>
+
+						<tr>
+							<td height="10" width="16" class="slNoPdf"> 
+								7
+							</td> 
+							<td height="32" width="423" class="bookName"> 
+								Pattern Recognition&nbsp; 
+							</td> 
+							<td align="center" height="32" width="23"> 
+								<a href="courses/ML/PDF/PAT_CLSFN_ML_2019.pdf">
+									<img src="./pdf.png" height="32" width="32" alt="Download Slide" border="0">
+								</a> 
+							</td> 
+						</tr>
+
+						<tr>
+							<td height="10" width="16" class="slNoPdf"> 
+								8
+							</td> 
+							<td height="32" width="423" class="bookName"> 
+								Gaussian Mixture Models&nbsp; 
+							</td> 
+							<td align="center" height="32" width="23"> 
+								<a href="courses/ML/PDF/gmm_em.pdf">
+									<img src="./pdf.png" height="32" width="32" alt="Download Slide" border="0">
+								</a> 
+							</td> 
+						</tr>
+
+						<tr>
+							<td height="10" width="16" class="slNoPdf"> 
+								9
+							</td> 
+							<td height="32" width="423" class="bookName"> 
+								Classification Methods&nbsp; 
+							</td> 
+							<td align="center" height="32" width="23"> 
+								<a href="courses/ML/PDF/ml_unit3_classif.pdf">
+									<img src="./pdf.png" height="32" width="32" alt="Download Slide" border="0">
+								</a> 
+							</td> 
+						</tr>
+
+						<tr>
+							<td height="10" width="16" class="slNoPdf"> 
+								10
+							</td> 
+							<td height="32" width="423" class="bookName"> 
+								Clustering Methods&nbsp; 
+							</td> 
+							<td align="center" height="32" width="23"> 
+								<a href="courses/ML/PDF/clustering.pdf">
+									<img src="./pdf.png" height="32" width="32" alt="Download Slide" border="0">
+								</a> 
+							</td> 
+						</tr>
+						<tr>
+							<td height="10" width="16" class="slNoPdf"> 
+								11
+							</td> 
+							<td height="32" width="423" class="bookName"> 
+								Spectral Clustering &nbsp; 
+							</td> 
+							<td align="center" height="32" width="23"> 
+								<a href="courses/ML/PDF/spec_clus.pdf">
+									<img src="./pdf.png" height="32" width="32" alt="Download Slide" border="0">
+								</a> 
+							</td> 
+						</tr>
+						<tr>
+							<td height="10" width="16" class="slNoPdf"> 
+								12
+							</td> 
+							<td height="32" width="423" class="bookName"> 
+								Ensemble Methods - Part 1 &nbsp; 
+							</td> 
+							<td align="center" height="32" width="23"> 
+								<a href="courses/ML/PDF/ensemble_methods.pdf">
+									<img src="./pdf.png" height="32" width="32" alt="Download Slide" border="0">
+								</a> 
+							</td> 
+						</tr>
+						<tr>
+							<td height="10" width="16" class="slNoPdf"> 
+								13
+							</td> 
+							<td height="32" width="423" class="bookName"> 
+								Graphical Models - Part 1 &nbsp; 
+							</td> 
+							<td align="center" height="32" width="23"> 
+								<a href="courses/ML/PDF/graphical_models.pdf">
+									<img src="./pdf.png" height="32" width="32" alt="Download Slide" border="0">
+								</a> 
+							</td> 
+						</tr>
+						<tr>
+							<td height="10" width="16" class="slNoPdf"> 
+								14
+							</td> 
+							<td height="32" width="423" class="bookName"> 
+								SVM &nbsp; 
+							</td> 
+							<td align="center" height="32" width="23"> 
+								<a href="courses/ML/PDF/ML_SD_svm_v3_JUNE-2019.pdf">
+									<img src="./pdf.png" height="32" width="32" alt="Download Slide" border="0">
+								</a> 
+							</td> 
+						</tr>
+						<tr>
+							<td height="10" width="16" class="slNoPdf"> 
+								15
+							</td> 
+							<td height="32" width="423" class="bookName"> 
+								Logistic Regression &nbsp; 
+							</td> 
+							<td align="center" height="32" width="23"> 
+								<a href="courses/ML/PDF/log_regr.pdf">
+									<img src="./pdf.png" height="32" width="32" alt="Download Slide" border="0">
+								</a> 
+							</td> 
+						</tr>
+					</tbody></table>
+				</p>
+			</div>
+
+
+<div class="tabbertab">
+				<h2>Assignment</h2>
+	 <p class="slNo">  Software Assignment 1 <br>
+<!--		    &nbsp &nbsp &nbsp &nbsp Problem Statement :<a href=courses/ML/Assign_Ques1.pdf>  
+									<img src="./pdf.png" height="32" width="32" alt="Download Slide" border="0" >  
+								</a>
+								<br>
+&nbsp &nbsp &nbsp &nbsp Data for Question 1 : 
+<a href=courses/ML/Q1_data_01.Rda> Q1_data_01.Rda</a>&nbsp &nbsp
+<a href=courses/ML/Q1_data_02.Rda> Q1_data_02.Rda</a>
+<br>
+
+Tutorials for R: <a href=https://machinelearningmastery.com/machine-learning-in-r-step-by-step/> Link 1</a>&nbsp &nbsp
+<a href=https://www.datacamp.com/community/tutorials/machine-learning-in-r> Link 2</a>&nbsp &nbsp
+<a href=https://www.analyticsvidhya.com/blog/2016/02/complete-tutorial-learn-data-science-scratch/> Link 3</a> -->
+</p> 
+
+ <p class="slNo">  Software Assignment 2 <br>
+<!--		    &nbsp &nbsp &nbsp &nbsp Problem Statement :<a href=courses/ML/Assign_Ques2.pdf>  
+									<img src="./pdf.png" height="32" width="32" alt="Download Slide" border="0" >  
+								</a>
+
+<a href=Assn2_Dataset.zip> Bank Marketing Dataset</a>&nbsp &nbsp
+								<br>
+<br>-->
+</p> 
+
+
+</div>
+
+
+<div class="tabbertab">
+				<h2>Prerequisites/Basics</h2>
+				<p>
+					<table border="1" align="center" height="60" width="487" cellspacing="0" cellpadding="0" bordercolor="#5e767e"> 
+						<tbody><tr> 
+							<td height="19" width="16" class="slNoPdf"> 
+								1 
+							</td> 
+							<td height="19" width="423" class="bookName"> 
+								Linear Algebra - overview
+							</td> 
+							<td align="center" height="19" width="23"> 
+								<a href="courses/ML/PDF/LIN_ALG_Basics.pdf" target="blank">									
+									<img src="./pdf.png" height="32" width="32" alt="Download Slide" border="0">
+								</a> 
+							</td> 
+						</tr>
+						<tr> 
+							<td height="19" width="16" class="slNoPdf"> 
+								2 
+							</td> 
+							<td height="19" width="423" class="bookName"> 
+								Introduction to Matrices 
+							</td> 
+							<td align="center" height="19" width="23"> 
+								<a href="courses/LARP_2018/Matrices_intro-1.pdf" target="blank">									
+									<img src="./pdf.png" height="32" width="32" alt="Download Slide" border="0">
+								</a> 
+							</td> 
+						</tr>
+						<tr> 
+							<td height="19" width="16" class="slNoPdf"> 
+								3 
+							</td> 
+							<td height="19" width="423" class="bookName"> 
+								Matrix Multiplication
+							</td> 
+							<td align="center" height="19" width="23"> 
+								<a href="courses/LARP_2018/Matrix_Intro-multiplication-2.pdf" target="blank">									
+									<img src="./pdf.png" height="32" width="32" alt="Download Slide" border="0">
+								</a> 
+							</td> 
+						</tr>
+						<tr> 
+							<td height="19" width="16" class="slNoPdf"> 
+								4
+							</td> 
+							<td height="19" width="423" class="bookName"> 
+								Vectors and Matrix Norms  
+							</td> 
+							<td align="center" height="19" width="23"> 
+								<a href="courses/LARP_2018/Matrix-Vector and Matrix Norms-3.pdf" target="blank">
+									<img src="./pdf.png" height="32" width="32" alt="Download Slide" border="0">
+								</a>
+							</td> 
+						</tr>
+						<tr> 
+							<td height="19" width="16" class="slNoPdf"> 
+								5 
+							</td> 
+							<td height="19" width="423" class="bookName"> 
+								Matrix Inverse and Transpose
+							</td> 
+							<td align="center" height="19" width="23"> 
+								<p align="center"><a href="courses/LARP_2018/Matrix_Inverse_and_Transpose_6.pdf" target="blank">
+								<img src="./pdf.png" height="32" width="32" alt="Download Slide" border="0">
+								</a></p>
+							</td> 
+						</tr>
+						<tr> 
+							<td height="19" width="16" class="slNoPdf"> 
+								6 
+							</td> 
+							<td height="19" width="423" class="bookName"> 
+								Determinants
+							</td> 
+							<td align="center" height="19" width="23"> 
+								<a href="courses/LARP_2018/chap4-determinants.pdf" target="blank">									
+									<img src="./pdf.png" height="32" width="32" alt="Download Slide" border="0">
+								</a> 
+							</td> 
+						</tr>
+						<tr> 
+							<td height="19" width="16" class="slNoPdf"> 
+								7
+							</td> 
+							<td height="19" width="423" class="bookName"> 
+								EigenValues and EigenVectors
+							</td> 
+							<td align="center" height="19" width="23"> 
+								<a href="courses/LARP_2018/chap5_EVV_LARP.pdf" target="blank">									
+									<img src="./pdf.png" height="32" width="32" alt="Download Slide" border="0">
+								</a> 
+							</td> 
+						</tr>
+						<tr> 
+							<td height="19" width="16" class="slNoPdf"> 
+								8 
+							</td> 
+							<td height="19" width="423" class="bookName"> 
+								Positive Semidefinite Matrices
+							</td> 
+							<td align="center" height="19" width="23"> 
+								<a href="courses/LARP_2018/chap6_PSD.pdf" target="blank">									
+									<img src="./pdf.png" height="32" width="32" alt="Download Slide" border="0">
+								</a> 
+							</td> 
+						</tr>
+						<tr> 
+							<td height="19" width="16" class="slNoPdf"> 
+								9 
+							</td> 
+							<td height="19" width="423" class="bookName"> 
+								Basics of Probability
+							</td> 
+							<td align="center" height="19" width="23"> 
+								<a href="courses/LARP_2018/c1_basics_of_probabilty.pdf" target="blank">									
+									<img src="./pdf.png" height="32" width="32" alt="Download Slide" border="0">
+								</a> 
+							</td> 
+						</tr>
+						<tr> 
+							<td height="19" width="16" class="slNoPdf"> 
+								10 
+							</td> 
+							<td height="19" width="423" class="bookName"> 
+								Permutations and Combinations
+							</td> 
+							<td align="center" height="19" width="23"> 
+								<a href="courses/LARP_2018/c1_perm_combinations.pdf" target="blank">									
+									<img src="./pdf.png" height="32" width="32" alt="Download Slide" border="0">
+								</a> 
+							</td> 
+						</tr>
+						<tr> 
+							<td height="19" width="16" class="slNoPdf"> 
+								11 
+							</td> 
+							<td height="19" width="423" class="bookName"> 
+								Random Variables and their Distributions
+							</td> 
+							<td align="center" height="19" width="23"> 
+								<a href="courses/LARP_2018/c2_RVs_distributions.pdf" target="blank">									
+									<img src="./pdf.png" height="32" width="32" alt="Download Slide" border="0">
+								</a> 
+							</td> 
+						</tr>
+						<tr> 
+							<td height="19" width="16" class="slNoPdf"> 
+								12 
+							</td> 
+							<td height="19" width="423" class="bookName"> 
+								Discrete Random Variables
+							</td> 
+							<td align="center" height="19" width="23"> 
+								<a href="courses/LARP_2018/c3_discrete_rv.pdf" target="blank">									
+									<img src="./pdf.png" height="32" width="32" alt="Download Slide" border="0">
+								</a> 
+							</td> 
+						</tr>
+						<tr> 
+							<td height="19" width="16" class="slNoPdf"> 
+								13 
+							</td> 
+							<td height="19" width="423" class="bookName"> 
+								Discrete Distributions
+							</td> 
+							<td align="center" height="19" width="23"> 
+								<a href="courses/LARP_2018/c3_discrete_distributions.pdf" target="blank">									
+									<img src="./pdf.png" height="32" width="32" alt="Download Slide" border="0">
+								</a> 
+							</td> 
+						</tr>
+						
+						<tr> 
+							<td height="19" width="16" class="slNoPdf"> 
+								14 
+							</td> 
+							<td height="19" width="423" class="bookName"> 
+								Continuous Random Variables
+							</td> 
+							<td align="center" height="19" width="23"> 
+								<a href="courses/LARP_2018/c4_cont_rv.pdf" target="blank">									
+									<img src="./pdf.png" height="32" width="32" alt="Download Slide" border="0">
+								</a> 
+							</td> 
+						</tr>
+
+					</tbody></table>
+
+				</p>
+
+</div>
+
+<!--			<div class="tabbertab">
+				<h2>Download</h2>
+                
+				
+
+<!--				
+				<a href=courses/CV_DIP/PDF/TRACK_VIDS.7z> <p class="slNo">
+                Tracking Videos 
+	<img src="./dwnld.png" height="32" width="32" alt="Download Schedule" border="0" >
+	</p>  
+								</a>-->
+
+	
+			              
+
+<!-- 			</div> -->
+
+
+
+
+
+
+
+
+		<!--	<div class="tabbertab">
+				<h2>Term Project Assignment</h2>
+				<!-- <p>
+					<br><br>
+					<table border="1" align="center" cellspacing="0" cellpadding="0" BORDERCOLOR="#5e767e" width="100%">
+
+						<tr>
+							<td colspan="9" class="tableHeader" align="center">
+								Term Project Assignment List
+							</td>
+						</tr>
+						<tr>
+							<td rowspan="3" class="slideName" align="center">
+								SL No.
+							</td>
+							<td rowspan="3" class="slideName" align="center">
+								Problem Statement
+							</td>
+							<td rowspan="2" colspan ="3" class="slideName" align="center">
+								Performance based marks (indicative)							
+                            </td>
+							<td colspan ="3" class="slideName" align="center">
+								Group IDs Alloted (by preference, FCFS)<br>
+							</td>
+							<td rowspan="3" class="slideName" align="center">
+								Details
+							</td>
+							<tr>
+								<td colspan ="3" class="slideName" align="center">
+									Preference No.<br>
+								</td>
+							</tr>
+							<tr>
+								<td class="slideName" align="center">
+									Satisfactory
+								</td>
+								<td class="slideName" align="center">
+									Good
+								</td>
+								<td class="slideName" align="center">
+									Excellent
+								</td>
+								<td class="slideName" align="center">
+									I
+								</td>
+								<td class="slideName" align="center">
+									II
+								</td>
+								<td class="slideName" align="center">
+									III
+								</td>
+							</tr>
+						</tr>
+						
+						
+						
+						<tr>
+							<td class="slNo">
+								1
+							</td>
+							<td class="bookName">
+								Deep Learning for occluded Object Recognition
+								<ul>
+									<li>Medical images</li>
+									<li>Indoor scenes</li>
+								</ul>
+							</td>
+							<td class="impact" align="center">
+								
+							</td>
+							<td class="impact" align="center">
+								
+							</td>
+							<td class="impact" align="center">
+								
+							</td>
+							<td class="semDate" align="center">
+								--
+							</td>
+							<td class="semDate" align="center">
+								--
+							</td>
+							<td class="semDate" align="center">
+								--
+							</td>
+							<td class="semDate" align="center">
+								<a href=courses/CV_DIP/PDF_2019/TPA_1.pdf> 
+									<img src="./pdf.png" height="32" width="32" alt="Download Slide" border="0" >  
+								</a>
+							</td>
+						</tr>
+						
+						<tr>
+							<td class="slNo">
+								2
+							</td>
+							<td class="bookName">
+								Video Event Categorization (UCF-101, HMDB-51)
+							</td>
+							<td class="impact" align="center">
+								20
+							</td>
+							<td class="impact" align="center">
+								34
+							</td>
+							<td class="impact" align="center">
+								41
+							</td>
+							<td class="semDate" align="center">
+								<del>--</del>
+							</td>
+							<td class="semDate" align="center">
+								<del>--</del>
+							</td>
+							<td class="semDate" align="center">
+								<del>--</del>
+							</td>
+							<td class="semDate" align="center">
+								<a href=courses/CV_DIP/PDF_2019/TPA_2.pdf> 
+									<img src="./pdf.png" height="32" width="32" alt="Download Slide" border="0" >  
+								</a>
+							</td>
+						</tr>
+						
+						
+						
+						<tr>
+							<td class="slNo">
+								3
+							</td>
+							<td class="bookName">
+								Indoor Scene modeling from single panorama
+							<td class="impact" align="center">
+								
+							</td>
+							<td class="impact" align="center">
+								
+							</td>
+							<td class="impact" align="center">
+								
+							</td>
+							<td class="semDate" align="center">--</td>
+							<td class="semDate" align="center">
+								<del>--</del>
+							</td>
+							<td class="semDate" align="center">
+								<del>--</del>
+							</td>
+							<td class="semDate" align="center">
+								<a href=courses/CV_DIP/PDF_2019/TPA_3.pdf> 
+									<img src="./pdf.png" height="32" width="32" alt="Download Slide" border="0" >  
+								</a>
+							</td>
+						</tr>
+						
+						<tr>
+							<td class="slNo">
+								4
+							</td>
+							<td class="bookName">
+								Video/Image Captioning (MS-COCO, Flickr30k)
+							</td>
+							<td class="impact" align="center">
+								20
+							</td>
+							<td class="impact" align="center">
+								35
+							</td>
+							<td class="impact" align="center">
+								42
+							</td>
+							<td class="semDate" align="center">--</td>
+							<td class="semDate" align="center">
+								--
+							</td>
+							<td class="semDate" align="center">
+								--
+							</td>
+							<td class = "semDate" align="center">
+							<a href=courses/CV_DIP/PDF_2019/TPA_4.pdf> 
+									<img src="./pdf.png" height="32" width="32" alt="Download Slide" border="0" >  
+								</a>
+							</td>
+						</tr>
+						
+						
+						
+						<tr>
+							<td class="slNo">
+								5
+							</td>
+							<td class="bookName">
+								SLAM by Domain Adaptation and Deep Learning
+							</td>
+							<td class="impact" align="center">
+								
+							</td>
+							<td class="impact" align="center">
+								
+							</td>
+							<td class="impact" align="center">
+								
+							</td>
+							<td class="semDate" align="center">--</td>
+							<td class="semDate" align="center">
+								--
+							</td>
+							<td class="semDate" align="center">
+								--
+							</td>
+							<td class="semDate" align="center">
+								<a href=courses/CV_DIP/PDF_2019/TPA_5.pdf> 
+									<img src="./pdf.png" height="32" width="32" alt="Download Slide" border="0" >  
+								</a>
+							</td>
+						</tr>
+						
+						<tr>
+							<td class="slNo">
+								6
+							</td>
+							<td class="bookName">
+								Depth from RGB and RGBD
+							</td>
+							<td class="impact" align="center">
+								
+							</td>
+							<td class="impact" align="center">
+								
+							</td>
+							<td class="impact" align="center">
+								
+							</td>
+							<td class="semDate" align="center">--</td>
+							<td class="semDate" align="center">
+								--
+							</td>
+							<td class="semDate" align="center">
+								--
+							</td>
+							<td class="semDate" align="center">
+								<a href=courses/CV_DIP/PDF_2019/TPA_6.pdf> 
+									<img src="./pdf.png" height="32" width="32" alt="Download Slide" border="0" >  
+								</a>
+							</td>
+						</tr>
+						
+						<tr>
+							<td class="slNo">
+								7
+							</td>
+							<td class="bookName">
+								Scene ontology from arbitrary stereo
+							</td>
+							<td class="impact" align="center">
+								
+							</td>
+							<td class="impact" align="center">
+								
+							</td>
+							<td class="impact" align="center">
+								
+							</td>
+							<td class="semDate" align="center">--</td>
+							<td class="semDate" align="center">
+								--
+							</td>
+							<td class="semDate" align="center">
+								--
+							</td>
+							<td class="semDate" align="center">
+							<a href=courses/CV_DIP/PDF_2019/TPA_7.pdf> 
+									<img src="./pdf.png" height="32" width="32" alt="Download Slide" border="0" >  
+								</a>
+							</td>
+						</tr>
+						
+						<tr>
+							<td class="slNo">
+								8
+							</td>
+							<td class="bookName">
+								Face Recognition using Face Images obtained from Net 
+							</td>
+							<td class="impact" align="center">
+								
+							</td>
+							<td class="impact" align="center">
+								
+							</td>
+							<td class="impact" align="center">
+							
+							</td>
+							<td class="semDate" align="center">--</td>
+							<td class="semDate" align="center">
+								--
+							</td>
+							<td class="semDate" align="center">
+								--
+							</td>
+							<td class="semDate" align="center">
+								<a href=courses/CV_DIP/PDF_2019/TPA_8.pdf> 
+									<img src="./pdf.png" height="32" width="32" alt="Download Slide" border="0" >  
+								</a> 
+
+								
+							</td>
+						</tr>	
+						
+						<tr>
+							<td class="slNo">
+								9
+							</td>
+							<td class="bookName">
+								SSD++ for multiple Object Detection from clutter and indoor shots
+							</td>
+							<td class="impact" align="center">
+								
+							</td>
+							<td class="impact" align="center">
+								
+							</td>
+							<td class="impact" align="center">
+							
+							</td>
+							<td class="semDate" align="center">--</td>
+							<td class="semDate" align="center">
+								--
+							</td>
+							<td class="semDate" align="center">
+								--
+							</td>
+							<td class="semDate" align="center">
+								<a href=courses/CV_DIP/PDF_2019/TPA_9.pdf> 
+									<img src="./pdf.png" height="32" width="32" alt="Download Slide" border="0" >  
+								</a> 
+
+								
+							</td>
+						</tr>
+						
+
+						
+						<tr>
+							<td class="slNo">
+								10
+							</td>
+							<td class="bookName">
+								Large scale saliency detection from images of multiple objects: Top-down/Bottom-up or combination
+							</td>
+							<td class="impact" align="center">
+								
+							</td>
+							<td class="impact" align="center">
+								
+							</td>
+							<td class="impact" align="center">
+							
+							</td>
+							<td class="semDate" align="center">--</td>
+							<td class="semDate" align="center">
+								--
+							</td>
+							<td class="semDate" align="center">
+								--
+							</td>
+							<td class="semDate" align="center">
+								<a href=courses/CV_DIP/PDF_2019/TPA_10.pdf> 
+									<img src="./pdf.png" height="32" width="32" alt="Download Slide" border="0" >  
+								</a> 
+
+								
+							</td>
+						</tr>
+						
+					
+						<tr>
+							<td class="slNo">
+								11
+							</td>
+							<td class="bookName">
+								Domain Adaptation using Kernel (or Manifold) Alignment for Object Categorization on Imagenet
+							</td>
+							<td class="impact" align="center">
+								20
+							</td>
+							<td class="impact" align="center">
+								32
+							</td>
+							<td class="impact" align="center">
+								41
+							</td>
+							<td class="semDate" align="center">--</td>
+							<td class="semDate" align="center">
+								--
+							</td>
+							<td class="semDate" align="center">
+								--
+							</td>
+							<td class="semDate" align="center">
+								<a href=courses/CV_DIP/PDF_2019/TPA_11.pdf> 
+									<img src="./pdf.png" height="32" width="32" alt="Download Slide" border="0" >  
+								</a> 
+
+								
+							</td>
+						</tr>
+
+					</table>
+				</p>-->
+		<!--	</div> -->
+			
+	<!--		<div class="tabbertab">
+				<h2>Tutorial</h2>
+	
+	<table>
+	<!--					<tr>
+							<td class="semDate">
+								Tutorial No.
+							</td>
+							<td class="semDate"> 
+								Date
+							</td> 
+							<td class="semDate"> 
+								Time
+							</td> 
+	
+						</tr>
+						<tr>
+							<td class="bookName">
+								1
+							</td>
+							<td class="slNo">29/01/2019&nbsp;  </td> 
+							<td class="slNo">08:00-08:50 &nbsp; </td> 
+							<td class="bookName">&nbsp;</td>
+						</tr>
+						<tr>
+							<td class="bookName">
+								2
+							</td>
+							<td class="slNo">12/02/2019</td> 
+			    				<td class="slNo">08:00-08:50</td>  
+							<td class="bookName">&nbsp;</td>
+						</tr>
+						<tr>
+							<td class="bookName">
+								3
+							</td>
+							<td class="slNo">12/03/2019</td> 
+							<td class="slNo">08:00-08:50</td> 
+							<td class="bookName">&nbsp;</td>
+						</tr>
+						<tr>
+							<td class="bookName">
+								4
+							</td>
+							<td class="slNo">02/04/2019</td> 
+							<td class="slNo">10:00-10:50</td>  
+							<td class="bookName">&nbsp;</td>
+						</tr>
+						<tr>
+							<td class="bookName">
+								5
+							</td>
+							<td class="slNo">16/04/2019</td> 
+							<td class="slNo">08:00-08:50</td>  
+							<td class="bookName">&nbsp;</td>
+						</tr>-->
+	<!--    </table>
+	
+			</div> -->
+
+			<div class="tabbertab">
+				<h2>Schedule</h2>
+
+				<p class="slNo">
+				Marks Distribution
+				</p><ul>
+				<strong>
+					<li class="bookName">Quiz x 2  : 20 - 30</li> <!-- 30-40 -->
+					<li class="bookName">Software Assignments : 20 - 25</li> <!-- 10 -->
+					<li class="bookName">End Trimester      : 40 - 50</li> <!-- 35-40 -->
+					</strong>
+				</ul>
+				<p></p>
+				<p class="slNo">
+				Logistic Details
+					<font class="slideName">
+						</font></p><ul><font class="slideName">
+							<!--<li class="bookName">TPA group submission last late 23-August-2012<br>-->
+							<!--<li class="semName"><b><del>TPA Assignemnt over</del></b><br>
+							<li class="semName"><b>TPA Final Evaluation Scheduled</b><br>-->
+							<li class="bookName">TA: Sonam Gupta (cs18d005@cse.iitm.ac.in)<br>
+							</li><li class="bookName">TA: Arti Keshari (cs19s008@cse.iitm.ac.in)<br>
+							<!-- <li class="bookName">TA: Sandeep Narayan P. (sandeepnarayan.p@gmail.com)<br> -->
+							<!-- <li class="bookName">TA: Anju Gopinath (anjugopinath1805@gmail.com)<br> -->
+							<!--<li class="bookName">Class Representative: TBD                            -->
+							<!--<li class="bookName">Google Group: <a href="http://groups.google.com/group/computervision2012" class="bookName">computervision2012</a> <br>-->
+							<!--<li class="bookName">Tutorial Solution <a href=courses/CV_DIP/PDF/TUT.pdf><img src="./pdf.png" height="32" width="32" alt="Tutorial Solution" border="0" ></a><br>-->
+							
+					    </li></font></ul><font class="slideName">
+						<br>
+					</font>
+				<p></p>
+				
+				 <p class="slNo"> Course Handout<br>
+		    &nbsp; &nbsp; &nbsp; &nbsp; <a href="courses/ML/PDF/MLE_Handout_Feb-May2021.pdf">  
+									<img src="./pdf.png" height="32" width="32" alt="Download Slide" border="0">  
+								</a>
+								<br>
+<br>
+</p>
+
+
+<!--				 <p class="slNo">  Quiz 2 solutions <br>
+		    &nbsp &nbsp &nbsp &nbsp <a href=courses/ML/PDF/quiz2_soln.pdf>  
+									<img src="./pdf.png" height="32" width="32" alt="Download Slide" border="0" >  
+								</a>
+								<br>
+<br>
+</p> --> 
+			  
+			  
+					<table>
+						<tbody><tr colspan="2" align="center">
+							<td class="slideName">Important Dates (Tentative)</td>
+					  </tr>
+<!--                        <tr>
+							<td class="bookName">
+								Tutorial Dates<br><br>
+							</td>
+							<td class="slNo"></td> <!-- 01/02/2017, 20/02/2017, 22/03/2017 and 12/04/2017 -->
+<!--						</tr> -->
+
+<!--						<tr>
+							<td class="semName">
+								Quiz 1
+							</td>
+							<td class="semDate"> &nbsp; 29/02/2020 </td>   
+						</tr>
+
+						<tr>
+							<td class="semName">
+								Quiz 2
+							</td>
+							<td class="semDate"> &nbsp; 28/03/2020</td>   
+						</tr>
+
+						<tr>
+							<td class="semName">
+								Software Assignment 1 Deadline
+							</td>
+							<td class="semDate"> &nbsp; 25/02/2020</td>   
+						</tr>
+
+						<tr>
+							<td class="semName">
+								Software Assignment 2 Deadline
+							</td>
+							<td class="semDate"> &nbsp; 20/04/2020</td>   
+						</tr>
+
+						<tr>
+							<td class="semName">
+								End Trimester
+							</td>
+							<td class="semDate"> &nbsp; 18/04/2020</td>   
+						</tr>
+
+-->
+<!-- 						<tr>
+							<td class="semName">
+								Mid Semester Exam
+							</td>
+							<td class="semDate"> &nbsp;</td>   03/03/2017 
+						</tr>							-->
+<!--						<tr>
+							<td class="semName">
+								End Semester Exam
+							</td>
+							<td class="semDate"> &nbsp; </td>  <!-- 02/05/2017 -->
+	<!--					</tr> -->
+	    </tbody></table>
+        <br>
+                <br>
+                       
+					<!--
+					<br>
+					<table border="1">
+						<CAPTION align="center" class="slideName">Extra Classes</CAPTION>
+						<tr>
+							<td class="sesName">
+								Date
+							</td>
+							<td class="sesName"> 
+								Day, Time
+							</td> 
+							<td class="sesName"> 
+								Place
+							</td> 
+						</tr>
+						<tr>
+							<td class="bookName">
+								<del>10-September-2011</del><br><br>
+							</td>
+							<td rowspan="4" class="slNo"> 
+								<del>Saturday, 10 AM to 12 noon</del>
+							</td> 
+							<td rowspan="4" class="slNo"> 
+								<del>BSB 361</del>
+							</td> 
+						</tr>	
+						<tr>
+							<td class="bookName">
+								<del>24-September-2011<br><br></del>
+							</td>
+						</tr>
+						<tr>
+							<td class="bookName">
+								<del>8-October-2011<br><br></del>
+							</td>
+						</tr>	
+						<tr>
+							<td class="bookName">
+								<del>22-October-2011<br><br></del>
+							</td>
+						</tr>							
+					</table>
+				-->
+	
+			</div>
+			
+
+			
+
+<!--			<div class="tabbertab">
+				<h2>Self-study </h2>
+			 <br>
+<p class="slNo">
+				Self Study Topics
+<p>
+					<table border="1" align="center" height="250" width="487" cellspacing="0" cellpadding="0" BORDERCOLOR="#5e767e"> 
+						<tr>
+							<td colspan="3" height="19" class="bookName2"><center>Pre mid-sem</center></td>
+						</tr>
+						<tr> 
+							<td height="19" width="16" class="slNoPdf"> 
+								1 
+							</td> 
+							<td height="19" width="423" class="bookName"> 
+								Neighborhood and Connectivity of pixels 
+							</td> 
+							<td align="center" height="19" width="23"> 
+								<a href="courses/CV_DIP/PDF/NEIGH_CONN.pdf" target = blank>									
+									<img src="./pdf.png" height="32" width="32" alt="Download Slide" border="0" >
+								</a> 
+							</td> 
+						</tr>
+						
+						<tr> 
+							<td height="19" width="16" class="slNoPdf"> 
+								2 
+							</td> 
+							<td height="19" width="423" class="bookName"> 
+								First part : 
+								<br> Fourier Theory and Filtering in spatial and spectral domains 
+							</td> 
+							<td align="center" height="19" width="23"> 
+								<p align="center"><a href="courses/CV_DIP/PDF/lect-Four_filt.pdf" target = blank>
+								<img src="./pdf.png" height="32" width="32" alt="Download Slide" border="0" >
+								</a></p>
+							</td> 
+						</tr>
+						<tr> 
+							<td height="19" width="16" class="slNoPdf"> 
+								3 
+							</td> 
+							<td height="19" width="423" class="bookName"> 
+								First 22 slides : 
+								<br> Histogram based image processing 
+							</td> 
+							<td align="center" height="19" width="23"> 
+								<p align="center"><a href="courses/CV_DIP/PDF/HIST_PROC.pdf" target = blank>
+								<img src="./pdf.png" height="32" width="32" alt="Download Slide" border="0" >
+								</a></p>
+							</td> 
+						</tr>
+						<tr>
+							<td colspan="3" height="19" class="bookName2"><center>Post mid-sem</center></td>
+						</tr>
+						<tr> 
+							<td height="19" width="16" class="slNoPdf"> 
+								4 
+							</td> 
+							<td height="19" width="423" class="bookName"> 
+								Slides 44-59 : 
+								<br> Pattern Recognition 
+							</td> 
+							<td align="center" height="19" width="23"> 
+								<p align="center"><a href="./courses/CV_DIP/PDF/PAT_RECOGN.pdf" target = blank>
+								<img src="./pdf.png" height="32" width="32" alt="Download Slide" border="0" >
+								</a></p>
+							</td> 
+						</tr>
+						<tr> 
+							<td height="19" width="16" class="slNoPdf"> 
+								5
+							</td> 
+							<td height="19" width="423" class="bookName"> 
+								First 25 slides : 
+								<br> Local Feature Detectors and Descriptors
+							</td> 
+							<td align="center" height="19" width="23"> 
+								<p align="center"><a href="./courses/CV_DIP/PDF/Feature_Detectors_and_Descriptors.pdf" target = blank>
+								<img src="./pdf.png" height="32" width="32" alt="Download Slide" border="0" >
+								</a></p>
+							</td> 
+						</tr>
+						
+</table>
+				</p>
+				
+			</div>-->
+		</div>
+
+
+
+
+	
+
+</body></html>

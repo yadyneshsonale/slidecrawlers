@@ -1,0 +1,394 @@
+<!DOCTYPE html><html><head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<title>
+ CS 15-122: Principles of Imperative Computation (Summer 2026)
+</title>
+
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+<script type="text/javascript" src="inc/lib/jquery.min.js"></script>
+<script type="text/javascript" src="inc/lib/tipsy/js/jquery.tipsy.js"></script>
+<link rel="stylesheet" type="text/css" href="inc/lib/tipsy/css/tipsy.css">
+<script type="text/javascript" src="inc/lib/jQuery.bubbletip-1.0.6.js"></script>
+<link type="text/css" href="inc/lib/bubbletip/bubbletip.css" rel="stylesheet">
+
+<!-- Course -->
+<script type="text/javascript" src="inc/scripts/toggler.js"></script>
+<link rel="stylesheet" type="text/css" href="inc/css/course.css">
+
+<!-- Email -->
+<script type="text/javascript" src="inc/scripts/email.js"></script>
+
+<!-- Calendar -->
+<script type="text/javascript" src="inc/scripts/dateutil.js"></script>
+<link rel="stylesheet" type="text/css" href="inc/css/calendar.css">
+<script type="text/javascript" src="inc/scripts/calendar.js"></script>
+<script type="text/javascript" src="inc/scripts/staff.js"></script>
+<link rel="stylesheet" type="text/css" href="inc/css/staff.css">
+<script type="text/javascript">
+  // Default subject of all emails
+  setEmailSubject("15-122");
+  var autolab    = "https://autolab.andrew.cmu.edu/courses/15122-n26";
+  var qatoolname = "Ed";
+  var qatool     = "https://edstem.org/us/courses/97996/discussion/";
+  var gradescope = "https://www.gradescope.com/courses/1299753";
+  var logistics  = "https://enr-apps.as.cmu.edu/open/SOC/SOCServlet/courseDetails?COURSE=15122&SEMESTER=M26";
+
+// Grades redirect
+  // First week of classes (before first assessment grades are posted)
+  var grades = "https://pic.cs.cmu.edu/n26/index.html";
+  // Actual grades
+  //var grades     = "https://pic.cs.cmu.edu/n26/grades/login/index.php";
+
+// TODO
+  var checkinURL = "https://NOT_YET_AVAILABLE/index.php?checkmein=true";
+  var queueURL = "https://cs122.andrew.cmu.edu/ohq/";
+
+  var showLO = false;  // show learning objectives in calendars (or not)
+
+  var C = new Course(2026, 06,22,07,30); // Begin-end of teaching semester
+
+  // values in {weekend, noclass, lecture, lab, recitation, precept}
+  C.setWeek(weekend, weekend, lecture, lecture, lecture, lecture, lecture);
+  C.setFinals(2026, 07,31, 07,31);  // setFinals(y, bm,bd, em,ed)
+  C.addHoliday(2026,07,03);         // Independence Day (observed)
+  C.addHoliday(2026,07,30);         // No lecture or precept -- review day
+
+  C.addExtra(2026,06,23, precept, "1");
+  C.addExtra(2026,06,26, precept, "2");
+  C.addExtra(2026,06,29, precept, "3");
+  C.addExtra(2026,07,01, precept, "4");
+  C.addExtra(2026,07,06, precept, "5");
+  C.addExtra(2026,07,08, precept, "6");
+  C.addExtra(2026,07,10, precept, "7");
+  C.addExtra(2026,07,15, precept, "8");
+  C.addExtra(2026,07,17, precept, "9");
+  C.addExtra(2026,07,21, precept, "10");
+  C.addExtra(2026,07,24, precept, "11");
+  C.addExtra(2026,07,27, precept, "12");
+  C.addExtra(2026,07,29, precept, "13");
+
+  C.newExam('CH', 'Checkins', 'proctored-activity', 'varies', 1);
+
+  // addExam(type, year,month,day, percent,learning,corrected,focus)
+  C.addExam('CH', 2026,06,25, '60pt',  '1-3',           +4, 'Lec.0-1');   // 1
+  C.addExam('CH', 2026,07,02, '120pt', '1-3,12',        +3, 'Lec.2-5');   // 2
+  C.addExam('CH', 2026,07,09, '120pt', '1-4,27',        +3, 'Lec.6-9');   // 3
+  C.addExam('CH', 2026,07,13, '120pt', '6-10,15-17,21', +3, 'Lec.10-11, 0-11');   // 4
+  C.addExam('CH', 2026,07,16, '120pt', '12,21,22,26,27',+4, 'Lec.12-15'); // 5
+  C.addExam('CH', 2026,07,23, '120pt', '9,12,17,24,27', +3, 'Lec.16-19'); // 6
+  C.addExam('CH', 2026,07,28, '120pt', '12,24,25,27',   +1, 'Lec.20-22'); // 7
+
+  C.setFinal(2026,07,31,              // setFinal(year,month,day,
+             "time TBA", null,              //          time (or null),room,
+             '250', '1-27', +7,       //          percent,learning,corrected,
+             'Lec.1-26');             //          focus)
+
+
+  var upl = gradescope;
+  C.newHw('PP', 'Practice Problems', 'practice-problem',
+          '6pm', '<a href="'+gradescope+'">Gradescope</a>', 0);
+  C.addHw('PP', 2026,06,22, ' 0pt',  '1-3,11',    -1,+1, upl, 'Lec.0');    // 0
+  C.addHw('PP', 2026,06,24, '10pt', '1-3',        -2,+1, upl, 'Lec.0-1');  // 1
+  C.addHw('PP', 2026,06,26, '10pt', '1,2,4,12',   -2,+3, upl, 'Lec.2-3');  // 2
+  C.addHw('PP', 2026,06,30, '10pt', '1-4,21,27',  -4,+1, upl, 'Lec.4-5');  // 3
+  C.addHw('PP', 2026,07,02, '10pt', '6-10,15-17', -2,+4, upl, 'Lec.6-7');  // 4
+  C.addHw('PP', 2026,07,07, '10pt', '6-8,12,17',  -5,+1, upl, 'Lec.8-9');  // 5
+  C.addHw('PP', 2026,07,10, '10pt', '9,17,24,27', -3,+2, upl, 'Lec.10-11');// 6
+  C.addHw('PP', 2026,07,13, '10pt', '12,24,27',   -4,+1, upl, 'Lec.12-13');// 7
+  C.addHw('PP', 2026,07,15, '10pt', '9,10,25-27', -2,+1, upl, 'Lec.14-15');// 8
+  C.addHw('PP', 2026,07,17, '10pt', '2,13,25,27', -2,+2, upl, 'Lec.16-17');// 9
+  C.addHw('PP', 2026,07,21, '10pt', '18-20',      -4,+1, upl, 'Lec.18-19');// 10
+  C.addHw('PP', 2026,07,24, '10pt', '19,20',      -3,+2, upl, 'Lec.20-21');// 11
+  C.addHw('PP', 2026,07,28, '10pt', '5,20,27',    -4,+1, upl, 'Lec.22-24');// 12
+
+  var upl = autolab;
+  C.newHw('PG', 'Programming Homework', 'prog',
+          '11:59pm', '<a href="'+autolab+'">Autolab</a>', 1);
+  C.addHw('PG', 2026,06,24, '50pt', '1,12',     -3,+4, upl, 'C0');      // 1
+  C.addHw('PG', 2026,06,27, '50pt', '12,15,16', -3,+4, upl, 'ints');    // 2
+  C.addHw('PG', 2026,07,01, '50pt', '1,12-16',  -4,+4, upl, 'arrays');  // 3
+  C.addHw('PG', 2026,07,05, '50pt', '1,18,17',  -4,+4, upl, 'sorting'); // 4
+  C.addHw('PG', 2026,07,08, '50pt', '5,12,27',  -3,+4, upl, 'stacks');  // 5
+  C.addHw('PG', 2026,07,11, '32pt', '10',      -14,+4, upl, 'lists');   // 6
+//C.addHw('PG', 2026,07,11, '50pt', '10',       -3,+2, upl, 'lists');   // 6
+  C.addHw('PG', 2026,07,15, '68pt', '1,12-18', -21,+4, upl, 'lists');   // 7
+//C.addHw('PG', 2026,07,15, '50pt', '1,12-18',  -4,+4, upl, 'hashing'); // 7
+  C.addHw('PG', 2026,07,18, '50pt', '8,10-18',  -3,+4, upl, 'trees');   // 8
+  C.addHw('PG', 2026,07,22, '50pt', '9,12-18',  -4,+4, upl, 'C');       // 9
+  C.addHw('PG', 2026,07,25, '50pt', '10,15-20', -3,+4, upl, 'C');       // 10
+  C.addHw('PG', 2026,07,28, '50pt', '5,15-20',  -3,+4, upl, 'c0vm');    // 11
+  C.addHw('PG', 2026,07,31, '50pt', '5,15-20',  -6,+2, upl, 'c0vm');    // 12
+
+  addInstructor("Krish Suraparaju", MEA("csurapar", "andrew", "cmu", "edu"),
+                "csurapar.png", "",
+                [seeSchedOfficeHours("TBA"),
+                 specialOfficeHours("By appointment at other times")]);
+  addInstructor("Sheng Shu", MEA("shengshu", "andrew", "cmu", "edu"),
+                "shengshu.png", "",
+                [seeSchedOfficeHours("TBA"),
+                 specialOfficeHours("By appointment at other times")]);
+
+  addStaff('mascot', "Honk ! ", "honk@andrew.cmu.edu",
+           ['honk/bfly.jpg',  'honk/love.jpg',    'honk/irish.jpg',
+            'honk/berry.jpg', 'honk/pumpkin.jpg', 'honk/pilgrim.jpg',
+            'honk/shore.jpg', 'honk/piada.jpg',   'honk/thanksgiving.jpg',
+            'honk/clown.jpg', 'honk/umpire.jpg',  'honk/frankenstein.jpg',
+            'honk/drink.jpg', 'honk/inclass.jpg', 'honk/karaoke.jpg',
+            'honk/diva.jpg',  'honk/takeoff.jpg', 'honk/fence.jpg',
+                                                  'honk/valentine.png',
+                                                  'honk/rockstar.jpg'
+           ],
+           "https://www.instagram.com/honk15122/",
+           null, []);
+
+  addStaff('mascotbuddy', "Chonk", null,
+           "chonk.png",
+           "https://www.instagram.com/chonk122/",
+           null, []);
+
+  addAA("Marcie Baker", MEA("marcella", "andrew", "cmu", "edu"),
+        "marcella.png", null, "GHC 6006");
+
+  function aMEA(id) { return MEA(id, "andrew", "cmu", "edu"); }
+/*addTA("Example TA", MEA("ta", "cs", "cmu", "edu"),
+                "ta.png", "https://www.cs.cmu.edu/~15122ta/",
+                [officeHours("F", "7:00pm", 60, "GHC 4307", null),
+                 officeHours("S", "1:30pm", 60, "GHC ta5", "Conceptual OH"),
+                 specialOfficeHours("TBA")]);
+*/
+
+addTA("Alex Zhou Xiang",      aMEA("azxiang"),    "azxiang.png",  null, []);
+addTA("Amy Wang",             aMEA("amywang3"),   "amywang3.png", null, []);
+addTA("Andrew Jiang",         aMEA("andrewji"),   "andrewji.png", null, []);
+addTA("Angela Mo",            aMEA("amo2"),       "amo2.png",     null, []);
+addTA("Anne Delale-O'Connor", aMEA("acdelale"),   "acdelale.png", null, []);
+addTA("David Leschensky",     aMEA("dleschen"),   "dleschen.png", "https://www.davidleschensky.com/", []);
+addTA("Derek Peng",           aMEA("derekpen"),   "derekpen.png", null, []);
+addTA("Etash Jhanji",         aMEA("etashjha"),   "etashjha.png", "https://etashj.github.io/", []);
+addTA("Evan Foster",          aMEA("evanfost"),   "evanfost.png", "https://brucemcrooster.dev/", []);
+addTA("Jonny Jentis",         aMEA("jjentis"),    "jjentis.png",  null, []);
+addTA("Katherine Chen",       aMEA("kzc"),        "kzc.png",      null, []);
+addTA("Luke Erbsen",          aMEA("serbsen"),    "serbsen.png",  "https://www.linkedin.com/in/lukeerbsen/", []);
+addTA("Mirabelle Feng",       aMEA("mirabelf"),   "mirabelf.png", null, []);
+addTA("Sophie Li",            aMEA("sophiel5"),   "sophiel5.png", null, []);
+
+
+  go(C);                          // runs initialization scripts
+
+  var author = staff[0].email;
+
+  $(document).ready(function () {
+     $("[rel='tipsy']").tipsy({gravity:'n', delayIn: 350, delayOut: 100, fade: true});
+     $("[rel='tipsy-w']").tipsy({gravity:'w', delayIn: 350, delayOut: 100, fade: true});
+     $('a.qatoolname').text(qatoolname);
+     $('a.qatool').attr("href", qatool);
+     $('a.gradescope').text("Gradescope");
+     $('a.gradescope').attr("href", gradescope);
+     $('a.autolab').text("Autolab");
+     $('a.autolab').attr("href", autolab);
+     $('a.grades').attr("href", grades);
+     $('a.logistics').attr("href", logistics);
+     $('#authorEmail').html(eMail(author));
+     $('.contactInstr').html(function (idx, oldtxt) {
+                               return hMail(oldtxt, emailByRole ("instructor"));
+                            });
+     $('#email_addr').attr("value", mAddrs(emailByRole("instructor")));
+     $('#classCalendar').html(buildCalendar(C));
+     $('#courseworkCalendar').html(buildWorkCalendarByKind(C.hws['PP'])
+                                 + buildWorkCalendarByKind(C.hws['PG'])
+                                 + buildWorkCalendarByKind(C.exams['CH'])
+                                 + C.final.display());
+
+     peopleFaces();
+  });
+</script>
+</head>
+
+
+<body>
+<div class="top">
+
+<table class="title">
+<tbody><tr>
+ <td class="logo">
+   <a href="https://www.cmu.edu">
+    <img class="logo" style="height:51px; padding-right: 0; border: 2px solid white;" src="inc/img/cmu-logo.png">
+   </a>
+ </td>
+ <td class="courseName">
+   CS 15-122: Principles of Imperative Computation
+  <br>(Summer 2026)
+ </td>
+ <td class="logo">
+   <a href="https://www.cs.cmu.edu">
+    <img class="logo" src="inc/img/scs-logo.gif">
+   </a>
+ </td>
+</tr>
+</tbody></table>
+
+<ul class="menu">
+<li class="menu"><a class="menu" href="home.shtml">Home</a></li>
+<li class="menu"><a class="menu" href="about.shtml" rel="tipsy" original-title="Objectives, resources and policies">About</a></li>
+<li class="menu"><a class="menu" href="staff.shtml" rel="tipsy" original-title="Instructors and TAs">Staff</a></li>
+<li class="menu"><a class="menu" href="schedule.shtml" rel="tipsy" original-title="Lectures and precepts">Schedule</a></li>
+<li class="menu"><a class="menu" href="handouts.shtml" rel="tipsy" original-title="This contains course material and assignments">Handouts</a></li>
+
+<li class="menu"><a class="menu qatool qatoolname" target="_blank" href="https://edstem.org/us/courses/97996/discussion/" rel="tipsy" original-title="This is our discussion board">Ed</a></li>
+<li class="menu"><a class="menu gradescope" target="_blank" href="https://www.gradescope.com/courses/1299753" rel="tipsy" original-title="This is where you submit your written assignments">Gradescope</a></li>
+<li class="menu"><a class="menu autolab" target="_blank" href="https://autolab.andrew.cmu.edu/courses/15122-n26" rel="tipsy" original-title="This is where you submit your programming assignments">Autolab</a></li>
+<!--li class="menu"><a class="menu" href="quiz.shtml"
+    rel="tipsy" title="Today's quiz (if any)">Quiz</a></li-->
+<li class="menu"><a class="menu" target="_blank" href="activities.shtml" rel="tipsy" original-title="Today's in-class activity">Activities</a></li>
+<li class="menu"><a class="menu grades" target="_blank" href="https://pic.cs.cmu.edu/n26/index.html" rel="tipsy" original-title="This where you can see your grades (and more)">Grades</a></li>
+</ul>
+</div>
+<br>
+
+<!-- Inherits from calendar.css -->
+
+<!-- Adds the filter box to the schedule page -->
+<script type="text/javascript" src="inc/lib/jquery.liveFilter.min.js"></script>
+<link type="text/css" rel="stylesheet" href="inc/css/filter.css" charset="utf-8">
+
+
+<!-- Actions that should be taken only on the schedule page -->
+<script type="text/javascript">
+$(document).ready(function() {
+   $('#schedule').html(buildSchedule(C));
+   callPendingSnippets(function() {afterLoadingSnippets(C);} );
+});
+</script>
+
+
+<h1 id="SCHEDULE">Schedule of Classes</h1>
+
+<h3 class="toggle-base"><span class="toggle-label">At a glance ...</span></h3>
+<div class="toggle-me" style="margin-left:20px; margin-right:auto; width:100%;">
+  <div id="classCalendar" style="page-break-inside:avoid;"><table style="margin: auto;" border="1"><tbody><tr><td><div class="main"><table class="main" cols="7" border="0"><thead><tr><th colspan="7" class="month">June 2026</th></tr></thead><tbody><tr><td class="daysofweek">U</td><td class="daysofweek">M</td><td class="daysofweek">T</td><td class="daysofweek">W</td><td class="daysofweek">R</td><td class="daysofweek">F</td><td class="daysofweek">S</td></tr><tr><td class="days noday">&nbsp;</td><td class="days vacation">1</td><td class="days vacation">2</td><td class="days vacation">3</td><td class="days vacation">4</td><td class="days vacation">5</td><td class="days weekend">6</td></tr><tr><td class="days weekend">7</td><td class="days vacation">8</td><td class="days vacation">9</td><td class="days vacation">10</td><td class="days vacation">11</td><td class="days vacation">12</td><td class="days weekend">13</td></tr><tr><td class="days weekend">14</td><td class="days today vacation">15</td><td class="days vacation">16</td><td class="days vacation">17</td><td class="days vacation">18</td><td class="days vacation">19</td><td class="days weekend">20</td></tr><tr><td class="days weekend">21</td><td class="days lecture hwdue rel=" tipsy"="" title="undefined0" "=""><a class="calendar" href="schedule.shtml#lecture0">22</a></td><td class="days lecture rel=" tipsy"="" title="undefined0" "=""><a class="calendar" href="schedule.shtml#lecture1">23</a></td><td class="days lecture hwdue rel=" tipsy"="" title="undefined1" "=""><a class="calendar" href="schedule.shtml#lecture2">24</a></td><td class="days lecture rel=" tipsy"="" title="undefined1" "=""><a class="calendar" href="schedule.shtml#lecture3">25</a></td><td class="days lecture hwdue rel=" tipsy"="" title="undefined2" "=""><a class="calendar" href="schedule.shtml#lecture4">26</a></td><td class="days weekend hwdue rel=" tipsy"="" title="undefined2" "="">27</td></tr><tr><td class="days weekend rel=" tipsy"="" title="undefined2" "="">28</td><td class="days lecture rel=" tipsy"="" title="undefined2" "=""><a class="calendar" href="schedule.shtml#lecture5">29</a></td><td class="days lecture hwdue rel=" tipsy"="" title="undefined3" "=""><a class="calendar" href="schedule.shtml#lecture6">30</a></td><td class="days noday">&nbsp;</td><td class="days noday">&nbsp;</td><td class="days noday">&nbsp;</td><td class="days noday">&nbsp;</td></tr><tr><td class="days noday">&nbsp;</td><td class="days noday">&nbsp;</td><td class="days noday">&nbsp;</td><td class="days noday">&nbsp;</td><td class="days noday">&nbsp;</td><td class="days noday">&nbsp;</td><td class="days noday">&nbsp;</td></tr></tbody></table></div></td><td><div class="main"><table class="main" cols="7" border="0"><thead><tr><th colspan="7" class="month">July 2026</th></tr></thead><tbody><tr><td class="daysofweek">U</td><td class="daysofweek">M</td><td class="daysofweek">T</td><td class="daysofweek">W</td><td class="daysofweek">R</td><td class="daysofweek">F</td><td class="daysofweek">S</td></tr><tr><td class="days noday">&nbsp;</td><td class="days noday">&nbsp;</td><td class="days noday">&nbsp;</td><td class="days lecture hwdue rel=" tipsy"="" title="undefined3" "=""><a class="calendar" href="schedule.shtml#lecture7">1</a></td><td class="days lecture hwdue rel=" tipsy"="" title="undefined4" "=""><a class="calendar" href="schedule.shtml#lecture8">2</a></td><td class="days lecture holiday rel=" tipsy"="" title="undefined4" "=""><a class="calendar" href="schedule.shtml#h1">3</a></td><td class="days weekend rel=" tipsy"="" title="undefined4" "="">4</td></tr><tr><td class="days weekend hwdue rel=" tipsy"="" title="undefined4" "="">5</td><td class="days lecture rel=" tipsy"="" title="undefined4" "=""><a class="calendar" href="schedule.shtml#lecture9">6</a></td><td class="days lecture hwdue rel=" tipsy"="" title="undefined5" "=""><a class="calendar" href="schedule.shtml#lecture10">7</a></td><td class="days lecture hwdue rel=" tipsy"="" title="undefined5" "=""><a class="calendar" href="schedule.shtml#lecture11">8</a></td><td class="days lecture rel=" tipsy"="" title="undefined5" "=""><a class="calendar" href="schedule.shtml#lecture12">9</a></td><td class="days lecture hwdue rel=" tipsy"="" title="undefined6" "=""><a class="calendar" href="schedule.shtml#lecture13">10</a></td><td class="days weekend hwdue rel=" tipsy"="" title="undefined6" "="">11</td></tr><tr><td class="days weekend rel=" tipsy"="" title="undefined6" "="">12</td><td class="days lecture hwdue rel=" tipsy"="" title="undefined7" "=""><a class="calendar" href="schedule.shtml#lecture14">13</a></td><td class="days lecture rel=" tipsy"="" title="undefined7" "=""><a class="calendar" href="schedule.shtml#lecture15">14</a></td><td class="days lecture hwdue rel=" tipsy"="" title="undefined8" "=""><a class="calendar" href="schedule.shtml#lecture16">15</a></td><td class="days lecture rel=" tipsy"="" title="undefined8" "=""><a class="calendar" href="schedule.shtml#lecture17">16</a></td><td class="days lecture hwdue rel=" tipsy"="" title="undefined9" "=""><a class="calendar" href="schedule.shtml#lecture18">17</a></td><td class="days weekend hwdue rel=" tipsy"="" title="undefined8" "="">18</td></tr><tr><td class="days weekend rel=" tipsy"="" title="undefined8" "="">19</td><td class="days lecture rel=" tipsy"="" title="undefined8" "=""><a class="calendar" href="schedule.shtml#lecture19">20</a></td><td class="days lecture hwdue rel=" tipsy"="" title="undefined10" "=""><a class="calendar" href="schedule.shtml#lecture20">21</a></td><td class="days lecture hwdue rel=" tipsy"="" title="undefined9" "=""><a class="calendar" href="schedule.shtml#lecture21">22</a></td><td class="days lecture rel=" tipsy"="" title="undefined9" "=""><a class="calendar" href="schedule.shtml#lecture22">23</a></td><td class="days lecture hwdue rel=" tipsy"="" title="undefined11" "=""><a class="calendar" href="schedule.shtml#lecture23">24</a></td><td class="days weekend hwdue rel=" tipsy"="" title="undefined10" "="">25</td></tr><tr><td class="days weekend rel=" tipsy"="" title="undefined10" "="">26</td><td class="days lecture rel=" tipsy"="" title="undefined10" "=""><a class="calendar" href="schedule.shtml#lecture24">27</a></td><td class="days lecture hwdue rel=" tipsy"="" title="undefined12" "=""><a class="calendar" href="schedule.shtml#lecture25">28</a></td><td class="days lecture rel=" tipsy"="" title="undefined12" "=""><a class="calendar" href="schedule.shtml#lecture26">29</a></td><td class="days lecture holiday rel=" tipsy"="" title="undefined12" "=""><a class="calendar" href="schedule.shtml#h2">30</a></td><td class="days final rel=" tipsy"="" title="undefined12" "=""><a class="calendar" href="schedule.shtml#FINAL">31</a></td><td class="days noday">&nbsp;</td></tr><tr><td class="days noday">&nbsp;</td><td class="days noday">&nbsp;</td><td class="days noday">&nbsp;</td><td class="days noday">&nbsp;</td><td class="days noday">&nbsp;</td><td class="days noday">&nbsp;</td><td class="days noday">&nbsp;</td></tr></tbody></table></div></td></tr></tbody></table></div>
+</div>
+<!-- toggler-on -->
+
+
+<div class="toggler-off">
+<h3 class="toggle-base"><span class="toggle-label">Outline<span class="toggleoff-mark">[+]</span></span></h3>
+
+<div class="toggle-me" style="display: none;">
+The course is organized around the following themes:
+<table style="margin-top: 1ex;" width="100%" border="1">
+<thead bgcolor="lightgray">
+<tr><th colspan="5" width="29%">Weeks 1-4</th>
+<th colspan="3" width="36%">Weeks 5-9</th>
+<th colspan="6" width="35%">Weeks 10-14</th>
+</tr></thead>
+<tbody><tr align="center" valign="top">
+<td colspan="5" bgcolor="#FFCC44" style="padding:10px 0"><a href="#lecture1">Deliberate programming</a></td>
+<td colspan="3" bgcolor="#FFCC99" style="padding:10px 0"><a href="#lecture9">Data structures</a></td>
+<td colspan="6" bgcolor="#FFCCEE" style="padding:10px 0"><a href="#lecture20">Transition to C</a></td>
+
+</tr>
+</tbody></table>
+<p></p>
+
+In this course, there will be two types of class periods:
+<ul>
+<li class="lecture" style="text-align:justify">
+	<b><em>Lectures</em></b> are listed below with a blue
+	background.  Lectures are led by the instructors and present
+	the core material of the course.
+</li>
+<li class="precept" style="text-align:justify; margin-top:4pt">
+	<b><em>Precepts</em></b> are listed with a gray background.
+	Precepts take place in small groups in various classrooms
+	under the supervision of teaching assistants.  Their main
+	purpose is to reinforce some of the notions introduced in
+	lecture.  They consist of a small number of practice exercises
+	to be solved on paper.  Precepts are graded on a 0-2 scale,
+	with 2 indicating completion of all exercises by all group
+	members.
+</li>
+
+
+<!--li class="lab" style="text-align:justify; margin-top:4pt">
+	<b><em>Lab </em></b> are listed with a light gray
+	background.  Labs take place in small groups in various
+	computer clusters under the supervision of teaching
+	assistants.  Their main purpose is to reinforce
+	the <em>programming</em> notions introduced in lecture.  They
+	consist of a small number of practice exercises to be solved
+	on a computer.  Labs are graded on a 0-3 scale, with 3
+	indicating completion of all exercises.
+</li>
+<li class="recitation" style="text-align:justify; margin-top:4pt">
+	<b><em>Recitations</em></b> are listed with a dark gray
+	background.  Recitations take place in small groups in various
+	classrooms under the supervision of teaching assistants.
+	Their main purpose is to reinforce the <em>theoretical</em>
+	notions introduced in lecture.
+</li-->
+</ul>
+</div>
+
+
+<script>document.write(release_relative_to_date(C.start, -7, `
+<h2>Before the First Day of Classes</h2>
+<p>
+<div class="recitation" style="border: 1px solid BLACK; padding: 5px 5px;">
+The "setup lab" will get you up to speed with some of the technology
+used in 15-122 and put you on the right footing for everything that
+will come later in the semester.  Please complete it before the first
+day of classes (it will take about an hour).  Here's what you need:
+  <ul>
+    <li><a href="handouts/misc/setup.pdf" target="_blank">Setup lab exercises</a>
+        <!--<li><a href="https://www.youtube.com/watch?v=2Are6AK5Nn4&ab_channel=122Videos" target="_blank">Step-by-step video</a> (Note: refer to exercises above for current details, video is from a prior semester)</li>-->
+  </ul>
+  If you get stuck anywhere, don't worry: we will have a workshop on
+  Tuesday at 7pm where our friendly staff will help you resolve any
+  lingering issues.  You are also welcome to ask questions about it on
+  <a href="" class="qatool qatoolname" target="_blank"></a>!
+</div>
+</p>`));
+</script>
+<h2>Before the First Day of Classes</h2>
+<p>
+</p><div class="recitation" style="border: 1px solid BLACK; padding: 5px 5px;">
+The "setup lab" will get you up to speed with some of the technology
+used in 15-122 and put you on the right footing for everything that
+will come later in the semester.  Please complete it before the first
+day of classes (it will take about an hour).  Here's what you need:
+  <ul>
+    <li><a href="handouts/misc/setup.pdf" target="_blank">Setup lab exercises</a>
+        <!--<li><a href="https://www.youtube.com/watch?v=2Are6AK5Nn4&ab_channel=122Videos" target="_blank">Step-by-step video</a> (Note: refer to exercises above for current details, video is from a prior semester)</li>-->
+  </li></ul>
+  If you get stuck anywhere, don't worry: we will have a workshop on
+  Tuesday at 7pm where our friendly staff will help you resolve any
+  lingering issues.  You are also welcome to ask questions about it on
+  <a href="https://edstem.org/us/courses/97996/discussion/" class="qatool qatoolname" target="_blank">Ed</a>!
+</div>
+<p></p>
+
+
+<br>
+<div id="schedule"><table id="weekSat 20 Jun" class="classweek"><tbody><tr class="classday lecture"><td class="schedule-lecture-id"><a name="lecture0"></a>  <div class="schedule-top">    <a href="#"><img class="schedule-topimg" src="inc/img/parent.gif"></a>    <input type="button" class="summary" value="S" title="Click to toggle the description on and off">    <input type="button" class="details" value="D" title="Click to toggle the concepts and readings on and off">  </div>  <div class="schedule-date">Mon 22 Jun</div>  <div class="schedule-lectureN">Lecture 0</div></td><td id="lecture0" class="schedule-lecture-body">waiting on id lecture0...</td></tr><tr class="classday lecture"><td class="schedule-lecture-id"><a name="lecture1"></a>  <div class="schedule-top">    <a href="#"><img class="schedule-topimg" src="inc/img/parent.gif"></a>    <input type="button" class="summary" value="S" title="Click to toggle the description on and off">    <input type="button" class="details" value="D" title="Click to toggle the concepts and readings on and off">  </div>  <div class="schedule-date">Tue 23 Jun</div>  <div class="schedule-lectureN">Lecture 1</div></td><td id="lecture1" class="schedule-lecture-body">waiting on id lecture1...</td></tr><tr class="classday precept"><td class="schedule-lecture-id"><a name="precept1"></a>  <div class="schedule-top">    <a href="#"><img class="schedule-topimg" src="inc/img/parent.gif"></a>    <input type="button" class="summary" value="S" title="Click to toggle the description on and off">    <input type="button" class="details" value="D" title="Click to toggle the concepts and readings on and off">  </div>  <div class="schedule-date">Tue 23 Jun</div>  <div class="schedule-lectureN">practice</div></td><td id="precept1" class="schedule-lecture-body">waiting on id precept1...</td></tr><tr class="classday lecture"><td class="schedule-lecture-id"><a name="lecture2"></a>  <div class="schedule-top">    <a href="#"><img class="schedule-topimg" src="inc/img/parent.gif"></a>    <input type="button" class="summary" value="S" title="Click to toggle the description on and off">    <input type="button" class="details" value="D" title="Click to toggle the concepts and readings on and off">  </div>  <div class="schedule-date">Wed 24 Jun</div>  <div class="schedule-lectureN">Lecture 2</div></td><td id="lecture2" class="schedule-lecture-body">waiting on id lecture2...</td></tr><tr class="classday lecture"><td class="schedule-lecture-id"><a name="lecture3"></a>  <div class="schedule-top">    <a href="#"><img class="schedule-topimg" src="inc/img/parent.gif"></a>    <input type="button" class="summary" value="S" title="Click to toggle the description on and off">    <input type="button" class="details" value="D" title="Click to toggle the concepts and readings on and off">  </div>  <div class="schedule-date">Thu 25 Jun</div>  <div class="schedule-lectureN">Lecture 3</div></td><td id="lecture3" class="schedule-lecture-body">waiting on id lecture3...</td></tr><tr class="classday lecture"><td class="schedule-lecture-id"><a name="lecture4"></a>  <div class="schedule-top">    <a href="#"><img class="schedule-topimg" src="inc/img/parent.gif"></a>    <input type="button" class="summary" value="S" title="Click to toggle the description on and off">    <input type="button" class="details" value="D" title="Click to toggle the concepts and readings on and off">  </div>  <div class="schedule-date">Fri 26 Jun</div>  <div class="schedule-lectureN">Lecture 4</div></td><td id="lecture4" class="schedule-lecture-body">waiting on id lecture4...</td></tr><tr class="classday precept"><td class="schedule-lecture-id"><a name="precept2"></a>  <div class="schedule-top">    <a href="#"><img class="schedule-topimg" src="inc/img/parent.gif"></a>    <input type="button" class="summary" value="S" title="Click to toggle the description on and off">    <input type="button" class="details" value="D" title="Click to toggle the concepts and readings on and off">  </div>  <div class="schedule-date">Fri 26 Jun</div>  <div class="schedule-lectureN">practice</div></td><td id="precept2" class="schedule-lecture-body">waiting on id precept2...</td></tr></tbody></table><table id="weekSat 27 Jun" class="classweek"><tbody><tr class="classday lecture"><td class="schedule-lecture-id"><a name="lecture5"></a>  <div class="schedule-top">    <a href="#"><img class="schedule-topimg" src="inc/img/parent.gif"></a>    <input type="button" class="summary" value="S" title="Click to toggle the description on and off">    <input type="button" class="details" value="D" title="Click to toggle the concepts and readings on and off">  </div>  <div class="schedule-date">Mon 29 Jun</div>  <div class="schedule-lectureN">Lecture 5</div></td><td id="lecture5" class="schedule-lecture-body">waiting on id lecture5...</td></tr><tr class="classday precept"><td class="schedule-lecture-id"><a name="precept3"></a>  <div class="schedule-top">    <a href="#"><img class="schedule-topimg" src="inc/img/parent.gif"></a>    <input type="button" class="summary" value="S" title="Click to toggle the description on and off">    <input type="button" class="details" value="D" title="Click to toggle the concepts and readings on and off">  </div>  <div class="schedule-date">Mon 29 Jun</div>  <div class="schedule-lectureN">practice</div></td><td id="precept3" class="schedule-lecture-body">waiting on id precept3...</td></tr><tr class="classday lecture"><td class="schedule-lecture-id"><a name="lecture6"></a>  <div class="schedule-top">    <a href="#"><img class="schedule-topimg" src="inc/img/parent.gif"></a>    <input type="button" class="summary" value="S" title="Click to toggle the description on and off">    <input type="button" class="details" value="D" title="Click to toggle the concepts and readings on and off">  </div>  <div class="schedule-date">Tue 30 Jun</div>  <div class="schedule-lectureN">Lecture 6</div></td><td id="lecture6" class="schedule-lecture-body">waiting on id lecture6...</td></tr><tr class="classday lecture"><td class="schedule-lecture-id"><a name="lecture7"></a>  <div class="schedule-top">    <a href="#"><img class="schedule-topimg" src="inc/img/parent.gif"></a>    <input type="button" class="summary" value="S" title="Click to toggle the description on and off">    <input type="button" class="details" value="D" title="Click to toggle the concepts and readings on and off">  </div>  <div class="schedule-date">Wed 1 Jul</div>  <div class="schedule-lectureN">Lecture 7</div></td><td id="lecture7" class="schedule-lecture-body">waiting on id lecture7...</td></tr><tr class="classday precept"><td class="schedule-lecture-id"><a name="precept4"></a>  <div class="schedule-top">    <a href="#"><img class="schedule-topimg" src="inc/img/parent.gif"></a>    <input type="button" class="summary" value="S" title="Click to toggle the description on and off">    <input type="button" class="details" value="D" title="Click to toggle the concepts and readings on and off">  </div>  <div class="schedule-date">Wed 1 Jul</div>  <div class="schedule-lectureN">practice</div></td><td id="precept4" class="schedule-lecture-body">waiting on id precept4...</td></tr><tr class="classday lecture"><td class="schedule-lecture-id"><a name="lecture8"></a>  <div class="schedule-top">    <a href="#"><img class="schedule-topimg" src="inc/img/parent.gif"></a>    <input type="button" class="summary" value="S" title="Click to toggle the description on and off">    <input type="button" class="details" value="D" title="Click to toggle the concepts and readings on and off">  </div>  <div class="schedule-date">Thu 2 Jul</div>  <div class="schedule-lectureN">Lecture 8</div></td><td id="lecture8" class="schedule-lecture-body">waiting on id lecture8...</td></tr><tr class="classday holiday"><td class="schedule-lecture-id"><a name="h1"></a>  <div class="schedule-date">Fri 3 Jul</div></td><td id="h1" class="schedule-lecture-body">waiting on id h1...</td></tr></tbody></table><table id="weekSat 4 Jul" class="classweek"><tbody><tr class="classday lecture"><td class="schedule-lecture-id"><a name="lecture9"></a>  <div class="schedule-top">    <a href="#"><img class="schedule-topimg" src="inc/img/parent.gif"></a>    <input type="button" class="summary" value="S" title="Click to toggle the description on and off">    <input type="button" class="details" value="D" title="Click to toggle the concepts and readings on and off">  </div>  <div class="schedule-date">Mon 6 Jul</div>  <div class="schedule-lectureN">Lecture 9</div></td><td id="lecture9" class="schedule-lecture-body">waiting on id lecture9...</td></tr><tr class="classday precept"><td class="schedule-lecture-id"><a name="precept5"></a>  <div class="schedule-top">    <a href="#"><img class="schedule-topimg" src="inc/img/parent.gif"></a>    <input type="button" class="summary" value="S" title="Click to toggle the description on and off">    <input type="button" class="details" value="D" title="Click to toggle the concepts and readings on and off">  </div>  <div class="schedule-date">Mon 6 Jul</div>  <div class="schedule-lectureN">practice</div></td><td id="precept5" class="schedule-lecture-body">waiting on id precept5...</td></tr><tr class="classday lecture"><td class="schedule-lecture-id"><a name="lecture10"></a>  <div class="schedule-top">    <a href="#"><img class="schedule-topimg" src="inc/img/parent.gif"></a>    <input type="button" class="summary" value="S" title="Click to toggle the description on and off">    <input type="button" class="details" value="D" title="Click to toggle the concepts and readings on and off">  </div>  <div class="schedule-date">Tue 7 Jul</div>  <div class="schedule-lectureN">Lecture 10</div></td><td id="lecture10" class="schedule-lecture-body">waiting on id lecture10...</td></tr><tr class="classday lecture"><td class="schedule-lecture-id"><a name="lecture11"></a>  <div class="schedule-top">    <a href="#"><img class="schedule-topimg" src="inc/img/parent.gif"></a>    <input type="button" class="summary" value="S" title="Click to toggle the description on and off">    <input type="button" class="details" value="D" title="Click to toggle the concepts and readings on and off">  </div>  <div class="schedule-date">Wed 8 Jul</div>  <div class="schedule-lectureN">Lecture 11</div></td><td id="lecture11" class="schedule-lecture-body">waiting on id lecture11...</td></tr><tr class="classday precept"><td class="schedule-lecture-id"><a name="precept6"></a>  <div class="schedule-top">    <a href="#"><img class="schedule-topimg" src="inc/img/parent.gif"></a>    <input type="button" class="summary" value="S" title="Click to toggle the description on and off">    <input type="button" class="details" value="D" title="Click to toggle the concepts and readings on and off">  </div>  <div class="schedule-date">Wed 8 Jul</div>  <div class="schedule-lectureN">practice</div></td><td id="precept6" class="schedule-lecture-body">waiting on id precept6...</td></tr><tr class="classday lecture"><td class="schedule-lecture-id"><a name="lecture12"></a>  <div class="schedule-top">    <a href="#"><img class="schedule-topimg" src="inc/img/parent.gif"></a>    <input type="button" class="summary" value="S" title="Click to toggle the description on and off">    <input type="button" class="details" value="D" title="Click to toggle the concepts and readings on and off">  </div>  <div class="schedule-date">Thu 9 Jul</div>  <div class="schedule-lectureN">Lecture 12</div></td><td id="lecture12" class="schedule-lecture-body">waiting on id lecture12...</td></tr><tr class="classday lecture"><td class="schedule-lecture-id"><a name="lecture13"></a>  <div class="schedule-top">    <a href="#"><img class="schedule-topimg" src="inc/img/parent.gif"></a>    <input type="button" class="summary" value="S" title="Click to toggle the description on and off">    <input type="button" class="details" value="D" title="Click to toggle the concepts and readings on and off">  </div>  <div class="schedule-date">Fri 10 Jul</div>  <div class="schedule-lectureN">Lecture 13</div></td><td id="lecture13" class="schedule-lecture-body">waiting on id lecture13...</td></tr><tr class="classday precept"><td class="schedule-lecture-id"><a name="precept7"></a>  <div class="schedule-top">    <a href="#"><img class="schedule-topimg" src="inc/img/parent.gif"></a>    <input type="button" class="summary" value="S" title="Click to toggle the description on and off">    <input type="button" class="details" value="D" title="Click to toggle the concepts and readings on and off">  </div>  <div class="schedule-date">Fri 10 Jul</div>  <div class="schedule-lectureN">practice</div></td><td id="precept7" class="schedule-lecture-body">waiting on id precept7...</td></tr></tbody></table><table id="weekSat 11 Jul" class="classweek"><tbody><tr class="classday lecture"><td class="schedule-lecture-id"><a name="lecture14"></a>  <div class="schedule-top">    <a href="#"><img class="schedule-topimg" src="inc/img/parent.gif"></a>    <input type="button" class="summary" value="S" title="Click to toggle the description on and off">    <input type="button" class="details" value="D" title="Click to toggle the concepts and readings on and off">  </div>  <div class="schedule-date">Mon 13 Jul</div>  <div class="schedule-lectureN">Lecture 14</div></td><td id="lecture14" class="schedule-lecture-body">waiting on id lecture14...</td></tr><tr class="classday lecture"><td class="schedule-lecture-id"><a name="lecture15"></a>  <div class="schedule-top">    <a href="#"><img class="schedule-topimg" src="inc/img/parent.gif"></a>    <input type="button" class="summary" value="S" title="Click to toggle the description on and off">    <input type="button" class="details" value="D" title="Click to toggle the concepts and readings on and off">  </div>  <div class="schedule-date">Tue 14 Jul</div>  <div class="schedule-lectureN">Lecture 15</div></td><td id="lecture15" class="schedule-lecture-body">waiting on id lecture15...</td></tr><tr class="classday lecture"><td class="schedule-lecture-id"><a name="lecture16"></a>  <div class="schedule-top">    <a href="#"><img class="schedule-topimg" src="inc/img/parent.gif"></a>    <input type="button" class="summary" value="S" title="Click to toggle the description on and off">    <input type="button" class="details" value="D" title="Click to toggle the concepts and readings on and off">  </div>  <div class="schedule-date">Wed 15 Jul</div>  <div class="schedule-lectureN">Lecture 16</div></td><td id="lecture16" class="schedule-lecture-body">waiting on id lecture16...</td></tr><tr class="classday precept"><td class="schedule-lecture-id"><a name="precept8"></a>  <div class="schedule-top">    <a href="#"><img class="schedule-topimg" src="inc/img/parent.gif"></a>    <input type="button" class="summary" value="S" title="Click to toggle the description on and off">    <input type="button" class="details" value="D" title="Click to toggle the concepts and readings on and off">  </div>  <div class="schedule-date">Wed 15 Jul</div>  <div class="schedule-lectureN">practice</div></td><td id="precept8" class="schedule-lecture-body">waiting on id precept8...</td></tr><tr class="classday lecture"><td class="schedule-lecture-id"><a name="lecture17"></a>  <div class="schedule-top">    <a href="#"><img class="schedule-topimg" src="inc/img/parent.gif"></a>    <input type="button" class="summary" value="S" title="Click to toggle the description on and off">    <input type="button" class="details" value="D" title="Click to toggle the concepts and readings on and off">  </div>  <div class="schedule-date">Thu 16 Jul</div>  <div class="schedule-lectureN">Lecture 17</div></td><td id="lecture17" class="schedule-lecture-body">waiting on id lecture17...</td></tr><tr class="classday lecture"><td class="schedule-lecture-id"><a name="lecture18"></a>  <div class="schedule-top">    <a href="#"><img class="schedule-topimg" src="inc/img/parent.gif"></a>    <input type="button" class="summary" value="S" title="Click to toggle the description on and off">    <input type="button" class="details" value="D" title="Click to toggle the concepts and readings on and off">  </div>  <div class="schedule-date">Fri 17 Jul</div>  <div class="schedule-lectureN">Lecture 18</div></td><td id="lecture18" class="schedule-lecture-body">waiting on id lecture18...</td></tr><tr class="classday precept"><td class="schedule-lecture-id"><a name="precept9"></a>  <div class="schedule-top">    <a href="#"><img class="schedule-topimg" src="inc/img/parent.gif"></a>    <input type="button" class="summary" value="S" title="Click to toggle the description on and off">    <input type="button" class="details" value="D" title="Click to toggle the concepts and readings on and off">  </div>  <div class="schedule-date">Fri 17 Jul</div>  <div class="schedule-lectureN">practice</div></td><td id="precept9" class="schedule-lecture-body">waiting on id precept9...</td></tr></tbody></table><table id="weekSat 18 Jul" class="classweek"><tbody><tr class="classday lecture"><td class="schedule-lecture-id"><a name="lecture19"></a>  <div class="schedule-top">    <a href="#"><img class="schedule-topimg" src="inc/img/parent.gif"></a>    <input type="button" class="summary" value="S" title="Click to toggle the description on and off">    <input type="button" class="details" value="D" title="Click to toggle the concepts and readings on and off">  </div>  <div class="schedule-date">Mon 20 Jul</div>  <div class="schedule-lectureN">Lecture 19</div></td><td id="lecture19" class="schedule-lecture-body">waiting on id lecture19...</td></tr><tr class="classday lecture"><td class="schedule-lecture-id"><a name="lecture20"></a>  <div class="schedule-top">    <a href="#"><img class="schedule-topimg" src="inc/img/parent.gif"></a>    <input type="button" class="summary" value="S" title="Click to toggle the description on and off">    <input type="button" class="details" value="D" title="Click to toggle the concepts and readings on and off">  </div>  <div class="schedule-date">Tue 21 Jul</div>  <div class="schedule-lectureN">Lecture 20</div></td><td id="lecture20" class="schedule-lecture-body">waiting on id lecture20...</td></tr><tr class="classday precept"><td class="schedule-lecture-id"><a name="precept10"></a>  <div class="schedule-top">    <a href="#"><img class="schedule-topimg" src="inc/img/parent.gif"></a>    <input type="button" class="summary" value="S" title="Click to toggle the description on and off">    <input type="button" class="details" value="D" title="Click to toggle the concepts and readings on and off">  </div>  <div class="schedule-date">Tue 21 Jul</div>  <div class="schedule-lectureN">practice</div></td><td id="precept10" class="schedule-lecture-body">waiting on id precept10...</td></tr><tr class="classday lecture"><td class="schedule-lecture-id"><a name="lecture21"></a>  <div class="schedule-top">    <a href="#"><img class="schedule-topimg" src="inc/img/parent.gif"></a>    <input type="button" class="summary" value="S" title="Click to toggle the description on and off">    <input type="button" class="details" value="D" title="Click to toggle the concepts and readings on and off">  </div>  <div class="schedule-date">Wed 22 Jul</div>  <div class="schedule-lectureN">Lecture 21</div></td><td id="lecture21" class="schedule-lecture-body">waiting on id lecture21...</td></tr><tr class="classday lecture"><td class="schedule-lecture-id"><a name="lecture22"></a>  <div class="schedule-top">    <a href="#"><img class="schedule-topimg" src="inc/img/parent.gif"></a>    <input type="button" class="summary" value="S" title="Click to toggle the description on and off">    <input type="button" class="details" value="D" title="Click to toggle the concepts and readings on and off">  </div>  <div class="schedule-date">Thu 23 Jul</div>  <div class="schedule-lectureN">Lecture 22</div></td><td id="lecture22" class="schedule-lecture-body">waiting on id lecture22...</td></tr><tr class="classday lecture"><td class="schedule-lecture-id"><a name="lecture23"></a>  <div class="schedule-top">    <a href="#"><img class="schedule-topimg" src="inc/img/parent.gif"></a>    <input type="button" class="summary" value="S" title="Click to toggle the description on and off">    <input type="button" class="details" value="D" title="Click to toggle the concepts and readings on and off">  </div>  <div class="schedule-date">Fri 24 Jul</div>  <div class="schedule-lectureN">Lecture 23</div></td><td id="lecture23" class="schedule-lecture-body">waiting on id lecture23...</td></tr><tr class="classday precept"><td class="schedule-lecture-id"><a name="precept11"></a>  <div class="schedule-top">    <a href="#"><img class="schedule-topimg" src="inc/img/parent.gif"></a>    <input type="button" class="summary" value="S" title="Click to toggle the description on and off">    <input type="button" class="details" value="D" title="Click to toggle the concepts and readings on and off">  </div>  <div class="schedule-date">Fri 24 Jul</div>  <div class="schedule-lectureN">practice</div></td><td id="precept11" class="schedule-lecture-body">waiting on id precept11...</td></tr></tbody></table><table id="weekSat 25 Jul" class="classweek"><tbody><tr class="classday lecture"><td class="schedule-lecture-id"><a name="lecture24"></a>  <div class="schedule-top">    <a href="#"><img class="schedule-topimg" src="inc/img/parent.gif"></a>    <input type="button" class="summary" value="S" title="Click to toggle the description on and off">    <input type="button" class="details" value="D" title="Click to toggle the concepts and readings on and off">  </div>  <div class="schedule-date">Mon 27 Jul</div>  <div class="schedule-lectureN">Lecture 24</div></td><td id="lecture24" class="schedule-lecture-body">waiting on id lecture24...</td></tr><tr class="classday precept"><td class="schedule-lecture-id"><a name="precept12"></a>  <div class="schedule-top">    <a href="#"><img class="schedule-topimg" src="inc/img/parent.gif"></a>    <input type="button" class="summary" value="S" title="Click to toggle the description on and off">    <input type="button" class="details" value="D" title="Click to toggle the concepts and readings on and off">  </div>  <div class="schedule-date">Mon 27 Jul</div>  <div class="schedule-lectureN">practice</div></td><td id="precept12" class="schedule-lecture-body">waiting on id precept12...</td></tr><tr class="classday lecture"><td class="schedule-lecture-id"><a name="lecture25"></a>  <div class="schedule-top">    <a href="#"><img class="schedule-topimg" src="inc/img/parent.gif"></a>    <input type="button" class="summary" value="S" title="Click to toggle the description on and off">    <input type="button" class="details" value="D" title="Click to toggle the concepts and readings on and off">  </div>  <div class="schedule-date">Tue 28 Jul</div>  <div class="schedule-lectureN">Lecture 25</div></td><td id="lecture25" class="schedule-lecture-body">waiting on id lecture25...</td></tr><tr class="classday lecture"><td class="schedule-lecture-id"><a name="lecture26"></a>  <div class="schedule-top">    <a href="#"><img class="schedule-topimg" src="inc/img/parent.gif"></a>    <input type="button" class="summary" value="S" title="Click to toggle the description on and off">    <input type="button" class="details" value="D" title="Click to toggle the concepts and readings on and off">  </div>  <div class="schedule-date">Wed 29 Jul</div>  <div class="schedule-lectureN">Lecture 26</div></td><td id="lecture26" class="schedule-lecture-body">waiting on id lecture26...</td></tr><tr class="classday precept"><td class="schedule-lecture-id"><a name="precept13"></a>  <div class="schedule-top">    <a href="#"><img class="schedule-topimg" src="inc/img/parent.gif"></a>    <input type="button" class="summary" value="S" title="Click to toggle the description on and off">    <input type="button" class="details" value="D" title="Click to toggle the concepts and readings on and off">  </div>  <div class="schedule-date">Wed 29 Jul</div>  <div class="schedule-lectureN">practice</div></td><td id="precept13" class="schedule-lecture-body">waiting on id precept13...</td></tr><tr class="classday holiday"><td class="schedule-lecture-id"><a name="h2"></a>  <div class="schedule-date">Thu 30 Jul</div></td><td id="h2" class="schedule-lecture-body">waiting on id h2...</td></tr></tbody></table><table class="classweek"><tbody><tr class="classday final"><td class="schedule-lecture-id"><a name="FINAL"></a>  <div class="schedule-top">    <a href="#"><img class="schedule-topimg" src="inc/img/parent.gif"></a>    <input type="button" class="summary" value="S" title="Click to toggle the description on and off">    <input type="button" class="details" value="D" title="Click to toggle the concepts and readings on and off">  </div>  <div class="schedule-date">Fri 31 Jul<br>(time TBA)</div>  <div class="schedule-lectureN">final</div></td><td id="FINAL" class="schedule-lecture-body">waiting on id FINAL...</td></tr></tbody></table></div>
+
+<hr>
+<address>
+<table width="100%" cellspacing="0" cellpadding="0"><tbody><tr>
+<td align="left">
+  <span id="copyright">2026
+  <a href="https://cs.cmu.edu/~iliano">Iliano Cervesato</a></span>
+</td><td align="right">
+  <a href="mailto:akohlbre@cmu.edu?Subject=15-122">akohlbre@cmu.edu</a>
+</td></tr></tbody></table>
+</address>
+
+<div style="display:none">
+<div id="invisible"></div>
+</div>
+
+
+
+</div></body></html>

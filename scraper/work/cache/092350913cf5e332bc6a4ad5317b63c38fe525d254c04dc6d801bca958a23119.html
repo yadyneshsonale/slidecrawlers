@@ -1,0 +1,622 @@
+<html><head>
+   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+   <meta http-equiv="Pragma" content="no-cache">
+   <meta http-equiv="Expires" content="0">
+   <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,700&amp;v2" rel="stylesheet" type="text/css">
+   <link href="style.css" rel="stylesheet" type="text/css">
+   <title>COS 324: Introduction to Machine Learning</title>
+ </head>
+ <body>
+
+   <h1>COS 324: Introduction to Machine Learning</h1>
+
+   <div id="header">
+     Princeton University, Spring 2019<br>
+   </div>
+   Prof. Ryan Adams (OH: Mon and Weds 3-4pm in CS 411)<br>
+   TA: Jad Rahme (OH: Tue 6-8pm in Fine Hall 216)<br>
+   TA: Farhan Damani (OH: Mon 7-9pm outside CS 242)<br>
+   TA: Fanghong Dong (OH: Wed 4-6pm CS 2nd floor tea room)<br>
+   Time: Monday and Wednesday, 1:30-2:50pm<br>
+   Location: COS 104<br>
+   Contact: <a href="mailto:cos324-s19@lists.cs.princeton.edu">cos324-s19@lists.cs.princeton.edu</a>
+
+   <hr>
+
+   <span class="menu">
+     <a href="files/syllabus.pdf">syllabus</a> |
+     <a href="#schedule">schedule</a> |
+     <a href="http://piazza.com/princeton/spring2019/cos324">piazza</a> |
+     <a href="#assignments">assignments</a> |
+     <a href="#grading">grading</a> |
+     <a href="#books">books</a> <!-- |
+     <a href="#faq">faq</a> -->
+   </span>
+
+   <h3>Announcements</h3>
+
+   <ul>
+     <li>13 May 2019: <a href="https://blackboard.princeton.edu/bbcswebdav/courses/COS324_S2019/final-practice-solutions.pdf">Final practice problems and solutions</a></li>
+     <li>29 April 2019: <a href="#assignments">HW6 posted</a>.</li>
+     <li>15 April 2019: <a href="#assignments">HW5 posted</a>.</li>
+     <li>1 April 2019: <a href="#assignments">HW4 posted</a>.</li>
+     <li>27 March 2019: <a href="https://blackboard.princeton.edu/bbcswebdav/courses/COS324_S2019/midterm-solutions.pdf">Midterm solutions</a></li>
+     <li>11 March 2019: <a href="https://blackboard.princeton.edu/bbcswebdav/courses/COS324_S2019/midterm-practice-solutions.pdf">Midterm practice problems and solutions</a></li>
+     <li>9 March 2019: <a href="#assignments">HW3 posted</a>.</li>
+     <li>9 March 2019: Reminder -- midterm review on Monday 11 March 5-7pm in CSML classroom</li>
+     <li>21 February 2019: <a href="#assignments">HW2 posted</a>.</li>
+     <li>11 February 2019: Extension for HW1 to Monday 18 February at 23:55.</li>
+     <li>6 February 2019: <a href="#assignments">HW1 posted</a>.</li>
+     <li>6 February 2019: Precepts are:
+       <ul>
+         <li>Wednesday 7:30-8:20pm Friend Center 009</li>
+         <li>Thursday 7:30-8:20pm Friend Center 112</li>
+         <li>Friday 1:30-2:20pm Andlinger Center 017</li>
+         </ul>
+       </li>
+     <li>1 February 2019: Sign up on the <a href="http://piazza.com/princeton/spring2019/cos324">Piazza</a> discussion site.</li>
+   </ul>
+
+   <hr>
+
+   <a name="schedule">
+   <h3>Schedule</h3>
+
+   Subject to change.
+
+   <div class="lecture">
+
+     <span class="lecture-date">Mon 4 February 2019</span>
+     <p class="lecture">
+     <span class="lecture-title">Lecture 1: Introduction </span>
+     </p><div class="lecture-prep">
+       <ul>
+         <li>[<span class="optional">optional</span>] Book: Murphy -- Chapter 1 -- <i>Introduction</i></li>
+         <li>[<span class="optional">optional</span>] Book: Bishop -- Chapter 1 -- <i>Introduction</i></li>
+       </ul>
+     </div>
+
+     <p></p>
+
+   </div>
+
+   </a><div class="lecture"><a name="schedule">
+     <h4>Supervised Learning</h4>
+
+     <span class="lecture-date">Wed 6 February 2019</span>
+     </a><p class="lecture"><a name="schedule">
+     <span class="lecture-title">Lecture 2: Linear Regression I</span><br>
+     <span class="lecture-assign"></span></a><a href="#assignments">Assignment 1</a> Out
+     </p><div class="lecture-prep">
+       <ul>
+         <li>[<span class="required">required</span>] Course Notes: <a href="files/linear-regression.pdf">Linear Regression</a></li>
+         <li>[<span class="optional">optional</span>] Metacademy: <a href="https://metacademy.org/graphs/concepts/linear_regression">Linear Regression</a></li>
+         <li>[<span class="optional">optional</span>] ESL: <a href="https://web.stanford.edu/~hastie/ElemStatLearn//printings/ESLII_print10.pdf#page=30">Sections 2.1-2.3 -- Overview of Supervised Learning</a></li>
+         <li>[<span class="optional">optional</span>] ESL: <a href="https://web.stanford.edu/~hastie/ElemStatLearn//printings/ESLII_print10.pdf#page=62">Sections 3.1-3.2 -- Linear Methods for Regression</a></li>
+         <li>[<span class="optional">optional</span>] External Course Notes: <a href="http://cs229.stanford.edu/notes/cs229-notes1.pdf">Andrew Ng Notes Sections 1 and 2</a></li>
+         <li>[<span class="optional">optional</span>] External Slides: <a href="http://www.cs.toronto.edu/~rgrosse/csc321/lec2.pdf">Roger Grosse CSC321 Lecture 2</a></li>
+         <li>[<span class="optional">optional</span>] ISL: <a href="http://www-bcf.usc.edu/~gareth/ISL/ISLR%20Seventh%20Printing.pdf#page=73">Sections 3.1-3.2 -- Linear Regression</a></li>
+
+       </ul>
+     </div>
+     <p></p>
+
+     <hr width="80%">
+
+     <span class="lecture-date">Mon 11 February 2019</span>
+     <p class="lecture">
+     <span class="lecture-title">Lecture 3: Linear Regression II</span>
+     </p><div class="lecture-prep">
+       <ul>
+         <li>[<span class="required">required</span>] Course Notes: <a href="files/mle-regression.pdf">Maximum Likelihood Linear Regression</a></li>
+         <li>[<span class="required">required</span>] Course Notes: <a href="files/basis-functions.pdf">Features and Basis Functions</a></li>
+         <li>[<span class="optional">optional</span>] Metacademy: <a href="https://metacademy.org/graphs/concepts/linear_regression_as_maximum_likelihood">Linear Regression as Maximum Likelihood</a></li>
+         <li>[<span class="optional">optional</span>] Mathematical Monk Video: <a href="https://www.youtube.com/watch?v=ulZW99jsMXY">MLE for Linear Regression Part 1</a>, <a href="https://www.youtube.com/watch?v=n5QZL1B8FaE">Part 2</a>, <a href="https://www.youtube.com/watch?v=3djOlw_iVbg">Part 3</a></li>
+         <li>[<span class="optional">optional</span>] External Course Notes: <a href="http://cs229.stanford.edu/notes/cs229-notes1.pdf#page=11">Andrew Ng Notes Section 3</a></li>
+
+       </ul>
+     </div>
+     <p></p>
+
+     <hr width="80%">
+
+     <span class="lecture-date">Weds 13 February 2019</span>
+     <p class="lecture">
+     <span class="lecture-title">Lecture 4: Linear Regression III</span>
+     </p><div class="lecture-prep">
+       <ul>
+         <li>[<span class="required">required</span>] Course Notes: <a href="files/mle-regression.pdf">Maximum Likelihood Linear Regression</a></li>
+         <li>[<span class="optional">optional</span>] Metacademy: <a href="https://metacademy.org/graphs/concepts/linear_regression_as_maximum_likelihood">Linear Regression as Maximum Likelihood</a></li>
+         <li>[<span class="optional">optional</span>] Mathematical Monk Video: <a href="https://www.youtube.com/watch?v=ulZW99jsMXY">MLE for Linear Regression Part 1</a>, <a href="https://www.youtube.com/watch?v=n5QZL1B8FaE">Part 2</a>, <a href="https://www.youtube.com/watch?v=3djOlw_iVbg">Part 3</a></li>
+         <li>[<span class="optional">optional</span>] External Course Notes: <a href="http://cs229.stanford.edu/notes/cs229-notes1.pdf#page=11">Andrew Ng Notes Section 3</a></li>
+       </ul>
+     </div>
+     <p></p>
+
+     <hr width="80%">
+
+     <span class="lecture-date">Mon 18 February 2019</span>
+     <p class="lecture">
+     <span class="lecture-title">Lecture 5: Features and Basis Functions</span><br>
+     <span class="lecture-assign">Assignment 1 Due at 23:55</span>
+     </p><div class="lecture-prep">
+       <ul>
+         <li>[<span class="required">required</span>] Course Notes: <a href="files/basis-functions.pdf">Features and Basis Functions</a></li>
+         <li>[<span class="optional">optional</span>] ESL: <a href="https://web.stanford.edu/~hastie/ElemStatLearn//printings/ESLII_print10.pdf#page=158">Sections 5.1-5.3 -- Basis Expansions and Regularization</a></li>
+         <li>[<span class="optional">optional</span>] Mathematical Monk Video: <a href="https://www.youtube.com/watch?v=HJSNb4GyiE8">Basis Functions for MLE</a></li>
+         <li>[<span class="optional">optional</span>] ISL: <a href="http://www-bcf.usc.edu/~gareth/ISL/ISLR%20Seventh%20Printing.pdf#page=279">Chapter 7 -- Moving Beyond Linearity</a></li>
+       <ul>
+     </ul></ul></div>
+     <p></p>
+
+     <hr width="80%">
+
+     <span class="lecture-date">Wed 20 February 2019</span>
+     <p class="lecture">
+     <span class="lecture-title">Lecture 6: Overfitting and Regularization</span>
+       <!-- <span class="lecture-assign">Assignment 2 Out</span> -->
+     </p><div class="lecture-prep">
+       <ul>
+         <li>[<span class="required">required</span>] Course Notes: <a href="files/regularization.pdf">Overfitting and Regularization</a></li>
+         <li>[<span class="optional">optional</span>] ESL: <a href="https://web.stanford.edu/~hastie/ElemStatLearn//printings/ESLII_print10.pdf#page=56">Section 2.9 -- Model Selection and the Bias-Variance Tradeoff</a></li>
+         <li>[<span class="optional">optional</span>] ESL: <a href="https://web.stanford.edu/~hastie/ElemStatLearn//printings/ESLII_print10.pdf#page=80">Section 3.4 -- Shrinkage Methods</a></li>
+         <li>[<span class="optional">optional</span>] Mathematical Monk Video: <a href="https://www.youtube.com/watch?v=C3nIFH649wY">Bias-Variance Decomposition</a></li>
+         <li>[<span class="optional">optional</span>] Metacademy: <a href="https://metacademy.org/graphs/concepts/ridge_regression">Ridge Regression</a></li>
+         <li>[<span class="optional">optional</span>] Metacademy: <a href="https://metacademy.org/graphs/concepts/regularization">Regularization</a></li>
+         <li>[<span class="optional">optional</span>] Metacademy: <a href="https://metacademy.org/graphs/concepts/bias_variance_decomposition">Bias-Variance Decomposition</a></li>
+       </ul>
+     </div>
+     <p></p>
+
+     <hr width="80%">
+     <span class="lecture-date">Thu 21 February 2019</span>
+     <p class="lecture">
+       <span class="lecture-assign"><a href="#assignments">Assignment 2</a> Out</span>
+     </p>
+
+     <hr width="80%">
+
+     <span class="lecture-date">Mon 25 February 2019</span>
+     <p class="lecture">
+       <span class="lecture-title">Lecture 7: Cross Validation</span><br>
+     </p><div class="lecture-prep">
+       <ul>
+         <li>[<span class="required">required</span>] Course Notes: <a href="files/model-selection.pdf">Model Selection</a></li>
+         <li>[<span class="optional">optional</span>] ESL: <a href="https://web.stanford.edu/~hastie/ElemStatLearn//printings/ESLII_print10.pdf#page=238">Sections 7.1-7.3, 7.10 -- Model Assessment and Selection</a></li>
+         <li>[<span class="optional">optional</span>] ISL: <a href="http://www-bcf.usc.edu/~gareth/ISL/ISLR%20Seventh%20Printing.pdf#page=189">Section 5.1 -- Cross-Validation</a></li>
+         <li>[<span class="optional">optional</span>] Mathematical Monk Video: <a href="https://www.youtube.com/watch?v=m5StqDv-YlM">Cross-validation part 1</a>, <a href="https://www.youtube.com/watch?v=OcJwdF8zBjM">Part 2</a>, <a href="https://www.youtube.com/watch?v=mvbBycl8BNM">Part 3</a></li>
+         <li>[<span class="optional">optional</span>] Metacademy: <a href="https://metacademy.org/graphs/concepts/cross_validation">Cross-validation</a></li>
+         <li>[<span class="optional">optional</span>] Wikipedia: <a href="https://en.wikipedia.org/wiki/Cross-validation_(statistics)">Cross-validation</a></li>
+       </ul>
+     </div>
+     <p></p>
+
+     <hr width="80%">
+
+     <span class="lecture-date">Weds 27 February 2019</span>
+     <p class="lecture">
+     <span class="lecture-title">Lecture 8: Linear Classification I</span>
+     </p><div class="lecture-prep">
+       <ul>
+         <li>[<span class="required">required</span>] Course Notes: <a href="files/perceptrons.pdf">Perceptrons</a></li>
+         <li>[<span class="optional">optional</span>] ESL: <a href="https://web.stanford.edu/~hastie/ElemStatLearn//printings/ESLII_print10.pdf#page=120">Sections 4.1-4.2 -- Linear Methods for Classification</a></li>
+         <li>[<span class="optional">optional</span>] External Course Notes: <a href="http://cs229.stanford.edu/notes/cs229-notes1.pdf#page=19">Andrew Ng Notes Section 6</a></li>
+         <li>[<span class="optional">optional</span>] ISL: <a href="http://www-bcf.usc.edu/~gareth/ISL/ISLR%20Seventh%20Printing.pdf#page=141">Sections 4.1-4.2 -- Classification</a></li>
+         <li>[<span class="optional">optional</span>] MacKay: <a href="http://www.inference.org.uk/itprnn/book.pdf#page=483">Chapter 39 -- The Single Neuron as a Classifier</a></li>
+         <li>[<span class="optional">optional</span>] MacKay: <a href="http://www.inference.org.uk/itprnn/book.pdf#page=495">Chapter 40 -- Capacity of a Single Neuron</a></li>
+         <li>[<span class="optional">optional</span>] Metacademy: <a href="https://metacademy.org/graphs/concepts/perceptron">Perceptron Learning Algorithm</a></li>
+         <li>[<span class="optional">optional</span>] Metacademy: <a href="https://metacademy.org/graphs/concepts/binary_linear_classifiers">Binary Linear Classification</a></li>
+         <li>[<span class="optional">optional</span>] External Slides: <a href="http://www.cs.toronto.edu/~rgrosse/csc321/lec4.pdf">Roger Grosse CSC321 Lecture 4</a></li>
+         <!-- PRML Location: Section 4.1.7, "The perceptron algorithm," pages 192-196 -->
+       </ul>
+     </div>
+     <p></p>
+
+     <hr width="80%">
+
+     <span class="lecture-date">Mon 4 March 2019</span>
+     <p class="lecture">
+     <span class="lecture-title">Lecture 9: Linear Classification II</span>
+
+     </p><div class="lecture-prep">
+       <ul>
+         <li>[<span class="required">required</span>] Course Notes: <a href="files/logistic-regression.pdf">Logistic Regression</a></li>
+         <li>[<span class="optional">optional</span>] ESL: <a href="https://web.stanford.edu/~hastie/ElemStatLearn//printings/ESLII_print10.pdf#page=138">Section 4.4 -- Logistic Regression</a></li>
+         <li>[<span class="optional">optional</span>] Mathematical Monk Video: <a href="https://www.youtube.com/watch?v=-Z2a_mzl9LM">Logistic Regression Part 1</a>, <a href="https://www.youtube.com/watch?v=_7b352zYicY">Part 2</a>, <a href="https://www.youtube.com/watch?v=hWLdFMccpTY">Part 3</a>, <a href="https://www.youtube.com/watch?v=jUwjbiBUR-k">Part 4</a>, <a href="https://www.youtube.com/watch?v=X-7sA83PjPM">Part 4</a></li>
+         <li>[<span class="optional">optional</span>] External Course Notes: <a href="http://cs229.stanford.edu/notes/cs229-notes1.pdf#page=16">Andrew Ng Notes Section 5</a></li>
+         <li>[<span class="optional">optional</span>] ISL: <a href="http://www-bcf.usc.edu/~gareth/ISL/ISLR%20Seventh%20Printing.pdf#page=145">Section 4.3 -- Logistic Regression</a></li>
+         <li>[<span class="optional">optional</span>] Metacademy: <a href="https://metacademy.org/graphs/concepts/logistic_regression">Logistic Regression</a></li>
+       </ul>
+     </div>
+     <p></p>
+
+     <hr width="80%">
+
+     <!--
+     <span class="lecture-date">Fri 12 Oct 2018</span>
+     <p class="lecture">
+       <span class="lecture-assign">Assignment 2 Due at 23:55</span>
+     </p>
+     <hr width="80%" />
+     -->
+
+     <span class="lecture-date">Weds 6 March 2019</span>
+     <p class="lecture">
+     <span class="lecture-title">Lecture 10: Linear Classification III -- Support Vector Machines</span><br>
+       <span class="lecture-assign">Assignment 2 Due at 23:55</span><br>
+     <span class="lecture-assign"><a href="#assignments">Assignment 3</a> Out</span>
+
+       </p><div class="lecture-prep">
+       <ul>
+         <li>[<span class="required">required</span>] Course Notes: <a href="files/max-margin.pdf">Support Vector Machines</a></li>
+         <li>[<span class="optional">optional</span>] ESL: <a href="https://web.stanford.edu/~hastie/ElemStatLearn//printings/ESLII_print10.pdf#page=148">Section 4.5 -- Separating Hyperplanes</a></li>
+         <li>[<span class="optional">optional</span>] ESL: <a href="https://web.stanford.edu/~hastie/ElemStatLearn//printings/ESLII_print10.pdf#page=436">Chapter 12 -- Support Vector Machines and Flexible Discriminants</a></li>
+         <li>[<span class="optional">optional</span>] ISL: <a href="http://www-bcf.usc.edu/~gareth/ISL/ISLR%20Seventh%20Printing.pdf#page=279">Sections 9.1-9.2 -- Support Vector Machines</a></li>
+         <li>[<span class="optional">optional</span>] Metacademy: <a href="https://metacademy.org/graphs/concepts/support_vector_machine">Support Vector Machine</a></li>
+         <li>[<span class="optional">optional</span>] External Course Notes: <a href="http://cs229.stanford.edu/notes/cs229-notes3.pdf#page=1">Andrew Ng Notes Part V</a></li>
+         <!-- PRML Location: Section 7.1, up to 7.1.1 (pages 326-331) -->
+         <!-- MLPP Location: Section 14.5-14.5.2.2, pages 496-502 -->
+       </ul>
+     </div>
+     <p></p>
+
+     <hr width="80%">
+
+     <span class="lecture-date">Mon 11 March 2019</span>
+     <p class="lecture">
+     <span class="lecture-title">Lecture 11: Kernel-based Classification</span>
+       <!-- <span class="lecture-assign">Assignment 3 Out</span> -->
+     </p><div class="lecture-prep">
+       <ul>
+         <li>[<span class="required">required</span>] Course Notes: <a href="files/kernel-trick.pdf">Kernels</a></li>
+         <li>[<span class="optional">optional</span>] ISL: <a href="http://www-bcf.usc.edu/~gareth/ISL/ISLR%20Seventh%20Printing.pdf#page=363">Sections 9.3-9.4 -- Support Vector Machines</a></li>
+         <li>[<span class="optional">optional</span>] ESL: <a href="https://web.stanford.edu/~hastie/ElemStatLearn//printings/ESLII_print10.pdf#page=186">Section 5.8 -- Regularization and Reproducing Kernel Hilbert Spaces</a></li>
+         <li>[<span class="optional">optional</span>] Metacademy: <a href="https://metacademy.org/graphs/concepts/kernel_trick">Kernel Trick</a></li>
+       </ul>
+     </div>
+     <p></p>
+
+     <hr width="80%">
+
+     <span class="lecture-date">Weds 13 March 2019</span>
+     <p class="lecture">
+       <span class="lecture-title"><b>MIDTERM EXAM</b> (Covers through Lecture 10 on 6 March)</span>
+       </p><div class="lecture-prep">
+         <ul>
+           </ul>
+       </div>
+     <p></p>
+
+     <hr width="80%">
+
+     <span class="lecture-date">Mon 25 March 2019</span>
+     <p class="lecture">
+     <span class="lecture-title">Lecture 12: Neural Networks I</span><br>
+     </p><div class="lecture-prep">
+       <ul>
+         <li>[<span class="required">required</span>] Course Notes: <a href="files/backprop.pdf">Backprop and Automatic Differentiation</a></li>
+         <li>[<span class="optional">optional</span>] ESL: <a href="https://web.stanford.edu/~hastie/ElemStatLearn//printings/ESLII_print10.pdf#page=408">Chapter 11 -- Neural Networks</a></li>
+         <li>[<span class="optional">optional</span>] Metacademy: <a href="https://metacademy.org/graphs/concepts/feed_forward_neural_nets">Feed-Forward Neural Nets</a></li>
+         <li>[<span class="optional">optional</span>] Metacademy: <a href="https://metacademy.org/graphs/concepts/backpropagation">Backpropagation</a></li>
+         <li>[<span class="optional">optional</span>] External Slides: <a href="http://www.cs.toronto.edu/~rgrosse/csc321/lec5.pdf">Roger Grosse CSC321 Lecture 5: Learning in a Single Neuron</a></li>
+         <li>[<span class="optional">optional</span>] External Slides: <a href="http://www.cs.toronto.edu/~rgrosse/csc321/lec6.pdf">Roger Grosse CSC321 Lecture 6: Backpropagation</a></li>
+       </ul>
+     </div>
+     <p></p>
+
+     <span class="lecture-date">Weds 27 March 2019</span>
+     <p class="lecture">
+     <span class="lecture-title">Lecture 13: Neural Networks II</span>
+     </p><div class="lecture-prep">
+       <ul>
+         <li>[<span class="optional">optional</span>] Metacademy: <a href="https://metacademy.org/graphs/concepts/convolutional_nets">Convolutional Neural Nets</a></li>
+         <li>[<span class="optional">optional</span>] External Slides: <a href="http://www.cs.toronto.edu/~rgrosse/csc321/lec7.pdf">Roger Grosse CSC321 Lecture 7: Neural Language Models</a></li>
+         <li>[<span class="optional">optional</span>] External Slides: <a href="http://www.cs.toronto.edu/~rgrosse/csc321/lec9.pdf">Roger Grosse CSC321 Lecture 9: Recurrent Neural Nets</a></li>
+         <li>[<span class="optional">optional</span>] External Slides: <a href="http://www.cs.toronto.edu/~rgrosse/csc321/lec11.pdf">Roger Grosse CSC321 Lecture 11: Convolutional Nets</a></li>
+       </ul>
+     </div>
+     <p></p>
+
+     <hr width="80%">
+
+     <span class="lecture-date">Fri 29 March 2019</span>
+     <p class="lecture">
+       <span class="lecture-assign">Assignment 3 Due at 23:55</span>
+     </p>
+
+
+   </div><!-- supervised learning -->
+
+   <div class="lecture">
+     <h4>Unsupervised Learning</h4>
+
+     <!--
+     <span class="lecture-date">Mon 5 Nov 2018</span>
+     <p class="lecture">
+       <span class="lecture-assign">Assignment 3 Due at 23:55</span>
+     </p>
+
+     <hr width="80%" />
+     -->
+
+     <span class="lecture-date">Mon 1 April 2019</span>
+     <p class="lecture">
+       <span class="lecture-title">Lecture 14: K-Means Clustering</span>
+       <span class="lecture-assign"><a href="#assignments">Assignment 4</a> Out</span>
+
+         </p><div class="lecture-prep">
+       <ul>
+         <li>[<span class="required">required</span>] Course Notes: <a href="files/kmeans.pdf">K-Means Clustering</a></li>
+         <li>[<span class="optional">optional</span>] Mathematical Monk Video: <a href="https://www.youtube.com/watch?v=0MQEt10e4NM">K-Means Clustering Part 1</a>, <a href="https://www.youtube.com/watch?v=4shfFAArxSc">Part 2</a>
+         </li><li>[<span class="optional">optional</span>] ISL: <a href="http://www-bcf.usc.edu/~gareth/ISL/ISLR%20Seventh%20Printing.pdf#page=399">Sections 10.3 -- Clustering Methods</a></li>
+         <li>[<span class="optional">optional</span>] Metacademy: <a href="https://metacademy.org/graphs/concepts/k_means">K-Means Clustering</a></li>
+         <li>[<span class="optional">optional</span>] Metacademy: <a href="https://metacademy.org/graphs/concepts/k_means_pp">K-Means++</a></li>
+       </ul>
+     </div>
+     <p></p>
+
+     <hr width="80%">
+
+     <span class="lecture-date">Weds 3 April 2019</span>
+     <p class="lecture">
+     <span class="lecture-title">Lecture 15: Hierarchical Clustering</span>
+     </p><div class="lecture-prep">
+       <ul>
+         <li>[<span class="required">required</span>] Course Notes: <a href="files/hierarchical-clustering.pdf">Hierarchical Clustering</a></li>
+         <li>[<span class="optional">optional</span>] External Slides: <a href="http://www.stat.cmu.edu/~ryantibs/datamining/lectures/05-clus2.pdf">Ryan Tibshirani CMU Data Mining: Hierarchical Clustering</a> (<a href="http://www.stat.cmu.edu/~ryantibs/datamining/lectures/06-clus3.pdf">Part II</a>)</li>
+         <li>[<span class="optional">optional</span>] ESL: <a href="https://web.stanford.edu/~hastie/ElemStatLearn//printings/ESLII_print10.pdf#page=520">Section 14.3: Cluster Analysis</a></li>
+         <li>[<span class="optional">optional</span>] ISL: <a href="http://www-bcf.usc.edu/~gareth/ISL/ISLR%20Seventh%20Printing.pdf#page=399">Sections 10.3 -- Clustering Methods</a></li>
+       </ul>
+     </div>
+     <p></p>
+
+     <hr width="80%">
+
+     <!--
+     <span class="lecture-date">Fri 16 Nov 2018</span>
+     <p class="lecture">
+       <span class="lecture-assign">Assignment 4 Due at 23:55</span>
+     </p>
+     <hr width="80%" />
+     -->
+
+     <span class="lecture-date">Mon 8 April 2019</span>
+     <p class="lecture">
+     <span class="lecture-title">Lecture 16: Principal Component Analysis</span>
+       <!-- <span class="lecture-assign">Assignment 5 Out</span> -->
+     </p><div class="lecture-prep">
+       <ul>
+         <li>[<span class="required">required</span>] Course Notes: <a href="files/pca.pdf">Principal Component Analysis</a></li>
+         <li>[<span class="optional">optional</span>] ISL: <a href="http://www-bcf.usc.edu/~gareth/ISL/ISLR%20Seventh%20Printing.pdf#page=388">Sections 10.2 -- Principal Component Analysis</a></li>
+         <li>[<span class="optional">optional</span>] Metacademy: <a href="https://metacademy.org/graphs/concepts/principal_component_analysis">Principal Component Analysis</a></li>
+         <!-- PRML Location: Chapter 12 introduction and Section 12.1, pages 559-570 -->
+         <!-- MLPP Location: Sections 12.2-12.2.1 (pages 387-389) and 12.2.3 (pages 392-395) -->
+         <!-- ESL Location: Section 14.5.1, "Principal components," pages 534-541 -->
+       </ul>
+     </div>
+     <p></p>
+
+     <hr width="80%">
+
+
+     <span class="lecture-date">Weds 10 April 2019</span>
+     <p class="lecture">
+       <span class="lecture-title">Lecture 17: SVD and Latent Factor Models</span><br>
+     </p><div class="lecture-prep">
+       <ul>
+         <li>[<span class="optional">optional</span>] Metacademy: <a href="https://metacademy.org/graphs/concepts/latent_semantic_analysis">Latent Semantic Analysis</a></li>
+         <!-- Abeel https://www.youtube.com/watch?v=i0o-ui1N35U -->
+       </ul>
+     </div>
+     <p></p>
+
+     <hr width="80%">
+
+     <span class="lecture-date">Fri 12 April 2019</span>
+     <p class="lecture">
+       <span class="lecture-assign">Assignment 4 Due at 23:55</span>
+     </p>
+
+   </div>
+
+   <div class="lecture">
+     <h4>Planning and Reinforcement Learning</h4>
+
+
+     <span class="lecture-date">Mon 15 April 2019</span>
+     <p class="lecture">
+       <span class="lecture-title">Lecture 18: Markov Decision Processes</span>
+       <span class="lecture-assign"><a href="#assignments">Assignment 5</a> Out</span>
+
+     </p><div class="lecture-prep">
+       <ul>
+         <li>[<span class="required">required</span>] Course Notes: <a href="files/expectimax.pdf">Markov Decision Processes</a></li>
+         <li>[<span class="optional">optional</span>] Metacademy: <a href="https://metacademy.org/graphs/concepts/markov_decision_process">Markov Decision Process</a></li>
+       </ul>
+     </div>
+     <p></p>
+
+     <hr width="80%">
+
+     <!--
+     <span class="lecture-date">Fri 30 Nov 2018</span>
+     <p class="lecture">
+       <span class="lecture-assign">Assignment 5 Due at 23:55</span>
+     </p>
+
+     <hr width="80%" />
+     -->
+
+     <span class="lecture-date">Weds 17 April 2019</span>
+     <p class="lecture">
+     <span class="lecture-title">Lecture 19: Value Iteration</span>
+       <!-- <span class="lecture-assign">Assignment 6 Out</span> -->
+     </p><div class="lecture-prep">
+       <ul>
+         <li>[<span class="required">required</span>] Course Notes: <a href="files/policy-iteration.pdf">Value and Policy Iteration</a></li>
+         <li>[<span class="optional">optional</span>] Metacademy: <a href="https://metacademy.org/graphs/concepts/value_iteration">Value Iteration</a></li>
+       </ul>
+     </div>
+     <p></p>
+
+     <hr width="80%">
+
+     <span class="lecture-date">Mon 22 April 2019</span>
+     <p class="lecture">
+       <span class="lecture-title">Lecture 20: Policy Iteration</span><br>
+     </p><div class="lecture-prep">
+       <ul>
+         <li>[<span class="required">required</span>] Course Notes: <a href="files/policy-iteration.pdf">Value and Policy Iteration</a></li>
+         <li>[<span class="optional">optional</span>] Metacademy: <a href="https://metacademy.org/graphs/concepts/policy_iteration">Policy Iteration</a></li>
+       </ul>
+     </div>
+     <p></p>
+
+    <hr width="80%">
+
+     <span class="lecture-date">Wed 24 April 2019</span>
+     <p class="lecture">
+     <span class="lecture-title">Lecture 21: Reinforcement Learning I</span>
+     </p><div class="lecture-prep">
+       <ul>
+         <li>[<span class="required">required</span>] Course Notes: <a href="files/rl.pdf">Reinforcement Learning</a></li>
+       </ul>
+     </div>
+     <p></p>
+     <hr width="80%">
+
+     <span class="lecture-date">Fri 26 April 2019</span>
+     <p class="lecture">
+       <span class="lecture-assign">Assignment 5 Due at 23:55</span>
+     </p>
+
+
+    <hr width="80%">
+
+     <span class="lecture-date">Mon 29 April 2019</span>
+     <p class="lecture">
+       <span class="lecture-title">Lecture 22: Reinforcement Learning II</span>
+       <span class="lecture-assign"><a href="#assignments">Assignment 6</a> Out</span>
+     </p><div class="lecture-prep">
+       <ul>
+         <li>[<span class="required">required</span>] Course Notes: <a href="files/rl.pdf">Reinforcement Learning</a></li>
+       </ul>
+     </div>
+     <p></p>
+
+   </div>
+
+   <div class="lecture">
+
+     <span class="lecture-date">Weds 1 May 2019</span>
+     <p class="lecture">
+     <span class="lecture-title">Lecture 23: Wrap-up</span>
+     </p><div class="lecture-prep">
+       <ul>
+       </ul>
+     </div>
+     <p></p>
+     <hr width="80%">
+
+     <span class="lecture-date">Fri 10 May 2019</span>
+     <p class="lecture">
+       <span class="lecture-assign">Assignment 6 Due at 23:55</span>
+     </p>
+
+     <!--
+     <hr width="80%" />
+
+     <span class="lecture-date">Wed 19 Dec 2018</span>
+     <p class="lecture">
+       <span class="lecture-assign">Assignment 6 Due at 23:55</span>
+     </p>
+     -->
+
+   </div>
+
+   <hr>
+
+   <a name="assignments">
+     <h3>Assignments</h3>
+     Upload via </a><a href="https://dropbox.cs.princeton.edu/">CS dropbox</a>.<br>
+     LaTeX template and example: <a href="files/cos324.cls">cos324.cls</a> <a href="files/cos324-example.tgz">cos324-example.tgz</a>
+     <ul>
+       <li>Assignment 1 -- Out Weds 5 Feb, due <s>Fri 15 Feb</s> Mon 18 Feb at 23:55 -- <a href="files/hw1.pdf">hw1.pdf</a>, <a href="files/hw1.tex">hw1.tex</a> (<a href="https://blackboard.princeton.edu/bbcswebdav/courses/COS324_S2019/hw1-solutions.pdf">hw1-solutions.pdf</a>)</li>
+       <li>Assignment 2 -- Out Thu 21 Feb, due Wed 6 Mar at 23:55 -- <a href="files/hw2.pdf">hw2.pdf</a>, <a href="files/hw2.tex">hw2.tex</a>, <a href="files/hmeq-train.csv">hmeq-train.csv</a>, <a href="files/hmeq-test.csv">hmeq-test.csv</a> (<a href="https://blackboard.princeton.edu/bbcswebdav/courses/COS324_S2019/hw2-solutions.pdf">hw2-solutions.pdf</a>)</li>
+       <li>Assignment 3 -- Out Sat 8 Mar, due Fri 29 Mar at 23:55 -- <a href="files/hw3.pdf">hw3.pdf</a>, <a href="files/hw3.tex">hw3.tex</a>, <a href="files/motorcycle.csv">motorcycle.csv</a> (<a href="https://blackboard.princeton.edu/bbcswebdav/courses/COS324_S2019/hw3-solutions.pdf">hw3-solutions.pdf</a></li>
+       <li>Assignment 4 -- Out Mon 1 Apr, due Fri 12 Apr at 23:55 -- <a href="files/hw4.pdf">hw4.pdf</a>, <a href="files/hw4.tex">hw4.tex</a>, <a href="files/cities100.csv">cities100.csv</a> (<a href="https://blackboard.princeton.edu/bbcswebdav/courses/COS324_S2019/hw4-solutions.pdf">hw4-solutions.pdf</a></li>
+       <li>Assignment 5 -- Out Mon 15 Apr, due Fri 26 Apr at 23:55 -- <a href="files/hw5.pdf">hw5.pdf</a>, <a href="files/hw5.tex">hw5.tex</a> (<a href="https://blackboard.princeton.edu/bbcswebdav/courses/COS324_S2019/hw5-solutions.pdf">hw5-solutions.pdf</a>)</li>
+       <li>Assignment 6 -- Out Mon 29 Apr, due Fri 10 May at 23:55 -- <a href="files/hw6.pdf">hw6.pdf</a>, <a href="files/hw6.tex">hw6.tex</a>, <a href="files/hw6-code.tgz">hw6-code.tgz</a></li>
+       </ul>
+     
+   
+
+   <hr>
+
+   <a name="grading">
+     <h3>Grading</h3>
+     <ul>
+     <li>Assignments: 60%</li>
+     <li>Midterm: 20%</li>
+     <li>Final: 20%</li>
+     </ul>
+   </a>
+
+   <hr>
+
+   <a name="books">
+     <h3>Optional Machine Learning Books</h3>
+     </a><ul><a name="books">
+       </a><li><a name="books">[Murphy] Kevin Murphy, </a><a href="http://www.cs.ubc.ca/~murphyk/MLbook/">Machine Learning: A Probabilistic Perspective</a>, MIT Press.</li>
+       <li>[Bishop] Christopher M. Bishop, <a href="http://research.microsoft.com/en-us/um/people/cmbishop/prml/">Pattern Recognition and Machine Learning</a>, Springer.</li>
+       <li>[MacKay] David J.C. MacKay, <a href="http://www.inference.phy.cam.ac.uk/itprnn/book.html">Information Theory, Inference, and Learning Algorithms</a>, Cambridge University Press. <b>Freely available online.</b></li>
+       <li>[ESL] Trevor Hastie, Robert Tibshirani, and Jerome Friedman, <a href="http://www-stat.stanford.edu/~tibs/ElemStatLearn/">The Elements of Statistical Learning</a>, Springer. <b>Freely available online.</b></li>
+       <li>[ISL] Gareth James, Daniela Witten, Trevor Hastie, and Robert Tibshirani, <a href="http://www-bcf.usc.edu/~gareth/ISL/">An Introduction to Statistical Learning</a>, Springer. <b>Freely available online.</b></li>
+     </ul>
+   
+
+   <hr>
+   <a name="faq">
+     <h3>Frequently Asked Questions</h3>
+     </a><ul><a name="faq">
+       </a><li><a name="faq"><b>What is </b></a><b><a href="http://www.metacademy.org">Metacademy</a>?</b>
+       Metacademy is an exciting online tool developed by <a href="https://www.cs.toronto.edu/~rgrosse/">Roger
+       Grosse</a>
+       and <a href="http://obphio.us/">Colorado Reed</a>
+       for helping you to develop personalized instruction.  It's
+       meant to help you manage what you know about different topics
+       and develop an individualized curriculum to learn a new
+       subject.</li>
+
+       <li><b>I have an interview/sporting event/illness/computer
+       crash.  Can I have an extension?</b> No.  You can turn your
+       assignment in up to a week late for half credit.</li>
+
+       <li><b>How should I format my assignment?</b>
+         It is highly recommended to use the provided
+       .tex and .cls files (see
+       the <a href="#assignments">examples</a>) to produce a LaTeX
+       document.  Compile it to PDF and upload the result
+       to the course dropbox. </li>
+
+       <li><b>What if I don't know how to use LaTeX?</b> Everyone
+       doing quantitative work should know how to use LaTeX, so
+       consider this class an opportunity to learn it.</li>
+
+       <li><b>Is attendance required at lecture/precept?</b> No,
+       attendance is not required.  However, you will be assessed on
+       material that is presented in both lecture and precepts and may
+       or may not be available from the readings alone.</li>
+
+       <li><b>I can't make the precept to which I was assigned. Can I switch?</b>
+         You are welcome to attend whatever precept you want, modulo space constraints.
+         </li>
+
+     </ul>
+   
+
+   
+
+ 
+
+</body></html>

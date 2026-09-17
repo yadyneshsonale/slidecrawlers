@@ -1,0 +1,52 @@
+[
+{
+"url": "https://tamarabroderick.com/ml.html",
+"title": "6.036 Introduction to Machine Learning, Fall 2020 - Tamara Broderick",
+"description": "In Fall 2020 I gave the lectures for MIT's 6.036 course: Introduction to Machine Learning. Below is a set of links to those lectures. Each link will be provided once captioning is completed for the corresponding video. A playlist of all the videos available so far can be found at the following link: . Note: I will try to release errata and slides with corrections relative to the live lectures here, as necessary. * Lecture 1: Basics (2020 / 09 / 01). * Lecture 2: Perceptrons (2020 / 09 / 08). * Lecture 6: Neural networks (2020 / 10 / 06). * Lecture 7: There was a holiday this week, and the lecture numbering matches the week of the course. * Lecture 8: Convolutional neural networks (2020 / 10 / 20). * Lecture 10: Reinforcement learning (2020 / 11 / 03). * Lecture 11: Recurrent neural networks (2020 / 11 / 10). * The 6.036 Fall 2020 course staff (instructors, TAs, and LAs) and past 6.036 course staff."
+},
+{
+"url": "https://introml.mit.edu/_static/fall22/VideoSlides/broderick_lecture_10_share.pdf",
+"title": "[PDF] 6.036: Introduction to Machine Learning - MIT",
+"description": "\u2022 Want to minimize the loss of people we serve [https://stanford.edu/class/engr108/visualizations/kmeans/kmeans.html] x1: longitude x2: latitude Food distribution placement 3 \u2022 Where should I have my k food trucks park? Food distribution placement [https://stanford.edu/class/engr108/visualizations/kmeans/kmeans.html] 3 \u2022 Where should I have my k food trucks park? Food distribution placement x1: longitude [https://stanford.edu/class/engr108/visualizations/kmeans/kmeans.html] 3 \u2022 Where should I have my k food trucks park? Food distribution placement x1: longitude x2: latitude [https://stanford.edu/class/engr108/visualizations/kmeans/kmeans.html] 3 \u2022 Where should I have my k food trucks park? \u2022 Want to minimize the loss of people we serve \u2022 Person i location [https://stanford.edu/class/engr108/visualizations/kmeans/kmeans.html] x1: longitude x2: latitude Food distribution placement 3 \u2022 Where should I have my k food trucks park? \u2022 Want to minimize the loss of people we serve \u2022 Person i location \u2022 Food truck j location [https://stanford.edu/class/engr108/visualizations/kmeans/kmeans.html] x1: longitude x2: latitude Food distribution placement 3 \u2022 Where should I have my k food trucks park?"
+},
+{
+"url": "https://www.youtube.com/watch?v=abB3fwfPy14",
+"title": "Machine Learning 6.036, Lecture 4: Logistic regression (Fall 2020)",
+"description": "Lecture 4 for the MIT course 6.036: Introduction to Machine Learning (Fall 2020 Semester) * Full lecture information and slides:"
+},
+{
+"url": "https://www.youtube.com/watch?v=OpvrwhWEUmY",
+"title": "MIT: Machine Learning 6.036, Lecture 5: Regression (Fall 2020)",
+"description": "Lecture 5 for the MIT course 6.036: Introduction to Machine Learning (Fall 2020 Semester) * Full lecture information and slides:"
+},
+{
+"url": "https://www.youtube.com/watch?v=A3obZhw7Jc4",
+"title": "MIT: Machine Learning 6.036, Lecture 2: Perceptrons (Fall 2020)",
+"description": "Lecture 2 for the MIT course 6.036: Introduction to Machine Learning (Fall 2020 Semester) * Full lecture information and slides:"
+},
+{
+"url": "https://phillipi.github.io/6.882/2020/notes/6.036_notes.pdf",
+"title": "[PDF] 6.036 Lecture Notes",
+"description": "FITTED-Q-LEARNING(A, s0, \u03b3, \u03b1, \u03f5, m) 1 s = s0 / / Or draw an s randomly from S 2 D = { } 3 initialize neural-network representation of Q 4 while True: 5 Dnew = experience from executing \u03f5-greedy policy based on Q for m steps 6 D = D \u222aDnew represented as (s, a, r, s\u2032) tuples 7 Dsup = {(x(i), y(i))} where x(i) = (s, a) and y(i) = r + \u03b3 maxa\u2032\u2208A Q(s\u2032, a\u2032) 8 for each tuple (s, a, r, s\u2032)(i) \u2208D 9 re-initialize neural-network representation of Q 10 Q = supervised_NN_regression(Dsup) Here, we alternate between using the policy induced by the current Q function to gather a batch of data Dnew, adding it to our overall data set D, and then using supervised neural-network training to learn a representation of the Q value function on the whole data set."
+},
+{
+"url": "https://www.youtube.com/playlist?list=PLxC_ffO4q_rW0bqQB80_vcQB09HOA3ClV",
+"title": "Broderick: Machine Learning, MIT 6.036 Fall 2020 - YouTube",
+"description": "Test Lecture 1 \u00b7 MIT: Machine Learning 6.036, Lecture 2: Perceptrons (Fall 2020) \u00b7 MIT: Machine Learning 6.036, Lecture 3: Features (Fall 2020) \u00b7 MIT: Machine"
+},
+{
+"url": "https://courses.csail.mit.edu/6.036",
+"title": "6.036 Introduction to Machine Learning",
+"description": "As a discipline, machine learning tries to design and understand computer programs that learn from experience for the purpose of prediction or control. **Midterm on Thursday March 23**, closed book, 1.5h, in-class, 20% of grade. If you have a conflict with the exam time, please. The conflict exam (with permission only) will. the midterm can be shifted to the final exam. in Track**, exam is closed book, 3h, 40% of grade. Any conflicts with the final exam time are handled by the registrar's office. ### Assignments (40% of grade in total, schedule):. **5 regular homework assignments (10% of the grade in total)**. we will add the weight of the missed assignment to the final exam weight. with other students and with the teaching staff to better understand the concepts. from this year or previous years in preparing your solutions to any assignment unless you developed the materials while working with other studens in class."
+},
+{
+"url": "https://openlearninglibrary.mit.edu/courses/course-v1:MITx+6.036+1T2019/jump_to/block-v1:MITx+6.036+1T2019+type@sequential+block@intro_ml",
+"title": "Notes \u2013 Chapters 1 and 2 | Introduction to ML | 6.036 Courseware | MIT Open Learning Library",
+"description": "The main focus of machine learning is *making decisions or predictions based on data*. There are a number of other fields with significant overlap in technique, but This story paraphrased from a post on 9/4/12 at andrewgelman.comdifference in focus:  in economics and psychology, the goal is to discover underlying causal processes and in statistics it is to find a model that fits a data set well. In machine learning, we often fit models, but as a means to the end of making good predictions or decisions. We will operationalize it by making assumptions, such as that all training data are IID (independent and identically distributed) and that queries will be drawn from the same distribution as the training data, or that the answer comes from a set of possible answers known in advance."
+},
+{
+"url": "https://www.reddit.com/r/learnmachinelearning/comments/jmfk9h/mits_new_machine_learning_course",
+"title": "MIT's New Machine Learning Course : r/learnmachinelearning - Reddit",
+"description": "I'm taking MIT's new (2020) machine learning course 6.036 through the MIT Open Learning Library. All of the homework questions have solutions which is great."
+}
+]

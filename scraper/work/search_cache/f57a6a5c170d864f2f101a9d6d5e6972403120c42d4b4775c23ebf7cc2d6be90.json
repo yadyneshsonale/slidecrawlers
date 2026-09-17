@@ -1,0 +1,52 @@
+[
+{
+"url": "https://ee.iitpkd.ac.in/ee5531",
+"title": "EE5531 - Electrical Engineering - IIT Palakkad",
+"description": "Introduction: Overview of applications of Reinforcement Learning (RL) in control: aerobatic helicopter flight, quadrotor control, pure pursuit control. 3. 2"
+},
+{
+"url": "https://cse.iitpkd.ac.in/courses/cs5008-Reinforcement-Learning",
+"title": "Reinforcement Learning - CSE @ IIT Palakkad",
+"description": "Reinforcement learning (RL) is a paradigm of learning via interactions with the environment. RL algorithms are at the frontier of current success of AI."
+},
+{
+"url": "https://davidstarsilver.wordpress.com/teaching",
+"title": "Teaching - David Silver",
+"description": "Video-lectures available here. Lecture 1: Introduction to Reinforcement Learning. Lecture 2: Markov Decision Processes. Lecture 3: Planning by Dynamic"
+},
+{
+"url": "https://www.youtube.com/watch?v=2pWv7GOvuf0",
+"title": "RL Course by David Silver - Lecture 1: Introduction to Reinforcement ...",
+"description": "Reinforcement Learning Course by David Silver# Lecture 1: Introduction to Reinforcement Learning."
+},
+{
+"url": "https://www.youtube.com/watch?v=0g4j2k_Ggc4",
+"title": "RL Course by David Silver - Lecture 5: Model Free Control",
+"description": "RL Course by David Silver - Lecture 5: Model Free Control\nGoogle DeepMind\n895000 subscribers\n2439 likes\n311975 views\n13 May 2015\n#Reinforcement Learning Course by David Silver# Lecture 5:  Model Free Control\n\n#Slides and more info about the course: http://goo.gl/vUiyjq\n189 comments\n"
+},
+{
+"url": "https://www.reddit.com/r/MachineLearning/comments/lqrek7/n_20_hours_of_new_lectures_on_deep_learning_and",
+"title": "[N] 20 hours of new lectures on Deep Learning and Reinforcement ...",
+"description": "# [N] 20 hours of new lectures on Deep Learning and Reinforcement Learning with lots of examples : r/MachineLearning. Skip to main content[N] 20 hours of new lectures on Deep Learning and Reinforcement Learning with lots of examples : r/MachineLearning. # [N] 20 hours of new lectures on Deep Learning and Reinforcement Learning with lots of examples. If anyone's interested in a Deep Learning and Reinforcement Learning series, I uploaded 20 hours of lectures on YouTube yesterday. Compared to other lectures, I think this gives quite a broad/compact overview of the fields with lots of minimal examples to build on. *   Lecture 10: Meta and manifold learning. What are the prereqs for learning reinforcement learning? 2.   Not for the main theory behind the fundamental RL algorithms, but when you start trying to scale up the methods with function approximators, it's useful to have had some practice in building DL models, especially CNNs & RNNs. Image 8: u/zeec123 avatar."
+},
+{
+"url": "https://cs231n.stanford.edu/slides/2017/cs231n_2017_lecture14.pdf",
+"title": "[PDF] Lecture 14: Reinforcement Learning - CS231n",
+"description": "NIPS Workshop 2013; Nature 2015] Fei-Fei Li & Justin Johnson & Serena Yeung Lecture 14 -May 23, 2017 Training the Q-network: Experience Replay 52 Learning from batches of consecutive samples is problematic: -Samples are correlated => inefficient learning -Current Q-network parameters determines next training samples (e.g. if maximizing action is to move left, training samples will be dominated by samples from left-hand size) => can lead to bad feedback loops Address these problems using experience replay -Continually update a replay memory table of transitions (st, at, rt, st+1) as game (experience) episodes are played -Train Q-network on random minibatches of transitions from the replay memory, instead of consecutive samples Each transition can also contribute to multiple weight updates => greater data efficiency [Mnih et al. NIPS Workshop 2013; Nature 2015] Fei-Fei Li & Justin Johnson & Serena Yeung Lecture 14 -May 23, 2017 59 Putting it together: Deep Q-Learning with Experience Replay Take the action (at), and observe the reward rt and next state st+1 [Mnih et al."
+},
+{
+"url": "https://www.youtube.com/playlist?list=PLqYmG7hTraZDM-OYHWgPebj2MfCFzFObQ",
+"title": "DeepMind x UCL | Introduction to Reinforcement Learning 2015",
+"description": "Watch the lectures from DeepMind research lead David Silver's course on reinforcement learning, taught at University College London."
+},
+{
+"url": "https://github.com/zyxue/youtube_RL_course_by_David_Silver",
+"title": "zyxue/youtube_RL_course_by_David_Silver: Collection of Slides for ...",
+"description": "## Navigation Menu. # Provide feedback. We read every piece of feedback, and take your input very seriously. # Saved searches. ## Use saved searches to filter your results more quickly. # zyxue/youtube\\_RL\\_course\\_by\\_David\\_Silver. ## Folders and files. | Name | | Name | Last commit message | Last commit date |. | Latest commit   History4 Commits   4 Commits | | |. | L1-intro\\_RL.pdf | | L1-intro\\_RL.pdf |  |  |. | L10-games.pdf | | L10-games.pdf |  |  |. | L2-MDP.pdf | | L2-MDP.pdf |  |  |. | L3-dynamic-programming.pdf | | L3-dynamic-programming.pdf |  |  |. | L4-model-free-prediction.pdf | | L4-model-free-prediction.pdf |  |  |. | L5-model-free-control.pdf | | L5-model-free-control.pdf |  |  |. | L6-value-function-approximation.pdf | | L6-value-function-approximation.pdf |  |  |. | L7-policy-gradient-methods.pdf | | L7-policy-gradient-methods.pdf |  |  |. | L8-integrating-learning-and-planning.pdf | | L8-integrating-learning-and-planning.pdf |  |  |. | L9-exploration-and-exploitation.pdf | | L9-exploration-and-exploitation.pdf |  |  |. ## Latest commit. ## Footer. ## Repository files navigation. Collection of Slides for David Silver's Reinforcement Learning Course on Youtube. ### Footer navigation."
+},
+{
+"url": "https://rll.berkeley.edu/deeprlcoursesp17",
+"title": "CS 294 Deep Reinforcement Learning, Spring 2017",
+"description": "| **If you are a UC Berkeley undergraduate student looking to enroll in the fall 2017 offering of this course:** We will post a form that you may fill out to provide us with some information about your background during the summer. Please do not email the instructors about enrollment: the form will be used to collect all information we need. | For people who are not enrolled, but interested in following and discussing the course, there is a subreddit forum here: reddit.com/r/berkeleydeeprlcourse/ |. | **Please do not email the course instructors about MuJoCo licenses if you are not enrolled in the course.** Unfortunately, we do not have any license that we can provide to students who are not officially enrolled in the course for credit. The course is **not** being offered as an online course, and the videos are provided only for your personal informational and entertainment purposes. * Feb 13: Reinforcement learning with policy gradients (Schulman)."
+}
+]

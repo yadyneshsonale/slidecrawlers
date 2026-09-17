@@ -1,0 +1,1366 @@
+<!DOCTYPE html><html lang="en" class="text-size-normal anon no-touch discourse-no-touch desktop-view not-mobile-device" style="--header-offset: 64px; --main-outlet-offset: 64px; --powered-by-height: 30.421875px;"><head>
+    <meta charset="utf-8">
+    <title>Free Course - Introduction to Deep Learning MIT 6.S191 - AI Learning - Open Integrator Community</title>
+    <meta name="description" content="If you’re looking to level up your machine-learning game, you should absolutely check out the course Introduction to Deep Learning (also known as MIT 6.S191) from Massachusetts Institute of Technology. The reason? It bri&amp;hellip;">
+    <meta name="discourse_theme_id" content="1">
+    <meta name="discourse_current_homepage" content="latest">
+
+    <meta name="generator" content="Discourse 2026.5.0-latest - https://github.com/discourse/discourse version aa31d18494cfd5af26e0c1dc7766e2b30c28b673">
+<link rel="icon" type="image/png" href="https://community.openintegrator.com/uploads/default/optimized/1X/93e0fd56c4f935cdcfd22d80ad5ad99d91821735_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://community.openintegrator.com/uploads/default/optimized/1X/93e0fd56c4f935cdcfd22d80ad5ad99d91821735_2_180x180.png">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#fff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#111111">
+
+<meta name="color-scheme" content="light dark">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover, interactive-widget=resizes-content">
+<link rel="canonical" href="https://community.openintegrator.com/t/free-course-introduction-to-deep-learning-mit-6-s191/106">
+
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://community.openintegrator.com/opensearch.xml" title="Open Integrator Community Search">
+
+    
+
+      <meta name="fragment" content="!">
+
+
+    
+  <script type="importmap" nonce="">
+    {
+  "imports": {
+    "discourse/plugins/chat": "/assets/js/plugins/chat_main-r8bjklt6.digested.js",
+    "discourse/plugins/checklist": "/assets/js/plugins/checklist_main-80x9a04u.digested.js",
+    "discourse/plugins/discourse-details": "/assets/js/plugins/discourse-details_main-cpx4p4cy.digested.js",
+    "discourse/plugins/discourse-lazy-videos": "/assets/js/plugins/discourse-lazy-videos_main-jv7tq7e0.digested.js",
+    "discourse/plugins/discourse-local-dates": "/assets/js/plugins/discourse-local-dates_main-q4jsmcfh.digested.js",
+    "discourse/plugins/discourse-narrative-bot": "/assets/js/plugins/discourse-narrative-bot_main-6v00v8rl.digested.js",
+    "discourse/plugins/discourse-presence": "/assets/js/plugins/discourse-presence_main-9m45gzkx.digested.js",
+    "discourse/plugins/discourse-solved": "/assets/js/plugins/discourse-solved_main-kcvs2dm3.digested.js",
+    "discourse/plugins/discourse-subscriptions": "/assets/js/plugins/discourse-subscriptions_main-kf11xxyl.digested.js",
+    "discourse/plugins/discourse-templates": "/assets/js/plugins/discourse-templates_main-o1f8l82a.digested.js",
+    "discourse/plugins/discourse-topic-voting": "/assets/js/plugins/discourse-topic-voting_main-emxqni3z.digested.js",
+    "discourse/plugins/footnote": "/assets/js/plugins/footnote_main-op32x7qz.digested.js",
+    "discourse/plugins/poll": "/assets/js/plugins/poll_main-qhktetis.digested.js",
+    "discourse/plugins/spoiler-alert": "/assets/js/plugins/spoiler-alert_main-qs2tqku8.digested.js"
+  }
+}
+  </script>
+
+      <link rel="modulepreload" href="/assets/js/plugins/chat_main-r8bjklt6.digested.js" nonce="" data-official="true" data-preinstalled="true" data-plugin-name="chat">
+      <link rel="modulepreload" href="/assets/js/plugins/checklist_main-80x9a04u.digested.js" nonce="" data-official="true" data-preinstalled="true" data-plugin-name="checklist">
+      <link rel="modulepreload" href="/assets/js/plugins/discourse-details_main-cpx4p4cy.digested.js" nonce="" data-official="true" data-preinstalled="true" data-plugin-name="discourse-details">
+      <link rel="modulepreload" href="/assets/js/plugins/discourse-lazy-videos_main-jv7tq7e0.digested.js" nonce="" data-official="true" data-preinstalled="true" data-plugin-name="discourse-lazy-videos">
+      <link rel="modulepreload" href="/assets/js/plugins/discourse-local-dates_main-q4jsmcfh.digested.js" nonce="" data-official="true" data-preinstalled="true" data-plugin-name="discourse-local-dates">
+      <link rel="modulepreload" href="/assets/js/plugins/discourse-narrative-bot_main-6v00v8rl.digested.js" nonce="" data-official="true" data-preinstalled="true" data-plugin-name="discourse-narrative-bot">
+      <link rel="modulepreload" href="/assets/js/plugins/discourse-presence_main-9m45gzkx.digested.js" nonce="" data-official="true" data-preinstalled="true" data-plugin-name="discourse-presence">
+      <link rel="modulepreload" href="/assets/js/plugins/discourse-solved_main-kcvs2dm3.digested.js" nonce="" data-official="true" data-preinstalled="true" data-plugin-name="discourse-solved">
+      <link rel="modulepreload" href="/assets/js/plugins/discourse-subscriptions_main-kf11xxyl.digested.js" nonce="" data-official="true" data-preinstalled="true" data-plugin-name="discourse-subscriptions">
+      <link rel="modulepreload" href="/assets/js/plugins/discourse-templates_main-o1f8l82a.digested.js" nonce="" data-official="true" data-preinstalled="true" data-plugin-name="discourse-templates">
+      <link rel="modulepreload" href="/assets/js/plugins/discourse-topic-voting_main-emxqni3z.digested.js" nonce="" data-official="true" data-preinstalled="true" data-plugin-name="discourse-topic-voting">
+      <link rel="modulepreload" href="/assets/js/plugins/footnote_main-op32x7qz.digested.js" nonce="" data-official="true" data-preinstalled="true" data-plugin-name="footnote">
+      <script defer="" src="/assets/plugins/footnote_extra-95ffab71.js" data-discourse-entrypoint="plugins/footnote_extra" data-official="true" data-preinstalled="true" data-plugin-name="footnote" nonce=""></script>
+
+      <link rel="modulepreload" href="/assets/js/plugins/poll_main-qhktetis.digested.js" nonce="" data-official="true" data-preinstalled="true" data-plugin-name="poll">
+      <link rel="modulepreload" href="/assets/js/plugins/spoiler-alert_main-qs2tqku8.digested.js" nonce="" data-official="true" data-preinstalled="true" data-plugin-name="spoiler-alert">
+
+    <link rel="modulepreload" href="/assets/js/plugins/chat_chunk.DaaNcb-r8bjklt6.digested.js" nonce="">
+
+
+    
+
+    <link rel="preload" href="/assets/start-discourse-ed0c531d.js" as="script" nonce="">
+    <link rel="preload" href="/assets/browser-update-296c1fea.js" as="script" nonce="">
+
+    <script defer="" src="/assets/browser-detect-eda0902d.js" data-discourse-entrypoint="browser-detect" nonce=""></script>
+
+
+    <script type="module" src="/extra-locales/a7249d4b2efb5a36921ad78154cfa84ad1d6dde8/en/main.js" nonce=""></script>
+
+    <script type="module" src="/extra-locales/03ccfdef355fdcfa142facd9bd30464c253307ee/en/mf.js?__ws=community.openintegrator.com" nonce=""></script>
+
+      
+
+    <script defer="" src="/assets/vendor.4dffda188ba7050df891869ce01b78dc-54abb82c.js" data-discourse-entrypoint="vendor" nonce=""></script>
+
+    <script defer="" src="/assets/chunk.8502f1ffcb0cdfb9a3c4.d41d8cd9.js" data-discourse-entrypoint="discourse" nonce=""></script>
+
+<script defer="" src="/assets/chunk.229351734ee9fd536f1b.d41d8cd9.js" data-discourse-entrypoint="discourse" nonce=""></script>
+
+
+
+      
+      
+
+    
+    
+    
+
+    <link id="manifest-link" rel="manifest" href="/manifest.webmanifest" crossorigin="use-credentials">
+
+
+        <link rel="alternate nofollow" type="application/rss+xml" title="RSS feed of 'Free Course - Introduction to Deep Learning MIT 6.S191'" href="https://community.openintegrator.com/t/free-course-introduction-to-deep-learning-mit-6-s191/106.rss">
+    <meta property="og:site_name" content="Open Integrator Community">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://community.openintegrator.com/uploads/default/original/1X/93e0fd56c4f935cdcfd22d80ad5ad99d91821735.png">
+<meta property="og:image" content="https://community.openintegrator.com/uploads/default/original/1X/93e0fd56c4f935cdcfd22d80ad5ad99d91821735.png">
+<meta property="og:url" content="https://community.openintegrator.com/t/free-course-introduction-to-deep-learning-mit-6-s191/106">
+<meta name="twitter:url" content="https://community.openintegrator.com/t/free-course-introduction-to-deep-learning-mit-6-s191/106">
+<meta property="og:title" content="Free Course - Introduction to Deep Learning MIT 6.S191">
+<meta name="twitter:title" content="Free Course - Introduction to Deep Learning MIT 6.S191">
+<meta property="og:description" content="If you’re looking to level up your machine-learning game, you should absolutely check out the course Introduction to Deep Learning (also known as MIT 6.S191) from Massachusetts Institute of Technology. The reason? It brings together the fundamentals of deep learning and real-world applications—in one intense, open-source program. MIT Deep Learning 6.S191  Here’s why I think it’s worth your time:   It covers the core algorithms of neural networks, gives you exposure to computer vision, language m...">
+<meta name="twitter:description" content="If you’re looking to level up your machine-learning game, you should absolutely check out the course Introduction to Deep Learning (also known as MIT 6.S191) from Massachusetts Institute of Technology. The reason? It brings together the fundamentals of deep learning and real-world applications—in one intense, open-source program. MIT Deep Learning 6.S191  Here’s why I think it’s worth your time:   It covers the core algorithms of neural networks, gives you exposure to computer vision, language m...">
+<meta property="og:article:section" content="AI Learning">
+<meta property="og:article:section:color" content="0088CC">
+<meta name="twitter:label1" value="Reading time">
+<meta name="twitter:data1" value="1 min 🕑">
+<meta name="twitter:label2" value="Likes">
+<meta name="twitter:data2" value="2 ❤">
+<meta property="article:published_time" content="2025-11-12T19:06:11+00:00">
+<meta property="og:ignore_canonical" content="true">
+
+
+
+    <script src="https://js.stripe.com/v3/" nonce=""></script>
+<script async="" src="https://js.stripe.com/v3/pricing-table.js" nonce=""></script>
+
+
+    <meta id="data-discourse-setup" data-base-url="https://community.openintegrator.com" data-base-uri="" data-environment="production" data-letter-avatar-version="5_c16b2ee14fe83ed9a59fc65fbec00f85" data-service-worker-url="service-worker.js" data-default-locale="en" data-asset-version="adf4c8c106214db17e7265e15a9fc513" data-disable-custom-css="false" data-highlight-js-path="/highlight-js/community.openintegrator.com/600885de53a0c5dcaf15540b83e94aafa44c5313.js" data-svg-sprite-path="/svg-sprite/community.openintegrator.com/svg-1-5d226543aae209fba886e49a3429d4ec9ac1c532.js" data-media-optimization-bundle="/assets/chunk.a19f2f8deb8cec693832.d41d8cd9.js" data-color-scheme-is-dark="false" data-user-color-scheme-id="-1" data-user-dark-scheme-id="-1">
+
+    <meta name="discourse/config/environment" content="%7B%22modulePrefix%22%3A%22discourse%22%2C%22environment%22%3A%22production%22%2C%22rootURL%22%3A%22%22%2C%22locationType%22%3A%22history%22%2C%22EmberENV%22%3A%7B%22FEATURES%22%3A%7B%7D%2C%22EXTEND_PROTOTYPES%22%3Afalse%7D%2C%22APP%22%3A%7B%22name%22%3A%22discourse%22%2C%22version%22%3A%222026.5.0-latest%20aa31d18494cfd5af26e0c1dc7766e2b30c28b673%22%7D%7D">
+  <style id="hashtag-css-generator">.hashtag-category-square { background-color: var(--primary-medium); }
+.hashtag-color--category-1 { background-color: #0088CC; }
+.hashtag-color--category-5 { background-color: #BF1E2E; }
+.hashtag-color--category-6 { background-color: #F1592A; }
+.hashtag-color--category-8 { background-color: #3AB54A; }
+.hashtag-color--category-9 { background-color: #9EB83B; }
+.hashtag-color--category-10 { background-color: #8C6238; }
+.hashtag-color--category-11 { background-color: #ED207B; }
+.hashtag-color--category-12 { background-color: #F7941D; }
+.hashtag-color--category-13 { background-color: #B3B5B4; }
+.hashtag-color--category-14 { background-color: #0088CC; }</style><script src="/svg-sprite/community.openintegrator.com/svg-1-5d226543aae209fba886e49a3429d4ec9ac1c532.js"></script><script charset="utf-8" data-webpack="discourse:chunk-434" src="https://community.openintegrator.com/assets/../assets/chunk.8c81cfb87268564d9247.d41d8cd9.js"></script></head>
+
+  <body class="uc-enable-simplified-category-creation uc-rename-faq-to-guidelines has-sidebar-page category category-ai-learn archetype-regular">
+      
+
+
+    <discourse-assets>
+      <discourse-assets-stylesheets>
+        <link href="/stylesheets/color_definitions_light-default_-1_1_fe98954d752097e7586c015bfbd4614ee28b72be.css?__ws=community.openintegrator.com" media="(prefers-color-scheme: light)" rel="stylesheet" class="light-scheme"><link href="/stylesheets/color_definitions_dark_1_1_94c847352543b4283de028cc69cc9e57f81142a6.css?__ws=community.openintegrator.com" media="(prefers-color-scheme: dark)" rel="stylesheet" class="dark-scheme" data-scheme-id="1">
+
+<link href="/stylesheets/common_0cf9aec744831fd8fe1456f566d759ebf7e082fe.css?__ws=community.openintegrator.com" media="all" rel="stylesheet" data-target="common">
+
+  <link href="/stylesheets/mobile_0cf9aec744831fd8fe1456f566d759ebf7e082fe.css?__ws=community.openintegrator.com" media="(max-width: 39.99999rem)" rel="stylesheet" data-target="mobile">
+  <link href="/stylesheets/desktop_0cf9aec744831fd8fe1456f566d759ebf7e082fe.css?__ws=community.openintegrator.com" media="(min-width: 40rem)" rel="stylesheet" data-target="desktop">
+
+
+
+    <link href="/stylesheets/chat_0cf9aec744831fd8fe1456f566d759ebf7e082fe.css?__ws=community.openintegrator.com" media="all" rel="stylesheet" data-target="chat">
+    <link href="/stylesheets/checklist_0cf9aec744831fd8fe1456f566d759ebf7e082fe.css?__ws=community.openintegrator.com" media="all" rel="stylesheet" data-target="checklist">
+    <link href="/stylesheets/discourse-details_0cf9aec744831fd8fe1456f566d759ebf7e082fe.css?__ws=community.openintegrator.com" media="all" rel="stylesheet" data-target="discourse-details">
+    <link href="/stylesheets/discourse-lazy-videos_0cf9aec744831fd8fe1456f566d759ebf7e082fe.css?__ws=community.openintegrator.com" media="all" rel="stylesheet" data-target="discourse-lazy-videos">
+    <link href="/stylesheets/discourse-local-dates_0cf9aec744831fd8fe1456f566d759ebf7e082fe.css?__ws=community.openintegrator.com" media="all" rel="stylesheet" data-target="discourse-local-dates">
+    <link href="/stylesheets/discourse-narrative-bot_0cf9aec744831fd8fe1456f566d759ebf7e082fe.css?__ws=community.openintegrator.com" media="all" rel="stylesheet" data-target="discourse-narrative-bot">
+    <link href="/stylesheets/discourse-presence_0cf9aec744831fd8fe1456f566d759ebf7e082fe.css?__ws=community.openintegrator.com" media="all" rel="stylesheet" data-target="discourse-presence">
+    <link href="/stylesheets/discourse-solved_0cf9aec744831fd8fe1456f566d759ebf7e082fe.css?__ws=community.openintegrator.com" media="all" rel="stylesheet" data-target="discourse-solved">
+    <link href="/stylesheets/discourse-subscriptions_0cf9aec744831fd8fe1456f566d759ebf7e082fe.css?__ws=community.openintegrator.com" media="all" rel="stylesheet" data-target="discourse-subscriptions">
+    <link href="/stylesheets/discourse-templates_0cf9aec744831fd8fe1456f566d759ebf7e082fe.css?__ws=community.openintegrator.com" media="all" rel="stylesheet" data-target="discourse-templates">
+    <link href="/stylesheets/discourse-topic-voting_0cf9aec744831fd8fe1456f566d759ebf7e082fe.css?__ws=community.openintegrator.com" media="all" rel="stylesheet" data-target="discourse-topic-voting">
+    <link href="/stylesheets/docker_manager_0cf9aec744831fd8fe1456f566d759ebf7e082fe.css?__ws=community.openintegrator.com" media="all" rel="stylesheet" data-target="docker_manager">
+    <link href="/stylesheets/footnote_0cf9aec744831fd8fe1456f566d759ebf7e082fe.css?__ws=community.openintegrator.com" media="all" rel="stylesheet" data-target="footnote">
+    <link href="/stylesheets/poll_0cf9aec744831fd8fe1456f566d759ebf7e082fe.css?__ws=community.openintegrator.com" media="all" rel="stylesheet" data-target="poll">
+    <link href="/stylesheets/spoiler-alert_0cf9aec744831fd8fe1456f566d759ebf7e082fe.css?__ws=community.openintegrator.com" media="all" rel="stylesheet" data-target="spoiler-alert">
+    <link href="/stylesheets/chat_mobile_0cf9aec744831fd8fe1456f566d759ebf7e082fe.css?__ws=community.openintegrator.com" media="(max-width: 39.99999rem)" rel="stylesheet" data-target="chat_mobile">
+    <link href="/stylesheets/chat_desktop_0cf9aec744831fd8fe1456f566d759ebf7e082fe.css?__ws=community.openintegrator.com" media="(min-width: 40rem)" rel="stylesheet" data-target="chat_desktop">
+    <link href="/stylesheets/poll_desktop_0cf9aec744831fd8fe1456f566d759ebf7e082fe.css?__ws=community.openintegrator.com" media="(min-width: 40rem)" rel="stylesheet" data-target="poll_desktop">
+
+  
+    
+    
+
+      </discourse-assets-stylesheets>
+      <discourse-assets-json>
+        <div class="hidden" id="data-preloaded" data-preloaded="{&quot;topic_106&quot;:&quot;{\&quot;post_stream\&quot;:{\&quot;posts\&quot;:[{\&quot;id\&quot;:166,\&quot;name\&quot;:\&quot;John\&quot;,\&quot;username\&quot;:\&quot;john\&quot;,\&quot;avatar_template\&quot;:\&quot;/user_avatar/community.openintegrator.com/john/{size}/16_2.png\&quot;,\&quot;created_at\&quot;:\&quot;2025-11-12T19:06:11.902Z\&quot;,\&quot;cooked\&quot;:\&quot;\\u003cp\\u003eIf you’re looking to level up your machine-learning game, you should absolutely check out the course \\u003cstrong\\u003eIntroduction to Deep Learning\\u003c/strong\\u003e (also known as MIT 6.S191) from Massachusetts Institute of Technology. The reason? It brings together the fundamentals of deep learning \\u003cem\\u003eand\\u003c/em\\u003e real-world applications—in one intense, open-source program. \\u003ca href=\\\&quot;https://introtodeeplearning.com/\\\&quot;\\u003eMIT Deep Learning 6.S191\\u003c/a\\u003e\\u003c/p\\u003e\\n\\u003cp\\u003eHere’s why I think it’s worth your time:\\u003c/p\\u003e\\n\\u003cul\\u003e\\n\\u003cli\\u003eIt covers the core algorithms of neural networks, gives you exposure to computer vision, language modelling, and even generative and reinforcement-learning topics.\\u003c/li\\u003e\\n\\u003cli\\u003eThe materials are open-source, so you can dig in directly—slides, code labs, lectures—all accessible.\\u003c/li\\u003e\\n\\u003cli\\u003ethe prerequisites are modest (basic calculus, linear algebra, some Python helps) and the pace is designed to bring you up to speed quickly.\\u003c/li\\u003e\\n\\u003c/ul\\u003e\\n\\u003chr\\u003e\\n\\u003cp\\u003e\\u003cstrong\\u003eMy journey so far\\u003c/strong\\u003e\\u003cbr\\u003e\\nI’ve completed the first two lectures of the course (Lecture 1: “Intro to Deep Learning”, Lecture 2: “Deep Sequence Modeling”) and created a video showing how to \\u003cem\\u003eget started\\u003c/em\\u003e with the code lab.\\u003c/p\\u003e\\n\\u003cp\\u003eThe value in this is two-fold: you don’t just listen; you get your hands dirty. And for someone like me who already has a technical background (in healthcare IT, data pipelines, integration etc), bridging that gap between “I know theory” and “I can run the code” was \\u003cem\\u003ecritical\\u003c/em\\u003e.\\u003c/p\\u003e\\n\\u003chr\\u003e\\n\\u003cp\\u003eIf you’re curious about stepping into deep learning—whether for a project, a career pivot or just broadening your skillset—this course is a top pick.\\u003c/p\\u003e\\n\\u003cp\\u003eHere is the video for getting started with the first code lab\\u003cbr\\u003e\\n            \\u003ciframe src=\\\&quot;https://www.youtube.com/embed/dTpsDq6BJGA?feature=oembed\\u0026amp;wmode=opaque\\\&quot; width=\\\&quot;480\\\&quot; height=\\\&quot;360\\\&quot; frameborder=\\\&quot;0\\\&quot; allowfullscreen=\\\&quot;\\\&quot; class=\\\&quot;youtube-onebox\\\&quot; seamless=\\\&quot;seamless\\\&quot; sandbox=\\\&quot;allow-same-origin allow-scripts allow-forms allow-popups allow-popups-to-escape-sandbox allow-presentation\\\&quot;\\u003e\\u003c/iframe\\u003e\\n\\u003c/p\\u003e\&quot;,\&quot;post_number\&quot;:1,\&quot;post_type\&quot;:1,\&quot;posts_count\&quot;:1,\&quot;updated_at\&quot;:\&quot;2025-11-12T19:06:50.796Z\&quot;,\&quot;reply_count\&quot;:0,\&quot;reply_to_post_number\&quot;:null,\&quot;quote_count\&quot;:0,\&quot;incoming_link_count\&quot;:53,\&quot;reads\&quot;:3,\&quot;readers_count\&quot;:2,\&quot;score\&quot;:280.6,\&quot;yours\&quot;:false,\&quot;topic_id\&quot;:106,\&quot;topic_slug\&quot;:\&quot;free-course-introduction-to-deep-learning-mit-6-s191\&quot;,\&quot;display_username\&quot;:\&quot;John\&quot;,\&quot;primary_group_name\&quot;:null,\&quot;flair_name\&quot;:null,\&quot;flair_url\&quot;:null,\&quot;flair_bg_color\&quot;:null,\&quot;flair_color\&quot;:null,\&quot;flair_group_id\&quot;:null,\&quot;badges_granted\&quot;:[],\&quot;version\&quot;:1,\&quot;can_edit\&quot;:false,\&quot;can_delete\&quot;:false,\&quot;can_recover\&quot;:false,\&quot;can_see_hidden_post\&quot;:false,\&quot;can_wiki\&quot;:false,\&quot;link_counts\&quot;:[{\&quot;url\&quot;:\&quot;https://introtodeeplearning.com/\&quot;,\&quot;internal\&quot;:false,\&quot;reflection\&quot;:false,\&quot;title\&quot;:\&quot;MIT Deep Learning 6.S191\&quot;,\&quot;clicks\&quot;:4}],\&quot;read\&quot;:true,\&quot;user_title\&quot;:\&quot;\&quot;,\&quot;bookmarked\&quot;:false,\&quot;actions_summary\&quot;:[{\&quot;id\&quot;:2,\&quot;count\&quot;:2}],\&quot;moderator\&quot;:true,\&quot;admin\&quot;:true,\&quot;staff\&quot;:true,\&quot;user_id\&quot;:1,\&quot;hidden\&quot;:false,\&quot;trust_level\&quot;:2,\&quot;deleted_at\&quot;:null,\&quot;user_deleted\&quot;:false,\&quot;edit_reason\&quot;:null,\&quot;can_view_edit_history\&quot;:true,\&quot;wiki\&quot;:false,\&quot;post_url\&quot;:\&quot;/t/free-course-introduction-to-deep-learning-mit-6-s191/106/1\&quot;,\&quot;can_accept_answer\&quot;:false,\&quot;can_unaccept_answer\&quot;:false,\&quot;accepted_answer\&quot;:false,\&quot;topic_accepted_answer\&quot;:null,\&quot;can_vote\&quot;:false}],\&quot;stream\&quot;:[166]},\&quot;timeline_lookup\&quot;:[[1,215]],\&quot;suggested_topics\&quot;:[{\&quot;fancy_title\&quot;:\&quot;How to Separate Access for Multiple Hospitals in One DCM4CHEE and OHIF Setup?\&quot;,\&quot;id\&quot;:80,\&quot;title\&quot;:\&quot;How to Separate Access for Multiple Hospitals in One DCM4CHEE and OHIF Setup?\&quot;,\&quot;slug\&quot;:\&quot;how-to-separate-access-for-multiple-hospitals-in-one-dcm4chee-and-ohif-setup\&quot;,\&quot;posts_count\&quot;:2,\&quot;reply_count\&quot;:0,\&quot;highest_post_number\&quot;:2,\&quot;image_url\&quot;:null,\&quot;created_at\&quot;:\&quot;2025-08-20T07:27:12.572Z\&quot;,\&quot;last_posted_at\&quot;:\&quot;2025-08-20T12:16:50.947Z\&quot;,\&quot;bumped\&quot;:true,\&quot;bumped_at\&quot;:\&quot;2025-08-20T12:16:50.947Z\&quot;,\&quot;archetype\&quot;:\&quot;regular\&quot;,\&quot;unseen\&quot;:false,\&quot;pinned\&quot;:false,\&quot;unpinned\&quot;:null,\&quot;visible\&quot;:true,\&quot;closed\&quot;:false,\&quot;archived\&quot;:false,\&quot;bookmarked\&quot;:null,\&quot;liked\&quot;:null,\&quot;tags\&quot;:[],\&quot;tags_descriptions\&quot;:{},\&quot;like_count\&quot;:1,\&quot;views\&quot;:100,\&quot;category_id\&quot;:5,\&quot;featured_link\&quot;:null,\&quot;op_like_count\&quot;:1,\&quot;has_accepted_answer\&quot;:false,\&quot;posters\&quot;:[{\&quot;extras\&quot;:null,\&quot;description\&quot;:\&quot;Original Poster\&quot;,\&quot;user\&quot;:{\&quot;id\&quot;:20,\&quot;username\&quot;:\&quot;JanLawrence\&quot;,\&quot;name\&quot;:\&quot;\&quot;,\&quot;avatar_template\&quot;:\&quot;/user_avatar/community.openintegrator.com/janlawrence/{size}/89_2.png\&quot;,\&quot;trust_level\&quot;:1}},{\&quot;extras\&quot;:\&quot;latest\&quot;,\&quot;description\&quot;:\&quot;Most Recent Poster\&quot;,\&quot;user\&quot;:{\&quot;id\&quot;:1,\&quot;username\&quot;:\&quot;john\&quot;,\&quot;name\&quot;:\&quot;John\&quot;,\&quot;avatar_template\&quot;:\&quot;/user_avatar/community.openintegrator.com/john/{size}/16_2.png\&quot;,\&quot;admin\&quot;:true,\&quot;moderator\&quot;:true,\&quot;trust_level\&quot;:2}}]},{\&quot;fancy_title\&quot;:\&quot;How to Install OHIF with docker on windows\&quot;,\&quot;id\&quot;:25,\&quot;title\&quot;:\&quot;How to Install OHIF with docker on windows\&quot;,\&quot;slug\&quot;:\&quot;how-to-install-ohif-with-docker-on-windows\&quot;,\&quot;posts_count\&quot;:1,\&quot;reply_count\&quot;:0,\&quot;highest_post_number\&quot;:1,\&quot;image_url\&quot;:\&quot;https://community.openintegrator.com/uploads/default/optimized/1X/65f45345a5bc2f6cae6837d6fd6960e9128c3e09_2_1024x576.jpeg\&quot;,\&quot;created_at\&quot;:\&quot;2025-07-05T18:13:29.400Z\&quot;,\&quot;last_posted_at\&quot;:\&quot;2025-07-05T18:13:29.590Z\&quot;,\&quot;bumped\&quot;:true,\&quot;bumped_at\&quot;:\&quot;2025-07-10T05:59:01.452Z\&quot;,\&quot;archetype\&quot;:\&quot;regular\&quot;,\&quot;unseen\&quot;:false,\&quot;pinned\&quot;:false,\&quot;unpinned\&quot;:null,\&quot;visible\&quot;:true,\&quot;closed\&quot;:false,\&quot;archived\&quot;:false,\&quot;bookmarked\&quot;:null,\&quot;liked\&quot;:null,\&quot;tags\&quot;:[],\&quot;tags_descriptions\&quot;:{},\&quot;like_count\&quot;:0,\&quot;views\&quot;:58,\&quot;category_id\&quot;:9,\&quot;featured_link\&quot;:null,\&quot;op_like_count\&quot;:0,\&quot;has_accepted_answer\&quot;:false,\&quot;posters\&quot;:[{\&quot;extras\&quot;:\&quot;latest single\&quot;,\&quot;description\&quot;:\&quot;Original Poster, Most Recent Poster\&quot;,\&quot;user\&quot;:{\&quot;id\&quot;:1,\&quot;username\&quot;:\&quot;john\&quot;,\&quot;name\&quot;:\&quot;John\&quot;,\&quot;avatar_template\&quot;:\&quot;/user_avatar/community.openintegrator.com/john/{size}/16_2.png\&quot;,\&quot;admin\&quot;:true,\&quot;moderator\&quot;:true,\&quot;trust_level\&quot;:2}}]},{\&quot;fancy_title\&quot;:\&quot;How to Install Mirth Connect in Docker\&quot;,\&quot;id\&quot;:42,\&quot;title\&quot;:\&quot;How to Install Mirth Connect in Docker\&quot;,\&quot;slug\&quot;:\&quot;how-to-install-mirth-connect-in-docker\&quot;,\&quot;posts_count\&quot;:9,\&quot;reply_count\&quot;:5,\&quot;highest_post_number\&quot;:9,\&quot;image_url\&quot;:null,\&quot;created_at\&quot;:\&quot;2025-07-10T07:07:47.951Z\&quot;,\&quot;last_posted_at\&quot;:\&quot;2025-10-28T18:54:32.052Z\&quot;,\&quot;bumped\&quot;:true,\&quot;bumped_at\&quot;:\&quot;2025-10-28T18:54:32.052Z\&quot;,\&quot;archetype\&quot;:\&quot;regular\&quot;,\&quot;unseen\&quot;:false,\&quot;pinned\&quot;:false,\&quot;unpinned\&quot;:null,\&quot;visible\&quot;:true,\&quot;closed\&quot;:false,\&quot;archived\&quot;:false,\&quot;bookmarked\&quot;:null,\&quot;liked\&quot;:null,\&quot;tags\&quot;:[],\&quot;tags_descriptions\&quot;:{},\&quot;like_count\&quot;:2,\&quot;views\&quot;:294,\&quot;category_id\&quot;:12,\&quot;featured_link\&quot;:null,\&quot;op_like_count\&quot;:0,\&quot;has_accepted_answer\&quot;:false,\&quot;posters\&quot;:[{\&quot;extras\&quot;:null,\&quot;description\&quot;:\&quot;Original Poster\&quot;,\&quot;user\&quot;:{\&quot;id\&quot;:-1,\&quot;username\&quot;:\&quot;system\&quot;,\&quot;name\&quot;:\&quot;system\&quot;,\&quot;avatar_template\&quot;:\&quot;/uploads/default/original/1X/93e0fd56c4f935cdcfd22d80ad5ad99d91821735.png\&quot;,\&quot;admin\&quot;:true,\&quot;moderator\&quot;:true,\&quot;trust_level\&quot;:4}},{\&quot;extras\&quot;:null,\&quot;description\&quot;:\&quot;Frequent Poster\&quot;,\&quot;user\&quot;:{\&quot;id\&quot;:9,\&quot;username\&quot;:\&quot;AllyJ\&quot;,\&quot;name\&quot;:\&quot;Alexander Jobe\&quot;,\&quot;avatar_template\&quot;:\&quot;/user_avatar/community.openintegrator.com/allyj/{size}/70_2.png\&quot;,\&quot;trust_level\&quot;:1}},{\&quot;extras\&quot;:\&quot;latest\&quot;,\&quot;description\&quot;:\&quot;Most Recent Poster\&quot;,\&quot;user\&quot;:{\&quot;id\&quot;:1,\&quot;username\&quot;:\&quot;john\&quot;,\&quot;name\&quot;:\&quot;John\&quot;,\&quot;avatar_template\&quot;:\&quot;/user_avatar/community.openintegrator.com/john/{size}/16_2.png\&quot;,\&quot;admin\&quot;:true,\&quot;moderator\&quot;:true,\&quot;trust_level\&quot;:2}}]},{\&quot;fancy_title\&quot;:\&quot;How to Install dcm4chee DICOM Archive 5 light on Windows 11 with Docker Desktop\&quot;,\&quot;id\&quot;:10,\&quot;title\&quot;:\&quot;How to Install dcm4chee DICOM Archive 5 light on Windows 11 with Docker Desktop\&quot;,\&quot;slug\&quot;:\&quot;how-to-install-dcm4chee-dicom-archive-5-light-on-windows-11-with-docker-desktop\&quot;,\&quot;posts_count\&quot;:2,\&quot;reply_count\&quot;:0,\&quot;highest_post_number\&quot;:2,\&quot;image_url\&quot;:\&quot;https://community.openintegrator.com/uploads/default/optimized/1X/a734cd34770c0f58329ef28152350a20e3c6fb90_2_1024x576.jpeg\&quot;,\&quot;created_at\&quot;:\&quot;2025-06-28T11:07:42.009Z\&quot;,\&quot;last_posted_at\&quot;:\&quot;2025-06-28T11:17:45.909Z\&quot;,\&quot;bumped\&quot;:true,\&quot;bumped_at\&quot;:\&quot;2025-06-28T11:17:45.909Z\&quot;,\&quot;archetype\&quot;:\&quot;regular\&quot;,\&quot;unseen\&quot;:false,\&quot;pinned\&quot;:false,\&quot;unpinned\&quot;:null,\&quot;visible\&quot;:true,\&quot;closed\&quot;:false,\&quot;archived\&quot;:false,\&quot;bookmarked\&quot;:null,\&quot;liked\&quot;:null,\&quot;tags\&quot;:[],\&quot;tags_descriptions\&quot;:{},\&quot;like_count\&quot;:0,\&quot;views\&quot;:238,\&quot;category_id\&quot;:5,\&quot;featured_link\&quot;:null,\&quot;op_like_count\&quot;:0,\&quot;has_accepted_answer\&quot;:false,\&quot;posters\&quot;:[{\&quot;extras\&quot;:\&quot;latest single\&quot;,\&quot;description\&quot;:\&quot;Original Poster, Most Recent Poster\&quot;,\&quot;user\&quot;:{\&quot;id\&quot;:1,\&quot;username\&quot;:\&quot;john\&quot;,\&quot;name\&quot;:\&quot;John\&quot;,\&quot;avatar_template\&quot;:\&quot;/user_avatar/community.openintegrator.com/john/{size}/16_2.png\&quot;,\&quot;admin\&quot;:true,\&quot;moderator\&quot;:true,\&quot;trust_level\&quot;:2}}]},{\&quot;fancy_title\&quot;:\&quot;DICOM Test Tools\&quot;,\&quot;id\&quot;:14,\&quot;title\&quot;:\&quot;DICOM Test Tools\&quot;,\&quot;slug\&quot;:\&quot;dicom-test-tools\&quot;,\&quot;posts_count\&quot;:5,\&quot;reply_count\&quot;:0,\&quot;highest_post_number\&quot;:5,\&quot;image_url\&quot;:null,\&quot;created_at\&quot;:\&quot;2025-06-30T18:06:44.668Z\&quot;,\&quot;last_posted_at\&quot;:\&quot;2025-07-10T05:47:46.777Z\&quot;,\&quot;bumped\&quot;:true,\&quot;bumped_at\&quot;:\&quot;2025-07-10T05:47:46.777Z\&quot;,\&quot;archetype\&quot;:\&quot;regular\&quot;,\&quot;unseen\&quot;:false,\&quot;pinned\&quot;:false,\&quot;unpinned\&quot;:null,\&quot;visible\&quot;:true,\&quot;closed\&quot;:false,\&quot;archived\&quot;:false,\&quot;bookmarked\&quot;:null,\&quot;liked\&quot;:null,\&quot;tags\&quot;:[],\&quot;tags_descriptions\&quot;:{},\&quot;like_count\&quot;:3,\&quot;views\&quot;:203,\&quot;category_id\&quot;:6,\&quot;featured_link\&quot;:null,\&quot;op_like_count\&quot;:1,\&quot;has_accepted_answer\&quot;:false,\&quot;posters\&quot;:[{\&quot;extras\&quot;:\&quot;latest single\&quot;,\&quot;description\&quot;:\&quot;Original Poster, Most Recent Poster\&quot;,\&quot;user\&quot;:{\&quot;id\&quot;:1,\&quot;username\&quot;:\&quot;john\&quot;,\&quot;name\&quot;:\&quot;John\&quot;,\&quot;avatar_template\&quot;:\&quot;/user_avatar/community.openintegrator.com/john/{size}/16_2.png\&quot;,\&quot;admin\&quot;:true,\&quot;moderator\&quot;:true,\&quot;trust_level\&quot;:2}}]}],\&quot;tags\&quot;:[],\&quot;tags_descriptions\&quot;:{},\&quot;fancy_title\&quot;:\&quot;Free Course - Introduction to Deep Learning MIT 6.S191\&quot;,\&quot;id\&quot;:106,\&quot;title\&quot;:\&quot;Free Course - Introduction to Deep Learning MIT 6.S191\&quot;,\&quot;posts_count\&quot;:1,\&quot;created_at\&quot;:\&quot;2025-11-12T19:06:11.683Z\&quot;,\&quot;views\&quot;:56,\&quot;reply_count\&quot;:0,\&quot;like_count\&quot;:2,\&quot;last_posted_at\&quot;:\&quot;2025-11-12T19:06:11.902Z\&quot;,\&quot;visible\&quot;:true,\&quot;closed\&quot;:false,\&quot;archived\&quot;:false,\&quot;has_summary\&quot;:false,\&quot;archetype\&quot;:\&quot;regular\&quot;,\&quot;slug\&quot;:\&quot;free-course-introduction-to-deep-learning-mit-6-s191\&quot;,\&quot;category_id\&quot;:14,\&quot;word_count\&quot;:265,\&quot;deleted_at\&quot;:null,\&quot;user_id\&quot;:1,\&quot;featured_link\&quot;:null,\&quot;pinned_globally\&quot;:false,\&quot;pinned_at\&quot;:null,\&quot;pinned_until\&quot;:null,\&quot;image_url\&quot;:null,\&quot;slow_mode_seconds\&quot;:0,\&quot;draft\&quot;:null,\&quot;draft_key\&quot;:\&quot;topic_106\&quot;,\&quot;draft_sequence\&quot;:null,\&quot;unpinned\&quot;:null,\&quot;pinned\&quot;:false,\&quot;current_post_number\&quot;:1,\&quot;highest_post_number\&quot;:1,\&quot;deleted_by\&quot;:null,\&quot;actions_summary\&quot;:[{\&quot;id\&quot;:4,\&quot;count\&quot;:0,\&quot;hidden\&quot;:false,\&quot;can_act\&quot;:false},{\&quot;id\&quot;:8,\&quot;count\&quot;:0,\&quot;hidden\&quot;:false,\&quot;can_act\&quot;:false},{\&quot;id\&quot;:10,\&quot;count\&quot;:0,\&quot;hidden\&quot;:false,\&quot;can_act\&quot;:false},{\&quot;id\&quot;:7,\&quot;count\&quot;:0,\&quot;hidden\&quot;:false,\&quot;can_act\&quot;:false}],\&quot;chunk_size\&quot;:20,\&quot;bookmarked\&quot;:false,\&quot;topic_timer\&quot;:null,\&quot;message_bus_last_id\&quot;:0,\&quot;participant_count\&quot;:1,\&quot;show_read_indicator\&quot;:false,\&quot;thumbnails\&quot;:null,\&quot;slow_mode_enabled_until\&quot;:null,\&quot;can_vote\&quot;:false,\&quot;vote_count\&quot;:0,\&quot;user_voted\&quot;:false,\&quot;discourse_zendesk_plugin_zendesk_id\&quot;:null,\&quot;discourse_zendesk_plugin_zendesk_url\&quot;:\&quot;https://your-url.zendesk.com/agent/tickets/\&quot;,\&quot;details\&quot;:{\&quot;can_edit\&quot;:false,\&quot;notification_level\&quot;:1,\&quot;participants\&quot;:[{\&quot;id\&quot;:1,\&quot;username\&quot;:\&quot;john\&quot;,\&quot;name\&quot;:\&quot;John\&quot;,\&quot;avatar_template\&quot;:\&quot;/user_avatar/community.openintegrator.com/john/{size}/16_2.png\&quot;,\&quot;post_count\&quot;:1,\&quot;primary_group_name\&quot;:null,\&quot;flair_name\&quot;:null,\&quot;flair_url\&quot;:null,\&quot;flair_color\&quot;:null,\&quot;flair_bg_color\&quot;:null,\&quot;flair_group_id\&quot;:null,\&quot;admin\&quot;:true,\&quot;moderator\&quot;:true,\&quot;trust_level\&quot;:2}],\&quot;created_by\&quot;:{\&quot;id\&quot;:1,\&quot;username\&quot;:\&quot;john\&quot;,\&quot;name\&quot;:\&quot;John\&quot;,\&quot;avatar_template\&quot;:\&quot;/user_avatar/community.openintegrator.com/john/{size}/16_2.png\&quot;},\&quot;last_poster\&quot;:{\&quot;id\&quot;:1,\&quot;username\&quot;:\&quot;john\&quot;,\&quot;name\&quot;:\&quot;John\&quot;,\&quot;avatar_template\&quot;:\&quot;/user_avatar/community.openintegrator.com/john/{size}/16_2.png\&quot;},\&quot;links\&quot;:[{\&quot;url\&quot;:\&quot;https://introtodeeplearning.com/\&quot;,\&quot;title\&quot;:\&quot;MIT Deep Learning 6.S191\&quot;,\&quot;internal\&quot;:false,\&quot;attachment\&quot;:false,\&quot;reflection\&quot;:false,\&quot;clicks\&quot;:4,\&quot;user_id\&quot;:1,\&quot;domain\&quot;:\&quot;introtodeeplearning.com\&quot;,\&quot;root_domain\&quot;:\&quot;introtodeeplearning.com\&quot;}]},\&quot;bookmarks\&quot;:[]}&quot;,&quot;site&quot;:&quot;{\&quot;default_archetype\&quot;:\&quot;regular\&quot;,\&quot;notification_types\&quot;:{\&quot;mentioned\&quot;:1,\&quot;replied\&quot;:2,\&quot;quoted\&quot;:3,\&quot;edited\&quot;:4,\&quot;liked\&quot;:5,\&quot;private_message\&quot;:6,\&quot;invited_to_private_message\&quot;:7,\&quot;invitee_accepted\&quot;:8,\&quot;posted\&quot;:9,\&quot;moved_post\&quot;:10,\&quot;linked\&quot;:11,\&quot;granted_badge\&quot;:12,\&quot;invited_to_topic\&quot;:13,\&quot;custom\&quot;:14,\&quot;group_mentioned\&quot;:15,\&quot;group_message_summary\&quot;:16,\&quot;watching_first_post\&quot;:17,\&quot;topic_reminder\&quot;:18,\&quot;liked_consolidated\&quot;:19,\&quot;post_approved\&quot;:20,\&quot;code_review_commit_approved\&quot;:21,\&quot;membership_request_accepted\&quot;:22,\&quot;membership_request_consolidated\&quot;:23,\&quot;bookmark_reminder\&quot;:24,\&quot;reaction\&quot;:25,\&quot;votes_released\&quot;:26,\&quot;event_reminder\&quot;:27,\&quot;event_invitation\&quot;:28,\&quot;chat_mention\&quot;:29,\&quot;chat_message\&quot;:30,\&quot;chat_invitation\&quot;:31,\&quot;chat_group_mention\&quot;:32,\&quot;chat_quoted\&quot;:33,\&quot;assigned\&quot;:34,\&quot;question_answer_user_commented\&quot;:35,\&quot;watching_category_or_tag\&quot;:36,\&quot;new_features\&quot;:37,\&quot;admin_problems\&quot;:38,\&quot;linked_consolidated\&quot;:39,\&quot;chat_watched_thread\&quot;:40,\&quot;upcoming_change_available\&quot;:41,\&quot;upcoming_change_automatically_promoted\&quot;:42,\&quot;boost\&quot;:43,\&quot;suggested_edit_created\&quot;:44,\&quot;suggested_edit_accepted\&quot;:45,\&quot;following\&quot;:800,\&quot;following_created_topic\&quot;:801,\&quot;following_replied\&quot;:802,\&quot;circles_activity\&quot;:900},\&quot;post_types\&quot;:{\&quot;regular\&quot;:1,\&quot;moderator_action\&quot;:2,\&quot;small_action\&quot;:3,\&quot;whisper\&quot;:4},\&quot;trust_levels\&quot;:{\&quot;newuser\&quot;:0,\&quot;basic\&quot;:1,\&quot;member\&quot;:2,\&quot;regular\&quot;:3,\&quot;leader\&quot;:4},\&quot;groups\&quot;:[{\&quot;id\&quot;:41,\&quot;name\&quot;:\&quot;Members\&quot;,\&quot;flair_url\&quot;:null,\&quot;flair_bg_color\&quot;:\&quot;\&quot;,\&quot;flair_color\&quot;:\&quot;\&quot;,\&quot;automatic\&quot;:false}],\&quot;filters\&quot;:[\&quot;latest\&quot;,\&quot;unread\&quot;,\&quot;new\&quot;,\&quot;unseen\&quot;,\&quot;top\&quot;,\&quot;read\&quot;,\&quot;posted\&quot;,\&quot;bookmarks\&quot;,\&quot;hot\&quot;,\&quot;votes\&quot;],\&quot;periods\&quot;:[\&quot;all\&quot;,\&quot;yearly\&quot;,\&quot;quarterly\&quot;,\&quot;monthly\&quot;,\&quot;weekly\&quot;,\&quot;daily\&quot;],\&quot;top_menu_items\&quot;:[\&quot;latest\&quot;,\&quot;unread\&quot;,\&quot;new\&quot;,\&quot;unseen\&quot;,\&quot;top\&quot;,\&quot;read\&quot;,\&quot;posted\&quot;,\&quot;bookmarks\&quot;,\&quot;hot\&quot;,\&quot;categories\&quot;,\&quot;votes\&quot;],\&quot;anonymous_top_menu_items\&quot;:[\&quot;latest\&quot;,\&quot;top\&quot;,\&quot;categories\&quot;,\&quot;hot\&quot;,\&quot;categories\&quot;,\&quot;top\&quot;,\&quot;votes\&quot;],\&quot;uncategorized_category_id\&quot;:1,\&quot;user_field_max_length\&quot;:2048,\&quot;post_action_types\&quot;:[{\&quot;id\&quot;:6,\&quot;name\&quot;:\&quot;Send @%{username} a message\&quot;,\&quot;name_key\&quot;:\&quot;notify_user\&quot;,\&quot;description\&quot;:\&quot;I want to talk to this person directly and personally about their post.\&quot;,\&quot;short_description\&quot;:\&quot;I want to talk to this person directly and personally about their post.\&quot;,\&quot;applies_to\&quot;:[\&quot;Post\&quot;,\&quot;Chat::Message\&quot;],\&quot;position\&quot;:1,\&quot;require_message\&quot;:true,\&quot;enabled\&quot;:true,\&quot;is_flag\&quot;:true,\&quot;is_used\&quot;:false,\&quot;auto_action_type\&quot;:false,\&quot;system\&quot;:true},{\&quot;id\&quot;:3,\&quot;name\&quot;:\&quot;Off-Topic\&quot;,\&quot;name_key\&quot;:\&quot;off_topic\&quot;,\&quot;description\&quot;:\&quot;This post is not relevant to the current discussion as defined by the title and first post, and should probably be moved elsewhere.\&quot;,\&quot;short_description\&quot;:\&quot;Not relevant to the discussion\&quot;,\&quot;applies_to\&quot;:[\&quot;Post\&quot;,\&quot;Chat::Message\&quot;],\&quot;position\&quot;:2,\&quot;require_message\&quot;:false,\&quot;enabled\&quot;:true,\&quot;is_flag\&quot;:true,\&quot;is_used\&quot;:false,\&quot;auto_action_type\&quot;:true,\&quot;system\&quot;:true},{\&quot;id\&quot;:4,\&quot;name\&quot;:\&quot;Inappropriate\&quot;,\&quot;name_key\&quot;:\&quot;inappropriate\&quot;,\&quot;description\&quot;:\&quot;This post contains content that a reasonable person would consider offensive, abusive, to be hateful conduct or a violation of \\u003ca href=\\\&quot;/guidelines\\\&quot;\\u003eour community guidelines\\u003c/a\\u003e.\&quot;,\&quot;short_description\&quot;:\&quot;A violation of \\u003ca href=\\\&quot;/guidelines\\\&quot;\\u003eour community guidelines\\u003c/a\\u003e\&quot;,\&quot;applies_to\&quot;:[\&quot;Post\&quot;,\&quot;Topic\&quot;,\&quot;Chat::Message\&quot;],\&quot;position\&quot;:3,\&quot;require_message\&quot;:false,\&quot;enabled\&quot;:true,\&quot;is_flag\&quot;:true,\&quot;is_used\&quot;:false,\&quot;auto_action_type\&quot;:true,\&quot;system\&quot;:true},{\&quot;id\&quot;:8,\&quot;name\&quot;:\&quot;Spam\&quot;,\&quot;name_key\&quot;:\&quot;spam\&quot;,\&quot;description\&quot;:\&quot;This post is an advertisement, or vandalism. It is not useful or relevant to the current topic.\&quot;,\&quot;short_description\&quot;:\&quot;This is an advertisement or vandalism\&quot;,\&quot;applies_to\&quot;:[\&quot;Post\&quot;,\&quot;Topic\&quot;,\&quot;Chat::Message\&quot;],\&quot;position\&quot;:4,\&quot;require_message\&quot;:false,\&quot;enabled\&quot;:true,\&quot;is_flag\&quot;:true,\&quot;is_used\&quot;:false,\&quot;auto_action_type\&quot;:true,\&quot;system\&quot;:true},{\&quot;id\&quot;:10,\&quot;name\&quot;:\&quot;Illegal\&quot;,\&quot;name_key\&quot;:\&quot;illegal\&quot;,\&quot;description\&quot;:\&quot;This post requires staff attention because I believe it contains content that is illegal.\&quot;,\&quot;short_description\&quot;:\&quot;This is illegal\&quot;,\&quot;applies_to\&quot;:[\&quot;Post\&quot;,\&quot;Topic\&quot;,\&quot;Chat::Message\&quot;],\&quot;position\&quot;:5,\&quot;require_message\&quot;:true,\&quot;enabled\&quot;:true,\&quot;is_flag\&quot;:true,\&quot;is_used\&quot;:false,\&quot;auto_action_type\&quot;:false,\&quot;system\&quot;:true},{\&quot;id\&quot;:7,\&quot;name\&quot;:\&quot;Something Else\&quot;,\&quot;name_key\&quot;:\&quot;notify_moderators\&quot;,\&quot;description\&quot;:\&quot;This post requires staff attention for another reason not listed above.\&quot;,\&quot;short_description\&quot;:\&quot;Requires staff attention for another reason\&quot;,\&quot;applies_to\&quot;:[\&quot;Post\&quot;,\&quot;Topic\&quot;,\&quot;Chat::Message\&quot;],\&quot;position\&quot;:6,\&quot;require_message\&quot;:true,\&quot;enabled\&quot;:true,\&quot;is_flag\&quot;:true,\&quot;is_used\&quot;:false,\&quot;auto_action_type\&quot;:false,\&quot;system\&quot;:true},{\&quot;id\&quot;:2,\&quot;name\&quot;:\&quot;Like\&quot;,\&quot;name_key\&quot;:\&quot;like\&quot;,\&quot;description\&quot;:\&quot;Like this post\&quot;,\&quot;short_description\&quot;:\&quot;Like this post\&quot;,\&quot;applies_to\&quot;:[\&quot;Post\&quot;],\&quot;position\&quot;:8,\&quot;require_message\&quot;:false,\&quot;enabled\&quot;:true,\&quot;is_flag\&quot;:false,\&quot;is_used\&quot;:true,\&quot;auto_action_type\&quot;:false,\&quot;system\&quot;:true}],\&quot;topic_flag_types\&quot;:[{\&quot;id\&quot;:4,\&quot;name\&quot;:\&quot;Inappropriate\&quot;,\&quot;name_key\&quot;:\&quot;inappropriate\&quot;,\&quot;description\&quot;:\&quot;This topic contains content that a reasonable person would consider offensive, abusive, to be hateful conduct or a violation of \\u003ca href=\\\&quot;/guidelines\\\&quot;\\u003eour community guidelines\\u003c/a\\u003e.\&quot;,\&quot;short_description\&quot;:\&quot;A violation of \\u003ca href=\\\&quot;/guidelines\\\&quot;\\u003eour community guidelines\\u003c/a\\u003e\&quot;,\&quot;applies_to\&quot;:[\&quot;Post\&quot;,\&quot;Topic\&quot;,\&quot;Chat::Message\&quot;],\&quot;position\&quot;:3,\&quot;require_message\&quot;:false,\&quot;enabled\&quot;:true,\&quot;is_flag\&quot;:true,\&quot;is_used\&quot;:false,\&quot;auto_action_type\&quot;:true,\&quot;system\&quot;:true},{\&quot;id\&quot;:8,\&quot;name\&quot;:\&quot;Spam\&quot;,\&quot;name_key\&quot;:\&quot;spam\&quot;,\&quot;description\&quot;:\&quot;This topic is an advertisement. It is not useful or relevant to this site, but promotional in nature.\&quot;,\&quot;short_description\&quot;:\&quot;This is an advertisement\&quot;,\&quot;applies_to\&quot;:[\&quot;Post\&quot;,\&quot;Topic\&quot;,\&quot;Chat::Message\&quot;],\&quot;position\&quot;:4,\&quot;require_message\&quot;:false,\&quot;enabled\&quot;:true,\&quot;is_flag\&quot;:true,\&quot;is_used\&quot;:false,\&quot;auto_action_type\&quot;:true,\&quot;system\&quot;:true},{\&quot;id\&quot;:10,\&quot;name\&quot;:\&quot;Illegal\&quot;,\&quot;name_key\&quot;:\&quot;illegal\&quot;,\&quot;description\&quot;:\&quot;This topic requires staff attention because I believe it contains content that is illegal.\&quot;,\&quot;short_description\&quot;:\&quot;This is illegal\&quot;,\&quot;applies_to\&quot;:[\&quot;Post\&quot;,\&quot;Topic\&quot;,\&quot;Chat::Message\&quot;],\&quot;position\&quot;:5,\&quot;require_message\&quot;:true,\&quot;enabled\&quot;:true,\&quot;is_flag\&quot;:true,\&quot;is_used\&quot;:false,\&quot;auto_action_type\&quot;:false,\&quot;system\&quot;:true},{\&quot;id\&quot;:7,\&quot;name\&quot;:\&quot;Something Else\&quot;,\&quot;name_key\&quot;:\&quot;notify_moderators\&quot;,\&quot;description\&quot;:\&quot;\&quot;,\&quot;short_description\&quot;:\&quot;Requires staff attention for another reason\&quot;,\&quot;applies_to\&quot;:[\&quot;Post\&quot;,\&quot;Topic\&quot;,\&quot;Chat::Message\&quot;],\&quot;position\&quot;:6,\&quot;require_message\&quot;:true,\&quot;enabled\&quot;:true,\&quot;is_flag\&quot;:true,\&quot;is_used\&quot;:false,\&quot;auto_action_type\&quot;:false,\&quot;system\&quot;:true}],\&quot;can_create_tag\&quot;:false,\&quot;can_tag_topics\&quot;:false,\&quot;can_tag_pms\&quot;:false,\&quot;tags_filter_regexp\&quot;:\&quot;[/\\\\?#\\\\[\\\\]@!\\\\$\\u0026'\\\\(\\\\)\\\\*\\\\+,;=\\\\.%\\\\\\\\`^\\\\s|\\\\{\\\\}\\\&quot;\\u003c\\u003e]+\&quot;,\&quot;top_tags\&quot;:[],\&quot;navigation_menu_site_top_tags\&quot;:[],\&quot;topic_featured_link_allowed_category_ids\&quot;:[2,9,10,11,6,4,1,13,8,7,5,3,12,14],\&quot;user_themes\&quot;:[{\&quot;theme_id\&quot;:1,\&quot;name\&quot;:\&quot;Default\&quot;,\&quot;default\&quot;:true,\&quot;color_scheme_id\&quot;:null,\&quot;dark_color_scheme_id\&quot;:1,\&quot;only_theme_color_schemes\&quot;:false}],\&quot;user_color_schemes\&quot;:[{\&quot;id\&quot;:1,\&quot;name\&quot;:\&quot;Dark\&quot;,\&quot;is_dark\&quot;:true,\&quot;theme_id\&quot;:null,\&quot;colors\&quot;:[{\&quot;name\&quot;:\&quot;primary\&quot;,\&quot;hex\&quot;:\&quot;dddddd\&quot;,\&quot;default_hex\&quot;:\&quot;dddddd\&quot;,\&quot;is_advanced\&quot;:false},{\&quot;name\&quot;:\&quot;secondary\&quot;,\&quot;hex\&quot;:\&quot;222222\&quot;,\&quot;default_hex\&quot;:\&quot;222222\&quot;,\&quot;is_advanced\&quot;:false},{\&quot;name\&quot;:\&quot;tertiary\&quot;,\&quot;hex\&quot;:\&quot;099dd7\&quot;,\&quot;default_hex\&quot;:\&quot;099dd7\&quot;,\&quot;is_advanced\&quot;:false},{\&quot;name\&quot;:\&quot;quaternary\&quot;,\&quot;hex\&quot;:\&quot;c14924\&quot;,\&quot;default_hex\&quot;:\&quot;c14924\&quot;,\&quot;is_advanced\&quot;:false},{\&quot;name\&quot;:\&quot;header_background\&quot;,\&quot;hex\&quot;:\&quot;111111\&quot;,\&quot;default_hex\&quot;:\&quot;111111\&quot;,\&quot;is_advanced\&quot;:false},{\&quot;name\&quot;:\&quot;header_primary\&quot;,\&quot;hex\&quot;:\&quot;dddddd\&quot;,\&quot;default_hex\&quot;:\&quot;dddddd\&quot;,\&quot;is_advanced\&quot;:false},{\&quot;name\&quot;:\&quot;highlight\&quot;,\&quot;hex\&quot;:\&quot;a87137\&quot;,\&quot;default_hex\&quot;:\&quot;a87137\&quot;,\&quot;is_advanced\&quot;:false},{\&quot;name\&quot;:\&quot;selected\&quot;,\&quot;hex\&quot;:\&quot;052e3d\&quot;,\&quot;default_hex\&quot;:\&quot;052e3d\&quot;,\&quot;is_advanced\&quot;:false},{\&quot;name\&quot;:\&quot;hover\&quot;,\&quot;hex\&quot;:\&quot;313131\&quot;,\&quot;default_hex\&quot;:\&quot;313131\&quot;,\&quot;is_advanced\&quot;:false},{\&quot;name\&quot;:\&quot;danger\&quot;,\&quot;hex\&quot;:\&quot;e45735\&quot;,\&quot;default_hex\&quot;:\&quot;e45735\&quot;,\&quot;is_advanced\&quot;:false},{\&quot;name\&quot;:\&quot;success\&quot;,\&quot;hex\&quot;:\&quot;1ca551\&quot;,\&quot;default_hex\&quot;:\&quot;1ca551\&quot;,\&quot;is_advanced\&quot;:false},{\&quot;name\&quot;:\&quot;love\&quot;,\&quot;hex\&quot;:\&quot;fa6c8d\&quot;,\&quot;default_hex\&quot;:\&quot;fa6c8d\&quot;,\&quot;is_advanced\&quot;:false}]},{\&quot;id\&quot;:4,\&quot;name\&quot;:\&quot;Dracula\&quot;,\&quot;is_dark\&quot;:true,\&quot;theme_id\&quot;:null,\&quot;colors\&quot;:[{\&quot;name\&quot;:\&quot;primary_very_low\&quot;,\&quot;hex\&quot;:\&quot;373A47\&quot;,\&quot;default_hex\&quot;:\&quot;373A47\&quot;,\&quot;is_advanced\&quot;:true},{\&quot;name\&quot;:\&quot;primary_low\&quot;,\&quot;hex\&quot;:\&quot;414350\&quot;,\&quot;default_hex\&quot;:\&quot;414350\&quot;,\&quot;is_advanced\&quot;:true},{\&quot;name\&quot;:\&quot;primary_low_mid\&quot;,\&quot;hex\&quot;:\&quot;8C8D94\&quot;,\&quot;default_hex\&quot;:\&quot;8C8D94\&quot;,\&quot;is_advanced\&quot;:true},{\&quot;name\&quot;:\&quot;primary_medium\&quot;,\&quot;hex\&quot;:\&quot;A3A4AA\&quot;,\&quot;default_hex\&quot;:\&quot;A3A4AA\&quot;,\&quot;is_advanced\&quot;:true},{\&quot;name\&quot;:\&quot;primary_high\&quot;,\&quot;hex\&quot;:\&quot;CCCCCF\&quot;,\&quot;default_hex\&quot;:\&quot;CCCCCF\&quot;,\&quot;is_advanced\&quot;:true},{\&quot;name\&quot;:\&quot;primary\&quot;,\&quot;hex\&quot;:\&quot;f2f2f2\&quot;,\&quot;default_hex\&quot;:\&quot;f2f2f2\&quot;,\&quot;is_advanced\&quot;:false},{\&quot;name\&quot;:\&quot;primary-50\&quot;,\&quot;hex\&quot;:\&quot;3F414E\&quot;,\&quot;default_hex\&quot;:\&quot;3F414E\&quot;,\&quot;is_advanced\&quot;:true},{\&quot;name\&quot;:\&quot;primary-100\&quot;,\&quot;hex\&quot;:\&quot;535460\&quot;,\&quot;default_hex\&quot;:\&quot;535460\&quot;,\&quot;is_advanced\&quot;:true},{\&quot;name\&quot;:\&quot;primary-200\&quot;,\&quot;hex\&quot;:\&quot;666972\&quot;,\&quot;default_hex\&quot;:\&quot;666972\&quot;,\&quot;is_advanced\&quot;:true},{\&quot;name\&quot;:\&quot;primary-300\&quot;,\&quot;hex\&quot;:\&quot;7A7C84\&quot;,\&quot;default_hex\&quot;:\&quot;7A7C84\&quot;,\&quot;is_advanced\&quot;:true},{\&quot;name\&quot;:\&quot;primary-400\&quot;,\&quot;hex\&quot;:\&quot;8D8F96\&quot;,\&quot;default_hex\&quot;:\&quot;8D8F96\&quot;,\&quot;is_advanced\&quot;:true},{\&quot;name\&quot;:\&quot;primary-500\&quot;,\&quot;hex\&quot;:\&quot;A2A3A9\&quot;,\&quot;default_hex\&quot;:\&quot;A2A3A9\&quot;,\&quot;is_advanced\&quot;:true},{\&quot;name\&quot;:\&quot;primary-600\&quot;,\&quot;hex\&quot;:\&quot;B6B7BC\&quot;,\&quot;default_hex\&quot;:\&quot;B6B7BC\&quot;,\&quot;is_advanced\&quot;:true},{\&quot;name\&quot;:\&quot;primary-700\&quot;,\&quot;hex\&quot;:\&quot;C7C7C7\&quot;,\&quot;default_hex\&quot;:\&quot;C7C7C7\&quot;,\&quot;is_advanced\&quot;:true},{\&quot;name\&quot;:\&quot;primary-800\&quot;,\&quot;hex\&quot;:\&quot;DEDFE0\&quot;,\&quot;default_hex\&quot;:\&quot;DEDFE0\&quot;,\&quot;is_advanced\&quot;:true},{\&quot;name\&quot;:\&quot;primary-900\&quot;,\&quot;hex\&quot;:\&quot;F5F5F5\&quot;,\&quot;default_hex\&quot;:\&quot;F5F5F5\&quot;,\&quot;is_advanced\&quot;:true},{\&quot;name\&quot;:\&quot;secondary_low\&quot;,\&quot;hex\&quot;:\&quot;CCCCCF\&quot;,\&quot;default_hex\&quot;:\&quot;CCCCCF\&quot;,\&quot;is_advanced\&quot;:true},{\&quot;name\&quot;:\&quot;secondary_medium\&quot;,\&quot;hex\&quot;:\&quot;91939A\&quot;,\&quot;default_hex\&quot;:\&quot;91939A\&quot;,\&quot;is_advanced\&quot;:true},{\&quot;name\&quot;:\&quot;secondary_high\&quot;,\&quot;hex\&quot;:\&quot;6A6C76\&quot;,\&quot;default_hex\&quot;:\&quot;6A6C76\&quot;,\&quot;is_advanced\&quot;:true},{\&quot;name\&quot;:\&quot;secondary_very_high\&quot;,\&quot;hex\&quot;:\&quot;3D404C\&quot;,\&quot;default_hex\&quot;:\&quot;3D404C\&quot;,\&quot;is_advanced\&quot;:true},{\&quot;name\&quot;:\&quot;secondary\&quot;,\&quot;hex\&quot;:\&quot;2d303e\&quot;,\&quot;default_hex\&quot;:\&quot;2d303e\&quot;,\&quot;is_advanced\&quot;:false},{\&quot;name\&quot;:\&quot;tertiary_low\&quot;,\&quot;hex\&quot;:\&quot;4A4463\&quot;,\&quot;default_hex\&quot;:\&quot;4A4463\&quot;,\&quot;is_advanced\&quot;:true},{\&quot;name\&quot;:\&quot;tertiary_medium\&quot;,\&quot;hex\&quot;:\&quot;6E5D92\&quot;,\&quot;default_hex\&quot;:\&quot;6E5D92\&quot;,\&quot;is_advanced\&quot;:true},{\&quot;name\&quot;:\&quot;tertiary\&quot;,\&quot;hex\&quot;:\&quot;bd93f9\&quot;,\&quot;default_hex\&quot;:\&quot;bd93f9\&quot;,\&quot;is_advanced\&quot;:false},{\&quot;name\&quot;:\&quot;tertiary_high\&quot;,\&quot;hex\&quot;:\&quot;9275C1\&quot;,\&quot;default_hex\&quot;:\&quot;9275C1\&quot;,\&quot;is_advanced\&quot;:true},{\&quot;name\&quot;:\&quot;quaternary_low\&quot;,\&quot;hex\&quot;:\&quot;6AA8BA\&quot;,\&quot;default_hex\&quot;:\&quot;6AA8BA\&quot;,\&quot;is_advanced\&quot;:true},{\&quot;name\&quot;:\&quot;quaternary\&quot;,\&quot;hex\&quot;:\&quot;8be9fd\&quot;,\&quot;default_hex\&quot;:\&quot;8be9fd\&quot;,\&quot;is_advanced\&quot;:false},{\&quot;name\&quot;:\&quot;header_background\&quot;,\&quot;hex\&quot;:\&quot;373A47\&quot;,\&quot;default_hex\&quot;:\&quot;373A47\&quot;,\&quot;is_advanced\&quot;:false},{\&quot;name\&quot;:\&quot;header_primary\&quot;,\&quot;hex\&quot;:\&quot;f2f2f2\&quot;,\&quot;default_hex\&quot;:\&quot;f2f2f2\&quot;,\&quot;is_advanced\&quot;:false},{\&quot;name\&quot;:\&quot;highlight_low\&quot;,\&quot;hex\&quot;:\&quot;686D55\&quot;,\&quot;default_hex\&quot;:\&quot;686D55\&quot;,\&quot;is_advanced\&quot;:true},{\&quot;name\&quot;:\&quot;highlight_medium\&quot;,\&quot;hex\&quot;:\&quot;52592B\&quot;,\&quot;default_hex\&quot;:\&quot;52592B\&quot;,\&quot;is_advanced\&quot;:true},{\&quot;name\&quot;:\&quot;highlight_high\&quot;,\&quot;hex\&quot;:\&quot;C0C879\&quot;,\&quot;default_hex\&quot;:\&quot;C0C879\&quot;,\&quot;is_advanced\&quot;:true},{\&quot;name\&quot;:\&quot;selected\&quot;,\&quot;hex\&quot;:\&quot;4A4463\&quot;,\&quot;default_hex\&quot;:\&quot;4A4463\&quot;,\&quot;is_advanced\&quot;:false},{\&quot;name\&quot;:\&quot;hover\&quot;,\&quot;hex\&quot;:\&quot;61597f\&quot;,\&quot;default_hex\&quot;:\&quot;61597f\&quot;,\&quot;is_advanced\&quot;:false},{\&quot;name\&quot;:\&quot;danger_low\&quot;,\&quot;hex\&quot;:\&quot;957279\&quot;,\&quot;default_hex\&quot;:\&quot;957279\&quot;,\&quot;is_advanced\&quot;:true},{\&quot;name\&quot;:\&quot;danger\&quot;,\&quot;hex\&quot;:\&quot;ff5555\&quot;,\&quot;default_hex\&quot;:\&quot;ff5555\&quot;,\&quot;is_advanced\&quot;:false},{\&quot;name\&quot;:\&quot;success_low\&quot;,\&quot;hex\&quot;:\&quot;386D50\&quot;,\&quot;default_hex\&quot;:\&quot;386D50\&quot;,\&quot;is_advanced\&quot;:true},{\&quot;name\&quot;:\&quot;success_medium\&quot;,\&quot;hex\&quot;:\&quot;44B366\&quot;,\&quot;default_hex\&quot;:\&quot;44B366\&quot;,\&quot;is_advanced\&quot;:true},{\&quot;name\&quot;:\&quot;success\&quot;,\&quot;hex\&quot;:\&quot;50fa7b\&quot;,\&quot;default_hex\&quot;:\&quot;50fa7b\&quot;,\&quot;is_advanced\&quot;:false},{\&quot;name\&quot;:\&quot;love_low\&quot;,\&quot;hex\&quot;:\&quot;6C4667\&quot;,\&quot;default_hex\&quot;:\&quot;6C4667\&quot;,\&quot;is_advanced\&quot;:true},{\&quot;name\&quot;:\&quot;love\&quot;,\&quot;hex\&quot;:\&quot;ff79c6\&quot;,\&quot;default_hex\&quot;:\&quot;ff79c6\&quot;,\&quot;is_advanced\&quot;:false}]},{\&quot;id\&quot;:6,\&quot;name\&quot;:\&quot;Solarized Dark\&quot;,\&quot;is_dark\&quot;:true,\&quot;theme_id\&quot;:null,\&quot;colors\&quot;:[{\&quot;name\&quot;:\&quot;primary_very_low\&quot;,\&quot;hex\&quot;:\&quot;0D353F\&quot;,\&quot;default_hex\&quot;:\&quot;0D353F\&quot;,\&quot;is_advanced\&quot;:true},{\&quot;name\&quot;:\&quot;primary_low\&quot;,\&quot;hex\&quot;:\&quot;193F47\&quot;,\&quot;default_hex\&quot;:\&quot;193F47\&quot;,\&quot;is_advanced\&quot;:true},{\&quot;name\&quot;:\&quot;primary_low_mid\&quot;,\&quot;hex\&quot;:\&quot;798C88\&quot;,\&quot;default_hex\&quot;:\&quot;798C88\&quot;,\&quot;is_advanced\&quot;:true},{\&quot;name\&quot;:\&quot;primary_medium\&quot;,\&quot;hex\&quot;:\&quot;97A59D\&quot;,\&quot;default_hex\&quot;:\&quot;97A59D\&quot;,\&quot;is_advanced\&quot;:true},{\&quot;name\&quot;:\&quot;primary_high\&quot;,\&quot;hex\&quot;:\&quot;B5BDB1\&quot;,\&quot;default_hex\&quot;:\&quot;B5BDB1\&quot;,\&quot;is_advanced\&quot;:true},{\&quot;name\&quot;:\&quot;primary\&quot;,\&quot;hex\&quot;:\&quot;FCF6E1\&quot;,\&quot;default_hex\&quot;:\&quot;FCF6E1\&quot;,\&quot;is_advanced\&quot;:false},{\&quot;name\&quot;:\&quot;primary-50\&quot;,\&quot;hex\&quot;:\&quot;21454E\&quot;,\&quot;default_hex\&quot;:\&quot;21454E\&quot;,\&quot;is_advanced\&quot;:true},{\&quot;name\&quot;:\&quot;primary-100\&quot;,\&quot;hex\&quot;:\&quot;415F66\&quot;,\&quot;default_hex\&quot;:\&quot;415F66\&quot;,\&quot;is_advanced\&quot;:true},{\&quot;name\&quot;:\&quot;primary-200\&quot;,\&quot;hex\&quot;:\&quot;556F74\&quot;,\&quot;default_hex\&quot;:\&quot;556F74\&quot;,\&quot;is_advanced\&quot;:true},{\&quot;name\&quot;:\&quot;primary-300\&quot;,\&quot;hex\&quot;:\&quot;627A7E\&quot;,\&quot;default_hex\&quot;:\&quot;627A7E\&quot;,\&quot;is_advanced\&quot;:true},{\&quot;name\&quot;:\&quot;primary-400\&quot;,\&quot;hex\&quot;:\&quot;697F83\&quot;,\&quot;default_hex\&quot;:\&quot;697F83\&quot;,\&quot;is_advanced\&quot;:true},{\&quot;name\&quot;:\&quot;primary-500\&quot;,\&quot;hex\&quot;:\&quot;76898C\&quot;,\&quot;default_hex\&quot;:\&quot;76898C\&quot;,\&quot;is_advanced\&quot;:true},{\&quot;name\&quot;:\&quot;primary-600\&quot;,\&quot;hex\&quot;:\&quot;839496\&quot;,\&quot;default_hex\&quot;:\&quot;839496\&quot;,\&quot;is_advanced\&quot;:true},{\&quot;name\&quot;:\&quot;primary-700\&quot;,\&quot;hex\&quot;:\&quot;B2B9B3\&quot;,\&quot;default_hex\&quot;:\&quot;B2B9B3\&quot;,\&quot;is_advanced\&quot;:true},{\&quot;name\&quot;:\&quot;primary-800\&quot;,\&quot;hex\&quot;:\&quot;DAD8CA\&quot;,\&quot;default_hex\&quot;:\&quot;DAD8CA\&quot;,\&quot;is_advanced\&quot;:true},{\&quot;name\&quot;:\&quot;primary-900\&quot;,\&quot;hex\&quot;:\&quot;F0EBDA\&quot;,\&quot;default_hex\&quot;:\&quot;F0EBDA\&quot;,\&quot;is_advanced\&quot;:true},{\&quot;name\&quot;:\&quot;secondary_low\&quot;,\&quot;hex\&quot;:\&quot;B5BDB1\&quot;,\&quot;default_hex\&quot;:\&quot;B5BDB1\&quot;,\&quot;is_advanced\&quot;:true},{\&quot;name\&quot;:\&quot;secondary_medium\&quot;,\&quot;hex\&quot;:\&quot;81938D\&quot;,\&quot;default_hex\&quot;:\&quot;81938D\&quot;,\&quot;is_advanced\&quot;:true},{\&quot;name\&quot;:\&quot;secondary_high\&quot;,\&quot;hex\&quot;:\&quot;4E6A6B\&quot;,\&quot;default_hex\&quot;:\&quot;4E6A6B\&quot;,\&quot;is_advanced\&quot;:true},{\&quot;name\&quot;:\&quot;secondary_very_high\&quot;,\&quot;hex\&quot;:\&quot;143B44\&quot;,\&quot;default_hex\&quot;:\&quot;143B44\&quot;,\&quot;is_advanced\&quot;:true},{\&quot;name\&quot;:\&quot;secondary\&quot;,\&quot;hex\&quot;:\&quot;002B36\&quot;,\&quot;default_hex\&quot;:\&quot;002B36\&quot;,\&quot;is_advanced\&quot;:false},{\&quot;name\&quot;:\&quot;tertiary_low\&quot;,\&quot;hex\&quot;:\&quot;003E54\&quot;,\&quot;default_hex\&quot;:\&quot;003E54\&quot;,\&quot;is_advanced\&quot;:true},{\&quot;name\&quot;:\&quot;tertiary_medium\&quot;,\&quot;hex\&quot;:\&quot;00557A\&quot;,\&quot;default_hex\&quot;:\&quot;00557A\&quot;,\&quot;is_advanced\&quot;:true},{\&quot;name\&quot;:\&quot;tertiary\&quot;,\&quot;hex\&quot;:\&quot;1a97d5\&quot;,\&quot;default_hex\&quot;:\&quot;1a97d5\&quot;,\&quot;is_advanced\&quot;:false},{\&quot;name\&quot;:\&quot;tertiary_high\&quot;,\&quot;hex\&quot;:\&quot;006C9F\&quot;,\&quot;default_hex\&quot;:\&quot;006C9F\&quot;,\&quot;is_advanced\&quot;:true},{\&quot;name\&quot;:\&quot;quaternary_low\&quot;,\&quot;hex\&quot;:\&quot;944835\&quot;,\&quot;default_hex\&quot;:\&quot;944835\&quot;,\&quot;is_advanced\&quot;:true},{\&quot;name\&quot;:\&quot;quaternary\&quot;,\&quot;hex\&quot;:\&quot;e45735\&quot;,\&quot;default_hex\&quot;:\&quot;e45735\&quot;,\&quot;is_advanced\&quot;:false},{\&quot;name\&quot;:\&quot;header_background\&quot;,\&quot;hex\&quot;:\&quot;002B36\&quot;,\&quot;default_hex\&quot;:\&quot;002B36\&quot;,\&quot;is_advanced\&quot;:false},{\&quot;name\&quot;:\&quot;header_primary\&quot;,\&quot;hex\&quot;:\&quot;FCF6E1\&quot;,\&quot;default_hex\&quot;:\&quot;FCF6E1\&quot;,\&quot;is_advanced\&quot;:false},{\&quot;name\&quot;:\&quot;highlight_low\&quot;,\&quot;hex\&quot;:\&quot;4D6B3D\&quot;,\&quot;default_hex\&quot;:\&quot;4D6B3D\&quot;,\&quot;is_advanced\&quot;:true},{\&quot;name\&quot;:\&quot;highlight_medium\&quot;,\&quot;hex\&quot;:\&quot;464C33\&quot;,\&quot;default_hex\&quot;:\&quot;464C33\&quot;,\&quot;is_advanced\&quot;:true},{\&quot;name\&quot;:\&quot;highlight\&quot;,\&quot;hex\&quot;:\&quot;F2F481\&quot;,\&quot;default_hex\&quot;:\&quot;F2F481\&quot;,\&quot;is_advanced\&quot;:false},{\&quot;name\&quot;:\&quot;highlight_high\&quot;,\&quot;hex\&quot;:\&quot;BFCA47\&quot;,\&quot;default_hex\&quot;:\&quot;BFCA47\&quot;,\&quot;is_advanced\&quot;:true},{\&quot;name\&quot;:\&quot;selected\&quot;,\&quot;hex\&quot;:\&quot;143B44\&quot;,\&quot;default_hex\&quot;:\&quot;143B44\&quot;,\&quot;is_advanced\&quot;:false},{\&quot;name\&quot;:\&quot;hover\&quot;,\&quot;hex\&quot;:\&quot;21454E\&quot;,\&quot;default_hex\&quot;:\&quot;21454E\&quot;,\&quot;is_advanced\&quot;:false},{\&quot;name\&quot;:\&quot;danger_low\&quot;,\&quot;hex\&quot;:\&quot;443836\&quot;,\&quot;default_hex\&quot;:\&quot;443836\&quot;,\&quot;is_advanced\&quot;:true},{\&quot;name\&quot;:\&quot;danger_medium\&quot;,\&quot;hex\&quot;:\&quot;944835\&quot;,\&quot;default_hex\&quot;:\&quot;944835\&quot;,\&quot;is_advanced\&quot;:true},{\&quot;name\&quot;:\&quot;danger\&quot;,\&quot;hex\&quot;:\&quot;e45735\&quot;,\&quot;default_hex\&quot;:\&quot;e45735\&quot;,\&quot;is_advanced\&quot;:false},{\&quot;name\&quot;:\&quot;success_low\&quot;,\&quot;hex\&quot;:\&quot;004C26\&quot;,\&quot;default_hex\&quot;:\&quot;004C26\&quot;,\&quot;is_advanced\&quot;:true},{\&quot;name\&quot;:\&quot;success_medium\&quot;,\&quot;hex\&quot;:\&quot;007313\&quot;,\&quot;default_hex\&quot;:\&quot;007313\&quot;,\&quot;is_advanced\&quot;:true},{\&quot;name\&quot;:\&quot;success\&quot;,\&quot;hex\&quot;:\&quot;009900\&quot;,\&quot;default_hex\&quot;:\&quot;009900\&quot;,\&quot;is_advanced\&quot;:false},{\&quot;name\&quot;:\&quot;love_low\&quot;,\&quot;hex\&quot;:\&quot;4B3F50\&quot;,\&quot;default_hex\&quot;:\&quot;4B3F50\&quot;,\&quot;is_advanced\&quot;:true},{\&quot;name\&quot;:\&quot;love\&quot;,\&quot;hex\&quot;:\&quot;fa6c8d\&quot;,\&quot;default_hex\&quot;:\&quot;fa6c8d\&quot;,\&quot;is_advanced\&quot;:false}]},{\&quot;id\&quot;:5,\&quot;name\&quot;:\&quot;Solarized Light\&quot;,\&quot;is_dark\&quot;:false,\&quot;theme_id\&quot;:null,\&quot;colors\&quot;:[{\&quot;name\&quot;:\&quot;primary_very_low\&quot;,\&quot;hex\&quot;:\&quot;F0ECD7\&quot;,\&quot;default_hex\&quot;:\&quot;F0ECD7\&quot;,\&quot;is_advanced\&quot;:true},{\&quot;name\&quot;:\&quot;primary_low\&quot;,\&quot;hex\&quot;:\&quot;D6D8C7\&quot;,\&quot;default_hex\&quot;:\&quot;D6D8C7\&quot;,\&quot;is_advanced\&quot;:true},{\&quot;name\&quot;:\&quot;primary_low_mid\&quot;,\&quot;hex\&quot;:\&quot;A4AFA5\&quot;,\&quot;default_hex\&quot;:\&quot;A4AFA5\&quot;,\&quot;is_advanced\&quot;:true},{\&quot;name\&quot;:\&quot;primary_medium\&quot;,\&quot;hex\&quot;:\&quot;7E918C\&quot;,\&quot;default_hex\&quot;:\&quot;7E918C\&quot;,\&quot;is_advanced\&quot;:true},{\&quot;name\&quot;:\&quot;primary_high\&quot;,\&quot;hex\&quot;:\&quot;4C6869\&quot;,\&quot;default_hex\&quot;:\&quot;4C6869\&quot;,\&quot;is_advanced\&quot;:true},{\&quot;name\&quot;:\&quot;primary\&quot;,\&quot;hex\&quot;:\&quot;002B36\&quot;,\&quot;default_hex\&quot;:\&quot;002B36\&quot;,\&quot;is_advanced\&quot;:false},{\&quot;name\&quot;:\&quot;primary-50\&quot;,\&quot;hex\&quot;:\&quot;F0EBDA\&quot;,\&quot;default_hex\&quot;:\&quot;F0EBDA\&quot;,\&quot;is_advanced\&quot;:true},{\&quot;name\&quot;:\&quot;primary-100\&quot;,\&quot;hex\&quot;:\&quot;DAD8CA\&quot;,\&quot;default_hex\&quot;:\&quot;DAD8CA\&quot;,\&quot;is_advanced\&quot;:true},{\&quot;name\&quot;:\&quot;primary-200\&quot;,\&quot;hex\&quot;:\&quot;B2B9B3\&quot;,\&quot;default_hex\&quot;:\&quot;B2B9B3\&quot;,\&quot;is_advanced\&quot;:true},{\&quot;name\&quot;:\&quot;primary-300\&quot;,\&quot;hex\&quot;:\&quot;839496\&quot;,\&quot;default_hex\&quot;:\&quot;839496\&quot;,\&quot;is_advanced\&quot;:true},{\&quot;name\&quot;:\&quot;primary-400\&quot;,\&quot;hex\&quot;:\&quot;76898C\&quot;,\&quot;default_hex\&quot;:\&quot;76898C\&quot;,\&quot;is_advanced\&quot;:true},{\&quot;name\&quot;:\&quot;primary-500\&quot;,\&quot;hex\&quot;:\&quot;697F83\&quot;,\&quot;default_hex\&quot;:\&quot;697F83\&quot;,\&quot;is_advanced\&quot;:true},{\&quot;name\&quot;:\&quot;primary-600\&quot;,\&quot;hex\&quot;:\&quot;627A7E\&quot;,\&quot;default_hex\&quot;:\&quot;627A7E\&quot;,\&quot;is_advanced\&quot;:true},{\&quot;name\&quot;:\&quot;primary-700\&quot;,\&quot;hex\&quot;:\&quot;556F74\&quot;,\&quot;default_hex\&quot;:\&quot;556F74\&quot;,\&quot;is_advanced\&quot;:true},{\&quot;name\&quot;:\&quot;primary-800\&quot;,\&quot;hex\&quot;:\&quot;415F66\&quot;,\&quot;default_hex\&quot;:\&quot;415F66\&quot;,\&quot;is_advanced\&quot;:true},{\&quot;name\&quot;:\&quot;primary-900\&quot;,\&quot;hex\&quot;:\&quot;21454E\&quot;,\&quot;default_hex\&quot;:\&quot;21454E\&quot;,\&quot;is_advanced\&quot;:true},{\&quot;name\&quot;:\&quot;secondary_low\&quot;,\&quot;hex\&quot;:\&quot;325458\&quot;,\&quot;default_hex\&quot;:\&quot;325458\&quot;,\&quot;is_advanced\&quot;:true},{\&quot;name\&quot;:\&quot;secondary_medium\&quot;,\&quot;hex\&quot;:\&quot;6C8280\&quot;,\&quot;default_hex\&quot;:\&quot;6C8280\&quot;,\&quot;is_advanced\&quot;:true},{\&quot;name\&quot;:\&quot;secondary_high\&quot;,\&quot;hex\&quot;:\&quot;97A59D\&quot;,\&quot;default_hex\&quot;:\&quot;97A59D\&quot;,\&quot;is_advanced\&quot;:true},{\&quot;name\&quot;:\&quot;secondary_very_high\&quot;,\&quot;hex\&quot;:\&quot;E8E6D3\&quot;,\&quot;default_hex\&quot;:\&quot;E8E6D3\&quot;,\&quot;is_advanced\&quot;:true},{\&quot;name\&quot;:\&quot;secondary\&quot;,\&quot;hex\&quot;:\&quot;FCF6E1\&quot;,\&quot;default_hex\&quot;:\&quot;FCF6E1\&quot;,\&quot;is_advanced\&quot;:false},{\&quot;name\&quot;:\&quot;tertiary_low\&quot;,\&quot;hex\&quot;:\&quot;D6E6DE\&quot;,\&quot;default_hex\&quot;:\&quot;D6E6DE\&quot;,\&quot;is_advanced\&quot;:true},{\&quot;name\&quot;:\&quot;tertiary_medium\&quot;,\&quot;hex\&quot;:\&quot;7EBFD7\&quot;,\&quot;default_hex\&quot;:\&quot;7EBFD7\&quot;,\&quot;is_advanced\&quot;:true},{\&quot;name\&quot;:\&quot;tertiary\&quot;,\&quot;hex\&quot;:\&quot;0088cc\&quot;,\&quot;default_hex\&quot;:\&quot;0088cc\&quot;,\&quot;is_advanced\&quot;:false},{\&quot;name\&quot;:\&quot;tertiary_high\&quot;,\&quot;hex\&quot;:\&quot;329ED0\&quot;,\&quot;default_hex\&quot;:\&quot;329ED0\&quot;,\&quot;is_advanced\&quot;:true},{\&quot;name\&quot;:\&quot;quaternary\&quot;,\&quot;hex\&quot;:\&quot;e45735\&quot;,\&quot;default_hex\&quot;:\&quot;e45735\&quot;,\&quot;is_advanced\&quot;:false},{\&quot;name\&quot;:\&quot;header_background\&quot;,\&quot;hex\&quot;:\&quot;FCF6E1\&quot;,\&quot;default_hex\&quot;:\&quot;FCF6E1\&quot;,\&quot;is_advanced\&quot;:false},{\&quot;name\&quot;:\&quot;header_primary\&quot;,\&quot;hex\&quot;:\&quot;002B36\&quot;,\&quot;default_hex\&quot;:\&quot;002B36\&quot;,\&quot;is_advanced\&quot;:false},{\&quot;name\&quot;:\&quot;highlight_low\&quot;,\&quot;hex\&quot;:\&quot;FDF9AD\&quot;,\&quot;default_hex\&quot;:\&quot;FDF9AD\&quot;,\&quot;is_advanced\&quot;:true},{\&quot;name\&quot;:\&quot;highlight_medium\&quot;,\&quot;hex\&quot;:\&quot;E3D0A3\&quot;,\&quot;default_hex\&quot;:\&quot;E3D0A3\&quot;,\&quot;is_advanced\&quot;:true},{\&quot;name\&quot;:\&quot;highlight\&quot;,\&quot;hex\&quot;:\&quot;F2F481\&quot;,\&quot;default_hex\&quot;:\&quot;F2F481\&quot;,\&quot;is_advanced\&quot;:false},{\&quot;name\&quot;:\&quot;highlight_high\&quot;,\&quot;hex\&quot;:\&quot;BCAA7F\&quot;,\&quot;default_hex\&quot;:\&quot;BCAA7F\&quot;,\&quot;is_advanced\&quot;:true},{\&quot;name\&quot;:\&quot;selected\&quot;,\&quot;hex\&quot;:\&quot;E8E6D3\&quot;,\&quot;default_hex\&quot;:\&quot;E8E6D3\&quot;,\&quot;is_advanced\&quot;:false},{\&quot;name\&quot;:\&quot;hover\&quot;,\&quot;hex\&quot;:\&quot;F0EBDA\&quot;,\&quot;default_hex\&quot;:\&quot;F0EBDA\&quot;,\&quot;is_advanced\&quot;:false},{\&quot;name\&quot;:\&quot;danger_low\&quot;,\&quot;hex\&quot;:\&quot;F8D9C2\&quot;,\&quot;default_hex\&quot;:\&quot;F8D9C2\&quot;,\&quot;is_advanced\&quot;:true},{\&quot;name\&quot;:\&quot;danger\&quot;,\&quot;hex\&quot;:\&quot;e45735\&quot;,\&quot;default_hex\&quot;:\&quot;e45735\&quot;,\&quot;is_advanced\&quot;:false},{\&quot;name\&quot;:\&quot;success_low\&quot;,\&quot;hex\&quot;:\&quot;CFE5B9\&quot;,\&quot;default_hex\&quot;:\&quot;CFE5B9\&quot;,\&quot;is_advanced\&quot;:true},{\&quot;name\&quot;:\&quot;success_medium\&quot;,\&quot;hex\&quot;:\&quot;4CB544\&quot;,\&quot;default_hex\&quot;:\&quot;4CB544\&quot;,\&quot;is_advanced\&quot;:true},{\&quot;name\&quot;:\&quot;success\&quot;,\&quot;hex\&quot;:\&quot;009900\&quot;,\&quot;default_hex\&quot;:\&quot;009900\&quot;,\&quot;is_advanced\&quot;:false},{\&quot;name\&quot;:\&quot;love_low\&quot;,\&quot;hex\&quot;:\&quot;FCDDD2\&quot;,\&quot;default_hex\&quot;:\&quot;FCDDD2\&quot;,\&quot;is_advanced\&quot;:true},{\&quot;name\&quot;:\&quot;love\&quot;,\&quot;hex\&quot;:\&quot;fa6c8d\&quot;,\&quot;default_hex\&quot;:\&quot;fa6c8d\&quot;,\&quot;is_advanced\&quot;:false}]},{\&quot;id\&quot;:3,\&quot;name\&quot;:\&quot;WCAG Dark\&quot;,\&quot;is_dark\&quot;:true,\&quot;theme_id\&quot;:null,\&quot;colors\&quot;:[{\&quot;name\&quot;:\&quot;primary\&quot;,\&quot;hex\&quot;:\&quot;ffffff\&quot;,\&quot;default_hex\&quot;:\&quot;ffffff\&quot;,\&quot;is_advanced\&quot;:false},{\&quot;name\&quot;:\&quot;primary-medium\&quot;,\&quot;hex\&quot;:\&quot;999999\&quot;,\&quot;default_hex\&quot;:\&quot;999999\&quot;,\&quot;is_advanced\&quot;:true},{\&quot;name\&quot;:\&quot;primary-low-mid\&quot;,\&quot;hex\&quot;:\&quot;888888\&quot;,\&quot;default_hex\&quot;:\&quot;888888\&quot;,\&quot;is_advanced\&quot;:true},{\&quot;name\&quot;:\&quot;secondary\&quot;,\&quot;hex\&quot;:\&quot;0c0c0c\&quot;,\&quot;default_hex\&quot;:\&quot;0c0c0c\&quot;,\&quot;is_advanced\&quot;:false},{\&quot;name\&quot;:\&quot;tertiary\&quot;,\&quot;hex\&quot;:\&quot;759AFF\&quot;,\&quot;default_hex\&quot;:\&quot;759AFF\&quot;,\&quot;is_advanced\&quot;:false},{\&quot;name\&quot;:\&quot;quaternary\&quot;,\&quot;hex\&quot;:\&quot;759AFF\&quot;,\&quot;default_hex\&quot;:\&quot;759AFF\&quot;,\&quot;is_advanced\&quot;:false},{\&quot;name\&quot;:\&quot;header_background\&quot;,\&quot;hex\&quot;:\&quot;000000\&quot;,\&quot;default_hex\&quot;:\&quot;000000\&quot;,\&quot;is_advanced\&quot;:false},{\&quot;name\&quot;:\&quot;header_primary\&quot;,\&quot;hex\&quot;:\&quot;ffffff\&quot;,\&quot;default_hex\&quot;:\&quot;ffffff\&quot;,\&quot;is_advanced\&quot;:false},{\&quot;name\&quot;:\&quot;highlight\&quot;,\&quot;hex\&quot;:\&quot;3369FF\&quot;,\&quot;default_hex\&quot;:\&quot;3369FF\&quot;,\&quot;is_advanced\&quot;:false},{\&quot;name\&quot;:\&quot;selected\&quot;,\&quot;hex\&quot;:\&quot;0d2569\&quot;,\&quot;default_hex\&quot;:\&quot;0d2569\&quot;,\&quot;is_advanced\&quot;:false},{\&quot;name\&quot;:\&quot;hover\&quot;,\&quot;hex\&quot;:\&quot;002382\&quot;,\&quot;default_hex\&quot;:\&quot;002382\&quot;,\&quot;is_advanced\&quot;:false},{\&quot;name\&quot;:\&quot;danger\&quot;,\&quot;hex\&quot;:\&quot;FF697A\&quot;,\&quot;default_hex\&quot;:\&quot;FF697A\&quot;,\&quot;is_advanced\&quot;:false},{\&quot;name\&quot;:\&quot;success\&quot;,\&quot;hex\&quot;:\&quot;70B880\&quot;,\&quot;default_hex\&quot;:\&quot;70B880\&quot;,\&quot;is_advanced\&quot;:false},{\&quot;name\&quot;:\&quot;love\&quot;,\&quot;hex\&quot;:\&quot;9D256B\&quot;,\&quot;default_hex\&quot;:\&quot;9D256B\&quot;,\&quot;is_advanced\&quot;:false}]},{\&quot;id\&quot;:2,\&quot;name\&quot;:\&quot;WCAG Light\&quot;,\&quot;is_dark\&quot;:false,\&quot;theme_id\&quot;:null,\&quot;colors\&quot;:[{\&quot;name\&quot;:\&quot;primary\&quot;,\&quot;hex\&quot;:\&quot;000000\&quot;,\&quot;default_hex\&quot;:\&quot;000000\&quot;,\&quot;is_advanced\&quot;:false},{\&quot;name\&quot;:\&quot;primary-medium\&quot;,\&quot;hex\&quot;:\&quot;696969\&quot;,\&quot;default_hex\&quot;:\&quot;696969\&quot;,\&quot;is_advanced\&quot;:true},{\&quot;name\&quot;:\&quot;primary-low-mid\&quot;,\&quot;hex\&quot;:\&quot;909090\&quot;,\&quot;default_hex\&quot;:\&quot;909090\&quot;,\&quot;is_advanced\&quot;:true},{\&quot;name\&quot;:\&quot;secondary\&quot;,\&quot;hex\&quot;:\&quot;ffffff\&quot;,\&quot;default_hex\&quot;:\&quot;ffffff\&quot;,\&quot;is_advanced\&quot;:false},{\&quot;name\&quot;:\&quot;tertiary\&quot;,\&quot;hex\&quot;:\&quot;0033CC\&quot;,\&quot;default_hex\&quot;:\&quot;0033CC\&quot;,\&quot;is_advanced\&quot;:false},{\&quot;name\&quot;:\&quot;quaternary\&quot;,\&quot;hex\&quot;:\&quot;3369FF\&quot;,\&quot;default_hex\&quot;:\&quot;3369FF\&quot;,\&quot;is_advanced\&quot;:false},{\&quot;name\&quot;:\&quot;header_background\&quot;,\&quot;hex\&quot;:\&quot;ffffff\&quot;,\&quot;default_hex\&quot;:\&quot;ffffff\&quot;,\&quot;is_advanced\&quot;:false},{\&quot;name\&quot;:\&quot;header_primary\&quot;,\&quot;hex\&quot;:\&quot;000000\&quot;,\&quot;default_hex\&quot;:\&quot;000000\&quot;,\&quot;is_advanced\&quot;:false},{\&quot;name\&quot;:\&quot;highlight\&quot;,\&quot;hex\&quot;:\&quot;ffff00\&quot;,\&quot;default_hex\&quot;:\&quot;ffff00\&quot;,\&quot;is_advanced\&quot;:false},{\&quot;name\&quot;:\&quot;highlight-high\&quot;,\&quot;hex\&quot;:\&quot;0036E6\&quot;,\&quot;default_hex\&quot;:\&quot;0036E6\&quot;,\&quot;is_advanced\&quot;:true},{\&quot;name\&quot;:\&quot;highlight-medium\&quot;,\&quot;hex\&quot;:\&quot;e0e9ff\&quot;,\&quot;default_hex\&quot;:\&quot;e0e9ff\&quot;,\&quot;is_advanced\&quot;:true},{\&quot;name\&quot;:\&quot;highlight-low\&quot;,\&quot;hex\&quot;:\&quot;e0e9ff\&quot;,\&quot;default_hex\&quot;:\&quot;e0e9ff\&quot;,\&quot;is_advanced\&quot;:true},{\&quot;name\&quot;:\&quot;selected\&quot;,\&quot;hex\&quot;:\&quot;E2E9FE\&quot;,\&quot;default_hex\&quot;:\&quot;E2E9FE\&quot;,\&quot;is_advanced\&quot;:false},{\&quot;name\&quot;:\&quot;hover\&quot;,\&quot;hex\&quot;:\&quot;F0F4FE\&quot;,\&quot;default_hex\&quot;:\&quot;F0F4FE\&quot;,\&quot;is_advanced\&quot;:false},{\&quot;name\&quot;:\&quot;danger\&quot;,\&quot;hex\&quot;:\&quot;BB1122\&quot;,\&quot;default_hex\&quot;:\&quot;BB1122\&quot;,\&quot;is_advanced\&quot;:false},{\&quot;name\&quot;:\&quot;success\&quot;,\&quot;hex\&quot;:\&quot;3d854d\&quot;,\&quot;default_hex\&quot;:\&quot;3d854d\&quot;,\&quot;is_advanced\&quot;:false},{\&quot;name\&quot;:\&quot;love\&quot;,\&quot;hex\&quot;:\&quot;9D256B\&quot;,\&quot;default_hex\&quot;:\&quot;9D256B\&quot;,\&quot;is_advanced\&quot;:false}]}],\&quot;default_light_color_scheme\&quot;:null,\&quot;default_dark_color_scheme\&quot;:{\&quot;id\&quot;:1,\&quot;name\&quot;:\&quot;Dark\&quot;,\&quot;is_base\&quot;:null,\&quot;base_scheme_id\&quot;:-2,\&quot;theme_id\&quot;:null,\&quot;theme_name\&quot;:null,\&quot;user_selectable\&quot;:true,\&quot;is_builtin_default\&quot;:null,\&quot;is_dark\&quot;:true,\&quot;colors\&quot;:[{\&quot;name\&quot;:\&quot;primary\&quot;,\&quot;hex\&quot;:\&quot;dddddd\&quot;,\&quot;default_hex\&quot;:\&quot;dddddd\&quot;,\&quot;is_advanced\&quot;:false},{\&quot;name\&quot;:\&quot;secondary\&quot;,\&quot;hex\&quot;:\&quot;222222\&quot;,\&quot;default_hex\&quot;:\&quot;222222\&quot;,\&quot;is_advanced\&quot;:false},{\&quot;name\&quot;:\&quot;tertiary\&quot;,\&quot;hex\&quot;:\&quot;099dd7\&quot;,\&quot;default_hex\&quot;:\&quot;099dd7\&quot;,\&quot;is_advanced\&quot;:false},{\&quot;name\&quot;:\&quot;quaternary\&quot;,\&quot;hex\&quot;:\&quot;c14924\&quot;,\&quot;default_hex\&quot;:\&quot;c14924\&quot;,\&quot;is_advanced\&quot;:false},{\&quot;name\&quot;:\&quot;header_background\&quot;,\&quot;hex\&quot;:\&quot;111111\&quot;,\&quot;default_hex\&quot;:\&quot;111111\&quot;,\&quot;is_advanced\&quot;:false},{\&quot;name\&quot;:\&quot;header_primary\&quot;,\&quot;hex\&quot;:\&quot;dddddd\&quot;,\&quot;default_hex\&quot;:\&quot;dddddd\&quot;,\&quot;is_advanced\&quot;:false},{\&quot;name\&quot;:\&quot;selected\&quot;,\&quot;hex\&quot;:\&quot;052e3d\&quot;,\&quot;default_hex\&quot;:\&quot;052e3d\&quot;,\&quot;is_advanced\&quot;:false},{\&quot;name\&quot;:\&quot;hover\&quot;,\&quot;hex\&quot;:\&quot;313131\&quot;,\&quot;default_hex\&quot;:\&quot;313131\&quot;,\&quot;is_advanced\&quot;:false},{\&quot;name\&quot;:\&quot;highlight\&quot;,\&quot;hex\&quot;:\&quot;a87137\&quot;,\&quot;default_hex\&quot;:\&quot;a87137\&quot;,\&quot;is_advanced\&quot;:false},{\&quot;name\&quot;:\&quot;danger\&quot;,\&quot;hex\&quot;:\&quot;e45735\&quot;,\&quot;default_hex\&quot;:\&quot;e45735\&quot;,\&quot;is_advanced\&quot;:false},{\&quot;name\&quot;:\&quot;success\&quot;,\&quot;hex\&quot;:\&quot;1ca551\&quot;,\&quot;default_hex\&quot;:\&quot;1ca551\&quot;,\&quot;is_advanced\&quot;:false},{\&quot;name\&quot;:\&quot;love\&quot;,\&quot;hex\&quot;:\&quot;fa6c8d\&quot;,\&quot;default_hex\&quot;:\&quot;fa6c8d\&quot;,\&quot;is_advanced\&quot;:false}]},\&quot;censored_regexp\&quot;:[],\&quot;custom_emoji_translation\&quot;:{},\&quot;watched_words_replace\&quot;:null,\&quot;watched_words_link\&quot;:null,\&quot;categories\&quot;:[{\&quot;id\&quot;:1,\&quot;name\&quot;:\&quot;Uncategorized\&quot;,\&quot;color\&quot;:\&quot;0088CC\&quot;,\&quot;text_color\&quot;:\&quot;FFFFFF\&quot;,\&quot;style_type\&quot;:\&quot;square\&quot;,\&quot;icon\&quot;:null,\&quot;emoji\&quot;:null,\&quot;slug\&quot;:\&quot;uncategorized\&quot;,\&quot;topic_count\&quot;:0,\&quot;post_count\&quot;:0,\&quot;position\&quot;:0,\&quot;description\&quot;:\&quot;\&quot;,\&quot;description_text\&quot;:\&quot;Topics that don't need a category, or don't fit into any other existing category.\&quot;,\&quot;description_excerpt\&quot;:\&quot;Topics that don't need a category, or don't fit into any other existing category.\&quot;,\&quot;topic_url\&quot;:\&quot;/t/\&quot;,\&quot;read_restricted\&quot;:false,\&quot;permission\&quot;:null,\&quot;notification_level\&quot;:1,\&quot;topic_template\&quot;:null,\&quot;topic_title_placeholder\&quot;:null,\&quot;has_children\&quot;:false,\&quot;subcategory_count\&quot;:null,\&quot;sort_order\&quot;:null,\&quot;sort_ascending\&quot;:null,\&quot;show_subcategory_list\&quot;:false,\&quot;num_featured_topics\&quot;:3,\&quot;default_view\&quot;:null,\&quot;subcategory_list_style\&quot;:\&quot;rows_with_featured_topics\&quot;,\&quot;default_top_period\&quot;:\&quot;all\&quot;,\&quot;default_list_filter\&quot;:\&quot;all\&quot;,\&quot;minimum_required_tags\&quot;:0,\&quot;navigate_to_first_post_after_read\&quot;:false,\&quot;custom_fields\&quot;:{\&quot;has_chat_enabled\&quot;:null,\&quot;enable_unassigned_filter\&quot;:null,\&quot;sort_topics_by_event_start_date\&quot;:null,\&quot;disable_topic_resorting\&quot;:null,\&quot;create_as_post_voting_default\&quot;:null,\&quot;only_post_voting_in_this_category\&quot;:null,\&quot;enable_accepted_answers\&quot;:null,\&quot;notify_on_staff_accept_solved\&quot;:null,\&quot;empty_box_on_unsolved\&quot;:null,\&quot;enable_topic_voting\&quot;:null},\&quot;allowed_tags\&quot;:[],\&quot;allowed_tag_groups\&quot;:[],\&quot;allow_global_tags\&quot;:false,\&quot;read_only_banner\&quot;:null,\&quot;form_template_ids\&quot;:[],\&quot;uploaded_logo\&quot;:null,\&quot;uploaded_logo_dark\&quot;:null,\&quot;uploaded_background\&quot;:null,\&quot;uploaded_background_dark\&quot;:null,\&quot;required_tag_groups\&quot;:[],\&quot;can_edit\&quot;:false},{\&quot;id\&quot;:2,\&quot;name\&quot;:\&quot;Site Feedback\&quot;,\&quot;color\&quot;:\&quot;808281\&quot;,\&quot;text_color\&quot;:\&quot;FFFFFF\&quot;,\&quot;style_type\&quot;:\&quot;emoji\&quot;,\&quot;icon\&quot;:null,\&quot;emoji\&quot;:\&quot;thought_balloon\&quot;,\&quot;slug\&quot;:\&quot;site-feedback\&quot;,\&quot;topic_count\&quot;:0,\&quot;post_count\&quot;:0,\&quot;position\&quot;:1,\&quot;description\&quot;:\&quot;\\u003cp\\u003eDiscussion about this site, its organization, how it works, and how we can improve it.\\u003c/p\\u003e\&quot;,\&quot;description_text\&quot;:\&quot;Discussion about this site, its organization, how it works, and how we can improve it.\&quot;,\&quot;description_excerpt\&quot;:\&quot;Discussion about this site, its organization, how it works, and how we can improve it.\&quot;,\&quot;topic_url\&quot;:\&quot;/t/about-the-site-feedback-category/1\&quot;,\&quot;read_restricted\&quot;:false,\&quot;permission\&quot;:null,\&quot;notification_level\&quot;:1,\&quot;topic_template\&quot;:null,\&quot;topic_title_placeholder\&quot;:null,\&quot;has_children\&quot;:false,\&quot;subcategory_count\&quot;:null,\&quot;sort_order\&quot;:null,\&quot;sort_ascending\&quot;:null,\&quot;show_subcategory_list\&quot;:false,\&quot;num_featured_topics\&quot;:3,\&quot;default_view\&quot;:null,\&quot;subcategory_list_style\&quot;:\&quot;rows_with_featured_topics\&quot;,\&quot;default_top_period\&quot;:\&quot;all\&quot;,\&quot;default_list_filter\&quot;:\&quot;all\&quot;,\&quot;minimum_required_tags\&quot;:0,\&quot;navigate_to_first_post_after_read\&quot;:false,\&quot;custom_fields\&quot;:{\&quot;has_chat_enabled\&quot;:null,\&quot;enable_unassigned_filter\&quot;:null,\&quot;sort_topics_by_event_start_date\&quot;:null,\&quot;disable_topic_resorting\&quot;:null,\&quot;create_as_post_voting_default\&quot;:null,\&quot;only_post_voting_in_this_category\&quot;:null,\&quot;enable_accepted_answers\&quot;:null,\&quot;notify_on_staff_accept_solved\&quot;:null,\&quot;empty_box_on_unsolved\&quot;:null,\&quot;enable_topic_voting\&quot;:null},\&quot;allowed_tags\&quot;:[],\&quot;allowed_tag_groups\&quot;:[],\&quot;allow_global_tags\&quot;:false,\&quot;read_only_banner\&quot;:null,\&quot;form_template_ids\&quot;:[],\&quot;uploaded_logo\&quot;:null,\&quot;uploaded_logo_dark\&quot;:null,\&quot;uploaded_background\&quot;:null,\&quot;uploaded_background_dark\&quot;:null,\&quot;required_tag_groups\&quot;:[],\&quot;can_edit\&quot;:false},{\&quot;id\&quot;:4,\&quot;name\&quot;:\&quot;General\&quot;,\&quot;color\&quot;:\&quot;25AAE2\&quot;,\&quot;text_color\&quot;:\&quot;FFFFFF\&quot;,\&quot;style_type\&quot;:\&quot;emoji\&quot;,\&quot;icon\&quot;:null,\&quot;emoji\&quot;:\&quot;blue_book\&quot;,\&quot;slug\&quot;:\&quot;general\&quot;,\&quot;topic_count\&quot;:5,\&quot;post_count\&quot;:14,\&quot;position\&quot;:3,\&quot;description\&quot;:\&quot;\\u003cp\\u003eCreate topics here that don’t fit into any other existing category.\\u003c/p\\u003e\&quot;,\&quot;description_text\&quot;:\&quot;Create topics here that don’t fit into any other existing category.\&quot;,\&quot;description_excerpt\&quot;:\&quot;Create topics here that don’t fit into any other existing category.\&quot;,\&quot;topic_url\&quot;:\&quot;/t/about-the-general-category/3\&quot;,\&quot;read_restricted\&quot;:false,\&quot;permission\&quot;:null,\&quot;notification_level\&quot;:1,\&quot;topic_template\&quot;:null,\&quot;topic_title_placeholder\&quot;:null,\&quot;has_children\&quot;:false,\&quot;subcategory_count\&quot;:null,\&quot;sort_order\&quot;:null,\&quot;sort_ascending\&quot;:null,\&quot;show_subcategory_list\&quot;:false,\&quot;num_featured_topics\&quot;:3,\&quot;default_view\&quot;:null,\&quot;subcategory_list_style\&quot;:\&quot;rows_with_featured_topics\&quot;,\&quot;default_top_period\&quot;:\&quot;all\&quot;,\&quot;default_list_filter\&quot;:\&quot;all\&quot;,\&quot;minimum_required_tags\&quot;:0,\&quot;navigate_to_first_post_after_read\&quot;:false,\&quot;custom_fields\&quot;:{\&quot;enable_unassigned_filter\&quot;:null,\&quot;sort_topics_by_event_start_date\&quot;:null,\&quot;disable_topic_resorting\&quot;:null,\&quot;create_as_post_voting_default\&quot;:null,\&quot;only_post_voting_in_this_category\&quot;:null,\&quot;enable_accepted_answers\&quot;:null,\&quot;notify_on_staff_accept_solved\&quot;:null,\&quot;empty_box_on_unsolved\&quot;:null,\&quot;enable_topic_voting\&quot;:null,\&quot;has_chat_enabled\&quot;:true},\&quot;allowed_tags\&quot;:[],\&quot;allowed_tag_groups\&quot;:[],\&quot;allow_global_tags\&quot;:false,\&quot;read_only_banner\&quot;:null,\&quot;form_template_ids\&quot;:[],\&quot;uploaded_logo\&quot;:null,\&quot;uploaded_logo_dark\&quot;:null,\&quot;uploaded_background\&quot;:null,\&quot;uploaded_background_dark\&quot;:null,\&quot;required_tag_groups\&quot;:[],\&quot;can_edit\&quot;:false},{\&quot;id\&quot;:5,\&quot;name\&quot;:\&quot;DCM4CHEE\&quot;,\&quot;color\&quot;:\&quot;BF1E2E\&quot;,\&quot;text_color\&quot;:\&quot;FFFFFF\&quot;,\&quot;style_type\&quot;:\&quot;square\&quot;,\&quot;icon\&quot;:null,\&quot;emoji\&quot;:null,\&quot;slug\&quot;:\&quot;dcm4chee\&quot;,\&quot;topic_count\&quot;:12,\&quot;post_count\&quot;:57,\&quot;position\&quot;:4,\&quot;description\&quot;:\&quot;This category is for discussions around the DCM4CHEE open source DICOM archive \\u003ca href=\\\&quot;https://github.com/dcm4che/dcm4chee-arc-light\\\&quot; class=\\\&quot;inline-onebox-loading\\\&quot;\\u003ehttps://github.com/dcm4che/dcm4chee-arc-light\\u003c/a\\u003e\&quot;,\&quot;description_text\&quot;:\&quot;This category is for discussions around the DCM4CHEE open source DICOM archive https://github.com/dcm4che/dcm4chee-arc-light\&quot;,\&quot;description_excerpt\&quot;:\&quot;This category is for discussions around the DCM4CHEE open source DICOM archive \\u003ca href=\\\&quot;https://github.com/dcm4che/dcm4chee-arc-light\\\&quot; class=\\\&quot;inline-onebox-loading\\\&quot;\\u003ehttps://github.com/dcm4che/dcm4chee-arc-light\\u003c/a\\u003e\&quot;,\&quot;topic_url\&quot;:\&quot;/t/about-the-dcm4chee-category/9\&quot;,\&quot;read_restricted\&quot;:false,\&quot;permission\&quot;:null,\&quot;notification_level\&quot;:1,\&quot;topic_template\&quot;:null,\&quot;topic_title_placeholder\&quot;:null,\&quot;has_children\&quot;:false,\&quot;subcategory_count\&quot;:null,\&quot;sort_order\&quot;:null,\&quot;sort_ascending\&quot;:null,\&quot;show_subcategory_list\&quot;:false,\&quot;num_featured_topics\&quot;:3,\&quot;default_view\&quot;:null,\&quot;subcategory_list_style\&quot;:\&quot;rows_with_featured_topics\&quot;,\&quot;default_top_period\&quot;:\&quot;all\&quot;,\&quot;default_list_filter\&quot;:\&quot;all\&quot;,\&quot;minimum_required_tags\&quot;:0,\&quot;navigate_to_first_post_after_read\&quot;:false,\&quot;custom_fields\&quot;:{\&quot;has_chat_enabled\&quot;:null,\&quot;enable_unassigned_filter\&quot;:null,\&quot;sort_topics_by_event_start_date\&quot;:null,\&quot;disable_topic_resorting\&quot;:null,\&quot;create_as_post_voting_default\&quot;:null,\&quot;only_post_voting_in_this_category\&quot;:null,\&quot;enable_accepted_answers\&quot;:null,\&quot;notify_on_staff_accept_solved\&quot;:null,\&quot;empty_box_on_unsolved\&quot;:null,\&quot;enable_topic_voting\&quot;:null},\&quot;allowed_tags\&quot;:[],\&quot;allowed_tag_groups\&quot;:[],\&quot;allow_global_tags\&quot;:false,\&quot;read_only_banner\&quot;:null,\&quot;form_template_ids\&quot;:[],\&quot;uploaded_logo\&quot;:null,\&quot;uploaded_logo_dark\&quot;:null,\&quot;uploaded_background\&quot;:null,\&quot;uploaded_background_dark\&quot;:null,\&quot;required_tag_groups\&quot;:[],\&quot;can_edit\&quot;:false},{\&quot;id\&quot;:6,\&quot;name\&quot;:\&quot;DICOM\&quot;,\&quot;color\&quot;:\&quot;F1592A\&quot;,\&quot;text_color\&quot;:\&quot;FFFFFF\&quot;,\&quot;style_type\&quot;:\&quot;square\&quot;,\&quot;icon\&quot;:null,\&quot;emoji\&quot;:null,\&quot;slug\&quot;:\&quot;dicom\&quot;,\&quot;topic_count\&quot;:8,\&quot;post_count\&quot;:19,\&quot;position\&quot;:5,\&quot;description\&quot;:\&quot;General DICOM discussions under this topic.\&quot;,\&quot;description_text\&quot;:\&quot;General DICOM discussions under this topic.\&quot;,\&quot;description_excerpt\&quot;:\&quot;General DICOM discussions under this topic.\&quot;,\&quot;topic_url\&quot;:\&quot;/t/about-the-dicom-category/12\&quot;,\&quot;read_restricted\&quot;:false,\&quot;permission\&quot;:null,\&quot;notification_level\&quot;:1,\&quot;topic_template\&quot;:null,\&quot;topic_title_placeholder\&quot;:null,\&quot;has_children\&quot;:false,\&quot;subcategory_count\&quot;:null,\&quot;sort_order\&quot;:null,\&quot;sort_ascending\&quot;:null,\&quot;show_subcategory_list\&quot;:false,\&quot;num_featured_topics\&quot;:3,\&quot;default_view\&quot;:null,\&quot;subcategory_list_style\&quot;:\&quot;rows_with_featured_topics\&quot;,\&quot;default_top_period\&quot;:\&quot;all\&quot;,\&quot;default_list_filter\&quot;:\&quot;all\&quot;,\&quot;minimum_required_tags\&quot;:0,\&quot;navigate_to_first_post_after_read\&quot;:false,\&quot;custom_fields\&quot;:{\&quot;has_chat_enabled\&quot;:null,\&quot;enable_unassigned_filter\&quot;:null,\&quot;sort_topics_by_event_start_date\&quot;:null,\&quot;disable_topic_resorting\&quot;:null,\&quot;create_as_post_voting_default\&quot;:null,\&quot;only_post_voting_in_this_category\&quot;:null,\&quot;enable_accepted_answers\&quot;:null,\&quot;notify_on_staff_accept_solved\&quot;:null,\&quot;empty_box_on_unsolved\&quot;:null,\&quot;enable_topic_voting\&quot;:null},\&quot;allowed_tags\&quot;:[],\&quot;allowed_tag_groups\&quot;:[],\&quot;allow_global_tags\&quot;:false,\&quot;read_only_banner\&quot;:null,\&quot;form_template_ids\&quot;:[],\&quot;uploaded_logo\&quot;:null,\&quot;uploaded_logo_dark\&quot;:null,\&quot;uploaded_background\&quot;:null,\&quot;uploaded_background_dark\&quot;:null,\&quot;required_tag_groups\&quot;:[],\&quot;can_edit\&quot;:false},{\&quot;id\&quot;:8,\&quot;name\&quot;:\&quot;AI Aplications\&quot;,\&quot;color\&quot;:\&quot;3AB54A\&quot;,\&quot;text_color\&quot;:\&quot;FFFFFF\&quot;,\&quot;style_type\&quot;:\&quot;square\&quot;,\&quot;icon\&quot;:null,\&quot;emoji\&quot;:null,\&quot;slug\&quot;:\&quot;ai\&quot;,\&quot;topic_count\&quot;:3,\&quot;post_count\&quot;:6,\&quot;position\&quot;:7,\&quot;description\&quot;:null,\&quot;description_text\&quot;:null,\&quot;description_excerpt\&quot;:null,\&quot;topic_url\&quot;:\&quot;/t/about-the-ai-aplications-category/22\&quot;,\&quot;read_restricted\&quot;:false,\&quot;permission\&quot;:null,\&quot;notification_level\&quot;:1,\&quot;topic_template\&quot;:null,\&quot;topic_title_placeholder\&quot;:null,\&quot;has_children\&quot;:false,\&quot;subcategory_count\&quot;:null,\&quot;sort_order\&quot;:null,\&quot;sort_ascending\&quot;:null,\&quot;show_subcategory_list\&quot;:false,\&quot;num_featured_topics\&quot;:3,\&quot;default_view\&quot;:null,\&quot;subcategory_list_style\&quot;:\&quot;rows_with_featured_topics\&quot;,\&quot;default_top_period\&quot;:\&quot;all\&quot;,\&quot;default_list_filter\&quot;:\&quot;all\&quot;,\&quot;minimum_required_tags\&quot;:0,\&quot;navigate_to_first_post_after_read\&quot;:false,\&quot;custom_fields\&quot;:{\&quot;has_chat_enabled\&quot;:null,\&quot;enable_unassigned_filter\&quot;:null,\&quot;sort_topics_by_event_start_date\&quot;:null,\&quot;disable_topic_resorting\&quot;:null,\&quot;create_as_post_voting_default\&quot;:null,\&quot;only_post_voting_in_this_category\&quot;:null,\&quot;enable_accepted_answers\&quot;:null,\&quot;notify_on_staff_accept_solved\&quot;:null,\&quot;empty_box_on_unsolved\&quot;:null,\&quot;enable_topic_voting\&quot;:null},\&quot;allowed_tags\&quot;:[],\&quot;allowed_tag_groups\&quot;:[],\&quot;allow_global_tags\&quot;:false,\&quot;read_only_banner\&quot;:null,\&quot;form_template_ids\&quot;:[],\&quot;uploaded_logo\&quot;:null,\&quot;uploaded_logo_dark\&quot;:null,\&quot;uploaded_background\&quot;:null,\&quot;uploaded_background_dark\&quot;:null,\&quot;required_tag_groups\&quot;:[],\&quot;can_edit\&quot;:false},{\&quot;id\&quot;:9,\&quot;name\&quot;:\&quot;OHIF\&quot;,\&quot;color\&quot;:\&quot;9EB83B\&quot;,\&quot;text_color\&quot;:\&quot;000000\&quot;,\&quot;style_type\&quot;:\&quot;square\&quot;,\&quot;icon\&quot;:null,\&quot;emoji\&quot;:null,\&quot;slug\&quot;:\&quot;ohif\&quot;,\&quot;topic_count\&quot;:7,\&quot;post_count\&quot;:14,\&quot;position\&quot;:8,\&quot;description\&quot;:null,\&quot;description_text\&quot;:null,\&quot;description_excerpt\&quot;:null,\&quot;topic_url\&quot;:\&quot;/t/about-the-ohif-category/24\&quot;,\&quot;read_restricted\&quot;:false,\&quot;permission\&quot;:null,\&quot;notification_level\&quot;:1,\&quot;topic_template\&quot;:null,\&quot;topic_title_placeholder\&quot;:null,\&quot;has_children\&quot;:false,\&quot;subcategory_count\&quot;:null,\&quot;sort_order\&quot;:null,\&quot;sort_ascending\&quot;:null,\&quot;show_subcategory_list\&quot;:false,\&quot;num_featured_topics\&quot;:3,\&quot;default_view\&quot;:null,\&quot;subcategory_list_style\&quot;:\&quot;rows_with_featured_topics\&quot;,\&quot;default_top_period\&quot;:\&quot;all\&quot;,\&quot;default_list_filter\&quot;:\&quot;all\&quot;,\&quot;minimum_required_tags\&quot;:0,\&quot;navigate_to_first_post_after_read\&quot;:false,\&quot;custom_fields\&quot;:{\&quot;has_chat_enabled\&quot;:null,\&quot;enable_unassigned_filter\&quot;:null,\&quot;sort_topics_by_event_start_date\&quot;:null,\&quot;disable_topic_resorting\&quot;:null,\&quot;create_as_post_voting_default\&quot;:null,\&quot;only_post_voting_in_this_category\&quot;:null,\&quot;enable_accepted_answers\&quot;:null,\&quot;notify_on_staff_accept_solved\&quot;:null,\&quot;empty_box_on_unsolved\&quot;:null,\&quot;enable_topic_voting\&quot;:null},\&quot;allowed_tags\&quot;:[],\&quot;allowed_tag_groups\&quot;:[],\&quot;allow_global_tags\&quot;:false,\&quot;read_only_banner\&quot;:null,\&quot;form_template_ids\&quot;:[],\&quot;uploaded_logo\&quot;:null,\&quot;uploaded_logo_dark\&quot;:null,\&quot;uploaded_background\&quot;:null,\&quot;uploaded_background_dark\&quot;:null,\&quot;required_tag_groups\&quot;:[],\&quot;can_edit\&quot;:false},{\&quot;id\&quot;:10,\&quot;name\&quot;:\&quot;Docker\&quot;,\&quot;color\&quot;:\&quot;8C6238\&quot;,\&quot;text_color\&quot;:\&quot;FFFFFF\&quot;,\&quot;style_type\&quot;:\&quot;square\&quot;,\&quot;icon\&quot;:null,\&quot;emoji\&quot;:null,\&quot;slug\&quot;:\&quot;docker\&quot;,\&quot;topic_count\&quot;:3,\&quot;post_count\&quot;:3,\&quot;position\&quot;:9,\&quot;description\&quot;:null,\&quot;description_text\&quot;:null,\&quot;description_excerpt\&quot;:null,\&quot;topic_url\&quot;:\&quot;/t/about-the-docker-category/26\&quot;,\&quot;read_restricted\&quot;:false,\&quot;permission\&quot;:null,\&quot;notification_level\&quot;:1,\&quot;topic_template\&quot;:null,\&quot;topic_title_placeholder\&quot;:null,\&quot;has_children\&quot;:false,\&quot;subcategory_count\&quot;:null,\&quot;sort_order\&quot;:null,\&quot;sort_ascending\&quot;:null,\&quot;show_subcategory_list\&quot;:false,\&quot;num_featured_topics\&quot;:3,\&quot;default_view\&quot;:null,\&quot;subcategory_list_style\&quot;:\&quot;rows_with_featured_topics\&quot;,\&quot;default_top_period\&quot;:\&quot;all\&quot;,\&quot;default_list_filter\&quot;:\&quot;all\&quot;,\&quot;minimum_required_tags\&quot;:0,\&quot;navigate_to_first_post_after_read\&quot;:false,\&quot;custom_fields\&quot;:{\&quot;has_chat_enabled\&quot;:null,\&quot;enable_unassigned_filter\&quot;:null,\&quot;sort_topics_by_event_start_date\&quot;:null,\&quot;disable_topic_resorting\&quot;:null,\&quot;create_as_post_voting_default\&quot;:null,\&quot;only_post_voting_in_this_category\&quot;:null,\&quot;enable_accepted_answers\&quot;:null,\&quot;notify_on_staff_accept_solved\&quot;:null,\&quot;empty_box_on_unsolved\&quot;:null,\&quot;enable_topic_voting\&quot;:null},\&quot;allowed_tags\&quot;:[],\&quot;allowed_tag_groups\&quot;:[],\&quot;allow_global_tags\&quot;:false,\&quot;read_only_banner\&quot;:null,\&quot;form_template_ids\&quot;:[],\&quot;uploaded_logo\&quot;:null,\&quot;uploaded_logo_dark\&quot;:null,\&quot;uploaded_background\&quot;:null,\&quot;uploaded_background_dark\&quot;:null,\&quot;required_tag_groups\&quot;:[],\&quot;can_edit\&quot;:false},{\&quot;id\&quot;:11,\&quot;name\&quot;:\&quot;ORTHANC\&quot;,\&quot;color\&quot;:\&quot;ED207B\&quot;,\&quot;text_color\&quot;:\&quot;000000\&quot;,\&quot;style_type\&quot;:\&quot;square\&quot;,\&quot;icon\&quot;:null,\&quot;emoji\&quot;:null,\&quot;slug\&quot;:\&quot;orthanc\&quot;,\&quot;topic_count\&quot;:3,\&quot;post_count\&quot;:10,\&quot;position\&quot;:10,\&quot;description\&quot;:null,\&quot;description_text\&quot;:null,\&quot;description_excerpt\&quot;:null,\&quot;topic_url\&quot;:\&quot;/t/about-the-orthanc-category/28\&quot;,\&quot;read_restricted\&quot;:false,\&quot;permission\&quot;:null,\&quot;notification_level\&quot;:1,\&quot;topic_template\&quot;:null,\&quot;topic_title_placeholder\&quot;:null,\&quot;has_children\&quot;:false,\&quot;subcategory_count\&quot;:null,\&quot;sort_order\&quot;:null,\&quot;sort_ascending\&quot;:null,\&quot;show_subcategory_list\&quot;:false,\&quot;num_featured_topics\&quot;:3,\&quot;default_view\&quot;:null,\&quot;subcategory_list_style\&quot;:\&quot;rows_with_featured_topics\&quot;,\&quot;default_top_period\&quot;:\&quot;all\&quot;,\&quot;default_list_filter\&quot;:\&quot;all\&quot;,\&quot;minimum_required_tags\&quot;:0,\&quot;navigate_to_first_post_after_read\&quot;:false,\&quot;custom_fields\&quot;:{\&quot;has_chat_enabled\&quot;:null,\&quot;enable_unassigned_filter\&quot;:null,\&quot;sort_topics_by_event_start_date\&quot;:null,\&quot;disable_topic_resorting\&quot;:null,\&quot;create_as_post_voting_default\&quot;:null,\&quot;only_post_voting_in_this_category\&quot;:null,\&quot;enable_accepted_answers\&quot;:null,\&quot;notify_on_staff_accept_solved\&quot;:null,\&quot;empty_box_on_unsolved\&quot;:null,\&quot;enable_topic_voting\&quot;:null},\&quot;allowed_tags\&quot;:[],\&quot;allowed_tag_groups\&quot;:[],\&quot;allow_global_tags\&quot;:false,\&quot;read_only_banner\&quot;:null,\&quot;form_template_ids\&quot;:[],\&quot;uploaded_logo\&quot;:null,\&quot;uploaded_logo_dark\&quot;:null,\&quot;uploaded_background\&quot;:null,\&quot;uploaded_background_dark\&quot;:null,\&quot;required_tag_groups\&quot;:[],\&quot;can_edit\&quot;:false},{\&quot;id\&quot;:12,\&quot;name\&quot;:\&quot;Mirth Connect\&quot;,\&quot;color\&quot;:\&quot;F7941D\&quot;,\&quot;text_color\&quot;:\&quot;000000\&quot;,\&quot;style_type\&quot;:\&quot;square\&quot;,\&quot;icon\&quot;:null,\&quot;emoji\&quot;:null,\&quot;slug\&quot;:\&quot;mirth\&quot;,\&quot;topic_count\&quot;:7,\&quot;post_count\&quot;:21,\&quot;position\&quot;:11,\&quot;description\&quot;:null,\&quot;description_text\&quot;:null,\&quot;description_excerpt\&quot;:null,\&quot;topic_url\&quot;:\&quot;/t/about-the-mirth-connect-category/35\&quot;,\&quot;read_restricted\&quot;:false,\&quot;permission\&quot;:null,\&quot;notification_level\&quot;:1,\&quot;topic_template\&quot;:null,\&quot;topic_title_placeholder\&quot;:null,\&quot;has_children\&quot;:false,\&quot;subcategory_count\&quot;:null,\&quot;sort_order\&quot;:null,\&quot;sort_ascending\&quot;:null,\&quot;show_subcategory_list\&quot;:false,\&quot;num_featured_topics\&quot;:3,\&quot;default_view\&quot;:null,\&quot;subcategory_list_style\&quot;:\&quot;rows_with_featured_topics\&quot;,\&quot;default_top_period\&quot;:\&quot;all\&quot;,\&quot;default_list_filter\&quot;:\&quot;all\&quot;,\&quot;minimum_required_tags\&quot;:0,\&quot;navigate_to_first_post_after_read\&quot;:false,\&quot;custom_fields\&quot;:{\&quot;has_chat_enabled\&quot;:null,\&quot;enable_unassigned_filter\&quot;:null,\&quot;sort_topics_by_event_start_date\&quot;:null,\&quot;disable_topic_resorting\&quot;:null,\&quot;create_as_post_voting_default\&quot;:null,\&quot;only_post_voting_in_this_category\&quot;:null,\&quot;enable_accepted_answers\&quot;:null,\&quot;notify_on_staff_accept_solved\&quot;:null,\&quot;empty_box_on_unsolved\&quot;:null,\&quot;enable_topic_voting\&quot;:null},\&quot;allowed_tags\&quot;:[],\&quot;allowed_tag_groups\&quot;:[],\&quot;allow_global_tags\&quot;:false,\&quot;read_only_banner\&quot;:null,\&quot;form_template_ids\&quot;:[],\&quot;uploaded_logo\&quot;:null,\&quot;uploaded_logo_dark\&quot;:null,\&quot;uploaded_background\&quot;:null,\&quot;uploaded_background_dark\&quot;:null,\&quot;required_tag_groups\&quot;:[],\&quot;can_edit\&quot;:false},{\&quot;id\&quot;:13,\&quot;name\&quot;:\&quot;Applications\&quot;,\&quot;color\&quot;:\&quot;B3B5B4\&quot;,\&quot;text_color\&quot;:\&quot;000000\&quot;,\&quot;style_type\&quot;:\&quot;square\&quot;,\&quot;icon\&quot;:null,\&quot;emoji\&quot;:null,\&quot;slug\&quot;:\&quot;apps\&quot;,\&quot;topic_count\&quot;:6,\&quot;post_count\&quot;:7,\&quot;position\&quot;:12,\&quot;description\&quot;:null,\&quot;description_text\&quot;:null,\&quot;description_excerpt\&quot;:null,\&quot;topic_url\&quot;:\&quot;/t/about-the-applications-category/49\&quot;,\&quot;read_restricted\&quot;:false,\&quot;permission\&quot;:null,\&quot;notification_level\&quot;:1,\&quot;topic_template\&quot;:null,\&quot;topic_title_placeholder\&quot;:null,\&quot;has_children\&quot;:false,\&quot;subcategory_count\&quot;:null,\&quot;sort_order\&quot;:null,\&quot;sort_ascending\&quot;:null,\&quot;show_subcategory_list\&quot;:false,\&quot;num_featured_topics\&quot;:3,\&quot;default_view\&quot;:null,\&quot;subcategory_list_style\&quot;:\&quot;rows_with_featured_topics\&quot;,\&quot;default_top_period\&quot;:\&quot;all\&quot;,\&quot;default_list_filter\&quot;:\&quot;all\&quot;,\&quot;minimum_required_tags\&quot;:0,\&quot;navigate_to_first_post_after_read\&quot;:false,\&quot;custom_fields\&quot;:{\&quot;has_chat_enabled\&quot;:null,\&quot;enable_unassigned_filter\&quot;:null,\&quot;sort_topics_by_event_start_date\&quot;:null,\&quot;disable_topic_resorting\&quot;:null,\&quot;create_as_post_voting_default\&quot;:null,\&quot;only_post_voting_in_this_category\&quot;:null,\&quot;enable_accepted_answers\&quot;:null,\&quot;notify_on_staff_accept_solved\&quot;:null,\&quot;empty_box_on_unsolved\&quot;:null,\&quot;enable_topic_voting\&quot;:null},\&quot;allowed_tags\&quot;:[],\&quot;allowed_tag_groups\&quot;:[],\&quot;allow_global_tags\&quot;:false,\&quot;read_only_banner\&quot;:null,\&quot;form_template_ids\&quot;:[],\&quot;uploaded_logo\&quot;:null,\&quot;uploaded_logo_dark\&quot;:null,\&quot;uploaded_background\&quot;:null,\&quot;uploaded_background_dark\&quot;:null,\&quot;required_tag_groups\&quot;:[],\&quot;can_edit\&quot;:false},{\&quot;id\&quot;:14,\&quot;name\&quot;:\&quot;AI Learning\&quot;,\&quot;color\&quot;:\&quot;0088CC\&quot;,\&quot;text_color\&quot;:\&quot;FFFFFF\&quot;,\&quot;style_type\&quot;:\&quot;square\&quot;,\&quot;icon\&quot;:null,\&quot;emoji\&quot;:null,\&quot;slug\&quot;:\&quot;ai-learn\&quot;,\&quot;topic_count\&quot;:1,\&quot;post_count\&quot;:1,\&quot;position\&quot;:13,\&quot;description\&quot;:null,\&quot;description_text\&quot;:null,\&quot;description_excerpt\&quot;:null,\&quot;topic_url\&quot;:\&quot;/t/about-the-ai-learning-category/105\&quot;,\&quot;read_restricted\&quot;:false,\&quot;permission\&quot;:null,\&quot;notification_level\&quot;:1,\&quot;topic_template\&quot;:null,\&quot;topic_title_placeholder\&quot;:null,\&quot;has_children\&quot;:false,\&quot;subcategory_count\&quot;:null,\&quot;sort_order\&quot;:null,\&quot;sort_ascending\&quot;:null,\&quot;show_subcategory_list\&quot;:false,\&quot;num_featured_topics\&quot;:3,\&quot;default_view\&quot;:null,\&quot;subcategory_list_style\&quot;:\&quot;rows_with_featured_topics\&quot;,\&quot;default_top_period\&quot;:\&quot;all\&quot;,\&quot;default_list_filter\&quot;:\&quot;all\&quot;,\&quot;minimum_required_tags\&quot;:0,\&quot;navigate_to_first_post_after_read\&quot;:false,\&quot;custom_fields\&quot;:{\&quot;has_chat_enabled\&quot;:null,\&quot;enable_unassigned_filter\&quot;:null,\&quot;sort_topics_by_event_start_date\&quot;:null,\&quot;disable_topic_resorting\&quot;:null,\&quot;create_as_post_voting_default\&quot;:null,\&quot;only_post_voting_in_this_category\&quot;:null,\&quot;enable_accepted_answers\&quot;:null,\&quot;notify_on_staff_accept_solved\&quot;:null,\&quot;empty_box_on_unsolved\&quot;:null,\&quot;enable_topic_voting\&quot;:null},\&quot;allowed_tags\&quot;:[],\&quot;allowed_tag_groups\&quot;:[],\&quot;allow_global_tags\&quot;:false,\&quot;read_only_banner\&quot;:null,\&quot;form_template_ids\&quot;:[],\&quot;uploaded_logo\&quot;:null,\&quot;uploaded_logo_dark\&quot;:null,\&quot;uploaded_background\&quot;:null,\&quot;uploaded_background_dark\&quot;:null,\&quot;required_tag_groups\&quot;:[],\&quot;can_edit\&quot;:false}],\&quot;markdown_additional_options\&quot;:{\&quot;chat\&quot;:{\&quot;limited_pretty_text_features\&quot;:[\&quot;anchor\&quot;,\&quot;bbcode-block\&quot;,\&quot;bbcode-inline\&quot;,\&quot;code\&quot;,\&quot;category-hashtag\&quot;,\&quot;censored\&quot;,\&quot;chat-transcript\&quot;,\&quot;discourse-local-dates\&quot;,\&quot;emoji\&quot;,\&quot;inlineEmoji\&quot;,\&quot;html-img\&quot;,\&quot;hashtag-autocomplete\&quot;,\&quot;mentions\&quot;,\&quot;unicodeUsernames\&quot;,\&quot;onebox\&quot;,\&quot;quotes\&quot;,\&quot;spoiler-alert\&quot;,\&quot;table\&quot;,\&quot;text-post-process\&quot;,\&quot;upload-protocol\&quot;,\&quot;watched-words\&quot;,\&quot;chat-html-inline\&quot;],\&quot;limited_pretty_text_markdown_rules\&quot;:[\&quot;autolink\&quot;,\&quot;list\&quot;,\&quot;backticks\&quot;,\&quot;newline\&quot;,\&quot;code\&quot;,\&quot;fence\&quot;,\&quot;image\&quot;,\&quot;table\&quot;,\&quot;linkify\&quot;,\&quot;link\&quot;,\&quot;strikethrough\&quot;,\&quot;blockquote\&quot;,\&quot;emphasis\&quot;,\&quot;replacements\&quot;,\&quot;escape\&quot;,\&quot;entity\&quot;],\&quot;hashtag_configurations\&quot;:{\&quot;topic-composer\&quot;:[\&quot;category\&quot;,\&quot;tag\&quot;,\&quot;channel\&quot;],\&quot;chat-composer\&quot;:[\&quot;channel\&quot;,\&quot;category\&quot;,\&quot;tag\&quot;]}}},\&quot;hashtag_configurations\&quot;:{\&quot;topic-composer\&quot;:[\&quot;category\&quot;,\&quot;tag\&quot;,\&quot;channel\&quot;],\&quot;chat-composer\&quot;:[\&quot;channel\&quot;,\&quot;category\&quot;,\&quot;tag\&quot;]},\&quot;hashtag_icons\&quot;:{\&quot;category\&quot;:\&quot;folder\&quot;,\&quot;tag\&quot;:\&quot;tag\&quot;,\&quot;channel\&quot;:\&quot;comment\&quot;},\&quot;anonymous_sidebar_sections\&quot;:[{\&quot;id\&quot;:1,\&quot;title\&quot;:\&quot;Community\&quot;,\&quot;links\&quot;:[{\&quot;id\&quot;:1,\&quot;name\&quot;:\&quot;Topics\&quot;,\&quot;value\&quot;:\&quot;/latest\&quot;,\&quot;icon\&quot;:\&quot;layer-group\&quot;,\&quot;external\&quot;:false,\&quot;segment\&quot;:\&quot;primary\&quot;},{\&quot;id\&quot;:2,\&quot;name\&quot;:\&quot;My posts\&quot;,\&quot;value\&quot;:\&quot;/my/activity\&quot;,\&quot;icon\&quot;:\&quot;user\&quot;,\&quot;external\&quot;:false,\&quot;segment\&quot;:\&quot;primary\&quot;},{\&quot;id\&quot;:11,\&quot;name\&quot;:\&quot;My messages\&quot;,\&quot;value\&quot;:\&quot;/my/messages\&quot;,\&quot;icon\&quot;:\&quot;inbox\&quot;,\&quot;external\&quot;:false,\&quot;segment\&quot;:\&quot;primary\&quot;},{\&quot;id\&quot;:3,\&quot;name\&quot;:\&quot;Review\&quot;,\&quot;value\&quot;:\&quot;/review\&quot;,\&quot;icon\&quot;:\&quot;flag\&quot;,\&quot;external\&quot;:false,\&quot;segment\&quot;:\&quot;primary\&quot;},{\&quot;id\&quot;:4,\&quot;name\&quot;:\&quot;Admin\&quot;,\&quot;value\&quot;:\&quot;/admin\&quot;,\&quot;icon\&quot;:\&quot;wrench\&quot;,\&quot;external\&quot;:false,\&quot;segment\&quot;:\&quot;primary\&quot;},{\&quot;id\&quot;:10,\&quot;name\&quot;:\&quot;Invite\&quot;,\&quot;value\&quot;:\&quot;/new-invite\&quot;,\&quot;icon\&quot;:\&quot;paper-plane\&quot;,\&quot;external\&quot;:false,\&quot;segment\&quot;:\&quot;primary\&quot;},{\&quot;id\&quot;:5,\&quot;name\&quot;:\&quot;Users\&quot;,\&quot;value\&quot;:\&quot;/u\&quot;,\&quot;icon\&quot;:\&quot;users\&quot;,\&quot;external\&quot;:false,\&quot;segment\&quot;:\&quot;secondary\&quot;},{\&quot;id\&quot;:6,\&quot;name\&quot;:\&quot;About\&quot;,\&quot;value\&quot;:\&quot;/about\&quot;,\&quot;icon\&quot;:\&quot;circle-info\&quot;,\&quot;external\&quot;:false,\&quot;segment\&quot;:\&quot;secondary\&quot;},{\&quot;id\&quot;:7,\&quot;name\&quot;:\&quot;FAQ\&quot;,\&quot;value\&quot;:\&quot;/faq\&quot;,\&quot;icon\&quot;:\&quot;circle-question\&quot;,\&quot;external\&quot;:false,\&quot;segment\&quot;:\&quot;secondary\&quot;},{\&quot;id\&quot;:8,\&quot;name\&quot;:\&quot;Groups\&quot;,\&quot;value\&quot;:\&quot;/g\&quot;,\&quot;icon\&quot;:\&quot;user-group\&quot;,\&quot;external\&quot;:false,\&quot;segment\&quot;:\&quot;secondary\&quot;},{\&quot;id\&quot;:9,\&quot;name\&quot;:\&quot;Badges\&quot;,\&quot;value\&quot;:\&quot;/badges\&quot;,\&quot;icon\&quot;:\&quot;certificate\&quot;,\&quot;external\&quot;:false,\&quot;segment\&quot;:\&quot;secondary\&quot;},{\&quot;id\&quot;:12,\&quot;name\&quot;:\&quot;Filter\&quot;,\&quot;value\&quot;:\&quot;/filter\&quot;,\&quot;icon\&quot;:\&quot;filter\&quot;,\&quot;external\&quot;:false,\&quot;segment\&quot;:\&quot;secondary\&quot;}],\&quot;slug\&quot;:\&quot;community\&quot;,\&quot;public\&quot;:true,\&quot;section_type\&quot;:\&quot;community\&quot;}],\&quot;full_name_required_for_signup\&quot;:false,\&quot;full_name_visible_in_signup\&quot;:false,\&quot;email_configured\&quot;:true,\&quot;show_campaign_banner\&quot;:true,\&quot;archetypes\&quot;:[{\&quot;id\&quot;:\&quot;regular\&quot;,\&quot;name\&quot;:\&quot;Regular Topic\&quot;,\&quot;options\&quot;:[]},{\&quot;id\&quot;:\&quot;banner\&quot;,\&quot;name\&quot;:\&quot;Banner Topic\&quot;,\&quot;options\&quot;:[]}],\&quot;user_fields\&quot;:[],\&quot;auth_providers\&quot;:[{\&quot;can_connect\&quot;:true,\&quot;can_revoke\&quot;:true,\&quot;custom_url\&quot;:null,\&quot;frame_height\&quot;:500,\&quot;frame_width\&quot;:850,\&quot;icon_override\&quot;:null,\&quot;name\&quot;:\&quot;google_oauth2\&quot;,\&quot;pretty_name_override\&quot;:null,\&quot;provider_url\&quot;:\&quot;https://accounts.google.com\&quot;,\&quot;title_override\&quot;:null}]}&quot;,&quot;siteSettings&quot;:&quot;{\&quot;default_locale\&quot;:\&quot;en\&quot;,\&quot;title\&quot;:\&quot;Open Integrator Community\&quot;,\&quot;short_site_description\&quot;:\&quot;\&quot;,\&quot;contact_email\&quot;:\&quot;\&quot;,\&quot;exclude_rel_nofollow_domains\&quot;:\&quot;\&quot;,\&quot;logo\&quot;:\&quot;/uploads/default/original/1X/891d7c15619cd5b36a14ee1cd8efe56ba505b4c9.png\&quot;,\&quot;logo_small\&quot;:\&quot;/uploads/default/original/1X/93e0fd56c4f935cdcfd22d80ad5ad99d91821735.png\&quot;,\&quot;digest_logo\&quot;:\&quot;\&quot;,\&quot;mobile_logo\&quot;:\&quot;\&quot;,\&quot;logo_dark\&quot;:\&quot;\&quot;,\&quot;logo_small_dark\&quot;:\&quot;\&quot;,\&quot;mobile_logo_dark\&quot;:\&quot;\&quot;,\&quot;large_icon\&quot;:\&quot;/uploads/default/original/1X/93e0fd56c4f935cdcfd22d80ad5ad99d91821735.png\&quot;,\&quot;manifest_icon\&quot;:\&quot;\&quot;,\&quot;manifest_screenshots\&quot;:\&quot;\&quot;,\&quot;favicon\&quot;:\&quot;/uploads/default/original/1X/93e0fd56c4f935cdcfd22d80ad5ad99d91821735.png\&quot;,\&quot;apple_touch_icon\&quot;:\&quot;\&quot;,\&quot;opengraph_image\&quot;:\&quot;\&quot;,\&quot;x_summary_large_image\&quot;:\&quot;\&quot;,\&quot;display_local_time_in_user_card\&quot;:false,\&quot;allow_user_locale\&quot;:true,\&quot;set_locale_from_accept_language_header\&quot;:false,\&quot;set_locale_from_cookie\&quot;:false,\&quot;set_locale_from_param\&quot;:false,\&quot;support_mixed_text_direction\&quot;:false,\&quot;suggested_topics\&quot;:5,\&quot;ga_universal_tracking_code\&quot;:\&quot;\&quot;,\&quot;ga_universal_domain_name\&quot;:\&quot;auto\&quot;,\&quot;gtm_container_id\&quot;:\&quot;\&quot;,\&quot;top_menu\&quot;:\&quot;latest|new|unread|hot|categories\&quot;,\&quot;post_menu\&quot;:\&quot;read|like|copyLink|flag|edit|bookmark|delete|admin|reply\&quot;,\&quot;post_menu_hidden_items\&quot;:\&quot;flag|bookmark|edit|delete|admin\&quot;,\&quot;share_links\&quot;:\&quot;twitter|facebook|email\&quot;,\&quot;allow_username_in_share_links\&quot;:true,\&quot;share_quote_visibility\&quot;:\&quot;all\&quot;,\&quot;share_quote_buttons\&quot;:\&quot;twitter|email\&quot;,\&quot;desktop_category_page_style\&quot;:\&quot;categories_and_latest_topics\&quot;,\&quot;mobile_category_page_style\&quot;:\&quot;categories_with_featured_topics\&quot;,\&quot;category_colors\&quot;:\&quot;BF1E2E|F1592A|F7941D|9EB83B|3AB54A|12A89D|25AAE2|0E76BD|652D90|92278F|ED207B|8C6238|231F20|808281|B3B5B4|E45735\&quot;,\&quot;max_category_nesting\&quot;:2,\&quot;enable_mobile_theme\&quot;:true,\&quot;enable_direct_s3_uploads\&quot;:false,\&quot;enable_upload_debug_mode\&quot;:false,\&quot;relative_date_duration\&quot;:30,\&quot;top_page_default_timeframe\&quot;:\&quot;yearly\&quot;,\&quot;fixed_category_positions\&quot;:false,\&quot;fixed_category_positions_on_create\&quot;:false,\&quot;enable_badges\&quot;:true,\&quot;show_badges_in_post_header\&quot;:true,\&quot;enable_badge_sql\&quot;:false,\&quot;max_favorite_badges\&quot;:2,\&quot;push_notifications_prompt\&quot;:true,\&quot;enable_desktop_push_notifications\&quot;:true,\&quot;vapid_public_key_bytes\&quot;:\&quot;4|15|225|203|228|148|150|225|148|216|108|17|100|161|160|1|74|141|14|226|127|235|14|197|64|216|130|194|180|65|175|127|248|47|121|164|76|126|148|148|129|99|134|196|162|102|197|140|116|72|151|243|137|200|60|220|236|30|159|57|18|62|18|63|183\&quot;,\&quot;base_font\&quot;:\&quot;inter\&quot;,\&quot;heading_font\&quot;:\&quot;inter\&quot;,\&quot;enable_user_tips\&quot;:false,\&quot;page_loading_indicator\&quot;:\&quot;slider\&quot;,\&quot;show_user_menu_avatars\&quot;:false,\&quot;about_page_extra_groups\&quot;:\&quot;\&quot;,\&quot;about_page_extra_groups_initial_members\&quot;:6,\&quot;about_page_extra_groups_order\&quot;:\&quot;alphabetically\&quot;,\&quot;about_page_extra_groups_show_description\&quot;:false,\&quot;use_legacy_pageviews\&quot;:false,\&quot;use_beacon_for_browser_page_views\&quot;:false,\&quot;interface_color_selector\&quot;:\&quot;disabled\&quot;,\&quot;login_required\&quot;:false,\&quot;must_approve_users\&quot;:false,\&quot;invite_only\&quot;:false,\&quot;enable_local_logins\&quot;:true,\&quot;enable_local_logins_via_email\&quot;:true,\&quot;enable_passkeys\&quot;:true,\&quot;allow_passkeys_for_2fa\&quot;:false,\&quot;allow_new_registrations\&quot;:true,\&quot;enable_signup_cta\&quot;:true,\&quot;facebook_app_id\&quot;:\&quot;\&quot;,\&quot;auth_skip_create_confirm\&quot;:false,\&quot;auth_immediately\&quot;:true,\&quot;auth_overrides_email\&quot;:false,\&quot;enable_discourse_connect\&quot;:false,\&quot;discourse_connect_overrides_avatar\&quot;:false,\&quot;hide_email_address_taken\&quot;:true,\&quot;show_signup_form_email_instructions\&quot;:true,\&quot;show_signup_form_username_instructions\&quot;:false,\&quot;show_signup_form_full_name_instructions\&quot;:false,\&quot;show_signup_form_password_instructions\&quot;:false,\&quot;min_username_length\&quot;:3,\&quot;max_username_length\&quot;:20,\&quot;unicode_usernames\&quot;:false,\&quot;min_password_length\&quot;:10,\&quot;min_admin_password_length\&quot;:15,\&quot;email_editable\&quot;:true,\&quot;logout_redirect\&quot;:\&quot;\&quot;,\&quot;enable_names\&quot;:true,\&quot;invite_expiry_days\&quot;:90,\&quot;invites_per_page\&quot;:40,\&quot;delete_user_max_post_age\&quot;:60,\&quot;delete_all_posts_max\&quot;:15,\&quot;delete_all_posts_background_threshold\&quot;:200,\&quot;prioritize_username_in_ux\&quot;:true,\&quot;prioritize_full_name_in_ux\&quot;:false,\&quot;enable_user_directory\&quot;:true,\&quot;allow_anonymous_mode\&quot;:false,\&quot;allow_likes_in_anonymous_mode\&quot;:false,\&quot;allow_users_to_hide_profile\&quot;:true,\&quot;hide_user_profiles_from_public\&quot;:false,\&quot;allow_featured_topic_on_user_profiles\&quot;:true,\&quot;hide_suspension_reasons\&quot;:false,\&quot;hide_silencing_reasons\&quot;:false,\&quot;ignored_users_count_message_threshold\&quot;:5,\&quot;ignored_users_message_gap_days\&quot;:365,\&quot;user_selected_primary_groups\&quot;:false,\&quot;gravatar_enabled\&quot;:true,\&quot;gravatar_name\&quot;:\&quot;Gravatar\&quot;,\&quot;gravatar_base_url\&quot;:\&quot;www.gravatar.com\&quot;,\&quot;gravatar_login_url\&quot;:\&quot;/emails\&quot;,\&quot;hide_user_activity_tab\&quot;:false,\&quot;enable_user_status\&quot;:false,\&quot;enable_group_directory\&quot;:true,\&quot;enable_category_group_moderation\&quot;:false,\&quot;min_post_length\&quot;:20,\&quot;min_first_post_length\&quot;:20,\&quot;prevent_uploads_only_posts\&quot;:false,\&quot;min_personal_message_post_length\&quot;:10,\&quot;max_post_length\&quot;:32000,\&quot;topic_featured_link_enabled\&quot;:true,\&quot;min_topic_views_for_delete_confirm\&quot;:5000,\&quot;min_topic_title_length\&quot;:15,\&quot;max_topic_title_length\&quot;:255,\&quot;enable_filtered_replies_view\&quot;:false,\&quot;min_personal_message_title_length\&quot;:2,\&quot;default_emoji_reactions\&quot;:\&quot;+1|heart|tada\&quot;,\&quot;allow_uncategorized_topics\&quot;:false,\&quot;min_title_similar_length\&quot;:10,\&quot;edit_history_visible_to_public\&quot;:true,\&quot;delete_removed_posts_after\&quot;:24,\&quot;traditional_markdown_linebreaks\&quot;:false,\&quot;enable_markdown_typographer\&quot;:true,\&quot;enable_markdown_linkify\&quot;:true,\&quot;markdown_linkify_tlds\&quot;:\&quot;com|net|org|io|onion|co|tv|ru|cn|us|uk|me|de|fr|fi|gov\&quot;,\&quot;markdown_typographer_quotation_marks\&quot;:\&quot;“|”|‘|’\&quot;,\&quot;suppress_reply_directly_below\&quot;:true,\&quot;suppress_reply_directly_above\&quot;:true,\&quot;max_reply_history\&quot;:1,\&quot;enable_mentions\&quot;:true,\&quot;max_users_notified_per_group_mention\&quot;:100,\&quot;here_mention\&quot;:\&quot;here\&quot;,\&quot;newuser_max_embedded_media\&quot;:1,\&quot;newuser_max_attachments\&quot;:0,\&quot;default_subcategory_on_read_only_category\&quot;:false,\&quot;show_pinned_excerpt_mobile\&quot;:true,\&quot;show_pinned_excerpt_desktop\&quot;:true,\&quot;display_name_on_posts\&quot;:false,\&quot;show_time_gap_days\&quot;:7,\&quot;short_progress_text_threshold\&quot;:10000,\&quot;default_code_lang\&quot;:\&quot;auto\&quot;,\&quot;autohighlight_all_code\&quot;:false,\&quot;highlighted_languages\&quot;:\&quot;bash|c|cpp|csharp|css|diff|go|graphql|ini|java|javascript|json|kotlin|lua|makefile|markdown|objectivec|perl|php|php-template|plaintext|python|python-repl|r|ruby|rust|scss|shell|sql|swift|typescript|xml|yaml|wasm\&quot;,\&quot;show_copy_button_on_codeblocks\&quot;:true,\&quot;enable_emoji\&quot;:true,\&quot;enable_emoji_shortcuts\&quot;:true,\&quot;emoji_set\&quot;:\&quot;twitter\&quot;,\&quot;emoji_autocomplete_min_chars\&quot;:0,\&quot;enable_inline_emoji_translation\&quot;:false,\&quot;emoji_deny_list\&quot;:\&quot;\&quot;,\&quot;enable_gifs\&quot;:false,\&quot;code_formatting_style\&quot;:\&quot;code-fences\&quot;,\&quot;allowed_href_schemes\&quot;:\&quot;\&quot;,\&quot;watched_words_regular_expressions\&quot;:false,\&quot;enable_fast_edit\&quot;:true,\&quot;old_post_notice_days\&quot;:14,\&quot;blur_tl0_flagged_posts_media\&quot;:true,\&quot;show_preview_for_form_templates\&quot;:true,\&quot;rich_editor\&quot;:true,\&quot;content_localization_enabled\&quot;:false,\&quot;content_localization_allowed_groups\&quot;:\&quot;1|2\&quot;,\&quot;content_localization_allow_author_localization\&quot;:true,\&quot;content_localization_supported_locales\&quot;:\&quot;\&quot;,\&quot;content_localization_language_switcher\&quot;:\&quot;none\&quot;,\&quot;nested_replies_enabled\&quot;:false,\&quot;nested_replies_default\&quot;:false,\&quot;nested_replies_default_sort\&quot;:\&quot;top\&quot;,\&quot;nested_replies_max_depth\&quot;:10,\&quot;nested_replies_cap_nesting_depth\&quot;:false,\&quot;email_time_window_mins\&quot;:10,\&quot;disable_digest_emails\&quot;:false,\&quot;simple_email_subject\&quot;:false,\&quot;email_in\&quot;:false,\&quot;enable_smtp\&quot;:false,\&quot;disable_emails\&quot;:\&quot;no\&quot;,\&quot;bounce_score_threshold\&quot;:4,\&quot;enable_secondary_emails\&quot;:true,\&quot;allow_email_invites\&quot;:true,\&quot;max_image_size_kb\&quot;:10240,\&quot;max_attachment_size_kb\&quot;:10240,\&quot;authorized_extensions\&quot;:\&quot;jpg|jpeg|png|gif|heic|heif|webp|avif|svg|jxl\&quot;,\&quot;authorized_extensions_for_staff\&quot;:\&quot;zip\&quot;,\&quot;max_image_width\&quot;:690,\&quot;max_image_height\&quot;:500,\&quot;prevent_anons_from_downloading_files\&quot;:false,\&quot;secure_uploads\&quot;:false,\&quot;secure_uploads_pm_only\&quot;:false,\&quot;enable_s3_uploads\&quot;:false,\&quot;allow_profile_backgrounds\&quot;:true,\&quot;default_avatars\&quot;:\&quot;\&quot;,\&quot;avatar_sizes\&quot;:\&quot;24|48|72|96|144|288\&quot;,\&quot;external_system_avatars_enabled\&quot;:true,\&quot;external_system_avatars_url\&quot;:\&quot;/letter_avatar_proxy/v4/letter/{first_letter}/{color}/{size}.png\&quot;,\&quot;external_emoji_url\&quot;:\&quot;\&quot;,\&quot;selectable_avatars_mode\&quot;:\&quot;disabled\&quot;,\&quot;selectable_avatars\&quot;:[],\&quot;image_quality\&quot;:90,\&quot;allow_staff_to_upload_any_file_in_pm\&quot;:true,\&quot;simultaneous_uploads\&quot;:15,\&quot;composer_media_optimization_image_enabled\&quot;:true,\&quot;composer_media_optimization_image_bytes_optimization_threshold\&quot;:524288,\&quot;composer_media_optimization_image_resize_dimensions_threshold\&quot;:1920,\&quot;composer_media_optimization_image_resize_width_target\&quot;:1920,\&quot;composer_media_optimization_image_resize_pre_multiply\&quot;:false,\&quot;composer_media_optimization_image_resize_linear_rgb\&quot;:false,\&quot;composer_media_optimization_image_encode_quality\&quot;:0,\&quot;composer_media_optimization_image_convert_enabled\&quot;:false,\&quot;composer_media_optimization_gif_conversion_threshold\&quot;:512000,\&quot;composer_media_optimization_debug_mode\&quot;:false,\&quot;composer_ios_media_optimisation_image_enabled\&quot;:true,\&quot;video_thumbnails_enabled\&quot;:true,\&quot;allow_all_users_to_flag_illegal_content\&quot;:false,\&quot;email_address_to_report_illegal_content\&quot;:\&quot;\&quot;,\&quot;tl1_requires_read_posts\&quot;:30,\&quot;tl3_links_no_follow\&quot;:false,\&quot;enforce_second_factor_on_external_auth\&quot;:true,\&quot;enforce_second_factor\&quot;:\&quot;no\&quot;,\&quot;moderators_manage_categories\&quot;:false,\&quot;moderators_manage_groups\&quot;:false,\&quot;moderators_change_post_ownership\&quot;:false,\&quot;moderators_view_emails\&quot;:false,\&quot;moderators_view_ips\&quot;:true,\&quot;use_admin_ip_allowlist\&quot;:false,\&quot;allowed_iframes\&quot;:\&quot;https://www.google.com/maps/embed?|https://www.openstreetmap.org/export/embed.html?|https://calendar.google.com/calendar/embed?|https://codepen.io/*/embed/preview/|https://www.instagram.com/|https://open.spotify.com/|https://community.openintegrator.com/discobot/certificate.svg\&quot;,\&quot;can_permanently_delete\&quot;:false,\&quot;max_oneboxes_per_post\&quot;:50,\&quot;reviewable_claiming\&quot;:\&quot;disabled\&quot;,\&quot;reviewable_default_topics\&quot;:false,\&quot;reviewable_default_visibility\&quot;:\&quot;low\&quot;,\&quot;reviewable_revision_reasons\&quot;:\&quot;Duplicate|Does not meet posting guidelines\&quot;,\&quot;alert_admins_if_errors_per_minute\&quot;:0,\&quot;alert_admins_if_errors_per_hour\&quot;:0,\&quot;max_prints_per_hour_per_user\&quot;:5,\&quot;invite_link_max_redemptions_limit\&quot;:5000,\&quot;invite_link_max_redemptions_limit_users\&quot;:10,\&quot;max_allowed_secondary_emails\&quot;:10,\&quot;enable_chunked_encoding\&quot;:true,\&quot;long_polling_base_url\&quot;:\&quot;/\&quot;,\&quot;background_polling_interval\&quot;:60000,\&quot;polling_interval\&quot;:3000,\&quot;anon_polling_interval\&quot;:25000,\&quot;verbose_localization\&quot;:false,\&quot;max_new_topics\&quot;:500,\&quot;enable_safe_mode\&quot;:true,\&quot;warn_critical_js_deprecations\&quot;:true,\&quot;warn_critical_js_deprecations_message\&quot;:\&quot;\&quot;,\&quot;custom_flags_limit\&quot;:50,\&quot;viewport_based_mobile_mode\&quot;:true,\&quot;site_setting_verbose_client_logging\&quot;:false,\&quot;navigation_menu\&quot;:\&quot;sidebar\&quot;,\&quot;default_navigation_menu_categories\&quot;:\&quot;2|3|4\&quot;,\&quot;default_navigation_menu_tags\&quot;:\&quot;\&quot;,\&quot;default_sidebar_switch_panel_position\&quot;:\&quot;bottom\&quot;,\&quot;embed_full_app\&quot;:false,\&quot;tos_url\&quot;:\&quot;\&quot;,\&quot;privacy_policy_url\&quot;:\&quot;\&quot;,\&quot;faq_url\&quot;:\&quot;\&quot;,\&quot;display_eu_visitor_stats\&quot;:false,\&quot;enable_backups\&quot;:true,\&quot;backup_location\&quot;:\&quot;s3\&quot;,\&quot;maximum_backups\&quot;:14,\&quot;remove_older_backups\&quot;:\&quot;\&quot;,\&quot;include_s3_uploads_in_backups\&quot;:false,\&quot;use_pg_headlines_for_excerpt\&quot;:false,\&quot;min_search_term_length\&quot;:3,\&quot;log_search_queries\&quot;:true,\&quot;search_default_sort_order\&quot;:0,\&quot;version_checks\&quot;:true,\&quot;suppress_uncategorized_badge\&quot;:true,\&quot;header_dropdown_category_count\&quot;:8,\&quot;slug_generation_method\&quot;:\&quot;ascii\&quot;,\&quot;summary_timeline_button\&quot;:false,\&quot;topic_views_heat_low\&quot;:1000,\&quot;topic_views_heat_medium\&quot;:2000,\&quot;topic_views_heat_high\&quot;:3500,\&quot;topic_post_like_heat_low\&quot;:0.5,\&quot;topic_post_like_heat_medium\&quot;:1.0,\&quot;topic_post_like_heat_high\&quot;:2.0,\&quot;history_hours_low\&quot;:12,\&quot;history_hours_medium\&quot;:24,\&quot;history_hours_high\&quot;:48,\&quot;cold_age_days_low\&quot;:14,\&quot;cold_age_days_medium\&quot;:90,\&quot;cold_age_days_high\&quot;:180,\&quot;global_notice\&quot;:\&quot;\&quot;,\&quot;general_category_id\&quot;:4,\&quot;default_composer_category\&quot;:\&quot;4\&quot;,\&quot;moderator_guide_topic\&quot;:\&quot;\&quot;,\&quot;view_user_route\&quot;:\&quot;summary\&quot;,\&quot;admin_quick_start_topic_id\&quot;:6,\&quot;automatically_unpin_topics\&quot;:true,\&quot;read_time_word_count\&quot;:500,\&quot;topic_page_title_includes_category\&quot;:true,\&quot;enable_powered_by_discourse\&quot;:true,\&quot;penalty_include_post_message\&quot;:false,\&quot;svg_icon_subset\&quot;:\&quot;\&quot;,\&quot;allow_bulk_invite\&quot;:true,\&quot;show_category_definitions_in_topic_lists\&quot;:false,\&quot;suggest_weekends_in_date_pickers\&quot;:true,\&quot;show_bottom_topic_map\&quot;:true,\&quot;show_topic_map_in_topics_without_replies\&quot;:true,\&quot;enable_site_owner_onboarding\&quot;:true,\&quot;welcome_banner_image\&quot;:\&quot;\&quot;,\&quot;welcome_banner_text_color\&quot;:\&quot;\&quot;,\&quot;welcome_banner_location\&quot;:\&quot;above_topic_content\&quot;,\&quot;welcome_banner_page_visibility\&quot;:\&quot;top_menu_pages\&quot;,\&quot;disable_mailing_list_mode\&quot;:true,\&quot;default_topics_automatic_unpin\&quot;:true,\&quot;mute_all_categories_by_default\&quot;:false,\&quot;default_text_size\&quot;:\&quot;normal\&quot;,\&quot;enable_offline_indicator\&quot;:false,\&quot;default_watched_precedence_over_muted\&quot;:false,\&quot;tagging_enabled\&quot;:true,\&quot;tag_style\&quot;:\&quot;simple\&quot;,\&quot;max_tags_per_topic\&quot;:5,\&quot;enable_max_tags_per_email_subject\&quot;:false,\&quot;max_tags_per_email_subject\&quot;:5,\&quot;max_tag_length\&quot;:20,\&quot;tag_topic_allowed_groups\&quot;:\&quot;1|2|10\&quot;,\&quot;max_tag_search_results\&quot;:5,\&quot;max_tags_in_filter_list\&quot;:30,\&quot;tags_sort_alphabetically\&quot;:false,\&quot;tags_listed_by_group\&quot;:false,\&quot;suppress_overlapping_tags_in_list\&quot;:false,\&quot;remove_muted_tags_from_latest\&quot;:\&quot;always\&quot;,\&quot;force_lowercase_tags\&quot;:true,\&quot;dashboard_hidden_reports\&quot;:\&quot;\&quot;,\&quot;dashboard_visible_tabs\&quot;:\&quot;moderation|security|reports|features\&quot;,\&quot;dashboard_general_tab_activity_metrics\&quot;:\&quot;page_view_total_reqs|visits|time_to_first_response|likes|flags|user_to_user_private_messages_with_replies\&quot;,\&quot;admin_allow_filter_untranslated_text\&quot;:false,\&quot;reporting_improvements\&quot;:false,\&quot;enable_auto_grid_images\&quot;:true,\&quot;enable_new_checkbox_style\&quot;:false,\&quot;enable_new_post_reactions_menu\&quot;:false,\&quot;rename_faq_to_guidelines\&quot;:true,\&quot;enable_form_templates\&quot;:true,\&quot;experimental_new_new_view_groups\&quot;:\&quot;\&quot;,\&quot;enable_rich_text_paste\&quot;:true,\&quot;reviewable_old_moderator_actions\&quot;:true,\&quot;floating_dismiss_topics_on_mobile\&quot;:false,\&quot;enable_simplified_category_creation\&quot;:true,\&quot;enable_new_defaults_for_trust_level_3_requirements\&quot;:false,\&quot;modernize_foundation_theme\&quot;:false,\&quot;dashboard_improvements\&quot;:false,\&quot;discourse_automation_enabled\&quot;:false,\&quot;chat_enabled\&quot;:true,\&quot;chat_pinned_messages\&quot;:false,\&quot;enable_public_channels\&quot;:true,\&quot;chat_threads_enabled\&quot;:false,\&quot;chat_search_enabled\&quot;:true,\&quot;chat_channel_retention_days\&quot;:90,\&quot;chat_max_direct_message_users\&quot;:20,\&quot;chat_dm_retention_days\&quot;:0,\&quot;chat_allow_archiving_channels\&quot;:false,\&quot;chat_minimum_message_length\&quot;:1,\&quot;chat_maximum_message_length\&quot;:6000,\&quot;chat_allow_uploads\&quot;:true,\&quot;chat_show_copy_button_on_codeblocks\&quot;:true,\&quot;max_chat_auto_joined_users\&quot;:10000,\&quot;max_mentions_per_chat_message\&quot;:5,\&quot;chat_separate_sidebar_mode\&quot;:\&quot;never\&quot;,\&quot;chat_editing_grace_period\&quot;:30,\&quot;chat_editing_grace_period_max_diff_low_trust\&quot;:10,\&quot;chat_editing_grace_period_max_diff_high_trust\&quot;:40,\&quot;chat_preferred_index\&quot;:\&quot;channels\&quot;,\&quot;checklist_enabled\&quot;:true,\&quot;discourse_adplugin_enabled\&quot;:false,\&quot;no_ads_for_personal_messages\&quot;:true,\&quot;no_ads_for_restricted_categories\&quot;:false,\&quot;no_ads_for_categories\&quot;:\&quot;\&quot;,\&quot;no_ads_for_tags\&quot;:\&quot;\&quot;,\&quot;house_ads_after_nth_topic\&quot;:20,\&quot;house_ads_after_nth_post\&quot;:20,\&quot;house_ads_frequency\&quot;:100,\&quot;ad_plugin_enable_tracking\&quot;:false,\&quot;ad_plugin_routes_enabled\&quot;:false,\&quot;adsense_publisher_code\&quot;:\&quot;\&quot;,\&quot;adsense_through_trust_level\&quot;:2,\&quot;adsense_topic_list_top_code\&quot;:\&quot;\&quot;,\&quot;adsense_topic_list_top_ad_sizes\&quot;:\&quot;728*90 - leaderboard\&quot;,\&quot;adsense_mobile_topic_list_top_code\&quot;:\&quot;\&quot;,\&quot;adsense_mobile_topic_list_top_ad_size\&quot;:\&quot;responsive\&quot;,\&quot;adsense_topic_above_post_stream_code\&quot;:\&quot;\&quot;,\&quot;adsense_topic_above_post_stream_ad_sizes\&quot;:\&quot;728*90 - leaderboard\&quot;,\&quot;adsense_mobile_topic_above_post_stream_code\&quot;:\&quot;\&quot;,\&quot;adsense_mobile_topic_above_post_stream_ad_size\&quot;:\&quot;responsive\&quot;,\&quot;adsense_topic_above_suggested_code\&quot;:\&quot;\&quot;,\&quot;adsense_topic_above_suggested_ad_sizes\&quot;:\&quot;728*90 - leaderboard\&quot;,\&quot;adsense_mobile_topic_above_suggested_code\&quot;:\&quot;\&quot;,\&quot;adsense_mobile_topic_above_suggested_ad_size\&quot;:\&quot;responsive\&quot;,\&quot;adsense_post_bottom_code\&quot;:\&quot;\&quot;,\&quot;adsense_post_bottom_ad_sizes\&quot;:\&quot;728*90 - leaderboard\&quot;,\&quot;adsense_mobile_post_bottom_code\&quot;:\&quot;\&quot;,\&quot;adsense_mobile_post_bottom_ad_size\&quot;:\&quot;responsive\&quot;,\&quot;adsense_nth_post_code\&quot;:\&quot;\&quot;,\&quot;dfp_publisher_id\&quot;:\&quot;\&quot;,\&quot;dfp_publisher_id_mobile\&quot;:\&quot;\&quot;,\&quot;dfp_through_trust_level\&quot;:2,\&quot;dfp_topic_list_top_code\&quot;:\&quot;\&quot;,\&quot;dfp_topic_list_top_ad_sizes\&quot;:\&quot;728*90 - leaderboard\&quot;,\&quot;dfp_mobile_topic_list_top_code\&quot;:\&quot;\&quot;,\&quot;dfp_mobile_topic_list_top_ad_sizes\&quot;:\&quot;320*50 - mobile leaderboard\&quot;,\&quot;dfp_target_topic_list_top_key_code\&quot;:\&quot;\&quot;,\&quot;dfp_target_topic_list_top_value_code\&quot;:\&quot;\&quot;,\&quot;dfp_topic_above_post_stream_code\&quot;:\&quot;\&quot;,\&quot;dfp_topic_above_post_stream_ad_sizes\&quot;:\&quot;728*90 - leaderboard\&quot;,\&quot;dfp_mobile_topic_above_post_stream_code\&quot;:\&quot;\&quot;,\&quot;dfp_mobile_topic_above_post_stream_ad_sizes\&quot;:\&quot;320*50 - mobile leaderboard\&quot;,\&quot;dfp_target_topic_above_post_stream_key_code\&quot;:\&quot;\&quot;,\&quot;dfp_target_topic_above_post_stream_value_code\&quot;:\&quot;\&quot;,\&quot;dfp_topic_above_suggested_code\&quot;:\&quot;\&quot;,\&quot;dfp_topic_above_suggested_ad_sizes\&quot;:\&quot;728*90 - leaderboard\&quot;,\&quot;dfp_mobile_topic_above_suggested_code\&quot;:\&quot;\&quot;,\&quot;dfp_mobile_topic_above_suggested_ad_sizes\&quot;:\&quot;320*50 - mobile leaderboard\&quot;,\&quot;dfp_target_topic_above_suggested_key_code\&quot;:\&quot;\&quot;,\&quot;dfp_target_topic_above_suggested_value_code\&quot;:\&quot;\&quot;,\&quot;dfp_nth_post_code\&quot;:\&quot;\&quot;,\&quot;dfp_post_bottom_code\&quot;:\&quot;\&quot;,\&quot;dfp_post_bottom_ad_sizes\&quot;:\&quot;728*90 - leaderboard\&quot;,\&quot;dfp_mobile_post_bottom_code\&quot;:\&quot;\&quot;,\&quot;dfp_mobile_post_bottom_ad_sizes\&quot;:\&quot;320*50 - mobile leaderboard\&quot;,\&quot;dfp_target_post_bottom_key_code\&quot;:\&quot;\&quot;,\&quot;dfp_target_post_bottom_value_code\&quot;:\&quot;\&quot;,\&quot;amazon_through_trust_level\&quot;:2,\&quot;amazon_display_groups\&quot;:\&quot;10|11|12\&quot;,\&quot;amazon_topic_list_top_src_code\&quot;:\&quot;\&quot;,\&quot;amazon_topic_list_top_ad_width_code\&quot;:\&quot;\&quot;,\&quot;amazon_topic_list_top_ad_height_code\&quot;:\&quot;\&quot;,\&quot;amazon_mobile_topic_list_top_src_code\&quot;:\&quot;\&quot;,\&quot;amazon_mobile_topic_list_top_ad_width_code\&quot;:\&quot;\&quot;,\&quot;amazon_mobile_topic_list_top_ad_height_code\&quot;:\&quot;\&quot;,\&quot;amazon_topic_above_post_stream_src_code\&quot;:\&quot;\&quot;,\&quot;amazon_topic_above_post_stream_ad_width_code\&quot;:\&quot;\&quot;,\&quot;amazon_topic_above_post_stream_ad_height_code\&quot;:\&quot;\&quot;,\&quot;amazon_mobile_topic_above_post_stream_src_code\&quot;:\&quot;\&quot;,\&quot;amazon_mobile_topic_above_post_stream_ad_width_code\&quot;:\&quot;\&quot;,\&quot;amazon_mobile_topic_above_post_stream_ad_height_code\&quot;:\&quot;\&quot;,\&quot;amazon_topic_above_suggested_src_code\&quot;:\&quot;\&quot;,\&quot;amazon_topic_above_suggested_ad_width_code\&quot;:\&quot;\&quot;,\&quot;amazon_topic_above_suggested_ad_height_code\&quot;:\&quot;\&quot;,\&quot;amazon_mobile_topic_above_suggested_src_code\&quot;:\&quot;\&quot;,\&quot;amazon_mobile_topic_above_suggested_ad_width_code\&quot;:\&quot;\&quot;,\&quot;amazon_mobile_topic_above_suggested_ad_height_code\&quot;:\&quot;\&quot;,\&quot;amazon_post_bottom_src_code\&quot;:\&quot;\&quot;,\&quot;amazon_nth_post_code\&quot;:\&quot;\&quot;,\&quot;amazon_post_bottom_ad_width_code\&quot;:\&quot;\&quot;,\&quot;amazon_post_bottom_ad_height_code\&quot;:\&quot;\&quot;,\&quot;amazon_mobile_post_bottom_src_code\&quot;:\&quot;\&quot;,\&quot;amazon_mobile_post_bottom_ad_width_code\&quot;:\&quot;\&quot;,\&quot;amazon_mobile_post_bottom_ad_height_code\&quot;:\&quot;\&quot;,\&quot;carbonads_serve_id\&quot;:\&quot;\&quot;,\&quot;carbonads_placement\&quot;:\&quot;\&quot;,\&quot;carbonads_through_trust_level\&quot;:2,\&quot;carbonads_display_groups\&quot;:\&quot;10|11|12\&quot;,\&quot;carbonads_topic_list_top_enabled\&quot;:false,\&quot;carbonads_above_post_stream_enabled\&quot;:false,\&quot;adbutler_publisher_id\&quot;:\&quot;\&quot;,\&quot;adbutler_through_trust_level\&quot;:2,\&quot;adbutler_display_groups\&quot;:\&quot;10|11|12\&quot;,\&quot;adbutler_topic_list_top_zone_id\&quot;:\&quot;\&quot;,\&quot;adbutler_mobile_topic_list_top_zone_id\&quot;:\&quot;\&quot;,\&quot;adbutler_topic_above_post_stream_zone_id\&quot;:\&quot;\&quot;,\&quot;adbutler_mobile_topic_above_post_stream_zone_id\&quot;:\&quot;\&quot;,\&quot;adbutler_topic_above_suggested_zone_id\&quot;:\&quot;\&quot;,\&quot;adbutler_mobile_topic_above_suggested_zone_id\&quot;:\&quot;\&quot;,\&quot;adbutler_post_bottom_zone_id\&quot;:\&quot;\&quot;,\&quot;adbutler_mobile_post_bottom_zone_id\&quot;:\&quot;\&quot;,\&quot;adbutler_nth_post\&quot;:4,\&quot;adbutler_adserver_hostname\&quot;:\&quot;servedbyadbutler.com\&quot;,\&quot;affiliate_enabled\&quot;:false,\&quot;affiliate_amazon_ca\&quot;:\&quot;\&quot;,\&quot;affiliate_amazon_cn\&quot;:\&quot;\&quot;,\&quot;affiliate_amazon_co_jp\&quot;:\&quot;\&quot;,\&quot;affiliate_amazon_co_uk\&quot;:\&quot;\&quot;,\&quot;affiliate_amazon_com\&quot;:\&quot;\&quot;,\&quot;affiliate_amazon_com_au\&quot;:\&quot;\&quot;,\&quot;affiliate_amazon_com_br\&quot;:\&quot;\&quot;,\&quot;affiliate_amazon_com_mx\&quot;:\&quot;\&quot;,\&quot;affiliate_amazon_de\&quot;:\&quot;\&quot;,\&quot;affiliate_amazon_es\&quot;:\&quot;\&quot;,\&quot;affiliate_amazon_fr\&quot;:\&quot;\&quot;,\&quot;affiliate_amazon_in\&quot;:\&quot;\&quot;,\&quot;affiliate_amazon_it\&quot;:\&quot;\&quot;,\&quot;affiliate_amazon_nl\&quot;:\&quot;\&quot;,\&quot;affiliate_amazon_eu\&quot;:\&quot;\&quot;,\&quot;affiliate_ldlc_com\&quot;:\&quot;\&quot;,\&quot;discourse_ai_enabled\&quot;:false,\&quot;ai_artifact_security\&quot;:\&quot;strict\&quot;,\&quot;ai_sentiment_enabled\&quot;:false,\&quot;ai_llm_temperature_top_p_enabled\&quot;:false,\&quot;ai_helper_enabled\&quot;:false,\&quot;ai_helper_allowed_in_pm\&quot;:false,\&quot;ai_helper_enabled_features\&quot;:\&quot;suggestions|context_menu\&quot;,\&quot;ai_embeddings_enabled\&quot;:false,\&quot;ai_embeddings_semantic_related_topics_enabled\&quot;:false,\&quot;ai_embeddings_semantic_search_enabled\&quot;:false,\&quot;ai_embeddings_semantic_quick_search_enabled\&quot;:false,\&quot;ai_summarization_enabled\&quot;:false,\&quot;ai_summary_gists_enabled\&quot;:false,\&quot;ai_bot_enabled\&quot;:false,\&quot;ai_bot_enabled_llms\&quot;:\&quot;\&quot;,\&quot;ai_bot_enable_chat_warning\&quot;:false,\&quot;ai_bot_add_to_header\&quot;:false,\&quot;ai_bot_add_to_community_section\&quot;:true,\&quot;ai_bot_enable_docked_composer\&quot;:false,\&quot;ai_discover_enabled\&quot;:false,\&quot;ai_discover_agent\&quot;:\&quot;-34\&quot;,\&quot;ai_discord_search_enabled\&quot;:false,\&quot;ai_translation_enabled\&quot;:false,\&quot;inferred_concepts_enabled\&quot;:false,\&quot;assign_enabled\&quot;:false,\&quot;assigns_public\&quot;:false,\&quot;assigns_user_url_path\&quot;:\&quot;/u/{username}/activity/assigned\&quot;,\&quot;remind_assigns_frequency\&quot;:0,\&quot;pending_assign_reminder_threshold\&quot;:2,\&quot;max_assigned_topics\&quot;:10,\&quot;assign_allowed_on_groups\&quot;:\&quot;3\&quot;,\&quot;enable_assign_status\&quot;:false,\&quot;assign_statuses\&quot;:\&quot;New|In Progress|Done\&quot;,\&quot;cakeday_enabled\&quot;:false,\&quot;cakeday_emoji\&quot;:\&quot;cake\&quot;,\&quot;cakeday_birthday_enabled\&quot;:false,\&quot;cakeday_birthday_emoji\&quot;:\&quot;birthday\&quot;,\&quot;calendar_enabled\&quot;:false,\&quot;holiday_calendar_topic_id\&quot;:\&quot;\&quot;,\&quot;holiday_status_emoji\&quot;:\&quot;date\&quot;,\&quot;all_day_event_start_time\&quot;:\&quot;\&quot;,\&quot;all_day_event_end_time\&quot;:\&quot;\&quot;,\&quot;calendar_categories\&quot;:\&quot;\&quot;,\&quot;calendar_event_display\&quot;:\&quot;auto\&quot;,\&quot;calendar_categories_outlet\&quot;:\&quot;discovery-list-container-top\&quot;,\&quot;working_days\&quot;:\&quot;Monday|Tuesday|Wednesday|Thursday|Friday\&quot;,\&quot;working_day_start_hour\&quot;:8,\&quot;working_day_end_hour\&quot;:17,\&quot;close_to_working_day_hours_extension\&quot;:2,\&quot;split_grouped_events_by_timezone_threshold\&quot;:0,\&quot;event_participation_buttons\&quot;:\&quot;going|interested|not going\&quot;,\&quot;discourse_post_event_enabled\&quot;:false,\&quot;discourse_post_event_allowed_on_groups\&quot;:\&quot;\&quot;,\&quot;display_post_event_date_on_topic_title\&quot;:true,\&quot;use_local_event_date\&quot;:false,\&quot;discourse_post_event_allowed_custom_fields\&quot;:\&quot;\&quot;,\&quot;events_calendar_categories\&quot;:\&quot;\&quot;,\&quot;sort_categories_by_event_start_date_enabled\&quot;:false,\&quot;disable_resorting_on_categories_enabled\&quot;:false,\&quot;sidebar_show_upcoming_events\&quot;:true,\&quot;map_events_to_color\&quot;:\&quot;[]\&quot;,\&quot;map_events_title\&quot;:\&quot;\&quot;,\&quot;calendar_first_day_of_week\&quot;:\&quot;monday\&quot;,\&quot;calendar_upcoming_events_default_view\&quot;:\&quot;month\&quot;,\&quot;enable_events_category_type_setup\&quot;:false,\&quot;data_explorer_enabled\&quot;:false,\&quot;data_explorer_ai_queries_enabled\&quot;:false,\&quot;details_enabled\&quot;:true,\&quot;discourse_gamification_enabled\&quot;:false,\&quot;discourse_graphviz_enabled\&quot;:false,\&quot;discourse_hcaptcha_enabled\&quot;:false,\&quot;hcaptcha_site_key\&quot;:\&quot;\&quot;,\&quot;lazy_videos_enabled\&quot;:true,\&quot;lazy_youtube_enabled\&quot;:true,\&quot;lazy_vimeo_enabled\&quot;:true,\&quot;lazy_tiktok_enabled\&quot;:false,\&quot;discourse_local_dates_email_timezone\&quot;:\&quot;Etc/UTC\&quot;,\&quot;discourse_local_dates_email_format\&quot;:\&quot;llll z\&quot;,\&quot;discourse_local_dates_enabled\&quot;:true,\&quot;discourse_local_dates_default_formats\&quot;:\&quot;LLL|LTS|LL|LLLL\&quot;,\&quot;discourse_local_dates_default_timezones\&quot;:\&quot;Europe/Paris|America/Los_Angeles\&quot;,\&quot;discourse_math_enabled\&quot;:false,\&quot;discourse_math_provider\&quot;:\&quot;mathjax\&quot;,\&quot;discourse_math_enable_latex_delimiters\&quot;:true,\&quot;discourse_math_mathjax_output\&quot;:\&quot;html\&quot;,\&quot;discourse_math_enable_menu\&quot;:true,\&quot;discourse_math_zoom_on_click\&quot;:false,\&quot;discourse_math_enable_accessibility\&quot;:false,\&quot;discourse_math_enable_asciimath\&quot;:false,\&quot;microsoft_auth_enabled\&quot;:false,\&quot;discourse_narrative_bot_enabled\&quot;:true,\&quot;oauth2_enabled\&quot;:false,\&quot;oauth2_button_title\&quot;:\&quot;with OAuth2\&quot;,\&quot;patreon_enabled\&quot;:false,\&quot;patreon_login_enabled\&quot;:false,\&quot;patreon_donation_prompt_enabled\&quot;:false,\&quot;patreon_donation_prompt_show_after_topics\&quot;:20,\&quot;patreon_donation_prompt_campaign_url\&quot;:\&quot;\&quot;,\&quot;policy_enabled\&quot;:false,\&quot;policy_restrict_to_staff_posts\&quot;:true,\&quot;create_policy_allowed_groups\&quot;:\&quot;1|2\&quot;,\&quot;post_voting_enabled\&quot;:false,\&quot;post_voting_comment_enabled\&quot;:true,\&quot;post_voting_comment_limit_per_post\&quot;:10,\&quot;post_voting_comment_max_raw_length\&quot;:600,\&quot;post_voting_enable_likes_on_answers\&quot;:false,\&quot;presence_enabled\&quot;:true,\&quot;presence_max_users_shown\&quot;:5,\&quot;discourse_reactions_enabled\&quot;:false,\&quot;discourse_reactions_like_icon\&quot;:\&quot;heart\&quot;,\&quot;discourse_reactions_reaction_for_like\&quot;:\&quot;heart\&quot;,\&quot;discourse_reactions_enabled_reactions\&quot;:\&quot;+1|laughing|open_mouth|clap|confetti_ball|hugs\&quot;,\&quot;discourse_reactions_desaturated_reaction_panel\&quot;:false,\&quot;discourse_reactions_allow_any_emoji\&quot;:false,\&quot;enable_new_post_reply_count_position\&quot;:false,\&quot;discourse_rewind_enabled\&quot;:false,\&quot;solved_enabled\&quot;:true,\&quot;show_who_marked_solved\&quot;:false,\&quot;allow_solved_on_all_topics\&quot;:false,\&quot;accept_all_solutions_trust_level\&quot;:4,\&quot;solved_quote_length\&quot;:700,\&quot;show_filter_by_solved_status\&quot;:false,\&quot;enable_solved_tags\&quot;:\&quot;\&quot;,\&quot;enable_support_category_type_setup\&quot;:false,\&quot;discourse_subscriptions_extra_nav_subscribe\&quot;:true,\&quot;discourse_subscriptions_pricing_table_id\&quot;:\&quot;\&quot;,\&quot;discourse_subscriptions_pricing_table_enabled\&quot;:false,\&quot;discourse_subscriptions_public_key\&quot;:\&quot;pk_live_51Rg8dsGzMtQYWOLrI8u33eGnRqEaUQUGXNwtAQqFvyu9nEbiP30dXBG2y57jvN0VMxErYHoL9p9kWc8J6dU6WQUy00cBqJko7b\&quot;,\&quot;discourse_subscriptions_currency\&quot;:\&quot;EUR\&quot;,\&quot;discourse_subscriptions_campaign_enabled\&quot;:true,\&quot;discourse_subscriptions_campaign_goal\&quot;:20,\&quot;discourse_subscriptions_campaign_type\&quot;:\&quot;Subscribers\&quot;,\&quot;discourse_subscriptions_campaign_banner_location\&quot;:\&quot;Top\&quot;,\&quot;discourse_subscriptions_campaign_banner_bg_image\&quot;:\&quot;\&quot;,\&quot;discourse_subscriptions_campaign_banner_shadow_color\&quot;:\&quot;2F70AC\&quot;,\&quot;discourse_subscriptions_campaign_show_contributors\&quot;:true,\&quot;discourse_subscriptions_campaign_product\&quot;:\&quot;\&quot;,\&quot;discourse_subscriptions_campaign_amount_raised\&quot;:100.0,\&quot;discourse_subscriptions_campaign_subscribers\&quot;:0,\&quot;discourse_templates_enabled\&quot;:true,\&quot;topic_voting_enabled\&quot;:true,\&quot;topic_voting_enable_vote_limits\&quot;:true,\&quot;topic_voting_show_who_voted\&quot;:true,\&quot;topic_voting_show_votes_on_profile\&quot;:true,\&quot;enable_ideas_category_type_setup\&quot;:false,\&quot;user_notes_enabled\&quot;:false,\&quot;user_notes_icon_placement\&quot;:\&quot;name\&quot;,\&quot;zendesk_url\&quot;:\&quot;https://your-url.zendesk.com/api/v2\&quot;,\&quot;zendesk_enabled\&quot;:false,\&quot;enable_markdown_footnotes\&quot;:true,\&quot;display_footnotes_inline\&quot;:true,\&quot;poll_enabled\&quot;:true,\&quot;poll_maximum_options\&quot;:20,\&quot;poll_minimum_trust_level_to_create\&quot;:1,\&quot;poll_groupable_user_fields\&quot;:\&quot;\&quot;,\&quot;poll_export_data_explorer_query_id\&quot;:-16,\&quot;poll_export_ranked_choice_data_explorer_query_id\&quot;:-19,\&quot;poll_default_public\&quot;:true,\&quot;spoiler_enabled\&quot;:true,\&quot;available_locales\&quot;:\&quot;[{\\\&quot;native_name\\\&quot;:\\\&quot;اللغة العربية\\\&quot;,\\\&quot;value\\\&quot;:\\\&quot;ar\\\&quot;,\\\&quot;name\\\&quot;:\\\&quot;languages.ar.name\\\&quot;},{\\\&quot;native_name\\\&quot;:\\\&quot;беларуская мова\\\&quot;,\\\&quot;value\\\&quot;:\\\&quot;be\\\&quot;,\\\&quot;name\\\&quot;:\\\&quot;languages.be.name\\\&quot;},{\\\&quot;native_name\\\&quot;:\\\&quot;български език\\\&quot;,\\\&quot;value\\\&quot;:\\\&quot;bg\\\&quot;,\\\&quot;name\\\&quot;:\\\&quot;languages.bg.name\\\&quot;},{\\\&quot;native_name\\\&quot;:\\\&quot;bosanski jezik\\\&quot;,\\\&quot;value\\\&quot;:\\\&quot;bs_BA\\\&quot;,\\\&quot;name\\\&quot;:\\\&quot;languages.bs_BA.name\\\&quot;},{\\\&quot;native_name\\\&quot;:\\\&quot;català\\\&quot;,\\\&quot;value\\\&quot;:\\\&quot;ca\\\&quot;,\\\&quot;name\\\&quot;:\\\&quot;languages.ca.name\\\&quot;},{\\\&quot;native_name\\\&quot;:\\\&quot;čeština\\\&quot;,\\\&quot;value\\\&quot;:\\\&quot;cs\\\&quot;,\\\&quot;name\\\&quot;:\\\&quot;languages.cs.name\\\&quot;},{\\\&quot;native_name\\\&quot;:\\\&quot;dansk\\\&quot;,\\\&quot;value\\\&quot;:\\\&quot;da\\\&quot;,\\\&quot;name\\\&quot;:\\\&quot;languages.da.name\\\&quot;},{\\\&quot;native_name\\\&quot;:\\\&quot;Deutsch\\\&quot;,\\\&quot;value\\\&quot;:\\\&quot;de\\\&quot;,\\\&quot;name\\\&quot;:\\\&quot;languages.de.name\\\&quot;},{\\\&quot;native_name\\\&quot;:\\\&quot;ελληνικά\\\&quot;,\\\&quot;value\\\&quot;:\\\&quot;el\\\&quot;,\\\&quot;name\\\&quot;:\\\&quot;languages.el.name\\\&quot;},{\\\&quot;native_name\\\&quot;:\\\&quot;English\\\&quot;,\\\&quot;value\\\&quot;:\\\&quot;en\\\&quot;,\\\&quot;name\\\&quot;:\\\&quot;languages.en.name\\\&quot;},{\\\&quot;native_name\\\&quot;:\\\&quot;English (UK)\\\&quot;,\\\&quot;value\\\&quot;:\\\&quot;en_GB\\\&quot;,\\\&quot;name\\\&quot;:\\\&quot;languages.en_GB.name\\\&quot;},{\\\&quot;native_name\\\&quot;:\\\&quot;Español\\\&quot;,\\\&quot;value\\\&quot;:\\\&quot;es\\\&quot;,\\\&quot;name\\\&quot;:\\\&quot;languages.es.name\\\&quot;},{\\\&quot;native_name\\\&quot;:\\\&quot;eesti\\\&quot;,\\\&quot;value\\\&quot;:\\\&quot;et\\\&quot;,\\\&quot;name\\\&quot;:\\\&quot;languages.et.name\\\&quot;},{\\\&quot;native_name\\\&quot;:\\\&quot;فارسی\\\&quot;,\\\&quot;value\\\&quot;:\\\&quot;fa_IR\\\&quot;,\\\&quot;name\\\&quot;:\\\&quot;languages.fa_IR.name\\\&quot;},{\\\&quot;native_name\\\&quot;:\\\&quot;suomi\\\&quot;,\\\&quot;value\\\&quot;:\\\&quot;fi\\\&quot;,\\\&quot;name\\\&quot;:\\\&quot;languages.fi.name\\\&quot;},{\\\&quot;native_name\\\&quot;:\\\&quot;Français\\\&quot;,\\\&quot;value\\\&quot;:\\\&quot;fr\\\&quot;,\\\&quot;name\\\&quot;:\\\&quot;languages.fr.name\\\&quot;},{\\\&quot;native_name\\\&quot;:\\\&quot;galego\\\&quot;,\\\&quot;value\\\&quot;:\\\&quot;gl\\\&quot;,\\\&quot;name\\\&quot;:\\\&quot;languages.gl.name\\\&quot;},{\\\&quot;native_name\\\&quot;:\\\&quot;עברית\\\&quot;,\\\&quot;value\\\&quot;:\\\&quot;he\\\&quot;,\\\&quot;name\\\&quot;:\\\&quot;languages.he.name\\\&quot;},{\\\&quot;native_name\\\&quot;:\\\&quot;hrvatski jezik\\\&quot;,\\\&quot;value\\\&quot;:\\\&quot;hr\\\&quot;,\\\&quot;name\\\&quot;:\\\&quot;languages.hr.name\\\&quot;},{\\\&quot;native_name\\\&quot;:\\\&quot;magyar\\\&quot;,\\\&quot;value\\\&quot;:\\\&quot;hu\\\&quot;,\\\&quot;name\\\&quot;:\\\&quot;languages.hu.name\\\&quot;},{\\\&quot;native_name\\\&quot;:\\\&quot;Հայերեն\\\&quot;,\\\&quot;value\\\&quot;:\\\&quot;hy\\\&quot;,\\\&quot;name\\\&quot;:\\\&quot;languages.hy.name\\\&quot;},{\\\&quot;native_name\\\&quot;:\\\&quot;Indonesian\\\&quot;,\\\&quot;value\\\&quot;:\\\&quot;id\\\&quot;,\\\&quot;name\\\&quot;:\\\&quot;languages.id.name\\\&quot;},{\\\&quot;native_name\\\&quot;:\\\&quot;Italiano\\\&quot;,\\\&quot;value\\\&quot;:\\\&quot;it\\\&quot;,\\\&quot;name\\\&quot;:\\\&quot;languages.it.name\\\&quot;},{\\\&quot;native_name\\\&quot;:\\\&quot;日本語\\\&quot;,\\\&quot;value\\\&quot;:\\\&quot;ja\\\&quot;,\\\&quot;name\\\&quot;:\\\&quot;languages.ja.name\\\&quot;},{\\\&quot;native_name\\\&quot;:\\\&quot;한국어\\\&quot;,\\\&quot;value\\\&quot;:\\\&quot;ko\\\&quot;,\\\&quot;name\\\&quot;:\\\&quot;languages.ko.name\\\&quot;},{\\\&quot;native_name\\\&quot;:\\\&quot;lietuvių kalba\\\&quot;,\\\&quot;value\\\&quot;:\\\&quot;lt\\\&quot;,\\\&quot;name\\\&quot;:\\\&quot;languages.lt.name\\\&quot;},{\\\&quot;native_name\\\&quot;:\\\&quot;latviešu valoda\\\&quot;,\\\&quot;value\\\&quot;:\\\&quot;lv\\\&quot;,\\\&quot;name\\\&quot;:\\\&quot;languages.lv.name\\\&quot;},{\\\&quot;native_name\\\&quot;:\\\&quot;Norsk bokmål\\\&quot;,\\\&quot;value\\\&quot;:\\\&quot;nb_NO\\\&quot;,\\\&quot;name\\\&quot;:\\\&quot;languages.nb_NO.name\\\&quot;},{\\\&quot;native_name\\\&quot;:\\\&quot;Nederlands\\\&quot;,\\\&quot;value\\\&quot;:\\\&quot;nl\\\&quot;,\\\&quot;name\\\&quot;:\\\&quot;languages.nl.name\\\&quot;},{\\\&quot;native_name\\\&quot;:\\\&quot;polski\\\&quot;,\\\&quot;value\\\&quot;:\\\&quot;pl_PL\\\&quot;,\\\&quot;name\\\&quot;:\\\&quot;languages.pl_PL.name\\\&quot;},{\\\&quot;native_name\\\&quot;:\\\&quot;Português\\\&quot;,\\\&quot;value\\\&quot;:\\\&quot;pt\\\&quot;,\\\&quot;name\\\&quot;:\\\&quot;languages.pt.name\\\&quot;},{\\\&quot;native_name\\\&quot;:\\\&quot;Português (BR)\\\&quot;,\\\&quot;value\\\&quot;:\\\&quot;pt_BR\\\&quot;,\\\&quot;name\\\&quot;:\\\&quot;languages.pt_BR.name\\\&quot;},{\\\&quot;native_name\\\&quot;:\\\&quot;limba română\\\&quot;,\\\&quot;value\\\&quot;:\\\&quot;ro\\\&quot;,\\\&quot;name\\\&quot;:\\\&quot;languages.ro.name\\\&quot;},{\\\&quot;native_name\\\&quot;:\\\&quot;Русский\\\&quot;,\\\&quot;value\\\&quot;:\\\&quot;ru\\\&quot;,\\\&quot;name\\\&quot;:\\\&quot;languages.ru.name\\\&quot;},{\\\&quot;native_name\\\&quot;:\\\&quot;slovenčina\\\&quot;,\\\&quot;value\\\&quot;:\\\&quot;sk\\\&quot;,\\\&quot;name\\\&quot;:\\\&quot;languages.sk.name\\\&quot;},{\\\&quot;native_name\\\&quot;:\\\&quot;slovenščina\\\&quot;,\\\&quot;value\\\&quot;:\\\&quot;sl\\\&quot;,\\\&quot;name\\\&quot;:\\\&quot;languages.sl.name\\\&quot;},{\\\&quot;native_name\\\&quot;:\\\&quot;Shqip\\\&quot;,\\\&quot;value\\\&quot;:\\\&quot;sq\\\&quot;,\\\&quot;name\\\&quot;:\\\&quot;languages.sq.name\\\&quot;},{\\\&quot;native_name\\\&quot;:\\\&quot;српски језик\\\&quot;,\\\&quot;value\\\&quot;:\\\&quot;sr\\\&quot;,\\\&quot;name\\\&quot;:\\\&quot;languages.sr.name\\\&quot;},{\\\&quot;native_name\\\&quot;:\\\&quot;svenska\\\&quot;,\\\&quot;value\\\&quot;:\\\&quot;sv\\\&quot;,\\\&quot;name\\\&quot;:\\\&quot;languages.sv.name\\\&quot;},{\\\&quot;native_name\\\&quot;:\\\&quot;Kiswahili\\\&quot;,\\\&quot;value\\\&quot;:\\\&quot;sw\\\&quot;,\\\&quot;name\\\&quot;:\\\&quot;languages.sw.name\\\&quot;},{\\\&quot;native_name\\\&quot;:\\\&quot;తెలుగు\\\&quot;,\\\&quot;value\\\&quot;:\\\&quot;te\\\&quot;,\\\&quot;name\\\&quot;:\\\&quot;languages.te.name\\\&quot;},{\\\&quot;native_name\\\&quot;:\\\&quot;ไทย\\\&quot;,\\\&quot;value\\\&quot;:\\\&quot;th\\\&quot;,\\\&quot;name\\\&quot;:\\\&quot;languages.th.name\\\&quot;},{\\\&quot;native_name\\\&quot;:\\\&quot;Türkçe\\\&quot;,\\\&quot;value\\\&quot;:\\\&quot;tr_TR\\\&quot;,\\\&quot;name\\\&quot;:\\\&quot;languages.tr_TR.name\\\&quot;},{\\\&quot;native_name\\\&quot;:\\\&quot;ئۇيغۇرچە\\\&quot;,\\\&quot;value\\\&quot;:\\\&quot;ug\\\&quot;,\\\&quot;name\\\&quot;:\\\&quot;languages.ug.name\\\&quot;},{\\\&quot;native_name\\\&quot;:\\\&quot;українська мова\\\&quot;,\\\&quot;value\\\&quot;:\\\&quot;uk\\\&quot;,\\\&quot;name\\\&quot;:\\\&quot;languages.uk.name\\\&quot;},{\\\&quot;native_name\\\&quot;:\\\&quot;اردو\\\&quot;,\\\&quot;value\\\&quot;:\\\&quot;ur\\\&quot;,\\\&quot;name\\\&quot;:\\\&quot;languages.ur.name\\\&quot;},{\\\&quot;native_name\\\&quot;:\\\&quot;tiếng Việt\\\&quot;,\\\&quot;value\\\&quot;:\\\&quot;vi\\\&quot;,\\\&quot;name\\\&quot;:\\\&quot;languages.vi.name\\\&quot;},{\\\&quot;native_name\\\&quot;:\\\&quot;简体中文\\\&quot;,\\\&quot;value\\\&quot;:\\\&quot;zh_CN\\\&quot;,\\\&quot;name\\\&quot;:\\\&quot;languages.zh_CN.name\\\&quot;},{\\\&quot;native_name\\\&quot;:\\\&quot;繁體中文\\\&quot;,\\\&quot;value\\\&quot;:\\\&quot;zh_TW\\\&quot;,\\\&quot;name\\\&quot;:\\\&quot;languages.zh_TW.name\\\&quot;}]\&quot;,\&quot;available_content_localization_locales\&quot;:[],\&quot;require_invite_code\&quot;:false,\&quot;site_logo_url\&quot;:\&quot;https://community.openintegrator.com/uploads/default/original/1X/891d7c15619cd5b36a14ee1cd8efe56ba505b4c9.png\&quot;,\&quot;site_logo_small_url\&quot;:\&quot;https://community.openintegrator.com/uploads/default/original/1X/93e0fd56c4f935cdcfd22d80ad5ad99d91821735.png\&quot;,\&quot;site_mobile_logo_url\&quot;:\&quot;https://community.openintegrator.com/uploads/default/original/1X/891d7c15619cd5b36a14ee1cd8efe56ba505b4c9.png\&quot;,\&quot;site_favicon_url\&quot;:\&quot;https://community.openintegrator.com/uploads/default/optimized/1X/93e0fd56c4f935cdcfd22d80ad5ad99d91821735_2_32x32.png\&quot;,\&quot;site_logo_dark_url\&quot;:\&quot;\&quot;,\&quot;site_logo_small_dark_url\&quot;:\&quot;\&quot;,\&quot;site_mobile_logo_dark_url\&quot;:\&quot;\&quot;}&quot;,&quot;themeSiteSettingOverrides&quot;:&quot;{\&quot;enable_welcome_banner\&quot;:true,\&quot;search_experience\&quot;:\&quot;search_icon\&quot;}&quot;,&quot;customHTML&quot;:&quot;{\&quot;top\&quot;:\&quot;\&quot;,\&quot;footer\&quot;:\&quot;\&quot;}&quot;,&quot;banner&quot;:&quot;{}&quot;,&quot;customEmoji&quot;:&quot;[]&quot;,&quot;isReadOnly&quot;:&quot;false&quot;,&quot;isStaffWritesOnly&quot;:&quot;false&quot;,&quot;activatedThemes&quot;:&quot;{\&quot;1\&quot;:\&quot;Default\&quot;}&quot;,&quot;upcomingChanges&quot;:&quot;{\&quot;ai_bot_enable_docked_composer\&quot;:false,\&quot;chat_pinned_messages\&quot;:false,\&quot;composer_media_optimization_image_convert_enabled\&quot;:false,\&quot;dashboard_improvements\&quot;:false,\&quot;enable_events_category_type_setup\&quot;:false,\&quot;enable_ideas_category_type_setup\&quot;:false,\&quot;enable_new_checkbox_style\&quot;:false,\&quot;enable_new_defaults_for_trust_level_3_requirements\&quot;:false,\&quot;enable_new_post_reactions_menu\&quot;:false,\&quot;enable_new_post_reply_count_position\&quot;:false,\&quot;enable_simplified_category_creation\&quot;:true,\&quot;enable_support_category_type_setup\&quot;:false,\&quot;floating_dismiss_topics_on_mobile\&quot;:false,\&quot;modernize_foundation_theme\&quot;:false,\&quot;rename_faq_to_guidelines\&quot;:true,\&quot;reporting_improvements\&quot;:false,\&quot;simple_email_subject\&quot;:false}&quot;}"></div>
+      </discourse-assets-json>
+      <discourse-assets-icons><div id="svg-sprites"><div class="fontawesome"></div></div></discourse-assets-icons>
+    </discourse-assets>
+
+      
+
+    
+    
+
+      
+
+      
+
+    <section id="main" class="ember-application">
+      
+  
+<style id="d-styles">
+    :root {
+--category-1-color: #0088CC;
+--category-2-color: #808281;
+--category-4-color: #25AAE2;
+--category-5-color: #BF1E2E;
+--category-6-color: #F1592A;
+--category-8-color: #3AB54A;
+--category-9-color: #9EB83B;
+--category-10-color: #8C6238;
+--category-11-color: #ED207B;
+--category-12-color: #F7941D;
+--category-13-color: #B3B5B4;
+--category-14-color: #0088CC;
+}
+    
+    .badge-category[data-category-id="1"] { --category-badge-color: var(--category-1-color); --category-badge-text-color: #FFFFFF; }
+.badge-category[data-category-id="2"] { --category-badge-color: var(--category-2-color); --category-badge-text-color: #FFFFFF; }
+.badge-category[data-category-id="4"] { --category-badge-color: var(--category-4-color); --category-badge-text-color: #FFFFFF; }
+.badge-category[data-category-id="5"] { --category-badge-color: var(--category-5-color); --category-badge-text-color: #FFFFFF; }
+.badge-category[data-category-id="6"] { --category-badge-color: var(--category-6-color); --category-badge-text-color: #FFFFFF; }
+.badge-category[data-category-id="8"] { --category-badge-color: var(--category-8-color); --category-badge-text-color: #FFFFFF; }
+.badge-category[data-category-id="9"] { --category-badge-color: var(--category-9-color); --category-badge-text-color: #000000; }
+.badge-category[data-category-id="10"] { --category-badge-color: var(--category-10-color); --category-badge-text-color: #FFFFFF; }
+.badge-category[data-category-id="11"] { --category-badge-color: var(--category-11-color); --category-badge-text-color: #000000; }
+.badge-category[data-category-id="12"] { --category-badge-color: var(--category-12-color); --category-badge-text-color: #000000; }
+.badge-category[data-category-id="13"] { --category-badge-color: var(--category-13-color); --category-badge-text-color: #000000; }
+.badge-category[data-category-id="14"] { --category-badge-color: var(--category-14-color); --category-badge-text-color: #FFFFFF; }
+</style>
+<style id="d-styles-block-outlets">
+  .hero-blocks__container { container: hero-blocks / inline-size; }
+.homepage-blocks__container { container: homepage-blocks / inline-size; }
+.main-outlet-blocks__container { container: main-outlet-blocks / inline-size; }
+.sidebar-blocks__container { container: sidebar-blocks / inline-size; }
+.sidebar-discovery__container { container: sidebar-discovery / inline-size; }
+</style>
+<!---->
+
+<div id="ember3" class="discourse-root ember-view">
+    <div id="skip-links__container" class="skip-links" aria-label="Skip navigation links">
+    <div>    
+<!----><!---->
+</div>
+    <a href="#main-container" class="skip-link">
+      Skip to main content
+    </a>
+  </div>
+
+
+  
+
+  <!---->
+    <div style="--loading-duration: 0.20s" class="loading-indicator-container ready">
+    <div class="loading-indicator">
+    </div>
+  </div>
+
+  <!----><!----><!---->
+
+    <div class="drop-down-mode d-header-wrap">
+<!---->  <header class="d-header">
+  <div class="wrap">
+    <div class="contents">
+  <!---->
+      <span class="header-sidebar-toggle">
+  <button title="Sidebar" class="btn btn-flat btn-sidebar-toggle no-text btn-icon" aria-expanded="true" aria-controls="d-sidebar">
+    <svg class="fa d-icon d-icon-bars svg-icon fa-width-auto svg-string" width="1em" height="1em" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><use href="#bars"></use></svg>
+  </button>
+</span>
+
+  <div class="home-logo-wrapper-outlet">
+    <!---->  
+      
+  <div class="title">
+    <a href="/">
+      
+            <img id="site-logo" class="logo-big" src="https://community.openintegrator.com/uploads/default/original/1X/891d7c15619cd5b36a14ee1cd8efe56ba505b4c9.png" alt="Open Integrator Community">
+
+
+      
+    </a>
+  </div>
+
+    
+<!---->
+  </div>
+
+<!---->
+<!---->
+  <div class="before-header-panel-outlet">
+    <!---->
+  </div>
+  <div class="panel" role="navigation">
+      <span class="header-buttons">
+            <span class="auth-buttons">
+    <button class="btn btn-primary btn-small sign-up-button" type="button">
+<!----><span class="d-button-label">Sign Up<!----></span>
+
+<!----></button>
+
+    <button class="btn btn-icon-text btn-primary btn-small login-button" type="button">
+<svg class="fa d-icon d-icon-user svg-icon fa-width-auto svg-string" width="1em" height="1em" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><use href="#user"></use></svg>  <span class="d-button-label">Log In<!----></span>
+
+<!----></button>
+</span>
+      </span>
+
+        <ul class="icons d-header-icons">
+<!----><!---->        <li class="header-dropdown-toggle search-dropdown">
+  <button class="btn no-text btn-icon icon btn-flat" id="search-button" title="Search" aria-label="Search" aria-haspopup="true" type="button">
+<svg class="fa d-icon d-icon-magnifying-glass svg-icon fa-width-auto svg-string" width="1em" height="1em" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><use href="#magnifying-glass"></use></svg>  <span aria-hidden="true">
+      ​
+    </span>
+
+<!----></button>
+
+</li>
+<!----><!----></ul>
+
+<!---->
+<!---->    </div>
+  <div class="after-header-panel-outlet">
+    <!---->
+  </div>
+  <!---->
+</div>
+  </div>
+  <!---->
+</header>
+</div>
+
+  <!---->
+
+<!---->
+<!---->
+  <!---->
+
+    
+
+  
+    
+<!---->    
+
+
+
+
+  <div id="main-outlet-wrapper" class="wrap" role="main">
+      <div class="sidebar-wrapper">
+    
+
+<section id="d-sidebar" class="sidebar-container">
+<!---->
+  <!---->
+
+      <div class="sidebar-sections sidebar-sections-anonymous">
+  
+
+  
+    
+<!---->    
+
+
+
+
+  <div class="sidebar-custom-sections">
+      <div data-section-name="community" class="sidebar-section sidebar-section-wrapper sidebar-section--expanded">
+<!---->
+      <ul id="sidebar-section-content-community" class="sidebar-section-content">
+        
+      <li data-list-item-name="everything" class="sidebar-section-link-wrapper">
+      <a id="ember5" class="ember-view sidebar-section-link sidebar-row" title="All topics" data-link-name="everything" href="/latest">
+          <span class="sidebar-section-link-prefix icon">
+      <svg class="fa d-icon d-icon-layer-group svg-icon fa-width-auto prefix-icon svg-string" width="1em" height="1em" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><use href="#layer-group"></use></svg>
+
+<!---->  </span>
+
+
+        <span class="sidebar-section-link-content-text">
+          Topics
+          <!---->
+        </span>
+
+<!---->
+<!---->
+<!---->
+<!---->      </a>
+  </li>
+
+
+      <!---->
+<li class="sidebar-section-link-wrapper">
+  <button class="fk-d-menu__trigger sidebar-more-section-trigger sidebar-section-link sidebar-more-section-links-details-summary sidebar-row --link-button sidebar-section-link sidebar-row" data-identifier="sidebar-more-section" data-trigger="" aria-expanded="false" type="button" id="ember20">
+  <span class="sidebar-section-link-prefix icon">
+    <svg class="fa d-icon d-icon-ellipsis-vertical svg-icon fa-width-auto svg-string" width="1em" height="1em" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><use href="#ellipsis-vertical"></use></svg>
+  </span>
+  <span class="sidebar-section-link-content-text">
+    More
+  </span>
+</button>
+
+<!---->
+</li>
+
+      </ul>
+  </div>
+
+</div>
+    <div data-section-name="categories" class="sidebar-section sidebar-section-wrapper sidebar-section--expanded">
+      <div class="sidebar-section-header-wrapper sidebar-row">
+          <button class="btn no-text sidebar-section-header sidebar-section-header-collapsable btn-transparent" aria-controls="sidebar-section-content-categories" aria-expanded="true" title="Toggle section" type="button">
+<!----><!---->
+    
+            <span class="sidebar-section-header-caret">
+              <svg class="fa d-icon d-icon-angle-down svg-icon fa-width-auto svg-string" width="1em" height="1em" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><use href="#angle-down"></use></svg>
+            </span>
+
+          <span class="sidebar-section-header-text">
+            Categories
+          </span>
+
+<!---->        
+  
+
+<!----></button>
+
+
+<!---->
+<!---->      </div>
+
+      <ul id="sidebar-section-content-categories" class="sidebar-section-content">
+        
+      <li class="sidebar-section-link-wrapper" data-category-id="4">
+      <a id="ember6" class="ember-view sidebar-section-link sidebar-row" title="Create topics here that don’t fit into any other existing category." href="/c/general/4">
+          <span style="color: #25AAE2" class="sidebar-section-link-prefix emoji">
+      <img width="20" height="20" src="/images/emoji/twitter/blue_book.png?v=15" title="blue_book" alt="blue_book" class="emoji prefix-emoji">
+
+<!---->  </span>
+
+
+        <span class="sidebar-section-link-content-text">
+          General
+          <!---->
+        </span>
+
+<!---->
+<!---->
+<!---->
+<!---->      </a>
+  </li>
+
+      <li class="sidebar-section-link-wrapper" data-category-id="2">
+      <a id="ember7" class="ember-view sidebar-section-link sidebar-row" title="Discussion about this site, its organization, how it works, and how we can improve it." href="/c/site-feedback/2">
+          <span style="color: #808281" class="sidebar-section-link-prefix emoji">
+      <img width="20" height="20" src="/images/emoji/twitter/thought_balloon.png?v=15" title="thought_balloon" alt="thought_balloon" class="emoji prefix-emoji">
+
+<!---->  </span>
+
+
+        <span class="sidebar-section-link-content-text">
+          Site Feedback
+          <!---->
+        </span>
+
+<!---->
+<!---->
+<!---->
+<!---->      </a>
+  </li>
+
+
+    <li data-list-item-name="all-categories" class="sidebar-section-link-wrapper">
+      <a id="ember8" class="ember-view sidebar-section-link sidebar-row" data-link-name="all-categories" href="/categories">
+          <span class="sidebar-section-link-prefix icon">
+      <svg class="fa d-icon d-icon-list svg-icon fa-width-auto prefix-icon svg-string" width="1em" height="1em" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><use href="#list"></use></svg>
+
+<!---->  </span>
+
+
+        <span class="sidebar-section-link-content-text">
+          All categories
+          <!---->
+        </span>
+
+<!---->
+<!---->
+<!---->
+<!---->      </a>
+  </li>
+
+
+      </ul>
+  </div>
+
+
+    <!---->
+</div>
+
+
+  <!---->
+
+    <!---->
+
+  <div class="sidebar-footer-wrapper">
+  <div class="sidebar-footer-container">
+    <div class="sidebar-footer-actions">
+      <!---->
+
+<!---->
+<!---->
+<!---->
+        <button class="btn no-text btn-icon btn-flat sidebar-footer-actions-button sidebar-footer-actions-keyboard-shortcuts" title="Keyboard Shortcuts" aria-label="Keyboard Shortcuts" type="button">
+<svg class="fa d-icon d-icon-keyboard svg-icon fa-width-auto svg-string" width="1em" height="1em" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><use href="#keyboard"></use></svg>  <span aria-hidden="true">
+      ​
+    </span>
+
+<!----></button>
+    </div>
+  </div>
+</div>
+</section>
+</div>
+
+    <!---->
+
+    <!---->
+
+    <div id="main-outlet">
+        <!----><div class="above-main-container-outlet subscriptions-campaign">
+  <div>
+<!----></div>
+</div><!---->
+          
+
+  
+    
+<!---->    
+
+
+
+
+          <!---->
+
+          
+<!---->
+
+        <div class="container" id="main-container">
+            <div>
+  
+</div>
+          <!---->
+          <!---->
+          <div class="global-notice">
+<!----></div>
+          <!---->
+        </div>
+
+      <!---->
+<div id="ember12" class="regular ember-view">
+  <!---->
+      
+
+<!---->
+    <!----><!----><!---->
+    
+      <div class="container">
+        <!---->
+      </div>
+
+<!---->
+    <span>
+      <!---->
+    </span>
+
+      <div id="topic-title" class="container">
+  <div class="title-wrapper">
+    
+          <h1 data-topic-id="106">
+                <!---->
+
+              <span class="topic-statuses"><!----><!----><!----><!----><!----><!----><!----><!----></span>
+              <a href="/t/free-course-introduction-to-deep-learning-mit-6-s191/106" class="fancy-title">
+                Free Course - Introduction to Deep Learning MIT 6.S191<!---->              </a>
+
+            <!---->
+          </h1>
+
+          
+            <div class="topic-category">
+    <a class="badge-category__wrapper " style="--category-badge-color: #0088CC;--category-badge-text-color: #FFFFFF;" href="/c/ai-learn/14"><span data-category-id="14" data-drop-close="true" class="badge-category --style-square"><span class="badge-category__name">AI Learning</span></span></a>
+  <div class="topic-header-extra">
+      <div class="list-tags">
+        <!---->
+      </div>
+      <!---->
+  </div>
+
+  <span>
+    <!---->
+  </span>
+</div>
+          
+
+      
+  </div>
+
+  <!----><!----><!---->
+</div>
+
+<!---->
+
+    <div class="container posts">
+      <div class="selected-posts hidden">
+        <div>
+  <p>
+    <span>You have selected <b>0</b> posts.</span>
+  </p>
+
+    <p>
+      <a class="select-all" href="">
+        select all
+      </a>
+    </p>
+
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+  <p class="cancel">
+    <a href="">
+      cancel selecting
+    </a>
+  </p>
+</div>
+      </div>
+
+<!---->
+      <!---->
+
+      <div id="ember15" class="with-timeline ember-view topic-navigation">  
+        <!----><div class="topic-navigation-outlet no-answer">
+<!----><!----></div><!---->
+
+          <div class="timeline-container">
+  <div class="topic-timeline">
+    <!---->
+<!---->
+  
+<!---->
+
+  <div class="timeline-scrollarea-wrapper">
+    <div class="timeline-date-wrapper">
+      <a href="/t/free-course-introduction-to-deep-learning-mit-6-s191/106/1" title="Jump to the first post" class="start-date">
+        <span>
+          Nov 2025
+        </span>
+      </a>
+    </div>
+
+    <div class="timeline-scrollarea" style="height: 300px">
+      <div style="height: 0px" class="timeline-padding"></div>
+
+      <div style="height: 50px" class="timeline-scroller">
+    <div class="timeline-handle"></div>
+    <div class="timeline-scroller-content">
+      <div class="timeline-replies">
+        1 / 1
+      </div>
+        <div class="timeline-ago">
+          Nov 2025
+        </div>
+<!---->    </div>
+</div>
+
+      <div style="height: 250px" class="timeline-padding"></div>
+
+<!---->    </div>
+
+    <div class="timeline-date-wrapper">
+      <a href="/t/free-course-introduction-to-deep-learning-mit-6-s191/106/1" class="now-date">
+        <span>
+          <span class="relative-date" title="Jump to the last post" data-time="1762974371902" data-format="tiny">Nov 2025</span>
+        </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="timeline-footer-controls">
+<!---->
+<!---->
+<!---->
+<!---->
+    <!---->
+  </div>
+
+  </div>
+</div>
+
+        <!---->
+      
+</div>
+
+      <div class="row">
+        <section class="topic-area" id="topic" data-topic-id="106">
+          <div class="posts-wrapper">
+            <span>
+              <!----><!----><!---->
+            </span>
+
+<!---->
+              
+  <div class="loading-container">
+      
+  </div>
+
+<div class="post-stream">
+<!---->
+<!---->
+<!---->
+          <div class="topic-post clearfix post--sticky-avatar sticky-avatar post--topic-owner topic-owner post--regular regular" data-post-number="1">
+  <h2 aria-hidden="false" class="sr-only" id="post-heading-1">
+  post by john on Nov 12, 2025
+</h2>
+      
+        <article id="post_1" class="boxed onscreen-post" aria-labelledby="post-heading-1" data-post-id="166" data-user-id="1">
+          
+<!----><!---->            <div class="post__row row">
+              <div class="topic-avatar">
+    
+      <div class="post-avatar">
+          <a class="main-avatar" tabindex="0" href="/u/john" data-user-card="john" aria-label="john's profile">
+  
+  <img alt="" width="48" height="48" src="/user_avatar/community.openintegrator.com/john/48/16_2.png" class="avatar" loading="lazy">
+
+</a>
+          
+            <!---->
+          
+<!---->      </div>
+    
+</div>
+              <div class="post__body topic-body clearfix">
+                
+                  <div class="topic-meta-data">
+      
+  <div class="names trigger-user-card">
+    
+<!---->      <span class="first username staff admin moderator">
+        
+          <a href="/u/john" data-user-card="john" aria-label="john's profile" tabindex="0">
+  
+            john
+                <span class="svg-icon-title" title="This user is a moderator"><svg class="fa d-icon d-icon-shield-halved svg-icon fa-width-auto svg-string" width="1em" height="1em" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><use href="#shield-halved"></use></svg></span>
+          
+</a>
+        
+      </span>
+
+<!---->
+<!---->
+<!---->
+<!---->        <!---->
+    
+  </div>
+
+
+  <div class="post-infos">
+      <div class="post-info post-date">
+  <a class="post-date" href="/t/free-course-introduction-to-deep-learning-mit-6-s191/106" title="Post date">
+    <span class="relative-date" title="Nov 12, 2025 7:06 pm" data-time="1762974371902" data-format="tiny">Nov 2025</span>
+  </a>
+</div>
+      <div class="read-state read" title="Post is unread">
+  <svg class="fa d-icon d-icon-circle svg-icon fa-width-auto svg-string" width="1em" height="1em" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><use href="#circle"></use></svg>
+</div>
+  </div>
+</div>
+                
+                <div class="post__regular regular post__contents contents">
+                  <!---->
+                    <div class="cooked"><p>If you’re looking to level up your machine-learning game, you should absolutely check out the course <strong>Introduction to Deep Learning</strong> (also known as MIT 6.S191) from Massachusetts Institute of Technology. The reason? It brings together the fundamentals of deep learning <em>and</em> real-world applications—in one intense, open-source program. <a href="https://introtodeeplearning.com/" data-clicks="4" aria-label="MIT Deep Learning 6.S191 link clicked 4 times">MIT Deep Learning 6.S191</a></p>
+<p>Here’s why I think it’s worth your time:</p>
+<ul>
+<li>It covers the core algorithms of neural networks, gives you exposure to computer vision, language modelling, and even generative and reinforcement-learning topics.</li>
+<li>The materials are open-source, so you can dig in directly—slides, code labs, lectures—all accessible.</li>
+<li>the prerequisites are modest (basic calculus, linear algebra, some Python helps) and the pace is designed to bring you up to speed quickly.</li>
+</ul>
+<hr>
+<p><strong>My journey so far</strong><br>
+I’ve completed the first two lectures of the course (Lecture 1: “Intro to Deep Learning”, Lecture 2: “Deep Sequence Modeling”) and created a video showing how to <em>get started</em> with the code lab.</p>
+<p>The value in this is two-fold: you don’t just listen; you get your hands dirty. And for someone like me who already has a technical background (in healthcare IT, data pipelines, integration etc), bridging that gap between “I know theory” and “I can run the code” was <em>critical</em>.</p>
+<hr>
+<p>If you’re curious about stepping into deep learning—whether for a project, a career pivot or just broadening your skillset—this course is a top pick.</p>
+<p>Here is the video for getting started with the first code lab<br>
+            <iframe src="https://www.youtube.com/embed/dTpsDq6BJGA?feature=oembed&amp;wmode=opaque" width="480" height="360" frameborder="0" allowfullscreen="" class="youtube-onebox" seamless="seamless" sandbox="allow-same-origin allow-scripts allow-forms allow-popups allow-popups-to-escape-sandbox allow-presentation"></iframe>
+</p><div class="cooked-selection-barrier" aria-hidden="true"><br></div></div><!---->
+                  <!----><!----><!---->
+
+<!---->
+<!---->
+<!---->
+                  <section class="post__menu-area post-menu-area clearfix">
+                    
+  <nav class="post-controls expanded">
+      <!---->
+    <div class="actions">
+        <!---->
+            <div class="double-button post-action-menu__double-button">
+        <button class="btn no-text fk-d-menu__trigger post-like-users_166-trigger post-action-menu__like-count like-count btn-flat button-count highlight-action regular-likes" id="post-like-users_166" aria-expanded="false" data-identifier="post-like-users_166" data-trigger="" label="2 people liked this post." type="button">
+<!----><!---->
+    
+      2
+    
+
+
+<!----></button>
+
+<!---->
+
+    <button class="btn no-text btn-icon post-action-menu__like toggle-like btn-icon like btn-flat" title="like this post" aria-label="like this post" data-post-id="166" type="button">
+<svg class="fa d-icon d-icon-d-unliked svg-icon fa-width-auto svg-string" width="1em" height="1em" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><use href="#far-heart"></use></svg>  <span aria-hidden="true">
+      ​
+    </span>
+
+<!----></button>
+  </div>
+
+
+          <button class="btn no-text btn-icon post-action-menu__copy-link btn-flat" title="copy a link to this post to clipboard" aria-label="copy a link to this post to clipboard" type="button">
+<svg class="fa d-icon d-icon-d-post-share svg-icon fa-width-auto svg-string" width="1em" height="1em" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><use href="#link"></use></svg>  <span aria-hidden="true">
+      ​
+    </span>
+
+<!----></button>
+
+        <!---->
+        <!---->
+        <!---->
+        <!---->
+        <!---->
+        <!---->
+        <!---->
+    </div>
+  </nav>
+  
+  <div class="small-user-list  who-read">
+    <span class="small-user-list-content" role="list" aria-live="polite" aria-atomic="true">
+<!---->    </span>
+  </div>
+
+<!---->
+
+                  </section>
+
+<!---->                </div>
+
+                <section class="post__actions post-actions">
+                  <!----><!---->
+                </section>
+                
+                  <!---->
+                
+              </div>
+            </div>
+              <div class="post__topic-map topic-map --op">
+                  
+    <section class="topic-map__contents">
+      <div class="topic-map__stats">
+  <button class="btn no-text fk-d-menu__trigger topic-map__views-trigger" aria-expanded="false" data-identifier="topic-map__views" data-trigger="" type="button" id="ember21">
+<!----><!---->
+    
+      <span class="number">56</span>
+      <span class="topic-map__stat-label">
+        views
+      </span>
+    
+
+
+<!----></button>
+
+<!---->
+
+<!---->
+    <button class="btn no-text fk-d-menu__trigger topic-map__links-trigger" aria-expanded="false" data-identifier="topic-map__links" data-trigger="" type="button" id="ember22">
+<!----><!---->
+    
+        <span class="number">1</span>
+        <span class="topic-map__stat-label">
+          link
+        </span>
+      
+
+
+<!----></button>
+
+<!---->
+
+<!---->
+<!---->  <!---->
+  <div class="topic-map__buttons">
+<!----><!---->  </div>
+</div>
+    </section>
+
+    <!---->
+
+<!---->  
+
+              </div>
+          
+        </article>
+      
+</div>
+
+<!---->
+<!---->
+    <div class="post-stream__bottom-boundary"></div>
+    <!---->
+  
+<!----></div>
+
+  <div class="loading-container">
+      
+  </div>
+
+
+<!---->          </div>
+          <div id="topic-bottom"></div>
+
+          
+  <div class="loading-container">
+      
+
+<!---->
+<!---->
+              <!---->
+
+              <div class="topic-timer-info">
+<!----></div>
+
+<!---->
+          
+  </div>
+
+
+          <!---->
+        </section>
+      </div>
+
+    </div>
+          <div role="region" id="topic-footer-buttons">
+  <div class="topic-footer-main-buttons">
+<!---->    <button class="btn btn-icon-text btn-primary" type="button">
+<svg class="fa d-icon d-icon-reply svg-icon fa-width-auto svg-string" width="1em" height="1em" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><use href="#reply"></use></svg>  <span class="d-button-label">Reply<!----></span>
+
+<!----></button>
+  </div>
+</div>
+
+      <br>
+
+      <span>
+        <!---->
+      </span>
+
+      <div class="more-topics__container">
+    <div class="more-topics__lists single-list">
+      <div role="complementary" aria-labelledby="suggested-topics-title" id="suggested-topics" class="more-topics__list">
+  
+<!---->
+
+  <h3 id="suggested-topics-title" class="more-topics__list-title">
+    New &amp; Unread Topics
+  </h3>
+
+  <div class="topics">
+      <div id="ember23" class="ember-view">
+  <div class="loading-container">
+      
+    <table class="topic-list">
+  <caption class="sr-only">Topic list, column headers with buttons are sortable.</caption>
+  <thead class="topic-list-header --has-tabs">
+    <tr>
+      <th data-sort-order="default" scope="col" class="topic-list-data default">
+<!---->
+      <span>
+        Topic
+      </span>
+
+  <!---->
+</th>
+
+    <th data-sort-order="posts" scope="col" class="topic-list-data posts num">
+<!---->
+      <span>
+        Replies
+      </span>
+
+  <!---->
+</th>
+    <th data-sort-order="views" scope="col" class="topic-list-data views num">
+<!---->
+      <span>
+        Views
+      </span>
+
+  <!---->
+</th>
+    <th data-sort-order="activity" scope="col" class="topic-list-data activity num">
+<!---->
+      <span>
+        Activity
+      </span>
+
+  <!---->
+</th>
+</tr>
+  </thead>
+
+  <!---->
+
+  <tbody class="topic-list-body">
+      <tr data-topic-id="80" class="topic-list-item category-dcm4chee">
+  <!---->
+
+        <td class="main-link topic-list-data" colspan="1">
+  <!---->
+
+  <span class="link-top-line" role="heading" aria-level="2"><!----><span class="topic-statuses"><!----><!----><!----><!----><!----><!----><!----><!----></span><a href="/t/how-to-separate-access-for-multiple-hospitals-in-one-dcm4chee-and-ohif-setup/80" data-topic-id="80" class="title raw-link raw-topic-link">How to Separate Access for Multiple Hospitals in One DCM4CHEE and OHIF Setup?</a><!----><!----><!----><span class="topic-post-badges"><!----><!----></span><!---->
+    
+  </span>
+
+  <div class="link-bottom-line">
+    
+      <!---->
+          <a class="badge-category__wrapper " style="--category-badge-color: #BF1E2E;--category-badge-text-color: #FFFFFF;" href="/c/dcm4chee/5"><span data-category-id="5" data-drop-close="true" class="badge-category --style-square" title="This category is for discussions around the DCM4CHEE open source DICOM archive https://github.com/dcm4che/dcm4chee-arc-light"><span class="badge-category__name">DCM4CHEE</span></span></a>
+      <!---->
+
+      <!---->
+
+<!---->
+      <!---->
+    
+  </div>
+
+<!---->
+  <!---->
+</td>
+        <td class="num posts-map posts  topic-list-data">
+  <a href="/t/how-to-separate-access-for-multiple-hospitals-in-one-dcm4chee-and-ohif-setup/80/1" class="badge-posts" aria-label="1 reply, jump to first post">
+    <!---->
+    <span class="number">1</span>
+  </a>
+</td>
+        <td class="num views topic-list-data">
+  <!---->
+  <span class="number" title="this topic has been viewed 100 times">100</span>
+</td>
+        <td title="Created: Aug 20, 2025 7:27 am
+Latest: Aug 20, 2025 12:16 pm" class="activity num topic-list-data age">
+  <a href="/t/how-to-separate-access-for-multiple-hospitals-in-one-dcm4chee-and-ohif-setup/80/2" class="post-activity"><!----><span class="relative-date" data-time="1755692210947" data-format="tiny">Aug 2025</span></a>
+</td>
+  
+</tr>
+
+<!---->
+      <!---->
+      <tr data-topic-id="25" class="topic-list-item category-ohif">
+  <!---->
+
+        <td class="main-link topic-list-data" colspan="1">
+  <!---->
+
+  <span class="link-top-line" role="heading" aria-level="2"><!----><span class="topic-statuses"><!----><!----><!----><!----><!----><!----><!----><!----></span><a href="/t/how-to-install-ohif-with-docker-on-windows/25" data-topic-id="25" class="title raw-link raw-topic-link">How to Install OHIF with docker on windows</a><!----><!----><!----><span class="topic-post-badges"><!----><!----></span><!---->
+    
+  </span>
+
+  <div class="link-bottom-line">
+    
+      <!---->
+          <a class="badge-category__wrapper " style="--category-badge-color: #9EB83B;--category-badge-text-color: #000000;" href="/c/ohif/9"><span data-category-id="9" data-drop-close="true" class="badge-category --style-square"><span class="badge-category__name">OHIF</span></span></a>
+      <!---->
+
+      <!---->
+
+<!---->
+      <!---->
+    
+  </div>
+
+<!---->
+  <!---->
+</td>
+        <td class="num posts-map posts  topic-list-data">
+  <a href="/t/how-to-install-ohif-with-docker-on-windows/25/1" class="badge-posts" aria-label="0 replies, jump to first post">
+    <!---->
+    <span class="number">0</span>
+  </a>
+</td>
+        <td class="num views topic-list-data">
+  <!---->
+  <span class="number" title="this topic has been viewed 58 times">58</span>
+</td>
+        <td title="Created: Jul 5, 2025 6:13 pm
+Latest: Jul 10, 2025 5:59 am" class="activity num topic-list-data age">
+  <a href="/t/how-to-install-ohif-with-docker-on-windows/25/1" class="post-activity"><!----><span class="relative-date" data-time="1752127141452" data-format="tiny">Jul 2025</span></a>
+</td>
+  
+</tr>
+
+<!---->
+      <!---->
+      <tr data-topic-id="42" class="topic-list-item category-mirth">
+  <!---->
+
+        <td class="main-link topic-list-data" colspan="1">
+  <!---->
+
+  <span class="link-top-line" role="heading" aria-level="2"><!----><span class="topic-statuses"><!----><!----><!----><!----><!----><!----><!----><!----></span><a href="/t/how-to-install-mirth-connect-in-docker/42" data-topic-id="42" class="title raw-link raw-topic-link">How to Install Mirth Connect in Docker</a><!----><!----><!----><span class="topic-post-badges"><!----><!----></span><!---->
+    
+  </span>
+
+  <div class="link-bottom-line">
+    
+      <!---->
+          <a class="badge-category__wrapper " style="--category-badge-color: #F7941D;--category-badge-text-color: #000000;" href="/c/mirth/12"><span data-category-id="12" data-drop-close="true" class="badge-category --style-square"><span class="badge-category__name">Mirth Connect</span></span></a>
+      <!---->
+
+      <!---->
+
+<!---->
+      <!---->
+    
+  </div>
+
+<!---->
+  <!---->
+</td>
+        <td class="num posts-map posts  topic-list-data">
+  <a href="/t/how-to-install-mirth-connect-in-docker/42/1" class="badge-posts" aria-label="8 replies, jump to first post">
+    <!---->
+    <span class="number">8</span>
+  </a>
+</td>
+        <td class="num views topic-list-data">
+  <!---->
+  <span class="number" title="this topic has been viewed 294 times">294</span>
+</td>
+        <td title="Created: Jul 10, 2025 7:07 am
+Latest: Oct 28, 2025 6:54 pm" class="activity num topic-list-data age coldmap-med">
+  <a href="/t/how-to-install-mirth-connect-in-docker/42/9" class="post-activity"><!----><span class="relative-date" data-time="1761677672052" data-format="tiny">Oct 2025</span></a>
+</td>
+  
+</tr>
+
+<!---->
+      <!---->
+      <tr data-topic-id="10" class="topic-list-item category-dcm4chee">
+  <!---->
+
+        <td class="main-link topic-list-data" colspan="1">
+  <!---->
+
+  <span class="link-top-line" role="heading" aria-level="2"><!----><span class="topic-statuses"><!----><!----><!----><!----><!----><!----><!----><!----></span><a href="/t/how-to-install-dcm4chee-dicom-archive-5-light-on-windows-11-with-docker-desktop/10" data-topic-id="10" class="title raw-link raw-topic-link">How to Install dcm4chee DICOM Archive 5 light on Windows 11 with Docker Desktop</a><!----><!----><!----><span class="topic-post-badges"><!----><!----></span><!---->
+    
+  </span>
+
+  <div class="link-bottom-line">
+    
+      <!---->
+          <a class="badge-category__wrapper " style="--category-badge-color: #BF1E2E;--category-badge-text-color: #FFFFFF;" href="/c/dcm4chee/5"><span data-category-id="5" data-drop-close="true" class="badge-category --style-square" title="This category is for discussions around the DCM4CHEE open source DICOM archive https://github.com/dcm4che/dcm4chee-arc-light"><span class="badge-category__name">DCM4CHEE</span></span></a>
+      <!---->
+
+      <!---->
+
+<!---->
+      <!---->
+    
+  </div>
+
+<!---->
+  <!---->
+</td>
+        <td class="num posts-map posts  topic-list-data">
+  <a href="/t/how-to-install-dcm4chee-dicom-archive-5-light-on-windows-11-with-docker-desktop/10/1" class="badge-posts" aria-label="1 reply, jump to first post">
+    <!---->
+    <span class="number">1</span>
+  </a>
+</td>
+        <td class="num views topic-list-data">
+  <!---->
+  <span class="number" title="this topic has been viewed 238 times">238</span>
+</td>
+        <td title="Created: Jun 28, 2025 11:07 am
+Latest: Jun 28, 2025 11:17 am" class="activity num topic-list-data age">
+  <a href="/t/how-to-install-dcm4chee-dicom-archive-5-light-on-windows-11-with-docker-desktop/10/2" class="post-activity"><!----><span class="relative-date" data-time="1751109465909" data-format="tiny">Jun 2025</span></a>
+</td>
+  
+</tr>
+
+<!---->
+      <!---->
+      <tr data-topic-id="14" class="topic-list-item category-dicom">
+  <!---->
+
+        <td class="main-link topic-list-data" colspan="1">
+  <!---->
+
+  <span class="link-top-line" role="heading" aria-level="2"><!----><span class="topic-statuses"><!----><!----><!----><!----><!----><!----><!----><!----></span><a href="/t/dicom-test-tools/14" data-topic-id="14" class="title raw-link raw-topic-link">DICOM Test Tools</a><!----><!----><!----><span class="topic-post-badges"><!----><!----></span><!---->
+    
+  </span>
+
+  <div class="link-bottom-line">
+    
+      <!---->
+          <a class="badge-category__wrapper " style="--category-badge-color: #F1592A;--category-badge-text-color: #FFFFFF;" href="/c/dicom/6"><span data-category-id="6" data-drop-close="true" class="badge-category --style-square" title="General DICOM discussions under this topic."><span class="badge-category__name">DICOM</span></span></a>
+      <!---->
+
+      <!---->
+
+<!---->
+      <!---->
+    
+  </div>
+
+<!---->
+  <!---->
+</td>
+        <td class="num posts-map posts  topic-list-data">
+  <a href="/t/dicom-test-tools/14/1" class="badge-posts" aria-label="4 replies, jump to first post">
+    <!---->
+    <span class="number">4</span>
+  </a>
+</td>
+        <td class="num views topic-list-data">
+  <!---->
+  <span class="number" title="this topic has been viewed 203 times">203</span>
+</td>
+        <td title="Created: Jun 30, 2025 6:06 pm
+Latest: Jul 10, 2025 5:47 am" class="activity num topic-list-data age">
+  <a href="/t/dicom-test-tools/14/5" class="post-activity"><!----><span class="relative-date" data-time="1752126466777" data-format="tiny">Jul 2025</span></a>
+</td>
+  
+</tr>
+
+<!---->
+      <!---->
+  </tbody>
+
+  <!---->
+</table>
+
+  </div>
+</div>
+  </div>
+</div>
+    </div>
+
+      <h3 class="more-topics__browse-more">
+    Want to read more? Browse other topics in <a class="badge-category__wrapper " style="--category-badge-color: #0088CC;--category-badge-text-color: #FFFFFF;" href="/c/ai-learn/14"><span data-category-id="14" data-drop-close="true" class="badge-category --style-square"><span class="badge-category__name">AI Learning</span></span></a> or <a href="/latest">view latest topics</a>.
+</h3>
+</div>
+      <!---->
+    <!---->
+    <!---->
+
+    <div></div>
+</div>
+
+        <!---->
+      <!---->
+
+  <div aria-label="User card" id="user-card" class="user-card show-badges no-bg group-undefined ember-view" role="dialog"><!----></div>
+
+
+<div id="group-card" class="no-bg group-card show-badges ember-view"><!----></div>
+    </div>
+
+    <!---->
+
+      <a class="powered-by-discourse" href="https://discourse.org/powered-by" target="_blank">
+  <span class="powered-by-discourse__content">
+    <span class="powered-by-discourse__logo">
+      <svg class="fa d-icon d-icon-fab-discourse svg-icon fa-width-auto svg-string" width="1em" height="1em" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><use href="#fab-discourse"></use></svg>
+    </span>
+    <span>Powered by Discourse</span>
+  </span>
+</a>
+  </div>
+
+  <!---->
+    <div class="custom-footer-content">
+  
+</div>
+  <!----><!----><div class="below-footer-outlet chat-drawer-outlet">
+  <div class="chat-drawer-outlet-container">
+    <!---->
+<!---->
+<!---->
+  </div>
+</div><div class="below-footer-outlet chat-message-actions-desktop-outlet">
+  <!---->
+</div><!---->
+
+  <div class="modal-container"></div>
+
+<!---->
+  <!---->
+  <div id="topic-entrance" class="hidden ember-view"><button class="btn no-text btn-default full jump-top" title="Jump to the first post" aria-label="Jump to the first post - Invalid date" type="button">
+<!----><!---->
+  <svg class="fa d-icon d-icon-backward-step svg-icon fa-width-auto svg-string" width="1em" height="1em" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><use href="#backward-step"></use></svg>
+  Invalid date
+
+
+<!----></button>
+
+<button class="btn no-text btn-default full jump-bottom" title="Jump to the last post" aria-label="Jump to the last post - Invalid date" type="button">
+<!----><!---->
+  Invalid date
+  <svg class="fa d-icon d-icon-forward-step svg-icon fa-width-auto svg-string" width="1em" height="1em" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><use href="#forward-step"></use></svg>
+
+
+<!----></button></div>
+  <div id="reply-control" class="closed hide-preview ember-view">
+  <div class="grippie"></div>
+<!----></div>
+  <!---->
+
+<!----></div>
+
+<div id="d-menu-portals"></div>
+
+<!---->
+<div id="d-tooltip-portals"></div>
+
+<!---->
+<section class="fk-d-toasts">
+<!----></section>
+
+<div id="a11y-announcements-polite" class="sr-only" role="status" aria-live="polite" aria-atomic="true">
+  
+</div>
+<div id="a11y-announcements-assertive" class="sr-only" role="alert" aria-live="assertive" aria-atomic="true">
+  
+</div></section>
+
+      <form id="hidden-login-form" method="post" action="/login" style="display: none;">
+        <input name="username" type="text" id="signin_username">
+        <input name="password" type="password" id="signin_password">
+        <input name="redirect" type="hidden">
+        <input type="submit" id="signin-button" value="Log In">
+      </form>
+
+    <script defer="" src="/assets/start-discourse-ed0c531d.js" nonce=""></script>
+
+    
+
+    <script defer="" src="/assets/browser-update-296c1fea.js" nonce=""></script>
+
+      
+
+      
+
+    <script nonce="">/* Workaround for https://bugs.webkit.org/show_bug.cgi?id=209261 */</script>
+  
+
+<iframe name="__privateStripeMetricsController6270" frameborder="0" allowtransparency="true" scrolling="no" role="presentation" allow="payment *" src="https://js.stripe.com/v3/m-outer-3437aaddcdf6922d623e172c2d6f9278.html#url=https%3A%2F%2Fcommunity.openintegrator.com%2Ft%2Ffree-course-introduction-to-deep-learning-mit-6-s191%2F106&amp;title=Free%20Course%20-%20Introduction%20to%20Deep%20Learning%20MIT%206.S191%20-%20AI%20Learning%20-%20Open%20Integrator%20Community&amp;referrer=&amp;muid=NA&amp;sid=NA&amp;version=6&amp;preview=false&amp;__shared_params__[version]=v3" aria-hidden="true" tabindex="-1" style="border: none !important; margin: 0px !important; padding: 0px !important; width: 1px !important; min-width: 100% !important; overflow: hidden !important; display: block !important; visibility: hidden !important; position: fixed !important; height: 1px !important; pointer-events: none !important; user-select: none !important;"></iframe></body></html>

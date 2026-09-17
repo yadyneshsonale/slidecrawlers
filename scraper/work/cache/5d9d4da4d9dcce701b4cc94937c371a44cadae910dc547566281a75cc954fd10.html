@@ -1,0 +1,529 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CS2300: Foundations of Computer Systems Design</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&amp;display=swap" rel="stylesheet">
+    <!-- GOOGLE ANALYTICS TRACKING CODE ------>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-J9TTCYMKCP&amp;cx=c&amp;gtm=4e66a1"></script><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-20509414-11"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-20509414-11');
+    </script>
+    <!-- END GOOGLE ANALYTICS TRACKING CODE -->
+
+    <link rel="stylesheet" href="../common/course.css">
+    <link rel="stylesheet" href="css/CS2300.css">
+</head>
+<body class="course-page">
+    <main class="course-shell course-shell--narrow">
+        <a class="course-back" href="../../index.html?tab=teaching-panel&amp;course=course-cs2300">Back to teaching</a>
+
+        <header class="course-hero">
+            <div class="course-hero-cta-group">
+                <a class="course-hero-cta" href="https://cse.iitm.ac.in/~ayon/courses/CS2300/taracpu/" target="_blank" rel="noopener">Try TARA</a>
+                <a class="course-hero-cta" href="https://cse.iitm.ac.in/~ayon/courses/CS2300/taramanual/" target="_blank" rel="noopener">TARA Manual</a>
+            </div>
+            <div class="course-hero-top">
+                <div>
+                    <p class="course-kicker">Undergraduate Core</p>
+                    <h1 class="course-title">CS2300: Foundations of Computer Systems Design</h1>
+                    <p class="course-summary">
+                        This course helps students design and implement a simple but functional processor microarchitecture from first principles. It moves from digital logic and combinational design to sequential systems, stored-program execution, instruction-set design, and a complete working CPU implementation.
+                   </p>
+                </div>
+                <div class="course-hero-media">
+                    <img class="course-hero-image" src="images/2300.png" alt="CS2300 course image">
+                </div>
+            </div>
+            <div class="course-meta-grid course-hero-meta-full">
+                <div class="course-meta-item">
+                    <span class="course-meta-label">Latest Offering</span>
+                    <span class="course-meta-value">Diwali'23 (July - Nov, 2023)</span>
+                </div>
+                <div class="course-meta-item">
+                    <span class="course-meta-label">Instructor</span>
+                    <span class="course-meta-value"><a href="https://www.cse.iitm.ac.in/~ayon/" target="_blank" rel="noopener">Ayon Chakraborty</a></span>
+                </div>
+                <div class="course-meta-item">
+                    <span class="course-meta-label">Materials</span>
+                    <span class="course-meta-value"><a href="https://courses.iitm.ac.in/course/view.php?id=2232" target="_blank" rel="noopener">Moodle</a></span>
+                </div>
+                <div class="course-meta-item">
+                    <span class="course-meta-label">Focus</span>
+                    <span class="course-meta-value">Digital design to microarchitecture</span>
+                </div>
+            </div>
+        </header>
+
+        <section class="course-section">
+            <article class="course-card course-feature">
+                <div class="course-prose">
+                    <p>
+                        The course is divided into two broad components: <strong>digital design</strong> and <strong>processor design</strong>. Students first learn logic-related fundamentals and core circuit-design skills, then connect stored-program execution to instruction-set architecture, machine code, and a hardware platform capable of storing and executing code.
+                    </p>
+                    <p>
+                        The accompanying video playlist is based on the online IIT Madras BS Data Science systems-bucket offering. The classroom version is positioned to help students transition smoothly into <strong>CS2600</strong> and later <strong>CS6600</strong> by first learning how to build a correct computer before worrying about performance and then state-of-the-art architectural optimization.
+                    </p>
+                </div>
+                <div class="course-media">
+                    <iframe class="course-embed" src="https://www.youtube.com/embed/videoseries?list=PLZ2ps__7DhBYE2TyvAAnxTlmE4xIcAHZj" title="CS2300 playlist" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+                    </iframe>
+                    <p class="course-media-caption">
+                        The playlist follows the online IIT Madras BS Data Science version of the course and works as a companion to the in-class material hosted on Moodle. Please note that the version offered as a part of BS Data Science is significantly diluted in terms of rigour compared to the version I offer for our B.Tech program.
+                    </p>
+                </div>
+            </article>
+        </section>
+
+        <section class="course-section">
+            <h2 class="course-section-title">Syllabus and TARA Lab</h2>
+
+            <article class="course-card course-tabs-card">
+                <div class="course-tabs-head" role="tablist" aria-label="CS2300 syllabus tabs">
+                    <button class="course-tab-button" id="tab-topics" type="button" role="tab" aria-selected="true" aria-controls="panel-topics" data-course-tab="panel-topics">Course Topic List</button>
+                    <button class="course-tab-button" id="tab-tara" type="button" role="tab" aria-selected="false" aria-controls="panel-tara" data-course-tab="panel-tara">TARA Emulator and ISA</button>
+                    <button class="course-tab-button" id="tab-fdho" type="button" role="tab" aria-selected="false" aria-controls="panel-fdho" data-course-tab="panel-fdho">FDHO</button>
+                    <button class="course-tab-button" id="tab-handbook" type="button" role="tab" aria-selected="false" aria-controls="panel-handbook" data-course-tab="panel-handbook">2300 Handbook</button>
+                </div>
+
+                <div class="course-tab-panel is-active" id="panel-topics" role="tabpanel" aria-labelledby="tab-topics">
+            <div class="course-timeline">
+                <div class="course-timeline-axis">
+                    <div class="course-timeline-item">
+                        <details class="course-panel" open="">
+                            <summary class="course-panel-summary">
+                                <span class="course-panel-topline">
+                                    <span class="course-panel-range">Module 1</span>
+
+                                </span>
+                                <span class="course-panel-title-row">
+                                    <span class="course-panel-title">Foundations: From Software to Digital Hardware</span>
+                                    <span class="course-panel-hint">Click to expand</span>
+                                </span>
+                            </summary>
+                            <div class="course-panel-content">
+                                <p class="course-subtopic">Module Topics</p>
+                                <ul class="course-lecture-list">
+                                    <li><strong>The Computing Stack:</strong> Computability, abstraction layers, source code, assembly, machine code, memory, and stored-program execution.</li>
+                                    <li><strong>The TARA Machine Model:</strong> Programmer-visible state: PC, IR, registers, memory, condition flags, and the ISA as a behavioral contract.</li>
+                                    <li><strong>TARA Assembly Programming:</strong> Arithmetic, logic, loads, stores, branches, loops, labels, and flag-driven control flow.</li>
+                                    <li><strong>Register Transfer Language:</strong> RTL notation, fetch-decode-execute sequences, and the bridge from instruction behavior to datapath hardware.</li>
+                                </ul>
+                            </div>
+                        </details>
+                    </div>
+
+                    <div class="course-timeline-item">
+                        <details class="course-panel">
+                            <summary class="course-panel-summary">
+                                <span class="course-panel-topline">
+                                    <span class="course-panel-range">Module 2</span>
+
+                                </span>
+                                <span class="course-panel-title-row">
+                                    <span class="course-panel-title">Data, Bits, and Logic</span>
+                                    <span class="course-panel-hint">Click to expand</span>
+                                </span>
+                            </summary>
+                            <div class="course-panel-content">
+                                <p class="course-subtopic">Module Topics</p>
+                                <ul class="course-lecture-list">
+                                    <li><strong>Data Representation:</strong> Bit patterns, bytes, words, hexadecimal notation, digital abstraction, and endian-aware interpretation.</li>
+                                    <li><strong>Number Representation:</strong> Unsigned integers, base conversion, signed magnitude, one's complement, two's complement, shifts, and overflow.</li>
+                                    <li><strong>Boolean Logic:</strong> Bitwise operations, masks, Boolean algebra, De Morgan's laws, truth tables, SOP/POS, NAND/NOR realization.</li>
+                                    <li><strong>CMOS Enrichment:</strong> Transistors as switches, CMOS gates, propagation delay, fan-out, and static/dynamic power.</li>
+                                </ul>
+                            </div>
+                        </details>
+                    </div>
+
+                    <div class="course-timeline-item">
+                        <details class="course-panel">
+                            <summary class="course-panel-summary">
+                                <span class="course-panel-topline">
+                                    <span class="course-panel-range">Module 3</span>
+
+                                </span>
+                                <span class="course-panel-title-row">
+                                    <span class="course-panel-title">Combinational Logic and the TARA ALU</span>
+                                    <span class="course-panel-hint">Click to expand</span>
+                                </span>
+                            </summary>
+                            <div class="course-panel-content">
+                                <p class="course-subtopic">Module Topics</p>
+                                <ul class="course-lecture-list">
+                                    <li><strong>Combinational Model:</strong> Output-as-function, timing specifications, critical paths, glitches, and hazard-aware design.</li>
+                                    <li><strong>Logic Simplification:</strong> Canonical forms, Karnaugh maps, don't-cares, multi-level logic, and bubble pushing.</li>
+                                    <li><strong>Building Blocks:</strong> Muxes, demuxes, decoders, encoders, comparators, wide logic, and their datapath/control uses.</li>
+                                    <li><strong>TARA ALU:</strong> Adders, subtraction, carry lookahead, operation selection, flag generation, and PLA-style control logic.</li>
+                                </ul>
+                            </div>
+                        </details>
+                    </div>
+
+                    <div class="course-timeline-item">
+                        <details class="course-panel">
+                            <summary class="course-panel-summary">
+                                <span class="course-panel-topline">
+                                    <span class="course-panel-range">Module 4</span>
+
+                                </span>
+                                <span class="course-panel-title-row">
+                                    <span class="course-panel-title">Sequential Logic, Memory, and Control</span>
+                                    <span class="course-panel-hint">Click to expand</span>
+                                </span>
+                            </summary>
+                            <div class="course-panel-content">
+                                <p class="course-subtopic">Module Topics</p>
+                                <ul class="course-lecture-list">
+                                    <li><strong>Time and Clocking:</strong> Why state is needed, setup/hold constraints, clock period, and synchronous design discipline.</li>
+                                    <li><strong>Latches and Flip-Flops:</strong> SR latches, gated D latches, edge-triggered D flip-flops, JK/T flip-flops, and excitation tables.</li>
+                                    <li><strong>Storage Blocks:</strong> Enabled registers, register files, buses, shift registers, counters, ROM, RAM, MAR, MDR, and IR.</li>
+                                    <li><strong>FSM Control:</strong> Moore/Mealy machines, ASM charts, sequence detectors, and counter-controlled datapaths.</li>
+                                </ul>
+                            </div>
+                        </details>
+                    </div>
+
+                    <div class="course-timeline-item">
+                        <details class="course-panel">
+                            <summary class="course-panel-summary">
+                                <span class="course-panel-topline">
+                                    <span class="course-panel-range">Module 5</span>
+
+                                </span>
+                                <span class="course-panel-title-row">
+                                    <span class="course-panel-title">TARA Microarchitecture Design and Implementation</span>
+                                    <span class="course-panel-hint">Click to expand</span>
+                                </span>
+                            </summary>
+                            <div class="course-panel-content">
+                                <p class="course-subtopic">Module Topics</p>
+                                <ul class="course-lecture-list">
+                                    <li><strong>ISA-Microarchitecture Contract:</strong> Architectural correctness, single-cycle versus multicycle design, and preserving observable state.</li>
+                                    <li><strong>TARA Datapath:</strong> PC, IR, register file, MAR/MDR, ALU result paths, bus organization, and mux-controlled data movement.</li>
+                                    <li><strong>Instruction Cycle:</strong> Common fetch RTL, execute sequences by instruction class, and disciplined control-signal derivation.</li>
+                                    <li><strong>Control and Validation:</strong> T-state counters, hardwired control, microprogramming, FSM controllers, block tests, traces, and program demos.</li>
+                                </ul>
+                                <p class="course-prose course-panel-callout">
+                                    <strong>Legacy final design reference:</strong> <a href="files/CS2310_final_design.pdf" target="_blank" rel="noopener">Gajendra-1 CPU</a>
+                                </p>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </div>
+                </div>
+
+                <div class="course-tab-panel" id="panel-tara" role="tabpanel" aria-labelledby="tab-tara">
+                    <div class="course-tara-layout">
+                        <div class="course-tara-teaser">
+                            <div class="course-tara-brand">
+                                <div class="course-tara-brand-text">
+                                    <p class="course-tara-eyebrow">TARA CPU Simulator</p>
+                                    <h3 class="course-tara-teaser-title">Teaser of TARA Emulator Tool</h3>
+                                </div>
+                                <img class="course-tara-logo" src="images/logo2.png" alt="TARA CPU logo">
+                            </div>
+                            <video class="course-video" controls="" preload="metadata" poster="images/tara.png">
+                                <source src="images/bubblesort.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <p class="course-media-caption">
+                                Assembly programs can drive a memory-mapped 64 x 64 display, making ISA behavior visible while the CPU state, memory, listing, and execution trace update.
+                            </p>
+                        </div>
+
+                        <div class="course-tara-bottom">
+                            <div class="course-isa-table-wrap">
+                                <table class="course-isa-table">
+                                    <caption>TARA ISA summary</caption>
+                                    <thead>
+                                        <tr>
+                                            <th>Format</th>
+                                            <th>Instructions</th>
+                                            <th>Encoding layout</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><code>F0</code></td>
+                                            <td><code>NOP</code>, <code>HLT</code>, <code>RET</code></td>
+                                            <td><code>op[15:11] 00000000000</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>F1</code></td>
+                                            <td><code>ADD</code>, <code>SUB</code>, <code>MUL</code>, <code>AND</code>, <code>OR</code>, <code>XOR</code>, <code>SLT</code></td>
+                                            <td><code>op rd rsA rsB 00</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>F2</code></td>
+                                            <td><code>MOV</code>, <code>NOT</code></td>
+                                            <td><code>op rd rs 00000</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>F3</code></td>
+                                            <td><code>LIL</code>, <code>LIH</code>, <code>ADDI</code>, <code>SHL</code>, <code>SHR</code></td>
+                                            <td><code>op rd imm8</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>F4</code></td>
+                                            <td><code>LDW</code>, <code>STW</code>, <code>LDB</code>, <code>STB</code></td>
+                                            <td><code>op rdata rbase off5</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>F5</code></td>
+                                            <td><code>BZ</code>, <code>BN</code></td>
+                                            <td><code>op rtest rel8</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>F6</code></td>
+                                            <td><code>JMP</code>, <code>CALL</code></td>
+                                            <td><code>op rel11</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>F7</code></td>
+                                            <td><code>PUSH</code>, <code>POP</code></td>
+                                            <td><code>op rstk 00000000</code></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="course-resource-grid">
+                                <a class="course-resource-link course-resource-card" href="./taramanual/" target="_blank" rel="noopener">
+                                    <span class="course-resource-icon">MAN</span>
+                                    <div class="course-resource-copy">
+                                        <h4>TARA CPU Manual</h4>
+                                        <p>Full simulator guide with installation, interface tour, examples, memory map, games, and debugging notes.</p>
+                                    </div>
+                                </a>
+                                <a class="course-resource-link course-resource-card" href="./taracpu/" target="_blank" rel="noopener">
+                                    <span class="course-resource-icon">SIM</span>
+                                    <div class="course-resource-copy">
+                                        <h4>TARA Simulator</h4>
+                                        <p>Browser-based simulator for writing, assembling, stepping, and running TARA assembly programs.</p>
+                                    </div>
+                                </a>
+                                <a class="course-resource-link course-resource-card" href="https://pypi.org/project/taracpu/" target="_blank" rel="noopener">
+                                    <span class="course-resource-icon">PY</span>
+                                    <div class="course-resource-copy">
+                                        <h4>TARA PyPI Package</h4>
+                                        <p>Installable Python package for launching the TARA CPU simulator locally.</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-tab-panel" id="panel-fdho" role="tabpanel" aria-labelledby="tab-fdho">
+                    <div class="course-pdf-panel">
+                        <div class="course-pdf-actions">
+                            <p class="course-media-caption">Foundations of Digital Hardware Organization document for CS2300.</p>
+                            <a class="course-chip" href="files/cs2300_fdho.pdf" target="_blank" rel="noopener">Open FDHO PDF</a>
+                        </div>
+                        <iframe class="course-pdf-embed" src="files/cs2300_fdho.pdf" title="CS2300 FDHO document">
+                        </iframe>
+                    </div>
+                </div>
+
+                <div class="course-tab-panel" id="panel-handbook" role="tabpanel" aria-labelledby="tab-handbook">
+                    <div class="course-pdf-panel">
+                        <div class="course-pdf-actions">
+                            <p class="course-media-caption">CS2300 handbook for course policies, expectations, and reference material.</p>
+                            <a class="course-chip" href="files/2300handbook.pdf" target="_blank" rel="noopener">Open 2300 Handbook PDF</a>
+                        </div>
+                        <iframe class="course-pdf-embed" src="files/2300handbook.pdf" title="CS2300 handbook">
+                        </iframe>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <section class="course-section">
+            <h2 class="course-section-title">Books</h2>
+            <div class="cs2300-book-group">
+                <h3 class="cs2300-book-heading">Primary References</h3>
+                <div class="cs2300-book-grid cs2300-book-grid--primary">
+                    <article class="cs2300-book-card cs2300-book-card--primary">
+                        <div class="cs2300-book-thumb">
+                            <img src="images/book_thumbnails/2300_harris.jpg" alt="Digital Design and Computer Architecture by Harris and Harris">
+                        </div>
+                        <div class="cs2300-book-meta">
+                            <h4 class="cs2300-book-title">Digital Design and Computer Architecture</h4>
+                            <p class="cs2300-book-author">Sarah Harris and David Harris</p>
+                        </div>
+                    </article>
+
+                    <article class="cs2300-book-card cs2300-book-card--primary">
+                        <div class="cs2300-book-thumb">
+                            <img src="images/book_thumbnails/2300_malvino.webp" alt="Digital Computer Electronics by Malvino and Brown">
+                        </div>
+                        <div class="cs2300-book-meta">
+                            <h4 class="cs2300-book-title">Digital Computer Electronics</h4>
+                            <p class="cs2300-book-author">Albert Paul Malvino and Jerald A. Brown</p>
+                        </div>
+                    </article>
+
+                    <article class="cs2300-book-card cs2300-book-card--primary">
+                        <div class="cs2300-book-thumb">
+                            <img src="images/book_thumbnails/2300_mano.jpg" alt="Digital Logic and Computer Design by Morris Mano">
+                        </div>
+                        <div class="cs2300-book-meta">
+                            <h4 class="cs2300-book-title">Digital Logic and Computer Design</h4>
+                            <p class="cs2300-book-author">Morris M. Mano</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <details class="cs2300-book-group cs2300-book-disclosure">
+                <summary class="cs2300-book-heading">Extra References</summary>
+                <div class="cs2300-book-grid cs2300-book-grid--extra">
+                    <article class="cs2300-book-card">
+                        <div class="cs2300-book-thumb">
+                            <img src="images/book_thumbnails/2300_radioshack.png" alt="Getting Started in Electronics">
+                        </div>
+                        <div class="cs2300-book-meta">
+                            <h4 class="cs2300-book-title">Getting Started in Electronics</h4>
+                            <p class="cs2300-book-author">RadioShack</p>
+                        </div>
+                    </article>
+
+                    <article class="cs2300-book-card">
+                        <div class="cs2300-book-thumb">
+                            <img src="images/book_thumbnails/2300_code.png" alt="Code by Charles Petzold">
+                        </div>
+                        <div class="cs2300-book-meta">
+                            <h4 class="cs2300-book-title">Code</h4>
+                            <p class="cs2300-book-author">Charles Petzold</p>
+                        </div>
+                    </article>
+
+                    <article class="cs2300-book-card">
+                        <div class="cs2300-book-thumb">
+                            <img src="images/book_thumbnails/2300_prosser_winkel.jpg" alt="The Art of Digital Design by Prosser and Winkel">
+                        </div>
+                        <div class="cs2300-book-meta">
+                            <h4 class="cs2300-book-title">The Art of Digital Design</h4>
+                            <p class="cs2300-book-author">Prosser and Winkel</p>
+                        </div>
+                    </article>
+
+                    <article class="cs2300-book-card">
+                        <div class="cs2300-book-thumb">
+                            <img src="images/book_thumbnails/2300_heuring.png" alt="Computer Systems Design and Architecture">
+                        </div>
+                        <div class="cs2300-book-meta">
+                            <h4 class="cs2300-book-title">Computer Systems Design and Architecture</h4>
+                            <p class="cs2300-book-author">Heuring and Jordan</p>
+                        </div>
+                    </article>
+
+                    <article class="cs2300-book-card">
+                        <div class="cs2300-book-thumb">
+                            <img src="images/book_thumbnails/2300_nelson.png" alt="Digital Logic Circuit Analysis and Design">
+                        </div>
+                        <div class="cs2300-book-meta">
+                            <h4 class="cs2300-book-title">Digital Logic Circuit Analysis and Design</h4>
+                            <p class="cs2300-book-author">Nelson et al.</p>
+                        </div>
+                    </article>
+
+                    <article class="cs2300-book-card">
+                        <div class="cs2300-book-thumb">
+                            <img src="images/book_thumbnails/2300_patel.png" alt="Introduction to Computing Systems by Patt and Patel">
+                        </div>
+                        <div class="cs2300-book-meta">
+                            <h4 class="cs2300-book-title">Introduction to Computing Systems</h4>
+                            <p class="cs2300-book-author">Patt and Patel</p>
+                        </div>
+                    </article>
+
+                    <article class="cs2300-book-card">
+                        <div class="cs2300-book-thumb">
+                            <img src="images/book_thumbnails/2300_nandtetris.png" alt="The Elements of Computing Systems">
+                        </div>
+                        <div class="cs2300-book-meta">
+                            <h4 class="cs2300-book-title">The Elements of Computing Systems</h4>
+                            <p class="cs2300-book-author">Nisan and Schocken</p>
+                        </div>
+                    </article>
+
+                    <article class="cs2300-book-card">
+                        <div class="cs2300-book-thumb">
+                            <img src="images/book_thumbnails/2300_hallaron.png" alt="Computer Systems: A Programmer's Perspective">
+                        </div>
+                        <div class="cs2300-book-meta">
+                            <h4 class="cs2300-book-title">Computer Systems: A Programmer's Perspective</h4>
+                            <p class="cs2300-book-author">Bryant and O'Hallaron</p>
+                        </div>
+                    </article>
+
+                    <article class="cs2300-book-card">
+                        <div class="cs2300-book-thumb">
+                            <img src="images/book_thumbnails/2300_manoarch.png" alt="Computer System Architecture by Morris Mano">
+                        </div>
+                        <div class="cs2300-book-meta">
+                            <h4 class="cs2300-book-title">Computer System Architecture</h4>
+                            <p class="cs2300-book-author">Morris M. Mano</p>
+                        </div>
+                    </article>
+
+                    <article class="cs2300-book-card">
+                        <div class="cs2300-book-thumb">
+                            <img src="images/book_thumbnails/2300_brown.png" alt="Fundamentals of Digital Logic with Verilog Design">
+                        </div>
+                        <div class="cs2300-book-meta">
+                            <h4 class="cs2300-book-title">Fundamentals of Digital Logic with Verilog Design</h4>
+                            <p class="cs2300-book-author">Brown and Vranesic</p>
+                        </div>
+                    </article>
+                </div>
+            </details>
+        
+        </section>
+   <section class="course-section">
+            <h2 class="course-section-title">Teaching Feedback</h2>
+            <div class="course-chip-list">
+                <a class="course-chip" href="../TCF/4_0.85_2300_1.pdf" target="_blank" rel="noopener">Diwali'22 · 0.85</a>
+                <a class="course-chip" href="../TCF/6_0.82_2300_2.pdf" target="_blank" rel="noopener">Diwali'23 · 0.82</a>
+                <a class="course-chip" href="../TCF/BSDS_CSD_feedback.pdf" target="_blank" rel="noopener">Online BS offering</a>
+            </div>
+        </section>
+        
+    </main>
+
+    <footer class="course-page-footer">
+        <div class="course-footer-inner">
+            <div class="course-footer-brand">
+                <p class="course-footer-title">CS2300: Foundations of Computer Systems Design</p>
+                <p class="course-footer-copy">© Ayon Chakraborty, Department of Computer Science and Engineering, IIT Madras.</p>
+            </div>
+            <img class="course-footer-logo" src="../common/iitmlogo.png" alt="IIT Madras logo">
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('[data-course-tab]').forEach((button) => {
+            button.addEventListener('click', () => {
+                const target = button.dataset.courseTab;
+                document.querySelectorAll('[data-course-tab]').forEach((tab) => {
+                    tab.setAttribute('aria-selected', String(tab === button));
+                });
+                document.querySelectorAll('.course-tab-panel').forEach((panel) => {
+                    panel.classList.toggle('is-active', panel.id === target);
+                });
+            });
+        });
+    </script>
+
+
+</body></html>

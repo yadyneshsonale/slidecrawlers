@@ -1,0 +1,52 @@
+[
+{
+"url": "https://cs162.org/static/lectures/1.pdf",
+"title": "[PDF] CS162 Operating Systems and Systems Programming Lecture 1",
+"description": "CS162 Operating Systems and Systems Programming Lecture 1 What is an Operating System? Lec 1.12 1/20/2026 Kubiatowicz CS162 \u00a9 UCB Spring 2026 Definition of an Operating System \u2022 No universally accepted definition \u2022 \u201cEverything a vendor ships when you order an operating system\u201d is good approximation \u2013 But varies wildly \u2022 \u201cThe one program running at all times on the computer\u201d is the kernel \u2013 Everything else is either a system program (ships with the operating system) or an application program Lec 1.13 1/20/2026 Kubiatowicz CS162 \u00a9 UCB Spring 2026 One Definition of an Operating System \u2022 Special layer of software that provides application software access to hardware resources \u2013 Convenient abstraction of complex hardware devices \u2013 Protected access to shared resources \u2013 Security and authentication \u2013 Communication Hardware appln appln appln OS Lec 1.14 1/20/2026 Kubiatowicz CS162 \u00a9 UCB Spring 2026 Operating System Switchboard Operator Computer Operators Operating System Lec 1.15 1/20/2026 Kubiatowicz CS162 \u00a9 UCB Spring 2026 Operating System What makes something a system?"
+},
+{
+"url": "https://people.eecs.berkeley.edu/~kubitron/courses/cs162-S19/sp19.html",
+"title": "CS162 \u2014 Spring 2019",
+"description": "| 1 | Tu 01/22 | 1 | Intro to CS162 [ppt] | A&D Ch1 |. | Th 01/24 | 2 | Introduction to the Process [ppt] | A&D CH2.1-7, 3.1-3 |. | 2 | Tu 01/29 | 3 | Processes, Fork [ppt] | A&D CH2.8-9, 3.1-3 |  |. | Th 01/31 | 4 | I/O, Files, Sockets, Networking [ppt] | A&D 2.10-11, 3.4-6, 11.1-2 | HW1: Basic Shell due 2/12 |. | Th 02/07 | 6 | Cooperating threads, Synchronization [ppt] | A&D Ch 4.1-5, OSC 2.7, 3.6 |. | 7 | Tu 03/05 | 11 | Deadlock, Address Translation, Virtual Memory [ppt] | A&D 2.7, 6.5, 7.2-5, 8.1-2 | HW3: Malloc due 3/24 |. | Th 03/07 | 12 | Address Translation [ppt] | A&D 8.3, 9.1-7 |  |. | 9 | Tu 03/19 | 15 | Demand Paging (Con't), I/O start [ppt] | OSC 13.1-5, A&D 11.1-4, 12, A&D 12.1, 7.5 |."
+},
+{
+"url": "https://cs162.org",
+"title": "CS 162 \u2014 Spring 2026",
+"description": "[1up.pdf] [pptx] | A&D Ch 1 | Release Homework 0: Introduction | Lecture Video: HERE |. | Tue 01/27 | 3 | Abstractions 1: Threads and Processes [1up.pdf] [pptx] | A&D Ch 4 | Release Project 0: Pregame | Lecture Video: HERE |. | Thu 01/29 | 4 | Abstractions 2: Threads (Con't), Process Management [1up.pdf] [pptx] | A&D Ch 3, Ch 4 | HW0 Due | Lecture Video: HERE |. | Thu 02/05 | 6 | Abstractions 4: Sockets and IPC (Finished) [1up.pdf] [pptx] | Lecture Video: HERE |. | Tue 02/17 | 9 | Synchronization 3: Semaphores, Monitors, and Readers/Writers [1up.pdf] [pptx] | A&D 5.4-5.6 | Design Document Due | Lecture Video: HERE |. | Thu 02/26 | 11 | Scheduling 1: Core Concepts and Classic Policies [1up.pdf] [pptx] | A&D Ch 7.1 | Lecture Video: HERE |. | Thu 03/05 | 13 | Scheduling 3: Proportional Share Scheduling, Deadlock [1up.pdf] [pptx] | A&D Ch 7.4&7.6 | Release Homework 3: HTTP (C version) (Rust version) | Lecture Video: HERE |."
+},
+{
+"url": "https://people.eecs.berkeley.edu/~kubitron/courses/cs162-F07/Lectures/lec01-intro.ppt",
+"title": "[PPT] Lecture 1: Course Introduction and Overview - People @EECS",
+"description": "In the future, the existing CS162 will become an advanced operating system course, and this new course will replace it. May be appropriate for a number of you."
+},
+{
+"url": "https://github.com/Leo-Adventure/Berkeley-CS162-Operating-System",
+"title": "Leo-Adventure/Berkeley-CS162-Operating-System - GitHub",
+"description": "This repository contains materials from the author's operating system course at UC Berkeley lectured by Prof.Kubi, including coursework, assignments, code, and"
+},
+{
+"url": "https://www.youtube.com/watch?v=4FpG1DcvHzc",
+"title": "CS162 Lecture 2: Four Fundamental OS Concepts",
+"description": "CS162 Lecture 2: Four Fundamental OS Concepts\nJohn Kubiatowicz\n6470 subscribers\n808 likes\n63360 views\n31 Aug 2021\nIn this lecture, we discuss four fundamental OS concepts behind virtualizing the processor: Threads, Address Spaces, Processes, and Dual Mode Execution.\n\n"
+},
+{
+"url": "https://notes.bencuan.me/cs162",
+"title": "CS 162: Operating Systems | ben's notes",
+"description": "# ben's notes. # CS 162: Operating Systems. Here are my notes for the Fall 2021 offering of CS162, Berkeley\u2019s OS course, based on Anderson and Dahlin\u2019s textbook \u201cOperating Systems: Principles and Practice\u201d. ## Table of Contents #. * OS Basics - What is an OS, kernels, concurrency. * Processes - The process abstraction, fork/exec/wait/pipe. * Threads - Fork-join parallelism, multithreading, TCB, race conditions. * IO - Everything Is A File, streams, file descriptors, pipes, signals, sockets. * Synchronization - Locks, semaphores, condition variables, atomic operations. * Address Translation - Virtual memory, paging, page tables. * Caching - Everything you need to know about caches; page replacement policies. * File Systems - Storage, queuing theory, FFS, FAT, NTFS, RAID, 2PC, networks. ## How to contribute #. See the contributing guide for more details! You might notice that some sections are empty (specifically, buffer management policies in Caching and most of Synchronization). Any contributions for these sections would be greatly appreciated!!"
+},
+{
+"url": "https://www.youtube.com/watch?v=pPzVV2kkGHc",
+"title": "CS162 Lecture 1: What is an Operating System? - YouTube",
+"description": "CS162 Lecture 1: What is an Operating System? 201K views \u00b7 4 years ago. UNIVERSITY OF CALIFORNIA, BERKELEY ...more. John Kubiatowicz. 6.49K."
+},
+{
+"url": "https://www.usuallypragmatic.com/projects/Course-Notes----UC-Berkeley-CS-162---Operating-Systems.html",
+"title": "Course Notes \u2013 UC Berkeley CS 162 - Operating Systems | Usually Pragmatic",
+"description": "### Here\u2019s yet another set of course notes, coming at you from UC Berkeley\u2019s CS 162 - Operating Systems course from the fall of 2013. ### Once I finished the lectures, it occurred to me that it might be interesting to look at the Youtube viewing statistics for the course. This suggests that for every 100 people who start watching these lectures, only maybe 1 person\u00b9 will actually make it all the way through. And rather than learning about them in, say, a course dedicated to databases, they prefer to jump into the last third of a course on operating systems? > Normally, the Operating System handles this for all the processes on your computer, and likewise, there are cloud/etc operating systems for handling these sorts of issues for datacenters/etc, but if you\u2019re working on any sort of application with multiple parts that have to communicate and/or share resources, you should give it some thought too, lest you end up in trouble someday."
+},
+{
+"url": "https://cs162.org/resources",
+"title": "CS 162 \u2014 Spring 2026",
+"description": "Archives of course materials from previous offerings of this class are available from here. The textbooks below are available as supplementary material that can help you become familiar with some of the languages and tools used in this course. Textbook Image | Textbook Description | Textbook Technicals || Git 3nd edition | Version Control with Git  3rd Edition Authors: Jon Loelinger and Matthew McCullough  Complete reference on Git. Covers almost anything you want to know about using Git. 3nd Edition (October 2022)   **ISBN-13:** 978-1-4920-9119-6  Free On-Campus: HERE  [SIGN IN with your .Berkeley.edu email address]: |. | O'Reilly Media, Inc. 1st Edition (April 2012)   **ISBN-13:** 978-1-4493-9991-7  Free On-Campus: HERE  [SIGN IN with your .Berkeley.edu email address] |. | O'Reilly Media, Inc. 2nd Edition (September 2014)   **ISBN-13:** 978-1-4919-0389-6  Free On-Campus: HERE   [SIGN IN with your .Berkeley.edu email address] |. 2nd Edition (June 2021)   **ISBN-13:** 978-1-4920-5259-3  Free On-Campus: HERE   [SIGN IN with your .Berkeley.edu email address] |."
+}
+]

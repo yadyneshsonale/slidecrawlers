@@ -1,0 +1,52 @@
+[
+{
+"url": "https://www.chrismusco.com/introml2020/lectures/lec24.pdf",
+"title": "[PDF] CS-UY 4563: Lecture 24 Reinforcement Learning - Christopher Musco",
+"description": "Other applications of classical control: \u2022 Semi-autonomous vehicles (airplanes, helicopters, rockets, etc.) \u2022 Industrial processes (e.g. controlling large chemical reactions) \u2022 Robotics control theory : reinforcement learning :: stats : machine learning 10 reinforcement learning examples Strategy games, like Go: \u2022 State: Position of all pieces on board. 12 mathematical framework for rl Model problem as a Markov Decision Process (MDP): \u2022 S : Set of all possible states. 24 q-learning w/ function approximation Minimize loss with gradient descent: \u2207L(\u03b8) = \u22122 \u00b7 Es,a\u223cD\u2207Q(s, a, \u03b8) \u00b7 [ R(s, a) + \u03b3 max a\u2032 Q(s\u2032, a\u2032, \u03b8) \u2212Q(s, a, \u03b8) ] In practice use stochastic gradient: \u2207L(\u03b8, s, a) = \u22122 \u00b7 \u2207Q(s, a, \u03b8) \u00b7 [ R(s, a) + \u03b3 max a\u2032 Q(s\u2032, a\u2032, \u03b8) \u2212Q(s, a, \u03b8) ] \u2022 Initialize \u03b80 \u2022 For i = 0, 1, 2, . 25 q-learning w/ function approximation \u2022 Initialize \u03b80 \u2022 For i = 0, 1, 2, . \u2022 For t = 0, 1, 2, ."
+},
+{
+"url": "https://www.youtube.com/watch?v=2pWv7GOvuf0",
+"title": "RL Course by David Silver - Lecture 1: Introduction to Reinforcement ...",
+"description": "Reinforcement Learning Course by David Silver# Lecture 1: Introduction to Reinforcement Learning."
+},
+{
+"url": "https://www.reddit.com/r/MachineLearning/comments/lqrek7/n_20_hours_of_new_lectures_on_deep_learning_and",
+"title": "[N] 20 hours of new lectures on Deep Learning and Reinforcement ...",
+"description": "# [N] 20 hours of new lectures on Deep Learning and Reinforcement Learning with lots of examples : r/MachineLearning. Skip to main content[N] 20 hours of new lectures on Deep Learning and Reinforcement Learning with lots of examples : r/MachineLearning. # [N] 20 hours of new lectures on Deep Learning and Reinforcement Learning with lots of examples. If anyone's interested in a Deep Learning and Reinforcement Learning series, I uploaded 20 hours of lectures on YouTube yesterday. Compared to other lectures, I think this gives quite a broad/compact overview of the fields with lots of minimal examples to build on. *   Lecture 10: Meta and manifold learning. What are the prereqs for learning reinforcement learning? 2.   Not for the main theory behind the fundamental RL algorithms, but when you start trying to scale up the methods with function approximators, it's useful to have had some practice in building DL models, especially CNNs & RNNs. Image 8: u/zeec123 avatar."
+},
+{
+"url": "https://web.stanford.edu/class/cs234/modules.html",
+"title": "CS234: Reinforcement Learning Winter 2026",
+"description": "# CS234: Reinforcement Learning Winter 2026. # Lecture Materials. | Introduction to Reinforcement Learning | 1. Lecture 1 Draft Slides  2. Additional Materials:  * High level introduction: SB (Sutton and Barto) Chp 1* Linear Algebra Review   * Probability Review   * Python Tutorial | |. Lecture 2 Slides (pre-class)  2. Additional Materials:  * SB (Sutton and Barto) Chp 3, 4.1-4.4 | |. | Tabular RL policy evaluation |  | 1. Lecture 4 Slides (preclass)  (post class with annotations) 2. <| Imitation Learning and Learning from Human Input and Batch RL |  | 1. Additional Materials:  * Bandit Algorithms Book Section 7.1 || Ethics and Society Guest Lecture |  | 1. Lecture 10 Part Guest Slides (see latter half of slides)- Lecture 14 Guest Slides Part 2 |  Monte Carlo Tree Search and Conquering Go |  | 1. Lecture 13 Draft slides  - Lecture 14 Draft slides    | | RL Guest Lecture |  | 1. Shane Gu: World of World Modeling | |."
+},
+{
+"url": "https://www.cs.toronto.edu/~rgrosse/courses/csc311_f20/slides/lec11.pdf",
+"title": "[PDF] Lecture 11 - Reinforcement Learning",
+"description": "The value function V \u03c0 for a policy \u03c0 measures the expected return if you start in state s and follow policy \u03c0. A closely related but usefully different function is the state-action value function, or Q-function, Q\u03c0 for policy \u03c0, defined as:. is the optimal state-action value function, and we can rewrite the optimal Bellman equation without mentioning \u03c0?:. Observe: a fixed point of this update is exactly a solution of the optimal Bellman equation, which we saw characterizes the Q-function of an optimal policy. Learn a value function (e.g. Q-learning, covered in this lecture). The \u03b5-greedy policy ensures that most of the time (probability 1 \u2212 \u03b5) the agent exploits its incomplete knowledge of the world by chooses the best action (i.e., corresponding to the highest action-value), but occasionally (probability \u03b5) it explores other actions. Because the fixed-point of the Bellman optimality operator is unique (and is Q\u2217), Q is the same as the optimal action-value function Q\u2217."
+},
+{
+"url": "https://rlseminar.github.io/resource.html",
+"title": "Resources - RL Seminar",
+"description": "* CSE 691 Reinforcement Learning and Optimal Control Winter 2019 at ASU by Dimitri P. > Deep reinforcement learning is the combination of reinforcement learning (RL) and deep learning. Thus, deep RL opens up many new applications in domains such as healthcare, robotics, smart grids, finance, and many more. Bellemare and Joelle Pineau (2018), \u201cAn Introduction to Deep Reinforcement Learning\u201d, in Foundations and Trends in Machine Learning: Vol. 11, No. 3-4. Another recent survey Deep Reinforcement Learning by Yuxi Li Under review for Morgan & Claypool: Synthesis Lectures in Artificial Intelligence and Machine Learning draw a comprehensive blueprint on modern (Deep) Reinforcement Learning. * Reinforcement Learning and Optimal Control by the Awesome Dimitri P. * Advanced Deep Learning and Reinforcement Learning at UCL(2018 Spring) taught by DeepMind\u2019s Research Scientists. * Infer to Control: Workshop on Probabilistic Reinforcement Learning and Structured Control at NeurIPS 2018. * Deep Reinforcement Learning Workshop at NeurIPS 2018. * Workshop on Causal Learning at NeurIPS 2018."
+},
+{
+"url": "https://rail.eecs.berkeley.edu/deeprlcourse-fa18/static/slides/lec-1.pdf",
+"title": "[PDF] Deep Reinforcement Learning CS 294 - 112 - UC Berkeley",
+"description": "Intelligent machines must be able to adapt Deep learning helps us handle unstructured environments Reinforcement learning provides a formalism for behavior decisions (actions) consequences observations rewards Mnih et al. decisions (actions) consequences observations rewards Actions: muscle contractions Observations: sight, smell Rewards: food Actions: motor current or torque Observations: camera images Rewards: task success measure (e.g., running speed) Actions: what to purchase Observations: inventory levels Rewards: profit Deep models are what allow reinforcement learning algorithms to solve complex problems end to end! \u2022 Learning from demonstrations \u2022 Directly copying observed behavior \u2022 Inferring rewards from observed behavior (inverse reinforcement learning) \u2022 Learning from observing the world \u2022 Learning to predict \u2022 Unsupervised learning \u2022 Learning from other tasks \u2022 Transfer learning \u2022 Meta-learning: learning to learn Imitation learning Bojarski et al."
+},
+{
+"url": "https://github.com/zyxue/youtube_RL_course_by_David_Silver",
+"title": "zyxue/youtube_RL_course_by_David_Silver: Collection of Slides for ...",
+"description": "## Navigation Menu. # Provide feedback. We read every piece of feedback, and take your input very seriously. # Saved searches. ## Use saved searches to filter your results more quickly. # zyxue/youtube\\_RL\\_course\\_by\\_David\\_Silver. ## Folders and files. | Name | | Name | Last commit message | Last commit date |. | Latest commit   History4 Commits   4 Commits | | |. | L1-intro\\_RL.pdf | | L1-intro\\_RL.pdf |  |  |. | L10-games.pdf | | L10-games.pdf |  |  |. | L2-MDP.pdf | | L2-MDP.pdf |  |  |. | L3-dynamic-programming.pdf | | L3-dynamic-programming.pdf |  |  |. | L4-model-free-prediction.pdf | | L4-model-free-prediction.pdf |  |  |. | L5-model-free-control.pdf | | L5-model-free-control.pdf |  |  |. | L6-value-function-approximation.pdf | | L6-value-function-approximation.pdf |  |  |. | L7-policy-gradient-methods.pdf | | L7-policy-gradient-methods.pdf |  |  |. | L8-integrating-learning-and-planning.pdf | | L8-integrating-learning-and-planning.pdf |  |  |. | L9-exploration-and-exploitation.pdf | | L9-exploration-and-exploitation.pdf |  |  |. ## Latest commit. ## Footer. ## Repository files navigation. Collection of Slides for David Silver's Reinforcement Learning Course on Youtube. ### Footer navigation."
+},
+{
+"url": "https://www.youtube.com/playlist?list=PLqYmG7hTraZDM-OYHWgPebj2MfCFzFObQ",
+"title": "DeepMind x UCL | Introduction to Reinforcement Learning 2015",
+"description": "Watch the lectures from DeepMind research lead David Silver's course on reinforcement learning, taught at University College London."
+},
+{
+"url": "https://www.youtube.com/watch?v=WsvFL-LjA6U",
+"title": "Stanford CS234 Reinforcement Learning I Introduction to ... - YouTube",
+"description": "For more information about Stanford's Artificial Intelligence programs visit: https://stanford.io/ai To follow along with the course,"
+}
+]

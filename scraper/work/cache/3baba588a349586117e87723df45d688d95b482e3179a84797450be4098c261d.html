@@ -1,0 +1,400 @@
+<!DOCTYPE html><html lang="en-US"><!--<![endif]--><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<title>Lecture 8: Network Security « CS2105</title>
+
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="https://blog.nus.edu.sg/cs2105/xmlrpc.php">
+<!--[if lt IE 9]>
+<script src="https://blog.nus.edu.sg/cs2105/wp-content/themes/quintus/js/html5.js" type="text/javascript"></script>
+<![endif]-->
+
+<meta name="robots" content="max-image-preview:large">
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="alternate" type="application/rss+xml" title="CS2105 » Feed" href="https://blog.nus.edu.sg/cs2105/feed/">
+<link rel="alternate" type="application/rss+xml" title="CS2105 » Comments Feed" href="https://blog.nus.edu.sg/cs2105/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="CS2105 » Lecture 8: Network Security Comments Feed" href="https://blog.nus.edu.sg/cs2105/2014/03/17/lecture-8-network-security-3/feed/">
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://blog.nus.edu.sg/cs2105/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fblog.nus.edu.sg%2Fcs2105%2F2014%2F03%2F17%2Flecture-8-network-security-3%2F">
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://blog.nus.edu.sg/cs2105/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fblog.nus.edu.sg%2Fcs2105%2F2014%2F03%2F17%2Flecture-8-network-security-3%2F&amp;format=xml">
+<style id="wp-img-auto-sizes-contain-inline-css" type="text/css">
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<link rel="stylesheet" id="dashicons-css" href="https://blog.nus.edu.sg/cs2105/wp-includes/css/dashicons.min.css?ver=6.9.4" type="text/css" media="all">
+<link rel="stylesheet" id="admin-bar-css" href="https://blog.nus.edu.sg/cs2105/wp-includes/css/admin-bar.min.css?ver=6.9.4" type="text/css" media="all">
+<style id="admin-bar-inline-css" type="text/css">
+
+		@media screen { html { margin-top: 32px !important; } }
+		@media screen and ( max-width: 782px ) { html { margin-top: 46px !important; } }
+	
+@media print { #wpadminbar { display:none; } }
+/*# sourceURL=admin-bar-inline-css */
+</style>
+<style id="wp-emoji-styles-inline-css" type="text/css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<link rel="stylesheet" id="wp-block-library-css" href="https://blog.nus.edu.sg/cs2105/wp-includes/css/dist/block-library/style.min.css?ver=6.9.4" type="text/css" media="all">
+
+<style id="classic-theme-styles-inline-css" type="text/css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+<link rel="stylesheet" id="awsm-ead-plus-public-css" href="https://blog.nus.edu.sg/cs2105/wp-content/plugins/embed-any-document-plus/css/embed-public.min.css?ver=2.8.2" type="text/css" media="all">
+<style id="global-styles-inline-css" type="text/css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+<link rel="stylesheet" id="lean-captcha-css-css" href="https://blog.nus.edu.sg/cs2105/wp-content/mu-plugins/lean-captcha/css/lean-captcha.css?ver=1" type="text/css" media="all">
+<link rel="stylesheet" id="quintus-style-css" href="https://blog.nus.edu.sg/cs2105/wp-content/themes/quintus/style.css?ver=2013042301" type="text/css" media="all">
+<link rel="stylesheet" id="lato-css" href="https://fonts.googleapis.com/css?family=Lato%3A100%2C400%2C700&amp;v2&amp;ver=6.9.4" type="text/css" media="all">
+<script type="text/javascript" src="https://blog.nus.edu.sg/cs2105/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script type="text/javascript" src="https://blog.nus.edu.sg/cs2105/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<link rel="https://api.w.org/" href="https://blog.nus.edu.sg/cs2105/wp-json/"><link rel="alternate" title="JSON" type="application/json" href="https://blog.nus.edu.sg/cs2105/wp-json/wp/v2/posts/990"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://blog.nus.edu.sg/cs2105/xmlrpc.php?rsd">
+<meta name="generator" content="Blog.nus 6.9.4 - https://blog.nus.edu.sg/">
+<link rel="canonical" href="https://blog.nus.edu.sg/cs2105/2014/03/17/lecture-8-network-security-3/">
+<link rel="shortlink" href="https://blog.nus.edu.sg/cs2105/?p=990">
+	<style>
+		@media screen and (max-width: 782px) {
+			#wpadminbar li#wp-admin-bar-log-in,
+			#wpadminbar li#wp-admin-bar-register {
+				display: block;
+			}
+
+			#wpadminbar li#wp-admin-bar-log-in a,
+			#wpadminbar li#wp-admin-bar-register a {
+				padding: 0 8px;
+			}
+		}
+	</style>
+<style id="simpler-css-style" type="text/css">
+.blog-header { height: 200px; }</style><!-- end of custom css -->
+
+        <script type="text/javascript">
+            var jQueryMigrateHelperHasSentDowngrade = false;
+
+			window.onerror = function( msg, url, line, col, error ) {
+				// Break out early, do not processing if a downgrade reqeust was already sent.
+				if ( jQueryMigrateHelperHasSentDowngrade ) {
+					return true;
+                }
+
+				var xhr = new XMLHttpRequest();
+				var nonce = '9911ad7a44';
+				var jQueryFunctions = [
+					'andSelf',
+					'browser',
+					'live',
+					'boxModel',
+					'support.boxModel',
+					'size',
+					'swap',
+					'clean',
+					'sub',
+                ];
+				var match_pattern = /\)\.(.+?) is not a function/;
+                var erroredFunction = msg.match( match_pattern );
+
+                // If there was no matching functions, do not try to downgrade.
+                if ( null === erroredFunction || typeof erroredFunction !== 'object' || typeof erroredFunction[1] === "undefined" || -1 === jQueryFunctions.indexOf( erroredFunction[1] ) ) {
+                    return true;
+                }
+
+                // Set that we've now attempted a downgrade request.
+                jQueryMigrateHelperHasSentDowngrade = true;
+
+				xhr.open( 'POST', 'https://blog.nus.edu.sg/cs2105/wp-admin/admin-ajax.php' );
+				xhr.setRequestHeader( 'Content-Type', 'application/x-www-form-urlencoded' );
+				xhr.onload = function () {
+					var response,
+                        reload = false;
+
+					if ( 200 === xhr.status ) {
+                        try {
+                        	response = JSON.parse( xhr.response );
+
+                        	reload = response.data.reload;
+                        } catch ( e ) {
+                        	reload = false;
+                        }
+                    }
+
+					// Automatically reload the page if a deprecation caused an automatic downgrade, ensure visitors get the best possible experience.
+					if ( reload ) {
+						location.reload();
+                    }
+				};
+
+				xhr.send( encodeURI( 'action=jquery-migrate-downgrade-version&_wpnonce=' + nonce ) );
+
+				// Suppress error alerts in older browsers
+				return true;
+			}
+        </script>
+
+							<!-- Google Analytics tracking code output by Beehive Analytics Pro -->
+						<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-KRM516WNHD&amp;l=beehiveDataLayer"></script>
+		<script>
+						window.beehiveDataLayer = window.beehiveDataLayer || [];
+			function gaplusu() {beehiveDataLayer.push(arguments);}
+			gaplusu('js', new Date())
+						gaplusu('config', 'G-KRM516WNHD', {
+				'anonymize_ip': false,
+				'allow_google_signals': false,
+			})
+					</script>
+		<style type="text/css">
+/* <![CDATA[ */
+img.latex { vertical-align: middle; border: none; }
+/* ]]> */
+</style>
+		<style type="text/css">
+			#ie7 .blog-header hgroup {
+				display: block;
+			}
+		</style>
+	</head>
+
+<body class="wp-singular post-template-default single single-post postid-990 single-format-standard admin-bar no-customize-support wp-theme-quintus color-default">
+
+<div id="page" class="hfeed">
+		<header class="blog-header" role="banner">
+		<hgroup>
+			<h1 id="site-title"><a href="https://blog.nus.edu.sg/cs2105/" title="CS2105" rel="home">CS2105</a></h1>
+			<h2 id="site-description">Introduction to Computer Networking</h2>
+		</hgroup>
+	</header>
+
+	<nav id="access" role="navigation">
+		<form method="get" id="searchform" action="https://blog.nus.edu.sg/cs2105/">
+    <input type="text" class="field" name="s" id="s" placeholder="Search">
+    <label for="s" class="assistive-text">Search</label>
+    <input type="submit" class="submit" name="submit" id="searchsubmit" value="Search">
+</form>		<div class="menu"><ul>
+<li><a href="https://blog.nus.edu.sg/cs2105/">Home</a></li><li class="page_item page-item-834"><a href="https://blog.nus.edu.sg/cs2105/about-cs2105-3/">About CS2105</a></li>
+<li class="page_item page-item-563"><a href="https://blog.nus.edu.sg/cs2105/bookmarks/">Bookmarks</a></li>
+<li class="page_item page-item-475"><a href="https://blog.nus.edu.sg/cs2105/readings/">Readings</a></li>
+</ul></div>
+	</nav>
+
+	<div id="main">
+		<div id="primary">
+			<div class="content" id="content" role="main">
+
+			
+				<nav id="nav-above">
+					<span class="permalink">
+					Bookmark the <a href="https://blog.nus.edu.sg/cs2105/2014/03/17/lecture-8-network-security-3/" title="Permalink to Lecture 8: Network Security" rel="bookmark">permalink</a>.					</span>
+				</nav><!-- #nav-above -->
+
+				
+<article id="post-990" class="post-990 post type-post status-publish format-standard hentry category-lecture">
+	<header class="entry-header">
+		<h1 class="entry-title">Lecture 8: Network Security</h1>
+
+		<div class="entry-meta">
+			<a class="entry-date" title="March 17 2014" href="https://blog.nus.edu.sg/cs2105/2014/03/17/lecture-8-network-security-3/">
+				<time datetime="2014-03-17T06:21:03+08:00" pubdate="">Mar<b>17</b></time>
+			</a>
+			<span class="entry-byline">
+			by <span class="author vcard"><a class="url fn n" href="https://blog.nus.edu.sg/cs2105/author/weitsang/" title="View all posts by Ooi Wei Tsang">Ooi Wei Tsang</a></span>			</span>
+		</div><!-- .entry-meta -->
+	</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<p> 17 March, 2014. </p>
+<p> This week we will look at network security at the application, transport, and network layer. We will skip the mathematics involved (there are other modules for that) and focus on the concepts that enable secure communication via SSL and IPsec. </p>
+<p> Slides: <a href="http://www.comp.nus.edu.sg/~ooiwt/cs2105/1314s2/lec08-secure.pdf">PDF</a> </p>
+<p> Please read the following sections in the textbook. Reading: </p>
+<ul>
+<li>1.6 Networks Under Attack </li>
+<li>8.1 What is Network Security? </li>
+<li>8.2 Principles of Cryptography (exclude 8.2.1) </li>
+<li>8.2.2 Public Key Encryption (exclude RSA and subsequent paragraphs) </li>
+<li>8.3 Message Integry and Digital Signatures </li>
+<li>8.4 End-Point Authentication </li>
+<li>8.6 Securing TPC Connections: SSL (exclude 8.6.2) </li>
+<li>8.7 Network-Layer Security: IPsec and VPN (exclude 8.7.5) </li>
+<li>8.9 Firewalls and Intrusion Detection Systems (FYI only) </li>
+</ul>
+			</div><!-- .entry-content -->
+
+	<footer class="entry-meta">
+		This entry was posted in <a href="https://blog.nus.edu.sg/cs2105/category/lecture/" rel="category tag">lecture</a>.
+			</footer><!-- .entry-meta -->
+</article><!-- #post-990 -->
+
+				<nav id="nav-below">
+					<h1 class="section-heading">Post navigation</h1>
+					<div class="nav-previous"><a href="https://blog.nus.edu.sg/cs2105/2014/03/17/diy-exercise-3-3/" rel="prev"><span class="meta-nav">←</span> DIY Exercise 3</a></div>
+					<div class="nav-next"><a href="https://blog.nus.edu.sg/cs2105/2014/03/17/assignment-2-3/" rel="next">Assignment 2 <span class="meta-nav">→</span></a></div>
+				</nav><!-- #nav-below -->
+
+					<div id="comments">
+	
+			<h2 id="comments-title">
+			2 comments to <em>Lecture 8: Network Security</em>		</h2>
+
+		<ol class="commentlist">
+					<li class="comment even thread-even depth-1" id="comment-911">
+				<div id="div-comment-911" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="https://secure.gravatar.com/avatar/acd54b47f3c481097dc7dab2615872e2?s=32&amp;d=blank&amp;r=G" class="avatar avatar-32" height="32" width="32">			<cite class="fn">Su Han</cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata">
+			<a href="https://blog.nus.edu.sg/cs2105/2014/03/17/lecture-8-network-security-3/#comment-911">March 21, 2014 at 4:42 PM</a>		</div>
+
+		<p>Hi Prof, I just wonder whether this lecture has screencast or not, if yes, could you please upload it?</p>
+
+		<div class="reply"><a rel="nofollow" class="comment-reply-login" href="https://blog.nus.edu.sg/cs2105/wp-login.php?redirect_to=https%3A%2F%2Fblog.nus.edu.sg%2Fcs2105%2F2014%2F03%2F17%2Flecture-8-network-security-3%2F&amp;action=shibboleth">Log in to Reply</a></div>
+				</div>
+				</li><!-- #comment-## -->
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-923">
+				<div id="div-comment-923" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="https://secure.gravatar.com/avatar/d633375a41f910ff15d864b915ef0e19?s=32&amp;d=blank&amp;r=G" class="avatar avatar-32" height="32" width="32">			<cite class="fn">A0105574</cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata">
+			<a href="https://blog.nus.edu.sg/cs2105/2014/03/17/lecture-8-network-security-3/#comment-923">March 25, 2014 at 10:47 AM</a>		</div>
+
+		<p>Hello, all! In the last part about the IPSec protocol, I notice that m=EB(IP data gram +padding), and h= H(i+n+m,MB). Does this mean that we encrypt the msg as m, and then hash this m with MAC key and other stuff to create h, then send m and h over the network? Cause in SSL protocol, the thing we send is m’ and h, and the h uses the original msg not the encrypted one. Thanks a lot if anyone can help clarify!</p>
+
+		<div class="reply"><a rel="nofollow" class="comment-reply-login" href="https://blog.nus.edu.sg/cs2105/wp-login.php?redirect_to=https%3A%2F%2Fblog.nus.edu.sg%2Fcs2105%2F2014%2F03%2F17%2Flecture-8-network-security-3%2F&amp;action=shibboleth">Log in to Reply</a></div>
+				</div>
+				</li><!-- #comment-## -->
+		</ol>
+
+		
+	
+	
+		<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/cs2105/2014/03/17/lecture-8-network-security-3/#respond" style="display:none;">Cancel reply</a></small></h3><p class="must-log-in">You must be <a href="https://blog.nus.edu.sg/cs2105/wp-login.php?redirect_to=https%3A%2F%2Fblog.nus.edu.sg%2Fcs2105%2F2014%2F03%2F17%2Flecture-8-network-security-3%2F&amp;action=shibboleth">logged in</a> to post a comment.</p>	</div><!-- #respond -->
+	
+</div><!-- #comments -->
+			
+			</div><!-- #content -->
+		</div><!-- #primary -->
+
+
+				<div id="secondary" class="widget-area" role="complementary">
+						<aside id="text-6" class="widget widget_text"><h1 class="widget-title">Links</h1>			<div class="textwidget">IVLE <a href="https://ivle.nus.edu.sg/ClassManagement/Student/list_classroster.aspx?CourseID=70eaca02-003b-49f9-9040-e9a388013777&amp;ClickFrom=Outline">Class Roster</a><br>
+
+Get <a href="http://www.wireshark.org">Wireshark</a><br></div>
+		</aside><aside id="text-4" class="widget widget_text"><h1 class="widget-title">Slides</h1>			<div class="textwidget"><a href="http://www.comp.nus.edu.sg/~ooiwt/cs2105/1314s2/lec01-intro.pdf">1</a>
+<a href="http://www.comp.nus.edu.sg/~ooiwt/cs2105/1314s2/lec02-app.pdf">2</a>
+<a href="http://www.comp.nus.edu.sg/~ooiwt/cs2105/1314s2/lec04-rely.pdf">4</a>
+<a href="http://www.comp.nus.edu.sg/~ooiwt/cs2105/1314s2/lec05-transport.pdf">5</a>
+<a href="http://www.comp.nus.edu.sg/~ooiwt/cs2105/1314s2/lec06-network.pdf">6</a>
+<a href="http://www.comp.nus.edu.sg/~ooiwt/cs2105/1314s2/lec07-route.pdf">7</a>
+<a href="http://www.comp.nus.edu.sg/~ooiwt/cs2105/1314s2/lec08-secure.pdf">8</a>
+<a href="http://www.comp.nus.edu.sg/~ooiwt/cs2105/1314s2/lec09-link.pdf">9</a>
+<a href="http://www.comp.nus.edu.sg/~ooiwt/cs2105/1314s2/lec10-lan.pdf">10</a>
+<a href="http://www.comp.nus.edu.sg/~ooiwt/cs2105/1314s2/lec11-physical.pdf">11</a>
+<!--<a href="http://www.comp.nus.edu.sg/~ooiwt/cs2105/1314s2/lec12-together.pdf">12</a>
+--></div>
+		</aside><aside id="text-8" class="widget widget_text"><h1 class="widget-title">Screencasts</h1>			<div class="textwidget"><a href="https://vimeo.com/84111168">1</a> 
+<a href="https://vimeo.com/84641265">2</a> 
+<a href="http://vimeo.com/85419112">3</a>
+<a href="http://vimeo.com/85810792">4</a>
+<a href="http://vimeo.com/86483429">5</a>
+<a href="http://vimeo.com/87171436">6</a>
+<a href="http://vimeo.com/88031601">6+</a>
+<a href="http://vimeo.com/88708465">7</a>
+<a href="http://vimeo.com/89773695">8</a>
+<a href="http://vimeo.com/90089905">9</a>
+<a href="http://vimeo.com/90847164">10</a>
+</div>
+		</aside><aside id="text-5" class="widget widget_text"><h1 class="widget-title">Problem Sets</h1>			<div class="textwidget"><a href="http://www.comp.nus.edu.sg/~ooiwt/cs2105/1314s2/ps1.pdf">1</a> 
+<a href="http://www.comp.nus.edu.sg/~ooiwt/cs2105/1314s2/ps2.pdf">2</a> 
+<a href="http://www.comp.nus.edu.sg/~ooiwt/cs2105/1314s2/ps3.pdf">3</a> 
+<a href="http://www.comp.nus.edu.sg/~ooiwt/cs2105/1314s2/ps4.pdf">4</a> 
+<a href="http://www.comp.nus.edu.sg/~ooiwt/cs2105/1314s2/ps5.pdf">5</a> 
+<a href="http://www.comp.nus.edu.sg/~ooiwt/cs2105/1314s2/ps6.pdf">6</a>
+<a href="http://www.comp.nus.edu.sg/~ooiwt/cs2105/1314s2/ps7.pdf">7</a>
+<a href="http://www.comp.nus.edu.sg/~ooiwt/cs2105/1314s2/ps8.pdf">8</a></div>
+		</aside>		</div><!-- #secondary .widget-area -->
+		
+	</div><!-- #main -->
+
+	<footer class="blog-footer" id="colophon" role="contentinfo">
+		<div id="site-generator">
+			<a href="http://wordpress.org/" rel="generator">Proudly powered by WordPress</a><span class="sep"> | </span>Theme: Quintus by <a href="http://automattic.com/" rel="designer">Automattic</a>.		</div>
+	<div id="branda_content_footer" style=""><p style="text-align: center"><a href="https://nus.atlassian.net/wiki/x/aIJ5Aw" target="_blank" rel="noopener">Terms of Use</a> | <a href="https://nus.atlassian.net/wiki/x/XoJ5Aw" target="_blank" rel="noopener">Disclaimers</a> | <a href="mailto:contact@campuspress.com">Blog.nus Help</a></p></div></footer><!-- #colophon -->
+</div><!-- #page -->
+
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/cs2105/*"},{"not":{"href_matches":["/cs2105/wp-*.php","/cs2105/wp-admin/*","/cs2105/files/*","/cs2105/wp-content/*","/cs2105/wp-content/plugins/*","/cs2105/wp-content/themes/quintus/*","/cs2105/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<script type="text/javascript" id="branda-content-footer-js">
+var branda_footer_node = document.createElement('div');
+var branda_footer = document.createAttribute('id');
+branda_footer.value = 'branda_content_footer';
+branda_footer_node.setAttributeNode( branda_footer );
+branda_footer = document.createAttribute('style');
+branda_footer.value = '';
+branda_footer_node.setAttributeNode( branda_footer );
+branda_footer_node.innerHTML = "<p style=\"text-align: center\"><a href=\"https:\/\/nus.atlassian.net\/wiki\/x\/aIJ5Aw\" target=\"_blank\" rel=\"noopener\">Terms of Use<\/a> | <a href=\"https:\/\/nus.atlassian.net\/wiki\/x\/XoJ5Aw\" target=\"_blank\" rel=\"noopener\">Disclaimers<\/a> | <a href=\"mailto:contact@campuspress.com\">Blog.nus Help<\/a><\/p>";
+branda_footer = document.getElementsByTagName( 'footer' );
+if ( branda_footer.length ) {
+	branda_footer = branda_footer[ branda_footer.length - 1 ];
+	branda_footer.appendChild( branda_footer_node, branda_footer.firstChild );
+}
+</script>
+<script type="text/javascript" src="https://blog.nus.edu.sg/cs2105/wp-includes/js/hoverintent-js.min.js?ver=2.2.1" id="hoverintent-js-js"></script>
+<script type="text/javascript" src="https://blog.nus.edu.sg/cs2105/wp-includes/js/admin-bar.min.js?ver=6.9.4" id="admin-bar-js"></script>
+<script type="text/javascript" src="https://blog.nus.edu.sg/cs2105/wp-content/plugins/embed-any-document-plus/js/pdfobject.min.js?ver=2.8.2" id="awsm-ead-pdf-object-js"></script>
+<script type="text/javascript" id="awsm-ead-plus-public-js-extra">
+/* <![CDATA[ */
+var eadPublic = {"pdfjs":""};
+//# sourceURL=awsm-ead-plus-public-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://blog.nus.edu.sg/cs2105/wp-content/plugins/embed-any-document-plus/js/embed-public.min.js?ver=2.8.2" id="awsm-ead-plus-public-js"></script>
+<script type="text/javascript" src="https://blog.nus.edu.sg/cs2105/wp-content/mu-plugins/lean-captcha/js/howler.min.js?ver=2015102605" id="lean-captcha-howler-js"></script>
+<script type="text/javascript" id="lean-captcha-js-extra">
+/* <![CDATA[ */
+var lean_captcha_object = {"ajax_url":"https://blog.nus.edu.sg/cs2105/wp-admin/admin-ajax.php","key":"lc_aG1Msb5GSNZzGx+f1ArCsA=="};
+//# sourceURL=lean-captcha-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://blog.nus.edu.sg/cs2105/wp-content/mu-plugins/lean-captcha/js/lean-captcha.js?ver=201709035" id="lean-captcha-js"></script>
+<script type="text/javascript" id="blog_templates_front-js-extra">
+/* <![CDATA[ */
+var blog_templates_params = {"type":""};
+//# sourceURL=blog_templates_front-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://blog.nus.edu.sg/cs2105/wp-content/plugins/blogtemplates//blogtemplatesfiles/assets/js/front.js?ver=2.6.8.2" id="blog_templates_front-js"></script>
+<script type="text/javascript" src="https://blog.nus.edu.sg/cs2105/wp-includes/js/comment-reply.min.js?ver=6.9.4" id="comment-reply-js" async="async" data-wp-strategy="async" fetchpriority="low"></script>
+<script id="wp-emoji-settings" type="application/json">
+{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://blog.nus.edu.sg/cs2105/wp-includes/js/wp-emoji-release.min.js?ver=6.9.4"}}
+</script>
+<script type="module">
+/* <![CDATA[ */
+/*! This file is auto-generated */
+const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(window._wpemojiSettings=a,"wpEmojiSettingsSupports"),s=["flag","emoji"];function i(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function c(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0);const a=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);return t.every((e,t)=>e===a[t])}function p(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var n=e.getImageData(16,16,1,1);for(let e=0;e<n.data.length;e++)if(0!==n.data[e])return!1;return!0}function u(e,t,n,a){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!a(e,"\ud83e\u1fac8")}return!1}function f(e,t,n,a){let r;const o=(r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):document.createElement("canvas")).getContext("2d",{willReadFrequently:!0}),s=(o.textBaseline="top",o.font="600 32px Arial",{});return e.forEach(e=>{s[e]=t(o,e,n,a)}),s}function r(e){var t=document.createElement("script");t.src=e,t.defer=!0,document.head.appendChild(t)}a.supports={everything:!0,everythingExceptFlag:!0},new Promise(t=>{let n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),c.toString(),p.toString()].join(",")+"));",a=new Blob([e],{type:"text/javascript"});const r=new Worker(URL.createObjectURL(a),{name:"wpTestEmojiSupports"});return void(r.onmessage=e=>{i(n=e.data),r.terminate(),t(n)})}catch(e){}i(n=f(s,u,c,p))}t(n)}).then(e=>{for(const n in e)a.supports[n]=e[n],a.supports.everything=a.supports.everything&&a.supports[n],"flag"!==n&&(a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&a.supports[n]);var t;a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&!a.supports.flag,a.supports.everything||((t=a.source||{}).concatemoji?r(t.concatemoji):t.wpemoji&&t.twemoji&&(r(t.twemoji),r(t.wpemoji)))});
+//# sourceURL=https://blog.nus.edu.sg/cs2105/wp-includes/js/wp-emoji-loader.min.js
+/* ]]> */
+</script>
+		<div id="wpadminbar" class="nojq">
+							<a class="screen-reader-shortcut" href="#wp-toolbar" tabindex="1">Skip to toolbar</a>
+						<div class="quicklinks" id="wp-toolbar" role="navigation" aria-label="Toolbar">
+				<ul role="menu" id="wp-admin-bar-top-secondary" class="ab-top-secondary ab-top-menu"><li role="group" id="wp-admin-bar-log-in"><a class="ab-item" role="menuitem" href="https://blog.nus.edu.sg/cs2105/wp-login.php?action=shibboleth">Log In</a></li><li role="group" id="wp-admin-bar-search" class="admin-bar-search"><div class="ab-item ab-empty-item" tabindex="-1" role="menuitem"><form action="https://blog.nus.edu.sg/cs2105/" method="get" id="adminbarsearch"><input class="adminbar-input" name="s" id="adminbar-search" type="text" value="" maxlength="150"><label for="adminbar-search" class="screen-reader-text">Search</label><input type="submit" class="adminbar-button" value="Search"></form></div></li></ul>			</div>
+		</div>
+
+		
+
+</body></html>

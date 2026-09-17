@@ -1,0 +1,52 @@
+[
+{
+"url": "https://people.math.harvard.edu/~landesman/assets/class_notes_cs_181_second.pdf",
+"title": "[PDF] CS 181 LECTURE NOTES Contents 1. Class 1/29/14 2 1.1. K ...",
+"description": "Then, f(tn|w, \u03c6(xn), \u03b2) = N(tn|\u03c6(xn)T w, \u03b2\u22121) = N Y n=1 p(tn|\u03c6(xn)T w, \u03b2\u22121) CS 181 LECTURE NOTES 9 Then, L(w) = log p(t|\u03a6, w, \u03b2) = N X n=1 log N(tn|\u03c6(xn)T w, \u03b2\u22121) = N X n=1 \u0012 \u22121 2 log 2\u03c0 + 1 2 log \u03b2 \u2212\u03b2 2 (tn \u2212\u03c6(xn)T w \u00132 = N 2 log 2\u03c0 + N 2 log \u03b2 \u2212\u03b2 2 (t \u2212\u03a6w)T (t \u2212\u03a6w) Then, WMLE = (\u03a6T \u03a6)\u22121\u03a6T t Remark 6.0.14. We have log P(w|t, \u03a6, \u03b2) = C \u2212\u03b2 2 N X n=1 (tn \u2212\u03c6(xn)T w)2 \u2212\u03b1 2 wT w. Then, we can learn by setting the data xn and noting log P(x|\u03c0, \u00b5, \u03a3) = X n log X k \u03c0kN(xn|\u00b5k, \u03a3k)."
+},
+{
+"url": "https://www.youtube.com/watch?v=2IrvcO6Fzp8",
+"title": "Harvard University--CS-181--lecture 1. Machine learning - YouTube",
+"description": "Harvard University--CS-181--lecture 1. Machine learning. 1.7K views \u00b7 5 years ago ...more. debdeep's. 169. Subscribe. 18. Share. Save."
+},
+{
+"url": "https://www.quora.com/What-is-it-like-to-take-CS-181-Machine-Learning-at-Harvard-Why-does-it-have-such-a-low-Q-score-when-taught-by-Ryan-Adams",
+"title": "What is it like to take CS 181 (Machine Learning) at Harvard ... - Quora",
+"description": "The class itself is very lecture based. When I took it, there were rarely any lecture slides posted or used, and only the occasional lecture"
+},
+{
+"url": "https://www.youtube.com/watch?v=V2SwJjULMTw",
+"title": "Harvard University--CS-181--lecture 17. Machine learning - YouTube",
+"description": "Harvard University--CS-181--lecture 17. Machine learning. 100 views \u00b7 4 years ago ...more. debdeep's. 170. Subscribe. 0. Share. Save."
+},
+{
+"url": "https://harvard-ml-courses.github.io/cs181-web",
+"title": "CS 1810: Machine Learning (2026) - GitHub Pages",
+"description": "CS 1810 provides a broad and rigorous introduction to machine learning, probabilistic reasoning and decision making in uncertain environments."
+},
+{
+"url": "https://harvard-ml-courses.github.io/cs181-web/syllabus",
+"title": "Syllabus | CS181 - GitHub Pages",
+"description": "CS 1810 provides a broad and rigorous introduction to the principles of machine learning, probabilistic reasoning and decision making in uncertain environments."
+},
+{
+"url": "https://www.coursehero.com/sitemap/schools/30-Harvard-University/courses/5984188-CS181",
+"title": "CS 181 : Machine Learning - Harvard University - Course Hero",
+"description": "Access study documents, get answers to your study questions, and connect with real tutors for CS 181 : Machine Learning at Harvard University."
+},
+{
+"url": "https://github.com/harvard-ml-courses/cs181-textbook",
+"title": "harvard-ml-courses/cs181-textbook - GitHub",
+"description": "Textbook created for Harvard's undergraduate course in Machine Learning, CS181. Current Version A current version of the textbook is available here."
+},
+{
+"url": "https://fennie.ai/universities/harvard/cs-181",
+"title": "Harvard CS 181 (Machine Learning) \u2014 Study Guide & Daily Plan",
+"description": "Free step-by-step study guide for Harvard CS 181: what it covers, what makes it hard, and a plan to pass. CS 181 is Harvard's core machine learning course"
+},
+{
+"url": "https://beta.my.harvard.edu/course/COMPSCI1810/2026-Spring/001",
+"title": "Machine Learning COMPSCI 1810 - my.harvard",
+"description": "Description. Introduction to machine learning, providing a probabilistic view on artificial intelligence and reasoning under uncertainty."
+}
+]

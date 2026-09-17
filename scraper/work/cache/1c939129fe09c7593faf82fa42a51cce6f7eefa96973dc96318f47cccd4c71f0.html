@@ -1,0 +1,799 @@
+<html><head>
+<title>CS763: Computer Vision, Winter 2014</title>
+
+
+</head>
+<body>
+<center>
+<table cellspacing="0" cellpadding="0" width="700" border="0">
+  <tbody>
+  <tr>
+    <td>
+
+      <center>
+      <h2>CS763 - Computer Vision</h2>
+	<b>Instructor:</b> Ajit Rajwade
+	<br><b>Office:</b> SIA-218, KReSIT Building
+	<br> <b>Email:</b> <img src="email.png" height="15," width="180">
+
+	<br> <b>Lecture Venue:</b>SIC-201 <del> SIC-205 </del>
+	<br> <b>Lecture Timings:</b> <a href="http://www.cse.iitb.ac.in/~ttc/spring2013-14.pdf">Slot 2</a>,  Mon (9:30 to 10:25 am), Tue (10:35 to 11:30 am), Thurs (11:35 to 12:30 am)
+	<br><b>Instructor Office Hours </b>(in room SIA-218): Wed 5:00 to 6:00 pm, Fri 5:00 to 6:00 pm <br> OR by appointment via email
+	<br> <b>Teaching Assistants: </b><a href="http://www.cse.iitb.ac.in/~vinitgupta">Vinit Gupta</a> and <a href="/~vibhor">Vibhor Agrawal</a>
+      	<br><b>TA office hours:</b> Vibhor 6:00 to 7:30 pm on Wednesday in KReSIT Library
+	</center>
+      <hr><hr>
+</td>
+</tr>
+</tbody>
+</table>
+</center><br><br>
+
+      <h3>Topics to be covered (tentative list)</h3>
+
+      <ul>
+	<li> Camera geometry, camera calibration, vanishing points
+	</li><li> Variational calculus (very basic -  intended only as a computational tool)
+	</li><li> Algorithms for - shape from shading, depth from needle map; optical flow, Kanade-Lucas-Tomasi algorithm; shape from stereo, epipolar geometry; structure from motion; shape from defocus
+	</li><li> Photometric stereo - deriving shape from multiple images of an object taken under different lighting conditions; applications to illumination invariant face recognition, face relighting
+	</li><li> Computational tools for creating Image Panoramas: homographies, RANSAC for point-matching, SIFT (scale invariant feature transform) for detection of salient feature points
+	</li><li> Machine Learning in computer vision: Face detection using Adaboost, Object detection using parts
+	</li><li> Computational photography - Interesting case studies in image restoration: analysis of <b>underwater</b> images (object submerged in water, photo taken from outside, effect of water 
+ripples); analysis of motion blur;
+	</li><li> Some of the above topics will make use of concepts from linear algebra - example: principal components analysis (PCA) and singular value decomposition (SVD) - these will be covered in 
+class in detail.
+      </li></ul>	
+<hr>
+
+	<h3>Intended Audience</h3>
+	First or second year M. Tech. students, Ph.D. students, third/fourth year B. Tech. students or fourth/fifth year dual-degree students. This course should be of interest to students from CSE and 
+EE primarily, but also to students from some other departments such as Biosciences and Bio-engineering, Mechanical Engineering, Geosciences or Civil Engineering.
+	<h3>Pre-requisites</h3>
+	<li> Exposure to basic mathematics: calculus, linear algebra and probability. Ability to program in C/C++/MATLAB and/or willingness to learn MATLAB. 
+	</li><li> Prior exposure to an image processing (CS 663) OR computer graphics (CS 475/675) course would be beneficial. Please speak to me to discuss whether your 
+background is sufficient for this course.
+
+
+      <h3>Learning Materials and Textbooks</h3>
+	<ul>
+	<li> Lecture slides that will be regularly posted
+	</li><li> "Introductory Techniques for 3D Computer Vision", Emanuele Trucco and Alessandro Verri, Prentice Hall.
+	</li><li> Robot Vision, by B. K. P. Horn, MIT Press (Cambridge).
+	</li><li> <a href="http://szeliski.org/Book/">Computer Vision: Algorithms and Applications, by Richard Szeliski</a> (freely downloadable!)
+	</li><li> <a href="http://www.flipkart.com/computer-vision-modern-approach-david-a-forsyth-jean-ponce/p/itmd32vtkypdh2yz?pid=9780273764144&amp;otracker=from-search&amp;srno=t_4&amp;query=Computer+Vision+%3A+A+Modern+Approach&amp;ref=992f0b9f-0af5-4fdc-9ef1-6f6a174f76af"> 
+Computer Vision: A Modern Approach, Forsyth and Ponce, Pearson Education.</a>
+	</li></ul>
+
+	<h3>Computational Resources</h3>
+	<ul>
+	<li> <a href="ftp://ftp.iitb.ac.in/IITB/software/Matlab/6.5/">MATLAB at IITB</a></li>
+	<li>MATLAB Tutorial: <a href="http://www.math.ufl.edu/help/matlab-tutorial/">here</a> or <a href="http://research.vtu.ac.in/Downloads/materials/matlab_guide.pdf">here</a></li>
+	<li>MATLAB Image Processing Toolbox tutorial: <a href="http://www.cs.otago.ac.nz/cosc451/Resources/matlab_ipt_tutorial.pdf">here</a></li>
+<li><a href="http://www.mines.utah.edu/gg_computer_seminar/matlab/matlab.html">Matlab Tutorial</a></li>
+<li><a href="http://www.mathworks.com/academia/student_center/tutorials/launchpad.html">The MathWorks - MATLAB Tutorial</a></li>
+<li><a href="http://math.ucsd.edu/~driver/21d-s99/matlab-primer.html">Matlab
+Primer</a></li>
+<li><a href="http://www.mathworks.com/access/helpdesk/help/techdoc/matlab.shtml">On-line Matlab Help</a></li>
+<li><a href="http://www.ee.columbia.edu/~marios/matlab/Writing_Fast_MATLAB_Code.pdf">Writing
+Fast Matlab Code</a> (pdf)</li>
+<li><a href="http://www.mathworks.com/support/tech-notes/1100/1109.html">Code Vectorization Guide</a></li>
+<li><a href="http://www.ee.columbia.edu/~marios/matlab/MatlabStyle1p5.pdf">Matlab
+Programmin Style Guidelines</a> (pdf)</li>
+	</ul><hr>
+
+
+      <h3>Grading Policy</h3>
+      <ul>
+        <li> Mid-sem exam: 20%
+	</li><li> Final exam (cumulative): 25%
+        </li><li> Programming or written assignments (5 or 6) to be done <i>in groups of two students</i>: total 50%. There may be an oral exam based on the assignments at the end of the semester (to 
+ensure that each student has put effort in every assignment).
+	</li><li> Attendance and class participation: 5%
+	</li><li> If you are a super-keen student who wants to do a course project, you may do so. In that case, you may do just k-2 assignments (k = 5 or 6), and concentrate on a course project. 
+	Instructor approval is a must for this! This option is especially recommended (though not compulsory) for graduate students (masters/PhD) who are interested in the broad areas of computer 
+vision/graphics/image 
+processing.
+	</li></ul>
+<hr>     
+
+
+	<h3>Other Policies</h3>
+	<ul>
+	<li>Attendance is mandatory. <b>Students with less than 80% attendance may be given a DX grade.</b></li>
+	<li> Assignments will be given out (typically) once every two or three weeks. They must be submitted on or before the deadline. No late 
+assignments will be accepted. The programming components of the assignments will typically involve MATLAB, so you must be willing to learn it quickly.
+	</li><li> <font color="red">We will adopt a zero-tolerance policy 
+against any forms of plagiarism or any other form of cheating. Just 
+don't do it! In cases of plagiarism, givers and takers will both be considered equally responsible. </font>
+	</li><li> This course is (inherently) cumulative. The syllabus for the final exam 
+will include everything taught during the semester.
+	</li></ul>	
+
+<hr>
+
+<h2 id="schedule">Lecture Schedule: </h2>
+<br>
+<p align="center">
+<table cellpadding="10" border="1">
+<tbody><tr bgcolor="#77ee77">
+<td> <b><h3>Date</h3></b></td>
+<td> <b><h3>Content of the Lecture</h3></b></td>
+<td> <b><h3>Assignments/Readings/Notes</h3></b></td>
+</tr>
+
+<tr>
+<td bgcolor="aaffaa">06/01 (Mon)</td>
+<td><ul>
+<li>Introduction, course overview</li>
+</ul>
+</td><td>
+<ul>
+<li>
+<a href="Overview.pdf">Intro</a>
+</li></ul>
+</td>
+</tr>
+
+
+<tr>
+<td bgcolor="aaffaa">07/01 (Tue)</td>
+<td><ul>
+<li>Camera geometry: Transformations of points and vectors in 2D (translation, rotation, scaling, shearing, reflection - affine transformation), concept of homogeneous coordinates, composition of 
+affine transformations: example - reflection across an arbitrary line;</li>
+<li>Transformation of points 
+and vectors in 3D: translation, rotation about X,Y,Z axis, rotation about an arbitrary axis</li>
+</ul>
+</td><td>
+<ul>
+<li><a href="CameraGeometry.pdf">Slides</a>
+</li><li>Read a standard computer graphics textbook (eg: Foley van Dam) for transformation matrices in 2D and 3D.
+</li></ul>
+</td>
+</tr>
+
+
+<tr>
+<td>09/01 (Thurs)</td>
+<td><ul>
+<li>Affine transformations in 3D: rotation and reflection matrices, reflection about an arbitrary plane, properties of orthonormal matrices, composition of affine transforms</li>
+<li>Camera geometry - pinhole, perspective projections, relationship between image and object coordinats, weak-perspective and orthographic projections, vanishing points</li>
+</ul>
+</td><td>
+<ul>
+<li><a href="CameraGeometry.pdf">Slides</a></li>
+<li>Chapter 2 (ignore section 2.2.3 and 2.5) of Trucco and Verri.</li>
+</ul>
+</td>
+</tr>
+
+
+<tr>
+<td>13/01 (Mon)</td>
+<td><ul>
+<li>Camera calibration: concept of camera coordinate system and world coordinate system, concept of extrinsic and intrinsic parameters</li>
+<li>Intro to calibration algorithm</li>
+</ul>
+</td><td>
+<ul>
+<li><a href="CameraGeometry.pdf">Slides</a>
+</li><li>Chapter 2 (section 2.4) and Chapter 6 of Trucco and Verri.
+</li></ul>
+</td>
+</tr>
+
+
+<tr>
+<td>16/01 (Thurs)</td>
+<td><ul>
+<li>Camera calibration algorithm</li>
+<li>Use of SVD in solving equations of the form Av = 0, where v is an unknown vector and A is a known matrix</li>
+<li>Use of a calibrated camera system</li>
+<li>Vanishing points and orthocenter property</li>
+</ul>
+</td><td>
+<ul>
+<li><a href="CameraGeometry.pdf">Slides</a>
+</li><li>Chapter 2 (section 2.4) and Chapter 6 of Trucco and Verri.
+</li></ul>
+</td>
+</tr>
+
+
+<tr>
+<td>20/01 (Mon)</td>
+<td><ul>
+<li>Camera calibration 2nd algorithm</li>
+<li>Use of SVD in solving equations of the form Av = 0, where v is an unknown vector and A is a known matrix</li>
+<li>Use of a calibrated camera system: binocular system, finding height of an object using cross-ratio</li>
+<li>Planar homography</li>
+</ul>
+</td><td>
+<ul>
+<li><a href="CameraGeometry.pdf">Slides</a>
+</li><li>Chapter 2 (section 2.4) and Chapter 6 of Trucco and Verri.
+</li><li><b>Decide your homework partner for the semester and send me an email by the end of the week!</b>
+</li></ul>
+</td>
+</tr>
+
+
+<tr>
+<td>21/01 (Tue)</td>
+<td><ul>
+<li>Planar homography</li>
+<li>Determining planar homography</li>
+<li>Camera with a lens - focal length, aperture width, depth of field, human eye as camera</li>
+<li>Singular decomposition (SVD) - its applications in linear algebra</li>
+</ul>
+</td><td>
+<ul>
+<li><a href="CameraGeometry.pdf">Slides</a>
+</li><li><a href="SVD.pdf">Slides for SVD</a>
+</li><li>Chapter 2 (section 2.4) and Chapter 6 of Trucco and Verri.
+</li><li><b>Decide your homework partner for the semester and send me an email by the end of the week!</b>
+</li><li><b><a href="HW1/">Homework 1 is posted</a>. Due 5th Feb before 11:59 pm</b>
+</li></ul>
+</td>
+</tr>
+
+
+<tr>
+<td bgcolor="aaffaa">21/01 (Thurs)</td>
+<td><ul>
+<li>Calculus of variations - concept of functional</li>
+<li>Derivation of the Euler Lagrange equation for a functional of the form J(y) = \int_{x_0}^{x_1} F(x,y(x),y'(x)) dx</li>
+<li>Example of length of a curve as a functional</li>
+</ul>
+</td><td>
+<ul>
+<li>Notes from <a href="http://www1.maths.leeds.ac.uk/~dwh/MATH2650/Section%203%20summary.pdf">here</a> (ignore the subsection on "alternate derivation"). Local copy <a href="calculus_of_variations.pdf">here</a>. I will post some 
+additional notes later.
+</li><li>Read appendix A.6 of B. K. P. Horn
+</li><li><b>Decide your homework partner for the semester and send me an email by the end of the week!</b>
+</li><li><b><a href="HW1/">Homework 1 is posted</a>. Due 5th Feb before 11:59 pm</b>
+</li></ul>
+</td>
+</tr>
+
+
+<tr>
+<td>27/01 (Mon)</td>
+<td><ul>
+<li>Calculus of variations - concept of functional</li>
+<li> Example of a projectile</li>
+<li>E-L equations for functional of the form J(y) = \int_{x_0}^{x_1} F(x,y(x),y'(x),z(x),z'(x)), i.e. one independent variable (x) and multiple dependent variables (z(x) and y(x))</li>
+<li>E-L equation for functional of the form J(z) = \int \int_{D} F(x,y,z,z_x, z_y), i.e. multiple independent variables (x and y) and one dependent variable (z(x,y))</li>
+<li>Example of the previous functional for image denoising</li>
+</ul>
+</td><td>
+<ul>
+<li>Notes from <a href="http://www1.maths.leeds.ac.uk/~dwh/MATH2650/Section%203%20summary.pdf">here</a> (ignore the subsection on "alternate derivation"). Local copy <a href="calculus_of_variations.pdf">here</a>. I will post some 
+additional notes later.
+</li><li>Read appendix A.6 of B. K. P. Horn
+</li><li>Optional but highly recommended reading: <a href="http://www.cs.helsinki.fi/u/ldaniel/mm_cn/FeynmanPrincipleofLeastAction.pdf">"Principle of Least Action - a special lecture almost verbatim"</a> 
+by Richard Feynmann (read upto the part where he talks about 
+relativity). 
+Local 
+copy 
+<a href="FeynmanPrincipleofLeastAction.pdf">here</a>.
+</li></ul>
+</td>
+</tr>
+
+
+<tr>
+<td>28/01 (Tue)</td>
+<td><ul>
+<li>Example on image denoising - concept of data fidelity term, regularizer and regularization parameter</li>
+<li>E-L equation with higher order derivatives</li>
+<li>Application in optics based on Fermat's principle that light takes the least-time path of travel</li>
+</ul>
+</td><td>
+<ul>
+<li><a href="calculus_variations_notes.pdf">Class notes on variational calculus</a></li>
+<li>Read appendix A.6 of B. K. P. Horn
+</li><li>Optional but highly recommended reading: <a href="http://www.cs.helsinki.fi/u/ldaniel/mm_cn/FeynmanPrincipleofLeastAction.pdf">"Principle of Least Action - a special lecture almost verbatim"</a> 
+by Richard Feynmann (read upto but not including the part on relativity). 
+Local 
+copy 
+<a href="FeynmanPrincipleofLeastAction.pdf">here</a>.
+</li></ul>
+</td>
+</tr>
+
+
+<tr>
+<td bgcolor="aaffaa">30/01 (Thurs)</td>
+<td>
+<ul>
+<li>Shape from Shading (SfS): problem statement
+</li><li>Scene radiance, image irradiance, surface reflectance model
+</li><li>Lambertian reflectance model, Lambert's cosine law
+</li><li>Variational formulation for SfS
+</li></ul>
+
+</td><td> 
+<ul> <li><a href="Shape_From_Shading.pdf">Slides</a></li> 
+<li>Sections 2.2.3 and 9.1 to 9.4 of Trucco and Verri (skip section 9.3.1)</li> 
+</ul> 
+</td> 
+</tr>
+
+
+<tr>
+<td>3/2 (Mon)</td>
+<td>
+<ul>
+<li>Variational formulation for SfS
+</li><li>Euler Lagrange and method to solve it
+</li><li>Violation of integrability constraint
+</li></ul>
+
+</td><td> 
+<ul> <li><a href="Shape_From_Shading.pdf">Slides</a></li> 
+<li>Sections 2.2.3 and 9.1 to 9.4 of Trucco and Verri (skip section 9.3.1)</li> 
+</ul> 
+</td> 
+</tr>
+
+
+<tr>
+<td>4/2 (Tue)</td>
+<td>
+<ul>
+<li>Violation of integrability constraint
+</li><li>Methods to overcome or mitigate the violation of integrability constraint
+</li><li>Photometric stereo - estimating surface normals of a Lambertian object given n &gt;= 3 images in the same pose but different lighting directions
+</li></ul>
+
+</td><td> 
+<ul> <li><a href="Shape_From_Shading.pdf">Slides</a></li> 
+<li>Sections 2.2.3 and 9.1 to 9.4 of Trucco and Verri (skip section 9.3.1)</li> 
+</ul> 
+</td> 
+</tr>
+
+
+<tr> <td>6/2 (Thurs)</td> 
+<td> 
+<ul> 
+<li>Photometric stereo - detecting shadows and specularities, applications in relighting, advantages of a 3D object model over a 2D image 
+</li><li>Estimating depth from shading by Tsai and Shah's method
+</li></ul>
+</td><td> 
+<ul> 
+<li><a href="Shape_From_Shading.pdf">Slides</a></li> 
+<li><a href="photometric_stereo">Matlab demo - photometric stereo</a>
+</li><li>Sections 2.2.3 and 9.1 to 9.4 of Trucco and Verri (skip section 9.3.1)</li> 
+<li> Optional reading for curious souls: <a href="HornBrooks_VariationalSFS.pdf">Variational approach to shape from shading (by Brooks and Horn)</a>
+</li><li> Optional reading for curious souls: <a href="TsaiShah.pdf">Approach of Tsai and Shah</a>
+</li><li><b><a href="HW2/">Homework 2</a> is posted.</b> Due 12th feb and 27th Feb before 11:59 pm
+</li></ul> 
+</td> 
+</tr>
+
+
+<tr><td bgcolor="aaffaa">10/2 (Mon)</td> 
+<td> 
+<ul> 
+<li>Optical flow - concept and examples
+</li><li>Brightness constancy equation, Aperture problem
+</li><li>Horn and Shunck method (global technique)
+</li><li>Lucas-Kanade method (local technique)
+</li></ul>
+</td><td> 
+<ul> 
+<li><a href="OpticalFlow.pdf">Slides</a></li> 
+<li>Online <a href="http://users.eecs.northwestern.edu/~yingwu/teaching/EECS432/Notes/optical_flow.pdf">notes</a> by Ying Wu from Northwestern University (read only sections 1 and 2). Local copy <a href="notes_opticalflow_yingwu.pdf">here</a></li>
+<li><b><a href="HW2/">Homework 2</a> is posted.</b> Due 12th feb and 27th Feb before 11:59 pm
+</li><li>Homework 1 solutions are <a href="HW1/">up</a></li>
+
+<li>Optional reading for curious souls: <a href="http://people.csail.mit.edu/bkph/papers/Optical_Flow_OPT.pdf">"Determining Optical Flow",Horn and Shunck, Artificial Intelligence, 1981</a>
+</li></ul> 
+</td> 
+</tr>
+
+
+<tr>
+<td>11/2 (Tue)</td> 
+<td> 
+<ul> 
+<li>Discussion of Horn and Shunck method
+</li><li>Discussion of Lucas-Kanade method, multiresolution version of Lucas-Kanade
+</li><li>Barberpole illusion
+</li></ul>
+</td><td> 
+<ul> 
+<li><a href="OpticalFlow.pdf">Slides</a></li> 
+<li>Online <a href="http://users.eecs.northwestern.edu/~yingwu/teaching/EECS432/Notes/optical_flow.pdf">notes</a> by Ying Wu from Northwestern University (read only sections 1 and 2). Local copy <a href="notes_opticalflow_yingwu.pdf">here</a></li>
+<li>Optional reading for curious souls: <a href="http://people.csail.mit.edu/bkph/papers/Optical_Flow_OPT.pdf">"Determining Optical Flow",Horn and Shunck, Artificial Intelligence, 1981</a>
+</li><li>Optional reading for curious souls: <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.129.7916&amp;rep=rep1&amp;type=pdf">"Horn and Shunck meets Lucas Kanade: Combining Local and Global 
+Optic Flow Methods ", Bruhn, Weickert and Schnorr, International Journal of Computer Vision, 2005</a>
+
+</li><li><font size="5"><a href="http://www.cse.iitb.ac.in/~ttc/springMIDSEM2013-14.pdf">Midsem exam on 18/2 (Tue) from 8:30-10:30 am in SIC 201/301</a></font></li>
+</ul> 
+</td> 
+</tr>
+
+<tr>
+<td>13/2 (Thurs)</td> 
+<td> 
+<ul> 
+Midterm revision
+</ul>
+</td><td> 
+<ul> 
+</ul> 
+</td> 
+</tr>
+
+
+<tr>
+<td>24/2 (Mon)</td> 
+<td> 
+<ul> 
+<li>Distribution of midterm answer papers and discussion of solutions
+</li></ul>
+</td><td> 
+<ul> 
+<li><a href="Midterm">Midterm solutions</a></li>
+</ul> 
+</td> 
+</tr>
+
+
+<tr>
+<td bgcolor="aaffaa">25/2 (Tue)</td> 
+<td> 
+<ul> 
+<li>Applications of Optical Flow
+</li><li>Stereo - introduction, stereopsis in the brain
+</li><li>Stereo reconstruction with aligned cameras
+</li></ul>
+</td><td> 
+<ul> 
+<li><a href="Stereo.pdf">Slides</a></li>
+<li>Chapter 7 of Trucco and Verri, Chapter 13 of B K P Horn
+</li></ul> 
+</td> 
+</tr>
+
+
+<tr>
+<td>27/2 (Thurs)</td> 
+<td> 
+<ul> 
+<li>Stereo reconstruction with aligned cameras
+</li><li>Intrinsic and extrinsic parameters of a stereo system
+</li><li>Stereo reconstruction with non-aligned cameras but known parameters
+</li><li>Epipolar geometry, epipolar constraint, essential matrix and fundamental matrix 
+</li></ul>
+</td><td> 
+<ul> 
+<li><a href="Stereo.pdf">Slides</a></li>
+<li>[See moodle] Chapter 7 of Trucco and Verri, Chapter 13 of B K P Horn
+</li></ul> 
+</td> 
+</tr>
+
+<tr>
+<td>3/3 (Mon)</td> 
+<td> 
+<ul> 
+<li>Epipolar geometry, epipolar constraint, essential matrix and fundamental matrix 
+</li><li>Eight-point algorithm to determine essential/fundamental matrix; location of epipoles from fundamental matrix
+</li><li>Stereo triangulation under noise - 3D reconstruction when the intrinsic/extrinsic parameters of a stereo system are known
+</li><li>3D reconstruction when only the intrinsic parameters of a stereo system are known
+</li></ul>
+</td><td> 
+<ul> 
+<li><a href="Stereo.pdf">Slides</a></li>
+<li>[See moodle] Chapter 7 of Trucco and Verri, Chapter 13 of B K P Horn
+</li><li><a href="HW2">HW2 solutions are up</a></li>
+</ul> 
+</td> 
+</tr>
+
+
+<tr>
+<td>4/3 (Tue)</td> 
+<td> 
+<ul> 
+<li>3D reconstruction when only the intrinsic parameters of a stereo system are known
+</li><li>3D reconstruction when the intrinsic and extrinsic parameters of a stereo system are unknown
+</li><li>stereo rectification
+</li><li>stereo correspondence algorithms: ordering constraint, cross-correlation, normalized cross-correlation, sum of squared differences, [Dynamic programming algorithm to be covered <i>later</i>]
+</li></ul>
+</td><td> 
+<ul> 
+<li><a href="Stereo.pdf">Slides</a></li>
+<li>[See moodle] Chapter 7 of Trucco and Verri, Chapter 13 of B K P Horn
+</li><li><b><a href="HW3">Homework 3 is out</a>, due 13th March before 11:59 pm</b>.
+</li></ul> 
+</td> 
+</tr>
+
+
+<tr>
+<td bgcolor="aaffaa">6/3 (Thurs)</td> 
+<td> 
+<ul> 
+<li><a href="HW2">HW2 solutions are up</a></li>
+<li>Feature point tracking (Kanade-Lucas-Tomasi tracker)
+</li><li>Motion models, detection of occlusions
+</li><li>Applications (brief discussion): mosaicing, stabilization, structure from motion
+</li></ul>
+</td><td> 
+<ul> 
+<li><a href="feature_point_tracking.pdf">Slides</a></li>
+<li>Matlab <a href="eigvals_structure_tensor.m">code</a> to understand the eigenvalues of the structure tensor</li>
+<li>Technical report (must read): <a href="TR_93-1399_Cornell.pdf"> "Good Features to Track"</a> by Shi and Tomasi (Cornell University, 1993)
+</li><li><b><a href="hw3">Homework 3 is out</a>, due 13th March before 11:59 pm</b>.
+</li></ul> 
+</td> 
+</tr>
+
+
+<tr>
+<td bgcolor="aaffaa">10/3 (Mon)</td> 
+<td> 
+<ul> 
+(Lecture by Prof. Sharat Chandran)
+<li>Structure from motion (SfM): problem statement and introduction
+</li><li>Overview of the Tomasi-Kanade SVD-based factorization algorithm
+</li></ul>
+</td><td> 
+<ul> 
+<li><a href="structure_from_motion_SharatChandran.pdf">Slides</a> (courtesy: Prof. Sharat Chandran)
+</li><li>Section 8.5.1 of Trucco and Verri
+</li><li>Paper: <a href="http://www.eecs.berkeley.edu/~yang/courses/cs294-6/papers/TomasiC_Shape%20and%20motion%20from%20image%20streams%20under%20orthography.pdf">Tomasi and Kanade, "Shape and Motion 
+from Image Streams under Orthogrpahy: a Factorization Approach", IJCV 1991</a>. (Read upto section 4)
+</li></ul> 
+</td> 
+</tr>
+
+
+<tr>
+<td>12/3 (Tue)</td> 
+<td> 
+<ul> 
+(Lecture by Prof. Sharat Chandran)
+<li>Overview of the Tomasi-Kanade SVD-based factorization algorithm for SfM
+</li><li>Intuition and proof of the algorithm
+</li></ul>
+</td><td> 
+<ul> 
+<li><a href="structure_from_motion_SharatChandran.pdf">Slides</a>
+</li><li>Section 8.5.1 of Trucco and Verri
+</li><li>Paper: <a href="http://www.eecs.berkeley.edu/~yang/courses/cs294-6/papers/TomasiC_Shape%20and%20motion%20from%20image%20streams%20under%20orthography.pdf">Tomasi and Kanade, "Shape and Motion 
+from Image Streams under Orthogrpahy: a Factorization Approach", IJCV 1991</a>. (Read upto section 4)
+</li></ul> 
+</td> 
+</tr>
+
+
+<tr>
+<td>13/3 (Thurs)</td> 
+<td> 
+<ul> 
+(Lecture by Prof. Sharat Chandran)
+<li>Intuition and proof of the Tomasi-Kanade factorization algorithm
+</li><li>Mathematical issues
+</li></ul>
+</td><td> 
+<ul> 
+<li><a href="structure_from_motion_SharatChandran.pdf">Slides</a>
+</li><li>Section 8.5.1 of Trucco and Verri
+</li><li>Paper: <a href="http://www.eecs.berkeley.edu/~yang/courses/cs294-6/papers/TomasiC_Shape%20and%20motion%20from%20image%20streams%20under%20orthography.pdf">Tomasi and Kanade, "Shape and Motion 
+from Image Streams under Orthogrpahy: a Factorization Approach", IJCV 1991</a>. (Read upto section 4)
+</li></ul> 
+</td> 
+</tr>
+
+
+<tr>
+<td bgcolor="aaffaa">18/3 (Tue)</td> 
+<td> 
+<ul> 
+<li>Robust fitting in computer vision: motivation - least squares fitting as a maximum likelihood problem
+</li><li>Effect of outliers on least squares solutions
+</li><li>Examples of outliers in computer vision problems
+</li></ul>
+</td><td> 
+<ul> 
+<li><a href="RobustMethods.pdf">Slides</a></li>
+<li>Appendix A.7 of Trucco and Verri
+</li><li><a href="http://www.eecs.berkeley.edu/~yang/courses/cs294-6/papers/Steward_Robust%20parameter%20estimation%20in%20computer%20vision.pdf">Paper by Peter Meer: Robust parameter estimation in 
+computer vision.</a>
+</li><li><a href="HW3">HW3 solutions are up</a></li>
+<li><a href="HW4">Homework 4 is out</a> - due 1st April before 11:59 pm.
+</li></ul> 
+</td> 
+</tr>
+
+<tr>
+<td>20/3 (Thurs)</td> 
+<td> 
+<ul> 
+<li>Least Median squares technique for robust fitting
+</li><li>RANSAC (RAndom SAmple Consensus) for robust fitting
+</li><li>Applications of RANSAC: line fitting, homography estimation, fundamental matrix estimation
+</li></ul>
+</td><td> 
+<ul> 
+<li><a href="RobustMethods.pdf">Slides</a></li>
+<li>Appendix A.7 of Trucco and Verri
+</li><li><a href="http://www.eecs.berkeley.edu/~yang/courses/cs294-6/papers/Steward_Robust%20parameter%20estimation%20in%20computer%20vision.pdf">Paper by Peter Meer: Robust parameter estimation in 
+computer vision.</a>
+</li><li><a href="HW4">Homework 4 is out</a> - due 1st April before 11:59 pm.
+</li></ul> 
+</td> 
+</tr>
+
+
+
+<tr>
+<td>24/3 (Mon)</td> 
+<td> 
+<ul> 
+<li>Discussion about HW4 in detail
+</li></ul>
+</td><td> 
+<ul> 
+<li><a href="RobustMethods.pdf">Slides</a></li>
+<li>Appendix A.7 of Trucco and Verri
+</li><li><a href="HW4">Homework 4 is out</a> - due 1st April before 11:59 pm.
+</li></ul> 
+</td> 
+</tr>
+
+
+<tr>
+<td bgcolor="aaffaa">25/3 (Tue)</td> 
+<td> 
+<ul> 
+<li>SIFT algorithm: intuitive notion of a salient point, applications of salient point detection
+</li><li>Step (1) of the SIFT algorithm: difference of Gaussians at different scales, detection of extrema in Difference of Gaussians pyramid, scale selection
+</li></ul>
+</td><td> 
+<ul> 
+<li><a href="SIFT.pdf">Slides</a></li>
+<li><a href="http://www.cs.ubc.ca/~lowe/papers/ijcv04.pdf">SIFT paper by David Lowe</a>
+</li><li><a href="HW4">Homework 4 is out</a> - due 1st April before 11:59 pm.
+</li></ul> 
+</td> 
+</tr>
+
+
+<tr>
+<td>27/3 (Thurs)</td> 
+<td> 
+<ul> 
+<li>Four major steps of SIFT: (1) Initial keypoint estimation, (2) Refinement of keypoint location and scale, elimination oif weak keypoints and keypoints on edges, (3) Keypoint orientation estimation, 
+(4) Creation of SIFT descriptor
+</li><li>Discussion of following properties of SIFT descriptors: rotation and scale invariance, illumination invariance
+</li></ul>
+</td><td> 
+<ul> 
+<li><a href="SIFT.pdf">Slides</a></li>
+<li><a href="http://www.cs.ubc.ca/~lowe/papers/ijcv04.pdf">SIFT paper by David Lowe</a>
+</li><li><a href="HW4">Homework 4 is out</a> - due 1st April before 11:59 pm.
+</li></ul> 
+</td> 
+</tr>
+
+
+<tr>
+<td>1/4 (Tue)</td> 
+<td> 
+<ul> 
+<li>Discussion of following properties of SIFT descriptors: rotation and scale invariance, illumination invariance
+</li><li>Detailed discussion of step 1: concept of scale space (only introductory), Laplacian of Gaussian filter (LoG) and its relation to DoG filter, use of LoG/DoG in detection of blobs of various radii 
+</li></ul>
+</td><td> 
+<ul> 
+<li><a href="SIFT.pdf">Slides</a></li>
+<li><a href="http://www.cs.ubc.ca/~lowe/papers/ijcv04.pdf">SIFT paper by David Lowe</a>
+</li><li><a href="HW4">Homework 4 is out</a> - due 1st April before 11:59 pm.
+</li></ul> 
+</td> 
+</tr>
+
+
+<tr>
+<td>3/4 (Thurs)</td> 
+<td> 
+<ul> 
+<li>Application of SIFT for object detection in cluttered scenes
+</li><li>Discussion on the limitations of the video stabilization algorithm in HW4
+</li></ul>
+</td><td> 
+<ul> 
+<li><a href="SIFT.pdf">Slides</a></li>
+<li><a href="http://www.cs.ubc.ca/~lowe/papers/ijcv04.pdf">SIFT paper by David Lowe</a>
+</li><li><a href="HW4">Homework 4 solutions posted</a>.
+</li></ul> 
+</td> 
+</tr>
+
+
+
+<tr>
+<td bgcolor="aaffaa">7/4 (Mon)</td> 
+<td> 
+<ul> 
+<li>Face detection: problem statement
+</li><li>Introduction to the Adaboost algorithm
+</li></ul>
+</td><td> 
+<ul> 
+<li><a href="FaceDetection.pdf">Slides</a></li> (will be updated)
+<li><a href="face_detection_ViolaJones.pdf">Paper on face detection using Adaboost</a>
+</li><li><a href="HW5"><b>Homework 5 posted - due 16th April before 11:59 pm (No extensions)</b></a>.
+</li></ul> 
+</td> 
+</tr>
+
+
+<tr>
+<td>8/4 (Tue)</td> 
+<td> 
+<ul> 
+<li>Adaboost algorithm
+</li><li>Statement of theorem about its training errors
+</li><li>Concept of overfitting in machine learning
+</li><li>Viola and Jones face detector: feature selection
+</li></ul>
+</td><td> 
+<ul> 
+<li><a href="FaceDetection.pdf">Slides</a></li> (will be updated)
+<li><a href="face_detection_ViolaJones.pdf">Paper on face detection using Adaboost</a>
+</li><li><a href="HW5">Homework 5 posted - due 16th April before 11:59 pm (No extensions)</a>.
+</li><li><a href="http://www.cse.iitb.ac.in/~ttc/endsem1314.pdf"><b><font color="red">Final exam timetable</font></b></a></li>
+</ul> 
+</td> 
+</tr>
+
+<tr>
+<td>10/4 (Thurs)</td> 
+<td> 
+<ul> 
+<li>Viola and Jones face detector: feature selection
+</li><li>Viola and Jones face detector: cascade of detectors; false positive rates, false negative rates, detection rates
+</li></ul>
+</td><td> 
+<ul> 
+<li><a href="FaceDetection.pdf">Slides</a></li> (will be updated)
+<li><a href="face_detection_ViolaJones.pdf">Paper on face detection using Adaboost</a>
+</li><li><a href="HW5">Homework 5 posted - due 16th April before 11:59 pm (No extensions)</a>.
+</li><li><a href="http://www.cse.iitb.ac.in/~ttc/endsem1314.pdf"><b><font color="red">Final exam timetable</font></b></a></li>
+</ul> 
+</td> 
+</tr>
+
+
+<tr>
+<td>12/4 (Sat)</td> 
+<td> 
+<ul> 
+<li>Theoretical treatment of Adaboost: Upper bound on training error, Adaboost as a coordinate descent, Optimizing for alpha (weight of weak classifier), Optimizing for the weak classifier itself,
+Upper bound on training error as number of Adaboost rounds increase
+</li><li>[This part is not on the final exam] Generalization capabilities of Adaboost (only summary of results): concept of classifier margins
+</li></ul>
+</td><td> 
+<ul> 
+<li><a href="FaceDetection.pdf">Slides</a></li> (will be updated)
+<li><a href="face_detection_ViolaJones.pdf">Paper on face detection using Adaboost</a>
+</li><li><a href="HW5"><b>Homework 5 posted - due 16th April before 11:59 pm (No extensions)</b></a>.
+</li><li><a href="http://www.cse.iitb.ac.in/~ttc/endsem1314.pdf"><b><font size="5">Final exam timetable</font></b></a></li>
+<li><a href="study_questions.pdf"><b>Study questions</b></a></li>
+<li>Homework solutions in one place: <a href="HW1">HW1</a>, <a href="HW2">HW2</a>, <a href="HW3">HW3</a>, <a href="HW4">HW4</a>, <a href="HW5">HW5</a>.
+</li></ul> 
+</td> 
+</tr>
+
+
+
+
+
+</tbody></table></p></li></body></html>

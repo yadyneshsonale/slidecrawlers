@@ -1,0 +1,908 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html dir="ltr" xmlns="http://www.w3.org/1999/xhtml"><!-- #BeginTemplate "../../master.dwt" --><head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<!-- #BeginEditable "doctitle" -->
+<title>CS554: Data-Intensive Computing</title>
+<style type="text/css">
+
+
+
+
+
+.style2 {
+	font-size: small;
+}
+.style8 {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+.style4 {
+	border-style: solid;
+	border-width: 0px;
+}
+.style5 {
+	border-style: solid;
+	border-width: 1px;
+}
+.style6 {
+	font-weight: normal;
+	border-style: solid;
+	border-width: 1px;
+}
+.style9 {
+	margin-top: 0;
+	margin-bottom: 0;
+	margin-left: 40px;
+}
+.auto-style1 {
+	font-size: medium;
+}
+.auto-style2 {
+	text-decoration: line-through;
+}
+</style>
+<!-- #EndEditable -->
+<link href="../../styles/style0.css" media="screen" rel="stylesheet" title="CSS" type="text/css">
+<style type="text/css">
+
+.style1 {
+	margin-right: 0px;
+}
+.style2 {
+	font-size: large;
+}
+.style3 {
+	font-size: small;
+}
+</style>
+<script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script><script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-1237893-6']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+
+<body>
+
+<!-- Begin Container -->
+<div id="container" style="width: 950px">
+	<!-- Begin Masthead -->
+	<div id="masthead">
+		<h1><a href="#">Ioan Raicu</a></h1>
+		<h3><a href="http://www.iit.edu/" target="_blank">Illinois Institute of Technology</a></h3>
+		<h3><a href="http://www.anl.gov/" target="_blank">Argonne National Laboratory</a></h3>
+	</div>
+	<!-- End Masthead -->
+	<!-- Begin Navigation -->
+	<div id="navigation">
+		<ul class="style2">
+			<li style="width: 65px"><a href="../../index.html">Home</a></li>
+			<li><a href="../../about_me/index.html">About Me</a></li>
+			<li><a href="../../research/index.html">Research</a></li>
+			<li><a href="../../research/publications/index.html">Publications</a></li>
+			<li><a href="../index.html">Teaching</a></li>
+			<li><a href="../../service/index.html">Service</a></li>
+			<li><a href="../../about_me/CV_resume_Ioan_Raicu.pdf">CV</a></li>
+			<li><a href="../../links/index.html">Links</a></li>
+			<li><a href="../../personal/index.html">Personal</a></li>
+			<li><a href="../../contact/index.html">Contact</a></li>
+		</ul>
+	</div>
+	<!-- End Navigation -->
+	<!-- Begin content_container -->
+	<div id="content_container">
+		<!-- Begin Left Column -->
+		<div id="column_left" style="width: 600px">
+			<!-- #BeginEditable "content" -->
+			
+			<h1>CS554: Data-Intensive Computing</h1>
+			<span class="style6">
+			<p class="style8"><strong>Semester: Fall 2013 </strong></p>
+			<p class="style8"><strong>Lecture Time: Monday/Wednesday, 11:25AM - 
+			12:40PM </strong></p>
+			<p class="style8"><strong>Lecture Location:
+			</strong>Stuart Building 238</p>
+			<p class="style8"><strong>Overflow Lecture Location:
+			</strong>Stuart Building 204<strong>Professor: Dr. Ioan Raicu </strong>
+			<a href="mailto:(iraicu@cs.iit.edu"><strong>(iraicu@cs.iit.edu</strong></a><strong>)
+			</strong></p>
+			<p class="style9">Office Hours Time: Wednesday 12:45PM-1:45PM </p>
+			<p class="style9">Office Hours Location: Stuart Building 
+			237D </p>
+			<p class="style8"><strong>Teaching Assistant: Ke Wang (<a href="mailto:kwang22@hawk.iit.edu">kwang22@hawk.iit.edu</a>)
+			</strong></p>
+			<p class="style9">Office Hours Time: Monday 1:40PM-2:30PM, Tuesday 12:45PM-1:45PM</p>
+			<p class="style9">Office Hours Location: Stuart Building 002</p>
+			<p class="style8"><strong>Teaching Assistant: Tonglin Li (<a href="mailto:tli13@iit.edu">tli13@iit.edu</a>)
+			</strong></p>
+			<p class="style9">Office Hours Time: Thursday 10AM-11AM, Friday 
+			12:45PM-1:45PM</p>
+			<p class="style9">Office Hours Location: Stuart Building 002</p>
+			<p class="style9">&nbsp;</p>
+			<p>This course is a tour through various research topics in 
+			distributed data-intensive computing, covering topics in cluster 
+			computing, grid computing, supercomputing, and cloud computing. We 
+			will explore solutions and learn design principles for building 
+			large network-based computational systems to support data intensive 
+			computing. This course is geared for junior/senior level 
+			undergraduates and graduate students in computer science. Prerequsites: 
+			CS450; however, one or more of the following courses would be 
+			recommended: 495 (Intro to Distributed 
+			Systems), CS546, CS550, CS553, or CS570.&nbsp; </p>
+			<p>We will be using Piazza to facilitate course discussions, at
+			<a href="http://piazza.com/iit/fall2013/cs554/home">
+			http://piazza.com/iit/fall2013/cs554/home</a>. The mailing list 
+			previously announced will be removed. &nbsp;</p>
+			<p><strong><em>In order to highight some of the best projects from the class 
+			this year (11 of the 30 projects), I have posted some of the 
+			final reports and presentation slides below (for a complete list of 
+			project titles and students, click </em></strong>
+			<a href="final-presentations.html"><strong><em>here</em></strong></a><strong><em>):</em></strong></p>
+			<ol>
+				<span class="style6">
+				<li>Dongfang Zhao, Ioan Raicu. "<a href="best-reports/2013_IIT-CS554_FusionFS-compression.pdf"><strong>Exploring Data Compression in 
+				Distributed File Systems</strong></a>", Illinois Institute of Technology, 
+				Department of Computer Science, Technical Report, 2013<ul>
+					<li>
+					<a href="best-reports/2013_IIT-CS554_FusionFS-compression-slides.pdf">Slides</a></li>
+					<li>Improved paper to be submitted to USENIX ATC 2014&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					</li>
+				</ul>
+				</li>
+				<li>Xiaobing Zhou, Hao Chen, Ke Wang, Michael Lang, Ioan Raicu. 
+				"<a href="best-reports/2013_IIT-CS554_dist-slurm.pdf"><strong>Exploring Distributed Resource Allocation Techniques in the 
+				SLURM Job Management System</strong></a>", Illinois Institute of Technology, 
+				Department of Computer Science, Technical Report, 2013<ul>
+					<li>
+					<a href="best-reports/2013_IIT-CS554_dist-slurm-slides.pdf">Slides</a></li>
+					<li>Improved paper to be submitted to ACM HPDC 2014</li>
+				</ul>
+				</li>
+				<li>Ajay Anthony, Sandeep Palur, Iman Sadooghi, Ioan Raicu. 
+				"<strong><a href="best-reports/2013_IIT-CS554_CloudKon-reloaded.pdf">CloudKon Reloaded with efficient Monitoring, Bundled Response 
+				and Dynamic Provisioning</a></strong>", Illinois Institute of Technology, 
+				Department of Computer Science, Technical Report, 2013
+				<ul>
+					<li>
+					<a href="best-reports/2013_IIT-CS554_CloudKon-reloaded-slides.pdf">Slides</a></li>
+					<li>Some results from this report were submitted as part of 
+					a CloudKon paper to IEEE CCGrid 2014 </li>
+				</ul>
+				</li>
+				<li>Kiran Ramamurthy, Ke Wang, Ioan Raicu. "<strong><a href="best-reports/2013_IIT-CS554_MATRIX-HPC.pdf">Exploring 
+				Distributed HPC Scheduling in MATRIX</a></strong>", Illinois Institute of 
+				Technology, Department of Computer Science, Technical Report, 
+				2013<ul>
+					<li>
+					<a href="best-reports/2013_IIT-CS554_Matrix-HPC-slides.pdf">Slides</a></li>
+					<li>Some results from this report to be submitted as part of 
+					a MATRIX paper to ACM HPDC 2014&nbsp; </li>
+				</ul>
+				</li>
+				<li>Isha Kapur, Karthik Belgodu, Pankaj Purandare, Iman 
+				Sadooghi, Ioan Raicu. "<strong><a href="best-reports/2013_IIT-CS554_CloudKon-HPC.pdf">Extending CloudKon to Support HPC Job 
+				Scheduling</a></strong>", Illinois Institute of Technology, Department of 
+				Computer Science, Technical Report, 2013<ul>
+					<li>
+					<a href="best-reports/2013_IIT-CS554_CloudKon-HPC-slides.pdf">Slides</a></li>
+					<li>&nbsp;Some results from this report were submitted as 
+					part of a CloudKon paper to IEEE CCGrid 2014 </li>
+				</ul>
+				</li>
+				<li>Digvijay Singh Gahlot, Scott Krieder, Ioan Raicu. 
+				"<strong><a href="best-reports/2013_IIT-CS554_GeMTC-apps.pdf">Accelerating Simulation Codes through the GeMTC Framework</a></strong>", 
+				Illinois Institute of Technology, Department of Computer 
+				Science, Technical Report, 2013<ul>
+					<li>
+					<a href="best-reports/2013_IIT-CS554_GeMTC-apps-slides.pdf">Slides</a></li>
+					<li>Some results from this report to be submitted as part of 
+					a GeMTC paper to ACM HPDC 2014 </li>
+				</ul>
+				</li>
+				<span class="style6">
+				<li>Kun Feng, Tianyang Che, Tonglin Li, Ioan Raicu. "<a href="best-reports/2013_IIT-CS554_OHT.pdf"><strong>OHT: 
+				Hierarchical Distributed Hash Tables</strong></a>", Illinois Institute of 
+				Technology, Department of Computer Science, Technical Report, 
+				2013<ul>
+					<li><a href="best-reports/2013_IIT-CS554_OHT-slides.pdf">Slides</a></li>
+				</ul>
+				</li>
+				<li>Shukun Xie, Ran Xin, Tonglin Li, Ioan Raicu. "<a href="best-reports/2013_IIT-CS554_ZHT-eventual-consistency.pdf"><strong>Exploring 
+				Eventual Consistency Support in ZHT</strong></a>", Illinois Institute of 
+				Technology, Department of Computer Science, Technical Report, 
+				2013<ul>
+					<li>
+					<a href="best-reports/2013_IIT-CS554_ZHT-eventual-consistency-slides.pdf">Slides</a></li>
+				</ul>
+				</li>
+				<li>Dharmit Patel, Faraj Khasib, Shiva Srivastava, Iman 
+				Sadooghi, Ioan Raicu. "<a href="best-reports/2013_IIT-CS554_HDMQ.pdf"><strong>HDMQ: Towards In-Order and Exactly-Once 
+				Delivery using Hierarchical Distributed Message Queues</strong></a>", 
+				Illinois Institute of Technology, Department of Computer 
+				Science, Technical Report, 2013<ul>
+					<li><a href="best-reports/2013_IIT-CS554_HDMQ-slides.pdf">Slides</a></li>
+				</ul>
+				</li>
+				<li>Sean Wallace, Scott Krieder, Ioan Raicu. "<strong><a href="best-reports/2013_IIT-CS554_GeMTC-power.pdf">Power Profiling of 
+				GeMTC Many Task Computing</a></strong>", Illinois Institute of Technology, 
+				Department of Computer Science, Technical Report, 2013<ul>
+					<li>
+					<a href="best-reports/2013_IIT-CS554_GeMTC-power-slides.pdf">Slides</a>
+					</li>
+				</ul>
+				</li>
+			</span></span></ol>
+				</span>
+			<p class="auto-style1"><strong>Schedule</strong></p>
+<span class="style6">
+		</span><span class="style6">
+		</span><span class="style6">
+		</span><span class="style6">
+		</span><span class="style6">
+		</span><span class="style6">
+		</span><span class="style6">
+		</span><span class="style6">
+		</span><span class="style6">
+		</span><span class="style6">
+		</span><span class="style6">
+		</span><span class="style6">
+		</span><span class="style6">
+		</span><span class="style6">
+		</span><span class="style6">
+		</span><span class="style6">
+		</span><span class="style6">
+		</span><span class="style6">
+		</span><span class="style6">
+		</span><span class="style6">
+		</span><span class="style6">
+		</span><span class="style6">
+		</span><span class="style6">
+		</span><span class="style6">
+		</span><table class="style4" style="width: 100%">
+	<tbody><tr>
+		<td class="style5" style="width: 80px"><strong>Date</strong></td>
+		<td class="style5"><strong>Lecture Topic</strong></td>
+		<td class="style5"><strong>Reading </strong>(To be completed by posted 
+		date)</td>
+		<td class="style5"><strong>Assignments</strong></td>
+	</tr>
+	<tr>
+		<td class="style5" style="width: 80px"><strong>08-19-2013</strong></td>
+		<td class="style6">Syllabus (<a href="lecture-syllabus.pdf">Slides</a>,
+		<a href="CS554-F13_syllabus.pdf">PDF</a>)</td>
+		<td class="style5">
+		&nbsp;</td>
+		<td class="style5">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="style5" style="width: 80px"><strong>08-21-2013</strong></td>
+		<td class="style6">Introduction to Distributed Systems (<a href="lecture01.pdf">Slides</a>) </td>
+		<td class="style5">
+		<p>&nbsp;</p>
+		</td>
+		<td class="style5">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="style5" style="width: 80px"><strong>08-26-2013</strong></td>
+		<td class="style6">Introduction to Distributed Systems</td>
+		<td class="style5">
+		&nbsp;</td>
+		<td class="style5">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="style5" style="width: 80px"><strong>08-28-2013</strong></td>
+		<td class="style6">Project Brainstorming (<a href="lecture03.pdf">Slides</a>)</td>
+		<td class="style5"><a href="proj/index.html">Project Ideas</a></td>
+		<td class="style5">
+		<p><a href="project-proposal.pdf">Project Proposal Handout</a></p>
+		</td>
+	</tr>
+	<tr>
+		<td class="style5" style="width: 80px"><strong>08-30-2013<br>
+		12:45PM-1:45PM in SB238</strong></td>
+		<td class="style6">
+		<a href="http://datasys.cs.iit.edu/projects/ZHT/index.html">ZHT: a 
+		zero-hop distributed hashtable</a> (<a href="file:///C:/Users/Ioan/Documents/Webs/IIT/teaching/CS554-F13/lecture03_ZHT-overview.pdf">Slides</a>) 
+		-- Tonglin Li</td>
+		<td class="style5">&nbsp;</td>
+		<td class="style5">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="style5" style="width: 80px"><strong>09-02-2013</strong></td>
+		<td class="style6">Labor Day -- NO CLASS </td>
+		<td class="style5">&nbsp;</td>
+		<td class="style5">&nbsp;</td>
+	</tr>
+	<tr>
+			<td class="style5" style="width: 80px"><strong>09-03-2013<br>
+		12:45PM-1:45PM in SB238</strong></td>
+		<td class="style6">CANCELED <span class="auto-style2">ZHT Tutorial 
+		(slides) -- Tonglin Li</span></td>
+		<td class="style5">
+		&nbsp;</td>
+		<td class="style5">&nbsp;</td>
+			
+			</tr>
+	<tr>
+		<td class="style5" style="width: 80px"><strong>09-03-2013<br>
+		1:50PM-3:05PM in LS111</strong></td>
+		<td class="style6">Linux &amp; Jarvis Cluster -- Scott Krieder (<a href="jarvis.pdf">Slides</a> 
+		- part of CS550, optional, it will not be recorded)</td>
+		<td class="style5">
+		&nbsp;</td>
+		<td class="style5">&nbsp;</td>
+	</tr>
+	<tr>
+			<td class="style5" style="width: 80px"><strong>09-04-2013 </strong></td>
+		<td class="style6">
+		<a href="http://datasys.cs.iit.edu/projects/FusionFS/index.html">
+		FusionFS: Fusion Distributed File System</a> (<a href="lecture03_FusionFS-overview.pdf">Slides</a>) 
+		-- Dongfang Zhao</td>
+		<td class="style5">
+		<p><strong>Reading #1</strong></p>
+		<ol>
+			<li>
+			<a href="http://datasys.cs.iit.edu/reports/2013_FusionFS_TR.pdf">Supporting Large 
+		Scale Data-Intensive Computing with the FusionFS Distributed File System</a>, 
+		Technical Report, IIT 2013 </li>
+		</ol>
+			</td>
+		<td class="style5">&nbsp;</td>
+			
+			</tr>
+	<tr>
+			<td class="style5" style="width: 80px"><strong>09-04-2013 <br>
+		2PM-3PM in SB106</strong></td>
+		<td class="style6">
+		<a href="http://datasys.cs.iit.edu/projects/ZHT/index.html">ZHT: a 
+		zero-hop distributed hashtable</a> (<a href="lecture03_ZHT-overview.pdf">Slides</a>) 
+		-- Tonglin Li</td>
+		<td class="style5">
+		<p><strong>Reading #2 </strong></p>
+		<ol>
+			<li>
+			<a href="http://datasys.cs.iit.edu/publications/2013_IPDPS13_ZHT.pdf">ZHT: A Light-weight Reliable Persistent Dynamic Scalable Zero-hop 
+		Distributed Hash Table, IPDPS 2013</a> </li>
+		</ol>
+			</td>
+		<td class="style5">&nbsp;</td>
+			
+			</tr>
+	<tr>
+		<td class="style5" style="width: 80px"><strong>09-04-2013 <br>
+		3:15PM-4:15PM in SB106 </strong></td>
+		<td class="style6">ZHT Tutorial (<a href="lecture03_ZHT-tutorial.pdf">slides</a>) 
+		-- Tonglin Li </td>
+		<td class="style5">
+		&nbsp;</td>
+		<td class="style5">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="style5" style="width: 80px"><strong>09-05-2013<br>
+		11:25AM-12:40PM in SB238 </strong></td>
+		<td class="style6">FusionFS Tutorial -- Dongfang Zhao</td>
+		<td class="style5">
+		<a href="FusionFS_Manual_v0.03.pdf">FusionFS Manual</a> (no writeup)</td>
+		<td class="style5">&nbsp;</td>
+	</tr>
+	<tr>
+			<td class="style5" style="width: 80px"><strong>09-06-2013<br>
+		12:45PM-1:45PM in SB238 </strong></td>
+		<td class="style6">
+		<a href="http://datasys.cs.iit.edu/projects/MATRIX/index.html">MATRIX: 
+		MAny-Task computing execution fabRIc at eXascales</a> (<a href="lecture03_MATRIX-overview.pdf">Slides</a>) 
+		-- Ke Wang </td>
+		<td class="style5">
+		<p><strong>Reading #3 </strong></p>
+		<ol>
+			<li><a href="http://datasys.cs.iit.edu/reports/2013_matrix_TR.pdf">MATRIX: Many-Task 
+		Computing Execution Fabric for Extreme Scales</a>, Technical Report, IIT 
+		2013 </li>
+		</ol>
+			</td>
+		<td class="style5">&nbsp;</td>
+			
+			</tr>
+	<tr>
+		<td class="style5" style="width: 80px"><strong>09-06-2013<br>
+		2:00PM-3:00PM in SB238 </strong></td>
+		<td class="style6">MATRIX Tutorial (<a href="lecture03_MATRIX-tutorial.pdf">Slides</a>) 
+		-- Ke Wang</td>
+		<td class="style5">
+		&nbsp;</td>
+		<td class="style5">&nbsp;</td>
+	</tr>
+	<tr>
+			<td class="style5" style="width: 80px"><strong>09-09-2013</strong></td>
+		<td class="style6">
+		<a href="http://datasys.cs.iit.edu/projects/GeMTC/index.html">GeMTC: 
+		GPU-Enabled Many-Task Computing</a> (<a href="lecture03_GeMTC-overvire-tutorial.pdf">Slides</a>) 
+		-- Scott Krieder</td>
+		<td class="style5">
+		<p><strong>Reading #4 </strong></p>
+		<ol>
+			<li>
+			<a href="http://datasys.cs.iit.edu/reports/2013_Qual-IIT_GEMTC.pdf">GEMTC: GPU Enabled Many-Task Computing</a> , Technical Report, IIT, 2013</li>
+		</ol>
+			</td>
+		<td class="style5">&nbsp;</td>
+			
+			</tr>
+	<tr>
+		<td class="style5" style="width: 80px"><strong>09-09-2013<br>
+		12:45PM-1:45PM in SB238 </strong></td>
+		<td class="style6">GeMTC Tutorial (<a href="lecture03_GeMTC-overvire-tutorial.pdf">Slides</a>) 
+		-- Scott Krieder</td>
+		<td class="style5">
+		<a href="file:///C:/Users/Ioan/Documents/Webs/IIT/teaching/CS554-F13/GTC_Express_Sarah_Tariq_June2011.pdf">
+		CUDA Slides</a></td>
+		<td class="style5">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="style5" style="height: 19px; width: 80px;"><strong>09-11-2013</strong></td>
+		<td class="style6">CloudKon: a Cloud-enabled Distributed Task Execution 
+		Framework (<a href="lecture03_CloudKon-overview.pdf">Slides</a>) -- Iman 
+		Sadooghi</td>
+		<td class="style5">
+		<p><strong>Reading #5 </strong></p>
+		<ol>
+			<li>
+			<a href="http://datasys.cs.iit.edu/reports/2013_Qual-IIT_CloudKon.pdf">CloudKon: a Cloud-enabled Distributed Task Execution Framework</a>, 
+		Technical Report, IIT, 2013</li>
+		</ol>
+		</td>
+		<td class="style5">&nbsp;</td>
+	</tr>
+	<tr>
+			<td class="style5" style="width: 80px"><strong>09-12-2013<br>
+		12:45PM-1:45PM in SB238 </strong></td>
+		<td class="style6">CloudKon &amp; AWS Tutorial (<a href="lecture03_CloudKon-tutorial.pdf">Slides</a>) 
+		-- Iman Sadooghi</td>
+		<td class="style5">&nbsp;</td>
+		<td class="style5" style="height: 19px">&nbsp;</td>
+			
+			</tr>
+	<tr>
+		<td class="style5" style="width: 80px"><strong>09-13-2013</strong></td>
+		<td class="style6">&nbsp;</td>
+		<td class="style5">&nbsp;</td>
+		<td class="style5" style="height: 19px"><a href="reading_writeup.html">
+		Reading Write-up Instructions</a> <br>
+		Reading Writeup #1, #2, #3, #4, and #5 due  
+		(09-13-2013 at 11:59PM) </td>
+	</tr>
+	<tr>
+			<td class="style5" style="width: 80px"><strong>09-16-2013</strong></td>
+		<td class="style6">Data Intensive Computing Overview (<a href="lecture07.pdf">Slides</a>)</td>
+		<td class="style5">
+		<p><strong>Reading #6 (one review for both)</strong></p>
+		<ol>
+			<li>Foreword (<a href="http://research.microsoft.com/en-us/collaboration/fourthparadigm/4th_paradigm_book_gordon_bell_foreword.pdf">PDF</a>)
+			</li>
+			<li>Jim Gray on eScience (<a href="http://research.microsoft.com/en-us/collaboration/fourthparadigm/4th_paradigm_book_jim_gray_transcript.pdf">PDF</a>)
+			</li>
+		</ol>
+			</td>
+		<td class="style5">Project Proposal Due on 09-16-2013 at 11:59PM</td>
+			
+			</tr>
+	<tr>
+			<td class="style5" style="width: 80px"><strong>09-16-2013<br>
+		12:45PM-1:45PM in SB238 </strong></td>
+		<td class="style6">Linux Tutorial and Sirius Cluster (<a href="https://docs.google.com/presentation/d/1BMw8EohVxp5vc2or0B5YLyy3SsJ11q99IfkWmE8-ylw/edit#slide=id.g7bbd5e81_0_97">Slides</a>) -- Tonglin 
+		Li</td>
+		<td class="style5">
+		&nbsp;</td>
+		<td class="style5">&nbsp;</td>
+			
+			</tr>
+	<tr>
+		<td class="style5" style="width: 80px"><strong>09-18-2013</strong></td>
+		<td class="style6">Data Intensive Computing Overview </td>
+		<td class="style5">
+		<p><strong>Reading #7 </strong></p>
+		<ol>
+			<li>Cloud Computing and Grid Computing 360-Degree Compared (<a href="http://www.cs.iit.edu/~iraicu/research/publications/2008_GCE08_Clouds_Grids.pdf">PDF</a>)</li>
+		</ol>
+		<p><strong>Optional (no review needed):</strong></p>
+		<ol>
+			<li>Above the clouds: A Berkeley view of cloud computing (<a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.150.628&amp;rep=rep1&amp;type=pdf">PDF</a>)</li>
+			<li>The Anatomy of the Grid (<a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.93.6383&amp;rep=rep1&amp;type=pdf">PDF</a>)</li>
+		</ol>
+		</td>
+		<td class="style5">&nbsp;</td>
+	</tr>
+	<tr>
+			<td class="style5" style="width: 80px"><strong>09-20-2013</strong></td>
+		<td class="style6">&nbsp;</td>
+		<td class="style5">
+		&nbsp;</td>
+		<td class="style5">Reading Writeup #6 and #7 due</td>
+			
+			</tr>
+	<tr>
+		<td class="style5" style="width: 80px"><strong>09-23-2013</strong></td>
+		<td class="style6">Grid Computing and Cloud Computing (<a href="lecture08.pdf">Slides</a>) </td>
+		<td class="style5">
+		&nbsp;</td>
+		<td class="style5">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="style5" style="width: 80px"><strong>09-25-2013</strong></td>
+		<td class="style5">Grid Computing and Cloud Computing </td>
+		<td class="style5">
+		&nbsp;</td>
+		<td class="style5">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="style5" style="width: 80px">09-30-2013</td>
+		<td class="style5">Workflow Systems [Swift] (<a href="lecture10.pdf">Slides</a>)</td>
+		<td class="style5">
+		<p><strong>Reading #8</strong></p>
+		<ol>
+			<li>
+			<a href="http://www.ci.uchicago.edu/swift/papers/SwiftLanguageForDistributedParallelScripting.pdf">
+			Swift: A language for distributed parallel scripting </a></li>
+		</ol>
+		<p><strong>Optional (no review needed):</strong></p>
+		<ol>
+			<li><a href="http://www.mcs.anl.gov/~wozniak/papers/Swift_2013.pdf">
+			Swift/T: Large-scale Application Composition via Distributed-memory 
+			Dataflow Processing</a> </li>
+			<li>
+			<a href="../../research/publications/2009_IC09_SwiftParallelScripting.pdf">
+			Parallel Scripting for Applications at the Petascale and Beyond</a>
+			</li>
+			<li><a href="../../research/publications/2007_SWF07_Swift.pdf">
+			Swift: Fast, Reliable, Loosely Coupled Parallel Computation</a> </li>
+		</ol>
+		</td>
+		<td class="style5">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="style5" style="width: 80px">10-02-2013</td>
+		<td class="style6">NO CLASS -- Please attend the
+		<a href="http://www.iit.edu/csl/cs/reunion.shtml">CS Reunion</a> in MTCC 
+		at 11:15AM-12:30PM</td>
+		<td class="style5">&nbsp;</td>
+		<td class="style5">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="style5" style="width: 80px">10-07-2013</td>
+		<td class="style6">NO CLASS (Fall Break Day)</td>
+		<td class="style5">
+		<p>&nbsp;</p>
+		</td>
+		<td class="style5">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="style5" style="width: 80px">10-09-2013 </td>
+			<td class="style6">Workflow Systems [Swift]</td>
+		<td class="style5">
+		&nbsp;</td>
+			
+		<td class="style5">Reading Writeup #8 due </td>
+	</tr>
+	<tr>
+		<td class="style5" style="width: 80px">10-14-2013</td>
+			<td class="style6">Workflow Systems [Swift]</td>
+		<td class="style5">
+		&nbsp;</td>
+			
+		<td class="style5"> <a href="project-writeup-mid-term.pdf">Project 
+		Midterm Progress Report Writeup</a></td>
+	</tr>
+	<tr>
+		<td class="style5" style="width: 80px">10-16-2013</td>
+			<td class="style6">Workflow Systems [Falkon] (<a href="lecture13.pdf">Slides</a>)</td>
+		<td class="style5">
+		<p><strong>Reading #9</strong></p>
+		<ol>
+			<li><a href="../../research/publications/2007_SC07_Falkon.pdf">
+			Falkon: a Fast and Light-weight tasK executiON framework</a> </li>
+		</ol>
+		<p><strong>Optional (no review needed)</strong></p>
+		<ol>
+			<li><a href="../../research/publications/2008_SC08_Falkon_BGP.pdf">
+			Toward Loosely Coupled Programming on Petascale Systems</a>" </li>
+		</ol>
+		</td>
+			
+		<td class="style5">- Extra Credit Writeup on Data Science Panel <br>
+		- Reading Writeup #9 due&nbsp; </td>
+	</tr>
+	<tr>
+		<td class="style5" style="width: 80px">10-21-2013</td>
+			<td class="style6">Workflow Systems (<a href="lecture14.pdf">Data-Diffusion</a>)</td>
+		<td class="style5">
+		<p><strong>Reading #10</strong></p>
+		<ol>
+			<li>
+			<a href="http://datasys.cs.iit.edu/publications/2009_HPDC09_data-diffusion.pdf">
+			The Quest for Scalable Support of Data Intensive Workloads in 
+			Distributed Systems</a> </li>
+		</ol>
+		</td>
+			
+		<td class="style5">- Project Midterm Progress Report Due <br>
+		- Reading Writeup #10 due </td>
+	</tr>
+	<tr>
+		<td class="style5" style="width: 80px">10-23-2013</td>
+			<td class="style6">MapReduce (<a href="lecture15.pdf">Slides</a>)</td>
+		<td class="style5">
+		<p><strong>Reading #11</strong></p>
+		<ol>
+			<li>
+			<a href="http://research.google.com/archive/mapreduce-osdi04.pdf">MapReduce:&nbsp;Simplified&nbsp;Data&nbsp;Processing&nbsp;on&nbsp;Large&nbsp;Clusters</a></li>
+		</ol>
+		</td>
+		<td class="style5">Reading Writeup #11 due </td>
+			
+	</tr>
+	<tr>
+			<td class="style5" style="width: 80px">10-25-2013<br>
+		12:45PM-1:45PM in SB201</td>
+		<td class="style6">ZHT Tutorial (<a href="ZHT-dev-tutorial-CS554_cs.iit.pdf">Slides</a>)<br>
+		Xiaobing Zhou</td>
+		<td class="style5">
+		&nbsp;</td>
+		<td class="style5">&nbsp;</td>
+			
+			</tr>
+	<tr>
+		<td class="style5" style="width: 80px">10-28-2013</td>
+			<td class="style6">MapReduce</td>
+		<td class="style5">
+		&nbsp;</td>
+		<td class="style5">&nbsp;</td>
+			
+	</tr>
+	<tr>
+		<td class="style5" style="width: 80px">10-30-2013</td>
+		<td class="style6">A Berkeley View of Resource Management(Spark, Mesos, 
+		RDD, Shark, Sparrow) (<a href="http://www.eecs.berkeley.edu/~keo/talks/tinytasks-hotos-talk.pdf">Slides 
+		#1</a>,
+		<a href="http://www.eecs.berkeley.edu/~keo/talks/sparrow-sosp-talk.pdf">
+		Slides #2</a>)</td>
+			<td class="style5">
+		<p><strong>Reading #12</strong></p>
+		<ol>
+			<li>
+			<a href="http://www.eecs.berkeley.edu/~matei/papers/2013/sosp_sparrow.pdf">
+			Sparrow: distributed, low latency scheduling</a> </li>
+		</ol>
+			<span class="style6">
+		<p><strong>Optional (no review needed)</strong></p>
+		<ol>
+			<li>
+			<a href="http://www.usenix.org/event/hotcloud10/tech/full_papers/Zaharia.pdf">
+			Spark: cluster computing with working sets</a>
+			</li>
+			<li>
+			<a href="http://static.usenix.org/events/nsdi11/tech/full_papers/Hindman_new.pdf">
+			Mesos: A platform for fine-grained resource sharing in the data 
+			center</a>
+			</li>
+			<li>
+			<a href="https://www.usenix.org/system/files/conference/nsdi12/nsdi12-final138.pdf">
+			Resilient distributed datasets: A fault-tolerant abstraction for 
+			in-memory cluster computing</a>
+			</li>
+			<li>
+			<a href="https://www.isaac.cs.berkeley.edu/wp-content/uploads/2012/03/mod482-xin1.pdf">
+			Shark: fast data analysis using coarse-grained distributed memory</a>
+			</li>
+		</ol>
+			</span>
+		</td>
+		<td class="style5">Reading Writeup #12 due </td>
+			
+	</tr>
+	<tr>
+		<td class="style5" style="width: 80px">11-04-2013</td>
+			<td class="style6">HPC Storage<br>
+		Guest Lecture by Rob Ross (Argonne National Laboratory) (<a href="ross-iit-hpc-pio-20131104.pdf">Slides</a>)</td>
+			
+		<td class="style5">
+			<span class="style6">
+		<p><strong>Reading #13</strong></p>
+		<ol>
+			<li>
+			<a href="http://www.mcs.anl.gov/papers/P1648.pdf">I/O Performance 
+			Challenges at Leadership Scale</a> </li>
+		</ol>
+			</span>
+			</td>
+		<td class="style5">Reading Writeup #13 due </td>
+	</tr>
+	<tr>
+		<td class="style5" style="width: 80px">11-06-2013</td>
+			<td class="style6">Parallel File Systems (<a href="lecture17-pfs.pdf">Slides 
+		#1</a>, <a href="lecture17-pfs-sam-lang.pdf">Slides #2</a>)</td>
+		<td class="style5">
+		<p><strong>Reading #13 Optinoal (NO REVIEW NEEDED)</strong></p>
+		<ol>
+			<li>GPFS: A Shared-Disk File System for Large Computing Clusters (<a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.19.7147&amp;rep=rep1&amp;type=pdf">PDF</a>)
+			</li>
+			<li>PVFS: A Parallel File System for Linux Clusters (<a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.36.4297&amp;rep=rep1&amp;type=pdf">PDF</a>)
+			</li>
+			<li>Lustre: Building a File System for 1,000-node Clusters (<a href="http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.2.456">PDF</a>)
+			</li>
+			<li>Scalable Performance of the Panasas Parallel File System (<a href="https://db.usenix.org//events/fast08/tech/full_papers/welch/welch.pdf">PDF</a>)
+			</li>
+		</ol>
+		</td>
+		<td class="style5">&nbsp;</td>
+			
+	</tr>
+	<tr>
+		<td class="style5" style="width: 80px">11-11-2013</td>
+			<td class="style6">Distributed File Systems (<a href="lecture18-gfs.pdf">Slides</a>)</td>
+		<td class="style5">
+		<p><strong>Reading #14</strong></p>
+		<ol>
+			<li>
+			<a href="http://static.googleusercontent.com/external_content/untrusted_dlcp/research.google.com/en/us/archive/gfs-sosp2003.pdf">
+			The Google File System</a></li>
+		</ol>
+		</td>
+		<td class="style5">Reading Writeup #14 due </td>
+			
+	</tr>
+	<tr>
+		<td class="style5" style="width: 80px">11-13-2013</td>
+			<td class="style6">Distributed File Systems (<a href="http://www.inktank.com/resource/oreilly-strata-feb-2012/">Slides 
+		#1</a>,
+		<a href="http://research.cs.wisc.edu/areas/os/Seminar/schedules/archive/ceph-final.ppt‎">
+		Slides #2</a>)</td>
+		<td class="style5">
+		<p><strong>Reading #15</strong></p>
+		<ol>
+			<span class="style6">
+			<li>
+			<a href="http://ceph.com/papers/weil-ceph-osdi06.pdf">Ceph: A 
+			Scalable, High-Performance Distributed File System</a></li>
+			</span>
+		</ol>
+		<p><strong>Optional (no review needed)</strong></p>
+		<ol>
+			<li>
+			<a href="http://static.usenix.org/legacy/publications/login/2010-08/openpdfs/maltzahn.pdf">
+			Ceph as a scalable alternative to the Hadoop Distributed File System</a></li>
+		</ol>
+		</td>
+			
+		<td class="style5">- Reading Writeup #15 due <br>
+		- <a href="project-writeup-final.pdf">Project Final Report Writeup</a></td>
+	</tr>
+	<tr>
+		<td class="style5" style="width: 80px">11-18-2013</td>
+			<td class="style6">Distributed Databases (Guest Lecture Boris Glavic)</td>
+		<td class="style5">
+		<p><strong>Reading #16 </strong></p>
+		<ol>
+			<li>
+			<a href="http://people.cs.kuleuven.be/~bettina.berendt/teaching/2010-11-2ndsemester/ctdb/petabyte_facebook.pdf">
+			Hive-a petabyte scale data warehouse using hadoop</a></li>
+		</ol>
+		<p><strong>Optional (no review needed)</strong> </p>
+		<ol>
+			<li>
+			<a href="http://www.dcs.bbk.ac.uk/~dell/teaching/cc/paper/sigmod08/p1099-olston.pdf">
+			Pig latin: a not-so-foreign language for data processing</a> </li>
+			<li>
+			<a href="http://net.pku.edu.cn/~course/cs501/2012/reading/2010-VLDB-Dremel%20Interactive%20Analysis%20of%20Web-Scale%20Datasets.pdf">
+			Dremel: interactive analysis of web-scale datasets</a> </li>
+			<li>
+			<a href="https://www.usenix.org/system/files/conference/osdi12/osdi12-final-16.pdf">
+			Spanner: Google's Globally-Distributed Database</a> </li>
+		</ol>
+		</td>
+		<td class="style5">
+		Reading Writeup #16 due </td>
+			
+	</tr>
+	<tr>
+		<td class="style5" style="width: 80px">11-20-2013</td>
+		<td class="style6">Distributed Hash Tables (Guest Lecture Tonglin Li) </td>
+			<td class="style5">
+		<p><strong>Reading #17</strong></p>
+		<ol>
+			<li>
+			<a href="http://www.read.seas.harvard.edu/~kohler/class/cs239-w08/decandia07dynamo.pdf">
+			Dynamo: amazon's highly available key-value store</a> </li>
+		</ol>
+		<p><strong>Optional (no review needed)</strong></p>
+		<ol>
+			<li>
+			<a href="http://people.csail.mit.edu/imcgraw/links/research/pubs/networks/Chord.pdf">
+			Chord: A Scalable Peer-to-peer Lookup Service for Internet 
+			Applications</a> </li>
+		</ol>
+		</td>
+		<td class="style5">Reading Writeup #17 due </td>
+			
+			</tr>
+	<tr>
+		<td class="style5" style="width: 80px">11-25-2013</td>
+		<td class="style6">TBA</td>
+			<td class="style5">
+		<p>TBA</p>
+		</td>
+		<td class="style5">
+		TBA</td>
+			
+	</tr>
+	<tr>
+		<td class="style5" style="width: 80px">11-27-2013</td>
+		<td class="style6">NO CLASS (Thanksgiving) </td>
+		<td class="style5">
+		&nbsp;</td>
+		<td class="style5">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="style5" style="width: 80px">12-02-2013<br>
+		9AM - 9PM<br>
+		SB 212</td>
+		<td class="style6"><a href="final-presentations.html">Project Final Presentations</a> </td>
+		<td class="style5">
+		&nbsp;</td>
+		<td class="style5">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="style5" style="width: 80px">12-04-2013</td>
+		<td class="style6">NO CLASS</td>
+		<td class="style5">
+		&nbsp;</td>
+		<td class="style5">Project Final Reports Due at 11:59PM</td>
+	</tr>
+	</tbody></table>
+			<p>
+			<br>
+			</p>
+			
+			<!-- #EndEditable --></div>
+		<!-- End Left Column -->
+		<!-- Begin Right Column -->
+		<div id="column_right">
+			<!-- #BeginEditable "sidebar" -->
+			<h4>Next Semester Spring 2014</h4>
+			<p><a href="../CS451-S14/index.html">CS451: Intro to Parallel and 
+			Distributed Computing</a></p>
+			<!-- #EndEditable --></div>
+		<!-- End Right Column -->
+		<!-- Begin Footer -->
+		<div id="footer">
+			<div id="copyright">
+				<p>Copyright © 2011. All Rights Reserved.</p>
+			</div>
+			<p><a href="../../index.html"><span class="style3">Home</span></a><span class="style3"> | 
+			<a href="../../about_me/index.html">
+			About Me</a> | <a href="../../research/index.html">Research</a> |
+			<a href="../../research/publications/index.html">Publications</a> | 
+			<a href="../index.html">Teaching</a> |
+			<a href="../../service/index.html">Service</a> |
+			<a href="../../about_me/CV_resume_Ioan_Raicu.pdf">CV</a> |
+			<a href="../../links/index.html">Links</a> | 
+			<a href="../../personal/index.html">
+			Personal</a> | </span> <a href="../../contact/index.html">
+			<span class="style3">Contact</span></a></p>
+		</div>
+		<!-- End Footer --></div>
+	<!-- End content_container --></div>
+<!-- End Container -->
+
+
+
+
+
+
+</body><!-- #EndTemplate --></html>

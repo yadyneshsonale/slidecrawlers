@@ -1,0 +1,299 @@
+<!DOCTYPE html PUBLIC "-//SQ//DTD HTML 2.0 + all extensions//EN" "hmpro3.dtd"><html><head>
+<title>Introduction to Deep Learning: Home Page</title>
+</head>
+
+<body bgcolor="ffffff">
+
+<table border="0" width="80%" cellpadding="5" cellspacing="0">
+  <tbody><tr>
+    <td valign="TOP" align="center"><img src="./pulogo.jpg" height="120">
+    </td>
+    <td valign="middle" align="center"><h2>COS 495<br>
+    Introduction to Deep Learning   <br>
+    <a href="http://www.cs.princeton.edu/~yingyul/">Yingyu Liang</a></h2>
+    </td>
+    <td valign="middle" align="center "><h3><large>Spring 2016</large></h3>
+    </td>
+  </tr>
+</tbody></table>
+
+<hr align="center">
+
+
+<h2>Course Summary</h2>
+
+<blockquote>
+
+This course is an elementary introduction to a machine learning technique called deep learning (also called deep neural nets), as well as its applications to a variety of domains, including image classification, speech recognition, and natural language processing. Along the way the course also provides an intuitive introduction to  basic  notions such as supervised vs unsupervised learning, linear and logistic regression, continuous optimization (especially variants of gradient descent), generalization theory and overfitting, regularizers, and probabilistic modeling. The homeworks explore key concepts and simple applications, and the final project allows an in-depth exploration of a particular application area.
+
+
+</blockquote>
+
+
+
+<hr>
+<p><a name="ADMIN"></a></p>
+
+<h2>Administrative Information</h2>
+
+<h4>Lectures: Mon + Wed, 3:00-4:20 in Friend Center, room 109.</h4>  
+
+<p><b>Instructor: </b><a href="http://www.cs.princeton.edu/~yingyul/">Yingyu Liang</a>, CS building 103b, <b>Reception hours:</b> Thu 3:00-4:00  
+
+</p><p><b>Teaching Assistant: </b>Bochao Wang, Electrical Engineering, C319B, <b>Reception hours:</b> Mon + Tue, 11:00-12:00 </p>
+
+
+<p><b> Requirements: </b>
+COS 126 General Computer Science (or equivalent) and COS 340 Reasoning About Computation. <br>
+Mostly need linear algebra, calculus, probability, and some programming knowledge.
+</p>
+
+
+<p><b> Attendance and the use of electronic devices:</b>
+Attendance is expected at all lectures. The use of laptops and similar devices for note-taking is permitted. 
+</p>
+
+<!-- 
+<p>
+<h4>NOTE:</h4>
+Since this class is by application only, we ask students not enrolled give room space to those in the class. As you may notice, we have many students standing in the back and this is the only room we have. As we need to make sure that the class is an appropriate size for the room, we have to make this announcement. Sorry for any inconvenience. Thank you for your understanding.
+</p>
+-->
+
+<hr>
+
+
+<h2><a name="Textbook">Textbook and readings</a></h2>
+
+<a href="http://www.deeplearningbook.org/">Deep Learning</a>: A recent book on deep learning by leading researchers in the field. The book is the most complete and the most up-to-date textbook on deep learning, and can be used as a reference and further-reading materials. Not all topics in the book will be covered in class.
+The book can be downloaded from the link for academic purpose. It is still in preparation (updated frequently), but any recent version should be sufficient for the course. For convenience, we will use the version on 2016-01-30.
+<br>
+<br>
+We'll post additional optional reading as the course progresses. 
+
+<p></p>
+
+
+<hr>  
+
+<h2 align="left"><a name="Grading_and_workload">Grading and collaboration</a></h2>
+
+<b>Grading: </b>  <br>
+Problem Sets: 70% <br>
+Projects: 30% (Oral Presentation: 5%, Project report: 25%) <br>
+<br>
+<b>Turning in assignments and late policy:</b> Coordinate submission of assignments with the TA. Every late day reduces the attainable credit for the exercise by 10%. <br>
+<br>
+<b>Projects:</b> Students should form groups of 2-4 members. A list of candidate papers will be posted, and each group should pick one from the list (you can also propose your own choice but need to coordinate with the TA). Each group is required to give an oral presentation about the content of the paper in the last two weeks, and submit a report at the end. The report should include at the minimum a summary of the method/framework, and experimental results obtained by playing the code published along with the paper. Division of work should be determined by the members.<br>
+
+<br>
+<b>Collaboration:</b> Students are expected to finish the homeworks by himself/herself, but discussion on the problem sets is allowed. The people you discussed with on assignments should be clearly detailed: before the solution to each question, list all people that you discussed with on that particlar question. <p></p>
+
+
+<hr>
+<p>
+</p><h2> Lecture notes and schedule </h2>
+
+
+<table border="1">
+<tbody><tr>
+<th>#</th>
+<th>Date</th>
+<th>Topic</th>
+<th>Lecture notes</th>
+<th>Extra reading</th>
+<th>Problem sets</th>
+</tr>
+<tr>
+<td> &nbsp; 1 &nbsp;</td>
+<td> &nbsp; 02/01 &nbsp;</td>
+<td> &nbsp; Motivation and logistics of the course  &nbsp;</td>
+<td> &nbsp; <a href="slides/Intro_to_course.pdf">slides</a> &nbsp;  </td>
+<td> &nbsp; <a href="http://www.nature.com/nature/journal/v521/n7553/full/nature14539.html">Nature review on deep learning</a><a> &nbsp;  </a></td>
+<td> </td>
+</tr>
+
+<tr>
+<td> &nbsp; 2 &nbsp;</td>
+<td> &nbsp; 02/03 &nbsp;</td>
+<td> &nbsp; Machine learning basics 1: linear regression  &nbsp;</td>
+<td> &nbsp; <a href="slides/ML_basics_lecture1_linear_regression.pdf">slides</a> &nbsp;  </td>
+<td> &nbsp; Math background: <a href="http://www.deeplearningbook.org/">Chapter 2-4 of the textbook</a><a> &nbsp;  </a></td>
+<td> </td>
+</tr>
+
+<tr>
+<td> &nbsp; 3 &nbsp;</td>
+<td> &nbsp; 02/08 &nbsp;</td>
+<td> &nbsp; Machine learning basics 2: linear classification  &nbsp;</td>
+<td> &nbsp; <a href="slides/ML_basics_lecture2_linear_classification.pdf">slides</a> &nbsp;  </td>
+<td> &nbsp;  &nbsp;  </td>
+<td> </td>
+</tr>
+
+<tr>
+<td> &nbsp; 4 &nbsp;</td>
+<td> &nbsp; 02/10 &nbsp;</td>
+<td> &nbsp; Machine learning basics 3: Perceptron and SGD &nbsp;</td>
+<td> &nbsp; <a href="slides/ML_basics_lecture3_Perceptron.pdf">slides</a> &nbsp;  </td>
+<td> &nbsp; Chapter 4.1.7 and 4.2 in <a href="http://research.microsoft.com/en-us/um/people/cmbishop/PRML/index.htm"> Pattern Recognition and Machine Learning</a>&nbsp;  </td>
+<td> &nbsp; <a href="homework/homework1.pdf">homework 1 </a> &nbsp;  </td>
+</tr>
+
+<tr>
+<td> &nbsp; 5 &nbsp;</td>
+<td> &nbsp; 02/15 &nbsp;</td>
+<td> &nbsp; Machine learning basics 4: SVM I &nbsp;</td>
+<td> &nbsp; <a href="slides/ML_basics_lecture4_SVM_I.pdf">slides</a> &nbsp;  </td>
+<td> &nbsp; <a href="slides/AndrewNg_SVM_note.pdf">Andrew Ng's note on SVM </a> &nbsp;  </td>
+<td> &nbsp; &nbsp;  </td>
+</tr>
+
+<tr>
+<td> &nbsp; 6 &nbsp;</td>
+<td> &nbsp; 02/18 &nbsp;</td>
+<td> &nbsp; Machine learning basics 5: SVM II &nbsp;</td>
+<td> &nbsp; <a href="slides/ML_basics_lecture5_SVM_II.pdf">slides</a> &nbsp;  </td>
+<td> &nbsp;  Appendix B (Convex Optimization) in <a href="http://www.cs.nyu.edu/~mohri/mlbook/"> Foundations of Machine Learning</a> &nbsp;  </td>
+<td> &nbsp;   &nbsp;  </td>
+</tr>
+
+<tr>
+<td> &nbsp; 7 &nbsp;</td>
+<td> &nbsp; 02/22 &nbsp;</td>
+<td> &nbsp; Machine learning basics 6: overfitting &nbsp;</td>
+<td> &nbsp; <a href="slides/ML_basics_lecture6_overfitting.pdf">slides</a> &nbsp;  </td>
+<td> &nbsp; <a href="http://www.deeplearningbook.org/">Chapter 5.1-5.4 of the textbook</a><a>  &nbsp;  </a></td>
+<td> &nbsp;   &nbsp;  </td>
+</tr>
+
+<tr>
+<td> &nbsp; 8 &nbsp;</td>
+<td> &nbsp; 02/24 &nbsp;</td>
+<td> &nbsp; Machine learning basics 7: multiclass classification &nbsp;</td>
+<td> &nbsp; <a href="slides/ML_basics_lecture7_multiclass.pdf">slides</a> &nbsp;  </td>
+<td> &nbsp;   &nbsp;  </td>
+<td> &nbsp; <a href="homework/homework2.pdf">homework 2 </a> &nbsp;  </td>
+</tr>
+
+<tr>
+<td> &nbsp; 9 &nbsp;</td>
+<td> &nbsp; 02/29 &nbsp;</td>
+<td> &nbsp; Deep learning 1: feedforward neural networks &nbsp;</td>
+<td> &nbsp; <a href="slides/DL_lecture1_feedforward.pdf">slides</a> &nbsp;  </td>
+<td> &nbsp;  <a href="http://www.deeplearningbook.org/">Chapter 6 of the textbook</a><a>   &nbsp;  </a></td>
+<td> &nbsp;   &nbsp;  </td>
+</tr>
+
+<tr>
+<td> &nbsp; 10 &nbsp;</td>
+<td> &nbsp; 03/02 &nbsp;</td>
+<td> &nbsp; Deep learning 2: backpropagation &nbsp;</td>
+<td> &nbsp; <a href="slides/DL_lecture2_backpropagation.pdf">slides</a> &nbsp;  </td>
+<td> &nbsp;   &nbsp;  </td>
+<td> &nbsp;   &nbsp;  </td>
+</tr>
+
+<tr>
+<td> &nbsp; 11 &nbsp;</td>
+<td> &nbsp; 03/07 &nbsp;</td>
+<td> &nbsp; Deep learning 3: regularization I &nbsp;</td>
+<td> &nbsp; <a href="slides/DL_lecture3_regularization_I.pdf">slides</a> &nbsp;  </td>
+<td> &nbsp;  <a href="http://www.deeplearningbook.org/">Chapter 7.1-7.3 of the textbook</a><a> &nbsp; &nbsp;  </a></td>
+<td> &nbsp;   &nbsp;  </td>
+</tr>
+
+<tr>
+<td> &nbsp; 12 &nbsp;</td>
+<td> &nbsp; 03/09 &nbsp;</td>
+<td> &nbsp; Deep learning 4: regularization II &nbsp;</td>
+<td> &nbsp; <a href="slides/DL_lecture4_regularization_II.pdf">slides</a> &nbsp;  </td>
+<td> &nbsp;  <a href="https://www.cs.toronto.edu/~hinton/absps/JMLRdropout.pdf">Paper on dropout regularization</a><a> &nbsp; &nbsp;  </a></td>
+<td> &nbsp;  <a href="homework/homework3.pdf">homework 3 </a>  &nbsp;  </td>
+</tr>
+
+<tr>
+<td> &nbsp; 13 &nbsp;</td>
+<td> &nbsp; 03/21 &nbsp;</td>
+<td> &nbsp; Deep learning 5: convolution &nbsp;</td>
+<td> &nbsp; <a href="slides/DL_lecture5_convolution.pdf">slides</a> &nbsp;  </td>
+<td> &nbsp; <a href="http://www.deeplearningbook.org/">Chapter 9.6-9.10 of the textbook</a><a> &nbsp; &nbsp; &nbsp; &nbsp;  </a></td>
+<td> &nbsp;  &nbsp;  </td>
+</tr>
+
+<tr>
+<td> &nbsp; 14 &nbsp;</td>
+<td> &nbsp; 03/23 &nbsp;</td>
+<td> &nbsp; Deep learning 6: convolutional neural networks &nbsp;</td>
+<td> &nbsp; <a href="slides/DL_lecture6_convolutionNN.pdf">slides</a> &nbsp;  </td>
+<td> &nbsp;  <a href="http://www.deeplearningbook.org/">Chapter 8.3-8.4 of the textbook</a><a> &nbsp; &nbsp; &nbsp; &nbsp;  </a></td>
+<td> &nbsp;  &nbsp;  </td>
+</tr>
+
+<tr>
+<td> &nbsp; 15 &nbsp;</td>
+<td> &nbsp; 03/28 &nbsp;</td>
+<td> &nbsp; Deep learning 7: factor analysis &nbsp;</td>
+<td> &nbsp; <a href="slides/DL_lecture7_factor.pdf">slides</a> &nbsp;  </td>
+<td> &nbsp;  <a href="http://www.deeplearningbook.org/">Chapter 13 of the textbook</a><a> &nbsp; &nbsp; &nbsp; &nbsp;  </a></td>
+<td> &nbsp;  &nbsp;  </td>
+</tr>
+
+<tr>
+<td> &nbsp; 16 &nbsp;</td>
+<td> &nbsp; 03/30 &nbsp;</td>
+<td> &nbsp; Deep learning 8: autoencoder and DBM &nbsp;</td>
+<td> &nbsp; <a href="slides/DL_lecture8_autoencoder.pdf">slides</a> &nbsp;  </td>
+<td> &nbsp;   <a href="http://www.deeplearningbook.org/">Chapter 14.3-14.5 of the textbook</a><a> &nbsp;&nbsp; &nbsp; &nbsp;  </a></td>
+<td> &nbsp;  <a href="homework/homework4.pdf">homework 4 </a>  &nbsp;  </td>
+</tr>
+
+<tr>
+<td> &nbsp; 17 &nbsp;</td>
+<td> &nbsp; 04/04 &nbsp;</td>
+<td> &nbsp; Deep learning 9: recurrent neural networks &nbsp;</td>
+<td> &nbsp; <a href="slides/DL_lecture9_RNN.pdf">slides</a> &nbsp;  </td>
+<td> &nbsp;   <a href="http://www.deeplearningbook.org/">Chapter 10.5-10.7 of the textbook</a><a> &nbsp;&nbsp; &nbsp; &nbsp;  </a></td>
+<td> &nbsp;  &nbsp;  </td>
+</tr>
+
+<tr>
+<td> &nbsp; 18 &nbsp;</td>
+<td> &nbsp; 04/11 &nbsp;</td>
+<td> &nbsp; Deep learning 10: natural language processing &nbsp;</td>
+<td> &nbsp; <a href="slides/DL_lecture10_NLP.pdf">slides</a> &nbsp;  </td>
+<td> &nbsp;  &nbsp; &nbsp; &nbsp;  </td>
+<td> &nbsp;  &nbsp;  </td>
+</tr>
+
+<tr>
+<td> &nbsp; 19 &nbsp;</td>
+<td> &nbsp; 04/13 &nbsp;</td>
+<td> &nbsp; Guest lecture by Tengyu Ma: word embedding theory &nbsp;</td>
+<td> &nbsp; <a href="slides/word_embeddings_theory.pdf">slides</a> &nbsp;  </td>
+<td> &nbsp;   <a href="http://arxiv.org/abs/1502.03520">Paper on arXiv</a>&nbsp; &nbsp; &nbsp; &nbsp;  </td>
+<td> &nbsp;  &nbsp;  </td>
+</tr>
+
+<tr>
+<td> &nbsp; 20 &nbsp;</td>
+<td> &nbsp; 04/18 &nbsp;</td>
+<td> &nbsp; Deep learning 11: practical methodology &nbsp;</td>
+<td> &nbsp; <a href="slides/DL_lecture11_practical.pdf">slides</a> &nbsp;  </td>
+<td> &nbsp; <a href="http://www.deeplearningbook.org/">Chapter 11 of the textbook</a><a>; <br>
+&nbsp; </a><a href="https://arxiv.org/abs/1206.5533v2">Practical Recommendations for Gradient-Based Training of Deep Architectures from Yoshua Bengio</a>  &nbsp;&nbsp; &nbsp; &nbsp;  </td>
+<td> &nbsp;  <a href="homework/homework5.pdf">homework 5 </a> &nbsp;  </td>
+</tr>
+
+</tbody></table>
+
+
+<br>
+
+<p>&nbsp;</p>
+
+
+
+
+
+</body></html>

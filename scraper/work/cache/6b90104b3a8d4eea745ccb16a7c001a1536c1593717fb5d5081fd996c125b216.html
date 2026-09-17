@@ -1,0 +1,2830 @@
+<!DOCTYPE html><html lang="en"><!-- Beautiful Jekyll 5.0.0 | Copyright Dean Attali 2020 --><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  
+
+  
+
+  <title>Algorithms for Big Data</title>
+
+  
+  <meta name="author" content="webadmin">
+  
+
+
+
+  <meta name="description" content="Pre-requisites: Algorithms, Probability. (CS2030 Data Structures and Algorithms OR CS3070/CS2040 Design and Analysis ofAlgorithms OR CS5009 Algorithms OR CS4...">
+
+  
+
+  
+  <meta name="keywords" content="cse,iitpkd,palakkad,iit">
+  
+
+  
+  <link rel="alternate" type="application/rss+xml" title="CSE @ IIT Palakkad" href="https://cse.iitpkd.ac.in/feed.xml">
+  
+
+  
+    
+      
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+    
+      
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+
+
+    
+  
+
+  
+    
+      <link rel="stylesheet" href="/assets/css/bootstrap-social.css">
+    
+      <link rel="stylesheet" href="/assets/css/beautifuljekyll.css">
+    
+  
+
+  
+    
+      <link rel="stylesheet" href="/assets/css/custom-styles.css">
+    
+  
+
+  
+  
+  
+
+  
+  <meta property="og:site_name" content="CSE @ IIT Palakkad">
+  
+<meta name="description" content="Pre-requisites: Algorithms, Probability. (CS2030 Data Structures and Algorithms OR CS3070/CS2040 Design and Analysis ofAlgorithms OR CS5009 Algorithms OR CS4...">
+
+  <meta property="og:title" content="Algorithms for Big Data">
+<meta property="og:description" content="Pre-requisites: Algorithms, Probability. (CS2030 Data Structures and Algorithms OR CS3070/CS2040 Design and Analysis ofAlgorithms OR CS5009 Algorithms OR CS4...">
+
+  
+  <meta property="og:image" content="https://cse.iitpkd.ac.in/assets/img/logo/logo.jpg">
+  
+
+  
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://cse.iitpkd.ac.in/courses/cs5654-Algorithms-for-Big-Data/">
+  <link rel="canonical" href="https://cse.iitpkd.ac.in/courses/cs5654-Algorithms-for-Big-Data/">
+  
+
+  
+  <meta name="twitter:card" content="summary">
+  
+  <meta name="twitter:site" content="@">
+  <meta name="twitter:creator" content="@">
+
+  <meta name="twitter:title" content="Algorithms for Big Data">
+  <meta name="twitter:description" content="Pre-requisites: Algorithms, Probability. (CS2030 Data Structures and Algorithms OR CS3070/CS2040 Design and Analysis ofAlgorithms OR CS5009 Algorithms OR CS4...">
+
+  
+  <meta name="twitter:image" content="https://cse.iitpkd.ac.in/assets/img/logo/logo.jpg">
+  
+
+
+  
+
+
+
+<style type="text/css">.CtxtMenu_InfoClose {  top:.2em; right:.2em;}
+.CtxtMenu_InfoContent {  overflow:auto; text-align:left; font-size:80%;  padding:.4em .6em; border:1px inset; margin:1em 0px;  max-height:20em; max-width:30em; background-color:#EEEEEE;  white-space:normal;}
+.CtxtMenu_Info.CtxtMenu_MousePost {outline:none;}
+.CtxtMenu_Info {  position:fixed; left:50%; width:auto; text-align:center;  border:3px outset; padding:1em 2em; background-color:#DDDDDD;  color:black;  cursor:default; font-family:message-box; font-size:120%;  font-style:normal; text-indent:0; text-transform:none;  line-height:normal; letter-spacing:normal; word-spacing:normal;  word-wrap:normal; white-space:nowrap; float:none; z-index:201;  border-radius: 15px;                     /* Opera 10.5 and IE9 */  -webkit-border-radius:15px;               /* Safari and Chrome */  -moz-border-radius:15px;                  /* Firefox */  -khtml-border-radius:15px;                /* Konqueror */  box-shadow:0px 10px 20px #808080;         /* Opera 10.5 and IE9 */  -webkit-box-shadow:0px 10px 20px #808080; /* Safari 3 & Chrome */  -moz-box-shadow:0px 10px 20px #808080;    /* Forefox 3.5 */  -khtml-box-shadow:0px 10px 20px #808080;  /* Konqueror */  filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color="gray", Positive="true"); /* IE */}
+</style><style type="text/css">.CtxtMenu_MenuClose {  position:absolute;  cursor:pointer;  display:inline-block;  border:2px solid #AAA;  border-radius:18px;  -webkit-border-radius: 18px;             /* Safari and Chrome */  -moz-border-radius: 18px;                /* Firefox */  -khtml-border-radius: 18px;              /* Konqueror */  font-family: "Courier New", Courier;  font-size:24px;  color:#F0F0F0}
+.CtxtMenu_MenuClose span {  display:block; background-color:#AAA; border:1.5px solid;  border-radius:18px;  -webkit-border-radius: 18px;             /* Safari and Chrome */  -moz-border-radius: 18px;                /* Firefox */  -khtml-border-radius: 18px;              /* Konqueror */  line-height:0;  padding:8px 0 6px     /* may need to be browser-specific */}
+.CtxtMenu_MenuClose:hover {  color:white!important;  border:2px solid #CCC!important}
+.CtxtMenu_MenuClose:hover span {  background-color:#CCC!important}
+.CtxtMenu_MenuClose:hover:focus {  outline:none}
+</style><style type="text/css">.CtxtMenu_Menu {  position:absolute;  background-color:white;  color:black;  width:auto; padding:5px 0px;  border:1px solid #CCCCCC; margin:0; cursor:default;  font: menu; text-align:left; text-indent:0; text-transform:none;  line-height:normal; letter-spacing:normal; word-spacing:normal;  word-wrap:normal; white-space:nowrap; float:none; z-index:201;  border-radius: 5px;                     /* Opera 10.5 and IE9 */  -webkit-border-radius: 5px;             /* Safari and Chrome */  -moz-border-radius: 5px;                /* Firefox */  -khtml-border-radius: 5px;              /* Konqueror */  box-shadow:0px 10px 20px #808080;         /* Opera 10.5 and IE9 */  -webkit-box-shadow:0px 10px 20px #808080; /* Safari 3 & Chrome */  -moz-box-shadow:0px 10px 20px #808080;    /* Forefox 3.5 */  -khtml-box-shadow:0px 10px 20px #808080;  /* Konqueror */}
+.CtxtMenu_MenuItem {  padding: 1px 2em;  background:transparent;}
+.CtxtMenu_MenuArrow {  position:absolute; right:.5em; padding-top:.25em; color:#666666;  font-family: null; font-size: .75em}
+.CtxtMenu_MenuActive .CtxtMenu_MenuArrow {color:white}
+.CtxtMenu_MenuArrow.CtxtMenu_RTL {left:.5em; right:auto}
+.CtxtMenu_MenuCheck {  position:absolute; left:.7em;  font-family: null}
+.CtxtMenu_MenuCheck.CtxtMenu_RTL { right:.7em; left:auto }
+.CtxtMenu_MenuRadioCheck {  position:absolute; left: .7em;}
+.CtxtMenu_MenuRadioCheck.CtxtMenu_RTL {  right: .7em; left:auto}
+.CtxtMenu_MenuInputBox {  padding-left: 1em; right:.5em; color:#666666;  font-family: null;}
+.CtxtMenu_MenuInputBox.CtxtMenu_RTL {  left: .1em;}
+.CtxtMenu_MenuComboBox {  left:.1em; padding-bottom:.5em;}
+.CtxtMenu_MenuSlider {  left: .1em;}
+.CtxtMenu_SliderValue {  position:absolute; right:.1em; padding-top:.25em; color:#333333;  font-size: .75em}
+.CtxtMenu_SliderBar {  outline: none; background: #d3d3d3}
+.CtxtMenu_MenuLabel {  padding: 1px 2em 3px 1.33em;  font-style:italic}
+.CtxtMenu_MenuRule {  border-top: 1px solid #DDDDDD;  margin: 4px 3px;}
+.CtxtMenu_MenuDisabled {  color:GrayText}
+.CtxtMenu_MenuActive {  background-color: #606872;  color: white;}
+.CtxtMenu_MenuDisabled:focus {  background-color: #E8E8E8}
+.CtxtMenu_MenuLabel:focus {  background-color: #E8E8E8}
+.CtxtMenu_ContextMenu:focus {  outline:none}
+.CtxtMenu_ContextMenu .CtxtMenu_MenuItem:focus {  outline:none}
+.CtxtMenu_SelectionMenu {  position:relative; float:left;  border-bottom: none; -webkit-box-shadow:none; -webkit-border-radius:0px; }
+.CtxtMenu_SelectionItem {  padding-right: 1em;}
+.CtxtMenu_Selection {  right: 40%; width:50%; }
+.CtxtMenu_SelectionBox {  padding: 0em; max-height:20em; max-width: none;  background-color:#FFFFFF;}
+.CtxtMenu_SelectionDivider {  clear: both; border-top: 2px solid #000000;}
+.CtxtMenu_Menu .CtxtMenu_MenuClose {  top:-10px; left:-10px}
+</style><style id="MJX-CHTML-styles">
+mjx-container[jax="CHTML"] {
+  line-height: 0;
+}
+
+mjx-container [space="1"] {
+  margin-left: .111em;
+}
+
+mjx-container [space="2"] {
+  margin-left: .167em;
+}
+
+mjx-container [space="3"] {
+  margin-left: .222em;
+}
+
+mjx-container [space="4"] {
+  margin-left: .278em;
+}
+
+mjx-container [space="5"] {
+  margin-left: .333em;
+}
+
+mjx-container [rspace="1"] {
+  margin-right: .111em;
+}
+
+mjx-container [rspace="2"] {
+  margin-right: .167em;
+}
+
+mjx-container [rspace="3"] {
+  margin-right: .222em;
+}
+
+mjx-container [rspace="4"] {
+  margin-right: .278em;
+}
+
+mjx-container [rspace="5"] {
+  margin-right: .333em;
+}
+
+mjx-container [size="s"] {
+  font-size: 70.7%;
+}
+
+mjx-container [size="ss"] {
+  font-size: 50%;
+}
+
+mjx-container [size="Tn"] {
+  font-size: 60%;
+}
+
+mjx-container [size="sm"] {
+  font-size: 85%;
+}
+
+mjx-container [size="lg"] {
+  font-size: 120%;
+}
+
+mjx-container [size="Lg"] {
+  font-size: 144%;
+}
+
+mjx-container [size="LG"] {
+  font-size: 173%;
+}
+
+mjx-container [size="hg"] {
+  font-size: 207%;
+}
+
+mjx-container [size="HG"] {
+  font-size: 249%;
+}
+
+mjx-container [width="full"] {
+  width: 100%;
+}
+
+mjx-box {
+  display: inline-block;
+}
+
+mjx-block {
+  display: block;
+}
+
+mjx-itable {
+  display: inline-table;
+}
+
+mjx-row {
+  display: table-row;
+}
+
+mjx-row > * {
+  display: table-cell;
+}
+
+mjx-mtext {
+  display: inline-block;
+}
+
+mjx-mstyle {
+  display: inline-block;
+}
+
+mjx-merror {
+  display: inline-block;
+  color: red;
+  background-color: yellow;
+}
+
+mjx-mphantom {
+  visibility: hidden;
+}
+
+_::-webkit-full-page-media, _:future, :root mjx-container {
+  will-change: opacity;
+}
+
+mjx-assistive-mml {
+  position: absolute !important;
+  top: 0px;
+  left: 0px;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 1px 0px 0px 0px !important;
+  border: 0px !important;
+  display: block !important;
+  width: auto !important;
+  overflow: hidden !important;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+mjx-assistive-mml[display="block"] {
+  width: 100% !important;
+}
+
+mjx-math {
+  display: inline-block;
+  text-align: left;
+  line-height: 0;
+  text-indent: 0;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 100%;
+  font-size-adjust: none;
+  letter-spacing: normal;
+  border-collapse: collapse;
+  word-wrap: normal;
+  word-spacing: normal;
+  white-space: nowrap;
+  direction: ltr;
+  padding: 1px 0;
+}
+
+mjx-container[jax="CHTML"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="CHTML"][display="true"][width="full"] {
+  display: flex;
+}
+
+mjx-container[jax="CHTML"][display="true"] mjx-math {
+  padding: 0;
+}
+
+mjx-container[jax="CHTML"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="CHTML"][justify="right"] {
+  text-align: right;
+}
+
+mjx-msub {
+  display: inline-block;
+  text-align: left;
+}
+
+mjx-mi {
+  display: inline-block;
+  text-align: left;
+}
+
+mjx-c {
+  display: inline-block;
+}
+
+mjx-utext {
+  display: inline-block;
+  padding: .75em 0 .2em 0;
+}
+
+mjx-mn {
+  display: inline-block;
+  text-align: left;
+}
+
+mjx-c::before {
+  display: block;
+  width: 0;
+}
+
+.MJX-TEX {
+  font-family: MJXZERO, MJXTEX;
+}
+
+.TEX-B {
+  font-family: MJXZERO, MJXTEX-B;
+}
+
+.TEX-I {
+  font-family: MJXZERO, MJXTEX-I;
+}
+
+.TEX-MI {
+  font-family: MJXZERO, MJXTEX-MI;
+}
+
+.TEX-BI {
+  font-family: MJXZERO, MJXTEX-BI;
+}
+
+.TEX-S1 {
+  font-family: MJXZERO, MJXTEX-S1;
+}
+
+.TEX-S2 {
+  font-family: MJXZERO, MJXTEX-S2;
+}
+
+.TEX-S3 {
+  font-family: MJXZERO, MJXTEX-S3;
+}
+
+.TEX-S4 {
+  font-family: MJXZERO, MJXTEX-S4;
+}
+
+.TEX-A {
+  font-family: MJXZERO, MJXTEX-A;
+}
+
+.TEX-C {
+  font-family: MJXZERO, MJXTEX-C;
+}
+
+.TEX-CB {
+  font-family: MJXZERO, MJXTEX-CB;
+}
+
+.TEX-FR {
+  font-family: MJXZERO, MJXTEX-FR;
+}
+
+.TEX-FRB {
+  font-family: MJXZERO, MJXTEX-FRB;
+}
+
+.TEX-SS {
+  font-family: MJXZERO, MJXTEX-SS;
+}
+
+.TEX-SSB {
+  font-family: MJXZERO, MJXTEX-SSB;
+}
+
+.TEX-SSI {
+  font-family: MJXZERO, MJXTEX-SSI;
+}
+
+.TEX-SC {
+  font-family: MJXZERO, MJXTEX-SC;
+}
+
+.TEX-T {
+  font-family: MJXZERO, MJXTEX-T;
+}
+
+.TEX-V {
+  font-family: MJXZERO, MJXTEX-V;
+}
+
+.TEX-VB {
+  font-family: MJXZERO, MJXTEX-VB;
+}
+
+mjx-stretchy-v mjx-c, mjx-stretchy-h mjx-c {
+  font-family: MJXZERO, MJXTEX-S1, MJXTEX-S4, MJXTEX, MJXTEX-A ! important;
+}
+
+@font-face /* 0 */ {
+  font-family: MJXZERO;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Zero.woff") format("woff");
+}
+
+@font-face /* 1 */ {
+  font-family: MJXTEX;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Main-Regular.woff") format("woff");
+}
+
+@font-face /* 2 */ {
+  font-family: MJXTEX-B;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Main-Bold.woff") format("woff");
+}
+
+@font-face /* 3 */ {
+  font-family: MJXTEX-I;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Math-Italic.woff") format("woff");
+}
+
+@font-face /* 4 */ {
+  font-family: MJXTEX-MI;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Main-Italic.woff") format("woff");
+}
+
+@font-face /* 5 */ {
+  font-family: MJXTEX-BI;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Math-BoldItalic.woff") format("woff");
+}
+
+@font-face /* 6 */ {
+  font-family: MJXTEX-S1;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Size1-Regular.woff") format("woff");
+}
+
+@font-face /* 7 */ {
+  font-family: MJXTEX-S2;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Size2-Regular.woff") format("woff");
+}
+
+@font-face /* 8 */ {
+  font-family: MJXTEX-S3;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Size3-Regular.woff") format("woff");
+}
+
+@font-face /* 9 */ {
+  font-family: MJXTEX-S4;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Size4-Regular.woff") format("woff");
+}
+
+@font-face /* 10 */ {
+  font-family: MJXTEX-A;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_AMS-Regular.woff") format("woff");
+}
+
+@font-face /* 11 */ {
+  font-family: MJXTEX-C;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Calligraphic-Regular.woff") format("woff");
+}
+
+@font-face /* 12 */ {
+  font-family: MJXTEX-CB;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Calligraphic-Bold.woff") format("woff");
+}
+
+@font-face /* 13 */ {
+  font-family: MJXTEX-FR;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Fraktur-Regular.woff") format("woff");
+}
+
+@font-face /* 14 */ {
+  font-family: MJXTEX-FRB;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Fraktur-Bold.woff") format("woff");
+}
+
+@font-face /* 15 */ {
+  font-family: MJXTEX-SS;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_SansSerif-Regular.woff") format("woff");
+}
+
+@font-face /* 16 */ {
+  font-family: MJXTEX-SSB;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_SansSerif-Bold.woff") format("woff");
+}
+
+@font-face /* 17 */ {
+  font-family: MJXTEX-SSI;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_SansSerif-Italic.woff") format("woff");
+}
+
+@font-face /* 18 */ {
+  font-family: MJXTEX-SC;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Script-Regular.woff") format("woff");
+}
+
+@font-face /* 19 */ {
+  font-family: MJXTEX-T;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Typewriter-Regular.woff") format("woff");
+}
+
+@font-face /* 20 */ {
+  font-family: MJXTEX-V;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Vector-Regular.woff") format("woff");
+}
+
+@font-face /* 21 */ {
+  font-family: MJXTEX-VB;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Vector-Bold.woff") format("woff");
+}
+
+mjx-c.mjx-c2113::before {
+  padding: 0.705em 0.417em 0.02em 0;
+  content: "\2113";
+}
+
+mjx-c.mjx-c30::before {
+  padding: 0.666em 0.5em 0.022em 0;
+  content: "0";
+}
+
+mjx-c.mjx-c32::before {
+  padding: 0.666em 0.5em 0 0;
+  content: "2";
+}
+</style></head>
+
+
+<body>
+
+  
+  
+    
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js" integrity="sha384-5AkRS45j4ukf+JbWAfHL8P4onPA9p0KwwP7pUdjSQA3ss9edbJUJc/XcYAiheSSz" crossorigin="anonymous"></script>
+
+
+  
+    
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+
+  
+    
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+  
+
+
+
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+      <script src="/assets/js/beautifuljekyll.js"></script>
+    
+  
+
+
+
+
+
+
+
+
+
+  <nav class="navbar navbar-expand-md navbar-light flex-column navbar-custom">
+<div class="w-200 d-flex align-self-center">
+ <a class="navbar-brand mx-md-auto" href="/">
+	<img class="p-4" src="/assets/img/cse-website-header.png" width="800px" alt="Logo"> </a>
+
+  <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+ </div>
+  <div class="collapse navbar-collapse align-self-center" id="main-navbar">
+    <ul class="navbar-nav navbar-center">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Programs</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="/programs-overview">Overview</a>
+                  <a class="dropdown-item" href="/btech">B.Tech CS</a>
+                  <a class="dropdown-item" href="/ms-phd">MS &amp; PhD</a>
+                  <a class="dropdown-item" href="/msocd">MSoCD</a>
+                  <a class="dropdown-item" href="/mcam">MCaM</a>
+            </div>
+          </li>
+        
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Research</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="/areas">Areas</a>
+                  <a class="dropdown-item" href="/labs">Labs</a>
+                  <a class="dropdown-item" href="/projects">Projects</a>
+                  <a class="dropdown-item" href="/positions">Open Positions &amp; Internships</a>
+                  <a class="dropdown-item" href="/publications">Publications</a>
+            </div>
+          </li>
+        
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Academics</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="/all-core">Core Courses</a>
+                  <a class="dropdown-item" href="/all-elective">Elective Courses</a>
+                  <a class="dropdown-item" href="/timetable">Timetable &amp; Slotting</a>
+                  <a class="dropdown-item" href="/past-courses">Past courses</a>
+                  <a class="dropdown-item" href="https://iitpkd.ac.in/academics-downloads">Forms🔗</a>
+            </div>
+          </li>
+        
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Events</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="/research-symposium">Research Symposium</a>
+                  <a class="dropdown-item" href="/department-colloquium">Department Colloquium</a>
+                  <a class="dropdown-item" href="/workshops">Workshops</a>
+                  <a class="dropdown-item" href="/talk-series">Talk Series</a>
+            </div>
+          </li>
+        
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">People</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="/ug">Bachelors</a>
+                  <a class="dropdown-item" href="/mtech">Masters</a>
+                  <a class="dropdown-item" href="/scholars">Scholars</a>
+                  <a class="dropdown-item" href="/faculty">Faculty</a>
+                  <a class="dropdown-item" href="/staff-pdf">Staff &amp; Postdocs</a>
+                  <a class="dropdown-item" href="/alumni">Alumni</a>
+            </div>
+          </li>
+        
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Contact</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="/location">Location</a>
+                  <a class="dropdown-item" href="/outreach">Outreach</a>
+                  <a class="dropdown-item" href="/openings">Openings</a>
+                  <a class="dropdown-item" href="/visitors">Visitors</a>
+                  <a class="dropdown-item" href="/getintouch">Get in touch</a>
+            </div>
+          </li>
+        </ul>
+  </div>
+
+  
+
+</nav>
+
+
+
+  <!-- TODO this file has become a mess, refactor it -->
+
+
+
+
+
+
+
+<header class="header-section ">
+
+<div class="no-img">
+  <div class="container-md">
+    <div class="row">
+      <div class="center">
+        <div class="page-heading">
+          <h1>Algorithms for Big Data</h1>
+          
+
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</header>
+
+
+
+
+
+  <div class="wrapper row">
+<div class=" container-md " role="main">
+    <div class=" width: auto;  ">
+      
+
+      <div class="text-center alert alert-info" role="alert">
+<strong>Code:</strong> CS5654 | <strong>Category:</strong> PME | <strong>Credits:</strong>  3-0-0-3 
+</div>
+
+
+
+
+
+
+
+<script>
+MathJax = {
+  tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+};
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" integrity="sha384-Wuix6BuhrWbjDBs24bXrjf4ZQ5aFeFWBuKkFekO2t8xFU0iNaLQfp2K6/1Nxveei" crossorigin="anonymous"></script>
+
+<p><strong>Pre-requisites</strong>: Algorithms, Probability.</p>
+
+<p>(CS2030 Data Structures and Algorithms OR CS3070/CS2040 Design and Analysis of
+Algorithms OR CS5009 Algorithms OR CS4999) AND
+(MA2041 - Probability and Statistics OR MA5007 - Probability and Statistics OR MA4999 OR CS4999 OR PH4999)</p>
+
+<p>XX4999 stands for having completed a bachelor’s degree in XX program.</p>
+
+<h2 id="course-overview">Course Overview</h2>
+
+<p>Classical Algorithm Design assumes that all the
+required data is stored on a fast memory and any piece of it can be
+accessed in unit time. This assumption is no longer true when one has to
+deal with massive amounts of data - much more than what could be stored
+in the main memory of any computer. This course describes models and
+algorithmic techniques developed for handling such massive amounts of
+data that is typically made available with access limitations. Topics
+covered include data stream algorithms, sampling techniques, sketching
+techniques, sparsification and lower bounds. The emphasis will be in the
+design of these techniques, proving performance and efficiency
+guarantees and understanding the fundamental limitations of these
+approaches.</p>
+
+<h2 id="course-content">Course Content</h2>
+
+<p><strong>Introduction</strong>. Introduction to massive data problems. Introduction to
+techniques like randomisation, streaming, sampling, and sketching. [2
+lectures ]</p>
+
+<p><strong>Streaming Algorithms</strong>. The Data Stream Model. Finding Frequent Items,
+Frequency Estimation. Estimating the Number of Distinct Elements: The
+Tidemark Algorithm, The Median Trick, The BJKST Algorithm, Hyperloglog
+Algorithm, CVM algorithm. Approximate Counting. [12 lectures]</p>
+
+<p><strong>Sketches and Linear Sketches</strong>. Finding Frequent Items via Linear
+Sketching. CountSketch and Count-Min Sketch Algorithms. Comparison of
+Frequency Estimation Methods. Estimating Frequency Moments: The AMS
+Estimator, The Tug-of-War Sketch. [10 lectures]</p>
+
+<p><strong>Sampling, Weight-Based Sampling</strong>: The <mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" tabindex="0" ctxtmenu_counter="0" style="font-size: 121.2%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c2113"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c30"></mjx-c></mjx-mn></mjx-script></mjx-msub></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>ℓ</mi><mn>0</mn></msub></math></mjx-assistive-mml></mjx-container>-Sampling, <mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" tabindex="0" ctxtmenu_counter="1" style="font-size: 121.2%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c2113"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c32"></mjx-c></mjx-mn></mjx-script></mjx-msub></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>ℓ</mi><mn>2</mn></msub></math></mjx-assistive-mml></mjx-container>-
+Sampling. [2 lectures]</p>
+
+<p><strong>Graph Streams</strong>. Basic Algorithms: The Connectedness Problem, The
+Bipartiteness Problem, Shortest Paths and Distance Estimation via
+Spanner. Finding Maximum Matchings: Maximum Cardinality Matching,
+Maximum Weight Matching. [6 lectures]</p>
+
+<p><strong>Graph Sketching</strong>. Testing Connectivity Using Boundary Edges, Testing
+Bipartiteness, The AGM Sketch. Counting Triangles: A Sampling-Based
+Algorithm, A Sketch-Based Algorithm. [4 lectures]</p>
+
+<p><strong>Lower Bounds</strong>. Communication Complexity and Lower Bounds.
+Communication Games, Protocols, Complexity. Two-Player Communication
+Games. Data Streaming Lower Bounds: for Majority, for Frequency
+Estimation. [6 lectures]</p>
+
+<h2 id="text-books">Text Books</h2>
+
+<ol>
+  <li>Amit Chakrabarti. <em>Data Stream Algorithms</em> Lecture Notes. (2024).
+(Available online)</li>
+</ol>
+
+<h2 id="references">References</h2>
+
+<ol>
+  <li>Avrim Blum, John Hopcroft, and Ravindran Kannan. <em>Foundations of
+data science</em>. Cambridge University Press, 2020. (ISBN:
+978-1108485067. Also available online)</li>
+  <li>Jelani Nelson, <em>Sketching Algorithms,</em> Lecture Notes (2020)
+(Available online)</li>
+</ol>
+
+
+ <h1 id="past-offerings"> Past Offerings </h1>
+
+ 
+  <ul> 
+   
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+   
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+   
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	 <li> Offered in Aug-Nov, 2024 by Deepak Rajendraprasad  </li>
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+   
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+   
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+   
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+   
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+   
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+   
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+   
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+   
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+   
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+   
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+   
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+   
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+   
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+   
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+   
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+   
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+   
+	
+     
+     
+     
+	 
+	
+  
+  </ul>
+
+
+<h1 id="detailed-course-information"> Course Metadata </h1>
+<table class="table table-bordered">
+   <thead>
+       <tr>
+            <th>Item</th>
+            <th>Details</th>
+        </tr>
+    </thead>
+  <tbody>
+    <tr>
+      <td>Course Title</td>
+      <td>Algorithms for Big Data</td>
+    </tr>
+    <tr>
+      <td>Course Code</td>
+      <td>CS5654</td>
+    </tr>
+    <tr>
+      <td>Course Credits</td>
+      <td>3-0-0-3</td>
+    </tr>
+    <tr>
+      <td>Course Category</td>
+      <td>PME</td>
+    </tr>
+    
+    <tr>
+      <td>Proposing Faculty</td>
+      <td>Deepak Rajendraprasad and Krithika Ramaswamy</td>
+    </tr>
+    
+    <tr>
+      <td>Approved on</td>
+      <td>Senate  of IIT Palakkad</td>
+    </tr>
+    
+    
+    <tr>
+      <td>Course status</td>
+      <td>New</td>
+    </tr>
+    
+    
+    
+    
+
+  </tbody>
+</table>
+
+
+      
+
+    </div>
+  </div>
+</div>
+
+
+  <footer>
+  <div class="container-md beautiful-jekyll-footer">
+    <div class="row">
+      <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
+      
+
+
+    <!-- FOOTER -->
+            <div class="row justify-content-center">
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="mb-4">Institute</h6>
+                    <ul class="list-unstyled text-muted">
+                        <li><a href="https://iitpkd.ac.in/">IIT Palakkad</a></li>
+                        <li>
+<a href="https://cdc.iitpkd.ac.in/">CDC </a> </li>
+                        <li>
+<a href="https://cet.iitpkd.ac.in/"> CET</a> </li>
+                        <li>
+<a href="https://techin-iitpkd.org/">TECHIN </a> </li>
+                        <li>
+<a href="https://cci-iitpkd.github.io/">CCI </a> </li>
+                        <li>
+<a href="https://iitpkd.ac.in/TelephoneDirectory">Telephone </a> </li>
+                        <li>
+<a href="https://iitpkd.ac.in/central-labs">Central Labs</a> </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="mb-4">Admissions</h6>
+                    <ul class="list-unstyled text-muted">
+                        <li><a href="https://iitpkd.ac.in/programs">Programs</a></li>
+                        <li><a href="https://resap.iitpkd.ac.in/">Research Portal</a></li>
+                        <li><a href="https://pgadmit.iitpkd.ac.in/">PG admissions Portal</a></li>
+                        <li><a href="https://pgadmit.iitpkd.ac.in/important-dates">Important Dates</a></li>
+                        <li><a href="https://pgadmit.iitpkd.ac.in/how-to-apply">How to apply</a></li>
+                        <li><a href="https://coap2026.iitr.ac.in/coap2026/index.php">COAP</a></li>
+                        <li><a href="https://josaa.nic.in">JOSAA</a></li>
+                    </ul>
+                </div>
+		<div class="col-lg-3 col-md-6">
+                    <h6 class="mb-4">E-resources</h6>
+                    <ul class="list-unstyled text-muted">
+                        <li><a href="https://idp.iitpkd.ac.in/">IDP</a></li>
+                        <li><a href="https://lms.iitpkd.ac.in">LMS/Moodle</a></li>
+                        <li><a href="https://library.iitpkd.ac.in">Library</a></li>
+                        <li><a href="https://support.iitpkd.ac.in/">Help desk</a></li>
+                        <li>
+<a href="https://mrbs.iitpkd.ac.in/">Room Booking </a> </li>
+                        <li>
+<a href="https://hpc.iitpkd.ac.in/">HPC</a> </li>
+                        <li>
+<a href="https://records.iitpkd.ac.in/">Records portal</a> </li>
+                    </ul>
+                </div>
+
+		<div class="col-lg-3 col-md-6">
+                    <h6 class="mb-4">Wellness &amp; Support</h6>
+                    <ul class="list-unstyled text-muted">
+                       <!-- <li><a href="https://iitpkd.ac.in/faqs-b.tech-freshers">Freshers FAQ</a></li> -->
+                        <li><a href="https://iitpkd.ac.in/student-affairs-council">SAC</a></li>
+                        <li><a href="https://iitpkd.ac.in/elss">ELSS</a></li>
+                        <li><a href="https://iitpkd.ac.in/wellness-hub">Wellness hub</a></li>
+                        <li><a href="https://iitpkd.ac.in/student-clubs/">Club Catalogue</a></li>
+                        <li><a href="https://sites.google.com/iitpkd.ac.in/iitpkdcharitable-trust/home">IIT Palakkad Charitable Trust</a></li>
+                        <li><a href="https://iitpkd.ac.in/help-desk-prospective-girl-students">For prospective girl students</a></li>
+                        <li><a href="https://drive.google.com/file/d/1E-pjX2kODoXjySObgCHFzdjCPHoR6abv/view?usp=sharing">Places to visit in Palakkad</a></li>
+
+                    </ul>
+                </div>
+             </div>
+      <p class="theme-by text-muted">
+        Maintained by Department of Computer Science and Engineering. <br>Based on
+        <a href="https://beautifuljekyll.com">Beautiful Jekyll</a>
+      </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+
+
+</body></html>

@@ -1,0 +1,581 @@
+<!DOCTYPE html><html lang="en" dir="ltr" prefix="og: https://ogp.me/ns#" class="sticky-footer js" style="--scrollbar-width: 0px; --full-width-left-distance: -82px; --full-width-right-distance: -82px; --sidebar-top-margin: 2727.078125px;"><head>
+    <meta charset="utf-8">
+<noscript><style>form.antibot * :not(.antibot-message) { display: none !important; }</style>
+</noscript><link rel="shortlink" href="https://ece.engineering.arizona.edu/">
+<meta property="og:site_name" content="Electrical and Computer Engineering">
+<meta property="og:url" content="https://ece.engineering.arizona.edu/undergrad-programs/courses/ECE304A">
+<meta property="og:title" content="ECE 304A Design of Electronic Circuits">
+<meta name="twitter:card" content="summary">
+<meta name="Generator" content="Arizona Quickstart (https://quickstart.arizona.edu)">
+<meta name="MobileOptimized" content="width">
+<meta name="HandheldFriendly" content="true">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "CollegeOrUniversity",
+            "url": "https://ece.engineering.arizona.edu/",
+            "name": "University of Arizona Electrical and Computer Engineering",
+            "parentOrganization": {
+                "@type": "EducationalOrganization",
+                "@id": "https://www.arizona.edu/",
+                "name": "University of Arizona",
+                "url": "https://www.arizona.edu/",
+                "sameAs": [
+                    "https://www.facebook.com/uarizona",
+                    "https://x.com/uarizona",
+                    "https://www.instagram.com/uarizona",
+                    "https://linkedin.com/edu/university-of-arizona-17783",
+                    "https://www.youtube.com/universityofarizona",
+                    "https://en.wikipedia.org/wiki/University_of_Arizona"
+                ],
+                "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "1401 E University Blvd",
+                    "addressLocality": "Tucson",
+                    "addressRegion": "AZ",
+                    "postalCode": "85721",
+                    "addressCountry": "US"
+                }
+            }
+        }
+    ]
+}</script>
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<link rel="icon" href="/profiles/custom/az_quickstart/themes/custom/az_barrio/favicon.ico" type="image/vnd.microsoft.icon">
+
+    <title>ECE 304A Design of Electronic Circuits | Electrical and Computer Engineering</title>
+    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_blNjE9mcRpqzoBYXjQn0Oy6zI8Ub-LoYLTyHrLi4how.css?delta=0&amp;language=en&amp;theme=az_barrio&amp;include=eJyFjtuSgyAMhl8I9JGYAFGpMWEgdFufvnStM3Zv9i7_IckHu_NQSpIRdntMVqbJBuA7VMtwN7C7IAXfhU18IjzdDAXmAnmp45cavpSbGpH7SVGX_5YUH9pxwjoXaRyNF9GqPT4ZZxIPZKs-KfFswooxqRSXOCKrJwnreJnNL3eQLQt3rw5_D1q7IbejFkvLQAPc4GE6R3-wnt5Hmgv7J7nwN87NU6oLRlOfVXEbPVR8AZEsipo">
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_P4Er52vuAxYax2o6xHSBGYcRynweXAyCrX_kOv49BG4.css?delta=1&amp;language=en&amp;theme=az_barrio&amp;include=eJyFjtuSgyAMhl8I9JGYAFGpMWEgdFufvnStM3Zv9i7_IckHu_NQSpIRdntMVqbJBuA7VMtwN7C7IAXfhU18IjzdDAXmAnmp45cavpSbGpH7SVGX_5YUH9pxwjoXaRyNF9GqPT4ZZxIPZKs-KfFswooxqRSXOCKrJwnreJnNL3eQLQt3rw5_D1q7IbejFkvLQAPc4GE6R3-wnt5Hmgv7J7nwN87NU6oLRlOfVXEbPVR8AZEsipo">
+<link rel="stylesheet" media="all" href="https://use.typekit.net/emv3zbo.css">
+<link rel="stylesheet" media="all" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,1,0#.css">
+<link rel="stylesheet" media="all" href="https://cdn.digital.arizona.edu/lib/az-icons/1.0.4/az-icons-styles.min.css">
+<link rel="stylesheet" media="all" href="https://cdn.digital.arizona.edu/lib/arizona-bootstrap/5.0.5/css/arizona-bootstrap.min.css">
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_3XOgR5Lt4EiN_cBlz5cNB3jlfB9XV_VQABtHj_cFxQ4.css?delta=6&amp;language=en&amp;theme=az_barrio&amp;include=eJyFjtuSgyAMhl8I9JGYAFGpMWEgdFufvnStM3Zv9i7_IckHu_NQSpIRdntMVqbJBuA7VMtwN7C7IAXfhU18IjzdDAXmAnmp45cavpSbGpH7SVGX_5YUH9pxwjoXaRyNF9GqPT4ZZxIPZKs-KfFswooxqRSXOCKrJwnreJnNL3eQLQt3rw5_D1q7IbejFkvLQAPc4GE6R3-wnt5Hmgv7J7nwN87NU6oLRlOfVXEbPVR8AZEsipo">
+<link rel="stylesheet" media="print" href="/sites/default/files/css/css_OpIpPoBeWYknRwA0qFqwQwzRLz0eWccwXat0tR-4jUg.css?delta=7&amp;language=en&amp;theme=az_barrio&amp;include=eJyFjtuSgyAMhl8I9JGYAFGpMWEgdFufvnStM3Zv9i7_IckHu_NQSpIRdntMVqbJBuA7VMtwN7C7IAXfhU18IjzdDAXmAnmp45cavpSbGpH7SVGX_5YUH9pxwjoXaRyNF9GqPT4ZZxIPZKs-KfFswooxqRSXOCKrJwnreJnNL3eQLQt3rw5_D1q7IbejFkvLQAPc4GE6R3-wnt5Hmgv7J7nwN87NU6oLRlOfVXEbPVR8AZEsipo">
+
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","pathPrefix":"","currentPath":"node\/727","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"gtag":{"tagId":"","consentMode":false,"otherIds":[],"events":[],"additionalConfigInfo":[]},"ajaxPageState":{"libraries":"eJyFT9FuwyAM_CEIn4QMOIQFbASma_v1I1MrJd3DJMvy3RlzB0_roLXEBp7agd-18Kyq4Cock-Z11R7oBl0T3I4Vzw2PhcIuZXyzFRrEBnXr5oKWC7LryNl-pyDbf48E72IPd7HxoKAcs3SZ8ttjzOwg6y6PnCj-1YkDKr9jSMLNJgpI4jL73Zxm9ZvGc6lMk-vL5xmtC9JQ08z8ZTehjQp5eUEVmWNGKxBNnO0TL_AF9ytZ1Cn069op-KA6XE59w6D6owsW46DjD0YTqe8","theme":"az_barrio","theme_token":null},"ajaxTrustedUrl":{"\/search\/node":true},"gtm":{"tagId":null,"settings":{"data_layer":"dataLayer","include_classes":false,"allowlist_classes":"","blocklist_classes":"","include_environment":false,"environment_id":"","environment_token":""},"tagIds":["GTM-ML2BZB","GTM-NDDWTL3"]},"data":{"extlink":{"extTarget":true,"extTargetAppendNewWindowDisplay":true,"extTargetAppendNewWindowLabel":"(opens in a new window)","extTargetNoOverride":true,"extNofollow":false,"extTitleNoOverride":false,"extNoreferrer":false,"extFollowNoOverride":false,"extClass":"0","extLabel":"(link is external)","extImgClass":false,"extSubdomains":false,"extExclude":"^(?!(https?:\\\/\\\/)(arizona.box.com|docs.google.com|dropbox.com|www.dropbox.com|emailarizona-my.sharepoint.com|events.trellis.arizona.edu)).*","extInclude":"\/sites\/.+\/files\/.+\\.pdf","extCssExclude":"","extCssInclude":"","extCssExplicit":"","extAlert":false,"extAlertText":"This link will take you to an external web site. We are not responsible for their content.","extHideIcons":false,"mailtoClass":"0","telClass":"","mailtoLabel":"(link sends email)","telLabel":"(link is a phone number)","extUseFontAwesome":false,"extIconPlacement":"append","extPreventOrphan":false,"extFaLinkClasses":"fa fa-external-link","extFaMailtoClasses":"fa fa-envelope-o","extAdditionalLinkClasses":"","extAdditionalMailtoClasses":"","extAdditionalTelClasses":"","extFaTelClasses":"fa fa-phone","allowedDomains":[],"extExcludeNoreferrer":""}},"field_group":{"html_element":{"mode":"default","context":"view","settings":{"classes":"col-12 col-md-8","show_empty_fields":false,"id":"","element":"div","show_label":false,"label_element":"h3","label_element_classes":"","attributes":"","effect":"none","speed":"fast"}}},"user":{"uid":0,"permissionsHash":"fb581335a39c806efc3257cf445b768a360c9890606df76cbe0ec0c883d6f7d3"}}</script>
+<script src="/sites/default/files/js/js_fjLjdW3sz3jmQxazLCrFp83FsDS9Avm5VTB1O0FnpMs.js?scope=header&amp;delta=0&amp;language=en&amp;theme=az_barrio&amp;include=eJxdjQEOwyAIRS8k9UgGrVpXKkZp1-30s8mazCUEeP_zA76NxVoTa3yDRbeCcK-icDSuDTgEcJgPbJDx-DmxuwhnyAyOc6Dk5DIdV3-lN7aJ_B0pWDFWLEvTA00DmbATmWeaZVGWWZp0-X4XiS0SNHlRylH5U_pc9Vz3gjR9UUXmSN4IRh17--cJH3iO4vYB72FoYw"></script>
+<script src="/modules/contrib/google_tag/js/gtag.js?tg2t4l"></script>
+<script src="/modules/contrib/google_tag/js/gtm.js?tg2t4l"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-ML2BZB" type="text/javascript"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-NDDWTL3" type="text/javascript"></script>
+
+  <style>
+    .js-az-spinner-position {
+      position: fixed;
+      z-index: 1261;
+      top: 48.5%;
+      left: 49%;
+    }
+  </style></head>
+  <body class="layout-no-sidebars page-node-727 path-node node--type-az-course">
+    <a href="#content" class="visually-hidden-focusable btn btn-dark position-absolute start-50 translate-middle-x z-1 mt-1">
+      Skip to main content
+    </a>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ML2BZB"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NDDWTL3"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas="">
+    
+<div id="page-wrapper">
+  <div id="page">
+        <header id="header" class="header" role="banner" aria-label="Site header">
+      <div class="arizona-header az-fixed-header-on-mobile bg-red" id="header_arizona">
+        <div class="container">
+          <div class="row flex-nowrap">
+                          <a class="arizona-logo col-auto" href="https://www.arizona.edu" title="The University of Arizona homepage">
+                <img class="arizona-line-logo" alt="The University of Arizona Wordmark Line Logo White" src="https://cdn.digital.arizona.edu/logos/v1.0.0/ua_wordmark_line_logo_white_rgb.min.svg" fetchpriority="high">
+              </a>
+                                        <section class="d-none d-lg-flex col-auto region region-header-ua-utilities">
+    <div class="search-block-form az-search-block block block-search block-search-form-block" data-drupal-selector="search-block-form" id="block-az-barrio-search" role="search">
+  
+    
+          <div class="content">
+      <form block="block-az-barrio-search" action="/search/node" method="get" id="search-block-form" accept-charset="UTF-8" class="search-form search-block-form">
+  <div class="input-group">
+      <label for="edit-keys" class="visually-hidden">Search</label>
+<input title="Enter the terms you wish to search for." data-drupal-selector="edit-keys" type="search" id="edit-keys" name="keys" value="" size="15" maxlength="128" class="form-search form-control rounded-start" placeholder="Search this site" aria-label="Search this site">
+
+
+<button data-drupal-selector="edit-submit" type="submit" id="edit-submit" value="Search" class="button js-form-submit form-submit btn"><span class="material-symbols-rounded">search</span></button>
+
+
+
+
+  </div>
+</form>
+
+
+    </div>
+  
+</div>
+
+  </section>
+
+                                      <div class="d-lg-none d-flex col-auto px-0">
+                                  <button type="button" data-bs-toggle="offcanvas" data-bs-target="#azMobileNav" aria-controls="azMobileNav" class="btn btn-arizona-header" id="jsAzSearch">
+                    <span aria-hidden="true" class="icon material-symbols-rounded">search</span>
+                    <span class="icon-text">Search</span>
+                  </button>
+                                                  <button type="button" data-bs-toggle="offcanvas" data-bs-target="#azMobileNav" aria-controls="azMobileNav" class="btn btn-arizona-header">
+                    <span aria-hidden="true" class="icon material-symbols-rounded">menu</span>
+                    <span class="icon-text">Menu</span>
+                  </button>
+                                <div class="offcanvas offcanvas-end mw-100 w-100 bg-white d-flex d-lg-none overflow-y-auto" tabindex="-1" id="azMobileNav" aria-label="Mobile navigation" data-once="azBarrioOffCanvasSearch">
+                  <div class="offcanvas-header sticky-top p-0 mb-2 text-bg-red d-flex justify-content-between align-items-center">
+                    <a href="/" class="btn btn-arizona-header">
+                      <span aria-hidden="true" class="icon material-symbols-rounded">home</span>
+                      <span class="icon-text">Home</span>
+                    </a>
+                    <button type="button" data-bs-toggle="offcanvas" data-bs-target="#azMobileNav" aria-controls="azMobileNav" class="btn btn-arizona-header">
+                      <span aria-hidden="true" class="icon material-symbols-rounded">close</span>
+                      <span class="icon-text">Close</span>
+                    </button>
+                  </div>
+                    <section class="region region-navigation-offcanvas">
+    <div class="search-block-form text-bg-white mb-1 border-bottom" data-drupal-selector="search-block-form-2" id="block-az-barrio-offcanvas-searchform" role="search">
+  
+    
+      <form block="block-az-barrio-offcanvas-searchform" action="/search/node" method="get" id="search-block-form--2" accept-charset="UTF-8" class="search-form search-block-form">
+  <div class="input-group">
+      <label for="edit-keys--2" class="visually-hidden">Search</label>
+<input title="Enter the terms you wish to search for." data-drupal-selector="edit-keys" type="search" id="edit-keys--2" name="keys" value="" size="15" maxlength="128" class="form-search form-control rounded-start" placeholder="Search this site" aria-label="Search this site">
+
+
+<button data-drupal-selector="edit-submit" type="submit" id="edit-submit--2" value="Search" class="button js-form-submit form-submit btn"><span class="material-symbols-rounded">search</span></button>
+
+
+
+
+  </div>
+</form>
+
+
+  </div>
+<div id="block-az-barrio-mobilenavblock" class="block block-az-core block-mobile-nav-block">
+  
+    
+      <div class="content">
+      <div id="az_mobile_nav_menu" data-once="azMobileNavCurrentPage"><div class="border-bottom"><div class="px-3 fw-bold az-mobile-nav-root"><h2 class="h5 my-0">Main Menu</h2>
+</div>
+</div>
+<ul id="az_mobile_nav_menu_links" class="nav nav-pills flex-column bg-white"><li class="nav-item"><span class="ms-2 text-black border-end">About</span>
+<a href="/az_core/mobile_nav_callback/menu_link_content%3A12cfc98f-cf84-40d6-a204-20df258f71f3" class="use-ajax btn btn-lg bg-white az-mobile-nav-link" type="button" data-ajax-http-method="GET" aria-label="View child pages of About" data-once="ajax"><span class="material-symbols-rounded text-azurite">chevron_right</span>
+</a></li>
+<li class="nav-item"><span class="ms-2 text-black border-end">Undergrad Programs</span>
+<a href="/az_core/mobile_nav_callback/menu_link_content%3Aab1ae471-3084-46df-a547-63874b5a83f8" class="use-ajax btn btn-lg bg-white az-mobile-nav-link" type="button" data-ajax-http-method="GET" aria-label="View child pages of Undergrad Programs" data-once="ajax"><span class="material-symbols-rounded text-azurite">chevron_right</span>
+</a></li>
+<li class="nav-item"><span class="ms-2 text-black border-end">Grad Programs</span>
+<a href="/az_core/mobile_nav_callback/menu_link_content%3Ac87963d9-e5b3-4dd5-8759-f2f2bcc97a30" class="use-ajax btn btn-lg bg-white az-mobile-nav-link" type="button" data-ajax-http-method="GET" aria-label="View child pages of Grad Programs" data-once="ajax"><span class="material-symbols-rounded text-azurite">chevron_right</span>
+</a></li>
+<li class="nav-item"><span class="ms-2 text-black border-end">Research</span>
+<a href="/az_core/mobile_nav_callback/menu_link_content%3A687637c3-16b9-4ef3-82d8-ab563ba35239" class="use-ajax btn btn-lg bg-white az-mobile-nav-link" type="button" data-ajax-http-method="GET" aria-label="View child pages of Research" data-once="ajax"><span class="material-symbols-rounded text-azurite">chevron_right</span>
+</a></li>
+<li class="nav-item"><span class="ms-2 text-black border-end">Faculty &amp; Staff</span>
+<a href="/az_core/mobile_nav_callback/menu_link_content%3Ab1354c6e-2efc-400f-bdea-eac726a1291e" class="use-ajax btn btn-lg bg-white az-mobile-nav-link" type="button" data-ajax-http-method="GET" aria-label="View child pages of Faculty &amp; Staff" data-once="ajax"><span class="material-symbols-rounded text-azurite">chevron_right</span>
+</a></li>
+<li class="nav-item"><span class="ms-2 text-black border-end">Alumni</span>
+<a href="/az_core/mobile_nav_callback/menu_link_content%3Ab9e1ed9b-f53c-4044-bc7e-df04bd71cdd4" class="use-ajax btn btn-lg bg-white az-mobile-nav-link" type="button" data-ajax-http-method="GET" aria-label="View child pages of Alumni" data-once="ajax"><span class="material-symbols-rounded text-azurite">chevron_right</span>
+</a></li>
+<li class="nav-item"><a href="/news-events" class="nav-link ms-2" role="button">News &amp; Events</a></li>
+</ul>
+</div>
+
+    </div>
+  </div>
+
+  </section>
+
+                </div>
+              </div>
+                      </div>
+        </div>
+      </div>
+      <div id="header_site">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-sm-6 col-lg-4">
+                <section class="region region-branding">
+    <div id="block-az-barrio-branding" class="clearfix block block-system block-system-branding-block">
+  
+    
+        <a href="/" title="Electrical and Computer Engineering | Home" class="qs-site-logo d-block" rel="home"><img class="img-fluid" fetchpriority="high" src="/sites/default/files/ECE.svg" alt="Electrical and Computer Engineering | Home">
+</a>
+    </div>
+
+  </section>
+
+            </div>
+            <div class="col-12 col-sm-6 col-lg-8">
+              <div class="row">
+                  <section class="col-md region region-header">
+          <nav role="navigation" aria-labelledby="block-az-utility-links-menu" id="block-az-utility-links" class="block block-menu navigation menu--az-utility-links">
+                      
+    <h2 class="visually-hidden" id="block-az-utility-links-menu">Utility Links</h2>
+    
+
+              
+              <ul id="block-az-utility-links" block="block-az-utility-links" class="clearfix nav nav-utility justify-content-end">
+                    <li class="nav-item">
+                <a href="/" title="Home" class="text-body-secondary nav-link nav-link--" data-drupal-link-system-path="<front>">Home</a>
+              </li>
+                <li class="nav-item">
+                <a href="/alumni/give-today" title="" class="text-body-secondary nav-link nav-link--alumni-give-today" data-drupal-link-system-path="node/39">Give Today</a>
+              </li>
+                <li class="nav-item">
+                <a href="/about/contact-us" title="" class="text-body-secondary nav-link nav-link--about-contact-us" data-drupal-link-system-path="node/40">Contact Us</a>
+              </li>
+        </ul>
+  
+
+
+      </nav>
+
+  </section>
+
+              </div>
+                          </div>
+          </div>
+        </div>
+        <div class="container">
+                      <div class="row d-none d-lg-flex">
+              <div class="col-lg">
+                <nav id="navbar-top" class="navbar navbar-expand">
+                    <section class="region region-navigation">
+          <nav role="navigation" aria-labelledby="block-az-barrio-main-menu-menu" id="block-az-barrio-main-menu" class="block block-menu navigation menu--main">
+                      
+    <h2 class="visually-hidden" id="block-az-barrio-main-menu-menu">Main navigation</h2>
+    
+
+              
+              <ul id="block-az-barrio-main-menu" block="block-az-barrio-main-menu" class="clearfix navbar-nav flex-lg-row">
+                          <li class="nav-item menu-item--expanded dropdown nav-item nav-item-parent keep-open">
+                            	    <button class="nav-item menu-item--expanded dropdown nav-item nav-item-parent keep-open nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true" data-bs-display="static">About</button>
+                                  <div class="dropdown-menu">
+                                                  <a href="/about-us" class="dropdown-item" data-drupal-link-system-path="node/32">About Overview</a>
+                                                                    <a href="/about/welcome" class="dropdown-item" data-drupal-link-system-path="node/1">Welcome</a>
+                                                                    <a href="/about/advisory-board" class="dropdown-item" data-drupal-link-system-path="node/17">Advisory Board</a>
+                                                                    <a href="/about/contact-us" class="dropdown-item" data-drupal-link-system-path="node/40">Contact Us</a>
+                                </div>
+      
+                          </li>
+                                  <li class="nav-item menu-item--expanded dropdown nav-item nav-item-parent keep-open">
+                            	    <button class="nav-item menu-item--expanded dropdown nav-item nav-item-parent keep-open nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true" data-bs-display="static">Undergrad Programs</button>
+                                  <div class="dropdown-menu">
+                                                  <a href="/undergrad-programs" class="dropdown-item" data-drupal-link-system-path="node/33">Undergrad Overview</a>
+                                                                    <a href="/undergrad-programs/admissions" class="dropdown-item" data-drupal-link-system-path="node/2">Admissions</a>
+                                                                    <a href="/undergrad-programs/degrees" class="dropdown-item" data-drupal-link-system-path="node/3">Degrees</a>
+                                                                    <a href="/undergrad-programs/courses" class="dropdown-item" data-drupal-link-system-path="node/22">Courses</a>
+                                                                    <a href="/undergrad-programs/advising" class="dropdown-item" data-drupal-link-system-path="node/12">Advising</a>
+                                                                    <a href="/undergrad-programs/scholarships" class="dropdown-item" data-drupal-link-system-path="node/13">Scholarships &amp; Financial Aid</a>
+                                                                    <a href="/undergrad-programs/research-internships" class="dropdown-item" data-drupal-link-system-path="node/14">Research &amp; Internships</a>
+                                                                    <a href="/undergrad-programs/student-clubs" class="dropdown-item" data-drupal-link-system-path="node/15">Student Clubs &amp; Organizations</a>
+                                                                    <a href="/undergrad-programs/abet-accreditation" class="dropdown-item" data-drupal-link-system-path="node/16">ABET Accreditation</a>
+                                </div>
+      
+                          </li>
+                                  <li class="nav-item menu-item--expanded dropdown nav-item nav-item-parent keep-open">
+                            	    <button class="nav-item menu-item--expanded dropdown nav-item nav-item-parent keep-open nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true" data-bs-display="static">Grad Programs</button>
+                                  <div class="dropdown-menu">
+                                                  <a href="/grad-programs" class="dropdown-item" data-drupal-link-system-path="node/34">Grad Overview</a>
+                                                                    <a href="/grad-programs/admissions" class="dropdown-item" data-drupal-link-system-path="node/5">Admissions</a>
+                                                                    <a href="/grad-programs/campus-degrees" class="dropdown-item" data-drupal-link-system-path="node/4">On-Campus Degrees</a>
+                                                                    <a href="/grad-programs/online-degrees" class="dropdown-item" data-drupal-link-system-path="node/29">Online Degrees</a>
+                                                                    <a href="/grad-programs/courses" class="dropdown-item" data-drupal-link-system-path="grad-programs/courses">Courses</a>
+                                                                    <a href="/grad-programs/advising" class="dropdown-item" data-drupal-link-system-path="node/6">Advising</a>
+                                                                    <a href="/research/focus-areas" class="dropdown-item" data-drupal-link-system-path="node/7">Research Focus Areas</a>
+                                                                    <a href="/grad-programs/funding" class="dropdown-item" data-drupal-link-system-path="node/18">Funding</a>
+                                </div>
+      
+                          </li>
+                                  <li class="nav-item menu-item--expanded dropdown nav-item nav-item-parent keep-open">
+                            	    <button class="nav-item menu-item--expanded dropdown nav-item nav-item-parent keep-open nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true" data-bs-display="static">Research</button>
+                                  <div class="dropdown-menu">
+                                                  <a href="/research" class="dropdown-item" data-drupal-link-system-path="node/36">Research Overview</a>
+                                                                    <a href="/research/focus-areas" title="" class="dropdown-item" data-drupal-link-system-path="node/7">Focus Areas</a>
+                                                                    <a href="/research/centers" class="dropdown-item" data-drupal-link-system-path="node/8">Centers</a>
+                                                                    <a href="/research/inventions" class="dropdown-item" data-drupal-link-system-path="node/9">Inventions</a>
+                                </div>
+      
+                          </li>
+                                  <li class="nav-item menu-item--expanded dropdown nav-item nav-item-parent keep-open">
+                            	    <button class="nav-item menu-item--expanded dropdown nav-item nav-item-parent keep-open nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true" data-bs-display="static">Faculty &amp; Staff</button>
+                                  <div class="dropdown-menu">
+                                                  <a href="/faculty-staff" class="dropdown-item" data-drupal-link-system-path="node/37">Faculty &amp; Staff</a>
+                                                                    <a href="/faculty-staff/core-faculty" class="dropdown-item" data-drupal-link-system-path="node/923">Faculty Directory</a>
+                                                                    <a href="/faculty-staff/staff" class="dropdown-item" data-drupal-link-system-path="node/21">Staff Directory</a>
+                                                                    <a href="/faculty-staff/faculty-honors-and-awards" class="dropdown-item" data-drupal-link-system-path="node/618">Faculty Honors &amp; Awards</a>
+                                                                    <a href="/faculty-staff/faculty-videos" class="dropdown-item" data-drupal-link-system-path="node/916">Faculty Videos</a>
+                                                                    <a href="/faculty-staff/resources" class="dropdown-item" data-drupal-link-system-path="node/10">Employee Resources</a>
+                                                                    <a href="/faculty-staff/open-positions" class="dropdown-item" data-drupal-link-system-path="node/19">Open Positions</a>
+                                </div>
+      
+                          </li>
+                                  <li class="nav-item menu-item--expanded dropdown nav-item nav-item-parent keep-open">
+                            	    <button class="nav-item menu-item--expanded dropdown nav-item nav-item-parent keep-open nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true" data-bs-display="static">Alumni</button>
+                                  <div class="dropdown-menu">
+                                                  <a href="/alumni" class="dropdown-item" data-drupal-link-system-path="node/35">Alumni Overview</a>
+                                                                    <a href="/alumni/give-today" class="dropdown-item" data-drupal-link-system-path="node/39">Give Today</a>
+                                </div>
+      
+                          </li>
+                                  <li class="nav-item">
+                                        <a href="/news-events" class="nav-link" data-drupal-link-system-path="node/38">News &amp; Events</a>
+                          </li>
+                      </ul>
+      
+
+
+      </nav>
+
+  </section>
+
+                </nav>
+              </div>
+            </div>
+                                <div class="row">
+                <section class="col-md region region-help">
+    <div data-drupal-messages-fallback="" class="hidden"></div>
+
+  </section>
+
+            </div>
+                  </div>
+      </div>
+    </header>
+
+    <div id="main-wrapper" class="layout-main-wrapper clearfix">
+        <div id="main">
+                              <div class="container">
+                                    <div class="row">
+                <section class="col-md region region-breadcrumb">
+    <div id="block-az-barrio-breadcrumbs" class="block block-system block-system-breadcrumb-block">
+  
+    
+      <div class="content">
+      
+  <nav role="navigation" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+                  <li class="breadcrumb-item breadcrumb-item-home">
+          <a href="/">Home</a>
+        </li>
+                        <li class="breadcrumb-item">
+          <a href="/undergrad-programs">Undergraduate Programs</a>
+        </li>
+                        <li class="breadcrumb-item">
+          <a href="/undergrad-programs/courses">Undergraduate Courses</a>
+        </li>
+                        <li class="breadcrumb-item active" aria-current="page">
+          ECE 304A Design of Electronic Circuits
+        </li>
+              </ol>
+  </nav>
+
+    </div>
+  </div>
+
+  </section>
+
+            </div>
+                                  </div>
+                    <div class="container">
+            <div class="row row-offcanvas row-offcanvas-left clearfix">
+              <main class="main-content col col-md-12" id="content" role="main">
+                  <section class="region region-content">
+    <div id="block-az-barrio-pagetitle" class="block block-core block-page-title-block">
+  
+    
+      <div class="content">
+      
+  <h1 class="title"><span class="field field--name-title field--type-string field--label-hidden">ECE 304A Design of Electronic Circuits</span>
+</h1>
+
+
+    </div>
+  </div>
+<div id="block-az-barrio-content" class="block block-system block-system-main-block">
+  
+    
+      <div class="content">
+      
+
+<article class="node node--type-az-course node--view-mode-full clearfix">
+  <header>
+    
+        
+      </header>
+  <div class="node__content clearfix">
+    
+<div class="row mb-4">
+    
+<div class="col-12 col-md-8">
+    
+            <div class="clearfix text-formatted field field--name-field-az-course-description field--type-text-long field--label-hidden field__item"><p><strong>Required course:</strong> No</p><h3>Course Level</h3><div class="field-course-level">Undergraduate</div><h3>Enrollment Requirements</h3><div class="field-prerequisites">Advanced Standing: Engineering. Major: ECE. ECE 351C.</div><h3>Course Texts</h3><p><strong>Required Texts</strong></p><ul><li>Sedra, Adel S., and Smith, Kenneth C. Microelectronic Circuits. 8th ed., Oxford Univ. Press, 2019.<ul><li>The book is available to digitally rent for 180 days at $40: <a href="https://redshelf.com/book/1504399/microelectronic-circuits-1504399-9780190853532-adel-ssedra-kenneth-c-kc-smith-tony-chan-carusone-vincent-gaudet">redshelf.com/book/1504399/microelectronic-circuits-1504399-9780190853532-adel-ssedra-kenneth-c-kc-smith-tony-chan-carusone-vincent-gaudet</a></li><li>You can also use the 7th edition of the book. All of the problem assignments will include the problem statement so there will be no mix-up in terms of problem numbers. There are certain advantages to the 8th edition - it includes videos of solved problems and more problems for each chapter.</li></ul></li><li>Additional Text for Reference: Horowitz, Paul, and Hill, Winfield. The Art of Electronics. 3rd&nbsp;ed. Cambridge University Press, 2015.</li></ul><p><strong>Required Special Materials</strong></p><ul><li>PSPICE software – See D2L Notes on how to download PSPICE Designer Lite. PSPICE will be used as part of your lab assignments. We will cover the use of PSPICE during the lectures. A tutorial will also be listed on D2L.</li><li>ADAML2000 module - The department has these units available to borrow for the semester. <a href="https://www.analog.com/en/design-center/evaluation-hardware-and-oftware/evaluationboards-kits/adalm2000.html">www.analog.com/en/design-center/evaluation-hardware-and-oftware/evaluationboards-kits/adalm2000.html</a></li><li>Parts: You will need to purchase a parts kit for the lab experiments and project. ($50). vakits.com/ua304a-kit</li></ul><p><strong>Additional Recommended Materials for your lab work</strong><br>The following is a list of recommended material for your lab work:</p><ul><li>5-3/4 in Needle nose pliers – These are extremely handy for inserting components (resistors, capacitors, diodes, chips, etc.) into your breadboard.</li><li>Digital multimeter and electrostatic discharge (ESD) mat/wristband</li><li>A soldering iron may be useful for the class project. Again, these items are not required but are very handy to have when doing any kind of electronics works.</li><li>ADAML2000 module - The department has these units available to borrow for the semester. <a href="https://www.analog.com/en/design-center/evaluation-hardware-and-oftware/evaluationboards-kits/adalm2000.html">www.analog.com/en/design-center/evaluation-hardware-and-oftware/evaluationboards-kits/adalm2000.html</a></li><li>Parts: You will need to purchase a parts kit for the lab experiments and project. ($50). vakits.com/ua304a-kit</li></ul><h3>Schedule</h3><div class="field-schedule">Three 50-minute lecture sessions per week, MWF 9:00 AM - 9:50 AM. One 170-minute laboratory session per week, MWF 9:00 AM – 9:50 AM.</div><h3>Course Description</h3><div class="field-body"><p><strong>Specific Course Information:</strong><br><strong>2021-2022 Catalog Data:&nbsp; </strong>Integrated theory and design laboratory course.&nbsp;Current mirrors, active loads, multi-stage amplifiers, output stages, frequency response, and feedback with emphasis on design, simulations of design and laboratory verification, measurement techniques, and technical communications.</p></div><h3>Learning Outcomes</h3><div class="field-learning-outcomes"><p><strong>Specific Goals for the Course:</strong><br><strong>Outcomes of Instruction: </strong>By the end of this course the student will be able to:</p><ul><li>Design and use basic analog building blocks and understand how they interact using the operational amplifier as an example.</li><li>Design differential amplifiers using active or resistive loads to meet large-signal swing and small-signal gain specifications.</li><li>Relate capacitance in devices to the frequency performance of circuits, including the Miller effect.</li><li>Understand why and how negative feedback-amplifiers become unstable and how to design to ensure stability.</li><li>Perform an intuitive approach for analyzing practical feedback-amplifier circuits.</li><li>Apply circuit techniques used in the design of power amplifiers.</li></ul></div><h3>Course Topics</h3><div class="field-course-topics"><p><strong>Brief list of topics to be covered:</strong><br>There are 4 labs during the semester. A list of the lab topics is given below:</p><ul><li>LAB 1: Review of the ADALM unit. Current mirror circuits and active loads.</li><li>LAB 2: Differential amplifier circuits</li><li>LAB 3: Negative and Positive Feedback Amplifiers</li><li>LAB 4: Multistage amplifiers</li></ul></div><h3>Relationship to Student Outcomes</h3><div class="field-student-outcomes"><p>ECE 304A contributes directly to the following specific electrical and computer engineering student outcomes of the ECE department:</p><p>1. An ability to identify, formulate, and solve complex engineering problems by applying principles of engineering, science, and mathematics.<br>2. An ability to apply engineering design to produce solutions that meet specified needs with consideration of public health, safety, and welfare, as well as global, cultural, social, environmental, and economic factors.<br>3. An ability to communicate effectively with a range of audiences.<br>6. An ability to develop and conduct appropriate experimentation, analyze and interpret data, and use engineering judgment to draw conclusions.</p></div><h3>Syllabus Prepared By</h3><div class="field-syllabus-prepared">Syllabus updated on 3/29/2022</div></div>
+      
+  </div>
+<div class="col-12 col-md-4">
+    
+<div class="card card-body">
+    
+  <div class="field field--name-field-az-course-units field--type-integer field--label-inline">
+    <div class="field__label fw-bolder trailing-colon">Course Units</div>
+              <div class="field__item">4</div>
+          </div>
+
+<div>
+  <h2 class="fw-bold mb-0 text-body text-size-h6">Instructor(s)</h2>
+    
+      <ul class="field field--name-field-az-course-instructor field--type-link field--label-hidden field__items">
+              <li class="field__item"><span>Dale Hetherington</span></li>
+          </ul>
+  
+  </div>
+  </div>
+  </div>
+  </div>
+  <div class="field field--name-field-engr-offered field--type-string field--label-inline">
+    <div class="field__label fw-bolder trailing-colon">Typically Offered</div>
+              <div class="field__item">Spring</div>
+          </div>
+
+            <div class="field field--name-field-engr-online field--type-boolean field--label-hidden field__item"></div>
+      
+  </div>
+</article>
+
+    </div>
+  </div>
+<div id="block-contactundergradredbar" class="block-content-az_flexible_block block block-block-content block-block-content2ac4a08d-54d6-40ec-ad06-a821356e9930">
+  
+    
+      <div class="content">
+      
+      <div class="field field--name-field-az-main-content field--type-entity-reference-revisions field--label-hidden field__items">
+              <div class="field__item">
+  <div class="mb-0 paragraph background-wrapper paragraph--type--az-text-background paragraph--view-mode--default bg-triangles-top-right text-bg-red py-5 full-width-background">
+                <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="content">
+              
+            <div class="clearfix text-formatted field field--name-field-az-text-area field--type-text-long field--label-hidden field__item"><h4 class="text-align-center">CONTACT: <a href="mailto:undergradadvisor@ece.arizona.edu">undergradadvisor@ece.arizona.edu</a></h4></div>
+      
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+</div>
+          </div>
+  
+    </div>
+  </div>
+
+  </section>
+
+              </main>
+                                                                    </div>
+          </div>
+          
+                                                </div>
+    </div>
+
+    <footer class="site-footer">
+                <div class="text-bg-warm-gray py-5" role="contentinfo">
+                    <section>
+            <div class="container">
+              <div class="row">
+                                  <div class="col-12 col-sm-5 col-md-4 col-lg-4 text-center-xs text-sm-start">
+                    <div class="row bottom-buffer-30">
+                      <div class="col">
+                        <a href="https://engineering.arizona.edu/" title="The University of Arizona | College of Engineering" rel="home" class="qs-site-logo d-block mt-0"><img class="img-fluid" src="/sites/default/files/college_footer.png" alt="The University of Arizona | College of Engineering">
+</a>
+                      </div>
+                    </div>
+                  </div>
+                                                  <!-- Force next columns to break to new line at md breakpoint and up -->
+                  <div class="w-100 d-block d-sm-none"></div>
+                    <section class="col-12 col-sm-7 col-md-8 col-lg-8 region region-footer">
+    <div id="block-az-barrio-footerresources" class="block-content-basic block block-block-content block-block-content58ed83df-c53e-4a34-a22f-a0cb6b2a1017">
+  
+    
+      <div class="content">
+      
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><div class="mb-4" id="footer-info"><div class="text-align-right small"><div class="mb-2"><a href="/faculty-staff/resources">Employee Resources</a></div><div class="mb-2"><strong>The University of Arizona</strong><br><strong>Department of Electrical &amp; Computer Engineering</strong></div><div>1230 E. Speedway Blvd.<br>P.O. Box 210104<br>Tucson, AZ 85721-0104<br>520.621.6193</div></div></div></div>
+      
+    </div>
+  </div>
+      <nav role="navigation" aria-labelledby="block-az-barrio-footersocialmedia-menu" id="block-az-barrio-footersocialmedia" class="block block-menu navigation menu--az-footer-social-media">
+                      
+    <h2 class="h6 mt-md-3 text-uppercase visually-hidden" id="block-az-barrio-footersocialmedia-menu">Footer - Social Media</h2>
+    
+
+              
+                  <ul block="block-az-barrio-footersocialmedia" class="nav-utility d-flex justify-content-center justify-content-sm-end clearfix nav" data-component-id="bootstrap_barrio:menu">
+                    <li class="nav-item">
+                <a href="https://facebook.com/uarizonaece" class="az-icon-facebook az-icon-spacing bg-transparent nav-link az-icon-facebook az-icon-spacing bg-transparent nav-link-https--facebookcom-uarizonaece">Facebook</a>
+              </li>
+                <li class="nav-item">
+                <a href="https://youtube.com/playlist?list=PLMVEfPBxhCRBXeKrrBBVSe-RLk4IrcRaC" class="az-icon-youtube az-icon-spacing bg-transparent nav-link az-icon-youtube az-icon-spacing bg-transparent nav-link-https--youtubecom-playlistlistplmvefpbxhcrbxekrrbbvse-rlk4ircrac">YouTube</a>
+              </li>
+                <li class="nav-item">
+                <a href="https://linkedin.com/showcase/uarizonaece" class="az-icon-linkedin az-icon-spacing bg-transparent nav-link az-icon-linkedin az-icon-spacing bg-transparent nav-link-https--linkedincom-showcase-uarizonaece">LinkedIn</a>
+              </li>
+                <li class="nav-item">
+                <a href="https://instagram.com/uazece/" class="az-icon-instagram az-icon-spacing bg-transparent nav-link az-icon-instagram az-icon-spacing bg-transparent nav-link-https--instagramcom-uazece-">Instagram</a>
+              </li>
+        </ul>
+  
+
+
+
+      </nav>
+
+  </section>
+
+                                <div class="col-12">
+                  <hr>
+                </div>
+              </div>
+            </div>
+          </section>
+                              <div id="footer_sub">
+            <div class="container">
+              <div class="row">
+                
+              </div>
+              <div class="row">
+                
+              </div>
+              <div class="row">
+                <div class="col text-center">
+                                    <p class="fw-light"><em>We respectfully acknowledge <a href="https://www.arizona.edu/university-arizona-land-acknowledgment">the University of Arizona is on the land and territories of Indigenous peoples</a>. Today, Arizona is home to 22 federally recognized tribes, with Tucson being home to the O’odham and the Yaqui. The university strives to build sustainable relationships with sovereign Native Nations and Indigenous communities through education offerings, partnerships, and community service.</em></p><hr>
+                  <p class="small" style="margin-bottom: 0.25rem;"><a href="https://www.arizona.edu/information-security-privacy" target="_blank">University Information Security and Privacy</a></p>
+                  
+                  <p class="small">© 2026 The Arizona Board of Regents on behalf of <a href="https://www.arizona.edu" target="_blank">The University of Arizona</a>.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+                  </div>
+            </footer>
+              <a id="az-js-back-to-top" href="#" class="align-items-center bottom-0 btn btn-blue btn-sm d-flex end-0 mb-card me-card position-fixed shadow-sm z-2 invisible">
+        <span class="material-symbols-rounded">keyboard_arrow_up</span>
+        Back to top
+      </a>
+        </div>
+</div>
+
+  </div>
+
+    
+    <script src="/core/assets/vendor/jquery/jquery.min.js?v=4.0.0-rc.1"></script>
+<script src="/sites/default/files/js/js_QrG64dhxS5fMUJIs_yz8EKeZPhah0fFbHLplfS2Y1go.js?scope=footer&amp;delta=1&amp;language=en&amp;theme=az_barrio&amp;include=eJxdjQEOwyAIRS8k9UgGrVpXKkZp1-30s8mazCUEeP_zA76NxVoTa3yDRbeCcK-icDSuDTgEcJgPbJDx-DmxuwhnyAyOc6Dk5DIdV3-lN7aJ_B0pWDFWLEvTA00DmbATmWeaZVGWWZp0-X4XiS0SNHlRylH5U_pc9Vz3gjR9UUXmSN4IRh17--cJH3iO4vYB72FoYw"></script>
+<script src="https://cdn.digital.arizona.edu/lib/arizona-bootstrap/5.0.5/js/arizona-bootstrap.bundle.min.js"></script>
+<script src="/sites/default/files/js/js_46altHvHvNJQblXIYNo6uS2_6-PSAGcm0_94dNfC9Rs.js?scope=footer&amp;delta=3&amp;language=en&amp;theme=az_barrio&amp;include=eJxdjQEOwyAIRS8k9UgGrVpXKkZp1-30s8mazCUEeP_zA76NxVoTa3yDRbeCcK-icDSuDTgEcJgPbJDx-DmxuwhnyAyOc6Dk5DIdV3-lN7aJ_B0pWDFWLEvTA00DmbATmWeaZVGWWZp0-X4XiS0SNHlRylH5U_pc9Vz3gjR9UUXmSN4IRh17--cJH3iO4vYB72FoYw"></script>
+
+  
+
+<div id="drupal-live-announce" class="visually-hidden" aria-live="polite" aria-busy="false"></div></body></html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html><html><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CS C280, Computer Vision (Spring 2026)</title>
+  <meta name="description" content="">
+  <link href="//fonts.googleapis.com/css?family=Merriweather:900,900italic,300,300italic" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://cs280-berkeley.github.io/">
+  <link rel="alternate" type="application/rss+xml" title="CS 280 Computer Vision" href="http://cs280-berkeley.github.io/feed.xml">
+</head>
+
+
+  <body>
+
+    <div class="page-content">
+      <div class="wrapper">
+        <h1 id="cs-c280-computer-vision-spring-2026">CS C280, Computer Vision (Spring 2026)</h1>
+
+<h2 id="logistics">Logistics</h2>
+
+<p>UC Berkeley, Spring 2026<br>
+Time: TuTh 15:30-16:59<br>
+Location: Hearst Mining 390<br>
+Ed: <a href="https://edstem.org/us/join/bX8tGp">https://edstem.org/us/join/bX8tGp</a><br>
+Gradescope Code: G66BDW</p>
+
+<p>Instructors: <a href="https://people.eecs.berkeley.edu/~efros">Alyosha Efros</a>, <a href="https://people.eecs.berkeley.edu/~kanazawa">Angjoo Kanazawa</a></p>
+
+<p>GSIs: <a href="https://gejiaxin.org">Jiaxin Ge</a>, <a href="https://jdiazchao.com/">Jorge Diaz Chao</a></p>
+
+<p><strong>Office hours - Location</strong></p>
+<ul>
+  <li>Alyosha Efros: After Lecture</li>
+  <li>Angjoo Kanazawa: After Lecture</li>
+  <li>Jiaxin Ge: Thursday 12-1pm BWW First Floor</li>
+  <li>Jorge Diaz Chao: Monday 12-1pm BWW First Floor</li>
+</ul>
+
+<p><strong>Policy:</strong> To keep discussions organized, please do not email the instructor or GSIs directly. We are using Ed Discussion for communication (private or public) as much as possible.</p>
+
+<p><strong>Prerequisites:</strong> Students should have mastery over content from COMPSCI 189, COMPSCI 182, COMPSCI 180/280A. We will not be teaching basic image processing (convolution, gaussian smoothing, fourier transforms), basic deep learning (PyTorch, Jax, TensorFlow), stereo/homography.</p>
+
+<h2 id="lectures">Lectures</h2>
+<ul>
+  <li><a href="https://docs.google.com/presentation/d/1TQ-jod_OQQ0qpm8dbywm6D0vOzDA_UDj/edit?usp=sharing&amp;ouid=112419339484327645529&amp;rtpof=true&amp;sd=true">Lecture 1: (1/20) Course Intro. and Fundamentals of Image Formation</a></li>
+  <li><a href="https://docs.google.com/presentation/d/1Y-LmmuN82IhxBLV57SEApz8cVVXOsi8G/edit?usp=drive_link&amp;ouid=112419339484327645529&amp;rtpof=true&amp;sd=true">Lecture 2: (1/22) Camera Calibration</a></li>
+  <li><a href="https://drive.google.com/file/d/1iq0Cpo8vlwZ2BDaEzGvkpgNkJIZ8hOqU/view?usp=sharing">Lecture 3: (1/27) Calibration, Binocular Perspective</a></li>
+  <li><a href="https://drive.google.com/file/d/1yt0BzkW7C0VqO9qLeHZqE93htkLYgEpv/view?usp=sharing">Lecture 4: (1/29) Multi-View Geometry</a></li>
+  <li><a href="https://docs.google.com/presentation/d/1268IffHkzS1GB00RfNEmQqV9h4dYvVoy/edit?usp=sharing&amp;ouid=112419339484327645529&amp;rtpof=true&amp;sd=true">Lecture 5: (2/3) Biological Vision</a></li>
+  <li><a href="https://docs.google.com/presentation/d/17AG6acSakV7R1S54UxZyVUss8chqsQIj/edit?usp=sharing&amp;ouid=112419339484327645529&amp;rtpof=true&amp;sd=true">Lecture 6: (2/5) Perceptual Grouping and Object Recognition Part1</a></li>
+  <li><a href="https://docs.google.com/presentation/d/17AG6acSakV7R1S54UxZyVUss8chqsQIj/edit?usp=sharing&amp;ouid=112419339484327645529&amp;rtpof=true&amp;sd=true">Lecture 7: (2/10) Perceptual Grouping and Object Recognition Part2</a></li>
+  <li><a href="https://drive.google.com/file/d/1d7_UvbayqhEag3gfczv_rtEC36BeexsT/view?usp=sharing">Lecture 8: (2/12) Modern Detection,Segmentation and Keypoints</a></li>
+  <li><a href="https://drive.google.com/file/d/1qapd0_j2PR8GpsWGjNgt6T7jo6CPJtbt/view?usp=drive_link">Lecture 9: (2/17) Attention</a></li>
+  <li><a href="https://drive.google.com/file/d/16BP7YVpnhE2vzslxKr4OYWHhNQ5vvCPO/view?usp=drive_link">Lecture 10: (2/19) ViT, Rope, Transformers</a></li>
+  <li><a href="https://drive.google.com/file/d/1JOm5UlFdbPTdBLZ6obCuURDPzqKjkb1N/view?usp=drive_link">Lecture 11: (2/24) Flow Matching</a></li>
+  <li><a href="https://drive.google.com/file/d/1zy2mLg8cAO_Z5IWtqy9_4ZuOY4NcwfBr/view?usp=drive_link">Lecture 12: (2/26) Practicals of Flow Models</a></li>
+  <li><a href="https://docs.google.com/presentation/d/1ATJ9D0OcQaehoat4NG_dosiLcBvxAp_J/edit?usp=drive_link&amp;ouid=112419339484327645529&amp;rtpof=true&amp;sd=true">Lecture 13: (3/3) Data (I)</a></li>
+  <li><a href="https://docs.google.com/presentation/d/1_s3ek2hWooCK83qz6PupUni9Ojho993K/edit?usp=sharing&amp;ouid=112419339484327645529&amp;rtpof=true&amp;sd=true">Lecture 14: (3/5) Data (II)</a></li>
+  <li><a href="https://docs.google.com/presentation/d/1Bo4N8NmzeCKRWmLdkoru0yxKI5sKvdks/edit?usp=sharing&amp;ouid=112419339484327645529&amp;rtpof=true&amp;sd=true">Lecture 15: (3/10) Representation Learning</a></li>
+  <li><a href="https://drive.google.com/file/d/1hI2r9XOuddAmuvb_nZM_vpZNCqVQkQWE/view?usp=sharing">Lecture 16: (3/12) Self-Supervised Learning</a></li>
+  <li><a href="https://docs.google.com/presentation/d/1B8CKPua_fmQoosiqXOpDywc4cOx46VaS/edit?usp=sharing&amp;ouid=112419339484327645529&amp;rtpof=true&amp;sd=true">Lecture 17: (3/17) Radiometry &amp; Color</a></li>
+  <li><a href="https://drive.google.com/file/d/1Y4LR_fmHE5VxCG5fyXBXjbQtFs1DHH5r/view?usp=sharing">Lecture 18: (3/31) Learning Correspondences</a></li>
+  <li><a href="https://drive.google.com/file/d/1V8I44JVCeyQx4zT4P9cY007GO1IMi1o1/view?usp=sharing">Lecture 19: (4/2) Learning-based Multi-view 3D</a></li>
+  <li><a href="https://drive.google.com/file/d/1LKkd5IgrWHJDAwUUPw7BbKRTfzX3ITPJ/view?usp=sharing">Lecture 20: (4/9) Single View 3D Prediction: Humans</a></li>
+  <li><a href="https://drive.google.com/file/d/1i3lIEK-kJevbSFK2azq9ES6lqh877h1B/view?usp=sharing">Lecture 21: (4/14) Single View 3D Prediction: Objects</a></li>
+  <li><a href="https://docs.google.com/presentation/d/1byp8jLb6ArxWAoWMu78KVchgR8Cg5TTH/edit?usp=sharing&amp;ouid=112419339484327645529&amp;rtpof=true&amp;sd=true">Lecture 22: (4/16) HDR and Image-Based Lighting</a></li>
+  <li><a href="https://drive.google.com/file/d/13j_7aBxaESavbp15XWWnzRlj2b4jc_El/view?usp=sharing">Lecture 23: (4/21) 4D Vision</a></li>
+  <li><a href="https://docs.google.com/presentation/d/1MpQEH9POPnCK7nwWPikAt_tM_VM5HDHm/edit?usp=sharing&amp;ouid=112419339484327645529&amp;rtpof=true&amp;sd=true">Lecture 24: (4/23) World Models</a></li>
+</ul>
+
+<h2 id="assignments">Assignments</h2>
+<ul>
+  <li><a href="https://drive.google.com/file/d/1bbn1_U9b9dYEeHLUikcSyClLXFJDACx9/view?usp=drive_link">HW0</a>: Due 01/27 at 11:59pm</li>
+  <li><a href="https://drive.google.com/file/d/1hvyTtXdbgOc75jpLZHAiW37uAZyL6Kln/view?usp=sharing">HW1</a>: Due 02/10 at 11:59pm</li>
+  <li><a href="https://drive.google.com/file/d/11U-4sxvJq7BiAX1KtNSb4T932y9sOH37/view?usp=sharing">HW2</a>: Due 02/24 at 11:59pm</li>
+  <li><a href="https://static.us.edusercontent.com/files/v0Dx2RVe2nx15jBDMdHZ264f">HW3</a>: Due 03/17 at 11:59pm</li>
+  <li><a href="https://cmt3.research.microsoft.com/UCBCV2026/">Final Project*</a>
+    <h2 id="additional-materials">Additional Materials</h2>
+  </li>
+  <li><a href="https://cs280-berkeley.github.io/sp25">Spring 2025 Course Website</a></li>
+  <li><a href="https://cs280-berkeley.github.io/sp24">Spring 2024 Course Website</a></li>
+  <li><a href="https://cs280-berkeley.github.io/sp23">Spring 2023 Course Website</a></li>
+</ul>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      <div class="wrapper">
+        <p><small>* The Microsoft CMT service was used for managing the peer-reviewing process for this conference. This service was provided for free by Microsoft and they bore all expenses, including costs for Azure cloud services as well as for software development and support.</small></p>
+      </div>
+    </footer>
+
+  
+
+
+</body></html>

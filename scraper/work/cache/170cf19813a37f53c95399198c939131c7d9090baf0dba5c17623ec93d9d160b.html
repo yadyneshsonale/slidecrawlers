@@ -1,0 +1,601 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    
+    <title>Introduction to Deep Learning — STAT 157, Spring 19  documentation</title>
+
+    <link rel="stylesheet" href="_static/basic.css" type="text/css">
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="_static/material-design-lite-1.3.0/material.blue-deep_orange.min.css">
+    <link rel="stylesheet" type="text/css" href="_static/sphinx_materialdesign_theme.css">
+    <link rel="stylesheet" type="text/css" href="_static/fontawesome/all.css">
+    <link rel="stylesheet" type="text/css" href="_static/fonts.css">
+    <script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-G1D9WM80CB&amp;cx=c&amp;_slc=1"></script><script async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/google_analytics.js"></script>
+    <script type="text/javascript" src="_static/sphinx_materialdesign_theme.js"></script>
+    <link rel="shortcut icon" href="_static/gluon_s2.png">
+    <link rel="index" title="Index" href="genindex.html">
+    <link rel="search" title="Search" href="search.html">
+    <link rel="next" title="Syllabus" href="syllabus.html"> 
+  </head>
+<body style="display: block;">
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-drawer"><header class="mdl-layout__header mdl-layout__header--waterfall ">
+    <div class="mdl-layout__header-row">
+        
+        <nav class="mdl-navigation breadcrumb">
+            <a class="mdl-navigation__link is-active">Introduction to Deep Learning</a>
+        </nav>
+        <div class="mdl-layout-spacer"></div>
+        <nav class="mdl-navigation">
+        
+<form class="form-inline pull-sm-right" action="search.html" method="get">
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right">
+        <label id="quick-search-icon" class="mdl-button mdl-js-button mdl-button--icon" for="waterfall-exp">
+          <i class="material-icons">search</i>
+        </label>
+        <div class="mdl-textfield__expandable-holder">
+          <input class="mdl-textfield__input" type="text" name="q" id="waterfall-exp" placeholder="Search">
+          <input type="hidden" name="check_keywords" value="yes">
+          <input type="hidden" name="area" value="default">
+        </div>
+      </div>
+      <div class="mdl-tooltip" data-mdl-for="quick-search-icon">
+      Quick search
+      </div>
+</form>
+        
+<a id="button-show-source" class="mdl-button mdl-js-button mdl-button--icon" href="_sources/index.md" rel="nofollow">
+  <i class="material-icons">code</i>
+</a>
+<div class="mdl-tooltip" data-mdl-for="button-show-source">
+Show Source
+</div>
+        </nav>
+    </div>
+    <div class="mdl-layout__header-row header-links">
+      <div class="mdl-layout-spacer"></div>
+      <nav class="mdl-navigation">
+          
+              <a class="mdl-navigation__link" href="https://d2l.ai/">
+                  <i class="fas fa-book"></i>
+                  Textbook
+              </a>
+          
+              <a class="mdl-navigation__link" href="https://www.youtube.com/playlist?list=PLZSO_6-bSqHQHBCoGaObUljoXAyyqhpFW">
+                  <i class="fas fa-video"></i>
+                  Video
+              </a>
+          
+              <a class="mdl-navigation__link" href="https://discuss.mxnet.io/c/courses">
+                  <i class="fas fa-user-tie"></i>
+                  Forum
+              </a>
+          
+              <a class="mdl-navigation__link" href="https://github.com/diveintodeeplearning/berkeley-stat-157">
+                  <i class="fab fa-github"></i>
+                  Github
+              </a>
+      </nav>
+    </div>
+</header><header class="mdl-layout__drawer">
+    
+          <!-- Title -->
+      <span class="mdl-layout-title">
+          <a class="title" href="#">
+              <span class="title-text">
+                  STAT 157, Spring 19
+              </span>
+          </a>
+      </span>
+    
+    
+      <div class="globaltoc">
+        <span class="mdl-layout-title toc">Table Of Contents</span>
+        
+        
+            
+            <nav class="mdl-navigation">
+                <ul>
+<li class="toctree-l1"><span class="link-wrapper"><a class="reference internal" href="syllabus.html">Syllabus</a></span></li>
+<li class="toctree-l1"><span class="link-wrapper"><a class="reference internal" href="homework.html">Assignments</a></span></li>
+<li class="toctree-l1">
+<span class="link-wrapper"><a class="reference internal" href="project.html">Projects</a><span class="nav-toggle"><a class="mdl-button mdl-js-button mdl-button--icon" data-toggle="#globalnav-2"><span style="color: #888"><i class="material-icons">keyboard_arrow_down</i></span></a></span></span><ul id="globalnav-2" class="collapse" style="display: none;">
+<li class="toctree-l2"><span class="link-wrapper"><a class="reference internal" href="projects/1.html">1. Ensuring Quality Conversations in Online Forums</a></span></li>
+<li class="toctree-l2"><span class="link-wrapper"><a class="reference internal" href="projects/2.html">2. Image attribute classification using disentangled embeddings on multimodal data</a></span></li>
+<li class="toctree-l2"><span class="link-wrapper"><a class="reference internal" href="projects/3.html">3. Deep Learning with NLP (Tacotron)</a></span></li>
+<li class="toctree-l2"><span class="link-wrapper"><a class="reference internal" href="projects/4.html">4. Image captioning</a></span></li>
+<li class="toctree-l2"><span class="link-wrapper"><a class="reference internal" href="projects/5.html">5. Explainable Electrocardiogram Classifications using Neural Networks</a></span></li>
+<li class="toctree-l2"><span class="link-wrapper"><a class="reference internal" href="projects/7.html">7. Deep fitting room</a></span></li>
+<li class="toctree-l2"><span class="link-wrapper"><a class="reference internal" href="projects/8.html">8. Bot controlled accounts</a></span></li>
+<li class="toctree-l2"><span class="link-wrapper"><a class="reference internal" href="projects/9.html">9. Predicting Next Day Stock Returns After Earnings Reports Using Deep Learning in Sentiment Analysis</a></span></li>
+<li class="toctree-l2"><span class="link-wrapper"><a class="reference internal" href="projects/10.html">10. Predict the presence of oil palm plantation in satellite imagery</a></span></li>
+<li class="toctree-l2"><span class="link-wrapper"><a class="reference internal" href="projects/11.html">11. Audio Recovery</a></span></li>
+<li class="toctree-l2"><span class="link-wrapper"><a class="reference internal" href="projects/12.html">12. Visual Speech recognition</a></span></li>
+<li class="toctree-l2"><span class="link-wrapper"><a class="reference internal" href="projects/14.html">14. Examination of Associative Vocabulary in Internet Language through Word Embedding</a></span></li>
+<li class="toctree-l2"><span class="link-wrapper"><a class="reference internal" href="projects/15.html">15. What Are You Thinking: Image Generation By Deconvolution Network</a></span></li>
+<li class="toctree-l2"><span class="link-wrapper"><a class="reference internal" href="projects/16.html">16. Predicting Length of Stay at Hospitals</a></span></li>
+<li class="toctree-l2"><span class="link-wrapper"><a class="reference internal" href="projects/17.html">17. Handwriting to Latex</a></span></li>
+<li class="toctree-l2"><span class="link-wrapper"><a class="reference internal" href="projects/18.html">18. ACID: Analyzing Census and Imaging Data</a></span></li>
+<li class="toctree-l2"><span class="link-wrapper"><a class="reference internal" href="projects/19.html">19. Parameterizable Single GAN Multi-Style</a></span></li>
+<li class="toctree-l2"><span class="link-wrapper"><a class="reference internal" href="projects/20.html">20. Measuring Amazon Product Reviews Helpfulness</a></span></li>
+</ul></li>
+<li class="toctree-l1">
+<span class="link-wrapper"><a class="reference internal" href="units/index.html">Units</a><span class="nav-toggle"><a class="mdl-button mdl-js-button mdl-button--icon" data-toggle="#globalnav-21"><span style="color: #888"><i class="material-icons">keyboard_arrow_down</i></span></a></span></span><ul id="globalnav-21" class="collapse" style="display: none;">
+<li class="toctree-l2">
+<span class="link-wrapper"><a class="reference internal" href="units/introduction.html">Introduction to Deep Learning</a><span class="nav-toggle"><a class="mdl-button mdl-js-button mdl-button--icon" data-toggle="#globalnav-22"><span style="color: #888"><i class="material-icons">keyboard_arrow_down</i></span></a></span></span><ul id="globalnav-22" class="collapse" style="display: none;">
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="https://d2l.ai/chapter_introduction/index.html">Introduction to Deep Learning</a></span></li>
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="https://d2l.ai/chapter_installation/index.html">Installation</a></span></li>
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="https://d2l.ai/chapter_preliminaries/linear-algebra.html">Linear Algebra</a></span></li>
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="https://d2l.ai/chapter_appendix-tools-for-deep-learning/jupyter.html">Using Jupyter Notebook</a></span></li>
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="https://d2l.ai/chapter_appendix-tools-for-deep-learning/aws.html">Using AWS to Run Code</a></span></li>
+</ul></li>
+<li class="toctree-l2">
+<span class="link-wrapper"><a class="reference internal" href="units/probability.html">Probability and Statistics</a><span class="nav-toggle"><a class="mdl-button mdl-js-button mdl-button--icon" data-toggle="#globalnav-28"><span style="color: #888"><i class="material-icons">keyboard_arrow_down</i></span></a></span></span><ul id="globalnav-28" class="collapse" style="display: none;">
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="https://d2l.ai/chapter_preliminaries/probability.html">Probability and Statistics</a></span></li>
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="https://d2l.ai/chapter_appendix-mathematics-for-deep-learning/naive-bayes.html">Naive Bayes</a></span></li>
+</ul></li>
+<li class="toctree-l2">
+<span class="link-wrapper"><a class="reference internal" href="units/arrays.html">Gradients, Chain Rule, Automatic Differentiation</a><span class="nav-toggle"><a class="mdl-button mdl-js-button mdl-button--icon" data-toggle="#globalnav-31"><span style="color: #888"><i class="material-icons">keyboard_arrow_down</i></span></a></span></span><ul id="globalnav-31" class="collapse" style="display: none;">
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="https://d2l.ai/chapter_preliminaries/autograd.html">Autograd</a></span></li>
+</ul></li>
+<li class="toctree-l2"><span class="link-wrapper"><a class="reference internal" href="units/linear.html">Linear Regression, Basic Optimization</a></span></li>
+<li class="toctree-l2">
+<span class="link-wrapper"><a class="reference internal" href="units/loss.html">Likelihood, Loss Functions, Logisitic Regression, Information Theory</a><span class="nav-toggle"><a class="mdl-button mdl-js-button mdl-button--icon" data-toggle="#globalnav-34"><span style="color: #888"><i class="material-icons">keyboard_arrow_down</i></span></a></span></span><ul id="globalnav-34" class="collapse" style="display: none;">
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="https://d2l.ai/chapter_linear-networks/softmax-regression.html">Softmax Regression</a></span></li>
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="https://d2l.ai/chapter_linear-networks/image-classification-dataset.html">Fashion MNIST</a></span></li>
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="https://d2l.ai/chapter_linear-networks/softmax-regression-scratch.html">Softmax Regression from scratch</a></span></li>
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="https://d2l.ai/chapter_linear-networks/softmax-regression-concise.html">Softmax Regression - concise version</a></span></li>
+</ul></li>
+<li class="toctree-l2">
+<span class="link-wrapper"><a class="reference internal" href="units/mlp.html">Multilayer Perceptron</a><span class="nav-toggle"><a class="mdl-button mdl-js-button mdl-button--icon" data-toggle="#globalnav-39"><span style="color: #888"><i class="material-icons">keyboard_arrow_down</i></span></a></span></span><ul id="globalnav-39" class="collapse" style="display: none;">
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="https://d2l.ai/chapter_multilayer-perceptrons/mlp.html">Multilayer Perceptron</a></span></li>
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="https://d2l.ai/chapter_multilayer-perceptrons/mlp-scratch.html">Multilayer Perceptron Implementation</a></span></li>
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="https://d2l.ai/chapter_multilayer-perceptrons/mlp-concise.html">Multilayer Perceptron in Gluon</a></span></li>
+</ul></li>
+<li class="toctree-l2">
+<span class="link-wrapper"><a class="reference internal" href="units/capacity.html">Model Selection, Weight Decay, Dropout</a><span class="nav-toggle"><a class="mdl-button mdl-js-button mdl-button--icon" data-toggle="#globalnav-43"><span style="color: #888"><i class="material-icons">keyboard_arrow_down</i></span></a></span></span><ul id="globalnav-43" class="collapse" style="display: none;">
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="https://d2l.ai/chapter_multilayer-perceptrons/underfit-overfit.html">Model Selection</a></span></li>
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="https://d2l.ai/chapter_multilayer-perceptrons/weight-decay.html">Weight Decay</a></span></li>
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="https://d2l.ai/chapter_multilayer-perceptrons/dropout.html">Dropout</a></span></li>
+</ul></li>
+<li class="toctree-l2">
+<span class="link-wrapper"><a class="reference internal" href="units/dropout.html">Numerical Stability, Hardware</a><span class="nav-toggle"><a class="mdl-button mdl-js-button mdl-button--icon" data-toggle="#globalnav-47"><span style="color: #888"><i class="material-icons">keyboard_arrow_down</i></span></a></span></span><ul id="globalnav-47" class="collapse" style="display: none;">
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="https://d2l.ai/chapter_multilayer-perceptrons/numerical-stability-and-init.html">Numerical Stability and Initialization</a></span></li>
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="https://d2l.ai/chapter_multilayer-perceptrons/kaggle-house-price.html">Predicting House Prices on Kaggle</a></span></li>
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="https://d2l.ai/chapter_appendix-tools-for-deep-learning/selecting-servers-gpus.html">GPU Purchase Guide</a></span></li>
+</ul></li>
+<li class="toctree-l2">
+<span class="link-wrapper"><a class="reference internal" href="units/environment.html">Machine Learning Problems and Statistical Environment</a><span class="nav-toggle"><a class="mdl-button mdl-js-button mdl-button--icon" data-toggle="#globalnav-51"><span style="color: #888"><i class="material-icons">keyboard_arrow_down</i></span></a></span></span><ul id="globalnav-51" class="collapse" style="display: none;">
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="http://d2l.ai/chapter_multilayer-perceptrons/environment.html">Statistical Environment</a></span></li>
+</ul></li>
+<li class="toctree-l2">
+<span class="link-wrapper"><a class="reference internal" href="units/layers.html">Layers, Parameters, GPUs</a><span class="nav-toggle"><a class="mdl-button mdl-js-button mdl-button--icon" data-toggle="#globalnav-53"><span style="color: #888"><i class="material-icons">keyboard_arrow_down</i></span></a></span></span><ul id="globalnav-53" class="collapse" style="display: none;">
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="http://d2l.ai/chapter_deep-learning-computation/model-construction.html">Blocks and Layers</a></span></li>
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="http://d2l.ai/chapter_deep-learning-computation/parameters.html">Parameter Management</a></span></li>
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="http://d2l.ai/chapter_deep-learning-computation/deferred-init.html">Deferred Initialization</a></span></li>
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="http://d2l.ai/chapter_deep-learning-computation/custom-layer.html">Custom Layers</a></span></li>
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="http://d2l.ai/chapter_deep-learning-computation/read-write.html">File I/O</a></span></li>
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="http://d2l.ai/chapter_deep-learning-computation/use-gpu.html">GPUs</a></span></li>
+</ul></li>
+<li class="toctree-l2">
+<span class="link-wrapper"><a class="reference internal" href="units/convnet.html">Convolutional Networks</a><span class="nav-toggle"><a class="mdl-button mdl-js-button mdl-button--icon" data-toggle="#globalnav-60"><span style="color: #888"><i class="material-icons">keyboard_arrow_down</i></span></a></span></span><ul id="globalnav-60" class="collapse" style="display: none;">
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="https://d2l.ai/chapter_convolutional-neural-networks/why-conv.html">Convolutional Neural Networks</a></span></li>
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="https://d2l.ai/chapter_convolutional-neural-networks/conv-layer.html">Convolutions</a></span></li>
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="https://d2l.ai/chapter_convolutional-neural-networks/padding-and-strides.html">Padding and Strides</a></span></li>
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="https://d2l.ai/chapter_convolutional-neural-networks/channels.html">Channels</a></span></li>
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="https://d2l.ai/chapter_convolutional-neural-networks/pooling.html">Pooling</a></span></li>
+</ul></li>
+<li class="toctree-l2">
+<span class="link-wrapper"><a class="reference internal" href="units/lenet.html">Basic Convolutional Networks</a><span class="nav-toggle"><a class="mdl-button mdl-js-button mdl-button--icon" data-toggle="#globalnav-66"><span style="color: #888"><i class="material-icons">keyboard_arrow_down</i></span></a></span></span><ul id="globalnav-66" class="collapse" style="display: none;">
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="https://d2l.ai/chapter_convolutional-neural-networks/lenet.html">LeNet</a></span></li>
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="https://d2l.ai/chapter_convolutional-modern/alexnet.html">AlexNet</a></span></li>
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="https://d2l.ai/chapter_convolutional-modern/vgg.html">VGG</a></span></li>
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="https://d2l.ai/chapter_convolutional-modern/nin.html">NiN</a></span></li>
+</ul></li>
+<li class="toctree-l2">
+<span class="link-wrapper"><a class="reference internal" href="units/resnet.html">Residual Networks and Advanced Architectures</a><span class="nav-toggle"><a class="mdl-button mdl-js-button mdl-button--icon" data-toggle="#globalnav-71"><span style="color: #888"><i class="material-icons">keyboard_arrow_down</i></span></a></span></span><ul id="globalnav-71" class="collapse" style="display: none;">
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="https://d2l.ai/chapter_convolutional-modern/googlenet.html">Network with Parallel Concatenations</a></span></li>
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="https://d2l.ai/chapter_convolutional-modern/resnet.html">Residual Networks</a></span></li>
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="https://d2l.ai/chapter_convolutional-modern/densenet.html">Densely Connected Networks</a></span></li>
+</ul></li>
+<li class="toctree-l2">
+<span class="link-wrapper"><a class="reference internal" href="units/parallel.html">Computation Performance, Multi-GPU and Multi-Machine Training</a><span class="nav-toggle"><a class="mdl-button mdl-js-button mdl-button--icon" data-toggle="#globalnav-75"><span style="color: #888"><i class="material-icons">keyboard_arrow_down</i></span></a></span></span><ul id="globalnav-75" class="collapse" style="display: none;">
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="http://d2l.ai/chapter_computational-performance/hybridize.html">Hybridization</a></span></li>
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="http://d2l.ai/chapter_computational-performance/async-computation.html">Asynchrony</a></span></li>
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="http://d2l.ai/chapter_computational-performance/auto-parallelism.html">Automatic Parallelization</a></span></li>
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="http://d2l.ai/chapter_computational-performance/multiple-gpus.html">Multiple GPUs</a></span></li>
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="http://d2l.ai/chapter_computational-performance/multiple-gpus-concise.html">Multiple GPUs in Gluon</a></span></li>
+</ul></li>
+<li class="toctree-l2">
+<span class="link-wrapper"><a class="reference internal" href="units/finetuning.html">Image Augmentation, Fine Turning, Neural Style</a><span class="nav-toggle"><a class="mdl-button mdl-js-button mdl-button--icon" data-toggle="#globalnav-81"><span style="color: #888"><i class="material-icons">keyboard_arrow_down</i></span></a></span></span><ul id="globalnav-81" class="collapse" style="display: none;">
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="http://d2l.ai/chapter_computer-vision/image-augmentation.html">Image Augmentation</a></span></li>
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="http://d2l.ai/chapter_computer-vision/fine-tuning.html">Fine Tuning</a></span></li>
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="http://d2l.ai/chapter_computer-vision/neural-style.html">Neural Style</a></span></li>
+</ul></li>
+<li class="toctree-l2">
+<span class="link-wrapper"><a class="reference internal" href="units/detection.html">Object Detection</a><span class="nav-toggle"><a class="mdl-button mdl-js-button mdl-button--icon" data-toggle="#globalnav-85"><span style="color: #888"><i class="material-icons">keyboard_arrow_down</i></span></a></span></span><ul id="globalnav-85" class="collapse" style="display: none;">
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="https://d2l.ai/chapter_computer-vision/bounding-box.html">Object Detection and Bounding Boxes</a></span></li>
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="https://d2l.ai/chapter_computer-vision/anchor.html">Anchor Boxes</a></span></li>
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="https://d2l.ai/chapter_computer-vision/multiscale-object-detection.html">Multiscale Object Detection</a></span></li>
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="https://d2l.ai/chapter_computer-vision/object-detection-dataset.html">Object Detection Data Set (Pikachu)</a></span></li>
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="https://d2l.ai/chapter_computer-vision/ssd.html">Single Shot Multibox Detection (SSD)</a></span></li>
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="https://d2l.ai/chapter_computer-vision/rcnn.html">Region-based CNNs (R-CNNs)</a></span></li>
+</ul></li>
+<li class="toctree-l2">
+<span class="link-wrapper"><a class="reference internal" href="units/sequence.html">Sequence Models and Language</a><span class="nav-toggle"><a class="mdl-button mdl-js-button mdl-button--icon" data-toggle="#globalnav-92"><span style="color: #888"><i class="material-icons">keyboard_arrow_down</i></span></a></span></span><ul id="globalnav-92" class="collapse" style="display: none;">
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="http://d2l.ai/chapter_recurrent-neural-networks/sequence.html">Sequence Models</a></span></li>
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="http://d2l.ai/chapter_recurrent-neural-networks/language-models-and-dataset.html">Language Models</a></span></li>
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="http://d2l.ai/chapter_recurrent-neural-networks/rnn.html">Recurrent Neural Networks</a></span></li>
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="http://d2l.ai/chapter_recurrent-neural-networks/text-preprocessing.html">Text Preprocessing</a></span></li>
+</ul></li>
+<li class="toctree-l2">
+<span class="link-wrapper"><a class="reference internal" href="units/rnn.html">Recurrent Neural Networks</a><span class="nav-toggle"><a class="mdl-button mdl-js-button mdl-button--icon" data-toggle="#globalnav-97"><span style="color: #888"><i class="material-icons">keyboard_arrow_down</i></span></a></span></span><ul id="globalnav-97" class="collapse" style="display: none;">
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="http://d2l.ai/chapter_recurrent-neural-networks/rnn-scratch.html">Building an RNN</a></span></li>
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="http://d2l.ai/chapter_recurrent-neural-networks/rnn-concise.html">Building an RNN in Gluon</a></span></li>
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="http://d2l.ai/chapter_recurrent-neural-networks/bptt.html">Backpropagation through Time</a></span></li>
+</ul></li>
+<li class="toctree-l2">
+<span class="link-wrapper"><a class="reference internal" href="units/blstm.html">Advanced Sequence Models</a><span class="nav-toggle"><a class="mdl-button mdl-js-button mdl-button--icon" data-toggle="#globalnav-101"><span style="color: #888"><i class="material-icons">keyboard_arrow_down</i></span></a></span></span><ul id="globalnav-101" class="collapse" style="display: none;">
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="https://d2l.ai/chapter_recurrent-modern/deep-rnn.html">Deep Recurrent Neural Networks</a></span></li>
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="https://d2l.ai/chapter_recurrent-modern/bi-rnn.html">Bidirectional RNNs</a></span></li>
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="https://d2l.ai/chapter_recurrent-modern/beam-search.html">Beam Search</a></span></li>
+</ul></li>
+<li class="toctree-l2"><span class="link-wrapper"><a class="reference internal" href="units/word2vec.html">Word2vec, FastText, GloVe, Sentiment Analysis</a></span></li>
+<li class="toctree-l2"><span class="link-wrapper"><a class="reference internal" href="units/seq2seq.html">Encoder-Decoder, Seq2seq, Machine Translation</a></span></li>
+<li class="toctree-l2"><span class="link-wrapper"><a class="reference internal" href="units/attention.html">Attention, Transformer, BERT</a></span></li>
+<li class="toctree-l2"><span class="link-wrapper"><a class="reference internal" href="units/optimization.html">Convex Optimization, Convergence Rate</a></span></li>
+<li class="toctree-l2"><span class="link-wrapper"><a class="reference internal" href="units/adam.html">Momentum, AdaGrad, RMSProp, Adam</a></span></li>
+</ul></li>
+<li class="toctree-l1"><span class="link-wrapper"><a class="reference internal" href="faq.html">FAQ</a></span></li>
+</ul>
+
+            </nav>
+        
+        </div>
+    
+</header>
+        <main class="mdl-layout__content" tabindex="0">
+<header class="mdl-layout__drawer">
+    
+          <!-- Title -->
+      <span class="mdl-layout-title">
+          <a class="title" href="#">
+              <span class="title-text">
+                  STAT 157, Spring 19
+              </span>
+          </a>
+      </span>
+    
+    
+      <div class="globaltoc">
+        <span class="mdl-layout-title toc">Table Of Contents</span>
+        
+        
+            
+            <nav class="mdl-navigation">
+                <ul>
+<li class="toctree-l1"><span class="link-wrapper"><a class="reference internal" href="syllabus.html">Syllabus</a></span></li>
+<li class="toctree-l1"><span class="link-wrapper"><a class="reference internal" href="homework.html">Assignments</a></span></li>
+<li class="toctree-l1">
+<span class="link-wrapper"><a class="reference internal" href="project.html">Projects</a><span class="nav-toggle"><a class="mdl-button mdl-js-button mdl-button--icon" data-toggle="#globalnav-113"><span style="color: #888"><i class="material-icons">keyboard_arrow_down</i></span></a></span></span><ul id="globalnav-113" class="collapse" style="display: none;">
+<li class="toctree-l2"><span class="link-wrapper"><a class="reference internal" href="projects/1.html">1. Ensuring Quality Conversations in Online Forums</a></span></li>
+<li class="toctree-l2"><span class="link-wrapper"><a class="reference internal" href="projects/2.html">2. Image attribute classification using disentangled embeddings on multimodal data</a></span></li>
+<li class="toctree-l2"><span class="link-wrapper"><a class="reference internal" href="projects/3.html">3. Deep Learning with NLP (Tacotron)</a></span></li>
+<li class="toctree-l2"><span class="link-wrapper"><a class="reference internal" href="projects/4.html">4. Image captioning</a></span></li>
+<li class="toctree-l2"><span class="link-wrapper"><a class="reference internal" href="projects/5.html">5. Explainable Electrocardiogram Classifications using Neural Networks</a></span></li>
+<li class="toctree-l2"><span class="link-wrapper"><a class="reference internal" href="projects/7.html">7. Deep fitting room</a></span></li>
+<li class="toctree-l2"><span class="link-wrapper"><a class="reference internal" href="projects/8.html">8. Bot controlled accounts</a></span></li>
+<li class="toctree-l2"><span class="link-wrapper"><a class="reference internal" href="projects/9.html">9. Predicting Next Day Stock Returns After Earnings Reports Using Deep Learning in Sentiment Analysis</a></span></li>
+<li class="toctree-l2"><span class="link-wrapper"><a class="reference internal" href="projects/10.html">10. Predict the presence of oil palm plantation in satellite imagery</a></span></li>
+<li class="toctree-l2"><span class="link-wrapper"><a class="reference internal" href="projects/11.html">11. Audio Recovery</a></span></li>
+<li class="toctree-l2"><span class="link-wrapper"><a class="reference internal" href="projects/12.html">12. Visual Speech recognition</a></span></li>
+<li class="toctree-l2"><span class="link-wrapper"><a class="reference internal" href="projects/14.html">14. Examination of Associative Vocabulary in Internet Language through Word Embedding</a></span></li>
+<li class="toctree-l2"><span class="link-wrapper"><a class="reference internal" href="projects/15.html">15. What Are You Thinking: Image Generation By Deconvolution Network</a></span></li>
+<li class="toctree-l2"><span class="link-wrapper"><a class="reference internal" href="projects/16.html">16. Predicting Length of Stay at Hospitals</a></span></li>
+<li class="toctree-l2"><span class="link-wrapper"><a class="reference internal" href="projects/17.html">17. Handwriting to Latex</a></span></li>
+<li class="toctree-l2"><span class="link-wrapper"><a class="reference internal" href="projects/18.html">18. ACID: Analyzing Census and Imaging Data</a></span></li>
+<li class="toctree-l2"><span class="link-wrapper"><a class="reference internal" href="projects/19.html">19. Parameterizable Single GAN Multi-Style</a></span></li>
+<li class="toctree-l2"><span class="link-wrapper"><a class="reference internal" href="projects/20.html">20. Measuring Amazon Product Reviews Helpfulness</a></span></li>
+</ul></li>
+<li class="toctree-l1">
+<span class="link-wrapper"><a class="reference internal" href="units/index.html">Units</a><span class="nav-toggle"><a class="mdl-button mdl-js-button mdl-button--icon" data-toggle="#globalnav-132"><span style="color: #888"><i class="material-icons">keyboard_arrow_down</i></span></a></span></span><ul id="globalnav-132" class="collapse" style="display: none;">
+<li class="toctree-l2">
+<span class="link-wrapper"><a class="reference internal" href="units/introduction.html">Introduction to Deep Learning</a><span class="nav-toggle"><a class="mdl-button mdl-js-button mdl-button--icon" data-toggle="#globalnav-133"><span style="color: #888"><i class="material-icons">keyboard_arrow_down</i></span></a></span></span><ul id="globalnav-133" class="collapse" style="display: none;">
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="https://d2l.ai/chapter_introduction/index.html">Introduction to Deep Learning</a></span></li>
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="https://d2l.ai/chapter_installation/index.html">Installation</a></span></li>
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="https://d2l.ai/chapter_preliminaries/linear-algebra.html">Linear Algebra</a></span></li>
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="https://d2l.ai/chapter_appendix-tools-for-deep-learning/jupyter.html">Using Jupyter Notebook</a></span></li>
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="https://d2l.ai/chapter_appendix-tools-for-deep-learning/aws.html">Using AWS to Run Code</a></span></li>
+</ul></li>
+<li class="toctree-l2">
+<span class="link-wrapper"><a class="reference internal" href="units/probability.html">Probability and Statistics</a><span class="nav-toggle"><a class="mdl-button mdl-js-button mdl-button--icon" data-toggle="#globalnav-139"><span style="color: #888"><i class="material-icons">keyboard_arrow_down</i></span></a></span></span><ul id="globalnav-139" class="collapse" style="display: none;">
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="https://d2l.ai/chapter_preliminaries/probability.html">Probability and Statistics</a></span></li>
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="https://d2l.ai/chapter_appendix-mathematics-for-deep-learning/naive-bayes.html">Naive Bayes</a></span></li>
+</ul></li>
+<li class="toctree-l2">
+<span class="link-wrapper"><a class="reference internal" href="units/arrays.html">Gradients, Chain Rule, Automatic Differentiation</a><span class="nav-toggle"><a class="mdl-button mdl-js-button mdl-button--icon" data-toggle="#globalnav-142"><span style="color: #888"><i class="material-icons">keyboard_arrow_down</i></span></a></span></span><ul id="globalnav-142" class="collapse" style="display: none;">
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="https://d2l.ai/chapter_preliminaries/autograd.html">Autograd</a></span></li>
+</ul></li>
+<li class="toctree-l2"><span class="link-wrapper"><a class="reference internal" href="units/linear.html">Linear Regression, Basic Optimization</a></span></li>
+<li class="toctree-l2">
+<span class="link-wrapper"><a class="reference internal" href="units/loss.html">Likelihood, Loss Functions, Logisitic Regression, Information Theory</a><span class="nav-toggle"><a class="mdl-button mdl-js-button mdl-button--icon" data-toggle="#globalnav-145"><span style="color: #888"><i class="material-icons">keyboard_arrow_down</i></span></a></span></span><ul id="globalnav-145" class="collapse" style="display: none;">
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="https://d2l.ai/chapter_linear-networks/softmax-regression.html">Softmax Regression</a></span></li>
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="https://d2l.ai/chapter_linear-networks/image-classification-dataset.html">Fashion MNIST</a></span></li>
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="https://d2l.ai/chapter_linear-networks/softmax-regression-scratch.html">Softmax Regression from scratch</a></span></li>
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="https://d2l.ai/chapter_linear-networks/softmax-regression-concise.html">Softmax Regression - concise version</a></span></li>
+</ul></li>
+<li class="toctree-l2">
+<span class="link-wrapper"><a class="reference internal" href="units/mlp.html">Multilayer Perceptron</a><span class="nav-toggle"><a class="mdl-button mdl-js-button mdl-button--icon" data-toggle="#globalnav-150"><span style="color: #888"><i class="material-icons">keyboard_arrow_down</i></span></a></span></span><ul id="globalnav-150" class="collapse" style="display: none;">
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="https://d2l.ai/chapter_multilayer-perceptrons/mlp.html">Multilayer Perceptron</a></span></li>
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="https://d2l.ai/chapter_multilayer-perceptrons/mlp-scratch.html">Multilayer Perceptron Implementation</a></span></li>
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="https://d2l.ai/chapter_multilayer-perceptrons/mlp-concise.html">Multilayer Perceptron in Gluon</a></span></li>
+</ul></li>
+<li class="toctree-l2">
+<span class="link-wrapper"><a class="reference internal" href="units/capacity.html">Model Selection, Weight Decay, Dropout</a><span class="nav-toggle"><a class="mdl-button mdl-js-button mdl-button--icon" data-toggle="#globalnav-154"><span style="color: #888"><i class="material-icons">keyboard_arrow_down</i></span></a></span></span><ul id="globalnav-154" class="collapse" style="display: none;">
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="https://d2l.ai/chapter_multilayer-perceptrons/underfit-overfit.html">Model Selection</a></span></li>
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="https://d2l.ai/chapter_multilayer-perceptrons/weight-decay.html">Weight Decay</a></span></li>
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="https://d2l.ai/chapter_multilayer-perceptrons/dropout.html">Dropout</a></span></li>
+</ul></li>
+<li class="toctree-l2">
+<span class="link-wrapper"><a class="reference internal" href="units/dropout.html">Numerical Stability, Hardware</a><span class="nav-toggle"><a class="mdl-button mdl-js-button mdl-button--icon" data-toggle="#globalnav-158"><span style="color: #888"><i class="material-icons">keyboard_arrow_down</i></span></a></span></span><ul id="globalnav-158" class="collapse" style="display: none;">
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="https://d2l.ai/chapter_multilayer-perceptrons/numerical-stability-and-init.html">Numerical Stability and Initialization</a></span></li>
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="https://d2l.ai/chapter_multilayer-perceptrons/kaggle-house-price.html">Predicting House Prices on Kaggle</a></span></li>
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="https://d2l.ai/chapter_appendix-tools-for-deep-learning/selecting-servers-gpus.html">GPU Purchase Guide</a></span></li>
+</ul></li>
+<li class="toctree-l2">
+<span class="link-wrapper"><a class="reference internal" href="units/environment.html">Machine Learning Problems and Statistical Environment</a><span class="nav-toggle"><a class="mdl-button mdl-js-button mdl-button--icon" data-toggle="#globalnav-162"><span style="color: #888"><i class="material-icons">keyboard_arrow_down</i></span></a></span></span><ul id="globalnav-162" class="collapse" style="display: none;">
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="http://d2l.ai/chapter_multilayer-perceptrons/environment.html">Statistical Environment</a></span></li>
+</ul></li>
+<li class="toctree-l2">
+<span class="link-wrapper"><a class="reference internal" href="units/layers.html">Layers, Parameters, GPUs</a><span class="nav-toggle"><a class="mdl-button mdl-js-button mdl-button--icon" data-toggle="#globalnav-164"><span style="color: #888"><i class="material-icons">keyboard_arrow_down</i></span></a></span></span><ul id="globalnav-164" class="collapse" style="display: none;">
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="http://d2l.ai/chapter_deep-learning-computation/model-construction.html">Blocks and Layers</a></span></li>
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="http://d2l.ai/chapter_deep-learning-computation/parameters.html">Parameter Management</a></span></li>
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="http://d2l.ai/chapter_deep-learning-computation/deferred-init.html">Deferred Initialization</a></span></li>
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="http://d2l.ai/chapter_deep-learning-computation/custom-layer.html">Custom Layers</a></span></li>
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="http://d2l.ai/chapter_deep-learning-computation/read-write.html">File I/O</a></span></li>
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="http://d2l.ai/chapter_deep-learning-computation/use-gpu.html">GPUs</a></span></li>
+</ul></li>
+<li class="toctree-l2">
+<span class="link-wrapper"><a class="reference internal" href="units/convnet.html">Convolutional Networks</a><span class="nav-toggle"><a class="mdl-button mdl-js-button mdl-button--icon" data-toggle="#globalnav-171"><span style="color: #888"><i class="material-icons">keyboard_arrow_down</i></span></a></span></span><ul id="globalnav-171" class="collapse" style="display: none;">
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="https://d2l.ai/chapter_convolutional-neural-networks/why-conv.html">Convolutional Neural Networks</a></span></li>
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="https://d2l.ai/chapter_convolutional-neural-networks/conv-layer.html">Convolutions</a></span></li>
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="https://d2l.ai/chapter_convolutional-neural-networks/padding-and-strides.html">Padding and Strides</a></span></li>
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="https://d2l.ai/chapter_convolutional-neural-networks/channels.html">Channels</a></span></li>
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="https://d2l.ai/chapter_convolutional-neural-networks/pooling.html">Pooling</a></span></li>
+</ul></li>
+<li class="toctree-l2">
+<span class="link-wrapper"><a class="reference internal" href="units/lenet.html">Basic Convolutional Networks</a><span class="nav-toggle"><a class="mdl-button mdl-js-button mdl-button--icon" data-toggle="#globalnav-177"><span style="color: #888"><i class="material-icons">keyboard_arrow_down</i></span></a></span></span><ul id="globalnav-177" class="collapse" style="display: none;">
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="https://d2l.ai/chapter_convolutional-neural-networks/lenet.html">LeNet</a></span></li>
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="https://d2l.ai/chapter_convolutional-modern/alexnet.html">AlexNet</a></span></li>
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="https://d2l.ai/chapter_convolutional-modern/vgg.html">VGG</a></span></li>
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="https://d2l.ai/chapter_convolutional-modern/nin.html">NiN</a></span></li>
+</ul></li>
+<li class="toctree-l2">
+<span class="link-wrapper"><a class="reference internal" href="units/resnet.html">Residual Networks and Advanced Architectures</a><span class="nav-toggle"><a class="mdl-button mdl-js-button mdl-button--icon" data-toggle="#globalnav-182"><span style="color: #888"><i class="material-icons">keyboard_arrow_down</i></span></a></span></span><ul id="globalnav-182" class="collapse" style="display: none;">
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="https://d2l.ai/chapter_convolutional-modern/googlenet.html">Network with Parallel Concatenations</a></span></li>
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="https://d2l.ai/chapter_convolutional-modern/resnet.html">Residual Networks</a></span></li>
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="https://d2l.ai/chapter_convolutional-modern/densenet.html">Densely Connected Networks</a></span></li>
+</ul></li>
+<li class="toctree-l2">
+<span class="link-wrapper"><a class="reference internal" href="units/parallel.html">Computation Performance, Multi-GPU and Multi-Machine Training</a><span class="nav-toggle"><a class="mdl-button mdl-js-button mdl-button--icon" data-toggle="#globalnav-186"><span style="color: #888"><i class="material-icons">keyboard_arrow_down</i></span></a></span></span><ul id="globalnav-186" class="collapse" style="display: none;">
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="http://d2l.ai/chapter_computational-performance/hybridize.html">Hybridization</a></span></li>
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="http://d2l.ai/chapter_computational-performance/async-computation.html">Asynchrony</a></span></li>
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="http://d2l.ai/chapter_computational-performance/auto-parallelism.html">Automatic Parallelization</a></span></li>
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="http://d2l.ai/chapter_computational-performance/multiple-gpus.html">Multiple GPUs</a></span></li>
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="http://d2l.ai/chapter_computational-performance/multiple-gpus-concise.html">Multiple GPUs in Gluon</a></span></li>
+</ul></li>
+<li class="toctree-l2">
+<span class="link-wrapper"><a class="reference internal" href="units/finetuning.html">Image Augmentation, Fine Turning, Neural Style</a><span class="nav-toggle"><a class="mdl-button mdl-js-button mdl-button--icon" data-toggle="#globalnav-192"><span style="color: #888"><i class="material-icons">keyboard_arrow_down</i></span></a></span></span><ul id="globalnav-192" class="collapse" style="display: none;">
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="http://d2l.ai/chapter_computer-vision/image-augmentation.html">Image Augmentation</a></span></li>
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="http://d2l.ai/chapter_computer-vision/fine-tuning.html">Fine Tuning</a></span></li>
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="http://d2l.ai/chapter_computer-vision/neural-style.html">Neural Style</a></span></li>
+</ul></li>
+<li class="toctree-l2">
+<span class="link-wrapper"><a class="reference internal" href="units/detection.html">Object Detection</a><span class="nav-toggle"><a class="mdl-button mdl-js-button mdl-button--icon" data-toggle="#globalnav-196"><span style="color: #888"><i class="material-icons">keyboard_arrow_down</i></span></a></span></span><ul id="globalnav-196" class="collapse" style="display: none;">
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="https://d2l.ai/chapter_computer-vision/bounding-box.html">Object Detection and Bounding Boxes</a></span></li>
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="https://d2l.ai/chapter_computer-vision/anchor.html">Anchor Boxes</a></span></li>
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="https://d2l.ai/chapter_computer-vision/multiscale-object-detection.html">Multiscale Object Detection</a></span></li>
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="https://d2l.ai/chapter_computer-vision/object-detection-dataset.html">Object Detection Data Set (Pikachu)</a></span></li>
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="https://d2l.ai/chapter_computer-vision/ssd.html">Single Shot Multibox Detection (SSD)</a></span></li>
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="https://d2l.ai/chapter_computer-vision/rcnn.html">Region-based CNNs (R-CNNs)</a></span></li>
+</ul></li>
+<li class="toctree-l2">
+<span class="link-wrapper"><a class="reference internal" href="units/sequence.html">Sequence Models and Language</a><span class="nav-toggle"><a class="mdl-button mdl-js-button mdl-button--icon" data-toggle="#globalnav-203"><span style="color: #888"><i class="material-icons">keyboard_arrow_down</i></span></a></span></span><ul id="globalnav-203" class="collapse" style="display: none;">
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="http://d2l.ai/chapter_recurrent-neural-networks/sequence.html">Sequence Models</a></span></li>
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="http://d2l.ai/chapter_recurrent-neural-networks/language-models-and-dataset.html">Language Models</a></span></li>
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="http://d2l.ai/chapter_recurrent-neural-networks/rnn.html">Recurrent Neural Networks</a></span></li>
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="http://d2l.ai/chapter_recurrent-neural-networks/text-preprocessing.html">Text Preprocessing</a></span></li>
+</ul></li>
+<li class="toctree-l2">
+<span class="link-wrapper"><a class="reference internal" href="units/rnn.html">Recurrent Neural Networks</a><span class="nav-toggle"><a class="mdl-button mdl-js-button mdl-button--icon" data-toggle="#globalnav-208"><span style="color: #888"><i class="material-icons">keyboard_arrow_down</i></span></a></span></span><ul id="globalnav-208" class="collapse" style="display: none;">
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="http://d2l.ai/chapter_recurrent-neural-networks/rnn-scratch.html">Building an RNN</a></span></li>
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="http://d2l.ai/chapter_recurrent-neural-networks/rnn-concise.html">Building an RNN in Gluon</a></span></li>
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="http://d2l.ai/chapter_recurrent-neural-networks/bptt.html">Backpropagation through Time</a></span></li>
+</ul></li>
+<li class="toctree-l2">
+<span class="link-wrapper"><a class="reference internal" href="units/blstm.html">Advanced Sequence Models</a><span class="nav-toggle"><a class="mdl-button mdl-js-button mdl-button--icon" data-toggle="#globalnav-212"><span style="color: #888"><i class="material-icons">keyboard_arrow_down</i></span></a></span></span><ul id="globalnav-212" class="collapse" style="display: none;">
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="https://d2l.ai/chapter_recurrent-modern/deep-rnn.html">Deep Recurrent Neural Networks</a></span></li>
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="https://d2l.ai/chapter_recurrent-modern/bi-rnn.html">Bidirectional RNNs</a></span></li>
+<li class="toctree-l3"><span class="link-wrapper"><a class="reference external" href="https://d2l.ai/chapter_recurrent-modern/beam-search.html">Beam Search</a></span></li>
+</ul></li>
+<li class="toctree-l2"><span class="link-wrapper"><a class="reference internal" href="units/word2vec.html">Word2vec, FastText, GloVe, Sentiment Analysis</a></span></li>
+<li class="toctree-l2"><span class="link-wrapper"><a class="reference internal" href="units/seq2seq.html">Encoder-Decoder, Seq2seq, Machine Translation</a></span></li>
+<li class="toctree-l2"><span class="link-wrapper"><a class="reference internal" href="units/attention.html">Attention, Transformer, BERT</a></span></li>
+<li class="toctree-l2"><span class="link-wrapper"><a class="reference internal" href="units/optimization.html">Convex Optimization, Convergence Rate</a></span></li>
+<li class="toctree-l2"><span class="link-wrapper"><a class="reference internal" href="units/adam.html">Momentum, AdaGrad, RMSProp, Adam</a></span></li>
+</ul></li>
+<li class="toctree-l1"><span class="link-wrapper"><a class="reference internal" href="faq.html">FAQ</a></span></li>
+</ul>
+
+            </nav>
+        
+        </div>
+    
+</header>
+
+    <div class="document">
+        <div class="page-content">
+        
+  <div class="section" id="introduction-to-deep-learning">
+<span id="introduction-to-deep-learning"></span><h1 class="mdl-color-text--primary">Introduction to Deep Learning<a class="headerlink" href="#introduction-to-deep-learning" title="Permalink to this headline">¶</a></h1>
+<p><strong>STAT 157, UC Berkeley, Spring, 2019</strong></p>
+<div class="section" id="practical-information">
+<span id="practical-information"></span><h2 class="mdl-color-text--primary">Practical information<a class="headerlink" href="#practical-information" title="Permalink to this headline">¶</a></h2>
+<table class="docutils">
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Instructors</td>
+<td><a href="https://alex.smola.org">Alex Smola</a> and <a href="https://github.com/mli">Mu Li</a></td>
+</tr>
+<tr>
+<td>TAs</td>
+<td><a href="https://statistics.berkeley.edu/people/rachel-hu">Rachel Hu</a> and <a href="http://ryantheisen.com/">Ryan Theisen</a></td>
+</tr>
+<tr>
+<td>Lectures</td>
+<td>Every Tuesday/Thursday 3:30pm - 5:00pm</td>
+</tr>
+<tr>
+<td>Location</td>
+<td><a href="https://confluence.ets.berkeley.edu/confluence/display/CL/3+LeConte">LeConte 3</a></td>
+</tr>
+<tr>
+<td>Instructor Office Hours</td>
+<td>Thursday, 1:00 - 3:00pm</td>
+</tr>
+<tr>
+<td>Location</td>
+<td>337 Evans Hall</td>
+</tr>
+<tr>
+<td>Contact instructors and TAs</td>
+<td>berkeley-stat-157@googlegroups.com</td>
+</tr>
+<tr>
+<td>Course discussion</td>
+<td><a href="https://discuss.mxnet.io/c/courses">https://discuss.mxnet.io/c/courses</a></td>
+</tr>
+<tr>
+<td>Grading Policy</td>
+<td>Homework 30%, Midterm 20%, Project 50%</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section" id="news">
+<span id="news"></span><h2 class="mdl-color-text--primary">News<a class="headerlink" href="#news" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>5/1: Modified presentation and report scores from 30% and 30% to 20% and 40%. Added slides/videos for lecture 4/25 and 4/30.</li>
+<li>4/25: Added homework 10 and lecture 4/23 slides and videos</li>
+<li>4/18: Added homework 9</li>
+<li>4/9: Added slides/vidoes for lectures 3/21, 4/2, 4/4. Uploaded homework 8.</li>
+<li>4/2: Added solutions to homework 6, uploaded homework 7.</li>
+<li>3/18: Added solutions to homework 5.</li>
+<li>3/15: Added slides/videos for lecture 3/14, with solutions to homework 3 and 4.</li>
+<li>3/13: Added slides/videos for lectures on 3/12, including midterm exam logistics</li>
+<li>3/5: Added midterm presentations</li>
+<li>3/5: Added homework 6.</li>
+<li>3/3: Added slides and (re-recorded) videos for lectures before 3/3.</li>
+<li>2/21: Added slides for 2/19 and 2/21</li>
+<li>2/19: Added homework 5.</li>
+<li>2/16: Added slides for 2/12 and 2/14</li>
+<li>2/12: Added homework 4.</li>
+<li>2/11: Added solution for homework 2.</li>
+<li>2/6: Added homework 3, and solution for homework 1. Uploaded slides for 2/5.</li>
+<li>1/31: Slighly updated homework 2, uploaded slides for lecture 2 &amp; 3.</li>
+<li>1/29: Homework 2 is uploaded.</li>
+<li>1/26: Videos for <a class="reference external" href="units/introduction.html">Lecture 1</a> are up
+(they’re not the original - we had to re-record them due to
+technical issues).</li>
+<li>1/24: Slides, Videos, and Notebooks for <a class="reference external" href="units/probability.html">Lecture 2</a> are up.</li>
+<li>1/22: Updated course information, uploaded slides for today’s lecture and homework 1.</li>
+</ul>
+</div>
+<div class="section" id="overview">
+<span id="overview"></span><h2 class="mdl-color-text--primary">Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>This class provides a practical introduction to deep learning, including
+theoretical motivations and how to implement it in practice. As part of the
+course we will cover multilayer perceptrons, backpropagation, automatic
+differentiation, and stochastic gradient descent. Moreover, we introduce
+convolutional networks for image processing, starting from the simple LeNet to
+more recent architectures such as ResNet for highly accurate models. Secondly,
+we discuss sequence models and recurrent networks, such as LSTMs, GRU, and the
+attention mechanism. Throughout the course we emphasize efficient
+implementation, optimization and scalability, e.g. to multiple GPUs and to
+multiple machines. The goal of the course is to provide both a good
+understanding and good ability to build modern nonparametric estimators. The
+entire course is based on Jupyter notebooks to allow students to gain experience
+quickly. Supporting material can be found at <a class="reference external" href="https://d2l.ai">https://d2l.ai</a>.</p>
+</div>
+<div class="section" id="prerequisites">
+<span id="prerequisites"></span><h2 class="mdl-color-text--primary">Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h2>
+<p>Programming in Python (CS 61a or CS/STAT C8 and CS 88), Linear Algebra (MATH 54,
+STAT 89A, or EE 16A), Probability (STAT 134, STAT 140, or EE 126), and
+Statistics (STAT 20, STAT 135, or CS/STAT C100) are highly
+desirable. Eqivalent knowledge is fine, and we will try to make the
+class as self-contained as possible. <em>This is a class where you need
+to get your hands dirty with programming.</em></p>
+</div>
+<div class="section" id="course-format">
+<span id="course-format"></span><h2 class="mdl-color-text--primary">Course Format<a class="headerlink" href="#course-format" title="Permalink to this headline">¶</a></h2>
+<p>The course consists of 2 units of 90 minutes, taught by the
+instructors, plus office hours by the instructors and TAs. Evaluation
+is based on a <strong>midterm exam</strong> (20%), <strong>homework</strong> (30%), and a <strong>research
+project</strong> (50%) which will be presented in lieu of an end-of-course
+exam. As part of the course you will be performing work that’s similar
+to research leading up to a paper.</p>
+<p></p><center><iframe width="560" height="441" src="https://www.youtube.com/embed/?listType=playlist&amp;list=PLZSO_6-bSqHQHBCoGaObUljoXAyyqhpFW" frameborder="0" allowfullscreen=""></iframe></center><p></p>
+<div class="toctree-wrapper compound mdl-color-text--primary">
+</div>
+</div>
+</div>
+
+
+        </div>
+        <div class="side-doc-outline">
+            <div class="side-doc-outline--content" style="height: 592px;"> 
+<div class="localtoc">
+    <p class="caption">
+      <span class="caption-text">Table Of Contents</span>
+    </p>
+    <ul>
+<li><a class="reference internal" href="#">Introduction to Deep Learning</a><ul>
+<li><a class="reference internal" href="#practical-information">Practical information</a></li>
+<li><a class="reference internal" href="#news">News</a></li>
+<li><a class="reference internal" href="#overview">Overview</a></li>
+<li><a class="reference internal" href="#prerequisites">Prerequisites</a></li>
+<li><a class="reference internal" href="#course-format">Course Format</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+            </div>
+        </div>
+
+      <div class="clearer"></div>
+    </div><div class="pagenation">
+     <a id="button-next" href="syllabus.html" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--colored" role="botton" accesskey="N">
+         <i class="pagenation-arrow-R fas fa-arrow-right fa-lg"></i>
+        <div class="pagenation-text">
+            <span class="pagenation-direction">Next</span>
+            <div>Syllabus</div>
+        </div>
+     </a>
+  </div>
+        
+        </main>
+    </div>
+  
+</body></html>

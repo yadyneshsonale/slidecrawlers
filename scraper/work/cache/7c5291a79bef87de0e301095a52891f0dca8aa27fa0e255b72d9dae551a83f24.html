@@ -1,0 +1,1278 @@
+<!DOCTYPE html><html lang="en"><head>
+<link rel="icon" type="image/png" href="images/fav.jpg" sizes="96x96"> <!-- This sets the favicon for the webpage -->
+<title>CS772: Deep Learning for Natural Language Processing</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#1506df">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="CS772">
+<link rel="apple-touch-icon" href="/images/icon-192x192.png">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body, h1, h2, h3, h4, h5, h6 {font-family: "Roboto", sans-serif}
+.w3-bar, h1, button {font-family: "Roboto", sans-serif}
+.fa-anchor,.fa-coffee {font-size:200px}
+.tg  {border-collapse:collapse;border-spacing:0;border-color:#ee0808;}
+.tg td{font-family:Helvetica, sans-serif;font-size:14px;padding:1px 1px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#93a1a1;color:#002b36;background-color:#fdf6e3;}
+.tg th{font-family:Helvetica, sans-serif;font-size:14px;font-weight:normal;padding:2px 1px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#93a1a1;color:#fdf6e3;background-color:#657b83;}
+.tg .tg-lboi{font-size:18px;border-color:inherit;text-align:center;vertical-align:middle}
+.tg .tg-0pky{font-size:15px;border-color:inherit;text-align:center;vertical-align:top}
+
+header {
+  color: white;
+  margin-bottom: 0;
+  padding: 40px 16px; /* Reduced padding */
+}
+
+.header-text {
+  background: white;
+  margin-bottom: 0;
+}
+
+.gradient-text {
+  background: linear-gradient(to right, #1506df, #0f9c24);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #1506df, #0f9c24);
+  padding: 10px 0;
+}
+.navbar a {
+  padding: 14px 20px;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+}
+.announcement {
+  font-size: 1.2em; /* Slightly reduced font size */
+  padding: 10px; /* Reduced padding */
+  background-color: #f9f9f9;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+  margin-top: 10px; /* Added small margin-top */
+}
+
+.course-details {
+  font-size: 1.2em; /* Adjust the font size as needed */
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.course-details h1, .course-details h3 {
+  margin-top: 0;
+}
+
+.course-details p {
+  margin: 5px 0;
+}
+
+.course-details ul {
+  padding-left: 20px;
+}
+.course-description {
+  font-size: 1.2em; /* Adjust the font size as needed */
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.course-description h1, .course-description h3 {
+  margin-top: 0;
+}
+
+.course-description p {
+  margin: 5px 0;
+}
+
+.course-description ul {
+  padding-left: 20px;
+}
+.course-references {
+  font-size: 1.2em; /* Adjust the font size as needed */
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+.course-motivation {
+  font-size: 1.2em; /* Same font size */
+  padding: 20px; /* Consistent padding */
+  background-color: #f9f9f9; /* Background color */
+  border: 2px solid #ddd; /* Border style */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  transition: transform 0.3s ease-in-out; /* Smooth hover transition */
+}
+.course-motivation h2 {
+  margin-top: 0;
+}
+
+
+.course-references h1, .course-references h3 {
+  margin-top: 0;
+}
+
+.course-references p {
+  margin: 5px 0;
+}
+
+.course-references ul {
+  padding-left: 20px;
+}
+.course-pr {
+  font-size: 1.2em; /* Adjust the font size as needed */
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.course-pr h1, .course-pr h3 {
+  margin-top: 0;
+}
+
+.course-pr p {
+  margin: 5px 0;
+}
+
+.course-pr ul {
+  padding-left: 20px;
+}
+.course-instructor {
+  font-size: 1.2em; /* Adjust the font size as needed */
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.course-instructor h1, .course-instructor h3 {
+  margin-top: 0;
+}
+
+.course-instructor p {
+  margin: 5px 0;
+}
+
+.course-instructor ul {
+  padding-left: 20px;
+}
+.course-tas {
+  font-size: 1.2em; /* Adjust the font size as needed */
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.course-tas h1, .course-tas h3 {
+  margin-top: 0;
+}
+
+.course-tas p {
+  margin: 5px 0;
+}
+
+.course-tas ul {
+  padding-left: 20px;
+}
+.office-hours-box {
+  font-family: Arial, sans-serif;
+  font-size: 1.2em; /* Uniform text size */
+  padding: 20px;
+  background-color: #f9f9f9; /* Light background color */
+  border: 2px solid #ddd; /* Subtle border */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+.office-hours-box p {
+  margin: 5px 0; /* Reduced margin for a compact look */
+}
+
+.office-hours-row {
+  display: flex;
+  justify-content: flex-start; /* Align columns neatly */
+  align-items: center; /* Vertical alignment */
+  margin-bottom: 15px;
+}
+
+.office-hours-box {
+  font-family: Arial, sans-serif;
+  font-size: 1.2em; /* Consistent text size */
+  padding: 15px; /* Reduced padding */
+  background-color: #f9f9f9; /* Light background */
+  border: 2px solid #ddd; /* Subtle border */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+table.schedule {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1em;
+}
+
+table.schedule th, table.schedule td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+table.schedule th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+table.schedule tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+table.schedule tr:hover {
+  background-color: #f1f1f1;
+}
+
+table.schedule a {
+  color: #0073e6;
+  text-decoration: none;
+}
+
+table.schedule a:hover {
+  text-decoration: underline;
+}
+
+
+.office-hours-row {
+  display: flex;
+  justify-content: space-between; /* Align columns neatly */
+  align-items: center; /* Vertically align items */
+  margin-bottom: 10px; /* Reduced spacing between rows */
+}
+
+.office-hours-column {
+  flex: 1; /* Equal spacing for columns */
+  padding: 5px; /* Minimal padding */
+}
+
+.office-hours-column strong {
+  font-weight: bold;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #ddd; /* Subtle line separator */
+  margin: 15px 0; /* Reduced margin */
+}
+
+
+
+.course-contact, .course-footer {
+  font-size: 1.2em; /* Adjust the font size as needed */
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.course-contact h2, .course-footer h2 {
+  margin-top: 0;
+}
+
+.course-contact ul, .course-footer ul {
+  padding-left: 20px;
+}
+
+.gradient-text {
+  background: linear-gradient(to right, #1506df, #0f9c24);
+  -webkit-background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+
+/* Flexbox for TAs */
+.course-tas .ta-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.course-tas .ta-wrapper .ta {
+  text-align: center;
+  flex: 1 1 150px;
+  max-width: 150px;
+}
+
+.course-tas .ta-wrapper .ta img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
+@media (max-width: 600px) {
+  .navbar a {padding: 10px; font-size: 14px;}
+}
+
+.blinking-new {
+  animation: blinker 1s linear infinite;
+  font-weight: bold;
+  color: #e60000;
+  letter-spacing: 1px;
+}
+@keyframes blinker {
+  50% { opacity: 0; }
+}
+</style>
+<script>
+var newwindow;
+function poptastic(url)
+{
+  newwindow=window.open(url,'name','height=600,width=400');
+  if (window.focus) {newwindow.focus()}
+}
+
+function scrollToSection(id) {
+  var element = document.getElementById(id);
+  var headerOffset = 70;
+  var elementPosition = element.getBoundingClientRect().top;
+  var offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+  window.scrollTo({
+    top: offsetPosition,
+    behavior: "smooth"
+  });
+}
+</script>
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="navbar w3-card">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="javascript:scrollToSection('about')" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
+    <a href="javascript:scrollToSection('instructor')" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Instructor</a>
+    <a href="javascript:scrollToSection('materials')" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Course Materials</a>
+    <a href="javascript:scrollToSection('ta')" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">TAs</a>
+    <!-- <a href="javascript:scrollToSection('office-hour')" class="w3-bar-item w3-button w3-padding-large">Office Hours</a> -->
+    <a href="javascript:scrollToSection('contact')" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Contact Us</a>
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+    <a href="javascript:scrollToSection('about')" class="w3-bar-item w3-button w3-padding-large">Home</a>
+    <a href="javascript:scrollToSection('instructor')" class="w3-bar-item w3-button w3-padding-large">Instructor</a>
+    <a href="javascript:scrollToSection('materials')" class="w3-bar-item w3-button w3-padding-large">Course Materials</a>
+    <a href="javascript:scrollToSection('ta')" class="w3-bar-item w3-button w3-padding-large">TAs</a>
+    <!-- <a href="javascript:scrollToSection('office-hour')" class="w3-bar-item w3-button w3-padding-large">Office Hours</a> -->
+    <a href="javascript:scrollToSection('contact')" class="w3-bar-item w3-button w3-padding-large">Contact Us</a>
+  </div>
+</div>
+
+<!-- Header -->
+
+<!-- <header class="w3-container w3-center header-text" style="padding:60px 2.5px; background: white;">
+  <h1 class="w3-margin w3-jumbo gradient-text"><b>CS772: Deep Learning for Natural Language Processing</b></h1>
+    <p class="w3-xxlarge gradient-text"><b>Spring, 2025</b></p>
+</header> -->
+
+<!-- NEW HEADER-->
+
+  <!-- Add this in the head section -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&amp;display=swap" rel="stylesheet">
+  
+  
+  <header class="w3-container w3-center header-text" style="padding:60px 2.5px; background: white;">
+    <h1 class="w3-margin w3-jumbo gradient-text"><b>CS772: Deep Learning for Natural Language Processing</b></h1>
+    <p class="w3-xxlarge gradient-text" style="font-family: 'Playfair Display', serif;">
+      <b>Autumn, <b><span style="font-size: 1.1em;">2025-2026</span></b></b>
+  </p>
+</header>
+
+       
+
+<!-- Announcement Section -->
+
+<section id="about" class="w3-row-padding w3-container">
+  <div class="w3-content">
+    <div class="announcement">
+      <h1 class="gradient-text" style="text-align: center;"><b>Announcements</b></h1>
+  
+      <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&amp;family=Montserrat:wght@400;700&amp;display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&amp;display=swap" rel="stylesheet">
+
+<!-- MS Teams Code -->
+<p style="display: flex; align-items: center; justify-content: center;">
+    <span style="margin-right: 8px; color: blue;">•</span>
+    <span style="color: blue;">
+        Join <span style="font-family: 'Montserrat', sans-serif;">MS Teams</span> with code: 
+        <b style="font-family: 'Montserrat', sans-serif; margin: 0 5px;">be1n1vl</b> (Login to MS Teams using IITB LDAP)
+    </span>
+</p>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&amp;display=swap" rel="stylesheet">
+
+<!-- YouTube Channel -->
+<p style="display: flex; align-items: center; justify-content: center;">
+    <span style="margin-right: 8px; color: blue;">•</span>
+    <span style="color: blue;">
+        Access course lecture recordings on 
+        <span style="font-family: 'Montserrat', sans-serif;">YouTube</span> channel
+        <a href="https://www.youtube.com/@pb_nlp" target="_blank" style="text-decoration: none; margin-left: 8px;">
+            <span style="background-color: #c4302b; color: white; padding: 2px 5px; border-radius: 4px; display: inline-flex; align-items: center;">
+                <img src="images/y.jpg" alt="YouTube" style="height: 20px; margin-right: 8px;">
+                Subscribe
+            </span>
+        </a>
+    </span>
+</p>
+
+  
+      <!-- Previous Iterations -->
+      <p style="display: flex; align-items: center; justify-content: center;">
+          <span style="margin-right: 8px; color: blue;">•</span>
+          <span style="color: blue;">
+              Previous iterations of the course: 
+              <a href="https://www.cfilt.iitb.ac.in/~cs772_2024/" style="color: rgb(8, 139, 58); margin: 0 5px;" target="_blank">2024</a> |
+              <a href="https://www.cse.iitb.ac.in/~cs772/2023/" style="color: rgb(8, 139, 58); margin: 0 5px;" target="_blank">2023</a> |
+              <a href="https://www.cfilt.iitb.ac.in/~cs772-2022/" style="color: rgb(8, 139, 58); margin-left: 5px;" target="_blank">2022</a>
+          </span>
+      </p>
+    </div>
+<!-- progrmamming test -->
+<!-- <section id="programming-test" class="w3-row-padding w3-container"> -->
+  <!-- <div class="w3-content">
+    <div class="announcement">
+      <h1 class="gradient-text" style="text-align: center;">
+        <b>
+          Instructions for the programming test on 5th August 2025
+          <span style="color: #e60000; font-size: 0.6em; margin-left: 10px;">
+            <span class="blinking-new">Important</span>
+          </span>
+        </b>
+      </h1>
+      <ul style="text-align: left; max-width: 800px; margin: 0 auto; font-size: 1.1em;">
+        <li>The venue is <b>F C Kohli Auditorium</b></li>
+        <li>Bring your laptop to the classroom, pre-loaded with Python. <br>Note: <b>Do not install PyCharm, VSCode or any other IDEs.</b></li>
+        <li>Only use simple text editors like Notepad, WordPad etc. (for Windows) and vim, nano, gedit, etc. for Linux.</li>
+        <li>The task will be specified to you through MS Teams. Students are requested to join Teams if they haven’t already.</li>
+        <li>The answers will have to be uploaded on a Google Form. The Google Form will also be circulated on Teams.</li>
+        <li>Going into internet, consulting neighbours or looking at anybody else's screen will <b>disqualify</b> you from the test with 0 marks and deregistration.</li>
+        <li>To check if your code is running, use the downloaded Python environment and test the code from your <b>terminal/command line only</b>.</li>
+        <li>The test will be for <b>50 minutes</b>. The test will start at <b>3:40pm</b> and the submission will have to be done by <b>4:30pm</b>.</li>
+        <li>The test will be for almost to the whole class duration, i.e., start at 3.40 PM and go up to 4.50 PM. There will not be any lecture on that day.</li>
+        <li>Anybody entering the class after <b>3:40pm</b> will have to go back without writing the test.</li>
+        <li>A Google Form where the answers are uploaded will mark your time of uploading. <b>Do not exceed beyond 4:30pm.</b></li>
+        <li>
+          You can check
+          <a href="https://wiki.python.org/moin/BeginnersGuide/Download" target="_blank" style="color: #1506df;">this website</a>
+          for installing Python for Windows, Linux or Mac. Please install Python version <b>3.11 or later</b>. After installation, please check if you are able to run programs through your terminal/command line using <code>python</code>.
+        </li>        
+      </ul>
+    </div> -->
+
+    <hr>
+    <div class="course-details">
+        <h2 class="gradient-text"><b>Course Details</b></h2>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&amp;display=swap" rel="stylesheet">
+     <p><b>CS<span style="font-family: 'Montserrat', sans-serif;">772</span>: Deep Learning for Natural Language Processing (Autumn, <span style="font-family: 'Montserrat', sans-serif;">2025</span>)</b></p>
+        
+        <p>Department of Computer Science and Engineering</p>
+        <p><a href="http://iitb.ac.in/" target="_blank">Indian Institute of Technology Bombay</a></p>
+        <h2 class="gradient-text"><b>Time Table and Venue</b></h2>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&amp;display=swap" rel="stylesheet">
+
+        <ul>
+          <li><b>Slot</b>: <span style="font-family: 'Montserrat', sans-serif;">11</span></li>
+          <li><b>Venue</b>: CC103 (First 4 Classes at FC Kohli)</li>
+          <li><b>Tuesday</b>: <span style="font-family: 'Montserrat', sans-serif;">3:30 PM to 5 PM</span></li>
+          <li><b>Friday</b>: <span style="font-family: 'Montserrat', sans-serif;">3:30 PM to 5 PM</span></li>
+        </ul>
+
+
+    </div>
+    <hr>
+    <hr>
+    <div class="course-motivation">
+      <h2 class="gradient-text"><b>Motivation</b></h2>
+      <p>Deep Learning (DL) is a framework for solving AI problems based on a network of neurons organized in many layers. DL has found heavy use in Natural Language Processing (NLP) too, including problems like machine translation, sentiment and emotion analysis, question answering, information extraction, and so on, improving performance on automatic systems by orders of magnitude.</p>      
+      <p>The course CS626 (Speech, NLP, and the Web) being taught in the the CSE Department at IIT Bombay for the last several years creates a strong foundation in NLP, covering the whole NLP stack, starting from morphology to part of speech tagging, to parsing and discourse and pragmatics. Students of this course acquire a strong grip on tasks, techniques, and linguistics of a plethora of NLP problems. Past lectures of CS626 can be found here
+        <a href="https://www.youtube.com/playlist?list=PL4KTg5v8C0TkbzCJRCNhgwrR5lF2w9NlY" target="_blank">
+          <img src="images/y.jpg" alt="YouTube" style="height: 18px; vertical-align: middle; margin-right: 4px;">
+        </a></p>
+      <p>CS772 (Deep Learning for Natural Language Processing) comes as a natural sequel to CS626. Language tasks are examined through the lens of Deep Learning. Foundations and advancements in Deep Learning are taught, integrated with NLP problems. For example, sequence-to-sequence transformers are covered with applications in machine translation. Similarly, various techniques in word embedding are taught with applications to text classification, information extraction, etc. 
+        Recent breakthroughs such as those involving Large Language Models (LLMs) and Generative AI (GenAI) are also highlighted as natural extensions of these core concepts.
+        <b>Throughout the course, references and allusions will be made to LLMs and GenAI.
+        </b>
+        </p>
+    </div>
+    <hr>
+    <div class="course-description">
+      <h2 class="gradient-text"><b>Course Description</b></h2>
+      <ul>
+          <li><b>Background:</b> History of Neural Nets; History of NLP; Basic Mathematical Machinery - Linear Algebra, Probability, Information Theory, etc.; Basic Linguistic Machinery - Phonology, morphology, syntax, semantics.</li>
+          <li><b>Introducing Neural Computation:</b> Perceptrons, Feedforward Neural Network and Backpropagation, Recurrent Neural Nets.</li>
+          <li><b>Difference between Classical Machine Learning and Deep Learning:</b> Representation - Symbolic Representation, Distributed Representation, Compositionality; Parametric and non-parametric learning.</li>
+          <li><b>Word Embeddings:</b> Word2Vec (CBOW and Skip Gram), Glove, FastText.</li>
+          <li><b>Application of Word Embedding to Shallow Parsing:</b> Morphological Processing, Part of Speech Tagging and Chunking.</li>
+          <li><b>Sequence to Sequence (seq2seq) Transformation using Deep Learning:</b> LSTMs and Variants, Attention, Transformers.</li>
+          <li><b>Transformer:</b> Architecture and Functioning, Attention, Positional Encoding, Layer Normalization, Applications in Sentiment Analysis, Image Labelling etc.</li>
+          <li><b>Deep Neural Net based Language Modeling:</b> XLM, BERT, GPT2-3 etc.; Subword Modeling; Transfer Learning and Multilingual Modeling.</li>
+          <li><b>Small LM, Medium LM and Large LM:</b> Language Modelling, Statistical Language Modelling; Curse of Dimensionality, Neural Language Modelling, Various LMs like BERT, XLM, etc., Open LLMs like Llama, Mistral, Mixtral.</li>
+          <li><b>Pretraining and Finetuning:</b> RAG, Generative Pretraining and GPT series; Transfer Learning and 0-shot Learning, Finetuning and few-shot learning; domain and language adaptation, Knowledge Graph Embedding; Knowledge Infusion; Retrieval Augmented Generation Natural Language Generation.</li>
+          <li><b>Application of seq2seq in Machine Translation:</b> Supervised, Semi-supervised, and Unsupervised MT; Encoder-Decoder and Attention in MT; Memory Networks in MT.</li>
+          <li><b>Deep Learning and Deep Parsing:</b> Recursive Neural Nets; Neural Constituency Parsing; Neural Dependency Parsing.</li>
+          <li><b>Deep Learning and Deep Semantics:</b> Word Embeddings and Word Sense Disambiguation; Semantic Role Labeling with Neural Nets.</li>
+          <li><b>Neural Text Classification:</b> Sentiment and Emotion labeling with Deep Neural Nets (DNN); DNN-based Question Answering.</li>
+          <li><b>The indispensability of DNN in Multimodal NLP:</b> Advanced Problems like Sarcasm, Metaphor, Humor, and Fake News Detection using multimodality and DNN.</li>
+          <li><b>Natural Language Generation:</b> Extractive and Abstractive Summarization with Neural Nets.</li>
+          <li><b>Large Language Models and Generative AI:</b> Llama3 like systems, ChatGPT, Gemini, Copilot, Comet etc.</li>
+          <li><b>Good and Bad LLMs:</b> Bias, Hallucination, FakeNews detection and mitigation.</li>
+      </ul>
+  </div>
+  <hr>
+  
+  
+  <div class="course-references">
+    <h2 class="gradient-text"><b>References</b></h2>
+    <ul>
+        <li>Pushpak Bhattacharyya and Aditya Madhav Joshi, Natural Language Processing, Print ISBN: <u>978-93-5746-283-9</u> eISBN: <u>978-93-5746-239-6</u>, Wiley, 2023.</li>     
+        <li>Ian Goodfellow, Yoshua Bengio, and Aaron Courville, Deep Learning, MIT Press, 2016.</li>
+        <li>Dan Jurafsky and James Martin, Speech and Language Processing, 3rd Edition, October 16, 2019.Aston Zhang, Zachary C. Lipton, Mu Li, and Alexander J. Smola, Dive into Deep Learning, e-book, 2020.</li>
+        <li>Christopher Manning and Heinrich Schutze, Foundations of Statistical Natural Language Processing, MIT Press, 1999.</li>
+        <li>Daniel Graupe, Deep Learning Neural Networks: Design and Case Studies, World Scientific Publishing Co., Inc., 2016.</li>
+        <li>Pushpak Bhattacharyya, Machine Translation, CRC Press, 2017.</li>
+        <li><b>Journals:</b> Computational Linguistics, Natural Language Engineering, Journal of Machine Learning Research (JMLR), Neural Computation, IEEE Transactions on Neural Networks and Learning Systems.</li>
+        <li><b>Conferences:</b> Annual Meeting of the Association of Computational Linguistics (ACL), Neural Information Processing (NeuiPS), Int’l Conf on Machine Learning (ICML), Empirical Methods in NLP (EMNLP).</li>
+    </ul>
+</div>
+<hr>
+
+
+    <div class="course-pr">    
+        <h2 class="gradient-text"><b>Pre-requisites</b></h2>
+        <ul>
+            <li>Python (or similar language) Programming skill</li>
+            <li>Basics of Statistics and Probability</li>
+            <li>Basics of Linear Algebra</li>
+            <li>Basics of Machine Learning</li>
+        </ul>
+    </div>
+    <hr>
+</div></section>
+
+<!-- Instructors Section -->
+<section id="instructor" class="w3-row-padding w3-container">
+    <div class="w3-content">
+		<div class="course-instructor">
+            <h2 class="gradient-text"><b>Course Instructor</b></h2>
+            <div style="text-align: left;">
+                <img src="images/p.png" alt="Prof. Pushpak Bhattacharyya" style="width:150px;height:150px;border-radius:50%;"><br>
+                <a href="https://www.cse.iitb.ac.in/~pb/" target="_blank"><font color="teal">Prof. Pushpak Bhattacharyya</font></a>
+            </div>
+    </div>    
+</div></section>
+<hr>
+
+<!-- TAs Section -->
+<section id="ta" class="w3-row-padding w3-container">
+  <div class="w3-content">
+      <div class="course-tas">
+          <h2 class="gradient-text"><b>Teaching Assistants</b></h2>
+          <div class="ta-wrapper">
+            
+              <!-- Arnav Attri -->
+              <!-- <div class="ta">
+                  <img src="https://yourarnav.github.io/cs626-website/1.jpg" alt="Arnav Attri"><br>
+                  <a href="https://cuteasduck.notion.site/Arnav-Attri-CS-772-Spring-2025-d5d96ce8cc464f5dae095273f881d6eb" target="_blank"><font color='teal'>Arnav Attri</font></a>
+              </div> -->
+              <!-- Anuj Attri -->
+              <!-- <div class="ta">
+                  <img src="https://yourarnav.github.io/cs626-website/4.jpg" alt="Anuj Attri"><br>
+                  <a href="https://cuteasduck.notion.site/Anuj-Attri-CS-772-Spring-2025-81f4facc5f02455f871aa5eaed2435e8?pvs=74" target="_blank"><font color='teal'>Anuj Attri</font></a>
+              </div> -->
+              <!-- Abhishek Shinde -->
+              <!-- <div class="ta">
+                  <img src="images/shinde.jpeg" alt="Abhishek"><br>
+                  <a href="https://www.linkedin.com/in/abhishek-shinde-942a67195/" target="_blank"><font color='teal'>Abhishek Shinde</font></a>
+              </div> -->
+              <!-- Harshvivek Kashid -->
+              <!-- <div class="ta">
+                <img src="images/Harsh.jpeg" alt="Harshvivek Kashid"><br>
+                <a href="https://in.linkedin.com/in/harshvivek-kashid" target="_blank"><font color='teal'>Harshvivek Kashid</font></a>
+              </div> -->
+
+              <!-- Ronak Upasham -->
+              <!-- <div class="ta">
+                <img src="images/Rounak.jpeg" alt="Ronak Upasham"><br>
+                <a href="https://in.linkedin.com/in/ronak-upasham" target="_blank"><font color='teal'>Ronak Upasham</font></a>
+              </div> -->
+
+              <!-- Swapnil Bhattacharyya -->
+              <!-- <div class="ta">
+                <img src="images/Swapnil.jpeg" alt="Swapnil Bhattacharyya"><br>
+                <a href="https://in.linkedin.com/in/swapnil-bhattacharyya-82b91920a" target="_blank"><font color='teal'>Swapnil Bhattacharyya</font></a>
+              </div> -->
+
+
+              <!-- Commented out other TAs -->
+              <!-- Poulami Ghosh -->
+              <div class="ta">
+                <img src="images/poulami.png" alt="Poulami"><br>
+                <a href="https://in.linkedin.com/in/poulamighosh" target="_blank"><font color="teal">Poulami Ghosh</font></a>
+              </div>
+              <div class="ta">
+                  <img src="images/ta1.jpg" alt="Settaluri Sravanthi"><br>
+                  <a href="https://www.linkedin.com/in/sravanthi-settaluri-83a48714/" target="_blank"><font color="teal">Settaluri Sravanthi</font></a>
+              </div>
+              <div class="ta">
+                  <img src="images/ta2.jpg" alt="Nihar Ranjan Sahoo"><br>
+                  <a href="https://sahoonihar.github.io/" target="_blank"><font color="teal">Nihar Ranjan Sahoo</font></a>
+              </div>
+              <div class="ta">
+                  <img src="images/sourabh.jpeg" alt="Sourabh Deoghare"><br>
+                  <a href="https://www.linkedin.com/in/sourabh-deoghare-11ab71124/" target="_blank"><font color="teal">Sourabh Deoghare</font></a>
+              </div>
+              <div class="ta">
+                  <img src="images/ujjwal.jpeg" alt="Ujjwal Sharma"><br>
+                  <a href="https://www.linkedin.com/in/ujjwalsharmacs" target="_blank"><font color="teal">Ujjwal Sharma</font></a>
+              </div>
+              <div class="ta">
+                  <img src="images/sneha.jpeg" alt="Sneha Oram"><br>
+                  <a href="https://www.linkedin.com/in/sneha-oram-a85b2866" target="_blank"><font color="teal">Sneha Oram</font></a>
+              </div>
+              <div class="ta">
+                  <img src="images/aashay.jpeg" alt="Aashay Sandansing"><br>
+                  <a href="https://www.linkedin.com/in/aashay-sandansing" target="_blank"><font color="teal">Aashay Sandansing</font></a>
+              </div>
+              <div class="ta">
+                  <img src="images/aakash.jpeg" alt="Aakash Kumar Agarwal"><br>
+                  <a href="https://openreview.net/forum?id=VojbkuVD1O" target="_blank"><font color="teal">Aakash Kumar Agarwal</font></a>
+              </div>
+              <div class="ta">
+                  <img src="images/manishit.jpg" alt="Manishit Kundu"><br>
+                  <a href="https://www.linkedin.com/in/manishit-kundu-508395221" target="_blank"><font color="teal">Manishit Kundu</font></a>
+              </div>
+              <div class="ta">
+                  <img src="images/aditya.jpeg" alt="Aditya Tomar"><br>
+                  <a href="https://www.linkedin.com/in/aditya20t/" target="_blank"><font color="teal">Aditya Tomar</font></a>
+              </div>
+              <div class="ta">
+                  <img src="images/tousin.jpg" alt="Md. Tousin Akhter"><br>
+                  <a href="https://www.linkedin.com/in/tousinakhter" target="_blank"><font color="teal">Md. Tousin Akhter</font></a>
+              </div>
+              <div class="ta">
+                  <img src="images/pritam.jpg" alt="pritam"><br>
+                  <a href="https://sites.google.com/view/pritam-sil/home" target="_blank"><font color="teal">Pritam Sil</font></a>
+              </div>
+              <div class="ta">
+                  <img src="images/hk.jpeg" alt="Hemnath"><br>
+                  <a href="https://www.linkedin.com/in/kotaprolu-hemanth-582b511a6" target="_blank"><font color="teal">Hemanth Kotaprolu</font></a>
+              </div>
+              <div class="ta">
+                  <img src="images/kiranpradeep.jpeg" alt="Kiran"><br>
+                  <a href="https://www.linkedin.com/in/kiran-pradeep1811/" target="_blank"><font color="teal">Kiran Pradeep</font></a>
+              </div>
+              <div class="ta">
+                  <img src="images/saif.jpeg" alt="Saiful Haq"><br>
+                  <a href="https://www.linkedin.com/in/haqsaiful/" target="_blank"><font color="teal">Saiful Haq</font></a>
+              </div>
+              <div class="ta">
+                  <img src="images/sanjeev.jpeg" alt="Sanjeev Kumar"><br>
+                  <a href="https://www.linkedin.com/in/snjev310/" target="_blank"><font color="teal">Sanjeev Kumar</font></a>
+              </div>
+              <div class="ta">
+                  <img src="images/tejomay.jpeg" alt="Tejomay Padole"><br>
+                  <a href="https://www.linkedin.com/in/tejomay-padole-0a167718b/" target="_blank"><font color="teal">Tejomay Padole</font></a>
+              </div>
+              <div class="ta">
+                  <img src="images/saprativa.jpeg" alt="Saprativa Bhattacharjee"><br>
+                  <a href="https://www.linkedin.com/in/saprativa/" target="_blank"><font color="teal">Saprativa Bhattacharjee</font></a>
+              </div>
+              <div class="ta">
+                  <img src="images/narjis.jpeg" alt="Narjis Asad"><br>
+                  <a href="https://www.linkedin.com/in/narjis-asad-2bba73174/" target="_blank"><font color="teal">Narjis Asad</font></a>
+              </div>
+              <div class="ta">
+                  <img src="images/wais.jpeg" alt="Waisullah Yousofi"><br>
+                  <a href="https://www.linkedin.com/in/waisyousofi/" target="_blank"><font color="teal">Waisullah Yousofi</font></a>
+               </div>
+                <div class="ta">
+                <img src="images/pinaki.jpeg" alt="Pinaki Das"><br>
+                <a href="https://www.linkedin.com/in/pinakidas7/" target="_blank"><font color="teal">Pinaki Das</font></a>
+                </div>
+          </div>
+      </div> 
+  </div>       
+</section>
+<hr>
+
+
+  
+<!-- office-hour Section -->
+
+<!-- <section id="office-hour" class="w3-row-padding w3-container">
+  <div class="w3-content">
+    <div class="office-hours-box">
+      <h2 class="gradient-text"><b>Office Hours Schedule</b></h2>
+      <p><strong>Professor:</strong> Pushpak Bhattacharyya: <b>TBD</b></p>
+      <p><strong>Teaching Assistants:</strong> <b>TBD</b></p>
+      <p><strong>CFILT LAB:</strong> Room Number <b>401</b>, 4th Floor, New CC Building</p>
+    </div>
+  </div>
+</section>
+<hr>-->
+
+
+<!-- Course Materials Section -->
+
+
+ <section id="materials" class="w3-row-padding w3-container">
+  <div class="w3-content">
+    <div class="materials">
+      <h2 class="gradient-text"><b>Course Materials</b></h2>
+
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&amp;display=swap" rel="stylesheet"><table class="schedule" style="margin-top: 10px; margin-bottom: 10px;" border="1" cellspacing="0">
+        <colgroup>
+          <col style="vertical-align: top; text-align: center;" width="13%">
+          <col style="vertical-align: top; text-align: center;" width="40%">
+          <col style="vertical-align: top; text-align: center;" width="15%">
+          <col style="vertical-align: top; text-align: center;" width="15%">
+        </colgroup>
+        <thead>
+          
+
+          <tr>
+            <th style="text-align: center; font-family: 'Montserrat', sans-serif;">Lecture</th>
+            <th style="text-align: center; font-family: 'Montserrat', sans-serif;">Topics</th>
+            <th style="text-align: center; font-family: 'Montserrat', sans-serif;">Slide Links</th>
+            <th style="text-align: center; font-family: 'Montserrat', sans-serif;">Video Links</th>
+        </tr>
+        </thead>
+        <tbody>
+          <tr>
+           <td style="text-align: center;">Week 1<br>(Week of 28th July)</td>
+            <td style="text-align: left;">
+              <ul>
+                <li>Introduction &amp; Course Logistics</li>
+                <li><i>The Evolution of NLP: From Specialists to Giants </i>by<br> 
+                  <b>Prof. Mitesh M. Khapra, IIT Madras
+              </b></li></ul><b>
+            </b></td>
+            <td style="text-align: center;">
+              <a target="_blank" href="slides_2025/1-cs772-intro-week1-of-28jul25.pdf">Week 1 (T)</a>
+              <br>
+               <a target="_blank" href="slides_2025/DL_for_NLP_Lecture2.pdf">Week 1 (F)</a>
+            </td>
+            <td style="text-align: center;">
+              <a target="_blank" href="https://www.youtube.com/watch?v=kHj2IyckPM0">Lecture 1</a><br>
+              <a target="_blank" href="https://www.youtube.com/watch?v=ofPQVbLam08">Lecture 2</a>
+            </td>
+          </tr>
+          <!-- Repeat similar structure for the rest of the rows -->
+          <!-- Week 2 -->
+         <tr>
+            <td style="text-align: center;">Week 2<br>(Week of 4th Aug)</td>
+            <td style="text-align: left;">
+              <ul>
+                <li>Programming Test</li>
+                <li><i>Whose English is it anyway?: Enhancing language models for text classification tasks</i>
+                  by <br><b>Dr. Aditya Joshi, UNSW</b></li>
+                
+              </ul>
+            </td>
+            <td style="text-align: center;">
+              <a target="_blank" href="">-----</a>
+              <br>
+              <a target="_blank" href="slides_2025/2025-aug-iitb-aditya.pdf">Week 2 (F)</a>
+            </td>
+            <td style="text-align: center;">
+              <a target="_blank">-----</a><br>
+              <a target="_blank" href="https://youtu.be/6mB48Co7Vg0">Lecture 3</a>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-align: center;">Week 3<br>(Week of 11th Aug)</td>
+            <td style="text-align: left;">
+              <ul>
+                <li>Perceptron, Sigmoid, Softmax, POS</li>
+                <li><i>National Holiday: Independence Day</i></li>
+                
+              </ul>
+            </td>
+            <td style="text-align: center;">
+              <a target="_blank" href="slides_2025/2-cs772-perceptron-sigmoid-softmax-pos-assignment-week-of-11aug25.pdf">Week 3 (T)</a>
+              <br>
+              <a target="_blank" href="">-----</a>
+              <!-- <a target="_blank" href="slides_2025/2025-aug-iitb-aditya.pdf">Week 2 (F)</a> -->
+            </td>
+            <td style="text-align: center;">
+              <a target="_blank" href="https://youtu.be/Mxe4Fy6Eej8">Lecture 4</a>
+              <br>
+              <a target="_blank" href="">-----</a>
+              <!-- <a target="_blank" href="https://youtu.be/6mB48Co7Vg0">Lecture 3</a> -->
+            </td>
+          </tr>
+          <!-- Week 4 -->
+          <tr>
+            <td style="text-align: center;">Week 4<br>(Week of 18th Aug)</td>
+            <td style="text-align: left;">
+              <ul>
+                <li>Backpropagation</li>
+                <li><i>Enough of Scaling Laws! Let's focus on downscaling</i>
+                  by <br><b>Prof. Tanmoy Chakraborty, IIT Delhi</b></li>
+                
+              </ul>
+            </td>
+            <td style="text-align: center;">
+              <a target="_blank" href="slides_2025/4-cs772-bp-week-of-18aug25.pdf">Week 4 (T)</a>
+              <br>
+              <a target="_blank" href="slides_2025/IITB_TC.pdf">Week 4 (F)</a>
+              <!-- <a target="_blank" href="slides_2025/2025-aug-iitb-aditya.pdf">Week 2 (F)</a> -->
+            </td>
+            <td style="text-align: center;">
+              <a target="_blank" href="https://youtu.be/xI161lztHqw">Lecture 5</a>
+              <br>
+              <a target="_blank" href="https://www.youtube.com/watch?v=_AdtWJUV3Fo" "="">Lecture 6</a>
+            </td>
+          </tr>
+          <!-- Week 5 -->
+          <tr>
+            <td style="text-align: center;">Week 5<br>(Week of 25th Aug)</td>
+            <td style="text-align: left;">
+              <ul>
+                <li>Word Embeddings</li>
+                <li><i>Advances in Neural Information Retrieval</i>
+                  by <br><b>Dr. Rudra Murthy, IBM</b></li>
+                
+              </ul>
+            </td>
+            <td style="text-align: center;">
+              <a target="_blank" href="slides_2025/5-cs772-bp-week-of-25aug25.pdf">Week 5 (T)</a>
+              <br>
+              <a target="_blank" href="slides_2025/Introduction-to-Information-Retrieval-Part-1-IIT-Bombay-August-27-2025.pdf">Week 5 (F)</a>
+              <!-- <a target="_blank" href="slides_2025/2025-aug-iitb-aditya.pdf">Week 2 (F)</a> -->
+            </td>
+            <td style="text-align: center;">
+              <a target="_blank" href="https://youtu.be/PnHd2ItICM4">Lecture 7</a>
+              <br>
+              <a target="_blank" href="">Lecture 8</a>
+              <!-- <a target="_blank" href="https://youtu.be/6mB48Co7Vg0">Lecture 3</a> -->
+            </td>
+          </tr>
+          <!-- Week 6 -->
+          <tr>
+            <td style="text-align: center;">Week 6<br>(Week of 1st Sept)</td>
+            <td style="text-align: left;">
+              <ul>
+                <li>Part 1: <i>Language Modeling and Seq-to-Seq Modeling</i>
+                  by <br><b>Dr. Anoop Kunchukuttan, Microsoft AI Core</b></li>
+                
+                <li><i>Summarization</i>
+                  by <br><b>Mr. Srikanth Tamilselvam, IBM</b></li>
+                                
+              </ul>
+            </td>
+            <td style="text-align: center;">
+              <a target="_blank" href="slides_2025/CS772_LM_SEQ2SEQ.pdf">Week 6 (T)</a>
+              <br><br>
+              <a target="_blank" href="slides_2025/iitb-talk-summarization.pdf">Week 6 (F)</a>
+              <!-- <a target="_blank" href="slides_2025/2025-aug-iitb-aditya.pdf">Week 2 (F)</a> -->
+            </td>
+            <td style="text-align: center;">
+              <a target="_blank" href="https://www.youtube.com/watch?v=WQtRrp01d04">Lecture 9</a>
+              <br><br>
+              <a target="_blank" href="https://www.youtube.com/watch?v=CsCa89jwNF4">Lecture 10</a>
+              <!-- <a target="_blank" href="https://youtu.be/6mB48Co7Vg0">Lecture 3</a> -->
+            </td>
+          </tr>
+                    
+          <!-- Week 6 -->
+          <tr>
+            <td style="text-align: center;">Week 7<br>(Week of 8th Sept)</td>
+            <td style="text-align: left;">
+              <ul>
+                <li>Part 2: <i>The Transformer Model </i>
+                  by <br><b>Dr. Anoop Kunchukuttan, Microsoft AI Core</b></li>
+                
+                <li><i>Quiz - 1 </i>
+                </li>                
+              </ul>
+            </td>
+            <td style="text-align: center;">
+              <a target="_blank" href="slides_2025/CS772_Transformer.pdf">Week 7 (T)</a>
+              <br><br>
+              <!-- <a target="_blank" href="slides_2025/iitb-talk-summarization.pdf">Week 6 (F)</a> -->
+              <!-- <a target="_blank" href="slides_2025/2025-aug-iitb-aditya.pdf">Week 2 (F)</a> -->
+            </td>
+            <td style="text-align: center;">
+              <a target="_blank" href="https://www.youtube.com/watch?v=wQkOXOw44Mk">Lecture 11</a>
+              <br><br>
+              <!-- <a target="_blank" href="https://www.youtube.com/watch?v=CsCa89jwNF4">Lecture 10</a> -->
+              <!-- <a target="_blank" href="https://youtu.be/6mB48Co7Vg0">Lecture 3</a> -->
+            </td>
+          </tr>
+          <!-- Week 7 -->
+          <tr>
+            <td style="text-align: center;">Week 8<br>(Week of 15th Sept)</td>
+            <td style="text-align: left;">
+              <ul>
+                <li><i>Midsem Week</i>
+                </li>
+                            
+              </ul>
+            </td>
+            <td style="text-align: center;">
+              <a target="_blank" href="">----</a>
+              <br><br>
+              <!-- <a target="_blank" href="slides_2025/iitb-talk-summarization.pdf">Week 6 (F)</a> -->
+              <!-- <a target="_blank" href="slides_2025/2025-aug-iitb-aditya.pdf">Week 2 (F)</a> -->
+            </td>
+            <td style="text-align: center;">
+              <a target="_blank" href="">----</a>
+              <br><br>
+              <!-- <a target="_blank" href="https://www.youtube.com/watch?v=CsCa89jwNF4">Lecture 10</a> -->
+              <!-- <a target="_blank" href="https://youtu.be/6mB48Co7Vg0">Lecture 3</a> -->
+            </td>
+          </tr>
+           <!-- Week 6 -->
+          <tr>
+            <td style="text-align: center;">Week 9<br>(Week of 22nd Sept)</td>
+            <td style="text-align: left;">
+              <ul>
+                <li><i>Convolutional Neural Networks</i>
+                  by <br><b>Mr. Jimut Bahan Pal, IIT Bombay</b></li>
+                
+                <li><i>Turing Test 2.0: The Possibility, Usefulness and Challenges of Imitating a Specific User through Generative AI</i>
+                  by <br><b>Prof. Monojit Choudhury, MBZUAI, Abu Dhabi</b></li>
+                                
+              </ul>
+            </td>
+            <td style="text-align: center;">
+              <a target="_blank" href="slides_2025/CNN-DLNLP-Jimut.pdf">Week 9 (T)</a><br>
+              <a target="_blank" href="https://colab.research.google.com/drive/154-NXcKOYnVRVbCJMZsQFCjoDDb4_lts?usp=sharing"><i>Code accompanying the slides</i></a><br>
+              <a target="_blank" href="https://colab.research.google.com/drive/1Rvhq3TwIQIDBbB3QCBBuA6hayI4PmABn?usp=sharing"><i>Code for the tutorial</i></a>
+              <br><br>
+              <a target="_blank" href="slides_2025/IIT Bombay TuringTest2o.pdf">Week 9 (F)</a>
+              <!-- <a target="_blank" href="slides_2025/2025-aug-iitb-aditya.pdf">Week 2 (F)</a> -->
+            </td>
+            <td style="text-align: center;">
+              <a target="_blank" href="https://www.youtube.com/watch?v=RBYuxHNVmI8">Lecture 12 </a>
+              <br><br><br>
+              <a target="_blank" href="https://youtu.be/SlsApzjPwUw">Lecture 13</a>
+              <!-- <a target="_blank" href="https://youtu.be/6mB48Co7Vg0">Lecture 3</a> -->
+            </td>
+          </tr>
+          <!-- Week 10 -->
+          <tr>
+            <td style="text-align: center;">Week 10<br>(Week of 29nd Sept)</td>
+            <td style="text-align: left;">
+              <ul>
+                <li><i>Responsible Language Models: Navigating Bias, Stereotypes, and Vulnerabilities</i>
+                  by <br><b>Nihar Ranjan Sahoo and Narjis Asad, IIT Bombay</b></li>
+                
+                <li><i>Federated Communication-Efficient Multi-Objective Optimization</i>
+                  by <br><b>Prof. Pranay Sharma, C-MInDS, IIT Bombay</b></li>
+                                
+              </ul>
+            </td>
+            <td style="text-align: center;">
+              <a target="_blank" href="slides_2025/CS772 Bias Talk- Nihar and Narjis.pdf">Week 10 (T)</a><br>
+              <br>
+              <a target="_blank" href="slides_2025/Pranay-Sharma-Talk.pdf">Week 10 (F)</a>
+              <!-- <a target="_blank" href="slides_2025/2025-aug-iitb-aditya.pdf">Week 2 (F)</a> -->
+            </td>
+            <td style="text-align: center;">
+              <a target="_blank" href="https://youtu.be/L1zkdkbY8Lk">Lecture 14 </a>
+              <br><br>
+              <a target="_blank" href="https://youtu.be/9P4ht9E4418">Lecture 15</a>
+              <!-- <a target="_blank" href="https://youtu.be/6mB48Co7Vg0">Lecture 3</a> -->
+            </td>
+          </tr>
+          <!-- Week 11 -->
+          <tr>
+            <td style="text-align: center;">Week 11<br>(Week of 6th Oct)</td>
+            <td style="text-align: left;">
+              <ul>
+                <li> No Class 
+                </li>
+                <li><i>Misinformation and Transformers as Languages Models</i>
+                  by <br><b>Prof. Raksha Sharma, IIT Roorkee</b></li>
+                                
+              </ul>
+            </td>
+            <td style="text-align: center;">
+              <a target="_blank" href="">----</a><br>
+              <br>
+              <a target="_blank" href="slides_2025/Transformer&amp;Misinformation_October10_IITB.pptx.pdf">Week 11 (F)</a>
+              <!-- <a target="_blank" href="slides_2025/2025-aug-iitb-aditya.pdf">Week 2 (F)</a> -->
+            </td>
+            <td style="text-align: center;">
+              <a target="_blank" href="">----</a>
+              <br><br>
+              <a target="_blank" href="https://youtu.be/mmXwJaP-wc8">Lecture 16</a>
+              <!-- <a target="_blank" href="https://youtu.be/6mB48Co7Vg0">Lecture 3</a> -->
+            </td>
+          </tr>
+           <!-- Week 12 -->
+          <tr>
+            <td style="text-align: center;">Week 12<br>(Week of 13th Oct)</td>
+            <td style="text-align: left;">
+              <ul>
+                <li><i>Diffusion Models</i>
+                  by <br><b>Tejomay Kishor Padole, IIT Bombay</b></li>
+                
+                <li><i>Enabling Robots to Understand Language</i>
+                  by <br><b>Prof. Rohan Paul, IIT Delhi</b></li>
+                                
+              </ul>
+            </td>
+            <td style="text-align: center;">
+              <a target="_blank" href="slides_2025/CS772-2025-Diffusion_models.pdf">Week 12 (T)</a><br>
+              <br>
+              <a target="_blank" href="slides_2025/RP-IITB-NLP-Talk-Static-Slides.pdf">Week 12 (F)</a>
+              <!-- <a target="_blank" href="slides_2025/2025-aug-iitb-aditya.pdf">Week 2 (F)</a> -->
+            </td>
+            <td style="text-align: center;">
+              <a target="_blank" href="">Lecture 17 </a>
+              <br><br>
+              <a target="_blank" href="https://youtu.be/JLIHPL7scOc">Lecture 18</a>
+              <!-- <a target="_blank" href="https://youtu.be/6mB48Co7Vg0">Lecture 3</a> -->
+            </td>
+          </tr>
+          <!-- Week 13 -->
+          <tr>
+            <td style="text-align: center;">Week 13<br>(Week of 20th Oct)</td>
+            <td style="text-align: left;">
+              <ul>
+                <li><i>Financial information extraction using knowledge graphs</i>
+                  by <br><b>Saiful Haq, Hyperbots Inc. and IIT Bombay</b></li>
+                
+                <li><i>Vision language models</i>
+                  by <br><b>Settaluri Lakshmi Sravanthi,  IIT Bombay</b></li>
+                                
+              </ul>
+            </td>
+            <td style="text-align: center;">
+              <a target="_blank" href="slides_2025/information_extraction_lecture_21oct2025 (2).pdf">Week 13 (T)</a><br>
+              <br>
+              <a target="_blank" href="slides_2025/cs772_lecture_vlms.pdf">Week 13 (F)</a>
+              <!-- <a target="_blank" href="slides_2025/2025-aug-iitb-aditya.pdf">Week 2 (F)</a> -->
+            </td>
+            <td style="text-align: center;">
+              <a target="_blank" href="">Lecture 19 </a>
+              <br><br>
+              <a target="_blank" href="">Lecture 20</a>
+              <!-- <a target="_blank" href="https://youtu.be/6mB48Co7Vg0">Lecture 3</a> -->
+            </td>
+          </tr>
+           <!-- Week 14 -->
+          <tr>
+            <td style="text-align: center;">Week 14<br>(Week of 27th Oct)</td>
+            <td style="text-align: left;">
+              <ul>
+                <li><i>Retrieval-Augmented Generation (RAG) Part 1</i>
+                  by <br><b>Prof. Soumen Chakrabarti, IIT Bombay</b></li>
+                
+                <li><i>etrieval-Augmented Generation (RAG) Part 2</i>
+                  by <br><b>Prof. Soumen Chakrabarti, IIT Bombay</b></li>
+                                
+              </ul>
+            </td>
+            <td style="text-align: center;">
+              <a target="_blank" href="slides_2025/2025-10-28_Retrieval_CS772.pptx.pdf">Week 14 (T) and (F)</a><br>
+              <br>
+              <!-- <a target="_blank" href="">Week 14 (F)</a> -->
+              <!-- <a target="_blank" href="slides_2025/2025-aug-iitb-aditya.pdf">Week 2 (F)</a> -->
+            </td>
+            <td style="text-align: center;">
+              <a target="_blank" href="">Lecture 21 </a>
+              <br><br>
+              <a target="_blank" href="">Lecture 22</a>
+              <!-- <a target="_blank" href="https://youtu.be/6mB48Co7Vg0">Lecture 3</a> -->
+            </td>
+          </tr>
+           <!-- Week 15 -->
+          <tr>
+            <td style="text-align: center;">Week 15<br>(Week of 3rd Nov)</td>
+            <td style="text-align: left;">
+              <ul>
+                <li><i>In-Context Learning</i>
+                  by <br><b>Prof. Sunita Sarawagi, IIT Bombay</b></li>
+                   
+                <li><i>Guest Lecture</i>
+                  by <br><b>Dr. Partha Talukdar, Principle Research Scientist and Director, Google Deepmind</b></li>
+                                
+              </ul>
+            </td>
+            <td style="text-align: center;">
+              <a target="_blank" href="slides_2025/ICLv3.pdf">Week 15 (T)</a><br>
+              <br>
+              <a target="_blank" href="">Week 15 (F)</a>
+              <!-- <a target="_blank" href="slides_2025/2025-aug-iitb-aditya.pdf">Week 2 (F)</a> -->
+            </td>
+            <td style="text-align: center;">
+              <a target="_blank" href="">Lecture 23 </a>
+              <br><br>
+              <a target="_blank" href="">Lecture 24</a>
+              <!-- <a target="_blank" href="https://youtu.be/6mB48Co7Vg0">Lecture 3</a> -->
+            </td>
+          </tr>
+          <!-- Add other weeks here... -->
+                    <!-- <tr>
+            <td style="text-align: center;">Week 2<br>(Week of 5th Aug)</td>
+            <td style="text-align: left;">
+              <ul>
+                <li>POS Tagging (PART-1)</li>
+                <li>POS Tagging (PART-2) | Hidden Markov Model</li>
+              </ul>
+            </td>
+            <td style="text-align: center;">
+              <a target="_blank" href="Lectures/2-cs626-pos-hmm-bayes-week-of-5aug24.pdf">Week 2</a>
+            </td>
+            <td style="text-align: center;">
+              <a target="_blank" href="https://youtu.be/fdHLGsQa9Kw">Lecture 3</a><br>
+              <a target="_blank" href="https://youtu.be/Ckqx1uRiQ2k">Lecture 4</a>
+            </td>
+          </tr> -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section> 
+<hr>
+
+<!-- Contact Section -->
+<section id="contact" class="w3-row-padding w3-container">
+    <div class="w3-content">
+	    <div class="course-contact">
+            <h2 class="gradient-text"><b>Contact Us</b></h2>
+            <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&amp;display=swap" rel="stylesheet">
+
+            <ul>
+                <li><a href="http://www.cfilt.iitb.ac.in/" target="_blank"><font color="blue">CFILT Lab</font></a></li>
+                <li>Room Number: <span style="font-family: 'Montserrat', sans-serif;">401</span>, <span style="font-family: 'Montserrat', sans-serif;">4th</span> Floor, new CC building</li>
+                <li>Department of Computer Science and Engineering</li>
+                <li>Indian Institute of Technology Bombay</li>
+                <li>Mumbai <span style="font-family: 'Montserrat', sans-serif;">400076</span>, India</li>
+            </ul>
+            
+        </div>
+    </div>        
+</section>
+<hr>
+
+<footer class="w3-container w3-padding-64 w3-center w3-opacity">
+  🌲 Managed by <i> Pinaki Das</i> 🌲<br>
+    🌲 Designed with ❤️ by <i>Arnav Attri &amp; Anuj Attri</i> 🌲<br>
+    
+    Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3schools.com</a>
+  </footer>
+
+  <!-- First Script: Menu Function -->
+  <script>
+    // Used to toggle the menu on small screens when clicking on the menu button
+    function myFunction() {
+      var x = document.getElementById("navDemo");
+      if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+      } else {
+        x.className = x.className.replace(" w3-show", "");
+      }
+    }
+  </script>
+  
+  <!-- Second Script: Service Worker and PWA Setup -->
+  <script>
+    // Service Worker Registration
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+          .then(registration => {
+            console.log('ServiceWorker registration successful');
+          })
+          .catch(err => {
+            console.log('ServiceWorker registration failed: ', err);
+          });
+      });
+    }
+  
+    // Add to Home Screen Prompt
+    let deferredPrompt;
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault();
+      deferredPrompt = e;
+  
+      // Show your custom install prompt here if desired
+      showInstallPrompt();
+    });
+  
+    function showInstallPrompt() {
+      const installBanner = document.createElement('div');
+      installBanner.style.position = 'fixed';
+      installBanner.style.bottom = '0';
+      installBanner.style.left = '0';
+      installBanner.style.right = '0';
+      installBanner.style.padding = '1rem';
+      installBanner.style.background = 'linear-gradient(to right, #1506df, #0f9c24)';
+      installBanner.style.color = 'white';
+      installBanner.style.display = 'flex';
+      installBanner.style.justifyContent = 'space-between';
+      installBanner.style.alignItems = 'center';
+      installBanner.innerHTML = `
+        <span>Install CS772 app for offline access</span>
+        <button onclick="installPWA()" style="padding: 0.5rem 1rem; border: 2px solid white; background: transparent; color: white; border-radius: 5px; cursor: pointer;">Install</button>
+        <button onclick="this.parentElement.remove()" style="background: transparent; border: none; color: white; cursor: pointer;">×</button>
+      `;
+      document.body.appendChild(installBanner);
+    }
+  
+    function installPWA() {
+      if (deferredPrompt) {
+        deferredPrompt.prompt();
+        deferredPrompt.userChoice.then((choiceResult) => {
+          if (choiceResult.outcome === 'accepted') {
+            console.log('User accepted the install prompt');
+          }
+          deferredPrompt = null;
+        });
+      }
+    }
+  </script>
+  
+  
+  
+  
+</body></html>

@@ -1,0 +1,515 @@
+<!DOCTYPE html><html><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>CS 294 Deep Reinforcement Learning, Spring 2017</title>
+  <meta name="description" content="">
+
+  <link rel="stylesheet" href="/deeprlcourse/css/main.css">
+  <link rel="canonical" href="http://rll.berkeley.edu/deeprlcourse/deeprlcourse/">
+  <link rel="alternate" type="application/rss+xml" title="" href="http://rll.berkeley.edu/deeprlcourse/deeprlcourse/feed.xml">
+</head>
+
+
+  <body>
+
+ 
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <!-- <h1 class="post-title">CS 294 Deep Reinforcement Learning, Fall 2015</h1> -->
+  </header>
+
+  <article class="post-content">
+    <h1 id="cs-294-deep-reinforcement-learning-spring-2017">CS 294: Deep Reinforcement Learning, Spring 2017</h1>
+
+<table>
+  <tbody>
+    <tr>
+      <td><strong>If you are a UC Berkeley undergraduate student looking to enroll in the fall 2017 offering of this course:</strong> We will post a form that you may fill out to provide us with some information about your background during the summer. Please do not email the instructors about enrollment: the form will be used to collect all information we need.</td>
+</tr>
+    <tr>
+      <td><strong>Instructors</strong>: Sergey Levine, John Schulman, Chelsea Finn</td>
+    </tr>
+    <tr>
+      <td><strong>Lectures</strong>: Mondays and Wednesdays, 9:00am-10:30am in 306 Soda Hall.</td>
+    </tr>
+    <tr>
+      <td><strong>Office Hours</strong>: MW 10:30-11:30, by appointment (see signup sheet on Piazza)</td>
+    </tr>
+    <tr>
+      <td><strong>Communication</strong>: Piazza will be used for announcements, general questions and discussions, clarifications about assignments, student questions to each other, and so on. To sign up, go to <a href="http://www.piazza.com/">Piazza</a> and sign up with “UC Berkeley” and “CS294-112”.</td>
+    </tr>
+    <tr>
+    <td> For people who are not enrolled, but interested in following and discussing the course, there is a subreddit forum here: <a href="https://www.reddit.com/r/berkeleydeeprlcourse/">reddit.com/r/berkeleydeeprlcourse/</a>
+    </td>
+    </tr>
+<tr>
+      <td><strong>Please do not email the course instructors about MuJoCo licenses if you are not enrolled in the course.</strong> Unfortunately, we do not have any license that we can provide to students who are not officially enrolled in the course for credit.
+</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><br></p>
+
+<hr>
+
+<p><br></p>
+
+<h3 id="table-of-contents">Table of Contents</h3>
+
+<ul>
+  <li><a href="#lecture-videos">Lecture Videos</a></li>
+  <li><a href="#lectures">Lectures, Readings, and Assignments</a></li>
+  <li><a href="#prerequisites">Prerequisites</a></li>
+  <li><a href="#related-materials">Related Materials</a></li>
+  <!-- <li><a href="#feedback">Feedback</a></li> -->
+  <li><a href="#previous">Previous Offerings</a></li>
+</ul>
+
+<p><br></p>
+
+<hr>
+
+<p><br></p>
+
+<h2 id="lecture-videos">Lecture Videos</h2>
+
+<p> The course lectures are available below. The course is <b>not</b> being offered as an online course, and the videos are provided only for your personal informational and entertainment purposes. They are not part of any course requirement or degree-bearing university program.<br> For all videos, <strong><a href="https://www.youtube.com/playlist?list=PLkFD6_40KJIwTmSbCv9OVJB3YaO4sFwkX">click here</a></strong>. <br>For live
+stream, <strong><a href="http://www.youtube.com/user/esgeecs/live">click here</a></strong>. </p>
+
+<h2 id="lectures">Lectures, Readings, and Assignments</h2>
+<p>Below you can find an outline of the course. Slides and references will be posted as the course proceeds.</p>
+
+<ul>
+  <li>Jan 18: Introduction and course overview (Levine, Finn, Schulman)
+    <ul>
+      <li><a href="docs/week_1_lecture_1_introduction.pdf">Slides: Levine</a></li>
+      <li><a href="docs/deeprl_lecture1.pdf">Slides: Finn</a></li>
+      <li><a href="docs/lec0.pdf">Slides: Schulman</a></li>
+    </ul>
+  </li>
+  <li>Jan 23: Supervised learning and decision making (Levine)
+    <ul>
+      <li><a href="docs/week_2_lecture_1_behavior_cloning.pdf">Slides</a></li>
+      <li><a href="https://arxiv.org/abs/1604.07316">End to End Learning for Self-Driving Cars</a></li>
+      <li><a href="https://arxiv.org/abs/1011.0686">A Reduction of Imitation Learning and Structured Prediction to No-Regret Online Learning</a> (DAgger paper)</li>
+      <li><a href="http://rpg.ifi.uzh.ch/docs/RAL16_Giusti.pdf">A Machine Learning Approach to Visual Perception of Forest Trails for Mobile Robots</a></li>
+      <li><a href="https://arxiv.org/abs/1608.00627">Learning Transferable Policies for Monocular Reactive MAV Control</a></li>
+      <li><a href="https://arxiv.org/abs/1603.03833">Learning Real Manipulation Tasks from Virtual Demonstrations using LSTM</a></li>
+    </ul>
+  </li>
+  <li>Jan 25: Optimal control and planning (Levine)
+    <ul>
+      <li><a href="docs/week_2_lecture_2_optimal_control.pdf">Slides</a></li>
+    </ul>
+  </li>
+  <li>Jan 27 (10 am, SDH 240): Review section: autodiff, backpropagation, optimization (Finn)
+    <ul>
+      <li><a href="https://www.tensorflow.org/tutorials/mnist/beginners/">TensorFlow MNIST tutorial</a></li>
+      <li><a href="https://www.tensorflow.org/tutorials/mnist/tf/">TensorFlow Mechanics 101</a></li>
+      <li><a href="docs/tfsection.pdf">Slides</a></li>
+    </ul>
+  </li>
+  <li>Jan 30: Learning dynamical system models from data (Levine)
+    <ul>
+      <li><b>Homework 1 is out: <a href="docs/hw1.pdf">Imitation Learning</a></b></li>
+      <li><b>Plotting and Visualization Handout: <a href="docs/plotting_handout.pdf">Handout</a></b></li>
+      <li><a href="docs/week_3_lecture_1_dynamics_learning.pdf">Slides</a></li>
+    </ul>
+  </li>
+  <li>Feb 1: Learning policies by imitating optimal controllers (Levine) 
+    <ul>
+      <li><a href="docs/week_3_lecture_2_imitating_optimal_control.pdf">Slides</a></li>
+    </ul>
+  </li>
+  <li>Feb 6: Guest lecture: Igor Mordatch, OpenAI 
+    <ul>
+      <li><a href="docs/igor_slides.pdf">Slides</a></li>
+    </ul>
+  </li>
+  <li>Feb 8: RL definitions, value iteration, policy iteration (Schulman) 
+    <ul>
+      <li><b>Homework 1 is DUE</b></li>
+      <li><b>Homework 2 is out: Basic RL:</b> <a href="https://github.com/berkeleydeeprlcourse/homework">see hw2 directory in the course github</a></li>
+      <li><a href="docs/lec1.pdf">Slides</a></li>
+    </ul>
+  </li>
+  <li>Feb 13: Reinforcement learning with policy gradients (Schulman) 
+    <ul>
+      <li><a href="docs/lec2.pdf">Slides</a></li>
+    </ul>
+  </li>
+  <li>Feb 15: Learning Q-functions: Q-learning, SARSA, and others (Schulman) 
+    <ul>
+      <li><a href="docs/lec3.pdf">Slides</a></li>
+    </ul>
+  </li>
+  <li>Feb 22: Advanced Q-learning: replay buffers, target networks, double Q-learning (Schulman) 
+    <ul>
+      <li><b>Homework 2 is DUE</b></li>
+      <li><b>Homework 3 is out: <a href="docs/hw3.pdf">Deep Q Learning</a></b></li>
+      <li><a href="docs/lec4.pdf">Slides</a></li>
+    </ul>
+  </li>
+  <li>Feb 27: Advanced model learning: predicting images and videos (Finn) 
+    <ul>
+      <li><a href="docs/deeprl_advanced_model_learning.pdf"><b>Slides</b></a></li>
+      <li><a href="http://ml.informatik.uni-freiburg.de/_media/publications/rieijcnn12.pdf">Autonomous reinforcement learning on raw visual input data in a real world application</a></li>
+      <li><a href="https://arxiv.org/pdf/1509.06113.pdf">Deep Spatial Autoencoders for Visuomotor Learning</a></li>
+      <li><a href="https://arxiv.org/pdf/1506.07365.pdf">Embed to Control: A Locally Linear Latent Dynamics Model for Control from Raw Images</a></li>
+      <li><a href="https://arxiv.org/pdf/1507.08750.pdf">Action-Conditional Video Prediction using Deep Networks in Atari Games</a></li>
+      <li><a href="https://arxiv.org/pdf/1605.07157.pdf">Unsupervised Learning for Physical Interaction through Video Prediction</a></li>
+      <li><a href="https://arxiv.org/pdf/1610.00696.pdf">Deep Visual Foresight for Planning Robot Motion</a></li>
+      <li><a href="https://arxiv.org/pdf/1606.07419.pdf">Learning to Poke by Poking: Experiential Learning of Intuitive Physics</a></li>
+    </ul>
+  </li>
+  <li>Mar 1: Advanced topics in imitation and safety (Finn) 
+    <ul>
+      <li><b><a href="docs/advanced_imitation.pdf">Slides</a></b></li>
+      <li><a href="https://arxiv.org/pdf/1504.03071.pdf">Robobarista: Object Part based Transfer of Manipulation Trajectories from Crowd-sourcing in 3D Pointclouds</a></li>
+      <li><a href="https://arxiv.org/pdf/1603.06348.pdf">Learning Dexterous Manipulation for a Soft Robotic Hand from Human Demonstrations</a></li>
+      <li><a href="https://arxiv.org/pdf/1612.06699.pdf">Unsupervised Perceptual Rewards for Imitation Learning</a></li>
+      <li><a href="https://arxiv.org/pdf/1605.06450.pdf">Query-Efficient Imitation Learning for End-to-End Autonomous Driving</a> (SafeDAgger)</li>
+      <li><a href="http://www.ieor.berkeley.edu/~goldberg/pubs/icra2016-final-SHIV-v29.pdf">SHIV: Reducing Supervisor Burden in DAgger using Support Vectors for Efficient Learning from Demonstrations in High Dimensional State Spaces</a></li>
+      <li><a href="https://arxiv.org/pdf/1702.01182.pdf">Uncertainty-Aware Reinforcement Learning for Collision Avoidance</a></li>
+      <li><a href="https://arxiv.org/pdf/1607.04614.pdf">Guided Policy Search as Approximate Mirror Descent</a></li>
+      <li><a href="https://arxiv.org/pdf/1610.01112.pdf">Reset-Free Guided Policy Search: Efficient Deep Reinforcement Learning with Stochastic Initial States</a></li>
+    </ul>
+  </li>
+  <li>Mar 6: Inverse RL: acquiring objectives from demonstration (Finn) 
+    <ul>
+      <li><a href="docs/inverserl.pdf"><b>Slides</b></a></li>
+      <li><a href="http://ai.stanford.edu/~ang/papers/icml00-irl.pdf">Algorithms for Inverse Reinforcement Learning</a></li>
+      <li><a href="http://www.aaai.org/Papers/AAAI/2008/AAAI08-227.pdf">Maximum Entropy Inverse Reinforcement Learning</a></li>
+      <li><a href="https://arxiv.org/pdf/1507.04888.pdf">Maximum Entropy Deep Inverse Reinforcement Learning</a></li>
+      <li><a href="https://arxiv.org/pdf/1603.00448.pdf">Guided Cost Learning: Deep Inverse Optimal Control via Policy Optimization</a></li>
+      <li><a href="https://arxiv.org/pdf/1606.03476.pdf">Generative Adversarial Imitation Learning</a></li>
+    </ul>
+  </li>
+  <li>Mar 8: Advanced policy gradients: natural gradient and TRPO (Schulman) 
+    <ul>
+      <li><b>Homework 3 is DUE</b></li>
+      <li><b>Homework 4 is out: <a href="https://github.com/berkeleydeeprlcourse/hw-private/blob/master/hw4/homework.md">Deep Policy Gradients</a></b></li>
+      <li><a href="docs/lec5.pdf">Slides</a></li>
+    </ul>
+  </li>
+  <li>Mar 13: Policy gradient variance reduction and actor-critic algorithms (Schulman) 
+    <ul>
+      <li><a href="docs/lec6.pdf">Slides</a></li>
+    </ul>
+  </li>
+  <li>Mar 15: Summary of policy gradients and temporal difference methods (Schulman)
+    <ul>
+      <li><a href="docs/lec7.pdf">Slides</a></li>
+    </ul>
+  </li>
+  <li>Mar 20: The exploration problem (Schulman) 
+    <ul>
+      <li><a href="docs/2017.03.20.Exploration.pdf">Slides</a></li>
+    </ul>
+  </li>
+  <li>Mar 22: Parallel RL algorithms, open problems and challenges in deep reinforcement learning (Levine) 
+    <ul>
+      <li><b>Deadline to form final project groups</b></li>
+      <li><a href="docs/challenges.pdf">Slides</a></li>
+    </ul>
+  </li>
+  <li>Mar 27: <b>Homework 4 is DUE</b></li>
+  <li>Apr 3: Transfer in Reinforcement Learning (Finn) 
+    <ul>
+      <li><a href="docs/deeprl_transfer.pdf">Slides</a></li>
+    </ul>
+  </li>
+  <li>Apr 5: Neural Architecture Search with Reinforcement Learning: Quoc Le and Barret Zoph, Google Brain Team
+    <ul>
+      <li><a href="docs/quoc_barret.pdf">Slides</a></li>
+    </ul>
+  </li>
+  <li>Apr 10: Generalization and Safety in Reinforcement Learning and Control: Aviv Tamar, UC Berkeley 
+    <ul>
+      <li><a href="docs/aviv_slides.pdf">Slides</a></li>
+    </ul>
+  </li>
+  <li>Apr 12: Guest lecture, Honglak Lee, University of Michigan and Google Brain Team
+    <ul>
+      <li><a href="docs/honglak_lecture.pdf">Slides</a></li>
+    </ul>
+  </li>
+  <li>Apr 17: Project milestone presentations 
+    <ul>
+      <li><b>Final project milestone reports DUE</b></li>
+    </ul>
+  </li>
+  <li>Apr 19: Guest lecture: Mohammad Norouzi, Google Brain Team 
+    <ul>
+      <li><a href="docs/mohammad_lecture.pdf">Slides</a></li>
+    </ul>
+  </li>
+  <li>Apr 24: Guest lecture: Pieter Abbeel, UC Berkeley and OpenAI 
+    <ul>
+      <li><a href="docs/pieter_lecture.pdf">Slides</a></li>
+    </ul>
+  </li>
+  <li>Apr 26: Final project presentations 
+  </li>
+  <li>May 1: Final project presentations 
+  </li>
+  <li>May 3: Final project presentations (spillover period)
+  </li>
+</ul>
+
+
+<!--<iframe width=100% height=750px src="https://docs.google.com/spreadsheets/d/1W6qBRW7AFnxcs7dOK8KGvUiwMXJwYZOpx8llF-CxbCQ/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe>-->
+
+<!--
+<p> The syllabus will be made available in early 2017.</p>
+
+<p>Below you can find a tentative outline of the course. Slides and references will be posted as the course proceeds. <strong>Dates are tentative</strong>.</p>
+
+
+<h4 id="course-introduction-and-overview">Course Introduction and Overview</h4>
+<ul>
+  <li>Date: 1/18</li>
+
+
+
+
+<h4 id="course-introduction-and-overview">Course Introduction and Overview</h4>
+<ul>
+  <li>Date: 8/26</li>
+  <li>Topics:
+    <ul>
+      <li>What is deep reinforcement learning?</li>
+      <li>Current applications of RL</li>
+      <li>Frontiers: where might deep RL be applied?</li>
+    </ul>
+  </li>
+  <li><a href="docs/2015.08.26.Lecture01Intro.pdf">Slides</a></li>
+  <li>References and further reading
+    <ul>
+      <li>See <a href="#textbooks">Powell textbook</a> for more information on applications in operations research.</li>
+      <li>See <a href="http://www.cs.cmu.edu/~sross1/publications/ross_phdthesis.pdf">Stephane Ross’ thesis</a> (Introduction) for more info on <em>structured prediction as reinforcement learning</em> and <em>how is RL difference from supervised learning?</em></li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="markov-decision-processes">Markov Decision Processes</h4>
+<ul>
+  <li>Date: 8/31</li>
+  <li><a href="docs/mdp-cheatsheet.pdf">MDP Cheatsheet</a></li>
+</ul>
+
+<h4 id="review-of-backpropagation-and-numerical-optimization">Review of Backpropagation and Numerical Optimization</h4>
+<ul>
+  <li>Date: 9/2</li>
+  <li>For a very thorough analysis of reverse mode automatic differentiation, see Griewank and Walther’s textbook <a href="http://epubs.siam.org/doi/book/10.1137/1.9780898717761">Evaluating Derivatives</a>. Chances are, you’re computing derivatives all day, so it pays off to go into some depth on this topic!</li>
+</ul>
+
+<h4 id="policy-gradient-methods">Policy Gradient Methods</h4>
+<ul>
+  <li>
+    <p>General references on policy gradients:</p>
+
+    <ul>
+      <li><a href="http://www.keck.ucsf.edu/~houde/sensorimotor_jc/possible_papers/JPeters08a.pdf">Peters &amp; Schaal: <em>Reinforcement learning of motor skills with policy gradients</em></a>: solid review article on policy gradient methods.</li>
+      <li><a href="http://homes.cs.washington.edu/~sham/papers/thesis/sham_thesis.pdf">Sham Kakade’s thesis, chapter 4</a>: nice historical overview and theoretical study, with an alternative perspective based on advantage functions.</li>
+      <li><a href="http://dl.acm.org/citation.cfm?id=1044710">Greensmith, Baxter, &amp; Bartlett: <em>Variance Reduction Techniques for Gradient Estimates in Reinforcement Learning</em></a>, and also see the paper <a href="http://www.jair.org/papers/paper806.html"><em>Infinite-Horizon Policy-Gradient Estimation</em></a> which introduces the theoretical framework.</li>
+    </ul>
+  </li>
+  <li>
+    <p>Trust region / proximal / batch methods</p>
+    <ul>
+      <li><a href="http://www.cs.cmu.edu/~./jcl/papers/aoarl/Final.pdf">Kakade &amp; Langford: <em>Approximately optimal approximate reinforcement learning</em></a> – Conservative policy iteration algorithm, providing some nice intuition about policy gradient methods, and some generally useful theoretical ideas.</li>
+      <li><a href="http://www-2.cs.cmu.edu/Groups/NIPS/NIPS2001/papers/psgz/CN11.ps.gz">Kakade: <em>A Natural Policy Gradient</em></a></li>
+      <li><a href="http://arxiv.org/abs/1502.05477">Schulman, Levine, Moritz, Jordan, Abbeel: <em>Trust Region Policy Optimization</em></a>: combines theoretical ideas from <em>conservative policy gradient algorithm</em> to prove that monotonic improvement can be guaranteed when one solves a series of subproblems of optimizing a bound on the policy performance. The conclusion is that one should use KL-divergence constraint.</li>
+      <li><a href="http://arxiv.org/abs/1506.024387">Schulman, Moritz, Levine, Jordan, Abbeel: <em>High-Dimensional Continuous Control Using Generalized Advantage Estimation</em></a>: Better estimation of advantage function for policy gradient algorithms, using a λ parameter.</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="approximate-dynamic-programming-methods">Approximate Dynamic Programming Methods</h4>
+
+<ul>
+  <li>Q-Learning / Q-Value Iteration
+    <ul>
+      <li><a href="http://link.springer.com/article/10.1007/BF00992698">Q-learning convergence result is originally due to Watkins</a>. A compact and general alternative proof is provided by <a href="http://www.mitpressjournals.org/doi/abs/10.1162/neco.1994.6.6.1185#.VgnucxNViko">Jordan, Jaakola, and Singh: <em>On the Convergence of Stochastic Iterative Dynamic Programming Algorithm</em></a>, which also applies to TD(λ)</li>
+      <li><a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.72.1193&amp;rep=rep1&amp;type=pdf">Neural Fitted Q Iteration (NFQ) by Riedmiller</a></li>
+      <li>Deep Q Network (DQN) by Mnih et al. of DeepMind: <a href="http://arxiv.org/abs/1312.5602">ArXiv</a>, <a href="http://www.nature.com/nature/journal/v518/n7540/abs/nature14236.html">Nature</a></li>
+    </ul>
+  </li>
+  <li>Approximate Policy Iteration methods
+    <ul>
+      <li><a href="http://arxiv.org/abs/1205.3054">Scherrer et al., <em>Approximate Modified Policy Iteration</em></a>. A very general framework that subsumes many other ADP algorithms as special cases. Also see the related paper with more practical tips: <a href="http://papers.nips.cc/paper/5190-approximate-dynamic-programming-finally-performs-well-in-the-game-of-tetris"><em>Approximate Dynamic Programming Finally Performs Well in the Game of Tetris</em></a>.</li>
+      <li>See <a href="http://web.mit.edu/dimitrib/www/dpchapter.pdf">Bertsekas’ textbook, 2ed</a> for a very extensive treatment of approximate value function estimation methods, and approximate policy iteration.</li>
+      <li><a href="http://machinelearning.wustl.edu/mlpapers/paper_files/LagoudakisP03.pdf">Least Squares Policy Iteration</a>: policy iteration with Q function.</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="search--supervised-learning">Search + Supervised Learning</h4>
+
+<ul>
+  <li>DAGGER and related ideas based on querying an expert (or search algorithm) while executing agent’s policy:
+    <ul>
+      <li><a href="http://arxiv.org/abs/1011.0686">A Reduction of Imitation Learning and Structured Prediction to No-Regret Online Learning</a> - DAGGER</li>
+      <li><a href="http://arxiv.org/abs/1406.5979">Reinforcement and Imitation Learning via Interactive No-Regret Learning</a> AGGREVATE – same authors as DAGGER, cleaner and more general framework (in my opinion).</li>
+      <li><a href="http://papers.nips.cc/paper/5421-scalable-inference-for-neuronal-connectivity-from-calcium-imaging">Deep Learning for Real-Time Atari Game Play Using Offline Monte-Carlo Tree Search Planning</a> Monte-Carlo Tree Search + DAGGER</li>
+      <li><a href="http://www.umiacs.umd.edu/~hal/docs/daume06searn-practice.pdf">SEARN in Practice</a> - similar to DAGGER/AGGREVATE but using a stochastic policy, and targeted at structured prediction problems. <a href="http://www.cs.cmu.edu/~sross1/publications/ross_phdthesis.pdf">Stephane Ross’ thesis</a> has a nice explanation of SEARN.</li>
+    </ul>
+  </li>
+  <li>Trajectory Optimization + Supervised Learning:
+    <ul>
+      <li><a href="http://jmlr.org/proceedings/papers/v28/levine13.pdf">Guided Policy Search</a>: use (modification of) importance sampling to get policy gradient, where samples are obtained via trajectory optimization.</li>
+      <li><a href="http://www.eecs.berkeley.edu/~svlevine/papers/cgps.pdf">Constrained Guided Policy Search</a>: Formulates an objective that jointly includes a collection of trajectories and a policy, and encourages them to become consistent. <a href="http://arxiv.org/pdf/1504.00702v1.pdf">End-To-End Training of Deep Visuomotor Policies</a> uses CGPS learn mapping from image pixels to low-level control signal in robotic manipulation problems.</li>
+      <li><a href="http://homes.cs.washington.edu/~todorov/papers/MordatchRSS14.pdf">Combining the Benefits of Function Approximation and Trajectory Optimization</a> jointly optimizing trajectories and policies, with some different design choices from CGPS. (Igor has written a new NIPS paper on this topic, it will be linked when it’s ready)</li>
+    </ul>
+  </li>
+  <li><a href="docs/2015.10.5.dagger.pdf">Slides from lecture on DAGGER and friends</a></li>
+</ul>
+
+<h4 id="frontiers">Frontiers:</h4>
+
+<ul>
+  <li><a href="docs/2015.10.07.Exploration.pdf">Slides on exploration and intrinisic rewards</a></li>
+</ul>
+
+-->
+
+<h2 id="prerequisites">Prerequisites</h2>
+
+<p>CS189 or equivalent is a prerequisite for the course. This course will assume some familiarity with reinforcement learning, numerical optimization and machine learning. Students who are not familiar with the concepts below are encouraged to brush up using the references provided right below this list. We’ll review this material in class, but it will be rather cursory.</p>
+
+<ul>
+  <li>Reinforcement learning and MDPs
+    <ul>
+      <li>Definition of MDPs</li>
+      <li>Exact algorithms: policy and value iteration</li>
+      <li>Search algorithms</li>
+    </ul>
+  </li>
+  <li>Numerical Optimization
+    <ul>
+      <li>gradient descent, stochastic gradient descent</li>
+      <li>backpropagation algorithm</li>
+    </ul>
+  </li>
+  <li>Machine Learning
+    <ul>
+      <li>Classification and regression problems: what loss functions are used, how to fit linear and nonlinear models</li>
+      <li>Training/test error, overfitting.</li>
+    </ul>
+  </li>
+</ul>
+
+<p>For introductory material on RL and MDPs, see</p>
+
+<ul>
+  <li><a href="http://ai.berkeley.edu">CS188 EdX course</a>, starting with <em>Markov Decision Processes I</em></li>
+  <li><a href="http://webdocs.cs.ualberta.ca/~sutton/book/the-book.html">Sutton &amp; Barto</a>, Ch 3 and 4.</li>
+  <li>For a concise intro to MDPs, see Ch 1-2 of <a href="docs/ng-thesis.pdf">Andrew Ng’s thesis</a></li>
+  <li>David Silver’s course, <a href="#related-materials">links below</a></li>
+</ul>
+
+<p>For introductory material on machine learning and neural networks, see</p>
+
+<ul>
+  <li><a href="http://cs231n.github.io">Andrej Karpathy’s course</a></li>
+  <li><a href="https://www.coursera.org/course/neuralnets">Geoff Hinton on Coursera</a></li>
+  <li><a href="https://www.coursera.org/learn/machine-learning/">Andrew Ng on Coursera</a></li>
+  <li><a href="https://work.caltech.edu/telecourse.html">Yaser Abu-Mostafa’s course</a></li>
+</ul>
+
+<h2 id="related-materials">Related Materials</h2>
+
+<h3 id="lectures">John's lecture series at MLSS</h3>
+
+<ul>
+  <li><a href="https://www.youtube.com/watch?v=aUrX-rP_ss4">Lecture 1</a>: intro, derivative free optimization</li>
+  <li><a href="https://www.youtube.com/watch?v=oPGVsoBonLM">Lecture 2</a>: score function gradient estimation and policy gradients</li>
+  <li><a href="https://www.youtube.com/watch?v=rO7Dx8pSJQw">Lecture 3</a>: actor critic methods</li>
+  <li><a href="https://www.youtube.com/watch?v=gb5Q2XL5c8A">Lecture 4</a>: trust region and natural gradient methods, open problems</li>
+</ul>
+
+
+<h3 id="courses">Courses</h3>
+
+<ul>
+  <li><a href="http://www0.cs.ucl.ac.uk/staff/D.Silver/web/Teaching.html">Dave Silver’s course on reinforcement learning</a> / <a href="http://www.machinelearningtalks.com/tag/rl-course">Lecture Videos</a></li>
+  <li><a href="https://www.cs.ox.ac.uk/people/nando.defreitas/machinelearning/">Nando de Freitas’ course on machine learning</a></li>
+  <li><a href="http://cs231n.github.io/">Andrej Karpathy’s course on neural networks</a></li>
+</ul>
+
+<h3 id="textbooks">Relevant Textbooks</h3>
+
+<ul>
+  <li><a href="http://www.deeplearningbook.org/">Deep Learning</a></li>
+  <li><a href="http://webdocs.cs.ualberta.ca/~sutton/book/the-book.html">Sutton &amp; Barto, Reinforcement Learning: An Introduction</a></li>
+  <li><a href="http://www.ualberta.ca/~szepesva/RLBook.html">Szepesvari, Algorithms for Reinforcement Learning</a></li>
+  <li><a href="http://www.athenasc.com/dpbook.html">Bertsekas, Dynamic Programming and Optimal Control, Vols I and II</a></li>
+  <li><a href="http://www.wiley.com/WileyCDA/WileyTitle/productCd-0471727822.html">Puterman, Markov Decision Processes: Discrete Stochastic Dynamic Programming</a></li>
+  <li><a href="http://adp.princeton.edu/">Powell, Approximate Dynamic Programming</a></li>
+</ul>
+
+<h3 id="misc-links">Misc Links</h3>
+
+<ul>
+  <li><a href="http://www.jeremydjacksonphd.com/?cat=7">A collection of deep learning resources</a></li>
+</ul>
+
+<!--
+<h2 id="feedback">Feedback</h2>
+
+<p><a href="http://www.emailmeform.com/builder/form/hopar1j43kqOW90KJEGLz83dm">Send feedback to the instructor</a>. Feel free to remain anonymous.</p>
+-->
+
+<h2 id="previous">Previous Offerings</h2>
+An abbreviated version of this course was offered in <a href="http://rll.berkeley.edu/deeprlcourse-fa15/">Fall 2015</a>.
+
+  </article>
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading"></h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+          <li></li>
+          <li><a href="mailto:"></a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <ul class="social-media-list">
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-3">
+        <p class="text"></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  
+
+
+</body></html>

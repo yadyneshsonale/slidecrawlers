@@ -1,0 +1,180 @@
+<!DOCTYPE html><html lang="en" ng-app="cecApp" class="ng-scope"><head><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide{display:none !important;}ng\:form{display:block;}.ng-animate-block-transitions{transition:0s all!important;-webkit-transition:0s all!important;}.ng-hide-add-active,.ng-hide-remove{display:block!important;}</style>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta http-equiv="cache-control" content="max-age=0">
+
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+<link rel="stylesheet" href="assets/css/menuStyles.css">
+<link rel="stylesheet" href="assets/css/customeStyle.css">
+<link rel="stylesheet" href="assets/css/responsiveStyle.css">
+<link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+
+<!-- ////////////////////// Photo Gallery //////////////////// -->
+
+<link rel="stylesheet" href="assets/css/jquery.fancybox.min.css">
+
+<!--///////////////////////// Ends ////////////////////////// -->
+
+<title>Department of Electrical Engineering</title>
+<style type="text/css">.fancybox-margin{margin-right:0px;}</style></head>
+<body ng-controller="homeController" class="ng-scope">
+<button onclick="bottomFunction()" id="myBtnb" title="Go to bottom" class="fa fa-angle-down"></button>
+<button onclick="topFunction()" id="myBtn" title="Go to top" class="fa fa-angle-up"></button>
+<script>
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop >(document.body.scrollHeight-window.innerHeight)/2 || document.documentElement.scrollTop >(document.documentElement.scrollHeight-window.innerHeight)/2) {
+    document.getElementById("myBtn").style.display = "block";
+    document.getElementById("myBtnb").style.display = "none";
+  } else {
+    document.getElementById("myBtn").style.display = "none";
+    document.getElementById("myBtnb").style.display = "block";
+  }
+}
+
+function bottomFunction() {
+  document.body.scrollTop = document.body.scrollHeight;
+  document.documentElement.scrollTop = document.documentElement.scrollHeight;
+}
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+<section class="topSection">
+  <div class="container-fluid main-container">
+   <div class="socailLink">
+          <!-- <ul>
+            <li><a href="http://www.ee.iitkgp.ac.in/index.php" ng-href="http://www.ee.iitkgp.ac.in/index.php" target="_blank">&nbsp; Old Website &nbsp; </a></li>
+          </ul> -->
+          <div class="clearfix"></div>
+        </div>
+  </div>
+</section>
+<header>
+  <div class="container-fluid main-container">
+    <div class="row">
+      <div class="col-lg-5"> <a href="home"> <img src="assets/images/logo.png" class="img-fluid"> </a> </div>
+      <div class="col-lg-7">
+        <div class="topMenu">
+          <ul>
+            <li ng-class="{'active': $route.current.activePage == 'home'}"><a href="home">Home</a></li>
+            <li ng-class="{'active': $route.current.activePage == 'research'}"><a href="research">Research</a></li>
+            <li ng-class="{'active': $route.current.activePage == 'staff'}"><a href="staff">Staff</a></li>
+            <li ng-class="{'active': $route.current.activePage == 'people'}"><a href="people">Faculty</a></li>
+            <li ng-class="{'active': $route.current.activePage == 'former_faculty'}"><a href="former_faculty">Former Faculty</a></li>
+            <li><a href="http://www.iitkgp.ac.in/" target="_blank">IIT Kgp</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="cssmenu"><div id="menu-line" style="width: 106.578px; left: 239.297px;"></div><div id="menu-button">Menu</div>
+      <ul>
+        <li ng-class="{'active': $route.current.activePage == 'history'}"><a href="history">History </a></li>
+        <li ng-class="{'active': $route.current.activePage == 'head'}"><a href="head">Head</a></li>
+        <li ng-class="{'active': $route.current.activePage == 'people'}"><a href="people">Faculty</a></li>
+        <li ng-class="{'active': $route.current.activePage == 'programme'}" class="active"><a href="programme">Academics</a></li>
+        <li ng-class="{'active': $route.current.activePage == 'research'}"><a href="research">Research</a></li>
+        <li ng-class="{'active': $route.current.activePage == 'publication'}"><a href="publication">Publication</a></li>
+        <!--<li ng-class="{'active': $route.current.activePage == 'contact'}"><a href="contact">Contact</a></li>-->
+        <!--<li ng-class="{'active': $route.current.activePage == 'ieee_iitkgp'}"><a href="ieee_iitkgp">IEEE at IIT KGP</a></li>-->
+        <li ng-class="{'active': $route.current.activePage == 'alumni_award'}"><a href="alumni_award">Notable Alumni</a></li>
+        <li ng-class="{'active': $route.current.activePage == 'awards_recognition'}"><a href="awards_recognition">Faculty Awards</a></li>
+        <li ng-class="{'active': $route.current.activePage == 'student_award'}"><a href="student_award">Student Awards</a></li>
+        <li ng-class="{'active': $route.current.activePage == 'visitors_help'}"><a href="visitors_help">For Visitors</a></li>
+      </ul>
+    </div>
+  </div>
+</header>
+<!-- ngView:  -->
+<footer>
+  <div class="container-fluid main-container">
+    <div class="footerBox">
+      <div class="row">
+        <div class="col-lg-3 border-right">
+          <h5>Contact</h5>
+          <strong>Prof. Chandan Chakraborty</strong><br>
+          <a href="head">Head</a>, Department of Electrical Engineering<br>
+          <p style="font-size: 80%;">
+            Phone (Head's Cabin) : +91-3222-282262<br>
+            Phone (EED Office): +91-3222-282261 <br>
+            FAX: +91-3222-282262<br> 
+            Email: hod[AT]ee[DOT]iitkgp[DOT]ac[DOT]in<br>
+          </p>
+          <h5>Social Media: <a href="https://www.linkedin.com/company/ee-iit-kgp/posts/?feedView=all" target="_blank">LinkedIn</a></h5>  
+          <h4>Web Team</h4>
+          <strong>Prof. Arpan Hota</strong><br>
+          <p style="font-size: 80%;">Email: arpan[AT]ee[DOT]iitkgp[DOT]ac[DOT]in</p>
+        </div>
+        <div class="col-lg-3 pl-5 pr-5">
+          <h5>Quick Links</h5>
+          <div class="quickLink">
+            <ul>
+              <li><a href="https://erp.iitkgp.ac.in" target="_blank">ERP</a></li>
+              <li><a href="http://www.library.iitkgp.ac.in/" target="_blank">Central Library</a></li>
+              <li><a href="time_table">Timetable</a></li>
+              <li><a href="information">Information</a></li>
+              <li><a href="http://www.ee.iitkgp.ac.in/ees/index.html" target="_blank">Electrical Engg. Society</a></li>
+              <li ng-class="{'active': $route.current.activePage == 'ieee_iitkgp'}"><a href="ieee_iitkgp">IEEE at IIT KGP</a></li>
+              <li><a href="photoAlbum" target="_blank">Photo Gallery</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-3 border-left pl-5 pr-5">
+          <h5>The Institute</h5>
+          The Indian Institute of Technology (IIT) Kharagpur was established in May 1950 and started its academic programme in August 1951. Electrical Engineering was established as one of the major departments of the Institute, since its inception in 1951. <a href="http://www.iitkgp.ac.in/about-iitkgp" target="_blank">Click to know more</a> </div>
+        <div class="col-lg-3 border-left  pl-5"> <img src="assets/images/indiamap.png" class="img-fluid"> </div>
+      </div>
+      <hr>
+     <p style="text-align:center"> © 2024 Department of Electrical Engineering, IIT Kharagpur <br>
+	  <a class="trigger_popup_fricc" style="display: none;"> </a> </p></div>
+  </div>
+</footer>
+
+<div class="hover_bkgr_fricc">
+    <span class="helper"></span>
+    <div>
+        <div class="popupCloseButton" onclick="$('.hover_bkgr_fricc').first().style.display='none';">x</div>
+    </div>
+</div>
+<!-- Optional JavaScript<em></em> --> 
+<!-- jQuery first, then Popper.js, then Bootstrap JS --> 
+<script src="assets/js/jquery-3.3.1.min.js"></script> 
+<!-- <script src="assets/js/jquery.dataTables.min.js"></script>  -->
+<!-- <script src="assets/js/dataTables.bootstrap4.min.js"></script>  -->
+<script src="assets/js/angular.min.js"></script> 
+
+<!-- <script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>  -->
+<!-- <script src="https://cdn.datatables.net/responsive/2.2.3/js/responsive.bootstrap4.min.js"></script> --> 
+
+<script src="assets/js/angular-route.js"></script> 
+<script src="assets/js/popper.min.js"></script> 
+<script src="assets/js/bootstrap.min.js"></script> 
+
+<!-- <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> --> 
+<script src="assets/js/owl.carousel.js"></script>
+
+<!-- //////////////// For Photo Gallery //////////////// -->
+
+<script src="assets/js/jquery.fancybox.min.js"></script> 
+<!-- ////////////////////// Ends //////////////////////-->
+
+
+<script src="assets/js/menuScript.js"></script> 
+<script src="assets/js/controllerScript.js"></script> 
+
+
+
+
+</body></html>

@@ -1,0 +1,686 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CS 276: Information Retrieval and Web Search</title>
+
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+  <!-- Google fonts -->
+  <link href="http://fonts.googleapis.com/css?family=Roboto:400,300" rel="stylesheet" type="text/css">
+
+  <!-- Google Analytics -->
+  <script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-KWDQQWLR0T&amp;cx=c&amp;_slc=1"></script><script async="" src="//www.google-analytics.com/analytics.js"></script><script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-60458624-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+
+<body>
+
+<div id="header">
+  <a href="http://nlp.stanford.edu/">
+    <img src="http://nlp.stanford.edu/sentiment/images/nlp-logo.gif" style="height:50px; float: left; margin-left: 20px; margin-right: -70px">
+  </a>
+  <a href="index.html">
+    <h1 style="padding-top: 8px;">CS 276 / LING 286: Information Retrieval and Web Search</h1>
+  </a>
+  <div style="clear:both;"></div>
+</div>
+
+
+
+
+<div class="sechighlight">
+<div class="container sec">
+  <h2>Course schedule</h2>
+
+  Lectures take place on Tuesdays and Thursdays from 4:30 to 5:50pm in <a href="https://campus-map.stanford.edu/?srch=NVIDIA+Auditorium">NVIDIA Auditorium</a>, located in the basement of the Jen-Hsun Huang Engineering Center on campus.  Lecture videos are recorded by SCPD and available to all enrolled students <a href="https://mvideox.stanford.edu/Course/904">here</a>.<br><br>
+
+  Students are also expected to become familiar with the course material presented in a series of video lectures that are hosted on Coursera.  Access the <strong>Coursera videos</strong> <a href="https://www.coursera.org/learn/cs276/home">here</a> (be sure to log in with your Stanford email account to get access).
+</div>
+</div>
+
+<div class="container sec">
+<table class="table">
+  <tbody><tr class="active">
+    <th width="9%">Week</th>
+    <th width="9%">Date</th>
+    <th width="12%">Event</th>
+    <th width="35%">Description &amp; materials</th>
+    <th width="35%">Readings &amp; other resources</th>
+  </tr>
+
+  <tr>
+    <td>Week 1</td>
+    <td>Tues. 4/4</td>
+    <td>Lecture (Pandu)</td>
+    <td><b>Introduction to the course</b><br><br>
+      Coursera content:
+      <ul>
+	<li>Slides:
+             Introduction
+	</li>
+    </ul>
+    </td>
+    <td>
+      <ul>
+        <li><a href="http://nlp.stanford.edu/IR-book/pdf/01bool.pdf">IIR chapter 1</a></li>
+        <li>MG section 3.2</li>
+        <li>MIR section 8.2</li>
+        <li><a href="http://www.rhymezone.com/shakespeare/">Shakespeare plays</a></li>
+      </ul>
+    </td>
+  </tr>
+
+  <tr>
+    <td></td>
+    <td>Thurs. 4/6</td>
+    <td>In-class lab (Chris)</td>
+    <td><b>Merge algorithm for proximity queries using a positional index</b>
+    (<a href="https://github.com/manning/MergeAlgorithms">starter code</a>)
+    <br><br>
+
+    You will need the following Google doc during the in-class lab session:
+    <a href="https://docs.google.com/document/d/15xnoTUm3kyelIDqPTs4H2w_CYf4uaua5MeukFWx1rW8/edit">Postings list intersection class session</a>
+    <br><br>
+
+      Coursera content:
+      <ul>
+         <li>Videos: "Term Vocabulary and Postings Lists"</li>
+         <li>Slides:
+             <a href="handouts/lecture2-dictionary.ppt">PPT</a> |
+             <a href="handouts/lecture2-dictionary-handout-6-per.pdf">PDF/6</a> |
+             <a href="handouts/lecture2-dictionary-handout-1-per.pdf">PDF/1</a></li>
+        <li>Videos: "Index Construction"</li>
+         <li>Slides:
+             <a href="handouts/lecture4-indexconstruction.ppt">PPT</a> |
+             <a href="handouts/lecture4-indexconstruction-handout-6-per.pdf">PDF/6</a> |
+             <a href="handouts/lecture4-indexconstruction-handout-1-per.pdf">PDF/1</a></li>
+        <li>Videos: "Boolean Retrieval"</li>
+         <li>Slides:
+             <a href="handouts/lecture1-intro.ppt">PPT</a> |
+             <a href="handouts/lecture1-intro-handout-6-per.pdf">PDF/6</a> |
+             <a href="handouts/lecture1-intro-handout-1-per.pdf">PDF/1</a></li>
+
+	</ul>
+    </td>
+    <td>
+      <ul>
+        <li><a href="http://nlp.stanford.edu/IR-book/pdf/02voc.pdf">IIR chapter 2</a></li>
+        <li><a href="http://nlp.stanford.edu/IR-book/pdf/04const.pdf">IIR chapter 4</a></li>
+        <li>MG sections 3.6, 4.3</li>
+        <li>MIR section 7.2</li>
+        <li><a href="http://www.sims.berkeley.edu/~hearst/irbook/porter.html">Porter's stemmer (MIR)</a></li>
+        <li><a href="http://www.tartarus.org/~martin/PorterStemmer/">Porter stemming algorithm (Official)</a></li>
+        <li><a href="http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.17.524">A skip list cookbook (Pugh 1990)</a></li>
+        <li><a href="http://portal.acm.org/citation.cfm?id=1028102">Fast phrase querying with combined indexes (Williams, Zobel, Bahle 2004)</a></li>
+        <li><a href="http://portal.acm.org/citation.cfm?id=564415">Efficient phrase querying with an auxiliary index (Bahle, Williams, Zobel 2002)</a></li>
+      </ul>
+    </td>
+  </tr>
+
+  
+   <tr class="warning">
+    <td></td>
+    <td>Thurs. 4/6</td>
+    <td>PA1 released</td>
+    <td><b><a href="pa/pa1.pdf">Programming assignment #1</a> released</b><br>
+    </td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>Week 2</td>
+    <td>Tues. 4/11</td>
+    <td>Lecture (Pandu)</td>
+    <td><b>Spelling correction</b><br><br>
+      In-class lecture notes:
+      <ul>
+        <!-- <li><a href="handouts/lecture5-compression.ppt">Powerpoint</a></li> -->
+        <li><a href="handouts/spell_correction-6up.pdf">PDF/6</a> |
+            <a href="handouts/spell_correction.pdf">PDF/1</a></li>
+      </ul>
+
+      Coursera content:
+      <ul>
+         <li>Videos: "Dictionaries and Tolerant Retrieval"</li>
+         <li>Slides:
+             <a href="handouts/lecture3-tolerant-retrieval.ppt">PPT</a> |
+             <a href="handouts/lecture3-tolerant-retrieval-handout-6-per.pdf">PDF/6</a> |
+             <a href="handouts/lecture3-tolerant-retrieval-handout-1-per.pdf">PDF/1</a></li>
+      </ul>
+    </td>
+    <td>
+      <ul>
+        <li><a href="http://nlp.stanford.edu/IR-book/pdf/03dict.pdf">IIR chapter 3</a></li>
+        <li>MG section 4.2</li>
+        <li><a href="http://norvig.com/spell-correct.html">How to write a spelling corrector (Peter Norvig)</a></li>
+        <li><a href="http://portal.acm.org/citation.cfm?id=146380">Techniques for automatically correcting words in text (Kukich 1992)</a></li>
+        <li><a href="http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.18.9400">Finding approximate matches in large lexicons (Zobel and Dart 1995)</a></li>
+        <li><a href="http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.49.1392">Efficient Generation and Ranking of Spelling Error Corrections (Tillenius)</a></li>
+      </ul>
+    </td>
+  </tr>
+
+  <tr>
+    <td></td>
+    <td>Thurs. 4/13</td>
+    <td>In-class lab (Chris)</td>
+    <td><b>Algorithms for postings list compression</b>
+    (<a href="https://github.com/manning/CompressionAlgorithms">starter code</a>)
+    (<a href="https://docs.google.com/spreadsheets/d/1znmKYjuj4hIehTrotqvkT_HLHTH6WSEEZ0ActjX1xo0/edit#gid=0">Google doc with class results</a>)
+    <br><br>
+
+      Coursera content:
+      <ul>
+         <li>Videos: "Index Compression"</li>
+         <li>Slides:
+             <a href="handouts/lecture5-compression.ppt">PPT</a> |
+             <a href="handouts/lecture5-compression-handout-6-per.pdf">PDF/6</a> |
+             <a href="handouts/lecture5-compression-handout-1-per.pdf">PDF/1</a></li>
+      </ul>
+    </td>
+    <td>
+      <ul>
+        <li><a href="http://nlp.stanford.edu/IR-book/pdf/05comp.pdf">IIR chapter 5</a></li>
+        <li>MG sections 3.3-3.4</li>
+        <li><a href="http://portal.acm.org/citation.cfm?id=564416">Compression of inverted indexes for fast query evaluation (Scholer et al. 2002)</a></li>
+        <li><a href="http://www.springerlink.com/content/j66851228120170t/">Inverted index compression using word-aligned binary codes (Anh and Moffat 2005)</a></li>
+        <li><a href="http://engineering.nyu.edu/~suel/papers/comp.pdf">Inverted index compression and query processing with optimized document ordering (Yan et al. 2009)</a></li>
+      </ul>
+    </td>
+  </tr>
+
+  <tr class="warning">
+    <td></td>
+    <td>Thurs. 4/13</td>
+    <td>PS1 released</td>
+    <td><b><a href="ps/ps1.pdf">Problem set #1</a> released</b></td>
+    <td><b><a href="restricted/ps1-solution.pdf">[PS1 solution]</a></b></td>
+  </tr>
+
+  <tr class="warning">
+    <td></td>
+    <td>Thurs. 4/13</td>
+    <td>Query quiz released</td>
+    <td><b><a href="https://goo.gl/forms/vpUekPg6isLIpP8H3">Query quiz</a> released</b></td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>Week 3</td>
+    <td>Tues. 4/18</td>
+    <td>Lecture (Chris)</td>
+    <td><b>Probabilistic IR: the binary independence model</b><br><br>
+      In-class lecture notes:
+      <ul>
+        <li><a href="handouts/lecture11-probir.pptx">PPT</a> |
+            <a href="handouts/lecture11-probir-6up.pdf">PDF/6</a> |
+            <a href="handouts/lecture11-probir.pdf">PDF/1</a></li>
+      </ul>
+
+      Coursera content:
+      <ul>
+         <li>Videos: "Vector Space Model"</li>
+         <li>Slides:
+             <a href="handouts/lecture6-tfidf.ppt">PPT</a> |
+             <a href="handouts/lecture6-tfidf-handout-6-per.pdf">PDF/6</a> |
+             <a href="handouts/lecture6-tfidf-handout-1-per.pdf">PDF/1</a></li>
+      </ul>
+    </td>
+    <td>
+      <ul>
+        <li><a href="http://nlp.stanford.edu/IR-book/pdf/06vect.pdf">IIR chapter 6</a></li>
+        <li><a href="http://nlp.stanford.edu/IR-book/pdf/11prob.pdf">IIR chapter 11</a></li>
+      </ul>
+    </td>
+  </tr>
+
+  <tr>
+    <td></td>
+    <td>Thurs. 4/20</td>
+    <td>Lecture (Chris)</td>
+    <td><b>Computing scores and BM25F</b><br><br>
+      In-class lecture notes:
+      <ul>
+        <li><a href="handouts/lecture12-bm25etc.pptx">PPT</a> |
+            <a href="handouts/lecture12-bm25etc-6up.pdf">PDF/6</a> |
+            <a href="handouts/lecture12-bm25etc.pdf">PDF/1</a></li>
+      </ul>
+
+      Coursera content:
+      <ul>
+         <li>Videos: "Computing Scores"</li>
+         <li>Slides:
+             <a href="handouts/lecture7-vectorspace.pptx">PPT</a> |
+             <a href="handouts/lecture7-vectorspace-6per.pdf">PDF/6</a> |
+             <a href="handouts/lecture7-vectorspace-1per.pdf">PDF/1</a></li>
+      </ul>
+    </td>
+    <td>
+      <ul>
+        <li><a href="http://nlp.stanford.edu/IR-book/pdf/07system.pdf">IIR chapter 7</a></li>
+        <li><a href="http://nlp.stanford.edu/IR-book/pdf/11prob.pdf">IIR chapter 11</a></li>
+      </ul>
+    </td>
+  </tr>
+
+  <tr class="warning">
+    <td></td>
+    <td>Thurs. 4/20</td>
+    <td>PA1 due</td>
+    <td><b>Programming assignment #1 due</b></td>
+    <td></td>
+  </tr>
+
+  <tr class="warning">
+    <td></td>
+    <td>Thurs. 4/20</td>
+    <td>PA2 released</td>
+    <td><b><a href="pa/pa2.pdf">Programming assignment #2</a> released</b></td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>Week 4</td>
+    <td>Tues. 4/25</td>
+    <td>Lecture (Pandu)</td>
+    <td><b>Evaluation methods &amp; NDCG</b><br><br>
+      In-class lecture notes:
+      <ul>
+        <li><a href="handouts/lecture8-evaluation_2014.ppt">PPT</a> |
+            <a href="handouts/lecture8-evaluation_2014-six-per-page.pdf">PDF/6</a> |
+            <a href="handouts/lecture8-evaluation_2014-one-per-page.pdf">PDF/1</a></li>
+      </ul>
+
+      Coursera content:
+      <ul>
+         <li>Videos: "Result Summaries"</li>
+         <li>Slides:
+             <a href="handouts/lecture8-evaluation.ppt">PPT</a> |
+             <a href="handouts/lecture8-evaluation-handout-6-per.pdf">PDF/6</a> |
+             <a href="handouts/lecture8-evaluation-handout-1-per.pdf">PDF/1</a></li>
+      </ul>
+    </td>
+    <td>
+      <ul>
+        <li><a href="http://nlp.stanford.edu/IR-book/pdf/08eval.pdf">IIR chapter 8</a></li>
+        <li>MG section 4.5</li>
+        <li>MIR chapter 3</li>
+      </ul>
+    </td>
+  </tr>
+
+  <tr>
+    <td></td>
+    <td>Thurs. 4/27</td>
+    <td>Lecture (Pandu)</td>
+    <td><b>Systems issues in efficient retrieval and scoring</b><br><br>
+      In-class lecture notes:
+      <ul>
+        <li><a href="handouts/lecture10-efficient-scoring.ppt">PPT</a> |
+            <a href="handouts/lecture10-efficient-scoring-six-per-page.pdf">PDF/6</a> |
+            <a href="handouts/lecture10-efficient-scoring-one-per-page.pdf">PDF/1</a></li>
+      </ul>
+    </td>
+    <td>
+      <ul>
+        <li><a href="http://nlp.stanford.edu/IR-book/pdf/06vect.pdf">IIR chapter 6</a></li>
+        <li><a href="http://nlp.stanford.edu/IR-book/pdf/07system.pdf">IIR chapter 7</a></li>
+        <li><a href="http://cis.poly.edu/westlab/papers/cntdstrb/p426-broder.pdf">
+          Efficient Query Evaluation using a Two-Level Retrieval Process (Broder et al. 2003)</a></li>
+      </ul>
+    </td>
+  </tr>
+
+  <tr class="warning">
+    <td></td>
+    <td>Thurs. 4/27</td>
+    <td>PS1 due</td>
+    <td><b>Problem set #1 due</b></td>
+    <td></td>
+  </tr>
+
+  <tr class="warning">
+    <td></td>
+    <td>Thurs. 4/27</td>
+    <td>Ranking quiz released</td>
+    <td><b><a href="https://web.stanford.edu/class/cs276/cgi-bin/queryrank/queryrank.php">Ranking quiz</a> released</b></td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>Week 5</td>
+    <td>Tues. 5/2</td>
+    <td>Guest lecture</td>
+    <td><b>"Amazon Product Search: Search Relevance and Query Understanding"</b><br>
+      <em>Guest lecture by Ravi Jammalamadaka and Erick Cantu-Paz (Engineering Managers, Amazon Search)</em><br><br>
+    <b>NOTE: attendance required</b> for on-campus students</td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td></td>
+    <td>Thurs. 5/4</td>
+    <td>Lecture (Chris)</td>
+    <td><b>Text classification (Naive Bayes, kNN, decision boundaries)</b><br><br>
+      In-class lecture notes:
+      <ul>
+        <li><a href="handouts/lecture12-textcat.pptx">PPT</a> |
+            <a href="handouts/lecture12-textcat-6up.pdf">PDF/6</a> |
+            <a href="handouts/lecture12-textcat.pdf">PDF/1</a></li>
+      </ul>
+
+      Coursera content:
+      <ul>
+         <li>Videos: "Naive Bayes"</li>
+      </ul>
+    </td>
+    <td>
+      <ul>
+        <li><a href="http://nlp.stanford.edu/IR-book/pdf/13bayes.pdf">IIR chapter 13</a></li>
+        <li><a href="http://nlp.stanford.edu/IR-book/pdf/14vcat.pdf">IIR chapter 14</a></li>
+        <li><a href="http://www.daviddlewis.com/resources/testcollections/reuters21578/">Reuters-21578</a></li>
+        <li><a href="http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.17.6513">Machine learning in automated text categorization (Sebastiani 2002)</a></li>
+        <li><a href="http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.11.9519">A re-examination of text categorization methods (Yang et al. 1999)</a></li>
+        <li><a href="http://citeseer.ist.psu.edu/mccallum98comparison.html">A Comparison of event models for naive Bayes text classification (McCallum et al. 1998)</a></li>
+        <li><a href="http://www.stanford.edu/class/cs276/handouts/rennie.icml03.pdf">Tackling the poor assumptions of Naive Bayes classifier (Rennie et al. 2003)</a></li>
+        <li><a href="http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.17.6513">Machine learning in automated text categorization (Sebastiani 2002)</a></li>
+        <li><a href="http://citeseer.ist.psu.edu/yang99reexamination.html">
+            A re-examination of text categorization methods (Yang et al. 1999)</a></li>
+        <li><a href="http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.33.867">Evaluating and optimizing autonomous text classification systems (Lewis 1995)</a></li>
+        <li>Tom Mitchell. <i>Machine Learning.</i> McGraw-Hill, 1997.</li>
+        <li>Trevor Hastie, Robert Tibshirani, Jerome Friedman. <em>Elements of Statistical Learning: Data Mining, Inference, and Prediction</em>. Springer-Verlag, New York, 2001.</li>
+        <li>Open Calais</li>
+        <li>Weka</li>
+      </ul>
+    </td>
+  </tr>
+
+  <tr class="warning">
+    <td></td>
+    <td>Thurs. 5/4</td>
+    <td>PA2 due</td>
+    <td><b>Programming assignment #2 due</b></td>
+    <td></td>
+  </tr>
+
+  <tr class="warning">
+    <td></td>
+    <td>Thurs. 5/4</td>
+    <td>PA3 released</td>
+    <td><b><a href="pa/pa3.pdf">Programming assignment #3</a> released</b></td>
+    <td></td>
+  </tr>
+
+    <tr>
+    <td>Week 6</td>
+    <td>Tues. 5/9</td>
+    <td>Lecture (Chris)</td>
+    <td><b>Text classification (Support vector machines)</b><br><br>
+      In-class lecture notes:
+      <ul>
+        <li><a href="handouts/lecture13-SVMs.ppt">PPT</a> |
+            <a href="handouts/lecture13-SVMs-6up.pdf">PDF/6</a> |
+            <a href="handouts/lecture13-SVMs.pdf">PDF/1</a></li>
+      </ul>
+    </td>
+    <td>
+      <ul>
+        <li><a href="http://nlp.stanford.edu/IR-book/pdf/15svm.pdf">IIR chapter 15</a></li>
+        <li><a href="http://www.daviddlewis.com/resources/testcollections/reuters21578/">Reuters-21578</a></li>
+        <li><a href="http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.18.1083">A tutorial on support vector machines for pattern recognition (Burges 1998)</a></li>
+        <li><a href="http://ezproxy.stanford.edu:2072/xpls/abs_all.jsp?isnumber=15361&amp;arnumber=708428&amp;count=14&amp;index=5">Using SVMs for text categorization (Dumais 1998)</a></li>
+        <li><a href="http://portal.acm.org/citation.cfm?id=288651">Inductive learning algorithms and representations for text categorization (Dumais et al. 1998)</a></li>
+        <li><a href="http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.30.5594">A Re-examination of text categorization methods (Yang et al. 1999)</a></li>
+        <li><a href="http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.20.5553">Text categorization based on regularized linear classification methods (Zhang et al. 2001)</a></li>
+        <li><a href="http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.8.2881">A loss function analysis for classification methods in text categorization (Li et al. 2003)</a></li>
+        <li>Trevor Hastie, Robert Tibshirani, Jerome Friedman. <em>Elements of Statistical Learning: Data Mining, Inference, and Prediction</em>. Springer-Verlag,New York, 2001.</li>
+        <li>Thorsten Joachims. <em>Learning to Classify Text using Support Vector Machines</em>.
+        Kluwer, 2002.</li>
+      </ul>
+    </td>
+  </tr>
+  
+  <tr>
+    <td></td>
+    <td>Thurs. 5/11</td>
+    <td>Lecture (Chris)</td>
+    <td><b>Learning to rank</b><br><br>
+      In-class lecture notes:
+      <ul>
+        <li><a href="handouts/lecture14-learning-ranking.pptx">PPT</a> |
+            <a href="handouts/lecture14-learning-ranking-6up.pdf">PDF/6</a> |
+            <a href="handouts/lecture14-learning-ranking.pdf">PDF/1</a></li>
+      </ul>
+    </td>
+    <td>
+      <ul>
+        <li><a href="http://nlp.stanford.edu/IR-book/pdf/06vect.pdf">IIR sections 6.1.2-6.1.3</a></li>
+        <li><a href="http://nlp.stanford.edu/IR-book/pdf/15svm.pdf">IIR section 15.4</a></li>
+        <li><a href="http://research.microsoft.com/users/LETOR/">LETOR benchmark datasets</a></li>
+        <li><a href="http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.2.9065">Discriminative models for information retrieval (Nallapati 2004)</a></li>
+        <li><a href="http://portal.acm.org/citation.cfm?id=1148205">Adapting ranking SVM to document retrieval (Cao et al. 2006)</a></li>
+        <li><a href="http://portal.acm.org/citation.cfm?id=1277790">A support vector method for optimizing average precision (Yue et al. 2007)</a></li>
+      </ul>
+    </td>
+  </tr>
+
+
+  <tr class="warning">
+    <td></td>
+    <td>Thurs. 5/11</td>
+    <td>PS2 released</td>
+    <td><b><a href="ps/ps2.pdf">Problem set #2</a> released</b></td>
+    <td><b><a href="restricted/ps2-solution.pdf">[PS2 solution]</a></b></td>
+  </tr>
+
+  <tr>
+    <td>Week 7</td>
+    <td>Tues. 5/16</td>
+    <td>Lecture (Chris)</td>
+    <td><b>Distributed word representations for IR</b><br><br>
+      In-class lecture notes:
+      <ul>
+        <li><a href="handouts/lecture20-distributed-representations.pptx">PPT</a> |
+            <a href="handouts/lecture20-distributed-representations-6up.pdf">PDF/6</a> |
+            <a href="handouts/lecture20-distributed-representations.pdf">PDF/1</a></li>
+      </ul>
+    </td>
+    <td>
+      <ul>
+        <li><a href="http://papers.nips.cc/paper/5021-distributed-representations-of-words-and-phrases-and-their-compositionality.pdf">
+          Distributed Representations of Words and Phrases and their
+          Compositionality (Mikolov et al., 2013)</a></li>
+        <li><a href="http://nlp.stanford.edu/pubs/glove.pdf">GloVe: Global Vectors for Word Representation (Pennington et al., 2014)</a></li>
+      </ul>
+    </td>
+  </tr>
+
+  <tr>
+    <td></td>
+    <td>Thurs. 5/18</td>
+    <td>Guest lecture</td>
+    <td><b>Guest lecture by Jeff Dean (Google Senior Fellow)</b><br><br>
+    <b>NOTE: attendance required</b> for on-campus students</td>
+    <td></td>
+  </tr>
+
+  <tr class="warning">
+    <td></td>
+    <td>Thurs. 5/18</td>
+    <td>PA3 due</td>
+    <td><b>Programming assignment #3 due</b></td>
+    <td></td>
+  </tr>
+
+  <tr class="warning">
+    <td></td>
+    <td>Thurs. 5/18</td>
+    <td>PA4 released</td>
+    <td><b><a href="pa/pa4.pdf">Programming assignment #4</a> released</b></td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>Week 8</td>
+    <td>Tues. 5/23</td>
+    <td>Lecture (Pandu)</td>
+    <td><b>Link analysis</b><br><br>
+      In-class lecture notes:
+      <ul>
+        <li><a href="handouts/lecture17-linkanalysis.ppt">PPT</a> |
+            <a href="handouts/lecture17-linkanalysis-six-per-page.pdf">PDF/6</a> |
+            <a href="handouts/lecture17-linkanalysis-one-per-page.pdf">PDF/1</a></li>
+      </ul>
+    </td>
+    <td>
+      <ul>
+        <li><a href="http://nlp.stanford.edu/IR-book/pdf/21link.pdf">IIR chapter 21</a></li>
+        <li><a href="http://portal.acm.org/citation.cfm?id=988714">Ranking the web frontier (Eiron et al. 2004)</a></li>
+        <li><a href="http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.14.6417">The WebGraph framework I: Compression techniques (Boldi et al. 2004)</a></li>
+        <li><a href="http://portal.acm.org/citation.cfm?id=775190">Extrapolation methods for accelerating PageRank computations (Kamvar et al. 2003)</a></li>
+        <li><a href="http://portal.acm.org/citation.cfm?id=775152.775204">Searching the workplace web (Fagin et al. 2003</a></li>
+      </ul>
+    </td>
+  </tr>
+
+  <tr>
+    <td></td>
+    <td>Thurs. 5/25</td>
+    <td>In-class lab (Pandu)</td>
+    <td><b>MapReduce with Java</b>
+    (<a href="https://docs.google.com/document/d/1i1Be9GDgS11cOD2JtlOUjTQT6Zenmr6UKB60D-mSaXs/edit">Hadoop setup instructions</a>)
+    (<a href="examples.tar.gz">starter code</a>)
+    <br><br>
+      In-class lecture notes:
+      <ul>
+        <li><a href="handouts/mapreduce-pact06-keynote.pdf">PDF/1</a></li>
+      </ul>
+    </td>
+    <td>
+      <ul>
+        <li><a href="http://nlp.stanford.edu/IR-book/pdf/04const.pdf">IIR section 4.4</a></li>
+        <li><a href="http://research.google.com/archive/mapreduce-osdi04-slides/index.html">Jeff Dean's MapReduce Slides</a></li>
+      </ul>
+    </td>
+  </tr>
+
+  <tr class="warning">
+    <td></td>
+    <td>Thurs. 5/25</td>
+    <td>PS2 due</td>
+    <td><b>Problem set #2 due</b></td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>Week 9</td>
+    <td>Tues. 5/30</td>
+    <td>Lecture (Pandu)</td>
+    <td><b>Crawling and near-duplicate pages</b><br><br>
+      In-class lecture notes:
+      <ul>
+        <li><a href="handouts/lecture18-crawling.ppt">PPT</a> |
+            <a href="handouts/lecture18-crawling-6-per-page.pdf">PDF/6</a> |
+            <a href="handouts/lecture18-crawling-1-per-page.pdf">PDF/1</a></li>
+      </ul>
+    </td>
+    <td>
+      <ul>
+        <li><a href="http://nlp.stanford.edu/IR-book/pdf/19web.pdf">IIR chapter 19</a></li>
+        <li><a href="http://nlp.stanford.edu/IR-book/pdf/20crawl.pdf">IIR chapter 20</a></li>
+        <li><a href="https://webarchive.jira.com/wiki/download/attachments/5441/1999-Mercator.pdf">Mercator: A scalable, extensible web crawler (Heydon et al. 1999)</a></li>
+        <li><a href="http://www.robotstxt.org/orig.html">A standard for robot exclusion</a></li>
+      </ul>
+    </td>
+  </tr>
+
+  <tr>
+    <td></td>
+    <td>Thurs. 6/1</td>
+    <td>Lecture (Pandu)</td>
+    <td><b>Personalization</b><br><br>
+      In-class lecture notes:
+      <ul>
+        <li><a href="handouts/personalization-lecture.ppt">PPT</a> |
+            <a href="handouts/personalization-lecture-6-per-page.pdf">PDF/6</a> |
+            <a href="handouts/personalization-lecture-1-per-page.pdf">PDF/1</a></li>
+      </ul>
+    </td>
+    <td>
+      <ul>
+        <li><a href="http://research.microsoft.com/pubs/154553/tochi10.pdf">J. Teevan, S. Dumais, E. Horvitz. Potential for personalization. 2010</a></li>
+        <li><a href="http://www.cond.org/p50-pitkow.pdf">J. Pitkow et al. Personalized search. 2002</a></li>
+        <li><a href="http://research.microsoft.com/en-us/um/people/sdumais/SIGIR2005-PersonalizedSearch.pdf">J. Teevan, S. Dumais, E. Horvitz. Personalizing search via automated analysis of interests and activities. 2005</a></li>
+        <li><a href="http://research.microsoft.com/pubs/150729/BennettSIGIR2011.pdf">P. Bennett et al. Inferring and using location metadata to personalize Web search. 2011</a></li>
+        <li><a href="http://www-cs-students.stanford.edu/~taherh/papers/topic-sensitive-pagerank.pdf">T. Haveliwala. Topic-sensitive pagerank. 2002.</a></li>
+        <li><a href="http://infolab.stanford.edu/~glenj/spws.pdf">G. Jeh and J. Widom. Scaling personalized Web search. 2003</a></li>
+        <li><a href="http://www.vldb.org/pvldb/vol6/p1150-curtiss.pdf">M. Curtiss et al. Unicorn: A system for searching the social graph. 2013</a></li>
+      </ul>
+    </td>
+  </tr>
+
+  <tr class="warning">
+    <td></td>
+    <td>Thurs. 6/1</td>
+    <td>PA4 due</td>
+    <td><b>Programming assignment #4 due</b></td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>Week 10</td>
+    <td>Tues. 6/6</td>
+    <td>Lecture (Chris)</td>
+    <td><b>Question answering</b><br><br>
+      In-class lecture notes:
+      <ul>
+        <li><a href="handouts/lecture19-Web-QA.pptx">PPT</a> |
+            <a href="handouts/lecture19-Web-QA-6up.pdf">PDF/6</a> |
+            <a href="handouts/lecture19-Web-QA.pdf">PDF/1</a></li>
+      </ul>
+    </td>
+    <td></td>
+  </tr>
+
+  <tr class="danger">
+    <td>Exam week</td>
+    <td>Mon. 6/12</td>
+    <td>Final exam</td>
+    <td><b>Alternate final exam (7:00-10:00pm)</b></td>
+    <td></td>
+  </tr>
+
+  <tr class="danger">
+    <td></td>
+    <td>Wed. 6/14</td>
+    <td>Final exam</td>
+    <td><b>Final exam (3:30-6:30pm)</b></td>
+    <td><a href="restricted/final_2016.pdf">Practice final (2016)</a><br>
+        <a href="restricted/final_2016_sol.pdf">Practice final solutions</a></td>
+  </tr>
+
+</tbody></table>
+</div>
+
+
+<!-- jQuery and Boostrap -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+
+
+</body></html>

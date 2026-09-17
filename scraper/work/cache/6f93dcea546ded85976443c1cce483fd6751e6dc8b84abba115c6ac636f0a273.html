@@ -1,0 +1,761 @@
+<!DOCTYPE html><html lang="en"><head>
+	<meta charset="utf-8">
+	<title>CS 330 Deep Multi-Task and Meta Learning</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="samir">
+
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+
+	<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+		<script src="js/html5shiv.js"></script>
+	<![endif]-->
+
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/scripts.js"></script>
+</head>
+
+<body style="">
+	<div class="container">
+		<div class="row clearfix">
+			<div class="col-md-12 column">
+				<div class="row clearfix">
+					<br>
+					<h1>CS 330: Deep Multi-Task and Meta Learning</h1>
+						<h3>Fall 2021, Class: Mon, Wed 11:30am-1:00pm, NVIDIA Auditorium</h3>
+						<br>
+						<!-- <img alt="" class="pull" src="./images/frontfig-cs330-v2.jpg" style="width: 100%">
+					<br/> -->
+						<!--img alt="" class="pull-right" src="./images/CS333-Pull-v1.jpg" style="width: 100%"-->
+						<!--<div class="carousel slide" id="carousel-25687">
+					<ol class="carousel-indicators">
+						<li class="active" data-slide-to="0" data-target="#carousel-25687"> </li>
+					</ol>
+					<div class="carousel-inner">
+						<div class="item active">
+							<img alt="" align="left" src="./images/frontfig-cs333.png">
+						</div>
+          </div>
+          </div>-->
+						<!--<h3><font color="red"><a href="https://www.youtube.com/playlist?list=PLoROMvodv4rMC6zfYmnD7UG3LVvwaITY5">Last year's lecture videos</a> are now available!</font></h3>-->
+						<!-- <p><b> The course website will be updated with Fall 2021 details in the coming days.</b></p> -->
+
+				<div class="hrline">
+					<hr>
+				</div>
+
+						<h3>Description:</h3>
+						<p>While deep learning has achieved remarkable success in supervised and reinforcement learning
+							problems, such as image classification, speech recognition, and game playing, these models
+							are, to a large degree, specialized for the single task they are trained for. This course
+							will cover the setting where there are multiple tasks to be solved, and study how the
+							structure arising from multiple tasks can be leveraged to learn more efficiently or
+							effectively. This includes:</p>
+						<ul>
+							<li>goal-conditioned reinforcement learning techniques that leverage the structure of the
+								provided goal space to learn many tasks significantly faster</li>
+							<li>meta-learning methods that aim to learn efficient learning algorithms that can learn new
+								tasks quickly</li>
+							<li>curriculum and lifelong learning, where the problem requires learning a sequence of
+								tasks, leveraging their shared structure to enable knowledge transfer</li>
+						</ul>
+						<p>This is a graduate-level course. By the end of the course, students will be able to
+							understand and implement the state-of-the-art multi-task learning and meta-learning
+							algorithms and be ready to conduct research on these topics.</p>
+
+
+						<h3>Format:</h3>
+						<p>The course will include in-person lectures (also livestreamed and recorded over zoom), three
+							graded
+							homework
+							assignments, two optional homework assignments, and a course project. The lectures will
+							discuss the fundamentals of <a href="#topics">topics</a> required for understanding and
+							designing multi-task and meta-learning algorithms in both supervised learning and
+							reinforcement learning domains. The assignments will focus on coding problems that emphasize
+							these fundamentals. Finally, students will present their projects at the poster session at
+							the end of the quarter.
+							<!--See detailed <a
+                    href="#grading-policies">course policies.</a></p>-->
+							<br>
+						</p><h3>Prerequisites:</h3>
+						<p>CS 229 or an equivalent introductory machine learning course is required. CS 221 or an
+							equivalent introductory artificial intelligence course is recommended but not required.</p>
+						<h3>Lecture Videos:</h3>
+						<p>If you are looking for publicly-available lecture videos from the Fall 2019 offering, <a href="https://www.youtube.com/playlist?list=PLoROMvodv4rMC6zfYmnD7UG3LVvwaITY5">they are
+								here</a>. Materials from the Fall 2019 offering <a href="http://cs330.stanford.edu/fall2019/index.html">are here</a> and materials from the
+							Fall 2020 offering <a href="http://cs330.stanford.edu/fall2020/index.html">are here</a>.
+							Lecture videos from this Fall 2021 offering will be processed and made publicly available
+							after the course. For students enrolled in the course, recorded lecture videos will be
+							posted to canvas after each lecture.</p>
+				</div>
+
+				<div class="hrline">
+					<hr>
+				</div>
+				<div class="row clearfix">
+					<h3> Staff </h3>
+					<div class="row clearfix">
+						<div class="col-md-2 column">
+							<img class="img-thumbnail" src="images/chelsea.jpg" alt="Chelsea Finn" width="160" height="160">
+							<h4>Prof. Chelsea Finn</h4>
+							<h5>Instructor</h5>
+							<h5>OH: Wed 1-2:30pm </h5>
+								<!--h5>Location: Gates 219</h4-->
+								<h5><a href="https://ai.stanford.edu/~cbfinn/">Webpage</a></h5>
+						</div>
+						<div class="col-md-2 column">
+							<img class="img-thumbnail" src="images/karol.png" alt="Karol Hausman" width="160" height="160">
+							<h4>Dr. Karol Hausman</h4>
+							<h5>Instructor</h5>
+							<!--h5>OH: Weds 3-4 pm</h4-->
+							<!--h5>Location: Gates 219</h4-->
+							<h5><a href="https://karolhausman.github.io/">Webpage</a></h5>
+						</div>
+						<div class="col-md-2 column">
+							<img class="img-thumbnail" src="images/amelie.jpg" alt="Amelie Byun" width="160" height="160">
+							<h4>Amelie Byun</h4>
+							<h5>Course Coordinator</h5>
+						</div>
+						<div class="col-md-2 column">
+							<img class="img-thumbnail" src="images/rafael.png" alt="Rafael Rafailov" width="160" height="160">
+							<h4>Rafael Rafailov</h4>
+							<h5>Head Teaching Assistant</h5>
+							<h5>OH: Thur 5:00-7:00pm</h5>
+						</div>
+						<div class="col-md-2 column">
+							<img class="img-thumbnail" src="images/Dilip.png" alt="Dilip Arumugam" width="160" height="160">
+							<h4>Dilip Arumugam</h4>
+							<h5>Teaching Assistant</h5>
+							<h5>OH: Fri 12:30-2:30pm</h5>
+						</div>
+						<div class="col-md-2 column">
+							<img class="img-thumbnail" src="images/archit.jpg" alt="Archit Sharma" width="160" height="160">
+							<h4>Archit Sharma</h4>
+							<h5>Teaching Assistant</h5>
+							<h5>OH: Thur 1:00-3:00pm</h5>
+						</div>
+					</div>
+
+					<div class="row clearfix">
+						<div class="col-md-2 column">
+							<img class="img-thumbnail" src="images/evan.jpg" alt="Evan Liu" width="160" height="160">
+							<h4>Evan Liu</h4>
+							<h5>Teaching Assistant</h5>
+							<h5>OH: Tue 3:00-5:00pm</h5>
+						</div>
+						<div class="col-md-2 column">
+							<img class="img-thumbnail" src="images/kevin.png" alt="Kevin Yu" width="160" height="160">
+							<h4>Kevin Yu</h4>
+							<h5>Teaching Assistant</h5>
+							<h5>OH: Sun 3:00-5:00pm</h5>
+						</div>
+						<div class="col-md-2 column">
+							<img class="img-thumbnail" src="images/kyle_hsu.jpg" alt="Kyle Hsu" width="160" height="160">
+							<h4>Kyle Hsu</h4>
+							<h5>Teaching Assistant</h5>
+							<h5>OH: Tue 11:00am-1:00pm</h5>
+						</div>
+						<div class="col-md-2 column">
+							<img class="img-thumbnail" src="images/siyi-tang.jpg" alt="Siyi Tang" width="160" height="160">
+							<h4>Siyi Tang</h4>
+							<h5>Teaching Assistant</h5>
+							<h5>OH: Mon 1:00-3:00pm</h5>
+						</div>
+						<div class="col-md-2 column">
+							<img class="img-thumbnail" src="images/ali_kamil.png" alt="Kamil Ali" width="160" height="160">
+							<h4>Kamil Ali</h4>
+							<h5>Teaching Assistant</h5>
+							<h5>OH: Sun 1:00-3:00pm</h5>
+						</div>
+						<div class="col-md-2 column">
+							<img class="img-thumbnail" src="images/edwin-pan.png" alt="Edwin Pan" width="160" height="160">
+							<h4>Edwin Pan</h4>
+							<h5>Teaching Assistant</h5>
+							<h5>OH: Sat 5:00-7:00pm</h5>
+						</div>
+
+					</div>
+				</div>
+
+				<div class="hrline">
+					<hr>
+				</div> <br>
+				<h3 id="topics">Timeline</h3>
+				<table class="table">
+					<thead>
+						<tr>
+							<th style="width: 12%">Date</th>
+							<th style="width: 23%">Lecture</th>
+							<th style="width: 15%">Deadlines</th>
+							<th style="width: 50%">Optional reading</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class="active">
+							<td><b>Week 1</b><br>
+								Mon, Sep 20
+							</td>
+							<td><i><span class="label label-lecture text-base">Lecture</span></i>
+								<!-- <a href="slides/cs330_intro_2021.pdf">Course introduction</a> -->
+								<a href="slides/cs330_intro_2021.pdf">Course introduction &amp; start of multi-task
+									learning</a> (Chelsea Finn &amp; Karol Hausman)
+							</td>
+							<td>
+								<b> Optional Homework 0 out</b>
+								[<a href="material/CS330_Homework_0_updated.pdf">PDF</a>][<a href="material/hw0.zip">Zip</a>]
+							</td>
+							<td>
+							</td>
+						</tr>
+						<tr class="active">
+							<td><b>Week 1</b><br>
+								Wed, Sep 22
+							</td>
+							<td><i><span class="label label-lecture text-base">Lecture</span></i>
+								<a href="slides/cs330_multitask_transfer_2021.pdf">Supervised multi-task learning,
+									transfer learning</a> (Chelsea Finn)
+							</td>
+							<td>
+
+							</td>
+							<td>
+								<ul>
+									<li> <a href="https://arxiv.org/abs/1705.07115"> P1: Multi-Task Learning Using
+											Uncertainty to Weigh Losses for Scene Geometry and Semantics.</a> Kendall et
+										al. (2018)</li>
+									<li> <a href="https://arxiv.org/abs/1801.06146"> P2: Universal Language Model
+											Fine-tuning for Text Classification.</a> Howard et al. (2018)</li>
+
+								</ul>
+							</td>
+						</tr>
+						<tr class="active">
+							<td><b>Week 1</b><br>
+								Thur, Sep 23
+							</td>
+							<td><i><span class="label label-lecture text-base">TA Session</span></i>
+								<a href="">PyTorch tutorial</a>
+							</td>
+							<td>
+							</td>
+							<td>
+								Tutorial is at 6pm over zoom and will be recorded.
+							</td>
+						</tr>
+						<tr>
+							<td><b>Week 2</b><br>
+								Mon, Sep 27
+							</td>
+							<td><i><span class="label label-lecture text-base">Lecture</span></i> <a href="slides/cs330_metalearning_bbox_2021.pdf">Meta-learning problem statement,
+									black-box meta-learning</a> (Chelsea Finn)
+							</td>
+							<td>
+								<span class="label label-due text-base">Due</span><b> Optional Homework 0</b><br>
+								<b> Homework 1 out</b>
+								[<a href="material/CS330_Homework_1.pdf">PDF</a>][<a href="material/hw1.zip">Zip</a>]
+
+							</td>
+							<td>
+								<ul>
+									<li> <a href="https://arxiv.org/abs/1605.06065"> P1:One-shot Learning with
+											Memory-Augmented Neural Networks.</a> Santoro et al. (2016)</li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+							<td><b>Week 2</b><br>
+								Wed, Sep 29
+							</td>
+							<td><i><span class="label label-lecture text-base">Lecture</span></i>
+								<a href="slides/cs330_optbased_metalearning_2021.pdf">Optimization-based
+									meta-learning</a> (Chelsea Finn)
+							</td>
+							<td>
+							</td>
+							<td>
+								<ul>
+									<li> <a href="https://arxiv.org/abs/1703.03400"> P1: Model-Agnostic Meta-Learning
+											for Fast Adaptation of Deep Networks.</a> Finn et al. (2017)</li>
+									<li> <a href="https://arxiv.org/abs/1904.03758"> P2: Meta-Learning with
+											Differentiable Convex Optimization.</a> Lee et al. (2019)</li>
+
+								</ul>
+							</td>
+						</tr>
+						<tr class="active">
+							<td><b>Week 3</b><br>
+								Mon, Oct 4
+							</td>
+							<td><i><span class="label label-lecture text-base">Lecture</span></i>
+								<a href="slides/cs330_nonparametric_2021.pdf">Few-shot learning via metric learning</a>
+								(Chelsea Finn)
+							</td>
+							<td>
+								<!-- [<a
+									href="https://colab.research.google.com/drive/1kp4phALWtcpLDeY5vQRrxBli6OqitlWJ?usp=sharing">Class
+									Colab</a>][<a
+									href="https://colab.sandbox.google.com/github/google/jax/blob/master/docs/notebooks/autodiff_cookbook.ipynb">Additional
+									Colab</a>] -->
+
+							</td>
+							<td>
+								<ul>
+									<li> <a href="https://arxiv.org/abs/1606.04080"> P1: Matching Networks for One Shot
+											Learning.</a> Vinyals et al. (2017)</li>
+									<li> <a href="https://arxiv.org/abs/1703.05175"> P2: Prototypical Networks for
+											Few-shot Learning.</a> Snell et al. (2017)</li>
+								</ul>
+							</td>
+						</tr>
+						<tr class="active">
+							<td><b>Week 3</b><br>
+								Wed, Oct 6
+							</td>
+							<td><i><span class="label label-lecture text-base"> Lecture</span></i> <a href="slides/cs330_advanced_meta_2021.pdf">Advanced
+									meta-learning topics</a> (Chelsea Finn)
+							</td>
+							<td>
+								<span class="label label-due text-base">Due</span><b> Homework 1</b><br>
+								<b> Homework 2 out</b>[<a href="material/hw2.pdf">PDF</a>][<a href="material/hw2.zip">Zip</a>]
+
+							</td>
+							<td>
+								<ul>
+									<li> <a href="https://arxiv.org/abs/1912.03820"> P1: Meta-Learning without
+											Memorization.</a> Yin et al. (2020)</li>
+								</ul>
+							</td>
+						</tr>
+						<tr class="active">
+							<td><b>Week 3</b><br>
+								Thur, Oct 7
+							</td>
+							<td><i><span class="label label-lecture text-base">TA Session</span></i>
+								<a href="material/Variational Inference Tutorial.pdf">Variational inference tutorial</a>
+							</td>
+							<td>
+							</td>
+							<td>
+								Tutorial is at 4pm over zoom and will be recorded.
+							</td>
+						</tr>
+
+						<tr>
+							<td><b>Week 4</b><br>
+								Mon, Oct 11
+							</td>
+							<td><i><span class="label label-lecture text-base">Lecture</span></i> <a href="slides/cs330_bayesian_meta_learning_2021.pdf">Bayesian
+									meta-learning</a> (Chelsea Finn)</td>
+							<td>
+							</td>
+							<td>
+								<ul>
+									<li> <a href="https://arxiv.org/abs/1807.01613"> P1: Conditional Neural
+											Processes.</a> Garnelo et al. (2018)</li>
+									<li> <a href="https://arxiv.org/abs/1805.09921"> P2: Meta-Learning Probabilistic
+											Inference For Prediction.</a> Gordon et al. (2019)</li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+							<td><b>Week 4</b><br>
+								Tue, Oct 12
+							</td>
+							<td><i><span class="label label-lecture text-base">TA Session</span></i>
+								<a href="material/CS330_RLTutorial.pdf">Reinforcement learning tutorial</a>
+							</td>
+							<td>
+							</td>
+							<td>
+								Tutorial is at 5pm over zoom and will be recorded.
+							</td>
+						</tr>
+						<tr>
+							<td><b>Week 4</b><br>
+								Wed, Oct 13
+							</td>
+							<td><i><span class="label label-lecture text-base">Leacture</span></i> <a href="slides/cs330_2021_rl_review.pdf">RL
+									review</a> (Karol Hausman)</td>
+							<td>
+								<span class="label label-due text-base">Due</span><b> Project proposal</b><br>
+							</td>
+							<td>
+
+							</td>
+						</tr>
+						<tr class="active">
+							<td><b>Week 5</b><br>
+								Mon, Oct 18
+							</td>
+							<td><i><span class="label label-lecture text-base">Lecture</span></i> <a href="slides/cs330_2021_mtrl.pdf">Multi-task
+									RL and goal-conditioned RL</a> (Karol Hausman)</td>
+							<td>
+								<span class="label label-due text-base">Due</span><b> Homework 2</b><br>
+								<b> Homework 3 out</b>[<a href="material/hw3.pdf">PDF</a>][<a href="material/hw3.zip">Zip</a>]
+
+							</td>
+							<td>
+								<ul>
+									<li> <a href="https://arxiv.org/abs/1707.01495"> P1: Hindsight Experience
+											Replay.</a> Andrychowicz et al. (2018)</li>
+									<li> <a href="https://arxiv.org/abs/2104.08212"> P2: MT-Opt: Continuous Multi-Task
+											Robotic Reinforcement Learning at Scale.</a> Kalashnikov et al. (2021)</li>
+								</ul>
+							</td>
+						</tr>
+						<tr class="active">
+							<td><b>Week 5</b><br>
+								Wed, Oct 20
+							</td>
+							<td><i><span class="label label-lecture text-base">Lecture</span></i> <a href="slides/cs330_mbrl_2021.pdf">Model-based
+									RL for multi-task learning</a> (Chelsea Finn)</td>
+							<td>
+							</td>
+							<td>
+								<ul>
+									<li> <a href="https://arxiv.org/abs/1812.00568"> P1: Visual Foresight: Model-Based
+											Deep Reinforcement Learning for Vision-Based Robotic Control.</a> Ebert et
+										al. (2018)</li>
+									<li> <a href="https://arxiv.org/abs/1909.11652"> P2: Deep Dynamics Models for
+											Learning Dexterous Manipulation.</a> Nagabandi et al. (2019)</li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+							<td><b>Week 6</b><br>
+								Mon, Oct 25
+							</td>
+							<td><i><span class="label label-lecture text-base">Lecture</span></i> <a href="slides/cs330_metarl1_2021.pdf">Meta-RL 1:
+									Adaptable models and policies</a> (Chelsea Finn)</td>
+							<td>
+							</td>
+							<td>
+								<ul>
+									<li> <a href="https://arxiv.org/abs/1611.02779"> P1: RL2: Fast Reinforcement
+											Learning via Slow Reinforcement
+											Learning.</a> Duan et al. (2016)</li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+							<td><b>Week 6</b><br>
+								Wed, Oct 27
+							</td>
+							<td><i><span class="label label-lecture text-base">Lecture</span></i> <a href="slides/cs330_metarl2_2021.pdf">Meta-RL 2:
+									Learning to explore</a> (Chelsea Finn)</td>
+							<td>
+								<span class="label label-due text-base">Due</span><b> Homework 3</b><br>
+								<b> Optional Homework 4 out</b>[<a href="material/hw4.pdf">PDF</a>][<a href="material/hw4.zip">Zip</a>]
+							</td>
+							<td>
+								<ul>
+									<li> <a href="https://arxiv.org/abs/1903.08254"> P1: Efficient Off-Policy
+											Meta-Reinforcement Learning via
+											Probabilistic Context Variables.</a> Rakelly et al. (2019)</li>
+									<li> <a href="https://arxiv.org/abs/2008.02790"> P2: Decoupling Exploration and
+											Exploitation for Meta-Reinforcement
+											Learning without Sacrifices.</a> Liu et al. (2021)</li>
+								</ul>
+							</td>
+						</tr>
+						<tr class="active">
+							<td><b>Week 7</b><br>
+								Mon, Nov 1
+							</td>
+							<td><i><span class="label label-lecture text-base">Lecture</span></i> <a href="slides/cs330_2021_offline_rl.pdf">Offline RL
+									and offline MTRL</a> (Karol Hausman)</td>
+							<td>
+							</td>
+							<td>
+								<ul>
+									<li> <a href="https://arxiv.org/abs/2005.01643"> P1: Offline Reinforcement Learning:
+											Tutorial, Review, and Perspectives on Open Problems. </a> Levine et al.
+										(2020)</li>
+									<li> <a href="https://arxiv.org/abs/2006.04779"> P2: Conservative Q-Learning for
+											Offline Reinforcement Learning.</a> Kumar et al. (2020)</li>
+									<li> <a href="https://arxiv.org/abs/2104.07749"> P3: Actionable Models: Unsupervised
+											Offline Reinforcement Learning of Robotic Skills. </a> Chebotar et al.
+										(2021)
+									</li>
+								</ul>
+							</td>
+						</tr>
+						<tr class="active">
+							<td><b>Week 7</b><br>
+								Wed, Nov 3
+							</td>
+							<td><i><span class="label label-lecture text-base">Lecture</span></i> <a href="slides/cs330_2021_skill_discovery.pdf">Hierarchical RL and skill
+									discovery</a> (Karol Hausman)</td>
+							<td>
+							</td>
+							<td>
+								<ul>
+									<li> <a href="https://arxiv.org/abs/1805.08296"> P1: Data-Efficient Hierarchical
+											Reinforcement Learning.</a> Nachum et al. (2018)</li>
+									<li> <a href="https://arxiv.org/abs/1802.06070"> P2: Diversity is All You Need:
+											Learning Skills without a Reward Function.</a> Eysenbach et al. (2018)</li>
+									<li> <a href="https://arxiv.org/abs/1907.01657"> P3: Dynamics-Aware Unsupervised
+											Discovery of Skills.</a> Sharma et al. (2019)</li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+							<td><b>Week 8</b><br>
+								Mon, Nov 8
+							</td>
+							<td><i><span class="label label-guest text-base">Guest Lecture</span></i> <a href="slides/stanford2021what.pdf"> What do language models learn from language
+									modeling?
+								</a> (Colin Raffel (UNC, Hugging Face))</td>
+							<td>
+								<span class="label label-due text-base">Due</span><b> Optional Homework 4</b><br>
+							</td>
+							<td>
+								Lecture is from 12-1pm (virtual).
+							</td>
+						</tr>
+						<tr>
+							<td><b>Week 8</b><br>
+								Wed, Nov 10
+							</td>
+							<td><i><span class="label label-guest text-base">Guest Lecture</span></i> <a href="slides/Stanford CS330 Jascha Sohl-Dickstein guest lecture on Learned optimizers.pdf">
+									Learned optimizers: why they're the future, why they're hard, and what they can
+									do now</a> (Jascha Sohl-Dickstein (Google))</td>
+							<td>
+								<span class="label label-due text-base">Due</span><b> Project milestone</b><br>
+							</td>
+							<td>
+							</td>
+						</tr>
+						<tr class="active">
+							<td><b>Week 9</b><br>
+								Mon, Nov 15
+							</td>
+							<td><i><span class="label label-lecture text-base">Lecture</span></i> <a href="slides/cs330_2021_lifelong_learning.pdf">Lifelong
+									learning: problem statements, forward &amp; backward transfer</a> (Karol Hausman)</td>
+							<td>
+
+							</td>
+							<td>
+								<ul>
+									<li> <a href="https://arxiv.org/abs/2004.10190"> P1: Never Stop Learning: The
+											Effectiveness of Fine-Tuning in Robotic Reinforcement Learning.
+										</a> Julian et al. (2020)</li>
+									<li> <a href="https://arxiv.org/abs/1902.08438"> P2: Online Meta-Learning.
+										</a> Finn et al. (2019)</li>
+
+								</ul>
+								Lecture will be over zoom and recorded.
+							</td>
+						</tr>
+						<tr class="active">
+							<td><b>Week 9</b><br>
+								Wed, Nov 17
+							</td>
+							<td><i><span class="label label-lecture text-base">Lecture</span></i> <a href="slides/cs330_2021_openchallenges.pdf">Frontiers
+									and open problems</a> (Karol Hausman)</td>
+							<td>
+
+							</td>
+							<td>
+								Guest speaker slides:
+								<li> <a href="slides/mend_cs330.pdf"> Learning to edit pre-trained models.
+									</a> (Eric Mitchell)</li>
+								<li> <a href="slides/BC-Z CS330 Lightning Talk.pdf"> BC-Z:
+										Zero-Shot Task Generalization with
+										Robotic Imitation Learning.
+									</a> (Eric Jang)</li>
+								<li> <a href="slides/Stanford LangLfP talk.pdf"> Language Conditioned Imitation Learning
+										Over Unstructured Data.</a> (Corey Lynch)</li>
+								<li> <a href="slides/lorel5min.pdf"> Learning Language-Conditioned Robot Behavior from
+										Offline Data and Crowd-Sourced Annotation.</a> (Suraj Nair)</li>
+								<li> <a href="slides/Autonomous RL (CS330).pdf"> Autonomous Reinforcement Learng.</a>
+									(Archit Sharma)</li>
+								<li> <a href="slides/CS330_DVD.pdf"> Learning Generalizable Robotic Reward Functions
+										from “In-The-Wild”
+										Human Videos.</a> (Annie Chen)</li>
+								<li> <a href="slides/Stanford Short Talk.pdf"> Reinforcement Learning as Sequence
+										Modeling.</a> (Igor Mordatch)</li>
+								<li> <a href="slides/retaining experiences cs330 slides.pdf"> Lifelong Robotic
+										Reinforcement Learning by Retaining Experiences. </a>
+									(Annie Xie)
+								</li>
+								Lecture will be over zoom and recorded.
+							</td>
+						</tr>
+						<tr>
+							<td><b>Week 10</b><br>
+								Mon, Nov 22
+							</td>
+							<td>Thanksgiving Break</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td><b>Week 10</b><br>
+								Wed, Nov 24
+							</td>
+							<td>Thanksgiving Break</td>
+							<td></td>
+							<td></td>
+						</tr>
+
+						<tr class="active">
+							<td><b>Week 11</b><br>
+								Mon, Nov 29
+							</td>
+							<!-- <td><i><span class="label label-guest text-base">Guest Lecture</span></i></td> -->
+							<td> No Class </td>
+							<td>
+							</td>
+							<td></td>
+						</tr>
+						<tr class="active">
+							<td><b>Week 11</b><br>
+								Tue, Nov 30
+							</td>
+							<td><i><span class="label label-reading text-base">Presentations</span></i> Project
+								poster session</td>
+							<td>
+							</td>
+							<td>The poster session will be held in McCaw Hall at the Alumni Center from 11:30am-1:30pm.
+							</td>
+						</tr>
+						<tr>
+							<td><b>Week 12</b><br>
+								Wed, Dec 8
+							</td>
+							<td>No Class</td>
+							<td>
+								<span class="label label-due text-base">Due</span><b> Final project report</b><br>
+							</td>
+							<td></td>
+						</tr>
+					</tbody>
+				</table>
+
+				<br>
+				<div class="hrline">
+					<hr>
+				</div>
+				<br>
+			</div>
+
+			<div id="calendar">
+				<h3> Course Calendar </h3>
+				<br>
+				<p>Course calendar with details of lectures, TA sessions, and office hours is available <a href="https://calendar.google.com/calendar/u/0/embed?src=1m7fc2ce9tdivl5p717mluuj84@group.calendar.google.com&amp;ctz=America/Los_Angeles">here</a>.
+				</p>
+			</div>
+
+			<div id="course-policies">
+				<h3> Grading and Course Policies </h3>
+				<br>
+				<p><b>Homeworks</b> (15% each): There are three graded homework assignments (Homeworks 1-3), each
+					worth 15% of the grade. Assignments will require training neural networks in PyTorch. Homework 0
+					is
+					optional and is worth 2% extra grade. Homework 4 is optional and will either replace one prior
+					homework grade or part of the project grade (whichever is better for grade). All assignments are due
+					on Gradescope at 11:59 pm Pacific Time on the respective due date.
+				</p>
+				<p><b>Project</b> (55%): There's a research-level project of your choice. You may form groups of 1-3
+					students to complete the project, and you are encouraged to start early! Detailed guidelines on the
+					project can be found <a href="material/CS330_ProjectGuidelines.pdf">here</a>.
+				</p>
+				<p><b>Late Days</b>: You have 6 total late days across homeworks and project proposal
+					submissions. You may use a maximum of 2 late days for any single assignment. Late days are not
+					allowed for final project report.
+				</p>
+				<p><b>Lecture Attendance</b>: While we do not require lecture attendance, students are encouraged to
+					join the live lecture. To accommodate various circumstances, we will be live-streaming the in-person
+					lecture via a zoom link on canvas. Students joining the zoom live stream will be able to ask
+					questions. For those who cannot join the live lectures, lecture recordings will also be available on
+					Canvas shortly following the lecture.
+				</p>
+				<p><b>Honor Code</b>: Students are free to form study groups and may discuss homework in groups.
+					However, each student must write down the solutions and code from scratch independently, and without
+					referring to any written notes from the joint session. When debugging code together, you are only
+					allowed to look at the input-output behavior of each other's programs and not the code itself.
+					In other words, each student must understand the solution well enough in order to reconstruct it by
+					him/herself. It is an honor code violation to copy, refer to, or look at written or code solutions
+					from a previous year, including but not limited to: official solutions from a previous year,
+					solutions posted online, and solutions you or someone else may have written up in a previous year.
+					Furthermore, it is an honor code violation to post your assignment solutions online, such as on a
+					public git repo. For more details about honor code, see <a href="https://communitystandards.stanford.edu/policies-and-guidance/honor-code">The Stanford
+						Honor
+						Code</a> and <a href="https://web.stanford.edu/class/archive/cs/cs106b/cs106b.1164/handouts/honor-code.pdf">The
+						Stanford Honor Code Pertaining to CS Courses</a>.
+				</p>
+			</div>
+
+			<div id="covid-protocol">
+				<h3> Health and Safety Expectation (COVID-19 Protocols) </h3>
+				<br>
+				<p>Following Stanford’s policies, everyone is required to wear a mask indoors, regardless of vaccination
+					status. This includes any in-person lectures or office hour sessions. Some community members may
+					have preferences that go beyond the requirements; it is important that we treat each others'
+					preferences with respect and care. You can find the most current policies on campus masking
+					requirements on the <a href="https://healthalerts.stanford.edu/covid-19/">COVID-19 Health Alerts
+						site</a>.</p>
+			</div>
+
+			<div id="academic-accomodations">
+				<h3> Academic Accommodations </h3>
+				<br>
+				<p>If you need an academic accommodation based on a disability, please register with the Office of
+					Accessible Education (OAE). Professional staff will evaluate your needs, support appropriate and
+					reasonable accommodations, and prepare an Academic Accommodation Letter for faculty. To get started,
+					or to re-initiate services, please visit oae.stanford.edu.
+
+					If you already have an Academic Accommodation Letter, please send your letter to
+					cs330-aut2122-staff@lists.stanford.edu. OAE Letters should be sent to us at the earliest possible
+					opportunity so that the course staff can partner with you and OAE to make the appropriate
+					accommodations.
+				</p>
+			</div>
+
+			<div id="financial-aid">
+				<h3> Note on Financial Aid </h3>
+				<br>
+				<p>All students should retain receipts for books and other course-related expenses, as these may be
+					qualified educational expenses for tax purposes. If you are an undergraduate receiving financial
+					aid, you may be eligible for additional financial aid for required books and course materials if
+					these expenses exceed the aid amount in your award letter. For more information, review your award
+					letter or visit the <a href="https://financialaid.stanford.edu/undergrad/budget/index.html">Student
+						Budget website</a>. </p>
+			</div>
+
+
+			<br>
+
+
+			<!-- The footer -->
+			<div class="hrline">
+				<hr>
+			</div><br>
+			<div class="row clearfix">
+				<div class="col-md-3 column">
+				</div>
+				<div class="col-md-6 column">
+					<div class="text-center">
+						<p>
+							&nbsp;&nbsp;&nbsp; © Chelsea Finn 2021
+						</p>
+					</div>
+				</div>
+				<div class="col-md-3 column">
+				</div>
+			</div>
+			<br>
+			<br>
+			<br>
+			<!-- End of document -->
+		</div>
+
+
+
+</div></body></html>

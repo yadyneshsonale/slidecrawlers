@@ -1,0 +1,904 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="featureription" content="ML at ETH Zurich">
+  <meta name="keywords" content="eth, zurich, machine, learning">
+  <meta name="author" content="2718282">
+  <link href="main.css" media="screen" rel="stylesheet" type="text/css">
+
+  <title>Advanced Machine Learning</title>
+</head>
+
+<body>
+  <div id="container">
+    <div id="logo">
+
+
+      <h1>Advanced Machine Learning</h1>
+      <p>ETH Zurich, Prof. Joachim M. Buhmann, Fall Semester 2023</p>
+    </div>
+
+    <div id="main">
+      <div id="feature">
+
+        <h2> Course Description</h2>
+        <p>Machine learning algorithms are data analysis methods which search
+          data sets for patterns and characteristic structures. Typical tasks
+          are the classification of data, automatic regression and unsupervised
+          model fitting. Machine learning has emerged mainly from computer
+          science and artificial intelligence, and draws on methods from a
+          variety of related subjects including statistics, applied mathematics
+          and more specialized fields, such as pattern recognition and neural
+          computation. Applications are, for example, image and speech
+          analysis, medical imaging, bioinformatics and exploratory data
+          analysis in natural science and engineering:</p> <br>
+
+        <table>
+          <tbody>
+            <tr>
+              <td><img src="images/svm.png" alt="nonlinear decision boundary" height="165" width="220"></td>
+              <td><img src="images/lda.png" alt="linear discriminant analysis" height="165" width="220"></td>
+              <td><img src="images/gene_exp.png" alt="gene expression levels" height="165" width="220"></td>
+            </tr>
+
+            <tr>
+              <td align="center">Non-linear decision boundary of a trained support vector machine (SVM) using a
+                radial-basis function kernel.</td>
+              <td align="center">Fisher's linear discriminant analysis (LDA) of four different auditory scenes: speech,
+                speech in noise, noise and music.</td>
+              <td align="center">Gene expression levels obtained from a micro-array experiment, used in gene function
+                prediction.</td>
+            </tr>
+
+          </tbody>
+        </table>
+
+        <br>
+        We assume that students are familiar with the course <a href="http://www.vvz.ethz.ch/Vorlesungsverzeichnis/lerneinheit.view?lerneinheitId=119694&amp;semkez=2018S&amp;ansicht=KATALOGDATEN&amp;lang=de">Introduction
+          to Machine Learning</a>.
+        <!--Other related courses offered at the D-INFK include: <a href="http://www.vvz.ethz.ch/Vorlesungsverzeichnis/lerneinheit.view?lerneinheitId=120106&semkez=2018S&ansicht=KATALOGDATEN&lang=en">Computational Intelligence Lab</a>, <a href="http://www.vvz.ethz.ch/Vorlesungsverzeichnis/lerneinheit.view?lerneinheitId=123979&semkez=2018W&ansicht=KATALOGDATEN&lang=en">Probabilistic Artificial Intelligence</a>, <a href="http://www.vvz.ethz.ch/Vorlesungsverzeichnis/lerneinheit.view?lerneinheitId=124470&semkez=2018W&ansicht=KATALOGDATEN&lang=en">Advanced Topics in Machine Learning</a>, <a href="http://www.vvz.ethz.ch/Vorlesungsverzeichnis/lerneinheit.view?lerneinheitId=122559&semkez=2018S&ansicht=KATALOGDATEN&lang=en">Information Retrieval</a>, <a href="http://www.vvz.ethz.ch/Vorlesungsverzeichnis/lerneinheit.view?lerneinheitId=124873&semkez=2018W&ansicht=KATALOGDATEN&lang=en">Deep Learning</a>, <a href="http://www.vvz.ethz.ch/Vorlesungsverzeichnis/lerneinheit.view?lerneinheitId=124397&semkez=2018W&ansicht=KATALOGDATEN&lang=en">Computational Biomedicine</a>.-->
+      </div>
+
+      <!--<h2 style="color:#ff0000">Admission to lectures and tutorials</h2>
+<ul>
+  <li> Starting in the week of November 2, all lectures and tutorials
+    will be delivered online only.
+  </li>
+ <li>In-person attendance of lectures and tutorials is restricted due
+   to the current pandemic. To find out which lectures and tutorials
+   you can attend in person, consult the <a href="./attendance.html">attendance
+   schedule</a>.
+ </li>
+  <li>Lectures and tutorials are
+    <a href="https://video.ethz.ch/live/lectures.html">live-streamed</a>
+    and <a href="https://video.ethz.ch/lectures/d-infk/2020/autumn.html">recorded</a>.
+    Recordings will appear online after 24 hours.
+  </li>
+</ul>-->
+
+      <a name="news"></a>
+      <h2>Announcements</h2>
+      <ul>
+        <li>There will be no tutorials in the first week of the semester.
+        </li>
+        <!--   <li>Tutorials of the second week of the semester will be delivered via Zoom. -->
+        <!--   </li> -->
+        <!-- <li> <a href="https://video.ethz.ch/lectures/d-infk/2019/autumn/252-0535-00L.html"> -->
+        <!-- Video recordings of the lectures</a> are now available. -->
+        <!-- </li> -->
+        <li>
+          The framework for the practical projects will be demonstrated in
+          the tutorials of the third week of the semester. See
+          the <a href="#projects">Projects</a> section below for more
+          information.
+        </li>
+        <li>
+          All materials and links can be accessed using your NETHZ credentials.
+        </li>
+        <li>
+          The lectures are offered in presence. A recording will also be made available within 24h after the lecture and
+          available through the <a href="https://video.ethz.ch/lectures/d-infk/2023.html">ETH Zürich Videoportal</a>.
+        </li>
+        <li>
+          Each student is assigned to one of the two tutorials, depending on the first letter of the surname.
+        </li>
+        <li>
+          For any further questions please check the FAQ at the end of the page.
+        </li>
+        <!-- <li> -->
+        <!--   The <a href="#projects">release dates and submission deadlines</a> for the practical -->
+        <!--   projects have been -->
+        <!--   published. -->
+        <!-- </li> -->
+      </ul>
+
+
+      
+
+      <a name="syllabus"></a>
+      <h2>Syllabus</h2>
+
+      <table width="100%">
+        <tbody><tr>
+          <th>Week</th>
+          <th>Lecture topics</th>
+          <th>Lecture slides</th>
+          <th>References</th>
+          <th>Tutorial slides</th>
+          <th>Exercises</th>
+        </tr>
+
+        <tr class="odd">
+          <td align="center" ,="" valign="top">38</td>
+          <td align="left" ,="" valign="top">Introduction to AML</td>
+          <td valign="top">
+            <a href="./slides/aml23_course_information.pdf">Course Information</a>
+            <br>
+            <a href="./slides/AML23 Motivation 230922.pdf">Lecture 1</a>
+          </td>
+          <td valign="top">
+            Bishop, Ch. 9 and 12
+          </td>
+          <td valign="top">
+            No tutorial
+
+          </td>
+          <td valign="top">
+            No exercise
+            
+          </td>
+          <!-- <td valign="top"></td> -->
+        </tr>
+
+        <tr class="even">
+          <td align="center" ,="" valign="top">39</td>
+          <td align="left" ,="" valign="top">
+            Representations, measurements, data types
+          </td>
+          <td valign="top">
+            <a href="./slides/Notes 230928+29.pdf">Notes</a>
+            <br>
+            <a href="./slides/aml23_lecture_02.pdf">Lecture 2</a>
+          </td>
+          <td valign="top">
+            Bishop, Ch. 9 and 12
+
+          </td>
+          <td valign="top">
+            <!-- <a href="https://ml2.inf.ethz.ch/courses/aml/tutorials/tutorial_1.pdf">Notes</a>
+            <br />
+            <a
+              href="https://ethz.zoom.us/rec/share/yFPtederMWsi3X0L67vq0nhEv7BPpQmg-CYeQcLZSnhkfISKJehE25OK9GSpabZ1.Gr5M5SL7G3CqRC0o?startTime=1664539792000">Recording</a> -->
+          </td>
+          <td valign="top">
+            <a href="https://ml2.inf.ethz.ch/courses/aml/exercises/exercises1.pdf">Exercise 1</a>
+            <br>
+            <a href="https://ml2.inf.ethz.ch/courses/aml/solutions/solutions1.pdf">Solution 1</a>
+            <!-- <a href="https://ml2.inf.ethz.ch/courses/aml/exercises/exercise1.pdf">Exercise 1</a> -->
+            <!--<br/>
+      <a href="https://ml2.inf.ethz.ch/courses/aml/solutions/solution1.pdf">Solution 1</a>-->
+            
+          </td>
+        </tr>
+
+        <tr class="odd">
+          <!--<td align="center", valign="top">00-33</td> -->
+          <td align="center" ,="" valign="top">40</td>
+          <td align="left" ,="" valign="top">Density estimation</td>
+          <td valign="top">
+            <a href="https://ml2.inf.ethz.ch/courses/aml/slides/aml23_lecture_03.pdf">Lecture 3</a>
+            <br>
+            <a href="https://ml2.inf.ethz.ch/courses/aml/slides/Notes 231006.pdf">Notes</a>
+          </td>
+          <td valign="top">
+            Wasserman, Ch. 9 -- 13,
+            <!-- <br>
+            <a href="https://arxiv.org/abs/1803.06964">Modern MLE for LR</a> -->
+          </td>
+          <!--   <td valign="top"><a href="https://ml2.inf.ethz.ch/courses/aml/tutorials/tutorial_regression_em.pdf">Recap IML</a> -->
+          <td valign="top">
+            <a href="https://ml2.inf.ethz.ch/courses/aml/tutorials/Introduction_to_projects_2023.pdf">Slides</a>
+       <!--      <br />
+            <a
+              href="https://ethz.zoom.us/rec/share/I7Q0boFX46yvncrA3XmzaPoYJbLXh2q8Lfa-gL2A9xz3X8Zn8BAaL9jzqKWUpYSq.wN8upsaXjnzkweHm?startTime=1665144865000">Recording</a> -->
+          </td>
+          <td valign="top">
+            No Exercise
+          </td>
+        </tr>
+
+        <tr class="even">
+          <td align="center" ,="" valign="top">41</td>
+          <td align="left" ,="" valign="top">Regression, bias-variance tradeoff</td>
+          <td valign="top">
+            <a href="https://ml2.inf.ethz.ch/courses/aml/slides/aml23_lecture_04.pdf">Lecture 4</a>
+          </td>
+          <td valign="top">
+            Hastie, Sec 3.2, 3.4, and 3.6
+          </td>
+          <!--   <td valign="top"><a href="https://ml2.inf.ethz.ch/courses/aml/tutorials/Project1.pdf">Project 1</a> -->
+          <td valign="top">
+            <a href="https://ml2.inf.ethz.ch/courses/aml/tutorials/tutorial2_density_estimation.pdf">Slides</a>
+          </td>
+          <td valign="top">
+            <a href="https://ml2.inf.ethz.ch/courses/aml/exercises/exercise2.pdf">Exercise 2</a>
+            <br>
+            <a href="https://ml2.inf.ethz.ch/courses/aml/solutions/solution2.pdf">Solution 2</a>
+          </td>
+        </tr>
+
+        <tr class="odd">
+          <td align="center" ,="" valign="top">42</td>
+          <td align="left" ,="" valign="top">Gaussian Processes</td>
+          <td valign="top">
+            <a href="https://ml2.inf.ethz.ch/courses/aml/slides/aml23_lecture_05.pdf">Lecture 5</a>
+
+
+          </td>
+          <td valign="top">
+            Bishop, Sec 6.4
+            <br>
+            <a href="https://ml2.inf.ethz.ch/courses/aml/material/Gorbach2017_Chapter_ModelSelectionForGaussianProce.pdf">Model
+              Selection for GP</a>
+          </td>
+          <td valign="top">
+            <!-- <a href="https://ml2.inf.ethz.ch/courses/aml/tutorials/tutorial_4.pdf">Slides </a>
+            <br>
+            <a href="https://ml2.inf.ethz.ch/courses/aml/tutorials/tutorial_4_zoom_recording.mp4">Recording</a> -->
+            <!-- <a href="https://ml2.inf.ethz.ch/courses/aml/tutorials/bayesian_regression.pdf">Tutorial 2</a> -->
+            <!--   </td> -->
+          </td>
+          <td valign="top">
+            <a href="https://ml2.inf.ethz.ch/courses/aml/exercises/exercise3.pdf">Exercise 3</a>
+            <br>
+            <a href="https://ml2.inf.ethz.ch/courses/aml/solutions/solution3.pdf">Solution 3</a>
+          </td>
+        </tr>
+
+        <tr class="even">
+          <td align="center" ,="" valign="top">43</td>
+          <td align="left" ,="" valign="top">Model validation (numerical techniques)</td>
+          <td valign="top">
+            <a href="https://ml2.inf.ethz.ch/courses/aml/slides/aml23_lecture_06.pdf">Lecture 6</a>
+            <!--    <a href="https://ml2.inf.ethz.ch/courses/aml/slides/aml20_lecture_shockfish.pdf">Shockfish</a>
+<br>
+    -->
+          </td>
+          <td valign="top">
+            Bishop, Ch. 7
+            <br>
+            <a href="https://web.stanford.edu/~boyd/cvxbook/">Boyd and Vanderberghe</a>, Ch. 5
+          </td>
+          <td valign="top">
+            <a href="https://ml2.inf.ethz.ch/courses/aml/tutorials/Project1.pdf">Project 1</a>
+            <!--   <br/>
+     <a href="https://ethz.zoom.us/rec/share/HWOs_k8oJwUj_YZwc2apxRxYrZ-DH8XLaCkl4Q0h_LxOA_whG5UeItu5wtVdUa8j.z3JQUiBpR9Wtj-Mu">Zoom recording</a>
+-->
+          </td>
+          <td valign="top">
+            No exercise
+          </td>
+        </tr>
+
+        <tr class="odd">
+          <td align="center" ,="" valign="top">44</td>
+          <td align="left" ,="" valign="top">SVMs</td>
+          <td valign="top">
+            <a href="https://ml2.inf.ethz.ch/courses/aml/slides/aml23_lecture_08.pdf">Shockfish</a>
+            <br>
+            <a href="https://ml2.inf.ethz.ch/courses/aml/slides/aml23_lecture_07.pdf">Lecture 7</a>
+
+            <!--      <a href="https://ml2.inf.ethz.ch/courses/aml/slides/aml20_lecture_08.pdf">Lecture 8</a>
+        <br>
+        <a href="https://ethz.zoom.us/rec/share/XZ6w8-SHNvTaOKvPWONEH_w08G46E5gLjPRcoA5zw2wr3rQZtZSRbA6KiH2bWZPm.o3dbBlFS2wmXR8ob">Zoom recording (Thu)</a>
+        <br>
+        <a href="https://ethz.zoom.us/rec/play/XggyyhajSoeI7EamrDm_rLjPI-XrcXyogH_gCqd7jQTkKM5SML9ryf-3aHZmHAaB0FaAJrpEw8PnOCoB.rz3QYoH18lKjQ2Db?continueMode=true">Zoom recording (Fri)</a>-->
+
+          </td>
+          <td valign="top">
+            Bishop, Ch. 7
+            <br>
+            <a href="https://dl.acm.org/doi/abs/10.1145/1592761.1592783?casa_token=EcttFDZC3W0AAAAA:VkPd6pqfK5wt49MB7Rdq4wnl6Yv3UL0_wj-Ow0-rC11-lY5wnMYmQe7xIg3JXlDWSk8wCDKXUT9P">Joachims,
+              2009</a>
+          </td>
+          <td valign="top">
+            <a href="https://ml2.inf.ethz.ch/courses/aml/tutorials/tutorial4_guassianprocesses.pdf">Slides</a>
+
+            <!-- <a href="https://ml2.inf.ethz.ch/courses/aml/tutorials/tutorial_6.pdf">Tutorial notes 6</a>
+  <br>
+    <a href="https://ethz.zoom.us/rec/play/LPi9rlCFgfztRyafiilrU0wkCpYm6XKXMDNR7THB3jNSVYRLRjzu64sHJC3lT6roADmtGcQFjuGDmVuR.3_bIiE-JeR2-URpY?continueMode=true">Zoom recording</a>-->
+          </td>
+          <td valign="top">
+            <a href="https://ml2.inf.ethz.ch/courses/aml/exercises/exercise4.pdf">Exercise 4</a>
+            <br>
+            <a href="https://ml2.inf.ethz.ch/courses/aml/solutions/solution4.pdf">Solution 4</a>
+          </td>
+        </tr>
+
+        <tr class="even">
+          <td align="center" ,="" valign="top">45</td>
+          <td align="left" ,="" valign="top">Ensemble methods</td>
+          <td valign="top">
+            <a href="https://ml2.inf.ethz.ch/courses/aml/slides/aml23_lecture_09.pdf">Lecture 9</a>
+          </td>
+          <td valign="top">
+            Hastie, Sec 8.7, 10.1 -- 10.11
+            <br>
+            <a href="https://arxiv.org/abs/1504.07676">Wyner et al, 2018</a>
+          </td>
+          <td valign="top">
+            <a href="https://ml2.inf.ethz.ch/courses/aml/recording/SVM_Tutorial.mp4">Recording</a>
+          </td>
+          <td valign="top">
+                  <a href="https://ml2.inf.ethz.ch/courses/aml/exercises/exercise5.pdf">Exercise 5</a>
+                  <br>
+                  <a href="https://ml2.inf.ethz.ch/courses/aml/solutions/solution5.pdf">Solution 5</a>
+          </td>
+        </tr>
+        <tr class="odd">
+          <td align="center" ,="" valign="top">46</td>
+          <td align="left" ,="" valign="top">Deep learning</td>
+          <td valign="top">
+            <a href="https://ml2.inf.ethz.ch/courses/aml/slides/aml23_lecture_10.pdf">Lecture 10</a>
+            <br>
+            <a href="https://ml2.inf.ethz.ch/courses/aml/slides/aml23_lecture_10b.pdf">Lecture 10b</a>
+            <br>
+            <a href="https://ml2.inf.ethz.ch/courses/aml/slides/aml23_lecture_10.pdf">Random Forests as Classifiers</a>
+            <!-- <a href="https://ml2.inf.ethz.ch/courses/aml/slides/aml22_lecture_11-DeepLearning.pdf">Lecture 9</a>
+            <br>
+            <a href="https://ml2.inf.ethz.ch/courses/aml/material/aml22_notes_robbins-monro.pdf">Notes Robbins-Monro</a> -->
+            <!--     <a href="https://ml2.inf.ethz.ch/courses/aml/slides/ERM-for-hyperplanes-2019-12-12.pdf">ERM for hyperplanes</a> -->
+            <!--     <br/> -->
+            <!--     <a href="https://ml2.inf.ethz.ch/courses/aml/slides/aml19_lecture_12.pdf">Lecture 12</a> -->
+          </td>
+          <td valign="top">
+            Goodfellow, Sec. 6.5, 8.1, 8.3.1
+          </td>
+          <td valign="top">
+            <a href="https://ml2.inf.ethz.ch/courses/aml/tutorials/Project2.pdf">Project 2</a>
+            <br>
+            <a href="https://ml2.inf.ethz.ch/courses/aml/tutorials/biosppy_examples.ipynb">Notebook</a>
+          </td>
+          <td valign="top">
+            No exercise
+          </td>
+        </tr>
+        <tr class="even">
+          <td align="center" ,="" valign="top">47</td>
+          <td align="left" ,="" valign="top">Deep learning</td>
+          <td valign="top">
+            <a href="https://ml2.inf.ethz.ch/courses/aml/slides/aml23_lecture_11-DeepLearning.pdf">Lecture 11</a>
+            <br>
+            <a href="https://ml2.inf.ethz.ch/courses/aml/slides/Notes 231124.pdf">Notes</a>
+            <!-- <a href="https://ml2.inf.ethz.ch/courses/aml/slides/aml22_notes_1124.pdf">Notes</a> -->
+
+            <!--          <a href="https://ml2.inf.ethz.ch/courses/aml/slides/aml20_lecture_10.pdf">Lecture 10</a>
+           <br>
+        <a href="https://ethz.zoom.us/rec/share/W_LLagoXz9wIhEVlXuSniBh_eLMxz7YKV74sSrRM1j_6JiqROk6HaQ-Un-D224Ds.YtRDAGtm6zjSlYgM">Zoom rec Thursday</a>
+        <br>
+        <a href="https://ethz.zoom.us/rec/share/YA35Lheq0LMLOX-VZgF61qOXcxgGsosNPzShlZypcc8LnmLr1DHep4RYiBXHRagm.1dBh5tblR6cYrlsF">Zoom rec Friday</a>-->
+            <!--     <a href="https://ml2.inf.ethz.ch/courses/aml/slides/ERM-for-hyperplanes-2019-12-12.pdf">ERM for hyperplanes</a> -->
+            <!--     <br/> -->
+            <!--     <a href="https://ml2.inf.ethz.ch/courses/aml/slides/aml19_lecture_12.pdf">Lecture 12</a> -->
+          </td>
+          <td valign="top">
+            Goodfellow, Sec. 6.5, 8.1, 8.3.1
+          </td>
+          <td valign="top">
+<!--     		 <a href="https://ml2.inf.ethz.ch/courses/aml/tutorials/tutorial_7_slides.pdf">Slides</a>
+                     <br/> -->
+    		 <!-- <a href="https://ml2.inf.ethz.ch/courses/aml/tutorials/tutorial_7_notes.pdf">Notes</a> -->
+         <br>
+         <!-- <a href="https://ethz.zoom.us/rec/play/dMAlq666rLjjvS3epCTT0Wrb_FiELSbctym3WYmGBXCeIfH9oB0DC4mLdFAQpCJSwW1QxVuTF-wbb7O2.Rj1flK1iYvTyTB11?autoplay=true&startTime=1669383387000">Recording</a> -->
+            <!--     <\!-- <a href="https://ml2.inf.ethz.ch/courses/aml/tutorials/task4.pdf">Project 4</a> -\-> -->
+
+          </td>
+          <td valign="top">
+            <a href="https://ml2.inf.ethz.ch/courses/aml/exercises/exercise6.pdf">Exercise 6</a>
+            <br>
+          <a href="https://ml2.inf.ethz.ch/courses/aml/solutions/solution6.pdf">Solutions 6</a>
+
+          </td>
+        </tr>
+
+        <tr class="odd">
+          <td align="center" ,="" valign="top">48</td>
+          <td align="left" ,="" valign="top">Deep learning</td>
+          <td valign="top">
+            <a href="https://ml2.inf.ethz.ch/courses/aml/slides/aml23_lecture_12.pdf">Lecture 12</a>
+            <br>
+            <a href="https://ml2.inf.ethz.ch/courses/aml/slides/Notes Vae.pdf">Notes 1</a>
+            <br>
+            <a href="https://ml2.inf.ethz.ch/courses/aml/slides/Notes RobbinsMonro.pdf">Notes 2</a>
+            <br>
+            <a href="https://ml2.inf.ethz.ch/courses/aml/material/Introduction_to_VAEs.pdf">Notes 3</a>
+
+            <!-- <a href="https://ml2.inf.ethz.ch/courses/aml/slides/aml22_lecture_dl2.pdf">Lecture 11A</a><br>
+            <a href="https://ml2.inf.ethz.ch/courses/aml/slides/aml22_lecture_dl3.pdf">Lecture 11B</a><br> -->
+            <!--       <a href="https://ml2.inf.ethz.ch/courses/aml/slides/aml20_lecture_11a.pdf">Lecture 11 (Thursday)</a>
+
+            <br>
+            <a href="https://ml2.inf.ethz.ch/courses/aml/slides/aml20_lecture_11-DeepLearning.pdf">Lecture 11 (Friday)</a>
+            <br>
+            <a href="https://ml2.inf.ethz.ch/courses/aml/slides/aml20_lecture_11_notes.pdf">Notes (Friday)</a>
+            <br>
+            <a href="https://ethz.zoom.us/rec/play/eCHwIqLzWUvk3BeI-Ck1pycVjKwalpIFjEDmf5D5bMrb6kfKFh_avh7POZdUdmszQO3bXXgVEMgcusvn upRIG.qBGxH531739cAVoF?continueMode=true">Zoom rec Thursday</a>
+            <br>
+            <a href="https://ethz.zoom.us/rec/play/Di9uLzGhCuyEWltAQqiZ3QOH2PpQ7YmexfCo3KGJR0nao125sgTT81PySstLwRe6yWy_PeuGP2K0OxIC.6xjts_QlY19NaLLL?continueMode=true">Zoom rec Friday</a>-->
+          </td>
+          <td valign="top">
+            Goodfellow, Sec. 6.5, 8.1, 8.3.1<br>
+            <!-- <a href="https://arxiv.org/abs/2007.03898">NVAE</a>
+
+            <a href="https://arxiv.org/abs/2006.11239">Diffusion</a>
+
+            <a href="https://arxiv.org/abs/1701.07875">WGAN</a>
+            <br>
+            <a href="https://jmlr.csail.mit.edu/papers/v13/gretton12a.html">MMD</a> -->
+            <br>
+          </td>
+          <td valign="top">
+          <a href="https://ml2.inf.ethz.ch/courses/aml/tutorials/tutorial7.pdf">Slides</a>
+          </td>
+          <td valign="top">
+            <a href="https://ml2.inf.ethz.ch/courses/aml/exercises/exercise7.pdf">Exercise 7</a>
+            <br>
+          <a href="https://ml2.inf.ethz.ch/courses/aml/solutions/solution7.pdf">Solutions 7</a>
+          </td>
+        </tr>
+
+        <tr class="even">
+          <td align="center" ,="" valign="top">49</td>
+          <td align="left" ,="" valign="top">Non-parametric Bayesian methods</td>
+          <td valign="top">
+            <a href="https://ml2.inf.ethz.ch/courses/aml/slides/aml23_lecture_13-clustering.pdf">Lecture 13</a>
+            <br>
+            <a href="https://ml2.inf.ethz.ch/courses/aml/slides/aml23_lecture_13-npBayes.pdf">Lecture 13b</a>
+            <!-- <a href="https://ml2.inf.ethz.ch/courses/aml/slides/aml22_lecture_13_npb.pdf">Lecture 12 </a> -->
+            <!--      <a href="https://ml2.inf.ethz.ch/courses/aml/slides/aml20_lecture_12-clustering.pdf">Lecture 12 (EM)</a>
+       <br/>
+       <a href="https://ml2.inf.ethz.ch/courses/aml/slides/aml20_lecture_12-npBayes.pdf">Lecture 12 (NP Bayes)</a>
+       <br/>
+       <a href="https://ml2.inf.ethz.ch/courses/aml/slides/notes_lecture_12.pdf">Notes</a>
+       <br/>
+       <a href="https://ethz.zoom.us/rec/play/P0CWkTO2qX8--SS3lqW8A_erTiFtLDVbxE5vHKzw0AysJUcOEcfAvQewfl9cbqG1Q2iMyZUz4SE751uN.xa-VXTo8dhhRKcWi?continueMode=true">Zoom rec (Thursday)</a>
+       <br/>
+       <a href="https://ethz.zoom.us/rec/share/bUDIm5bJ0M3PyF13uQtsz0ZRQVHmLGqOMmLZ2LNfY-n9tTJHbDxSxQvpudre9iai.Ts4AmLcV95bTVnT5">Zoom rec (Friday)</a>-->
+          </td>
+          <td valign="top">
+            Murphy, Ch. 24, 25<br>
+            <a href="https://ml2.inf.ethz.ch/courses/aml/material/kamper_npb.pdf">Kamper's notes</a>
+            <br>
+            <a href="https://ml2.inf.ethz.ch/courses/aml/material/tutorial_on_bayesian_np_models.pdf">Gershman and Blei's tutorial</a>
+          </td>
+          <td valign="top">
+            <a href="https://ml2.inf.ethz.ch/courses/aml/tutorials/Project3.pdf">Slides</a>
+         <!--               <a href="https://ml2.inf.ethz.ch/courses/aml/tutorials/project3_2022.pdf">Project 3</a>
+
+           <br/>
+         <a href="https://ethz.zoom.us/rec/share/ozcdpuaqSmQlY62tBc3L9AoOrbzX6fwzdGDwk4Nnsc8RKZWkiTADf5foZ2orgBCF.Tdt7TAWtBNID_0lX?startTime=1670591648000">Recording</a> -->
+          </td>
+
+
+          <td valign="top">
+            No exercise
+            <!-- <a href="https://ml2.inf.ethz.ch/courses/aml/exercises/exercise8_updated.pdf">Exercise 8</a>
+            <br/>
+            <a href="https://ml2.inf.ethz.ch/courses/aml/solutions/solution8_updated.pdf">Solutions 8</a> -->
+          </td>
+        </tr>
+
+        <tr class="odd">
+          <td align="center" ,="" valign="top">50</td>
+          <td align="left" ,="" valign="top">PAC learning</td>
+          <td valign="top">
+            <a href="https://ml2.inf.ethz.ch/courses/aml/slides/aml23_lecture_14-PAC.pdf">Lecture 14</a>
+            <br>
+            <a href="https://ml2.inf.ethz.ch/courses/aml/slides/NotesPac.pdf">PAC Notes</a>
+          </td>
+          <td valign="top">
+            Mohri, Ch. 1
+          </td>
+          <td valign="top">
+               <!--  <a href="https://ml2.inf.ethz.ch/courses/aml/tutorials/tutorial_9.pdf">Slides</a>
+                <br>
+               <a href="https://ethz.zoom.us/rec/share/aB5aGFGFg8qOz3_9k0ixPAY2eJw9nd8Wn8WrUBlIFqHw31fJ0ayf8kIYgTosOWAO.hJioCnKykwdAQ_EQ"> Recording<a> -->
+          </td>
+          <td valign="top">
+            <a href="https://ml2.inf.ethz.ch/courses/aml/exercises/exercise8.pdf">Exercise 8</a>
+            <br>
+            <a href="https://ml2.inf.ethz.ch/courses/aml/solutions/solution8.pdf">Solutions 8</a>
+          </td>
+        </tr>
+
+        <tr class="even">
+          <td align="center" ,="" valign="top">51</td>
+          <td align="left" ,="" valign="top">PAC learning</td>
+          <td valign="top">
+            <a href="https://ml2.inf.ethz.ch/courses/aml/slides/aml23_lecture_14-SLT.pdf">Lecture 15</a>
+            <br>
+            <a href="https://ml2.inf.ethz.ch/courses/aml/slides/Notes 231222.pdf">Notes</a>
+            <!-- <a href="https://ml2.inf.ethz.ch/courses/aml/slides/aml22_lecture_14-SLT.pdf">Lecture 14</a>
+            <br/>
+            <a href='https://ml2.inf.ethz.ch/courses/aml/material/AML221223.pdf'>Notes</a> -->
+            <!--      <\!-- <a href="https://ml2.inf.ethz.ch/courses/aml/slides/aml19_lecture_11.pdf">Lecture 11</a> -\-> -->
+            <!--  <a href="https://ml2.inf.ethz.ch/courses/aml/slides/notes_lecture13.pdf">Handwritten notes</a>
+  <br/>
+  <a href="https://ethz.zoom.us/rec/share/UpyIdmeYAVgmc-unhmYS6edrX-CLrRxL5eL4GC1he9qGpIlXh4q52if6v2_M9KQG.o_KfpuEDY1ILdLx3">Zoom recording</a>
+  <br/>
+  <a href="https://ethz.zoom.us/rec/share/vDD2yx6mdhslYmIaknF2wt5Av2wwWRo0wfSbmjOFokTZKB5PKGMcNmApjyBeR4fj.pV5mvX_VJLeHLXZk">Zoom recording</a>-->
+          </td>
+          <td valign="top">
+            Mohri, Ch. 1
+          </td>
+          <td valign="top">
+                <a href="https://ml2.inf.ethz.ch/courses/aml/tutorials/tutorial_9_pac.pdf">Slides</a>
+                <br>
+                <!-- <a href="https://ml2.inf.ethz.ch/courses/aml/tutorials/tutorial_9_pac_notes.pdf">Notes</a>
+                <br> -->
+                <a href="https://ethz.zoom.us/rec/share/k3LjUr76tgR0obo5b4QotBKBjn-Ha2Wf9muU1wvB3sD9JQ6PeS79GvYqtVaae2R1.r4tLq-wjQGmG8z8E">Recording</a>
+
+
+          </td>
+          <td valign="top">
+            <a href="https://ml2.inf.ethz.ch/courses/aml/exercises/exercise9.pdf">Exercise 9</a>
+            <br>
+            <a href="https://ml2.inf.ethz.ch/courses/aml/solutions/solution9.pdf">Solutions 9</a>
+          </td>
+        </tr>
+
+      </tbody></table>
+
+      <p>Some of the material can only be accessed with a valid nethz account. This list of topics is intended as a
+        guide and may change during the semester.</p>
+
+      <!-- <p><a href="https://www.video.ethz.ch/lectures/d-infk/2018/autumn/252-0535-00L.html">Video recordings of the lectures.</a></p> -->
+
+      <a name="information"></a>
+
+      <h2>General Information</h2>
+      <!-- <p> -->
+      <!--   <a href="https://ml2.inf.ethz.ch/courses/aml/slides/aml19_course_information.pdf">Course Information (presented in Lecture 1)</a> -->
+      <!-- </p> -->
+
+      <p>
+        <a href="https://www.vorlesungen.ethz.ch/Vorlesungsverzeichnis/lerneinheit.view?semkez=2023W&amp;ansicht=ALLE&amp;lerneinheitId=172028&amp;lang=en">Course
+          Catalogue (VVZ)</a>
+      </p>
+
+
+      <a name="schedule"></a>
+      <h3>Times and Places</h3>
+
+      <b>Lectures</b>
+      <table width="100%">
+        <tbody><tr>
+          <th width="25%">Time</th>
+          <th width="25%">Room</th>
+          <th width="50%">Remarks</th>
+        </tr>
+        <tr class="odd">
+          <td>Thu 15-16</td>
+          <td><a href="http://www.rauminfo.ethz.ch/Rauminfo/grundrissplan.gif?gebaeude=ETA&amp;geschoss=F&amp;raumNr=5&amp;lang=en">ETA
+              F 5</a>
+          </td>
+          <!-- <td>Consult the <a href="./attendance.html">attendance schedule</a>! -->
+          <!--<td>Online only!</td>-->
+          
+        </tr>
+        <tr class="even">
+          <td>Fri 08-10</td>
+          <td><a href="https://www.rauminfo.ethz.ch/Rauminfo/grundrissplan.gif?gebaeude=HG&amp;geschoss=F&amp;raumNr=7&amp;lang=en">HG
+              F 7</a> | <a href="https://www.rauminfo.ethz.ch/Rauminfo/grundrissplan.gif?gebaeude=HG&amp;geschoss=F&amp;raumNr=5&amp;lang=en">HG
+              F 5 (video)</a>
+          </td>
+          <td></td>
+        </tr>
+      </tbody></table>
+
+      <a name="assignment"></a>
+      <b>Tutorials</b>
+
+      <p>Please attend only the tutorial assigned to you by the first letter of your surname. </p>
+      <table width="100%">
+        <tbody><tr width="25%">
+          <th>Time</th>
+          <th width="25%">Room</th>
+          <th width="50%">Surname first letter</th>
+        </tr>
+        <tr class="odd">
+          <td>Wed 14-16</td>
+          <td><a href="http://www.rauminfo.ethz.ch/Rauminfo/grundrissplan.gif?gebaeude=CAB&amp;geschoss=G&amp;raumNr=61&amp;lang=en">CAB
+              G 61</a></td>
+          <!-- <td>Consult the <a href="./attendance.html">attendance schedule</>!</td> -->
+          <!-- <td>Online only!</td>-->
+          <td>A-L</td>
+        </tr>
+        <!--   <tr class="even">
+    <td>Wed 16-18</td>
+    <td><a href="http://www.rauminfo.ethz.ch/Rauminfo/grundrissplan.gif?gebaeude=CAB&geschoss=G&raumNr=61&lang=en">CAB G 61</a></td>
+    <td>H-L</td>
+  </tr> -->
+<!--         <tr class="even">
+          <td>Thu 17-18 (QA session)</td>
+          <td><a href="./zoom/zoom.html">Fully virtual through Zoom</a></td>
+          <td><a href="http://www.rauminfo.ethz.ch/Rauminfo/grundrissplan.gif?gebaeude=ML&geschoss=F&raumNr=34&lang=en">ML F 34</a></td>
+          <td></td> -->
+        
+        <tr class="even">
+          <td>Fri 14-16</td>
+          <td><a href="https://www.rauminfo.ethz.ch/Rauminfo/grundrissplan.gif?gebaeude=CHN&amp;geschoss=C&amp;raumNr=14&amp;lang=en">CHN
+              C 14</a></td>
+          <td>M-Z</td>
+        </tr>
+      </tbody></table>
+      <p>
+        All tutorial sessions are identical. Attendance to the tutorials is not mandatory.
+      </p>
+
+      <!--<p><b style="color:#ff0000">IMPORTANT</b> Starting in the week of
+  November 2, all lectures and tutorials will be delivered online only.
+</p>-->
+
+      <!--        In-person attendance of -->
+      <!-- lectures or tutorials is restricted. Before going to a lecture or -->
+      <!-- tutorial, consult the <a href="./attendance.html">attendance -->
+      <!-- schedule</a> to confirm that you are in the group of students who can -->
+      <!-- attend. -->
+
+      <!--<h3>Livestreams and recordings </h3>
+
+<p>Lectures and tutorials are
+   <a href="https://video.ethz.ch/live/lectures.html">live-streamed</a>
+  and <a href="https://video.ethz.ch/lectures/d-infk/2020/autumn.html">recorded</a>.
+  Recordings will appear online after 24 hours. </p>
+<p>During lectures, students attending remotely can ask questions
+via <a href="./zoom/zoom.html">Zoom</a>. Use your nethz credentials to
+access Zoom links.</p>-->
+
+      <h3>Exercises</h3>
+      <p>The exercise problems will contain theoretical pen &amp; paper
+        assignments. Solutions are not handed in and are not graded. Solutions to the
+        exercise problems are published one week after the exercise on this website.</p>
+      <!--
+  <ul>
+    <li>Send an electronic version of your solutions to the respective
+      teaching assistant for that exercise (specified on top of the exercise
+      sheet). This can be latexed, or a scan/photo of a hand-written
+      solution.
+    </li>
+    <li>Do not submit hard copies of your solutions.</li>
+  </ul>-->
+      <p></p>
+
+      <a name="projects"></a>
+      <h3>Projects</h3>
+
+      <p>
+        The goal of the practical projects is to get hands-on experience in machine learning tasks.
+        For further information and to access the projects, login at the <a href="https://aml.ise.inf.ethz.ch">projects
+          website</a> using your nethz credentials.
+        You need to be within the ETH network or connected via VPN to get access.
+      </p>
+      <p>
+        There will be one "dummy" project (Task 0) whose purpose it is to help students familiarize with the framework
+        we use and which will
+        be discussed in the tutorials of the third week of the semester. Following that, there will be three "real"
+        projects (Task 1 -- Task 3) that will be graded.
+      </p>
+      <p>
+        In order to complete the course, students have to pass at least two out of the three graded projects (it is
+        recommended to participate in all three). Students who do not fulfil this requirement will not be admitted to
+        take the final examination of the course.
+      </p>
+      <p>
+        The final project grade, which will constitute 30% of the total grade for the course, will be the average of the
+        best two project grades obtained.
+      </p>
+
+      <a name="news"></a>
+      <h4>Release dates and submission deadlines are in (UTC time)</h4>
+
+      <table width="100%">
+        <tbody><tr>
+          <th></th>
+          <th>Release date</th>
+          <th>Submission deadline</th>
+        </tr>
+        <tr class="odd">
+          <td>Task 0 (dummy task)</td>
+          <td>Mon, Oct 2, 15:00</td>
+          <td>Mon, Oct 23,14:00</td>
+        </tr>
+        <tr class="even">
+          <td>Task 1</td>
+          <td>Mon, Oct 23, 15:00</td>
+          <td>Mon, Nov 13, 14:00</td>
+        </tr>
+        <tr class="odd">
+          <td>Task 2</td>
+          <td>Mon, Nov 13, 15:00</td>
+          <td>Mon, Dec 4, 14:00</td>
+        </tr>
+        <tr class="even">
+          <td>Task 3</td>
+          <td>Mon, Dec 4, 15:00</td>
+          <td>Fri, Dec 23, 14:00</td>
+        </tr>
+      </tbody></table>
+
+
+      <h3>Exam</h3>
+      <p>There will be a written exam of 180 minutes
+        length. The language of the examination is English. As written aids,
+        you can bring two A4 pages (i.e., one A4 sheet of paper), either
+        handwritten or 11 point minimum font size. The grade obtained in the
+        written exam will constitute 70% of the total grade.</p>
+
+      <p>Under certain circumstances, exchange students may ask the exams office for a distance examination.
+        This must be organized by you via the <a href="https://ethz.ch/students/en/studies/performance-assessments.html">exams office</a>
+        with plenty of time in advance. Prof. Buhmann does not organize distance exams.</p>
+
+      <h3 id="questions">Moodle</h3>
+
+      <p>To account for the scale of this course, we will answer questions
+        regarding lectures exercises and projects
+        on <a href="https://moodle-app2.let.ethz.ch/">Moodle</a>. To
+        allow for an optimal flow of information, please ask your
+        content-related questions on this platform rather than via email. In this manner, your question and our answer
+        are visible to
+        everyone. Consequently, please read existing question-answer pairs
+        before asking new questions.</p>
+
+      <!--<p><a href="https://piazza.com/ethz.ch/fall2020/252053500l/">Sign up for Piazza here.</a></p>-->
+
+      <a name="resources"></a>
+      <!-- <h3>Resources</h3> -->
+
+      <!--<a name="applets"></a>
+<h3>Java Applets</h3>
+<ul>
+<li><a href="applets/Classifier/JPerceptronApplet.html">Perceptron</a></li>
+<li><a href="applets/Classifier/JFishersLinearDiscriminantApplet.html">Fisher LDA</a></li>
+<li><a href="applets/Classifier/JLMCompFisherApplet.html">Fisher LDA</a></li>
+<li><a href="applets/Classifier/JLMEveryPairFisherApplet.html">Fisher LDA</a></li>
+</ul>-->
+
+
+      <h3>Text Books</h3>
+      <p>C. Bishop. <em>Pattern Recognition and Machine Learning.</em> Springer 2006.<br>
+        This is an excellent introduction to machine learning that covers most
+        topics which will be treated in the lecture. Contains lots of
+        exercises, some with exemplary solutions. Available from ETH-HDB and
+        ETH-INFK libraries.</p>
+
+      <p>R. Duda, P. Hart, and D. Stork. <em>Pattern Classification. </em>John Wiley &amp; Sons, second edition,
+        2001.<br>
+        The classic introduction to the field. An early edition is available <a href="https://ml2.inf.ethz.ch/courses/aml/duda_book/index.html">online</a> for students attending this class,
+        the second edition is available from ETH-BIB and ETH-INFK libraries.</p>
+
+      <p>Goodfellow, Ian, Yoshua Bengio, and Aaron Courville. <em>Deep learning</em>. MIT Press, 2016.</p>
+
+      <p>T. Hastie, R. Tibshirani, and J. Friedman. <em>The Elements of
+          Statistical Learning: Data Mining, Inference and
+          Prediction. </em>Springer, 2001.<br> Another comprehensive text,
+        written by three Stanford statisticians. Covers additive models and
+        boosting in great detail. Available from ETH-BIB and ETH-INFK
+        libraries. <a href="https://web.stanford.edu/~hastie/ElemStatLearn/">A
+          free pdf version</a> is available.
+
+      </p>
+
+      <p>Mohri, Mehryar, Afshin Rostamizadeh, and Ameet Talwalkar. <em>Foundations of machine learning</em>. MIT press,
+        2018.</p>
+
+      <p>L. Wasserman. <em>All of Statistics: A Concise Course in Statistical Inference</em>. Springer, 2004.<br>
+        This book is a compact treatment of statistics that facilitates a deeper
+        understanding of machine learning methods. Available from ETH-BIB and
+        ETH-INFK libraries.</p>
+
+      <p>D. Barber. <em>Bayesian Reasoning and Machine Learning</em>. Cambridge University Press, 2012.<br>
+        This book is a compact and extensive treatment of most topics. Available for personal use online: <a href=" http://www.cs.ucl.ac.uk/staff/d.barber/brml/">Link</a>.</p>
+
+      <p>K. Murphy. <em>Machine Learning: A Probabilistic Perspective</em>. MIT, 2012.<br>
+        Unified probabilistic introduction to machine learning. Available from ETH-BIB and ETH-INFK libraries.</p>
+
+      <p>S. Shalev-Shwartz, and S. Ben-David. <em>Understanding Machine Learning: From Theory to Algorithms</em>.
+        Cambridge University Press, 2014.<br>
+        This recent book covers the mathematical foundations of machine learning. Available for personal use online: <a href="http://www.cs.huji.ac.il/~shais/UnderstandingMachineLearning/">Link</a>.</p>
+
+      <a name="exams"></a>
+      <h3>Exams from previous years</h3>
+      <ul>
+        <!-- <li><a href="https://ml2.inf.ethz.ch/courses/aml/material/exam2011.pdf">2011 exam</a></li> -->
+        <!-- <li><a href="https://ml2.inf.ethz.ch/courses/aml/material/exam2012.pdf">2012 exam</a></li> -->
+        <!-- <li><a href="https://ml2.inf.ethz.ch/courses/aml/material/exam2013.pdf">2013 exam</a></li> -->
+        <!-- <li><a href="https://ml2.inf.ethz.ch/courses/aml/material/exam2014.pdf">2014 exam</a></li> -->
+        <!-- <li><a href="https://ml2.inf.ethz.ch/courses/aml/material/exam2015.pdf">2015 exam</a></li> -->
+        <!-- <li><a href="https://ml2.inf.ethz.ch/courses/aml/material/exam2016.pdf">2016 exam</a></li> -->
+        <!-- <li><a href="https://ml2.inf.ethz.ch/courses/aml/material/exam2017.pdf">2017 exam</a></li> -->
+        <li><a href="https://ml2.inf.ethz.ch/courses/aml/old_exams/exam2018.pdf">2018 exam</a></li>
+        <li><a href="https://ml2.inf.ethz.ch/courses/aml/old_exams/exam2019.pdf">2019 exam</a></li>
+        <li><a href="https://ml2.inf.ethz.ch/courses/aml/old_exams/exam2020.pdf">2020 exam</a></li>
+        <li><a href="https://ml2.inf.ethz.ch/courses/aml/old_exams/exam_fs_2021.pdf">2020 exam (spring)</a></li>
+        <li><a href="https://ml2.inf.ethz.ch/courses/aml/old_exams/exam_2021.pdf">2021 exam</a></li>
+      </ul>
+
+      <a name="exams"></a>
+      <h3>FAQ</h3>
+      <p><b>Q: Can I transfer my project grades from last year to this year?</b>
+        No.
+      </p>
+      <p><b>Q: Can I take the exam remotely?</b>
+        This is only possible for exchange students or rare exceptions. You must make a justified request to the exams
+        office early in the semester. Prof. Buhmann does not handle such requests.
+      </p>
+
+      <p><b>Q: When do we get the project grades?</b>
+        At the end of the course, but you are informed before the exam whether you passed enough projects.
+      </p>
+
+      <p><b>Q: I cannot attend the tutorial I have been assigned to, can I attend another tutorial?</b>
+        Yes, but please wait until a few weeks for this. During the first weeks, we have a lot of students attending the
+        tutorials, so we cannot accommodate all students in one room.
+      </p>
+
+      <p><b>Q: I did not take introduction to machine learning at ETH. Can I still attend this course? How do I know if
+          I have enough background for it?</b>
+        We cannot decide this for you. We recommend that you go through the material and the exam of introduction to
+        machine learning. If you are familiar with the concepts taught there, you should probably be able to attend this
+        course. You can also try to solve the exercise sheets for the first two weeks. If you can solve them, you are
+        probably able to attend this course.
+      </p>
+
+      <p><b>Q: I am a doctoral student and I want to get credits for this course. What do I need for this?</b>
+        You need to pass both the projects and the exam. We do not give partial credits for passing only the projects.
+      </p>
+
+      <p><b>Q: Will a repetition of the final exam be offered in summer?
+        </b>
+        Yes. 
+      </p>
+
+      <!---<h3>Applets</h3>
+<p>You can access the Java applets used in the lecture (plus some others) <a href="http://www.ml.inf.ethz.ch/education/lectures_and_seminars/annex_estat/index.html">here</a>. </p> -->
+
+      <a name="contact"></a>
+      <h3>Contact</h3>
+      <p>Please ask questions related to the course using <a href="https://moodle-app2.let.ethz.ch/">Moodle</a>, not via
+        email.
+
+      </p><p><b>Instructors:</b>
+        <a href="http://www.ml.inf.ethz.ch/people/person-detail.html?persid=113456">Prof. Joachim M. Buhmann</a>,
+        <b>Teaching Assistants:</b> João Carvalho (Head TA), Javier Abad, Sonali Andani, Florian Barkmann, Piersilvio Bartolomeis,
+        Berken Demirel, Robin Geyer, Yongjun He, Fabian Laumer, Xia Li, Xiaozhong Lyu, Alexander Marx, Max Möbus, Stefan Stark, Alexandru Tifrea, Josephine Yates
+      </p>
+      <hr>
+    </div>
+
+
+    <div id="sidebar">
+
+      <h2>Navigation</h2>
+
+      <ul class="sidelink">
+        <li><a href="#news">Announcements</a></li>
+        <li><a href="#syllabus">Syllabus</a></li>
+        <li><a href="#resources">Resources</a></li>
+        <li><a href="#questions">Questions</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+    </div>
+  </div>
+
+  <div id="footer">
+    <p>Copyright © 2023 <a href="http://www.ml.inf.ethz.ch/">Machine
+        Learning Lab</a> · Template design by <a href="http://andreasviklund.com/">Andreas Viklund</a></p>
+
+
+  </div>
+
+
+
+
+</body></html>

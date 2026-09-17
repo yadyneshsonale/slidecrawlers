@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><title> Welcome to CS222 Computer Organization and Architecture Course Homepage </title>
+</head><body>
+<center>
+<h3>CS222 : Computer Organization and Architecture </h3>
+<h4>Instructor: Dr. A. Sahu and  Dr Santosh Biswas </h4>
+</center>
+<hr>
+<a href="#CourseStrcut">Course Structure</a> | <a href="#LectSlides">Lecture Slides</a> | <a href="#Books">Books</a> | <a href="#CVR">Class Timing, Venue and Rules</a>
+<hr> 
+<h4><a name="CourseStrcut">Course Structure:</a></h4>
+<ul>
+<li> Instruction sets : RISC and CISC paradigms. Various addressing modes. Assembly language programming </li>
+<li> ALU Design: Adder, multiplier, Floating Point, Instruction interpretation: Micro-operations and their RTL specification </li>
+<li> CPU design (Hardwired and Micro-programmed): Single Cycle, Multi-cycle, Pipeline, Multi-pipeline </li>
+<b>Mid Semester Examination <a href="https://drive.google.com/file/d/12vZH7y5hjV9lBl_LO9fLjOKF79vT5EH2/view?usp=drive_link">Question</a>,  <a href="https://drive.google.com/file/d/1BooZ6v3TV66oMzdJs9HXn9YHz_compBf/view?usp=drive_link">ModelSolution</a>  </b>
+<li> Memory Organization : RAM, Cache  </li>
+<li> I/O transfer: Program controlled, Interrupt controlled and DMA. </li>
+<li> Introduction to computer buses, peripherals, performance bench-marking and current trends in architecture.</li>
+</ul>
+<hr>
+Thanks to Prof Anshul Kumar (IIT Delhi),  W. Stalling (Author of Computer Organization and Architecture  Book), Ercegovac/Lang (Authors of Digital Arithmetic Book) for providing PPT/PDF slides.
+<hr>
+
+
+<ol>
+<li> 29 Dec 2014 MON: Introduction to Computer Organization and Architecture ; What is architecture?  what is COA? why different processors? Cost/Power/Size/Area/Complexity; Different processors Intel i3/i5/i7, core2duo, Pentium I/II/III/IV, Atom (mobile, tablet, desktop), Xeon, Phenom, Optron, APU, GPU; Different computing system; History of computing system; Super computer of 90s Vs mobile of 2015; Motivation behind CS222; why assembly language programming? </li>	<br> 
+
+<li> 30 Dec 2014 TUE: Instruction and Programmable ; Fixed Logic block; Programmable logic block; Instruction; Instruction set; RISC, CISC, OISC; Basic blocks of computer; generating ALP from C code : <b> gcc -s test.c </b> and open test.s </li> 
+<br> 
+<li> <font color="red">02 Jan 2015 FRI: class room shifted to #1207, clashed with BT205, class got canceled </font>  <br> </li>
+<li> 05 Jan 2015 MON: Programmable logic block using memory; BCD to 7Seg LED decoder using  8x7 memory; Block Diagram of ALU (inputs, output, control/select): ALU as configurable FU (functional Unit) with some fixed functions; Block Diagram of Memory Memory (MBR/MDR:Memory Buffer/Data Reg, MAR:Memory Address Reg, RW signal); Von Newman Architecture: Memory, CPU, Input and Output; Computing System and Peripheral: printer, scanner, KBD, etc; Instruction, Demo of instruction execution  <a href="http://www.eastaughs.fsnet.co.uk/images/flash/MainAnimation.swf">Demo1</a>, <a href="http://ib-computing.net/FlashMovies/FE_Cycle2.swf">Demo2</a> ; Micro-instruction, Typical machine organization; Instruction Execution (Read Ins IR=M[PC], Decode Ins, DO THE WORK, Increment PC), Instruction work division; RISC/MIPS instruction set, Assembly Language Programming <a href="https://drive.google.com/file/d/1mr4sIe56f2GFCg_ryKB-NRxR3msNZKUq/view?usp=drive_link">PDF Slides</a> </li>
+<br>
+<li> 06 Jan 2015 TUE: Architecture of 8085 Microprocessor; Instruction Set of 8085; CISC; 8085 Micro-instruction of  ADD R; Work Division of Instruction (ADD R, ADI 43H, ADD M, LDA 2000H, INR M, PUSH D and JMP 5000H), Comparison of these instruction intern of size and T states; Conclusion is all instruction size is not same (1 to 3 bytes, all take different amount of T states (3 to 15); Real life case: B Tech Program → Semesters → Courses → Assign, Quiz, MID,END, Scribe, Take home; Computer Program → instructions → micro-instruction → micro-micro work ;  <a href="https://drive.google.com/file/d/1iNwjMsjpPlcUHDM4pmuNCZ0eAEwt2Kn9/view?usp=drive_link">PDF Slides</a> 
+<br> <br> Ref 1. <a href="http://www.das.ufsc.br/~werner/eel7030/8085/instrucoes8085Detalhadas.pdf">8085 Introduction Set</a> 
+<br> Ref 2. "Microprocessor and Programming" by R S Gaonkar, Penram Publication India <br>  </li> <br> 
+<li> 09 Jan 2015 FRI: CISC to RISC; Instruction break up: dividing complex instruction to smaller instructions; ADD M → (a) LD B M (b)ADD A, A,B; INC M → (a) LDA M, (b) ADD A 1, (c) STA M; MVI A 34H → Combine Immediate data (34) and Opcode in instruction itself (instruction size increase: if we choose instruction size 32 bits, it will be feasible); LDA 2000H → (a) MVI H 20H, (b) MVI L 00H, (c) LD A M;  MIPS Instruction Set (R type, I type, J type); CISC to RISC → (a) All instruction are of same size, (b) load and store are separated from arithmetic [complex INC M → simpler (a) LDA M, (b) ADD A 1, (c) STA M;], (c) load and stores are separated; RISC Example : MIPS, ARM, PowerPC; MIPS Introduction Set; MIPS registers; MIPS Assembly code fragment for A=B+C → $add $s0, $s1, $s2; A[8]=h+A[8] → lw  $t0, 32($s3), add $t0, $s2, $t0	and sw  $t0, 32($s3)  <br>  <a href="https://drive.google.com/file/d/148L8nhx8B8OQwCNQUpVOcWoQB7JjvMe_/view?usp=drive_link">PDF Slides</a> </li>
+<br>
+<li> 12 Jan 2015 MON:  MIPS Instruction Set (R type, I type, J type); Instruction ADD, SUB, LW, SW, ORI, MOVE, SLT, JAL, JR, BNE, BEQ; Instruction coding format; [ ADD Rdst, Rsrc1, Rsrc2 →  000000, R<sub>DST</sub>, R<sub>SRC1</sub>, R<sub>SRC2</sub>, ShftAmt, Func (add)]; MIPS code snippet for swap two memory location, A[8]=h+A[8]; large constant, zero R0; <a href="https://drive.google.com/file/d/17NFJmUe_YdGSJoJOU6BhO7XTn7h_QEpS/view?usp=drive_link">PDF Slides</a> </li> <br>  
+
+<li> 13 Jan 2015 TUE:  MIPS Addressing Mode: Register, Immediate (ADDI $s1 $s2, 234), Base register (LW $t0 32($s3)); PC relative (BEQ r1 r2 16bitLabel[PC=PC+16bitLevel]), Pseudo direct (J 26bitlevel [PC=26bit*4 + higher 4 bit from OldPC]); MIPS Floating Point Instruction; IEEE 754 Floating point Representation and conversion <a href="http://www.h-schmidt.net/FloatConverter/IEEE754.html">Demo: Online IEEE 754 FP to Decimal Converter</a>; No one use FP immediate in MIPS  (they use load a constant to fp register from memory) and  reasons are (a) FP is 32 bit unit consists of Sign, Exponent and Mantissa unlike integers are in simple format, (b) conversion need to done by users to store in IEEE FP format, so compiler convert and store into memory the constants or immediate;Assembly Language Programming; Variable Mapping to memory in C/C++ Program (local → stack section, global initialized → data section, local pointer → stack, global uninitialized → BSS, calloc/malloc → Heap section );  SPIM Simulator: Hello World Example <br> <br> <a href="https://drive.google.com/file/d/1wDUgxDC_7l22uLJGJSaKv1Fs19NVT-ne/view?usp=drive_link">PDF Slides</a> 
+<br> <font color="green">Ref: Chap 2 and 3, Computer Organization and Design HW/SW interface, Hennessy Paterson, 3rd Ed, 2005</font> <a href="http://ceit.aut.ac.ir/~amirkhani/Downloads/patterson_book.pdf">PDF 3rd Ed </a>
+<br> <a href="Lects/MIPSALP.tgz">"Hello World" MIPS ALP Examples </a> 
+<br> (<a href="http://sourceforge.net/projects/spimsimulator/files/">SPIM from sourceforge.com</a>), other resources <a href="http://chortle.ccsu.edu/AssemblyTutorial/index.html">MIPS ALP tutorial from CCSU</a>,  <a href="http://www.cs.uwm.edu/classes/cs315/Bacon/Lecture/HTML/ch05s04.html">MIPS ALP Tutorial from UWM</a>,  <a href="http://logos.cs.uic.edu/366/notes/mips%20quick%20tutorial.htm">MIPS ALP tutorial from UIC</a> and <a href="http://www-id.imag.fr/~briat/perso.html/NACHOS/NACHOS_DOC/CA225b.html">MIPS Arch and ALP from IMAG.FR</a> <br>  </li>
+<br>
+<li> 16 Jan 2015 FRI:  Advanced MIPS ALP, Section of ALP: Data, Text; Call/Return, Managing Control and Data transfer via argument register and variable register: parameter passing to/from function; inline function of C/C++ (why inline function have at most 4 argument?), Generated X86 Assembly code; Demo program of Hello World and S= Sum i; Program optimization Assembly code Sum A[i]: array version, pointer version <a href="https://drive.google.com/file/d/1MK-3HytYdUQYzEAko1XsPKgDFEP8Wz7c/view?usp=drive_link">PDF Slides</a></li>
+<br>
+<li> 19 Jan 2015 MON: Advanced MIPS ALP: call/return, parameter passing, stack pointer, local variable to stack, , MIPS ALP for factorial with parameter passing and stack; OISC: OISC Example, SBLEQ a,b,c and instruction synthesis using SBLEQ;  X86 : Registers, Named Register, Compatibility 8 bit (AH/AL) to 16 bit (AX) to 32 bit (EAX) to 64 bit (RAX); sample X86 ALP : Loop, nested loop;  <a href="https://drive.google.com/file/d/14t-LkS8ucrJugoyfVqA44jEexDcofNQ6/view?usp=drive_link">PDF Slides</a> </li>
+<br> <br> Ref 1: "Computer Architecture: A Minimalist Perspective", By Gilreath, W. F., Laplante, P. A., 
+Springer Int., 2003,  <br> Ref 2: <a href="http://en.wikipedia.org/wiki/One_instruction_set_computer">OISC Wiki </a>
+<br> <br>
+
+<li> 20 Jan 2015 TUE: X86 Addressing, Example ALP MASM  MASM, NASM and online C assembly code using GCC; Components of Computer REG, MUX, Memory, Shift, ALU;  <a href="https://drive.google.com/file/d/1wLL_IfcHIroLKrJzhdBv7gdel6Ej8eGz/view?usp=drive_link">PDF Slides</a>  </li>
+<br> 
+NASM (the <b>N</b>etwide <b>AS</b>se<b>M</b>bler): <a href="http://en.wikipedia.org/wiki/Netwide_Assembler">NASM Wiki</a>
+NASM Tutorial: <a href="http://www.csee.umbc.edu/portal/help/nasm/sample.shtml">Tutorial One </a>, <a href="http://cs.lmu.edu/~ray/notes/nasmtutorial/">Tutorial Two </a>
+<br> NASM Hello World Example <a href="Lects/hello.asm">hello.asm</a> 
+<br> MASM Hello World Example <a href="Lects/HelloWorld.asm">HelloWorld.asm</a>
+<br> Basic online assembly code : Examples <a href="http://www.codeproject.com/Articles/15971/Using-Inline-Assembly-in-C-C">Mixing C with Assembly using GCC</a>, C ASM Examples: <a href="Lects/Casm1.c">C ASM Example 1</a> and  <a href="Lects/Casm2.c">C ASM Example 2</a> <br> <br>
+
+<li> 23 Jan 2015 FRI: Processor Design Single Cycle: MIPS components;  Data Path + Control; Register, RF, Multi port Memory; Adder and ALU; Signed Extend and Shift: adding a signed 4 bit number with signed 8 bit number, compatibility; Small Instruction Set (with 9 MIPS instruction arithmetic:[ADD,SUB, AND, OR, SLT], mem:[LW and SW] and branch:[J and BEQ]);Instruction cycle: Fetch IM, Decode, Register Fetch (Rsrc1 and Rsrc2), Pass to ALU, Do the Operation, Write back to RF (at Rdst) or Memory and increment PC (PC=PC+4); Data Path for Add instruction; Addition of Data path for LW and SW instruction <a href="https://drive.google.com/file/d/1IUdnsTZS21oteGFBS8PGVgtUg03PYtSM/view?usp=drive_link">PDF Slides</a> </li>
+<br><b> <font color="green">Ref: Chap 5, Computer Organization and Design HW/SW interface, Hennessy Paterson, 3rd Ed, 2005</font> <a href="http://ceit.aut.ac.ir/~amirkhani/Downloads/patterson_book.pdf">PDF 3rd Edition, MIPS Version</a> :) :) :) </b>
+<br>
+<br> 
+<li> 27 Jan 2015 TUE: Processor Design (Single Cycle) : Data Path for ADD instruction: (ADD Rdst, Rsrc1, Rsrc2) meaning R[dst]=R[src1]+R[src2]; Addition of Data path for LW and SW instruction: putting multiplexer (mux) at conflicting input;  Data Path for BEQ and J instruction; Controller: 6 input and 8 output combinational circuit or with PLA; Control input for ALU from instruction opcode; Control Path select the Portion of Data path to be activated to execute an particular instruction; In which sequence element of data path to be activated? <br> <a href="https://drive.google.com/file/d/1g1a1n03gTl0XRU2z5Qnas7zfyfO2MnXF/view?usp=drive_link">PDF Slides</a> <br> 
+A Visual MIPS R2000 Processor Simulator - Freeware  <a href="http://jamesgart.com/procsim/">ProcSim </a>
+<br> Ref: Section 5.3 and 5.4 of Computer Organization and Design HW/SW interface, Hennessy Paterson, 3rd Ed, 2005 <a href="http://ceit.aut.ac.ir/~amirkhani/Downloads/patterson_book.pdf">PDF 3rd Ed </a>
+<br><br>
+</li> 
+<li> 03 Feb 2015 TUE: Processor Design (Single Cycle and Multi Cycle): Performance Analysis of Single Cycle Data Path: using t<sub>i</sub>, t<sub>r</sub>, t<sub>a</sub>, t<sub>m</sub>, t<sub>+</sub>; Timing for instructions: Rtype (t<sub>i</sub>+t<sub>r</sub>+t<sub>a</sub>+t<sub>r</sub>), SW (t<sub>i</sub>+t<sub>r</sub>+t<sub>a</sub>+t<sub>m</sub>), LW(t<sub>i</sub>+t<sub>r</sub>+t<sub>a</sub>+t<sub>m</sub>+t<sub>r</sub>), BEQ (t<sub>i</sub>+t<sub>r</sub>+t<sub>a</sub>) and J (max [t<sub>i</sub>, t<sub>+</sub>); Micro sequencing  in processor: status and activate signal, sequencing based on status signal; Problem and Benefits in Synchronized design: Multi Cycle Design; Resource Utilization of Single Cycle Design; Example of Single Cycle and Multi Cycle Performance in term of time and area: Removing Adders, merging IM and DM to save area <a href="https://drive.google.com/file/d/1A-Rec6-oAW4AkR-COyp8ubDyPaJrN2A-/view?usp=drive_link">PDF Slides</a></li>
+<br> Ref: Section 5.4 and 5.5 of Computer Organization and Design HW/SW interface, Hennessy Paterson, 3rd Ed, 2005 <a href="http://ceit.aut.ac.ir/~amirkhani/Downloads/patterson_book.pdf">PDF 3rd Ed </a>
+<br><br>
+
+<li> 09 Feb 2015 MON: Processor Design (Multi Cycle): Area and Delay of single cycle design; Removal of Adder1 and Adder2 (ALU used in place of Adder1 and Adder2), merging of IM and DM to reduce area (and Power); Performance comparison as compared to single cycle design; Control Path designing for Multi cycle: Break instructions into cycles, Put cycle sequences together, Control signal groups and micro operations, Control states and signal values, Control state transitions;  Control states for different instructions; Abstract of overall control of multi cycle design; how to implement a sequencer or micro program control (using counter and memory: the control state FSM) <a href="https://drive.google.com/file/d/143fLSYMF-SbcC0EwnUitZuZ_AbXHBIXk/view?usp=drive_link">PDF Slides</a> </li><br>
+<li> 10 Feb 2015 TUE: Processor Design (Pipeline): Introduction to pipeline; What is pipe, what is pipeline; instruction pipeline; 5 state instruction pipeline; performance of pipeline as compared to multi cycle design; Resource sharing in pipeline design: RF used in 2nd D/RF stage and 5th WB: how to handle this; Putting pipe stage; Abstract control of pipeline design: delaying control; Pipeline Hazards : resource hazards <a href="https://drive.google.com/file/d/1f_lPZRQFOGGY5FM3gw8TSyhjQrbTUBZA/view?usp=drive_link">PDF Slides</a> </li>
+<br>
+<li> 13 Feb 2015 FRI: Pipeline Processor: Data Hazards, Forwards path P1, P2, P3 and P4, data dependency graph; Control hazard: Branch speed up (delayed branch), branch prediction;  <a href="https://drive.google.com/file/d/1-cbBtf2WmtljLNw46GVAU85zaszBaq-P/view?usp=drive_link">PDF Slides</a>  </li><br>
+<li> 16 Feb 2015 MON: Pipeline Processor : Control hazards, Handling control hazards; Delay introduced due to control instruction (conditional and unconditional); Improving Branch performance: reduce time of condition setting CC (if R1==R2) and address generation  AG (PC=PC+4+SinX32(level*4)) (and target instruction fetch);
+<br> <br>  Branch elimination; Branch Speed up: Early condition setting (inserting independent instruction between condition instruction and branch instruction), Delayed branch (inserting independent instruction between branch instruction and the target/inline instruction); 
+<br> <br> Branch prediction: delay of branch ; conditional vs unconditional; GIGI (guess inline go inline), GIGT (guest inline go target:predicted false), GTGI (guess target go inline : predicted false) and GTGT (guest target and go target) ; Prediction : fixed (always yes), static (based on instruction type), dynamic based on history; 
+<br> <br> Branch target capture : BTB (Branch target buffer), BTIB (branch target instruction buffer); Mixing up both BTB/BTIB with prediction: if hit in BTB/BTIB predict guess target <a href="https://drive.google.com/file/d/1hqXxOTEKo9jMsHhhyVpGLc-YYXHxm-ig/view?usp=drive_link">PDF Slides</a> </li> <br> <br> 
+<font color="green">
+Ref1: Dezso Sima, Peter Kacsuk, Terence Fountain, " Advanced Computer Architectures : A Design Space Approach", Pearson Education India, 1997
+<br> Ref2: Michael J Flynn, " Computer Architecture: Pipelined and Parallel Processor Design ", Narosa Publishing India, 2003 
+<br></font>
+<br> 
+<br>
+<li> 17 Feb 2015 TUE: ADDER : Ripple Carry ADDER and it analysis;  PGK: Propagation, Generation and Kill; Carry Skip Adder: time and area complexity analysis; Carry Select Adder: time and area complexity; Carry Look Ahead Adder: time and area complexity, how to achieve log(n) delay and O(n) area with CLA;  and Multiplier: Booth, Parallel, Array <a href="https://drive.google.com/file/d/1Rz5igPo4cey_vJ4vDwTmLyc1I5hgN3Sy/view?usp=drive_link">PDF Slides</a> </li> <br>
+Ref:   Ercegovac and Lang, Digital Arithmetic, Morgan Kauffman, 2004, Some slide <a href="http://www.cs.ucla.edu/digital_arithmetic/files/ch2.pdf"> Some slide </a>
+<br> <br> <br>
+
+<li> 20 Feb 2015 FRI: Multiplier and FFU : Multiplier parallel multiplier with N shift N tree like addition: time ( log(n) and area complexity (O(n)); Serial Multiplier: reducing adder size, combining B and Sum, Area and time complexity; Booth Multiplier: Basic and time/area complexity; Floating Point : Density, underflow and overflow, floating point adder and multiplier; Violation of associative rules by FPU <a href="https://drive.google.com/file/d/1MnaurEHc0mCtKY1J2tiEJcVK6IvIvlcr/view?usp=drive_link">PDF Slides</a> </li>
+
+
+
+</ol>
+
+<hr> 
+
+<h4><a name="Books"> Text Books:</a></h4>
+<ol>
+<li> Patterson, D.A., and Hennessy, J.L. , “<i>Computer Organization and Design: The Hardware/Software Interface</i>”, Morgan Kaufman Publishers, 4th Edition, Inc.2005 <b>(Very Good Book to Purchase and Keep a Copy with You) </b>  </li> 
+<li> Stalling W,  “<i>Computer Organization and Architecture </i>”, Pearson Education India. 2008 </li>
+</ol>
+References:
+<ol>
+<li> D V Hall, <i>Microprocessors and Interfacing</i>, TMH, 1995 </li>
+<li> Patterson, D.A., and Hennessy, J.L. , “<i>Computer Architecture : A Quantitative Approach </i>”, Morgan Kaufmann Publishers, 4th Edition, Inc.2005 <b>(Very Good Book to Purchase and Keep a Copy with You) </b> </li> 
+<li> Hamacher, V.C., Vranesic, Z.G., and Zaky, S.G., “<i>Computer Organization</i>”, 5/e. McGraw-Hill. 2008  </li>
+<li> Tanenbaum, A.S,  “<i>Structured Computer Organization</i>”, Prentice-Hall of India. 1994  </li>
+</ol>
+<hr>
+
+<h4><a name="CVR">Class timing, Venue and Rules:</a></h4>
+
+<ul>
+<li> Venue: L3, IITG  </li>
+<li> Timing : Slot C  { MON:10AM–11AM, TUE:11AM-12Nn, FRI:9AM-10AM} </li>
+<li> 30% Mid Sem + 50% end Sem + 20% scribe </li>
+</ul>
+
+<hr>
+
+
+
+</body></html>

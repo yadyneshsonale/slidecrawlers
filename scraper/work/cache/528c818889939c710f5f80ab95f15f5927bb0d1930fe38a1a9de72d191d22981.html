@@ -1,0 +1,745 @@
+<!DOCTYPE html><html class=" ie ie7 lte7 lte8 lte9 js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths" lang="en-US" sizset="false" sizcache032866541369794594="704 34 0"><!--[endif]--><!--[if IE 8 ]--><!--[endif]--><!--[if IE 9 ]--><!--[endif]--><!--[if (gt IE 9)|!(IE)]--><!--[endif]--><head>
+		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+		<meta http-equiv="Pragma" content="no-cache">
+		<meta http-equiv="Expires" content="0">
+		<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE;chrome=1">
+		<meta charset="utf-8">
+  		<meta name="viewport" content="width=device-width, initial-scale=1">
+  		<meta name="description" content="Academic Programs CSE Department, IIT Kharagpur">
+		<meta name="keywords" content="Academic Programs CSE Department, IIT Kharagpur">
+		<meta name="author" content=" CSE Department, IIT Kharagpur">
+		<title>Academic Programs</title>
+		<style>
+			.data_View{
+				display:flex;
+				margin-left:10px ;
+				/* flex-direction:row; */
+			}
+			.marq_view{
+				margin-top: 0px;
+/			}
+
+			@media only screen and (max-width: 500px) {
+				.data_View{
+				display:flex;
+				flex-direction:column;
+
+			}
+
+			.marq_view{
+				margin-top: 230px;
+			}
+}
+			.divheadframe{
+				width: -webkit-fill-available;
+			        height: 20vh;
+    				margin-left: 10px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+  				text-align: center;
+  				/* background: #bf938f; */
+				/* background: #F3D1D6; */
+				background: #E5C9CE;
+  				color: black;
+  				font-size: 3vw; 
+				//font-family: Helvetica, Arial, sans-serif;
+				font-family: Playfair Display;
+				
+			}
+			@media screen and (max-width: 500px) {
+				.divheadframe{
+				width: -webkit-fill-available;
+			        height: 10vh;
+    				margin-left: 10px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+  				text-align: center;
+  				/* background: #bf938f; */
+				/* background: #F3D1D6; */
+				background: #E5C9CE;
+  				color: black;
+  				font-size: 3vw; 
+				//font-family: Helvetica, Arial, sans-serif;
+				font-family: Playfair Display;
+				
+			}
+			
+        }
+			.header-log{
+				position: absolute;
+				display: flex;
+				left: 20px;
+				height: 20vh;
+			
+				justify-content: center;
+				align-items: center;
+			}
+			.header-log img {
+  height: 90%;
+  object-fit: cover;
+}
+			.rightcontent{
+				/* width:80%; */
+				
+				/* float:right;  */
+				margin-top:2px; 
+				margin-left:5px;
+				margin-right:5px;
+				padding-right: 9px;
+				/* overflow: auto; */
+				
+			}
+			@media screen and (max-width: 500px) {
+            .rightcontent{
+				overflow: auto;
+				height: 55vh;
+			}
+			
+        }
+				
+	
+			.header-log-right{
+				position: absolute;
+				display: flex;
+				right: 20px;
+				top: 0;
+				height: 20vh;
+			
+				justify-content: center;
+				align-items: center;
+			}
+			.header-log-right img{
+				height: 90%;
+				
+				border-radius: 15px;
+
+			}
+			@media screen and (max-width: 500px) {
+            .header-log img{
+                height: 25%; /* Adjust the width as needed */
+				position: relative;
+				bottom: 45px;
+            }
+
+            .header-log-right img{
+                height: 20%; /* Adjust the width as needed */
+				position: relative;
+				bottom: 45px;
+				right: 1px;
+            }
+        }
+
+			.leftothers{
+				/* width:100%;  */
+				/* float:left;  */
+				/* margin-top:10px; */
+				background-color:#E1D7C3;
+				margin-bottom: 10px;
+			
+			}
+			.details_view{
+				display:flex;
+				justify-content:center;
+				align-items:center;
+				overflow:auto;
+			}
+
+		/* width */
+		::-webkit-scrollbar {
+		width: 5px;
+		}
+		@media screen and (max-width: 500px){
+			::-webkit-scrollbar {
+			width: 0px;
+		}
+		}
+		/* Track */
+		::-webkit-scrollbar-track {
+		background: #f1f1f1; 
+		}
+		
+		/* Handle */
+		::-webkit-scrollbar-thumb {
+		background: rgb(194 150 158);
+		border-radius: 8px; 
+		}
+
+		/* Handle on hover */
+		::-webkit-scrollbar-thumb:hover {
+		background: #d55959; 
+		}
+		.leftforce{
+			height:74vh ;
+			overflow: auto;
+		}
+
+		@media screen and (max-width: 500px) {
+    .leftforce {
+        height: 22vh;
+        overflow: auto;
+    }
+
+		</style>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><link rel="stylesheet" type="text/css" href="./support/themes/smoothness/jquery-ui.css?1781518244"><link rel="stylesheet" type="text/css" href="./support/themes/smoothness/jquery.ui.theme.css?1781518244"><link rel="stylesheet" type="text/css" href="./support/tbstyle.css?1781518244"><link rel="stylesheet" type="text/css" href="./support/jquery.mCustomScrollbar.css?1781518244"><link rel="stylesheet" type="text/css" href="./support/site.css?1781518244"><link rel="stylesheet" type="text/css" href="./support/bjqs.css?1781518244"><link rel="stylesheet" type="text/css" href="./support/clr.css?1781518244"><link rel="stylesheet" type="text/css" href="./support/jquery.realperson.css?1781518244"><script src="https://connect.facebook.net/en_US/bundle/sdk.js/" async="" crossorigin="anonymous"></script><script type="text/javascript" src="./support/jquery-3.3.1.min.js?1781518244"></script><script defer="defer" type="text/javascript" src="./support/jquery-ui.min.js?1781518244"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script><script defer="defer" type="text/javascript" src="./support/bjqs-1.3.min.js?1781518244"></script><script defer="defer" type="text/javascript" src="./support/modernizr.custom.js?1781518244"></script><script defer="defer" type="text/javascript" src="./support/jquery.masked.min.js?1781518244"></script><script defer="defer" type="text/javascript" src="./support/jquery.realperson.js?1781518244"></script><script defer="defer" type="text/javascript" src="./support/jquery.validate.js?1781518244"></script><script defer="defer" type="text/javascript" src="./support/jquery.filtertable.min.js?1781518244"></script><script defer="defer" type="text/javascript" src="./support/jquery-migrate-1.2.1.js?1781518244"></script><script defer="defer" type="text/javascript" src="./support/site.js?1781518244"></script><script async="" defer="" crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&amp;version=v17.0" nonce="ABC123"></script><link rel="shortcut icon" href="./myicons/favicon.ico" type="image/x-icon"><link rel="icon" href="./myicons/favicon.ico" type="image/x-icon"><style type="text/css" class="init">
+	
+tr.group,
+tr.group:hover {
+	background-color: #ddd !important;
+}
+
+</style><script type="text/javascript" class="init">
+var $ = jQuery.noConflict();
+$(document).ready(function() {
+    
+} );
+
+</script><style type="text/css" data-fbcssmodules="css:fb.css.base css:fb.css.dialog css:fb.css.iframewidget">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0px;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:lucida grande,tahoma,verdana,arial,sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:400;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{0%{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+
+.fb_dialog{background:#525252b3;position:absolute;top:-10000px;z-index:10001}.fb_dialog_advanced{border-radius:8px;padding:10px}.fb_dialog_content{background:#fff;color:#373737}.fb_dialog_close_icon{background:url(https://connect.facebook.net/rsrc.php/v4/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{left:5px;right:auto;top:5px}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://connect.facebook.net/rsrc.php/v4/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://connect.facebook.net/rsrc.php/v4/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:700;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://connect.facebook.net/rsrc.php/v4/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{height:100%;left:0;margin:0;overflow:visible;position:absolute;top:-10000px;transform:none;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://connect.facebook.net/rsrc.php/v4/ya/r/3rhSv5V8j3o.gif) #fff no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{background:none;height:auto;min-height:initial;min-width:initial;width:auto}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{clear:both;color:#fff;display:block;font-size:18px;padding-top:20px}#fb-root #fb_dialog_ipad_overlay{background:#0006;inset:0;min-height:100%;position:absolute;width:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_mobile .fb_dialog_iframe{position:sticky;top:0}.fb_dialog_content .dialog_header{background:linear-gradient(from(#738aba),to(#2c4987));border-bottom:1px solid;border-color:#043b87;box-shadow:#fff 0 1px 1px -1px inset;color:#fff;font:700 14px Helvetica,sans-serif;text-overflow:ellipsis;text-shadow:rgba(0,30,84,.296875) 0px -1px 0px;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:linear-gradient(from(#4267B2),to(#2a4887));background-clip:padding-box;border:1px solid #29487d;border-radius:3px;display:inline-block;line-height:18px;margin-top:3px;max-width:85px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{background:none;border:none;color:#fff;font:700 12px Helvetica,sans-serif;margin:2px -12px;padding:2px 6px 3px;text-shadow:rgba(0,30,84,.296875) 0px -1px 0px}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:700;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://connect.facebook.net/rsrc.php/v4/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #4A4A4A;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f5f6f7;border:1px solid #4A4A4A;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://connect.facebook.net/rsrc.php/v4/y2/r/onuUJj0tCqE.png);background-position:50% 50%;background-repeat:no-repeat;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0)}to{transform:rotate(360deg)}}
+
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}
+</style></head>
+		
+		<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+		
+		
+		
+		
+		
+		
+		
+		
+		 
+		
+		
+  		<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
+		
+		<!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script> -->
+		
+		<!-- 
+		<script  defer='defer' type='text/javascript' src="./support/jquery-ui.min.css?1781518244"></script>
+                <script  defer='defer' type='text/javascript' src="./support/jquery-ui.structure.min.css?1781518244"></script>
+                <script  defer='defer' type='text/javascript' src="./support/jquery-ui.theme.min.css?1781518244"></script>
+		-->	
+		                
+		
+                
+                
+                
+                  
+		
+                
+
+		
+
+		
+
+
+
+
+
+
+
+
+		
+<body style="overflow: hidden;"> 
+<div>
+	<!-- ------------------------------header-------------------- -->
+	<div class="header-log">
+		<img src="banner/test_logo.png" alt="">
+	</div>
+	 <div class="divheadframe">
+		<!-- <img src="banner/header6b.jpg" class="img-thumbnail" title="CSE, IIT Kharagpur"> -->
+	Department of Computer Science and Engineering<br>
+		Indian Institute of Technology Kharagpur
+
+	</div> 
+	<div class="header-log-right">
+		<img src="banner/dept_logo_bw.png " alt="">
+	</div>
+	<!-- -------------------------------left menu panel-------------------- -->
+<div class="data_View">
+  <div class=" col-sm-2 col-md-2 col-lg-2 leftpanel leftforce">
+	<div class="page-container">
+		
+<div id="cssmenu" style="width:100%; float:left; margin-top:3px;border-bottom-width: 12px;
+    border-bottom-color: white;
+    border-bottom-style: solid;">
+<ul>
+
+	<li><a href="?home.html" rel="tab"><span><b>Home</b></span></a></li><li class="has-sub"><a><span><b>People</b></span></a><ul id="menu"><li><a href="?faculty.html" rel="tab"><span>Faculty</span></a></li><li class="last"><a href="?staff.html" rel="tab"><span>Staff</span></a></li></ul></li><li class="has-sub"><a><span><b>Academics</b></span></a><ul id="menu"><li class="last"><a href="?academicprograms.html" rel="tab"><span>Academic Programs</span></a></li></ul></li><li class="has-sub"><a><span><b>Research</b></span></a><ul id="menu"><li><a href="?researchareas.html" rel="tab"><span>Research Areas</span></a></li><li class="last"><a href="?researchlabs.html" rel="tab"><span>Research Labs</span></a></li></ul></li><li class="has-sub"><a><span><b>Department Resources</b></span></a><ul id="menu"><li><a href="?hardwarefacilities.html" rel="tab"><span>Hardware Lab</span></a></li><li><a href="?softwarefacilities.html" rel="tab"><span>Software Lab</span></a></li><li class="last"><a href="?stdserver.html" rel="tab"><span>Server Status</span></a></li></ul></li><li class="has-sub"><a><span><b>Announcements</b></span></a><ul id="menu"><li><a href="?noticeboard.html" rel="tab"><span>Noticeboard</span></a></li><li class="last"><a href="?seminars.html" rel="tab"><span>Seminars</span></a></li></ul></li><li class="has-sub"><a><span><b>Join Us</b></span></a><ul id="menu"><li><a href="?prospectivefaculty.html" rel="tab"><span>Prospective Faculty</span></a></li><li class="last"><a href="?prospectivestudents.html" rel="tab"><span>Prospective Students</span></a></li></ul></li><li><a href="?Newsletter.html" rel="tab"><span><b>Newsletter</b></span></a></li><li><a href="?importantlink.html" rel="tab"><span><b>Important Links</b></span></a></li><li><a href="?contactus.html" rel="tab"><span><b>Contact Us</b></span></a></li>      
+</ul>
+</div>
+<div id="mobile-menu-bar" style="display: none;">
+        <a href="#" onclick="toggleMobileMenu()"><span>☰</span></a>
+</div>
+
+<style>
+/* @charset 'UTF-8'; */
+/* Base Styles */
+/* ----------------------------------------------------------- */
+
+
+
+        /* New styles for smaller screens (adjust breakpoints as needed) */
+        @media only screen and (max-width: 768px) {
+            #cssmenu {
+                display: none;
+            }
+
+            #mobile-menu-bar {
+                display: block;
+            }
+
+            #mobile-menu-bar a {
+                display: block;
+                padding: 10px;
+                text-align: center;
+                background-color: #914545;
+                color: #FFFFFF;
+                text-decoration: none;
+            }
+
+            #mobile-menu-bar a:hover {
+                background-color: #FDFFD0;
+                color: #5F0E07;
+            }
+
+            #cssmenu ul ul {
+                display: block;
+                position: static;
+            }
+        }
+/* ------------------------------------------------------------- */
+#cssmenu,
+#cssmenu ul,
+#cssmenu li,
+#cssmenu a {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
+  text-decoration: none;
+  line-height: 1;
+  font-family: Calibri, Arial, sans-serif;
+  font-size: 1.2rem;
+  list-style-position: inside;
+  text-transform: capitalize; 
+  position: relative;
+	margin: 0 auto;
+	text-align: left;
+}
+#cssmenu a {
+  line-height: 1.3;
+  padding: 6px 15px;
+  font-weight: normal;
+}
+
+#cssmenu {
+  width: 200px;
+}
+#cssmenu > ul > li {
+  cursor: pointer;
+  background: #000;
+  border-bottom: 1px solid #D9DDEF;
+}
+#cssmenu > ul > li:last-child {
+  border-bottom: 1px solid #050E38;
+}
+#cssmenu > ul > li > a {
+
+  font-size: 1.2rem;
+  display: block;
+  color: #FFFFFF;
+  background: #914545;
+  font-weight: bold; 
+}
+
+#cssmenu > ul > li.active {
+  border-bottom: none;
+}
+#cssmenu > ul > li.active > a {
+	background: #FDFFD0;
+	color: #5F0E07;  
+}
+#cssmenu > ul > li.has-sub > a:after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: 5px solid transparent;
+  border-left: 5px solid #ffffff;
+}
+#cssmenu > ul > li.has-sub.active > a:after {
+  right: 14px;
+  top: 12px;
+  border: 5px solid transparent;
+  border-top: 5px solid #4e5800;
+}
+
+.parentTabActive a span{
+	color: #5F0E07;
+	font-weight: bold;
+	
+}
+/* Sub menu */
+#cssmenu ul ul {
+  padding: 0;
+  display: none;
+}
+#cssmenu ul ul a {
+  background: #F8FBFD;
+  display: block;
+  color: #00176C;
+  font-size: 1.2rem;
+}
+#cssmenu ul ul a:hover {
+  background: #FFE4E4;
+  display: block;
+  color: #6E2C07;
+  font-size: 1.2rem;
+  /*text-shadow: 0 1px 1px #204a87;*/
+}
+#cssmenu ul ul li {
+  border-bottom: 1px solid #c9c9c9;
+}
+#cssmenu ul ul li.odd a {
+  background: #e5e5e5;
+}
+#cssmenu ul ul li:last-child {
+  border: none;
+}
+#cssmenu .selected {
+    background-color: #3366cc; /* Change the background color to your preferred style */
+    color: #fff; /* Change the text color to your preferred style */
+}
+
+</style>
+
+<script>
+	//    function toggleMobileMenu() {
+    //     var cssMenu = document.getElementById('cssmenu');
+    //     cssMenu.style.display = (cssMenu.style.display === 'none' || cssMenu.style.display === '') ? 'block' : 'none';
+    // }
+	/////////////////////////////////////////////////////////////////////
+	function toggleMobileMenu() {
+        var cssMenu = document.getElementById('cssmenu');
+        cssMenu.style.display = (cssMenu.style.display === 'none' || cssMenu.style.display === '') ? 'block' : 'none';
+    }
+
+    // JavaScript function to show the mobile menu bar only when in mobile view
+    window.onload = function () {
+        var mobileMenuBar = document.getElementById('mobile-menu-bar');
+        var cssMenu = document.getElementById('cssmenu');
+
+        if (window.innerWidth <= 768) {
+            mobileMenuBar.style.display = 'block';
+            cssMenu.style.display = 'none';
+        } else {
+            mobileMenuBar.style.display = 'none';
+            cssMenu.style.display = 'block';
+        }
+    };
+
+    // Update visibility on window resize
+    window.onresize = function () {
+        var mobileMenuBar = document.getElementById('mobile-menu-bar');
+        var cssMenu = document.getElementById('cssmenu');
+
+        if (window.innerWidth <= 768) {
+            mobileMenuBar.style.display = 'block';
+            cssMenu.style.display = 'none';
+        } else {
+            mobileMenuBar.style.display = 'none';
+            cssMenu.style.display = 'block';
+        }
+    };
+	//////////////////////////////////////////////////////////////////////
+// $(function() {
+// 	"use strict";
+// 	var locked=false;
+
+// 	$('#cssmenu > ul > li > a').click(function() {
+		
+// 			locked=true;
+// 			$('#cssmenu li').removeClass('active');
+// 			$(this).closest('li').addClass('active selected');	
+			
+// 			var checkElement = $(this).next();
+// 			console.log("hellllllllo")
+// 			console.log(checkElement)
+// 			if((checkElement.is('ul')) && (checkElement.is(':visible'))) {
+// 				$(this).closest('li').removeClass('active');
+// 				checkElement.slideUp('normal');
+// 				locked=false;
+// 			}
+// 			if((checkElement.is('ul')) && (!checkElement.is(':visible'))) {
+// 				$('#cssmenu ul ul:visible').slideUp('normal');
+// 				checkElement.slideDown('normal');
+// 				locked=true;
+// 			}
+// 			if($(this).closest('li').find('ul').children().length == 0) {
+// 				return true;
+// 			} else {
+// 				return false;	
+// 			}		
+// 	}); 
+	
+	
+	
+	/*
+	$('#cssmenu > ul > li > a').mouseenter(function() {
+	   if (!locked) {
+		  $('#cssmenu li').removeClass('active');
+		  $(this).closest('li').addClass('active');	
+		  var checkElement = $(this).next();
+		  if((checkElement.is('ul')) && (checkElement.is(':visible'))) {
+			$(this).closest('li').removeClass('active');
+			checkElement.slideUp('normal');
+		  }
+		  if((checkElement.is('ul')) && (!checkElement.is(':visible'))) {
+			$('#cssmenu ul ul:visible').slideUp('normal');
+			checkElement.delay(100).slideDown('normal');
+		  }	  
+	   }
+	});
+	
+	$('#cssmenu > ul > li > a').mouseleave(function() {
+		 if (!locked) {
+			$('#cssmenu li').removeClass('active');
+			$(this).closest('li').addClass('active');	
+			var checkElement = $(this).next();
+			if((checkElement.is('ul')) && (checkElement.is(':visible'))) {
+			$(this).closest('li').removeClass('active');
+			checkElement.delay(500).slideUp('normal');
+			}
+			if((checkElement.is('ul')) && (!checkElement.is(':visible'))) {
+			$('#cssmenu ul ul:visible').slideUp('normal');
+			checkElement.slideDown('normal');
+			}	  
+	     }
+	});
+	*/
+// });
+</script>
+<script>
+$(document).ready(function() {
+ 
+  var activeMenuItem = localStorage.getItem('activeMenuItem');
+  var parentchek = localStorage.getItem('tabclicked')
+
+//   var checkElement = $(this).next();
+var flag=0
+  if (activeMenuItem) {
+    $('#cssmenu ul li').removeClass('active');
+    $('#cssmenu ul li:has(a:contains(' + activeMenuItem + '))').addClass('active');
+
+	
+	var menuElement = $('#cssmenu ul li.active').find('#menu');
+    
+    if (menuElement.is(':visible')) {
+        // If visible, set display to none
+        menuElement.css('display', 'none');
+		
+    } else {
+        // If hidden, set display to block
+        menuElement.css('display', 'block');
+		if(parentchek){
+			$('#cssmenu  ul  li  ul li').removeClass('parentTabActive');
+    
+	$('#cssmenu  ul  li  ul li:has(a:contains('+ parentchek + '))').addClass('parentTabActive');
+		}
+		console.log("From Active tab",parentchek)
+
+    }
+
+	//checkElement.slideDown('normal');
+
+  var checkElement = $('#cssmenu ul li:has(a:contains(' + activeMenuItem + '))').next();
+
+  checkElement.slideDown('normal');
+	
+  // Trigger the click event on the targeted element
+  var locked=false;
+  $('#cssmenu ul li:has(a:contains(' + activeMenuItem + ')) > a').click();
+  }
+
+  $('#cssmenu > ul > li > a').click(function() {
+    var clickedItem = $(this).text();
+	
+     $('#cssmenu ul li').removeClass('active');
+    $(this).closest('li').addClass('active');    
+    localStorage.setItem('activeMenuItem', clickedItem);
+
+	/////////////////////////////////////////////////////////
+	locked=true;
+			$('#cssmenu li').removeClass('active');
+			$(this).closest('li').addClass('active');	
+			var checkElement = $(this).next();
+			if((checkElement.is('ul')) && (checkElement.is(':visible'))) {
+				$(this).closest('li').removeClass('active');
+				checkElement.slideUp('normal');
+				locked=false;
+			}
+			if((checkElement.is('ul')) && (!checkElement.is(':visible'))) {
+				$('#cssmenu ul ul:visible').slideUp('normal');
+				checkElement.slideDown('normal');
+				locked=true;
+			}
+			if($(this).closest('li').find('ul').children().length == 0) {
+				return true;
+			} else {
+				return false;	
+			}	
+
+
+  });
+  
+
+});
+var tabclick = localStorage.getItem('tabclicked');
+$('#cssmenu > ul > li > ul > li').click(function() {
+	var status=false;
+	var tabStatus = $(this).text();
+	$(this).attr('id', 'activeTab');
+	var parentchek = $('#cssmenu > ul > li > ul > li').text();
+		$('#cssmenu > ul > li > ul > li').closest('li').attr('id', 'activeTab');
+
+		console.log("From Active tab",parentchek)
+	
+	localStorage.setItem('tabclicked', tabStatus);
+
+})
+console.log(localStorage.getItem('tabclicked'))
+</script>
+
+	</div>
+			
+		
+		<script defer="defer" language="javascript" type="text/javascript">
+					function changeImage(imid, imsrc) {
+						document.getElementById(imid).src = imsrc;
+					}
+		</script>
+		
+		<div class="leftothers">
+			<center>
+			<b><a class="colorANC" href="http://iitkgpmail.iitkgp.ac.in/" target="_blank">&nbsp;&nbsp;Webmail Access&nbsp;&nbsp;</a></b></center>
+		</div>
+		<div class="leftothers">
+			<!-- <center><b>Coursework Systems<br></b> -->
+			<!-- <a class='colorANC' href="https://moodlecse.iitkgp.ac.in/moodle" target=_blank>&nbsp;&nbsp;Moodle&nbsp;&nbsp;</a>&nbsp;|&nbsp;<a class='colorANC' href="https://cse.iitkgp.ac.in/~wbcm">&nbsp;&nbsp;WBCM&nbsp;&nbsp;</a> -->
+			<center><a class="colorANC" href="https://moodlecse.iitkgp.ac.in/moodle" target="_blank">&nbsp;&nbsp;CSE Moodle Server&nbsp;&nbsp;</a> 
+			<br><font color="#432">Support Email <br><b>moodle [at] cse.iitkgp.ac.in </b></font></center>
+		</div>
+
+		<div class="leftothers">
+			<center><a class="colorANC" href="https://cse.iitkgp.ac.in/rsday" target="_blank">&nbsp;Research Scholar Day&nbsp;&nbsp;</a> </center>
+		</div>
+		
+<div class="leftothers">
+			<center><a class="colorANC" href="?QIP-Course.html" target="_blank">&nbsp;AICTE QIPPG Course&nbsp;&nbsp;</a> </center>
+		</div>
+		<div class="leftothers">
+			<center><a class="colorANC" href="https://www.iitkgp.ac.in/" target="_blank">&nbsp;IIT Kharagpur Website&nbsp;&nbsp;</a> </center>
+		</div>
+		<!-- <div class="leftothers">
+		<center><b>GIT Service</b><br>
+			<a class='colorANC' href="http://git.cse.iitkgp.ac.in" target=_blank>&nbsp;&nbsp;GIT-Server&nbsp;&nbsp;</a>&nbsp;&amp;&nbsp;<a class='colorANC' href="https://cse.iitkgp.ac.in/git-manual.pdf" target=_blank>&nbsp;&nbsp;Manual&nbsp;&nbsp;</a>
+			<br>Restricted Users Only</center>
+		</div>   -->
+		 
+	</div>
+	
+	<div class=" col-sm-10 col-md-10 col-lg-10 rightcontent">
+				<style>
+			img.shadow {
+				margin: 2px;
+				border: 1px solid #ccc;
+				padding: 1px;
+				}
+
+			img.shadow:hover {
+				-moz-box-shadow: 0 0 5px rgba(0,0,0,0.5);
+				-webkit-box-shadow: 0 0 5px rgba(0,0,0,0.5);
+				box-shadow: 0 0 5px rgba(0,0,0,0.5);
+				cursor: pointer;
+				}
+
+			#page-container {
+            width: 100%;
+            /* max-width: 1200px; */
+            margin: 0 auto;
+        }
+		</style>
+		<div id="maincontent" style="height: 74vh; overflow: auto;"><img class="loading" src="othimg/ajax-loader.gif" alt="loading..."></div>
+		<script type="text/javascript">
+			$(document).ready( function() {
+				var dispName = 'academicprograms';
+				var fileName = 'acadprog.php';
+				var target = '';
+				if (target=="_blank") preurl="";
+				else preurl="./";
+				var loadUrl = preurl + fileName;
+				var ajax_load = "<img class='loading' src='othimg/ajax-loader.gif' alt='loading...'  />";
+				 // $("#maincontent").html(ajax_load).load(loadUrl, function(){ addScrollbar(this); });
+				   $("#maincontent").html(ajax_load).load(loadUrl);
+				var noscrolledfiles="xxx noticeboard.php facopen.php acadcal.php stulogin.php ";
+				console.log(dispName + '\n' + fileName + '\n' + noscrolledfiles);
+				console.log("noscrolledfiles.indexOf(fileName) = " + noscrolledfiles.indexOf(fileName));
+				console.log("noscrolledfiles.indexOf(dispName) = " + noscrolledfiles.indexOf(dispName));
+				if ( noscrolledfiles.indexOf(fileName) > 0 || noscrolledfiles.indexOf(dispName) > 0) {
+				$('body').css("overflow-y", "hidden");
+				$("#maincontent").css("overflow", "hidden");		
+				}
+			});
+		</script>		
+	
+	</div>
+
+
+
+
+</div>
+<div id="footertext" class="footerclass">
+			Copyright © Department of Computer Sceince and Engineering, IIT Kharagpur<br> Suggestions and Comments to
+			<font color="#07502C"><a href="mailto:webmaster@cse.iitkgp.ernet.in" style="font-weight: normal">Webmaster</a> &nbsp; </font>
+			<!-- <font color=#07502C><a href="mailto:webmaster@cse.iitkgp.ernet.in" style="font-weight: normal">Webmaster</a> &nbsp; | Other Links : <a style="font-weight: normal" href="#" onmouseup='loadContent("sitemap.php")'> Site Map </a>&nbsp;|&nbsp;<a style="font-weight: normal" href="https://cse.iitkgp.ac.in/oldlook"> Old-Site </a> </font> -->
+			<div class="heavenrank" style="position: absolute; left: -9999px; top: -9999px; width: 1px; height: 1px; overflow: hidden;">
+
+
+<a href="https://kolachitandoori.com/">toto</a>
+<a href="https://legendeat.com/">slot777</a>
+<a href="https://www.gillianbates-textiles.com/">toto togel</a>
+<a href="https://atpautomotive.com/">Toto Slot</a>
+<a href="https://ltdtoto88.org/">LTDTOTO</a>
+<a href="https://bobatotovip.com/">BOBATOTO</a>
+<a href="https://bobatoto.com">bobatoto</a>
+<a href="https://linklist.bio/sesetoto">sessetoto</a>
+<a href="https://happycity.com.co/parques/">BOBATOTO</a>
+<a href="https://policlinicacapaoraso.com.br/">SLOT THAILAND</a>
+<a href="http://signala.co/index-14.html">Pakde4D</a>
+<a href="https://lingkarsiang.xyz/">lingkartoto</a>
+
+<a href="https://basabotswana.com/current-members/">situs toto</a>
+<a href="https://www.weekendschool-deutschland.org/neuzugang-im-team/">slot gacor</a>
+<a href="https://latiendadelhotelindiana.es/villanas-disney/">situs slot</a>
+<a href="https://pakde4d.world/">Pakde4D</a>
+<a href="https://latiendadelhotelindiana.es/villanas-disney/">slot gacor</a>
+<a href="https://eng.sjp.ac.lk/">bobatoto</a>
+<a href="https://77ag-game.com/">77ag</a>
+<a href="https://kudamas11.com/">Kudamas11</a>
+<a href="https://www.candeur40.com/amenities.php">situs toto</a>
+<a href="https://hotelredhimalayan.com/">slot thailand</a>
+<a href="https://buildasiacorp.com/careers">tikus4d</a>
+</div>
+
+
+	
+		</div> 
+		</div>
+
+
+<div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; width: 0px; height: 0px;"><div></div></div></div></body></html>

@@ -1,0 +1,687 @@
+<html><head>
+<link rel="stylesheet" type="text/css" href="style.css">
+<title>CS 747: Autumn 2021</title>
+</head>
+
+<body>
+
+<br>
+<center>
+<h1>
+CS 747: Foundations of Intelligent and Learning Agents<br><font size="6"><span style="font-weight:normal">(Autumn 2021)</span></font>
+</h1>
+</center>
+
+
+<p align="center">
+<img src="./tetris.svg" width="200px">
+</p>
+<p align="center">
+  <font size="1">(Picture source: https://upload.wikimedia.org/wikipedia/commons/7/7c/Emacs_Tetris_vector_based_detail.svg.)</font>
+</p>
+
+<p align="center">(Page last edited <script>document.write( document.lastModified );</script>09/27/2022 11:16:48.)</p>
+
+
+<h3>Instructor</h3>
+
+&nbsp;&nbsp;<a href="http://www.cse.iitb.ac.in/~shivaram">Shivaram Kalyanakrishnan</a><br>
+&nbsp;&nbsp;Office: Room 220, New CSE Building<br>
+&nbsp;&nbsp;Phone: 7704<br>
+&nbsp;&nbsp;E-mail: shivaram@cse.iitb.ac.in<br>
+
+<h3>Teaching Assistants</h3> 
+
+&nbsp;&nbsp;<a>Santhosh Kumar G.</a><br>
+&nbsp;&nbsp;E-mail: santhoshkg@iitb.ac.in<br>
+<br>
+&nbsp;&nbsp;<a>Dibyangshu Mukherjee</a><br>
+&nbsp;&nbsp;E-mail: dbnshu@cse.iitb.ac.in<br>
+<br>
+&nbsp;&nbsp;<a>Keshav Agarwal</a><br>
+&nbsp;&nbsp;E-mail: keshavagarwal@cse.iitb.ac.in<br>
+<br>
+&nbsp;&nbsp;<a>Ashish Aggarwal</a><br>
+&nbsp;&nbsp;E-mail: ashishaggarwal@cse.iitb.ac.in<br>
+<br>
+&nbsp;&nbsp;<a>Debabrata Biswal</a><br>
+&nbsp;&nbsp;E-mail: dbiswal@cse.iitb.ac.in<br>
+<br>
+&nbsp;&nbsp;<a>Mohith Jagalmohanan</a><br>
+&nbsp;&nbsp;E-mail: 203050073@iitb.ac.in<br>
+<br>
+&nbsp;&nbsp;<a>Shashank Shet</a><br>
+&nbsp;&nbsp;E-mail: shashankshet@cse.iitb.ac.in<br>
+<br>
+
+&nbsp;&nbsp;<a>Venkata Sai Baba Reddy Velugoti</a><br>
+&nbsp;&nbsp;E-mail: velugoti@cse.iitb.ac.in<br>
+<br>
+
+&nbsp;&nbsp;<a>Arance Kurmi</a><br>
+&nbsp;&nbsp;E-mail: arance@cse.iitb.ac.in<br>
+<br>
+
+&nbsp;&nbsp;<a>Yash Gadhia</a><br>
+&nbsp;&nbsp;E-mail: 180100130@iitb.ac.in<br>
+<br>
+
+&nbsp;&nbsp;<a>Rohan Gupta</a><br>
+&nbsp;&nbsp;E-mail: 180010048@iitb.ac.in<br>
+<br>
+
+&nbsp;&nbsp;<a>Gagan Jain</a><br>
+&nbsp;&nbsp;E-mail: 180100043@iitb.ac.in<br>
+<br>
+
+&nbsp;&nbsp;<a>Gosula Vinayaka</a><br>
+&nbsp;&nbsp;E-mail: 180050033@iitb.ac.in<br>
+<br>
+
+
+
+<h3>Course Description</h3> 
+
+<p>Today's computing systems are increasingly adaptive and autonomous:
+they are akin to intelligent, decision-making "agents". With its roots
+in artificial intelligence and machine learning, this course covers
+the foundational principles of designing such agents. Topics covered
+include: (1) agency, intelligence, and learning; (2) exploration and
+multi-armed bandits; (3) Markov Decision Problems and planning; (4)
+reinforcement learning; (5) multi-agent systems and multi-agent
+learning; and (6) case studies.</p>
+
+<p>The course will adopt a "hands-on" approach, with programming
+assignments designed to highlight the relationship between theory and
+practice. Case studies will offer an end-to-end view of deployed
+agents. It is hoped that students can apply the learnings from this
+course to the benefit of their respective pursuits in various areas of
+computer science and related fields.</p>
+
+<p>This offering of the course (in the on-line mode) will be very
+similar to
+the <a href="https://www.cse.iitb.ac.in/~shivaram/teaching/old/cs747-a2020/index.html">Autumn
+2020 offering</a>. The same video lectures (possibly with
+minor changes) will be used. The evaluation pattern will also be
+similar.</p>
+
+<h3>Prerequisites</h3> 
+
+<p>The course is open to all Ph.D. students, all masters students, and
+undergraduate/dual-degree students in their third (or higher) year of
+study.</p>
+
+<p>The course does not formally have other courses as
+prerequisites. However, lectures and assignments will assume that the
+student is comfortable with probability and
+algorithms. <a href="https://math.dartmouth.edu/~prob/prob/prob.pdf">Introduction
+to Probability</a> by Grinstead and Snell is an excellent resource on
+basic probability. Any student who is not comfortable with the
+contents of chapters 1 through 7 (and is unable to solve the
+exercises) is advised against taking CS 747.</p>
+
+<p>The course has an intensive programming component: based on ideas
+discussed in class, the student must be able to independently design,
+implement, and evaluate programs in <code>python</code>. The student
+must be prepared to spend a significant amount of time on the
+programming component of the course.</p>
+
+<p>Students who are unsure about their preparedness for taking the
+course are strongly advised to watch the lectures from weeks 1, 2, and
+3 from
+the <a href="https://www.cse.iitb.ac.in/~shivaram/teaching/old/cs747-a2020/index.html">Autumn
+2020 offering</a>, to attempt the quizzes from those weeks, and also
+to go through Programming Assignment 1. If they are unable to get a
+reasonable grasp of the material or to negotiate the quizzes and
+programming assignment, they are advised against taking CS 747.</p>
+
+<h3>On-line Mode</h3> 
+
+<ul>
+
+  <li margin-bottom="100px">The course will be conducted entirely in on-line mode.</li><br>
+
+<li>All lecture slides and instructional videos will be made available on
+this page.</li><br>
+
+<li>There shall be <b>no</b> synchronous meetings that students are
+mandated to attend.</li><br>
+
+<li>The instructor will hold office hours in the allotted meeting slot
+(Slot 13: 7.00 p.m. – 8.25 p.m. Mondays and Thursdays). No new
+material will be presented during these slots. </li><br>
+
+<li>Any significant questions and discussions that arise based on
+interactions during the office hours will be addressed by the
+instructor on Moodle.</li><br>
+
+<li> Students are strongly encouraged to keep up with the weekly plan
+  posted below, and should they have any questions for the instructor,
+  bring them up through one of the channels listed. Nonetheless, students
+  who are unable to interact with the instructor on a regular basis
+  will be at no particular disadvantage. Students who are unable to
+  access course material may please promptly inform the instructor.
+</li><br>
+
+</ul>
+
+
+<h3>Weekly Plan</h3> 
+
+<p>Each "week" of the course will run Tuesday through the subsequent Monday.</p>
+
+<ul>
+
+  <li>Tuesday 12.00 p.m.: Lectures and slides for the week are put up
+  on this page.</li><br>
+
+  <li>Tuesday–Saturday: Students watch the videos and make a
+  note of questions and comments.</li><br>
+
+  <li>Tuesday–Saturday: Students post their questions and
+  comments on the week's discussion forum (on Moodle). It is okay to
+  ask questions based on previous lectures, and to bring up topics of
+  general interest.</li><br>
+
+  <li>Office hours (7.00 p.m. – 8.25 p.m. Mondays and
+    Thursdays):
+<ul>
+    <li>The instructor is available on a web-based interaction
+    platform 7.00 p.m. – 8.00 p.m. on both Mondays and
+    Thursdays. The web-based interaction will be recorded as a video
+    and shared with the class through Moodle.</li>
+    <li>Students may also request
+    for the instructor to call them; the instructor makes these
+      calls 8.00 p.m. – 8.25 p.m. on both Mondays and Thursdays.</li>
+
+    <br>
+  </ul>
+  
+  </li><li>Thursday 11.55 p.m.: A quiz is published based on the
+    week's material.</li><br>
+
+  <li>Students submit a response to the week's quiz (handwritten,
+scanned into pdf) by 11.55 p.m. Monday.</li><br>
+
+</ul>
+
+<p>Details of the web-based interaction, as well as a form for
+  requesting the instructor to call back, will be provided on Moodle. In
+  addition, students will be given a feedback form through which they
+  can communicate issues related to the course at any point of time.</p>
+
+
+<h3>Evaluation</h3> 
+
+<p>The evaluation will be based on the following three components.</p>
+<ul>
+  <li>Quizzes each week for 3–4 marks, contributing a total of 40–45 marks.</li>
+  <li>Three programming assignments, each for 11–14 marks, contributing a total of 35–40 marks.</li>
+  <li>An end-semester examination for 35–40 marks.</li>
+</ul>
+
+<p>The total marks from the three components will be at least
+  115. However, letter grades will be assigned by taking 100 as the
+  denominator. If a student scores X marks in total, the effective
+  marks for deciding the letter grade will be the minimum of X and
+  100. The purpose of this scheme is to provide students some amount
+  of slack, given that many students might be facing difficulties
+  related to the pandemic and the on-line mode. Students can still
+  aspire for the maximum grade even if they fail to turn in, or
+  perform poorly, in a couple of quizzes or a programming
+  assignment.</p>
+
+<p>All assessments will be based on individual work.</p>
+
+<p>Submissions to the quizzes and the programming assignments must be
+turned in through Moodle. Late submissions will not be evaluated; they
+will receive no marks.</p>
+
+<p>Students auditing the course must have an effective score of 50 or
+more marks in the course to be awarded an "AU" grade.</p>
+
+<h3>Moodle</h3>
+
+<p>Moodle will be the primary course management system. Marks for the
+  assessments will be maintained on the class Moodle page; discussion
+  fora will also be hosted on Moodle. Students who do not have an
+  account on Moodle for the course must send TA Santhosh Kumar
+  G. a request by e-mail, specifying the roll number/employee
+  number for account creation.</p>
+
+
+<h3>Academic Honesty</h3> 
+
+<p>Students are expected to adhere to the highest standards of
+  integrity and academic honesty. Academic violations, as detailed
+  below, will be dealt with strictly, in accordance with the
+  institute's <a href="http://www.iitb.ac.in/newacadhome/procedures201521July.pdf">procedures</a>
+  and <a href="http://www.iitb.ac.in/newacadhome/punishments201521July.pdf">disciplinary
+  actions</a> for academic malpractice.</p>
+
+<p>Students are expected to work alone on all the quizzes, the
+  programming assignments, and the end-semester examination. While
+  they are free to discuss the material presented in class with their
+  peers, they must not discuss the contents of the assessments
+  (neither the questions, nor the solutions) with classmates (or
+  anybody other than the instructor and TAs). They must not share
+  code, even if it only pertains to functionalities that are perceived
+  not to be relevant to the core logic of the assessment (for example,
+  file-handling and plotting). They also may not look at solutions to
+  the given quiz/assignment or related ones on the
+  Internet. Violations will be considered acts of dishonesty.</p>
+
+  <p>Students are allowed to use resources on the Internet for
+  programming (say to understand a particular command or a data
+  structure), and also to understand concepts (so a Wikipedia page or
+  someone's lecture notes or a textbook can certainly be
+  consulted). It is also okay to use libraries or code snippets for
+  portions unrelated to the core logic of the
+  assignment—typically for operations such as moving data,
+  network communication, etc. However, students must cite <i>every</i>
+  resource consulted or used, whatever be the reason, in a file
+  named <code>references.txt</code>, which must be included in the
+  submission. Failure to list any resource used will be considered an
+  academic violation.</p>
+
+<p>Copying or consulting any external sources during the examination
+will be treated as cheating.</p>
+
+<p>If in any doubt as to what is legitimate collaboration and what is
+not, students must ask the instructor.</p>
+
+<h3>Texts and References</h3> 
+
+<p>Reinforcement Learning: An Introduction, Richard S. Sutton and
+Andrew G. Barto, 2<sup>nd</sup> edition, MIT Press,
+2018. <a href="http://incompleteideas.net/book/RLbook2018trimmed.pdf">On-line
+version</a>.</p>
+
+<p>Algorithms for Reinforcement Learning, Csaba Szepesvári,
+Morgan &amp; Claypool,
+2009. <a href="http://www.ualberta.ca/~szepesva/papers/RLAlgsInMDPs.pdf"> On-line
+version</a>.
+</p>
+
+<p>Selected research papers.</p>
+
+<ul class="plain">
+
+<li class="plain">
+<a href="https://www.jstor.org/stable/2332286?seq=1#metadata_info_tab_contents">On the Likelihood that One Unknown Probability Exceeds Another in View of the Evidence of Two Samples</a><br>
+William R. Thompson, 1933<br>
+</li>
+
+  <li class="plain">
+<a href="http://projecteuclid.org/download/pdf_1/euclid.aoms/1177729586">A
+Stochastic Approximation Method</a><br>
+Herbert Robbins and Sutton Monro, 1951<br>
+</li>
+
+  <li class="plain">
+<a href="http://repository.lib.ncsu.edu/bitstream/1840.4/2170/1/ISMS_1962_326.pdf">Probability inequalities for sums of bounded random variables</a><br>
+Wassily Hoeffding, 1963<br>
+</li>
+
+  <li class="plain">
+<a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.674.1620&amp;rep=rep1&amp;type=pdf">Asymptotically
+Efficient Adaptive Allocation Rules</a><br>
+T. L. Lai and Herbert Robbins, 1985<br>
+</li>
+
+<li class="plain">
+<a href="http://www.incompleteideas.net/lin-92.pdf">Self-Improving Reactive Agents Based On Reinforcement Learning, Planning and Teaching</a><br>
+Long-ji Lin, 1992<br>
+</li>
+
+<li class="plain">
+<a href="https://papers.nips.cc/paper/465-practical-issues-in-temporal-difference-learning.pdf">Practical Issues in Temporal Difference Learning</a><br>
+Gerald Tesauro, 1992<br> 
+</li>
+
+<li class="plain">
+<a href="https://people.cs.umass.edu/~barto/courses/cs687/williams92simple.pdf">Simple Statistical Gradient-Following Algorithms for Connectionist Reinforcement Learning</a><br>
+Ronald J. Williams, 1992<br>
+</li>
+
+<li class="plain">
+<a href="https://www2.cs.duke.edu/courses/spring07/cps296.3/littman94markov.pdf">Markov games as a framework for multi-agent reinforcment learning</a><br>
+Michael L. Littman, 1994<br> 
+</li>
+
+  <li class="plain">
+<a href="https://arxiv.org/ftp/arxiv/papers/1302/1302.4971.pdf">On the Complexity of Solving Markov Decision Problems</a><br>
+Michael L. Littman, Thomas L. Dean, and Leslie Pack Kaelbling, 1995<br> 
+</li>
+
+<li class="plain">
+<a href="https://pdfs.semanticscholar.org/a7b8/3a8eda36a46fff93803e6ddefa1012279e05.pdf">Average Reward Reinforcement Learning: Foundations, Algorithms, and Empirical Results</a><br>
+Sridhar Mahadevan, 1996<br> 
+</li>
+
+<li class="plain">
+<a href="https://arxiv.org/ftp/arxiv/papers/1301/1301.6718.pdf">On the Complexity of Policy Iteration</a><br>
+Yishay Mansour and Satinder Singh, 1999<br> 
+</li>
+
+
+<li class="plain">
+<a href="http://www.cs.cmu.edu/~mmv/papers/01ijcai-mike.pdf">Rational and Convergent Learning in Stochastic Games</a><br>
+Michael Bowling and Manuela Veloso, 2001<br> 
+</li>
+
+  <li class="plain">
+<a href="https://pdfs.semanticscholar.org/1a49/99c918c6206cd9804c48f7dce1bac6ec5b4a.pdf">Learning to Trade via Direct Reinforcment</a><br>
+John Moody and Matthew Saffell, 2001<br>
+</li>
+
+  <li class="plain">
+<a href="http://homes.dsi.unimi.it/~cesabian/Pubblicazioni/ml-02.pdf">Finite-time
+Analysis of the Multiarmed Bandit Problem</a><br>
+Peter Auer,  Nicolò Cesa-Bianchi, and  Paul Fischer, 2002<br>
+</li>
+
+<li class="plain">
+  <a href="https://people.eecs.berkeley.edu/~jordan/papers/ng-etal03.pdf">Autonomous helicopter flight via reinforcement learning</a><br>
+Andrew Y. Ng, H. Jin Kim, Michael I. Jordan, and Shankar Sastry, 2003<br>
+</li>
+
+<li class="plain">
+<a href="http://www.jmlr.org/papers/volume6/ernst05a/ernst05a.pdf">Tree-based Batch Mode Reinforcement Learning</a><br>
+Damien Ernst, Pierre Geurts, and Louis Wehenkel, 2005<br>
+</li>
+
+ <li class="plain">
+<a href="http://robotics.stanford.edu/users/shoham/www%20papers/LearningInMAS.pdf">If multi-agent learning is the answer, what is the question?</a><br>
+Yoav Shoham, Rob Powers, and Trond Grenager, 2006<br> 
+</li>
+
+  <li class="plain">
+<a href="http://www.cse.iitb.ac.in/~shivaram/papers/kls_rs_2006.pdf">Half
+Field Offense in RoboCup Soccer: A Multiagent Reinforcement Learning
+Case Study</a><br>
+Shivaram Kalyanakrishnan, Yaxin Liu, and Peter Stone, 2007<br> 
+</li>
+
+<li class="plain">
+  <a href="http://www.cse.iitb.ac.in/~shivaram/papers/ks_aamas_2007.pdf">Batch Reinforcement Learning
+    in a Complex Domain</a><br>
+Shivaram Kalyanakrishnan and Peter Stone, 2007<br> 
+</li>
+
+<li class="plain">
+<a href="http://users.ece.cmu.edu/~omutlu/pub/rlmc_isca08.pdf">Self-Optimizing Memory Controllers: A Reinforcement Learning Approach</a><br>
+Engin İpek, Onur Mutlu, José F. Martínez, and Rich Caruana, 2008<br>
+</li>
+
+<li class="plain">
+<a href="https://www.cs.mcgill.ca/~jpineau/files/guez-iaai08.pdf">Adaptive Treatment of Epilepsy via Batch-mode Reinforcement Learning</a><br>
+Arthur Guez, Robert D. Vincent, Massimo Avoli, and Joelle Pineau, 2008<br>
+</li>
+
+<li class="plain">
+<a href="https://papers.nips.cc/paper/4321-an-empirical-evaluation-of-thompson-sampling.pdf">An Empirical Evaluation of Thompson Sampling</a><br>
+Olivier Chapelle and Lihong Li, 2011<br>
+</li>
+
+<li class="plain">
+<a href="http://arxiv.org/pdf/1102.2490v5.pdf">The KL-UCB Algorithm for Bounded Stochastic Bandits and Beyond</a><br>
+Aurélien Garivier and Olivier Cappé, 2011<br> 
+</li>
+
+<li class="plain">
+  <a href="https://www.cse.iitb.ac.in/~shivaram/papers/umkbs_aamas_2011.pdf">On Optimizing Interdependent Skills: A Case Study in Simulated 3D Humanoid Robot Soccer</a><br>
+  Daniel Urieli, Patrick MacAlpine, Shivaram Kalyanakrishnan, Yinon Bentor, and Peter Stone, 2011<br>
+</li>
+
+<li class="plain">
+<a href="https://www.nature.com/nature/journal/v518/n7540/pdf/nature14236.pdf">Human-level control through deep reinforcement learning</a><br>
+Volodymyr Mnih, Koray Kavukcuoglu, David Silver, Andrei A. Rusu, Joel
+Veness, Marc G. Bellemare, Alex Graves, Martin Riedmiller, Andreas
+K. Fidjeland, Georg Ostrovski, Stig Petersen, Charles Beattie, Amir
+Sadik, Ioannis Antonoglou, Helen King, Dharshan Kumaran, Daan
+Wierstra, Shane Legg, and Demis Hassabis, 2015<br>
+</li>
+
+<li class="plain">
+<a href="https://www.cse.iitb.ac.in/~shivaram/papers/kmg_aaai_2016.pdf">Randomised Procedures for Initialising and Switching Actions in Policy Iteration</a><br>
+Shivaram Kalyanakrishnan, Neeldhara Misra, and Aditya Gopalan, 2016<br>
+</li>
+
+<li class="plain">
+<a href="https://www.sciencedirect.com/science/article/pii/S1389934116304749">Spatial interactions and optimal forest management on a fire-threatened landscape</a><br>
+Christopher J. Lauer, Claire A. Montgomery, and Thomas G. Dietterich, 2017<br> 
+</li>
+
+<li class="plain">
+  <a href="https://science.sciencemag.org/content/362/6419/1140/tab-pdf">A general reinforcement learning algorithm that masters chess, shogi, and Go through self-play</a><br>
+David Silver, Thomas Hubert, Julian Schrittwieser, Ioannis Antonoglou, Matthew Lai, Arthur Guez, Marc Lanctot, Laurent Sifre, Dharshan Kumaran, Thore Graepel, Timothy Lillicrap, Karen Simonyan, and Demis Hassabis, 2018<br>
+</li>
+
+<li class="plain">
+<a href="https://arxiv.org/pdf/1801.03365.pdf">Five Proofs of Chernoff's Bound with Applications</a><br>
+Wolfgang Mulzer, 2019<br>
+</li>
+
+<li class="plain">
+<a href="https://ala2020.vub.ac.be/papers/ALA2020_paper_29.pdf">Optimising a Real-time Scheduler for Railway Lines using Policy Search</a><br>
+Rohit Prasad, Harshad Khadilkar, Shivaram Kalyanakrishnan, 2020<br>
+</li>
+
+</ul>
+
+<h3>Communication</h3> 
+
+<p>This page will serve as the primary source of information regarding
+the course, the schedule, and related announcements. The Moodle page
+for the course will be used for recording grades and for
+students to post questions/comments.</p>
+
+<p>E-mail is the best means of communicating with the instructor
+outside of office hours; students must send e-mail with "[CS747]" in
+the header.</p>
+
+<h3>Schedule</h3> 
+
+<ul class="plain">
+
+<li class="plain">
+<b>Week 0 (July 27‐August 2) </b>: Welcome; Introduction to the course.<br>
+<ul class="plain">
+<li>Administrative: <a href="https://drive.google.com/file/d/1his8lk7KBvF9DGH_Q17oVQrbkK6y8nto/view?usp=sharing">Video</a>.</li>
+<li>Lecture 1: <a href="https://drive.google.com/file/d/1zv9ClKeseAgwBCYj1W7f_VaNjKTMVBjX/view?usp=sharing">Video</a>, <a href="https://drive.google.com/file/d/1MJHqtOPfYqcyJIc0agvM-OUkSpkqy65n/view?usp=sharing">Slides</a>.</li>
+</ul>
+</li>
+
+<li class="plain">
+<b>Week 1 (August 3‐9) </b>: Multi-armed Bandits.<br>
+<ul class="plain">
+<li>Administrative: <a href="https://drive.google.com/file/d/1aA0_Rjo2i-zypoYKCBR1cOQ3BpNiKdqq/view?usp=sharing">Video</a>.</li>
+<li>Lecture 1: <a href="https://drive.google.com/file/d/1MQtCsms-BLEnIqEpdCpg1ERtt0IgMBYF/view?usp=sharing">Video</a>, <a href="https://drive.google.com/file/d/1GLZl9CIceTgUJVS7RtYsALm28YYt0ltf/view?usp=sharing">Slides</a>.</li>
+<li>Summary: Coin-tossing game; Definition of stochastic multi-armed bandit; Definition of algorithm, ε-first and ε-greedy algorithms; Graph of E[r<sup>t</sup>] versus t; Definition of regret.</li>
+<li>Reading: Sections 2, 2.1, 2.2, 2.3, Sutton and Barto (2018).</li>
+<li>Resource: <a href="https://drive.google.com/file/d/149MT9ta7ZcaVn6rcDIcYDe8SyvTjyA5J/view?usp=sharing">coins.py</a>.</li>
+</ul>
+</li>
+
+<li class="plain">
+<b>Week 2 (August 10‐16) </b>: Multi-armed Bandits.<br>
+<ul class="plain">
+<li>Administrative: <a href="https://drive.google.com/file/d/1jfHPDMDkDyfC1a4gjvhdGP2xz8joAoEg/view?usp=sharing">Video</a>.</li>
+<li>Lecture 1: <a href="https://drive.google.com/file/d/1_Ko5Mfg8DpXcpZVOa7fDBR-N0DIBaJ0s/view?usp=sharing">Video</a>, <a href="https://drive.google.com/file/d/1rDMXVSgdcXbtayd4x8npm_qs-r4kFlTA/view?usp=sharing">Slides</a>.</li>
+<li>Summary: Achieving sublinear regret with GLIE sampling; Lai and Robbins's lower bound on regret; UCB, KL-UCB, Thompson Sampling algorithms.</li>
+<li>Reading: Section 1, Figure 1, Theorem 1, Auer et al. (2002); Sections 1–3, Garivier and Cappé (2011); Chapelle and Li (2011).</li>
+<li>References: <a href="./resources/classnote-1.pdf">Class Note 1</a>; Theorem 1, Lai and Robbins (1985).</li>
+</ul>
+</li>
+
+
+<li class="plain">
+<b>Week 3 (August 17‐23) </b>: Multi-armed Bandits.<br>
+<ul class="plain">
+<li>Administrative: <a href="https://drive.google.com/file/d/16NoefVcUuI5LDZXZeRmvjAT7S09xtZzd/view?usp=sharing">Video</a>.</li>
+<li>Lecture 1: <a href="https://drive.google.com/file/d/1-ibXb2lpBJ9LRPn_PIqV8z-SOI68aUVc/view?usp=sharing">Video</a>, <a href="https://drive.google.com/file/d/1WTJW97ymsgwt20iY7h6a1iiQPwmOaQuL/view?usp=sharing">Slides</a>.</li>
+<li>Summary: Hoeffding's Inequality, "KL" Inequality; Proof of upper bound on the regret of UCB; Interpretation of Thompson Sampling; Survey of bandit formulations.</li>
+<li>Reading: <a href="https://en.wikipedia.org/wiki/Hoeffding%27s_inequality">Wikipedia page</a> on Hoeffding's Inequality; Proof of Theorem 1, Auer et al. (2002).</li>
+<li>References: Thompson (1933); Hoeffding (1963); Mulzer (2019).</li>
+</ul>
+</li>
+
+<li class="plain">
+<b>Week 4 (August 24‐30) </b>: Markov Decision Problems.<br>
+<ul class="plain">
+<li>Administrative: <a href="https://drive.google.com/file/d/1OxQUWZUivfi-cw61Mq0PN1mSeyoNVupE/view?usp=sharing">Video</a>.</li>
+<li>Lecture 1: <a href="https://drive.google.com/file/d/1AahM5ktkCP1H2o98zSBaDLW-daCHD3W3/view?usp=sharing">Video</a>, <a href="https://drive.google.com/file/d/1X2a5HTZ1uVz66PAz_o2S6ItkAKROAIMO/view?usp=sharing">Slides</a>.</li>
+<li>Summary: Definition of Markov Decision Problem, policy, and value
+function; Existence of optimal policy; MDP planning problem;
+Continuing and episodic tasks; Infinite-discounted, total,
+finite-horizon, and average reward structures; Applications of MDPs;
+  Bellman's equations; Action value function.</li>
+<li>Reading: Chapter 3, Sutton and Barto (2018).<br>
+</li><li>References: Section 2.2, Mahadevan (1996); Ng et al. (2003); Lauer et al. (2017).</li>
+</ul>
+</li>
+
+<li class="plain">
+<b>Week 5 (August 31‐September 6) </b>: Markov Decision Problems.<br>
+<ul class="plain">
+<li>Administrative: <a href="https://drive.google.com/file/d/1mFNrtGR-JVBS0pj9yX7lJjoobobXIot4/view?usp=sharing">Video</a>.</li>
+<li>Lecture 1: <a href="https://drive.google.com/file/d/109AwRlPjG0YGjE3ZtLthgPvmN-bJ0pxW/view?usp=sharing">Video</a>, <a href="https://drive.google.com/file/d/13RsweuRjplu7bm0sRoJMOpldy4HN4skP/view?usp=sharing">Slides</a>.</li>
+<li>Summary: Banach's Fixed-point Theorem; Bellman optimality operator; Proof of contraction under max norm; Value iteration; Linear programming.
+</li><li> Reading: Appendix A, Szepesvári (2009).</li>
+<li> Reference: Littman et al. (1995).</li>
+</ul>
+</li>
+
+<li class="plain">
+<b>Week 6 (September 7‐September 20) </b>: Markov Decision Problems.<br>
+<ul class="plain">
+<li>Administrative: <a href="https://drive.google.com/file/d/1D19pfFAFBfHwdbwDr0TzdZo9Iu58Q0IY/view?usp=sharing">Video</a>.</li>
+<li>Lecture 1: <a href="https://drive.google.com/file/d/17ukZF6YAGWPe1ynyU07G_XY0GH1Jvbdk/view?usp=sharing">Video</a>, <a href="https://drive.google.com/file/d/19TE4imy7sRaOCcX2VJq6YLfcWFMG5TU2/view?usp=sharing">Slides</a>.</li>
+<li>Summary: Policy improvement; Bellman operator; Proof of Policy improvement theorem; Policy Iteration family of algorithms; Complexity bounds for MDP planning.
+</li><li> Reading: Sections 1 and 2, Kalyanakrishnan et al. (2016).</li>
+<li> References: Mansour and Singh (1999); <a href="./resources/classnote-2.pdf">Class Note 2</a>. References from Section 3 of the slides are either listed in the reading (Kalyanakrishnan et al. (2016)) or linked from the <a href="http://www.cse.iitb.ac.in/~shivaram">instructor's home page</a>.</li>
+</ul>
+</li>
+
+<li class="plain">
+<b>Week 7 (September 21‐September 27) </b>: Reinforcement Learning.<br>
+<ul class="plain">
+<li>Administrative: <a href="https://drive.google.com/file/d/1Y9CBjOIdsHEO_8Iw86QUzfoqv-scPbac/view?usp=sharing">Video</a>.</li>
+<li>Lecture 1: <a href="https://drive.google.com/file/d/17Ra_gdFYBhErjPxo7QvZICFCwQbqDVOP/view?usp=sharing">Video</a>, <a href="https://drive.google.com/file/d/1q5H7Mht6_hiAnMx9aOPeQqkt-qJXgaqZ/view?usp=sharing">Slides</a>.</li>
+<li>Summary: The Reinforcement Learning problem; Upcoming topics; Applications.</li>
+<li> References: Tesauro (1992); Silver et al. (2018); Ng et al. (2003); Mnih et al. (2015); İpek et al. (2008); Guez et al. (2008); Moody and Saffell (2001).</li>
+<li>Lecture 2: <a href="https://drive.google.com/file/d/1GxoIndazWw_OLbC6vXIYatJMpe9wiL7f/view?usp=sharing">Video</a>, <a href="https://drive.google.com/file/d/17PjQr0ezDQCQOwUb0aaYzvxzKhIAOeOC/view?usp=sharing">Slides</a>.</li>
+<li>Summary: Prediction and control problems; Ergodic MDPs; Model-based algorithm for acting optimally in the limit; Monte Carlo methods for prediction.</li>
+<li>Reading: <a href="./resources/classnote-3.pdf">Class Note 3</a>; Sections 5, 5.1, Sutton and Barto (2018).</li>
+<li> Reference: Wikipedia page on <a href="https://en.wikipedia.org/wiki/Markov_chain#Ergodicity">Ergodic Markov chains</a>.</li>
+</ul>
+</li>
+
+<li class="plain">
+<b>Week 8 (September 28‐October 4) </b>: Reinforcement Learning.<br>
+<ul class="plain">
+<li>Administrative: <a href="https://drive.google.com/file/d/1zJ40KtYSPxGHTUW7Xo8WJdCTZTj_Xw6v/view?usp=sharing">Video</a>.</li>
+<li>Lecture 1: <a href="https://drive.google.com/file/d/146XNVsdBUzbX1QuXNCGV1IDI5J7Z7m14/view?usp=sharing">Video</a>, <a href="https://drive.google.com/file/d/1br7y_N69uyG9zd60sso4CEBT0in3e6au/view?usp=sharing">Slides</a>.</li>
+<li>Summary: Maximum likelihood estimates and least squares estimates;
+On-line implementation of Monte Carlo policy evaluation;
+Bootstrapping; TD(0) algorithm; Convergence of Monte Carlo and batch
+TD(0) algorithms; Model-free control: Q-learning, Sarsa, Expected
+Sarsa.</li>
+<li>Reading: Sections 6, 6.1, 6.2, 6.3, 6.4, 6.5, 6.6, Sutton and
+Barto (2018).</li>
+<li>Reference: Robbins and Monro (1951).</li>
+</ul>
+</li>
+
+<li class="plain">
+<b>Week 9 (October 5‐October 11) </b>: Reinforcement Learning.<br>
+<ul class="plain">
+<li>Administrative: <a href="https://drive.google.com/file/d/194E6kLGG7kmvnheAzjCdmwh2R9rimrpO/view?usp=sharing">Video</a>.</li>
+<li>Lecture 1: <a href="https://drive.google.com/file/d/1mf6Pze-0S6L8gD6fnQSbQgukGJzP0cqw/view?usp=sharing">Video</a>, <a href="https://drive.google.com/file/d/1n6YDE45yZnwkM8ambjMeXnpCgVLzF7GZ/view?usp=sharing">Slides</a>.</li>
+<li>Summary: n-step returns; TD(λ) algorithm; Need for
+generalisation in practice; Soccer as illustrative example; Linear
+function approximation and geometric view; Linear TD(λ).</li>
+<li>Reading: Sections 7, 7.1, 9, 9.1, 9.2, 9.3, 9.4, 12, 12.1, 12.2,
+Sutton and Barto (2018).</li>
+<li>Reference: Kalyanakrishnan et al. (2007).</li>
+</ul>
+</li>
+
+<li class="plain">
+<b>Week 10 (October 12‐October 18) </b>: Reinforcement Learning.<br>
+<ul class="plain">
+<li>Administrative: <a href="https://drive.google.com/file/d/1n012gauUDRUn-1oiFhHEQlFW-f0BFX86/view?usp=sharing">Video</a>.</li>
+<li>Lecture 1: <a href="https://drive.google.com/file/d/1kOwdDrU-nV7mHStf_oxoQwyDym4H4z5p/view?usp=sharing">Video</a>, <a href="https://drive.google.com/file/d/1TtWMZ3HPN1c4FYVf-QJlAwhiGLYIFojz/view?usp=sharing">Slides</a>.</li>
+<li>Summary: Tile coding; Control with function approximation;
+  Tsitsiklis and Van Roy's counterexample; Policy search; Case
+  studies: humanoid robot soccer, railway scheduling.</li>
+<li>Reading: 9.5, 9.6, 9.7, 11, 11.1, 11.2, 11.3, Sutton and
+  Barto (2018).</li>
+<li>References: Urieli et al. (2011), Prasad et al. (2020).</li>
+</ul>
+</li>
+
+<li class="plain">
+<b>Week 11 (October 19‐October 25) </b>: Reinforcement Learning.<br>
+<ul class="plain">
+<li>Administrative: <a href="https://drive.google.com/file/d/1f6BZd10mF3ylxAWFXsKo2W7PtDUkjjjS/view?usp=sharing">Video</a>.</li>
+<li>Lecture 1: <a href="https://drive.google.com/file/d/14hpo1ONkULNvp1QnTkX1DUnQSCSIhoPB/view?usp=sharing">Video</a>, <a href="https://drive.google.com/file/d/1bZ-FVVAv0QVGd5jCZnZBt9dcIGmd-TDS/view?usp=sharing">Slides</a>.</li>
+<li>Summary: Policy gradient methods; Policy gradient theorem; REINFORCE; REINFORCE with a baseline; Actor-critic methods; Batch RL; Experience replay; Fitted Q Iteration.</li>
+<li>Reading: Sections 13, 13.1, 13.2, 13.3, 13.4, 13.5, Sutton and Barto (2018), Kalyanakrishnan and Stone (2007).</li>
+<li>References: Williams (1992), Lin (1992), Ernst et al. (2005).</li>
+</ul>
+</li>
+
+<li class="plain">
+<b>Week 12 (October 26‐November 1) </b>: Multiagent Reinforcement Learning.<br>
+<ul class="plain">
+<li>Administrative: <a href="https://drive.google.com/file/d/1zvSqBVFyd3Jv1JoLD_1g_dLBHPBwMP1k/view?usp=sharing">Video</a>.</li>
+<li>Lecture 1: <a href="https://drive.google.com/file/d/1xSybkaxGrxfXACoUKRzXJn7ryG_-hqze/view?usp=sharing">Video</a>, <a href="https://drive.google.com/file/d/11RBGJatNWhxmBu8cJxgfcbCTmO_yMISm/view?usp=sharing">Slides</a>.</li>
+<li>Summary: Matrix games, Minimax-optimality, Markov games, Minimax-Q algorithm.</li>
+<li>Reading: Littman, 1994.</li>
+<li>References: Bowling and Veloso (2001); Shoham, Powers, and Grenager (2006).</li>
+</ul>
+</li>
+
+</ul>
+
+
+
+<h3>Assignments</h3>
+
+<ul>
+  <li> <a href="./resources/cs747_a2021_quizzes.pdf">Week 1 Quiz</a>, due 11.55 p.m. Monday, August 9.</li>
+  <li> <a href="./resources/cs747_a2021_quizzes.pdf">Week 2 Quiz</a>, due 11.55 p.m. Monday, August 16.</li>
+  <li> <a href="./resources/cs747_a2021_quizzes.pdf">Week 3 Quiz</a>, due 11.55 p.m. Monday, August 23.</li>
+  <li> <a href="./resources/cs747_a2021_quizzes.pdf">Week 4 Quiz</a>, due 11.55 p.m. Monday, August 30.</li>
+  <li> <a href="./pa-1/programming-assignment-1.html">Programming Assignment 1</a>, due 11.55 p.m. Thursday, September 9.</li>
+  <li> <a href="./resources/cs747_a2021_quizzes.pdf">Week 5 Quiz</a>, due 11.55 p.m. Monday, September 6.</li>
+  <li> <a href="./resources/cs747_a2021_quizzes.pdf">Week 7 Quiz</a>, due 11.55 p.m. Monday, September 27.</li>
+  <li> <a href="./pa-2/programming-assignment-2.html">Programming Assignment 2</a>, due 11.55 p.m. Monday, October 11.</li>
+  <li> <a href="./resources/cs747_a2021_quizzes.pdf">Week 8 Quiz</a>, due 11.55 p.m. Wednesday, October 6.</li>
+  <li> <a href="./resources/cs747_a2021_quizzes.pdf">Week 9 Quiz</a>, due 11.55 p.m. Wednesday, October 13.</li>
+  <li> <a href="./resources/cs747_a2021_quizzes.pdf">Week 10 Quiz</a>, due 11.55 p.m. Monday, October 18.</li>
+  <li> <a href="./pa-3/programming-assignment-3.html">Programming Assignment 3</a>, due 11.55 p.m. Tuesday, November 2.</li>
+  <li> <a href="./resources/cs747_a2021_quizzes.pdf">Week 11 Quiz</a>, due 11.55 p.m. Monday, October 25.</li>
+  <li> <a href="./resources/cs747_a2021_end_semester.pdf">End-semester Examination</a>, due 11.55 p.m. Sunday, November 21.</li>
+</ul>
+
+
+<h3>Copyright</h3>
+
+
+<p>Slides and videos on this page are licensed under
+a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons
+Attribution-ShareAlike 4.0 International License</a>. Permission for
+their use beyond the scope of the license may be sought by writing to
+shivaram@cse.iitb.ac.in.</p>
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative
+Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"></a>
+
+<hr>
+<hr>
+
+
+
+</body></html>

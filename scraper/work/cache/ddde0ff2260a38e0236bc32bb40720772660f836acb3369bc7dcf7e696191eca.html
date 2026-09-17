@@ -1,0 +1,228 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+
+<title>CSC-106: Can Computers Think?</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body bgcolor="white">
+<center>
+<h1><font color="#87071F" face="Georgia, Arial, Garamond">CSC-106: Can Computers Think?</font><br>
+</h1>
+<font face="Georgia, Arial, Garamond">
+<p>
+<img src="images/computer_thinker.jpg" alt="Creative Computing Collage" height="350" width="263">
+</p>
+</font></center><font face="Georgia, Arial, Garamond">
+
+<h2>Course Overview</h2>
+
+<p>
+CSC 106 is an introductory course in computer science, focusing on the theme of artificial intelligence (AI). 
+If you've ever wondered how computers are able to perform "intelligent" tasks, this course will show you how the magic works.
+</p>
+
+<p>
+At its core, this course is about how computer scientists think about and solve problems. 
+So if you're thinking about a CS major or minor, this will give you a solid foundation. 
+If you're a neuroscience major, this course will help you see how scientists are using biological and 
+neurological principles to model "behavior" in computers. It's also a foundation for the 
+computational track in neuroscience. And if you're here just because you're curious, 
+well, that's great since AI is cool!
+</p>
+
+<p>
+By the end of the course, you should be proficient in the following:
+</p><ul>
+<li>to understand the Python programming language in order to write functional programs that act "intelligently"</li>
+<li>to understand the concept of search, which arguably is at the heart of most "intelligent" systems</li>
+<li>to develop good debugging skills</li>
+<li>to learn about how the computer represents and processes information</li>
+</ul>
+<p></p>
+
+<h2>Language &amp; Resources</h2> 
+
+<ul>
+<li> <a href="https://www.python.org/">Python</a>: which includes the IDLE editor
+</li><li> <a href="http://sourceforge.net/projects/rur-ple/files/rur-ple/rurple1.0rc3/">RUR-PLE</a>: the robot environment we use in class
+</li></ul>
+
+<p>
+In class, you are required to use our lab iMacs.
+However, when working on your projects outside of class, you have a choice.
+If you'd like to continue using our iMacs, feel free!  We have three
+spaces that you can use:
+</p>
+
+<p>
+</p><ul>
+<li>Olin 107 (where we have class)</li>
+<li>Pasta lab (N104 in the Science &amp; Engineering building)</li>
+<li>CS Resource room (Steinmetz Hall, 209A)</li>
+</ul>
+<p></p>
+
+All of these labs are available to you 24/7 using your ID card, except when classes
+are being held in them.  
+
+<h2>Course Text</h2>
+<p>
+<em>The practice of computing using Python</em>, William Punch and Richard Enbody, Addison-Wesley, 2010, ISBN: 978-0-13-611067-5
+</p>
+
+<h2>Example Assignment</h2>
+<h3>Boggle</h3>
+
+<p>
+Boggle is a famous party game.  Never played it?  The rules are 
+<a href="http://cs.union.edu/~fernandc/csc106/boggleRules.pdf">here</a>.   
+In this final project, you'll use almost every construct we've learned this term to create a Boggle game 
+that you can play against the computer.  You'll implement two modes where you can tell the 
+computer to play either "smart" or "dumb". 
+You'll do this by implementing an intelligent algorithm to make the computer be a smart player. 
+</p>
+
+<p>
+When the game begins, the human player will be shown a welcome message, given instructions if needed, 
+and then the Boggle board will be displayed.  The human player will write down words in a plain 
+text file named 'player.txt', one per line.  The computer will find words by searching a dictionary 
+and seeing which words can be found on the Boggle board.  For each word found on the board, it will 
+place it into a list.  When both the computer and the human have finished writing words, your program 
+will determine who gets points by reading 'player.txt' into a list and then finding the unique words 
+in both the computer's list and the human's list.  For each unique word found, that player gets a point.  
+Once scores are updated, a new round with a new Boggle board will begin.  Play continues until one 
+player reaches a pre-specified number of points. 
+</p>
+
+
+<h2>Example Lab (In-Class Exercise)</h2>
+<h3>Anagram finder</h3>
+
+<p>
+If you can rearrange the letters of a word to form another word, the two words are anagrams of each other.  
+For example, <em>tear</em> is an anagram of <em>rate</em>.   You can do it with phrases too.  For example, <em>A stew, Sir?</em> 
+is an anagram of <em>waitress</em> as long as you ignore capitalization, punctuation, and whitespace.  
+In this lab, you'll build an intelligent anagram finder that takes phrases as input, and outputs anagrams of that phrase.
+
+</p><ol>
+<li>Download two text files from Nexus onto your flash drive. "input.txt" is the input file of phrases.  
+Your program will read each phrase (each line) from the file, and print out the anagrams of that phrase.  
+The second text file is "dict.txt".  This is a dictionary that lists words (one per line) in alphabetical order.  
+You will use the dictionary to find the anagrams.
+</li>
+
+<li>
+<p>Here's the basic idea of how the anagram finder will work.</p>
+<ol>
+<li>Read each input phrase and convert it to lowercase characters.</li>
+<li>Use the built-in sorted function to create a list of all the characters in alphabetical order.  
+For example, sorted("tear!") will return the list 
+['!', 'a', 'e', 'r', 't'].  Try it in the Python shell to see what it does.</li>
+<li>Remove all non-alphabetic characters from the list created in Step 2.   For the example, this results in ['a', 'e', 'r', 't'].</li>
+<li>Read each word in the dictionary, which are all lowercase already, and for each one, use the 
+<strong>sorted</strong> function to make another alphabetic list of characters.  Thus the word "rate", when sorted, will also result in 
+['a', 'e', 'r', 't'].  This is explained in Chapter 6.5 of your text as a <strong>canonical</strong> representation of a word.</li>
+<li>If the canonical representation of the input phrase is the same as the canonical representation of a 
+dictionary word, they must be anagrams.  Append that dictionary word to an output list.  
+<strong>PITFALL ALERT</strong>: don't include the original phrase itself in the output list.  This might happen, 
+for example, if the original phrase is "rate" and "rate" is also in the dictionary.</li>
+<li>Once you have gone through all the dictionary words, your output list will have all the anagrams of the original phrase.</li>
+</ol>
+</li>
+</ol>
+<p></p>
+
+<h2>Assignments &amp; Grades</h2>
+
+<ul>
+<li><strong><u>Exams</u></strong> There is 1 midterm and a final exam.
+Exams are cumulative, closed book, and limited notes. You may bring 
+one single-sided page of notes to the midterm and two single-sided 
+pages of notes to the final.
+If you cannot be at an exam for a <strong>good</strong> reason (illness, for
+example)
+then please let me know so we can make other arrangements. 
+The final will be cumulative.  On exams, you will be responsible 
+for all material covered in the readings and in lectures. 
+</li>
+
+<p>
+</p>
+
+<li><strong><u>Programming projects</u></strong> Programming 
+projects will be assigned throughout the term to reinforce 
+the concepts discussed in class. Projects are due at the
+<u>start</u> of class on the day it is due.  
+<strong>No lates will be accepted.</strong>
+You must turn in <strong>both</strong> a hard copy (on paper) and an electronic 
+copy (on Nexus).  Your assignment is not
+turned in unless you give me both.
+</li>
+
+<p>
+</p>
+
+<li><strong><u>In-Class Exercises (ICEs)</u></strong> We will often
+have hands-on computer time during class so you can practice things
+first-hand.  This is especially true on Tuesdays, when our class
+is a little longer.  I will occasionally have you turn in your
+ICE for credit, either on that day or at the next class.  You should
+turn in ICEs the same way as programming projects: on paper and on Nexus.
+</li>
+
+<p>
+</p>
+
+<li><strong><u>Microquizzes</u></strong> There will be a 1-point
+closed-book, closed-notes quiz at the start of each class.  
+You can miss 4 of these
+quizzes without penalty.  <em>You won't be allowed to take the
+microquiz if you enter class after I've finished passing it out.</em>
+You may not make up a missed microquiz.
+
+<p>
+The point of these is not busy-work.  I hate busy-work.
+But in computer science,
+we start with simple things and build on them and combine them 
+into more and more complex ideas. It is important that you don't 
+fall behind. Microquizzes, ICEs, 
+etc. are
+there to motivate you to review material <em>regularly</em> and
+to keep up. If you feel 
+at any point that something is not quite clear to you, it's your job
+to come see me so that we can clarify that issue before we get to 
+something more complex that builds on it.
+</p>
+</li>
+</ul>
+
+<h3>Grade Allocation</h3>
+
+<ul>
+<li>ICEs: 12%</li>
+<li>Programming projects: 36%</li>
+<li>Midterm: 20%</li>
+<li>Final exam: 20%</li>
+<li>Microquizzes: 12%</li>
+</ul>
+
+
+<h2>Schedule</h2>
+
+<ul>
+<li>Week 1: What is a computer?  What is thinking?  What are computers good at doing?</li>
+<li>Week 2: Functions, arguments, parameters</li>
+<li>Week 3: <em>while</em> loops, <em>if</em> statements, intelligent mapping of a room</li>
+<li>Week 4: variables and assignment</li>
+<li>Week 5: user input, building up answers iteratively, error checking</li>
+<li>Week 6: modules, scope, expressions vs. statements, the <em>return</em> statement</li>
+<li>Week 7: strings, methods, <em>for</em> loops, binary representation and ASCII</li>
+<li>Week 8: lists and mutability, two-dimensional lists</li>
+<li>Week 9: dictionaries and file input/output</li>
+<li>Week 10: recursion</li>
+</ul>
+
+<hr>
+</font>
+
+</body></html>

@@ -1,0 +1,425 @@
+<!DOCTYPE html><html lang="en-US" class="js"><head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+		<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
+<title>15-150 Principles of Functional Programming (Fall 2017) – Giselle Reis</title>
+<meta name="robots" content="max-image-preview:large">
+<link rel="dns-prefetch" href="//secure.gravatar.com">
+<link rel="dns-prefetch" href="//stats.wp.com">
+<link rel="dns-prefetch" href="//v0.wordpress.com">
+<link rel="dns-prefetch" href="//i0.wp.com">
+<link rel="dns-prefetch" href="//c0.wp.com">
+<link rel="alternate" type="application/rss+xml" title="Giselle Reis » Feed" href="https://gisellereis.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="Giselle Reis » Comments Feed" href="https://gisellereis.com/comments/feed/">
+<script>
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/gisellereis.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.3.8"}};
+/*! This file is auto-generated */
+!function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\uddfa\ud83c\uddf3","\ud83c\uddfa\u200b\ud83c\uddf3")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!n(e,"\ud83e\udef1\ud83c\udffb\u200d\ud83e\udef2\ud83c\udfff","\ud83e\udef1\ud83c\udffb\u200b\ud83e\udef2\ud83c\udfff")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+</script>
+<style>
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel="stylesheet" id="twentysixteen-jetpack-css" href="https://c0.wp.com/p/jetpack/12.4.1/modules/theme-tools/compat/twentysixteen.css" media="all">
+<link rel="stylesheet" id="wp-block-library-css" href="https://gisellereis.com/wp-content/plugins/gutenberg/build/block-library/style.css?ver=16.4.0" media="all">
+<style id="wp-block-library-inline-css">
+.has-text-align-justify{text-align:justify;}
+</style>
+<link rel="stylesheet" id="wp-block-library-theme-css" href="https://gisellereis.com/wp-content/plugins/gutenberg/build/block-library/theme.css?ver=16.4.0" media="all">
+<link rel="stylesheet" id="jetpack-videopress-video-block-view-css" href="https://gisellereis.com/wp-content/plugins/jetpack/jetpack_vendor/automattic/jetpack-videopress/build/block-editor/blocks/video/view.css?minify=false&amp;ver=34ae973733627b74a14e" media="all">
+<link rel="stylesheet" id="mediaelement-css" href="https://c0.wp.com/c/6.3.8/wp-includes/js/mediaelement/mediaelementplayer-legacy.min.css" media="all">
+<link rel="stylesheet" id="wp-mediaelement-css" href="https://c0.wp.com/c/6.3.8/wp-includes/js/mediaelement/wp-mediaelement.min.css" media="all">
+<style id="classic-theme-styles-inline-css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<style id="global-styles-inline-css">
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #fff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--dark-gray: #1a1a1a;--wp--preset--color--medium-gray: #686868;--wp--preset--color--light-gray: #e5e5e5;--wp--preset--color--blue-gray: #4d545c;--wp--preset--color--bright-blue: #007acc;--wp--preset--color--light-blue: #9adffd;--wp--preset--color--dark-brown: #402b30;--wp--preset--color--medium-brown: #774e24;--wp--preset--color--dark-red: #640c1f;--wp--preset--color--bright-red: #ff675f;--wp--preset--color--yellow: #ffef8e;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}body .is-layout-grid{display: grid;}body .is-layout-grid > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+</style>
+<link rel="stylesheet" id="collapscore-css-css" href="https://gisellereis.com/wp-content/plugins/jquery-collapse-o-matic/css/core_style.css?ver=1.0" media="all">
+<link rel="stylesheet" id="collapseomatic-css-css" href="https://gisellereis.com/wp-content/plugins/jquery-collapse-o-matic/css/light_style.css?ver=1.6" media="all">
+<link rel="stylesheet" id="twentysixteen-fonts-css" href="https://gisellereis.com/wp-content/themes/twentysixteen/fonts/merriweather-plus-montserrat-plus-inconsolata.css?ver=20230328" media="all">
+<link rel="stylesheet" id="genericons-css" href="https://c0.wp.com/p/jetpack/12.4.1/_inc/genericons/genericons/genericons.css" media="all">
+<link rel="stylesheet" id="twentysixteen-style-css" href="https://gisellereis.com/wp-content/themes/twentysixteen/style.css?ver=20240716" media="all">
+<style id="twentysixteen-style-inline-css">
+
+		/* Custom Link Color */
+		.menu-toggle:hover,
+		.menu-toggle:focus,
+		a,
+		.main-navigation a:hover,
+		.main-navigation a:focus,
+		.dropdown-toggle:hover,
+		.dropdown-toggle:focus,
+		.social-navigation a:hover:before,
+		.social-navigation a:focus:before,
+		.post-navigation a:hover .post-title,
+		.post-navigation a:focus .post-title,
+		.tagcloud a:hover,
+		.tagcloud a:focus,
+		.site-branding .site-title a:hover,
+		.site-branding .site-title a:focus,
+		.entry-title a:hover,
+		.entry-title a:focus,
+		.entry-footer a:hover,
+		.entry-footer a:focus,
+		.comment-metadata a:hover,
+		.comment-metadata a:focus,
+		.pingback .comment-edit-link:hover,
+		.pingback .comment-edit-link:focus,
+		.comment-reply-link,
+		.comment-reply-link:hover,
+		.comment-reply-link:focus,
+		.required,
+		.site-info a:hover,
+		.site-info a:focus {
+			color: #ed005a;
+		}
+
+		mark,
+		ins,
+		button:hover,
+		button:focus,
+		input[type="button"]:hover,
+		input[type="button"]:focus,
+		input[type="reset"]:hover,
+		input[type="reset"]:focus,
+		input[type="submit"]:hover,
+		input[type="submit"]:focus,
+		.pagination .prev:hover,
+		.pagination .prev:focus,
+		.pagination .next:hover,
+		.pagination .next:focus,
+		.widget_calendar tbody a,
+		.page-links a:hover,
+		.page-links a:focus {
+			background-color: #ed005a;
+		}
+
+		input[type="date"]:focus,
+		input[type="time"]:focus,
+		input[type="datetime-local"]:focus,
+		input[type="week"]:focus,
+		input[type="month"]:focus,
+		input[type="text"]:focus,
+		input[type="email"]:focus,
+		input[type="url"]:focus,
+		input[type="password"]:focus,
+		input[type="search"]:focus,
+		input[type="tel"]:focus,
+		input[type="number"]:focus,
+		textarea:focus,
+		.tagcloud a:hover,
+		.tagcloud a:focus,
+		.menu-toggle:hover,
+		.menu-toggle:focus {
+			border-color: #ed005a;
+		}
+
+		@media screen and (min-width: 56.875em) {
+			.main-navigation li:hover > a,
+			.main-navigation li.focus > a {
+				color: #ed005a;
+			}
+		}
+	
+</style>
+<link rel="stylesheet" id="twentysixteen-block-style-css" href="https://gisellereis.com/wp-content/themes/twentysixteen/css/blocks.css?ver=20240117" media="all">
+<!--[if lt IE 10]>
+<link rel='stylesheet' id='twentysixteen-ie-css' href='https://gisellereis.com/wp-content/themes/twentysixteen/css/ie.css?ver=20170530' media='all' />
+<![endif]-->
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentysixteen-ie8-css' href='https://gisellereis.com/wp-content/themes/twentysixteen/css/ie8.css?ver=20170530' media='all' />
+<![endif]-->
+<!--[if lt IE 8]>
+<link rel='stylesheet' id='twentysixteen-ie7-css' href='https://gisellereis.com/wp-content/themes/twentysixteen/css/ie7.css?ver=20170530' media='all' />
+<![endif]-->
+<link rel="stylesheet" id="jetpack_css-css" href="https://c0.wp.com/p/jetpack/12.4.1/css/jetpack.css" media="all">
+<script src="https://c0.wp.com/c/6.3.8/wp-includes/js/jquery/jquery.min.js" id="jquery-core-js"></script>
+<script src="https://c0.wp.com/c/6.3.8/wp-includes/js/jquery/jquery-migrate.min.js" id="jquery-migrate-js"></script>
+<!--[if lt IE 9]>
+<script src='https://gisellereis.com/wp-content/themes/twentysixteen/js/html5.js?ver=3.7.3' id='twentysixteen-html5-js'></script>
+<![endif]-->
+<script id="twentysixteen-script-js-extra">
+var screenReaderText = {"expand":"expand child menu","collapse":"collapse child menu"};
+</script>
+<script src="https://gisellereis.com/wp-content/themes/twentysixteen/js/functions.js?ver=20230629" id="twentysixteen-script-js" defer="" data-wp-strategy="defer"></script>
+<link rel="https://api.w.org/" href="https://gisellereis.com/wp-json/"><link rel="alternate" type="application/json" href="https://gisellereis.com/wp-json/wp/v2/pages/518"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://gisellereis.com/xmlrpc.php?rsd">
+<meta name="generator" content="WordPress 6.3.8">
+<link rel="canonical" href="https://gisellereis.com/15150-f17/">
+<link rel="shortlink" href="https://wp.me/P7mZTV-8m">
+<link rel="alternate" type="application/json+oembed" href="https://gisellereis.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fgisellereis.com%2F15150-f17%2F">
+<link rel="alternate" type="text/xml+oembed" href="https://gisellereis.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fgisellereis.com%2F15150-f17%2F&amp;format=xml">
+	<style>img#wpstats{display:none}</style>
+		<style id="custom-background-css">
+body.custom-background { background-color: #020000; }
+</style>
+	
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="15-150 Principles of Functional Programming (Fall 2017)">
+<meta property="og:url" content="https://gisellereis.com/15150-f17/">
+<meta property="og:description" content="Description: This course will teach functional programming. More than another programming language, this is another approach to problem solving. You will learn how to write code that is, at the sam…">
+<meta property="article:published_time" content="2017-08-02T12:25:08+00:00">
+<meta property="article:modified_time" content="2017-10-05T09:45:50+00:00">
+<meta property="og:site_name" content="Giselle Reis">
+<meta property="og:image" content="https://i0.wp.com/gisellereis.com/wp-content/uploads/2016/05/avatar.png?fit=420%2C420&amp;ssl=1">
+<meta property="og:image:width" content="420">
+<meta property="og:image:height" content="420">
+<meta property="og:image:alt" content="">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:text:title" content="15-150 Principles of Functional Programming (Fall 2017)">
+<meta name="twitter:image" content="https://i0.wp.com/gisellereis.com/wp-content/uploads/2016/05/avatar.png?fit=240%2C240&amp;ssl=1">
+<meta name="twitter:card" content="summary">
+
+<!-- End Jetpack Open Graph Tags -->
+<link rel="icon" href="https://i0.wp.com/gisellereis.com/wp-content/uploads/2016/05/avatar.png?fit=32%2C32&amp;ssl=1" sizes="32x32">
+<link rel="icon" href="https://i0.wp.com/gisellereis.com/wp-content/uploads/2016/05/avatar.png?fit=192%2C192&amp;ssl=1" sizes="192x192">
+<link rel="apple-touch-icon" href="https://i0.wp.com/gisellereis.com/wp-content/uploads/2016/05/avatar.png?fit=180%2C180&amp;ssl=1">
+<meta name="msapplication-TileImage" content="https://i0.wp.com/gisellereis.com/wp-content/uploads/2016/05/avatar.png?fit=270%2C270&amp;ssl=1">
+<style type="text/css" id="wp-custom-css">table, tr, td {
+    border: none;
+}</style><script src="https://gisellereis.com/wp-includes/js/wp-emoji-release.min.js?ver=6.3.8" defer=""></script></head>
+
+<body class="page-template page-template-page-clean page-template-page-clean-php page page-id-518 custom-background wp-embed-responsive">
+<div id="page" class="site">
+	<div class="site-inner">
+		<a class="skip-link screen-reader-text" href="#content">
+			Skip to content		</a>
+
+		<header id="masthead" class="site-header">
+			<div class="site-header-main">
+				<div class="site-branding">
+					
+											<p class="site-title"><a href="https://gisellereis.com/" rel="home">Giselle Reis</a></p>
+												<p class="site-description">Just another human being</p>
+									</div><!-- .site-branding -->
+
+									<button id="menu-toggle" class="menu-toggle" aria-expanded="false">Menu</button>
+
+					<div id="site-header-menu" class="site-header-menu">
+													<nav id="site-navigation" class="main-navigation" aria-label="Primary Menu" aria-expanded="false">
+								<div class="menu-main-menu-container"><ul id="menu-main-menu" class="primary-menu"><li id="menu-item-8" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-8"><a href="https://gisellereis.com/">About me</a></li>
+<li id="menu-item-329" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-329"><a href="https://gisellereis.com/blog/">Blog</a></li>
+<li id="menu-item-628" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-628"><a href="https://gisellereis.com/courses/">Courses</a></li>
+<li id="menu-item-323" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-323"><a href="https://gisellereis.com/quick-cv/">Quick CV</a></li>
+<li id="menu-item-353" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-353" aria-haspopup="true"><a href="https://gisellereis.com/research/">Research</a><button class="dropdown-toggle" aria-expanded="false"><span class="screen-reader-text">expand child menu</span></button>
+<ul class="sub-menu">
+	<li id="menu-item-336" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-336"><a href="https://gisellereis.com/publications/">Publications</a></li>
+	<li id="menu-item-357" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-357"><a href="https://gisellereis.com/talks/">Talks</a></li>
+	<li id="menu-item-366" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-366"><a href="https://gisellereis.com/projects/">Projects</a></li>
+</ul>
+</li>
+</ul></div>							</nav><!-- .main-navigation -->
+						
+											</div><!-- .site-header-menu -->
+							</div><!-- .site-header-main -->
+
+											<div class="header-image">
+					<a href="https://gisellereis.com/" rel="home">
+						<img src="https://gisellereis.com/wp-content/uploads/2016/03/cropped-tiny_me-1.jpg" width="1200" height="288" alt="Giselle Reis" decoding="async" sizes="(max-width: 709px) 85vw, (max-width: 909px) 81vw, (max-width: 1362px) 88vw, 1200px" srcset="https://i0.wp.com/gisellereis.com/wp-content/uploads/2016/03/cropped-tiny_me-1.jpg?w=1200&amp;ssl=1 1200w, https://i0.wp.com/gisellereis.com/wp-content/uploads/2016/03/cropped-tiny_me-1.jpg?resize=300%2C72&amp;ssl=1 300w, https://i0.wp.com/gisellereis.com/wp-content/uploads/2016/03/cropped-tiny_me-1.jpg?resize=768%2C184&amp;ssl=1 768w, https://i0.wp.com/gisellereis.com/wp-content/uploads/2016/03/cropped-tiny_me-1.jpg?resize=1024%2C246&amp;ssl=1 1024w" fetchpriority="high">					</a>
+				</div><!-- .header-image -->
+					</header><!-- .site-header -->
+
+		<div id="content" class="site-content">
+
+<div id="primary" class="content-area">
+	<main id="main" class="site-main">
+		
+<article id="post-518" class="post-518 page type-page status-publish hentry">
+	<header class="entry-header">
+		<h1 class="entry-title">15-150 Principles of Functional Programming (Fall 2017)</h1>	</header><!-- .entry-header -->
+
+	
+	<div class="entry-content">
+		<p><strong>Description:</strong><br>
+This course will teach functional programming. More than another programming language, this is another approach to problem solving. You will learn how to write code that is, at the same time, a definition and an algorithm, and to prove this code correct.</p>
+<hr>
+<p><strong>Lectures:</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sun-Tue &nbsp; 15:00 ~ 16:20&nbsp; (CMB 1064)<br>
+<strong>Recitations:</strong>&nbsp;&nbsp; Thu&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 15:00 ~ 16:20&nbsp; (CMB 2035)<br>
+<strong>Units:</strong> 10<br>
+<strong>Prereq:</strong> (21127 or 15151) and (15112)</p>
+<p><strong>Piazza:&nbsp;</strong><a href="http://piazza.com/cmu/fall2017/15150q" target="_blank" rel="noopener"><span id="class-homepage-link" class="hideForTrial">piazza.com/cmu/fall2017/15150q</span></a> (important announcements will be posted there)<strong>&nbsp;</strong><br>
+<span id="class-link" class="hideForTrial"></span><strong>Autolab</strong><strong>: </strong><a href="https://autolab.andrew.cmu.edu/courses/15150q-f17" target="_blank" rel="noopener">https://autolab.andrew.cmu.edu/courses/15150q-f17</a><strong><br>
+</strong></p>
+<p><strong>Instructor:</strong> Giselle Reis<br>
+<strong>Office:</strong> CMU-Q 1008<br>
+<strong>Office hours:</strong> by appointment<br>
+<strong>e-mail:</strong> <a href="mailto:giselle@cmu.edu">giselle@cmu.edu</a></p>
+<p><strong>Teaching Assistant (voluntary):</strong> Sharjeel Khan<br>
+<strong>Office:</strong> CMU-Q 1210<br>
+<strong>Office hours:</strong> whenever the office door is open, or send an e-mail to schedule an appointment<br>
+<strong>e-mail:</strong> <a href="mailto:smkhan@cmu.edu">smkhan@cmu.edu</a></p>
+<p><strong>Teaching Assistant:</strong> Abdulrahman Alfayad<br>
+<strong>Office:</strong> ARC<br>
+<strong>Office hours:</strong> Mondays 15:00 ~ 16:30, Wednesdays 16:00 ~ 16:30, Saturdays 08:00 ~ 12:00 and by appointment<br>
+<strong>e-mail:</strong> <a href="mailto:afayad@qatar.cmu.edu">afayad@qatar.cmu.edu</a></p>
+<hr>
+<p><strong>Setting up your programming environment:</strong><br>
+The functional programming language we will use for this course is in the <a href="https://en.wikipedia.org/wiki/ML_(programming_language)" target="_blank" rel="noopener">ML</a> (for Meta-Language) family and it is called SML (Standard ML). There are different compilers for (i.e. implementations of) SML, but your code will be tested with <a href="http://www.smlnj.org/" target="_blank" rel="noopener">Standard ML of New Jersey</a> (or SML/NJ) version 110.81.<br>
+You can use SML/NJ in one of two ways:<br>
+1. <em>On CMU’s machines</em>: All machines should have SML/NJ installed, so you can use it by simply ssh-ing them (type ‘ssh your_andrew_id@unix.qatar.cmu.edu’ in a terminal and press enter).<br>
+2. <em>On your machine</em>: Go to <a href="http://www.smlnj.org/" target="_blank" rel="noopener">http://www.smlnj.org/</a> to download the files and follow the installation instruction for your operating system. Having a local installation is convenient since you will not need to rely on a good internet connection and you can compile local files edited on your favorite <a href="https://en.wikipedia.org/wiki/Comparison_of_text_editors" target="_blank" rel="noopener">text editor</a>. I recommend vim or emacs (both can be used in a terminal, and remember to keep an eye on the status bar at the bottom of the screen).</p>
+<p><em>emacs</em><br>
+If you are using emacs, there is an sml-mode where you can edit your file and run it interactively. To install, see <a href="http://elpa.gnu.org/packages/sml-mode.html" target="_blank" rel="noopener">http://elpa.gnu.org/packages/sml-mode.html</a>. Here are a few useful commands (C-x means hit Ctrl+x):<br>
+– C-x C-f : open a file (if this is a .sml file and sml-mode is installed, you should see (SML) on the status bar)<br>
+– C-space : select a text region<br>
+– C-x C-c : exit emacs<br>
+Additionally, the following commands can be used to interact with the repl<br>
+– C-c C-l : load the file in an sml repl (first time asks the name of the sml command used)<br>
+– C-x ` : find the next error (` is the grave accent key. On my keyboard layout, I need to press this key + space to actually type it.)<br>
+– C-c C-b : send selected region to sml repl</p>
+<p><em>vim</em><br>
+As far as I know, there is no sml integration with vim, but this is a good text editor which I use on a daily basis. Vim has three main modes: command, insert or visual. By default, it starts on command mode. You can enter insert mode (for editing) by typing i and visual mode (for selecting) by typing v. Hitting ESC will return to command mode. Here are a few useful commands:<br>
+– i : enter insert mode<br>
+– ESC : return to command mode<br>
+– :w : write file (aka save)<br>
+– :q : quit vim</p>
+<p>As for the rest, you can find a million resources online, so just google it 😉</p>
+<p><strong>References:</strong><br>
+– <a href="http://sml-family.org/Basis/index.html" target="_blank" rel="noopener">SML Basis Library</a><br>
+– <a href="http://www.cs.cmu.edu/~rwh/isml/book.pdf" target="_blank" rel="noopener">SML Book</a><br>
+– the internet</p>
+<hr>
+<p><strong>Grading:<br>
+</strong><em>Homework:</em> 45% (9 x 5%)<br>
+– Due on Thursdays before lab (i.e. 14:59)<br>
+– May contain written and programming parts<br>
+– To be solved individually<br>
+– Evaluated based on:<br>
+* Correct type-checking<br>
+* Correct functionality<br>
+* Presence of structured comments (type, description, requires/ensures)<br>
+* Presence of test-cases<br>
+* <a href="http://web2.qatar.cmu.edu/~greis/style.pdf" target="_blank" rel="noopener">Well-written code</a><br>
+<em>Project:</em> 30% (2 x 15%)<br>
+– Involves programming and documenting the solution<br>
+– Evaluated on the basis of correctness, clarity and elegance (no typos and no bad grammar).<br>
+<em>Participation:</em> 5%<br>
+– Attending labs.<br>
+– Asking and answering questions and contributing to discussions in class.<br>
+– Participating on discussions on Piazza.<br>
+– Using LaTeX for assignments.<br>
+<em>Final exam:</em> 20%</p>
+<p><strong>Schedule (subject to change):</strong><br>
+<iframe src="https://docs.google.com/spreadsheets/d/1EpFTs_4x5ZvE5Yj2Pf3_OBXUFr17mhVtJT_4bZdfB_I/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false" width="50%" height="1100"></iframe></p>
+<p><strong>Academic integrity:</strong><br>
+You are expected to comply with the <a href="http://www.cmu.edu/policies/student-and-student-life/academic-integrity.html" target="_blank" rel="noopener">university policy on academic integrity</a> (see also <a href="http://www.cmu.edu/student-affairs/theword/comm_standards/standards.html" target="_blank" rel="noopener">The Word</a> and <a href="http://www.cmu.edu/academic-integrity/understanding/cmu.html" target="_blank" rel="noopener">Understanding Academic Integrity</a>).<br>
+Collaboration is regulated by the <em>whiteboard policy</em>: you can bounce ideas about a homework with other students, but when it comes to typing it down for submission, you are on your own. You are not allowed to use notes, files, pictures, etc, from any previous discussion nor previous versions of this course.<br>
+And remember not to ignore your inner voice when it says “That’s probably not the best decision…”.</p>
+<p><strong>An Invitation to Students with Learning Disabilities:</strong><br>
+Carnegie Mellon University is committed to providing reasonable accommodations for all persons with disabilities. To access accommodation services you are expected to initiate the request and submit a Voluntary Disclosure of Disability Form to the office of Health &amp; Wellness or CaPS-Q. In order to receive services/accommodations, verification of a disability is required as recommended in writing by a doctor, licensed psychologist or psycho-educational specialist. The office of Health &amp; Wellness, CaPS-Q and Office of Disability Resources in Pittsburgh will review the information you provide. All information will be considered confidential and only released to appropriate persons on a need to know basis.</p>
+<p>Once the accommodations have been approved, you will be issued a Summary of Accommodations Memorandum documenting the disability and describing the accommodation. You are responsible for providing the Memorandum to your professors at the beginning of each semester.</p>
+<p><strong>Take Care of Yourself:</strong><br>
+Do your best to maintain a healthy lifestyle this semester by eating well, exercising, getting enough sleep and taking some time to relax. This will help you achieve your goals and cope with stress.</p>
+<p>All of us benefit from support during times of struggle. You are not alone. There are many helpful resources available on campus and an important part of the college experience is learning how to ask for help. Asking for support sooner rather than later is often helpful.</p>
+<p>If you or anyone you know experiences any academic stress, difficult life events, or feelings like anxiety or depression, we strongly encourage you to seek support. Counseling and Psychological Services (CaPS-Q) is here to help: call&nbsp;4454 8525 or make an appointment to see the counselor by emailing student-counselling@qatar.cmu.edu . Consider reaching out to a friend, faculty or family member you trust for help.</p>
+<p>If you or someone you know is feeling suicidal or in danger of self-harm, call someone immediately, day or night at 5554 7913.<br>
+If the situation is life threatening, call 999.</p>
+	</div><!-- .entry-content -->
+
+	
+</article><!-- #post-518 -->
+
+	</main><!-- .site-main -->
+
+	
+</div><!-- .content-area -->
+
+
+	<aside id="secondary" class="sidebar widget-area">
+		<section id="text-2" class="widget widget_text"><h2 class="widget-title">Whereabouts</h2>			<div class="textwidget"><p>Associate Professor at CMU-Qatar (office 1008). Doha, Qatar.</p>
+</div>
+		</section><section id="search-2" class="widget widget_search">
+<form role="search" method="get" class="search-form" action="https://gisellereis.com/">
+	<label>
+		<span class="screen-reader-text">
+			Search for:		</span>
+		<input type="search" class="search-field" placeholder="Search …" value="" name="s">
+	</label>
+	<button type="submit" class="search-submit"><span class="screen-reader-text">
+		Search	</span></button>
+</form>
+</section>
+		<section id="recent-posts-2" class="widget widget_recent_entries">
+		<h2 class="widget-title">Recent Posts</h2><nav aria-label="Recent Posts">
+		<ul>
+											<li>
+					<a href="https://gisellereis.com/2024/07/inteligencia-artificial/">Inteligência Artificial</a>
+									</li>
+											<li>
+					<a href="https://gisellereis.com/2022/10/sobre-debates-produtivos/">Sobre debates produtivos</a>
+									</li>
+											<li>
+					<a href="https://gisellereis.com/2021/11/lecture-notebook/">Lecture Notebook</a>
+									</li>
+											<li>
+					<a href="https://gisellereis.com/2021/04/10-anos-brasil/">10 years away from Brazil / 10 anos fora do Brasil</a>
+									</li>
+											<li>
+					<a href="https://gisellereis.com/2020/12/food-shelter-and-companionship/">Food, shelter, and companionship</a>
+									</li>
+					</ul>
+
+		</nav></section>	</aside><!-- .sidebar .widget-area -->
+
+		</div><!-- .site-content -->
+
+		<footer id="colophon" class="site-footer">
+							<nav class="main-navigation" aria-label="Footer Primary Menu">
+					<div class="menu-main-menu-container"><ul id="menu-main-menu-1" class="primary-menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-8"><a href="https://gisellereis.com/">About me</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-329"><a href="https://gisellereis.com/blog/">Blog</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-628"><a href="https://gisellereis.com/courses/">Courses</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-323"><a href="https://gisellereis.com/quick-cv/">Quick CV</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-353" aria-haspopup="true"><a href="https://gisellereis.com/research/">Research</a><button class="dropdown-toggle" aria-expanded="false"><span class="screen-reader-text">expand child menu</span></button>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-336"><a href="https://gisellereis.com/publications/">Publications</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-357"><a href="https://gisellereis.com/talks/">Talks</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-366"><a href="https://gisellereis.com/projects/">Projects</a></li>
+</ul>
+</li>
+</ul></div>				</nav><!-- .main-navigation -->
+			
+			
+			<div class="site-info">
+								<span class="site-title"><a href="https://gisellereis.com/" rel="home">Giselle Reis</a></span>
+								<a href="https://wordpress.org/" class="imprint">
+					Proudly powered by WordPress				</a>
+			</div><!-- .site-info -->
+		</footer><!-- .site-footer -->
+	</div><!-- .site-inner -->
+</div><!-- .site -->
+
+<script src="https://gisellereis.com/wp-content/plugins/jetpack/jetpack_vendor/automattic/jetpack-image-cdn/dist/image-cdn.js?minify=false&amp;ver=132249e245926ae3e188" id="jetpack-photon-js"></script>
+<script id="collapseomatic-js-js-before">
+const com_options = {"colomatduration":"fast","colomatslideEffect":"slideFade","colomatpauseInit":"","colomattouchstart":""}
+</script>
+<script src="https://gisellereis.com/wp-content/plugins/jquery-collapse-o-matic/js/collapse.js?ver=1.7.2" id="collapseomatic-js-js"></script>
+<script defer="" src="https://stats.wp.com/e-202625.js" id="jetpack-stats-js"></script>
+<script id="jetpack-stats-js-after">
+_stq = window._stq || [];
+_stq.push([ "view", {v:'ext',blog:'108915519',post:'518',tz:'-4',srv:'gisellereis.com',j:'1:12.4.1'} ]);
+_stq.push([ "clickTrackerInit", "108915519", "518" ]);
+</script>
+
+
+
+
+
+
+<img src="https://pixel.wp.com/g.gif?v=ext&amp;blog=108915519&amp;post=518&amp;tz=-4&amp;srv=gisellereis.com&amp;j=1%3A12.4.1&amp;host=gisellereis.com&amp;ref=&amp;fcp=750&amp;rand=0.0927352945305997" alt="" width="6" height="5" id="wpstats"></body></html>

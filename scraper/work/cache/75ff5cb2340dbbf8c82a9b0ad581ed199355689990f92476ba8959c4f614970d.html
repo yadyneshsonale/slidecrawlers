@@ -1,0 +1,290 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head>
+    
+      <title>CS 215</title>
+    
+      <link rel="shortcut icon" href="/favicon.ico">
+      <meta name="robots" content="index,nofollow">
+      <link rel="stylesheet" type="text/css" href="/Brander?f=Skin.css&amp;v=2tx3">
+    
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta name="description" content="Web word processing and spreadsheets">
+
+    
+      
+<style>
+BODY, P, DIV, H1, H2, H3, H4, H5, H6, ADDRESS, OL, UL, TITLE, TD, OPTION, SELECT {
+ font-family: Verdana;
+ 
+}
+
+BODY, P, DIV, ADDRESS, OL, UL, LI, TITLE, TD, OPTION, SELECT {  
+  font-size: 10.0pt;
+  margin-top:0pt;  
+  margin-bottom:0pt;  
+} 
+
+BODY, P {
+  margin-left:0pt; 
+  margin-right:0pt;
+}
+
+BODY {
+  line-height: ;
+
+  margin: 6px;
+  padding: 0px;
+}
+
+h6 { font-size: 10pt }
+h5 { font-size: 11pt }
+h4 { font-size: 12pt }
+h3 { font-size: 13pt }
+h2 { font-size: 14pt }
+h1 { font-size: 16pt }
+
+blockquote {padding: 10px; border: 1px #DDDDDD dashed }
+
+a img {border: 0}
+
+</style>
+
+
+    
+
+    
+
+
+  <script>
+      var RedirectMessage = "";
+      
+      function ShowMessageIfAny() {
+        if (RedirectMessage.length > 0) {
+          alert(RedirectMessage);
+        }
+
+        
+      }
+      
+      function HideFileMenu() {
+        if (typeof(window.parent) != "undefined" && 
+            window.parent != null && 
+            typeof(window.parent.HideMenus) != "undefined") {
+          window.parent.HideMenus(true);
+        }
+      }
+  </script>
+</head>
+
+<body topmargin="0" rightmargin="0" leftmargin="0" bottommargin="0" style="margin: 0px; padding: 0px; " onclick="HideFileMenu();" onload="ShowMessageIfAny();">
+
+
+
+<center>
+<h1>CS 215: Data Analysis and Interpretation </h1>
+</center>
+  
+
+
+<div style="padding: 8px">
+  
+<blockquote style="BACKGROUND-COLOR:#deebf1">
+<h4>
+	Instructor: <a href="http://www.cse.iitb.ac.in/~ganesh" target="_blank">Ganesh Ramakrishnan</a> 
+  </h4>
+<b>TAs:</b> <a href="http://www.cse.iitb.ac.in/~amanmadaan" target="_blank">Aman Madaan</a>, <a href="http://www.cse.iitb.ac.in/~pankajsi/" target="_blank">Pankaj Singh</a>,
+<a href="http://www.cse.iitb.ac.in/~amangour" target="_blank">Aman Gour</a>,
+<a href="http://www.cse.iitb.ac.in/~bijoy" target="_blank">Bijoy Singh Kochar,</a>
+<a href="http://www.cse.iitb.ac.in/~samkit" target="_blank">Samkit Shah</a>
+<a href="http://www.cse.iitb.ac.in/~Arpan" target="_blank">Arpan Kumar</a>
+<a href="http://www.cse.iitb.ac.in/~chinmaym" target="_blank">Chinmay Mhatre</a>
+<br>
+
+</blockquote>
+
+
+
+   
+    <blockquote style="BACKGROUND-COLOR:#eaeff6">
+
+<h4>
+Online Notes
+</h4>
+<ul>
+<li>  <a href="calendar.html">Calendar along with handwritten notes</a> 
+</li><li><a href="notes/classNotes/combinedNotes.pdf">Main lecture notes from class</a>. Other lecture notes can be found in <a href="notes/classNotes/">this</a> directory. Please <a href="mailto:ganesh@cse.iitb.ac.in">email me</a> for login and password.
+</li><li><a href="notes/exercises/problems.pdf">Exercises (including those outlined in the class)</a> 
+</li><li> Assignments: To be posted on moodle 
+</li><li>  <a href="https://docs.google.com/spreadsheet/ccc?key=0ApGjHieOqvTAdDJrZlJWUDdFU0lpUVdIZmVsTXJVa0E#gid=0">List of applets</a> for illustration of concepts taught in class.
+</li></ul>
+ 
+<h4>
+Code and Datasets
+</h4>
+<ul>
+<li> <b>Scilab code</b>: <a href="http://scilab.in/textbook_run/291">Scilab code</a> associated with the primary textbook [<a href="#CITERoss" name="Ross">Ross </a>]. You can download the local copy of the <a href="code/scilab_code.zip">scilab code</a> and a local copy of the <a href="code/scilab_code_description.pdf">scilab code description</a>. The code has been reformated and reorganized for compatibility with Aakash tablets in both tar.gz and zip formats <a href="code/aakash_code">here</a>. Somewhat detailed introductory notes on scilab can be downloaded <a href="code/Scilabnotes.pdf">here</a>.
+
+
+</li><li>  <b>Dataset1 for Assignments</b>: <a href="HungamaBKDec11LR.pdf">Sample statistical report</a> and <a href="data/hungama_data.xlsx">all data from the report extracted into spreadsheets</a> (with help from <a href="http://www.ida.ing.tu-bs.de/home/mitarbeiter/tamal_das/">Tamal Das</a>). The <a href="HUNGaMATrainingManual.pdf">survey methodology</a>, the <a href="http://www.hungamaforchange.org/HUNGaMASurveyTool-Household">household survey tool</a> and the <a href="http://www.hungamaforchange.org/HUNGaMASurveyTool-VillageandAWC">village survey tool</a> will be relevant to discussions in the class. 
+
+
+</li><li> <b>Dataset2 for illustration in class</b>: <a href="code/scilab_code/census_code/census_data/">The Census data for Thane district</a> along with associated code for reading the data. In particular, you can invoke <a href="code/scilab_code/census_code/census_data/loaddata.sce">loaddata.sce</a> that has all the commands.
+
+</li><li>  <b>Miscellaneous data</b>: You may listen to <a href="http://www.youtube.com/watch?v=U42zOfxzICs">this talk</a> making sense of tons of data (similar to <a href="http://www.techfest.org/home/event/Sainath">the invited Techfest talk</a>). The data that forms basis for these talks (as pointed out by P. Sainath himself) is listed below:
+<ul>
+<li> <a href="http://censusindia.gov.in/">Census of India</a>
+</li><li> <a href="http://en.wikipedia.org/wiki/National_Sample_Survey_Organisation">National Sample Survey Organisation</a>
+</li><li> <a href="http://indiabudget.nic.in/survey.asp">Economic survey of India</a> (available online year by year alongside the budget)
+</li><li> (More recently) <a href="www.pratirodh.com/pdf/human_development_report2011.pdf">India Human Development Report</a> brought out by a group set up by the Planning Commission
+</li><li> All the international comparisons are from: <a href="http://hdr.undp.org/en/reports/">United National Development Programme (UNDP) Human Development Report</a>. This is where the Human Development Index and rankings are anchored.
+</li><li>  The billionaire data is from <a href="forbes.com">forbes.com</a>
+</li><li> <a href="http://indiabudget.nic.in/es2011-12/estat1.pdf">Economic survey</a> (especially Table 1.17 on Page A22)
+</li><li> <a href="http://indiabudget.nic.in/index.asp">Union buget</a> annexure called  Statement of Revenue Foregone which allows you to see the writeoffs for mainly rich people by way of corporate direct income tax, custsoms duty and excise duty writeoffs.
+</li></ul>
+
+<br> 
+</li><li> You can find downloads specifically related to Aakash tablet <a href="aakash_downloads/">here</a>.
+  <br>
+</li><li>  We will borrow from and often refer to the <a href="http://www.cse.iitb.ac.in/~sohoni/IC102/">previous offering of this course</a> by <a href="http://www.cse.iitb.ac.in/~sohoni">Prof. Milind Sohoni</a>
+  <br>
+
+ 
+</li></ul></blockquote>
+
+
+
+   
+<blockquote style="BACKGROUND-COLOR:#fcccdd">
+  <h4>
+    <a name="Class Timings, Venue and Grading"></a>Class Timings, Venue and Grading
+  </h4>
+  <br>
+    <b>Time:</b> Monday (9:30-10:30), Tuesday (10:30-11:30), Thursday (11:30-12:30)
+  <br>
+    <b>Venue:</b> LCC301
+  <br>
+   <b>Office hours (for doubt clarifications):</b> Thursday, 2:00-4:00 PM
+    
+  <br>
+<b>Credit Requirements</b>
+Approximate credit structure
+<li>20% Mid-semester exam
+</li><li>40% End-semester exam
+</li><li>15% Programming assignments/project (team based)
+</li><li>15% Three quizzes 
+(best two of three quizzes used for grading.)
+</li><li>10% Team-based assignments (on piazza)</li>
+<!--
+<li>15% Three short surprise quizzes 
+(best two of three quizzes used for grading. All quizzes will be surprise and there will be no compensation for missed quizzes except under very special circumstances.)
+-->
+
+
+  <br>
+</blockquote>
+
+
+<br>
+<h4> Primary books </h4>
+<dl compact="">
+<dt>
+[<a name="Ross" href="#CITERoss"></a>
+<a href="#CITERoss" name="Ross">Ross</a>]</dt>
+<dd>
+<a href="http://www.amazon.com/Introduction-Probability-Statistics-Engineers-Scientists/dp/0125984723">Introduction to Probability and Statistics for Engineers and Scientists</a> by Sheldon M. Ross, Elsevier, New Delhi, 3rd edition (Indian).
+</dd>
+
+</dl>
+
+<h4> Supplementary books</h4>
+<dl compact="">
+<dt>
+[<a name="PRS" href="#PRS"></a>
+<a href="#PRS" name="PRS">PRS </a>]</dt>
+
+<dd>
+<li> Probability, Random Variables and Stochastic processes by Papoulis and Pillai, 4th Edition, Tata McGraw Hill Edition.
+</li></dd> 
+
+
+
+<dt>
+[<a name="FEL" href="#FEL"></a>
+<a href="#FEL" name="FEL">FEL </a>]</dt>
+
+<dd>
+<li> An Introduction to Probability Theory and Its Applications, Vol. 1, William Feller, 3rd edition, Wiley International
+</li></dd> 
+
+
+<dt>
+[<a name="HPS" href="#HPS"></a>
+<a href="#HPS" name="HPS">HPS </a>]</dt>
+
+<dd>
+<li> Introduction to Probability Theory, Paul. G. Hoel, Sidney Port, Charles Stone
+</li></dd> 
+
+
+
+</dl>
+
+
+    <br>
+  
+  
+
+  
+  <center><img alt="" src="http://www.cse.iitb.ac.in/%7Eganesh/images/byline.gif"></center>
+
+  
+
+</div>
+
+
+  <table width="100%" cellspacing="0" cellpadding="0" border="0" id="navigation">
+    <tbody><tr><td bgcolor="#676767"><img src="/images/blankdot.gif" height="1"></td></tr>
+    <tr><td align="center">
+      <table width="100%" cellspacing="0" cellpadding="8" border="0" style="direction: ltr"><tbody><tr>
+        <td class="smalltext" style="padding-top:4px; direction: ltr">
+        </td>
+
+        <td class="smalltext" style="padding-top:4px; direction: ltr" align="right">
+          <!-- a class=smalllink target=_blank href="http://digg.com/submit?phase=2&url=http%3A%2F%2Fdocs.google.com%2FDoc%3Fid%3Dddhrv88f_9c2gcw3"><b>Digg this</b></a><span class=graytext> | </span -->
+
+          
+          
+        </td>
+      </tr></tbody></table>
+    </td></tr>
+   </tbody></table>
+
+
+
+
+<script>
+  
+    var urchinPage = "/View";
+  
+</script>
+
+<script src="https://ssl.google-analytics.com/urchin.js" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+  
+    _uacct="UA-18065-1";
+    _uanchor=1;
+    if (typeof(urchinPage) != "undefined" && 
+        urchinPage != null && urchinPage.length > 0) {
+      urchinTracker(urchinPage);
+    } else {  
+      urchinTracker();
+    }
+  
+</script>
+
+
+
+
+
+</body></html>

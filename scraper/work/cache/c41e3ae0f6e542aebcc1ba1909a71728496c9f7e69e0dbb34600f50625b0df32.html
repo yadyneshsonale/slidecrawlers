@@ -1,0 +1,1220 @@
+<!DOCTYPE html><html lang="en"><head>
+        <title>ECE 314 | Course Explorer</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link type="image/x-icon" href="https://cis-data.cis.techservices.illinois.edu/images/favicon.ico" rel="icon">
+        
+    
+        
+
+
+
+<script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-X7QVZSEF1K&amp;cx=c&amp;gtm=4e66a1"></script><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-52702852-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-52702852-2');
+</script>
+
+<link rel="stylesheet" href="/static/css/cis/cis.min.css">
+
+<!--[if lte IE 9]>
+    <script src="/static/bootstrap/common/html5shiv.min.js"></script>
+    <script src="/static/bootstrap/common/respond.js"></script>
+ <![endif]-->
+
+<script src="/static/js/cis.min.js"></script>
+
+
+
+
+
+    
+    
+        
+    
+
+    </head>
+    <body>
+        
+        
+        <noscript><div id="noscript-padding"></div></noscript>
+        
+        
+        <div id="wrap">
+            
+            
+            <div role="banner">
+    <div id="header-wrap">
+        <div id="header-container" class="container">
+            <div class="row">
+                <div id="header" class="span12 hidden-xs">
+                    <a id="header-title" href="http://illinois.edu/" target="_blank">University of Illinois Urbana-Champaign</a>
+                    <ul id="login-info" class="list-unstyled list-inline pull-right">
+                        <li><b>Hello Guest</b></li>
+                        <!--<li><a href="https://illinois.edu/fb/sec/2080949">Contact Us</a></li>-->
+                        <li>
+                            
+                                <a href="/login/oidc">Login</a>
+                            
+                            
+                        </li>
+                    </ul>
+                </div>
+                <div id="header-mobile" class="span12 visible-xs-block">
+                    <a id="header-title" href="http://illinois.edu/" target="_blank">University of Illinois Urbana-Champaign</a>
+                    <br>
+                    <ul id="login-info" class="list-unstyled list-inline">
+                        <li><b>Hello Guest</b></li>
+                        <!--<li><a href="https://illinois.edu/fb/sec/2080949">Contact Us</a></li>-->
+                        <li>
+                            
+                                <a href="/login/oidc">Login</a>
+                            
+                             
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>    
+    <div id="header-brand-wrap" class="hidden-xs">
+        <div class="container">
+            <div class="row">
+                <div id="header-brand" class="col-xs-6">
+                    <a target="_blank" href="http://illinois.edu">
+                        <img alt="Illinois logo" src="https://cis-data.cis.techservices.illinois.edu/images/Illinois-Logo.png">
+                    </a>
+                    <a id="header-brand-title" class="noxs" href="/">Course Explorer</a>
+                </div>
+                <div id="header-brand" class="col-xs-6 easy-autocomplete" style="padding-top: 15px;">
+                    <form id="subjectAutoJump-form" action="/schedule/subjectjump" class="form-inline pull-right" method="post">
+                        <div class="form-group">
+                            <label id="cb1-label" for="subjectAutoJump" class="sr-only">Enter and go to subject for the enrolling term</label>
+                            <div class="easy-autocomplete" style="width: 255px;"><input id="subjectAutoJump" class="form-control" name="subjectAutoJump" placeholder="Go to subject..." role="combobox" aria-labelledby="cb1-label" aria-autocomplete="list" aria-owns="subject-jump-list" aria-readonly="false" autocomplete="off"><div class="easy-autocomplete-container" id="eac-container-subjectAutoJump"><ul id="subject-jump-list" tabindex="-1" role="listbox" aria-hidden="true" class="cb_list"></ul></div></div>
+                        </div>
+                        <button type="submit" class="btn btn-default">Go!</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="header-brand-wrap-xs" class="visible-xs-block">            
+        <div class="container">
+            <div class="row">
+                <div id="header-brand" class="span12">
+                    <a id="header-brand-title-xs" href="/">Course Explorer</a>
+                </div>
+            </div>    
+        </div>
+    </div>
+</div>
+            
+            
+            <div class="container">
+
+
+
+
+
+
+
+
+
+
+
+
+                
+                <div id="app-main-nav" class="navbar navbar-default" role="navigation" aria-label="primary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+    </div>
+    
+    <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <ul class="nav navbar-nav nav-justified">
+            
+            
+                
+                
+                    <li><a href="/">Home</a></li>
+                
+            
+                
+            
+                
+                    <li class="navbar-text">Schedule</li>
+                
+                
+            
+                
+            
+                
+                
+                    <li><a href="/gened/DEFAULT/DEFAULT">GenEd&nbsp;REQs</a></li>
+                
+            
+                
+            
+                
+                
+                    <li><a href="/search/form">Search</a></li>
+                
+            
+                
+            
+                
+                
+                    <li><a href="/resources">Resources</a></li>
+                
+                
+            
+            
+        </ul>
+        
+    </div> 
+</div> 
+
+
+
+
+
+<script type="text/javascript">
+    var sectionDataObj = [{"status":"<span class=\"hide\">5<\/span><span class=\"sr-only\">section unknown<\/span><img src=\"https:\/\/cis-data.cis.techservices.illinois.edu\/images\/sectionUnknown.png\" title=\"Unknown\" alt=\"Unknown\"\/>","favorite":"<a href=\"\/login\/refresh?r=\/schedule\/2017\/fall\/ECE\/314\" data-toggle=\"popover\" data-trigger=\"hover\" data-content=\"Add this Section to a personalized favorites list.  Must be logged in.\"><span class=\"glyphicon glyphicon-star-empty app-font16 aria-label=Activate to add to favorites. \"><\/span> <\/a>","crn":"66503","type":"<div class=\"app-meeting\">Laboratory<\/div>","section":"<div class=\"app-meeting\">A  <\/div>","time":"<span class=\"hide\">0900<\/span><div class=\"app-meeting\">09:00AM - 10:50AM<\/div>","day":"<div class=\"app-meeting\">R      <\/div>","location":"<div class=\"app-meeting\">2022 Electrical & Computer Eng Bldg<\/div>","instructor":"<div class=\"app-meeting\">Hajek, B<br \/><\/div>","availability":"UNKNOWN","credit":null,"sectionTitle":null,"sectionDescription":null,"courseDescription":null,"sectionDegreeNotes":null,"courseDegreeNotes":null,"specialApproval":"","approvalCode":null,"sectionFee":"","sectionDateRange":"Meets 08\/28\/17-12\/13\/17","partOfTerm":"1","info":null,"corequest":null,"restricted":"Not intended for Graduate - Urbana-Champaign.<br\/>"},{"status":"<span class=\"hide\">5<\/span><span class=\"sr-only\">section unknown<\/span><img src=\"https:\/\/cis-data.cis.techservices.illinois.edu\/images\/sectionUnknown.png\" title=\"Unknown\" alt=\"Unknown\"\/>","favorite":"<a href=\"\/login\/refresh?r=\/schedule\/2017\/fall\/ECE\/314\" data-toggle=\"popover\" data-trigger=\"hover\" data-content=\"Add this Section to a personalized favorites list.  Must be logged in.\"><span class=\"glyphicon glyphicon-star-empty app-font16 aria-label=Activate to add to favorites. \"><\/span> <\/a>","crn":"66505","type":"<div class=\"app-meeting\">Laboratory<\/div>","section":"<div class=\"app-meeting\">B  <\/div>","time":"<span class=\"hide\">1100<\/span><div class=\"app-meeting\">11:00AM - 12:50PM<\/div>","day":"<div class=\"app-meeting\">R      <\/div>","location":"<div class=\"app-meeting\">2022 Electrical & Computer Eng Bldg<\/div>","instructor":"<div class=\"app-meeting\">Hajek, B<br \/><\/div>","availability":"UNKNOWN","credit":null,"sectionTitle":null,"sectionDescription":null,"courseDescription":null,"sectionDegreeNotes":null,"courseDegreeNotes":null,"specialApproval":"","approvalCode":null,"sectionFee":"","sectionDateRange":"Meets 08\/28\/17-12\/13\/17","partOfTerm":"1","info":null,"corequest":null,"restricted":"Not intended for Graduate - Urbana-Champaign.<br\/>"},{"status":"<span class=\"hide\">5<\/span><span class=\"sr-only\">section unknown<\/span><img src=\"https:\/\/cis-data.cis.techservices.illinois.edu\/images\/sectionUnknown.png\" title=\"Unknown\" alt=\"Unknown\"\/>","favorite":"<a href=\"\/login\/refresh?r=\/schedule\/2017\/fall\/ECE\/314\" data-toggle=\"popover\" data-trigger=\"hover\" data-content=\"Add this Section to a personalized favorites list.  Must be logged in.\"><span class=\"glyphicon glyphicon-star-empty app-font16 aria-label=Activate to add to favorites. \"><\/span> <\/a>","crn":"68868","type":"<div class=\"app-meeting\">Laboratory<\/div>","section":"<div class=\"app-meeting\">C  <\/div>","time":"<span class=\"hide\">1300<\/span><div class=\"app-meeting\">01:00PM - 02:50PM<\/div>","day":"<div class=\"app-meeting\">R      <\/div>","location":"<div class=\"app-meeting\">2022 Electrical & Computer Eng Bldg<\/div>","instructor":"<div class=\"app-meeting\">Hajek, B<br \/><\/div>","availability":"UNKNOWN","credit":null,"sectionTitle":null,"sectionDescription":null,"courseDescription":null,"sectionDegreeNotes":null,"courseDegreeNotes":null,"specialApproval":"","approvalCode":null,"sectionFee":"","sectionDateRange":"Meets 08\/28\/17-12\/13\/17","partOfTerm":"1","info":null,"corequest":null,"restricted":"Not intended for Graduate - Urbana-Champaign.<br\/>"}];
+    var studentRole = false;
+    var showStatus = false;
+    //console.log(sectionDataObj);
+</script> 
+
+<div id="app-content" role="main">
+    
+    
+    
+    
+    
+    
+        
+        
+        
+    
+    
+    
+    
+    <ul class="breadcrumb app-breadcrumb" role="navigation" aria-label="breadcrumbs">
+        <li><a href="/schedule">schedule</a></li>
+        <li><a href="/schedule/2017">2017</a></li>
+        <li><a href="/schedule/2017/fall">fall</a></li>
+        <li><a href="/schedule/2017/fall/ECE">ECE</a></li>
+        <li class="active">314</li>
+    </ul>
+    
+    <div class="row">
+        <div class="col-sm-12">
+
+            
+
+            <div class="lead app-table-lead" style="margin-bottom:2px;">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h1 class="app-inline">ECE 314</h1>
+                        <div class="app-text-engage pull-right">
+                            
+                            <span class="app-cap">fall 2017</span>
+                            
+                            <div class="pull-right app-text-focus" style="font-size: 12px;line-height:13px;padding-left:10px;">
+                                <div>&nbsp;</div>
+                                <div>All Classes</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                            
+            
+
+            
+    
+            
+                            
+            
+            
+
+            
+                            
+            <div id="app-course-info" class="row" app-label="course information">
+                <div class="col-sm-12">
+                    <span class="app-label app-text-engage">Probability in Engineering Lab</span>
+                    <ul class="pull-right list-inline list-unstyled">
+                        <li><a target="_BLANK" href="http://catalog.illinois.edu/courses-of-instruction/ece/">Course in Catalog</a></li>
+                        <li><a href="/schedule/terms/ECE/314?year=2017&amp;term=fall">List of Terms offered</a></li>
+                        
+                        <li>
+                            <a target="_BLANK" href="https://go.illinois.edu/RegisterForClasses" class="btn btn-xs app-btn-link" style="padding:0 3px;">
+                                Register for Classes
+                            </a>
+                        </li>
+                    </ul>    
+                </div>
+
+                
+                    
+                        
+                        
+                            <div class="col-sm-12">
+                                    <div id="app-final-exam" class="text-center">
+        <a id="final-exam-action" class="btn app-btn-special" role="button" aria-controls="final-exams" aria-expanded="true" data-ajaxpath="2017-fall-ECE-314">
+            Show Final Exam Schedule
+        </a>
+    </div> 
+    <div id="final-exams" class="well well-lg" style="display:none;" aria-expanded="false">
+        <div class="table-responsive">
+        <table id="final-exam-table" class="table table-condensed table-bordered">
+            <thead>
+                <tr>
+                    <th>Course</th>
+                    <th>Section</th>
+                    <th>CRN</th>
+                    <th>Date</th>
+                    <th>Day</th>
+                    <th>Start Time</th>
+                    <th>End Time</th>
+                    <th>Room</th>
+                    <th>Exam Type</th>
+                </tr>
+            </thead>
+        </table>
+        </div>
+    </div>
+
+                            </div>
+                        
+                    
+                            
+                  
+                <div class="col-sm-12">    
+                    
+
+    <p><b>Credit:</b> 1 hours.</p>                    
+    
+
+
+    
+        
+            <p>Designed to be taken concurrently with <a href="/schedule/terms/ECE/313">ECE 313</a>, Probability in Engineering Systems, to strengthen the students' understanding of the concepts in <a href="/schedule/terms/ECE/313">ECE 313</a> and their applications, through computer simulation and computation using the Python programming language. Topics include sequential hypothesis testing, parameter estimation, confidence intervals, Bloom filters, min hashing, load balancing, inference for Markov chains, PageRank algorithm, vector Gaussian distribution, contagion in networks, principle component method and linear regression for data analysis, investment portfolio analysis. </p>
+        
+        
+    
+
+
+    
+    
+        <p>Prerequisite: Concurrent enrollment in <a href="/schedule/terms/ECE/313">ECE 313</a> or one of: <a href="/schedule/terms/ECE/313">ECE 313</a>, <a href="/schedule/terms/IE/300">IE 300</a>, <a href="/schedule/terms/STAT/410">STAT 410</a>.</p>
+    
+
+
+
+    
+
+
+
+    
+
+    
+
+ 
+  
+
+                </div>    
+            </div>    
+            
+            
+            <div class="row">
+                <div class="col-sm-12">
+                    <a href="#toggleinfo" data-toggle="collapse" data-target="#toggle-info" aria-expanded="false" aria-controls="toggle-info">
+                        <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> Status Icon Legend
+                    </a>
+                    <ul class="pull-right list-inline list-unstyled app-margbot5">
+                        <li style="padding-right:0;">
+                            <a href="/user/student/favorites/2017/fall" class="btn btn-xs app-btn-link" style="padding:0; width:100px;">
+                                My Favorites
+                            </a>
+                        </li>
+                        <li style="padding-left:0;">
+                            <a href="/user/student/courselist/2017/fall" class="btn btn-xs app-btn-link" style="padding:0; width:100px;">
+                                My Schedule
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>    
+            <div id="toggle-info" class="collapse">
+                
+                <dl class="dl-horizontal">
+                    <dt><img src="https://cis-data.cis.techservices.illinois.edu/images/sectionClosed.png" alt="Closed"></dt>
+                    <dd>Section Status Closed</dd>
+                    <dt><img src="https://cis-data.cis.techservices.illinois.edu/images/sectionOpen.png" alt="Open"></dt>
+                    <dd>Section Status Open</dd>
+                    <dt><img src="https://cis-data.cis.techservices.illinois.edu/images/sectionPending.png" alt="Pending"></dt>
+                    <dd>Section Status Pending</dd>
+                    <dt><img src="https://cis-data.cis.techservices.illinois.edu/images/sectionRestricted.png" alt="Open (Restricted)"></dt>
+                    <dd>Section Status Open (Restricted)</dd>
+                    <dt><img src="https://cis-data.cis.techservices.illinois.edu/images/sectionUnknown.png" alt="Unknown"></dt>
+                    <dd>Section Status Unknown</dd>
+                </dl>
+            </div>
+          
+                <div class="clearfix" style="border-bottom:1px solid #ccc;margin-bottom:2px;">
+                    <span class="app-text-focus" style="vertical-align:-5px;"><b>Section Status updates every 10 minutes.</b></span>
+                    <ul class="pull-right list-inline list-unstyled" style="margin-bottom:2px;">
+                        <li>
+                            <div class="btn-group" role="group" aria-label="...">
+                                <button type="button" class="btn app-btn-dflt btn-xs disabled" id="expandAllTR">Show Section Details</button>
+                                <button type="button" class="btn app-btn-dflt btn-xs" id="collapseAllTR">Hide Section Details</button>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="btn-group">
+                                <button type="button" class="btn app-btn-dflt btn-xs dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                    
+                                    
+                                        
+                                    
+                                    ECE - All Classes 
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                                    
+                                        
+                                        <li role="presentation">
+                                            <a class="text-right" href="/schedule/2017/fall/ECE/110" tabindex="-1" role="menuitem">
+                                                ECE 110
+                                            </a>
+                                        </li>
+                                    
+                                        
+                                        <li role="presentation">
+                                            <a class="text-right" href="/schedule/2017/fall/ECE/120" tabindex="-1" role="menuitem">
+                                                ECE 120
+                                            </a>
+                                        </li>
+                                    
+                                        
+                                        <li role="presentation">
+                                            <a class="text-right" href="/schedule/2017/fall/ECE/199" tabindex="-1" role="menuitem">
+                                                ECE 199
+                                            </a>
+                                        </li>
+                                    
+                                        
+                                        <li role="presentation">
+                                            <a class="text-right" href="/schedule/2017/fall/ECE/200" tabindex="-1" role="menuitem">
+                                                ECE 200
+                                            </a>
+                                        </li>
+                                    
+                                        
+                                        <li role="presentation">
+                                            <a class="text-right" href="/schedule/2017/fall/ECE/205" tabindex="-1" role="menuitem">
+                                                ECE 205
+                                            </a>
+                                        </li>
+                                    
+                                        
+                                        <li role="presentation">
+                                            <a class="text-right" href="/schedule/2017/fall/ECE/206" tabindex="-1" role="menuitem">
+                                                ECE 206
+                                            </a>
+                                        </li>
+                                    
+                                        
+                                        <li role="presentation">
+                                            <a class="text-right" href="/schedule/2017/fall/ECE/210" tabindex="-1" role="menuitem">
+                                                ECE 210
+                                            </a>
+                                        </li>
+                                    
+                                        
+                                        <li role="presentation">
+                                            <a class="text-right" href="/schedule/2017/fall/ECE/211" tabindex="-1" role="menuitem">
+                                                ECE 211
+                                            </a>
+                                        </li>
+                                    
+                                        
+                                        <li role="presentation">
+                                            <a class="text-right" href="/schedule/2017/fall/ECE/220" tabindex="-1" role="menuitem">
+                                                ECE 220
+                                            </a>
+                                        </li>
+                                    
+                                        
+                                        <li role="presentation">
+                                            <a class="text-right" href="/schedule/2017/fall/ECE/297" tabindex="-1" role="menuitem">
+                                                ECE 297
+                                            </a>
+                                        </li>
+                                    
+                                        
+                                        <li role="presentation">
+                                            <a class="text-right" href="/schedule/2017/fall/ECE/298" tabindex="-1" role="menuitem">
+                                                ECE 298
+                                            </a>
+                                        </li>
+                                    
+                                        
+                                        <li role="presentation">
+                                            <a class="text-right" href="/schedule/2017/fall/ECE/304" tabindex="-1" role="menuitem">
+                                                ECE 304
+                                            </a>
+                                        </li>
+                                    
+                                        
+                                        <li role="presentation">
+                                            <a class="text-right" href="/schedule/2017/fall/ECE/310" tabindex="-1" role="menuitem">
+                                                ECE 310
+                                            </a>
+                                        </li>
+                                    
+                                        
+                                        <li role="presentation">
+                                            <a class="text-right" href="/schedule/2017/fall/ECE/311" tabindex="-1" role="menuitem">
+                                                ECE 311
+                                            </a>
+                                        </li>
+                                    
+                                        
+                                        <li role="presentation">
+                                            <a class="text-right" href="/schedule/2017/fall/ECE/313" tabindex="-1" role="menuitem">
+                                                ECE 313
+                                            </a>
+                                        </li>
+                                    
+                                        
+                                        <li role="presentation">
+                                            <a class="text-right" href="/schedule/2017/fall/ECE/314" tabindex="-1" role="menuitem">
+                                                ECE 314
+                                            </a>
+                                        </li>
+                                    
+                                        
+                                        <li role="presentation">
+                                            <a class="text-right" href="/schedule/2017/fall/ECE/316" tabindex="-1" role="menuitem">
+                                                ECE 316
+                                            </a>
+                                        </li>
+                                    
+                                        
+                                        <li role="presentation">
+                                            <a class="text-right" href="/schedule/2017/fall/ECE/329" tabindex="-1" role="menuitem">
+                                                ECE 329
+                                            </a>
+                                        </li>
+                                    
+                                        
+                                        <li role="presentation">
+                                            <a class="text-right" href="/schedule/2017/fall/ECE/330" tabindex="-1" role="menuitem">
+                                                ECE 330
+                                            </a>
+                                        </li>
+                                    
+                                        
+                                        <li role="presentation">
+                                            <a class="text-right" href="/schedule/2017/fall/ECE/333" tabindex="-1" role="menuitem">
+                                                ECE 333
+                                            </a>
+                                        </li>
+                                    
+                                        
+                                        <li role="presentation">
+                                            <a class="text-right" href="/schedule/2017/fall/ECE/340" tabindex="-1" role="menuitem">
+                                                ECE 340
+                                            </a>
+                                        </li>
+                                    
+                                        
+                                        <li role="presentation">
+                                            <a class="text-right" href="/schedule/2017/fall/ECE/342" tabindex="-1" role="menuitem">
+                                                ECE 342
+                                            </a>
+                                        </li>
+                                    
+                                        
+                                        <li role="presentation">
+                                            <a class="text-right" href="/schedule/2017/fall/ECE/343" tabindex="-1" role="menuitem">
+                                                ECE 343
+                                            </a>
+                                        </li>
+                                    
+                                        
+                                        <li role="presentation">
+                                            <a class="text-right" href="/schedule/2017/fall/ECE/350" tabindex="-1" role="menuitem">
+                                                ECE 350
+                                            </a>
+                                        </li>
+                                    
+                                        
+                                        <li role="presentation">
+                                            <a class="text-right" href="/schedule/2017/fall/ECE/374" tabindex="-1" role="menuitem">
+                                                ECE 374
+                                            </a>
+                                        </li>
+                                    
+                                        
+                                        <li role="presentation">
+                                            <a class="text-right" href="/schedule/2017/fall/ECE/380" tabindex="-1" role="menuitem">
+                                                ECE 380
+                                            </a>
+                                        </li>
+                                    
+                                        
+                                        <li role="presentation">
+                                            <a class="text-right" href="/schedule/2017/fall/ECE/385" tabindex="-1" role="menuitem">
+                                                ECE 385
+                                            </a>
+                                        </li>
+                                    
+                                        
+                                        <li role="presentation">
+                                            <a class="text-right" href="/schedule/2017/fall/ECE/391" tabindex="-1" role="menuitem">
+                                                ECE 391
+                                            </a>
+                                        </li>
+                                    
+                                        
+                                        <li role="presentation">
+                                            <a class="text-right" href="/schedule/2017/fall/ECE/395" tabindex="-1" role="menuitem">
+                                                ECE 395
+                                            </a>
+                                        </li>
+                                    
+                                        
+                                        <li role="presentation">
+                                            <a class="text-right" href="/schedule/2017/fall/ECE/396" tabindex="-1" role="menuitem">
+                                                ECE 396
+                                            </a>
+                                        </li>
+                                    
+                                        
+                                        <li role="presentation">
+                                            <a class="text-right" href="/schedule/2017/fall/ECE/397" tabindex="-1" role="menuitem">
+                                                ECE 397
+                                            </a>
+                                        </li>
+                                    
+                                        
+                                        <li role="presentation">
+                                            <a class="text-right" href="/schedule/2017/fall/ECE/398" tabindex="-1" role="menuitem">
+                                                ECE 398
+                                            </a>
+                                        </li>
+                                    
+                                        
+                                        <li role="presentation">
+                                            <a class="text-right" href="/schedule/2017/fall/ECE/402" tabindex="-1" role="menuitem">
+                                                ECE 402
+                                            </a>
+                                        </li>
+                                    
+                                        
+                                        <li role="presentation">
+                                            <a class="text-right" href="/schedule/2017/fall/ECE/408" tabindex="-1" role="menuitem">
+                                                ECE 408
+                                            </a>
+                                        </li>
+                                    
+                                        
+                                        <li role="presentation">
+                                            <a class="text-right" href="/schedule/2017/fall/ECE/411" tabindex="-1" role="menuitem">
+                                                ECE 411
+                                            </a>
+                                        </li>
+                                    
+                                        
+                                        <li role="presentation">
+                                            <a class="text-right" href="/schedule/2017/fall/ECE/414" tabindex="-1" role="menuitem">
+                                                ECE 414
+                                            </a>
+                                        </li>
+                                    
+                                        
+                                        <li role="presentation">
+                                            <a class="text-right" href="/schedule/2017/fall/ECE/415" tabindex="-1" role="menuitem">
+                                                ECE 415
+                                            </a>
+                                        </li>
+                                    
+                                        
+                                        <li role="presentation">
+                                            <a class="text-right" href="/schedule/2017/fall/ECE/417" tabindex="-1" role="menuitem">
+                                                ECE 417
+                                            </a>
+                                        </li>
+                                    
+                                        
+                                        <li role="presentation">
+                                            <a class="text-right" href="/schedule/2017/fall/ECE/420" tabindex="-1" role="menuitem">
+                                                ECE 420
+                                            </a>
+                                        </li>
+                                    
+                                        
+                                        <li role="presentation">
+                                            <a class="text-right" href="/schedule/2017/fall/ECE/422" tabindex="-1" role="menuitem">
+                                                ECE 422
+                                            </a>
+                                        </li>
+                                    
+                                        
+                                        <li role="presentation">
+                                            <a class="text-right" href="/schedule/2017/fall/ECE/425" tabindex="-1" role="menuitem">
+                                                ECE 425
+                                            </a>
+                                        </li>
+                                    
+                                        
+                                        <li role="presentation">
+                                            <a class="text-right" href="/schedule/2017/fall/ECE/428" tabindex="-1" role="menuitem">
+                                                ECE 428
+                                            </a>
+                                        </li>
+                                    
+                                        
+                                        <li role="presentation">
+                                            <a class="text-right" href="/schedule/2017/fall/ECE/435" tabindex="-1" role="menuitem">
+                                                ECE 435
+                                            </a>
+                                        </li>
+                                    
+                                        
+                                        <li role="presentation">
+                                            <a class="text-right" href="/schedule/2017/fall/ECE/437" tabindex="-1" role="menuitem">
+                                                ECE 437
+                                            </a>
+                                        </li>
+                                    
+                                        
+                                        <li role="presentation">
+                                            <a class="text-right" href="/schedule/2017/fall/ECE/438" tabindex="-1" role="menuitem">
+                                                ECE 438
+                                            </a>
+                                        </li>
+                                    
+                                        
+                                        <li role="presentation">
+                                            <a class="text-right" href="/schedule/2017/fall/ECE/439" tabindex="-1" role="menuitem">
+                                                ECE 439
+                                            </a>
+                                        </li>
+                                    
+                                        
+                                        <li role="presentation">
+                                            <a class="text-right" href="/schedule/2017/fall/ECE/444" tabindex="-1" role="menuitem">
+                                                ECE 444
+                                            </a>
+                                        </li>
+                                    
+                                        
+                                        <li role="presentation">
+                                            <a class="text-right" href="/schedule/2017/fall/ECE/445" tabindex="-1" role="menuitem">
+                                                ECE 445
+                                            </a>
+                                        </li>
+                                    
+                                        
+                                        <li role="presentation">
+                                            <a class="text-right" href="/schedule/2017/fall/ECE/446" tabindex="-1" role="menuitem">
+                                                ECE 446
+                                            </a>
+                                        </li>
+                                    
+                                        
+                                        <li role="presentation">
+                                            <a class="text-right" href="/schedule/2017/fall/ECE/447" tabindex="-1" role="menuitem">
+                                                ECE 447
+                                            </a>
+                                        </li>
+                                    
+                                        
+                                        <li role="presentation">
+                                            <a class="text-right" href="/schedule/2017/fall/ECE/448" tabindex="-1" role="menuitem">
+                                                ECE 448
+                                            </a>
+                                        </li>
+                                    
+                                        
+                                        <li role="presentation">
+                                            <a class="text-right" href="/schedule/2017/fall/ECE/452" tabindex="-1" role="menuitem">
+                                                ECE 452
+                                            </a>
+                                        </li>
+                                    
+                                        
+                                        <li role="presentation">
+                                            <a class="text-right" href="/schedule/2017/fall/ECE/453" tabindex="-1" role="menuitem">
+                                                ECE 453
+                                            </a>
+                                        </li>
+                                    
+                                        
+                                        <li role="presentation">
+                                            <a class="text-right" href="/schedule/2017/fall/ECE/455" tabindex="-1" role="menuitem">
+                                                ECE 455
+                                            </a>
+                                        </li>
+                                    
+                                        
+                                        <li role="presentation">
+                                            <a class="text-right" href="/schedule/2017/fall/ECE/456" tabindex="-1" role="menuitem">
+                                                ECE 456
+                                            </a>
+                                        </li>
+                                    
+                                        
+                                        <li role="presentation">
+                                            <a class="text-right" href="/schedule/2017/fall/ECE/459" tabindex="-1" role="menuitem">
+                                                ECE 459
+                                            </a>
+                                        </li>
+                                    
+                                        
+                                        <li role="presentation">
+                                            <a class="text-right" href="/schedule/2017/fall/ECE/460" tabindex="-1" role="menuitem">
+                                                ECE 460
+                                            </a>
+                                        </li>
+                                    
+                                        
+                                        <li role="presentation">
+                                            <a class="text-right" href="/schedule/2017/fall/ECE/464" tabindex="-1" role="menuitem">
+                                                ECE 464
+                                            </a>
+                                        </li>
+                                    
+                                        
+                                        <li role="presentation">
+                                            <a class="text-right" href="/schedule/2017/fall/ECE/465" tabindex="-1" role="menuitem">
+                                                ECE 465
+                                            </a>
+                                        </li>
+                                    
+                                        
+                                        <li role="presentation">
+                                            <a class="text-right" href="/schedule/2017/fall/ECE/466" tabindex="-1" role="menuitem">
+                                                ECE 466
+                                            </a>
+                                        </li>
+                                    
+                                        
+                                        <li role="presentation">
+                                            <a class="text-right" href="/schedule/2017/fall/ECE/467" tabindex="-1" role="menuitem">
+                                                ECE 467
+                                            </a>
+                                        </li>
+                                    
+                                        
+                                        <li role="presentation">
+                                            <a class="text-right" href="/schedule/2017/fall/ECE/469" tabindex="-1" role="menuitem">
+                                                ECE 469
+                                            </a>
+                                        </li>
+                                    
+                                        
+                                        <li role="presentation">
+                                            <a class="text-right" href="/schedule/2017/fall/ECE/470" tabindex="-1" role="menuitem">
+                                                ECE 470
+                                            </a>
+                                        </li>
+                                    
+                                        
+                                        <li role="presentation">
+                                            <a class="text-right" href="/schedule/2017/fall/ECE/473" tabindex="-1" role="menuitem">
+                                                ECE 473
+                                            </a>
+                                        </li>
+                                    
+                                        
+                                        <li role="presentation">
+                                            <a class="text-right" href="/schedule/2017/fall/ECE/476" tabindex="-1" role="menuitem">
+                                                ECE 476
+                                            </a>
+                                        </li>
+                                    
+                                        
+                                        <li role="presentation">
+                                            <a class="text-right" href="/schedule/2017/fall/ECE/482" tabindex="-1" role="menuitem">
+                                                ECE 482
+                                            </a>
+                                        </li>
+                                    
+                                        
+                                        <li role="presentation">
+                                            <a class="text-right" href="/schedule/2017/fall/ECE/485" tabindex="-1" role="menuitem">
+                                                ECE 485
+                                            </a>
+                                        </li>
+                                    
+                                        
+                                        <li role="presentation">
+                                            <a class="text-right" href="/schedule/2017/fall/ECE/486" tabindex="-1" role="menuitem">
+                                                ECE 486
+                                            </a>
+                                        </li>
+                                    
+                                        
+                                        <li role="presentation">
+                                            <a class="text-right" href="/schedule/2017/fall/ECE/487" tabindex="-1" role="menuitem">
+                                                ECE 487
+                                            </a>
+                                        </li>
+                                    
+                                        
+                                        <li role="presentation">
+                                            <a class="text-right" href="/schedule/2017/fall/ECE/488" tabindex="-1" role="menuitem">
+                                                ECE 488
+                                            </a>
+                                        </li>
+                                    
+                                        
+                                        <li role="presentation">
+                                            <a class="text-right" href="/schedule/2017/fall/ECE/491" tabindex="-1" role="menuitem">
+                                                ECE 491
+                                            </a>
+                                        </li>
+                                    
+                                        
+                                        <li role="presentation">
+                                            <a class="text-right" href="/schedule/2017/fall/ECE/492" tabindex="-1" role="menuitem">
+                                                ECE 492
+                                            </a>
+                                        </li>
+                                    
+                                        
+                                        <li role="presentation">
+                                            <a class="text-right" href="/schedule/2017/fall/ECE/493" tabindex="-1" role="menuitem">
+                                                ECE 493
+                                            </a>
+                                        </li>
+                                    
+                                        
+                                        <li role="presentation">
+                                            <a class="text-right" href="/schedule/2017/fall/ECE/496" tabindex="-1" role="menuitem">
+                                                ECE 496
+                                            </a>
+                                        </li>
+                                    
+                                        
+                                        <li role="presentation">
+                                            <a class="text-right" href="/schedule/2017/fall/ECE/498" tabindex="-1" role="menuitem">
+                                                ECE 498
+                                            </a>
+                                        </li>
+                                    
+                                        
+                                        <li role="presentation">
+                                            <a class="text-right" href="/schedule/2017/fall/ECE/499" tabindex="-1" role="menuitem">
+                                                ECE 499
+                                            </a>
+                                        </li>
+                                    
+                                        
+                                        <li role="presentation">
+                                            <a class="text-right" href="/schedule/2017/fall/ECE/500" tabindex="-1" role="menuitem">
+                                                ECE 500
+                                            </a>
+                                        </li>
+                                    
+                                        
+                                        <li role="presentation">
+                                            <a class="text-right" href="/schedule/2017/fall/ECE/511" tabindex="-1" role="menuitem">
+                                                ECE 511
+                                            </a>
+                                        </li>
+                                    
+                                        
+                                        <li role="presentation">
+                                            <a class="text-right" href="/schedule/2017/fall/ECE/515" tabindex="-1" role="menuitem">
+                                                ECE 515
+                                            </a>
+                                        </li>
+                                    
+                                        
+                                        <li role="presentation">
+                                            <a class="text-right" href="/schedule/2017/fall/ECE/517" tabindex="-1" role="menuitem">
+                                                ECE 517
+                                            </a>
+                                        </li>
+                                    
+                                        
+                                        <li role="presentation">
+                                            <a class="text-right" href="/schedule/2017/fall/ECE/518" tabindex="-1" role="menuitem">
+                                                ECE 518
+                                            </a>
+                                        </li>
+                                    
+                                        
+                                        <li role="presentation">
+                                            <a class="text-right" href="/schedule/2017/fall/ECE/520" tabindex="-1" role="menuitem">
+                                                ECE 520
+                                            </a>
+                                        </li>
+                                    
+                                        
+                                        <li role="presentation">
+                                            <a class="text-right" href="/schedule/2017/fall/ECE/524" tabindex="-1" role="menuitem">
+                                                ECE 524
+                                            </a>
+                                        </li>
+                                    
+                                        
+                                        <li role="presentation">
+                                            <a class="text-right" href="/schedule/2017/fall/ECE/527" tabindex="-1" role="menuitem">
+                                                ECE 527
+                                            </a>
+                                        </li>
+                                    
+                                        
+                                        <li role="presentation">
+                                            <a class="text-right" href="/schedule/2017/fall/ECE/530" tabindex="-1" role="menuitem">
+                                                ECE 530
+                                            </a>
+                                        </li>
+                                    
+                                        
+                                        <li role="presentation">
+                                            <a class="text-right" href="/schedule/2017/fall/ECE/534" tabindex="-1" role="menuitem">
+                                                ECE 534
+                                            </a>
+                                        </li>
+                                    
+                                        
+                                        <li role="presentation">
+                                            <a class="text-right" href="/schedule/2017/fall/ECE/535" tabindex="-1" role="menuitem">
+                                                ECE 535
+                                            </a>
+                                        </li>
+                                    
+                                        
+                                        <li role="presentation">
+                                            <a class="text-right" href="/schedule/2017/fall/ECE/537" tabindex="-1" role="menuitem">
+                                                ECE 537
+                                            </a>
+                                        </li>
+                                    
+                                        
+                                        <li role="presentation">
+                                            <a class="text-right" href="/schedule/2017/fall/ECE/542" tabindex="-1" role="menuitem">
+                                                ECE 542
+                                            </a>
+                                        </li>
+                                    
+                                        
+                                        <li role="presentation">
+                                            <a class="text-right" href="/schedule/2017/fall/ECE/544" tabindex="-1" role="menuitem">
+                                                ECE 544
+                                            </a>
+                                        </li>
+                                    
+                                        
+                                        <li role="presentation">
+                                            <a class="text-right" href="/schedule/2017/fall/ECE/548" tabindex="-1" role="menuitem">
+                                                ECE 548
+                                            </a>
+                                        </li>
+                                    
+                                        
+                                        <li role="presentation">
+                                            <a class="text-right" href="/schedule/2017/fall/ECE/551" tabindex="-1" role="menuitem">
+                                                ECE 551
+                                            </a>
+                                        </li>
+                                    
+                                        
+                                        <li role="presentation">
+                                            <a class="text-right" href="/schedule/2017/fall/ECE/552" tabindex="-1" role="menuitem">
+                                                ECE 552
+                                            </a>
+                                        </li>
+                                    
+                                        
+                                        <li role="presentation">
+                                            <a class="text-right" href="/schedule/2017/fall/ECE/563" tabindex="-1" role="menuitem">
+                                                ECE 563
+                                            </a>
+                                        </li>
+                                    
+                                        
+                                        <li role="presentation">
+                                            <a class="text-right" href="/schedule/2017/fall/ECE/566" tabindex="-1" role="menuitem">
+                                                ECE 566
+                                            </a>
+                                        </li>
+                                    
+                                        
+                                        <li role="presentation">
+                                            <a class="text-right" href="/schedule/2017/fall/ECE/573" tabindex="-1" role="menuitem">
+                                                ECE 573
+                                            </a>
+                                        </li>
+                                    
+                                        
+                                        <li role="presentation">
+                                            <a class="text-right" href="/schedule/2017/fall/ECE/584" tabindex="-1" role="menuitem">
+                                                ECE 584
+                                            </a>
+                                        </li>
+                                    
+                                        
+                                        <li role="presentation">
+                                            <a class="text-right" href="/schedule/2017/fall/ECE/586" tabindex="-1" role="menuitem">
+                                                ECE 586
+                                            </a>
+                                        </li>
+                                    
+                                        
+                                        <li role="presentation">
+                                            <a class="text-right" href="/schedule/2017/fall/ECE/590" tabindex="-1" role="menuitem">
+                                                ECE 590
+                                            </a>
+                                        </li>
+                                    
+                                        
+                                        <li role="presentation">
+                                            <a class="text-right" href="/schedule/2017/fall/ECE/596" tabindex="-1" role="menuitem">
+                                                ECE 596
+                                            </a>
+                                        </li>
+                                    
+                                        
+                                        <li role="presentation">
+                                            <a class="text-right" href="/schedule/2017/fall/ECE/597" tabindex="-1" role="menuitem">
+                                                ECE 597
+                                            </a>
+                                        </li>
+                                    
+                                        
+                                        <li role="presentation">
+                                            <a class="text-right" href="/schedule/2017/fall/ECE/598" tabindex="-1" role="menuitem">
+                                                ECE 598
+                                            </a>
+                                        </li>
+                                    
+                                        
+                                        <li role="presentation">
+                                            <a class="text-right" href="/schedule/2017/fall/ECE/599" tabindex="-1" role="menuitem">
+                                                ECE 599
+                                            </a>
+                                        </li>
+                                    
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            <!--</div>-->
+            
+                              
+            <div id="icon-help" class="panel panel-info" style="display:none;">
+                <div class="panel-heading">
+                    <a type="button" class="close app-toggle" data-target="icon-help" href="#">×</a>
+                    <b>STATUS ICON LEGEND</b>
+                </div>
+                <div class="panel-body">
+                    <p><img class="app-top" src="https://cis-data.cis.techservices.illinois.edu/images/sectionOpen.png">"/&gt;&nbsp;&nbsp;<em class="text-muted">Section is Open</em></p>
+                    <p><img class="app-top" src="https://cis-data.cis.techservices.illinois.edu/images/sectionRestricted.png">"/&gt;&nbsp;&nbsp;<em class="text-muted">Section is Open with Restrictions</em></p>
+                    <p><img class="app-top" src="https://cis-data.cis.techservices.illinois.edu/images/sectionClosed.png">"/&gt;&nbsp;&nbsp;<em class="text-muted">Section is Closed</em></p>
+                    <p><img class="app-top" src="https://cis-data.cis.techservices.illinois.edu/images/sectionPending.png">"/&gt;&nbsp;&nbsp;<em class="text-muted">Section is Pending</em></p>
+                    <p><img class="app-top" src="https://cis-data.cis.techservices.illinois.edu/images/sectionUnknown.png">"/&gt;&nbsp;&nbsp;<em class="text-muted">Section is availability is unknown</em></p>
+                </div>
+                <div class="panel-footer">   
+                        <button type="button" class="btn btn-default btn-xs app-toggle" data-target="icon-help">Close</button>
+                    </div>
+            </div>                  
+            
+             
+            
+            <div class="table-responsive">
+            <div id="section-dt_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer"><div class="row clearfix"><div class="col-sm-12"><div id="section-dt_filter" class="dataTables_filter"><label><input type="search" class="form-control input-sm" placeholder="Search Table..." aria-controls="section-dt"></label></div><div class="dataTables_info" id="section-dt_info" role="status" aria-live="polite">3 entries</div></div><div id="section-dt_processing" class="dataTables_processing" style="display: none;">Processing...</div></div><table id="section-dt" class="table table-condensed dataTable no-footer" aria-describedby="section-dt_info" role="grid">
+                <thead>
+                    <tr role="row"><th class="control center text-center sorting_disabled" rowspan="1" colspan="1" aria-label="Detail" style="width: 40px;">Detail</th><th class="sorting" tabindex="0" aria-controls="section-dt" rowspan="1" colspan="1" aria-label="CRN: activate to sort column ascending" style="width: 35px;">CRN</th><th class="adjh type-col sorting" tabindex="0" aria-controls="section-dt" rowspan="1" colspan="1" aria-label="Type: activate to sort column ascending" style="width: 110px;">Type</th><th class="adjh td-break sorting_asc" tabindex="0" aria-controls="section-dt" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Section: activate to sort column descending" style="width: 55px;">Section</th><th class="adjh sorting" tabindex="0" aria-controls="section-dt" rowspan="1" colspan="1" aria-label="Time: activate to sort column ascending" style="width: 80px;">Time</th><th class="adjh sorting" tabindex="0" aria-controls="section-dt" rowspan="1" colspan="1" aria-label="Day: activate to sort column ascending" style="width: 35px;">Day</th><th class="adjh sorting" tabindex="0" aria-controls="section-dt" rowspan="1" colspan="1" aria-label="Location: activate to sort column ascending" style="width: 90px;">Location</th><th class="instructor adjh sorting" tabindex="0" aria-controls="section-dt" rowspan="1" colspan="1" aria-label="Instructor: activate to sort column ascending" style="width: 120px;">Instructor</th></tr>
+                </thead>
+                <tbody><tr id="uid1" role="row" class="odd"><td class=" control center text-center"><a aria-label="hide or show section details" href="#none" aria-controls="uid1A" aria-expanded="true"><span class="dt glyphicon glyphicon-chevron-down app-font16"></span></a></td><td>66503</td><td class=" adjh type-col"><div class="app-meeting">Laboratory</div></td><td class="adjh td-break sorting_1"><div class="app-meeting">A  </div></td><td class=" adjh"><span class="hide">0900</span><div class="app-meeting">09:00AM - 10:50AM</div></td><td class=" adjh"><div class="app-meeting">R      </div></td><td class=" adjh"><div class="app-meeting">2022 Electrical &amp; Computer Eng Bldg</div></td><td class=" instructor adjh"><div class="app-meeting">Hajek, B<br></div></td></tr><tr><td colspan="8" class="details" id="uid1A"><table id="section-details"><tbody><tr><th class="app-text-engage">Availability</th><td class="app-text-value details" id="uid1A">UNKNOWN</td></tr><tr><th class="app-text-engage">Date Range</th><td class="app-text-value details" id="uid1A">Meets 08/28/17-12/13/17</td></tr><tr><th class="app-text-engage">Part of Term</th><td class="app-text-value details" id="uid1A">1</td></tr><tr><th class="app-text-engage">Restriction(s)</th><td class="app-text-value details" id="uid1A">Not intended for Graduate - Urbana-Champaign.<br></td></tr></tbody></table></td></tr><tr id="uid2" role="row" class="even"><td class=" control center text-center"><a aria-label="hide or show section details" href="#none" aria-controls="uid2A" aria-expanded="true"><span class="dt glyphicon glyphicon-chevron-down app-font16"></span></a></td><td>66505</td><td class=" adjh type-col"><div class="app-meeting">Laboratory</div></td><td class="adjh td-break sorting_1"><div class="app-meeting">B  </div></td><td class=" adjh"><span class="hide">1100</span><div class="app-meeting">11:00AM - 12:50PM</div></td><td class=" adjh"><div class="app-meeting">R      </div></td><td class=" adjh"><div class="app-meeting">2022 Electrical &amp; Computer Eng Bldg</div></td><td class=" instructor adjh"><div class="app-meeting">Hajek, B<br></div></td></tr><tr><td colspan="8" class="details" id="uid2A"><table id="section-details"><tbody><tr><th class="app-text-engage">Availability</th><td class="app-text-value details" id="uid2A">UNKNOWN</td></tr><tr><th class="app-text-engage">Date Range</th><td class="app-text-value details" id="uid2A">Meets 08/28/17-12/13/17</td></tr><tr><th class="app-text-engage">Part of Term</th><td class="app-text-value details" id="uid2A">1</td></tr><tr><th class="app-text-engage">Restriction(s)</th><td class="app-text-value details" id="uid2A">Not intended for Graduate - Urbana-Champaign.<br></td></tr></tbody></table></td></tr><tr id="uid3" role="row" class="odd"><td class=" control center text-center"><a aria-label="hide or show section details" href="#none" aria-controls="uid3A" aria-expanded="true"><span class="dt glyphicon glyphicon-chevron-down app-font16"></span></a></td><td>68868</td><td class=" adjh type-col"><div class="app-meeting">Laboratory</div></td><td class="adjh td-break sorting_1"><div class="app-meeting">C  </div></td><td class=" adjh"><span class="hide">1300</span><div class="app-meeting">01:00PM - 02:50PM</div></td><td class=" adjh"><div class="app-meeting">R      </div></td><td class=" adjh"><div class="app-meeting">2022 Electrical &amp; Computer Eng Bldg</div></td><td class=" instructor adjh"><div class="app-meeting">Hajek, B<br></div></td></tr><tr><td colspan="8" class="details" id="uid3A"><table id="section-details"><tbody><tr><th class="app-text-engage">Availability</th><td class="app-text-value details" id="uid3A">UNKNOWN</td></tr><tr><th class="app-text-engage">Date Range</th><td class="app-text-value details" id="uid3A">Meets 08/28/17-12/13/17</td></tr><tr><th class="app-text-engage">Part of Term</th><td class="app-text-value details" id="uid3A">1</td></tr><tr><th class="app-text-engage">Restriction(s)</th><td class="app-text-value details" id="uid3A">Not intended for Graduate - Urbana-Champaign.<br></td></tr></tbody></table></td></tr></tbody>
+            </table><div class="row"><div class="col-sm-12"></div></div></div>
+            </div>    
+            
+        </div> <!-- end col-sm-12 -->
+    </div> <!-- end row-fluid -->
+    
+    
+    
+</div> 
+
+
+    </div> 
+
+    
+    <div id="push"></div>
+
+    </div> 
+
+    
+    <footer id="footer" role="contentinfo">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-1">
+                <a target="_blank" href="http://illinois.edu" class="pull-right">
+                    <img alt="Illinois logo" src="https://cis-data.cis.techservices.illinois.edu/images/Illinois-Logo-footer.png">
+                </a>
+            </div>
+            <div class="col-sm-11">
+                <p>
+                    <strong>
+                        <a href="http://registrar.illinois.edu/">OFFICE OF THE REGISTRAR</a>
+                    </strong> | 901 W. Illinois Street, Suite 140, Urbana, Illinois 61801</p>
+                <p>
+                    Site developed by: <strong>
+                        <a target="_blank" href="http://techservices.illinois.edu/">Technology Services at Illinois</a>
+                    </strong>  |  
+                    <a target="_blank" href="http://illinois.edu/">UNIVERSITY OF ILLINOIS URBANA-CHAMPAIGN</a>
+                </p>
+                <p>1102 Digital Computer Laboratory | MC-256 | Urbana, IL 61801 
+                    | phone <a href="tel:2172447000">217-244-7000</a> 
+                    | email <a href="https://illinois.edu/fb/sec/2080949">Course Explorer Feedback</a>
+                </p>
+                <p>
+                    <a href="https://www.vpaa.uillinois.edu/resources/web_privacy">Web Privacy Notice</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <!--OneTrust Cookies Settings button start -->
+
+    <!--OneTrust Cookies Settings button end -->
+</footer>
+
+
+<script src="https://cis-data.cis.techservices.illinois.edu/js/application.js"></script>
+
+
+
+
+
+    
+    
+    <noscript>
+        <div id="noscript-warning">Course Explorer works best with JavaScript enabled</div>
+    </noscript>
+
+    
+
+    <!--OneTrust Cookies Consent Notice (Production CDN, illinois.edu, en-GB) end -->
+
+
+
+<script src="https://cis-data.cis.techservices.illinois.edu/js/class-schedule.js"></script></body></html>

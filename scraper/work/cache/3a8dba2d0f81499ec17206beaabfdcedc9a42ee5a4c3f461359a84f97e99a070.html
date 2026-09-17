@@ -1,0 +1,950 @@
+<!DOCTYPE html><html><head>
+    <meta charset="utf-8">
+    <title>CS221: Artificial Intelligence: Principles and Techniques</title>
+    <link rel="stylesheet" href="plugins/main.css">
+</head>
+
+<!-- TODO @jessica link to Fall 2025! -->
+
+<body onload="eventsOnLoad()" style="margin: auto">
+
+
+    <div class="section">
+        <div style="float:left; clear:left">
+            <img width="90" src="plugins/stanford_seal.gif">
+        </div>
+        <div style="margin-left: 30px; margin-top: 20px">
+            <div class="top assignmentTitle">
+                CS221: Artificial Intelligence: Principles and Techniques
+            </div>
+            <div class="top nav">
+                Stanford / Spring 2026
+            </div>
+            <div class="top">
+                <a class="nav" href="https://calendar.google.com/calendar/u/0/embed?src=21f0687a22b115c1f8aace80898d3b0666654229e7d2b9b8794237bf3d6945cf@group.calendar.google.com&amp;ctz=America/Los_Angeles" target="_blank">[Calendar]
+                </a>
+                &nbsp;
+                <a class="nav" href="modules">[Modules]</a>
+                &nbsp;
+                <a class="nav" href="#coursework">[Coursework]</a>
+                &nbsp;
+                <a class="nav" href="#schedule">[Schedule]</a>
+            </div>
+        </div>
+    </div>
+
+    <ul>
+        <li> <b> Lectures </b>: Mon/Wed 10:30 AM - 12:00 PM in Hewlett 200. Recordings on <a href="https://canvas.stanford.edu/courses/225208">Canvas</a>, slides/code in Modules</li>
+        <li> <b> Problem sessions </b>: Fri 10:30 AM - 11:20 AM in Gates B03.</li>
+        <li> <b> Office hours </b> (in person + virtual): see <a href="https://calendar.google.com/calendar/embed?src=21f0687a22b115c1f8aace80898d3b0666654229e7d2b9b8794237bf3d6945cf%40group.calendar.google.com&amp;ctz=America%2FLos_Angeles">course calendar</a> for times/locations.</li>
+        <li> <b> Asking general questions: </b> use <a href="https://edstem.org/us/courses/96988/admin/discussion">Ed</a>.</li>
+        <li> <b> For personal/sensitive matters </b>, email <a href="mailto:cs221-staff-spr2526@cs.stanford.edu">cs221-staff-spr2526@cs.stanford.edu</a>.</li>
+        <li> <b> See previous CS221 iterations </b> <a href="https://stanford-cs221.github.io/">here</a>.</li>
+    </ul>
+
+    <div class="section">
+        <span class="header">Activities</span>
+        <ul>
+            <li><b>Modules</b>: All the course content has been broken up into short modules (link to be updated), which include slides, recorded videos, and notes.</li>
+            <li><b>Lectures:</b> Instructors go over the main modules (link to be updated) more slowly and interactively. All lectures will be recorded and available on Canvas.</li>
+            <li><b>Problem sessions:</b> CAs work through practice homework and exam problems.</li>
+            <li><b>Homework parties</b>: CAs help students work through homework problems in small groups.</li>
+            <li><b>Office Hours:</b> Meet 1:1 with instructors and CAs. There are two types of CA office hours: homework OH (for help with homework questions) and general OH (to ask questions about course content from lecture).</li>
+        </ul>
+        Homework parties and most office hours are in person in Huang Basement, but we will have some remote office hours (for CGOE students) on Zoom. See <a href="https://calendar.google.com/calendar/u/0/embed?src=21f0687a22b115c1f8aace80898d3b0666654229e7d2b9b8794237bf3d6945cf@group.calendar.google.com&amp;ctz=America/Los_Angeles">class calendar</a> for the exact times and locations of all activities.
+    </div>
+
+    <div class="section">
+        <span class="header">Teaching Staff</span>
+        <div class="staff" style="width: 50%; margin-right: 25%; margin-left: 15%">
+            <div class="cas">
+                <table>
+                    <tbody><tr>
+                        <td>
+                            <div class="photos_staff">
+                                <div><img src="photos/moses.jpg" alt="Moses"></div>
+                                <div>
+                                    <a href="https://profiles.stanford.edu/moses-charikar">Moses Charikar</a><br>
+                                    Instructor<br>
+                                </div>
+                            </div>
+                            <div class="photos_staff">
+                                <div><img src="photos/zachary.png" alt="Zachary"></div>
+                                <div>
+                                    <a href="https://zrobertson466920.github.io/about/">Zachary Robertson</a><br>
+                                    Instructor<br>
+                                </div>
+                            </div>
+                            <div class="photos_staff">
+                                <div><img src="photos/adi.jpg" alt="Adi"></div>
+                                <div>
+                                    <a href="https://www.linkedin.com/in/aditya-badlani/">Adi Badlani</a><br>
+                                    Head CA<br>
+                                </div>
+                            </div>
+                            <div class="photos_staff">
+                                <div><img src="photos/amelie.jpeg" alt="Amelie Byun"></div>
+                                <div>
+                                    <a href="https://www.cs.stanford.edu/people/amelie-byun">Amelie Byun</a><br>
+                                    Course Manager<br>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody></table>
+            </div>
+        </div>
+        <!-- CAs -->
+        <div>
+            <div class="cas">
+                <table>
+                    <tbody><tr>
+                        <td>
+                            <div class="photos">
+                                <div><img src="photos/illia.jpeg" alt="Illia Shkirko"></div>
+                                <div>
+                                    <a href="https://www.linkedin.com/in/illiashkirko/">Illia Shkirko</a><br>
+                                    CA<br>
+                                </div>
+                            </div>
+                            <div class="photos">
+                                <div><img src="photos/jessica.png" alt="Jessica Chudnovsky"></div>
+                                <div>
+                                    <a href="https://www.linkedin.com/in/jessica-chudnovsky/">Jessica Chudnovsky</a><br>
+                                    CA<br>
+                                </div>
+                            </div>
+                            <div class="photos">
+                                <div><img src="photos/livia.jpg" alt="Livia Sun"></div>
+                                <div>
+                                    <a href="https://web.stanford.edu/~chuyues/">Livia Sun</a><br>
+                                    CA<br>
+                                </div>
+                            </div>
+                            <div class="photos">
+                                <div><img src="photos/shiny.png" alt="Shiny Weng"></div>
+                                <div>
+                                    <a href="https://www.linkedin.com/in/shinyweng/">Shiny Weng</a><br>
+                                    CA<br>
+                                </div>
+                            </div>
+                            <div class="photos">
+                                <div><img src="photos/yibo.png" alt="Yibo Zhang"></div>
+                                <div>
+                                    <a href="https://yiboz.me">Yibo Zhang</a><br>
+                                    CA<br>
+                                </div>
+                            </div>
+                            <div class="photos">
+                                <div><img src="photos/sydney.jpeg" alt="Sydney Yan"></div>
+                                <div>
+                                    <a href="https://www.linkedin.com/in/sydney-yan/">Sydney Yan</a><br>
+                                    CA<br>
+                                </div>
+                            </div>
+                            <div class="photos">
+                                <div><img src="photos/harry.png" alt="Harry Ge"></div>
+                                <div>
+                                    <a href="https://www.linkedin.com/in/harry-ge-145b531a4/">Harry Ge</a><br>
+                                    CA<br>
+                                </div>
+                            </div>
+                            <div class="photos">
+                                <div><img src="photos/ishasinha.jpeg" alt="Isha Sinha"></div>
+                                <div>
+                                    <a href="https://www.linkedin.com/in/isha-s-45490b245/">Isha Sinha</a><br>
+                                    CA<br>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody></table>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <span class="header">Policies</span>
+
+        <div class="section"><b>AIWG Statement:</b>
+            This course is participating in the proctoring pilot overseen by the Academic Integrity Working Group (AIWG). The purpose of this pilot is to determine the efficacy of proctoring and develop effective practices for proctoring in-person exams at Stanford.
+            Please review <a href="https://stanford-cs221.github.io/spring2025-extra/AY24-25_AIWG_ProctoringPilotInformationforStudents-Final.pdf">this document</a> as it contains the main questions students might have about the pilot.
+            To find more details on the pilot or the working group, please visit <a href="https://studentaffairs.stanford.edu/AIWG">the AIWG's webpage</a>.
+        </div>
+
+        <div class="section"><b>Communication:</b>
+            We will use <a href="https://edstem.org/us/courses/96988/admin/discussion">Ed</a> for all communications,
+            which you can access via <a href="https://canvas.stanford.edu/courses/225208">Canvas</a>.
+            CGOE students: please email <a href="mailto:stanfordonline-gradprograms">stanfordonline-gradprograms@stanford.edu</a> if you need general assistance.
+            Make a public Ed post whenever possible.
+            For extra sensitive matters, you can email
+            <a href="mailto:cs221-staff-spr2526@cs.stanford.edu">cs221-staff-spr2526@cs.stanford.edu</a>,
+            which is visible by only the instructors, head CA, course manager, and student liaison.
+        </div>
+
+        <div class="section"><b>Video access disclaimer:</b>
+            Lectures and sections will be recorded and available on Canvas.
+            These recordings might be reused in other Stanford courses, viewed by
+            other Stanford students, faculty, or staff, or used for other
+            education and research purposes. If you have questions or concerns,
+            please contact us.
+        </div>
+
+        <div class="section"><b>Academic accommodations:</b>
+            If you need an academic accommodation, contact the Office of Accessible Education (OAE).
+            The OAE will then prepare an OAE letter with the recommended accommodations.
+            Send this letter to
+            <a href="mailto:cs221-staff-spr2526@cs.stanford.edu">cs221-staff-spr2526@cs.stanford.edu</a>
+            by <b>Friday, Apr 18 (Week 3)</b>.
+            <br><br>
+            <b>General OAE Guidelines:</b>
+            <ul>
+                <li>Contact the OAE to obtain an official accommodation letter if you have a health condition that may impact your coursework.</li>
+                <li>Only accommodations explicitly stated in your current OAE letter will be accommodated. If you need additional or revised accommodations, you must request an updated letter from the OAE.</li>
+                <li>The teaching team will not be able to approve any retroactive accommodation requests.</li>
+                <li>If you have any questions or concerns regarding your accommodations, please contact your disability advisor.</li>
+                <li><b>Deadlines and Assignments:</b>
+                <ul>
+                <li>Students with OAE letters must request a separate extension for each assignment (you cannot auto-apply your OAE extensions to all assignments).</li>
+                <li>Students with the standard OAE extension accommodation must request an extension before the original due date, as it says in your OAE letter. Retroactive extension requests will not be approved.</li>
+                <li>The teaching team will only approve what is outlined in the OAE letter. If you have any questions or concerns, please reach out to your OAE advisor.</li>
+                </ul></li>
+            </ul>
+            <i>IMPORTANT:</i> If you plan to use your OAE-approved exam accommodations for a specific assessment, students must provide their letter to
+            <a href="mailto:cs221-staff-spr2526@cs.stanford.edu">cs221-staff-spr2526@cs.stanford.edu</a> by:
+            <ul>
+                <li>At least <b>10 calendar days in advance</b> for accommodations on the midterm exam</li>
+                <li><b>May 22, 2026 at 5:00pm</b> for accommodations on the final exam</li>
+            </ul>
+            You need only submit your letter once per quarter. For urgent OAE-related accommodations needs that arise after the deadline, please consult your OAE advisor.
+            If you are not yet registered with OAE, contact the office directly at <a href="mailto:oae-contactus@stanford.edu">oae-contactus@stanford.edu</a>.
+        </div>
+
+        <div class="section"><b>Collaboration policy and honor code:</b>
+            Please read <a href="https://communitystandards.stanford.edu/policies-guidance/honor-code">Stanford's honor code policy</a>.
+            In the context of CS221,
+            you are free to form study groups and discuss homeworks and projects.
+            However, you must write up homeworks and code from scratch independently, and you must acknowledge in your submission all the students you discussed with.
+            The following are considered to be honor code violations:
+            <ul>
+                <li>Looking at the writeup or code of another student.</li>
+                <li>Showing your writeup or code to another student.</li>
+                <li>Discussing homework problems in such detail that your solution (writeup or code) is almost identical to another student's solution.</li>
+                <li>Uploading your writeup or code to a public repository (e.g., GitHub) so that it can be accessed by other students.</li>
+                <li>Looking at solutions from previous years, either official or written up by another student, or found online.</li>
+            </ul>
+            When debugging code together, you are only allowed to look at the input-output behavior
+            of each other's programs (so you should write good test cases!).
+            We periodically run similarity-detection software over all
+            submitted student programs, including programs from past quarters and any
+            solutions found online on public websites.
+            <p>
+                <b>Generative AI Policy:</b> Each student is expected to submit their own solutions to the CS221 homeworks.
+                You may use generative AI tools such as Co-Pilot and ChatGPT as you would use a human collaborator. This means that you may <i>not</i> directly ask
+                generative AI tools for answers or copy solutions, and you must acknowledge generative AI tools as collaborators.
+                Additionally, you may not use generative AI tools to "check" your work, even if you wrote it yourself, as this is equivalent to having another student look at your answers.
+                The use of generative AI tools to substantially complete an assignment or exam (e.g. by directly copying) is prohibited and will result in honor code violations.
+                We will be checking students' homework to enforce this policy.
+            </p>
+
+            <p>
+                If you use generative AI tools, you must provide a transcript of the interaction (for example, a shared ChatGPT link or screenshots). 
+                For example, it is acceptable to use ChatGPT to help with unfamiliar syntax or to debug a specific error, provided that you include the transcript. 
+                You may not use generative AI tools that do not support attribution or transcript sharing. For example, using an agentic coding tool such as Codex or 
+                Claude Code to build a repository from a project proposal is not allowed. For the final project, we may also review commit history for evidence of 
+                overreliance on AI tools.
+
+            </p>
+            <p>
+                <b>Honor Code Violations:</b> Anyone violating the honor code policy will be referred to the Office of Community Standards.
+                If you think you violated the policy (it can happen, especially under time pressure!),
+                please reach out to us; the consequences will be much less severe than if we approach you.
+            </p>
+        </div>
+
+        <div class="section"><b>Inclusion:</b>
+            The CS221 teaching staff is committed to creating an inclusive and
+            supportive learning environment for <i>all</i> students.
+            Please be respectful to your fellow students, course CAs, and instructors.
+            If you see any problems, please reach out to us early.
+            <br><br>
+            Stanford as an institution is committed to the highest quality education, and
+            as your teaching team, our first priority is to uphold your educational experience.
+            To that end we are committed to following the syllabus as written here, including
+            through short- or long-term disruptions, such as public health emergencies, natural
+            disasters, or protests and demonstrations. However, there may be extenuating
+            circumstances that necessitate some changes. Should adjustments be necessary,
+            we will communicate clearly and promptly to ensure you understand the expectations
+            and are positioned for successful learning.
+        </div>
+
+    </div>
+
+    <div class="section">
+        <a name="content"><span class="header">Content</span></a>
+
+        <div class="section"><b>What is this course about?</b>
+            The goal of artificial intelligence (AI) is to tackle complex real-world problems with rigorous mathematical
+            tools.
+            In this course, you will learn the foundational principles and practice implementing various AI systems.
+            Specific topics include machine learning, search, Markov decision processes, game playing, constraint satisfaction, graphical models, and logic.
+        </div>
+
+        <div class="section"><b>Prerequisites:</b>
+            This course is fast-paced and covers a lot of ground,
+            so it is important that you have a solid foundation in a number of areas.
+            Here are the basic skills that you need and the classes that teach those skills:
+            <ul>
+                <li><b>(Required)</b> Programming <a href="http://www.stanford.edu/class/cs106a/">CS 106A</a>, <a href="http://www.stanford.edu/class/cs106b/">CS 106B</a></li>
+                <li><b>(Required)</b> Discrete math, mathematical rigor: <a href="http://www.stanford.edu/class/cs103/">CS 103</a></li>
+                <li><b>(Required)</b> Probability: <a href="http://www.stanford.edu/class/cs109/">CS 109</a></li>
+                <li><b>(Required)</b> Linear algebra: <a href="https://web.stanford.edu/class/math51/textbook.html">Math 51</a></li>
+                <li>(Recommended, but not required) Algorithms: <a href="http://www.stanford.edu/class/cs161/">CS 161</a></li>
+                <li>(Recommended, but not required) Systems: <a href="http://www.stanford.edu/class/cs107/">CS 107</a></li>
+            </ul>
+            It is less important that you know particular things (e.g., we
+            don't use eigenvectors in this course even though that's a pillar
+            of any linear algebra course),
+            and more important that you've done enough related things that you
+            feel at ease with it. While it is possible to fill in the gaps,
+            this course does move quickly, and ideally you want to be focusing
+            your energy on learning AI rather than catching up on
+            prerequisites. We have made a few prerequisite modules that you can review to refresh your memory, and the first homework (foundations) will allow you to also get some practice on these basics.
+        </div>
+
+        <div class="section"><b>Further reading:</b>
+            There are no required textbooks for this class, and you should be able to learn everything from the
+            lecture notes and homeworks. However, if you would like to pursue more advanced topics or get another
+            perspective on the same material, here are some great resources:
+            <ul>
+                <li>
+                    <a href="http://aima.cs.berkeley.edu">
+                        Russell and Norvig. Artificial Intelligence: A Modern Approach.
+                    </a>
+                    A comprehensive reference for all the AI topics that we will cover.
+                </li>
+                <li>
+                    <a href="http://mitpress.mit.edu/books/probabilistic-graphical-models">
+                        Koller and Friedman. Probabilistic Graphical Models.
+                    </a>
+                    Covers factor graphs and Bayesian networks (this is the textbook for
+                    <a href="https://ermongroup.github.io/cs228/">CS228</a>).
+                </li>
+                <li>
+                    <a href="http://incompleteideas.net/book/the-book-2nd.html">
+                        Sutton and Barto. Reinforcement Learning: An Introduction.
+                    </a>
+                    Covers Markov decision processes and reinforcement learning (free online).
+                </li>
+                <li>
+                    <a href="https://web.stanford.edu/~hastie/ElemStatLearn/">
+                        Hastie, Tibshirani, and Friedman. The Elements of Statistical Learning.
+                    </a>
+                    Covers machine learning from a rigorous statistical perspective (free online).
+                </li>
+                <li>
+                    <a href="http://www.bracil.net/edward/FCS.html">
+                        Tsang. Foundations of Constraint Satisfaction.
+                    </a>
+                    Covers constraint satisfaction problems (free online).
+                </li>
+            </ul>
+            Note that some of these books use different notation and terminology from this course,
+            so it may may take some effort to make the appropriate connections.
+        </div>
+
+    </div>
+
+    <div class="section">
+        <a name="coursework"><span class="header">Coursework</span></a>
+
+        <ul>
+            <li><b>Prerequisites Quiz</b> (0.5%):
+                There is a quiz on the prerequisites that you must take by the due date listed on the Schedule.
+                The quiz is on Gradescope and is open book. You have unlimited attempts and no time limit,
+                and the quiz offers study materials and explanations to help with review.
+            </li>
+            <br>
+
+            <li><b>Homeworks</b> (39.5%):
+                There are weekly homeworks.
+                Each homework is usually centered around an application
+                and has both written and programming parts.
+                Read more about the homework policies <a href="homework.html">here</a>.
+                <p></p>
+                <ol>
+                    <!-- To release a homework, uncomment the linked version and comment/delete the plain text version -->
+
+                    <li>Foundations [foundations]: <a href="assignments/hw1_foundations/index.html">page</a>, <a href="assignments/hw1_foundations.zip">zip</a> (due Tue Apr 7)</li>
+
+                    <li>Sentiment classification [sentiment]: <a href="https://stanford-cs221.github.io/spring2026/assignments/hw2_sentiment/index.html">page</a>, <a href="https://stanford-cs221.github.io/spring2026/assignments/hw2_sentiment.zip">zip</a> (due Tue Apr 14)</li>
+
+                    <li>Route planning [route]: <a href="https://stanford-cs221.github.io/spring2026/assignments/hw3_route/index.html">page</a>, <a href="https://stanford-cs221.github.io/spring2026/assignments/hw3_route.zip">zip</a> (due Tue Apr 21)</li>
+
+                    <li>Controlling mountaincar [mountaincar]: <a href="https://stanford-cs221.github.io/spring2026/assignments/hw4_mountaincar/index.html">page</a>, <a href="https://stanford-cs221.github.io/spring2026/assignments/hw4_mountaincar.zip">zip</a> (due Tue Apr 28)</li>
+
+                    <li>Pac-Man [pacman]: <a href="https://stanford-cs221.github.io/spring2026/assignments/hw5_pacman/index.html">page</a>, <a href="https://stanford-cs221.github.io/spring2026/assignments/hw5_pacman.zip">zip</a> (due Tue May 12)</li> 
+
+                    <li>Course scheduling [scheduling]: <a href="https://stanford-cs221.github.io/spring2026/assignments/hw6_scheduling/index.html">page</a>, <a href="https://stanford-cs221.github.io/spring2026/assignments/hw6_scheduling.zip">zip</a> (due Tue May 19)</li>
+
+                    <li>Car tracking [car]: <a href="https://stanford-cs221.github.io/spring2026/assignments/hw7_car/index.html">page</a>, <a href="https://stanford-cs221.github.io/spring2026/assignments/hw7_car.zip">zip</a> (due Tue May 26)</li>
+
+                    <li>From Language to Logic [logic]: <a href="https://stanford-cs221.github.io/spring2026/assignments/hw8_logic/index.html">page</a>, <a href="https://stanford-cs221.github.io/spring2026/assignments/hw8_logic.zip">zip</a> (due Tue Jun 2)</li>
+                </ol>
+
+                <p></p>
+                Homeworks must be typeset and submitted on Gradescope as a PDF.
+                The coding portion will be auto-graded; you get only feedback on a subset of the test cases.
+                Auto-grading is strict, so check your outputs carefully!
+                Read more about the <a href="homework.html">policies</a> around late days (7 total, max 2 per homework),
+                regrades, and submission.
+                <p>
+                    <b>Late day policy (please read):</b> You have 7 total late days across homeworks.
+                    You may use a maximum of 2 late days for any single assignment.
+                    You are responsible for keeping track of your late days.
+                    Please read through the full <a href="https://stanford-cs221.github.io/spring2026/homework.html">homework guidelines page</a> for more details.
+                </p>
+                <p>
+                    The point of late days is to give you flexibility to deal with extenuating circumstances (illness, travel, etc).
+                    Do not ask for an extension if you have extenuating circumstances; this is what late days are for.
+                </p>
+                <p>
+                    If you join the class late, you will receive a zero on any missed homework assignments.
+                </p>
+            </li>
+            <br>
+
+            <li><b>Exams</b> (60%):
+                <ul>
+                    <li><b>Exam 1</b> (30%): <b>Wed May 6th, 6-8 PM on Campus (Location TBD) </b>.</li>
+                    <li><b>Exam 2</b> (30%): <b>Fri Jun 5th, 3:30-5:30 PM on Campus (Location TBD) </b>.</li>
+                    <li>Both exams will be in-person.</li>
+                    <li><b>Exam policy:</b> We will not accommodate Final exam conflicts since the exam is scheduled by the Registrar. All students enrolled in the course must be able to sit for the scheduled exam.</li>
+                    <li>If you miss an exam, by default you will receive a zero on it.</li>
+                    <li>If you have an emergency (including illness) that means you have to miss an exam, please contact us via staff mailing list and explain your circumstances. We can't promise to accommodate your emergency, but we will see what we can do. Please keep in mind that if you email us on exam day or the night before, the course staff will be busy with exam logistics and we may take a day or two to get back to you.</li>
+                    <li><b>CGOE Students:</b> CGOE students will need to nominate exam monitors for both exams and coordinate the exam process with the <a href="mailto:stanfordonline-exams@stanford.edu">CGOE exams team</a>. Please refer to <a href="https://online.stanford.edu/graduate-education/exams-homework-faqs">this link</a> for more information on the process. For any additional questions, please reach out to the <a href="mailto:stanfordonline-exams@stanford.edu">CGOE exams team</a>.</li>
+                </ul>
+                <p></p>
+            </li>
+
+            <li>
+                <b>Extra Credit Options</b>: Students may choose <b>one</b> of the following two extra credit opportunities (not both):
+                <ul>
+                    <li>
+                        <b>Project</b> (up to 1.5% extra credit):
+                        Use the tools from class to build something interesting of your choice!
+                        <ul>
+                            <li>Projects should be done in groups of 1-4 students.</li>
+                            <li>There are 5 milestones for the project throughout the quarter: interest form, proposal, progress report, video, final report.</li>
+                            <li>Each project group will be assigned a CA mentor who will give feedback and answer questions.</li>
+                            <li>Your project will be graded on the axes described in <a href="project.html" target="_blank">the project page</a>: task definition, approach, data and experiments, analysis.</li>
+                            <li>Your project grade will be scaled to award up to 1.5% extra credit to your final grade: up to +1.5% for an A+ level project, up to +1% for an A/A- level project, up to +0.5% for a B+ level project.</li>
+                            <li>For inspiration, check out <a href="https://github.com/stanford-cs221/sample-projects" target="_blank">previous CS221 projects</a>.</li>
+                            <li>See <a href="project.html" target="_blank">the project page</a> for more details.</li>
+                            <li><b>Project Timeline:</b>
+                                <ol>
+                                    <li>
+                                        <a href="project.html#p-interest">Project interest form</a> (due <b>Mon Apr 13</b>)
+                                    </li>
+                                    <li>
+                                        <a href="project.html#p-proposal" target="_blank">Project proposal</a> (due <b>Mon Apr 27</b>)
+                                    </li>
+                                    <li>
+                                        <a href="project.html#p-progress" target="_blank">Project progress report</a> (due <b>Thu May 21</b>)
+                                    </li>
+                                    <li>
+                                        <a href="project.html#p-final" target="_blank">Project final report and video</a> (due <b>Tue Jun 2</b>)
+                                    </li>
+                                </ol>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b>AI Product Deep Dive</b> (up to 0.75% extra credit):
+                        An individual written assignment exploring AI products and their societal implications (approximately half the time commitment of the project).
+                        <ul>
+                            <li>Must be completed individually.</li>
+                            <li>Due <b>Tue Jun 2</b> (same as the project final report).</li>
+                            <li>More details on this assignment will be released soon.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <br>
+            <li><b>Ed</b> (up to 1% extra credit):
+                Please help answer your classmates's questions on Ed!
+                You will be awarded extra credit depending on how substantial and helpful you were on Ed.
+            </li>
+        </ul>
+        <br>
+    </div>
+
+    <div class="section">
+        <a name="schedule"><span class="header">Schedule</span></a>
+        <br>
+        <br>
+        See also <a href="https://calendar.google.com/calendar/u/0/embed?src=21f0687a22b115c1f8aace80898d3b0666654229e7d2b9b8794237bf3d6945cf@group.calendar.google.com&amp;ctz=America/Los_Angeles" target="_blank">course calendar</a> for office hours and other events.
+        <br>
+        <br>
+        <b>Pre-requisite review materials:</b> see <a href="https://canvas.stanford.edu/courses/225208" target="_blank">Canvas</a> for pre-recorded videos from previous iterations.
+        <br>
+        <br>
+        <div class="course_schedule">
+            <style>
+                .course_schedule .table td:first-child,
+                .course_schedule .table th:first-child {
+                    background-color: #faf8f7;
+                    border-left: 3px solid #8C1515;
+                    font-size: 0.92em;
+                }
+            </style>
+            <!-- Spring 2026 schedule -->
+            <table class="table">
+                <tbody>
+                    <tr class="highlightOnHover">
+                        <th></th>
+                        <th>Monday</th>
+                        <th>Tuesday</th>
+                        <th>Wednesday</th>
+                        <th>Thursday</th>
+                        <th>Friday</th>
+                        <th>Saturday</th>
+                        <th>Sunday</th>
+                    </tr>
+
+                    <!-- Week 1 -->
+                    <tr>
+                        <td>Week 1</td>
+                        <td>Mar 30</td>
+                        <td>Mar 31</td>
+                        <td>Apr 1</td>
+                        <td>Apr 2</td>
+                        <td>Apr 3</td>
+                        <td>Apr 4</td>
+                        <td>Apr 5</td>
+                    </tr>
+                    <tr class="highlightOnHover">
+                        <td>
+                            <b>Modules</b><br>
+                            Week 1<br>
+                            <br>
+                            <b>HW1 Released</b><br>
+                            [Foundations]<br>
+                        </td>
+                        <td>
+                            <b>Lecture 1:</b><br>
+                            Overview<br>
+                            <span class="pseudolink">10:30am - 12:20pm</span><br>
+                        </td>
+                        <td><!-- Tue --></td>
+                        <td>
+                            <b>Lecture 2:</b><br>
+                            Learning I<br>
+                            <span class="pseudolink">10:30am - 12:20pm</span><br>
+                        </td>
+                        <td><!-- Thu --></td>
+                        <td>
+                            <b>Problem Session 1</b><br>
+                            <span class="pseudolink">10:30am - 11:20am</span><br>
+                        </td>
+                        <td><!-- Sat --></td>
+                        <td><!-- Sun --></td>
+                    </tr>
+
+                    <!-- Week 2 -->
+                    <tr>
+                        <td>Week 2</td>
+                        <td>Apr 6</td>
+                        <td>Apr 7</td>
+                        <td>Apr 8</td>
+                        <td>Apr 9</td>
+                        <td>Apr 10</td>
+                        <td>Apr 11</td>
+                        <td>Apr 12</td>
+                    </tr>
+                    <tr class="highlightOnHover">
+                        <td>
+                            <b>Modules</b><br>
+                            Week 2<br>
+                            <br>
+                            <b>HW2 Released</b><br>
+                            [Sentiment]<br>
+                        </td>
+                        <td>
+                            <b>Lecture 3:</b><br>
+                            Learning II<br>
+                            <span class="pseudolink">10:30am - 12:20pm</span><br>
+                        </td>
+                        <td>
+                            <b>HW1 due</b><br>
+                            <span class="pseudolink">11:59pm</span><br>
+                            <b>Prerequisites quiz due</b><br>
+                            <span class="pseudolink">11:59pm</span><br>
+                        </td>
+                        <td>
+                            <b>Lecture 4:</b><br>
+                            Learning III<br>
+                            <span class="pseudolink">10:30am - 12:20pm</span><br>
+                        </td>
+                        <td><!-- Thu --></td>
+                        <td>
+                            <b>Problem Session 2</b><br>
+                            <span class="pseudolink">10:30am - 11:20am</span><br>
+                        </td>
+                        <td><!-- Sat --></td>
+                        <td><!-- Sun --></td>
+                    </tr>
+
+                    <!-- Week 3 -->
+                    <tr>
+                        <td>Week 3</td>
+                        <td>Apr 13</td>
+                        <td>Apr 14</td>
+                        <td>Apr 15</td>
+                        <td>Apr 16</td>
+                        <td>Apr 17</td>
+                        <td>Apr 18</td>
+                        <td>Apr 19</td>
+                    </tr>
+                    <tr class="highlightOnHover">
+                        <td>
+                            <b>Modules</b><br>
+                            Week 3<br>
+                            <br>
+                            <b>HW3 Released</b><br>
+                            [Route]<br>
+                        </td>
+                        <td>
+                            <b>Lecture 5:</b><br>
+                            Search I<br>
+                            <span class="pseudolink">10:30am - 12:20pm</span><br>
+                            <br>
+                            <b>Project interest form due</b><br>
+                            <span class="pseudolink">11:59pm</span><br>
+                        </td>
+                        <td>
+                            <b>HW2 due</b><br>
+                            <span class="pseudolink">11:59pm</span><br>
+                        </td>
+                        <td>
+                            <b>Lecture 6:</b><br>
+                            Search II<br>
+                            <span class="pseudolink">10:30am - 12:20pm</span><br>
+                        </td>
+                        <td><!-- Thu --></td>
+                        <td>
+                            <b>Problem Session 3</b><br>
+                            <span class="pseudolink">10:30am - 11:20am</span><br>
+                        </td>
+                        <td><!-- Sat --></td>
+                        <td><!-- Sun --></td>
+                    </tr>
+
+                    <!-- Week 4 -->
+                    <tr>
+                        <td>Week 4</td>
+                        <td>Apr 20</td>
+                        <td>Apr 21</td>
+                        <td>Apr 22</td>
+                        <td>Apr 23</td>
+                        <td>Apr 24</td>
+                        <td>Apr 25</td>
+                        <td>Apr 26</td>
+                    </tr>
+                    <tr class="highlightOnHover">
+                        <td>
+                            <b>Modules</b><br>
+                            Week 4<br>
+                            <br>
+                            <b>HW4 Released</b><br>
+                            [MountainCar]<br>
+                        </td>
+                        <td>
+                            <b>Lecture 7:</b><br>
+                            MDPs I<br>
+                            <span class="pseudolink">10:30am - 12:20pm</span><br>
+                        </td>
+                        <td>
+                            <b>HW3 due</b><br>
+                            <span class="pseudolink">11:59pm</span><br>
+                        </td>
+                        <td>
+                            <b>Lecture 8:</b><br>
+                            MDPs II<br>
+                            <span class="pseudolink">10:30am - 12:20pm</span><br>
+                        </td>
+                        <td><!-- Thu --></td>
+                        <td>
+                            <b>Problem Session 4</b><br>
+                            <span class="pseudolink">10:30am - 11:20am</span><br>
+                        </td>
+                        <td><!-- Sat --></td>
+                        <td><!-- Sun --></td>
+                    </tr>
+
+                    <!-- Week 5 -->
+                    <tr>
+                        <td>Week 5</td>
+                        <td>Apr 27</td>
+                        <td>Apr 28</td>
+                        <td>Apr 29</td>
+                        <td>Apr 30</td>
+                        <td>May 1</td>
+                        <td>May 2</td>
+                        <td>May 3</td>
+                    </tr>
+                    <tr class="highlightOnHover">
+                        <td>
+                            <b>Modules</b><br>
+                            Week 5<br>
+                            <br>
+                            <b>HW5 Released</b><br>
+                            [Pacman]<br>
+                        </td>
+                        <td>
+                            <b>Lecture 9:</b><br>
+                            Games I<br>
+                            <span class="pseudolink">10:30am - 12:20pm</span><br>
+                            <br>
+                            <b>Project proposal due</b><br>
+                            <span class="pseudolink">11:59pm</span><br>
+                        </td>
+                        <td>
+                            <b>HW4 due</b><br>
+                            <span class="pseudolink">11:59pm</span><br>
+                        </td>
+                        <td>
+                            <b>Lecture 10:</b><br>
+                            Games II<br>
+                            <span class="pseudolink">10:30am - 12:20pm</span><br>
+                        </td>
+                        <td><!-- Thu --></td>
+                        <td>
+                            <b>Problem Session 5</b><br>
+                            <span class="pseudolink">10:30am - 11:20am</span><br>
+                        </td>
+                        <td><!-- Sat --></td>
+                        <td><!-- Sun --></td>
+                    </tr>
+
+                    <!-- Week 6 -->
+                    <tr>
+                        <td>Week 6</td>
+                        <td>May 4</td>
+                        <td>May 5</td>
+                        <td>May 6</td>
+                        <td>May 7</td>
+                        <td>May 8</td>
+                        <td>May 9</td>
+                        <td>May 10</td>
+                    </tr>
+                    <tr class="highlightOnHover">
+                        <td>
+                            <b>Modules</b><br>
+                            Week 6<br>
+                        </td>
+                        <td>
+                            <b>Lecture 11:</b><br>
+                            Factor Graphs<br>
+                            <span class="pseudolink">10:30am - 12:20pm</span><br>
+                        </td>
+                        <td><!-- Tue --></td>
+                        <td>
+                            <b>Lecture 12:</b><br>
+                            Beam Search<br>
+                            <span class="pseudolink">10:30am - 12:20pm</span><br>
+                            <br>
+                            <b>Exam 1</b><br>
+                            <span class="pseudolink">6-8pm</span><br>
+                        </td>
+                        <td><!-- Thu --></td>
+                        <td>
+                            <b>Problem Session 6</b><br>
+                            <span class="pseudolink">10:30am - 11:20am</span><br>
+                        </td>
+                        <td><!-- Sat --></td>
+                        <td><!-- Sun --></td>
+                    </tr>
+
+                    <!-- Week 7 -->
+                    <tr>
+                        <td>Week 7</td>
+                        <td>May 11</td>
+                        <td>May 12</td>
+                        <td>May 13</td>
+                        <td>May 14</td>
+                        <td>May 15</td>
+                        <td>May 16</td>
+                        <td>May 17</td>
+                    </tr>
+                    <tr class="highlightOnHover">
+                        <td>
+                            <b>Modules</b><br>
+                            Week 7<br>
+                            <br>
+                            <b>HW6 Released</b><br>
+                            [Scheduling]<br>
+                        </td>
+                        <td>
+                            <b>Lecture 13:</b><br>
+                            Bayesian Networks I<br>
+                            <span class="pseudolink">10:30am - 12:20pm</span><br>
+                        </td>
+                        <td>
+                            <b>HW5 due</b><br>
+                            <span class="pseudolink">11:59pm</span><br>
+                        </td>
+                        <td>
+                            <b>Lecture 14:</b><br>
+                            Bayesian Networks II<br>
+                            <span class="pseudolink">10:30am - 12:20pm</span><br>
+                        </td>
+                        <td><!-- Thu --></td>
+                        <td>
+                            <b>Problem Session 7</b><br>
+                            <span class="pseudolink">10:30am - 11:20am</span><br>
+                        </td>
+                        <td><!-- Sat --></td>
+                        <td><!-- Sun --></td>
+                    </tr>
+
+                    <!-- Week 8 -->
+                    <tr>
+                        <td>Week 8</td>
+                        <td>May 18</td>
+                        <td>May 19</td>
+                        <td>May 20</td>
+                        <td>May 21</td>
+                        <td>May 22</td>
+                        <td>May 23</td>
+                        <td>May 24</td>
+                    </tr>
+                    <tr class="highlightOnHover">
+                        <td>
+                            <b>Modules</b><br>
+                            Week 8<br>
+                            <br>
+                            <b>HW7 Released</b><br>
+                            [Car]<br>
+                        </td>
+                        <td>
+                            <b>Lecture 15:</b><br>
+                            Bayesian Networks III<br>
+                            <span class="pseudolink">10:30am - 12:20pm</span><br>
+                        </td>
+                        <td>
+                            <b>HW6 due</b><br>
+                            <span class="pseudolink">11:59pm</span><br>
+                        </td>
+                        <td>
+                            <b>Lecture 16:</b><br>
+                            Logic I<br>
+                            <span class="pseudolink">10:30am - 12:20pm</span><br>
+                        </td>
+                        <td>
+                            <b>Project progress report due</b><br>
+                            <span class="pseudolink">11:59pm</span><br>
+                        </td>
+                        <td>
+                            <b>Problem Session 8</b><br>
+                            <span class="pseudolink">10:30am - 11:20am</span><br>
+                        </td>
+                        <td><!-- Sat --></td>
+                        <td><!-- Sun --></td>
+                    </tr>
+
+                    <!-- Week 9 (Memorial Day) -->
+                    <tr>
+                        <td>Week 9</td>
+                        <td>May 25</td>
+                        <td>May 26</td>
+                        <td>May 27</td>
+                        <td>May 28</td>
+                        <td>May 29</td>
+                        <td>May 30</td>
+                        <td>May 31</td>
+                    </tr>
+                    <tr class="highlightOnHover">
+                        <td>
+                            <b>Modules</b><br>
+                            Week 9<br>
+                            <br>
+                            <b>HW8 Released</b><br>
+                            [Logic]<br>
+                        </td>
+                        <td>
+                            Memorial Day<br>
+                            <i>No lecture</i><br>
+                        </td>
+                        <td>
+                            <b>HW7 due</b><br>
+                            <span class="pseudolink">11:59pm</span><br>
+                        </td>
+                        <td>
+                            <b>Lecture 17:</b><br>
+                            Logic II<br>
+                            <span class="pseudolink">10:30am - 12:20pm</span><br>
+                        </td>
+                        <td><!-- Thu --></td>
+                        <td>
+                            <b>Problem Session 9</b><br>
+                            <span class="pseudolink">10:30am - 11:20am</span><br>
+                        </td>
+                        <td><!-- Sat --></td>
+                        <td><!-- Sun --></td>
+                    </tr>
+
+                    <!-- Week 10 -->
+                    <tr>
+                        <td>Week 10</td>
+                        <td>Jun 1</td>
+                        <td>Jun 2</td>
+                        <td>Jun 3</td>
+                        <td>Jun 4</td>
+                        <td>Jun 5</td>
+                        <td>Jun 6</td>
+                        <td>Jun 7</td>
+                    </tr>
+                    <tr class="highlightOnHover">
+                        <td>
+                            <b>Modules</b><br>
+                            Week 10<br>
+                        </td>
+                        <td>
+                            <b>Lecture 18:</b><br>
+                            Conclusion/Summary/Future of AI<br>
+                            <span class="pseudolink">10:30am - 12:20pm</span><br>
+                        </td>
+                        <td>
+                            <b>HW8 due</b><br>
+                            <span class="pseudolink">11:59pm</span><br>
+                            <br>
+                            <b>Project final report and video due</b><br>
+                            <span class="pseudolink">11:59pm</span><br>
+                            <br>
+                            <b>AI Product Deep Dive due</b><br>
+                            <span class="pseudolink">11:59pm</span><br>
+                            <br>
+                            <i>(Please note: only ONE of Project and AI Product Deep Dive are due — NOT both.)</i><br>
+                            <br>
+                            <b>Final Exam Review</b><br>
+                            Skilling Auditorium<br>
+                            <span class="pseudolink">3:00 - 4:20pm</span><br>
+                        </td>
+                        <td><!-- Wed --></td>
+                        <td><!-- Thu --></td>
+                        <td>
+                            <b>Exam 2</b><br>
+                            <span class="pseudolink">3:30-5:30pm</span><br>
+                        </td>
+                        <td><!-- Sat --></td>
+                        <td><!-- Sun --></td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+    </div>
+
+</body></html>

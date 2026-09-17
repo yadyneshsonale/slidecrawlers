@@ -1,0 +1,52 @@
+[
+{
+"url": "https://www.cse.iitk.ac.in/users/piyush/courses/pml_spring25/slides/CS772-Lec1.pdf",
+"title": "[PDF] Course Logistics and Introduction to Probabilistic Machine Learning",
+"description": "\u25aaFollow the suggested readings for each lecture (may also include some portions from these books), rather than trying to read these books in a linear fashion 4 CS772A: PML Probabilistic Machine Learning \u25aaMachine Learning primarily deals with \u25aaPredicting output \ud835\udc66\u2217 for new (test) inputs \ud835\udc99\u2217 given training data \ud835\udc7f, \ud835\udc9a= \ud835\udc99\ud835\udc56, \ud835\udc66\ud835\udc56 \ud835\udc56=1 \ud835\udc41 \u25aaGenerating new (synthetic) data given some training data \ud835\udc7f= \ud835\udc99\ud835\udc56\ud835\udc56=1 \ud835\udc41 \u25aaProbabilistic ML gives a natural way to solve both these tasks (with some advantages) \u25aaPrediction: Learning the predictive distribution \u25aaGeneration: Learning a generative model of data \u25aaAt its core, both problems require estimating the underlying distribution of data 5 \ud835\udc5d\ud835\udc66\u2217\ud835\udc65\u2217, \ud835\udc7f, \ud835\udc9a) \ud835\udc5d\ud835\udc99\u2217\ud835\udc7f) Both are conditional distributions Estimating them exactly is hard in general but we can use approximations Can \u201csample\u201d (simulate) from this distribution to generate new data PML is about estimating these distributions accurately and efficiently Using this, we can not only get the mean but also the variance (uncertainty) of the predicted output \ud835\udc66\u2217 CS772A: PML Probabilistic Machine Learning \u25aaWith a probabilistic approach to ML, we can also easily incorporate \u201cdomain knowledge\u201d \u25aaCan specify our assumptions about data using suitable probability distributions over inputs/outputs, usually in the forms \u25aaCan specify our assumptions about the unknowns \ud835\udf03 using a \u201cprior distribution\u201d \u25aaAfter seeing some data \ud835\udc9f, can update the prior into a posterior distribution \ud835\udc5d(\ud835\udf03|\ud835\udc9f) 6 \ud835\udc5d\ud835\udc66\ud835\udc5b\ud835\udc65\ud835\udc5b, \ud835\udf03) \ud835\udc5d(\ud835\udc65\ud835\udc5b|\ud835\udf03) \ud835\udc5d(\ud835\udf03) Probability distribution of the output as a function of input Distribution of the inputs \ud835\udc5d(\ud835\udc65\ud835\udc5b|\ud835\udc66\ud835\udc5b, \ud835\udf03) Distribution of the input conditioned on its \u201clabel/output\u201d Unknown parameters of this distribution Represents our belief about the unknown parameters before we see the data CS772A: PML The Core of PML: Two Basic Rules of Probability \u25aaSum Rule (marginalization): Distribution of \ud835\udc4e considering for all possibilities of \ud835\udc4f \u25aaProduct Rule \u25aaThese two rules are the core of most of probabilistic/Bayesian ML \u25aaBayes rule easily derived from the sum and product rules 7 \ud835\udc5d\ud835\udc4e= \u0dcd \ud835\udc4f \ud835\udc5d(\ud835\udc4e, \ud835\udc4f)"
+},
+{
+"url": "https://www.cse.iitk.ac.in/users/piyush/courses/pml_spring26/pml.html",
+"title": "Probabilistic Machine Learning (CS772A) - CSE - IIT Kanpur",
+"description": "We will use lecture slides/notes, monographs, tutorials, and papers for the topics that will be covered in this course. Some recommended, although not"
+},
+{
+"url": "https://www.cse.iitk.ac.in/users/piyush/courses/pml_autumn22/pml.html",
+"title": "Probabilistic Machine Learning (CS772A) - CSE - IIT Kanpur",
+"description": "We will use lecture slides/notes, monographs, tutorials, and papers for the topics that will be covered in this course. Some recommended, although not required,"
+},
+{
+"url": "https://www.scribd.com/document/441900435/pml-lec1-slides-pdf",
+"title": "CS772A: Probabilistic ML Overview | PDF - Scribd",
+"description": "This document outlines the course logistics and introduction for the Probabilistic Machine Learning course CS772A. The course will be taught by Piyush Rai"
+},
+{
+"url": "https://www.slideshare.net/slideshow/cs772lec1pptx/265247523",
+"title": "CS772-Lec1.pptx - Slideshare",
+"description": "The document provides an overview of the course \"Probabilistic Machine Learning\". Key points: - The course will meet twice a week and cover foundations of"
+},
+{
+"url": "https://www.coursehero.com/sitemap/schools/3185-IIT-Kanpur/courses/18495559-CS772",
+"title": "CS 772 - IIT Kanpur - Course Hero",
+"description": "CS 772 \u00b7 Lecture-4.pptx. Decision Trees CS771: Introduction to Machine Learning 2 Decision Trees A Decision Tree (DT) defines a hierarchy of rules to make a"
+},
+{
+"url": "https://piazza.com/iitk.ac.in/secondsemester2016/cs772a/info",
+"title": "CS 772A: Probabilistic Machine Learning - Piazza",
+"description": "This course will introduce the basic (and some advanced) topics in probabilistic machine learning, covering (1) common parameter estimation methods for"
+},
+{
+"url": "https://www.cse.iitk.ac.in/users/piyush/teaching.html",
+"title": "Teaching - CSE - IIT Kanpur",
+"description": "CS772A: Probabilistic Machine Learning (2025-26, Sem-II); CS772A: Probabilistic Machine Learning (2024-25, Sem-II); CS771A: Introduction to Machine Learning"
+},
+{
+"url": "https://www.reddit.com/r/IITK/comments/1h0tphq/ml_courses",
+"title": "ML courses : r/IITK - Reddit",
+"description": "For 771, the course webpage and slides show lot of ML topics covered but seems a bit heavy."
+},
+{
+"url": "https://github.com/krushnapavan9/CS771-Introduction-to-Machine-Learning---Piyush-Rai",
+"title": "krushnapavan9/CS771-Introduction-to-Machine-Learning---Piyush ...",
+"description": "krushnapavan9/CS771-Introduction-to-Machine-Learning---Piyush-Rai ; Lecture 01 - Introduction.pdf \u00b7 Lecture 01 - Introduction.pdf ; Lecture 02 - Warming-up and"
+}
+]

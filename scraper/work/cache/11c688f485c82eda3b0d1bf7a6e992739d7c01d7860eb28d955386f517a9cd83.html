@@ -1,0 +1,994 @@
+<!DOCTYPE html><html lang="en" dir="ltr" class=" js" data-once="drupal-dialog-deprecation-listener"><head>
+    <meta charset="utf-8">
+<meta name="Generator" content="Drupal 11 (https://www.drupal.org)">
+<meta name="MobileOptimized" content="width">
+<meta name="HandheldFriendly" content="true">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style type="text/css">:host,:root{--fa-font-solid:normal 900 1em/1 "Font Awesome 6 Free";--fa-font-regular:normal 400 1em/1 "Font Awesome 6 Free";--fa-font-light:normal 300 1em/1 "Font Awesome 6 Pro";--fa-font-thin:normal 100 1em/1 "Font Awesome 6 Pro";--fa-font-duotone:normal 900 1em/1 "Font Awesome 6 Duotone";--fa-font-duotone-regular:normal 400 1em/1 "Font Awesome 6 Duotone";--fa-font-duotone-light:normal 300 1em/1 "Font Awesome 6 Duotone";--fa-font-duotone-thin:normal 100 1em/1 "Font Awesome 6 Duotone";--fa-font-brands:normal 400 1em/1 "Font Awesome 6 Brands";--fa-font-sharp-solid:normal 900 1em/1 "Font Awesome 6 Sharp";--fa-font-sharp-regular:normal 400 1em/1 "Font Awesome 6 Sharp";--fa-font-sharp-light:normal 300 1em/1 "Font Awesome 6 Sharp";--fa-font-sharp-thin:normal 100 1em/1 "Font Awesome 6 Sharp";--fa-font-sharp-duotone-solid:normal 900 1em/1 "Font Awesome 6 Sharp Duotone";--fa-font-sharp-duotone-regular:normal 400 1em/1 "Font Awesome 6 Sharp Duotone";--fa-font-sharp-duotone-light:normal 300 1em/1 "Font Awesome 6 Sharp Duotone";--fa-font-sharp-duotone-thin:normal 100 1em/1 "Font Awesome 6 Sharp Duotone"}svg:not(:host).svg-inline--fa,svg:not(:root).svg-inline--fa{overflow:visible;box-sizing:content-box}.svg-inline--fa{display:var(--fa-display,inline-block);height:1em;overflow:visible;vertical-align:-.125em}.svg-inline--fa.fa-2xs{vertical-align:.1em}.svg-inline--fa.fa-xs{vertical-align:0}.svg-inline--fa.fa-sm{vertical-align:-.0714285705em}.svg-inline--fa.fa-lg{vertical-align:-.2em}.svg-inline--fa.fa-xl{vertical-align:-.25em}.svg-inline--fa.fa-2xl{vertical-align:-.3125em}.svg-inline--fa.fa-pull-left{margin-right:var(--fa-pull-margin,.3em);width:auto}.svg-inline--fa.fa-pull-right{margin-left:var(--fa-pull-margin,.3em);width:auto}.svg-inline--fa.fa-li{width:var(--fa-li-width,2em);top:.25em}.svg-inline--fa.fa-fw{width:var(--fa-fw-width,1.25em)}.fa-layers svg.svg-inline--fa{bottom:0;left:0;margin:auto;position:absolute;right:0;top:0}.fa-layers-counter,.fa-layers-text{display:inline-block;position:absolute;text-align:center}.fa-layers{display:inline-block;height:1em;position:relative;text-align:center;vertical-align:-.125em;width:1em}.fa-layers svg.svg-inline--fa{transform-origin:center center}.fa-layers-text{left:50%;top:50%;transform:translate(-50%,-50%);transform-origin:center center}.fa-layers-counter{background-color:var(--fa-counter-background-color,#ff253a);border-radius:var(--fa-counter-border-radius,1em);box-sizing:border-box;color:var(--fa-inverse,#fff);line-height:var(--fa-counter-line-height,1);max-width:var(--fa-counter-max-width,5em);min-width:var(--fa-counter-min-width,1.5em);overflow:hidden;padding:var(--fa-counter-padding,.25em .5em);right:var(--fa-right,0);text-overflow:ellipsis;top:var(--fa-top,0);transform:scale(var(--fa-counter-scale,.25));transform-origin:top right}.fa-layers-bottom-right{bottom:var(--fa-bottom,0);right:var(--fa-right,0);top:auto;transform:scale(var(--fa-layers-scale,.25));transform-origin:bottom right}.fa-layers-bottom-left{bottom:var(--fa-bottom,0);left:var(--fa-left,0);right:auto;top:auto;transform:scale(var(--fa-layers-scale,.25));transform-origin:bottom left}.fa-layers-top-right{top:var(--fa-top,0);right:var(--fa-right,0);transform:scale(var(--fa-layers-scale,.25));transform-origin:top right}.fa-layers-top-left{left:var(--fa-left,0);right:auto;top:var(--fa-top,0);transform:scale(var(--fa-layers-scale,.25));transform-origin:top left}.fa-1x{font-size:1em}.fa-2x{font-size:2em}.fa-3x{font-size:3em}.fa-4x{font-size:4em}.fa-5x{font-size:5em}.fa-6x{font-size:6em}.fa-7x{font-size:7em}.fa-8x{font-size:8em}.fa-9x{font-size:9em}.fa-10x{font-size:10em}.fa-2xs{font-size:.625em;line-height:.1em;vertical-align:.225em}.fa-xs{font-size:.75em;line-height:.0833333337em;vertical-align:.125em}.fa-sm{font-size:.875em;line-height:.0714285718em;vertical-align:.0535714295em}.fa-lg{font-size:1.25em;line-height:.05em;vertical-align:-.075em}.fa-xl{font-size:1.5em;line-height:.0416666682em;vertical-align:-.125em}.fa-2xl{font-size:2em;line-height:.03125em;vertical-align:-.1875em}.fa-fw{text-align:center;width:1.25em}.fa-ul{list-style-type:none;margin-left:var(--fa-li-margin,2.5em);padding-left:0}.fa-ul>li{position:relative}.fa-li{left:calc(-1 * var(--fa-li-width,2em));position:absolute;text-align:center;width:var(--fa-li-width,2em);line-height:inherit}.fa-border{border-color:var(--fa-border-color,#eee);border-radius:var(--fa-border-radius,.1em);border-style:var(--fa-border-style,solid);border-width:var(--fa-border-width,.08em);padding:var(--fa-border-padding,.2em .25em .15em)}.fa-pull-left{float:left;margin-right:var(--fa-pull-margin,.3em)}.fa-pull-right{float:right;margin-left:var(--fa-pull-margin,.3em)}.fa-beat{animation-name:fa-beat;animation-delay:var(--fa-animation-delay,0s);animation-direction:var(--fa-animation-direction,normal);animation-duration:var(--fa-animation-duration,1s);animation-iteration-count:var(--fa-animation-iteration-count,infinite);animation-timing-function:var(--fa-animation-timing,ease-in-out)}.fa-bounce{animation-name:fa-bounce;animation-delay:var(--fa-animation-delay,0s);animation-direction:var(--fa-animation-direction,normal);animation-duration:var(--fa-animation-duration,1s);animation-iteration-count:var(--fa-animation-iteration-count,infinite);animation-timing-function:var(--fa-animation-timing,cubic-bezier(.28,.84,.42,1))}.fa-fade{animation-name:fa-fade;animation-delay:var(--fa-animation-delay,0s);animation-direction:var(--fa-animation-direction,normal);animation-duration:var(--fa-animation-duration,1s);animation-iteration-count:var(--fa-animation-iteration-count,infinite);animation-timing-function:var(--fa-animation-timing,cubic-bezier(.4,0,.6,1))}.fa-beat-fade{animation-name:fa-beat-fade;animation-delay:var(--fa-animation-delay,0s);animation-direction:var(--fa-animation-direction,normal);animation-duration:var(--fa-animation-duration,1s);animation-iteration-count:var(--fa-animation-iteration-count,infinite);animation-timing-function:var(--fa-animation-timing,cubic-bezier(.4,0,.6,1))}.fa-flip{animation-name:fa-flip;animation-delay:var(--fa-animation-delay,0s);animation-direction:var(--fa-animation-direction,normal);animation-duration:var(--fa-animation-duration,1s);animation-iteration-count:var(--fa-animation-iteration-count,infinite);animation-timing-function:var(--fa-animation-timing,ease-in-out)}.fa-shake{animation-name:fa-shake;animation-delay:var(--fa-animation-delay,0s);animation-direction:var(--fa-animation-direction,normal);animation-duration:var(--fa-animation-duration,1s);animation-iteration-count:var(--fa-animation-iteration-count,infinite);animation-timing-function:var(--fa-animation-timing,linear)}.fa-spin{animation-name:fa-spin;animation-delay:var(--fa-animation-delay,0s);animation-direction:var(--fa-animation-direction,normal);animation-duration:var(--fa-animation-duration,2s);animation-iteration-count:var(--fa-animation-iteration-count,infinite);animation-timing-function:var(--fa-animation-timing,linear)}.fa-spin-reverse{--fa-animation-direction:reverse}.fa-pulse,.fa-spin-pulse{animation-name:fa-spin;animation-direction:var(--fa-animation-direction,normal);animation-duration:var(--fa-animation-duration,1s);animation-iteration-count:var(--fa-animation-iteration-count,infinite);animation-timing-function:var(--fa-animation-timing,steps(8))}@media (prefers-reduced-motion:reduce){.fa-beat,.fa-beat-fade,.fa-bounce,.fa-fade,.fa-flip,.fa-pulse,.fa-shake,.fa-spin,.fa-spin-pulse{animation-delay:-1ms;animation-duration:1ms;animation-iteration-count:1;transition-delay:0s;transition-duration:0s}}@keyframes fa-beat{0%,90%{transform:scale(1)}45%{transform:scale(var(--fa-beat-scale,1.25))}}@keyframes fa-bounce{0%{transform:scale(1,1) translateY(0)}10%{transform:scale(var(--fa-bounce-start-scale-x,1.1),var(--fa-bounce-start-scale-y,.9)) translateY(0)}30%{transform:scale(var(--fa-bounce-jump-scale-x,.9),var(--fa-bounce-jump-scale-y,1.1)) translateY(var(--fa-bounce-height,-.5em))}50%{transform:scale(var(--fa-bounce-land-scale-x,1.05),var(--fa-bounce-land-scale-y,.95)) translateY(0)}57%{transform:scale(1,1) translateY(var(--fa-bounce-rebound,-.125em))}64%{transform:scale(1,1) translateY(0)}100%{transform:scale(1,1) translateY(0)}}@keyframes fa-fade{50%{opacity:var(--fa-fade-opacity,.4)}}@keyframes fa-beat-fade{0%,100%{opacity:var(--fa-beat-fade-opacity,.4);transform:scale(1)}50%{opacity:1;transform:scale(var(--fa-beat-fade-scale,1.125))}}@keyframes fa-flip{50%{transform:rotate3d(var(--fa-flip-x,0),var(--fa-flip-y,1),var(--fa-flip-z,0),var(--fa-flip-angle,-180deg))}}@keyframes fa-shake{0%{transform:rotate(-15deg)}4%{transform:rotate(15deg)}24%,8%{transform:rotate(-18deg)}12%,28%{transform:rotate(18deg)}16%{transform:rotate(-22deg)}20%{transform:rotate(22deg)}32%{transform:rotate(-12deg)}36%{transform:rotate(12deg)}100%,40%{transform:rotate(0)}}@keyframes fa-spin{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}.fa-rotate-90{transform:rotate(90deg)}.fa-rotate-180{transform:rotate(180deg)}.fa-rotate-270{transform:rotate(270deg)}.fa-flip-horizontal{transform:scale(-1,1)}.fa-flip-vertical{transform:scale(1,-1)}.fa-flip-both,.fa-flip-horizontal.fa-flip-vertical{transform:scale(-1,-1)}.fa-rotate-by{transform:rotate(var(--fa-rotate-angle,0))}.fa-stack{display:inline-block;vertical-align:middle;height:2em;position:relative;width:2.5em}.fa-stack-1x,.fa-stack-2x{bottom:0;left:0;margin:auto;position:absolute;right:0;top:0;z-index:var(--fa-stack-z-index,auto)}.svg-inline--fa.fa-stack-1x{height:1em;width:1.25em}.svg-inline--fa.fa-stack-2x{height:2em;width:2.5em}.fa-inverse{color:var(--fa-inverse,#fff)}.fa-sr-only,.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border-width:0}.fa-sr-only-focusable:not(:focus),.sr-only-focusable:not(:focus){position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border-width:0}.svg-inline--fa .fa-primary{fill:var(--fa-primary-color,currentColor);opacity:var(--fa-primary-opacity,1)}.svg-inline--fa .fa-secondary{fill:var(--fa-secondary-color,currentColor);opacity:var(--fa-secondary-opacity,.4)}.svg-inline--fa.fa-swap-opacity .fa-primary{opacity:var(--fa-secondary-opacity,.4)}.svg-inline--fa.fa-swap-opacity .fa-secondary{opacity:var(--fa-primary-opacity,1)}.svg-inline--fa mask .fa-primary,.svg-inline--fa mask .fa-secondary{fill:#000}</style><style>div#sliding-popup, div#sliding-popup .eu-cookie-withdraw-banner, .eu-cookie-withdraw-tab {background: #0779bf} div#sliding-popup.eu-cookie-withdraw-wrapper { background: transparent; } #sliding-popup h1, #sliding-popup h2, #sliding-popup h3, #sliding-popup p, #sliding-popup label, #sliding-popup div, .eu-cookie-compliance-more-button, .eu-cookie-compliance-secondary-button, .eu-cookie-withdraw-tab { color: #ffffff;} .eu-cookie-withdraw-tab { border-color: #ffffff;}</style>
+<style>/* cyrillic-ext */@font-face {  font-family: 'Source Sans Pro';  font-style: italic;  font-weight: 400;  font-display: swap;  src: url(/sites/default/files/public/maths/fonts/6xK1dSBYKcSV-LCoeQqfX1RYOo3qPZ7qsDJT9g.woff2) format('woff2');  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;}/* cyrillic */@font-face {  font-family: 'Source Sans Pro';  font-style: italic;  font-weight: 400;  font-display: swap;  src: url(/sites/default/files/public/maths/fonts/6xK1dSBYKcSV-LCoeQqfX1RYOo3qPZ7jsDJT9g.woff2) format('woff2');  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;}/* greek-ext */@font-face {  font-family: 'Source Sans Pro';  font-style: italic;  font-weight: 400;  font-display: swap;  src: url(/sites/default/files/public/maths/fonts/6xK1dSBYKcSV-LCoeQqfX1RYOo3qPZ7rsDJT9g.woff2) format('woff2');  unicode-range: U+1F00-1FFF;}/* greek */@font-face {  font-family: 'Source Sans Pro';  font-style: italic;  font-weight: 400;  font-display: swap;  src: url(/sites/default/files/public/maths/fonts/6xK1dSBYKcSV-LCoeQqfX1RYOo3qPZ7ksDJT9g.woff2) format('woff2');  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;}/* vietnamese */@font-face {  font-family: 'Source Sans Pro';  font-style: italic;  font-weight: 400;  font-display: swap;  src: url(/sites/default/files/public/maths/fonts/6xK1dSBYKcSV-LCoeQqfX1RYOo3qPZ7osDJT9g.woff2) format('woff2');  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;}/* latin-ext */@font-face {  font-family: 'Source Sans Pro';  font-style: italic;  font-weight: 400;  font-display: swap;  src: url(/sites/default/files/public/maths/fonts/6xK1dSBYKcSV-LCoeQqfX1RYOo3qPZ7psDJT9g.woff2) format('woff2');  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;}/* latin */@font-face {  font-family: 'Source Sans Pro';  font-style: italic;  font-weight: 400;  font-display: swap;  src: url(/sites/default/files/public/maths/fonts/6xK1dSBYKcSV-LCoeQqfX1RYOo3qPZ7nsDI.woff2) format('woff2');  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}/* cyrillic-ext */@font-face {  font-family: 'Source Sans Pro';  font-style: italic;  font-weight: 600;  font-display: swap;  src: url(/sites/default/files/public/maths/fonts/6xKwdSBYKcSV-LCoeQqfX1RYOo3qPZY4lCdh18Smxg.woff2) format('woff2');  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;}/* cyrillic */@font-face {  font-family: 'Source Sans Pro';  font-style: italic;  font-weight: 600;  font-display: swap;  src: url(/sites/default/files/public/maths/fonts/6xKwdSBYKcSV-LCoeQqfX1RYOo3qPZY4lCdo18Smxg.woff2) format('woff2');  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;}/* greek-ext */@font-face {  font-family: 'Source Sans Pro';  font-style: italic;  font-weight: 600;  font-display: swap;  src: url(/sites/default/files/public/maths/fonts/6xKwdSBYKcSV-LCoeQqfX1RYOo3qPZY4lCdg18Smxg.woff2) format('woff2');  unicode-range: U+1F00-1FFF;}/* greek */@font-face {  font-family: 'Source Sans Pro';  font-style: italic;  font-weight: 600;  font-display: swap;  src: url(/sites/default/files/public/maths/fonts/6xKwdSBYKcSV-LCoeQqfX1RYOo3qPZY4lCdv18Smxg.woff2) format('woff2');  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;}/* vietnamese */@font-face {  font-family: 'Source Sans Pro';  font-style: italic;  font-weight: 600;  font-display: swap;  src: url(/sites/default/files/public/maths/fonts/6xKwdSBYKcSV-LCoeQqfX1RYOo3qPZY4lCdj18Smxg.woff2) format('woff2');  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;}/* latin-ext */@font-face {  font-family: 'Source Sans Pro';  font-style: italic;  font-weight: 600;  font-display: swap;  src: url(/sites/default/files/public/maths/fonts/6xKwdSBYKcSV-LCoeQqfX1RYOo3qPZY4lCdi18Smxg.woff2) format('woff2');  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;}/* latin */@font-face {  font-family: 'Source Sans Pro';  font-style: italic;  font-weight: 600;  font-display: swap;  src: url(/sites/default/files/public/maths/fonts/6xKwdSBYKcSV-LCoeQqfX1RYOo3qPZY4lCds18Q.woff2) format('woff2');  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}/* cyrillic-ext */@font-face {  font-family: 'Source Sans Pro';  font-style: normal;  font-weight: 300;  font-display: swap;  src: url(/sites/default/files/public/maths/fonts/6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwmhduz8A.woff2) format('woff2');  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;}/* cyrillic */@font-face {  font-family: 'Source Sans Pro';  font-style: normal;  font-weight: 300;  font-display: swap;  src: url(/sites/default/files/public/maths/fonts/6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwkxduz8A.woff2) format('woff2');  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;}/* greek-ext */@font-face {  font-family: 'Source Sans Pro';  font-style: normal;  font-weight: 300;  font-display: swap;  src: url(/sites/default/files/public/maths/fonts/6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwmxduz8A.woff2) format('woff2');  unicode-range: U+1F00-1FFF;}/* greek */@font-face {  font-family: 'Source Sans Pro';  font-style: normal;  font-weight: 300;  font-display: swap;  src: url(/sites/default/files/public/maths/fonts/6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwlBduz8A.woff2) format('woff2');  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;}/* vietnamese */@font-face {  font-family: 'Source Sans Pro';  font-style: normal;  font-weight: 300;  font-display: swap;  src: url(/sites/default/files/public/maths/fonts/6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwmBduz8A.woff2) format('woff2');  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;}/* latin-ext */@font-face {  font-family: 'Source Sans Pro';  font-style: normal;  font-weight: 300;  font-display: swap;  src: url(/sites/default/files/public/maths/fonts/6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwmRduz8A.woff2) format('woff2');  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;}/* latin */@font-face {  font-family: 'Source Sans Pro';  font-style: normal;  font-weight: 300;  font-display: swap;  src: url(/sites/default/files/public/maths/fonts/6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwlxdu.woff2) format('woff2');  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}/* cyrillic-ext */@font-face {  font-family: 'Source Sans Pro';  font-style: normal;  font-weight: 400;  font-display: swap;  src: url(/sites/default/files/public/maths/fonts/6xK3dSBYKcSV-LCoeQqfX1RYOo3qNa7lqDY.woff2) format('woff2');  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;}/* cyrillic */@font-face {  font-family: 'Source Sans Pro';  font-style: normal;  font-weight: 400;  font-display: swap;  src: url(/sites/default/files/public/maths/fonts/6xK3dSBYKcSV-LCoeQqfX1RYOo3qPK7lqDY.woff2) format('woff2');  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;}/* greek-ext */@font-face {  font-family: 'Source Sans Pro';  font-style: normal;  font-weight: 400;  font-display: swap;  src: url(/sites/default/files/public/maths/fonts/6xK3dSBYKcSV-LCoeQqfX1RYOo3qNK7lqDY.woff2) format('woff2');  unicode-range: U+1F00-1FFF;}/* greek */@font-face {  font-family: 'Source Sans Pro';  font-style: normal;  font-weight: 400;  font-display: swap;  src: url(/sites/default/files/public/maths/fonts/6xK3dSBYKcSV-LCoeQqfX1RYOo3qO67lqDY.woff2) format('woff2');  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;}/* vietnamese */@font-face {  font-family: 'Source Sans Pro';  font-style: normal;  font-weight: 400;  font-display: swap;  src: url(/sites/default/files/public/maths/fonts/6xK3dSBYKcSV-LCoeQqfX1RYOo3qN67lqDY.woff2) format('woff2');  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;}/* latin-ext */@font-face {  font-family: 'Source Sans Pro';  font-style: normal;  font-weight: 400;  font-display: swap;  src: url(/sites/default/files/public/maths/fonts/6xK3dSBYKcSV-LCoeQqfX1RYOo3qNq7lqDY.woff2) format('woff2');  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;}/* latin */@font-face {  font-family: 'Source Sans Pro';  font-style: normal;  font-weight: 400;  font-display: swap;  src: url(/sites/default/files/public/maths/fonts/6xK3dSBYKcSV-LCoeQqfX1RYOo3qOK7l.woff2) format('woff2');  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}/* cyrillic-ext */@font-face {  font-family: 'Source Sans Pro';  font-style: normal;  font-weight: 600;  font-display: swap;  src: url(/sites/default/files/public/maths/fonts/6xKydSBYKcSV-LCoeQqfX1RYOo3i54rwmhduz8A.woff2) format('woff2');  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;}/* cyrillic */@font-face {  font-family: 'Source Sans Pro';  font-style: normal;  font-weight: 600;  font-display: swap;  src: url(/sites/default/files/public/maths/fonts/6xKydSBYKcSV-LCoeQqfX1RYOo3i54rwkxduz8A.woff2) format('woff2');  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;}/* greek-ext */@font-face {  font-family: 'Source Sans Pro';  font-style: normal;  font-weight: 600;  font-display: swap;  src: url(/sites/default/files/public/maths/fonts/6xKydSBYKcSV-LCoeQqfX1RYOo3i54rwmxduz8A.woff2) format('woff2');  unicode-range: U+1F00-1FFF;}/* greek */@font-face {  font-family: 'Source Sans Pro';  font-style: normal;  font-weight: 600;  font-display: swap;  src: url(/sites/default/files/public/maths/fonts/6xKydSBYKcSV-LCoeQqfX1RYOo3i54rwlBduz8A.woff2) format('woff2');  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;}/* vietnamese */@font-face {  font-family: 'Source Sans Pro';  font-style: normal;  font-weight: 600;  font-display: swap;  src: url(/sites/default/files/public/maths/fonts/6xKydSBYKcSV-LCoeQqfX1RYOo3i54rwmBduz8A.woff2) format('woff2');  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;}/* latin-ext */@font-face {  font-family: 'Source Sans Pro';  font-style: normal;  font-weight: 600;  font-display: swap;  src: url(/sites/default/files/public/maths/fonts/6xKydSBYKcSV-LCoeQqfX1RYOo3i54rwmRduz8A.woff2) format('woff2');  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;}/* latin */@font-face {  font-family: 'Source Sans Pro';  font-style: normal;  font-weight: 600;  font-display: swap;  src: url(/sites/default/files/public/maths/fonts/6xKydSBYKcSV-LCoeQqfX1RYOo3i54rwlxdu.woff2) format('woff2');  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}</style>
+<link rel="icon" href="/sites/default/files/public/favicon.ico" type="image/vnd.microsoft.icon">
+<link rel="canonical" href="https://www.maths.ox.ac.uk/events/public-lectures-events">
+<link rel="shortlink" href="https://www.maths.ox.ac.uk/node/13243">
+
+    <title>Oxford Mathematics Public Lectures and Events | Mathematical Institute</title>
+    <style>ul.dropdown-menu {display: none;}</style>
+    <link rel="stylesheet" media="all" href="/sites/default/files/public/css/css_VQO7ajswk7AO-r0-r4ivMkFuMdaqyQ4rVzGMQIwQ3zQ.css?delta=0&amp;language=en&amp;theme=maths&amp;include=eJyFkltywyAMRTcE5qML8giQbSUyojza0NUXx52M3abtD49zBVxJWIaPZljAU5iVFSm5JIhjLo0xm8h1pjBYcNc5SQ1-dMKSBluJvXIMSUwfc27DRIzKSULjU43AA1zgdgKegGVW_hbTWBZc0YBfKRzBw4B-eY7v-6fS6cD-on5HO0laT0pf7rfoexKYflEXhP9ErVexW9p_B2Xyp5DNUj6CmcV2t1vNty4clAU59ivuJcbTmctrxdR0pSNkaFLLkUSYURcqZ5MbTTomfAt4O8WXFmXu1VyawtqbLVfCPq2RCYJD8wyOHieoXNT-_OgpO3nr7owE7P9FrVCW_D3LzOSuxkJGlWtPcqK8GApUVG654LpLXx0cH202P8gn3c8UGw">
+<link rel="stylesheet" media="all" href="/sites/default/files/public/css/css_dZpXRjw-atybqk7di_Pdfmi4ZSiFTMHyo023Hw7NzzA.css?delta=1&amp;language=en&amp;theme=maths&amp;include=eJyFkltywyAMRTcE5qML8giQbSUyojza0NUXx52M3abtD49zBVxJWIaPZljAU5iVFSm5JIhjLo0xm8h1pjBYcNc5SQ1-dMKSBluJvXIMSUwfc27DRIzKSULjU43AA1zgdgKegGVW_hbTWBZc0YBfKRzBw4B-eY7v-6fS6cD-on5HO0laT0pf7rfoexKYflEXhP9ErVexW9p_B2Xyp5DNUj6CmcV2t1vNty4clAU59ivuJcbTmctrxdR0pSNkaFLLkUSYURcqZ5MbTTomfAt4O8WXFmXu1VyawtqbLVfCPq2RCYJD8wyOHieoXNT-_OgpO3nr7owE7P9FrVCW_D3LzOSuxkJGlWtPcqK8GApUVG654LpLXx0cH202P8gn3c8UGw">
+
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","pathPrefix":"","currentPath":"node\/13243","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"ajaxPageState":{"libraries":"eJyFU9GWnDAI_SE1D_2gHKIY2cGQhmR27Nc36uxUp3b7gnBvSC4IjuHXYtxqm82ankGVSfMzZoHh6UbhZSTmrzDJTIrPKMH49D7RxcaJZM0Jonl5Nia0FCgfyChR7pgOSBbhTIcLrOaFUU3k4il0DvqbT1LCYHthSZ0rxENTZSfZxS9dFYlNLwnNkEoE7gYCFt_BBzxO-ChpboZHTDZPOKOBYaZwBF4q2h_X8BZfUqeE_b22tub9ydXdb2m3SmozrtkJ4X9k287i1tq_P6Q0nI6skvQIeBZX1a6Np-CPzIQc6xVbn_GU8_GzYFraQkeQYZGSj0gEj22mfBa5oqmt83EP-Didz0sUX7s5LQ2W-sflRlg_c2SC0KO5Au2AIxTOzSghwyeqbEW-_E7v_juu04nmxot4RpvBG1_Ne7wP016gHUj7dY4XIwHrWDYz5KnyRjGXuEX63lVxY9EeMlqcgdh8ia7L19_MZrtt-bTUlo-kk3l5V5idVgUUMoZ8yesMzNonxHDNr54Wp_9ioyhlkpq9aMbZOKjb_xxp-2eD_0J-A_bIuns","theme":"maths","theme_token":null},"ajaxTrustedUrl":{"\/search\/node":true},"gtag":{"tagId":"G-YJ01E46BB2","consentMode":false,"otherIds":[],"events":[],"additionalConfigInfo":[]},"mathjax":{"config_type":1,"config":{"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"processEscapes":"true"},"showProcessingMessages":"false","messageStyle":"none"}},"eu_cookie_compliance":{"cookie_policy_version":"1.0.0","popup_enabled":true,"popup_agreed_enabled":false,"popup_hide_agreed":false,"popup_clicking_confirmation":false,"popup_scrolling_confirmation":false,"popup_html_info":"\u003Cdiv aria-labelledby=\u0022popup-text\u0022  class=\u0022eu-cookie-compliance-banner eu-cookie-compliance-banner-info eu-cookie-compliance-banner--opt-in\u0022\u003E\n  \u003Cdiv class=\u0022popup-content info eu-cookie-compliance-content\u0022\u003E\n        \u003Cdiv id=\u0022popup-text\u0022 class=\u0022eu-cookie-compliance-message\u0022 role=\u0022document\u0022\u003E\n      \u003Cdiv class=\u0022tex2jax_process\u0022\u003E\u003Ch2\u003EWe use cookies on this site to enhance your user experience\u003C\/h2\u003E\u003Cp\u003EBy clicking the Accept button, you agree to us doing so.\u003C\/p\u003E\u003C\/div\u003E\n              \u003Cbutton type=\u0022button\u0022 class=\u0022find-more-button eu-cookie-compliance-more-button\u0022\u003EMore info\u003C\/button\u003E\n          \u003C\/div\u003E\n\n    \n    \u003Cdiv id=\u0022popup-buttons\u0022 class=\u0022eu-cookie-compliance-buttons\u0022\u003E\n            \u003Cbutton type=\u0022button\u0022 class=\u0022agree-button eu-cookie-compliance-secondary-button\u0022\u003EAccept\u003C\/button\u003E\n              \u003Cbutton type=\u0022button\u0022 class=\u0022decline-button eu-cookie-compliance-default-button\u0022\u003ENo, thanks\u003C\/button\u003E\n          \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E","use_mobile_message":false,"mobile_popup_html_info":"\u003Cdiv aria-labelledby=\u0022popup-text\u0022  class=\u0022eu-cookie-compliance-banner eu-cookie-compliance-banner-info eu-cookie-compliance-banner--opt-in\u0022\u003E\n  \u003Cdiv class=\u0022popup-content info eu-cookie-compliance-content\u0022\u003E\n        \u003Cdiv id=\u0022popup-text\u0022 class=\u0022eu-cookie-compliance-message\u0022 role=\u0022document\u0022\u003E\n      \u003Cdiv class=\u0022tex2jax_process\u0022\u003E\u003C\/div\u003E\n              \u003Cbutton type=\u0022button\u0022 class=\u0022find-more-button eu-cookie-compliance-more-button\u0022\u003EMore info\u003C\/button\u003E\n          \u003C\/div\u003E\n\n    \n    \u003Cdiv id=\u0022popup-buttons\u0022 class=\u0022eu-cookie-compliance-buttons\u0022\u003E\n            \u003Cbutton type=\u0022button\u0022 class=\u0022agree-button eu-cookie-compliance-secondary-button\u0022\u003EAccept\u003C\/button\u003E\n              \u003Cbutton type=\u0022button\u0022 class=\u0022decline-button eu-cookie-compliance-default-button\u0022\u003ENo, thanks\u003C\/button\u003E\n          \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E","mobile_breakpoint":768,"popup_html_agreed":false,"popup_use_bare_css":false,"popup_height":"auto","popup_width":"100%","popup_delay":1000,"popup_link":"https:\/\/www.maths.ox.ac.uk\/members\/it\/it-notices-policies\/website-privacy-policy","popup_link_new_window":true,"popup_position":false,"fixed_top_position":true,"popup_language":"en","store_consent":false,"better_support_for_screen_readers":false,"cookie_name":"","reload_page":false,"domain":"","domain_all_sites":false,"popup_eu_only":false,"popup_eu_only_js":false,"cookie_lifetime":100,"cookie_session":0,"set_cookie_session_zero_on_disagree":0,"disagree_do_not_show_popup":false,"method":"opt_in","automatic_cookies_removal":true,"allowed_cookies":"","withdraw_markup":"\u003Cbutton type=\u0022button\u0022 class=\u0022eu-cookie-withdraw-tab\u0022\u003EPrivacy settings\u003C\/button\u003E\n\u003Cdiv aria-labelledby=\u0022popup-text\u0022 class=\u0022eu-cookie-withdraw-banner\u0022\u003E\n  \u003Cdiv class=\u0022popup-content info eu-cookie-compliance-content\u0022\u003E\n    \u003Cdiv id=\u0022popup-text\u0022 class=\u0022eu-cookie-compliance-message\u0022 role=\u0022document\u0022\u003E\n      \u003Cdiv class=\u0022tex2jax_process\u0022\u003E\u003Ch2\u003EWe use cookies on this site to enhance your user experience\u003C\/h2\u003E\u003Cp\u003EYou have given your consent for us to set cookies.\u003C\/p\u003E\u003C\/div\u003E\n    \u003C\/div\u003E\n    \u003Cdiv id=\u0022popup-buttons\u0022 class=\u0022eu-cookie-compliance-buttons\u0022\u003E\n      \u003Cbutton type=\u0022button\u0022 class=\u0022eu-cookie-withdraw-button \u0022\u003EWithdraw consent\u003C\/button\u003E\n    \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E","withdraw_enabled":false,"reload_options":0,"reload_routes_list":"","withdraw_button_on_info_popup":false,"cookie_categories":[],"cookie_categories_details":[],"enable_save_preferences_button":true,"cookie_value_disagreed":"0","cookie_value_agreed_show_thank_you":"1","cookie_value_agreed":"2","containing_element":"body","settings_tab_enabled":false,"olivero_primary_button_classes":"","olivero_secondary_button_classes":"","close_button_action":"close_banner","open_by_default":true,"modules_allow_popup":true,"hide_the_banner":false,"geoip_match":true,"unverified_scripts":[]},"bootstrap":{"forms_has_error_value_toggle":1,"popover_enabled":1,"popover_animation":1,"popover_auto_close":1,"popover_container":"body","popover_content":"","popover_delay":"0","popover_html":0,"popover_placement":"top","popover_selector":"","popover_title":"","popover_trigger":"click","tooltip_enabled":1,"tooltip_animation":1,"tooltip_container":"body","tooltip_delay":"0","tooltip_html":0,"tooltip_placement":"auto top","tooltip_selector":"","tooltip_trigger":"hover"},"blazy":{"loadInvisible":false,"offset":100,"saveViewportOffsetDelay":50,"validateDelay":25,"container":"","loader":true,"unblazy":false,"visibleClass":false},"blazyIo":{"disconnect":false,"rootMargin":"0px","threshold":[0,0.25,0.5,0.75,1]},"slick":{"accessibility":true,"adaptiveHeight":false,"autoplay":false,"pauseOnHover":true,"pauseOnDotsHover":false,"pauseOnFocus":true,"autoplaySpeed":3000,"arrows":true,"downArrow":false,"downArrowTarget":"","downArrowOffset":0,"centerMode":false,"centerPadding":"50px","dots":false,"dotsClass":"slick-dots","draggable":true,"fade":false,"focusOnSelect":false,"infinite":true,"initialSlide":0,"lazyLoad":"ondemand","mouseWheel":false,"randomize":false,"rtl":false,"rows":1,"slidesPerRow":1,"slide":"","slidesToShow":1,"slidesToScroll":1,"speed":500,"swipe":true,"swipeToSlide":false,"edgeFriction":0.35,"touchMove":true,"touchThreshold":5,"useCSS":true,"cssEase":"ease","cssEaseBezier":"","cssEaseOverride":"","useTransform":true,"easing":"linear","variableWidth":false,"vertical":false,"verticalSwiping":false,"waitForAnimate":true},"dxpr_themeSettings":{"breadcrumbsSeparator":"\u0026gt;","headerHeight":"20","headerOffset":"60","headerMobileHeight":"20","headerSideDirection":"left"},"superfish":{"superfish-main":{"id":"superfish-main","sf":{"animation":{"opacity":"show","height":"show"},"speed":"fast","autoArrows":false,"dropShadows":true},"plugins":{"smallscreen":{"cloneParent":0,"mode":"window_width"},"supposition":true,"supersubs":{"minWidth":10,"maxWidth":18}}}},"user":{"uid":0,"permissionsHash":"96c0bafb425f5efdbe85a13861a270fc34d0364797264d1f5cc1502bfaf99392"}}</script>
+<script src="/sites/default/files/public/js/js_CWgsxBDu_s8510A5XHIGHocdv3i1XpfCLGMx0gVSMHE.js?scope=header&amp;delta=0&amp;language=en&amp;theme=maths&amp;include=eJx9UVtOxDAMvFBoPjhQ5LRuataJo9jdB6enXcpugcLPeB6So3giw_vNxxXdHX3PoMqktmkWGDZahW8jMX_JJpkUN9Vg3NgFY3VRxNQaVP9goTYMVMh2YZUqZ2w7x0TYqLpeGvqhzRW4GwhYUgdvcP3mj9KyG661BZsw4_Op172bWCLwi9qNqSSHc-hFToTLyJUJSo_-yHSjFIMLqixLdrzTc_ov63Si7JJIYgwGyacFfurPz2SwaZle0ebqJI6z9mAYMAOxH3CEmc0tdfQnf8fuXofOFdtIOvkHO_LCtN6WimGxw1wzMGvfEMtxvjKdo_6VVlEykuKWztcywrPHX84HaPH1SQ"></script>
+<script src="/libraries/fontawesome/js/all.min.js?v=6.4.2" defer=""></script>
+<script src="/libraries/fontawesome/js/v4-shims.min.js?v=6.4.2" defer=""></script>
+<script src="/modules/contrib/google_tag/js/gtag.js?tgiy5q"></script><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-YJ01E46BB2" type="text/javascript"></script>
+
+  <style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 5px 0px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; -khtml-border-radius: 5px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 1px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: .7em}
+.MathJax_MenuRadioCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuLabel {padding: 1px 2em 3px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #DDDDDD; margin: 4px 3px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: #606872; color: white}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
+</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888; display: contents}
+#MathJax_Message {position: fixed; left: 1px; bottom: 2px; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">.MJXp-script {font-size: .8em}
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXp-bold {font-weight: bold}
+.MJXp-italic {font-style: italic}
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-largeop {font-size: 150%}
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXp-display {display: block; text-align: center; margin: 1em 0}
+.MJXp-math span {display: inline-block}
+.MJXp-box {display: block!important; text-align: center}
+.MJXp-box:after {content: " "}
+.MJXp-rule {display: block!important; margin-top: .1em}
+.MJXp-char {display: block!important}
+.MJXp-mo {margin: 0 .15em}
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXp-denom {display: inline-table!important; width: 100%}
+.MJXp-denom > * {display: table-row!important}
+.MJXp-surd {vertical-align: top}
+.MJXp-surd > * {display: block!important}
+.MJXp-script-box > *  {display: table!important; height: 50%}
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}
+.MJXp-script-box > * > * > * {display: block!important}
+.MJXp-mphantom {visibility: hidden}
+.MJXp-munderover, .MJXp-munder {display: inline-table!important}
+.MJXp-over {display: inline-block!important; text-align: center}
+.MJXp-over > * {display: block!important}
+.MJXp-munderover > *, .MJXp-munder > * {display: table-row!important}
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXp-mtr {display: table-row!important}
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-mlabeledtr {display: table-row!important}
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style></head>
+  <body class="page-node-13243 html path-node page-node-type-page has-glyphicons body--dxpr-theme-header-top body--dxpr-theme-header-not-overlay body--dxpr-theme-header-normal body--dxpr-theme-nav-desktop eu-cookie-compliance-popup-open eu-cookie-compliance-status-null" data-once="b-root form-single-submit" data-eu-cookie-compliance-once="true">
+    <script>
+  var dxpr_themeNavBreakpoint = 769;
+  var dxpr_themeWindowWidth = window.innerWidth;
+  if (dxpr_themeWindowWidth > dxpr_themeNavBreakpoint) {
+    document.body.className += ' body--dxpr-theme-nav-desktop';
+  }
+  else {
+    document.body.className += ' body--dxpr-theme-nav-mobile';
+  }
+  </script>
+    <a href="#main-content" class="visually-hidden focusable skip-link">
+      Skip to main content
+    </a>
+    
+          <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas="">
+    <div class="dxpr-theme-boxed-container">
+  
+    
+                                                    
+      <header class="navbar navbar dxpr-theme-header clearfix dxpr-theme-header--top dxpr-theme-header--normal dxpr-theme-header--hover-opacity" id="navbar" role="banner">
+                <div class="container navbar-container">
+                    <div class="row container-row">
+            <div class="col-sm-12 container-col">
+                            <div class="navbar-header">
+                  <div class="region region-navigation">
+        <div class="wrap-branding">
+      <a class="oxford-logo" href="https://www.ox.ac.uk/" title="University of Oxford" rel="home">
+    <img alt="University of Oxford" src="/themes/custom/maths/images/header/oxford-logo.svg">
+  </a>
+        <a class="logo navbar-btn" href="/" title="Home" rel="home">
+      <img id="logo" src="/themes/custom/maths/images/header/maths-logo.svg" alt="Home">
+    </a>
+        </div>
+  <div class="search-block-form block block-search block-search-form-block" data-drupal-selector="search-block-form" id="block-maths-searchform" role="search">
+  
+      <h2 class="visually-hidden">Search form</h2>
+    
+      <form action="/search/node" method="get" id="search-block-form" accept-charset="UTF-8" data-once="form-updated" data-drupal-form-fields="edit-keys">
+  <div class="form-item js-form-item form-type-search js-form-type-search form-item-keys js-form-item-keys form-no-label form-group">
+      <label for="edit-keys" class="control-label sr-only">Search</label>
+  
+  
+  <div class="input-group"><input title="" data-drupal-selector="edit-keys" class="form-search form-control" placeholder="Search" type="search" id="edit-keys" name="keys" value="" size="15" maxlength="128" data-toggle="tooltip" data-original-title="Enter the terms you wish to search for."><span class="input-group-btn"><button type="submit" value="Search" class="button js-form-submit form-submit btn-primary btn icon-only"><span class="sr-only">Search</span><span class="icon glyphicon glyphicon-search" aria-hidden="true"></span></button></span></div>
+
+  
+  
+  </div>
+<div class="form-actions form-group js-form-wrapper form-wrapper" data-drupal-selector="edit-actions" id="edit-actions"></div>
+
+</form>
+
+  </div>
+<section id="block-maths-loginformpopup" class="block block-login-popup block-login-form-popup clearfix">
+  <ul class="menu sf-menu sf-members sf-horizontal sf-style-none sf-js-enabled sf-shadow">
+    <li class="sf-depth-1 menuparent">
+      <div class="Login-popup-link"><a href="/user/login" class="use-ajax login-popup-form" data-dialog-type="modal" data-dialog-options="{&quot;width&quot;:500}" data-once="ajax">Log in</a></div>
+      </li>
+  </ul>
+</section>
+
+                                                            <section id="block-maths-membersblock" class="block block-block-content block-block-content91d56060-7233-451c-a446-618b5bc047e6 clearfix">
+  
+          
+
+      
+            <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item"><div class="tex2jax_process"><ul class="menu sf-menu sf-members sf-horizontal sf-style-none sf-js-enabled sf-shadow">
+	<li class="sf-depth-1 menuparent"><a href="/members">Members</a></li>
+</ul>
+</div></div>
+      
+  </section>
+                                                            <section id="block-maths-mainnavigation-3" class="block block-superfish block-superfishmain clearfix">
+  
+          
+
+      
+<ul id="superfish-main" class="menu sf-menu sf-main sf-horizontal sf-style-none sf-js-enabled sf-shadow" role="menu" aria-label="Menu" data-once="superfish">
+  
+
+            
+  <li id="main-menu-link-content7f2a873a-0f1a-4f11-a042-081283a5d0ac" class="sf-depth-1 menuparent sf-first" role="none">
+    
+          <a href="/study-here" class="sf-depth-1 menuparent" role="menuitem" aria-haspopup="true" aria-expanded="false">Study Here</a>
+    
+    
+    
+              <ul role="menu" class="sf-hidden" style="float: none; width: 14.5385em;">
+      
+      
+
+  
+  <li id="main-menu-link-contentd66c73bd-7553-4aaa-8e90-6073099b724e" class="sf-depth-2 sf-no-children sf-first" role="none" style="">
+    
+          <a href="/study-here/undergraduate-study" class="sf-depth-2" role="menuitem" style="">Undergraduate Study</a>
+    
+    
+    
+    
+      </li>
+
+
+  
+  <li id="main-menu-link-content5f48dee0-791d-4077-8948-3aa574fd64fd" class="sf-depth-2 sf-no-children" role="none" style="">
+    
+          <a href="/study-here/postgraduate-study" class="sf-depth-2" role="menuitem" style="">Postgraduate Study</a>
+    
+    
+    
+    
+      </li>
+
+
+  
+  <li id="main-menu-link-content3f419173-1e93-4b6b-8ad8-abd80993376d" class="sf-depth-2 sf-no-children sf-last" role="none" style="">
+    
+          <a href="https://www.maths.ox.ac.uk/members/students" class="sf-depth-2 sf-external" role="menuitem" style="">Current Students</a>
+    
+    
+    
+    
+      </li>
+
+
+
+              </ul>
+      
+    
+    
+      </li>
+
+
+            
+  <li id="main-menu-link-contentae88e175-12b0-4ee2-b933-348b76614878" class="sf-depth-1 menuparent" role="none">
+    
+          <a href="/research" class="menu-node-unpublished sf-depth-1 menuparent" role="menuitem" aria-haspopup="true" aria-expanded="false">Research</a>
+    
+    
+    
+              <ul role="menu" class="sf-hidden" style="float: none; width: 12.3077em;">
+      
+      
+
+  
+  <li id="main-menu-link-content34ae07e4-4578-421a-b166-162f084a5286" class="sf-depth-2 sf-no-children sf-first" role="none" style="">
+    
+          <a href="/research" class="sf-depth-2" role="menuitem" style="">Research Groups</a>
+    
+    
+    
+    
+      </li>
+
+
+  
+  <li id="main-views-viewviewscase-studiescase-studies-page" class="sf-depth-2 sf-no-children" role="none" style="">
+    
+          <a href="/research/case-studies" class="sf-depth-2" role="menuitem" style="">Case Studies</a>
+    
+    
+    
+    
+      </li>
+
+
+  
+  <li id="main-menu-link-content11100676-04c6-46fe-b79b-7b89139a604f" class="sf-depth-2 sf-no-children" role="none" style="">
+    
+          <a href="/research/faculty-books" class="sf-depth-2" role="menuitem" style="">Faculty Books</a>
+    
+    
+    
+    
+      </li>
+
+
+
+              </ul>
+      
+    
+    
+      </li>
+
+
+            
+  <li id="main-menu-link-contentfd5f2860-09d0-4cc6-95c3-4b546da50e28" class="sf-depth-1 menuparent" role="none">
+    
+          <a href="/outreach" class="sf-depth-1 menuparent" role="menuitem" aria-haspopup="true" aria-expanded="false">Outreach</a>
+    
+    
+    
+              <ul role="menu" class="sf-hidden" style="float: none; width: 18em;">
+      
+      
+
+  
+  <li id="main-menu-link-content69409819-ebcd-48eb-baab-e55500e8ce9a" class="sf-depth-2 sf-no-children sf-first" role="none" style="">
+    
+          <a href="/outreach/posters" class="sf-depth-2" role="menuitem" style="">Posters</a>
+    
+    
+    
+    
+      </li>
+
+
+  
+  <li id="main-menu-link-content50e90020-ccb6-409f-9a07-f3e680bcfeff" class="sf-depth-2 sf-no-children" role="none" style="">
+    
+          <a href="/outreach/oxford-mathematics-alphabet" class="menu-node-unpublished sf-depth-2" role="menuitem" style="">Oxford Mathematics Alphabet</a>
+    
+    
+    
+    
+      </li>
+
+
+  
+  <li id="main-menu-link-content553bfa57-803e-4859-9f51-63dfd5f97cb5" class="sf-depth-2 sf-no-children" role="none" style="">
+    
+          <a href="/outreach/oxford-online-maths-club" class="sf-depth-2" role="menuitem" style="">Oxford Online Maths Club</a>
+    
+    
+    
+    
+      </li>
+
+
+  
+  <li id="main-menu-link-contentf747803b-4256-4bf9-9adf-4ecced78ffa8" class="sf-depth-2 sf-no-children" role="none" style="">
+    
+          <a href="/outreach/oxford-maths-festival" class="sf-depth-2" role="menuitem" style="">Oxford Maths Festival</a>
+    
+    
+    
+    
+      </li>
+
+
+  
+  <li id="main-menu-link-content5dc6f584-037d-4f82-babf-114ac5e6a215" class="sf-depth-2 sf-no-children" role="none" style="">
+    
+          <a href="/outreach/it-all-adds" class="sf-depth-2" role="menuitem" style="">It All Adds Up</a>
+    
+    
+    
+    
+      </li>
+
+
+  
+  <li id="main-menu-link-contente78b38fa-aee5-42d3-a675-08a4a7c62638" class="sf-depth-2 sf-no-children" role="none" style="">
+    
+          <a href="/outreach/problem-solving-matters" class="sf-depth-2" role="menuitem" style="">Problem Solving Matters</a>
+    
+    
+    
+    
+      </li>
+
+
+  
+  <li id="main-menu-link-content05226800-1fdd-44b6-a1ba-7c5c921ca7b7" class="sf-depth-2 sf-no-children" role="none" style="">
+    
+          <a href="/outreach/miorpa" class="sf-depth-2" role="menuitem" style="">MIORPA</a>
+    
+    
+    
+    
+      </li>
+
+
+  
+  <li id="main-menu-link-contentf87c8121-31d2-40fc-b3ee-7df71dcd0b3e" class="sf-depth-2 sf-no-children" role="none" style="">
+    
+          <a href="/outreach/promys-europe" class="sf-depth-2" role="menuitem" style="">PROMYS Europe</a>
+    
+    
+    
+    
+      </li>
+
+
+  
+  <li id="main-menu-link-content596b37b8-fddd-4948-be45-c27a2f015166" class="sf-depth-2 sf-no-children" role="none" style="">
+    
+          <a href="/outreach/oxfordshire-maths-masterclasses" class="sf-depth-2" role="menuitem" style="">Oxfordshire Maths Masterclasses</a>
+    
+    
+    
+    
+      </li>
+
+
+  
+  <li id="main-menu-link-contenteab36529-d32b-41be-b61d-046925820b9e" class="sf-depth-2 sf-no-children" role="none" style="">
+    
+          <a href="/outreach/outreach-information" class="sf-depth-2" role="menuitem" style="">Outreach Information</a>
+    
+    
+    
+    
+      </li>
+
+
+  
+  <li id="main-menu-link-content5dc6e99b-b907-48c8-9ba6-177e8571f4d6" class="sf-depth-2 sf-no-children" role="none" style="">
+    
+          <a href="/outreach/oxford-unbounded" class="sf-depth-2" role="menuitem" style="">Oxford Unbounded</a>
+    
+    
+    
+    
+      </li>
+
+
+  
+  <li id="main-menu-link-contentb4d80139-cb60-4500-9db5-f8de97182f0b" class="sf-depth-2 sf-no-children" role="none" style="">
+    
+          <a href="/outreach/mailing-list" class="sf-depth-2" role="menuitem" style="">Mailing List</a>
+    
+    
+    
+    
+      </li>
+
+
+
+              </ul>
+      
+    
+    
+      </li>
+
+
+            
+  <li id="main-menu-link-content2ab35c27-55b9-4bb7-ac19-a36bb8a15b65" class="active-trail sf-depth-1 menuparent" role="none">
+    
+          <a href="/events" class="sf-depth-1 menuparent" role="menuitem" aria-haspopup="true" aria-expanded="false">Events</a>
+    
+    
+    
+              <ul role="menu" class="sf-hidden" style="float: none; width: 18em;">
+      
+      
+
+  
+  <li id="main-menu-link-content108e2ddd-fccc-4cda-996c-cf1aaed707cd" class="sf-depth-2 sf-no-children sf-first" role="none" style="">
+    
+          <a href="/events/venue-hire" class="sf-depth-2" role="menuitem" style="">Venue Hire</a>
+    
+    
+    
+    
+      </li>
+
+
+  
+  <li id="main-menu-link-content2f6c8a64-9869-4b20-99fd-a9572c2f1220" class="active-trail sf-depth-2 sf-no-children" role="none" style="">
+    
+          <a href="/events/public-lectures-events" class="is-active sf-depth-2" role="menuitem" style="">Public Lectures &amp; Events</a>
+    
+    
+    
+    
+      </li>
+
+
+  
+  <li id="main-menu-link-contentd92d73c5-728d-4bee-84d4-73913efdea0d" class="sf-depth-2 sf-no-children" role="none" style="">
+    
+          <a href="/events/list" title="" class="sf-depth-2" role="menuitem" style="">Departmental Seminars &amp; Events</a>
+    
+    
+    
+    
+      </li>
+
+
+  
+  <li id="main-menu-link-content6b14078d-a0dc-4e48-bfcd-3d7e15872360" class="sf-depth-2 sf-no-children" role="none" style="">
+    
+          <a href="/events/special-lectures" class="sf-depth-2" role="menuitem" style="">Special Lectures</a>
+    
+    
+    
+    
+      </li>
+
+
+  
+  <li id="main-menu-link-contentd6703d20-baa0-4bc4-93e4-07759572083f" class="sf-depth-2 sf-no-children" role="none" style="">
+    
+          <a href="/events/conferences" class="sf-depth-2" role="menuitem" style="">Conferences</a>
+    
+    
+    
+    
+      </li>
+
+
+  
+  <li id="main-menu-link-content7ddb977c-94a4-4c64-bda7-58ac9b127e31" class="sf-depth-2 sf-no-children" role="none" style="">
+    
+          <a href="/events/summer-schools" class="sf-depth-2" role="menuitem" style="">Summer Schools</a>
+    
+    
+    
+    
+      </li>
+
+
+  
+  <li id="main-menu-link-contenta8fb76e9-1768-4620-b4eb-5b3aca074044" class="sf-depth-2 sf-no-children" role="none" style="">
+    
+          <a href="/events/past" class="sf-depth-2" role="menuitem" style="">Past Events</a>
+    
+    
+    
+    
+      </li>
+
+
+  
+  <li id="main-menu-link-contentde3ec7b6-0bfe-408a-9dff-38cea148a4cc" class="sf-depth-2 sf-no-children" role="none" style="">
+    
+          <a href="/events/info-event-organisers-attendees" class="sf-depth-2" role="menuitem" style="">Info for Event Organisers &amp; Attendees</a>
+    
+    
+    
+    
+      </li>
+
+
+
+              </ul>
+      
+    
+    
+      </li>
+
+
+            
+  <li id="main-menu-link-content64544c90-fb0e-4821-a594-e92fa946630a" class="sf-depth-1 menuparent" role="none">
+    
+          <a href="/people" class="sf-depth-1 menuparent" role="menuitem" aria-haspopup="true" aria-expanded="false">People</a>
+    
+    
+    
+              <ul role="menu" class="sf-hidden" style="float: none; width: 18em;">
+      
+      
+
+  
+  <li id="main-menu-link-contentfd3663fb-6593-476e-bc0a-9bc8819c72fa" class="sf-depth-2 sf-no-children sf-first" role="none" style="">
+    
+          <a href="/people/key-contacts" class="sf-depth-2" role="menuitem" style="">Key Contacts</a>
+    
+    
+    
+    
+      </li>
+
+
+  
+  <li id="main-views-viewviewspeoplepage-2" class="sf-depth-2 sf-no-children" role="none" style="">
+    
+          <a href="/people/find/list" class="sf-depth-2" role="menuitem" style="">People List</a>
+    
+    
+    
+    
+      </li>
+
+
+  
+  <li id="main-menu-link-content77a714a3-de4e-448b-96d9-33b24d6a9d85" class="sf-depth-2 sf-no-children" role="none" style="">
+    
+          <a href="/people/diversity" class="sf-depth-2" role="menuitem" style="">A Global Department</a>
+    
+    
+    
+    
+      </li>
+
+
+  
+  <li id="main-menu-link-content5d7fdd6c-9e36-4af5-a0f1-02b1a082a763" class="sf-depth-2 sf-no-children" role="none" style="">
+    
+          <a href="/people/research-fellowship-programmes" class="menu-node-unpublished sf-depth-2" role="menuitem" style="">Research Fellowship Programmes</a>
+    
+    
+    
+    
+      </li>
+
+
+  
+  <li id="main-menu-link-content61c1a56f-8bcd-4fc8-87d1-d76de414b6c3" class="sf-depth-2 sf-no-children" role="none" style="">
+    
+          <a href="/members/professional-services-teams" class="sf-depth-2" role="menuitem" style="">Professional Services Teams</a>
+    
+    
+    
+    
+      </li>
+
+
+
+              </ul>
+      
+    
+    
+      </li>
+
+
+            
+  <li id="main-menu-link-contentc1a001c2-7196-41eb-9ac7-69ca3c79005d" class="sf-depth-1 menuparent sf-last" role="none">
+    
+          <a href="/about-us" class="sf-depth-1 menuparent" role="menuitem" aria-haspopup="true" aria-expanded="false">About Us</a>
+    
+    
+    
+              <ul role="menu" class="sf-hidden" style="float: none; width: 18em;">
+      
+      
+
+  
+  <li id="main-menu-link-contente6496c4d-69b8-4005-90c5-a6dd3a45dd49" class="sf-depth-2 sf-no-children sf-first" role="none" style="">
+    
+          <a href="/about-us/contact-us" class="sf-depth-2" role="menuitem" style="">Contact Us</a>
+    
+    
+    
+    
+      </li>
+
+
+  
+  <li id="main-menu-link-content0df5d091-e708-409b-99a6-e273899842b9" class="sf-depth-2 sf-no-children" role="none" style="">
+    
+          <a href="/about-us/travel-maps" class="sf-depth-2" role="menuitem" style="">Travel &amp; Maps</a>
+    
+    
+    
+    
+      </li>
+
+
+  
+  <li id="main-menu-link-content7ec1ece7-7672-4fb6-941d-cce08c814c29" class="sf-depth-2 sf-no-children" role="none" style="">
+    
+          <a href="/about-us/supporting-mathematics" class="sf-depth-2" role="menuitem" style="">Supporting Mathematics</a>
+    
+    
+    
+    
+      </li>
+
+
+  
+  <li id="main-menu-link-content7bf6ecf7-6cc4-49e7-9f95-329a0bd452f1" class="sf-depth-2 sf-no-children" role="none" style="">
+    
+          <a href="/news" class="sf-depth-2" role="menuitem" style="">News</a>
+    
+    
+    
+    
+      </li>
+
+
+  
+  <li id="main-menu-link-content6eb0c2a5-c995-46e5-b666-086204c9dbc2" class="sf-depth-2 sf-no-children" role="none" style="">
+    
+          <a href="/about-us/alumni" class="sf-depth-2" role="menuitem" style="">Alumni</a>
+    
+    
+    
+    
+      </li>
+
+
+  
+  <li id="main-menu-link-content64acdf70-ff2f-4dbe-b127-6c4a6a59958a" class="sf-depth-2 sf-no-children" role="none" style="">
+    
+          <a href="/about-us/history" class="sf-depth-2" role="menuitem" style="">History</a>
+    
+    
+    
+    
+      </li>
+
+
+  
+  <li id="main-menu-link-content98998d10-9204-4b88-935f-146cd6f8d08b" class="sf-depth-2 sf-no-children" role="none" style="">
+    
+          <a href="/about-us/our-building" class="sf-depth-2" role="menuitem" style="">Our Building</a>
+    
+    
+    
+    
+      </li>
+
+
+  
+  <li id="main-menu-link-contentdfc1dd00-7834-47a2-b7ba-cd53bc500e8a" class="sf-depth-2 sf-no-children" role="none" style="">
+    
+          <a href="/about-us/art-and-oxford-mathematics" class="menu-node-unpublished sf-depth-2" role="menuitem" style="">Art and Oxford Mathematics</a>
+    
+    
+    
+    
+      </li>
+
+
+  
+  <li id="main-menu-link-contenta23efc0f-2899-4e74-985b-a03ef2862271" class="sf-depth-2 sf-no-children" role="none" style="">
+    
+          <a href="/about-us/equality-diversity-and-inclusion" class="sf-depth-2" role="menuitem" style="">Equality, Diversity and Inclusion</a>
+    
+    
+    
+    
+      </li>
+
+
+  
+  <li id="main-menu-link-content98a7b94a-b5cf-4f95-94ed-0bfc354cc6db" class="sf-depth-2 sf-no-children" role="none" style="">
+    
+          <a href="/about-us/vacancies" title="" class="sf-depth-2" role="menuitem" style="">Vacancies</a>
+    
+    
+    
+    
+      </li>
+
+
+
+              </ul>
+      
+    
+    
+      </li>
+
+
+</ul>
+
+  </section>
+
+  </div>
+
+                                              </div>
+
+                                                      </div>
+          </div>
+                  </div>
+      </header>
+      
+  <div class="wrap-containers node-type-page">
+
+        
+        
+            
+        
+                    <div role="main" class="main-container container js-quickedit-main-content clearfix">
+                <div class="row">
+                              
+                                          
+          <section class="col-sm-12">
+
+                        
+                        
+                                      <a id="main-content"></a>
+                <div class="region region-content">
+    <div data-drupal-messages-fallback="" class="hidden"></div>
+  <article class="page is-promoted full clearfix node">
+
+  
+    
+
+  <div class="content">
+            <div class="layout layout--onecol">
+    <div class="layout__region layout__region--content">
+                                                                  <section class="block block-layout-builder block-field-blocknodepagefield-images clearfix">
+  
+          
+
+      <div class="slick blazy slick--field slick--field-images slick--field-images---custom unslick slick--optionset--banner slick--less is-blazy slick--initialized" data-blazy="" data-once="blazy slick">
+  
+      
+
+  
+  <div class="slide__content is-loading" style="" tabindex="0">    <div data-b-token="b-5846584de36" class="media media--blazy media--slick media--bundle--image media--image is-b-loading is-b-visible"><img decoding="async" class="media__element b-lazy" loading="auto" src="/system/files/styles/banner/private/maths_gallery/Maths_Opening_3.10.13_by_John_Cairns-36.jpg?h=51a72048&amp;itok=yzEhNSba" width="1160" height="250">
+        </div>
+  </div></div>
+
+  </section>
+                                                            <section class="block block-system block-system-breadcrumb-block clearfix">
+  
+          
+
+      <div>
+  <ol class="breadcrumb">
+                <li>
+                  <a href="/">Home</a>
+              </li>
+                      <li>
+                  <a href="/events">Events</a>
+              </li>
+                      <li>
+                  Public Lectures &amp; Events
+              </li>
+            </ol>
+</div>
+
+  </section>
+                                                            <section class="block block-layout-builder block-field-blocknodepagetitle clearfix">
+  
+          
+
+      
+<h1>Oxford Mathematics Public Lectures and Events</h1>
+
+  </section>
+
+    </div>
+  </div>
+<div class="_none"><div class="container">  
+  <div class="layout row no-gutters layout-builder__layout">
+    
+                        <div class="col-lg-3 col-md-3 col-12">
+          
+
+<section class="block block-mi-blocks block-mi-menu-tree-block clearfix">
+  
+    
+
+      <ul><li><a class="" href="/events/public-lectures-events/public-lectures">Public Lectures</a></li>
+<li><a class="" href="/events/public-lectures-events/posters-public-lectures">Posters for Public Lectures</a></li>
+<li><a class="" href="/events/public-lectures-events/public-events">Public Events</a></li></ul>
+  </section>
+
+        </div>
+                              <div class="col-lg-9 col-md-9 col-12">
+                                                                      <section class="block block-layout-builder block-field-blocknodepagebody clearfix">
+  
+          
+
+      
+            <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item"><div class="tex2jax_process"><p>Oxford Mathematics Public Lectures enable anyone&nbsp;with an interest in the subject to see the best mathematicians in action and to share&nbsp;their pleasure (and occasional pain). They are aimed at the General Public, schools and anyone who just wants to come along and hear a bit more about what maths is really about. <strong>To join the mailing&nbsp;list&nbsp;please email <a href="mailto:external-relations@maths.ox.ac.uk">external-relations@maths.ox.ac.uk</a></strong>. Upcoming Public Lectures are listed below.</p><p>If you can't be here in person you can always view online. All our lectures are broadcast on our <a href="https://www.youtube.com/channel/UCLnGGRG__uGSPLBLzyhg8dQ">YouTube</a> page.</p><p>The Oxford Mathematics Public Lectures are generously supported by <a href="https://www.xtxmarkets.com/">XTX Markets</a>.</p><p>In addition to Public Lectures we also host other public events including music and art exhibitions.</p><p><a href="/events/past/2898">Past&nbsp;Oxford Mathematics Public Lectures</a></p><p><a href="#PublicLecturesOnline">Jump down to Public Lectures and interviews online</a></p><p><a href="/events/public-lectures-events/posters-public-lectures">You can view and download posters from previous events</a></p><h2><a class="ck-anchor" id="PublicLecturesOnline"></a>Public Lectures Online</h2><p><a href="https://youtu.be/3NCbEbopMj8"><span>Computers, Geometry and Einstein</span></a><span> - Jason Lotay</span></p><p><a href="https://youtu.be/_ZvxlXS9rbQ"><span>Rhythmicity and Coordination: The Importance of Circadian and Seasonal Biology</span></a><span> - Russell Foster</span></p><p><a href="https://youtu.be/7uGxRE7kmHI"><span>How Costly is Your Brain's Activity Pattern?</span></a><span> - Dani Bassett</span></p><p><a href="https://youtu.be/-qBNRISU2G8"><span>Understanding Infectious Disease Transmission: Insights and Uncertainty</span></a><span> - Christl Donnelly</span></p><p><a href="https://youtu.be/UeGXwvXqUNA" data-entity-type="external">Going for Gold: the Mathematics of Sporting Glory</a> - Amandine Aftalion</p><p><a href="https://youtu.be/OpYUxZry4vo" data-entity-type="external">Responsible modelling</a> - Erica Thompson</p><p><a href="https://youtu.be/xqH-oscXKTM" data-entity-type="external">Blueprints: how mathematics shapes creativity</a> - Marcus du Sautoy</p><p><a href="https://youtu.be/e7b5pAudnKs" data-entity-type="external">Natural tilings: from hard rock to soft cells</a> - Gábor Domokos</p><p><a href="https://youtu.be/i-nAaIDJu0c" data-entity-type="external">The Mathematics of Wound Healing</a> - Tanniemola Liverpool</p><p><a href="https://youtu.be/ruXHq7g5fFg" data-entity-type="external">Can we truly understand by counting?</a> - Hugo Duminil-Copin</p><p><a href="https://youtu.be/Cybnip2Kyw0" data-entity-type="external">Chance, luck, and ignorance: how to put our uncertainty into numbers</a> - David Spiegelhalter</p><p><a href="https://www.youtube.com/watch?v=_sTDSO74D8Q">Oxford Mathematics London Public Lecture: The Potential for AI in Science and Mathematics</a> - Terence Tao</p><p><a href="https://www.youtube.com/watch?v=BHqxRC5fBTU">The Inaugural Vicky Neale Public Lecture: The Counting Project</a> - Tim Harford</p><p><a href="https://www.youtube.com/watch?v=08FGB5x090M" hreflang="en">From Ronald Ross to ChatGPT: the birth and strange life of the random walk</a><a href="https://www.maths.ox.ac.uk/node/68269" hreflang="en"> </a>- Jordan Ellenberg</p><p><a href="https://www.youtube.com/watch?v=A_yR9DfJW6E">Infinite Jesters: what can philosophers learn from a puzzle involving infinitely many clowns?</a> - Ofra Magidor</p><p><a href="https://www.youtube.com/watch?v=qnmTcE5-HpI">The Ubiquity of Braids</a> - Tara Brendle</p><p><a href="https://www.youtube.com/watch?v=PH2BOo_XKt4">Mobilizing Mathematics For the Fight against Cancer</a> - Trachette Jackson</p><p><a href="https://www.youtube.com/watch?v=UsK52iZMsxo">Logging the World</a> - Oliver Johnson</p><p><a href="https://www.youtube.com/watch?v=1N_bDXyh36c">A Mathematical Journey through Literature</a> - Sarah Hart</p><p><a href="https://www.youtube.com/watch?v=sbx95iv870g">Does Life know about quantum mechanics?</a> - Jim Al-Khalili</p><p><a href="https://www.youtube.com/watch?v=8IvhWMJnEyg">Around the World in 80 Games</a> - Marcus du Sautoy</p><p><a href="https://youtu.be/PPCfDe8TfJQ">Four Ways of Thinking: Statistical, Interactive, Chaotic and Complex</a> - David Sumpter</p><p><a href="https://www.youtube.com/watch?v=pONU_V3frXU">Envisioning Imagination</a>&nbsp;-&nbsp;&nbsp;Roger Penrose, Carlo Rovelli and Conrad Shawcross with Fatos Ustek</p><p><a href="https://www.youtube.com/watch?v=raC3S0ZKIYo">The Hat: An aperiodic monotile</a> -&nbsp;Chaim Goodman-Strauss, Craig Kaplan, Marjorie Senechal with Henna Koivusalo.</p><p><a href="https://www.youtube.com/watch?v=8p02DtmyQhU">A world from a sheet of paper</a> - Tadashi Tokieda</p><p><a href="https://www.youtube.com/watch?v=qyctvtlIKu8">The Magic of the Primes</a> - James Maynard with Hannah Fry</p><p><a href="https://www.youtube.com/watch?v=8WOXWZv1Ph4">Cascading Principles</a> - Conrad Shawcross, Martin Bridson and James Sparks with Fatos Ustek</p><p><a href="https://www.youtube.com/watch?v=pwy7x1nzhag">Anyone for a mince pi? Mathematical modelling of festive foods</a> - Helen Wilson</p><p><a href="https://www.youtube.com/watch?v=GtJMLJqTUFc">The Signatures of Streams</a> - Terry Lyons</p><p><a href="https://www.youtube.com/watch?v=QeDCxGjB4ZA">The million-dollar shuffle: symmetry and complexit</a>y - Colva Roney-Dougal</p><p><a href="https://www.youtube.com/watch?v=TOY52LF_ZTA">A Mathematical Journey through Scales</a> - Martin Hairer</p><p><a href="https://www.youtube.com/watch?v=fKOmIHkq_i8&amp;list=PL4d5ZtfQonW0GETJ5JVu8CTkIrt0w1B77&amp;index=1">Communicating Complex Statistical Ideas to the Public: Lessons from the Pandemic</a> - David Spiegelhalter</p><p><a href="https://www.youtube.com/watch?v=wbJQTtjlM_w">Deep Maths - machine learning and mathematics</a>&nbsp;- Alex Davies, Andras Juhasz, Marc Lackenby, Geordie Willimason &amp;&nbsp;Jon Keating</p><p><a href="https://www.youtube.com/watch?v=qTLzC64cF7E&amp;list=PL4d5ZtfQonW0GETJ5JVu8CTkIrt0w1B77&amp;index=1&amp;t=1s">Mathemalchemy: a mathematical and artistic adventure</a>&nbsp;- Ingrid Daubechies</p><p><a href="https://www.youtube.com/watch?v=xEORIj1Ecug">I is a Strange Loop</a> - Marcus du Sautoy and Victoria Gould</p><p><a href="https://www.youtube.com/watch?v=mfh_d0G1nB4&amp;t=5s">From one extreme to another: the statistics of extreme events</a> - Jon Keating</p><p><a href="https://www.youtube.com/watch?v=1zXC51o3EfI">Spacetime Singularities</a> - Roger Penrose, Dennis Lehmkuhl &amp; Melvyn&nbsp;Bragg</p><p><a href="https://www.youtube.com/watch?v=6KQ1ffJVJn4&amp;t=764s">Ideas for a Complex World</a> - Anna Seigal</p><p><a href="https://www.youtube.com/watch?v=ExCP0p7gQPU&amp;t=1731s">How Learning Ten Equations Can Improve Your Life</a> - David Sumpter</p><p><a href="https://www.youtube.com/watch?v=0ZxV1WhqE90">How to Make the World Add Up</a> - Tim Harford</p><p><a href="https://www.youtube.com/watch?v=LzEuweGrHvc">Can maths tell us how to win at Fantasy Football?</a> - Joshua Bull</p><p><a href="https://www.youtube.com/watch?v=H-GnVgLS4pM&amp;t=18s">Squirrels, Turing and Excitability - Mathematical Modelling in Biology, Ecology and Medicine</a> - Philip Maini</p><p><a href="https://www.youtube.com/watch?v=QauZQ_3-Fuo">Smartphones v COVID-19</a> - Renaud Lambiotte</p><p><a href="https://www.youtube.com/watch?v=m6Hr69JH_wA">How do Mathematicians Model Infectious Disease Outbreaks</a>&nbsp;- Robin Thompson</p><p><a href="https://www.youtube.com/watch?v=D7LDla7Hes8">Cheerios, iPhones and Dysons</a> - Ian Griffiths</p><p><a href="https://www.youtube.com/watch?v=c9-WlKz8Frs">Artistic Mathematics: truth&nbsp;and beauty</a> - Henry Segerman</p><p><a href="https://www.youtube.com/watch?v=cbNVfbcWi-g">Why Does Rudolph Have a Shiny&nbsp;Nose?</a> - Chris Budd</p><p><a href="https://www.youtube.com/watch?v=VhgIaTJ6kzM">Spin Networks: the quamtum structure of spacetime from Penrose's intuiition to Loop Quamtum Gravity</a> - Carlo Rovelli</p><p><a href="https://www.youtube.com/watch?v=VZQpo1XnJQs&amp;t=25s">Oxford Mathematics Newcastle Public Lecture:&nbsp;😊🤔😔😁😕😮😍 in Maths?</a> - Vicky Neale</p><p><a href="https://www.youtube.com/watch?v=95SD9eNNdaE&amp;t=1s">Oxford Mathematics London Public Lecture: Productive generalization: one reason we will never run out of interesting mathematical questions </a>- Timothy Gowers</p><p><a href="https://www.youtube.com/watch?v=I63CRjGUMGI&amp;t=23s">Waves&nbsp;and resonance: from musical instruments to vacuum cleaners, via metamaterials and invisibility cloaks</a> - Jon&nbsp;Chapman</p><p><a href="https://www.youtube.com/watch?v=AqDxrj8K480">Soccermatics: could a Premier League team one day be managed by a mathematician?</a>&nbsp;-&nbsp;David Sumpter</p><p><a href="https://www.youtube.com/watch?v=-9gw5NhcKpU&amp;t=59s">Walking on water: from biolocomotion to quantum foundations </a>- John Bush</p><p><a href="https://www.youtube.com/watch?v=k89sS6fsZvI&amp;t=44s">The Creativity Code: How AI is learning to write, paint and think</a> - Marcus du Sautoy</p><p><a href="https://www.youtube.com/watch?v=SECwfP_Jrcg&amp;t=1356s">The Universe Speaks in Numbers</a> - Graham Farmelo</p><p><a href="https://www.youtube.com/watch?v=lVU8hae2T7Y&amp;t=1s">Knotty Problems</a> - Marc Lackenby</p><p><a href="https://www.youtube.com/watch?v=o1OZDqqotJc&amp;t=1s">The Num8er My5teries</a> -&nbsp;Marcus du Sautoy</p><p><a href="https://www.youtube.com/watch?v=vX-kmR-bId8&amp;t=23s">Chasing the dragon: tidal bores in the UK and elsewhere</a> -&nbsp;Michael&nbsp;Berry</p><p><a href="https://www.youtube.com/watch?v=6BmWMm0Jtgk&amp;t=3s">To&nbsp;a physicist I am a mathematician; to a mathematician, a physicst</a> - Roger Penrose and Hannah Fry</p><p><a href="https://www.youtube.com/watch?v=T6Ld2RDKO9g&amp;t=18s">Bach&nbsp;and the Cosmos</a> - James Sparks and City of London SInfonia</p><p><a href="https://www.youtube.com/watch?v=VlkH9v4dP7w&amp;t=1s">Eschermatics</a> - Roger Penrose</p><p><a href="https://www.youtube.com/watch?v=IBvHw_5mlRc">Atomistically inspired origami</a> - Richard James</p><p><a href="https://www.youtube.com/channel/UCLnGGRG__uGSPLBLzyhg8dQ">Numbers are Serious but they are also Fun</a> - Michael Atiyah</p><p><a href="https://www.youtube.com/watch?v=jYP3crI0wpc&amp;t=458s">Can Mathematics Understand the Brain?</a> - Alain Goriely</p><p><a href="https://www.youtube.com/watch?v=6oKCkx_jwuc">Euler’s&nbsp;pioneering&nbsp;equation: ‘the most beautiful theorem in mathematics</a>’ -&nbsp;Robin&nbsp;Wilson</p><p><a href="https://www.youtube.com/watch?v=SDuvH3VurBg&amp;t=4s">Scaling the Maths of Life</a> - Michael Bonsall</p><p><a href="https://www.youtube.com/watch?v=xJJ1aRt_8j4">Can Yule solve my problems</a>&nbsp;- Alex Bellos</p><p><a href="https://www.youtube.com/watch?v=uQgcpzKA5jk&amp;t=175s">Andrew Wiles London Public Lecture</a></p><p><a href="https://www.youtube.com/watch?v=6ZQKzcw9Ulk&amp;t=2s">The Seduction of Curves</a>: The Lines of Beauty that Connect&nbsp;Mathematics, Art and the Nude - Allan McRobie</p><p><a href="https://www.youtube.com/watch?v=4grniCh1JPs">Maths v Disease</a> - Julia Gog</p><p><a href="https://www.youtube.com/watch?v=VSw5RUy9W5E">Closing the Gap: the quest to understand prime numbers</a> - Vicky Neale</p><p><a href="https://www.youtube.com/watch?v=5exeKjonQZE">The Law of the Few</a> - Sanjeev Goyal&nbsp;</p><p><a href="https://www.youtube.com/watch?v=d1yQEOsK4fg">The Sound of Symmetry and the Symmetry of Sound</a> - Marcus du Sautoy&nbsp;</p><p><a href="https://www.youtube.com/watch?v=vkQEqXAz44I">The Butterfly Effect - What Does It Really Signify</a> - Tim Palmer</p><p><a href="https://www.youtube.com/watch?v=OHnJd6lEtTM">Why the truth&nbsp;matters </a>- Tim Harford</p><p><a href="https://podcasts.ox.ac.uk/mathematics-visual-illusions">The Mathematics of Visual Illusions</a> - Ian Stewart</p><p><a href="https://www.youtube.com/watch?v=GPKmFEDLh5E">How can we understand our complex economy</a> - Doyne Farmer</p><p><a href="/node/23396" data-entity-type="node" data-entity-uuid="4fc49a24-d899-4500-887e-c4302434f48a" data-entity-substitution="canonical" title="Fashion, Faith and Fantasy - Roger Penrose Public Lecture now online">Fashion, Faith and Fantasy</a> - Roger Penrose</p><p><a href="https://podcasts.ox.ac.uk/modelling-genes-backwards-and-forwards-mathematical-population-genetics">Modelling genes: the backwards and forwards of mathematical population genetics</a>&nbsp;- Alison&nbsp;Etheridge</p><p><a href="/node/16313" data-entity-type="node" data-entity-uuid="89200654-c500-41cb-a3b4-176d1eb3b77f" data-entity-substitution="canonical" title="What We Cannot Know - Marcus du Sautoy Public Lecture now online">What We Cannot Know </a>- Marcus du Sautoy</p><p><a href="/node/15724" data-entity-type="node" data-entity-uuid="9451afd5-6d93-4c3b-8772-31d267104dcb" data-entity-substitution="canonical" title="The Mathematics of Christmas - Marcus du Sautoy Christmas Lecture now online">The Travelling Santa Problem and Other Seasonal Challenges</a>&nbsp;- Marcus du Sautoy</p><p><a href="/node/15702" data-entity-type="node" data-entity-uuid="12659623-274e-4cc6-b963-27db5d2b1f00" data-entity-substitution="canonical" title="Symmetry, Spaces and Undecidability - Public Lecture now online">Symmetry, Spaces and Undecidability</a> - Martin Bridson</p><p><a href="/node/15386" data-entity-type="node" data-entity-uuid="239989d5-180d-4b68-9999-365b76a79645" data-entity-substitution="canonical" title="'M.C. Escher: Artist, Mathematician, Man' - Public Lecture online">M.C. Escher: Artist, Mathematician, Man</a> - Roger Penrose and Jon Chapman</p><p><a href="/node/15204" data-entity-type="node" data-entity-uuid="3a8244e9-5adf-4972-ad7b-53fbe3b074fd" data-entity-substitution="canonical" title="Dancing Vortices - Étienne Ghys Public Lecture now online">Dancing Vortices</a> -&nbsp;<span>Étienne&nbsp;</span><span id="DWT28210">Ghys</span></p><p><a href="/node/14665" data-entity-type="node" data-entity-uuid="1cd7d567-fabb-4871-accb-9d3511678872" data-entity-substitution="canonical" title="The Gömböc, the Turtle and the Evolution of Shape - Public Lecture now online">The Gömböc, the Turtle and the Evolution of Shape&nbsp;</a>-&nbsp;<span>Gábor Domokos</span></p><p><a href="/node/14180" data-entity-type="node" data-entity-uuid="adca6a0c-c777-4c65-bf60-eb82d736f226" data-entity-substitution="canonical" title="Cédric Villani - Birth of an Idea. Public Lecture now online">Birth of an Idea: A Mathematical Adventure&nbsp;</a>-&nbsp;<span>Cédric Villani</span></p><p><a href="/node/13353" data-entity-type="node" data-entity-uuid="a6d8f587-cb1c-49e9-8e89-c5db3e7dee74" data-entity-substitution="canonical" title="The History of Mathematics in 300 Stamps - Public Lecture online">The History of Mathematics&nbsp;in 300 Stamps</a> - Robin Wilson</p><p><a href="/node/13316" data-entity-type="node" data-entity-uuid="3bc6aae5-0e4c-4f64-a9e6-fee2478511ce" data-entity-substitution="canonical" title="What Maths Really Does - Public Lecture online">What Maths Really Does</a> - Alain Goriely</p><p><a href="/node/13315" data-entity-type="node" data-entity-uuid="f9e6be6e-6eba-49cc-bad8-c718a83df14f" data-entity-substitution="canonical" title="Roger Penrose - Forbidden Crystal Symmetry">Forbidden Crystal Symmetry</a>&nbsp;-&nbsp;Sir Roger Penrose</p><p><a href="/node/13296" data-entity-type="node" data-entity-uuid="dbd1dd2f-4831-46be-9374-67c6f701bb77" data-entity-substitution="canonical" title="Big Data Lecture now online">Big Data's Big Deal</a><a href="https://podcasts.ox.ac.uk/big-datas-big-deal">&nbsp;</a>- Viktor Mayer-Schonberger</p><p><a href="/node/917" data-entity-type="node" data-entity-uuid="ccbd84ff-cdd7-4f96-98a8-c3024fce7f1b" data-entity-substitution="canonical" title="Oxford Mathematics Public Lectures online: Edward Frenkel - 'Love and Math'">Love and Math</a>&nbsp;- Edward Frenkel</p><p><a href="/node/893" data-entity-type="node" data-entity-uuid="52130ff8-1218-44ca-aaee-7e74c2bee0fb" data-entity-substitution="canonical" title="Monsters, tumours and divorce - watch the Inaugural Hooke Lecture">Why there are no three-headed monsters, resolving some problems with brain tumours, divorce prediction and how to save marriages</a>&nbsp;- James D Murray</p><h2><span>Interviews with Mathematicians</span></h2><p><span>John Ball on the journey of an applied mathematician&nbsp;- interview with Alain Goriely</span></p><p><span><a href="https://www.youtube.com/watch?v=4leaH7lEAmw">https://www.youtube.com/watch?v=4leaH7lEAmw</a></span></p><p>Nigel Hitchin reflects&nbsp;with Martin&nbsp;Bridson</p><p><a href="/node/23405" data-entity-type="node" data-entity-uuid="e638b881-e229-4a02-a054-5c841ad05f6b" data-entity-substitution="canonical" title="Savilian Professor Nigel Hitchin reflects">https://www.maths.ox.ac.uk/node/23405</a></p><p>Roger Heath-Brown in conversation with Ben Green</p><p><a href="https://www.maths.ox.ac.uk/node/16561">https://www.maths.ox.ac.uk/node/16561</a></p><p>Roger Penrose interviewed by Andrew Hodges – part one</p><p><a href="http://podcasts.ox.ac.uk/extra-time-professor-sir-roger-penrose-conversation-andrew-hodges-part-one"><span id="OBJ_PREFIX_DWT11801_com_zimbra_url">http://podcasts.ox.ac.uk/extra-time-professor-sir-roger-penrose-conversation-andrew-hodges-part-one</span></a></p><p>Roger Penrose interviewed by Andrew Hodges – part two</p><p><a href="http://podcasts.ox.ac.uk/extra-time-professor-sir-roger-penrose-conversation-andrew-hodges-part-two"><span id="OBJ_PREFIX_DWT11802_com_zimbra_url">http://podcasts.ox.ac.uk/extra-time-professor-sir-roger-penrose-conversation-andrew-hodges-part-two</span></a></p><p>Michael Atiyah interviewed by Paul Tod</p><p><a href="https://podcasts.ox.ac.uk/sir-michael-atiyah-life-mathematics">https://podcasts.ox.ac.uk/sir-michael-atiyah-life-mathematics</a></p><p>Jim Murray interviewed by Philip Maini</p><p><a href="http://podcasts.ox.ac.uk/james-d-murray-reflections-life-academia-conversation-phillip-maini"><span id="OBJ_PREFIX_DWT11804_com_zimbra_url">http://podcasts.ox.ac.uk/james-d-murray-reflections-life-academia-conversation-phillip-maini</span></a></p><p>Bryce McLeod Interviewed by John Ball</p><p><a href="http://podcasts.ox.ac.uk/bryce-mcleod-life-mathematics-conversation-john-ball"><span id="OBJ_PREFIX_DWT11805_com_zimbra_url">http://podcasts.ox.ac.uk/bryce-mcleod-life-mathematics-conversation-john-ball</span></a></p><p>&nbsp;</p></div></div>
+      
+  </section>
+
+        </div>
+                                                                                                                                                                              
+  </div>
+
+</div></div>
+      </div>
+
+                    <footer class="submitted">
+        <div class="author">
+
+                      Last updated on 6 Apr 2026, 2:37pm.
+          Please <a href="/user/8725/contact?url=/events/public-lectures-events">contact us</a> with feedback and comments about this page.</div>
+      </footer>
+        
+  
+</article>
+
+
+  </div>
+
+                      </section>
+
+                                      </div><!-- end .ow -->
+              </div><!-- end main-container -->
+    
+          </div>
+
+    <footer class="maths-footer">
+
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-7 maths-footer-social-media">
+
+        <a href="https://www.facebook.com/OxfordMathematics/" rel="no-lightbox" title="Facebook - Oxford Mathematics">
+          <img alt="Facebook" src="/themes/custom/maths/images/footer/facebook.png">
+        </a>
+
+        <a href="https://www.linkedin.com/school/oxford-mathematics/" rel="no-lightbox" title="LinkedIn - Oxford Mathematics">
+          <img alt="LinkedIn" src="/themes/custom/maths/images/footer/linkedin.png">
+        </a>
+
+        <a href="https://bsky.app/profile/oxfordmathematics.bsky.social" rel="no-lightbox" title="Bluesky - @oxfordmathematics.bsky.social">
+          <img alt="Bluesky" src="/themes/custom/maths/images/footer/bluesky.png">
+        </a>
+
+        <a href="https://x.com/OxUniMaths" rel="no-lightbox" title="X - @OxUniMaths">
+          <img alt="X" src="/themes/custom/maths/images/footer/x.svg">
+        </a>
+
+        <br class="maths-footer-social-media-break">
+
+        <a href="https://www.tiktok.com/@oxfordmathematics" rel="no-lightbox" title="TikTok - @oxfordmathematics">
+          <img alt="TikTok" src="/themes/custom/maths/images/footer/tiktok.png">
+        </a>
+
+        <a href="https://www.instagram.com/oxford.mathematics/" rel="no-lightbox" title="Instagram - oxford.mathematics">
+          <img alt="Instagram" src="/themes/custom/maths/images/footer/instagram.png">
+        </a>
+
+        <a href="https://www.youtube.com/c/OxfordMathematics" rel="no-lightbox" title="YouTube - @OxfordMathematics">
+          <img alt="YouTube" src="/themes/custom/maths/images/footer/youtube-v2.png">
+        </a>
+
+      </div>
+      <div class="col-xs-12 col-sm-5 maths-footer-awards">
+
+        <a href="/node/3378" rel="no-lightbox" title="London Mathematical Society Good Practice Scheme">
+          <img alt="London Mathematical Society Good Practice Scheme" src="/themes/custom/maths/images/footer/good-practice-scheme.png">
+        </a>
+
+        <a href="/node/15048" rel="no-lightbox" title="Athena SWAN">
+          <img alt="Athena SWAN Silver Award (ECU Gender Charter)" src="/themes/custom/maths/images/footer/athena-swan-silver.jpg">
+        </a>
+
+        <a href="https://edu.admin.ox.ac.uk/stonewall-workplace-equality-index" rel="no-lightbox" title="Stonewall Workplace Equality Index">
+          <img alt="Stonewall Silver Employer 2022" src="/themes/custom/maths/images/footer/stonewall-silver.jpg">
+        </a>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="maths-footer-text">
+
+    <p><a href="/node/2839">© Mathematical Institute</a></p>
+    <p><a href="/node/2837">Accessibility Statement</a></p>
+    <br class="maths-footer-text-break">
+    <p><a href="/node/28867">Privacy Policy</a></p>
+    <p><a href="/node/2820">Cookies</a></p>
+
+  </div>
+
+</footer>
+
+  
+  </div><!-- end dxpr-theme-boxed-container -->
+
+  </div>
+
+    <script src="/sites/default/files/public/js/js_lny-348Le9MZ-0oH7970NkmRap3zGLwVCr_OXojtGXE.js?scope=footer&amp;delta=0&amp;language=en&amp;theme=maths&amp;include=eJx9UVtOxDAMvFBoPjhQ5LRuataJo9jdB6enXcpugcLPeB6So3giw_vNxxXdHX3PoMqktmkWGDZahW8jMX_JJpkUN9Vg3NgFY3VRxNQaVP9goTYMVMh2YZUqZ2w7x0TYqLpeGvqhzRW4GwhYUgdvcP3mj9KyG661BZsw4_Op172bWCLwi9qNqSSHc-hFToTLyJUJSo_-yHSjFIMLqixLdrzTc_ov63Si7JJIYgwGyacFfurPz2SwaZle0ebqJI6z9mAYMAOxH3CEmc0tdfQnf8fuXofOFdtIOvkHO_LCtN6WimGxw1wzMGvfEMtxvjKdo_6VVlEykuKWztcywrPHX84HaPH1SQ"></script>
+<script src="/core/assets/vendor/jquery/jquery.min.js?v=4.0.0"></script>
+<script src="/sites/default/files/public/js/js_6FcJfClbnpVg_0fvMOwJnPfcr_lpeB0Aqxbj9oDfABc.js?scope=footer&amp;delta=2&amp;language=en&amp;theme=maths&amp;include=eJx9UVtOxDAMvFBoPjhQ5LRuataJo9jdB6enXcpugcLPeB6So3giw_vNxxXdHX3PoMqktmkWGDZahW8jMX_JJpkUN9Vg3NgFY3VRxNQaVP9goTYMVMh2YZUqZ2w7x0TYqLpeGvqhzRW4GwhYUgdvcP3mj9KyG661BZsw4_Op172bWCLwi9qNqSSHc-hFToTLyJUJSo_-yHSjFIMLqixLdrzTc_ov63Si7JJIYgwGyacFfurPz2SwaZle0ebqJI6z9mAYMAOxH3CEmc0tdfQnf8fuXofOFdtIOvkHO_LCtN6WimGxw1wzMGvfEMtxvjKdo_6VVlEykuKWztcywrPHX84HaPH1SQ"></script>
+<script src="/libraries/MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script src="/sites/default/files/public/js/js_DwxxIQzHxpZ9bL_ZMV3QCIc0vX2erdNN1W_KC8d42aI.js?scope=footer&amp;delta=4&amp;language=en&amp;theme=maths&amp;include=eJx9UVtOxDAMvFBoPjhQ5LRuataJo9jdB6enXcpugcLPeB6So3giw_vNxxXdHX3PoMqktmkWGDZahW8jMX_JJpkUN9Vg3NgFY3VRxNQaVP9goTYMVMh2YZUqZ2w7x0TYqLpeGvqhzRW4GwhYUgdvcP3mj9KyG661BZsw4_Op172bWCLwi9qNqSSHc-hFToTLyJUJSo_-yHSjFIMLqixLdrzTc_ov63Si7JJIYgwGyacFfurPz2SwaZle0ebqJI6z9mAYMAOxH3CEmc0tdfQnf8fuXofOFdtIOvkHO_LCtN6WimGxw1wzMGvfEMtxvjKdo_6VVlEykuKWztcywrPHX84HaPH1SQ"></script>
+
+    <div class="hidden" id="dxpr-theme-js-seed">sfy39587stp18</div>
+  
+
+<div id="drupal-live-announce" class="visually-hidden" aria-live="polite" aria-busy="false"></div><div id="drupal-modal" class="ui-front" style="display:none"></div><div id="sliding-popup" role="alertdialog" aria-describedby="popup-text" aria-label="Cookie compliance banner" class="sliding-popup-bottom" style="height: auto; width: 100%; bottom: -90.8807px;"><div aria-labelledby="popup-text" class="eu-cookie-compliance-banner eu-cookie-compliance-banner-info eu-cookie-compliance-banner--opt-in" aria-hidden="false">
+  <div class="popup-content info eu-cookie-compliance-content">
+        <div id="popup-text" class="eu-cookie-compliance-message" role="document">
+      <div class="tex2jax_process"><h2>We use cookies on this site to enhance your user experience</h2><p>By clicking the Accept button, you agree to us doing so.</p></div>
+              <button type="button" class="find-more-button eu-cookie-compliance-more-button find-more-button-processed" tabindex="0">More info</button>
+          </div>
+
+    
+    <div id="popup-buttons" class="eu-cookie-compliance-buttons">
+            <button type="button" class="agree-button eu-cookie-compliance-secondary-button" tabindex="0">Accept</button>
+              <button type="button" class="decline-button eu-cookie-compliance-default-button" tabindex="0">No, thanks</button>
+          </div>
+  </div>
+</div></div></body></html>

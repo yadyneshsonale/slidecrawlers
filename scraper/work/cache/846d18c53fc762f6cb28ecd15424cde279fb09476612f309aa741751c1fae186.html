@@ -1,0 +1,858 @@
+<html><head> <title>CS763: Computer Vision, Spring 2016</title>
+
+</head>
+<body>
+<center>
+<table cellspacing="0" cellpadding="0" width="700" border="0">
+  <tbody>
+<tr bgcolor="ccccff">
+    <td>
+
+      <center>
+      <h2>CS763 - Computer Vision</h2>
+	<b>Instructor:</b> Ajit Rajwade
+	<br><b>Office:</b> SIA-218, KReSIT Building
+	<br> <b>Email:</b> <img src="email.png" height="15," width="180">
+
+	<br> <b>Lecture Timings:</b> <a href="http://www.cse.iitb.ac.in/~ttc/springsem15-16.pdf">Slot 12</a>, Monday and Thursday 5:30 to 7:00 pm <b>(note the new timing for slot 12)</b> 
+	<br> <b>Lecture Venue:</b> SIC 301
+	<br><b>Instructor Office Hours </b>(in room SIA-218): Tuesday and Friday 5:00 pm to 6:00 pm, or after class, or by appointment via email
+	<br> <b>Teaching Assistants:</b> Abhishek Chakraborty (abhishek.chakraborty.iitb AT gmail DOT com), Divyanshu Grover, Souvik Sinha Deb, Sougata Sinha {divyanshu, souviksd, sougata}@cse DOT iitb DOT ac DOT in
+	<br>
+<br>
+	</center>
+</td>
+</tr>
+</tbody>
+</table>
+</center><br><br>
+
+      <h3>Topics to be covered (tentative list)</h3>
+
+      <ul>
+	<li> Camera geometry, camera calibration, vanishing points
+	</li><li> Computational tools for creating Image Panoramas: homographies, RANSAC for point-matching, SIFT (scale invariant feature transform) for detection of salient feature points
+	</li><li> Algorithms for - shape from shading, depth from needle map; optical flow, Kanade-Lucas-Tomasi algorithm, applications of optical flow in underwater imagery; shape from stereo, epipolar geometry; structure from motion;
+	</li><li> Photometric stereo - deriving shape from multiple images of an object taken under different lighting conditions; applications to illumination invariant face recognition, face relighting
+	</li><li> Machine Learning in computer vision: Face detection using Adaboost, Object detection using parts
+	</li><li> Compressive sensing: summary of key theorems and results, proof of one or two key theorems, applications of compressive sensing, algorithms for compressive sensing reconstruction, architectures
+	of some compressive cameras for grayscale and color images, video, hyperspectral images
+	</li><li> Some of the above topics will make use of concepts from signal processing (Fourier transform, convolution) and linear algebra (principal components analysis (PCA) and singular value decomposition (SVD))
+      </li></ul>	
+<hr>
+
+	<h3>Intended Audience</h3>
+	First or second year M. Tech. students, Ph.D. students, third/fourth year B. Tech. students or fourth/fifth year dual-degree students. This course should be of interest to students from CSE and 
+EE primarily, but also to students from some other departments such as Aerospace, Physics, Biosciences and Bio-engineering, Mechanical Engineering, Geosciences or Civil Engineering.
+	<h3>Pre-requisites</h3>
+	<li> Exposure to basic mathematics: calculus, linear algebra and probability. Ability to program in C/C++/MATLAB and/or willingness to learn MATLAB. 
+	</li><li> Should have taken at least one out of the following: CS 663 (Image Processing), CS 475/675 (Computer graphics), CS 740 (Mathematical Methods for Visual Computing), or equivalent courses from other departments. I will expect you to be familiar with the Fourier transform (or be willing to learn it quickly), and basic linear algebra (eigen-analysis, matrix inverse)
+
+      <h3>Learning Materials and Textbooks</h3>
+	<ul>
+	<li> Lecture slides that will be regularly posted
+	</li><li> "Introductory Techniques for 3D Computer Vision", Emanuele Trucco and Alessandro Verri, Prentice Hall.
+	</li><li> Robot Vision, by B. K. P. Horn, MIT Press (Cambridge).
+	</li><li> <a href="http://szeliski.org/Book/">Computer Vision: Algorithms and Applications, by Richard Szeliski</a> (freely downloadable!)
+	</li><li> <a href="http://www.flipkart.com/computer-vision-modern-approach-david-a-forsyth-jean-ponce/p/itmd32vtkypdh2yz?pid=9780273764144&amp;otracker=from-search&amp;srno=t_4&amp;query=Computer+Vision+%3A+A+Modern+Approach&amp;ref=992f0b9f-0af5-4fdc-9ef1-6f6a174f76af"> 
+Computer Vision: A Modern Approach, Forsyth and Ponce, Pearson Education.</a>
+	</li></ul>
+
+	<h3>Computational Resources</h3>
+	<ul>
+	<li> <a href="ftp://ftp.iitb.ac.in/IITB/Matlab/MATHWORKS_R2015B/">MATLAB at IITB (see readme file in the folder, for installation instructions)</a></li>
+	<li>MATLAB Tutorial: <a href="http://www.math.ufl.edu/help/matlab-tutorial/">here</a> or <a href="http://research.vtu.ac.in/Downloads/materials/matlab_guide.pdf">here</a></li>
+	<li>MATLAB Image Processing Toolbox tutorial: <a href="http://www.cs.otago.ac.nz/cosc451/Resources/matlab_ipt_tutorial.pdf">here</a></li>
+<li><a href="http://www.mines.utah.edu/gg_computer_seminar/matlab/matlab.html">Matlab Tutorial</a></li>
+<li><a href="http://www.mathworks.com/academia/student_center/tutorials/launchpad.html">The MathWorks - MATLAB Tutorial</a></li>
+<li><a href="http://math.ucsd.edu/~driver/21d-s99/matlab-primer.html">Matlab
+Primer</a></li>
+<li><a href="http://www.mathworks.com/access/helpdesk/help/techdoc/matlab.shtml">On-line Matlab Help</a></li>
+<li><a href="http://www.ee.columbia.edu/~marios/matlab/Writing_Fast_MATLAB_Code.pdf">Writing
+Fast Matlab Code</a> (pdf)</li>
+<li><a href="http://www.mathworks.com/support/tech-notes/1100/1109.html">Code Vectorization Guide</a></li>
+<li><a href="http://www.ee.columbia.edu/~marios/matlab/MatlabStyle1p5.pdf">Matlab
+Programmin Style Guidelines</a> (pdf)</li>
+	</ul><hr>
+
+
+      <h3>Grading Policy</h3>
+      <ul>
+        <li> Mid-sem exam: 20%
+	</li><li> Final exam (cumulative): 20%
+	</li><li> Programming assignments (five or six): 35% (all to be done in groups of 2-3 students)
+	</li><li> Course project: 20% (to be done in the same group of 2-3 students) 
+	</li><li> Attendance and class participation: 5%
+	</li><li> Course project work will be presented by the student group during a viva at the end of the course. During this viva,
+each student in the group will be separately questioned, not only on the project work, but also the assignments. Each student
+is expected to contribute to each and every assignment and the course project. Out of the 35% set aside for assignments, the viva about the assignments will count for 5%.
+</li><li>Audit requirements: You must have 80% attendance at least (In general, I recommend you take this course for credit instead of auditing it, if you *really* wish to learn).
+</li></ul>
+<hr>     
+
+	<h3>Other Policies</h3>
+	<ul>
+	<li>Attendance is mandatory. <b>Students with less than 80% attendance may be given a DX grade.</b></li>
+	<li> Assignments will be given out (typically) once every two or three weeks. They must be submitted on or before the deadline. No late 
+assignments will be accepted. The programming components of the assignments will typically involve MATLAB, so you must be willing to learn it quickly.
+	</li><li> <font color="red">We will adopt a zero-tolerance policy 
+against any forms of plagiarism or any other form of cheating. Just 
+don't do it! In cases of plagiarism, givers and takers will both be considered equally responsible. </font>
+	</li><li> This course is (inherently) cumulative. The syllabus for the final exam 
+will include everything taught during the semester.
+	</li></ul>	
+<hr>
+
+
+<h2 id="Projects">Course Projects</h2>
+Read <a href="projects.html">this link</a> for a list of project topics, and various instructions regarding course project submissions and expectations. 
+I will keep updating it as new topics come to my mind. 
+You can also refer to "extra interesting readings" in the lecture schedule.
+<hr>
+
+<h2 id="schedule">Lecture Schedule: </h2>
+<br>
+<p align="center">
+<table cellpadding="10" border="1">
+<tbody><tr bgcolor="bbbbff">
+<td> <b><h3>Date</h3></b></td>
+<td> <b><h3>Content of the Lecture</h3></b></td>
+<td> <b><h3>Assignments/Readings/Notes</h3></b></td>
+<td><b><h3>Interesting Extra Readings (not for exam)</h3></b></td>
+</tr>
+
+<tr>
+<td>04/01 (Mon)</td>
+<td><ul>
+<li>Introduction, course overview</li>
+</ul>
+</td><td>
+<ul>
+<li>
+<a href="Overview.pdf">Slides</a>
+</li></ul>
+</td>
+<td></td>
+</tr>
+
+<tr>
+<td>07/01 (Thu)</td>
+<td><ul>
+<li>Transformations in 2D: translation, rotation, scaling, shearing, reflection; affine transformations; composition of affine transformations; number of degrees of freedom</li>
+<li>Transformations in 3D: translation, rotation about cartesian axes, rotation about arbitrary axis, reflection across an arbitrary plane; affine transformations; number of degrees of freedom</li>
+<li>Pinhole camera, purpose of pinhole; perspective projection and basic equations deriving relationship between coordinates of object point (in 3D) and those of its image (on the image plane)</li>
+</ul>
+</td><td>
+<ul>
+<li> Slides: <a href="CameraGeometry.pdf">pdf</a>, <a href="CameraGeometry.pptx">pptx</a> 
+</li><li> Chapter 2 (section 2.4) and chapter 6 of Trucco and Verri (see moodle)
+</li></ul>
+</td>
+<td></td>
+</tr>
+
+
+<tr> 
+<td>11/01 (Mon)</td> 
+<td>
+<ul> 
+<li>Camera coordinate system and image coordinate system 
+</li><li>Weak perspective projection, orthographic projection 
+</li><li>Vanishing point: geometric and alegbraic 
+derivation, proof that vanishing points of coplanar lines are collinear 
+</li><li>Camera calibration: camera coordinate system, world coordinate system, meaning of geometric camera calibration, checkerboard 
+box for calibration, concept of extrinsic and intrinsic camera parameters
+</li><li>Motivation for camera calibration (implications for 3D reconstruction given two calibrated cameras)
+</li></ul> 
+</td><td> 
+<ul> 
+<li> Slides: <a href="CameraGeometry.pdf">pdf</a>, <a href="CameraGeometry.pptx">pptx</a> 
+</li><li> Chapter 2 (section 2.4) and chapter 6 of Trucco and Verri 
+</li></ul> 
+</td> 
+<td><ul>
+<li><a href="http://www1.cs.columbia.edu/CAVE/publications/pdfs/Watanabe_IUW96.pdf">Telecentric lens: depth-independent magnification (image-space telecentricity)</a>
+</li><li><a href="http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=817294">Telecentric lens: physical realization of an orthographic projection (object-space telecentricity)</a>
+</li></ul>
+</td>
+</tr>
+
+
+<tr> 
+<td>14/01 (Thu)</td> 
+<td>
+<ul> 
+<li>Motivation for camera calibration (implications for 3D reconstruction given two calibrated cameras)
+</li><li>Camera calibration algorithm (using minimum 7 points): matrix formulation and solution to homogenous system of linear equations, extraction of camera parameters from the solution
+</li><li>Perspective invariant: cross ratio, application in visual metrology
+</li></ul> 
+</td><td> 
+<ul> 
+<li> Slides: <a href="CameraGeometry.pdf">pdf</a>,<a href="CameraGeometry.pptx">pptx</a> 
+</li><li> Chapter 2 (section 2.4) and chapter 6 of Trucco and Verri  (chapter 6 contains the camera calibration algorithms in detail)
+</li></ul> 
+</td> 
+<td>
+<ul>
+<li><a href="https://www.cs.cmu.edu/~ph/869/papers/Criminisi99.pdf">Single view metrology</a>
+</li><li><a href="http://www.cut-the-knot.org/pythagoras/Cross-Ratio.shtml">Cross-ratio at cut-the-knot</a>
+</li></ul>
+</td>
+</tr>
+
+
+<tr> 
+<td>18/01 (Mon)</td> 
+<td>
+<ul> 
+<li>Perspective invariant: cross ratio, more applications in visual metrology, proof of invariance of cross-ratio, Explanation as to why calibrated cameras are not essential for visual metrology applications
+(namely that affine transformations also preserve cross ratios, and coordinates of a point in image coordinate system with pixels and the camera coordinate system are related by an affine transformation)
+</li><li>Camera calibration algorithm: direct camera matrix estimation
+</li></ul> 
+</td><td> 
+<ul> 
+<li> Slides: <a href="CameraGeometry.pdf">pdf</a>,<a href="CameraGeometry.pptx">pptx</a> 
+</li><li> Chapter 2 (section 2.4) and chapter 6 of Trucco and Verri  (chapter 6 contains the camera calibration algorithms in detail)
+</li></ul> 
+</td> 
+<td>
+<ul>
+</ul>
+</td>
+</tr>
+
+
+<tr> 
+<td>20/01 (Wed: extra lecture)</td> 
+<td>
+<ul> 
+<li>Concept of planar hompgraphy: derivation of the key equations
+</li><li>Algorithm to find the homography from two or images of a planar scene given N pairs of corresponding points from the two images
+</li></ul> 
+</td><td> 
+<ul> 
+<li> Slides: <a href="CameraGeometry.pdf">pdf</a>,<a href="CameraGeometry.pptx">pptx</a> 
+</li><li> Chapter 2 (section 2.4) and chapter 6 of Trucco and Verri  (chapter 6 contains the camera calibration algorithms in detail)
+</li></ul> 
+</td> 
+<td>
+<ul>
+<li><a href="https://www.siam.org/publicawareness/art.php">Application of planar homographies in the Google Art Project</a></li><a href="https://www.siam.org/publicawareness/art.php">
+</a></ul><a href="https://www.siam.org/publicawareness/art.php">
+</a></td>
+</tr>
+
+
+<tr> 
+<td>21/01 (Thu)</td> 
+<td>
+<ul> 
+<li>Need for a lens in a camera, concept of depth of focus and its relation to aperture size, distortion due to a lens, human eye as a camera</li>
+<br>
+<hr>
+<li>Image alignment: concept and need</li>
+<li>Motion estimation and image warping: two steps of image alignment
+</li><li>Overview of parameteric and non-parametric motion models
+</li><li>Forward and reverse image warping
+</li><li>Control-point based parametric motion estimation for affine transformation, homography, and difficulties faced in rigid motion estimation
+</li></ul> 
+</td><td> 
+<ul> 
+<li> Slides (Camera Geometry): <a href="CameraGeometry.pdf">pdf</a>,<a href="CameraGeometry.pptx">pptx</a> 
+</li><li> Slides (Image Alignment): <a href="ImageAlignment.pdf">pdf</a> 
+
+</li></ul> 
+</td> 
+<td>
+<ul>
+</ul>
+</td>
+</tr>
+
+<tr> 
+<td>22/01 (Fri: extra lecture)</td> 
+<td>
+<ul> 
+<li>Problems with control-point based image alignment
+</li><li>Image similarity metrics for image alignment: mean squared error, normalized cross-correlation: issues with field of overlap
+</li><li>Concept of joint histogram and its potential use for image alignment.
+</li></ul> 
+</td><td> 
+<ul> 
+<li> Slides: <a href="ImageAlignment.pdf">pdf</a>
+</li><li><b><a href="https://www.cse.iitb.ac.in/~ajitvr/CS763_Spring2016/HW1/">HW1 out</a>, due 2nd Feb before 11:55 pm</b>
+
+</li></ul> 
+</td> 
+<td>
+<ul>
+<li><a href="https://www.siam.org/publicawareness/art.php">Application of planar homographies in the Google Art Project</a></li><a href="https://www.siam.org/publicawareness/art.php">
+</a></ul><a href="https://www.siam.org/publicawareness/art.php">
+</a></td>
+</tr>
+
+<tr> 
+<td>25/01 (Mon)</td> 
+<td>
+<ul> 
+<li>Concept of joint histogram and its potential use for image alignment.
+</li><li>Concept of entropy and joint entropy, and its use for image alignment
+</li><li>Application scenarios for image alignment: template matching, face recognition, image panoramas, denoising image bursts, Google art project, 3D model to 2D image registration
+</li></ul> 
+</td><td> 
+<ul> 
+<li> Slides: <a href="ImageAlignment.pdf">pdf</a> 
+</li><li><b><a href="https://www.cse.iitb.ac.in/~ajitvr/CS763_Spring2016/HW1/">HW1 out</a>, due 2nd Feb before 11:55 pm</b>
+
+</li></ul> 
+</td> 
+<td>
+<ul>
+</ul>
+</td>
+</tr>
+
+
+<tr> 
+<td>27/01 (Wed: extra lecture)</td> 
+<td>
+<ul> 
+<li>Orthogonal procrustes problem for determining rotation matrix: detailed derivation
+<br>
+<hr>
+</li><li>Least squares methods in computer vision: definition and examples, least squares as a maximum likelihood problem assuming Gaussian distribution on the noise
+</li><li>Meaning of robust and non-robust methods
+</li></ul> 
+</td><td> 
+<ul> 
+<li><a href="https://www.cse.iitb.ac.in/~ajitvr/CS763_Spring2016/procrustes.pdf">Notes on orthogonal procrustes problem</a>
+</li><li><a href="https://www.cse.iitb.ac.in/~ajitvr/CS763_Spring2016/SVD.pdf">Slides on Singular Value Decomposition (SVD)</a>
+</li><li>Slides: <a href="RobustMethods.pdf">pdf</a> 
+
+</li><li><b><a href="https://www.cse.iitb.ac.in/~ajitvr/CS763_Spring2016/HW1/">HW1 out</a>, due 2nd Feb before 11:55 pm</b>
+
+</li></ul> 
+</td> 
+<td>
+<ul>
+</ul>
+</td>
+</tr>
+
+
+<tr> 
+<td>28/01 (Thu)</td> 
+<td>
+<ul> 
+<li>Role of Laplacian and Generalized Gaussian distributions with shape parameter beta &lt;= 1
+</li><li>Mean versus median, robust mean using the q-norm (0 &lt; q &lt;= 1)
+</li><li>Example of outliers in computer vision problems
+</li><li>Least Median of Squares (LMedS) algorithm, and its analysis; relationship between parameters P, p, k and S in LMedS
+
+</li></ul> 
+</td><td> 
+<ul> 
+<li>Slides: <a href="RobustMethods.pdf">pdf</a> 
+</li><li>Appendix A.7 from Trucco and Verri (see moodle)
+
+</li><li><b><a href="https://www.cse.iitb.ac.in/~ajitvr/CS763_Spring2016/HW1/">HW1 out</a>, due 2nd Feb before 11:55 pm</b>
+
+</li></ul> 
+</td> 
+<td>
+<ul>
+</ul>
+</td>
+</tr>
+
+
+<tr> 
+<td>30/01 (Sat: extra lecture)</td> 
+<td>
+<ul> 
+<li>RanSac algorithm and its variants
+</li><li>Application of RanSac in robust image alignment - homography estimation
+</li><li>Relationship between least squares methods and pseudo-inverse
+<hr>
+<br>
+
+</li><li>Optical flow: problem definition
+</li><li>Aperture problem: demo, brightness constancy and small motion assumption, derivation of brightness constancy equation
+
+</li></ul> 
+</td><td> 
+<ul> 
+<li>Slides (robust methods): <a href="RobustMethods.pdf">pdf</a> 
+</li><li>Appendix A.7 from Trucco and Verri (see moodle)
+
+</li><li>Slides (optical flow): <a href="OpticalFlow.pdf">pdf</a> 
+</li><li>Read sections 8.3 and 8.4 from Trucco and Verri
+
+</li><li><b><a href="https://www.cse.iitb.ac.in/~ajitvr/CS763_Spring2016/HW1/">HW1 out</a>, due 2nd Feb before 11:55 pm</b>
+
+</li></ul> 
+</td> 
+<td>
+<ul>
+</ul>
+</td>
+</tr>
+
+
+<tr> 
+<td>01/02 (Mon)</td> 
+<td>
+<ul> 
+<li>Concept of regularization and its application to optical flow
+</li><li>Horn and Shunck algorithm: discrete formulation, update equations using Jacobi's method for inverting large systems
+</li><li>Examples of Horn and Shunck algorithm
+</li><li>Limitations of the Horn and Shunck algorithm
+</li></ul> 
+</td><td> 
+<ul> 
+<li>Slides (optical flow): <a href="OpticalFlow.pdf">pdf</a> 
+</li><li>Read sections 8.3 and 8.4 from Trucco and Verri
+</li><li><b><a href="https://www.cse.iitb.ac.in/~ajitvr/CS763_Spring2016/HW1/">HW1 out</a>, due 2nd Feb before 11:55 pm</b>
+</li></ul> 
+</td> 
+
+<td>
+<ul>
+<li><a href="http://image.diku.dk/imagecanon/material/HornSchunckOptical_Flow.pdf">Original paper</a> by Horn and Shunck
+</li><li><a href="http://www.ipol.im/pub/art/2013/20/article_lr.pdf">A simplified explanation of the same paper</a>
+</li></ul>
+</td>
+</tr>
+
+
+<tr> 
+<td>04/02 (Thu)</td> 
+<td>
+<ul> 
+<li>Lucas-Kanade algorithm and its multiscale version
+</li><li>Measures of reliability in the Lucas-Kanade algorithm
+</li><li>Applications of optical flow
+</li></ul> 
+</td><td> 
+<ul> 
+<li>Slides (optical flow): <a href="OpticalFlow.pdf">pdf</a> 
+</li><li>Read sections 8.3 and 8.4 from Trucco and Verri
+</li></ul> 
+</td> 
+
+<td>
+<ul>
+<li><a href="http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=6595861">Face spoofing detection</a> (using optical flow and motion magnification)
+</li><li><a href="http://people.csail.mit.edu/mrub/vidmag/">Motion magnification</a>
+</li></ul>
+</td>
+</tr>
+
+
+<tr> 
+<td>06/02 (Sat: extra lecture)</td> 
+<td>
+<ul> 
+<li>Optical flow: non-rigid image warping
+</li><li>SVD: reduced form, SVD as weighted summation of rank-1 matrices, Eckart-Young theorem for best low-rank approximation (will be required in structure from motion), application in image compression
+</li><li>Structure from motion: problem definition
+</li><li>Factorization algorithm by Tomasi and Kanade: assumptions
+</li><li>Statement of rank theorem in SfM and its proof
+</li></ul> 
+</td><td> 
+<ul> 
+<li>Slides (optical flow): <a href="OpticalFlow.pdf">pdf</a> 
+</li><li>Slides (SVD): <a href="SVD.pdf">pdf</a> 
+</li><li>Slides (structure from motion): <a href="SfM.pdf">pdf</a> 
+</li><li>Read section 8.5.1. from Trucco and Verri (for SfM)
+
+</li><li><b><a href="https://www.cse.iitb.ac.in/~ajitvr/CS763_Spring2016/HW1/">HW1 solutions</a></b>
+</li></ul> 
+</td> 
+
+<td>
+<ul>
+</ul>
+</td>
+</tr>
+
+
+
+<tr> 
+<td>08/02 (Mon)</td> 
+<td>
+<ul> 
+<li>Factorization algorithm by Tomasi and Kanade: assumptions
+</li><li>Statement of rank theorem in SfM and its proof
+</li><li>Commplete factorization algorithm, SfM under noise (application of Eckart Young theorem), Newton's method for imposing metric constraints for unique factorization solution
+<hr>
+
+<br><br>
+</li><li>Introduction to feature point tracking
+
+</li></ul> 
+</td><td> 
+<ul> 
+<li>Slides (structure from motion): <a href="SfM.pdf">pdf</a> 
+</li><li>Slides (feature point tracking): <a href="feature_point_tracking.pdf">pdf</a> 
+</li><li>Read section 8.5.1. from Trucco and Verri (for SfM)
+</li><li><b><a href="https://www.cse.iitb.ac.in/~ajitvr/CS763_Spring2016/HW2/">HW2 out (due 17th Feb)</a></b>
+</li></ul> 
+</td> 
+
+<td>
+<ul>
+</ul>
+</td>
+</tr>
+
+
+
+<tr><td>11/02 (Thu)</td> 
+<td>
+<ul> 
+<li>Introduction to feature point tracking
+</li><li>Motion estimation models: piecewise translation (similar to Lucas Kanade) and piecewise affine
+</li><li>Criterion for trackable points as per local structure tensor and its eigenvalues
+</li><li>Use of piecewise affine transformation model for feature tracking
+</li><li>Problem of disappearing feature points, newly appearing feature points, and occlusion during tracking
+</li><li>Comparison of piecewise translation and piecewise affine motion models
+</li><li>Applications of feature point tracking: facial expressions, video stabilization
+
+</li></ul> 
+</td><td> 
+<ul> 
+<li>Slides (feature point tracking): <a href="feature_point_tracking.pdf">pdf</a> 
+</li><li><a href="http://www.inf.fu-berlin.de/lehre/SS06/SeminarComputerVision/origReport_von_Carlo_Tomasi.pdf">Paper on feature point tracking by Tomasi and Kanade</a></li>
+<li><b><a href="https://www.cse.iitb.ac.in/~ajitvr/CS763_Spring2016/HW2/">HW2 out (due 17th Feb)</a></b>
+</li></ul> 
+</td> 
+
+<td>
+<ul>
+<li><a href="http://www.cc.gatech.edu/cpl/projects/videostabilization/"> A state of the art video stabilization algorithm</a> (uses feature point tracking)</li>
+</ul>
+</td>
+</tr>
+
+
+
+<tr><td>15/02 (Mon)</td> 
+<td>
+<ul> 
+<li>Introduction to shape from shading
+</li><li>Conceopt of image irradiance, scene radiance, and reflectance function
+</li><li>Lambert's cosine law, Lambertian reflectance model, concept of albedo, Phong's reflectance model
+</li><li>Shape from shading algorithm given orthographic projections and known reflectance model
+</li><li>Introduction to shape from needle map and the Poisson equation
+
+</li></ul> 
+</td><td> 
+<ul> 
+<li>Slides: <a href="Shape_From_Shading.pdf">pdf</a> 
+</li><li><b><a href="https://www.cse.iitb.ac.in/~ajitvr/CS763_Spring2016/HW2/">HW2 out (due 17th Feb)</a></b>
+</li></ul> 
+</td> 
+
+<td>
+<ul>
+</ul>
+</td>
+</tr>
+
+
+<tr><td>15/02 (Thu)</td> 
+<td>
+<ul> 
+<li>Midterm review session
+
+</li></ul> 
+</td><td> 
+<ul> 
+<li><font color="red" size="5"><a href="https://www.cse.iitb.ac.in/~ttc/spmidsem15-16.pdf">Midterm time-table</a></font>
+</li></ul> 
+</td> 
+
+<td>
+<ul>
+</ul>
+</td>
+</tr>
+
+
+<tr><td>3/03 (Thu)</td> 
+<td>
+<ul> 
+<li>Distribution of midterm papers
+
+</li></ul> 
+</td><td> 
+<ul> 
+</ul> 
+</td> 
+
+<td>
+<ul>
+</ul>
+</td>
+</tr>
+
+
+<tr><td>7/03 (Mon)</td> 
+<td>
+<ul> 
+<li>Stereographic projections in shape from shading
+</li><li>Poisson equation, issues in integrating gradient fields, solution to the Poisson equation using DFT, some interesting applications of the Poisson equation in image editing
+</li><li>Photometric stereo: determining surface normals and albedo from multiple images of a Lambertian object - each under a different light source direction
+</li><li>Cast and attached shadows: locating the shadows and specularities given at least 4 images
+</li></ul> 
+
+</td><td> 
+<ul> 
+<li>Slides: <a href="Shape_From_Shading.pdf">pdf</a> 
+</li><li><a href="HW3"><b>HW3 is out</b></a>, due 15th March before 11:55 pm.
+</li></ul> 
+</td> 
+
+<td>
+<ul>
+<li><a href="https://www.cs.jhu.edu/~misha/Fall07/Papers/Perez03.pdf">Poisson image editing</a>
+</li></ul>
+</td>
+</tr>
+
+
+<tr><td>10/03 (Thurs)</td> 
+<td>
+<ul> 
+<li>Adaboost: concept of weak and strong classifier, machine learning 101: classifier, training and test set
+</li><li>Basic adaboost algorithm, example of families of classifiers 
+</li></ul> 
+
+</td><td> 
+<ul> 
+<li>Slides: <a href="Adaboost_FaceDetection.pdf">pdf</a> 
+</li></ul> 
+</td> 
+
+<td>
+<ul>
+</ul>
+</td>
+</tr>
+
+
+<tr><td>14/03 (Mon)</td> 
+<td>
+<ul> 
+<li>Viola and Jones face detector: detailed architecture, Haar-like features, concept of classifier cascade: detection rate and false positive rate
+</li></ul> 
+
+</td><td> 
+<ul> 
+<li>Slides: <a href="Adaboost_FaceDetection.pdf">pdf</a> 
+</li><li><a href="http://www.vision.caltech.edu/html-files/EE148-2005-Spring/pprs/viola04ijcv.pdf">Paper on face detection using Adaboost by Viola and Jones</a>: Robust real-time face detection,
+International Journal of Computer Vision (IJCV), 2004. <a href="http://link.springer.com/article/10.1023%2FB%3AVISI.0000013087.49260.fb">Another link</a>
+</li></ul> 
+</td> 
+
+<td>
+<ul>
+</ul>
+</td>
+</tr>
+
+
+<tr><td>17/03 (Thu)</td> 
+<td>
+<ul> 
+<li>Theoretical treatment of Adaboost: derivation of algorithm, deriving rule for updating classifier weights, training sample weights, criterion for next weak classifier to be chosen
+</li><li>Coordinate descent, and Adaboost as coordinate descent
+</li><li>Generalization properties of Adaboost (brief overview): concept of classifier margin, empirical evidence of increase in margin of the strong classifier across rounds of Adaboost
+</li></ul> 
+
+</td><td> 
+<ul> 
+<li>Slides: <a href="Adaboost_FaceDetection.pdf">pdf</a> 
+</li><li><a href="http://www.vision.caltech.edu/html-files/EE148-2005-Spring/pprs/viola04ijcv.pdf">Paper on face detection using Adaboost by Viola and Jones</a>: Robust real-time face detection,
+International Journal of Computer Vision (IJCV), 2004.
+</li><li><a href="HW4"><b>HW4 is out</b></a>, due March 29th before 11:55 pm.
+</li></ul> 
+</td> 
+
+<td>
+<ul>
+</ul>
+</td>
+</tr>
+
+
+
+<tr><td>28/03 (Mon)</td> 
+<td>
+<ul> 
+<li>Concept of (geometric binocular) stereo: concept of stereo baseline, disparity
+</li><li>Stereo with aligned camera axes: relationship between stereo disparity and depth
+</li><li>Intrinsic and extrinsic parameters of a stereo system
+</li><li>Epipolar geoemetry: left and right epipoles, epipolar line, epipolar plane, epipolar constraint
+</li><li>Concept of essential and fundamental matrix
+</li></ul>
+
+</td><td> 
+<ul> 
+<li>Slides: <a href="Stereo.pdf">pdf</a> 
+</li><li><a href="HW4"><b>HW4 is out</b></a>, due March 29th before 11:55 pm.
+</li></ul> 
+</td> 
+
+<td>
+<ul>
+</ul>
+</td>
+</tr>
+
+
+<tr><td>31/03 (Thu)</td> 
+<td>
+<ul> 
+<li>Degrees of freedom of essential and fundamental matrix, eight point algorithm, applications of fundamental/essential matrix
+</li><li>stereo reconstruction: known parameters; under known intrinisc and unknown extrinsic parameters 
+</li><li>Correspondence problem and "solving it": comparing patches, inferring regularized disparity maps, dynamic programming method (ordering constraint and its failure)
+</li></ul>
+
+</td><td> 
+<ul> 
+<li>Slides: <a href="Stereo.pdf">pdf</a> 
+</li><li><a href="HW4"><b>HW4 is out</b></a>, due March 29th before 11:55 pm.
+</li></ul> 
+</td> 
+
+<td>
+<ul>
+</ul>
+</td>
+</tr>
+
+<tr><td>4/04 (Mon)</td> 
+<td>
+<ul> 
+<li>Compressed sensing: problem statement and motivation - conventional sensing and compression, concept of signals expressed as linear combination of columns of orthonormal matrices, 
+sparsity of signals in discrete cosine transform bases, concept of compressed sensing and its potential applications
+</li><li>Shannon's sampling theorem and its limitations
+</li><li>Candes' puzzling experiment
+</li><li>Concept of incoherence of the measurement matrix with the signal representation basis
+</li><li>Signal reconstruction: uniqueness issues, L0-norm optimization and its NP-hard nature, L1-norm optimization; key theorem by Candes, Romberg and Tao and commentary on it
+</li></ul>
+
+</td><td> 
+<ul> 
+<li>Slides on CS theory:  <a href="CS_Theory.pdf">pdf</a> 
+</li><li><b><a href="HW5">HW5 is out</a></b>, due 15th April before 11:55 pm</li>
+</ul> 
+</td> 
+
+<td>
+<ul>
+</ul>
+</td>
+</tr>
+
+
+
+
+<tr><td>6/04 (Wed)(extra lecture)</td> 
+<td>
+<ul> 
+<li>Theorem 1 by Candes, Romberg, Tao and commentary on it, comparisons to Shannon's sampling theorem
+</li><li>Motivation behind concept of incoherence
+</li><li>Concept of restricted isometry property and restricted isometry constant
+</li><li>Theorems 2 and 3 - CS reconstruction for compressible (not just sparse) signals, and under bounded noise
+</li><li>CS reconstruction: L1 norm versus L2 norm optimization
+</li><li>CS reconstruction: some toy experiments
+</li></ul>
+
+</td><td> 
+<ul> 
+<li>Slides on CS theory:  <a href="CS_Theory.pdf">pdf</a> 
+</li><li><b><a href="HW5">HW5 is out</a></b>, due 15th April before 11:55 pm</li>
+</ul> 
+</td> 
+
+<td>
+<ul>
+</ul>
+</td>
+</tr>
+
+
+<tr><td>7/04 (Thu)</td> 
+<td>
+<ul> 
+<li>Candes' experiment and its results in terms of theorem 1
+</li><li>Algorithms for CS reconstruction: matching pursuit (MP) and orthogonal matching pursuit (OMP), comparison of these algorithms and their properties
+</li><li>Rice single pixel camera
+</li></ul>
+
+</td><td> 
+<ul> 
+<li>Slides on CS theory:  <a href="CS_Theory.pdf">pdf</a> 
+</li><li>Slides on CS algorithms:  <a href="CS_Algorithms.pdf">pdf</a> (note: the slides also contain the description of an algorithm called ISTA, which is not for the exam)
+</li><li>Slides on CS systems:  <a href="CS_Systems.pdf">pdf</a> 
+
+</li><li><a href="compressive_sensing_SigProcMagazine.pdf">Introductory article on CS by Candes and Wakin</a>
+</li><li><a href="romberg_compressive_sensing.pdf">Introductory article on CS by Romberg</a>
+
+</li><li><b><a href="HW5">HW5 is out</a></b>, due 15th April before 11:55 pm</li>
+</ul> 
+</td> 
+
+<td>
+<ul>
+</ul>
+</td>
+</tr>
+
+
+<tr><td>11/04 (Mon)</td> 
+<td>
+<ul> 
+<li>Rice single pixel camera
+</li><li>Coded aperture snapshot spectral imager (CASSI): compressive camera for acquisition of hyperspectral images; discussiom on color filter arrays and demosaicing
+</li><li>Hitomi's video camera (not for exam)
+</li></ul>
+
+</td><td> 
+<ul> 
+<li>Slides on CS theory:  <a href="CS_Theory.pdf">pdf</a> 
+</li><li>Slides on CS algorithms:  <a href="CS_Algorithms.pdf">pdf</a> (note: the slides also contain the description of an algorithm called ISTA, which is not for the exam)
+</li><li>Slides on CS systems:  <a href="CS_Systems.pdf">pdf</a> 
+
+</li><li><a href="compressive_sensing_SigProcMagazine.pdf">Introductory article on CS by Candes and Wakin</a>
+</li><li><a href="romberg_compressive_sensing.pdf">Introductory article on CS by Romberg</a>
+
+</li><li><b><a href="HW5">HW5 is out</a></b>, due 15th April before 11:55 pm</li>
+<li><a href="https://www.cse.iitb.ac.in/~ttc/spendsem15-16.pdf"><font size="5">Final exam time-table</font></a>
+</li><li>All Homework solutions together: 
+<a href="HW1">HW1</a>
+<a href="HW2">HW2</a>
+<a href="HW3">HW3</a>
+<a href="HW4">HW4</a>
+<a href="HW5">HW5</a>
+
+</li></ul> 
+</td> 
+
+<td>
+<ul>
+</ul>
+</td>
+</tr>
+
+
+
+
+
+
+
+
+</tbody></table></p></li></body></html>

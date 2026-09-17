@@ -1,0 +1,463 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta>
+    <meta>
+    <meta>
+    <link rel="stylesheet" type="text/css" href="origo.css" media="all">
+    <meta name="author" content="Lei Li">
+    <title>Multilingual NLP</title>
+  </head>
+  <body>
+    <h1 align="center">CMU 11-737: Multilingual Natural Language
+      Processing<br>
+    </h1>
+    <h2>Course Description </h2>
+    <p>CMU 11-737 is an advanced graduate-level course on natural
+      language processing techniques applicable to many languages.
+      Students who take this course should be able to develop
+      linguistically motivated solutions to core and applied NLP tasks
+      for any language. This includes understanding and mitigating the
+      difficulties posed by lack of data in low-resourced languages or
+      language varieties, and the necessity to model particular
+      properties of the language of interest such as complex morphology
+      or syntax. The course will introduce modeling solutions to these
+      issues such as multilingual or cross-lingual methods,
+      linguistically informed NLP models, and methods for effectively
+      bootstrapping systems with limited data or human intervention. The
+      project work will involve building an end-to-end NLP pipeline in a
+      language you don’t know. </p>
+    <h2>Instructor</h2>
+    <p><a href="https://www.cs.cmu.edu/%7Eleili">Lei Li</a> (Office
+      Hour: Tuesday 4-5pm outside GHC 5417, book a slot <a href="https://calendar.app.google/4vm4CAe8KzVYpq1B8">here</a> or
+      drop in) </p>
+    <h2>Teaching Assistants </h2>
+    TA Mailing list: <tt>cs11-737-fa2023-tas</tt><tt>@</tt><tt>cs.cmu.edu</tt>
+    <ul>
+      <li><a href="https://simran-khanuja.github.io/">Simran Khanuja</a>
+        (Office Hour: Friday 4-5pm at GHC 5417)</li>
+      <li><a href="https://sayalikandarkar.github.io/">Sayali Kandarkar</a>&nbsp;
+
+
+
+
+
+
+      </li>
+      <!-- <li><a href="https://www.linkedin.com/in/yudong-liu-510929205/">Yudong
+
+          Liu</a> (Office Hour: Monday 4-5pm) </li> -->
+    </ul>
+    <h2>Time and Location</h2>
+    <p> Tuesday and Thursday, 2-3:20pm, Doherty Hall 1212 (in-person
+      expected)</p>
+    <h2>Prerequisites</h2>
+    <p> You are highly recommended to take a NLP (11-411 or 11-611 or
+      11-711) course previously. The assignments for the class will be
+      done by creating neural network models, and examples will be
+      provided using PyTorch. If you are not familiar with PyTorch, we
+      suggest you attempt to familiarize yourself using online tutorials
+      (for example Deep Learning for NLP with PyTorch) before starting
+      the class. </p>
+    <h2>Class Format</h2>
+    <p> For each class there will be: </p>
+    <ul>
+      <li><i>Reading:</i> Most classes will have associated reading
+        material that we recommend you read before the class to
+        familiarize yourself with the topic. </li>
+      <li><i>Lecture:</i> The first part of the class with feature a
+        lecture to overview the topic of the day, in which you can ask
+        questions to clarify about any of the material. </li>
+      <li><i>Language in 10:</i> Groups in the class will make a
+        10-minute presentation of one of the languages of the world. </li>
+      <li><i>Discussion:</i> There will be an open-ended discussion in
+        which we will split into small groups and discuss a question
+        regarding the class. </li>
+    </ul>
+    <h2>Homework Submission &amp; Grading</h2>
+    Please submit your homework on canvas or the specified platform. The
+    assignments will be given a grade of A+ (100), A (96), A- (92), B+
+    (88), B (85), B- (82), or below. The final grades will be determined
+    based on the weighted average of discussion participation,
+    assignments, and project. Cutoffs for final grades will be
+    approximately 97+ A+, 93+ A, 90+ A-, 87+ B+, 83+ B, 80+ B-, etc.,
+    although we reserve some flexibility to change these thresholds
+    slightly.
+    <ul>
+      <li><i>Participation:</i> Worth 5% of the grade.</li>
+      <li><i>Assignments:</i> There will be 4 assignments (the final one
+        being the project), worth respectively 20%, 20%, 15%, 30% of the
+        grade.</li>
+      <li><i><a href="LanguageIn10.html">Language in 10</a>: 10% of
+          grade</i></li>
+      <li><i><a href="multiling_reading.html">Reading List for
+            Assignment 3</a> (Blog)</i></li>
+      <li><i><a moz-do-not-send="true" href="project.html">Project</a><br>
+        </i></li>
+    </ul>
+    <br>
+    <h2>Discussion Forum</h2>
+    <p>We will use the Ed platform for discussions <a href="https://edstem.org/us/join/qbssDd">(sign up here)</a>, but
+      coming to office hours is also encouraged. You may send private
+      message on edstem platform as well. </p>
+    <h2>Syllabus</h2>
+    <table width="100%" border="0">
+      <tbody>
+        <tr>
+          <td>#<br>
+          </td>
+          <td>Date<br>
+          </td>
+          <td>Topic<br>
+          </td>
+          <td>Material<br>
+          </td>
+          <td>Homework<br>
+          </td>
+        </tr>
+        <tr>
+          <td>1<br>
+          </td>
+          <td>8/29<br>
+          </td>
+          <td> Introduction <br>
+          </td>
+          <td><a moz-do-not-send="true" href="slides/multiling-01-intro.pdf">Slides</a><br>
+          </td>
+          <td>Reading List out<br>
+          </td>
+        </tr>
+        <tr>
+          <td>2<br>
+          </td>
+          <td>8/31<br>
+          </td>
+          <td>Typology: The Space of Languages<br>
+          </td>
+          <td><a moz-do-not-send="true" href="slides/multiling-02-typology.pdf">Slides</a><br>
+          </td>
+          <td><br>
+          </td>
+        </tr>
+        <tr>
+          <td>3<br>
+          </td>
+          <td>9/5</td>
+          <td>Words and Morphology<br>
+          </td>
+          <td><a href="slides/multiling-03-word.pdf">Slides</a><br>
+          </td>
+          <td><br>
+          </td>
+        </tr>
+        <tr>
+          <td>4<br>
+          </td>
+          <td>9/7</td>
+          <td>Sequence Labeling</td>
+          <td><a href="slides/multiling-04-seqlabeling.pdf">Slides</a> </td>
+          <td><a moz-do-not-send="true" href="assignment/assignment1_mt/index.html">HW1 out </a></td>
+        </tr>
+        <tr>
+          <td>5<br>
+          </td>
+          <td>9/12<br>
+          </td>
+          <td>Machine Translation Overview and Evaluation <br>
+          </td>
+          <td><a moz-do-not-send="true" href="slides/multiling-05-mt.pdf">Slides</a><br>
+          </td>
+          <td><br>
+          </td>
+        </tr>
+        <tr>
+          <td>6<br>
+          </td>
+          <td>9/14</td>
+          <td>Neural Machine Translation Models<br>
+          </td>
+          <td><a moz-do-not-send="true" href="slides/multiling-06-mtmodel.pdf">Slides</a><br>
+          </td>
+          <td><br>
+          </td>
+        </tr>
+        <tr>
+          <td>7<br>
+          </td>
+          <td>9/19<br>
+          </td>
+          <td>Sequence Decoding<br>
+          </td>
+          <td><a moz-do-not-send="true" href="slides/multiling-07-decoding.pdf">Slides</a><br>
+          </td>
+          <td><br>
+          </td>
+        </tr>
+        <tr>
+          <td>8<br>
+          </td>
+          <td>9/21<br>
+          </td>
+          <td>Semi-supervised and Unsupervised MT<br>
+          </td>
+          <td><a moz-do-not-send="true" href="slides/multiling-08-unmt.pdf">Slides</a><br>
+          </td>
+          <td><br>
+          </td>
+        </tr>
+        <tr>
+          <td>9<br>
+          </td>
+          <td>9/26</td>
+          <td>Multilingual NMT<br>
+          </td>
+          <td><a moz-do-not-send="true" href="slides/multiling-09-mnmt.pdf">Slides</a> </td>
+          <td><br>
+          </td>
+        </tr>
+        <tr>
+          <td>10<br>
+          </td>
+          <td>9/28<br>
+          </td>
+          <td>Pre-training for NMT</td>
+          <td><a moz-do-not-send="true" href="slides/multiling-10-mnmt-pretrain-joint-train.pdf">Slides</a>
+          </td>
+          <td><br>
+          </td>
+        </tr>
+        <tr>
+          <td>11<br>
+          </td>
+          <td>10/3<br>
+          </td>
+          <td>Speech Processing</td>
+          <td><a href="slides/multiling-11-speech.pdf">Slides</a> </td>
+          <!-- <td>HW1 Due 
+          <ahref="assignment/assignment2_mt/index.html">HW2 out </ahref></td> -->
+          <td>HW1 Due</td>
+        </tr>
+        <tr>
+          <td>12<br>
+          </td>
+          <td>10/5</td>
+          <td>End-to-end Speech Recognition </td>
+          <td><a moz-do-not-send="true" href="slides/multiling-12-asr.pdf">Slides</a> </td>
+          <td>Project Proposal Du, <a moz-do-not-send="true" href="assignment/assignment2_asr/index.html">HW2 out </a>
+          </td>
+        </tr>
+        <tr>
+          <td>13<br>
+          </td>
+          <td>10/10<br>
+          </td>
+          <td>Text-to-speech, <a moz-do-not-send="true" href="code/tts/run_tactron2.ipynb">Tactron2 Noteboo </a>,
+            <a moz-do-not-send="true" href="https://github.com/lileicc/FastSpeech2">FastSpeech 2
+              code</a> </td>
+          <td><a moz-do-not-send="true" href="slides/multiling-13-tts.pdf">Slides</a> </td>
+          <td><br>
+          </td>
+        </tr>
+        <tr>
+          <td>14<br>
+          </td>
+          <td>10/12<br>
+          </td>
+          <td>Speech Representation Learning<br>
+          </td>
+          <td><a moz-do-not-send="true" href="slides/multiling-14-speech-pre-training.pdf">Slides</a>
+          </td>
+          <td><br>
+          </td>
+        </tr>
+        <tr>
+          <td><br>
+          </td>
+          <td>10/17</td>
+          <td>Fall Break</td>
+          <td><br>
+          </td>
+          <td><br>
+          </td>
+        </tr>
+        <tr>
+          <td><br>
+          </td>
+          <td>10/19</td>
+          <td>Fall Break</td>
+          <td><br>
+          </td>
+          <td><br>
+          </td>
+        </tr>
+        <tr>
+          <td>15<br>
+          </td>
+          <td>10/24<br>
+          </td>
+          <td>Speech Translation</td>
+          <td><a moz-do-not-send="true" href="slides/multiling-15-speech-translation.pdf">Slides</a>
+          </td>
+          <td><br>
+          </td>
+        </tr>
+        <tr>
+          <td>16<br>
+          </td>
+          <td>10/26</td>
+          <td>Streaming Speech Translation<br>
+          </td>
+          <td><a moz-do-not-send="true" href="slides/multiling-16-streaming-st.pdf">Slides</a><br>
+          </td>
+          <td><br>
+          </td>
+        </tr>
+        <tr>
+          <td>17<br>
+          </td>
+          <td>10/31<br>
+          </td>
+          <td>Guest Lecture: Juan Pino (Meta)<br>
+          </td>
+          <td><br>
+          </td>
+          <td><br>
+          </td>
+        </tr>
+        <tr>
+          <td>18<br>
+          </td>
+          <td>11/2<br>
+          </td>
+          <td>Language Contact and Change, Code Switching, Pidgins,
+            Creoles</td>
+          <td><a moz-do-not-send="true" href="slides/multiling-18-languagechange-codeswitching.pdf">Slides</a><br>
+          </td>
+          <td>HW 2 Due </td>
+        </tr>
+        <tr>
+          <td><br>
+          </td>
+          <td>11/7</td>
+          <td>Democracy Day Holiday</td>
+          <td><br>
+          </td>
+          <td><br>
+          </td>
+        </tr>
+        <tr>
+          <td>19<br>
+          </td>
+          <td>11/9<br>
+          </td>
+          <td>Morphological Analysis and Inflection (Possible Guest
+            Lecture by Kristine Stenzel) <br>
+          </td>
+          <td><br>
+          </td>
+          <td>Mid-term Report Due </td>
+        </tr>
+        <tr>
+          <td>20<br>
+          </td>
+          <td>11/14<br>
+          </td>
+          <td> Learned Metrics <br>
+          </td>
+          <td><a moz-do-not-send="true" href="slides/multiling-20-metrics-and-InstructScore.pdf">Slides</a><br>
+          </td>
+          <td><br>
+          </td>
+        </tr>
+        <tr>
+          <td>21<br>
+          </td>
+          <td>11/16</td>
+          <td>Guest Lecture: Large Language Models for MT, Colin Cherry
+            (Google)<br>
+          </td>
+          <td><br>
+          </td>
+          <td>HW3 Due </td>
+        </tr>
+        <tr>
+          <td>22<br>
+          </td>
+          <td>11/21<br>
+          </td>
+          <td>Vocabulary Learning<br>
+          </td>
+          <td><a moz-do-not-send="true" href="slides/multiling-22-vocabulary_learning.pdf"> Slides</a><br>
+          </td>
+          <td><br>
+          </td>
+        </tr>
+        <tr>
+          <td><br>
+          </td>
+          <td>11/23<br>
+          </td>
+          <td>Thanksgiving, no classes </td>
+          <td> <a moz-do-not-send="true" href="slides/multiling-23-NAT.pdf">Slides</a><br>
+          </td>
+          <td><br>
+          </td>
+        </tr>
+        <tr>
+          <td>23<br>
+          </td>
+          <td>11/28</td>
+          <td>Non-Autoregressive Generation Models<br>
+          </td>
+          <td><br>
+          </td>
+          <td><br>
+          </td>
+        </tr>
+        <tr>
+          <td>24<br>
+          </td>
+          <td>11/30<br>
+          </td>
+          <td>Guest Lecture (Stephen Mayhew, Duolingo)<br>
+          </td>
+          <td><br>
+          </td>
+          <td><br>
+          </td>
+        </tr>
+        <tr>
+          <td><br>
+          </td>
+          <td>12/5<br>
+          </td>
+          <td>Poster Presentations </td>
+          <td> <br>
+          </td>
+          <td><br>
+          </td>
+        </tr>
+        <tr>
+          <td><br>
+          </td>
+          <td>12/7<br>
+          </td>
+          <td>Image-Text Modeling for Multilingual NLP<br>
+          </td>
+          <td> Slides<br>
+          </td>
+          <td>Final Report Due<br>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <p><br>
+    </p>
+    <!-- Graph Neural Network 
+<a href="http://arxiv.org/abs/1609.02907">GCN</a>, <a href="https://arxiv.org/pdf/1704.01212.pdf">MPNN</a> -->
+    <!-- Graph Neural Network 
+<a href="http://arxiv.org/abs/1609.02907">GCN</a>, <a href="https://arxiv.org/pdf/1704.01212.pdf">MPNN</a> -->
+    <!-- Graph Neural Network 
+<a href="http://arxiv.org/abs/1609.02907">GCN</a>, <a href="https://arxiv.org/pdf/1704.01212.pdf">MPNN</a> -->
+  
+
+</body></html>

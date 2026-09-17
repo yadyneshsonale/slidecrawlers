@@ -1,0 +1,989 @@
+<html><head>
+<title>CS 215: Data Interpretation and Analysis, Fall 2025</title>
+</head>
+
+<body><font face="Arial">
+
+
+
+<center>
+<table cellspacing="0" cellpadding="0" width="700" border="0">
+  <tbody>
+  <tr bgcolor="#CEFF88">
+    <td>
+
+      <center>
+      <h2>CS 215 - Data Interpretation and Analysis</h2>
+	<b>Instructor:</b> Ajit Rajwade	
+	<br><b>Office:</b> SIA-218, KReSIT Building
+	<br> <b>Email:</b> <img src="email.png" height="15," width="180">
+	<br><br><b>Lecture Timings:</b> <a href="https://www.cse.iitb.ac.in/academics/timetable">Slot 3</a>: Monday 10:35 am to 11:30 am, Tuesday 11:35 am to 12:30 pm, Thursday 8:30 am to 9:25 am
+	<br><br><b>Lecture Venue:</b> LA 002
+	<br><br><b>Instructor Office hours:</b> Thursday 2:30 to 3:30 pm in KR 118 (or after class on Tuesdays in LA 002). (<b>Feel free to send queries over email or moodle</b>)
+	<br><br> <b>Teaching Assistants:</b>
+	<ul>
+	<li>Srijan Das</li>
+	<li>Ayush Pratap Singh</li>
+	<li>Manivannan N</li>
+	<li>Mohammad Kashif Khan</li>
+	<li>Anirban Paul</li>
+	<li>Kumar Rajnish</li>
+	<li>Sabil Ahmad</li>
+	<li>Badisa Chennakesava Venkata Vignesh</li>
+	<li>Sameer Arvind Patil</li>
+	<li>S Ramachandran</li>
+	</ul>
+	
+	</center>
+	<br>
+</td>
+</tr>
+</tbody>
+</table>
+</center>
+
+
+<font face="Arial">
+
+      <h3>Topics to be covered (tentative list)</h3>
+
+      <ul>
+	<li>Descriptive statistics
+	</li><li>Discrete and continuous probability
+	</li><li>Random variables and expectation
+	</li><li>Special random variables: Bernoulli, Binomial, Geometric, Hypergeometric, Gaussian, Chi-square, Uniform, Poisson, Exponential
+	</li><li>Hypothesis testing: z-test, t-test, Kolmogorov Smirnov test
+	</li><li>Parameter estimation: maximum likelihood, Bayesian, concept of asymptotic normality and Fisher information, Cramer-Rao bounds
+	</li><li>Regression
+	</li><li>Non-parametric probability density estimation
+	</li><li>Multivariate Gaussians, Principal Components Analysis
+	</li><li>Transformation and Simulation of Random Variables
+	</li><li>We will cover some nice applications in image procesing, basic machine learning and group testing alongside some key concepts.
+      </li></ul>	
+<hr>
+
+	<h3>Intended Audience</h3>
+	2nd year BTech students from CSE
+
+      <h3>Learning Materials and Textbooks</h3>
+	<ul>
+	<li> Lecture slides that will be regularly posted. I may occasionally post links to videos, or additional material such as problem sets.
+	</li><li> We will use moodle for posting assignments and grades
+	</li><li> Course textbook: Introduction to Probability and Statistics for Engineers and Scientists: Fifth Edition (20-30 copies available in the library)
+	</li></ul>
+
+	<h3>Computational Resources</h3>
+	<ul>
+	<b>Matlab</b>
+	<li><a href="http://matlab.iitb.ac.in/matlab/">Online MATLAB @IITB</a>, accessible through your LDAP id and password</li>
+
+<li><a href="http://www.mccormick.northwestern.edu/docs/efirst/matlab.pdf">Matlab tutorial 1</a></li>
+<li><a href="http://web.eecs.umich.edu/~aey/eecs451/matlab.pdf">Matlab tutorial 2</a></li>
+<li><a href="http://www.cs.cmu.edu/~ggordon/10601/recitations/matlab/pretty_matlab_pres.pdf">Matlab tutorial 3</a></li>
+
+<li><a href="http://www.mathworks.com/academia/student_center/tutorials/launchpad.html">The MathWorks - MATLAB Tutorial</a></li>
+<li><a href="http://math.ucsd.edu/~driver/21d-s99/matlab-primer.html">Matlab
+Primer</a></li>
+<li><a href="http://www.mathworks.com/access/helpdesk/help/techdoc/matlab.shtml">On-line Matlab Help</a></li>
+<li><a href="http://www.ee.columbia.edu/~marios/matlab/Writing_Fast_MATLAB_Code.pdf">Writing
+Fast Matlab Code</a> (pdf)</li>
+<li>One more tutorial for <a href="http://home.online.no/~pjacklam/matlab/doc/mtt/doc/mtt.pdf">writing fast matlab code</a></li>
+<li><a href="http://www.mathworks.com/support/tech-notes/1100/1109.html">Code Vectorization Guide</a></li>
+<li><a href="http://www.ee.columbia.edu/~marios/matlab/MatlabStyle1p5.pdf">Matlab
+Programmin Style Guidelines</a> (pdf)</li>
+<li><a href="http://home.online.no/~pjacklam/matlab/doc/mtt/doc/mtt.pdf">Matlab array manipulation</a></li>
+</ul>
+<hr>
+
+      <h3>Grading Policy (tenative)</h3>
+      <ul>
+        <li> Mid-sem exam: 25%
+	</li><li> Final exam (cumulative): 30%
+	</li><li> Programming and written assignments (about five): 30% - all to be done in groups of 2 students. This will possibly include a "project". 
+	</li><li> Two pre-announced quizzes: 15% total
+</li></ul>
+<hr>     
+
+
+	<h3>Other Policies</h3>
+	<ul>
+	<li>Attendance is mandatory. <b>Students with less than 90% attendance may be given a DX grade.</b></li>
+	<li> Assignments will be given out (typically) once every two or three weeks. They must be submitted on or before the deadline. No late 
+assignments will be accepted. The programming components of the assignments will typically involve MATLAB, so you must be willing to learn it quickly.
+	</li><li> <font color="red">We will adopt a zero-tolerance policy 
+against any forms of plagiarism or any other form of cheating. Just 
+don't do it! In cases of plagiarism, givers and takers will both be considered equally responsible. </font>
+	</li><li> This course is (inherently) cumulative. The syllabus for the final exam 
+will include everything taught during the semester.
+	</li></ul>	
+
+<hr>
+
+<h2 id="Tutorials">Tutorials</h2>
+<ul> <li>See moodle</li></ul>
+
+<h2 id="Quizzes">Quizzes</h2>
+<ul> <li>See moodle</li></ul>
+
+
+
+<h2 id="schedule">Lecture Schedule: </h2>
+<br>
+<p align="center">
+<table cellpadding="10" border="1">
+<tbody><tr bgcolor="#CEFF88">
+<td> <b><h3>Number</h3></b></td>
+<td> <b><h3>Date</h3></b></td>
+<td> <b><h3>Content of the Lecture</h3></b></td>
+<td> <b><h3>Assignments/Readings/Notes</h3></b></td>
+</tr>
+
+<tr>
+<td>1</td>
+<td>28/07</td>
+<td><ul>
+<li>Introduction, course overview and course policies</li>
+</ul>
+
+</td><td>
+<ul>
+<li><a href="https://docs.google.com/presentation/d/1eeXKBP9gpvZ_baqHk4qxWQx1oZhkCxt3/edit?usp=sharing&amp;ouid=113281828352677469792&amp;rtpof=true&amp;sd=true">Slides: Course Overview</a></li> 
+</ul>
+</td>
+</tr>
+
+
+<tr>
+<td>2</td>
+<td>29/07</td>
+<td>
+<ul>
+<b>Descriptive Statistics</b>
+<li>Terminology: population, sample, discrete and continuous valued attributes</li>
+<li>Frequency tables, frequency polyongs, line diagrams, pie charts, relative frequency tables</li>
+<li>Histograms with examples for image intensity histograms, image gradient histograms</li>
+<li>Histogram binning problem</li>
+<li>Data summarization: Mean and Median</li>
+</ul>
+
+</td><td>
+<ul>
+<li><a href="https://docs.google.com/presentation/d/1NTzkD4rqWf6rznGEuGsX9YkNPgCzbJzv/edit?usp=sharing&amp;ouid=113281828352677469792&amp;rtpof=true&amp;sd=true">Slides: Descriptive Statistics</a></li> 
+<li>Readings: sections 2.1 and 2.2 of the textbook by Sheldon Ross</li>
+</ul>
+</td>
+</tr>
+
+
+
+<tr>
+<td>3</td>
+<td>31/07</td>
+<td>
+<ul>
+<li>Data summarization: mean and median</li>
+<li>"Proof" that median minimizes the sum of absolute deviations - using calculus</li>
+<li>Proof that median minimizes the sum of absolute deviations, without using calculus</li>
+<li>Concept of quantile/percentile</li>
+<li>Calculation of mean and median in different ways from histogram or cumulative plots</li>
+<li>Standard deviation and variance, some applications</li>
+<li>Two-sided Chebyshev inequality with proof; One-side Chebyshev inequality (Chebyshev-Cantelli inequality)</li>
+</ul>
+
+</td><td>
+<ul>
+<li><a href="https://docs.google.com/presentation/d/1NTzkD4rqWf6rznGEuGsX9YkNPgCzbJzv/edit?usp=sharing&amp;ouid=113281828352677469792&amp;rtpof=true&amp;sd=true">Slides: Descriptive Statistics</a></li> 
+<li><a href="https://drive.google.com/file/d/1XHoVuT8LxEZLhf-OHq-dFQ3xk10F79cG/view?usp=sharing">Non-calculus proof for median</a></li>
+<li>Readings: sections 2.1 and 2.2 of the textbook by Sheldon Ross</li>
+</ul>
+</td>
+</tr>
+
+
+<tr>
+<td>4</td>
+<td>4/8</td>
+<td>
+<ul>
+<li>Two-sided Chebyshev inequality with proof; One-side Chebyshev inequality (Chebyshev-Cantelli inequality)</li>
+<li>Concept of correlation coefficient and formula for it; proof that its value lies from -1 to +1</li>
+<li>Correlation coefficient: properties; uncentered correlation coefficient; limitations of correlation coefficient and Anscombe's quartet</li>
+<li>Correlation and causation</li>
+</ul>
+
+
+</td><td>
+<ul>
+<li><a href="https://docs.google.com/presentation/d/1NTzkD4rqWf6rznGEuGsX9YkNPgCzbJzv/edit?usp=sharing&amp;ouid=113281828352677469792&amp;rtpof=true&amp;sd=true">Slides: Descriptive Statistics</a></li> 
+<li>Readings: sections 2.1,2.2,2.3,2.4,2.6 of the textbook by Sheldon Ross</li>
+</ul>
+</td>
+</tr>
+
+
+<tr>
+<td>5</td>
+<td>5/8</td>
+<td>
+<b>Discrete Probability</b>
+<ul>
+<li>Discrete probability: sample space, event, composition of events: union, intersection, complement, exclusive or, De Morgan's laws</li>
+<li>Boole's and Bonferroni's inequalities</li>
+<li>Conditional probability, Bayes rule, False Positive Paradox</li>
+<li>Independent and mutually exclusive events</li>
+<li>Birthday paradox</li>
+</ul>
+
+</td><td>
+<ul>
+<li><a href="https://docs.google.com/presentation/d/1mvtRdaoTXcfCHzQGB2_YeNubb5Y0jgyY/edit?usp=sharing&amp;ouid=113281828352677469792&amp;rtpof=true&amp;sd=true">Slides: Discrete Probability</a></li> 
+<li>Readings: Chapter 3 of the textbook by Sheldon Ross</li>
+</ul>
+</td>
+</tr>
+
+
+<tr>
+<td>6</td>
+<td>7/8</td>
+<td>
+<ul>
+<li>Independent and mutually exclusive events</li>
+<li>Birthday paradox</li>
+</ul>
+<b>MATLAB Tutorial</b>
+<ul>
+<li>Code vectorization: vectors and matrix operations</li>
+<li>Plotting graphs, scatterplots, images in MATLAB</li>
+<li>Some functions for computing statistical quantities</li>
+</ul>
+
+</td><td>
+<ul>
+<li><a href="https://drive.google.com/drive/folders/1UCVbfgcsj1hEkFrV-DWfdj227kJ0mFqg?usp=sharing">MATLAB Demo Examples</a></li>
+<li><a href="https://docs.google.com/presentation/d/1mvtRdaoTXcfCHzQGB2_YeNubb5Y0jgyY/edit?usp=sharing&amp;ouid=113281828352677469792&amp;rtpof=true&amp;sd=true">Slides: Discrete Probability</a></li> 
+<li>Readings: Chapter 3 of the textbook by Sheldon Ross</li>
+</ul>
+</td>
+</tr>
+
+
+
+<tr>
+<td>7</td>
+
+<td>11/8</td>
+<td>
+<b>Random Variables</b>
+<ul>
+<li>Random variable: concept, discrete and continuous random variables</li>
+<li>Probability mass function (pmf), cumulative distribution function (cdf) and probability density function (pdf)</li>
+<li>Expected value for discrete and continuous random variables; Law of the Unconscious Statistician</li>
+<li>Standard deviation, Markov's inequality, Chebyshev's inequality; proofs of these inequalities</li>
+<li>Concept of covariance and its properties</li>
+</ul>
+
+</td><td>
+<ul>
+<li><a href="https://docs.google.com/presentation/d/1sI-8arcM2yYnNZ4sHUWIWfBFTLbc-Bpe/edit?usp=sharing&amp;ouid=113281828352677469792&amp;rtpof=true&amp;sd=true">Slides: Random Variables</a></li> 
+<li>Readings: Chapter 4 of the textbook by Sheldon Ross</li>
+</ul>
+</td>
+</tr>
+
+
+<tr>
+<td>8</td>
+
+<td>12/8</td>
+<td>
+<ul>
+<li>Proof of the law of the unconscious statistician</li>
+<li>Weak law of large numbers and its proof using Chebyshev's inequality; statement of strong law</li>
+</ul>
+
+</td><td>
+<ul>
+<li><a href="https://docs.google.com/presentation/d/1sI-8arcM2yYnNZ4sHUWIWfBFTLbc-Bpe/edit?usp=sharing&amp;ouid=113281828352677469792&amp;rtpof=true&amp;sd=true">Slides: Random Variables</a></li> 
+<li>Readings: Chapter 4 of the textbook by Sheldon Ross</li>
+</ul>
+</td>
+</tr>
+
+
+<tr>
+<td>9</td>
+<td>14/8</td>
+<td>
+<ul>
+<li>Joint PMF, PDF, CDF with examples; marginals obtained by integration of joint PDFs, CDFs, PMFs</li>
+<li>Concept of independence of random variables</li>
+</ul>
+
+</td><td>
+<ul>
+<li><a href="https://docs.google.com/presentation/d/1sI-8arcM2yYnNZ4sHUWIWfBFTLbc-Bpe/edit?usp=sharing&amp;ouid=113281828352677469792&amp;rtpof=true&amp;sd=true">Slides: Random Variables</a></li> 
+<li>Readings: Chapter 4 of the textbook by Sheldon Ross</li>
+</ul>
+</td>
+</tr>
+
+
+<tr>
+<td>10</td>
+<td>18/8</td>
+<td>
+<ul>
+<li>Conditional CDF, PDF, PMF; conditional expectation; examples</li>
+<li>Moment generating functions: definition, genesis, properties</li>
+</ul>
+
+</td><td>
+<ul>
+<li><a href="https://docs.google.com/presentation/d/1sI-8arcM2yYnNZ4sHUWIWfBFTLbc-Bpe/edit?usp=sharing&amp;ouid=113281828352677469792&amp;rtpof=true&amp;sd=true">Slides: Random Variables</a></li> 
+<li>Readings: Chapter 4 of the textbook by Sheldon Ross</li>
+</ul>
+</td>
+</tr>
+
+
+<tr>
+<td>11</td>
+<td>19/8</td>
+<td>
+<ul>
+<li>Conditional CDF, PDF, PMF; conditional expectation; examples</li>
+<li>Moment generating functions: properties, uniqueness proofs, connection to Laplace transforms; mention of characteristic functions</li>
+</ul>
+
+<b>Families of Random Variables</b>
+<ul>
+<li>Bernoulli random variables: mean, median, mode, variance, MGF</li>
+</ul>
+
+</td><td>
+<ul>
+<li><a href="https://docs.google.com/presentation/d/1sI-8arcM2yYnNZ4sHUWIWfBFTLbc-Bpe/edit?usp=sharing&amp;ouid=113281828352677469792&amp;rtpof=true&amp;sd=true">Slides: Random Variables</a></li> 
+<li><a href="https://docs.google.com/presentation/d/1msB3LSL-juckVQ1xqRBkx9GgJHlGqAy8/edit?usp=sharing&amp;ouid=113281828352677469792&amp;rtpof=true&amp;sd=true">Slides: Families of Random Variables</a></li>
+<li>Readings: Chapter 4 of the textbook by Sheldon Ross</li>
+<li>Readings: Chapter 5 of the textbook by Sheldon Ross</li>
+</ul>
+</td>
+</tr>
+
+
+<tr>
+<td>12</td>
+<td>21/8</td>
+<td>
+<ul>
+<li>Binomial random variables: mean, median, mode, variance, MGF</li>
+</ul>
+
+</td><td>
+<ul>
+<li><a href="https://docs.google.com/presentation/d/1msB3LSL-juckVQ1xqRBkx9GgJHlGqAy8/edit?usp=sharing&amp;ouid=113281828352677469792&amp;rtpof=true&amp;sd=true">Slides: Families of Random Variables</a></li>
+<li>Readings: Chapter 5 of the textbook by Sheldon Ross</li>
+</ul>
+</td>
+</tr>
+
+
+
+<tr>
+<td>13</td>
+<td>25/8</td>
+<td>
+<ul>
+<li>Gaussian distribution: definition, mean, variance, verification of integration to 1, MGF, error functions</li>
+<li>Introduction to and basic statement of the central limit theorem, with examples</li>
+</ul>
+
+</td><td>
+<ul>
+<li><a href="https://docs.google.com/presentation/d/1msB3LSL-juckVQ1xqRBkx9GgJHlGqAy8/edit?usp=sharing&amp;ouid=113281828352677469792&amp;rtpof=true&amp;sd=true">Slides: Families of Random Variables</a></li>
+<li>Readings: chapter 5</li>
+<li><a href="https://drive.google.com/drive/folders/1wOR-1RJ-VFPIIyzuyTih4gCh5KfYRIHD?usp=sharing">Code for the central limit theorem</a></li>
+</ul>
+</td>
+</tr>
+
+
+<tr>
+<td>14</td>
+<td>26/8</td>
+<td>
+<ul>
+<li>Properties of Gaussian: CDF and error function, MGF</li>
+<li>Relation between CLT and Law of Large Numbers</li>
+<li>Gaussian tail bounds</li>
+<li>Distribution of sample mean and sample variance, Bessel's correction</li>
+</ul>
+
+</td><td>
+<ul>
+<li><a href="https://docs.google.com/presentation/d/1msB3LSL-juckVQ1xqRBkx9GgJHlGqAy8/edit?usp=sharing&amp;ouid=113281828352677469792&amp;rtpof=true&amp;sd=true">Slides: Families of Random Variables</a></li>
+<li>Readings: chapter 5</li>
+<li><a href="https://drive.google.com/drive/folders/1wOR-1RJ-VFPIIyzuyTih4gCh5KfYRIHD?usp=sharing">Code for the central limit theorem</a></li>
+</ul>
+</td>
+</tr>
+
+
+
+<tr>
+<td>15</td>
+<td>28/8</td>
+<td>
+<ul>
+<li>Proof of central limit theorem</li>
+<li>Chi-square distribution</li>
+<li>Distribution of sample variance given Gaussian random variables</li>
+</ul>
+
+</td><td>
+<ul>
+<li><a href="https://docs.google.com/presentation/d/1msB3LSL-juckVQ1xqRBkx9GgJHlGqAy8/edit?usp=sharing&amp;ouid=113281828352677469792&amp;rtpof=true&amp;sd=true">Slides: Families of Random Variables</a></li>
+<li>Readings: chapter 5</li>
+<li><a href="https://drive.google.com/drive/folders/1wOR-1RJ-VFPIIyzuyTih4gCh5KfYRIHD?usp=sharing">Code for the central limit theorem</a></li>
+</ul>
+</td>
+</tr>
+
+
+<tr>
+<td>16</td>
+<td>1/9</td>
+<td>
+<ul>
+<li>Uniform distribution: mean, mode, median, MGF, sampling from a PMF, probability integral transform</li>
+<li>Hypergeometric distribution: mean, variance</li>
+</ul>
+
+</td><td>
+<ul>
+<li><a href="https://docs.google.com/presentation/d/1msB3LSL-juckVQ1xqRBkx9GgJHlGqAy8/edit?usp=sharing&amp;ouid=113281828352677469792&amp;rtpof=true&amp;sd=true">Slides: Families of Random Variables</a></li>
+<li>Readings: chapter 5</li>
+<li><a href="https://drive.google.com/drive/folders/1wOR-1RJ-VFPIIyzuyTih4gCh5KfYRIHD?usp=sharing">Code for the central limit theorem</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Probability_integral_transform">Probability integral transform</a></li>
+</ul>
+</td>
+</tr>
+
+
+<tr>
+<td>17</td>
+<td>2/9</td>
+<td>
+<ul>
+<li>Hypergeometric distribution: method of capture+recapture in ecology</li>
+<li>Multinomial distribution: mean vector, covariance matrix, MGF</li>
+</ul>
+
+</td><td>
+<ul>
+<li><a href="https://docs.google.com/presentation/d/1msB3LSL-juckVQ1xqRBkx9GgJHlGqAy8/edit?usp=sharing&amp;ouid=113281828352677469792&amp;rtpof=true&amp;sd=true">Slides: Families of Random Variables</a></li>
+<li>Readings: chapter 5</li>
+<li><a href="https://drive.google.com/drive/folders/1wOR-1RJ-VFPIIyzuyTih4gCh5KfYRIHD?usp=sharing">Code for the central limit theorem</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Probability_integral_transform">Probability integral transform</a></li>
+</ul>
+</td>
+</tr>
+
+
+<tr>
+<td>18</td>
+<td>4/9</td>
+<td>
+<ul>
+<li>Poisson distribution: genesis and examples, Poisson limit theorem, mean, variance, MGF, Poisson thinning, relation to normal distribution</li>
+<li>Exponential distribution: genesis, and relevance to Poisson distribution</li>
+</ul>
+
+</td><td>
+<ul>
+<li><a href="https://docs.google.com/presentation/d/1msB3LSL-juckVQ1xqRBkx9GgJHlGqAy8/edit?usp=sharing&amp;ouid=113281828352677469792&amp;rtpof=true&amp;sd=true">Slides: Families of Random Variables</a></li>
+<li>Readings: chapter 5</li>
+</ul>
+</td>
+</tr>
+
+
+<tr>
+<td>19</td>
+<td>8/9</td>
+<td>
+<ul>
+<li>Exponential distribution: mean, variance, MGF, property of memorylessness</li>
+</ul>
+<b>Parameter Estimation</b>
+<ul>
+<li>Concept of parameter estimation (or parametric PDF/PMF estimation)</li>
+<li>Maximum likelihood estimation (MLE)</li>
+<li>MLE for parameters of Bernoulli, Poisson, Gaussian and uniform distributions</li>
+<li>Least squares line fitting as an MLE problem</li>
+<li>MLE for parameters of uniform distributions</li>
+</ul>
+
+</td><td>
+<ul>
+<li><a href="https://docs.google.com/presentation/d/1msB3LSL-juckVQ1xqRBkx9GgJHlGqAy8/edit?usp=sharing&amp;ouid=113281828352677469792&amp;rtpof=true&amp;sd=true">Slides: Families of Random Variables</a></li>
+<li>Readings: chapter 5</li>
+
+
+<li><a href="https://docs.google.com/presentation/d/1wOzc8yxGQnkP2RV_oLcyKj8vwHjlVbZl/edit?usp=sharing&amp;ouid=113281828352677469792&amp;rtpof=true&amp;sd=true">Slides: Parameter estimation</a></li>
+<li><a href="MLE_notes.pdf">MLE derivations</a></li>
+<li>Readings: Section 5.6 from the textbook by Sheldon Ross</li>
+<li>Readings: Sections 7.1, 7.2, 7.5, 7.7, 9.2 (for least squares line fitting) of the textbook by Sheldon Ross</li>
+</ul>
+</td>
+</tr>
+
+
+<tr>
+<td>20</td>
+<td>9/9</td>
+<td>
+<ul>
+<li>Least squares line fitting as an MLE problem</li>
+<li>MLE for parameters of uniform distributions</li>
+<li>Concept of ML estimate as a random variable, notion of confidence interval</li>
+</ul>
+
+</td><td>
+<ul>
+<li><a href="https://docs.google.com/presentation/d/1wOzc8yxGQnkP2RV_oLcyKj8vwHjlVbZl/edit?usp=sharing&amp;ouid=113281828352677469792&amp;rtpof=true&amp;sd=true">Slides: Parameter estimation</a></li>
+<li><a href="MLE_notes.pdf">MLE derivations</a></li>
+<li>Readings: Section 5.6 from the textbook by Sheldon Ross</li>
+<li>Readings: Sections 7.1, 7.2, 7.5, 7.7, 9.2 (for least squares line fitting) of the textbook by Sheldon Ross</li>
+</ul>
+</td>
+</tr>
+
+
+<tr>
+<td>21</td>
+<td>11/9</td>
+<td>
+<ul>
+<li>Concept of estimator bias, mean squared error, variance</li>
+<li>Estimators for interval of uniform distribution: example of bias</li>
+</ul>
+
+</td><td>
+<ul>
+<li><a href="https://docs.google.com/presentation/d/1wOzc8yxGQnkP2RV_oLcyKj8vwHjlVbZl/edit?usp=sharing&amp;ouid=113281828352677469792&amp;rtpof=true&amp;sd=true">Slides: Parameter estimation</a></li>
+<li><a href="MLE_notes.pdf">MLE derivations</a></li>
+<li>Readings: Section 5.6 from the textbook by Sheldon Ross</li>
+<li>Readings: Sections 7.1, 7.2, 7.3, 7.5, 7.7, 9.2 (for least squares line fitting) of the textbook by Sheldon Ross</li>
+
+</ul>
+</td>
+</tr>
+
+
+<tr>
+<td>22</td>
+<td>22/9</td>
+<td>
+<ul>
+<li>Concept of nonparametric density estimation; Concept of histogram as a probability density estimator</li>
+<li>Bias, variance and MSE for a histogram estimator for a smooth density (with bounded first derivatives) which is non-zero on a finite-sized interval; derivation of optimal number of bins (equivalently, optimal binwidth) and optimal MSE O(n^{-2/3})</li>
+</ul>
+
+</td><td>
+<ul>
+<li><a href="http://faculty.washington.edu/yenchic/18W_425/Lec6_hist_KDE.pdf">Derivation of MSE, bias, variance for a histogram</a>. Read section 6.1 only. These notes are by Prof. Yen-Chi Chen from the Univ. of Washington, Seattle. A local copy of the pdf is <a href="https://drive.google.com/file/d/1uVC5SgvOKPt3zuYXq5VmKo4Vpi2Y7gbJ/view?usp=sharing">here</a></li>
+
+</ul>
+</td>
+</tr>
+
+
+<tr>
+<td>23</td>
+<td>23/9</td>
+<td>
+<ul>
+<li>Kernel density estimation for non-parametric PDF estimation.</li>
+<li>Derivation of bias, variance, MSE for KDE.</li>
+</ul>
+
+</td><td>
+<ul>
+<li><a href="http://faculty.washington.edu/yenchic/18W_425/Lec6_hist_KDE.pdf">Derivation of MSE, bias, variance for a KDE</a>. These notes are by Prof. Yen-Chi Chen from the Univ. of Washington, Seattle. A local copy of the pdf is <a href="https://drive.google.com/file/d/1uVC5SgvOKPt3zuYXq5VmKo4Vpi2Y7gbJ/view?usp=sharing">here</a></li>
+
+</ul>
+</td>
+</tr>
+
+
+<tr>
+<td>24</td>
+<td>25/9</td>
+<td>
+<ul>
+<li>Confidence intervals in maximum likelihood estimation</li>
+<li>Concept of two-sided confidence interval and one-sided confidence interval</li>
+<li>Confidence interval for mean of a Gaussian with known standard deviation</li>
+<li>Confidence interval for variance of a Gaussian</li>
+<li>Concept of two-sided confidence interval and one-sided confidence interval</li>
+<li>Confidence interval for mean of a Gaussian with known standard deviation</li>
+<li>Confidence interval for variance of a Gaussian</li>
+</ul>
+
+</td><td>
+<ul>
+<li><a href="https://docs.google.com/presentation/d/1wOzc8yxGQnkP2RV_oLcyKj8vwHjlVbZl/edit?usp=sharing&amp;ouid=113281828352677469792&amp;rtpof=true&amp;sd=true">Slides: Parameter estimation</a></li>
+<li>Chapter 7 of the textbook</li>
+</ul>
+</td>
+</tr>
+
+
+
+<tr>
+<td>25</td>
+<td>29/9</td>
+<td>
+<b>Hypothesis Testing</b>
+<ul>
+<li>Concept of statistical hypothesis test</li>
+<li>Type I and Type II errors, p-value, test statistic, critical region</li>
+<li>Hypothesis test for mean of a normal distribution with known variance</li>
+</ul>
+
+</td><td>
+<ul>
+<li><a href="https://docs.google.com/presentation/d/1J4iLDSar7SJEdocn6LvaxMSukk7e4M5_2b6JKMnsDG0/edit?usp=sharing">Slides</a></li>
+<li>Chapter 8 of the textbook</li>
+</ul>
+</td>
+</tr>
+
+
+
+<tr>
+<td>26</td>
+<td>30/9</td>
+<td>
+<ul>
+<li>One sided test for mean of a normal distribution known variance</li>
+<li>Testing equality of means of two normal populations with known variances</li>
+<li>Hypothesis test for mean of a normal distribution with unknown variance</li>
+</ul>
+
+</td><td>
+<ul>
+<li><a href="https://docs.google.com/presentation/d/1J4iLDSar7SJEdocn6LvaxMSukk7e4M5_2b6JKMnsDG0/edit?usp=sharing">Slides</a></li>
+<li>Chapter 8 of the textbook</li>
+</ul>
+</td>
+</tr>
+
+
+<tr>
+<td>27</td>
+<td>6/10</td>
+<td>
+<ul>
+<li>Hypothesis test for mean of a normal distribution with unknown variance</li>
+<li>Derivation of the t-distribution</li>
+<li>Testing equality of means of two normal populations with unknown but equal variances</li>
+</ul>
+
+</td><td>
+<ul>
+<li><a href="https://docs.google.com/presentation/d/1J4iLDSar7SJEdocn6LvaxMSukk7e4M5_2b6JKMnsDG0/edit?usp=sharing">Slides</a></li>
+<li>Chapter 8 of the textbook</li>
+</ul>
+</td>
+</tr>
+
+<tr>
+<td>28</td>
+<td>7/10</td>
+<td>
+<ul>
+<li>Hypothesis test regarding the variance of a normal population (with unknown mean)</li>
+<li>Hypothesis test for the success parameter of a Bernoulli distribution</li>
+<li>Hypothesis test: equality of success parameters in two Bernoulli distributions</li>\
+<li>Chi-square test for goodness of fit</li>
+</ul>
+
+</td><td>
+<ul>
+<li><a href="https://docs.google.com/presentation/d/1J4iLDSar7SJEdocn6LvaxMSukk7e4M5_2b6JKMnsDG0/edit?usp=sharing">Slides</a></li>
+<li>Chapter 8 of the textbook</li>
+<li>Chapter 11 for goodness of fit tests</li>
+</ul>
+</td>
+</tr>
+
+
+<tr>
+<td>29</td>
+<td>7/10</td>
+<td>
+<ul>
+<li>Chi-square test for goodness of fit</li>
+<li>Kolmogorov-Smirnov goodness of fit test: basic (non-constructive) derivation, computation of the test statistic efficiently; concept of empirical CDF, empirical CDF as an unbiased and low variance estimator of the true CDF</li>
+<li>Brief mention of the Dvortezky-Kiefer-Wolfowitz inequality</li>
+<li>Two examples of hypothesis testing in medicine: placebo effect, control group</li>
+</ul>
+
+</td><td>
+<ul>
+<li><a href="https://docs.google.com/presentation/d/1J4iLDSar7SJEdocn6LvaxMSukk7e4M5_2b6JKMnsDG0/edit?usp=sharing">Slides</a></li>
+<li>Chapter 8 of the textbook</li>
+<li>Chapter 11 for goodness of fit tests</li>
+</ul>
+</td>
+</tr>
+
+
+<tr>
+<td>30</td>
+<td>9/10</td>
+<td>
+<b>Multivariate Normal Distribution</b>
+<ul>
+<li>Expression for multivariate normal PDF; mean vector, covariance matrix</li>
+<li>Properties of the covariance matrix</li>
+<li>Concept of random normal vectors and derivation of the multivariate normal PDF using transformation of random variables</li>
+</ul>
+
+</td><td>
+<ul>
+<li><a href="https://docs.google.com/presentation/d/1ElqLbDMwPWuXatmeCx6bSM8anVnkjPTxYdiOKxslkZw/edit?usp=sharing">Slides</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Multivariate_normal_distribution">Wiki article on multivariate normal distribution</a></li>
+<li><a href="https://www.statlect.com/probability-distributions/multivariate-normal-distribution">Statlect article on multivariate normal distribution</a></li>
+</ul>
+</td>
+</tr>
+
+
+<tr>
+<td>31</td>
+<td>13/10</td>
+<td>
+<ul>
+<li>Concept of random normal vectors and derivation of the multivariate normal PDF using transformation of random variables</li>
+<li>Sampling from a multivariate normal distribution using univariate Gaussians as a sub-routine</li>
+<li>Special versions of the multivariate Gaussian: diagonal covariance matrix, covariance matrix proportional to identity</li>
+</ul>
+
+</td><td>
+<ul>
+<li><a href="https://docs.google.com/presentation/d/1ElqLbDMwPWuXatmeCx6bSM8anVnkjPTxYdiOKxslkZw/edit?usp=sharing">Slides</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Multivariate_normal_distribution">Wiki article on multivariate normal distribution</a></li>
+<li><a href="https://www.statlect.com/probability-distributions/multivariate-normal-distribution">Statlect article on multivariate normal distribution</a></li>
+</ul>
+</td>
+</tr>
+
+
+<tr>
+<td>32</td>
+<td>14/10</td>
+<td>
+<ul>
+<li>Marginalization: argument that individual elements of a multivariate normal random vector are normally distributed</li>
+<li>Eigenvectors and eigenvalues of the covariance matrix</li>
+<li>Matrices as Geometric Transformations</li>
+<li>Whitening transformation</li>
+</ul>
+
+</td><td>
+<ul>
+<li><a href="https://docs.google.com/presentation/d/1ElqLbDMwPWuXatmeCx6bSM8anVnkjPTxYdiOKxslkZw/edit?usp=sharing">Slides</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Multivariate_normal_distribution">Wiki article on multivariate normal distribution</a></li>
+<li><a href="https://www.statlect.com/probability-distributions/multivariate-normal-distribution">Statlect article on multivariate normal distribution</a></li>
+</ul>
+</td>
+</tr>
+
+
+<tr>
+<td>33</td>
+<td>16/10</td>
+<td>
+<ul>
+<li>Matrices as Geometric Transformations</li>
+<li>Whitening transformation</li>
+<li>Joint and marginal PDFs</li>
+</ul>
+
+</td><td>
+<ul>
+<li><a href="https://docs.google.com/presentation/d/1ElqLbDMwPWuXatmeCx6bSM8anVnkjPTxYdiOKxslkZw/edit?usp=sharing">Slides</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Multivariate_normal_distribution">Wiki article on multivariate normal distribution</a></li>
+<li><a href="https://www.statlect.com/probability-distributions/multivariate-normal-distribution">Statlect article on multivariate normal distribution</a></li>
+</ul>
+</td>
+</tr>
+
+
+<tr>
+<td>34</td>
+<td>23/10</td>
+<td>
+<ul>
+<li>Joint and marginal PDFs</li>
+<li>Isocontours of multivariate normal PDFs: hyperspheres, hyperellipsoids, oriented hyperellipsoids</li>
+<li>Euclidean distance and Mahalanobis distance, concept of a distance measure</li>
+<li>Different interpretations of the Mahalanobis distance, relation to chi-squared distribution</li>
+</ul>
+
+</td><td>
+<ul>
+<li><a href="https://docs.google.com/presentation/d/1ElqLbDMwPWuXatmeCx6bSM8anVnkjPTxYdiOKxslkZw/edit?usp=sharing">Slides</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Multivariate_normal_distribution">Wiki article on multivariate normal distribution</a></li>
+<li><a href="https://www.statlect.com/probability-distributions/multivariate-normal-distribution">Statlect article on multivariate normal distribution</a></li>
+</ul>
+</td>
+</tr>
+
+
+
+<tr>
+<td>35</td>
+<td>25/10</td>
+<td>
+<ul>
+<li>Principal components analysis (PCA): concept of data compression</li>
+<li>Derivation of PCA: eigenvalus of covariance/scatter matrix as variance of the data when projected onto the eigenvectors, derivation of PCA for a single direction</li>
+</ul>
+
+</td><td>
+<ul>
+<li><a href="https://docs.google.com/presentation/d/1ElqLbDMwPWuXatmeCx6bSM8anVnkjPTxYdiOKxslkZw/edit?usp=sharing">Slides</a></li>
+</ul>
+</td>
+</tr>
+
+
+<tr>
+<td>36</td>
+<td>27/10</td>
+<td>
+<ul>
+<li>Derivation of PCA: eigenvalus of covariance/scatter matrix as variance of the data when projected onto multiple directions, derivation of PCA for multiple directions</li>
+<li>Application: eigenfaces, decay of eigenvalues of covariance matrices of face images</li>
+</ul>
+
+</td><td>
+<ul>
+<li><a href="https://docs.google.com/presentation/d/1ElqLbDMwPWuXatmeCx6bSM8anVnkjPTxYdiOKxslkZw/edit?usp=sharing">Slides</a></li>
+</ul>
+</td>
+</tr>
+
+
+
+<tr>
+<td>37</td>
+<td>28/10</td>
+<td>
+<b>Maximum Likelihood and Bayesian Estimation</b>
+<ul>
+<li>Regularity conditions</li>
+<li>Efficiency of an estimator</li>
+<li>Fisher information: intuition, different algebraic forms, examples for different distributions, significance in ML estimation</li>
+<li>Statement of Cramer Rao lower bound</li>
+</ul>
+
+</td><td>
+<ul>
+<li><a href="https://docs.google.com/presentation/d/1v4nKhoZKMfotg-h5SrhUuNyM7gWcY9ogo58mX19GTYA/edit?usp=sharing">Slides</a></li>
+</ul>
+</td>
+</tr>
+
+
+
+<tr>
+<td>38</td>
+<td>30/10</td>
+<td>
+<ul>
+<li>Statement of Cramer Rao lower bound; proof of Cramer Rao bound</li>
+<li>Significance of Cramer Rao bound; examples of the bound for Poisson and Gaussian distributions</li>
+<li>Concept of efficiency and asymptotic efficiency of an estimator</li>
+</ul>
+
+</td><td>
+<ul>
+<li><a href="https://docs.google.com/presentation/d/1v4nKhoZKMfotg-h5SrhUuNyM7gWcY9ogo58mX19GTYA/edit?usp=sharing">Slides</a></li>
+</ul>
+</td>
+</tr>
+
+
+<tr>
+<td>39</td>
+<td>3/11</td>
+<td>
+<ul>
+<li>Concept of efficiency and asymptotic efficiency of an estimator</li>
+<li>Asymptotic distribution of maximum likelihood estimates using the Fisher information</li>
+<li>Functional invariance of MLE estimators</li>
+<li>Concept of Bayesian estimation; posterior and prior distributions</li>
+</ul>
+
+</td><td>
+<ul>
+<li><a href="https://docs.google.com/presentation/d/1v4nKhoZKMfotg-h5SrhUuNyM7gWcY9ogo58mX19GTYA/edit?usp=sharing">Slides</a></li>
+</ul>
+</td>
+</tr>
+
+
+<tr>
+<td>40</td>
+<td>4/11</td>
+<td>
+<ul>
+<li>Concept of Bayesian estimation; posterior and prior distributions</li>
+<li>Maximum a posteriori (MAP) and Bayes estimators with examples</li>
+<li>Concept of conjugate priors</li>
+</ul>
+
+</td><td>
+<ul>
+<li><a href="https://docs.google.com/presentation/d/1v4nKhoZKMfotg-h5SrhUuNyM7gWcY9ogo58mX19GTYA/edit?usp=sharing">Slides</a></li>
+</ul>
+</td>
+</tr>
+
+
+<tr>
+<td>41</td>
+<td>6/11</td>
+<td>
+<ul>
+<li>Concept of conjugate priors</li>
+<li>Example of conjugate priors: Bernoulli likelihood and Beta prior</li>
+<li>Discussion regarding HW5</li>
+</ul>
+
+</td><td>
+<ul>
+<li><a href="https://docs.google.com/presentation/d/1v4nKhoZKMfotg-h5SrhUuNyM7gWcY9ogo58mX19GTYA/edit?usp=sharing">Slides</a></li>
+</ul>
+</td>
+</tr>
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+</tbody></table></p></font></font></body></html>

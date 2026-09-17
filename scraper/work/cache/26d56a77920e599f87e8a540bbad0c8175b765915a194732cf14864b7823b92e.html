@@ -1,0 +1,934 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<!-- 2025-01-15 Wed 10:43 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EE5606 Convex Optimization</title>
+<meta name="author" content="Shashank Vatedka">
+<meta name="generator" content="Org Mode">
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+<link rel="stylesheet" type="text/css" href="new.css">
+<script>
+  window.MathJax = {
+    tex: {
+      ams: {
+        multlineWidth: '85%'
+      },
+      tags: 'ams',
+      tagSide: 'right',
+      tagIndent: '.8em'
+    },
+    chtml: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    svg: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    output: {
+      font: 'mathjax-modern',
+      displayOverflow: 'overflow'
+    }
+  };
+</script>
+
+<script id="MathJax-script" async="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<style type="text/css">.CtxtMenu_InfoClose {  top:.2em; right:.2em;}
+.CtxtMenu_InfoContent {  overflow:auto; text-align:left; font-size:80%;  padding:.4em .6em; border:1px inset; margin:1em 0px;  max-height:20em; max-width:30em; background-color:#EEEEEE;  white-space:normal;}
+.CtxtMenu_Info.CtxtMenu_MousePost {outline:none;}
+.CtxtMenu_Info {  position:fixed; left:50%; width:auto; text-align:center;  border:3px outset; padding:1em 2em; background-color:#DDDDDD;  color:black;  cursor:default; font-family:message-box; font-size:120%;  font-style:normal; text-indent:0; text-transform:none;  line-height:normal; letter-spacing:normal; word-spacing:normal;  word-wrap:normal; white-space:nowrap; float:none; z-index:201;  border-radius: 15px;                     /* Opera 10.5 and IE9 */  -webkit-border-radius:15px;               /* Safari and Chrome */  -moz-border-radius:15px;                  /* Firefox */  -khtml-border-radius:15px;                /* Konqueror */  box-shadow:0px 10px 20px #808080;         /* Opera 10.5 and IE9 */  -webkit-box-shadow:0px 10px 20px #808080; /* Safari 3 & Chrome */  -moz-box-shadow:0px 10px 20px #808080;    /* Forefox 3.5 */  -khtml-box-shadow:0px 10px 20px #808080;  /* Konqueror */  filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color="gray", Positive="true"); /* IE */}
+</style><style type="text/css">.CtxtMenu_MenuClose {  position:absolute;  cursor:pointer;  display:inline-block;  border:2px solid #AAA;  border-radius:18px;  -webkit-border-radius: 18px;             /* Safari and Chrome */  -moz-border-radius: 18px;                /* Firefox */  -khtml-border-radius: 18px;              /* Konqueror */  font-family: "Courier New", Courier;  font-size:24px;  color:#F0F0F0}
+.CtxtMenu_MenuClose span {  display:block; background-color:#AAA; border:1.5px solid;  border-radius:18px;  -webkit-border-radius: 18px;             /* Safari and Chrome */  -moz-border-radius: 18px;                /* Firefox */  -khtml-border-radius: 18px;              /* Konqueror */  line-height:0;  padding:8px 0 6px     /* may need to be browser-specific */}
+.CtxtMenu_MenuClose:hover {  color:white!important;  border:2px solid #CCC!important}
+.CtxtMenu_MenuClose:hover span {  background-color:#CCC!important}
+.CtxtMenu_MenuClose:hover:focus {  outline:none}
+</style><style type="text/css">.CtxtMenu_Menu {  position:absolute;  background-color:white;  color:black;  width:auto; padding:5px 0px;  border:1px solid #CCCCCC; margin:0; cursor:default;  font: menu; text-align:left; text-indent:0; text-transform:none;  line-height:normal; letter-spacing:normal; word-spacing:normal;  word-wrap:normal; white-space:nowrap; float:none; z-index:201;  border-radius: 5px;                     /* Opera 10.5 and IE9 */  -webkit-border-radius: 5px;             /* Safari and Chrome */  -moz-border-radius: 5px;                /* Firefox */  -khtml-border-radius: 5px;              /* Konqueror */  box-shadow:0px 10px 20px #808080;         /* Opera 10.5 and IE9 */  -webkit-box-shadow:0px 10px 20px #808080; /* Safari 3 & Chrome */  -moz-box-shadow:0px 10px 20px #808080;    /* Forefox 3.5 */  -khtml-box-shadow:0px 10px 20px #808080;  /* Konqueror */}
+.CtxtMenu_MenuItem {  padding: 1px 2em;  background:transparent;}
+.CtxtMenu_MenuArrow {  position:absolute; right:.5em; padding-top:.25em; color:#666666;  font-family: null; font-size: .75em}
+.CtxtMenu_MenuActive .CtxtMenu_MenuArrow {color:white}
+.CtxtMenu_MenuArrow.CtxtMenu_RTL {left:.5em; right:auto}
+.CtxtMenu_MenuCheck {  position:absolute; left:.7em;  font-family: null}
+.CtxtMenu_MenuCheck.CtxtMenu_RTL { right:.7em; left:auto }
+.CtxtMenu_MenuRadioCheck {  position:absolute; left: .7em;}
+.CtxtMenu_MenuRadioCheck.CtxtMenu_RTL {  right: .7em; left:auto}
+.CtxtMenu_MenuInputBox {  padding-left: 1em; right:.5em; color:#666666;  font-family: null;}
+.CtxtMenu_MenuInputBox.CtxtMenu_RTL {  left: .1em;}
+.CtxtMenu_MenuComboBox {  left:.1em; padding-bottom:.5em;}
+.CtxtMenu_MenuSlider {  left: .1em;}
+.CtxtMenu_SliderValue {  position:absolute; right:.1em; padding-top:.25em; color:#333333;  font-size: .75em}
+.CtxtMenu_SliderBar {  outline: none; background: #d3d3d3}
+.CtxtMenu_MenuLabel {  padding: 1px 2em 3px 1.33em;  font-style:italic}
+.CtxtMenu_MenuRule {  border-top: 1px solid #DDDDDD;  margin: 4px 3px;}
+.CtxtMenu_MenuDisabled {  color:GrayText}
+.CtxtMenu_MenuActive {  background-color: #606872;  color: white;}
+.CtxtMenu_MenuDisabled:focus {  background-color: #E8E8E8}
+.CtxtMenu_MenuLabel:focus {  background-color: #E8E8E8}
+.CtxtMenu_ContextMenu:focus {  outline:none}
+.CtxtMenu_ContextMenu .CtxtMenu_MenuItem:focus {  outline:none}
+.CtxtMenu_SelectionMenu {  position:relative; float:left;  border-bottom: none; -webkit-box-shadow:none; -webkit-border-radius:0px; }
+.CtxtMenu_SelectionItem {  padding-right: 1em;}
+.CtxtMenu_Selection {  right: 40%; width:50%; }
+.CtxtMenu_SelectionBox {  padding: 0em; max-height:20em; max-width: none;  background-color:#FFFFFF;}
+.CtxtMenu_SelectionDivider {  clear: both; border-top: 2px solid #000000;}
+.CtxtMenu_Menu .CtxtMenu_MenuClose {  top:-10px; left:-10px}
+</style><style id="MJX-CHTML-styles">
+mjx-container[jax="CHTML"] {
+  line-height: 0;
+}
+
+mjx-container [space="1"] {
+  margin-left: .111em;
+}
+
+mjx-container [space="2"] {
+  margin-left: .167em;
+}
+
+mjx-container [space="3"] {
+  margin-left: .222em;
+}
+
+mjx-container [space="4"] {
+  margin-left: .278em;
+}
+
+mjx-container [space="5"] {
+  margin-left: .333em;
+}
+
+mjx-container [rspace="1"] {
+  margin-right: .111em;
+}
+
+mjx-container [rspace="2"] {
+  margin-right: .167em;
+}
+
+mjx-container [rspace="3"] {
+  margin-right: .222em;
+}
+
+mjx-container [rspace="4"] {
+  margin-right: .278em;
+}
+
+mjx-container [rspace="5"] {
+  margin-right: .333em;
+}
+
+mjx-container [size="s"] {
+  font-size: 70.7%;
+}
+
+mjx-container [size="ss"] {
+  font-size: 50%;
+}
+
+mjx-container [size="Tn"] {
+  font-size: 60%;
+}
+
+mjx-container [size="sm"] {
+  font-size: 85%;
+}
+
+mjx-container [size="lg"] {
+  font-size: 120%;
+}
+
+mjx-container [size="Lg"] {
+  font-size: 144%;
+}
+
+mjx-container [size="LG"] {
+  font-size: 173%;
+}
+
+mjx-container [size="hg"] {
+  font-size: 207%;
+}
+
+mjx-container [size="HG"] {
+  font-size: 249%;
+}
+
+mjx-container [width="full"] {
+  width: 100%;
+}
+
+mjx-box {
+  display: inline-block;
+}
+
+mjx-block {
+  display: block;
+}
+
+mjx-itable {
+  display: inline-table;
+}
+
+mjx-row {
+  display: table-row;
+}
+
+mjx-row > * {
+  display: table-cell;
+}
+
+mjx-mtext {
+  display: inline-block;
+}
+
+mjx-mstyle {
+  display: inline-block;
+}
+
+mjx-merror {
+  display: inline-block;
+  color: red;
+  background-color: yellow;
+}
+
+mjx-mphantom {
+  visibility: hidden;
+}
+
+_::-webkit-full-page-media, _:future, :root mjx-container {
+  will-change: opacity;
+}
+
+mjx-assistive-mml {
+  position: absolute !important;
+  top: 0px;
+  left: 0px;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 1px 0px 0px 0px !important;
+  border: 0px !important;
+  display: block !important;
+  width: auto !important;
+  overflow: hidden !important;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+mjx-assistive-mml[display="block"] {
+  width: 100% !important;
+}
+
+mjx-math {
+  display: inline-block;
+  text-align: left;
+  line-height: 0;
+  text-indent: 0;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 100%;
+  font-size-adjust: none;
+  letter-spacing: normal;
+  border-collapse: collapse;
+  word-wrap: normal;
+  word-spacing: normal;
+  white-space: nowrap;
+  direction: ltr;
+  padding: 1px 0;
+}
+
+mjx-container[jax="CHTML"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="CHTML"][display="true"][width="full"] {
+  display: flex;
+}
+
+mjx-container[jax="CHTML"][display="true"] mjx-math {
+  padding: 0;
+}
+
+mjx-container[jax="CHTML"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="CHTML"][justify="right"] {
+  text-align: right;
+}
+
+mjx-TeXAtom {
+  display: inline-block;
+  text-align: left;
+}
+
+mjx-mi {
+  display: inline-block;
+  text-align: left;
+}
+
+mjx-c {
+  display: inline-block;
+}
+
+mjx-utext {
+  display: inline-block;
+  padding: .75em 0 .2em 0;
+}
+
+mjx-c::before {
+  display: block;
+  width: 0;
+}
+
+.MJX-TEX {
+  font-family: MJXZERO, MJXTEX;
+}
+
+.TEX-B {
+  font-family: MJXZERO, MJXTEX-B;
+}
+
+.TEX-I {
+  font-family: MJXZERO, MJXTEX-I;
+}
+
+.TEX-MI {
+  font-family: MJXZERO, MJXTEX-MI;
+}
+
+.TEX-BI {
+  font-family: MJXZERO, MJXTEX-BI;
+}
+
+.TEX-S1 {
+  font-family: MJXZERO, MJXTEX-S1;
+}
+
+.TEX-S2 {
+  font-family: MJXZERO, MJXTEX-S2;
+}
+
+.TEX-S3 {
+  font-family: MJXZERO, MJXTEX-S3;
+}
+
+.TEX-S4 {
+  font-family: MJXZERO, MJXTEX-S4;
+}
+
+.TEX-A {
+  font-family: MJXZERO, MJXTEX-A;
+}
+
+.TEX-C {
+  font-family: MJXZERO, MJXTEX-C;
+}
+
+.TEX-CB {
+  font-family: MJXZERO, MJXTEX-CB;
+}
+
+.TEX-FR {
+  font-family: MJXZERO, MJXTEX-FR;
+}
+
+.TEX-FRB {
+  font-family: MJXZERO, MJXTEX-FRB;
+}
+
+.TEX-SS {
+  font-family: MJXZERO, MJXTEX-SS;
+}
+
+.TEX-SSB {
+  font-family: MJXZERO, MJXTEX-SSB;
+}
+
+.TEX-SSI {
+  font-family: MJXZERO, MJXTEX-SSI;
+}
+
+.TEX-SC {
+  font-family: MJXZERO, MJXTEX-SC;
+}
+
+.TEX-T {
+  font-family: MJXZERO, MJXTEX-T;
+}
+
+.TEX-V {
+  font-family: MJXZERO, MJXTEX-V;
+}
+
+.TEX-VB {
+  font-family: MJXZERO, MJXTEX-VB;
+}
+
+mjx-stretchy-v mjx-c, mjx-stretchy-h mjx-c {
+  font-family: MJXZERO, MJXTEX-S1, MJXTEX-S4, MJXTEX, MJXTEX-A ! important;
+}
+
+@font-face /* 0 */ {
+  font-family: MJXZERO;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Zero.woff") format("woff");
+}
+
+@font-face /* 1 */ {
+  font-family: MJXTEX;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Main-Regular.woff") format("woff");
+}
+
+@font-face /* 2 */ {
+  font-family: MJXTEX-B;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Main-Bold.woff") format("woff");
+}
+
+@font-face /* 3 */ {
+  font-family: MJXTEX-I;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Math-Italic.woff") format("woff");
+}
+
+@font-face /* 4 */ {
+  font-family: MJXTEX-MI;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Main-Italic.woff") format("woff");
+}
+
+@font-face /* 5 */ {
+  font-family: MJXTEX-BI;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Math-BoldItalic.woff") format("woff");
+}
+
+@font-face /* 6 */ {
+  font-family: MJXTEX-S1;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Size1-Regular.woff") format("woff");
+}
+
+@font-face /* 7 */ {
+  font-family: MJXTEX-S2;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Size2-Regular.woff") format("woff");
+}
+
+@font-face /* 8 */ {
+  font-family: MJXTEX-S3;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Size3-Regular.woff") format("woff");
+}
+
+@font-face /* 9 */ {
+  font-family: MJXTEX-S4;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Size4-Regular.woff") format("woff");
+}
+
+@font-face /* 10 */ {
+  font-family: MJXTEX-A;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_AMS-Regular.woff") format("woff");
+}
+
+@font-face /* 11 */ {
+  font-family: MJXTEX-C;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Calligraphic-Regular.woff") format("woff");
+}
+
+@font-face /* 12 */ {
+  font-family: MJXTEX-CB;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Calligraphic-Bold.woff") format("woff");
+}
+
+@font-face /* 13 */ {
+  font-family: MJXTEX-FR;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Fraktur-Regular.woff") format("woff");
+}
+
+@font-face /* 14 */ {
+  font-family: MJXTEX-FRB;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Fraktur-Bold.woff") format("woff");
+}
+
+@font-face /* 15 */ {
+  font-family: MJXTEX-SS;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_SansSerif-Regular.woff") format("woff");
+}
+
+@font-face /* 16 */ {
+  font-family: MJXTEX-SSB;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_SansSerif-Bold.woff") format("woff");
+}
+
+@font-face /* 17 */ {
+  font-family: MJXTEX-SSI;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_SansSerif-Italic.woff") format("woff");
+}
+
+@font-face /* 18 */ {
+  font-family: MJXTEX-SC;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Script-Regular.woff") format("woff");
+}
+
+@font-face /* 19 */ {
+  font-family: MJXTEX-T;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Typewriter-Regular.woff") format("woff");
+}
+
+@font-face /* 20 */ {
+  font-family: MJXTEX-V;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Vector-Regular.woff") format("woff");
+}
+
+@font-face /* 21 */ {
+  font-family: MJXTEX-VB;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Vector-Bold.woff") format("woff");
+}
+
+mjx-c.mjx-c211D.TEX-A::before {
+  padding: 0.683em 0.722em 0 0;
+  content: "R";
+}
+</style></head>
+<body>
+<div id="content" class="content">
+<h1 class="title">EE5606 Convex Optimization</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org483749e">1. Assessment (tentative):</a></li>
+<li><a href="#org3ad1bed">2. Instructor:</a></li>
+<li><a href="#org2a2f1df">3. Class timings:</a></li>
+<li><a href="#orgd6f0580">4. Primary references:</a></li>
+<li><a href="#org1422347">5. Other material:</a></li>
+<li><a href="#orgf795ce2">6. Tentative topics, reference material and homeworks</a>
+<ul>
+<li><a href="#org15e55f6">6.1. Class slides and videos:</a></li>
+</ul>
+</li>
+<li><a href="#org7a218a9">7. Academic honesty and plagiarism</a></li>
+<li><a href="#org90cf6fc">8. Comments regarding code submissions</a></li>
+<li><a href="#org11d8cb0">9. General comments regarding presentations/reports</a></li>
+</ul>
+</div>
+</div>
+<p>
+Welcome to EE5606 (Convex Optimization), 2025 edition.
+</p>
+
+<p>
+There will be a mix of live lectures, in-classroom problem solving sessions, and recorded lectures.
+Much of our online interaction (homework submissions, announcements, off-classroom discussions, etc) will be on Google classroom. 
+Invites will be sent to registered students by the first week of January. If you have not received an invite by the second class, please send me an email.
+</p>
+
+<p>
+<b>Prerequisites</b>
+</p>
+<ul class="org-ul">
+<li>Strong foundation in linear algebra/matrices and calculus. Some exposure to probability and random processes</li>
+<li>Comfort with programming in C/C++/matlab/python. We will primarily program in python, and some tutorials will be provided.</li>
+</ul>
+<div id="outline-container-org483749e" class="outline-2">
+<h2 id="org483749e"><span class="section-number-2">1.</span> Assessment (tentative):</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Each student will be expected to
+</p>
+<ul class="org-ul">
+<li>attend classes and solve short in-class (surprise) quizzes</li>
+<li>participate in class</li>
+<li>solve homework assignments</li>
+<li>write exams (3-4)</li>
+</ul>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col class="org-left">
+
+<col class="org-right">
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">Exams</td>
+<td class="org-right">65%</td>
+</tr>
+
+<tr>
+<td class="org-left">In-class quizzes</td>
+<td class="org-right">15%</td>
+</tr>
+
+<tr>
+<td class="org-left">Programming assignments</td>
+<td class="org-right">20%</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-org3ad1bed" class="outline-2">
+<h2 id="org3ad1bed"><span class="section-number-2">2.</span> Instructor:</h2>
+<div class="outline-text-2" id="text-2">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col class="org-left">
+
+<col class="org-left">
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">Name</td>
+<td class="org-left"><a href="https://www.iith.ac.in/~shashankvatedka/html/home.html">Dr. Shashank Vatedka</a></td>
+</tr>
+
+<tr>
+<td class="org-left">Email</td>
+<td class="org-left">shashankvatedka@ee.iith.ac.in</td>
+</tr>
+
+<tr>
+<td class="org-left">Office</td>
+<td class="org-left">EE616, EE Department</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-org2a2f1df" class="outline-2">
+<h2 id="org2a2f1df"><span class="section-number-2">3.</span> Class timings:</h2>
+<div class="outline-text-2" id="text-3">
+<ul class="org-ul">
+<li><b>Slot R</b>: Tuesdays 14:30-16:00, Fridays 16:00-17:30</li>
+<li><b>Class venue</b>: A-221</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd6f0580" class="outline-2">
+<h2 id="orgd6f0580"><span class="section-number-2">4.</span> Primary references:</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+We will primarily use the following material:
+</p>
+<ul class="org-ul">
+<li>Stephen Boyd and Lieven Vandenberghe, <i>Convex Optimization</i>. (<b>BV</b>) Soft copy available for <a href="https://web.stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf">free</a>. A few physical copies also available in the campus library.</li>
+<li>Edwin Chong and Stanislaw Zak, <i>An Introduction to Optimization</i>, 4th ed.</li>
+<li>Nisheeth Vishnoi, <i>Algorithms for Convex Optimization</i></li>
+</ul>
+
+<p>
+Other references will be indicated below. 
+</p>
+</div>
+</div>
+<div id="outline-container-org1422347" class="outline-2">
+<h2 id="org1422347"><span class="section-number-2">5.</span> Other material:</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+Programming:
+</p>
+<ul class="org-ul">
+<li>A short introductory <a href="https://www.youtube.com/playlist?list=PLMmTBP3nE-rRai1ZnleQegzJWuN_N8ppc">video series on python programming</a></li>
+<li>The <a href="https://numpy.org/doc/stable/user/quickstart.html">numpy quickstart</a> is a good place to learn the basics of the numpy library.</li>
+<li>The same holds true for <a href="https://matplotlib.org/stable/users/explain/quick_start.html#quick-start">matplotlib</a>. As long as you can create basic 2d and surface plots, it should be sufficient.</li>
+<li>We will also use the <a href="https://www.cvxpy.org/index.html">cvxpy</a> library in python. This website has a very detailed documentation, and a large number of examples.</li>
+</ul>
+
+<p>
+Basics:
+</p>
+<ul class="org-ul">
+<li>Gilbert Strang, <i>Introduction to linear algebra</i> for very basic stuff</li>
+<li>Jimmie Gilbert and Linda  Gilbert, <i>Linear algebra and matrix theory</i></li>
+<li>Roger Horn and Charles Johnson, <i>Matrix analysis</i>: good for topics starting from eigenvalues and eigenvectors</li>
+<li>Terence Tao, <i>Analysis 1</i> is a more gentle introduction to real analysis, and mostly deals with <mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" tabindex="0" ctxtmenu_counter="0" style="font-size: 110.8%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-texatom texclass="ORD"><mjx-mi class="mjx-ds mjx-b"><mjx-c class="mjx-c211D TEX-A"></mjx-c></mjx-mi></mjx-texatom></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow data-mjx-texclass="ORD"><mi mathvariant="double-struck">R</mi></mrow></math></mjx-assistive-mml></mjx-container>.</li>
+<li>Walter Rudin, <i>Principles of mathematical analysis</i>: for basic topology</li>
+</ul>
+
+<p>
+Recorded lectures from the previous edition of this course can be accessed via  <a href="https://www.youtube.com/watch?v=YH3fOEUPois&amp;list=PLMmTBP3nE-rROSIYO419Bp_dZNpjWeoRG">this playlist</a>.
+</p>
+</div>
+</div>
+<div id="outline-container-orgf795ce2" class="outline-2">
+<h2 id="orgf795ce2"><span class="section-number-2">6.</span> Tentative topics, reference material and homeworks</h2>
+<div class="outline-text-2" id="text-6">
+<p>
+Tentative list of topics:
+</p>
+<ul class="org-ul">
+<li>Introduction</li>
+<li>Review of real analysis, derivatives, gradient, hessian (Refs: books by Tao and Rudin. Also see the first few chapters of Chong-Zak and appendix in Boyd-Vandenburghe)</li>
+<li>Review of linear algebra: basics, symmetric and PSD matrices (Refs: Strang, Gilbert-Gilbert, Horn-Johnson)</li>
+<li>Definitions and basic properties of convex sets and convex functions</li>
+<li>Unconstrained convex optimization, and numerical algorithms for solving these</li>
+<li>Cvxpy for solving constrained convex optimization problems</li>
+<li>Deep dive into convex sets and their properties</li>
+<li>Deep dive into convex functions and their properties</li>
+<li>Convex optimization problems with constraints</li>
+<li>Lagrange multiplier method and KKT conditions</li>
+</ul>
+</div>
+<div id="outline-container-org15e55f6" class="outline-3">
+<h3 id="org15e55f6"><span class="section-number-3">6.1.</span> Class slides and videos:</h3>
+<div class="outline-text-3" id="text-6-1">
+<p>
+Class notes and code will be uploaded to <a href="https://drive.google.com/drive/folders/1ssZay6JvbSWqDXBhMPkXkzUmEXSvUxAI?usp=sharing">this</a> Google drive folder. Some class recordings will be made available on <a href="https://www.youtube.com/watch?v=41JIVeJayDA&amp;list=PLMmTBP3nE-rTSAhZQmo2E44lVgrXziKjE">this</a> YouTube playlist.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org7a218a9" class="outline-2">
+<h2 id="org7a218a9"><span class="section-number-2">7.</span> Academic honesty and plagiarism</h2>
+<div class="outline-text-2" id="text-7">
+<p>
+Students are encouraged to discuss with each other regarding class material and assignments. However, verbatim copying in any of the assignments or exams (from your friends or books or an online sources) is not allowed.
+This includes programming assignments. It is good to collaborate when solving assignments, but the solutions and programs must be <i>written on your own</i>. Copying in assignments or exams, will be dealt with severely.
+</p>
+
+<p>
+See <a href="https://cse.iith.ac.in/academics/plagiarism-policy.html">this page</a> (maintained by the CSE department), <a href="https://www.ox.ac.uk/students/academic/guidance/skills/plagiarism">this</a> page, and <a href="https://en.wikipedia.org/wiki/Plagiarism">this</a> one to understand more about plagiarism. 
+</p>
+</div>
+</div>
+<div id="outline-container-org90cf6fc" class="outline-2">
+<h2 id="org90cf6fc"><span class="section-number-2">8.</span> Comments regarding code submissions</h2>
+<div class="outline-text-2" id="text-8">
+<ul class="org-ul">
+<li>When writing/submitting code, make sure that the code works. Ensure that there are no spurious lines, missing declarations/initializations, etc. This is particularly true for jupyter notebooks, and more so if you are exporting ipynb to py. There is a tendency to perform out of order execution in jupyter notebooks (which is generally a bad habit and should be avoided as much as possible, but can be helpful for quick checks), but your final code should work when executed in order.</li>
+<li>If you are using a particular dataset/additional files, you must provide this along with your code, or a working link to the data.</li>
+<li>Please comment your code! The main advantage of jupyter notebooks is that you can intersperse detailed text with code. This is particularly necessary when someone else is going to see your work (or you want to go through it at some later point in time)</li>
+<li>Follow good programming practices: use good naming convention for variables, try to write modular code, and keep it as simple as possible.</li>
+<li>Unless your code just involves executing one py file, or ordered execution of cells in a jupyter notebook, you should provide instructions for running the files. You must also specify what environment/libraries are required for running your files. You must not expect the user to figure this out.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org11d8cb0" class="outline-2">
+<h2 id="org11d8cb0"><span class="section-number-2">9.</span> General comments regarding presentations/reports</h2>
+<div class="outline-text-2" id="text-9">
+<p>
+In addition to learning cool stuff, you should also learn to present your work. The final presentation is an opportunity to develop your presenting skills.
+You must be able to convey your ideas and thoughts clearly to another person.
+Here are some general comments for making good presentations:
+</p>
+
+<ul class="org-ul">
+<li>Make sure that you acknowledge all the references/material that you used (papers/code/etc.) While it does not matter much for the purposes of this class, this is very important to keep in mind when you are delivering presentations at bigger venues</li>
+<li>In a presentation, always introduce yourself and your team members/collaborators in the very beginning.</li>
+<li>If much of the presentation is based on on one/two papers/references, explicitly state which references you are using in the first/second slide.</li>
+<li>Avoid saying “We did this/we showed that…” when you are in fact talking about some other authors’ work. Unless you have derived something/programmed something yourself, always say “they/the authors did/showed/observed that…”</li>
+<li>A presentation/report is like telling a story: even before preparing the slides/document, imagine that you want to explain the work to a friend in 15-20 mins, identify exactly what you want to convey, and only then proceed.</li>
+<li>Make sure that you explain the problem clearly.</li>
+<li>When reading a paper, you should first understand what the problem is, what makes it challenging, and why it is worthwhile solving the problem. Then, you should identify what is new about the paper, and what the contributions are. To understand the rest of the paper, you should then try to understand the constructions/proof techniques/ideas. Your presentation should also bring out these aspects. See <a href="https://www.eecs.harvard.edu/~michaelm/postscripts/ReadPaper.pdf">this</a> article and <a href="https://web.stanford.edu/class/ee384m/Handouts/HowtoReadPaper.pdf">this</a> one on how to read a paper.</li>
+<li>There is no single best rule for presentations, but generally in any presentation, the viewer/audience’s attention is maximum in the first 5-10 minutes and then gradually decreases. So it is helpful to get to the punchline in the first few minutes.</li>
+<li>Citations should be treated differently in papers and slides. When you are making a reference to a particular paper/book/website (for e.g., when you say that result A can be found in paper B) in your slides, mention the paper/book/website as a footnote rather than saying [1], and putting the reference in the last slide.&nbsp;</li>
+<li>Do not put too much text on your slides. This is bad practice. Each slide should contain at most 3-5 points. You should absolutely avoid long sentences.&nbsp;</li>
+<li>Do not copy text directly from the paper.</li>
+<li>Do not read out your slides word-to-word.</li>
+<li>Similarly, do not put too many lemmas in a slide. Each slide should convey a single idea. Unless very important, do not put too much math/long derivations in a short presentation. It is more important to convey ideas/intuition. But at the same time, there should be a significant amount of technical content. It is therefore very useful to instead explain using examples.</li>
+<li>Make sure that the fonts/diagrams/labels/plots are clear. Label all the axes on your plots.</li>
+<li>Speak clearly, and make sure that the audio quality is fine. Check your mic volume. Do a couple of dry runs.</li>
+<li>If you are using Google meet to record, then make sure that you “pin” the slides since meet might automatically switch displaying you/your icon instead of the presentation.&nbsp;</li>
+<li>Make sure that you check, and double check the slides and report for typos, technical and grammatical errors.</li>
+<li>If your group has more than one person, then the presentation must be shared equally.</li>
+<li>Use a standard document format for reports (not slides), preferably latex for typesetting math.</li>
+<li>Use standard formats for citing references in reports: e.g., see <a href="https://labwrite.ncsu.edu/res/res-citsandrefs.html">this</a> and <a href="https://www.overleaf.com/learn/latex/Bibliography_management_with_bibtex">this</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Shashank Vatedka</p>
+<p class="date">Created: 2025-01-15 Wed 10:43</p>
+</div>
+
+
+</body></html>

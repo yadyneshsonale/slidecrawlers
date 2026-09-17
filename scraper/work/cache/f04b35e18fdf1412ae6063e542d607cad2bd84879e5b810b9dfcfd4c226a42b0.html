@@ -1,0 +1,257 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>CS4262/5462 Machine Learning Systems</title>
+<link rel="stylesheet" href="main.css">
+</head>
+
+  <body data-new-gr-c-s-check-loaded="14.1122.0" data-gr-ext-installed=""><header class="site-header">
+
+    <div class="wrapper"><p class="site-title">CS4262/5462		
+				</p><nav class="site-nav">
+          
+  
+          <div class="trigger">Machine Learning Systems</div>
+  </nav></div></header><main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <!-- <header class="post-header">
+    <h1 class="post-title">Papers</h1>
+  </header> -->
+
+  <div class="post-content">
+    
+The rise of Large Language Models (LLMs) has transformed what AI systems can do, but delivering these capabilities reliably and efficiently requires advances in machine learning systems. This course covers the foundations and current practice of ML systems for LLMs, spanning training, serving and applications. Students will learn key system design principles, optimizing compute and memory, and accelerating end-to-end performance with modern hardware and software techniques. The course also examines applied LLM systems, including RAG, AI agents, and ML operations, as well as alignment and safety considerations in deployment. It provides a practical and research-oriented background for students interested in building or studying production-grade machine learning systems. Students are expected to code and demonstrate end-to-end systems as the outcome of this course.
+<p>
+</p><p>
+
+<b>Pre-requisitions</b>: UG machine learning, UG operating systems, Python coding.<br>
+
+<b>Instructor</b>: <a href="http://yao.lu">Yao Lu</a><br>
+<b>TAs</b>: <a href="https://j1shen.github.io/">Junyi Shen</a>, <a href="https://www.linkedin.com/in/noppanat-wadlom/">Noppanat Wadlom</a>, <a href="https://timzsu.github.io/">Zhengyuan Su</a>, <a href="https://github.com/taowangcheng">Wangcheng Tao</a><br> 
+<b>When and where</b>: Thu 18:30-20:30 (lecture), 20:30-21:30 (tutorial) @ COM3-MPH<br>
+</p><p>
+<b>Schedule</b>:
+</p><table class="table table-hover">
+	<colgroup>
+		<col style="width:5%">
+			<col style="width:72%">
+					<col style="width:23%">
+      </colgroup>
+					<thead class="thead-light">
+						<tr>
+							<th scope="col">Lecture<br>date</th>
+							<th scope="col">Plan</th>
+							<th scope="col">Note</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class="past">
+							<th scope="row">Jan 15</th>
+							<td>
+        Week 1: <strong>Introduction &amp; MLsys Foundations</strong>
+								<br>
+        [<a href="CS4262^5462_25S2/1.pdf" target="_blank">slides</a>]
+    </td>
+							<td>
+								[<a href="">HW0 (Ungraded)</a> &amp; <a href="">HW1: AutoDiff</a>]
+							</td>
+						</tr>
+					
+						<tr class="past">
+							<th scope="row">Jan 22</th>
+							<td>
+        Week 2: <strong>TinyTorch &amp; Automatic Differentiation</strong>
+								<br>
+        [<a href="CS4262^5462_25S2/2.pdf" target="_blank">slides</a>]
+    </td>
+							<td>
+								
+							</td>
+						</tr>
+						<tr class="past">
+							<th scope="row">Jan 29</th>
+							<td>
+        Week 3:  <strong>Hardware Acceleration</strong>
+								<br>
+        [<a href="CS4262^5462_25S2/3.pdf" target="_blank">slides</a>]
+						Tutorial: TinyTorch
+        [<a href="CS4262^5462_25S2/t1.pdf" target="_blank">tutorial</a>]
+    </td>
+							<td>
+							</td>
+						</tr>
+												<tr class="past">
+							<th scope="row">Feb 05</th>
+							<td>
+        Week 4: <strong>LLM Serving &amp; Optimizations</strong>
+								<br>
+        [<a href="CS4262^5462_25S2/4.pdf" target="_blank">slides</a>]
+								LLM serving &amp; benchmarks [<a href="CS4262^5462_25S2/p1.pdf" target="_blank">slides</a>] (project option 
+        )
+    </td>
+							<td>
+								HW1 due &amp; [<a href="">HW2 Release: TinyLLM</a>]
+							</td>
+						</tr>
+						<tr class="past">
+							<th scope="row">Feb 12</th>
+							<td>
+        Week 5: <strong> Application Systems: RAG, Agents &amp; Workflows</strong>
+								<br>
+        [<a href="CS4262^5462_25S2/5.pdf" target="_blank">slides</a>]
+								Tutorial: agentic workflows
+        [<a href="CS4262^5462_25S2/t2.pdf" target="_blank">tutorial</a>]
+        [<a href="CS4262^5462_25S2/T2.zip" target="_blank">data</a>]
+    </td>
+							<td>
+								<p>
+							</p></td>
+						</tr>
+						<tr class="past">
+							<th scope="row">Feb 19</th>
+							<td>
+        Week 6: <strong>Parallelism, Training Techniques &amp; Attention Optimizations</strong>
+								<br>
+        [<a href="CS4262^5462_25S2/6.pdf" target="_blank">slides</a>]
+								Building agentic applications  
+        [<a href="CS4262^5462_25S2/p2.pdf" target="_blank">slides</a>]<br> &amp; on-device AI  
+        [<a href="CS4262^5462_25S2/p3.pdf" target="_blank">slides</a>] (project options)
+    </td>
+							<td>
+								HW2 due &amp; [<a href="">HW3 Release: TinyRAG</a>]
+							</td>
+						</tr>
+						<tr class="past">
+							<th scope="row">Feb 26</th>
+							<td>
+        Recess week
+								<br>
+    </td>
+							<td>
+								
+        [<a href="" target="_blank">Project 1</a>]<br>
+        [<a href="" target="_blank">Project 2</a>]<br>
+        [<a href="" target="_blank">Project 3</a>]
+							</td>
+						</tr>
+						<tr class="past">
+							<th scope="row">Mar 05</th>
+							<td>
+        Week 7: <strong>LLM Alignment &amp; Safety</strong>
+								<br>
+        [<a href="CS4262^5462_25S2/7.pdf" target="_blank">slides</a>]
+								Tutorial: LLM finetuning &amp; alignment 
+        [<a href="CS4262^5462_25S2/t3.pdf" target="_blank">tutorial</a>]
+    </td>
+							<td>
+								Project proposal due
+							</td>
+						</tr>
+						<tr class="past">
+							<th scope="row">Mar 12</th>
+							<td>
+        Week 8: <strong>Efficient AI</strong>
+								<br>
+        [<a href="CS4262^5462_25S2/8.pdf" target="_blank">slides</a>]
+								Tutorial: same
+        [<a href="CS4262^5462_25S2/t4.pdf" target="_blank">tutorial</a>]
+    </td>
+							<td>
+								HW3 due
+							</td>
+						</tr>
+						<tr class="past">
+							<th scope="row">Mar 19</th>
+							<td>
+        Week 9: <strong>ML Operations</strong>
+								<br>
+        [<a href="CS4262^5462_25S2/9.pdf" target="_blank">slides</a>]
+								Tutorial: same
+        [<a href="CS4262^5462_25S2/t5.pdf" target="_blank">tutorial</a>]
+        [<a href="CS4262^5462_25S2/t5.zip" target="_blank">data</a>]
+    </td>
+							<td>
+								
+							</td>
+						</tr>
+						<tr class="past">
+							<th scope="row">Mar 26</th>
+							<td>
+        Week 10: <strong>Data Systems for AI</strong> [Recorded due to travel]
+								<br>
+        [<a href="CS4262^5462_25S2/10.pdf" target="_blank">slides</a>]
+								No tutorial
+    </td>
+							<td>
+								Mid-term project report due
+							</td>
+						</tr>
+						<tr class="past">
+							<th scope="row">Apr 02</th>
+							<td>
+        Well-Being Day
+								<br>
+        
+    </td>
+							<td>
+							</td>
+						</tr>
+						<tr class="past">
+							<th scope="row">Apr 09</th>
+							<td>
+        Week 12: <strong>Cloud Systems for AI</strong>
+								<br>						
+        [<a href="CS4262^5462_25S2/12.pdf" target="_blank">slides</a>]		
+								Tutorial: data engineering
+        [<a href="CS4262^5462_25S2/t6.pdf" target="_blank">tutorial</a>]
+		[<a href="https://drive.google.com/file/d/1i_aS08bZcfQeYi5Ln33HGEMwTLD91pSh/view?usp=sharing" target="_blank">notebook</a>]
+    </td>
+							<td>
+								
+							</td>
+						</tr>
+						<tr class="past">
+							<th scope="row">Apr 16</th>
+							<td>
+        Week 13: <strong>Project Demos</strong>
+								<br>
+    </td>
+							<td>
+								Final project report due
+							</td>
+						</tr>
+					</tbody>
+				</table>
+
+<b>Text book</b>: <br>
+<a href="https://mlsysbook.ai/">Machine Learning Systems: Principles and Practices of Engineering Artificially Intelligent Systems</a>
+<br><br>
+
+<b>Grading schemes</b>: 
+<ul>
+	<li>Tutorials and HW1-3 for each individual student</li>
+	<li>Course project for groups of 4 students. No individual projects. You can choose among three directions of projects. The project will demonstrate systems design and implementation which leads to improvements of the system efficiency, robustness or generalizability. </li>	
+</ul>
+
+</div></article>
+      </div>
+    </main><footer class="site-footer h-card">
+    <data class="u-url" href="/"></data>
+  
+    <div class="wrapper">
+  
+      <div class="footer-col-wrapper">
+      
+        <div class="footer-col">
+          NUS SoC 2025-26 Semester 2
+        </div>
+      </div>
+  
+    </div>
+  
+  </footer>
+
+</body></html>

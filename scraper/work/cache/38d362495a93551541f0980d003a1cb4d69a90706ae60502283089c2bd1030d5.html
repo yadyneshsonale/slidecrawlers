@@ -1,0 +1,753 @@
+<!DOCTYPE html><html><head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<title>
+ CS 15-122: Principles of Imperative Computation (Summer 2026)
+</title>
+
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+<script type="text/javascript" src="inc/lib/jquery.min.js"></script>
+<script type="text/javascript" src="inc/lib/tipsy/js/jquery.tipsy.js"></script>
+<link rel="stylesheet" type="text/css" href="inc/lib/tipsy/css/tipsy.css">
+<script type="text/javascript" src="inc/lib/jQuery.bubbletip-1.0.6.js"></script>
+<link type="text/css" href="inc/lib/bubbletip/bubbletip.css" rel="stylesheet">
+
+<!-- Course -->
+<script type="text/javascript" src="inc/scripts/toggler.js"></script>
+<link rel="stylesheet" type="text/css" href="inc/css/course.css">
+
+<!-- Email -->
+<script type="text/javascript" src="inc/scripts/email.js"></script>
+
+<!-- Calendar -->
+<script type="text/javascript" src="inc/scripts/dateutil.js"></script>
+<link rel="stylesheet" type="text/css" href="inc/css/calendar.css">
+<script type="text/javascript" src="inc/scripts/calendar.js"></script>
+<script type="text/javascript" src="inc/scripts/staff.js"></script>
+<link rel="stylesheet" type="text/css" href="inc/css/staff.css">
+<script type="text/javascript">
+  // Default subject of all emails
+  setEmailSubject("15-122");
+  var autolab    = "https://autolab.andrew.cmu.edu/courses/15122-n26";
+  var qatoolname = "Ed";
+  var qatool     = "https://edstem.org/us/courses/97996/discussion/";
+  var gradescope = "https://www.gradescope.com/courses/1299753";
+  var logistics  = "https://enr-apps.as.cmu.edu/open/SOC/SOCServlet/courseDetails?COURSE=15122&SEMESTER=M26";
+
+// Grades redirect
+  // First week of classes (before first assessment grades are posted)
+  var grades = "https://pic.cs.cmu.edu/n26/index.html";
+  // Actual grades
+  //var grades     = "https://pic.cs.cmu.edu/n26/grades/login/index.php";
+
+// TODO
+  var checkinURL = "https://NOT_YET_AVAILABLE/index.php?checkmein=true";
+  var queueURL = "https://cs122.andrew.cmu.edu/ohq/";
+
+  var showLO = false;  // show learning objectives in calendars (or not)
+
+  var C = new Course(2026, 06,22,07,30); // Begin-end of teaching semester
+
+  // values in {weekend, noclass, lecture, lab, recitation, precept}
+  C.setWeek(weekend, weekend, lecture, lecture, lecture, lecture, lecture);
+  C.setFinals(2026, 07,31, 07,31);  // setFinals(y, bm,bd, em,ed)
+  C.addHoliday(2026,07,03);         // Independence Day (observed)
+  C.addHoliday(2026,07,30);         // No lecture or precept -- review day
+
+  C.addExtra(2026,06,23, precept, "1");
+  C.addExtra(2026,06,26, precept, "2");
+  C.addExtra(2026,06,29, precept, "3");
+  C.addExtra(2026,07,01, precept, "4");
+  C.addExtra(2026,07,06, precept, "5");
+  C.addExtra(2026,07,08, precept, "6");
+  C.addExtra(2026,07,10, precept, "7");
+  C.addExtra(2026,07,15, precept, "8");
+  C.addExtra(2026,07,17, precept, "9");
+  C.addExtra(2026,07,21, precept, "10");
+  C.addExtra(2026,07,24, precept, "11");
+  C.addExtra(2026,07,27, precept, "12");
+  C.addExtra(2026,07,29, precept, "13");
+
+  C.newExam('CH', 'Checkins', 'proctored-activity', 'varies', 1);
+
+  // addExam(type, year,month,day, percent,learning,corrected,focus)
+  C.addExam('CH', 2026,06,25, '60pt',  '1-3',           +4, 'Lec.0-1');   // 1
+  C.addExam('CH', 2026,07,02, '120pt', '1-3,12',        +3, 'Lec.2-5');   // 2
+  C.addExam('CH', 2026,07,09, '120pt', '1-4,27',        +3, 'Lec.6-9');   // 3
+  C.addExam('CH', 2026,07,13, '120pt', '6-10,15-17,21', +3, 'Lec.10-11, 0-11');   // 4
+  C.addExam('CH', 2026,07,16, '120pt', '12,21,22,26,27',+4, 'Lec.12-15'); // 5
+  C.addExam('CH', 2026,07,23, '120pt', '9,12,17,24,27', +3, 'Lec.16-19'); // 6
+  C.addExam('CH', 2026,07,28, '120pt', '12,24,25,27',   +1, 'Lec.20-22'); // 7
+
+  C.setFinal(2026,07,31,              // setFinal(year,month,day,
+             "time TBA", null,              //          time (or null),room,
+             '250', '1-27', +7,       //          percent,learning,corrected,
+             'Lec.1-26');             //          focus)
+
+
+  var upl = gradescope;
+  C.newHw('PP', 'Practice Problems', 'practice-problem',
+          '6pm', '<a href="'+gradescope+'">Gradescope</a>', 0);
+  C.addHw('PP', 2026,06,22, ' 0pt',  '1-3,11',    -1,+1, upl, 'Lec.0');    // 0
+  C.addHw('PP', 2026,06,24, '10pt', '1-3',        -2,+1, upl, 'Lec.0-1');  // 1
+  C.addHw('PP', 2026,06,26, '10pt', '1,2,4,12',   -2,+3, upl, 'Lec.2-3');  // 2
+  C.addHw('PP', 2026,06,30, '10pt', '1-4,21,27',  -4,+1, upl, 'Lec.4-5');  // 3
+  C.addHw('PP', 2026,07,02, '10pt', '6-10,15-17', -2,+4, upl, 'Lec.6-7');  // 4
+  C.addHw('PP', 2026,07,07, '10pt', '6-8,12,17',  -5,+1, upl, 'Lec.8-9');  // 5
+  C.addHw('PP', 2026,07,10, '10pt', '9,17,24,27', -3,+2, upl, 'Lec.10-11');// 6
+  C.addHw('PP', 2026,07,13, '10pt', '12,24,27',   -4,+1, upl, 'Lec.12-13');// 7
+  C.addHw('PP', 2026,07,15, '10pt', '9,10,25-27', -2,+1, upl, 'Lec.14-15');// 8
+  C.addHw('PP', 2026,07,17, '10pt', '2,13,25,27', -2,+2, upl, 'Lec.16-17');// 9
+  C.addHw('PP', 2026,07,21, '10pt', '18-20',      -4,+1, upl, 'Lec.18-19');// 10
+  C.addHw('PP', 2026,07,24, '10pt', '19,20',      -3,+2, upl, 'Lec.20-21');// 11
+  C.addHw('PP', 2026,07,28, '10pt', '5,20,27',    -4,+1, upl, 'Lec.22-24');// 12
+
+  var upl = autolab;
+  C.newHw('PG', 'Programming Homework', 'prog',
+          '11:59pm', '<a href="'+autolab+'">Autolab</a>', 1);
+  C.addHw('PG', 2026,06,24, '50pt', '1,12',     -3,+4, upl, 'C0');      // 1
+  C.addHw('PG', 2026,06,27, '50pt', '12,15,16', -3,+4, upl, 'ints');    // 2
+  C.addHw('PG', 2026,07,01, '50pt', '1,12-16',  -4,+4, upl, 'arrays');  // 3
+  C.addHw('PG', 2026,07,05, '50pt', '1,18,17',  -4,+4, upl, 'sorting'); // 4
+  C.addHw('PG', 2026,07,08, '50pt', '5,12,27',  -3,+4, upl, 'stacks');  // 5
+  C.addHw('PG', 2026,07,11, '32pt', '10',      -14,+4, upl, 'lists');   // 6
+//C.addHw('PG', 2026,07,11, '50pt', '10',       -3,+2, upl, 'lists');   // 6
+  C.addHw('PG', 2026,07,15, '68pt', '1,12-18', -21,+4, upl, 'lists');   // 7
+//C.addHw('PG', 2026,07,15, '50pt', '1,12-18',  -4,+4, upl, 'hashing'); // 7
+  C.addHw('PG', 2026,07,18, '50pt', '8,10-18',  -3,+4, upl, 'trees');   // 8
+  C.addHw('PG', 2026,07,22, '50pt', '9,12-18',  -4,+4, upl, 'C');       // 9
+  C.addHw('PG', 2026,07,25, '50pt', '10,15-20', -3,+4, upl, 'C');       // 10
+  C.addHw('PG', 2026,07,28, '50pt', '5,15-20',  -3,+4, upl, 'c0vm');    // 11
+  C.addHw('PG', 2026,07,31, '50pt', '5,15-20',  -6,+2, upl, 'c0vm');    // 12
+
+  addInstructor("Krish Suraparaju", MEA("csurapar", "andrew", "cmu", "edu"),
+                "csurapar.png", "",
+                [seeSchedOfficeHours("TBA"),
+                 specialOfficeHours("By appointment at other times")]);
+  addInstructor("Sheng Shu", MEA("shengshu", "andrew", "cmu", "edu"),
+                "shengshu.png", "",
+                [seeSchedOfficeHours("TBA"),
+                 specialOfficeHours("By appointment at other times")]);
+
+  addStaff('mascot', "Honk ! ", "honk@andrew.cmu.edu",
+           ['honk/bfly.jpg',  'honk/love.jpg',    'honk/irish.jpg',
+            'honk/berry.jpg', 'honk/pumpkin.jpg', 'honk/pilgrim.jpg',
+            'honk/shore.jpg', 'honk/piada.jpg',   'honk/thanksgiving.jpg',
+            'honk/clown.jpg', 'honk/umpire.jpg',  'honk/frankenstein.jpg',
+            'honk/drink.jpg', 'honk/inclass.jpg', 'honk/karaoke.jpg',
+            'honk/diva.jpg',  'honk/takeoff.jpg', 'honk/fence.jpg',
+                                                  'honk/valentine.png',
+                                                  'honk/rockstar.jpg'
+           ],
+           "https://www.instagram.com/honk15122/",
+           null, []);
+
+  addStaff('mascotbuddy', "Chonk", null,
+           "chonk.png",
+           "https://www.instagram.com/chonk122/",
+           null, []);
+
+  addAA("Marcie Baker", MEA("marcella", "andrew", "cmu", "edu"),
+        "marcella.png", null, "GHC 6006");
+
+  function aMEA(id) { return MEA(id, "andrew", "cmu", "edu"); }
+/*addTA("Example TA", MEA("ta", "cs", "cmu", "edu"),
+                "ta.png", "https://www.cs.cmu.edu/~15122ta/",
+                [officeHours("F", "7:00pm", 60, "GHC 4307", null),
+                 officeHours("S", "1:30pm", 60, "GHC ta5", "Conceptual OH"),
+                 specialOfficeHours("TBA")]);
+*/
+
+addTA("Alex Zhou Xiang",      aMEA("azxiang"),    "azxiang.png",  null, []);
+addTA("Amy Wang",             aMEA("amywang3"),   "amywang3.png", null, []);
+addTA("Andrew Jiang",         aMEA("andrewji"),   "andrewji.png", null, []);
+addTA("Angela Mo",            aMEA("amo2"),       "amo2.png",     null, []);
+addTA("Anne Delale-O'Connor", aMEA("acdelale"),   "acdelale.png", null, []);
+addTA("David Leschensky",     aMEA("dleschen"),   "dleschen.png", "https://www.davidleschensky.com/", []);
+addTA("Derek Peng",           aMEA("derekpen"),   "derekpen.png", null, []);
+addTA("Etash Jhanji",         aMEA("etashjha"),   "etashjha.png", "https://etashj.github.io/", []);
+addTA("Evan Foster",          aMEA("evanfost"),   "evanfost.png", "https://brucemcrooster.dev/", []);
+addTA("Jonny Jentis",         aMEA("jjentis"),    "jjentis.png",  null, []);
+addTA("Katherine Chen",       aMEA("kzc"),        "kzc.png",      null, []);
+addTA("Luke Erbsen",          aMEA("serbsen"),    "serbsen.png",  "https://www.linkedin.com/in/lukeerbsen/", []);
+addTA("Mirabelle Feng",       aMEA("mirabelf"),   "mirabelf.png", null, []);
+addTA("Sophie Li",            aMEA("sophiel5"),   "sophiel5.png", null, []);
+
+
+  go(C);                          // runs initialization scripts
+
+  var author = staff[0].email;
+
+  $(document).ready(function () {
+     $("[rel='tipsy']").tipsy({gravity:'n', delayIn: 350, delayOut: 100, fade: true});
+     $("[rel='tipsy-w']").tipsy({gravity:'w', delayIn: 350, delayOut: 100, fade: true});
+     $('a.qatoolname').text(qatoolname);
+     $('a.qatool').attr("href", qatool);
+     $('a.gradescope').text("Gradescope");
+     $('a.gradescope').attr("href", gradescope);
+     $('a.autolab').text("Autolab");
+     $('a.autolab').attr("href", autolab);
+     $('a.grades').attr("href", grades);
+     $('a.logistics').attr("href", logistics);
+     $('#authorEmail').html(eMail(author));
+     $('.contactInstr').html(function (idx, oldtxt) {
+                               return hMail(oldtxt, emailByRole ("instructor"));
+                            });
+     $('#email_addr').attr("value", mAddrs(emailByRole("instructor")));
+     $('#classCalendar').html(buildCalendar(C));
+     $('#courseworkCalendar').html(buildWorkCalendarByKind(C.hws['PP'])
+                                 + buildWorkCalendarByKind(C.hws['PG'])
+                                 + buildWorkCalendarByKind(C.exams['CH'])
+                                 + C.final.display());
+
+     peopleFaces();
+  });
+</script>
+</head>
+
+
+<body>
+<div class="top">
+
+<table class="title">
+<tbody><tr>
+ <td class="logo">
+   <a href="https://www.cmu.edu">
+    <img class="logo" style="height:51px; padding-right: 0; border: 2px solid white;" src="inc/img/cmu-logo.png">
+   </a>
+ </td>
+ <td class="courseName">
+   CS 15-122: Principles of Imperative Computation
+  <br>(Summer 2026)
+ </td>
+ <td class="logo">
+   <a href="https://www.cs.cmu.edu">
+    <img class="logo" src="inc/img/scs-logo.gif">
+   </a>
+ </td>
+</tr>
+</tbody></table>
+
+<ul class="menu">
+<li class="menu"><a class="menu" href="home.shtml">Home</a></li>
+<li class="menu"><a class="menu" href="about.shtml" rel="tipsy" original-title="Objectives, resources and policies">About</a></li>
+<li class="menu"><a class="menu" href="staff.shtml" rel="tipsy" original-title="Instructors and TAs">Staff</a></li>
+<li class="menu"><a class="menu" href="schedule.shtml" rel="tipsy" original-title="Lectures and precepts">Schedule</a></li>
+<li class="menu"><a class="menu" href="handouts.shtml" rel="tipsy" original-title="This contains course material and assignments">Handouts</a></li>
+
+<li class="menu"><a class="menu qatool qatoolname" target="_blank" href="https://edstem.org/us/courses/97996/discussion/" rel="tipsy" original-title="This is our discussion board">Ed</a></li>
+<li class="menu"><a class="menu gradescope" target="_blank" href="https://www.gradescope.com/courses/1299753" rel="tipsy" original-title="This is where you submit your written assignments">Gradescope</a></li>
+<li class="menu"><a class="menu autolab" target="_blank" href="https://autolab.andrew.cmu.edu/courses/15122-n26" rel="tipsy" original-title="This is where you submit your programming assignments">Autolab</a></li>
+<!--li class="menu"><a class="menu" href="quiz.shtml"
+    rel="tipsy" title="Today's quiz (if any)">Quiz</a></li-->
+<li class="menu"><a class="menu" target="_blank" href="activities.shtml" rel="tipsy" original-title="Today's in-class activity">Activities</a></li>
+<li class="menu"><a class="menu grades" target="_blank" href="https://pic.cs.cmu.edu/n26/index.html" rel="tipsy" original-title="This where you can see your grades (and more)">Grades</a></li>
+</ul>
+</div>
+<br>
+
+<script>
+function release_info(date, phrasing="released on") {
+  var d =  date instanceof Date ? date : new Date(date);
+  var r = phrasing + " " + formatDate(d) + ", " + formatTime(d);
+   var s = '<span class="release-info" rel="tipsy-w" title="'+r+'">i</span>';
+  return s;
+}
+
+function release_exam(date, id, name) {
+  var link_blank = "handouts/exams/"+id+".pdf";
+  var link_sol   = "handouts/exams/"+id+"-sol.pdf";
+  var r = release_info(date, phrasing="published by");
+  var s = '<li><a href="'+ link_blank + '" target="_blank">'+ name +'</a>'
+        + '    <a class="card-code" href="'+ link_sol + '" target="_blank">solutions</a></li>';
+  var x = '<li class="unreleased">'
+        + '    <span>'+ name +r+'</span>'
+        + '    <span class="card-code">solutions'+r+'</span></li>';
+  document.write(visible_on(new Date(date), s, alt=x));
+}
+
+function release_assessment(date, id, name) {
+  var link = autolab +"/assessments/"+id+"/writeup";
+  var s = '<li><a href="'+ link + '" target="_blank">'+ name +'</a></li>';
+
+  var r = release_info(date);
+  var x = '<li class="unreleased">'+name+r+'</li>';
+  document.write(visible_on(new Date(date), s, alt=x));
+}
+
+function release_assessment_and_solution(date, sol_delay, id, name, sol_delay_hours=0, sol_delay_minutes=0) {
+  var link_blank = autolab +"/assessments/"+id+"/writeup";
+  var date_blank = new Date(date);
+  var s_blank    = '<li><a href="'+ link_blank + '" target="_blank">'+ name +'</a>';
+  var r_blank    = release_info(date);
+  var x_blank    = '<li class="unreleased"><span>'+name+r_blank+'</span>';
+
+  var link_sol   = autolab +"/assessments/"+id+"-sol/writeup";
+  var date_sol   = incrDate(date_blank, sol_delay, sol_delay_hours, sol_delay_minutes);
+  var s_sol      = '<a class="card-code" href="'+ link_sol + '" target="_blank">solutions</a></li>';
+  var r_sol      = release_info(date_sol);
+  var x_sol      = '<span class="card-code unreleased">solutions'+r_sol+'</span></li>';
+
+  var s          = visible_on(date_blank, s_blank, alt=x_blank)
+                 + visible_on(date_sol,   s_sol,   alt=x_sol);
+  document.write(s);
+}
+</script>
+
+<h1 id="handouts">Course Material and Assessments
+<span class="shortcut">
+&nbsp;[&nbsp; <a href="#MATERIAL">Course material</a>
+&nbsp;|&nbsp; <a href="#ASSESSMENTS">Assessments</a>
+&nbsp;]
+</span></h1>
+
+<div class="toggler-on">
+<h2 id="MATERIAL" class="toggle-base"><span class="toggle-label">Course Material<span class="toggleon-mark">[–]</span></span></h2>
+
+<div class="toggle-me">
+<div class="grid-container">
+    <script>
+function release_lec_extra(id, name, extra) {
+  var pdf    = "handouts/lectures/"+id+".pdf";
+  var code   = "handouts/code/"+id+".tgz";
+  var slides = "handouts/slides/review/"+id+".pdf";
+  var s = '<li><a                     href="'+pdf+'"    target="_blank">'+name+'</a>';
+      s+= '    <a class="card-code"   href="'+code+'"   target="_blank">code</a>';
+      s+= '    <a class="card-slides" href="'+slides+'" target="_blank">slides</a>';
+      s+= extra + '</li>';
+  document.write(s);
+}
+
+function extra_slides(id, name) {
+  var pdf    = "handouts/lectures/"+id+".pdf";
+  var slides = "handouts/slides/review/"+id+".pdf";
+  var s = '<br>&nbsp;';
+      s+= '<span class="card-code" style="color:#ECFAFF;">code</span>';
+      s+= '<a class="card-slides" href="'+slides+'" target="_blank">'+name+' slides</a>';
+  return s;
+}
+
+function release_lec(id, name) {
+  release_lec_extra(id, name, "");
+}
+
+function release_ext(id, name, id2, name2) {
+  release_lec_extra(id, name, extra_slides(id2, name2));
+}
+</script>
+
+
+<div class="card">
+  <div class="card-title">
+    Lecture Notes
+  </div>
+  <div class="card-contents">
+    <div class="card-section">
+      Part 1: Deliberate Programming
+    </div>
+    <ol>
+      <script>release_lec("01-contracts",  "Contracts");</script><li><a href="handouts/lectures/01-contracts.pdf" target="_blank">Contracts</a>    <a class="card-code" href="handouts/code/01-contracts.tgz" target="_blank">code</a>    <a class="card-slides" href="handouts/slides/review/01-contracts.pdf" target="_blank">slides</a></li>
+      <script>release_lec("02-ints",       "Ints");</script><li><a href="handouts/lectures/02-ints.pdf" target="_blank">Ints</a>    <a class="card-code" href="handouts/code/02-ints.tgz" target="_blank">code</a>    <a class="card-slides" href="handouts/slides/review/02-ints.pdf" target="_blank">slides</a></li>
+      <script>release_lec("03-arrays",     "Arrays");</script><li><a href="handouts/lectures/03-arrays.pdf" target="_blank">Arrays</a>    <a class="card-code" href="handouts/code/03-arrays.tgz" target="_blank">code</a>    <a class="card-slides" href="handouts/slides/review/03-arrays.pdf" target="_blank">slides</a></li>
+      <script>release_lec("04-linsearch",  "Searching Arrays");</script><li><a href="handouts/lectures/04-linsearch.pdf" target="_blank">Searching Arrays</a>    <a class="card-code" href="handouts/code/04-linsearch.tgz" target="_blank">code</a>    <a class="card-slides" href="handouts/slides/review/04-linsearch.pdf" target="_blank">slides</a></li>
+      <script>release_lec("05-bigo",       "Big-O");</script><li><a href="handouts/lectures/05-bigo.pdf" target="_blank">Big-O</a>    <a class="card-code" href="handouts/code/05-bigo.tgz" target="_blank">code</a>    <a class="card-slides" href="handouts/slides/review/05-bigo.pdf" target="_blank">slides</a></li>
+      <script>release_lec("06-binsearch",  "Binary Search");</script><li><a href="handouts/lectures/06-binsearch.pdf" target="_blank">Binary Search</a>    <a class="card-code" href="handouts/code/06-binsearch.tgz" target="_blank">code</a>    <a class="card-slides" href="handouts/slides/review/06-binsearch.pdf" target="_blank">slides</a></li>
+      <script>release_lec("07-quicksort",  "Quicksort");</script><li><a href="handouts/lectures/07-quicksort.pdf" target="_blank">Quicksort</a>    <a class="card-code" href="handouts/code/07-quicksort.tgz" target="_blank">code</a>    <a class="card-slides" href="handouts/slides/review/07-quicksort.pdf" target="_blank">slides</a></li>
+    </ol>
+
+    <div class="card-section">
+      Part 2: Data Structures
+    </div>
+    <ol start="8">
+      <script>release_ext("08-libraries",   "Libraries", "08-pointers", "pointers and structs");</script><li><a href="handouts/lectures/08-libraries.pdf" target="_blank">Libraries</a>    <a class="card-code" href="handouts/code/08-libraries.tgz" target="_blank">code</a>    <a class="card-slides" href="handouts/slides/review/08-libraries.pdf" target="_blank">slides</a><br>&nbsp;<span class="card-code" style="color:#ECFAFF;">code</span><a class="card-slides" href="handouts/slides/review/08-pointers.pdf" target="_blank">pointers and structs slides</a></li>
+      <script>release_lec("09-stackqueue", "Stacks and Queues");</script><li><a href="handouts/lectures/09-stackqueue.pdf" target="_blank">Stacks and Queues</a>    <a class="card-code" href="handouts/code/09-stackqueue.tgz" target="_blank">code</a>    <a class="card-slides" href="handouts/slides/review/09-stackqueue.pdf" target="_blank">slides</a></li>
+      <script>release_lec("10-linkedlist", "Linked Lists");</script><li><a href="handouts/lectures/10-linkedlist.pdf" target="_blank">Linked Lists</a>    <a class="card-code" href="handouts/code/10-linkedlist.tgz" target="_blank">code</a>    <a class="card-slides" href="handouts/slides/review/10-linkedlist.pdf" target="_blank">slides</a></li>
+      <script>release_lec("11-uba",        "Unbounded Arrays");</script><li><a href="handouts/lectures/11-uba.pdf" target="_blank">Unbounded Arrays</a>    <a class="card-code" href="handouts/code/11-uba.tgz" target="_blank">code</a>    <a class="card-slides" href="handouts/slides/review/11-uba.pdf" target="_blank">slides</a></li>
+      <script>release_lec("12-hashing",    "Hashing");</script><li><a href="handouts/lectures/12-hashing.pdf" target="_blank">Hashing</a>    <a class="card-code" href="handouts/code/12-hashing.tgz" target="_blank">code</a>    <a class="card-slides" href="handouts/slides/review/12-hashing.pdf" target="_blank">slides</a></li>
+      <script>release_ext("13-hdict",      "Hash Dictionaries",     "12-voidstar", "<em>void*</em>");</script><li><a href="handouts/lectures/13-hdict.pdf" target="_blank">Hash Dictionaries</a>    <a class="card-code" href="handouts/code/13-hdict.tgz" target="_blank">code</a>    <a class="card-slides" href="handouts/slides/review/13-hdict.pdf" target="_blank">slides</a><br>&nbsp;<span class="card-code" style="color:#ECFAFF;">code</span><a class="card-slides" href="handouts/slides/review/12-voidstar.pdf" target="_blank"><em>void*</em> slides</a></li>
+      <script>release_ext("14-generic",    "Genericity",            "14-fpointer", "function pointers");</script><li><a href="handouts/lectures/14-generic.pdf" target="_blank">Genericity</a>    <a class="card-code" href="handouts/code/14-generic.tgz" target="_blank">code</a>    <a class="card-slides" href="handouts/slides/review/14-generic.pdf" target="_blank">slides</a><br>&nbsp;<span class="card-code" style="color:#ECFAFF;">code</span><a class="card-slides" href="handouts/slides/review/14-fpointer.pdf" target="_blank">function pointers slides</a></li>
+      <script>release_lec("15-bst",        "Binary Search Trees");</script><li><a href="handouts/lectures/15-bst.pdf" target="_blank">Binary Search Trees</a>    <a class="card-code" href="handouts/code/15-bst.tgz" target="_blank">code</a>    <a class="card-slides" href="handouts/slides/review/15-bst.pdf" target="_blank">slides</a></li>
+      <script>release_lec("16-avl",        "AVL Trees");</script><li><a href="handouts/lectures/16-avl.pdf" target="_blank">AVL Trees</a>    <a class="card-code" href="handouts/code/16-avl.tgz" target="_blank">code</a>    <a class="card-slides" href="handouts/slides/review/16-avl.pdf" target="_blank">slides</a></li>
+    </ol>
+
+    <div class="card-section">
+      Part 3: Transitioning to C
+    </div>
+    <ol start="17">
+      <script>release_lec("17-cintro",     "Introduction to C");</script><li><a href="handouts/lectures/17-cintro.pdf" target="_blank">Introduction to C</a>    <a class="card-code" href="handouts/code/17-cintro.tgz" target="_blank">code</a>    <a class="card-slides" href="handouts/slides/review/17-cintro.pdf" target="_blank">slides</a></li>
+      <script>release_lec("18-cmem",       "C's Memory Model");</script><li><a href="handouts/lectures/18-cmem.pdf" target="_blank">C's Memory Model</a>    <a class="card-code" href="handouts/code/18-cmem.tgz" target="_blank">code</a>    <a class="card-slides" href="handouts/slides/review/18-cmem.pdf" target="_blank">slides</a></li>
+      <script>release_lec("19-cnum",       "Types in C");</script><li><a href="handouts/lectures/19-cnum.pdf" target="_blank">Types in C</a>    <a class="card-code" href="handouts/code/19-cnum.tgz" target="_blank">code</a>    <a class="card-slides" href="handouts/slides/review/19-cnum.pdf" target="_blank">slides</a></li>
+      <script>release_lec("20-c0vm",       "Virtual Machines");</script><li><a href="handouts/lectures/20-c0vm.pdf" target="_blank">Virtual Machines</a>    <a class="card-code" href="handouts/code/20-c0vm.tgz" target="_blank">code</a>    <a class="card-slides" href="handouts/slides/review/20-c0vm.pdf" target="_blank">slides</a></li>
+      <script>release_lec("21-graphs",     "Graph Representation");</script><li><a href="handouts/lectures/21-graphs.pdf" target="_blank">Graph Representation</a>    <a class="card-code" href="handouts/code/21-graphs.tgz" target="_blank">code</a>    <a class="card-slides" href="handouts/slides/review/21-graphs.pdf" target="_blank">slides</a></li>
+      <script>release_lec("22-dfs",        "Graph Search");</script><li><a href="handouts/lectures/22-dfs.pdf" target="_blank">Graph Search</a>    <a class="card-code" href="handouts/code/22-dfs.tgz" target="_blank">code</a>    <a class="card-slides" href="handouts/slides/review/22-dfs.pdf" target="_blank">slides</a></li>
+      <script>release_lec("23-spanning",   "Spanning Trees");</script><li><a href="handouts/lectures/23-spanning.pdf" target="_blank">Spanning Trees</a>    <a class="card-code" href="handouts/code/23-spanning.tgz" target="_blank">code</a>    <a class="card-slides" href="handouts/slides/review/23-spanning.pdf" target="_blank">slides</a></li>
+      <script>release_lec("24-unionfind",  "Union-Find");</script><li><a href="handouts/lectures/24-unionfind.pdf" target="_blank">Union-Find</a>    <a class="card-code" href="handouts/code/24-unionfind.tgz" target="_blank">code</a>    <a class="card-slides" href="handouts/slides/review/24-unionfind.pdf" target="_blank">slides</a></li>
+      <script>release_lec("25-pq",         "Priority Queues");</script><li><a href="handouts/lectures/25-pq.pdf" target="_blank">Priority Queues</a>    <a class="card-code" href="handouts/code/25-pq.tgz" target="_blank">code</a>    <a class="card-slides" href="handouts/slides/review/25-pq.pdf" target="_blank">slides</a></li>
+      <script>release_lec("26-heap",       "Restoring Invariants");</script><li><a href="handouts/lectures/26-heap.pdf" target="_blank">Restoring Invariants</a>    <a class="card-code" href="handouts/code/26-heap.tgz" target="_blank">code</a>    <a class="card-slides" href="handouts/slides/review/26-heap.pdf" target="_blank">slides</a></li>
+    </ol>
+
+  </div><!-- card-contents -->
+</div><!-- card -->
+
+    <script>
+function release_gts(id, name) {
+  var file = "handouts/gts/"+id+".pdf";
+  var s = '<li><a href="'+ file + '" target="_blank">'+ name +'</a></li>';
+  document.write(s);
+}
+</script>
+
+
+<div class="card">
+  <div class="card-title">
+    Guides to Success
+  </div>
+  <div class="card-contents">
+    <div class="card-section">
+      Part 1: Using Office Hours Effectively
+    </div>
+    <ul>
+      <script>release_gts("questions",   "Asking Questions");</script><li><a href="handouts/gts/questions.pdf" target="_blank">Asking Questions</a></li>
+    </ul>
+
+    <div class="card-section">
+      Part 2: Infrastructure
+    </div>
+    <ul>
+      <script>release_gts("laptop",      "Setting up your Laptop");</script><li><a href="handouts/gts/laptop.pdf" target="_blank">Setting up your Laptop</a></li>
+      <script>release_gts("terminal",    "How to Use the Linux Terminal");</script><li><a href="handouts/gts/terminal.pdf" target="_blank">How to Use the Linux Terminal</a></li>
+      <script>release_gts("vim",         "Vim Guide");</script><li><a href="handouts/gts/vim.pdf" target="_blank">Vim Guide</a></li>
+      <script>release_gts("vscode",      "VSCode Guide");</script><li><a href="handouts/gts/vscode.pdf" target="_blank">VSCode Guide</a></li>
+    </ul>
+
+    <div class="card-section">
+      Part 3: General Tips and Tricks
+    </div>
+    <ul>
+      <script>release_gts("style",       "Coding with Style");</script><li><a href="handouts/gts/style.pdf" target="_blank">Coding with Style</a></li>
+    </ul>
+
+    <div class="card-section">
+      Part 4: Debugging C0 Code
+    </div>
+    <ul>
+      <script>release_gts("c0debugging", "General Debugging Practices");</script><li><a href="handouts/gts/c0debugging.pdf" target="_blank">General Debugging Practices</a></li>
+      <script>release_gts("autolab",     "How to Interpret Autolab Output");</script><li><a href="handouts/gts/autolab.pdf" target="_blank">How to Interpret Autolab Output</a></li>
+      <script>release_gts("testing",     "How to Write a Test File");</script><li><a href="handouts/gts/testing.pdf" target="_blank">How to Write a Test File</a></li>
+      <script>release_gts("print",       "How to Debug with Print Statements");</script><li><a href="handouts/gts/print.pdf" target="_blank">How to Debug with Print Statements</a></li>
+      <script>release_gts("contracts",   "How to Debug with Contracts");</script><li><a href="handouts/gts/contracts.pdf" target="_blank">How to Debug with Contracts</a></li>
+    </ul>
+
+    <div class="card-section">
+      Part 5: Debugging C Code
+    </div>
+    <ul>
+      <script>release_gts("cdebugging",  "General Debugging Practices");</script><li><a href="handouts/gts/cdebugging.pdf" target="_blank">General Debugging Practices</a></li>
+      <script>release_gts("valgrind",    "How to Use Valgrind");</script><li><a href="handouts/gts/valgrind.pdf" target="_blank">How to Use Valgrind</a></li>
+      <script>release_gts("cprint",      "Printing in C");</script><li><a href="handouts/gts/cprint.pdf" target="_blank">Printing in C</a></li>
+      <script>release_gts("clib",        "Annotated C Libraries");</script><li><a href="handouts/gts/clib.pdf" target="_blank">Annotated C Libraries</a></li>
+    </ul>
+
+  </div><!-- card-contents -->
+</div><!-- card -->
+
+    <script>
+  var mt1_release   = "2024-02-15T21:00:00Z"; // Obsolete
+  var mt2_release   = "2024-03-28T21:00:00Z"; // Obsolete
+  var mt2_pm        = "2024-03-30T15:00:00Z"; // Obsolete
+  var final_release = "2026-07-24T21:00:00-04:00";
+</script>
+<div class="card" id="PRACTICE_EXAMS">
+  <div class="card-title">
+    Practice Exams
+  </div>
+  <div class="card-contents">
+    <div class="card-section">
+
+<!--
+      Midterm 1
+      <span class="card-comment">published on <em><script>display_date(mt1_release);</script></em></span>
+    </div>
+    <ul>
+      <script>release_exam(mt1_release, "mt1_a", "Practice A");</script>
+      <script>release_exam(mt1_release, "mt1_b", "Practice B");</script>
+    </ul>
+
+    <div class="card-section">
+      Midterm 2
+      <span class="card-comment">published on <em><script>display_date(mt2_release);</script></em></span>
+    </div>
+    <ul>
+      <script>release_exam(mt2_release, "mt2_a", "Practice A");</script>
+      <script>release_exam(mt2_release, "mt2_b", "Practice B");</script>
+      <script>release_exam(mt2_pm,      "mt2_c", "Practice C");</script>
+    </ul>
+-->
+
+      Final
+      <span class="card-comment">published by <em><script>display_date(final_release);</script>Sat 25 Jul</em></span>
+    </div>
+    <ul>
+      <script>release_exam(final_release, "final-practiceA", "Practice A");</script><li class="unreleased">    <span>Practice A<span class="release-info" rel="tipsy-w" original-title="published by Sat 25 Jul, 01:00">i</span></span>    <span class="card-code">solutions<span class="release-info" rel="tipsy-w" original-title="published by Sat 25 Jul, 01:00">i</span></span></li>
+      <script>release_exam(final_release, "final-practiceB", "Practice B");</script><li class="unreleased">    <span>Practice B<span class="release-info" rel="tipsy-w" original-title="published by Sat 25 Jul, 01:00">i</span></span>    <span class="card-code">solutions<span class="release-info" rel="tipsy-w" original-title="published by Sat 25 Jul, 01:00">i</span></span></li>
+    </ul>
+
+  </div><!-- card-contents -->
+</div><!-- card -->
+
+</div><!-- grid-container -->
+</div><!-- toggle-me -->
+
+
+<h2 id="ASSESSMENTS" class="toggle-base"><span class="toggle-label">Assessments<span class="toggleon-mark">[–]</span></span></h2>
+
+<div class="toggle-me">
+<p>
+  <em>Assessments will become visible on their release date.  Precept
+    solutions will become visible 24 hours after the precepts
+    themselves.  Make sure to refresh your browser to see them!</em>
+</p>
+<div class="grid-container">
+    <script>
+function release_pp(date, sol_delay, id, name) {
+  release_assessment_and_solution(date, sol_delay, id, name, 4, 30);
+}
+</script>
+
+
+<div class="card">
+  <div class="card-title">
+    Practice Problems
+  </div>
+  <div class="card-contents">
+  <ul>
+    <script>release_assessment("2026-06-15T09:00:00-0400", "ppsample", "PP Sample (UNGRADED)");</script><li class="unreleased">PP Sample (UNGRADED)<span class="release-info" rel="tipsy-w" original-title="released on Mon 15 Jun, 13:00">i</span></li>
+    <script>release_pp("2026-06-21T18:00:00-0400",  3, "pp00", "PP 00");</script><li class="unreleased"><span>PP 00<span class="release-info" rel="tipsy-w" original-title="released on Sun 21 Jun, 22:00">i</span></span><span class="card-code unreleased">solutions<span class="release-info" rel="tipsy-w" original-title="released on Thu 25 Jun, 02:30">i</span></span></li>
+    <script>release_pp("2026-06-22T18:00:00-0400",  2, "pp01", "PP 01");</script><li class="unreleased"><span>PP 01<span class="release-info" rel="tipsy-w" original-title="released on Mon 22 Jun, 22:00">i</span></span><span class="card-code unreleased">solutions<span class="release-info" rel="tipsy-w" original-title="released on Thu 25 Jun, 02:30">i</span></span></li>
+    <script>release_pp("2026-06-24T18:00:00-0400",  5, "pp02", "PP 02");</script><li class="unreleased"><span>PP 02<span class="release-info" rel="tipsy-w" original-title="released on Wed 24 Jun, 22:00">i</span></span><span class="card-code unreleased">solutions<span class="release-info" rel="tipsy-w" original-title="released on Tue 30 Jun, 02:30">i</span></span></li>
+    <script>release_pp("2026-06-26T18:00:00-0400",  5, "pp03", "PP 03");</script><li class="unreleased"><span>PP 03<span class="release-info" rel="tipsy-w" original-title="released on Fri 26 Jun, 22:00">i</span></span><span class="card-code unreleased">solutions<span class="release-info" rel="tipsy-w" original-title="released on Thu 2 Jul, 02:30">i</span></span></li>
+    <script>release_pp("2026-06-30T18:00:00-0400",  6, "pp04", "PP 04");</script><li class="unreleased"><span>PP 04<span class="release-info" rel="tipsy-w" original-title="released on Tue 30 Jun, 22:00">i</span></span><span class="card-code unreleased">solutions<span class="release-info" rel="tipsy-w" original-title="released on Tue 7 Jul, 02:30">i</span></span></li>
+    <script>release_pp("2026-07-02T18:00:00-0400",  6, "pp05", "PP 05");</script><li class="unreleased"><span>PP 05<span class="release-info" rel="tipsy-w" original-title="released on Thu 2 Jul, 22:00">i</span></span><span class="card-code unreleased">solutions<span class="release-info" rel="tipsy-w" original-title="released on Thu 9 Jul, 02:30">i</span></span></li>
+    <script>release_pp("2026-07-07T18:00:00-0400",  5, "pp06", "PP 06");</script><li class="unreleased"><span>PP 06<span class="release-info" rel="tipsy-w" original-title="released on Tue 7 Jul, 22:00">i</span></span><span class="card-code unreleased">solutions<span class="release-info" rel="tipsy-w" original-title="released on Mon 13 Jul, 02:30">i</span></span></li>
+    <script>release_pp("2026-07-09T18:00:00-0400",  5, "pp07", "PP 07");</script><li class="unreleased"><span>PP 07<span class="release-info" rel="tipsy-w" original-title="released on Thu 9 Jul, 22:00">i</span></span><span class="card-code unreleased">solutions<span class="release-info" rel="tipsy-w" original-title="released on Wed 15 Jul, 02:30">i</span></span></li>
+    <script>release_pp("2026-07-13T18:00:00-0400",  5, "pp08", "PP 08");</script><li class="unreleased"><span>PP 08<span class="release-info" rel="tipsy-w" original-title="released on Mon 13 Jul, 22:00">i</span></span><span class="card-code unreleased">solutions<span class="release-info" rel="tipsy-w" original-title="released on Sun 19 Jul, 02:30">i</span></span></li>
+    <script>release_pp("2026-07-15T18:00:00-0400",  4, "pp09", "PP 09");</script><li class="unreleased"><span>PP 09<span class="release-info" rel="tipsy-w" original-title="released on Wed 15 Jul, 22:00">i</span></span><span class="card-code unreleased">solutions<span class="release-info" rel="tipsy-w" original-title="released on Mon 20 Jul, 02:30">i</span></span></li>
+    <script>release_pp("2026-07-17T18:00:00-0400",  5, "pp10", "PP 10");</script><li class="unreleased"><span>PP 10<span class="release-info" rel="tipsy-w" original-title="released on Fri 17 Jul, 22:00">i</span></span><span class="card-code unreleased">solutions<span class="release-info" rel="tipsy-w" original-title="released on Thu 23 Jul, 02:30">i</span></span></li>
+    <script>release_pp("2026-07-21T18:00:00-0400",  5, "pp11", "PP 11");</script><li class="unreleased"><span>PP 11<span class="release-info" rel="tipsy-w" original-title="released on Tue 21 Jul, 22:00">i</span></span><span class="card-code unreleased">solutions<span class="release-info" rel="tipsy-w" original-title="released on Mon 27 Jul, 02:30">i</span></span></li>
+    <script>release_pp("2026-07-24T18:00:00-0400",  5, "pp12", "PP 12");</script><li class="unreleased"><span>PP 12<span class="release-info" rel="tipsy-w" original-title="released on Fri 24 Jul, 22:00">i</span></span><span class="card-code unreleased">solutions<span class="release-info" rel="tipsy-w" original-title="released on Thu 30 Jul, 02:30">i</span></span></li>
+  </ul>
+  </div><!-- card-contents -->
+</div><!-- card -->
+
+    <script>
+function release_ep(date, sol_delay, id, name) {
+  release_assessment_and_solution(date, sol_delay, id, name, -9);
+}
+/*
+function release_ep(date, id, name) {
+  release_assessment(date, id, name);
+}
+*/
+</script>
+
+<div class="card">
+  <div class="card-title">
+    Extra Practice Problems
+  </div>
+  <div class="card-contents">
+  <ul>
+    <script>release_ep("2026-06-22T18:00:00-0400",  2, "ep01", "EP 01");</script><li class="unreleased"><span>EP 01<span class="release-info" rel="tipsy-w" original-title="released on Mon 22 Jun, 22:00">i</span></span><span class="card-code unreleased">solutions<span class="release-info" rel="tipsy-w" original-title="released on Wed 24 Jun, 13:00">i</span></span></li>
+    <script>release_ep("2026-06-24T18:00:00-0400",  2, "ep02", "EP 02");</script><li class="unreleased"><span>EP 02<span class="release-info" rel="tipsy-w" original-title="released on Wed 24 Jun, 22:00">i</span></span><span class="card-code unreleased">solutions<span class="release-info" rel="tipsy-w" original-title="released on Fri 26 Jun, 13:00">i</span></span></li>
+    <script>release_ep("2026-06-26T18:00:00-0400",  4, "ep03", "EP 03");</script><li class="unreleased"><span>EP 03<span class="release-info" rel="tipsy-w" original-title="released on Fri 26 Jun, 22:00">i</span></span><span class="card-code unreleased">solutions<span class="release-info" rel="tipsy-w" original-title="released on Tue 30 Jun, 13:00">i</span></span></li>
+    <script>release_ep("2026-06-30T18:00:00-0400",  2, "ep04", "EP 04");</script><li class="unreleased"><span>EP 04<span class="release-info" rel="tipsy-w" original-title="released on Tue 30 Jun, 22:00">i</span></span><span class="card-code unreleased">solutions<span class="release-info" rel="tipsy-w" original-title="released on Thu 2 Jul, 13:00">i</span></span></li>
+    <script>release_ep("2026-07-02T18:00:00-0400",  5, "ep05", "EP 05");</script><li class="unreleased"><span>EP 05<span class="release-info" rel="tipsy-w" original-title="released on Thu 2 Jul, 22:00">i</span></span><span class="card-code unreleased">solutions<span class="release-info" rel="tipsy-w" original-title="released on Tue 7 Jul, 13:00">i</span></span></li>
+    <script>release_ep("2026-07-07T18:00:00-0400",  2, "ep06", "EP 06");</script><li class="unreleased"><span>EP 06<span class="release-info" rel="tipsy-w" original-title="released on Tue 7 Jul, 22:00">i</span></span><span class="card-code unreleased">solutions<span class="release-info" rel="tipsy-w" original-title="released on Thu 9 Jul, 13:00">i</span></span></li>
+    <script>release_ep("2026-07-09T18:00:00-0400",  4, "ep07", "EP 07");</script><li class="unreleased"><span>EP 07<span class="release-info" rel="tipsy-w" original-title="released on Thu 9 Jul, 22:00">i</span></span><span class="card-code unreleased">solutions<span class="release-info" rel="tipsy-w" original-title="released on Mon 13 Jul, 13:00">i</span></span></li>
+    <script>release_ep("2026-07-13T18:00:00-0400",  2, "ep08", "EP 08");</script><li class="unreleased"><span>EP 08<span class="release-info" rel="tipsy-w" original-title="released on Mon 13 Jul, 22:00">i</span></span><span class="card-code unreleased">solutions<span class="release-info" rel="tipsy-w" original-title="released on Wed 15 Jul, 13:00">i</span></span></li>
+    <script>release_ep("2026-07-15T18:00:00-0400",  2, "ep09", "EP 09");</script><li class="unreleased"><span>EP 09<span class="release-info" rel="tipsy-w" original-title="released on Wed 15 Jul, 22:00">i</span></span><span class="card-code unreleased">solutions<span class="release-info" rel="tipsy-w" original-title="released on Fri 17 Jul, 13:00">i</span></span></li>
+    <script>release_ep("2026-07-17T18:00:00-0400",  4, "ep10", "EP 10");</script><li class="unreleased"><span>EP 10<span class="release-info" rel="tipsy-w" original-title="released on Fri 17 Jul, 22:00">i</span></span><span class="card-code unreleased">solutions<span class="release-info" rel="tipsy-w" original-title="released on Tue 21 Jul, 13:00">i</span></span></li>
+    <script>release_ep("2026-07-21T18:00:00-0400",  3, "ep11", "EP 11");</script><li class="unreleased"><span>EP 11<span class="release-info" rel="tipsy-w" original-title="released on Tue 21 Jul, 22:00">i</span></span><span class="card-code unreleased">solutions<span class="release-info" rel="tipsy-w" original-title="released on Fri 24 Jul, 13:00">i</span></span></li>
+    <script>release_ep("2026-07-24T18:00:00-0400",  4, "ep12", "EP 12");</script><li class="unreleased"><span>EP 12<span class="release-info" rel="tipsy-w" original-title="released on Fri 24 Jul, 22:00">i</span></span><span class="card-code unreleased">solutions<span class="release-info" rel="tipsy-w" original-title="released on Tue 28 Jul, 13:00">i</span></span></li>
+  </ul>
+  </div><!-- card-contents -->
+</div><!-- card -->
+
+    <script>
+function release_ch(date, id, name) {
+  release_assessment_and_solution(date, 0, id, name);
+}
+</script>
+
+<div class="card">
+  <div class="card-title">
+    Checkins
+  </div>
+  <div class="card-contents">
+  <ul>
+    <!-- release day after grading -->
+    <script>release_ch("2026-06-30T09:00:01-0400", "ch01", "CH 01");</script><li class="unreleased"><span>CH 01<span class="release-info" rel="tipsy-w" original-title="released on Tue 30 Jun, 13:00">i</span></span><span class="card-code unreleased">solutions<span class="release-info" rel="tipsy-w" original-title="released on Tue 30 Jun, 13:00">i</span></span></li>
+    <script>release_ch("2026-07-04T09:00:01-0400", "ch02", "CH 02");</script><li class="unreleased"><span>CH 02<span class="release-info" rel="tipsy-w" original-title="released on Sat 4 Jul, 13:00">i</span></span><span class="card-code unreleased">solutions<span class="release-info" rel="tipsy-w" original-title="released on Sat 4 Jul, 13:00">i</span></span></li>
+    <script>release_ch("2026-07-11T09:00:01-0400", "ch03", "CH 03");</script><li class="unreleased"><span>CH 03<span class="release-info" rel="tipsy-w" original-title="released on Sat 11 Jul, 13:00">i</span></span><span class="card-code unreleased">solutions<span class="release-info" rel="tipsy-w" original-title="released on Sat 11 Jul, 13:00">i</span></span></li>
+    <script>release_ch("2026-07-16T09:00:01-0400", "ch04", "CH 04");</script><li class="unreleased"><span>CH 04<span class="release-info" rel="tipsy-w" original-title="released on Thu 16 Jul, 13:00">i</span></span><span class="card-code unreleased">solutions<span class="release-info" rel="tipsy-w" original-title="released on Thu 16 Jul, 13:00">i</span></span></li>
+    <script>release_ch("2026-07-21T09:00:01-0400", "ch05", "CH 05");</script><li class="unreleased"><span>CH 05<span class="release-info" rel="tipsy-w" original-title="released on Tue 21 Jul, 13:00">i</span></span><span class="card-code unreleased">solutions<span class="release-info" rel="tipsy-w" original-title="released on Tue 21 Jul, 13:00">i</span></span></li>
+    <script>release_ch("2026-07-25T09:00:01-0400", "ch06", "CH 06");</script><li class="unreleased"><span>CH 06<span class="release-info" rel="tipsy-w" original-title="released on Sat 25 Jul, 13:00">i</span></span><span class="card-code unreleased">solutions<span class="release-info" rel="tipsy-w" original-title="released on Sat 25 Jul, 13:00">i</span></span></li>
+    <script>release_ch("2026-07-30T09:00:01-0400", "ch07", "CH 07");</script><li class="unreleased"><span>CH 07<span class="release-info" rel="tipsy-w" original-title="released on Thu 30 Jul, 13:00">i</span></span><span class="card-code unreleased">solutions<span class="release-info" rel="tipsy-w" original-title="released on Thu 30 Jul, 13:00">i</span></span></li>
+  </ul>
+  </div><!-- card-contents -->
+</div><!-- card -->
+
+    <script>
+function release_pg(date, id, name) {
+  release_assessment(date, id, name);
+}
+</script>
+
+<div class="card">
+  <div class="card-title">
+    Programming Assignments
+  </div>
+  <div class="card-contents">
+  <ul>
+    <script>release_pg("2026-06-15T09:00:00-0400", "sample",    "Sample Assignment (UNGRADED)");</script><li class="unreleased">Sample Assignment (UNGRADED)<span class="release-info" rel="tipsy-w" original-title="released on Mon 15 Jun, 13:00">i</span></li>
+    <script>release_pg("2026-06-21T23:59:00-0400", "scavhunt",  "Scavenger Hunt");</script><li class="unreleased">Scavenger Hunt<span class="release-info" rel="tipsy-w" original-title="released on Mon 22 Jun, 03:59">i</span></li>
+    <script>release_pg("2026-06-24T23:59:00-0400", "pixels",    "Pixels");</script><li class="unreleased">Pixels<span class="release-info" rel="tipsy-w" original-title="released on Thu 25 Jun, 03:59">i</span></li>
+    <script>release_pg("2026-06-27T23:59:00-0400", "images",    "Images");</script><li class="unreleased">Images<span class="release-info" rel="tipsy-w" original-title="released on Sun 28 Jun, 03:59">i</span></li>
+    <script>release_pg("2026-07-01T23:59:00-0400", "speller",   "Speller");</script><li class="unreleased">Speller<span class="release-info" rel="tipsy-w" original-title="released on Thu 2 Jul, 03:59">i</span></li>
+    <!--script>release_pg("", "doslingos", "Dos Lingos");</script-->
+    <script>release_pg("2026-07-05T23:59:00-0400", "clac",      "Clac");</script><li class="unreleased">Clac<span class="release-info" rel="tipsy-w" original-title="released on Mon 6 Jul, 03:59">i</span></li>
+    <!--script>release_pg("", "exp",       "Exp");</script-->
+    <script>release_pg("2026-07-08T23:59:00-0400", "editor",    "Editor");</script><li class="unreleased">Editor<span class="release-info" rel="tipsy-w" original-title="released on Thu 9 Jul, 03:59">i</span></li>
+    <!--script>release_pg("", "tbuf",      "Text buffers");</script-->
+    <!--script>release_pg("", "bloom",     "Bloom Filters");</script-->
+    <script>release_pg("2026-07-15T23:59:00-0400", "ropes",     "Ropes");</script><li class="unreleased">Ropes<span class="release-info" rel="tipsy-w" original-title="released on Thu 16 Jul, 03:59">i</span></li>
+    <!--script>release_pg("", "peg",       "Peg Solitaire");</script-->
+    <!--script>release_pg("", "queues",    "Generic Queues");</script-->
+    <script>release_pg("2026-07-18T23:59:00-0400", "strbuf",    "String Buffers");</script><li class="unreleased">String Buffers<span class="release-info" rel="tipsy-w" original-title="released on Sun 19 Jul, 03:59">i</span></li>
+    <!--script>release_pg("", "huffman",   "Huffman Compression");</script-->
+    <script>release_pg("2026-07-22T23:59:00-0400", "lightsout", "Lights Out");</script><li class="unreleased">Lights Out<span class="release-info" rel="tipsy-w" original-title="released on Thu 23 Jul, 03:59">i</span></li>
+    <script>release_pg("2026-07-25T23:59:00-0400", "c0vm",      "C0VM");</script><li class="unreleased">C0VM<span class="release-info" rel="tipsy-w" original-title="released on Sun 26 Jul, 03:59">i</span></li>
+  </ul>
+  </div><!-- card-contents -->
+</div><!-- card -->
+
+    <script>
+function release_pc(date, id, name) {
+  release_assessment_and_solution(date, 0, id, name);
+}
+</script>
+
+<div class="card">
+  <div class="card-title">
+    Precepts
+  </div>
+  <div class="card-contents">
+  <ol>
+    <!-- release day after precept -->
+    <script>release_pc("2026-06-23T21:00:01-0400", "pc01", "What's the Point?");</script><li class="unreleased"><span>What's the Point?<span class="release-info" rel="tipsy-w" original-title="released on Wed 24 Jun, 01:00">i</span></span><span class="card-code unreleased">solutions<span class="release-info" rel="tipsy-w" original-title="released on Wed 24 Jun, 01:00">i</span></span></li>
+    <script>release_pc("2026-06-26T21:00:01-0400", "pc02", "int-eresting!");</script><li class="unreleased"><span>int-eresting!<span class="release-info" rel="tipsy-w" original-title="released on Sat 27 Jun, 01:00">i</span></span><span class="card-code unreleased">solutions<span class="release-info" rel="tipsy-w" original-title="released on Sat 27 Jun, 01:00">i</span></span></li>
+    <script>release_pc("2026-06-29T21:00:01-0400", "pc03", "Hip Hip Array!");</script><li class="unreleased"><span>Hip Hip Array!<span class="release-info" rel="tipsy-w" original-title="released on Tue 30 Jun, 01:00">i</span></span><span class="card-code unreleased">solutions<span class="release-info" rel="tipsy-w" original-title="released on Tue 30 Jun, 01:00">i</span></span></li>
+    <script>release_pc("2026-07-01T21:00:01-0400", "pc04", "Fancy Partition");</script><li class="unreleased"><span>Fancy Partition<span class="release-info" rel="tipsy-w" original-title="released on Thu 2 Jul, 01:00">i</span></span><span class="card-code unreleased">solutions<span class="release-info" rel="tipsy-w" original-title="released on Thu 2 Jul, 01:00">i</span></span></li>
+    <script>release_pc("2026-07-06T21:00:01-0400", "pc05", "Point me to Safety");</script><li class="unreleased"><span>Point me to Safety<span class="release-info" rel="tipsy-w" original-title="released on Tue 7 Jul, 01:00">i</span></span><span class="card-code unreleased">solutions<span class="release-info" rel="tipsy-w" original-title="released on Tue 7 Jul, 01:00">i</span></span></li>
+    <script>release_pc("2026-07-08T21:00:01-0400", "pc06", "Link it all Together");</script><li class="unreleased"><span>Link it all Together<span class="release-info" rel="tipsy-w" original-title="released on Thu 9 Jul, 01:00">i</span></span><span class="card-code unreleased">solutions<span class="release-info" rel="tipsy-w" original-title="released on Thu 9 Jul, 01:00">i</span></span></li>
+    <script>release_pc("2026-07-10T21:00:01-0400", "pc07", "Everything Hash to Go");</script><li class="unreleased"><span>Everything Hash to Go<span class="release-info" rel="tipsy-w" original-title="released on Sat 11 Jul, 01:00">i</span></span><span class="card-code unreleased">solutions<span class="release-info" rel="tipsy-w" original-title="released on Sat 11 Jul, 01:00">i</span></span></li>
+    <script>release_pc("2026-07-15T21:00:01-0400", "pc08", "Generally Speaking");</script><li class="unreleased"><span>Generally Speaking<span class="release-info" rel="tipsy-w" original-title="released on Thu 16 Jul, 01:00">i</span></span><span class="card-code unreleased">solutions<span class="release-info" rel="tipsy-w" original-title="released on Thu 16 Jul, 01:00">i</span></span></li>
+    <script>release_pc("2026-07-17T21:00:01-0400", "pc09", "Rotating Rotations");</script><li class="unreleased"><span>Rotating Rotations<span class="release-info" rel="tipsy-w" original-title="released on Sat 18 Jul, 01:00">i</span></span><span class="card-code unreleased">solutions<span class="release-info" rel="tipsy-w" original-title="released on Sat 18 Jul, 01:00">i</span></span></li>
+    <script>release_pc("2026-07-21T21:00:01-0400", "pc10", "C-ing is Believing");</script><li class="unreleased"><span>C-ing is Believing<span class="release-info" rel="tipsy-w" original-title="released on Wed 22 Jul, 01:00">i</span></span><span class="card-code unreleased">solutions<span class="release-info" rel="tipsy-w" original-title="released on Wed 22 Jul, 01:00">i</span></span></li>
+    <script>release_pc("2026-07-24T21:00:01-0400", "pc11", "Computing on the Edge");</script><li class="unreleased"><span>Computing on the Edge<span class="release-info" rel="tipsy-w" original-title="released on Sat 25 Jul, 01:00">i</span></span><span class="card-code unreleased">solutions<span class="release-info" rel="tipsy-w" original-title="released on Sat 25 Jul, 01:00">i</span></span></li>
+    <script>release_pc("2026-07-27T21:00:01-0400", "pc12", "Spend some Cycles Thinking");</script><li class="unreleased"><span>Spend some Cycles Thinking<span class="release-info" rel="tipsy-w" original-title="released on Tue 28 Jul, 01:00">i</span></span><span class="card-code unreleased">solutions<span class="release-info" rel="tipsy-w" original-title="released on Tue 28 Jul, 01:00">i</span></span></li>
+ <!--script>release_pc("", "pc12", "Spanning the Union");</script-->
+    <script>release_pc("2026-07-29T21:00:01-0400", "pc13", "What are your Priorities");</script><li class="unreleased"><span>What are your Priorities<span class="release-info" rel="tipsy-w" original-title="released on Thu 30 Jul, 01:00">i</span></span><span class="card-code unreleased">solutions<span class="release-info" rel="tipsy-w" original-title="released on Thu 30 Jul, 01:00">i</span></span></li>
+  </ol>
+  </div><!-- card-contents -->
+</div><!-- card -->
+
+    <!--include virtual="wr-handouts.shtml"-->
+    <!--include virtual="lab-handouts.shtml"-->
+    <!--include virtual="rec-handouts.shtml"-->
+</div><!-- grid-container -->
+</div><!--toggle-me-->
+
+
+<h2 id="MISC" class="toggle-base"><span class="toggle-label">Miscellaneous<span class="toggleon-mark">[–]</span></span></h2>
+<div class="toggle-me">
+<div class="grid-container">
+    <script>
+function release_misc(date, delay, file, name) {
+  var s = '<li><a href="'+file+'" target="_blank">'+name+'</a></li>';
+  var r = release_info(incrDate(date, delay));
+  var x = '<li class="unreleased"><span>'+name+r+'</span></li>';
+  var text = release_relative_to_date(date, delay, s, alt=x);
+  document.write(text);
+}
+</script>
+
+<div class="card">
+  <div class="card-title">
+    Start of Semester
+  </div>
+  <div class="card-contents">
+  <ul>
+    <script>release_misc(C.start, -7, "handouts/misc/setup.pdf", "Setup Lab");</script><li><a href="handouts/misc/setup.pdf" target="_blank">Setup Lab</a></li>
+  </ul>
+  </div><!-- card-contents -->
+</div><!-- card -->
+
+    <script>
+function release_resource(url, name) {
+  var s = '<li><a href="'+ url + '" target="_blank">'+ name +'</a></li>';
+  document.write(s);
+}
+</script>
+
+
+<div class="card">
+  <div class="card-title">
+    Programming Resources
+  </div>
+  <div class="card-contents">
+    <!--div class="card-section">
+      C0 references
+    </div-->
+    <ul>
+      <script>release_resource("https://bitbucket.org/c0-lang/docs/wiki/Home",
+                               "C0 Wiki");</script><li><a href="https://bitbucket.org/c0-lang/docs/wiki/Home" target="_blank">C0 Wiki</a></li>
+      <ul>
+        <script>release_resource("https://bitbucket.org/c0-lang/docs/wiki/Tutorial",
+                                 "C0 Tutorial");</script><li><a href="https://bitbucket.org/c0-lang/docs/wiki/Tutorial" target="_blank">C0 Tutorial</a></li>
+        <script>release_resource("https://c0.cs.cmu.edu/docs/c0-libraries.pdf",
+                                 "C0 library reference");</script><li><a href="https://c0.cs.cmu.edu/docs/c0-libraries.pdf" target="_blank">C0 library reference</a></li>
+        <script>release_resource("https://c0.cs.cmu.edu/docs/c0-reference.pdf",
+                                 "C0 language reference");</script><li><a href="https://c0.cs.cmu.edu/docs/c0-reference.pdf" target="_blank">C0 language reference</a></li>
+      </ul>
+      <script>release_resource("https://github.com/MarkChenYutian/C0VM-ts",
+                               "C0 Visualizer");</script><li><a href="https://github.com/MarkChenYutian/C0VM-ts" target="_blank">C0 Visualizer</a></li>
+    </ul>
+
+  </div><!-- card-contents -->
+</div><!-- card -->
+
+</div><!-- grid-container -->
+</div><!--toggle-me-->
+
+
+</div><!--toggler-on-->
+
+<hr>
+<address>
+<table width="100%" cellspacing="0" cellpadding="0"><tbody><tr>
+<td align="left">
+  <span id="copyright">2026
+  <a href="https://cs.cmu.edu/~iliano">Iliano Cervesato</a></span>
+</td><td align="right">
+  <a href="mailto:akohlbre@cmu.edu?Subject=15-122">akohlbre@cmu.edu</a>
+</td></tr></tbody></table>
+</address>
+
+<div style="display:none">
+<div id="invisible"></div>
+</div>
+
+
+</body></html>

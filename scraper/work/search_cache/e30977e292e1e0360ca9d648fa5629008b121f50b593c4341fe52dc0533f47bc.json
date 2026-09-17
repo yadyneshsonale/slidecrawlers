@@ -1,0 +1,52 @@
+[
+{
+"url": "https://www.cse.iitm.ac.in/~miteshk/CS6910.html",
+"title": "CS6910/CS7015: Deep Learning - CSE IIT Madras",
+"description": "| Anushka Singh | AI4Bharat | cs22s015@smail.iitm.ac.in | 3-4 pm | Tuesday, Thursday |. | Bibhuti Majhi | AI4Bharat | cs22m031@smail.iitm.ac.in | 2-4 pm | Wednesday |. | Sarthak Naithani | AI4Bharat | cs22m078@smail.iitm.ac.in | 3-4 pm | Tuesday, Wednesday |. | Ravi Prakash Singh | AI4Bharat | cs22m069@smail.iitm.ac.in | 1-2 pm | Tuesday, Friday |. | Amit Kumar | - | cs22m010@smail.iitm.ac.in | 2-4 pm | Wednesday |. | Lecture 1 | (Partial) History of Deep Learning, Deep Learning Success Stories | Slides | M1 | M2| M3 | M4 | M5 | Juergen Schmidhuber, Deep Learning in Neural Networks: An Overview. | Lecture 3 | Sigmoid Neurons, Gradient Descent, Feedforward Neural Networks, Representation Power of Feedforward Neural Networks | Slides | M1 | M2| M3 | M4 | M5| M6 | M7| M8 |  |. | Assignment 2 ( **Ungraded** ) | Convolutional Neural Networks | Link | 03-Mar-2024 | 03-Apr-2024 |."
+},
+{
+"url": "https://www.cse.iitm.ac.in/~miteshk/CS7015/Slides/Handout/Lecture11.pdf",
+"title": "[PDF] CS7015 (Deep Learning) : Lecture 11 - Convolutional Neural ...",
+"description": "Khapra CS7015 (Deep Learning) : Lecture 11 10/1 a b c d e f g h i j k \u2113 w x y z aw+bx+ey+fz bw+cx+fy+gz cw+dx+gy+hz ew+fx+iy+jz fw+gx+jy+kz gw+hx+ky+\u2113z Output Input Kernel Let us apply this idea to a toy ex-ample and see the results Mitesh M. Khapra CS7015 (Deep Learning) : Lecture 11 48/1 b c d e f g h i j w x y z \u2113 m n o Output \u2113 m n o Output \u2113 m n o Output \u2113 m n o Output Input Kernel We can thus train a convolution neural network using backpropagation by thinking of it as a feedforward neural network with sparse connections b c d e f g h i j o n m l A CNN can be implemented as a feedforward neural network wherein only a few weights(in color) are active the rest of the weights (in gray) are zero Mitesh M."
+},
+{
+"url": "https://www.cse.iitm.ac.in/~miteshk/CS7015/Slides/Handout/Lecture3.pdf",
+"title": "[PDF] CS7015 (Deep Learning) : Lecture 3 - Sigmoid Neurons, Gradient ...",
+"description": "Khapra CS7015 (Deep Learning) : Lecture 3 8/70 1 z= Pn i=1 wixi y -w0 Introducing sigmoid neurons where the out-put function is much smoother than the step function Here is one form of the sigmoid function called the logistic function y = 1 1 + e\u2212(w0+Pn i=1 wixi) We no longer see a sharp transition around the threshold -w0 Also the output y is no longer binary but a real value between 0 and 1 which can be in-terpreted as a probability Instead of a like/dislike decision we get the probability of liking the movie Mitesh M. Khapra CS7015 (Deep Learning) : Lecture 3 60/70 y = 1 1 + e\u2212(w1x1+w2x2+b) Now let us set w1 to 0 and adjust w2 to get a 2-dimensional step function with a di\ufb00erent orientation And now we change b Mitesh M. Khapra CS7015 (Deep Learning) : Lecture 3 61/70 y = 1 1 + e\u2212(w1x1+w2x2+b) Now let us set w1 to 0 and adjust w2 to get a 2-dimensional step function with a di\ufb00erent orientation And now we change b Mitesh M."
+},
+{
+"url": "https://www.youtube.com/watch?v=iC1grJK7z9U",
+"title": "W10_L10.3: Deep learning: introduction - YouTube",
+"description": "Welcome to Week 10 Lecture 10 Part 1 of the course \"Big Data and ... IIT Madras, or BSc/BS Degrees from IIT Madras. For more details"
+},
+{
+"url": "https://www.youtube.com/watch?v=Ydd9TMyoG6k",
+"title": "L9: Perceptrons:from mcculloch-pitts to weighted inputs, & real-world ...",
+"description": "This content isn't available. Welcome to Lecture 9 of the course \"Deep Learning\" by Prof. ... About IIT Madras' online Bachelor of Science"
+},
+{
+"url": "https://www.cse.iitm.ac.in/~miteshk/CS7015_2018.html",
+"title": "CS7015: Deep Learning",
+"description": "Linear Algebra [CS6015 or equivalent] | [Online course from MIT]. Probability Theory [CS6015 or equivalent] | [Online course from MIT]. | Lecture 1 | (Partial) History of Deep Learning, Deep Learning Success Stories | T |  H | M1 | M2| M3 | M4 | M5| M6 | M7 | M8| M9 | Juergen Schmidhuber, Deep Learning in Neural Networks: An Overview. | Lecture 4 | Feedforward Neural Networks, Backpropagation | T |  H | M1 | M2 | M3 | M4 | M5 | M6 | M7 | M8 | M9 | M10 | [See Lecture 2 [Training Neural Networks] by Hugo Larochelle](http://info.usherbrooke.ca/hlarochelle/neural_networks/content.html) |. | Lecture 13 | Visualizing Convolutional Neural Networks, Guided Backpropagation, Deep Dream, Deep Art, Fooling Convolutional Neural Networks | T |  H | M1 | M2| M3 | M4 | M5| M6 | M7 | M8 | M9 | M10 | * RCNN(See the section on visualizations) * ZFNet(see the section on experiments) * Striving for simplicity(Guided Backpropagation) * DeepVis * Deep Inside Convolutional Networks * Understanding Convolutional Networks * Understanding Deep Image Representations * DeepDream * A Neural Algorithm for Artistic Style * Neural style * Intriguing properties of neural networks * Deep Neural Networks are easily fooled |."
+},
+{
+"url": "https://www.scribd.com/document/903830217/SYLLABUS-106106201",
+"title": "Deep Learning Course by Mitesh Khapra | PDF - Scribd",
+"description": "DEEP LEARNING \u2013 PART 2. COMPUTER SCIENCE & ENGINEERING PROF. MITESH M. KHAPRA Dept. of Computer Science and Engineering IIT Madras. TYPE OF COURSE : New"
+},
+{
+"url": "https://iitm-pod.slides.com/arunprakash_ai/cs6910-lecture-2",
+"title": "CS6910: Lecture 2 - IITM-POD - Slides",
+"description": "Lecture 2: McCulloch Pitts Neuron, Thresholding Logic, Perceptrons, Perceptron Learning Algorithm and Convergence, Multilayer Perceptrons (MLPs), Representation"
+},
+{
+"url": "https://www.youtube.com/playlist?list=PLZ2ps__7DhBZVxMrSkTIcG6zZBDKUXCnM",
+"title": "Deep Learning - YouTube",
+"description": "L2: Brief history of deep learning. IIT Madras - B.S. Degree Programme \u00b7 10:24 \u00b7 L1: The deep revival | from cats to convnet | tracing the evolution. IIT Madras"
+},
+{
+"url": "https://github.com/Yash-Kavaiya/iitm-diploma",
+"title": "GitHub - Yash-Kavaiya/iitm-diploma: \ud83d\udcd6 Course materials, assignments, and notes from IIT Madras BS Degree in Data Science and Programming \u00b7 GitHub",
+"description": "| Machine Learning Foundation | | Machine Learning Foundation |  |  |. | Tools in Data Science | | Tools in Data Science |  |  |. ### Machine Learning Foundations. Lecture Playlist :- https://www.youtube.com/playlist? ### Tools in Data Science. Here is an up to date collection of links to all course playlists on YouTube. | Statistics for Data Science 1 | link |. | Reinforcement Learning | https://www.youtube.com/playlist? | Linear Statistical Models | https://www.youtube.com/playlist? You will have a decent intuition for which methods can work when, and an ability to at least understand and modify code for ML analysis in both R and Python. The second is a link to his page for his new textbook, but that page also has links out to all the youtube videos from his coursera version of CS 161 (Algorithms 1). | Foundations of Data Science textbook and videos | This mini-course appears to have developed out of CMU\u2019s \u201cCS Theory for the Information Age\u201d 2012 site, which I think is a better name for this."
+}
+]

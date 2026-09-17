@@ -1,0 +1,490 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CSE 2020: Study materials and resources for Computer Science and Engineering, IIT Kharagpur.">
+    <meta name="author" content="garggopal2001">
+
+    <title>CSE 2020 | IIT Kharagpur</title>
+    <link rel="icon" type="image/x-icon" href="img/GG.png">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Refined stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-GQK9TPGLNL"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-GQK9TPGLNL');
+    </script>
+</head>
+<body>
+
+    <header class="sticky-header">
+        <nav class="container nav-container">
+            <!-- Renders the logo and title, clicking it navigates home -->
+            <a href="#" class="logo" data-action="show-home" aria-label="Go to Homepage">
+                <i class="fas fa-graduation-cap"></i> CSE 2020
+            </a>
+            <!-- Search input container -->
+            <div class="search-container">
+                <input type="text" class="search-box" placeholder="Search courses by name or code..." id="searchInput" aria-label="Search Courses">
+                <i class="fas fa-search search-icon"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container main-content">
+
+        <!-- Home View: Displays hero, important links and all semester courses -->
+        <section id="homeView" class="view">
+            <!-- *** FIX: Moved hero section inside the home view *** -->
+            <section class="hero-section">
+                <div class="hero-content">
+                    <h1>CSE 2020 Resources</h1>
+                    <h2>Computer Science &amp; Engineering, IIT Kharagpur</h2>
+                    <p>A curated collection of academic materials and useful links for the Batch of 2020.</p>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSden1G9sySVuokDMkI-ARzznm0jVRnQsSUA46GA6xVGxfWiCQ/viewform?embedded=false" target="_blank" class="btn btn-accent">
+                        <i class="fas fa-comment-dots"></i> Give Feedback
+                    </a>
+                </div>
+            </section>
+
+            <div class="card important-links-card">
+                <h2 class="section-title"><i class="fas fa-external-link-alt"></i> Important Links</h2>
+                <div class="links-grid" id="linksGrid">
+        <a href="https://erp.iitkgp.ac.in/SSOAdministration/login.htm?sessionToken=14ADC44B03533E3B1C22E5BD4DB428A5.worker1&amp;requestedUrl=https://erp.iitkgp.ac.in/IIT_ERP3/" target="_blank" class="link-card" title="Official Site for Admin work">
+            <i class="fas fa-user-cog"></i>
+            <span>ERP</span>
+        </a>
+        <a href="https://moodlecse.iitkgp.ac.in/moodle/login/index.php" target="_blank" class="link-card" title="Moodle of CSE Department">
+            <i class="fas fa-chalkboard-teacher"></i>
+            <span>CSE Moodle</span>
+        </a>
+        <a href="https://cse.iitkgp.ac.in/~wbcm/" target="_blank" class="link-card" title="Web Based Course Material">
+            <i class="fas fa-globe"></i>
+            <span>WBCM</span>
+        </a>
+        <a href="http://kgpmoodlenew.iitkgp.ac.in/moodle/login/index.php" target="_blank" class="link-card" title="Moodle for Non-CSE Courses">
+            <i class="fas fa-chalkboard"></i>
+            <span>KGP Moodle</span>
+        </a>
+        <a href="https://qp.metakgp.org/" target="_blank" class="link-card" title="Instant Search through Previous Years' Question Papers">
+            <i class="fas fa-file-alt"></i>
+            <span>Question Papers</span>
+        </a>
+        <a href="https://metakgp.github.io/mcmp/" target="_blank" class="link-card" title="Search for Faculty by Area of Interest">
+            <i class="fas fa-search-location"></i>
+            <span>Professor Search</span>
+        </a>
+        <a href="https://wiki.metakgp.org/" target="_blank" class="link-card" title="The community wiki for IIT Kharagpur">
+            <i class="fas fab fa-wikipedia-w"></i>
+            <span>Meta KGP</span>
+        </a>
+        <a href="https://share.streamlit.io/spookbite/kronos2.0/main/app.py" target="_blank" class="link-card" title="Grade Distribution of Courses">
+            <i class="fas fa-chart-bar"></i>
+            <span>Kronos</span>
+        </a>
+        <a href="https://library.iitkgp.ac.in/pages/eSearch2.1/" target="_blank" class="link-card" title="Ebooks by Central Library">
+            <i class="fas fa-book-open"></i>
+            <span>Library Books</span>
+        </a>
+        <a href="https://thescholarsavenue.github.io/societytable/" target="_blank" class="link-card" title="Society Table by The Scholar's Avenue">
+            <i class="fas fa-users"></i>
+            <span>Clubs &amp; Societies</span>
+        </a>
+        <a href="https://clist.by/" target="_blank" class="link-card" title="Competitive Programming Calendar">
+            <i class="fas fa-calendar-alt"></i>
+            <span>CP Calendar</span>
+        </a>
+        <a href="https://www.topcoder.com/thrive/articles/Power%20up%20C++%20with%20the%20Standard%20Template%20Library%20Part%20One" target="_blank" class="link-card" title="C++ STL Tutorial by TopCoder">
+            <i class="fas fa-code"></i>
+            <span>C++ STL Guide</span>
+        </a>
+        <a href="http://cse.iitkgp.ac.in/~abhij/course/" target="_blank" class="link-card" title="Index of Prof. Abhijit Das Courses">
+            <i class="fas fa-folder-open"></i>
+            <span>Abhijit Das Courses</span>
+        </a>
+        <a href="https://drive.google.com/folderview?id=0Bx7x8HmM7p_zM3VDMURfWWdvY28&amp;resourcekey=0-4H4yE_Kxs1Dr61KH_3fxFw" target="_blank" class="link-card" title="CSE Notes by Anubhav Jain">
+            <i class="fas fa-pen-alt"></i>
+            <span>Anubhav Jain Notes</span>
+        </a>
+        <a href="https://www.youtube.com/playlist?list=PLauivoElc3ggagradg8MfOZreCMmXMmJ-" target="_blank" class="link-card" title="CP/DSA Playlist by Luv">
+            <i class="fas fab fa-youtube"></i>
+            <span>CP/DSA Playlist</span>
+        </a>
+        <a href="https://cses.fi/problemset/" target="_blank" class="link-card" title="CSES Problem Set">
+            <i class="fas fa-tasks"></i>
+            <span>CSES Problem Set</span>
+        </a></div>
+            </div>
+            <div class="card" id="semestersContainer">
+                <div id="semester-section-1" class="semester-section">
+                    <h3 class="semester-title">Semester 1</h3>
+                    <div class="course-buttons-grid">
+        <button class="course-card" data-action="show-details" data-course-id="sem01Modal1" aria-label="View details for Advanced Calculus">
+            <span class="course-name">Advanced Calculus</span>
+            <span class="course-code">MA11003</span>
+        </button>
+        <button class="course-card" data-action="show-details" data-course-id="sem01Modal2" aria-label="View details for DIY Project">
+            <span class="course-name">DIY Project</span>
+            <span class="course-code">DY17003</span>
+        </button>
+        <button class="course-card" data-action="show-details" data-course-id="sem01Modal3" aria-label="View details for Physics of Waves">
+            <span class="course-name">Physics of Waves</span>
+            <span class="course-code">PH11003</span>
+        </button>
+        <button class="course-card" data-action="show-details" data-course-id="sem01Modal4" aria-label="View details for Physics Laboratory">
+            <span class="course-name">Physics Laboratory</span>
+            <span class="course-code">PH19003</span>
+        </button>
+        <button class="course-card" data-action="show-details" data-course-id="sem01Modal5" aria-label="View details for Electrical Technology">
+            <span class="course-name">Electrical Technology</span>
+            <span class="course-code">EE11003</span>
+        </button>
+        <button class="course-card" data-action="show-details" data-course-id="sem01Modal6" aria-label="View details for Basic Engineering Mechanics">
+            <span class="course-name">Basic Engineering Mechanics</span>
+            <span class="course-code">ME11003</span>
+        </button>
+        <button class="course-card" data-action="show-details" data-course-id="sem01Modal7" aria-label="View details for Engineering Laboratory">
+            <span class="course-name">Engineering Laboratory</span>
+            <span class="course-code">EN19003</span>
+        </button>
+        <button class="course-card" data-action="show-details" data-course-id="sem01Modal8" aria-label="View details for Environmental Science">
+            <span class="course-name">Environmental Science</span>
+            <span class="course-code">EV10003</span>
+        </button></div>
+                </div>
+                <div id="semester-section-2" class="semester-section">
+                    <h3 class="semester-title">Semester 2</h3>
+                    <div class="course-buttons-grid">
+        <button class="course-card" data-action="show-details" data-course-id="sem02Modal1" aria-label="View details for Linear Algebra, Numerical and Complex Analysis">
+            <span class="course-name">Linear Algebra, Numerical and Complex Analysis</span>
+            <span class="course-code">MA11004</span>
+        </button>
+        <button class="course-card" data-action="show-details" data-course-id="sem02Modal2" aria-label="View details for Engineering Drawing and Computer Graphics">
+            <span class="course-name">Engineering Drawing and Computer Graphics</span>
+            <span class="course-code">CE13003</span>
+        </button>
+        <button class="course-card" data-action="show-details" data-course-id="sem02Modal3" aria-label="View details for Programming and Data Structures">
+            <span class="course-name">Programming and Data Structures</span>
+            <span class="course-code">CS10003</span>
+        </button>
+        <button class="course-card" data-action="show-details" data-course-id="sem02Modal4" aria-label="View details for Programming and Data Structures Laboratory">
+            <span class="course-name">Programming and Data Structures Laboratory</span>
+            <span class="course-code">CS19003</span>
+        </button>
+        <button class="course-card" data-action="show-details" data-course-id="sem02Modal5" aria-label="View details for Chemistry">
+            <span class="course-name">Chemistry</span>
+            <span class="course-code">CY11003</span>
+        </button>
+        <button class="course-card" data-action="show-details" data-course-id="sem02Modal6" aria-label="View details for Chemistry Laboratory">
+            <span class="course-name">Chemistry Laboratory</span>
+            <span class="course-code">CY19003</span>
+        </button>
+        <button class="course-card" data-action="show-details" data-course-id="sem02Modal7" aria-label="View details for English for Communication">
+            <span class="course-name">English for Communication</span>
+            <span class="course-code">HS13003</span>
+        </button>
+        <button class="course-card" data-action="show-details" data-course-id="sem02Modal8" aria-label="View details for Science of Living Systems">
+            <span class="course-name">Science of Living Systems</span>
+            <span class="course-code">BS10003</span>
+        </button></div>
+                </div>
+                <div id="semester-section-3" class="semester-section">
+                    <h3 class="semester-title">Semester 3</h3>
+                    <div class="course-buttons-grid">
+        <button class="course-card" data-action="show-details" data-course-id="sem03Modal1" aria-label="View details for Probability and Statistics">
+            <span class="course-name">Probability and Statistics</span>
+            <span class="course-code">MA20205</span>
+        </button>
+        <button class="course-card" data-action="show-details" data-course-id="sem03Modal2" aria-label="View details for Discrete Structures">
+            <span class="course-name">Discrete Structures</span>
+            <span class="course-code">CS21201</span>
+        </button>
+        <button class="course-card" data-action="show-details" data-course-id="sem03Modal3" aria-label="View details for Algorithms-I">
+            <span class="course-name">Algorithms-I</span>
+            <span class="course-code">CS21203</span>
+        </button>
+        <button class="course-card" data-action="show-details" data-course-id="sem03Modal4" aria-label="View details for Algorithms Laboratory">
+            <span class="course-name">Algorithms Laboratory</span>
+            <span class="course-code">CS29203</span>
+        </button>
+        <button class="course-card" data-action="show-details" data-course-id="sem03Modal5" aria-label="View details for Basic Electronics">
+            <span class="course-name">Basic Electronics</span>
+            <span class="course-code">EC21201</span>
+        </button>
+        <button class="course-card" data-action="show-details" data-course-id="sem03Modal6" aria-label="View details for Basic Electronics Laboratory">
+            <span class="course-name">Basic Electronics Laboratory</span>
+            <span class="course-code">EC29201</span>
+        </button>
+        <button class="course-card" data-action="show-details" data-course-id="sem03Modal7" aria-label="View details for Signals and Systems">
+            <span class="course-name">Signals and Systems</span>
+            <span class="course-code">EE21201</span>
+        </button></div>
+                </div>
+                <div id="semester-section-4" class="semester-section">
+                    <h3 class="semester-title">Semester 4</h3>
+                    <div class="course-buttons-grid">
+        <button class="course-card" data-action="show-details" data-course-id="sem04Modal1" aria-label="View details for Formal Language and Automata Theory">
+            <span class="course-name">Formal Language and Automata Theory</span>
+            <span class="course-code">CS21204</span>
+        </button>
+        <button class="course-card" data-action="show-details" data-course-id="sem04Modal2" aria-label="View details for Systems Programming Laboratory">
+            <span class="course-name">Systems Programming Laboratory</span>
+            <span class="course-code">CS29206</span>
+        </button>
+        <button class="course-card" data-action="show-details" data-course-id="sem04Modal3" aria-label="View details for Software Engineering">
+            <span class="course-name">Software Engineering</span>
+            <span class="course-code">CS20202</span>
+        </button>
+        <button class="course-card" data-action="show-details" data-course-id="sem04Modal4" aria-label="View details for Software Engineering Laboratory">
+            <span class="course-name">Software Engineering Laboratory</span>
+            <span class="course-code">CS29202</span>
+        </button>
+        <button class="course-card" data-action="show-details" data-course-id="sem04Modal5" aria-label="View details for Switching Circuits and Logic Design">
+            <span class="course-name">Switching Circuits and Logic Design</span>
+            <span class="course-code">CS21202</span>
+        </button>
+        <button class="course-card" data-action="show-details" data-course-id="sem04Modal6" aria-label="View details for Switching Circuits Laboratory">
+            <span class="course-name">Switching Circuits Laboratory</span>
+            <span class="course-code">CS29204</span>
+        </button>
+        <button class="course-card" data-action="show-details" data-course-id="sem04Modal7" aria-label="View details for Environmental Humanities">
+            <span class="course-name">Environmental Humanities</span>
+            <span class="course-code">HS20016</span>
+        </button>
+        <button class="course-card" data-action="show-details" data-course-id="sem04Modal8" aria-label="View details for Operation Research">
+            <span class="course-name">Operation Research</span>
+            <span class="course-code">MA30014</span>
+        </button></div>
+                </div>
+                <div id="semester-section-5" class="semester-section">
+                    <h3 class="semester-title">Semester 5</h3>
+                    <div class="course-buttons-grid">
+        <button class="course-card" data-action="show-details" data-course-id="sem05Modal1" aria-label="View details for Algorithms-II">
+            <span class="course-name">Algorithms-II</span>
+            <span class="course-code">CS31005</span>
+        </button>
+        <button class="course-card" data-action="show-details" data-course-id="sem05Modal2" aria-label="View details for Compilers">
+            <span class="course-name">Compilers</span>
+            <span class="course-code">CS31003</span>
+        </button>
+        <button class="course-card" data-action="show-details" data-course-id="sem05Modal3" aria-label="View details for Compilers Laboratory">
+            <span class="course-name">Compilers Laboratory</span>
+            <span class="course-code">CS39003</span>
+        </button>
+        <button class="course-card" data-action="show-details" data-course-id="sem05Modal4" aria-label="View details for Computer Organization and Architecture">
+            <span class="course-name">Computer Organization and Architecture</span>
+            <span class="course-code">CS31007</span>
+        </button>
+        <button class="course-card" data-action="show-details" data-course-id="sem05Modal5" aria-label="View details for Computer Organization Laboratory">
+            <span class="course-name">Computer Organization Laboratory</span>
+            <span class="course-code">CS39001</span>
+        </button>
+        <button class="course-card" data-action="show-details" data-course-id="sem05Modal6" aria-label="View details for Machine Learning">
+            <span class="course-name">Machine Learning</span>
+            <span class="course-code">CS60050</span>
+        </button>
+        <button class="course-card" data-action="show-details" data-course-id="sem05Modal7" aria-label="View details for Linear Algebra for AI and ML">
+            <span class="course-name">Linear Algebra for AI and ML</span>
+            <span class="course-code">AI61003</span>
+        </button></div>
+                </div>
+                <div id="semester-section-6" class="semester-section">
+                    <h3 class="semester-title">Semester 6</h3>
+                    <div class="course-buttons-grid">
+        <button class="course-card" data-action="show-details" data-course-id="sem06Modal1" aria-label="View details for Operating Systems">
+            <span class="course-name">Operating Systems</span>
+            <span class="course-code">CS31202</span>
+        </button>
+        <button class="course-card" data-action="show-details" data-course-id="sem06Modal2" aria-label="View details for Operating Systems Laboratory">
+            <span class="course-name">Operating Systems Laboratory</span>
+            <span class="course-code">CS39002</span>
+        </button>
+        <button class="course-card" data-action="show-details" data-course-id="sem06Modal3" aria-label="View details for Database Management Systems">
+            <span class="course-name">Database Management Systems</span>
+            <span class="course-code">CS30202</span>
+        </button>
+        <button class="course-card" data-action="show-details" data-course-id="sem06Modal4" aria-label="View details for Database Management Systems Laboratory">
+            <span class="course-name">Database Management Systems Laboratory</span>
+            <span class="course-code">CS39202</span>
+        </button>
+        <button class="course-card" data-action="show-details" data-course-id="sem06Modal5" aria-label="View details for Computer Networks">
+            <span class="course-name">Computer Networks</span>
+            <span class="course-code">CS31204</span>
+        </button>
+        <button class="course-card" data-action="show-details" data-course-id="sem06Modal6" aria-label="View details for Networks Laboratory">
+            <span class="course-name">Networks Laboratory</span>
+            <span class="course-code">CS39006</span>
+        </button>
+        <button class="course-card" data-action="show-details" data-course-id="sem06Modal7" aria-label="View details for Deep Learning">
+            <span class="course-name">Deep Learning</span>
+            <span class="course-code">CS60010</span>
+        </button></div>
+                </div>
+                <div id="semester-section-7" class="semester-section">
+                    <h3 class="semester-title">Semester 7</h3>
+                    <div class="course-buttons-grid">
+        <button class="course-card" data-action="show-details" data-course-id="sem07Modal1" aria-label="View details for Object Oriented Systems">
+            <span class="course-name">Object Oriented Systems</span>
+            <span class="course-code">CS60059</span>
+        </button>
+        <button class="course-card" data-action="show-details" data-course-id="sem07Modal2" aria-label="View details for Theory and Applications of Blockchain">
+            <span class="course-name">Theory and Applications of Blockchain</span>
+            <span class="course-code">CS61065</span>
+        </button>
+        <button class="course-card" data-action="show-details" data-course-id="sem07Modal3" aria-label="View details for Artificial Intelligence for Economics">
+            <span class="course-name">Artificial Intelligence for Economics</span>
+            <span class="course-code">AI60003</span>
+        </button>
+        <button class="course-card" data-action="show-details" data-course-id="sem07Modal4" aria-label="View details for Intercultural Communication">
+            <span class="course-name">Intercultural Communication</span>
+            <span class="course-code">HS30036</span>
+        </button>
+        <button class="course-card" data-action="show-details" data-course-id="sem07Modal5" aria-label="View details for Frugal Engineering">
+            <span class="course-name">Frugal Engineering</span>
+            <span class="course-code">EP60044</span>
+        </button></div>
+                </div>
+                <div id="semester-section-8" class="semester-section">
+                    <h3 class="semester-title">Semester 8</h3>
+                    <div class="course-buttons-grid">
+        <button class="course-card" data-action="show-details" data-course-id="sem08Modal1" aria-label="View details for High Performance in Computer Architecture">
+            <span class="course-name">High Performance in Computer Architecture</span>
+            <span class="course-code">CS60003</span>
+        </button>
+        <button class="course-card" data-action="show-details" data-course-id="sem08Modal2" aria-label="View details for Big Data Processing">
+            <span class="course-name">Big Data Processing</span>
+            <span class="course-code">AI60004</span>
+        </button>
+        <button class="course-card" data-action="show-details" data-course-id="sem08Modal3" aria-label="View details for Computational Biophysics: Algorithms to Applications">
+            <span class="course-name">Computational Biophysics: Algorithms to Applications</span>
+            <span class="course-code">CS61060</span>
+        </button>
+        <button class="course-card" data-action="show-details" data-course-id="sem08Modal4" aria-label="View details for Hardware Security">
+            <span class="course-name">Hardware Security</span>
+            <span class="course-code">CS60004</span>
+        </button>
+        <button class="course-card" data-action="show-details" data-course-id="sem08Modal5" aria-label="View details for Engineering Design Process">
+            <span class="course-name">Engineering Design Process</span>
+            <span class="course-code">EP60042</span>
+        </button></div>
+                </div>
+                <div id="semester-section-9" class="semester-section">
+                    <h3 class="semester-title">Semester 9</h3>
+                    <div class="course-buttons-grid">
+        <button class="course-card" data-action="show-details" data-course-id="sem09Modal1" aria-label="View details for Social Computing">
+            <span class="course-name">Social Computing</span>
+            <span class="course-code">CS60017</span>
+        </button>
+        <button class="course-card" data-action="show-details" data-course-id="sem09Modal2" aria-label="View details for Scalable Data Mining">
+            <span class="course-name">Scalable Data Mining</span>
+            <span class="course-code">CS60021</span>
+        </button>
+        <button class="course-card" data-action="show-details" data-course-id="sem09Modal3" aria-label="View details for Data Analytics">
+            <span class="course-name">Data Analytics</span>
+            <span class="course-code">CS610161</span>
+        </button></div>
+                </div>
+                <div id="semester-section-10" class="semester-section">
+                    <h3 class="semester-title">Semester 10</h3>
+                    <div class="course-buttons-grid">
+        <button class="course-card" data-action="show-details" data-course-id="sem10Modal1" aria-label="View details for Natural Language Processing">
+            <span class="course-name">Natural Language Processing</span>
+            <span class="course-code">CS60075</span>
+        </button>
+        <button class="course-card" data-action="show-details" data-course-id="sem10Modal2" aria-label="View details for Advanced Topics in Speech Processing">
+            <span class="course-name">Advanced Topics in Speech Processing</span>
+            <span class="course-code">CS60116</span>
+        </button></div>
+                </div>
+                <div id="semester-section-11" class="semester-section">
+                    <h3 class="semester-title">Depth Elective</h3>
+                    <div class="course-buttons-grid">
+        <button class="course-card" data-action="show-details" data-course-id="sem11Modal1" aria-label="View details for Information Retrieval">
+            <span class="course-name">Information Retrieval</span>
+            <span class="course-code">CS60092</span>
+        </button></div>
+                </div>
+                <div id="semester-section-12" class="semester-section">
+                    <h3 class="semester-title">Breadth Elective</h3>
+                    <div class="course-buttons-grid">
+        <button class="course-card" data-action="show-details" data-course-id="sem12Modal1" aria-label="View details for Econometric Analysis">
+            <span class="course-name">Econometric Analysis</span>
+            <span class="course-code">HS30033</span>
+        </button>
+        <button class="course-card" data-action="show-details" data-course-id="sem12Modal2" aria-label="View details for Statistical Inference">
+            <span class="course-name">Statistical Inference</span>
+            <span class="course-code">MA20008</span>
+        </button>
+        <button class="course-card" data-action="show-details" data-course-id="sem12Modal3" aria-label="View details for Stochastic Processes and Applications">
+            <span class="course-name">Stochastic Processes and Applications</span>
+            <span class="course-code">MA20208</span>
+        </button></div>
+                </div></div>
+        </section>
+
+        <!-- Course Details View: Displays detailed information for a single course -->
+        <section id="courseDetailsView" class="view hidden">
+            <!-- Back button to navigate to the previous view -->
+            <button class="btn btn-secondary back-btn" data-action="go-back">
+                <i class="fas fa-arrow-left"></i> Back
+            </button>
+            <div id="courseDetailsContent" class="card"></div>
+        </section>
+
+        <!-- Search Results View: Displays courses matching the search query -->
+        <section id="searchResultsView" class="view hidden">
+            <!-- Back button to return to the home screen -->
+            <button class="btn btn-secondary back-btn" data-action="show-home">
+                <i class="fas fa-arrow-left"></i> Back to Home
+            </button>
+            <div id="searchResultsContent" class="card">
+                <h2 class="section-title" id="searchResultsTitle">Search Results</h2>
+                <div id="searchResultsList"></div>
+                <p id="noSearchResults" class="hidden">No courses found matching your search.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content-grid">
+            <div class="footer-section">
+                <h4>About this Site</h4>
+                <p>This website aggregates academic materials for the core subjects of the <a href="http://cse.iitkgp.ac.in/" target="_blank">CSE Department</a> at <a href="http://www.iitkgp.ac.in/" target="_blank">IIT Kharagpur</a>, curated for the Batch of 2020.</p>
+            </div>
+            <div class="footer-section">
+                <h4>About Me</h4>
+                <p>I'm <a href="http://cse.iitkgp.ac.in/~gopal/" target="_blank">Gopal</a>, a 2025 Dual Degree graduate from the CSE Department at IIT Kharagpur.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Feel free to reach out with any queries or suggestions.</p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/garggopal2001/" target="_blank" class="social-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/garggopal2001/" target="_blank" class="social-btn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/garggopal2001" target="_blank" class="social-btn" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Made with <span class="heart-icon"><i class="fa-solid fa-heart"></i></span> for Kgpians</p>
+            <p class="dev-note">Developed with the assistance of Sonnet 4 and 2.5 Flash</p>
+        </div>
+    </footer>
+
+    <!-- Button to scroll back to the top of the page -->
+    <button id="scrollTopBtn" class="scroll-to-top hidden" data-action="scroll-top" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+    <!-- The main application script -->
+    <script src="script.js"></script>
+
+</body></html>

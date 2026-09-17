@@ -1,0 +1,255 @@
+<!DOCTYPE html><html><head>
+		<script defer="" src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+		<meta name="viewport" content="width=device-width">
+		<meta name="description" content="Chat with other students in your classes, plan your schedule, and get notified when classes have open seats.">
+		<meta property="og:image" content="/homepage/img/coursiclePhotoForBots.png">
+		<meta name="twitter:card" content="summary_large_image"> <!-- Needed to make image big in some places, like Discord -->
+		<link rel="icon" href="/homepage/img/coursicleCLogoMedium.png"> <!-- For social sharing, like Snapchat, GroupMe -->
+		<title>Coursicle | Plan your schedule and get into classes</title>
+	<script> 
+		window.captchaCaller = "fullPage"; 
+	</script><link href="https://fonts.googleapis.com/css?family=Montserrat&amp;display=swap" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><script>
+	function onSubmitCaptcha(token) {
+		result = {}
+		$("#captchaTitle").text("Verifying humanity...")
+		$.ajax({
+				url: '/shared/captcha/confirmCaptcha.php',
+				method: 'POST',
+				data: {gCapRes : grecaptcha.getResponse()},
+				success: function(msg){
+					setTimeout(function() {
+						$("#captchaTitle").text("Ok, you seem human.")
+						setTimeout(function() {
+								
+							// this case covers both scraping and DDoS protection
+							if(window.captchaCaller == "fullPage"){
+								
+								// generally scraping protection related captchas
+								if(!window.location.search.includes("?r=")){
+									if(!window.location.href.includes("captcha.php")){
+										// then indeed it was scraping protection that rewrote the html
+										// on the page, so the url should already be what they want to access
+										// now that they've passed the captcha, refreshing should get them what they want
+										location.reload(true);
+									}else{
+										// then they're pointing to the captcha page already, and we have no way of determining 
+										// what url they were going for (short of trying to read headers), so let's just take 
+										// them to the homepage so they at least know they made it past the captcha
+										window.location.href = window.location.origin + "?dismissMyself=true";
+									}
+								// DDoS protection related captchas
+								}else{
+									// try to read the url that our DDoS protection url encoded and put in the url and direct them to it
+									try {
+										window.location.href = decodeURIComponent(window.location.search.split("?r=")[1]);
+									}catch(err) {
+										// fallback to redirecting them to the homepage if we fail to decode the redirect
+										// at least this way they'll know they passed the captcha
+										window.location.href = window.location.origin;
+									}
+								}
+
+								return;
+							}
+
+							// this section handles all ajax related calls on the web app where they may encounter the captcha 
+							// because of scraping or DDoS protection. We hide the captcha and then make the request they were 
+							// trying to make to show them that the captcha completion actually got them access to what they wanted
+							// everything else that calls the captcha would have hit 
+							$('#captchaFrame').hide();
+							$("#captchaTitle").text("Prove your humanity.")
+							makeGetClassesRequest(window.getClassesWasScrollingWhenCaptchad);
+
+						}, 250);
+					}, 350);
+				}
+		});
+	}
+
+	function onloadCallback() {
+	    grecaptcha.render('recaptcha', {
+      	'sitekey' : '6LfMZq4UAAAAAFpqPUkr_6vvyJ0nNuZDh-EaRzqK'
+    	});
+  	}
+</script><style>
+	#classSearchResultsContainer #captchaSubFrame #recaptcha{
+		transform: scale(0.75);
+	}
+
+	#captchaSubFrame, #captchaTitle{
+		font-family: 'Montserrat', sans-serif;
+	}
+
+	#captchaTitle {
+		padding-top: 100px;
+	}
+
+	#contactLink {
+	    color: #36ADFE;
+	    text-decoration: none;
+	    white-space: nowrap; /* prevents the words from being broken up */
+	}
+
+	#contactLink:hover {
+	    color: #337ab7;
+	}
+
+	.androids {
+		margin-top: 50px;
+		margin-bottom: 50px;
+	}
+	.first {
+		color: #FF9AA2;
+		-webkit-animation: fa-spin 3s infinite linear;
+			animation: fa-spin 3s infinite linear;
+	}
+	.second {
+		color: #FFB7B2;
+		-webkit-animation: fa-spin 3s infinite linear;
+			animation: fa-spin 3s infinite linear;
+			animation-delay: .5s;
+			animation-direction: reverse;
+	}
+	.third {
+		color: #FFDAC1;
+		-webkit-animation: fa-spin 3s infinite linear;
+			animation: fa-spin 3s infinite linear;
+			animation-delay: 1s;
+	}
+	.fourth {
+		color: #E2F0CB;
+		-webkit-animation: fa-spin 3s infinite linear;
+			animation: fa-spin 3s infinite linear;
+			animation-delay: 1.5s;
+			animation-direction: reverse;
+	}
+	.fifth {
+		color: #B5EAD7;
+		-webkit-animation: fa-spin 3s infinite linear;
+			animation: fa-spin 3s infinite linear;
+			animation-delay: 2s;
+	}
+	.sixth {
+		color: #C7CEEA;
+		-webkit-animation: fa-spin 3s infinite linear;
+			animation: fa-spin 3s infinite linear;
+			animation-delay: 2.5s;
+			animation-direction: reverse;
+	}
+	.fa-android {
+		padding: 30px;
+	} 
+	#recaptcha {
+		margin-top: 80px;
+	}
+	#subtext{
+		margin-top: 50px;
+		font-size: 16px;
+		padding-bottom: 40px;
+	}
+
+	#classSearchResultsContainer #subtext{
+		font-size: 13px;
+	}
+
+	@media(max-width: 767px) {
+		#captchaTitle {
+			padding-top: 30px;
+		}
+
+		.fifth, .sixth {
+			display: none;
+		}
+	}
+	@media(max-width: 510px) {
+		.third, .fourth {
+			display: none;
+		}
+		#subtext{
+			margin-top:30px;
+		}
+	}
+
+	#classSearchResultsContainer #captchaTitle{
+		padding-top: 11px;
+		font-size: 19px;
+	}
+
+	#classSearchResultsContainer .fa-android{
+		padding: 10px;
+	}
+
+	#classSearchResultsContainer .androids{
+		font-size: 10px;
+		margin-top: 0px;
+	}
+
+	#classSearchResultsContainer #recaptcha{
+		margin-top: 30px;
+	}
+
+	#classSearchResultsContainer #subtext{
+		margin-top: 15px;
+	}
+
+	#classSearchResultsContainer #subtext{
+		padding-left: 20px;
+    	padding-right: 20px;
+	}
+
+</style></head>
+
+	
+
+	
+
+
+
+<!-- Custom Functions -->
+
+
+<!-- Custom Styling -->
+
+
+<body style=""><div id="captchaSubFrame">
+	
+	<h1 id="captchaTitle" align="center">You don't smell human...</h1>
+
+	<span id="uniqueTagIndicatingCaptchaReturned"></span>
+	
+	<div class="androids" align="center">
+		<i class="fa fa-android fa-spin fa-5x first"></i>
+		<i class="fa fa-android fa-spin fa-5x second"></i>
+		<i class="fa fa-android fa-spin fa-5x third"></i>
+		<i class="fa fa-android fa-spin fa-5x fourth"></i>
+		<i class="fa fa-android fa-spin fa-5x fifth"></i>
+		<i class="fa fa-android fa-spin fa-5x sixth"></i>
+	</div>
+	
+	<!-- START Google recaptcha v2 test-->
+     <div id="recaptcha" class="g-recaptcha" data-callback="onSubmitCaptcha" align="center">
+     </div>
+
+     <p align="center" id="subtext">Want to buy access to all our course data? <a id="contactLink" onclick="contactLinkClicked()" href="mailto:team@coursicle.com?subject=Interest in course data">Click here</a>.</p>
+
+	<script>
+		function contactLinkClicked(){
+			$.ajax({
+				url: '/shared/api/log.php',
+				type: 'POST',
+				dataType: 'json',
+				data: {
+					client: navigator.userAgent,
+					category: "dataSales",
+					action: "contactUsClicked"
+				},
+				success(response) {}
+			});
+		}
+	</script>
+
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&amp;render=explicit" async="" defer=""></script>
+
+</div>
+
+</body></html>

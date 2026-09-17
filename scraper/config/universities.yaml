@@ -1,0 +1,160 @@
+# Universities to search, in priority order (lower `priority` = searched first).
+# `region: india` is processed before `region: global` by the pipeline.
+# `aliases` feed the keyword-query generator; `domains` bias result filtering.
+
+universities:
+  # ---- India (priority 1xx) ----
+  - name: IIT Madras
+    slug: iit_madras
+    region: india
+    priority: 100
+    aliases: ["IIT Madras", "IITM", "Indian Institute of Technology Madras"]
+    domains: [iitm.ac.in, cse.iitm.ac.in, ee.iitm.ac.in]
+
+  - name: IIT Bombay
+    slug: iit_bombay
+    region: india
+    priority: 101
+    aliases: ["IIT Bombay", "IITB", "Indian Institute of Technology Bombay"]
+    domains: [iitb.ac.in, cse.iitb.ac.in]
+
+  - name: IIT Delhi
+    slug: iit_delhi
+    region: india
+    priority: 102
+    aliases: ["IIT Delhi", "IITD", "Indian Institute of Technology Delhi"]
+    domains: [iitd.ac.in, cse.iitd.ac.in]
+
+  - name: IIT Kanpur
+    slug: iit_kanpur
+    region: india
+    priority: 103
+    aliases: ["IIT Kanpur", "IITK", "Indian Institute of Technology Kanpur"]
+    domains: [iitk.ac.in, cse.iitk.ac.in]
+
+  - name: IIT Kharagpur
+    slug: iit_kharagpur
+    region: india
+    priority: 104
+    aliases: ["IIT Kharagpur", "IIT KGP", "Indian Institute of Technology Kharagpur"]
+    domains: [iitkgp.ac.in, cse.iitkgp.ac.in]
+
+  - name: IIT Guwahati
+    slug: iit_guwahati
+    region: india
+    priority: 105
+    aliases: ["IIT Guwahati", "IITG", "Indian Institute of Technology Guwahati"]
+    domains: [iitg.ac.in, cse.iitg.ac.in]
+
+  - name: IIT Hyderabad
+    slug: iit_hyderabad
+    region: india
+    priority: 106
+    aliases: ["IIT Hyderabad", "IITH", "Indian Institute of Technology Hyderabad"]
+    domains: [iith.ac.in, cse.iith.ac.in]
+
+  - name: IIT Roorkee
+    slug: iit_roorkee
+    region: india
+    priority: 107
+    aliases: ["IIT Roorkee", "IITR", "Indian Institute of Technology Roorkee"]
+    domains: [iitr.ac.in, cse.iitr.ac.in]
+
+  - name: IIT Palakkad
+    slug: iit_palakkad
+    region: india
+    priority: 108
+    aliases: ["IIT Palakkad", "Indian Institute of Technology Palakkad"]
+    domains: [iitpkd.ac.in]
+
+  - name: Indian Institute of Science
+    slug: iisc
+    region: india
+    priority: 109
+    aliases: ["IISc", "Indian Institute of Science", "IISc Bangalore"]
+    domains: [iisc.ac.in, csa.iisc.ac.in]
+
+  - name: IIIT Hyderabad
+    slug: iiit_hyderabad
+    region: india
+    priority: 110
+    aliases: ["IIIT Hyderabad", "IIITH", "International Institute of Information Technology Hyderabad"]
+    domains: [iiit.ac.in]
+
+  - name: NPTEL
+    slug: nptel
+    region: india
+    priority: 120
+    aliases: ["NPTEL", "Swayam NPTEL"]
+    domains: [nptel.ac.in]
+
+  # ---- Global (priority 2xx) ----
+  - name: Stanford University
+    slug: stanford
+    region: global
+    priority: 200
+    aliases: ["Stanford", "Stanford University"]
+    domains: [stanford.edu, cs.stanford.edu]
+
+  - name: MIT
+    slug: mit
+    region: global
+    priority: 201
+    aliases: ["MIT", "Massachusetts Institute of Technology"]
+    domains: [mit.edu, ocw.mit.edu, csail.mit.edu]
+
+  - name: Harvard University
+    slug: harvard
+    region: global
+    priority: 202
+    aliases: ["Harvard", "Harvard University"]
+    domains: [harvard.edu, seas.harvard.edu]
+
+  - name: UC Berkeley
+    slug: uc_berkeley
+    region: global
+    priority: 203
+    aliases: ["UC Berkeley", "Berkeley", "University of California Berkeley"]
+    domains: [berkeley.edu, eecs.berkeley.edu]
+
+  - name: Carnegie Mellon University
+    slug: cmu
+    region: global
+    priority: 204
+    aliases: ["CMU", "Carnegie Mellon", "Carnegie Mellon University"]
+    domains: [cmu.edu, cs.cmu.edu]
+
+  - name: Princeton University
+    slug: princeton
+    region: global
+    priority: 205
+    aliases: ["Princeton", "Princeton University"]
+    domains: [princeton.edu, cs.princeton.edu]
+
+  - name: University of Oxford
+    slug: oxford
+    region: global
+    priority: 206
+    aliases: ["Oxford", "University of Oxford"]
+    domains: [ox.ac.uk, cs.ox.ac.uk]
+
+  - name: University of Cambridge
+    slug: cambridge
+    region: global
+    priority: 207
+    aliases: ["Cambridge", "University of Cambridge"]
+    domains: [cam.ac.uk, cl.cam.ac.uk]
+
+  - name: ETH Zurich
+    slug: eth_zurich
+    region: global
+    priority: 208
+    aliases: ["ETH Zurich", "ETH Zürich", "ETHZ"]
+    domains: [ethz.ch, inf.ethz.ch]
+
+  - name: National University of Singapore
+    slug: nus
+    region: global
+    priority: 209
+    aliases: ["NUS", "National University of Singapore"]
+    domains: [nus.edu.sg, comp.nus.edu.sg]

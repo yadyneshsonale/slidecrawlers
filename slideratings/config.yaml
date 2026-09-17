@@ -1,0 +1,34 @@
+# slideratings configuration
+paths:
+  data_dir: data            # downloaded slide decks: data/{uni}-{num}/{N}.pdf
+  work_dir: work            # caches, logs, scratch
+  db_path: slideratings.db  # SQLite store
+
+http:
+  user_agent: "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+  timeout_s: 30
+  max_retries: 3
+  min_interval_s: 1.2        # per-host politeness throttle
+  cache_max_age_s: 604800    # 7 days
+  render_fallback: true      # use Playwright when a page needs JS
+
+ccr:
+  base: https://collegeclassreviews.com
+  max_course_pages: 200
+
+rmp:
+  max_workers: 4
+  request_delay_s: 0.4
+
+slides:
+  max_search_results: 8
+  max_decks: 60
+  max_index_follow: 3
+  use_browser_search: true
+  max_prof_courses: 6        # per professor, top-N courses (by rating count) to search slides for
+
+verify:
+  min_pages: 3
+  slide_min_aspect_ratio: 1.4
+  notes_max_chars_per_page: 900
+  enforce_slide_likeness: false

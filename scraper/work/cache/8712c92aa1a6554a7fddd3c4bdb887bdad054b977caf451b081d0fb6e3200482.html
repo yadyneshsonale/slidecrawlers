@@ -1,0 +1,235 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Probabilistic Machine Learning (CS772A) - IIT Kanpur</title>
+<link rel="stylesheet" href="./PML_files/main.css" type="text/css">
+</head>
+<body bgcolor="#B18AD1">
+
+<table width="100%">
+<tbody><tr>
+<td>
+<h1>Probabilistic Machine Learning<br>
+CS772A<br>
+2025-26 (even semester)</h1></td>
+<td align="right"><a href="http://www.iitk.ac.in/"><img src="./PML_files/iitk_logo.jpg" valign="top" align="right" border="0" height="130" width="150"></a></td>
+</tr>
+</tbody></table>
+<hr>
+Class Timings: Mon/Wed 18:00 - 19:15<br>
+Class Venue: RM-101<br>
+Instructor: <a href="http://www.cse.iitk.ac.in/users/piyush" target="_blank">Piyush Rai</a> (Office RM-502, email: piyush AT cse DOT iitk DOT ac DOT in)<br>
+Office Hours: By appointment (RM-502)<br>
+Q/A Forum: <a href=" https://piazza.com/iitk.ac.in/secondsemester2026/cs772/home">Piazza</a> <br>
+<h3>Background and Course Description</h3>
+
+Probabilistic models for data are ubiquitous in many areas of science and engineering, and specific domains such as visual and language understanding, finance, healthcare, biology, climate informatics, etc. This course will be an advanced introduction to probabilistic models of data (often through case studies from these domains) and a deep-dive into advanced inference and optimization methods used to learn such probabilistic models. This is an advanced course and ideally suited for student who are doing research in this area or are interested in doing research in this area.
+
+<h3>Pre-requisites</h3>
+
+Instructor's consent. The course expects students to have a strong prior background in machine learning  (ideally through formal coursework, such as CS771), and ideally also some prior exposure/appreciation to basic principles of probabilistic modeling. The students are expected to have strong foundations in probability and statistics, linear algebra, and optimization, and must also be proficient in programming in Python.
+
+<h3>Grading</h3>
+
+There will be 2 homeworks (30%), 2 quizzes (20%), a mid-sem exam (20%), and an end-sem exam (30%).
+
+<h3>Reference materials</h3>
+
+There will not be any dedicated textbook for this course. We will use lecture slides/notes, monographs, tutorials, and papers for the topics that will be covered in this course. Some recommended, although not required, reference books are listed below:
+<ul>
+	<li>Kevin Murphy, <a href="https://probml.github.io/pml-book/book1.html" target="_blank">Probabilistic Machine Learning: An Introduction</a> (PML-1), MIT Press, 2022 (freely available online)</li>
+	<li>Kevin Murphy, <a href="https://probml.github.io/pml-book/book2.html" target="_blank">Probabilistic Machine Learning: Advanced Topics</a> (PML-2), MIT Press, 2022 (freely available online)</li>
+	<li>Christopher Bishop, <a href="https://www.microsoft.com/en-us/research/people/cmbishop/prml-book/" target="_blank">Pattern Recognition and Machine Learning</a> (PRML), Springer, 2007 (freely available online)</li>
+	<li>Christopher Bishop and Hugh Bishop, <a href="https://link.springer.com/book/10.1007/978-3-031-45468-4" target="_blank">Deep Learning: Foundations and Concepts</a> (DLFC), Springer, 2023 (freely available online)</li>
+</ul> 
+
+<h3><a name="schedule"></a>Schedule</h3>
+<table width="100%" border="1">
+<tbody><tr>
+<td><strong>Lec. No.</strong></td>
+<td><strong>Topics</strong></td>
+<td><strong>Readings/References/Comments</strong></td>
+<td><strong>Slides/Notes</strong></td>
+</tr>
+<tr>
+<td>1</td>
+<td>Course Logistics, Intro to Probabilistic Machine Learning</td>
+<td><a href="https://www.cse.iitk.ac.in/users/piyush/courses/PML_Resources/PML_Ghaharamani2015.pdf" target="_blank">A review article on PML and AI</a>, 
+<a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_spring25/slides/probability-basics.pdf" target="_blank">Probability and statistics refresher slides</a></td>
+<td><a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_spring26/slides/CS772-Lec1-Spring26.pptx" target="_blank">PPTX slides</a>, 
+<a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_spring26/slides/CS772-Lec1-Spring26.pdf" target="_blank">PDF slides</a></td>
+</tr>
+<tr>
+<td>2</td>
+<td>Getting Started: PML Basics</td>
+<td>PML-1 (Section 4.6), Optional/recommended: Chapter 2 and Appendix B of PRML</td>
+<td><a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_spring26/slides/CS772-Lec2-Spring26.pptx" target="_blank">PPTX slides</a>, 
+<a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_spring26/slides/CS772-Lec2-Spring26.pdf" target="_blank">PDF slides</a></td>
+</tr>
+<tr>
+<td>3</td>
+<td>Parameter Estimation and Prediction in Probabilistic Models</td>
+<td>PML-1 (Section 4.6), Optional/recommended: Chapter 2 and Appendix B of PRML</td>
+<td><a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_spring26/slides/CS772-Lec3-Spring26.pptx" target="_blank">PPTX slides</a>, 
+<a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_spring26/slides/CS772-Lec3-Spring26.pdf" target="_blank">PDF slides</a></td>
+</tr>
+<tr>
+<td>4</td>
+<td>Parameter Estimation and Prediction (contd)</td>
+<td></td>
+<td><a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_spring26/slides/CS772-Lec4-Spring26.pptx" target="_blank">PPTX slides</a>, 
+<a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_spring26/slides/CS772-Lec4-Spring26.pdf" target="_blank">PDF slides</a></td>
+</tr>
+<tr>
+<td>5</td>
+<td>Probabilistic Supervised Learning</td>
+<td><a href="https://www.cse.iitk.ac.in/users/piyush/courses/readings/Bayes_Tipping.pdf" target="_blank">Bayesian inference tutorial</a> (Section 1-3)</td>
+<td><a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_spring26/slides/CS772-Lec5-Spring26.pptx" target="_blank">PPTX slides</a>, 
+<a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_spring26/slides/CS772-Lec5-Spring26.pdf" target="_blank">PDF slides</a></td>
+</tr>
+<tr>
+<td>6</td>
+<td>Probabilistic Supervised Learning (contd)</td>
+<td><a href="https://www.cse.iitk.ac.in/users/piyush/courses/readings/Bayes_Tipping.pdf" target="_blank">Bayesian inference tutorial</a> (Section 1-3)</td>
+<td><a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_spring26/slides/CS772-Lec6-Spring26.pptx" target="_blank">PPTX slides</a>, 
+<a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_spring26/slides/CS772-Lec6-Spring26.pdf" target="_blank">PDF slides</a></td>
+</tr>
+<tr>
+<td>7</td>
+<td>Exponential Family Distributions</td>
+<td></td>
+<td><a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_spring26/slides/CS772-Lec7-Spring26.pptx" target="_blank">PPTX slides</a>, 
+<a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_spring26/slides/CS772-Lec7-Spring26.pdf" target="_blank">PDF slides</a></td>
+</tr>
+<tr>
+<td>8</td>
+<td>Generative Supervised Learning</td>
+<td></td>
+<td><a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_spring26/slides/CS772-Lec8-Spring26.pptx" target="_blank">PPTX slides</a>, 
+<a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_spring26/slides/CS772-Lec8-Spring26.pdf" target="_blank">PDF slides</a></td>
+</tr>
+<tr>
+<td>9</td>
+<td>Gaussian Process (Bayesian Learning meets Kernels)</td>
+<td></td>
+<td><a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_spring26/slides/CS772-Lec9-Spring26.pptx" target="_blank">PPTX slides</a>, 
+<a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_spring26/slides/CS772-Lec9-Spring26.pdf" target="_blank">PDF slides</a></td>
+</tr>
+<tr>
+<td>10</td>
+<td>GP (wrap-up) and Probabilistic Models with Nuisance Variables</td>
+<td></td>
+<td><a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_spring26/slides/CS772-Lec10-Spring26.pptx" target="_blank">PPTX slides</a>, 
+<a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_spring26/slides/CS772-Lec10-Spring26.pdf" target="_blank">PDF slides</a></td>
+</tr>
+<tr>
+<td>11</td>
+<td>Probabilistic Models with Nuisance Variables (contd)</td>
+<td></td>
+<td><a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_spring26/slides/CS772-Lec11-Spring26.pptx" target="_blank">PPTX slides</a>, 
+<a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_spring26/slides/CS772-Lec11-Spring26.pdf" target="_blank">PDF slides</a></td>
+</tr>
+<tr>
+<td>12</td>
+<td>Latent Variable Models and EM (contd)</td>
+<td></td>
+<td><a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_spring26/slides/CS772-Lec12-Spring26.pptx" target="_blank">PPTX slides</a>, 
+<a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_spring26/slides/CS772-Lec12-Spring26.pdf" target="_blank">PDF slides</a></td>
+</tr>
+<tr>
+<td>13</td>
+<td>Two Use-cases of Uncertainty: Active Learning and Bayesian Optimization</td>
+<td></td>
+<td><a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_spring26/slides/CS772-Lec13-Spring26.pptx" target="_blank">PPTX slides</a>, 
+<a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_spring26/slides/CS772-Lec13-Spring26.pdf" target="_blank">PDF slides</a></td>
+</tr>
+<tr>
+<td>14</td>
+<td>Variational Inference</td>
+<td></td>
+<td><a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_spring26/slides/CS772-Lec14-Spring26.pptx" target="_blank">PPTX slides</a>, 
+<a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_spring26/slides/CS772-Lec14-Spring26.pdf" target="_blank">PDF slides</a></td>
+</tr>
+<tr>
+<td>15</td>
+<td>Variational Inference (contd)</td>
+<td></td>
+<td><a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_spring26/slides/CS772-Lec15-Spring26.pptx" target="_blank">PPTX slides</a>, 
+<a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_spring26/slides/CS772-Lec15-Spring26.pdf" target="_blank">PDF slides</a></td>
+</tr>
+<tr>
+<td>16</td>
+<td>Variational Inference (wrap-up)</td>
+<td></td>
+<td><a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_spring26/slides/CS772-Lec16-Spring26.pptx" target="_blank">PPTX slides</a>, 
+<a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_spring26/slides/CS772-Lec16-Spring26.pdf" target="_blank">PDF slides</a></td>
+</tr>
+<tr>
+<td>17</td>
+<td>Approximating Distributions via Sampling</td>
+<td></td>
+<td><a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_spring26/slides/CS772-Lec17-Spring26.pptx" target="_blank">PPTX slides</a>, 
+<a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_spring26/slides/CS772-Lec17-Spring26.pdf" target="_blank">PDF slides</a></td>
+</tr>
+<tr>
+<td>18</td>
+<td>Approximating Distributions via Sampling (contd)</td>
+<td></td>
+<td><a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_spring26/slides/CS772-Lec18-Spring26.pptx" target="_blank">PPTX slides</a>, 
+<a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_spring26/slides/CS772-Lec18-Spring26.pdf" target="_blank">PDF slides</a></td>
+</tr>
+<tr>
+<td>19</td>
+<td>Sampling (wrap-up)</td>
+<td></td>
+<td><a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_spring26/slides/CS772-Lec19-Spring26.pptx" target="_blank">PPTX slides</a>, 
+<a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_spring26/slides/CS772-Lec19-Spring26.pdf" target="_blank">PDF slides</a></td>
+</tr>
+<tr>
+<td>20</td>
+<td>Deep Generative Models</td>
+<td></td>
+<td><a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_spring26/slides/CS772-Lec20-Spring26.pptx" target="_blank">PPTX slides</a>, 
+<a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_spring26/slides/CS772-Lec20-Spring26.pdf" target="_blank">PDF slides</a></td>
+</tr>
+<tr>
+<td>21</td>
+<td>Deep Generative Models (contd)</td>
+<td></td>
+<td><a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_spring26/slides/CS772-Lec21-Spring26.pptx" target="_blank">PPTX slides</a>, 
+<a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_spring26/slides/CS772-Lec21-Spring26.pdf" target="_blank">PDF slides</a></td>
+</tr>
+<tr>
+<td>22</td>
+<td>Assorted Topics (1)</td>
+<td></td>
+<td><a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_spring26/slides/CS772-Lec22-Spring26.pptx" target="_blank">PPTX slides</a>, 
+<a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_spring26/slides/CS772-Lec22-Spring26.pdf" target="_blank">PDF slides</a></td>
+</tr>
+<tr>
+<td>23</td>
+<td>Assorted Topics (2)</td>
+<td></td>
+<td><a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_spring26/slides/CS772-Lec23-Spring26.pptx" target="_blank">PPTX slides</a>, 
+<a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_spring26/slides/CS772-Lec23-Spring26.pdf" target="_blank">PDF slides</a></td>
+</tr>
+<tr>
+<td>24</td> 
+<td>Nonparametric Bayesian Models</td>
+<td></td>
+<td><a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_spring26/slides/CS772-Lec24-Spring26.pptx" target="_blank">PPTX slides</a>, 
+<a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_spring26/slides/CS772-Lec24-Spring26.pdf" target="_blank">PDF slides</a></td>
+</tr>
+<tr>
+<td>25</td> 
+<td>NPBayes (wrap-up), Simulation based Inference, Topic Models </td>
+<td></td>
+<td><a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_spring26/slides/CS772-Lec25-Spring26.pptx" target="_blank">PPTX slides</a>, 
+<a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_spring26/slides/CS772-Lec25-Spring26.pdf" target="_blank">PDF slides</a></td>
+</tr>
+</tbody></table>
+
+<h3>Course Policies</h3>
+
+<a href="http://www.cse.iitk.ac.in/pages/AntiCheatingPolicy.html">Anti-cheating policy</a>
+
+
+</body></html>

@@ -1,0 +1,962 @@
+<html><head>
+   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+   <meta http-equiv="Pragma" content="no-cache">
+   <meta http-equiv="Expires" content="0">
+   <link href="http://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,700&amp;v2" rel="stylesheet" type="text/css">
+   <link href="style.css" rel="stylesheet" type="text/css">
+   <title>CS281: Advanced Machine Learning</title>
+ </head>
+ <body>
+   
+   <h1>CS281: Advanced Machine Learning</h1>
+   
+   <div id="header">
+     Harvard University, Fall 2013<br>
+   </div>
+   Prof. Ryan Adams (OH: Mon 2:30-3:30pm in MD 233)<br>
+   TF: Eyal Dechter (OH: Thu 1pm in MD 1st Floor Lounge; Section: Thu 2:30-3:30pm in MD 319)<br>
+   TF: Scott Linderman (OH: Thu 10am in MD 2nd Floor Lounge; Section: Thu 9-10am in MD 221)<br>
+   TF: Dougal Maclaurin (OH: Mon 10am in MD 334; Section: Fri 10-11am in MD 223)<br>
+   Time: Monday and Wednesday, 1-2:30pm<br>
+   Location: Maxwell-Dworkin G115<br>
+   Contact: (course number) + (hyphen) + (the word "f13") + (hyphen) + (the word "staff") + "seas.harvard.edu"<br>
+
+   <hr>
+
+   <span class="menu">
+     <a href="files/syllabus.pdf">syllabus</a> |
+     <a href="#schedule">schedule</a> | 
+     <a href="http://www.piazza.com/harvard/fall2013/cs281">piazza</a> |
+     <a href="#assignments">assignments</a> | 
+     <a href="#grading">grading</a> |
+     <a href="#books">books</a> |
+     <a href="#faq">faq</a> |
+     <a href="http://isites.harvard.edu/icb/icb.do?keyword=k98807&amp;pageid=icb.page623774&amp;pageContentId=icb.pagecontent1350015&amp;state=maximize">dropbox</a> |
+     <a href="http://isites.harvard.edu/icb/icb.do?keyword=k98807&amp;pageid=icb.page623774&amp;pageContentId=icb.pagecontent1350016&amp;state=maximize">quizzes</a>
+   </span>
+
+   <h3>Announcements</h3>
+
+   <ul>
+     <li>2 December 2013: The final project poster session will be on the ground and first floors of Maxwell-Dworkin on Thursday 5 December from 2-4pm.  Come a bit early to set things up.</li>
+     <li>3 November 2013: <a href="#assignments">Assignment 5</a> is now available.</li>
+     <li>25 October 2013: <a href="#assignments">Assignment 4</a> is now available.</li>
+     <li>18 October 2013: A <a href="files/practice-midterm.pdf">practice midterm</a> is available.</li>
+     <li>11 October 2013: A <a href="files/midterm-topics.pdf">list of midterm study topics</a> is now available.</li>
+     <li>6 October 2013: <a href="#assignments">Assignment 3</a> is now available.  The due date is extended to October 20.</li>
+     <li>21 September 2013: <a href="#assignments">Assignment 2</a> is now available.</li>
+     <li>13 September 2013: Section times and places, as well as office hours, are now available.</li>
+     <li>10 September 2013: Please identify your section preferences <a href="https://docs.google.com/forms/d/1MpBtI8ibpVZi_n8p_4wTLVIvnVcs27YbhVKprSn-P2A/viewform">here</a>.</li>
+     <li>9 September 2013: Due to the size of the class, we are moving to a larger room: G115.</li>
+     <li>8 September 2013: If you filled out the survey, you should have now received notification of your status.  If you have been assigned a place but do not intend to take the course, please let the staff know ASAP so that another student can take the course.</li>
+     <li>6 September 2013: <a href="#assignments">Assignment 1</a> is now available.</li>
+     <li>5 September 2013: It has become apparent that cross-registered students will not be able to access the online quizzes until after study card day.  As such, there will not be a quiz for the second lecture.</li>
+     <li>3 September 2013: Please fill out the <a href="https://docs.google.com/forms/d/1BcVEzn3fbl2A_LLRpt9DOnxnXsCGA7WAfssPSmmcjmw/viewform">survey</a>.</li>
+     <li>31 August 2013: The <a href="files/syllabus.pdf">syllabus</a> is now available.</li>
+     <li>28 August 2013: Sign up on the <a href="http://www.piazza.com/harvard/fall2013/cs281">Piazza</a> discussion site.</li>
+   </ul>
+
+   <hr>
+
+   <a name="schedule">
+   <h3>Schedule</h3>
+
+   Subject to change.
+
+   </a><div class="lecture"><a name="schedule">
+     <span class="lecture-date">Wed 4 Sep 2013</span>
+     <p class="lecture">
+     <span class="lecture-title">Lecture 1: Introduction to Inference and Learning</span>
+     </p></a><div class="lecture-prep"><a name="schedule">
+       </a><ul><a name="schedule">
+         <li>[<span class="required">required</span>] Book: Murphy -- Chapter 1 -- <i>Introduction</i></li>
+         <li>[<span class="optional">optional</span>] Book: Bishop -- Chapter 1 -- <i>Introduction</i></li>
+         </a><li><a name="schedule">[<span class="optional">optional</span>] Video: Christopher Bishop -- </a><a href="http://scpro.streamuk.com/uk/player/Default.aspx?wid=7739">Embracing Uncertainty: The New Machine Intelligence</a></li>
+         <li>[<span class="optional">optional</span>] Video: Sam Roweis -- <a href="http://videolectures.net/mlss06tw_roweis_mlpgm/">Machine Learning, Probability and Graphical Models, Part 1</a></li>
+         <li>[<span class="optional">optional</span>] Video: Iain Murray -- <a href="http://videolectures.net/bootcamp2010_murray_iml/">Introduction to Machine Learning, Part 1</a></li>
+         <li>[<span class="optional">optional</span>] Video: Neil Lawrence -- <a href="http://videolectures.net/mlss2010_lawrence_mlfcs/">What is Machine Learning?</a></li>
+       </ul>
+     </div>
+
+     <p></p>
+
+     <hr width="80%">
+
+     <span class="lecture-date">Mon 9 Sep 2013</span>
+     <p class="lecture">
+     <span class="lecture-title">Lecture 2: Simple Discrete Models</span>
+     <!-- [ <a href="http://isites.harvard.edu/icb/icb.do?state=maximize&keyword=k98807&topicId=icb.topic1317659&pageContentId=icb.pagecontent1350016&pageid=icb.page623774&panel=icb.pagecontent1350016%3Ar%2Fquiz%2Ftake%2F17#quizmo-icb.topic1317659">quiz</a> ] -->
+     [ <a href="demos/discrete_coins.m">discrete_coins.m</a> | <a href="demos/plot_beta.m">plot_beta.m</a> | <a href="demos/beta_coins.m">beta_coins.m</a> ]
+     </p><div class="lecture-prep">
+       <ul>
+         <li><span class="lecture-assign">Assignment 1 Out</span></li>         
+         <li>[<span class="required">required</span>] Book: Murphy -- Chapter 2 -- <i>Probability</i></li>
+         <li>[<span class="required">required</span>] Book: Murphy -- Chapter 3 -- <i>Generative Models for Discrete Data</i></li>
+         <li>[<span class="optional">optional</span>] Book: Bishop -- Chapter 2, Sections 2.1-2.2 -- <i>Probability Distributions</i></li>
+         <li>[<span class="optional">optional</span>] Book: MacKay -- Chapter 2 -- <i>Probability, Entropy, and Inference</i></li>
+         <li>[<span class="optional">optional</span>] Book: MacKay -- Chapter 3 -- <i>More About Inference</i></li>
+         <li>[<span class="optional">optional</span>] Book: Mackay -- Chapter 23 -- <i>Useful Probability Distributions</i></li>
+         <li>[<span class="optional">optional</span>] Video: Iain Murray -- <a href="http://videolectures.net/bootcamp2010_murray_iml/">Introduction to Machine Learning, Part 2</a></li>
+         <li>[<span class="optional">optional</span>] Metacademy: <a href="http://www.metacademy.org/graphs/concepts/bayesian_parameter_estimation#lfocus=bayesian_parameter_estimation">Bayesian Parameter Estimation</a></li>
+         <li>[<span class="optional">optional</span>] Metacademy: <a href="http://www.metacademy.org/graphs/concepts/dirichlet_distribution#lfocus=dirichlet_distribution">Dirichlet Distribution</a></li>
+       </ul>
+     </div>
+     <p></p>
+
+   </div>
+
+   <div class="lecture">
+     <h4>Linear Models</h4>
+
+     <span class="lecture-date">Wed 11 Sep 2013</span>
+     <p class="lecture">
+     <span class="lecture-title">Lecture 3: Simple Gaussian Models</span>
+     [ <a href="demos/plot_bigauss1.m">plot_bigauss1.m</a> | <a href="demos/plot_bigauss2.m">plot_bigauss2.m</a> ]
+     </p><div class="lecture-prep">
+       <ul>
+         <li>[<span class="required">required</span>] Book: Murphy -- Chapter 4 -- <i>Gaussian Models</i></li>
+         <li>[<span class="optional">optional</span>] Book: Bishop -- Chapter 2, Section 2.3 -- <i>Probability Distributions</i></li>
+         <li>[<span class="optional">optional</span>] Note: David J.C. MacKay -- <a href="papers/mackay-2006.pdf"><i>The Humble Gaussian Distribution</i></a>.</li>
+         <li>[<span class="optional">optional</span>] Note: Sam Roweis -- <a href="papers/gaussian-identities.pdf"><i>Gaussian Identities</i></a>.</li>
+         <li>[<span class="optional">optional</span>] Metacademy: <a href="http://www.metacademy.org/graphs/concepts/multivariate_gaussian_distribution#lfocus=multivariate_gaussian_distribution">Multivariate Gaussian Distribution</a></li>
+       </ul>
+     </div>
+     <p></p>
+
+     <hr width="80%">
+
+     <span class="lecture-date">Fri 13 Sep 2013</span>
+     <p class="lecture">
+     <span class="lecture-title">Section 1: Math Review</span>
+     [ <a href="files/section01.pdf">notes</a> ]
+     </p><div class="lecture-prep">
+       <ul>
+         <li>[<span class="optional">optional</span>] Note: Sam Roweis -- <a href="papers/matrix-identities.pdf"><i>Matrix Identities</i></a>.</li>
+         <li>[<span class="optional">optional</span>] Book: Mackay -- Appendix A -- <i>Notation</i></li>
+         <li>[<span class="optional">optional</span>] Metacademy: <a href="http://www.metacademy.org/graphs/concepts/probability#lfocus=probability">Probability</a></li>
+         <li>[<span class="optional">optional</span>] Metacademy: <a href="http://www.metacademy.org/graphs/concepts/linear_systems_as_matrices#lfocus=linear_systems_as_matrices">Lnear Algebra</a></li>
+         <li>[<span class="optional">optional</span>] Metacademy: <a href="http://www.metacademy.org/graphs/concepts/multiple_integrals#lfocus=multiple_integrals">Multivariate Calculus</a></li>
+       </ul>
+     </div>
+     <p></p>
+
+     <hr width="80%">
+
+     <span class="lecture-date">Mon 16 Sep 2013</span>
+     <p class="lecture">
+     <span class="lecture-title">Lecture 4: Bayesian Statistics</span>
+     [ <a href="http://isites.harvard.edu/icb/icb.do?keyword=k98807&amp;panel=icb.pagecontent1350016%3Ar%2Fquiz%2Ftake%2F19&amp;pageid=icb.page623774&amp;pageContentId=icb.pagecontent1350016&amp;state=maximize">quiz</a> ]
+     </p><div class="lecture-prep">
+       <ul>
+         <li>[<span class="required">required</span>] Book: Murphy -- Chapter 5 -- <i>Bayesian Statistics</i></li>
+         <li>[<span class="optional">optional</span>] Book: Murphy -- Chapter 6 -- <i>Frequentist Statistics</i></li>
+         <li>[<span class="optional">optional</span>] Video: Iain Murray -- <a href="http://videolectures.net/bootcamp2010_murray_iml/">Introduction to Machine Learning, Part 3</a></li>
+         <li>[<span class="optional">optional</span>] Video: Michael Jordan -- <a href="http://videolectures.net/mlss09uk_jordan_bfway/">Bayesian or Frequentist: Which Are You?</a></li>
+         <li>[<span class="optional">optional</span>] Video: Christopher Bishop -- <a href="http://videolectures.net/mlss09uk_bishop_ibi/">Introduction to Bayesian Inference</a></li>
+         <li>[<span class="optional">optional</span>] Metacademy: <a href="http://www.metacademy.org/graphs/concepts/bayesian_decision_theory#lfocus=bayesian_decision_theory">Bayesian Decision Theory</a></li>
+       </ul>
+     </div>
+     <p></p>
+
+     <hr width="80%">
+
+     <span class="lecture-date">Wed 18 Sep 2013</span>
+     <p class="lecture">
+     <span class="lecture-title">Lecture 5: Linear Regression (Guest Lecturer: <a href="http://www.mit.edu/~mattjj/">Matt Johnson</a>)</span>
+     [ <a href="https://github.com/mattjj/cs281_linear_regression">demos</a> ]
+     </p><div class="lecture-prep">
+       <ul>
+         <li><span class="lecture-assign">Assignment 1 Help Session 5-7pm, Maxwell-Dworkin Second Floor Lounge</span></li>         
+         <li>[<span class="required">required</span>] Book: Murphy -- Chapter 7 -- <i>Linear Regression</i></li>
+         <li>[<span class="optional">optional</span>] Book: Bishop -- Chapter 3 -- <i>Linear Models for Regression</i></li>
+         <li>[<span class="optional">optional</span>] Book: Hastie, Tibshirani, and Friedman -- Chapter 2 -- <i>Overview of Supervised Learning</i></li>
+         <li>[<span class="optional">optional</span>] Book: Hastie, Tibshirani, and Friedman -- Chapter 3 -- <i>Linear Methods for Regression</i></li>
+         <li>[<span class="optional">optional</span>] Metacademy: <a href="http://www.metacademy.org/graphs/concepts/linear_regression#lfocus=linear_regression">Linear Regression</a></li>
+       </ul>
+     </div>
+     <p></p>
+
+     <hr width="80%">
+
+     <span class="lecture-date">Fri 20 Sep 2013</span>
+     <p class="lecture">
+     <span class="lecture-title">Section 2: Practical Optimization</span>
+     [ <a href="files/section02.pdf">notes</a> ]
+     </p><div class="lecture-prep">
+       <ul>
+         <li><span class="lecture-assign">Assignment 1 Due</span></li>         
+         <li><span class="lecture-assign">Assignment 2 Out</span></li>         
+         <li>[<span class="optional">optional</span>] Metacademy: <a href="http://www.metacademy.org/graphs/concepts/optimization_problems#lfocus=optimization_problems">Optimization</a></li>
+       </ul>
+     </div>
+     <p></p>
+
+     <hr width="80%">
+
+     <span class="lecture-date">Mon 23 Sep 2013</span>
+     <p class="lecture">
+     <span class="lecture-title">Lecture 6: Linear Classifiers</span>
+     [ <a href="http://isites.harvard.edu/icb/icb.do?state=edit&amp;keyword=k98807&amp;topicId=icb.topic1317659&amp;pageContentId=icb.pagecontent1350016&amp;pageid=icb.page.topiceditgeneral.icb.topic1317659.icb.page623774&amp;panel=icb.pagecontent1350016%3Ar%2Fquiz%2Ftake%2F21#quizmo-icb.topic1317659">quiz</a> ]
+     </p><div class="lecture-prep">
+       <ul>
+         <li>[<span class="required">required</span>] Book: Murphy -- Chapter 8 -- <i>Logistic Regression</i></li>
+         <li>[<span class="optional">optional</span>] Book: Bishop -- Chapter 4 -- <i>Linear Models for Classification</i></li>
+         <li>[<span class="optional">optional</span>] Book: Hastie, Tibshirani, and Friedman -- Chapter 4 -- <i>Linear Methods for Classification</i></li>
+         <li>[<span class="optional">optional</span>] Metacademy: <a href="http://www.metacademy.org/graphs/concepts/binary_linear_classifiers#lfocus=binary_linear_classifiers">Binary Linear Classifiers</a></li>
+       </ul>
+     </div>
+     <p></p>
+
+     <hr width="80%">
+
+     <span class="lecture-date">Wed 25 Sep 2013</span>
+     <p class="lecture">
+     <span class="lecture-title">Lecture 7: Generalized Linear Models</span>
+     [ <a href="http://isites.harvard.edu/icb/icb.do?state=edit&amp;keyword=k98807&amp;topicId=icb.topic1317659&amp;pageContentId=icb.pagecontent1350016&amp;pageid=icb.page.topiceditgeneral.icb.topic1317659.icb.page623774&amp;panel=icb.pagecontent1350016%3Ar%2Fquiz%2Ftake%2F22#quizmo-icb.topic1317659">quiz</a> ]
+     </p><div class="lecture-prep">
+       <ul>
+         <li>[<span class="required">required</span>] Book: Murphy -- Chapter 9, Sections 9.1-9.4 -- <i>Generalized Linear Models and the Exponential Family</i></li>
+         <li>[<span class="optional">optional</span>] Book: Murphy -- Chapter 9, Sections 9.5-9.7 -- <i>Generalized Linear Models and the Exponential Family</i></li>
+         <li>[<span class="optional">optional</span>] Book: Koller and Friedman -- Chapter 8 -- <i>The Exponential Family</i></li>
+
+         <li>[<span class="optional">optional</span>] Paper: Kevin P. Murphy -- <a href="papers/murphy-2007.pdf"><i>Conjugate Bayesian Analysis of the Gaussian Distribution</i></a>, informal note, 2007.</li>
+         <li>[<span class="optional">optional</span>] Video: Alex Smola -- <a href="http://videolectures.net/mlss06au_smola_ef/">Exponential Families, Part I</a></li>
+         <li>[<span class="optional">optional</span>] Metacademy: <a href="http://www.metacademy.org/graphs/concepts/generalized_linear_models#lfocus=generalized_linear_models">Generalized Linear Models</a></li>
+         <li>[<span class="optional">optional</span>] Metacademy: <a href="http://www.metacademy.org/graphs/concepts/exponential_families#lfocus=exponential_families">Exponential Family</a></li>
+       </ul>
+     </div>
+     <p></p>
+
+   </div>
+
+   <div class="lecture">
+     <h4>Unsupervised Bayesian Modeling</h4>
+
+     <span class="lecture-date">Fri 27 Sep 2013</span>
+     <p class="lecture">
+     <span class="lecture-title">Section 3: Undirected Graphical Models and Factor Graphs</span>
+     [ <a href="files/section03.pdf">notes</a> ]
+     </p><div class="lecture-prep">
+       <ul>
+         <li><span class="lecture-assign">Return Assignment 1</span></li>         
+         <li>[<span class="required">required</span>] Book: Murphy -- Chapter 19, Sections 19.1-19.4 -- <i>Undirected Graphical Models (Markov Random Fields)</i>
+         </li><li>[<span class="optional">optional</span>] Book: Bishop -- Chapter 8, Sections 8.1-8.3 -- <i>Graphical Models</i></li>
+         <li>[<span class="optional">optional</span>] Book: Hastie, Tibshirani, and Friedman -- Chapter 17 -- <i>Undirected Graphical Models</i></li>
+         <li>[<span class="optional">optional</span>] Book: Koller and Friedman -- Chapter 4 -- <i>Undirected Graphical Models</i></li>
+         <li>[<span class="optional">optional</span>] Metacademy: <a href="http://www.metacademy.org/graphs/concepts/markov_random_fields#lfocus=markov_random_fields">Markov Random Fields</a></li>
+         <li>[<span class="optional">optional</span>] Metacademy: <a href="http://www.metacademy.org/graphs/concepts/factor_graphs#lfocus=factor_graphs">Factor Graphs</a></li>
+       </ul>
+     </div>
+     <p></p>
+
+     <hr width="80%">
+
+     <span class="lecture-date">Mon 30 Sep 2013</span>
+     <p class="lecture">
+     <span class="lecture-title">Lecture 8: Directed Graphical Models</span>
+     [ <a href="http://isites.harvard.edu/icb/icb.do?state=edit&amp;keyword=k98807&amp;topicId=icb.topic1317659&amp;pageContentId=icb.pagecontent1350016&amp;pageid=icb.page.topiceditgeneral.icb.topic1317659.icb.page623774&amp;panel=icb.pagecontent1350016%3Ar%2Fquiz%2Ftake%2F23#quizmo-icb.topic1317659">quiz</a> ]
+     </p><div class="lecture-prep">
+       <ul>
+         <li>[<span class="required">required</span>] Book: Murphy -- Chapter 10, Sections 10.1-10.5 -- <i>Directed Graphical Models (Bayes Nets)</i></li>
+         <li>[<span class="optional">optional</span>] Book: Bishop -- Chapter 8 -- <i>Graphical Models</i></li>
+         <li>[<span class="optional">optional</span>] Book: Koller and Friedman -- Chapter 3 -- <i>The Bayesian Network Representation</i></li>
+         <li>[<span class="optional">optional</span>] Paper: Martin J. Wainwright and Michael I. Jordan. <i><a href="papers/WaiJor08_FTML.pdf">Graphical Models, Exponential Families and Variational Inference</a></i>.  Foundations and Trends in Machine Learning 1(1-2):1-305, 2008.</li>
+         <li>[<span class="optional">optional</span>] Paper: Michael I. Jordan. <i><a href="papers/jordan-2004.pdf">Graphical Models</a></i>. Statistical Science 19(1):140-155, 2004.</li>
+         <li>[<span class="optional">optional</span>] Video: Zoubin Ghahramani -- <a href="http://videolectures.net/mlss09uk_ghahramani_gm/">Graphical Models</a></li>
+         <li>[<span class="optional">optional</span>] Video: Cedric Archambeau -- <a href="http://videolectures.net/bootcamp2010_archambeau_gm/">Graphical Models</a></li>
+         <li>[<span class="optional">optional</span>] Metacademy: <a href="http://www.metacademy.org/graphs/concepts/bayesian_networks#lfocus=bayesian_networks">Bayesian Networks</a></li>
+       </ul>
+     </div>
+     <p></p>
+
+     <hr width="80%">
+
+     <span class="lecture-date">Wed 2 Oct 2013</span>
+     <p class="lecture">
+     <span class="lecture-title">Lecture 9: Mixture Models</span>
+     [ <a href="http://isites.harvard.edu/icb/icb.do?state=edit&amp;keyword=k98807&amp;topicId=icb.topic1317659&amp;pageContentId=icb.pagecontent1350016&amp;pageid=icb.page.topiceditgeneral.icb.topic1317659.icb.page623774&amp;panel=icb.pagecontent1350016%3Ar%2Fquiz%2Ftake%2F24#quizmo-icb.topic1317659">quiz</a> ]
+     </p><div class="lecture-prep">
+       <ul>
+         <li><span class="lecture-assign">Assignment 2 Help Session, 5-7pm, Maxwell-Dworkin Second Floor Lounge</span></li>         
+         <li>[<span class="required">required</span>] Book: Murphy -- Chapter 11 -- <i>Mixture Models and the EM Algorithm</i></li>
+         <li>[<span class="optional">optional</span>] Book: Bishop -- Chapter 9 -- <i>Mixture Models and EM</i></li>
+         <li>[<span class="optional">optional</span>] Book: Mackay -- Chapter 20 -- <i>An Example Inference Task: Clustering</i></li>
+         <li>[<span class="optional">optional</span>] Book: Mackay -- Chapter 22 -- <i>Maximum Likelihood and Clustering</i></li>
+         <li>[<span class="optional">optional</span>] Metacademy: <a href="http://www.metacademy.org/graphs/concepts/expectation_maximization#lfocus=expectation_maximization">Expectation-Maximization Algorithm</a></li>
+      </ul>
+     </div>
+     <p></p>
+
+     <hr width="80%">
+
+     <span class="lecture-date">Fri 4 Oct 2013</span>
+     <p class="lecture">
+     <span class="lecture-title">Section 4: Factor Analysis and PCA</span>
+     [ <a href="files/section04.pdf">notes</a> ]
+     </p><div class="lecture-prep">
+       <ul>
+         <li><span class="lecture-assign">Assignment 2 Due</span></li>         
+         <li><span class="lecture-assign">Assignment 3 Out</span></li>         
+         <li>[<span class="required">required</span>] Book: Murphy -- Chapter 12 -- <i>Latent Linear Models</i></li>
+         <li>[<span class="required">required</span>] Paper: Sam Roweis and Zoubin Ghahramani. <i><a href="papers/lds.pdf">A Unifying Review of Linear Gaussian Models</a></i>. Neural Computation 11(2), 1999.</li>
+
+         <li>[<span class="optional">optional</span>] Book: Bishop -- Chapter 12, Sections 12.1-12.2 -- <i>Continuous Latent Variables</i></li>
+         <li>[<span class="optional">optional</span>] Book: MacKay -- Chapter 34 -- <i>Independent Component Analysis and Latent Vriable Modelling</i></li>
+         <li>[<span class="optional">optional</span>] Video: Aapo Hyvarinen -- <a href="http://videolectures.net/mlss05au_hyvarinen_ica/">Independent Components Analysis</a></li>
+         <li>[<span class="optional">optional</span>] Metacademy: <a href="http://www.metacademy.org/graphs/concepts/factor_analysis#lfocus=factor_analysis">Factor Analysis</a></li>
+         <li>[<span class="optional">optional</span>] Metacademy: <a href="http://www.metacademy.org/graphs/concepts/principal_component_analysis#lfocus=principal_component_analysis">Principal Component Analysis</a></li>
+
+       </ul>
+     </div>
+     <p></p>
+
+     <hr width="80%">
+
+     <span class="lecture-date">Mon 7 Oct 2013</span>
+     <p class="lecture">
+     <span class="lecture-title">Lecture 10: Sparse Linear Models</span>
+     [ <a href="http://isites.harvard.edu/icb/icb.do?state=edit&amp;keyword=k98807&amp;topicId=icb.topic1317659&amp;pageContentId=icb.pagecontent1350016&amp;pageid=icb.page.topiceditgeneral.icb.topic1317659.icb.page623774&amp;panel=icb.pagecontent1350016%3Ar%2Fquiz%2Ftake%2F25#quizmo-icb.topic1317659">quiz</a> ]
+     </p><div class="lecture-prep">
+       <ul>
+         <li>[<span class="required">required</span>] Book: Murphy -- Chapter 13, Sections 13.1-13.7 -- <i>Sparse Linear Models</i></li>
+         <li>[<span class="optional">optional</span>] Book: Hastie, Tibshirani, and Friedman -- Chapter 3 -- <i>Linear Methods for Regression</i></li>
+         <li>[<span class="optional">optional</span>] Metacademy: <a href="http://www.metacademy.org/graphs/concepts/lasso#lfocus=lasso">LASSO</a></li>
+       </ul>
+     </div>
+     <p></p>
+
+   </div>
+
+   <div class="lecture">
+     <h4>Inference Procedures</h4>
+
+     <span class="lecture-date">Wed 9 Oct 2013</span>
+     <p class="lecture">
+     <span class="lecture-title">Lecture 11: Exact Inference</span>
+     [ <a href="http://isites.harvard.edu/icb/icb.do?state=edit&amp;keyword=k98807&amp;topicId=icb.topic1317659&amp;pageContentId=icb.pagecontent1350016&amp;pageid=icb.page.topiceditgeneral.icb.topic1317659.icb.page.inlinecontent.icb.page623774.icb.page623774&amp;panel=icb.pagecontent1350016%3Ar%2Fquiz%2Ftake%2F26#quizmo-icb.topic1317659">quiz</a> ]
+     </p><div class="lecture-prep">
+       <ul>
+         <li>[<span class="required">required</span>] Book: Murphy -- Chapter 17, Section 17.1-17.4 -- <i>Markov and Hidden Markov Models</i></li>
+         <li>[<span class="required">required</span>] Book: Murphy -- Chapter 20, Section 20.1-20.3 -- <i>Exact Inference for Graphical Models</i></li>
+         <li>[<span class="optional">optional</span>] Book: Murphy -- Chapter 17, Section 17.5-17.6 -- <i>Markov and Hidden Markov Models</i></li>
+         <li>[<span class="optional">optional</span>] Book: Bishop -- Chapter 8, Sections 8.4 -- <i>Graphical Models</i></li>
+         <li>[<span class="optional">optional</span>] Book: Bishop -- Chapter 13, Sections 13.1-13.2 -- <i>Sequential Data</i></li>
+         <li>[<span class="optional">optional</span>] Book: Mackay -- Chapter 16 -- <i>Message Passing</i></li>         
+         <li>[<span class="optional">optional</span>] Book: Mackay -- Chapter 21 -- <i>Exact Inference by Complete Enumeration</i></li>
+         <li>[<span class="optional">optional</span>] Book: Mackay -- Chapter 24 -- <i>Exact Marginalization</i></li>
+         <li>[<span class="optional">optional</span>] Book: Mackay -- Chapter 26 -- <i>Exact Marginalization in Graphs</i></li>
+         <li>[<span class="optional">optional</span>] Book: Koller and Friedman -- Chapter 9 -- <i>Exact Inference: Variable Elimination</i></li>
+         <li>[<span class="optional">optional</span>] Book: Koller and Friedman -- Chapter 10 -- <i>Exact Inference: Clique Trees</i></li>
+         <li>[<span class="optional">optional</span>] Book: Koller and Friedman -- Chapter 13 -- <i>MAP Inference</i></li>
+
+         <li>[<span class="optional">optional</span>] Frank R. Kschischang, Brendan J. Frey and Hans-Andrea Loeliger. <i><a href="papers/frey2001factor.pdf">Factor Graphs and the Sum-Product Algorithm</a></i>.  IEEE Transactions on Information Theory 47(2):498-519, 2001.</li>
+         <li>[<span class="optional">optional</span>] Metacademy: <a href="http://www.metacademy.org/graphs/concepts/variable_elimination#lfocus=variable_elimination">Variable Elimination</a></li>
+       </ul>
+     </div>
+     <p></p>
+
+     <hr width="80%">
+
+     <span class="lecture-date">Fri 11 Oct 2013</span>
+     <p class="lecture">
+     <span class="lecture-title">Section 5: The Junction Tree Algorithm</span>
+     [ <a href="files/section05.pdf">notes</a> ]
+     </p><div class="lecture-prep">
+       <ul>
+         <li><span class="lecture-assign">Last Day for Assignment 1 Regrades</span></li>         
+         <li><span class="lecture-assign">Return Assignment 2</span></li>         
+         <li>[<span class="required">required</span>] Book: Murphy -- Chapter 20, Section 20.4 -- <i>Exact Inference for Graphical Models</i></li>
+         <li>[<span class="optional">optional</span>] Metacademy: <a href="http://www.metacademy.org/graphs/concepts/junction_trees#lfocus=junction_trees">Junction Trees</a></li>
+       </ul>
+     </div>
+     <p></p>
+
+     <hr width="80%">
+
+     <span class="lecture-date">Wed 16 Oct 2013</span>
+     <p class="lecture">
+     <span class="lecture-title">Lecture 12: Variational Inference (Guest Lecturer: <a href="http://www.mit.edu/~mattjj/">Matt Johnson</a>)</span>
+     [ <a href="https://github.com/mattjj/pybasicbayes">demo</a> | <a href="http://isites.harvard.edu/icb/icb.do?state=edit&amp;keyword=k98807&amp;topicId=icb.topic1317659&amp;pageContentId=icb.pagecontent1350016&amp;pageid=icb.page.topiceditgeneral.icb.topic1317659.icb.page623774&amp;panel=icb.pagecontent1350016%3Ar%2Fquiz%2Ftake%2F99#quizmo-icb.topic1317659">quiz</a> ]
+     </p><div class="lecture-prep">
+       <ul>
+         <li><span class="lecture-assign">Assignment 3 Help Session 5-7pm, Maxwell-Dworkin Second Floor Lounge</span></li>         
+         <li>[<span class="required">required</span>] Book: Murphy -- Chapter 21, Section 21.1-21.3, 21.5-21.6 -- <i>Variational Inference</i></li>
+         <li>[<span class="optional">optional</span>] Book: Bishop -- Chapter 10 -- <i>Approximate Inference</i></li>
+         <li>[<span class="optional">optional</span>] Book: MacKay -- Chapter 27 -- <i>Laplace's Method</i></li>
+         <li>[<span class="optional">optional</span>] Book: MacKay -- Chapter 33 -- <i>Variational Methods</i></li>
+         <li>[<span class="optional">optional</span>] Paper: Winn and Bishop -- <a href="">Variational Message Passing</a></li>
+         <li>[<span class="optional">optional</span>] Paper: Thomas Minka -- <a href="">Divergence Measures and Message Passing</a></li>
+         <li>[<span class="optional">optional</span>] Paper: Wainwright, Jaakkola and Willsky -- <a href="">A New Class of Upper Bounds on the Log Partition Function</a></li>
+
+         <li>[<span class="optional">optional</span>] Video: Tom Minka -- <a href="http://videolectures.net/mlss09uk_minka_ai/">Approximate Inference</a></li>
+         <li>[<span class="optional">optional</span>] Video: Martin Wainwright -- <a href="http://videolectures.net/mlss06tw_wainwright_gmvmm/">Graphical Models, Variational Methods and Message Passing</a></li>
+         <li>[<span class="optional">optional</span>] Video: Christopher Bishop -- <a href="http://videolectures.net/mlss04_bishop_gmvm/">Graphical Models and Variational Methods</a></li>
+         <li>[<span class="optional">optional</span>] Video: David Sontag -- <a href="http://research.microsoft.com/apps/video/default.aspx?id=150309">Approximate Inference in Graphical Models using LP relaxations</a></li>
+         <li>[<span class="optional">optional</span>] Metacademy: <a href="http://www.metacademy.org/graphs/concepts/variational_inference#lfocus=variational_inference">Variational Inference</a></li>
+       </ul>
+     </div>
+     <p></p>
+
+     <hr width="80%">
+
+     <span class="lecture-date">Fri 18 Oct 2013</span>
+     <p class="lecture">
+     <span class="lecture-title">Section 6: Loopy Belief Propagation</span>
+     </p><div class="lecture-prep">
+       <ul>
+         <li><span class="lecture-assign">Assignment 3 Due</span></li>
+         <li>[<span class="required">required</span>] Book: Murphy -- Chapter 22, Section 22.1-22.2, 22.5-22.6 -- <i>More Variational Inference</i></li>
+         <li>[<span class="optional">optional</span>] Paper: Thomas Minka. <i><a href="papers/minka-divergence.pdf">Divergence Measures and Message Passing</a></i>. Microsoft Research MSR-TR-2005-173, 2005.</li>
+         <li>[<span class="optional">optional</span>] Paper: John Winn and Christopher Bishop. <i><a href="papers/VMP2004.pdf">Variational Message Passing</a></i>. Journal of Machine Learning Research 6:661-694, 2005.</li>
+         <li>[<span class="optional">optional</span>] Metacademy: <a href="http://www.metacademy.org/graphs/concepts/loopy_belief_propagation#lfocus=loopy_belief_propagation">Loopy Belief Propagation</a></li>
+       </ul>
+     </div>
+     <p></p>
+
+     <hr width="80%">
+
+     <span class="lecture-date">Mon 21 Oct 2013</span>
+     <p class="lecture">
+     <span class="lecture-title">Lecture 13: Monte Carlo Basics (Guest Lecturer: <a href="http://people.csail.mit.edu/finale/new-wiki/doku.php">Finale Doshi-Velez</a>)</span>
+     [ <a href="http://isites.harvard.edu/icb/icb.do?state=edit&amp;keyword=k98807&amp;topicId=icb.topic1317659&amp;pageContentId=icb.pagecontent1350016&amp;pageid=icb.page.topiceditgeneral.icb.topic1317659.icb.page623774&amp;panel=icb.pagecontent1350016%3Ar%2Fquiz%2Ftake%2F28#quizmo-icb.topic1317659">quiz</a> ]
+     </p><div class="lecture-prep">
+       <ul>
+         <li>[<span class="required">required</span>] Book: Murphy -- Chapter 23, Section 23.1-23.4 -- <i>Monte Carlo Inference</i></li>
+         <li>[<span class="optional">optional</span>] Book: Bishop -- Chapter 11, Section 11.1 -- <i>Sampling Methods</i></li>
+         <li>[<span class="optional">optional</span>] Book: MacKay -- Chapter 29 -- <i>Monte Carlo Methods</i></li>
+         <li>[<span class="optional">optional</span>] Book: Devroye -- Chapter 2</li>
+         <li>[<span class="optional">optional</span>] Metacademy: <a href="http://www.metacademy.org/graphs/concepts/monte_carlo_estimation#lfocus=monte_carlo_estimation">Monte Carlo Estimation</a></li>
+         <li>[<span class="optional">optional</span>] Metacademy: <a href="http://www.metacademy.org/graphs/concepts/rejection_sampling#lfocus=rejection_sampling">Rejection Sampling</a></li>
+         <li>[<span class="optional">optional</span>] Metacademy: <a href="http://www.metacademy.org/graphs/concepts/importance_sampling#lfocus=importance_sampling">Importance Sampling</a></li>
+       </ul>
+     </div>
+     <p></p>
+
+     <hr width="80%">
+
+     <span class="lecture-date">Wed 23 Oct 2013</span>
+     <p class="lecture">
+     <span class="lecture-title">Midterm Exam</span>
+     </p><div class="lecture-prep">
+       <ul>
+         <li><span class="lecture-assign">Final Project Brainstorming Session 5-7pm, Maxwell-Dworkin Second Floor Lounge</span></li>
+       </ul>
+     </div>
+     <p></p>
+
+     <hr width="80%">
+
+     <span class="lecture-date">Fri 25 Oct 2013</span>
+     <p class="lecture">
+     <span class="lecture-title">Section 7: Particle Filtering</span>
+     </p><div class="lecture-prep">
+       <ul>
+         <li><span class="lecture-assign">Final Project Proposals Due</span></li>         
+         <li><span class="lecture-assign">Assignment 4 Out</span></li>         
+         <li><span class="lecture-assign">Assignment 3 Back</span></li>         
+         <li><span class="lecture-assign">Last Day for Assignment 2 Regrades</span></li>         
+         <li>[<span class="required">required</span>] Book: Murphy -- Chapter 23, Section 23.5-23.6 -- <i>Monte Carlo Inference</i></li>
+         <li>[<span class="optional">optional</span>] Book: Bishop -- Chapter 13, Section 13.3 -- <i>Sequential Data</i></li>
+         <li>[<span class="optional">optional</span>] Paper: Arnaud Doucet and Adams M. Johansen. <a href="papers/doucet-johansen.pdf"><i>A Tutorial on Particle Filtering and Smoothing: Fifteen Years Later</i></a>, 2008.</li>
+         <li>[<span class="optional">optional</span>] Video: Simon Godsill -- <a href="http://videolectures.net/mlss09uk_godsill_pf/">Particle Filters</a></li>
+         <li>[<span class="optional">optional</span>] Video: Arnaud Doucet and Nando de Freitas -- <a href="http://videolectures.net/nips09_doucet_freitas_smc/">Sequential Monte Carlo Methods</a></li>
+       </ul>
+     </div>
+     <p></p>
+
+     <hr width="80%">
+
+     <span class="lecture-date">Mon 28 Oct 2013</span>
+     <p class="lecture">
+     <span class="lecture-title">Lecture 14: Markov Chain Monte Carlo</span>
+     [ <a href="http://isites.harvard.edu/icb/icb.do?state=edit&amp;keyword=k98807&amp;topicId=icb.topic1317659&amp;pageContentId=icb.pagecontent1350016&amp;pageid=icb.page.topiceditgeneral.icb.topic1317659.icb.page623774&amp;panel=icb.pagecontent1350016%3Ar%2Fquiz%2Ftake%2F29#quizmo-icb.topic1317659">quiz</a> ]
+     </p><div class="lecture-prep">
+       <ul>
+         <li>[<span class="required">required</span>] Book: Murphy -- Chapter 24, Sections 24.1-24.4 -- <i>Markov Chain Monte Carlo (MCMC) Inference</i></li>
+         <li>[<span class="optional">optional</span>] Book: Bishop -- Chapter 11, Section 11.2-11.3 -- <i>Sampling Methods</i></li>
+         <li>[<span class="optional">optional</span>] Book: MacKay -- Chapter 30 -- <i>Efficient Monte Carlo Methods</i></li>
+         <li>[<span class="optional">optional</span>] Paper: Christophe Andrieu, Nando de Freitas, Arnaud Doucet and Michael I. Jordan. <i><a href="papers/andrieu-defreitas-doucet-jordan-2002.pdf">An Introduction to MCMC for Machine Learning</a></i>. Machine Learning 50:5-43, 2003.</li>
+         <li>[<span class="optional">optional</span>] Paper: Gareth O. Roberts and Jeffrey S. Rosenthal. <i><a href="papers/roberts-rosenthal-2003.pdf">Markov chain Monte Carlo</a></i>. Encyclopedia of the Actuarial Sciences, 2004.</li>
+
+         <li>[<span class="optional">optional</span>] Video: Iain Murray -- <a href="http://videolectures.net/mlss09uk_murray_mcmc/">Markov Chain Monte Carlo</a></li>
+         <li>[<span class="optional">optional</span>] Video: Nando de Freitas -- <a href="http://videolectures.net/mlss08au_freitas_asm/">Monte Carlo Simulation for Statistical Inference</a></li>
+         <li>[<span class="optional">optional</span>] Video: Christian Robert -- <a href="http://videolectures.net/mlss04_robert_mcmcm/">Markov Chain Monte Carlo Methods</a></li>
+         <li>[<span class="optional">optional</span>] Slides: Jeffrey Rosenthal -- <a href="http://probability.ca/jeff/ftpdir/lannotes.4.pdf">Understanding MCMC</a></li>
+         <li>[<span class="optional">optional</span>] Metacademy: <a href="http://metacademy.org/graphs/concepts/markov_chain_monte_carlo#lfocus=markov_chain_monte_carlo">Markov Chain Monte Carlo</a></li>
+         <li>[<span class="optional">optional</span>] Metacademy: <a href="http://metacademy.org/graphs/concepts/metropolis_hastings#lfocus=metropolis_hastings">Metropolis-Hastings</a></li>
+         <li>[<span class="optional">optional</span>] Metacademy: <a href="http://metacademy.org/graphs/concepts/gibbs_sampling#lfocus=gibbs_sampling">Gibbs Sampling</a></li>
+       </ul>
+     </div>
+     <p></p>
+
+     <hr width="80%">
+
+     <span class="lecture-date">Wed 30 Oct 2013</span>
+     <p class="lecture">
+     <span class="lecture-title">Lecture 15: Advanced Markov Chain Monte Carlo</span>
+     [ <a href="http://isites.harvard.edu/icb/icb.do?state=edit&amp;keyword=k98807&amp;topicId=icb.topic1317659&amp;pageContentId=icb.pagecontent1350016&amp;pageid=icb.page.topiceditgeneral.icb.topic1317659.icb.page623774&amp;panel=icb.pagecontent1350016%3Ar%2Fquiz%2Ftake%2F30#quizmo-icb.topic1317659">quiz</a> ]
+     </p><div class="lecture-prep">
+       <ul>
+         <li>[<span class="required">required</span>] Book: Murphy -- Chapter 24, Sections 24.5-24.7 -- <i>Markov Chain Monte Carlo (MCMC) Inference</i></li>
+         <li>[<span class="required">required</span>] Paper: Radford M. Neal. <i><a href="papers/neal-2001.pdf">Slice sampling (with discussion)</a></i>. Annals of Statistics 31:705-767, 2003.</li>
+         <li>[<span class="required">required</span>] Paper: Radford M. Neal. <i><a href="papers/neal-2010.pdf">MCMC using Hamiltonian dynamics</a></i>. Handbook of Markov Chain Monte Carlo, 2010.</li>
+         <li>[<span class="optional">optional</span>] Book: Bishop -- Chapter 11, Section 11.4-11.6 -- <i>Sampling Methods</i></li>
+         <li>[<span class="optional">optional</span>] Book: MacKay -- Chapter 32 -- <i>Exact Monte Carlo Sampling</i></li>
+         <li>[<span class="optional">optional</span>] Slides: Peter Green -- <a href="http://www.maths.bris.ac.uk/~mapjg/slides/tdtut4.pdf">Trans-dimensional Markov chain Monte Carlo</a></li>
+         <li>[<span class="optional">optional</span>] Paper: David I. Hastie and Peter J. Green -- <a href="papers/hastie-green-2011.pdf">Model choice using reversible jump Markov chain Monte Carlo</a></li>
+         <li>[<span class="optional">optional</span>] Metacademy: <a href="http://metacademy.org/graphs/concepts/slice_sampling#lfocus=slice_sampling">Slice Sampling</a></li>
+         <li>[<span class="optional">optional</span>] Metacademy: <a href="http://metacademy.org/graphs/concepts/hamiltonian_monte_carlo#lfocus=hamiltonian_monte_carlo">Hamiltonian Monte Carlo</a></li>
+       </ul>
+     </div>
+     <p></p>
+
+     <hr width="80%">
+
+     <span class="lecture-date">Fri 1 Nov 2013</span>
+     <p class="lecture">
+     <span class="lecture-title">Section 8: MCMC Practicalities</span>
+     </p><div class="lecture-prep">
+       <ul>
+         <li><span class="lecture-assign">Final Project Proposal Feedback Available</span></li>
+         <li><span class="lecture-assign">Midterms Back</span></li>
+       </ul>
+     </div>
+     <p></p>
+
+   </div>
+
+   <div class="lecture">
+     <h4>Example Models</h4>
+
+     <span class="lecture-date">Mon 4 Nov 2013</span>
+     <p class="lecture">
+     <span class="lecture-title">Lecture 16: Latent Dirichlet Allocation</span>
+     [ <a href="http://isites.harvard.edu/icb/icb.do?state=edit&amp;keyword=k98807&amp;topicId=icb.topic1317659&amp;pageContentId=icb.pagecontent1350016&amp;pageid=icb.page.topiceditgeneral.icb.topic1317659.icb.page623774&amp;panel=icb.pagecontent1350016%3Ar%2Fquiz%2Ftake%2F31#quizmo-icb.topic1317659">quiz</a> ]
+     </p><div class="lecture-prep">
+       <ul>
+         <li>[<span class="required">required</span>] Book: Murphy -- Chapter 27, Sections 27.1-27.4 -- <i>Latent Variable Models for Discrete Data</i></li>
+         <li>[<span class="required">required</span>] Paper: David M. Blei, Andrew Ng and Michael I. Jordan. <i><a href="papers/blei-ng-jordan-2003.pdf">Latent Dirichlet allocation</a></i>.  Journal of Machine Learning Research 3:993-1022, 2003.</li>
+         <li>[<span class="required">required</span>] Paper: David M. Blei and John D. Lafferty. <i><a href="papers/blei-lafferty-2009.pdf">Topic Models</a></i>. Text Mining: Classification, Clustering and Applications, 2009.</li>
+         <li>[<span class="required">required</span>] Paper: Thomas L. Griffiths and Mark Steyvers. <a href="papers/griffiths-steyvers-2004.pdf"><i>Finding Scientific Topics</i></a>. Proceedings of the National Academy of Sciences 101:5228-5235, 2004.</li>
+         <li>[<span class="optional">optional</span>] Paper: Thomas Hofmann. <a href="papers/hofmann-1999a.pdf"><i>Probabilistic Latent Semantic Analysis</i></a>. UAI 1999.</li>
+
+         <li>[<span class="optional">optional</span>] Paper: Asuncion, Smyth and Welling -- <a href="#refs">Asynchronous Distributed Learning of Topic Models</a></li>
+         <li>[<span class="optional">optional</span>] Video: David Blei -- <a href="http://videolectures.net/mlss09uk_blei_tm/">Topic Models</a></li>
+         <li>[<span class="optional">optional</span>] Slides: David Blei -- <a href="http://www.cs.princeton.edu/~blei/kdd-tutorial.pdf">Probabilistic Topic Models</a></li>
+         <li>[<span class="optional">optional</span>] Metacademy: <a href="http://metacademy.org/graphs/concepts/latent_dirichlet_allocation#lfocus=latent_dirichlet_allocation">Latent Dirichlet Allocation</a></li>
+
+       </ul>
+     </div>
+     <p></p>
+
+     <hr width="80%">
+
+     <span class="lecture-date">Wed 6 Nov 2013</span>
+     <p class="lecture">
+     <span class="lecture-title">Lecture 17: State Space Models</span>
+     </p><div class="lecture-prep">
+       <ul>
+         <li><span class="lecture-assign">Assignment 4 Help Session 5-7pm, Maxwell-Dworkin Second Floor Lounge</span></li>         
+         <li>[<span class="required">required</span>] Book: Murphy -- Chapter 18, Sections 18.1-18.4 -- <i>State Space Models</i></li>
+         <li>[<span class="optional">optional</span>] Book: Murphy -- Chapter 18, Sections 18.5-18.6 -- <i>State Space Models</i></li>
+         <li>[<span class="optional">optional</span>] Book: Bishop -- Chapter 13, Sections 13.3 -- <i>Sequential Data</i></li>
+         <li>[<span class="optional">optional</span>] Paper: Eric A. Wan and Rudolph van der Merwe. <i><a href="papers/unscented.pdf">The Unscented Kalman Filter for Nonlinear Estimation</a></i>.</li>
+         <li>[<span class="optional">optional</span>] Metacademy: <a href="http://metacademy.org/graphs/concepts/linear_dynamical_systems#lfocus=linear_dynamical_systems">Linear Dynamical Systems</a></li>
+       </ul>
+     </div>
+     <p></p>
+
+     <hr width="80%">
+
+     <span class="lecture-date">Fri 8 Nov 2013</span>
+     <p class="lecture">
+     <span class="lecture-title">Section 9: Graph Models</span>
+     [ <a href="files/section09.pdf">notes</a> ]
+     </p><div class="lecture-prep">
+       <ul>
+         <li><span class="lecture-assign">Assignment 4 Due</span></li>
+         <li><span class="lecture-assign">Assignment 5 Out</span></li>
+         <li><span class="lecture-assign">Last Day for Assignment 3 Regrades</span></li>
+         <li>[<span class="required">required</span>] Book: Murphy -- Chapter 27, Sections 27.5-27.6 -- <i>Latent Variable Models for Discrete Data</i></li>
+       </ul>
+     </div>
+     <p></p>
+
+   </div>
+
+   <div class="lecture">
+     <h4>Nonparametric Models</h4>
+
+     <span class="lecture-date">Mon 11 Nov 2013</span>
+     <p class="lecture">
+     <span class="lecture-title">Lecture 18: Kernels</span>
+     [ <a href="http://isites.harvard.edu/icb/icb.do?state=edit&amp;keyword=k98807&amp;topicId=icb.topic1317659&amp;pageContentId=icb.pagecontent1350016&amp;pageid=icb.page.topiceditgeneral.icb.topic1317659.icb.page623774&amp;panel=icb.pagecontent1350016%3Ar%2Fquiz%2Ftake%2F33#quizmo-icb.topic1317659">quiz</a> ]
+     </p><div class="lecture-prep">
+       <ul>
+         <li>[<span class="required">required</span>] Book: Murphy -- Chapter 14 -- <i>Kernels</i></li>
+         <li>[<span class="optional">optional</span>] Book: Bishop -- Chapter 6, Sections 6.1-6.2 -- <i>Kernel Methods</i></li>
+         <li>[<span class="optional">optional</span>] Book: Hastie, Tibshirani, and Friedman -- Chapter 5 -- <i>Basis Expansions and Regularization</i></li>
+         <li>[<span class="optional">optional</span>] Book: Hastie, Tibshirani, and Friedman -- Chapter 12 -- <i>Support Vector Machines and Flexibile Discriminants</i></li>
+         <li>[<span class="optional">optional</span>] Slides: Andrew Moore -- <a href="http://www.autonlab.org/tutorials/svm15.pdf">Support Vector Machines</a></li>
+         <li>[<span class="optional">optional</span>] Video: Bernhard Scholkopf -- <a href="http://videolectures.net/mlss09uk_schoelkopf_km/">Kernel Methods</a></li>
+         <li>[<span class="optional">optional</span>] Video: Liva Ralaivola -- <a href="http://videolectures.net/bootcamp2010_ralaivola_ikm/">Introduction to Kernel Methods</a></li>
+         <li>[<span class="optional">optional</span>] Video: Colin Campbell -- <a href="http://videolectures.net/epsrcws08_campbell_isvm/">Introduction to Support Vector Machines</a></li>
+         <li>[<span class="optional">optional</span>] Video: Alex Smola -- <a href="http://videolectures.net/mlss08au_smola_ksvm/">Kernel Methods and Support Vector Machines</a></li>
+         <li>[<span class="optional">optional</span>] Video: Partha Niyogi -- <a href="http://videolectures.net/mlss05us_niyogi_ikm/">Introduction to Kernel Methods</a></li>
+         <li>[<span class="optional">optional</span>] Many more videos on kernel-related topics <a href="http://videolectures.net/Top/Computer_Science/Machine_Learning/Kernel_Methods/">here</a></li>
+         <li>[<span class="optional">optional</span>] Metacademy: <a href="http://metacademy.org/graphs/concepts/kernel_trick#lfocus=kernel_trick">The Kernel Trick</a></li>
+         <li>[<span class="optional">optional</span>] Metacademy: <a href="http://metacademy.org/graphs/concepts/constructing_kernels#lfocus=constructing_kernels">Constructing Kernels</a></li>
+         <li>[<span class="optional">optional</span>] Metacademy: <a href="http://metacademy.org/graphs/concepts/support_vector_machine#lfocus=support_vector_machine">Support Vector Machines</a></li>
+       </ul>
+     </div>
+     <p></p>
+
+     <hr width="80%">
+
+     <span class="lecture-date">Wed 13 Nov 2013</span>
+     <p class="lecture">
+     <span class="lecture-title">Lecture 19: Gaussian Processes</span>
+     [ <a href="http://isites.harvard.edu/icb/icb.do?state=edit&amp;keyword=k98807&amp;topicId=icb.topic1317659&amp;pageContentId=icb.pagecontent1350016&amp;pageid=icb.page.topiceditgeneral.icb.topic1317659.icb.page623774&amp;panel=icb.pagecontent1350016%3Ar%2Fquiz%2Ftake%2F34#quizmo-icb.topic1317659">quiz</a> ]
+     </p><div class="lecture-prep">
+       <ul>
+         <li>[<span class="required">required</span>] Book: Murphy -- Chapter 15 -- <i>Gaussian Processes</i></li>
+         <li>[<span class="optional">optional</span>] Book: Rasmussen and Williams -- Chapter 2 -- <i>Regression</i></li>
+         <li>[<span class="optional">optional</span>] Book: Rasmussen and Williams -- Chapter 3 -- <i>Classification</i></li>
+         <li>[<span class="optional">optional</span>] Book: Bishop -- Chapter 6, Sections 6.4 -- <i>Kernel Methods</i></li>
+         <li>[<span class="optional">optional</span>] Book: MacKay -- Chapter 45 -- <i>Gaussian Processes</i></li>
+         <li>[<span class="required">required</span>] Video: David MacKay -- <a href="http://videolectures.net/gpip06_mackay_gpb/">Gaussian Process Basics</a></li>
+         <li>[<span class="optional">optional</span>] Video: Carl Rasmussen -- <a href="http://videolectures.net/mlss09uk_rasmussen_gp/">Learning with Gaussian Processes</a></li>
+         <li>[<span class="optional">optional</span>] Metacademy: <a href="http://metacademy.org/graphs/concepts/gaussian_processes#lfocus=gaussian_processes">Gaussian Process</a></li>
+       </ul>
+     </div>
+     <p></p>
+
+     <hr width="80%">
+
+     <span class="lecture-date">Fri 15 Nov 2013</span>
+     <p class="lecture">
+     <span class="lecture-title">Section 10: Practical Gaussian Processes</span>
+     </p><div class="lecture-prep">
+       <ul>
+         <li><span class="lecture-assign">Assignment 4 Back</span></li>
+         <li><span class="lecture-assign">Last Day for Midterm Regrades</span></li>
+         <li>[<span class="required">required</span>] Paper: Iain Murray, Ryan Prescott Adams and David J.C. MacKay. <i><a href="http://homepages.inf.ed.ac.uk/imurray2/pub/10ess/ess.pdf">Elliptical Slice Sampling</a></i>.  JMLR Workshop and Conference Proceedings 9:541-548, 2010.</li>
+         <li>[<span class="optional">optional</span>] Paper: Iain Murray and Ryan Prescott Adams. <i><a href="http://homepages.inf.ed.ac.uk/imurray2/pub/10hypers/hypers.pdf">Slice Sampling Covariance Hyperparameters of Latent Gaussian Models</a></i>. Advances in Neural Information Processing Systems, 2011.</li>
+         <li>[<span class="optional">optional</span>] Book: Rasmussen and Williams -- Chapter 4 -- <i>Covariance Functions</i></li>
+         <li>[<span class="optional">optional</span>] Book: Rasmussen and Williams -- Chapter 5 -- <i>Model Selection and Adaptation of Hyperparameters</i></li>
+         <li>[<span class="optional">optional</span>] Video: Yee Whye Teh -- <a href="http://videolectures.net/mlss09uk_teh_nbm/">Nonparametric Bayesian Methods</a></li>
+         <li>[<span class="optional">optional</span>] Video: Peter Orbanz -- <a href="http://videolectures.net/mlss09uk_orbanz_fnbm/">Foundations of Nonparametric Bayesian Methods</a></li>
+         <li>[<span class="optional">optional</span>] Video: Michael Jordan -- <a href="http://videolectures.net/icml05_jordan_dpcrp/">Dirichlet Processes, Chinese Restaurant Processes and All That</a></li>
+         <li>[<span class="optional">optional</span>] Video: Yee Whye Teh -- <a href="http://videolectures.net/mlss07_teh_dp/">Dirichlet Processes: Tutorial and Practical Course</a></li>
+         <li>[<span class="optional">optional</span>] Video: Volker Tresp -- <a href="http://videolectures.net/mlss06au_tresp_dpnbm/">Dirichlet Processes and Nonparametric Bayesian Modelling</a></li>
+         <li>[<span class="optional">optional</span>] Video: Zoubin Ghahramani -- <a href="http://videolectures.net/bark08_ghahramani_samlbb/">Should All Machine Learning Be Bayesian? Should All Bayesian Models Be Nonparametric?</a></li>
+       </ul>
+     </div>
+     <p></p>
+
+     <hr width="80%">
+     
+     <span class="lecture-date">Mon 18 Nov 2013</span>
+     <p class="lecture">
+     <span class="lecture-title">Lecture 20: Dirichlet Processes I</span>
+     [ <a href="http://isites.harvard.edu/icb/icb.do?state=edit&amp;keyword=k98807&amp;topicId=icb.topic1317659&amp;pageContentId=icb.pagecontent1350016&amp;pageid=icb.page.topiceditgeneral.icb.topic1317659.icb.page623774&amp;panel=icb.pagecontent1350016%3Ar%2Fquiz%2Ftake%2F35#quizmo-icb.topic1317659">quiz</a> ]
+     </p><div class="lecture-prep">
+       <ul>
+         <li>[<span class="required">required</span>] Book: Murphy -- Chapter 25, Sections 25.1-25.2 -- <i>Clustering</i></li>
+         <li>[<span class="required">required</span>] Paper: Peter Orbanz and Yee Whye Teh. <i><a href="papers/orbanz-teh-2010.pdf">Bayesian Nonparametric Models</a></i>. Encyclopedia of Machine Learning, 2010.</li>
+         <li>[<span class="required">required</span>] Paper: Carl Edward Rasmussen. <i><a href="papers/rasmussen-1999a.pdf">The Infinite Gaussian Mixture Model</a></i>. NIPS, 1999.</li>
+         <li>[<span class="optional">optional</span>] Video: Tom Griffiths -- <a href="http://videolectures.net/mlss2010_griffiths_isfd/">Inferring Structure from Data</a></li>
+         <li>[<span class="optional">optional</span>] Metacademy: <a href="http://metacademy.org/graphs/concepts/dirichlet_process#lfocus=dirichlet_process">Dirichlet Process</a></li>
+         <li>[<span class="optional">optional</span>] Metacademy: <a href="http://metacademy.org/graphs/concepts/chinese_restaurant_process#lfocus=chinese_restaurant_process">Chinese Restaurant Process</a></li>
+       </ul>
+     </div>
+     <p></p>
+
+     <hr width="80%">
+     
+     <span class="lecture-date">Wed 20 Nov 2013</span>
+     <p class="lecture">
+     <span class="lecture-title">Lecture 21: Dirichlet Processes II</span>
+     [ <a href="http://isites.harvard.edu/icb/icb.do?state=edit&amp;keyword=k98807&amp;topicId=icb.topic1317659&amp;pageContentId=icb.pagecontent1350016&amp;pageid=icb.page.topiceditgeneral.icb.topic1317659.icb.page623774&amp;panel=icb.pagecontent1350016%3Ar%2Fquiz%2Ftake%2F36#quizmo-icb.topic1317659">quiz</a> ]
+     </p><div class="lecture-prep">
+       <ul>
+         <li><span class="lecture-assign">Assignment 5 Help Session 5-7pm, Maxwell-Dworkin Second Floor Lounge</span></li>         
+         <li>[<span class="optional">optional</span>] Paper: Jayaram Sethuraman. <i><a href="papers/sethuraman-1994.pdf">A Constructive Definition of Dirichlet Priors</a></i>. Statistica Sinica 4, 1994.</li>
+         <li>[<span class="optional">optional</span>] Paper: Yee Whye Teh, Michael I. Jordan, Matthew J. Beal and David M. Blei -- <a href="papers/teh-jordan-beal-blei-2005.pdf">Hierarchical Dirichlet Processes</a>, Journal of the American Statistical Association, 2006.</li>
+         <li>[<span class="optional">optional</span>] Paper: Radford M. Neal -- <a href="papers/neal-2001b.pdf">Defining Priors for Distributions Using Dirichlet Diffusion Trees</a>, Bayesian Statistics 7, 619-629, 2003.</li>
+         <li>[<span class="optional">optional</span>] Paper: Zoubin Ghahramani, Thomas L. Griffiths and Peter Sollich -- <a href="papers/ghahramani-griffiths-sollich-2006.pdf">Bayesian nonparametric latent feature models</a></li>
+         <li>[<span class="optional">optional</span>] Metacademy: <a href="http://metacademy.org/graphs/concepts/hierarchical_dirichlet_process#lfocus=hierarchical_dirichlet_process">Hierarchical Dirichlet Process</a></li>
+       </ul>
+     </div>
+     <p></p>
+
+     <hr width="80%">
+
+     <span class="lecture-date">Fri 22 Nov 2013</span>
+     <p class="lecture">
+     <span class="lecture-title">Section 11: Practical Dirichlet Processes</span>
+     </p><div class="lecture-prep">
+       <ul>
+         <li><span class="lecture-assign">Final Project Abstract and Status Report Due</span></li>
+         <li><span class="lecture-assign">Assignment 5 Due</span></li>
+         <li>[<span class="required">required</span>] Paper: Radford M. Neal -- <a href="papers/neal-1998.pdf">Markov Chain Sampling Methods for Dirichlet Process Mixture Models</a></li>
+       </ul>
+     </div>
+     <p></p>
+
+   </div>
+     
+   <div class="lecture">
+     <h4>Deep Learning</h4>
+
+     <span class="lecture-date">Mon 25 Nov 2013</span>
+     <p class="lecture">
+     <span class="lecture-title">Lecture 22: Boltzmann Machines</span>
+     </p><div class="lecture-prep">
+       <ul>
+         <li>[<span class="required">required</span>] Book: Murphy -- Chapter 27, Section 27.7 -- <i>Latent Variable Models for Discrete Data</i></li>
+         <li>[<span class="required">required</span>] Book: Murphy -- Chapter 28, Section 28.1 -- <i>Deep Learning</i></li>
+         <li>[<span class="optional">optional</span>] Book: MacKay -- Chapter 31 -- <i>Ising Models</i></li>
+         <li>[<span class="optional">optional</span>] Book: MacKay -- Chapter 42 -- <i>Hopfield Networks</i></li>
+         <li>[<span class="optional">optional</span>] Book: MacKay -- Chapter 43 -- <i>Boltzmann Machines</i></li>
+         <li>[<span class="optional">optional</span>] Video: Geoffrey Hinton -- <a href="http://videolectures.net/mlss09uk_hinton_dbn/">Deep Belief Networks</a></li>
+         <li>[<span class="optional">optional</span>] Video: Marcus Frean -- <a href="http://videolectures.net/mlss2010au_frean_deepbeliefnets/">Restricted Boltzmann Machines and Deep Belief Networks</a></li>
+         <li>[<span class="optional">optional</span>] Video: Geoffrey Hinton -- <a href="http://videolectures.net/jul09_hinton_deeplearn/">A Tutorial on Deep Learning</a></li>
+         <li>[<span class="optional">optional</span>] Video: Yoshua Bengio and Yann LeCun -- <a href="http://videolectures.net/icml09_bengio_lecun_tldar/">Tutorial on Deep Learning Architectures</a></li>
+         <li>[<span class="optional">optional</span>] Video: Yann LeCun -- <a href="http://www.youtube.com/watch?v=3boKlkPBckA">Visual Perception with Deep Learning</a></li>
+
+       </ul>
+     </div>
+     <p></p>
+
+     <hr width="80%">
+
+     <span class="lecture-date">Mon 2 Dec 2013</span>
+     <p class="lecture">
+     <span class="lecture-title">Lecture 23: Neural Networks</span>
+     [ <a href="http://isites.harvard.edu/icb/icb.do?state=edit&amp;keyword=k98807&amp;topicId=icb.topic1317659&amp;pageContentId=icb.pagecontent1350016&amp;pageid=icb.page.topiceditgeneral.icb.topic1317659.icb.page623774&amp;panel=icb.pagecontent1350016%3Ar%2Fquiz%2Ftake%2F38#quizmo-icb.topic1317659">quiz</a> ]
+     </p><div class="lecture-prep">
+       <ul>
+         <li><span class="lecture-assign">Last Day for Assignment 4 Regrades</span></li>
+         <li><span class="lecture-assign">Assignment 5 Back</span></li>
+         <li>[<span class="required">required</span>] Book: Murphy -- Chapter 16, Section 16.5 -- <i>Adaptive Basis Function Models</i></li>
+         <li>[<span class="optional">optional</span>] Book: Bishop -- Chapter 5 -- <i>Neural Networks</i></li>
+         <li>[<span class="optional">optional</span>] Book: MacKay -- Chapter 39 -- <i>The Single Neuron as a Classifier</i></li>
+         <li>[<span class="optional">optional</span>] Book: MacKay -- Chapter 40 -- <i>Capacity of a Single Neuron</i></li>
+         <li>[<span class="optional">optional</span>] Book: MacKay -- Chapter 41 -- <i>Learning as Inference</i></li>
+         <li>[<span class="optional">optional</span>] Book: MacKay -- Chapter 44 -- <i>Supervised Learning in Multilayer Networks</i></li>
+         <li>[<span class="optional">optional</span>] Book: Hastie, Tibshirani, and Friedman -- Chapter 11 -- <i>Neural Networks</i></li>
+         <li>[<span class="optional">optional</span>] Metacademy: <a href="http://metacademy.org/graphs/concepts/feed_forward_neural_nets#lfocus=feed_forward_neural_nets">Feedforward Neural Networks</a></li>
+       </ul>
+     </div>
+     <p></p>
+
+     <hr width="80%">
+
+     <span class="lecture-date">Wed 4 Dec 2013</span>
+     <p class="lecture">
+     <span class="lecture-title">Lecture 24: Advanced Neural Networks</span>
+     [ <a href="http://isites.harvard.edu/icb/icb.do?state=edit&amp;keyword=k98807&amp;topicId=icb.topic1317659&amp;pageContentId=icb.pagecontent1350016&amp;pageid=icb.page.topiceditgeneral.icb.topic1317659.icb.page623774&amp;panel=icb.pagecontent1350016%3Ar%2Fquiz%2Ftake%2F39#quizmo-icb.topic1317659">quiz</a> ]
+     </p><div class="lecture-prep">
+       <ul>
+         <li>[<span class="required">required</span>] Book: Murphy -- Chapter 28, Sections 28.3-28.5 -- <i>Deep Learning</i></li>
+         <li>[<span class="optional">optional</span>] Paper: Geoffrey E. Hinton, Simon Osindero and Yee Whye Teh. <i><a href="papers/hinton-etal-2006.pdf">A Fast Learning Algorithm for Deep Belief Nets</a></i>. Neural Computation 18:1527-1554, 2006.</li>
+         <li>[<span class="optional">optional</span>] Metacademy: <a href="http://metacademy.org/graphs/concepts/convolutional_nets#lfocus=convolutional_nets">Convolutional Neural Networks</a></li>
+       </ul>
+     </div>
+     <p></p>
+   </div>
+   
+   <div class="lecture">
+
+       <span class="lecture-date">Thu 5 Dec 2013</span>
+       <p class="lecture-prep">
+         </p><ul>
+           <li><span class="lecture-assign">Final Project Poster Session</span></li>
+         </ul>
+       <p></p>
+
+     <hr width="80%">
+
+     <span class="lecture-date">Wed 11 Dec 2013</span>
+       <p class="lecture-prep">
+         </p><ul>
+           <li><span class="lecture-assign">Final Project Reports Due</span></li>
+           <li><span class="lecture-assign">Last Day for Assignment 5 Regrades</span></li>
+         </ul>
+       <p></p>
+   </div>
+
+   <hr>
+
+   <a name="assignments">
+   <h3>Assignments</h3> For the assignments, you'll get both a .tex
+   file and a .pdf.  You'll also need the class
+   file: </a><a href="files/harvardml.cls">harvardml.cls</a>.  Examples of
+   usage: <a href="files/example.tex">example.tex</a>, <a href="files/example.pdf">example.pdf</a>, <a href="files/example-fig.pdf">example-fig.pdf</a>.
+   <ul>
+     <li>Assignment 1: Out 6 September 2013; Due 20 September 2013 [ <a href="files/assignment-1.pdf">assignment-1.pdf</a> | <a href="files/assignment-1.tex">assignment-1.tex</a> ]<br>
+       <p>
+         <a name="jester">
+           <b>Jester Data:</b> 
+           These data are approximately 1.7 million ratings in the range
+           [-10,10] of 150 jokes from 63,974 users.  These data are from
+           the </a><a href="http://eigentaste.berkeley.edu/dataset/">Eigentaste
+             Project</a> at Berkeley.  I have munged the data somewhat, so use
+           the local copies here:
+           </p><ul>
+             <li><a href="data/jester_ratings.dat.gz">jester_ratings.dat.gz</a>:
+               Each row is formatted as [User ID] [Joke ID] [Rating]</li>
+             <li><a href="data/jester_items.dat.gz">jester_items.dat.gz</a>: Maps the joke IDs to the joke text.</li>
+             <li><a href="data/jester_items.clean.dat.gz">jester_items.clean.dat.gz</a>: Maps the joke IDs to the joke text. (No punctuation, lowercased.)</li>
+             <li><a href="data/jester_ratings_users.mat">jester_ratings_users.mat</a>: Ratings chopped up into a cell array with one entry per user.</li>
+             <li><a href="data/jester_ratings_jokes.mat">jester_ratings_jokes.mat</a>: Ratings chopped up into a cell array with one entry per joke.</li>
+           </ul>
+           The correct reference for these data is Ken Goldberg,
+           Theresa Roeder, Dhruv Gupta and Chris
+           Perkins. <i>Eigentaste: A Constant Time Collaborative
+           Filtering Algorithm</i>. Information Retrieval
+           4(2):133-151,
+           2001. [<a href="papers/goldberg-roeder-gupta-perkins-2001.pdf">pdf</a>]
+         
+       <p></p>
+     </li>
+     <li>Assignment 2: Out 21 September 2013; Due 4 October 2013 [ <a href="files/assignment-2.pdf">assignment-2.pdf</a> | <a href="files/assignment-2.tex">assignment-2.tex</a> ]<br>
+       <p>
+         <a name="spam">
+           <b>Spam Email Data:</b> These data are 3000 training and
+           1601 test emails.  Each has 57 features and a binary label
+           in the last column. You can read more about the
+           data </a><a href="http://www-stat.stanford.edu/~tibs/ElemStatLearn/datasets/spam.info.txt">here</a>.
+           </p><ul>
+             <li><a href="data/spam.train.dat.gz">spam.train.dat.gz</a></li>
+             <li><a href="data/spam.test.dat.gz">spam.test.dat.gz</a></li>
+           </ul>
+         
+       <p></p>
+     </li>
+     <li>Assignment 3: Out 4 October 2013; Due <del>18 October 2013</del> 20 October 2013 [ <a href="files/assignment-3.pdf">assignment-3.pdf</a> | <a href="files/assignment-3.tex">assignment-3.tex</a> ]<br>
+       <p>
+         Uses <a href="#jester">Jester data</a> above.
+       </p>
+     </li>
+     <li>Assignment 4: Out 25 October 2013; Due 8 November 2013 [ <a href="files/assignment-4.pdf">assignment-4.pdf</a> | <a href="files/assignment-4.tex">assignment-4.tex</a> ] </li>
+     <li>Assignment 5: Out 8 November 2013; Due 22 November 2013 [<a href="files/assignment-5.pdf">assignment-5.pdf</a> | <a href="files/assignment-5.tex">assignment-5.tex</a> ] </li>
+   </ul>
+   
+
+   <hr>
+
+   <a name="project">
+   <h3>Final Project</h3> See
+   document </a><a href="files/project.pdf">here</a> for details.  For the
+   final report use the NIPS style files
+   available <a href="http://nips.cc/Conferences/2013/PaperInformation/StyleFiles">here</a>.
+   <ul>
+     <li>Proposal: Due 25 October 2013</li>
+     <li>Abstract and Status Report: Due 22 November 2013</li>
+     <li>Poster Session: 5 December 2013 (2-4pm in Maxwell-Dworking)</li>
+     <li>Final Report: Due 11 December 2013</li>
+   </ul>
+   
+
+   <hr>
+
+   <a name="grading">
+   <h3>Grading</h3>
+   <ul>
+     <li>Assignments (lowest dropped): 40%</li>
+     <li>Pre-lecture Quizzes: 5%</li>
+     <li>Midterm: 15%</li>
+     <li>Project Proposal: 10%</li>
+     <li>Project Status Report and Abstract: 5%</li>
+     <li>Project Poster: 5%</li>
+     <li>Project Report: 20%</li>
+   </ul>
+   </a>
+
+   <hr>
+
+   <a name="books">
+     <h3>General Machine Learning Books</h3>
+     </a><ul><a name="books">
+       </a><li><a name="books"><b>Required:</b> Kevin Murphy, </a><a href="http://www.cs.ubc.ca/~murphyk/MLbook/">Machine Learning: A Probabilistic Perspective</a>, MIT Press.</li>
+       <li>Recommended: Christopher M. Bishop, <a href="http://research.microsoft.com/en-us/um/people/cmbishop/prml/">Pattern Recognition and Machine Learning</a>, Springer.</li>
+       <li>Optional: David J.C. MacKay, <a href="http://www.inference.phy.cam.ac.uk/itprnn/book.html">Information Theory, Inference, and Learning Algorithms</a>, Cambridge University Press. <b>Freely available online.</b></li>
+       <li>Optional: Trevor Hastie, Robert Tibshirani, and Jerome Friedman, <a href="http://www-stat.stanford.edu/~tibs/ElemStatLearn/">The Elements of Statistical Learning</a>, Springer. <b>Freely available online.</b></li>
+       <li>Optional: David Barber, <a href="http://www.cs.ucl.ac.uk/staff/d.barber/brml/">Bayesian Reasoning and Machine Learning</a>, Cambridge University Press. <b>Freely available online.</b></li>
+     </ul>
+     
+     <h3>Relevant Specialized Books (Optional)</h3>
+     <ul>
+       <li>Carl Edward Rasmussen and Christopher K.I. Williams, <a href="http://www.gaussianprocess.org/gpml/"><i>Gaussian Processes for Machine Learning</i></a>, MIT Press. <b>Freely available online.</b></li>
+       <li>Luc Devroye, <a href="http://luc.devroye.org/rnbookindex.html"><i>Non-Uniform Random Variate Generation</i></a>, Springer-Verlag. <b>Freely available online.</b></li>
+       <li>Daphne Koller and Nir Friedman, <a href="http://pgm.stanford.edu/"><i>Probabilistic Graphical Models: Principles and Techniques</i></a>, MIT Press.</li>
+       <li>Jorge Nocedal and Stephen J. Wright, <a href="http://www.ece.northwestern.edu/~nocedal/book/index.html"><i>Numerical Optimization</i></a>, Springer.</li>
+       <li>Andrew Gelman, John B. Carlin, Hal S. Stern, David B. Dunson, Aki Vehtari, and Donald B. Rubin. <a href="http://www.stat.columbia.edu/~gelman/book/"><i>Bayesian Data Analysis</i></a>, CRC.</li>
+       <li>Thomas M. Cover and Joy A. Thomas, <a href="http://www.wiley.com/WileyCDA/WileyTitle/productCd-0471241954.html"><i>Elements of Information Theory</i></a>, Wiley.</li>
+       <li>Christian P. Robert and George Casella, <a href="http://www.springer.com/statistics/statistical+theory+and+methods/book/978-0-387-21239-5"><i>Monte Carlo Statistical Methods</i></a>, Springer.</li>
+     </ul>
+   
+
+   <hr>
+   <a name="faq">
+     <h3>Frequently Asked Questions</h3>
+     </a><ul><a name="faq">
+       </a><li><a name="faq"><b>What
+       is </b></a><b><a href="http://www.metacademy.org">Metacademy</a>?</b>
+       Metacademy is an exciting new online tool developed
+       by <a href="http://people.csail.mit.edu/rgrosse/">Roger
+       Grosse</a>
+       and <a href="http://mlg.eng.cam.ac.uk/creed/">Colorado Reed</a>
+       for helping you to develop personalized instruction.  It's
+       meant to help you manage what you know about different topics
+       and develop an individualized curriculum to learn a new
+       subject.</li>
+
+       <li><b>I have an interview/sporting event/illness/computer
+       crash.  Can I have an extension?</b> No.  You can turn your
+       assignment in up to a week late for half credit, and your
+       lowest assignment grade will be dropped.</li>
+
+       <li><b>Do I need to turn in code?</b>  No.  You will write up
+       your results with graphs, tables, and descriptions.</li>
+
+       <li><b>How should I format my assignment?</b> Use the provided
+       .tex and .cls files (see
+       the <a href="#assignments">examples</a>) to produce a LaTeX
+       document.  Compile it to PDF and upload the result
+       to <a href="http://isites.harvard.edu/icb/icb.do?keyword=k98807&amp;pageid=icb.page623774&amp;pageContentId=icb.pagecontent1350015&amp;state=maximize">the
+       iSites dropbox</a>.</li>
+
+       <li><b>What if I don't know how to use LaTeX?</b> Everyone
+       doing quantitative work should know how to use LaTeX, so
+       consider this class an opportunity to learn it.</li>
+
+       <li><b>Is attendance required at lecture/section?</b> No,
+       attendance is not required.  However, you will be assessed on
+       material that is presented in both lecture and section and may
+       or may not be available from the readings alone.</li>
+
+       <li><b>Can I do the final project without a partner?</b> Yes.</li>
+
+       <li><b>Can I have a group of three for the final project?</b>
+       Yes, but you'll be expected to do an amount of work appropriate
+       for three people.  I suggest discussing this with the
+       instructors.</li>
+
+       <li><b>I think I have found an error in the Murphy book!</b>
+       This is entirely possible.  Let's share a comprehensive list of
+       these in Piazza.</li>
+
+       <li><b>What is your policy on simultaneous enrollment?</b>
+         You may not be simultaneously enrolled in this class and another.</li>
+
+     </ul>
+   
+
+   
+
+ 
+
+</body></html>

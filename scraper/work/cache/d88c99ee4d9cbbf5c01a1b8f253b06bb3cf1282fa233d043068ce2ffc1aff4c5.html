@@ -1,0 +1,1632 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="This webpage contains information about CS2040S course in School of Computing, National University of Singapore titled: Data Structures and Algorithms. This course heavily uses https://visualgo.net.">
+    <meta name="keywords" content="Associate Professor Steven Halim CS2040S VisuAlgo SoC School of Computing NUS National University of Singapore Data Structures Algorithms">
+    <meta name="author" content="Associate Professor Steven Halim">
+    <link rel="icon" href="images/wo7_icon.ico">
+
+    <title>CS2040S - Data Structures and Algorithms - World of Seven</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/jq-3.2.1/dt-1.10.16/datatables.min.css">
+    <link href="css/stevenstyle.css" rel="stylesheet"> <!-- Prof Halim's personal styles -->
+
+    <style> /* custom styles, only for this document */
+      dd, li { margin-top: 5px; margin-bottom: 5px; }
+
+      .red { color: red; }
+      .green { color: green; }
+      .black { color: black; }
+      .khaki { color: khaki; }
+      .lightgreen { color: lightgreen; }
+
+      .redbg { background-color: red; }
+      .blue { background-color: lightblue; }
+      .yellow { background-color: yellow; }
+      .darkgrey { background-color: darkgrey; }
+      .lightgrey { background-color: lightgrey; }
+
+      .notready { background-color: pink; }
+
+      .weightage {
+        font-weight: bold;
+        color: red;
+      }
+
+      .publicholiday {
+        font-style: italic;
+        color: green;
+      }
+
+      .detail {
+        font-size: smaller;
+        font-family: 'Arial Narrow';
+      }
+
+      .notforit5003 { background-color: lightblue; }
+    </style>
+  </head>
+
+  <body data-spy="scroll" data-target="#navbar-example">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-2 d-none d-lg-block sidebar">
+          <nav id="navbar-example" class="navbar navbar-light bg-light">
+            <nav class="nav nav-pills flex-column">
+              <a class="nav-link" href="index.html">World of 7</a>
+              <br>
+              <a class="nav-link" href="#intro">Introduction</a>
+              <a class="nav-link" href="#registration">Registration</a>
+              <br>
+              <a class="nav-link" href="#news">News</a>
+              <a class="nav-link" href="#lessonplan">Lesson&nbsp;Plan</a>
+              <br>
+              <a class="nav-link" href="https://visualgo.net" target="_blank">VisuAlgo</a>
+              <a class="nav-link" href="" onclick="alert('Check Prof Halim\'s broadcast email for the invite link');">Discord&nbsp;Server</a>
+              <br>
+              <!--<a class="nav-link" href="cs2040c.html">CS2040C</a>-->
+              <a class="nav-link" href="cs2040s.html"><b>CS2040S</b></a>
+              <a class="nav-link" href="cs3230.html">CS3230</a>
+              <a class="nav-link" href="cs3233.html">CS3233</a>
+              <!-- <a class="nav-link" href="cs4234.html">CS4234</a> -->
+              <a class="nav-link" href="it5003.html">IT5003</a>
+              <a class="nav-link" href="myteaching.html">My&nbsp;Teaching</a>
+              <a class="nav-link" href="cs_textbooks_animated.html">CSBooks@VA</a>
+              <br>
+              <a class="nav-link" href="myresearch/phd_tips.html">PhD Tips</a>
+            </nav>
+          </nav>
+        </div>
+
+        <div class="offset-lg-2 col-lg-10 col-md-12 main">
+          <h1 class="page-header">CS2040S - Data Structures and Algorithms (Java)</h1>
+
+          <div id="intro">
+            <h2 class="sub-header">Introduction</h2>
+
+            <p>This course introduces students to the design and implementation of fundamental data structures and algorithms.
+            The course covers basic data structures (linked lists, stacks, queues, binary heaps, hash tables, trees, and graphs),
+        <!--The course covers basic data structures (linked lists, stacks, queues, hash tables, binary heaps, trees, and graphs), // I put hash tables after binary heaps -->
+            searching and sorting algorithms, and basic analysis of algorithms.
+            </p>
+
+            <p>The programming language used for this course is Java.
+            </p>
+
+            <p>We use <b>very</b> basic object-oriented programming concepts in various data structures implementations, e.g., Stack class inherits LinkedList class (more details of OOP are in CS2030).
+            </p>
+
+            <p><em>Note: This introductory message will not be prominent the next time you visit this URL again. This behavior is normal. You can view it again by scrolling to the top of this page.</em><br>
+            </p>
+          </div>
+
+          <div id="registration">
+            <h2 class="sub-header">Course Registration</h2>
+
+            <p class="red">For AY 2026/27, Prof Halim only teaches CS2040S (CS students) in S1.<br>
+            his return to <a href="cs2040c.html">CS2040C</a> (CEG, InfoSecurity, exchange students) in S2 AY 2025/26 last semester ends up just one-off as he will run both CS3230 S1 AND S2 of AY 2026/27.<br>
+            </p>
+
+            <p><b>
+            As of Mon, 15 Jun 2026, the max class size for S1 AY 2026/27 is configured at 240.<br>
+            Prof Halim expects the true enrollment to be ≥200, i.e., between [206 (last S1 AY 2025/26 size)..240].<br>
+            He is now looking for 12 best of the best part-time TA applications (contact Prof Halim as early as possible; hard deadline is 30 Jun 26, but the earlier the better).<br>
+            Generally: the higher your past teaching feedback rating of related course(s) (for senior TAs), your CS2040/C/S grade (for new TAs), the higher your LeetCode rating/number of solves, the higher your chance to be TA of this course.<br>
+            </b></p>
+
+            <!--
+            <p>b>
+            As of Thu, 24 Jul 2025, the class size is 195 &mdash; This is above the predicted range of [150-180].<br>
+            As of Mon, 28 Jul 2025, I have reconfigured Lab group sizes (4 sessions at PL3, up to 24 pax - no change; but now 4 sessions at PL2, up to 31 pax), to cater for the possibility of 220 pax this sem.<br>
+            As of Tue, 05 Aug 2025, the class size is 203.<br>
+            As of Mon, 11 Aug 2025, the class size is 205.<br>
+            As of Thu, 14 Aug 2025, the class size is 206, and most (186/206) have gotten their preferred lab group.<br>
+            As of Mon, 18 Aug 2025, the class size is 206, and almost all (198/206) have gotten their lab group.<br>
+            As of Tue, 19 Aug 2025, the class size is 206, and all except last 3 have gotten their lab group.<br>
+            As of Thu, 21 Aug 2025, the class size is 206, and everyone have gotten their lab group, official D&C starts.<br>
+            </b></p>
+            -->
+
+            <p>Some facts:
+            </p>
+
+            <ol>
+              <li>Prof Halim has implemented <a href="https://en.wikipedia.org/wiki/Flipped_classroom" target="_blank">flipped classroom</a> (a type of <a href="https://en.wikipedia.org/wiki/Blended_learning" target="_blank">blended learning</a>) techniques, employing machine-teach-(and-auto-test)-students-on-basic-stuffs, along with in-class live discussion of more challenging problems in his CS2040/C/S classes. From AY 2017/18 to the present, he has received teaching feedback ratings from 3.9 (bad) to 4.8 (very good) out of a maximum of 5.0 for these offerings, with a running average rating of 4.429 (good).</li>
+
+              <li>Apart from teaching CS2040/C/S on multiple occassions from 2017 to the present, Prof Halim has also taught similar courses that are variants of the current version of CS2040/C/S, namely CS2020 once (2011), CS2010 six times (2011-2016), CS1020E once (2016), and <a href="it5003.html">IT5003</a> more than ten times (2020-present).</li>
+
+              <li>Teaching staffs:<br>
+                  <a href="myteaching.html">Associate Professor Steven Halim</a>, the key man behind <a href="https://visualgo.net" target="_blank">VisuAlgo</a>, a tool that is <i>utilized extensively</i> in this course.<br>
+                  The primary goal for this S1 AY 2026/27 is on how to prepare the current generation of (CS) students to co-exist with the ever-growing capabilities of Generative AI tools.<br>
+                  <br>
+                  <table class="table table-striped table-sm">
+                    <thead class="thead-dark">
+                      <tr>
+                        <th scope="col" class="w-16">Rating<br>(out of 5.0)</th>
+                        <th scope="col" class="w-14">Aug-Nov 26<br>(n=1??/2??)<br>≥50%</th>
+                        <th scope="col" class="d-none d-sm-table-cell w-14">Jan-Apr 26 (CS2040C)<br>(n=116/155)<br>75% <span class="red">▼</span></th>
+                        <th scope="col" class="d-none d-md-table-cell w-14">Aug-Nov 25<br>(n=163/206)<br>79% <span class="red">▼</span></th>
+                        <th scope="col" class="d-none d-lg-table-cell w-14">Aug-Nov 24<br>(n=128/161)<br>80% <span class="green">▲</span></th>
+                        <th scope="col" class="d-none d-xl-table-cell w-14">Aug-Nov 23<br>(n=90/128)<br>70% <!--<span class="red">&#x25BC;</span>--></th>
+                        <!-- <th scope="col" class="d-none d-xl-table-cell w-14">Aug-Nov 22 (CS2040C)<br>(n=162/206)<br>79% <span class="green">&#x25B2;</span></th>
+                        <th scope="col" class="d-none d-xl-table-cell w-14">Jan-May 22<br>(n=101/131)<br>77% <span class="green">&#x25B2;</span></th>
+                        <th scope="col" class="d-none d-xl-table-cell w-14">Aug-Dec 21<br>(n=49/69)<br>71% <span class="green">&#x25B2;</span></th>
+                        <th scope="col" class="d-none d-xl-table-cell w-14">Jan-May 21<br>(n=158/253)<br>62% <span class="green">&#x25B2;</span></th>
+                        <th scope="col" class="d-none d-xl-table-cell w-14">Aug-Dec 20<br>(n=60/115)<br>52% <span class="red">&#x25BC;</span></th>
+                        <th scope="col" class="d-none d-xl-table-cell w-14">Aug-Dec 19<br>(n=56/96)<br>58% <span class="green">&#x25B2;</span></th>
+                        <th scope="col" class="d-none d-xl-table-cell w-14">Jan-May 19<br>(n=144/269)<br>54% <span class="red">&#x25BC;</span></th>
+                        <th scope="col" class="d-none d-xl-table-cell w-14">Jun-Aug 18<br>(n=33/38)<br>87% <span class="green">&#x25B2;</span></th>
+                        <th scope="col" class="d-none d-xl-table-cell w-14">Jan-May 18<br>(n=145/173)<br>84% <span class="green">&#x25B2;</span></th>
+                        <th scope="col" class="d-none d-xl-table-cell w-14">Aug-Dec 17<br>(n=28/37)<br>76%</th> -->
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">Course feedback (SoC CS avg lvl 2000 ~3.9)</th>
+                        <td>[4.0..4.2] (tgt)</td>
+                        <td class="d-none d-sm-table-cell">3.7 (PW) <span class="red">▼</span></td>
+                        <td class="d-none d-md-table-cell"><b>4.4 (PB)</b> <span class="green">▲</span></td>
+                        <td class="d-none d-lg-table-cell">4.2 <span class="green">==</span></td>
+                        <td class="d-none d-xl-table-cell">4.2 <!--<span class="green">==</span>--></td>
+                        <!-- <td class="d-none d-xl-table-cell">4.2 <span class="green">==</span></td>
+                        <td class="d-none d-xl-table-cell">4.2 <span class="green">==</span> (+Alan)</td>
+                        <td class="d-none d-xl-table-cell">4.2 <span class="green">==</span></td>
+                        <td class="d-none d-xl-table-cell">4.2 <span class="green">&#x25B2;</span> (+Alan)</td>
+                        <td class="d-none d-xl-table-cell">3.8 <span class="red">&#x25BC;</span> (C-19+IOI 20)</td>
+                        <td class="d-none d-xl-table-cell">4.0 <span class="green">==</span></td>
+                        <td class="d-none d-xl-table-cell">4.0 <span class="red">&#x25BC;</span> (v large)</td>
+                        <td class="d-none d-xl-table-cell"><b>4.4</b> <span class="green">&#x25B2;</span> (S1 level)</td>
+                        <td class="d-none d-xl-table-cell">4.3 <span class="red">&#x25BC;</span> (large)</td>
+                        <td class="d-none d-xl-table-cell"><b>4.4</b> (&gt; avg :)</td> -->
+                      </tr>
+                      <tr>
+                        <th scope="row">Course difficulty (SoC CS avg lvl 2000 ~4.1)</th>
+                        <td>[3.9..4.1] (tgt)</td>
+                        <td class="d-none d-sm-table-cell">4.3 <span class="red">▲</span></td>
+                        <td class="d-none d-md-table-cell"><b>4.0 (PB)</b> <span class="green">▼</span></td>
+                        <td class="d-none d-lg-table-cell">4.2 <span class="green">▼</span></td>
+                        <td class="d-none d-xl-table-cell">4.3 <!-- <span class="green">==</span>--></td>
+                        <!-- <td class="d-none d-xl-table-cell">4.3 <span class="red">&#x25B2;</span></td>
+                        <td class="d-none d-xl-table-cell">4.2 <span class="green">==</span> (high)</td>
+                        <td class="d-none d-xl-table-cell">4.2 <span class="red">&#x25B2;</span></td>
+                        <td class="d-none d-xl-table-cell"><b>3.9</b> <span class="green">&#x25BC;</span> (easiest)</td>
+                        <td class="d-none d-xl-table-cell">4.6 <span class="red">&#x25B2;</span> (C-19+IOI 20)</td>
+                        <td class="d-none d-xl-table-cell">4.2 <span class="red">&#x25B2;</span></td>
+                        <td class="d-none d-xl-table-cell">4.0 <span class="green">&#x25BC;</span></td>
+                        <td class="d-none d-xl-table-cell">4.2 <span class="red">&#x25B2;</span> (Sp Sem)</td>
+                        <td class="d-none d-xl-table-cell">4.0 <span class="green">&#x25BC;</span></td>
+                        <td class="d-none d-xl-table-cell">4.1</td> -->
+                      </tr>
+                      <tr>
+                        <th scope="row">Prof Halim's teaching (SoC CS avg lvl 2000 ~4.2)</th>
+                        <td>[4.2..4.4] (tgt)</td>
+                        <td class="d-none d-sm-table-cell">3.9 (PW) <span class="red">▼</span></td>
+                        <td class="d-none d-md-table-cell"><b>4.6 (PB)</b> <span class="green">▲</span></td>
+                        <td class="d-none d-lg-table-cell">4.5 <span class="green">▲</span></td>
+                        <td class="d-none d-xl-table-cell">4.4 <!-- <span class="red">&#x25BC;</span>--></td>
+                        <!--<td class="d-none d-xl-table-cell">4.5 <span class="green">&#x25B2;</span></td>
+                        <td class="d-none d-xl-table-cell">4.3 <span class="red">&#x25BC;</span> (+Alan)</td>
+                        <td class="d-none d-xl-table-cell">4.5 <span class="green">&#x25B2;</span></td>
+                        <td class="d-none d-xl-table-cell">4.4 <span class="green">&#x25B2;</span> (+Alan)</td>
+                        <td class="d-none d-xl-table-cell">4.3 <span class="red">&#x25BC;</span> (C-19+IOI 20)</td>
+                        <td class="d-none d-xl-table-cell">4.4 <span class="green">&#x25B2;</span></td>
+                        <td class="d-none d-xl-table-cell">4.2 <span class="red">&#x25BC;</span> (v large)</td>
+                        <td class="d-none d-xl-table-cell">4.8 <span class="green">&#x25B2;</span> (Thx God :)</td>
+                        <td class="d-none d-xl-table-cell">4.5 <span class="red">&#x25BC;</span> (large)</td>
+                        <td class="d-none d-xl-table-cell">4.7</td> -->
+                      </tr>
+                    </tbody>
+                  </table>
+
+                  <p>TAs:<br><!-- Update on 17 Jul 2024<br>
+                  Prof Halim has found best 8 TAs for this semester.<br> -->
+                  <!-- For the other 48-8 = 40 not-successful applicants, try again next semester (Sem2 version of CS2040S is much bigger).<br>
+                  I still don't have the confirmed list of eligible TAs (those who have formally applied as of 30 Jun 2024) as per 12 Jul 2024.<br> -->
+                  <!-- The list below are list of known TA applicants via direct messages/emails to Prof Halim.<br> -->
+                  <!-- PS: THERE ARE FOURTY-EIGHT MINUS SEVEN SELECTED = FOURTY-ONE OTHER APPLICATIONS FOR THE LAST SLOT<br>
+                  Or pivot to CS2040 (with Dr Ket Fah), CS2040C (with Dr Alan/Sanka) or try the new CS2040DE (with Design and Engineering faculty)<br>
+                  Or consider re-applying to <a href='cs3230.html'>CS3230</a> (I still need 2 other part-time TAs) if you have also cleared CS3230.<br>-->
+                  <!-- Update on 22 Aug: 161/162 students have secured their lab group.<br>
+                  The last one should be sorted out by today??.<br> -->
+                  </p>
+
+                  <table id="tutgrp" class="table table-sm">
+                    <thead class="thead-dark">
+                      <tr>
+                        <th scope="col">Date, Time</th>
+                        <th scope="col">Live Session (Venue) (#Stu/#Cap)</th>
+                        <th scope="col">No</th>
+                        <th scope="col" class="d-none d-sm-table-cell">TA</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1/Mon, 1000-1200</td>
+                        <td>COM1-B109 (PL2) (<span style="color: green;">??/20</span>)</td>
+                        <td>01</td>
+                        <td class="d-none d-sm-table-cell">@TBA</td>
+                      </tr>
+                      <tr>
+                        <td>1/Mon, 1000-1200</td>
+                        <td>COM1-B108 (PL3) (<span style="color: green;">??/20</span>)</td>
+                        <td>02</td>
+                        <td class="d-none d-sm-table-cell">@TBA</td>
+                      </tr>
+                      <tr>
+                        <td>1/Mon, 1000-1200</td>
+                        <td>COM1-B110 (PL5) (<span style="color: green;">??/20</span>)</td>
+                        <td>03</td>
+                        <td class="d-none d-sm-table-cell">@TBA</td>
+                      </tr>
+                      <tr>
+                        <td>1/Mon, 1200-1400</td>
+                        <td>COM1-B109 (PL2) (<span style="color: green;">??/20</span>)</td>
+                        <td>04</td>
+                        <td class="d-none d-sm-table-cell">@TBA</td>
+                      </tr>
+                      <tr>
+                        <td>1/Mon, 1200-1400</td>
+                        <td>COM1-B108 (PL3) (<span style="color: green;">??/20</span>)</td>
+                        <td>05</td>
+                        <td class="d-none d-sm-table-cell">@TBA</td>
+                      </tr>
+                      <tr>
+                        <td>1/Mon, 1200-1400</td>
+                        <td>COM1-B110 (PL5) (<span style="color: green;">??/20</span>)</td>
+                        <td>06</td>
+                        <td class="d-none d-sm-table-cell">@TBA</td>
+                      </tr>
+                      <tr>
+                        <td>1/Mon, 1400-1600</td>
+                        <td>COM1-B109 (PL2) (<span style="color: green;">??/20</span>)</td>
+                        <td>07</td>
+                        <td class="d-none d-sm-table-cell">@TBA</td>
+                      </tr>
+                      <tr>
+                        <td>1/Mon, 1400-1600</td>
+                        <td>COM1-B108 (PL3) (<span style="color: green;">??/20</span>)</td>
+                        <td>08</td>
+                        <td class="d-none d-sm-table-cell">@TBA</td>
+                      </tr>
+                      <tr>
+                        <td>1/Mon, 1400-1600</td>
+                        <td>COM1-B110 (PL5) (<span style="color: green;">??/20</span>)</td>
+                        <td>09</td>
+                        <td class="d-none d-sm-table-cell">@TBA</td>
+                      </tr>
+                      <tr>
+                        <td>1/Mon, 1600-1800</td>
+                        <td>COM1-B109 (PL2) (<span style="color: green;">??/20</span>)</td>
+                        <td>10</td>
+                        <td class="d-none d-sm-table-cell">@TBA</td>
+                      </tr>
+                      <tr>
+                        <td>1/Mon, 1600-1800</td>
+                        <td>COM1-B108 (PL3) (<span style="color: green;">??/20</span>)</td>
+                        <td>11</td>
+                        <td class="d-none d-sm-table-cell">@TBA</td>
+                      </tr>
+                      <tr>
+                        <td>1/Mon, 1600-1800</td>
+                        <td>COM1-B110 (PL5) (<span style="color: green;">??/20</span>)</td>
+                        <td>12</td>
+                        <td class="d-none d-sm-table-cell">@TBA</td>
+                      </tr>
+                      <!-- 
+                      <tr class="yellow">
+                        <td>5/Fri, 2100-2300</td>
+                        <td><a href='https://nus-sg.zoom.us/j/81574591621?pwd=iEJkaewvyO7bEqf5F9WfocYWnIrvYD.1' target='_blank'>Zoom Recurring Link</a> (free and easy)</td>
+                        <td>-</td>
+                        <td class="d-none d-sm-table-cell">various TAs</td>
+                      </tr>
+                      <tr class="yellow">
+                        <td>6/Sat, (morning, TBC)</td>
+                        <td><a href='https://nus-sg.zoom.us/j/TBA' target='_blank'>Zoom Recurring Link TBA</a> (free and easy)</td>
+                        <td>-</td>
+                        <td class="d-none d-sm-table-cell">TBA</td>
+                      </tr> -->
+                    </tbody>
+                  </table>
+
+                  <p>List of TAs: <!-- (ordered using Lab Group Number): <!-- &mdash; Ivan is not taking any lab group): -->
+                  </p>
+
+                  <ol start="0">
+                    <li>Special part-time TA only for grading midterm+final: Ivan Chew Teck Meng (not taking any lab group) - TBC pending annual contract renewal</li>
+
+                    <li>@chowwars, Chow YUAN BIN, full-time TA, but on half-load (just one lab group) - assignment confirmed</li>
+
+                    <li>@bionicrjk, <a href="https://leetcode.com/u/taihengkerk/" target="_blank">KERK Tai Heng</a>, ex CS3233 (A) (peak rating: 4.9/CS2040S S2 AY24/25) (also TA-ing CS3230)</li>
+                    <li>@ycteo_, <a href="https://leetcode.com/u/ycteo/" target="_blank">Teo YOCK CHENG</a> (peak rating: 4.8/CS1101S S2 AY24/25) (also TA-ing CS3230)</li>
+                    <li>@niv0507, <a href="https://leetcode.com/u/nivanthn/" target="_blank">NIVANTH Naricitty</a>, ex CS2040S (A-) (peak rating: 4.7/CS2040S S2 AY25/26)</li>
+                    <li>@huyhomhinh, <a href="https://leetcode.com/u/huyhasun/" target="_blank">Nguyen DUC HUY</a>, ex CS3233 (A+) (peak rating: 4.6/CS2040S S2 AY25/26)</li>
+                    <li>@yql, <a href="https://leetcode.com/u/michaelyql/" target="_blank">MICHAEL Yang Qianlong</a>, ex CS3230 (A) (peak rating: 4.5/CS2040S and CS3230 S2 AY25/26) (also TA-ing CS3230)</li> <!-- 4.6/IT5002 S1 AY25/26 -->
+                    <li>@HanJu, <a href="https://leetcode.com/u/hanjxnny/" target="_blank">RAYSON Yap Han Jun</a>, ex CS2040S S1 AY25/26 (A), (peak rating: 4.3/CS2040C S2 AY25/26)</li>
+                    <li>@snowlite_, <a href="https://leetcode.com/u/jerejms/" target="_blank">JEREMIAH James</a>, ex CS2040C (A) (new TA, but has personally elaborated on his past (non-NUS) teaching assignment pre University)</li>
+
+                    <li>@TAdiscord, <a href="https://leetcode.com/u/leetcode/" target="_blank">LeetCode handle of the TA</a>, ex CS2040/C/S/CS3230/CS3233 (peak grade) (peak rating: 4.5+/CS???? S? AY2?/2?)</li>
+                    <li>@TAdiscord, <a href="https://leetcode.com/u/leetcode/" target="_blank">LeetCode handle of the TA</a>, ex CS2040/C/S/CS3230/CS3233 (peak grade) (peak rating: 4.5+/CS???? S? AY2?/2?)</li>
+                    <li>@TAdiscord, <a href="https://leetcode.com/u/leetcode/" target="_blank">LeetCode handle of the TA</a>, ex CS2040/C/S/CS3230/CS3233 (peak grade) (peak rating: 4.5+/CS???? S? AY2?/2?)</li>
+                    <li>@TAdiscord, <a href="https://leetcode.com/u/leetcode/" target="_blank">LeetCode handle of the TA</a>, ex CS2040/C/S/CS3230/CS3233 (peak grade) (peak rating: 4.5+/CS???? S? AY2?/2?)</li>
+                  </ol>
+
+                  <!--<p>For other applicants (<b>A TOTAL OF 52 (FIFTY TWO) APPLICANTS AT TMTF</b>), thanks for your applications, but many applicants to just 8 slots is impossible; do reapply to TA <b>other</b> courses in S1 AY 2025/26.
+                  </p>
+                  -->
+
+                  <br>
+                  <p>Part-time TAs applications (Prof Halim assumes that all names here have officially applied formally at TMTF system by 30 Jun 26):
+                  </p>
+
+                  <ul>
+                    <li>Category 1: Prof Halim returning part-time TAs (sorted by non-increasing peak-performance):
+                      <ol start="0">
+                        <li>All known applicants on this category has been considered</li>
+                      </ol>
+                    </li>
+
+                    <li>Category 2: Has other NUS teaching experience(s), chance correlates with teaching feedback of those past experiences (sorted by non-increasing peak-performance) and perceived 'spare mental capacities left to do far-higher-than-average TA job again':
+                      <ol start="0">
+                        <li>All known applicants on this category has been considered</li>
+                        <!-- <li>@kelven11, <a href='https://leetcode.com/u/KelvenN/' target='_blank'>KELVEN Nathanael</a>, ex CS3233 (A) (peak rating: 3.9/CS2040S S2 AY25/26) (will be assigned to CS3230)</li> -->
+                      </ol>
+                    </li>
+
+                    <li>Category 3: New with NUS teaching, chance correlates with Prof Halim's 'spider sense' about the candidates potential teaching capabilities and perceived 'spare mental capacities left to do first time TA job' (for future TA army replenishment) - discuss with Prof Halim directly to adjust your ranking below:
+                      <ol>
+                        <li>@ramanujanprimes, <a href="https://leetcode.com/u/sr-71-black-bird/" target="_blank">Hein Htet Zaw (COLIN)</a>, ex CS2040S (A+)</li>
+                        <li>@kine2626, Nguyen DINH KIEN (ex CS3233 S2 AY25/26 (A-)) (also applying for CS3230)</li>
+                        <li>@1mmunity, ADRIEL Jansen Siahaya (ex CS3233 S2 AY25/26 (A-))</li>
+                        <li>@falconbear73, <a href="https://leetcode.com/u/AlanOng2004/" target="_blank">Ong Zhi Kai ALAN</a> (ex CS2040C S2 AY25/26 (A+))</li>
+                        <li>@savemywifi, <a href="https://leetcode.com/u/SaveMyWifi/" target="_blank">Lee JIAN YI</a>, ex CS2040S S2 AY25/26 (A+)</li>
+                        <li>@kimjunkespanol, <a href="https://leetcode.com/u/KimJunk/" target="_blank">NICHOLAS Vun Ken</a> (ex CS2040C S2 AY25/26 (A))</li>
+                        <!--
+                        <li>Thanks for your applications, but many applicants to just 12 slots is impossible; do reapply to TA <b>other</b> courses</li>-->
+                      </ol>
+                    </li>
+                  </ul>
+
+                  <p>Any other applicant(s) who put CS2040S in the TMTF system but without informing Prof Halim will not be considered.</p>
+              </li>
+
+              <li>Have you passed (or exempted from) CS1010 (or its variants)? You have to...</li>
+
+              <li>For CS2040S, have you passed CS1231 (or its variants)? You have to...</li>
+
+              <li>Have you taken CS1020/CS1020E/CS2010/CS2020? You cannot take CS2040/C/S if you have taken similar/older course(s) that have huge degree of overlap with this course.</li>
+            </ol>
+
+
+            <h3>Syllabus</h3>
+
+            <p>This is what students learn in CS2040/C/S as taught by Prof Halim, compare it with the subset <a href="it5003.html">IT5003</a> version:<br>
+            </p>
+
+            <ul>
+              <li>Part 0: A quick review of CS1101S/CS1010/variants - Programming Methodology, with clearing at least 25 out of 33 non-premium (out of 49) LeetCode <a href="https://leetcode.com/studyplan/programming-skills/" target="_blank">programming-skills</a> problems as major key indicator (except Linked List category that is discussed in this course and the 16 premium problems)</li>
+
+              <li>Part 1: Algorithms using the simplest Linear Data Structure:
+                <ol>
+                  <li>Simple algorithms involving <a href="https://visualgo.net/en/array" target="_blank">(Resize-able) Array</a> (some are Complete Search, a.k.a., Brute Force)</li>
+                  <li>Various <a href="https://visualgo.net/en/sorting" target="_blank">Sorting</a> algorithms (DnC) and a few simple (Greedy) algorithms that are applicable after sorting the data</li>
+                </ol>
+              </li>
+
+              <li>Part 2: Various Linear Data Structures (DSes):
+                <ol>
+                  <li>List Abstract Data Structure (ADT)</li>
+                  <li>Stack, Queue, and Deque ADTs in their <a href="https://visualgo.net/en/list" target="_blank">Linked List</a> implementations</li>
+                  <li>Stack and Queue in their (resize-able/circular) Array implementations</li>
+                </ol>
+              </li>
+
+              <li>Part 3: Various (Non-)Linear Data Structures (DSes):
+                <ol>
+                  <li>Priority Queue (PQ) ADT, its <a href="https://visualgo.net/en/heap" target="_blank">Binary Heap</a> implementation (DnC), and a few simple (Greedy) algorithm with PQ</li>
+                  <li>Table/Map (ADT) part 1 (unordered) and its <a href="https://visualgo.net/en/hashtable" target="_blank">Hash Table</a> implementation (DnC)</li>
+                  <li>Disjoint Sets ADT and its <a href="https://visualgo.net/en/ufds" target="_blank">Union-Find Disjoint Sets</a> implementation (DnC)</li>
+                  <li>Table/Map (ADT) part 2 (ordered) and its <a href="https://visualgo.net/en/bst" target="_blank">Binary Search Tree (BST)</a> implementation, inclusive of the balanced BST version: <a href="https://visualgo.net/en/avl" target="_blank">Adelson-Velskii Landis (AVL) Tree</a> (DnC)</li>
+                  <li><a href="https://visualgo.net/en/graphds" target="_blank">Graph DS: Adjacency Matrix/Adjacency List/Edge List/Implicit Graph</a></li>
+                </ol>
+              </li>
+
+              <li>Part 4: Algorithms for Graph Problems:
+                <ol>
+                  <li><a href="https://visualgo.net/en/dfsbfs" target="_blank">Graph Traversal (CS): Depth-First Search (DFS), Breadth-First Search (BFS)</a>, and various application scenarios (Complete Search)</li>
+                  <li><a href="https://visualgo.net/en/sssp" target="_blank">Single-Source Shortest Paths (SSSP): Bellman-Ford algorithm (DP), on unweighted graph (BFS), on non-negative weight graph (Dijkstra's algorithm: two versions, Greedy), on Tree (BFS/DFS), on DAG (DP)</a><!--, Line Graph, Complete Graph--></li>
+                  <li><a href="https://visualgo.net/en/mst" target="_blank">Minimum Spanning Tree (MST): Kruskal's or Prim's algorithms (both are Greedy)</a>, various special cases and various application scenarios</li>
+                </ol>
+              </li>
+
+              <li>Part 5: Beyond polynomial-time algorithms: Short introduction to the theory of <a href="https://visualgo.net/en/reductions" target="_blank">NP-completeness</a> (preview of CS3230)
+              </li>
+
+              <li>Throughought this course:
+                <ol>
+                  <li>More advanced data structures and algorithms <b>design</b> and <b>analysis</b> (compared to Programming Methodology (CS1010/CS1101S/IT5001), but not as advanced as <a href="cs3230.html">CS3230</a>)</li>
+                  <li>Various trade-offs situations</li>
+                  <li>Real-life <b>problem-solving</b> skills (Complete Search/Brute Force/BF, Divide and Conquer/DnC, Greedy, and Dynamic Programming/DP)</li>
+                  <li>Recursive thinking</li>
+                  <li>Proper implementation (more emphasis) of (some) data structures and algorithms in <b>Java</b> with (lesser emphasis) their Java API version at the end</li>
+                  <li>Preview of what are being asked by technical interviewers today as per Prof Halim's research in solving ALL tasks in <a href="https://leetcode.com/studyplan/leetcode-75/" target="_blank">leetcode-75</a>, <a href="https://leetcode.com/studyplan/top-100-liked/" target="_blank">top-100-liked</a>, and <span class="notready"><a href="https://leetcode.com/studyplan/top-interview-150/" target="_blank">top-interview-150</a></span> lists</li>
+                </ol>
+              </li>
+            </ul>
+
+
+            <h3>Course Registration Additional FAQ</h3>
+
+            <p>If you have any important questions regarding this course, email dcssh at nus edu sg.
+            Relevant answers will be posted here to reach wider audiences.
+            </p>
+
+            <dl>
+              <dt><b>Q</b>: Will there be a Practical Exam (PE) for your version of CS2040/C/S?</dt>
+              <dd><b>A</b>: Starting from S1 AY2025/26, no... The weightage (that was previously for the stressful PE) will be passed to Final Assessment instead.
+              </dd>
+
+              <dt><b>Q</b>: Will this course be graded using Bell curve?</dt>
+              <dd><b>A</b>: CS2040S has much more than 40 students each semester. Bell curve system will obviously be used.</dd>
+
+              <dt><b>Q</b>: I am from CS1101S (subset of JavaScript)/CS1010S or CS1010E (Python)/other courses that do not use Java, should I pick up Java on my own before August 2025?</dt>
+              <dd><b>A</b>: Yes, that is a very good idea. We will only review basic Java in the first few weeks of this course and then Prof Halim will encourage you to self-learn Java along the way.</dd>
+
+              <dt><b>Q</b>: What Integrated Development Environment (IDE) that we will use in your version of CS2040/C/S?</dt>
+              <dd><b>A</b>: The choice of IDE to do the bi-weekly assignments is "up to you" (as there is no PE).</dd>
+
+              <dt><b>Q</b>: Do I have to buy any textbook for this course?</dt>
+              <dd><b>A</b>: Generally, no. But my <a href="cs3233.html">CS3233</a> textbook: <a href="https://cpbook.net" target="_blank">Competitive Programming</a> book: CP4, Book 1 (get a copy legally from <a href="https://www.lulu.com/shop/suhendry-effendy-and-felix-halim-and-steven-halim/competitive-programming-4-book-1/ebook/product-2978pr.html" target="_blank">lulu.com (eBook)</a> or <a href="https://www.lulu.com/en/gb/shop/suhendry-effendy-and-felix-halim-and-steven-halim/competitive-programming-4-book-1/paperback/product-1q2pjn4n.html" target="_blank">lulu.com (physical, need shipping from overseas)</a>) should be a good book to have. The answers for many of my test questions <i>may</i> be inside that book. The problem is... I discuss <a href="https://cpbook.net/methodstosolve" target="_blank">a lot of problems</a> in that book, near impossible to solve them all in just one semester.</dd>
+
+              <dt><b>Q</b>: Can I S/U this course if I am a freshman when I take this course?</dt>
+              <dd><b>A</b>: No, as this is a level-2 core course. CS2040/C/S has CS1101S/CS1010/variant as pre-requisite and according to <a href="https://www.nus.edu.sg/registrar/academic-information-policies/undergraduate-students/continuation-and-graduation-requirements#SU" target="_blank">Registrar's Office</a>: <b>"The S/U option will apply to all Level 1000 courses (with or without pre-requisites) and <u>Level 2000</u> courses without other NUS courses as pre-requisites, unless otherwise stipulated by the Faculties/Departments."</b>. So factor this information when taking this course.<!--  PS: Steven is not sure if NUS will continue to give additional S/U options for S1 AY 2020/21 due to COVID-19. --></dd>
+
+              <dt><b>Q</b>: I heard from my friend/senior that your version of CS2040/C/S is a <a href="https://en.wikipedia.org/wiki/Flipped_classroom" target="_blank">flipped classroom</a> course?</dt>
+              <dd><b>A</b>: You heard that correctly. Get ready :).</dd>
+
+              <dt><b>Q</b>: What are the potential changes that you will apply to CS2040/C/S in S1 AY 2026/27 compared to your many earlier runs of this course?</dt>
+              <dd><b>A</b>: Prof Halim only plan to change these variables this time (all others are planned to be kept roughly constant - with assumption that S2 AY2025/26 dip was due to personal reasons):
+                <ol>
+                  <li>Course weightage is now set to 50% CA and 50% final after last AY 2025/26 experiment of 40% CA and 60% final (too stressful for many students), so now final weightage goes down from 60% → 50% but midterm weightage goes up from 10% → 20% (all other components: PS/VA OQ/tutorial are kept constant).</li>
+                  <li>Prof Halim plans to disappear twice this semester, on Week 01 (to attend <a href="https://ioi2026.uz/" target="_blank">IOI 2026, Tashkent, Uzbekistan</a>) and on Reading Week - not affecting this class (to attend <a href="https://worldfinals.icpc.global/2026/" target="_blank">ICPC World Finals 2026, Dubai, United Arab Emirates</a>). Most likely, the first week's class will be recorded.</li>
+                  <li><a href="https://leetcode.com/u/stevenhalim/" target="_blank">Prof Halim</a> has lots of experience with LeetCode. Therefore, he has extended the <strike>Optional</strike> Essential LeetCode daily tasks from 13 weeks x 5 (Monday to Friday) = 65 tasks last year to 15 weeks (adding Week 0 and reading weeks) x 6 (Monday to Saturday) = 90 tasks this semester. At least 3 out of 6 --, i.e., half of -- these weekly tasks will be officially discussed in Lecture or Lab session with the rest to be openly discussed in our internal class Discord.</li> <!--has now solved more than half of entire LeetCode tasks: 2192/3949 (56%)</a>. By Week 0 (Mon, 03 Aug 26), he is projected to have solved ~2300/4000 tasks (~58%). For the next ~15 weeks until exam period, he plans to continue solving at a rate of ~1 task per day to reach ~2400/4100 tasks solved (~59%). -->
+                  <li>Possible tweak: Lab sessions (the 2nd hour of each Monday tutorial+lab combo) will likely be turned into mock interview sessions (details TBC).</li>
+                  <!--<li>[TO TRY ONE MORE TIME]: Prof Halim will try to make this course has difficulty rating in [4.0-4.1] range instead of 4.3, 4.3, 4.2, 4.2 in his last four iterations..., <b>so let's see if removing PE helps to achieve this</b>. The weightage of PE has to go somewhere though, so Final assessment weightage now increases from 40% to 60%...</li>-->
+                </ol>
+              </dd>
+            </dl>
+
+            <p><em>Note: This course registration section will not be prominent from Week 1 onwards. This behavior is normal. You can view it again by scrolling to the top of this page.</em><br>
+            </p>
+          </div>
+
+          <div id="news">
+            <h2 class="sub-header">News <button type="button" class="btn btn-primary btn-sm" id="showallbutton" onclick="get_news(-1); $(this).fadeOut(1000);">Show All</button></h2>
+
+            <table class="table table-striped table-hover table-sm">
+              <thead class="thead-dark">
+                <tr>
+                  <th scope="col">Date</th>
+                  <th scope="col">News</th>
+                </tr>
+              </thead>
+              <tbody id="n">  <tr><td>Wed, 03 Jun 26 <span class="badge badge-secondary">new</span></td><td>Final assessment date and time is announced (Tue, 24 Nov 26, 9-11am).<br>Lecture slots also change from Wed+Thu to Thu+Fri (but at least not early morning for the Fri session, but Fri of Wk08 will be affected by NUS Well-Being Day).<br>Lab slots are now increased from 4x2 = 8 sessions on Mondays to 4x3 = 12 sessions to minimize the maximum number of students per lab group.</td></tr>
+  <tr><td>Fri, 15 May 26</td><td>Multiple source of information points towards the further increase of CS2040S S1 size from record 206 pax in S1 AY25/26 to possibly up to 240 pax in S1 AY26/27. Prof Halim has adjusted number of labs from 4 Monday time slots x 2 parallel slots = 8 to 4x3 = 12 sessions to anticipate this. He is now looking for best 12 TA applications to fill in these slots.</td></tr>
+</tbody>
+            </table>
+          </div>
+
+          <div id="lessonplan">
+            <h2 class="sub-header">Lesson Plan
+              <button type="button" class="btn btn-primary btn-sm" id="hidepastbutton" onclick="$('#showpastrow').hide(); UpdateLesson(false); $(this).hide(); $('#showpastbutton').show();">Hide Past</button>
+              <button type="button" class="btn btn-primary btn-sm" id="showpastbutton" onclick="$('#showpastrow').show(); UpdateLesson(true); $(this).hide(); $('#hidepastbutton').show();" style="display: none;">Show Past</button>
+              <button type="button" class="btn btn-primary btn-sm" id="hidedetailsbutton" onclick="$('.detail').hide(); $('.current .detail').show(); $(this).hide(); $('#showdetailsbutton').show();">Hide Details</button>
+              <button type="button" class="btn btn-primary btn-sm" id="showdetailsbutton" onclick="$('.detail').show();  $(this).hide(); $('#hidedetailsbutton').show();" style="display: none;">Show Details</button>
+            </h2>
+
+            <div class="alert alert-warning d-lg-none" role="alert" id="lessonplansmallwindow"><b>Warning!</b> Lesson Plan details are hidden on small viewport. Please view this page on large screen ≥ 992 pixels to avoid missing important deadlines.
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">×</span>
+              </button>
+            </div>
+
+            <div class="detail">
+              <p>The 4 units CS2040/C/S syllabus will be delivered over 13 weeks.<br>
+              This course is a superset of a similar <a href="it5003.html">IT5003</a> course, approximately (3*13-2*12)/2*12 = 15/24 ~= 63% more content than IT5003.<br>
+              The weekly lesson plan of Week X is typically as follows (2+(1+1)+(2+1)+3 = 10 hours/week):
+              </p>
+
+              <ol>
+                <li>Give yourself about 2-hours/week to self-study as much as you can from various online Java references (especially during the early transition weeks) and <a href="https://visualgo.net" target="_blank">VisuAlgo</a> about the designated topic and attempt the e-Lecture/Online Quiz questions first (<a href="https://en.wikipedia.org/wiki/Flipped_classroom" target="_blank">flipped classroom</a>),</li>
+
+                <li>There are two lecture sessions weekly starting from Wk01:
+                <ol>
+                  <li>2-hour/week (effective 95m) in-class lecture 1 on Thu, 10am-12nn @ LT9 (start on time at 10.00am and end by around 11.35am), we will roughly do: 5m (buffer) + 5m (admins) + 35m (fast in class review of the more difficult parts of the designated VisuAlgo e-Lecture topics) + 7m (break) + 30m (application 1 - solving at least 1 Online Judge problem live) + 13m (buffer),</li>
+                  <li>1-hour/week (effective 45m) in-class lecture 2 on Fri, 11am-12nn @ LT19 (<b>NOTICE 9 VERSUS 19</b>), we will roughly do: 5m (buffer) + 5m (admins) + 30m (application 2 - solving at least another 1 Online Judge problem live) + 5m (buffer) — this additional 45m lecture per week is the main difference versus the <a href="it5003.html">IT5003</a> version.</li>
+                  </ol>
+                </li>
+
+                <li>On Tutorial+Lab (combo) day (on the following week), attempt and then actively participate on 1-hour/week (effective 50 minutes) tutorial slot of <b>past</b> week X-1 topic to improve student's understanding of course material, short 5m break, then for the second half, students will practice solve a "simple" problem (<b>guided by TA, possibly turned into mock coding interview practices</b>) during the next 1-hour/week (effective 40 minutes) lab session of past week X-1 topic to improve student's coding skills. This semester, we have 12 timing options (all on Monday), starting from Wk03,</li>
+
+                <li>Attempt a ~two-weeks Problem Set (PS) @ home, approximately 3 hours of work per week on average or (~6++ hours/set), starting from Wk01. The problems will be discussed in algorithmic (high-level) during each Tut+Lab session. You can use ChatGPT (or alternative GenAI) tool(s) <b>if you have spent more than 2 hours attempting any PS task without external help (other human or AI, which means in the 2 hours final assessment, you cannot solve this yet), and as long as you eventually (re-)code the solution yourself</b> (this part is for your own good), Plagiarism checker is built-in inside Kattis and extremely similar code can be easily identified,</li>
+
+                <li>TOTALLY OPTIONAL: (Re-)solve some Kattis and/or LeetCode demo problems (or more) that are related to this course using Prof Halim's <a href="https://cpbook.net/methodstosolve" target="_blank">Methods to Solve</a> page. <span class="red">WARNING: Doing this will significantly increases your study time per week for this course</span>.</li>
+              </ol>
+
+              <p>Then, repeat this throughout the semester :).
+              </p>
+            </div>
+ 
+            <p class="red">The S1 AY 2026/27 timetable below is still tentative, especially those that are highlighted with <span class="notready">pink color</span>. The Thu morning of CS2040S will be as close as possible with Wed evening of <a href="it5003.html">IT5003</a>.
+            </p>
+
+            <table class="table table-hover table-sm" id="lesson">
+              <thead class="thead-dark">
+                <tr data-offset="200" title="double click (on SmartPhone: double tap) this row to toggle showing/hiding the details">
+                  <th scope="col">Week</th>
+                  <th scope="col" class="d-none d-sm-table-cell">Tutorial+Lab Combo</th>
+                  <th scope="col">Lecture</th>
+                  <th scope="col" class="d-none d-md-table-cell">Interesting Problem Set</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr data-offset="200" id="showpastrow" title="double click (on SmartPhone: double tap) this row to toggle showing/hiding the details">
+                  <td colspan="4" class="text-center">
+                    Cells with course material that have <b>not</b> been updated are highlighted with <span class="notready">pink color</span>, <span class="khaki">past classes</span> more than one week ago are hidden so that we can focus on the <span class="lightgreen">current</span> and future classes, but you can restore them by clicking 'Show Past' button above, future classes are not highlighted
+                  </td>
+                </tr>
+
+                <tr data-offset="-14" title="double click (on SmartPhone: double tap) this row to toggle showing/hiding the details">
+                  <th scope="row">
+                    -01,<br>
+                    27-31&nbsp;Jul
+                  </th>
+                  <td class="d-none d-sm-table-cell">
+                    Has Not Started
+                  </td>
+                  <td>
+                    Has Not Started,<br>
+                    but please revise your CS1101S/CS1010/equivalent<br>
+                    <span class="detail">Prof Halim assumes that all of you have taken<br>
+                    or exempted from this course/its variants<br>
+                    <br>
+                    <b>Register at <a href="https://nus.kattis.com/courses/CS2040S/CS2040S_S1_AY2627/register" target="_blank">Kattis</a> and <a href="https://leetcode.com/accounts/signup/" target="_blank">LeetCode</a></b> (use full name as in Matric card),<br>
+                    <b>read <a href="https://nus.kattis.com/languages/java" target="_blank">Java specific instructions @ Kattis</a></b>,<br>
+                    pick up basic <b>Java</b> by yourself,<br>
+                    and solve the selected Online Judge (OJ)<br>
+                    Problem Set 0 (PS0) by yourself (CS1101S/CS1010/equivalent level)<br>
+                    and LeetCode OJ <a href="https://leetcode.com/studyplan/programming-skills/" target="_blank">programming-skills</a> study plan<br>
+                    (solving many 'trivial problems' from this set<br>
+                    ---the Kattis one is trackable by Prof Halim, indirectly tells him<br>
+                    about your CS1101S/CS1010/equivalent rough grade)<br>
+                    </span>
+                    <br>
+                    <span class="timehighlight notforit5003">There should be a <a href="https://www.comp.nus.edu.sg/programmes/ug/exemptions/olympiad/" target="_blank">CS2040 placement test</a><br>
+                    for AY26/27 incoming IOI medallists<br>
+                    Details TBA<br>
+                    <!--on Wed, 30 Jul 2025 late evening Bolivia time<br>
+                    and Thu, 31 Jul 2025, 9-11am SGT<br>-->
+                    </span>
+                  </td>
+                  <td class="d-none d-md-table-cell">
+                    <a href="https://nus.kattis.com/courses/CS2040S/CS2040S_S1_AY2627/assignments/ms7snz/standings" target="_blank">PS0</a>: Easy Coding Challenges<br>
+                    (01-13 Aug)<br>
+                    <span class="detail">Already graded to speed up<br>
+                    registration admins<br>
+                    Solve any 3 out of 10 trivial tasks for 1%
+                    </span>
+                  </td>
+                </tr>
+
+                <tr data-offset="-7" title="double click (on SmartPhone: double tap) this row to toggle showing/hiding the details">
+                  <th scope="row">
+                    00,<br>
+                    03-07&nbsp;Aug
+                  </th>
+                  <td class="d-none d-sm-table-cell">
+                    Has Not Started<br>
+                    <br>
+                    <span class="detail">
+                    Essential LeetCode exercises mostly from <a href="https://leetcode.com/studyplan/programming-skills/" target="_blank">programming-skills</a> 1:<br>
+                    Mon: <a href="https://leetcode.com/problems/to-lower-case/description/?envType=study-plan-v2&amp;envId=programming-skills" target="_blank">to-lower-case</a> (simple string processing),<br> <!-- or length-of-last-word -->
+                    Tue: <a href="https://leetcode.com/problems/average-salary-excluding-the-minimum-and-maximum-salary/description/?envType=study-plan-v2&amp;envId=programming-skills" target="_blank">average-salary-excluding-the-minimum-and-maximum-salary</a> (use library),<br>
+                    Wed: <a href="https://leetcode.com/problems/count-odd-numbers-in-an-interval-range/description/?envType=study-plan-v2&amp;envId=programming-skills" target="_blank">count-odd-numbers-in-an-interval-range</a> (PIE),<br>
+                    Thu: <a href="https://leetcode.com/problems/find-the-highest-altitude/?envType=study-plan-v2&amp;envId=leetcode-75" target="_blank">find-the-highest-altitude</a> (simple one pass),<br>
+                    Fri: <a href="https://leetcode.com/problems/plus-one/description/?envType=study-plan-v2&amp;envId=programming-skills" target="_blank">plus-one</a> (simulate +1 on a 'big' integer),<br>
+                    Sat: <a href="https://leetcode.com/problems/matrix-diagonal-sum/description/?envType=study-plan-v2&amp;envId=programming-skills" target="_blank">matrix-diagonal-sum</a> (2D grid processing, but still with one loop),<br>
+                    <!--Sun: sign-of-the-product-of-an-array<br>-->
+                    </span>
+                  </td>
+                  <td>
+                    Has Not Started<br>
+                    <span class="detail">Continue attempting Kattis PS0 and LeetCode programming-skills study plan<br>
+                    (hints in class Discord)<br></span>
+                  </td>
+                  <td class="d-none d-md-table-cell">
+                    PS0, continued<br>
+                    <span class="detail">Remember, solve any 3 for 1%
+                    </span>
+                  </td>
+                </tr>
+
+                <tr data-offset="0" title="double click (on SmartPhone: double tap) this row to toggle showing/hiding the details">
+                  <th scope="row">
+                    01,<br>
+                    10-14&nbsp;Aug
+                  </th>
+                  <td class="d-none d-sm-table-cell">
+                    Has Not Started<br>
+                    <br>
+                    <span class="detail">
+                    Essential LeetCode exercises mostly from <a href="https://leetcode.com/studyplan/programming-skills/" target="_blank">programming-skills</a> 2:<br>
+                    Mon: <a href="https://leetcode.com/problems/find-winner-on-a-tic-tac-toe-game/?envType=study-plan-v2&amp;envId=programming-skills" target="_blank">find-winner-on-a-tic-tac-toe-game</a> (small (3x3) 2D grid processing),<br>
+                    Tue: <a href="https://leetcode.com/problems/spiral-matrix/description/?envType=study-plan-v2&amp;envId=programming-skills" target="_blank">spiral-matrix</a> (interesting 2D grid traversal variant),<br>
+                    Wed: <a href="https://leetcode.com/problems/move-zeroes?envType=study-plan-v2&amp;envId=programming-skills" target="_blank">move-zeroes</a> (use two pointers),<br>
+                    Thu: <a href="https://leetcode.com/problems/is-subsequence/description/?envType=study-plan-v2&amp;envId=leetcode-75" target="_blank">is-subsequence</a> (use two pointers),<br>
+                    Fri: <a href="https://leetcode.com/problems/robot-return-to-origin/?envType=study-plan-v2&amp;envId=programming-skills" target="_blank">robot-return-to-origin</a> ((virtual) 2D grid traversal with one loop),<br>
+                    Sat: <a href="https://leetcode.com/problems/robot-bounded-in-circle/description/?envType=study-plan-v2&amp;envId=programming-skills" target="_blank">robot-bounded-in-circle</a> (a bit harder than robot-return-to-origin).<br>
+                    <!--Sun: <br>-->
+                    </span>
+                  </td>
+                  <td>
+                    <span class="timehighlight">Singapore National Day on Sun, 09 Aug 26<br>
+                    The following Mon, 10 Aug 26 is a Public Holiday<br>
+                    but this class is not affected with that PH but of something else<br>
+                    <br>
+                    Prof Halim is away for national service:<br>
+                    <a href="https://ioi2026.uz/schedule" target="_blank">IOI 2026, Tashkent, Uzbekistan</a><br>
+                    The first two classes will be combined into one recording...<br>
+                    </span>
+                    <br>
+                    01a. Course Admin, (Re-)Introduction to course programming language<br>
+                    <span class="detail">1. Setting the tone for a <a href="https://en.wikipedia.org/wiki/Flipped_classroom" target="_blank">flipped classroom</a> course<br>
+                    <a href="https://visualgo.net" target="_blank">VisuAlgo</a> + this Private Canvas + <a href="https://nus.kattis.com/" target="_blank">Kattis (NUS)</a> + <a href="https://leetcode.com/studyplan/leetcode-75/" target="_blank">LeetCode</a><br>
+                    2. Basic course programming language review/new feature introduction<br>
+                    3. Kattis/LeetCode problem(s) discussed today:<br>
+                    A few PS0 and/or programming-skills problems review (just for warm-up)<br>
+                    </span>
+                    <br>
+                    In the middle of 01a: <a href="https://visualgo.net/tests" target="_blank">VisuAlgo Online Quiz 0</a> <span class="weightage">(0%)</span><br>
+                    <span class="detail">There is 1 trivial question during the first lecture<br>
+                    Bring your own laptop<br>
+                    This one is put here to speed-up admins (don't skip the first lecture)<br>
+                    </span>
+                    <br>
+                    <span>Reminder: Read <a href="https://visualgo.net/en/array?slide=1" target="_blank">simple algorithms on unsorted array</a><br>
+                    (Slide 1 to 5-1) before the next lecture<br>
+                    </span>
+                    <br>
+                    <span class="notforit5003">
+                    <a href="https://visualgo.net/en/array?mode=array" target="_blank">01b. Algorithms on Unsorted Array</a><br>
+                    <span class="detail">
+                    Kattis/LeetCode problem(s) discussed today:<br>
+                    <a href="https://open.kattis.com/problems/rankproblem" target="_blank">rankproblem</a> (a List ADT task; Java ArrayList operations:<br>
+                    add (2 versions), indexOf, remove; and using Java class)<br>
+                    </span>
+                    <!--
+                    <a href='https://nus.kattis.com/problems/basicprogramming1' target='_blank'>basicprogramming1</a> (basic programming review)<br>
+                    <a href='https://nus.kattis.com/problems/vectorfunctions' target='_blank'>vectorfunctions</a> (more about C++ functions (const, &) and std::vector)<br>
+                    
+                    <a href='https://en.cppreference.com/w/cpp/algorithm/iota' target='_blank'>iota</a>; std::vector <a href='https://en.cppreference.com/w/cpp/container/vector/insert' target='_blank'>insert</a> and <a href='https://en.cppreference.com/w/cpp/container/vector/erase' target='_blank'>erase</a> operations)<br>-->
+                    </span>
+                    <br>
+                    Reminder: Read <a href="https://visualgo.net/en/sorting?slide=1" target="_blank">sorting intro, algorithm analysis,<br>
+                    and O(N^2) sorting algorithms</a> (Slide 1 to 9-3)<br>
+                    before the next lecture<br>
+                  </td>
+                  <td class="d-none d-md-table-cell">
+                    <a href="https://nus.kattis.com/courses/CS2040S/CS2040S_S1_AY2627/assignments/ms7snz/standings" target="_blank">PS0</a> <span class="weightage">(1%)</span><br>
+                    <span class="detail">Due: Thu, 13 Aug 26, 11.29am<br>
+                    </span>
+                    <br>
+                    <a href="https://nus.kattis.com/courses/CS2040S/CS2040S_S1_AY2627/assignments/g6292q/standings" target="_blank">PS1</a>: Basic Programming<br>
+                    <span class="detail">Out: Wed, 13 Aug 25, 11.30am<br>
+                    Mentioned at the end of the first lecture<br>
+                    CS2040S students do problem B+C<br>
+                    problem A is optional (extra (easy) practice)
+                    </span>
+                  </td>
+                </tr>
+
+                <tr data-offset="7" title="double click (on SmartPhone: double tap) this row to toggle showing/hiding the details">
+                  <th scope="row">
+                    02,<br>
+                    17-21&nbsp;Aug
+                  </th>
+                  <td class="d-none d-sm-table-cell">
+                    Has Not Started<br>
+                    <br>
+                    <span class="detail">
+                    Essential LeetCode exercises involving (simple) problems with two (or more) solutions:<br>
+                    Mon: <a href="https://leetcode.com/problems/monotonic-array/description/?envType=study-plan-v2&amp;envId=programming-skills" target="_blank">monotonic-array</a> (a monotonic array is a sorted array),<br>
+                    Tue: <a href="https://leetcode.com/problems/container-with-most-water/description/?envType=study-plan-v2&amp;envId=leetcode-75" target="_blank">container-with-most-water</a> (O(n^2) vs O(n) solutions),<br> <!-- two pointers solution, skip the proof of correctness -->
+                    Wed: <a href="https://leetcode.com/problems/product-of-array-except-self/?envType=study-plan-v2&amp;envId=leetcode-75" target="_blank">product-of-array-except-self</a> (O(n^2) vs O(n) solutions),<br> <!-- (prefix/suffix products) -->
+                    Thu: <a href="https://leetcode.com/problems/maximum-score-of-a-split/description" target="_blank">maximum-score-of-a-split</a> (O(n^2) vs O(n) solutions),<br>
+                    Fri: <a href="https://leetcode.com/problems/shortest-unsorted-continuous-subarray/description" target="_blank">shortest-unsorted-continuous-subarray</a> (O(n log n) vs O(n) solutions),<br>
+                    Sat: <a href="https://leetcode.com/problems/largest-perimeter-triangle/description/?envType=study-plan-v2&amp;envId=programming-skills" target="_blank">largest-perimeter-triangle</a> (sort the lengths first)<br>
+                    <!--Sun: <br>-->
+                    </span>
+                  </td>
+                  <td>
+                    <a href="https://visualgo.net/en/sorting?slide=1" target="_blank">02a. Analysis of Algorithms</a> (Slide 1 to 9-3)<br>
+                    <span class="detail">1. Live <a href="cs2040/demos/SpeedTest.cpp" target="_blank">SpeedTest.cpp</a> | <a href="cs2040/demos/SpeedTest.py" target="_blank">py</a> | <a href="cs2040/demos/SpeedTest.java" target="_blank">java</a> demo<br>
+                    (measure runtime, count # of operations, vs asymptotic analysis)<br>
+                    2. Fast review of O(N^2) sorting algorithms<br>
+                    3. Kattis/LeetCode problem(s) discussed today:<br>
+                    <a href="https://open.kattis.com/problems/thanos" target="_blank">thanos</a> (analysis: exponential growth, logarithmic steps)<br>
+                    <!--<a href='https://open.kattis.com/problems/mjehuric' target='_blank'>mjehuric</a> (bubble sort simulation)<br>
+                    <a href='https://open.kattis.com/problems/height' target='_blank'>height</a> (insertion sort simulation)<br>-->
+                    <a href="https://leetcode.com/problems/maximum-score-of-a-split/description" target="_blank">maximum-score-of-a-split</a><br>
+                    <a href="https://open.kattis.com/problems/nothanks" target="_blank">nothanks</a> (sorting library and linear pass)<br>
+                    </span>
+                    <br>
+                    <span class="notforit5003">
+                    <a href="https://visualgo.net/en/array?mode=sorted-array" target="_blank">02b. Algorithms on Sorted Array</a><br>
+                    <span class="detail">
+                    Kattis/LeetCode problem(s) discussed today:<br>
+                    <a href="https://open.kattis.com/problems/classfieldtrip" target="_blank">classfieldtrip</a> (merge of mergesort; or any other solution that works)<br>
+                    <a href="https://leetcode.com/problems/shortest-unsorted-continuous-subarray/" target="_blank">shortest-unsorted-continuous-subarray</a><br>
+                    </span>
+                    </span>
+                    <br>
+                    Last flipped classroom reminder:<br>
+                    Read all <a href="https://visualgo.net/en/sorting?slide=10" target="_blank">sorting</a> e-Lecture slides before next lecture<br>
+                  </td>
+                  <td class="d-none d-md-table-cell">
+                    <a href="https://nus.kattis.com/courses/CS2040S/CS2040S_S1_AY2627/assignments/g6292q/standings" target="_blank">PS1</a> <span class="weightage">(2%)</span><br>
+                    <span class="detail">Due: Sat, 22 Aug 26, 07.59am<br>
+                    </span>
+                    <br>
+                    <a href="https://nus.kattis.com/courses/CS2040S/CS2040S_S1_AY2627/assignments/ehkspa/standings" target="_blank">PS2</a>: Sorting-related Problems<br>
+                    <span class="detail">Out: Sat, 22 Aug 26, 08.00am<br>
+                    </span>
+                  </td>
+                </tr>
+
+                <tr data-offset="14" title="double click (on SmartPhone: double tap) this row to toggle showing/hiding the details">
+                  <th scope="row">
+                    03,<br>
+                    24-28&nbsp;Aug
+                  </th>
+                  <td class="d-none d-sm-table-cell">
+                    <a href="cs2040/tutorials/tut01.pdf" target="_blank">T01+L01: tut01.pdf</a><br>
+                    <span class="detail">Introduction,<br>
+                    OOP review (List ADT, <a href="cs2040/tutorials/ListArrayTest.py" target="_blank">ListArrayTest.py</a> | <a href="cs2040/tutorials/ListArrayTest.java" target="_blank">java</a>)<br>
+                    Algorithm Analysis,<br>
+                    Simulated coding interview 1 (TA as interviewee),<br>
+                    PS1 Debrief (short),<br>
+                    PS2 Discussion (algorithmic)<br>
+                    <br>
+                    Essential LeetCode exercises involving sorting:<br>
+                    Mon: <a href="https://leetcode.com/problems/squares-of-a-sorted-array/description/" target="_blank">squares-of-a-sorted-array</a> (<a href="https://www.comp.nus.edu.sg/~stevenha/cs2040/tests/CS2040S-2025-26-S1-final-medium.pdf" target="_blank">CS2040S final S1 AY25/26, B.2</a>, discussed in Lab01),<br> <!-- modified a bit -->
+                    Tue: <a href="https://leetcode.com/problems/find-pivot-index/description/?envType=study-plan-v2&amp;envId=leetcode-75" target="_blank">find-pivot-index</a> (pivot here is not identical to Quicksort Partition),<br>
+                    Wed: <a href="https://leetcode.com/problems/merge-strings-alternately/description/?envType=study-plan-v2&amp;envId=leetcode-75" target="_blank">merge-strings-alternately</a> (variant of merge of Merge sort),<br>
+                    Thu: <a href="https://leetcode.com/problems/sort-colors/description/?envType=study-plan-v2&amp;envId=top-100-liked" target="_blank">sort-colors</a> (Dutch National Flag problem),<br>
+                    Fri: <a href="https://leetcode.com/problems/verifying-an-alien-dictionary/description/" target="_blank">verifying-an-alien-dictionary</a> (<a href="https://www.comp.nus.edu.sg/~stevenha/cs2040/tests/CS2040C-2025-26-S2-midterm-easy.pdf" target="_blank">CS2040C midterm S2 AY25/26, B.1</a>),<br> <!-- in <a href='https://www.youtube.com/watch?v=P0XN3-n-2Lo' target='_blank'>Project Hail Mary</a> format)-->
+                    Sat: <a href="https://leetcode.com/problems/separate-black-and-white-balls/description/" target="_blank">separate-black-and-white-balls</a> (<a href="https://www.comp.nus.edu.sg/~stevenha/cs2040/tests/IT5003-2025-26-S2-midterm-easy.pdf" target="_blank">IT5003 midterm S2 AY25/26, B.1</a>),<br>
+                    <!--Sun: <br>-->
+                    </span>
+                  </td>
+                  <td>
+                    <a href="https://visualgo.net/en/sorting?slide=10" target="_blank">03a. Sorting</a> (Slide 10 to 13-2)<br>
+                    <span class="detail">1. O(N log N) Merge Sort (C++ stable_sort; Java Collections.sort; Python list.sort)<br>
+                    2. Exp O(N log N) (Rand) Quick Sort (C++ sort; Java Arrays.sort (primitives); N/A in Python)<br>
+                    <a href="https://visualgo.net/training?diff=Easy&amp;n=3&amp;tl=3&amp;module=sorting" target="_blank">Sorting Online Quiz (easy)</a><br>
+                    White-box: <a href="cs2040/demos/SortingDemo.cpp" target="_blank">SortingDemo.cpp</a> | <a href="cs2040/demos/SortingDemo.py" target="_blank">py</a> | <a href="cs2040/demos/SortingDemo.java" target="_blank">java</a><br>
+                    Black-box: Java <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collections.html#sort(java.util.List)" target="_blank">Collections.sort</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Arrays.html#sort(java.lang.Object%5B%5D)" target="_blank">Arrays.sort (object)</a>, <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Arrays.html#sort(int%5B%5D)" target="_blank">Arrays.sort (primitives)</a><br>
+                    3. Kattis/LeetCode problem(s) discussed today:<br>
+                    <a href="https://open.kattis.com/problems/sortofsorting" target="_blank">sortofsorting</a> (custom comparator, stable sorting library)<br>
+                    <a href="https://leetcode.com/problems/merge-strings-alternately/?envType=study-plan-v2&amp;envId=leetcode-75" target="_blank">merge-strings-alternately</a><br>
+                    <a href="https://leetcode.com/problems/sort-colors/description/?envType=study-plan-v2&amp;envId=top-100-liked" target="_blank">sort-colors</a><br>
+                    </span>
+                    <br>
+                    <span class="notforit5003">
+                    <a href="https://visualgo.net/en/sorting?slide=14" target="_blank">03b. Sorting Extras</a> (until end)<br>
+                    <span class="detail">A preview of Ω(N log N) lower-bound of comparison-based sorting algorithms<br>
+                    Special-purpose O(N) sorting algorithm: Counting Sort (Only)<br>
+                    Other topics of sorting, e.g., counting inversions, counting minimum swaps<br>
+                    LeetCode problem(s) discussed today:<br>
+                    <a href="https://leetcode.com/problems/verifying-an-alien-dictionary/description/" target="_blank">verifying-an-alien-dictionary</a><br>
+                    <!-- Alan's ideas: Pancake sorting? QSort double partition question?
+                    More discussion of greedy algorithms involving sorting the data first? -->
+                    </span>
+                    </span>
+                  </td>
+                  <td class="d-none d-md-table-cell">
+                    PS2, continued
+                  </td>
+                </tr>
+
+                <tr data-offset="21" title="double click (on SmartPhone: double tap) this row to toggle showing/hiding the details">
+                  <th scope="row">
+                    04,<br>
+                    31&nbsp;Aug-04&nbsp;Sep
+                  </th>
+                  <td class="d-none d-sm-table-cell">
+                    <a href="cs2040/tutorials/tut02.pdf" target="_blank">T02+L02: tut02.pdf</a><br>
+                    <span class="detail">Sorting Application(s),<br>
+                    Sorting, mini experiment,<br>
+                    QuickSelect,<br>
+                    ADT/List ADT,<br>
+                    <!-- Alan's version: Sorting detective, which could have been the sorting algo used (first few iterations shown) -->
+                    VA OQ demo (<a href="https://visualgo.net/training?diff=Medium&amp;n=5&amp;tl=5&amp;module=sorting" target="_blank">sorting</a>),<br>
+                    Simulated coding interview 2 (one student as interviewee),<br>
+                    PS2 Discussion (algorithmic)<br>
+                    <br>
+                    Essential LeetCode exercises involving list:<br>
+                    Mon: <a href="https://leetcode.com/problems/arithmetic-subarrays/description/" target="_blank">arithmetic-subarrays</a> (there is an easy solution with sorting, discussed in Lab02),<br> <!-- there is an easy solution with sorting (but faster solution exists) -->
+                    Tue: <a href="https://leetcode.com/problems/reverse-linked-list/description/?envType=study-plan-v2&amp;envId=programming-skills" target="_blank">reverse-linked-list</a> (there are several ways to do this),<br>
+                    Wed: <a href="https://leetcode.com/problems/design-linked-list/" target="_blank">design-linked-list</a> (use SLLDemo),<br>
+                    Thu: <a href="https://leetcode.com/problems/delete-the-middle-node-of-a-linked-list/description/?envType=study-plan-v2&amp;envId=leetcode-75" target="_blank">delete-the-middle-node-of-a-linked-list</a> (two passes or two pointers),<br>
+                    Fri: <a href="https://leetcode.com/problems/removing-stars-from-a-string/description/?envType=study-plan-v2&amp;envId=leetcode-75" target="_blank">removing-stars-from-a-string</a> (bracket matching variant),<br> <!-- baseball-game -->
+                    Sat: <a href="https://leetcode.com/problems/maximum-twin-sum-of-a-linked-list/description/?envType=study-plan-v2&amp;envId=leetcode-75" target="_blank">maximum-twin-sum-of-a-linked-list</a> (in SLL, we can only go forward?).<br>
+                    <!--Sun: odd-even-linked-list<br><br>-->
+                    </span>
+                  </td>
+                  <td>
+                    <a href="https://visualgo.net/en/list?slide=1" target="_blank">04a. List ADT: SLL/Stack/Queue/DLL/Deque</a> (all slides)<br>
+                    <span class="detail">1. Introducing List ADT, <a href="https://visualgo.net/en/array" target="_blank">(resizeable) array</a> versus Singly Linked List (SLL) way<br>
+                    2. Introducing Stack/Queue/Deque (DLL) ADT<br>
+                    <a href="https://visualgo.net/training?diff=Easy&amp;n=3&amp;tl=3&amp;module=list" target="_blank">Linked List Online Quiz</a> (easy)<br>
+                    White-box: <a href="cs2040/demos/SLLDemo.cpp" target="_blank">SLLDemo.cpp</a> | <a href="cs2040/demos/SLLDemo.py" target="_blank">py</a> | <a href="cs2040/demos/SLLDemo.java" target="_blank">java</a> implementation<br>
+                    Black-box: Stack, but using Java <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/ArrayList.html" target="_blank">ArrayList</a> implementation versus Java <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/LinkedList.html" target="_blank">LinkedList</a> and <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Stack.html" target="_blank">Stack</a> classes<br>
+                    Fixed-size array, circular array version, versus Java <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Queue.html" target="_blank">Queue</a> and <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Deque.html" target="_blank">Deque</a> <i>interfaces</i><br>
+                    3. LeetCode problem(s) discussed today:<br>
+                    <a href="https://leetcode.com/problems/design-linked-list/" target="_blank">design-linked-list</a><br>
+                    </span>
+                    <br>
+                    <span class="notforit5003">
+                    04b. List Extras<br>
+                    <span class="detail">LeetCode problem(s) discussed today:<br>
+                    <a href="https://leetcode.com/problems/delete-the-middle-node-of-a-linked-list/description/?envType=study-plan-v2&amp;envId=leetcode-75" target="_blank">delete-the-middle-node-of-a-linked-list</a><br>
+                    <a href="https://leetcode.com/problems/removing-stars-from-a-string/?envType=study-plan-v2&amp;envId=leetcode-75" target="_blank">removing-stars-from-a-string</a><br>
+                    <!--<a href='https://leetcode.com/problems/maximum-twin-sum-of-a-linked-list/?envType=study-plan-v2&envId=leetcode-75' target='_blank'>maximum-twin-sum-of-a-linked-list</a> (how to go backwards in SLL?)<br> use stack or when recursion unwinds -->
+                    </span>
+                    </span>
+                  </td>
+                  <td class="d-none d-md-table-cell">
+                    <a href="https://nus.kattis.com/courses/CS2040S/CS2040S_S1_AY2627/assignments/ehkspa/standings" target="_blank">PS2</a> <span class="weightage">(2%)</span><br>
+                    <span class="detail">Due: Sat, 05 Sep 26, 07.59am<br>
+                    </span>
+                    <br>
+                    <a href="https://nus.kattis.com/courses/CS2040S/CS2040S_S1_AY2627/assignments/fjskxq/standings" target="_blank">PS3</a>: List+PQ Problems<br>
+                    <span class="detail">Out: Sat, 05 Sep 26, 08.00am<br>
+                    </span>
+                  </td>
+                </tr>
+
+                <tr data-offset="28" title="double click (on SmartPhone: double tap) this row to toggle showing/hiding the details">
+                  <th scope="row">
+                    05,<br>
+                    07-11&nbsp;Sep
+                  </th>
+                  <td class="d-none d-sm-table-cell">
+                    <a href="cs2040/tutorials/tut03.pdf" target="_blank">T03+L03: tut03.pdf</a><br>
+                    <span class="detail">Linked List, mini experiment,<br>
+                    Applications: Reversing/Sorting a List,<br>
+                    Application: Stack-related,<br>
+                    PS2 Debrief (short),<br>
+                    <b>Java LinkedList/Stack/Queue/Deque</b>,<br>
+                    VA OQ demo (<a href="https://visualgo.net/training?diff=Medium&amp;n=5&amp;tl=5&amp;module=list" target="_blank">list</a>),<br>
+                    <!-- Alan's LL PSes (two of them :O)-->
+                    Simulated coding interview 3 (TA as a failed interviewee),<br>
+                    PS3 Discussion (algorithmic)<br>
+                    <br>
+                    Essential LeetCode exercises involving PQ:<br>
+                    Mon: <a href="https://leetcode.com/problems/add-two-numbers-ii/description/?envType=study-plan-v2&amp;envId=programming-skills" target="_blank">add-two-numbers-ii</a> (use two stacks; do LSB to MSB, discussed in Lab03),<br>
+                    Tue: <a href="https://leetcode.com/problems/last-stone-weight/description/" target="_blank">last-stone-weight</a> (<a href="https://www.comp.nus.edu.sg/~stevenha/cs2040/tests/IT5003-2024-25-S2-final.pdf" target="_blank">IT5003 Final S2 AY24/25, B.2</a>),<br> <!-- but n *= 10000 -->
+                    Wed: <a href="https://leetcode.com/problems/remove-stones-to-minimize-the-total/description/" target="_blank">remove-stones-to-minimize-the-total</a> (max PQ simulation),<br>
+                    Thu: <a href="https://leetcode.com/problems/kth-largest-element-in-an-array/description/?envType=study-plan-v2&amp;envId=leetcode-75" target="_blank">kth-largest-element-in-an-array</a> (O(n log k) version),<br>
+                    Fri: <a href="https://leetcode.com/problems/smallest-number-in-infinite-set/description/?envType=study-plan-v2&amp;envId=leetcode-75" target="_blank">smallest-number-in-infinite-set</a> (min PQ simulation; with lazy deletion),<br>
+                    Sat: <a href="https://leetcode.com/problems/minimum-operations-to-exceed-threshold-value-ii/description/" target="_blank">minimum-operations-to-exceed-threshold-value-ii</a> (<a href="https://www.comp.nus.edu.sg/~stevenha/cs2040/tests/IT5003-2025-26-S2-midterm-easy.pdf" target="_blank">IT5003 Midterm S2 AY25/26 B.3</a>),<br> <!-- modified a bit, 4x+2y, not 2x+y -->
+                    <!--Sun: <a href='https://leetcode.com/problems/merge-two-sorted-lists/description/?envType=study-plan-v2&envId=programming-skills' target='_blank'>merge-two-sorted-lists</a> (merge of Merge Sort; on two SLLs)-->
+                    </span>
+                  </td>
+                  <td>
+                    <a href="https://visualgo.net/en/heap?slide=1" target="_blank">05a. Priority Queue (PQ) ADT: Binary Heap</a> (Slide 1 to 8-2)<br>
+                    <span class="detail">1. Introducing PQ ADT<br>
+                    2. Introducing basic Binary Heap structure and its Insert+ExtractMax operations<br>
+                    3. Discussing CreateHeap (two versions) and HeapSort operations<br>
+                    <a href="https://visualgo.net/training?diff=Easy&amp;n=3&amp;tl=3&amp;module=heap" target="_blank">Binary Heap Online Quiz</a> (easy)<br>
+                    White-box: <a href="cs2040/demos/BinaryHeapDemo.cpp" target="_blank">BinaryHeapDemo.cpp</a> | <a href="cs2040/demos/BinaryHeapDemo.py" target="_blank">py</a> | <a href="cs2040/demos/BinaryHeapDemo.java" target="_blank">java</a><br>
+                    Black-box: <a href="https://github.com/stevenhalim/cpbook-code/blob/master/ch2/nonlineards/priority_queue.cpp" target="_blank">priority_queue.cpp</a> | <a href="https://github.com/stevenhalim/cpbook-code/blob/master/ch2/nonlineards/priority_queue.py" target="_blank">py</a> | <a href="https://github.com/stevenhalim/cpbook-code/blob/master/ch2/nonlineards/priority_queue.java" target="_blank">java</a><br>
+                    LeetCode problem(s) discussed today:<br>
+                    <a href="https://leetcode.com/problems/kth-largest-element-in-an-array/?envType=study-plan-v2&amp;envId=leetcode-75" target="_blank">kth-largest-element-in-an-array</a><br>
+                    </span>
+                    <br>
+                    Last 15m of 05a: <a href="https://visualgo.net/tests" target="_blank">VisuAlgo Online Quiz 1</a> <span class="weightage">(4%)</span><br>
+                    <span class="detail">Bring your own laptop that can run at least 15 minutes on battery power.<br>
+                    (we do not provide any spare laptop).<br>
+                    Material: /array (1Q + 2 'new'), /sorting (3 Qs), /list (3 Qs),<br>
+                    and 3 'new' questions especially on asymptotics.<br>
+                    </span>
+                    <br>
+                    <span class="notforit5003">
+                    <a href="https://visualgo.net/en/heap?slide=9" target="_blank">05b. PQ Extras</a> (until end)<br>
+                    <span class="detail">1. O(N) CreateHeap analysis and O(N+K log N) PartialSort<br>
+                    <!-- 2. Max-to-Min heap conversions (numbers only)<br> -->
+                    2. Discussing UpdateKey(i, newv) and Delete(i) operations<br>
+                    LeetCode problem(s) discussed today:<br>
+                    <!--<a href='https://nus.kattis.com/problems/rationalsequence3' target='_blank'>rationalsequence3</a> (stack/LIFO and binary heap indexing)<br>-->
+                    <a href="https://leetcode.com/problems/smallest-number-in-infinite-set/description/?envType=study-plan-v2&amp;envId=leetcode-75" target="_blank">smallest-number-in-infinite-set</a><br>
+                    </span>
+                    </span>
+                  </td>
+                  <td class="d-none d-md-table-cell">
+                    PS3, continued
+                  </td>
+                </tr>
+
+                <tr data-offset="35" title="double click (on SmartPhone: double tap) this row to toggle showing/hiding the details">
+                  <th scope="row">
+                    06,<br>
+                    14-18&nbsp;Sep
+                  </th>
+                  <td class="d-none d-sm-table-cell">
+                    <a href="cs2040/tutorials/tut04.pdf" target="_blank">T04+L04: tut04.pdf</a><br>
+                    <span class="detail">Binary Heap,<br>
+                    Max-Min conversion,<br>
+                    Additional ADT PQ Operations,<br>
+                    <b>Java PriorityQueue</b>,<br>
+                    VA OQ demo (<a href="https://visualgo.net/training?diff=Medium&amp;n=5&amp;tl=5&amp;module=heap" target="_blank">heap</a>),<br>
+                    Simulated coding interview 4 (TA as another failed interviewee),<br>
+                    PS3 last Discussion (algorithmic)<br>
+                    <br>
+                    Essential LeetCode exercises involving hash table:<br>
+                    Mon: <a href="https://leetcode.com/problems/total-cost-to-hire-k-workers/?envType=study-plan-v2&amp;envId=leetcode-75" target="_blank">total-cost-to-hire-k-workers</a> (min PQ simulation, discussed in Lab04),<br> <!-- with a complex rule -->
+                    Tue: <a href="https://leetcode.com/problems/unique-number-of-occurrences/description/?envType=study-plan-v2&amp;envId=leetcode-75" target="_blank">unique-number-of-occurrences</a> (map and set application),<br>
+                    Wed: <a href="https://leetcode.com/problems/design-hashmap/" target="_blank">design-hashmap</a> (use HashTableDemo),<br>
+                    Thu: <a href="https://leetcode.com/problems/longest-consecutive-sequence/description/?envType=study-plan-v2&amp;envId=top-100-liked" target="_blank">longest-consecutive-sequence</a> (use set to help checks),<br>
+                    Fri: <a href="https://leetcode.com/problems/group-anagrams/description/?envType=study-plan-v2&amp;envId=top-100-liked" target="_blank">group-anagrams</a> (sort and hash),<br>
+                    Sat: <a href="https://leetcode.com/problems/top-k-frequent-elements/?envType=study-plan-v2&amp;envId=top-100-liked" target="_blank">top-k-frequent-elements</a> (PQ and hash combo)<br>
+                    <!--Sun: <br>-->
+                    </span>
+                  </td>
+                  <td>
+                    <a href="https://visualgo.net/en/hashtable?slide=1" target="_blank">06a. Table ADT part 1: Hash Table</a> (slide 1 to 10-5)<br>
+                    <span class="detail">1. Table ADT, DAT, Basic Hashing; Easiest Collision Resolution (CR): CA (SC)<br>
+                    <a href="cs2040/demos/HashTableDemo.cpp" target="_blank">HashTableDemo.cpp</a> | <a href="cs2040/demos/HashTableDemo.py" target="_blank">py</a> | <a href="cs2040/demos/HashTableDemo.java" target="_blank">java</a> (all use SC)<br>
+                    <!-- // Alan has cuckoo hashing -->
+                    2. More CR Techniques: OA (LP, QP, DH); Comparing CA: SC with OA: DH<br>
+                    <a href="https://visualgo.net/training?diff=Easy&amp;n=5&amp;tl=5&amp;module=hashtable" target="_blank">Hash Table Online Quiz</a> (easy; a bit too tedious on medium/hard settings)<br>
+                    3. LeetCode problem(s) discussed today:<br>
+                    <a href="https://leetcode.com/problems/design-hashmap/" target="_blank">design-hashmap</a><br>
+                    <a href="https://leetcode.com/problems/longest-consecutive-sequence/description/?envType=study-plan-v2&amp;envId=top-100-liked" target="_blank">longest-consecutive-sequence</a><br>
+                    </span>
+                    <br>
+                    <span class="notforit5003">
+                    <a href="https://visualgo.net/en/hashtable?slide=1" target="_blank">06b. Hash Table Extras</a> (until end)<br>
+                    <span class="detail">Other technicalities of Hash Table<br>
+                    Java <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/HashSet.html" target="_blank">HashSet</a>/<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/HashMap.html" target="_blank">HashMap</a>/<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Hashtable.html" target="_blank">Hashtable</a> classes<br>
+                    See <a href="https://github.com/stevenhalim/cpbook-code/blob/master/ch2/nonlineards/unordered_map_unordered_set.cpp" target="_blank">unordered_map_unordered_set.cpp</a> | <a href="https://github.com/stevenhalim/cpbook-code/blob/master/ch2/nonlineards/unordered_map_unordered_set.py" target="_blank">py</a> | <a href="https://github.com/stevenhalim/cpbook-code/blob/master/ch2/nonlineards/unordered_map_unordered_set.java" target="_blank">java</a> at GitHub repo of CPbook website<br>
+                    LeetCode problem(s) discussed today:<br>
+                    <a href="https://leetcode.com/problems/group-anagrams/description/?envType=study-plan-v2&amp;envId=top-100-liked" target="_blank">group-anagrams</a><br>
+                    </span>
+                    </span>
+                  </td>
+                  <td class="d-none d-md-table-cell">
+                    <a href="https://nus.kattis.com/courses/CS2040S/CS2040S_S1_AY2627/assignments/fjskxq/standings" target="_blank">PS3</a> <span class="weightage">(2%)</span><br>
+                    <span class="detail">Due: Sat, 19 Sep 26, 07.59am<br>
+                    </span>
+                    <br>
+                    <a href="https://nus.kattis.com/courses/CS2040S/CS2040S_S1_AY2627/assignments/wdmeev/standings" target="_blank">PS4</a>: Hash Table Problems<br>
+                    <span class="detail">Out: Sat, 19 Sep 26, 08.00am<br>
+                    </span>
+                  </td>
+                </tr>
+
+                <tr data-offset="42" title="double click (on SmartPhone: double tap) this row to toggle showing/hiding the details">
+                  <td colspan="4" class="text-center">
+                    Recess Week, 19-27 Sep 2026<br>
+                    <span class="detail">You can take a break this week :)<br>
+                    </span>
+                  </td>
+                </tr>
+
+                <tr data-offset="49" title="double click (on SmartPhone: double tap) this row to toggle showing/hiding the details">
+                  <th scope="row">
+                    07,<br>
+                    28&nbsp;Sep-02&nbsp;Oct
+                  </th>
+                  <td class="d-none d-sm-table-cell">
+                    <a href="cs2040/tutorials/tut05.pdf" target="_blank">T05+L05: tut05.pdf</a> [Special]<br>
+                    <span class="detail">Past midterm paper(s) discussions<br>
+                    <br>
+                    Essential LeetCode exercises (mix and match; UFDS):<br>
+                    Mon: <a href="https://leetcode.com/problems/max-sum-of-a-pair-with-equal-sum-of-digits/description/" target="_blank">max-sum-of-a-pair-with-equal-sum-of-digits</a> (<a href="https://www.comp.nus.edu.sg/~stevenha/cs2040/tests/CS2040S-2025-26-S1-midterm-medium.pdf" target="_blank">CS2040S midterm S1 AY25/26, A.1</a>),<br>
+                    Tue: <a href="https://leetcode.com/problems/split-linked-list-in-parts/description/" target="_blank">split-linked-list-in-parts</a> (<a href="https://www.comp.nus.edu.sg/~stevenha/cs2040/tests/CS2040C-2025-26-S2-midterm-easy.pdf" target="_blank">CS2040C midterm S2 AY25/26, B.3</a>),<br>
+                    Wed: <a href="https://leetcode.com/problems/min-stack/description/?envType=study-plan-v2&amp;envId=top-interview-150" target="_blank">min-stack</a> (<a href="https://www.comp.nus.edu.sg/~stevenha/cs2040/tests/CS2040S-2023-24-S1-midterm-medium.pdf" target="_blank">CS2040S midterm S1 AY23/24, B</a>),<br>
+                    <!--<a href='https://leetcode.com/problems/find-k-pairs-with-smallest-sums/description/?envType=study-plan-v2&envId=top-interview-150' target='_blank'>find-k-pairs-with-smallest-sums</a> (discussed in Lab05),<br> (use PQ and set)-->
+                    Thu: <a href="https://leetcode.com/problems/number-of-provinces/description/?envType=study-plan-v2&amp;envId=leetcode-75" target="_blank">number-of-provinces</a> (simple with UFDS),<br>
+                    Fri: <a href="https://leetcode.com/problems/redundant-connection/" target="_blank">redundant-connection</a> (simple with UFDS),<br>
+                    Sat: <a href="https://leetcode.com/problems/making-a-large-island/description/" target="_blank">making-a-large-island</a> (hard UFDS LC task).<br>
+                    <!--Sun: <a href='https://leetcode.com/problems/find-the-difference-of-two-arrays/description/?envType=study-plan-v2&envId=leetcode-75' target='_blank'>find-the-difference-of-two-arrays</a> (use set)-->
+                    </span>
+                  </td>
+                  <td>
+                    Midterm Test <span class="weightage">(10% → 20%)</span><br>
+                    Venue: TBC<br>
+                    Date and Time: Thu, 01 Oct 26 (wk7), 10:05-11:35am (90 mins), TBC<br>
+                    <!--Hall entry time earliest by 09:45am<br>
+                    Hall exit time latest by 11:55am<br>-->
+                    <span class="detail">Open book<br>
+                    Details TBC<br>
+                    <!--Three essay questions (with partial marks scheme) and one special box<br>
+                    Material: Up to PQ (L05ab on Week 05 + T05+L05 on Week 07), NO Hash Table yet<br>
+                    A few special needs students do the test at TBA<br>
+                    <!--<a href='https://docs.google.com/spreadsheets/d/1YnNMT8CtBgLXH-nT_CJvaHChfe4X64Ti381n5lpSge0/htmlview' target='_blank'><b>O(1) SEATING PLAN: sorted names -> <s>[1..206]</s> [101..306]</b></a><br>-->
+                    <br>
+                    Midterm Test Past Papers (recent 3 AYs only):<br>
+                    <!--AY 2022/23: <a href='cs2040/tests/CS2040C-2022-23-S1-midterm-hard.pdf' target='_blank'>S1-midterm.pdf</a>, [I didn't teach CS2040C in S2],<br>-->
+                    AY 2023/24: <a href="cs2040/tests/CS2040S-2023-24-S1-midterm-medium.pdf" target="_blank">S1-midterm.pdf</a>, [I didn't teach CS2040S in S2],<br>
+                    AY 2024/25: <a href="cs2040/tests/CS2040S-2024-25-S1-midterm-medium.pdf" target="_blank">S1-midterm.pdf</a>, [I didn't teach CS2040S in S2],<br>
+                    AY 2025/26: <a href="cs2040/tests/CS2040S-2025-26-S1-midterm-medium.pdf" target="_blank">S1-midterm.pdf</a>, <a href="cs2040/tests/CS2040C-2025-26-S2-midterm-easy.pdf" target="_blank">S2-midterm.pdf</a> (CS2040C),<br>
+                    AY 2026/27: S1-midterm.pdf (to be our paper), [I don't teach CS2040S in S2].<br>
+                    </span>
+                    <br>
+                    <span class="notforit5003">
+                    <a href="https://visualgo.net/en/ufds?slide=1" target="_blank">07b. Union-Find Disjoint Sets</a> (all slides)<br>
+                    <span class="detail">1. Quick Recap with VisuAlgo<br>
+                    See <a href="https://github.com/stevenhalim/cpbook-code/blob/master/ch2/ourown/unionfind_ds.cpp" target="_blank">unionfind_ds.cpp</a> | <a href="https://github.com/stevenhalim/cpbook-code/blob/master/ch2/ourown/unionfind_ds.py" target="_blank">py</a> | <a href="https://github.com/stevenhalim/cpbook-code/blob/master/ch2/ourown/unionfind_ds.java" target="_blank">java</a> at GitHub repo of CPbook website<br>
+                    2. Kattis/LeetCode problem(s) discussed today:<br>
+                    <a href="https://leetcode.com/problems/redundant-connection/" target="_blank">redundant-connection</a><br>
+                    <!--<a href='https://leetcode.com/problems/number-of-provinces/description/?envType=study-plan-v2&envId=leetcode-75' target='_blank'>number-of-provinces</a><br>
+                    <a href='https://open.kattis.com/problems/tildes' target='_blank'>tildes</a> (basic UFDS task)<br> -->
+                    PS: UFDS is reused in Connected Component (CC) and MST topics<br>
+                    </span>
+                    </span>
+                  </td>
+                  <td class="d-none d-md-table-cell">
+                    PS4, continued
+                  </td>
+                </tr>
+
+                <tr data-offset="56" title="double click (on SmartPhone: double tap) this row to toggle showing/hiding the details">
+                  <th scope="row">
+                    08,<br>
+                    05-09&nbsp;Oct
+                  </th>
+                  <td class="d-none d-sm-table-cell notready">
+                    <a href="cs2040/tutorials/tut06.pdf" target="_blank">T06+L06: tut06.pdf</a><br>
+                    <span class="detail">Table ADT 1 - unordered,<br>
+                    Basic hashing concepts,<br>
+                    Hash Table issues,<br>
+                    <b>Java HashSet/HashMap</b><!-- (HashTable is obsolete)-->,<br>
+                    PS3 Debrief (short),<br>
+                    <b>Only for CS2040S: UFDS review</b>,<br>
+                    VA OQ demo (<a href="https://visualgo.net/training?diff=Medium&amp;n=5&amp;tl=5&amp;module=hashtable,ufds" target="_blank">hashtable,ufds</a>),<br>
+                    Simulated coding interview 5,<br>
+                    PS4 Discussion (algorithmic)<br>
+                    <br>
+                    Extra exercises:<br>
+                    Mon: <a href="https://leetcode.com/problems/determine-if-two-strings-are-close/description/?envType=study-plan-v2&amp;envId=leetcode-75" target="_blank">determine-if-two-strings-are-close</a> (anagram checker variant, discussed in Lab06),<br>
+                    Tue: <a href="https://leetcode.com/problems/validate-binary-search-tree/?envType=study-plan-v2&amp;envId=top-interview-150" target="_blank">validate-binary-search-tree</a> (simple recursive check),<br>
+                    Wed: <a href="https://leetcode.com/problems/search-in-a-binary-search-tree/description/?envType=study-plan-v2&amp;envId=leetcode-75" target="_blank">search-in-a-binary-search-tree</a> (implement recursive BST search),<br>
+                    Thu: <a href="https://leetcode.com/problems/delete-node-in-a-bst/description/?envType=study-plan-v2&amp;envId=leetcode-75" target="_blank">delete-node-in-a-bst</a> (implement the three cases of BST deletion),<br>
+                    Fri: <a href="https://leetcode.com/problems/minimum-absolute-difference-in-bst/?envType=study-plan-v2&amp;envId=top-interview-150" target="_blank">minimum-absolute-difference-in-bst</a> (use the correct tree traversal),<br>
+                    Sat: <a href="https://leetcode.com/problems/sum-root-to-leaf-numbers/?envType=study-plan-v2&amp;envId=top-interview-150" target="_blank">sum-root-to-leaf-numbers</a> (preorder traversal; process leaves)<br>
+                    <!--Sun: <br>-->
+                    </span>
+                  </td>
+                  <td>
+                    <a href="https://visualgo.net/en/bst?slide=1" target="_blank">08a. Table ADT part 2: BST</a> (all slides)<br><!--Slide 1 to 12-1)<br>-->
+                    <span class="detail">1. BST concepts, BST operations, and the <a href="https://en.wikipedia.org/wiki/Multiset" target="_blank">multiset</a> idea<br>
+                    <!--<a href='https://visualgo.net/training?diff=Medium&n=5&tl=5&module=bst' target='_blank'>BST (only) Online Quiz</a> (medium)<br> (no time for this S1 AY26/27)-->
+                    <a href="cs2040/demos/BSTDemo.cpp" target="_blank">BSTDemo.cpp</a> | <a href="cs2040/demos/BSTDemo.py" target="_blank">py</a> | <a href="cs2040/demos/BSTDemo.java" target="_blank">java</a><br>
+                    2. Randomly built BST versus a balanced BST, e.g., AVL Tree<br>
+                    QnA about AVL Tree concepts<br>
+                    <a href="https://github.com/stevenhalim/cpbook-code/blob/master/ch2/nonlineards/AVL.cpp" target="_blank">AVL.cpp</a> | <span class="notready">TO ADD PY SOON</span> | <a href="https://github.com/stevenhalim/cpbook-code/blob/master/ch2/nonlineards/AVL.java" target="_blank">java</a><br>
+                    <b>Java <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/TreeSet.html" target="_blank">TreeSet</a>/<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/TreeMap.html" target="_blank">TreeMap</a> classes</b><br>
+                    See <a href="https://github.com/stevenhalim/cpbook-code/blob/master/ch2/nonlineards/map_set.cpp" target="_blank">map_set.cpp</a> | (no built-in py) | <a href="https://github.com/stevenhalim/cpbook-code/blob/master/ch2/nonlineards/map_set.java" target="_blank">java</a> at GitHub repo of CPbook website<br>
+                    3. LeetCode problem(s) discussed today:<br>
+                    <a href="https://leetcode.com/problems/search-in-a-binary-search-tree/description/?envType=study-plan-v2&amp;envId=leetcode-75" target="_blank">search-in-a-binary-search-tree</a> [not live]<br>
+                    <a href="https://leetcode.com/problems/delete-node-in-a-bst/description/?envType=study-plan-v2&amp;envId=leetcode-75" target="_blank">delete-node-in-a-bst</a> [not live]<br>
+                    </span>
+                    <!--
+                    <br>
+                    <span class="notforit5003">
+                    <a href='https://visualgo.net/en/bst?slide=13' target='_blank'>08b. Balanced BST and Applications</a> (until end)<br>
+                    <span class="detail">QnA about AVL Tree concepts<br>
+                    A short discussion of Select and Rank operations<br>
+                    <a href='https://visualgo.net/training?diff=Hard&n=5&tl=5&module=bst' target='_blank'>BST+AVL Online Quiz</a> (hard; need to clear pre-req)<br>
+                    LeetCode problem(s) discussed today:<br>
+                    <a href='https://leetcode.com/problems/minimum-absolute-difference-in-bst/?envType=study-plan-v2&envId=top-interview-150' target='_blank'>minimum-absolute-difference-in-bst</a><br>
+                    </span>
+                    </span>
+                    -->
+                    <br>
+                    <span class="timehighlight">Fri, 09 Oct 2026 is NUS Well-Being Day<br>
+                    Lec08b is cancelled<br>
+                    Lec08a will be a combo of the usual 08a+b sessions<br>
+                    </span>
+                  </td>
+                  <td class="d-none d-md-table-cell">
+                    <a href="https://nus.kattis.com/courses/CS2040S/CS2040S_S1_AY2627/assignments/wdmeev/standings" target="_blank">PS4</a> <span class="weightage">(2%)</span><br>
+                    <span class="detail">Due: Sat, 10 Oct 26, 07.59am<br>
+                    </span>
+                    <br>
+                    <a href="https://nus.kattis.com/courses/CS2040S/CS2040S_S1_AY2627/assignments/fkn8np/standings" target="_blank">PS5</a>: Combo DS + Graph 1<br>
+                    <span class="detail">Out: Sat, 10 Oct 26, 08.00am<br>
+                    </span>
+                  </td>
+                </tr>
+
+                <tr data-offset="63" title="double click (on SmartPhone: double tap) this row to toggle showing/hiding the details">
+                  <th scope="row">
+                    09,<br>
+                    12-16&nbsp;Oct
+                  </th>
+                  <td class="d-none d-sm-table-cell notready">
+                    <a href="cs2040/tutorials/tut07.pdf" target="_blank">T07+L07: tut07.pdf</a><br>
+                    <span class="detail">Table ADT 2 - ordered,<br>
+                    (balanced) BST advanced stuffs: Select and Rank,<br> <!-- Alan has more augmenting bBST questions -->
+                    PQ ADT alternative implementation,<br>
+                    Comparison with Table ADT 1: unordered vs ordered,<br>
+                    <b>Java TreeSet/TreeMap</b>,<br>
+                    PS4 Debrief (short),<br>
+                    <!-- Indexing demo,<br> -->
+                    VA OQ demo (<a href="https://visualgo.net/training?diff=Medium&amp;n=5&amp;tl=5&amp;module=bst" target="_blank">bst</a> or <a href="https://visualgo.net/training?diff=Hard&amp;n=5&amp;tl=5&amp;module=bst" target="_blank">avl</a> (need to clear pre-req))<br>
+                    Simulated coding interview 6,<br>
+                    PS5 Discussion (algorithmic)<br>
+                    <br>
+                    Extra exercises:<br>
+                    Mon: <a href="https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/description/?envType=study-plan-v2&amp;envId=top-interview-150" target="_blank">construct-binary-tree-from-preorder-and-inorder-traversal</a> (classic, discussed in Lab07),<br> <!-- classic interview question -->
+                    Tue: <a href="https://leetcode.com/problems/maximal-network-rank/description/" target="_blank">maximal-network-rank</a> (just degree and edge existence checks),<br>
+                    Wed: <a href="https://leetcode.com/problems/count-good-nodes-in-binary-tree/?envType=study-plan-v2&amp;envId=leetcode-75" target="_blank">count-good-nodes-in-binary-tree</a> (modified preorder; precursor of DFS),<br>
+                    Thu: <a href="https://leetcode.com/problems/destination-city" target="_blank">destination-city</a> (in/out degree checks; use hash table),<br>
+                    Fri: <a href="https://leetcode.com/problems/keys-and-rooms/description/?envType=study-plan-v2&amp;envId=leetcode-75" target="_blank">keys-and-room</a> (visitation check from 0; showing DFS way),<br>
+                    Sat: <a href="https://leetcode.com/problems/minimum-number-of-vertices-to-reach-all-nodes/description/" target="_blank">minimum-number-of-vertices-to-reach-all-nodes</a> (compute in-degrees).<br>
+                    <!--Sun: <br>-->
+                    </span>
+                  </td>
+                  <td>
+                    <!-- 09a. Augmented Trees<br>
+                    <span class="detail">See Dr Alan's announcements<br>
+                    His lecture title is: "Augmented Trees"<br>
+                    (not much relevant slides in VisuAlgo /bst course)<br>
+                    Plus starting the introduction to Graph Topic<br>
+                    </span>
+                    <br> -->
+                    <a href="https://visualgo.net/en/graphds?slide=1" target="_blank">09a. Graph DS</a> (all slides) + <a href="https://visualgo.net/en/dfsbfs?slide=1" target="_blank">DFS Traversal</a> (Slide 1 to 5-8)<br>
+                    <span class="detail">1. Concept checks: <a href="https://visualgo.net/training?diff=Medium&amp;n=5&amp;tl=5&amp;module=graphds" target="_blank">Graph DS Online Quiz</a> (medium),<br>
+                    Implementations of graph DS and its applications<br>
+                    No built-in C++ STL container | Python standard library | Java API,<br>
+                    See <a href="https://github.com/stevenhalim/cpbook-code/blob/master/ch2/ourown/graph_ds.cpp" target="_blank">graph_ds.cpp</a> | <a href="https://github.com/stevenhalim/cpbook-code/blob/master/ch2/ourown/graph_ds.py" target="_blank">py</a> | <a href="https://github.com/stevenhalim/cpbook-code/blob/master/ch2/ourown/graph_ds.java" target="_blank">java</a> at GitHub repo of CPbook website,<br>
+                    2. Early discussion of the <b>basic</b> forms of Graph Traversal algorithms: DFS first<br>
+                    See <a href="https://github.com/stevenhalim/cpbook-code/blob/master/ch4/traversal/dfs_cc.cpp" target="_blank">dfs_cc.cpp</a> | <a href="https://github.com/stevenhalim/cpbook-code/blob/master/ch4/traversal/dfs_cc.py" target="_blank">py</a> | <a href="https://github.com/stevenhalim/cpbook-code/blob/master/ch4/traversal/dfs_cc.java" target="_blank">java</a><br>
+                    3. LeetCode problem(s) discussed today:<br>
+                    <a href="https://leetcode.com/problems/destination-city" target="_blank">destination-city</a><br>
+                    </span>
+                    <br>
+                    Last 15m of 09a: <a href="https://visualgo.net/tests" target="_blank">VisuAlgo Online Quiz 2</a> <span class="weightage">(4%)</span><br>
+                    <span class="detail">Material: /heap (3 Qs), /hashtable (3 Qs), /ufds (3 Qs), /bst (3 Qs)<br>
+                    but NO new question this time...<br>
+                    </span>
+                    <br>
+                    <span class="notforit5003">
+                    <a href="https://visualgo.net/en/dfsbfs?slide=7-3" target="_blank">09b. Graph Traversal Applications</a> (Slide 7-3 to 7-8)<br>
+                    <span class="detail">Finding Connected Components<br>
+                    Kattis/LeetCode problem(s) discussed today:<br>
+                    <a href="https://open.kattis.com/problems/weakvertices" target="_blank">weakvertices</a> (AM demo)<br>
+                    <a href="https://leetcode.com/problems/keys-and-rooms/description/?envType=study-plan-v2&amp;envId=leetcode-75" target="_blank">keys-and-room</a><br>
+                    </span>
+                    </span>
+                  </td>
+                  <td class="d-none d-md-table-cell">
+                    PS5, continued
+                  </td>
+                </tr>
+
+                <tr data-offset="70" title="double click (on SmartPhone: double tap) this row to toggle showing/hiding the details">
+                  <th scope="row">
+                    10,<br>
+                    19-23&nbsp;Oct
+                  </th>
+                  <td class="d-none d-sm-table-cell notready">
+                    <a href="cs2040/tutorials/tut08.pdf" target="_blank">T08+L08: tut08.pdf</a><br>
+                    <span class="detail">Graph DS Review,<br>
+                    Some Graph Properties Discussion,<br>
+                    Graph DS Conversion Exercise,<br>
+                    <!-- Graph Modeling exercise 1,<br> -->
+                    DFS/BFS Review,<br>
+                    Custom graph DS implementation review,<br>
+                    VA OQ demo (<a href="https://visualgo.net/training?diff=Medium&amp;n=5&amp;tl=5&amp;module=graphds,dfsbfs" target="_blank">graphds,dfsbfs</a>),<br>
+                    Simulated coding interview 7,<br>
+                    PS5 Discussion (algorithmic)<br>
+                    <br>
+                    Essential LeetCode exercises (graph 1):<br>
+                    Mon: <a href="https://leetcode.com/problems/maximum-star-sum-of-a-graph/description/" target="_blank">maximum-star-sum-of-a-graph</a> (<a href="https://www.comp.nus.edu.sg/~stevenha/cs2040/tests/CS2040S-2025-26-S1-final-medium.pdf" target="_blank">CS2040S final S1 AY25/26, B.5</a>, discussed in Lab08),<br>
+                    Tue: <a href="https://leetcode.com/problems/reorder-routes-to-make-all-paths-lead-to-the-city-zero/description/?envType=study-plan-v2&amp;envId=leetcode-75" target="_blank">reorder-routes-to-make-all-paths-lead-to-the-city-zero</a> (make undirected to simplify).<br>
+                    Wed: <a href="https://leetcode.com/problems/max-area-of-island/description/?envType=study-plan-v2&amp;envId=graph-theory" target="_blank">max-area-of-island</a> (DFS flood fill on an implicit 2D grid graph),<br>
+                    Thu: <a href="https://leetcode.com/problems/course-schedule/description/?envType=study-plan-v2&amp;envId=top-interview-150" target="_blank">course-schedule</a> (using DFS ternary states to detect back edge (cycle)),<br>
+                    Fri: <a href="https://leetcode.com/problems/binary-tree-right-side-view/?envType=study-plan-v2&amp;envId=leetcode-75" target="_blank">binary-tree-right-side-view</a> (BFS on a binary tree: level order traversal),<br>
+                    Sat: <a href="https://leetcode.com/problems/number-of-islands/description/?envType=study-plan-v2&amp;envId=top-interview-150" target="_blank">number-of-islands</a> (BFS flood fill on an implicit 2D grid graph).<br>
+                    <!--<a href='https://leetcode.com/problems/maximum-depth-of-binary-tree/description/?envType=study-plan-v2&envId=leetcode-75' target='_blank'>maximum-depth-of-binary-tree</a> (recursive check; precursor of DFS),<br>-->
+                    <!--Sun: <a href='https://leetcode.com/problems/surrounded-regions/description/?envType=study-plan-v2&envId=top-interview-150' target='_blank'>surrounded-regions</a> (harder floodfill problem)<br>-->
+                    </span>
+                  </td>
+                  <td>
+                    <a href="https://visualgo.net/en/dfsbfs?slide=6" target="_blank">10a. Graph Traversal Applications</a> (Slide 6 to 7-12)<br>
+                    <span class="detail">1. Review DFS and introducing BFS<br>
+                    2. Focus on a few more basic DFS/BFS applications<br>
+                    (we skip slide 8-11, out of CS2040/C/S and IT5003 scope)<br>
+                    <a href="https://visualgo.net/training?diff=Medium&amp;n=5&amp;tl=5&amp;module=dfsbfs" target="_blank">DFS/BFS Online Quiz</a> (medium)<br>
+                    No built-in C++ STL algorithm | Python standard library | Java API,<br>
+                    See <a href="https://github.com/stevenhalim/cpbook-code/blob/master/ch4/traversal/UVa00469.cpp" target="_blank">UVa00469.cpp</a> | <a href="https://github.com/stevenhalim/cpbook-code/blob/master/ch4/traversal/UVa00469.py" target="_blank">py</a> | <a href="https://github.com/stevenhalim/cpbook-code/blob/master/ch4/traversal/UVa00469.java" target="_blank">java</a>, and<br>
+                    <a href="https://github.com/stevenhalim/cpbook-code/blob/master/ch4/sssp/bfs.cpp" target="_blank">bfs.cpp</a> | <a href="https://github.com/stevenhalim/cpbook-code/blob/master/ch4/sssp/bfs.py" target="_blank">bfs.py</a> | <a href="https://github.com/stevenhalim/cpbook-code/blob/master/ch4/sssp/bfs.java" target="_blank">java</a> at GitHub repo of CPbook website,<br>
+                    3. LeetCode problem(s) discussed today:<br>
+                    <a href="https://leetcode.com/problems/max-area-of-island/description/?envType=study-plan-v2&amp;envId=graph-theory" target="_blank">max-area-of-island</a><br>
+                    </span>
+                    <br>
+                    <span class="notforit5003">
+                    10b. Graph Traversal Extras<br>
+                    <span class="detail">
+                    1. LeetCode problem(s) discussed today:<br>
+                    <a href="https://leetcode.com/problems/course-schedule/description/?envType=study-plan-v2&amp;envId=top-interview-150" target="_blank">course-schedule</a><br>
+                    <a href="https://leetcode.com/problems/binary-tree-right-side-view/?envType=study-plan-v2&amp;envId=leetcode-75" target="_blank">binary-tree-right-side-view</a><br>
+                    </span>
+                    </span>
+                    <br>
+                    <span class="timehighlight">
+                    NUS Online Teaching Feedback opens this Fri<br>
+                    But this timing is too early for our course...<br>
+                    You can wait until you have completed the course<br>
+                    </span>
+                  </td>
+                  <td class="d-none d-md-table-cell">
+                    <a href="https://nus.kattis.com/courses/CS2040S/CS2040S_S1_AY2627/assignments/fkn8np/standings" target="_blank">PS5</a> <span class="weightage">(2%)</span><br>
+                    <span class="detail">Due: Sat, 24 Oct 26, 07.59am<br>
+                    </span>
+                    <br>
+                    <a href="https://nus.kattis.com/courses/CS2040S/CS2040S_S1_AY2627/assignments/s9xfdh/standings" target="_blank">PS6</a>: Graph 2<br>
+                    <span class="detail">Out: Sat, 24 Oct 26, 08.00am<br>
+                    </span>
+                  </td>
+                </tr>
+
+                <tr data-offset="77" title="double click (on SmartPhone: double tap) this row to toggle showing/hiding the details">
+                  <th scope="row">
+                    11,<br>
+                    26-30&nbsp;Oct
+                  </th>
+                  <td class="d-none d-sm-table-cell notready">
+                    <a href="cs2040/tutorials/tut09.pdf" target="_blank">T09+L09: tut09.pdf</a><br>
+                    <span class="detail">DFS/BFS advanced stuffs:<br>
+                    Cycle Detection, Toposort++, Floodfill/CC, Bipartite Graph Checker<br>
+                    Modeling exercise,<br>
+                    PS5 Debrief (short),<br>
+                    VA OQ demo (<a href="https://visualgo.net/training?diff=Medium&amp;n=5&amp;tl=5&amp;module=dfsbfs,sssp" target="_blank">dfsbfs,sssp</a>),<br>
+                    Simulated coding interview 8,<br>
+                    PS6 Discussion (algorithmic)<br>
+                    <br>
+                    Essential LeetCode exercises (graph 2):<br>
+                    Mon: <a href="https://leetcode.com/problems/course-schedule-ii/description/?envType=study-plan-v2&amp;envId=top-interview-150" target="_blank">course-schedule-ii</a> (Kahn's algorithm, discussed in Lab09),<br>
+                    Tue: <a href="https://leetcode.com/problems/nearest-exit-from-entrance-in-maze/description/?envType=study-plan-v2&amp;envId=leetcode-75" target="_blank">nearest-exit-from-entrance-in-maze</a> (SSSP; implicit unweighted grid graph; BFS),<br>
+                    Wed: <a href="https://leetcode.com/problems/rotting-oranges/description/?envType=study-plan-v2&amp;envId=leetcode-75" target="_blank">rotting-oranges</a> (SSSP; implicit unweighted grid graph; BFS; MSSP),<br>
+                    Thu: <a href="https://leetcode.com/problems/network-delay-time" target="_blank">network-delay-time</a> (basic Dijkstra's),<br>
+                    Fri: <a href="https://leetcode.com/problems/snakes-and-ladders/description/?envType=study-plan-v2&amp;envId=top-interview-150" target="_blank">snakes-and-ladders</a> (SSSP; implicit (with a twist) unweighted grid graph; BFS),<br>
+                    Sat: <a href="https://leetcode.com/problems/minimum-genetic-mutation/?envType=study-plan-v2&amp;envId=top-interview-150" target="_blank">minimum-genetic-mutation</a> (SSSP; implicit unweighted graph; BFS).<br>
+                    <!--Sun: <a href='https://leetcode.com/problems/check-knight-tour-configuration/description/' target='_blank'>check-knight-tour-configuration</a> (classic BFS),<br>-->
+                    </span>
+                  </td>
+                  <td>
+                    <a href="https://visualgo.net/en/sssp?slide=1" target="_blank">11a. SSSP Problem</a> (all slides)<br>
+                    <span class="detail">1. Review of basic SSSP problem + O(VE) / O(kE) Bellman-Ford algorithm<br>
+                    2. QnA on BFS algorithm for unweighted SSSP<br>
+                    QnA on Dijkstra's algorithm (modified Dijkstra's first)<br>
+                    See <a href="https://github.com/stevenhalim/cpbook-code/blob/master/ch4/sssp/dijkstra.cpp" target="_blank">dijkstra.cpp</a> | <a href="https://github.com/stevenhalim/cpbook-code/blob/master/ch4/sssp/dijkstra.py" target="_blank">py</a> | <a href="https://github.com/stevenhalim/cpbook-code/blob/master/ch4/sssp/dijkstra.java" target="_blank">java</a> at GitHub repo of CPbook website<br>
+                    Quick discussion of SSSP on Tree and on DAG<br>
+                    <a href="https://visualgo.net/training?diff=Medium&amp;n=5&amp;tl=5&amp;module=sssp" target="_blank">SSSP Online Quiz</a> (medium)<br>
+                    3. LeetCode problem(s) discussed today:<br>
+                    <a href="https://leetcode.com/problems/rotting-oranges/description/?envType=study-plan-v2&amp;envId=leetcode-75" target="_blank">rotting-oranges</a><br>
+                    <a href="https://leetcode.com/problems/network-delay-time" target="_blank">network-delay-time</a><br>
+                    </span>
+                    <br>
+                    <span class="notforit5003">
+                    11b. SSSP Extras<br>
+                    <span class="detail">1. Original Dijkstra's and other SSSP special cases<br> <!-- SSSP on DAG (bottom-up DP) and on Tree,<br> -->
+                    2. LeetCode problem(s) discussed today:<br>
+                    <a href="https://leetcode.com/problems/snakes-and-ladders/description/?envType=study-plan-v2&amp;envId=top-interview-150" target="_blank">snakes-and-ladders</a><br>
+                    </span>
+                    </span>
+                  </td>
+                  <td class="d-none d-md-table-cell">
+                    PS6, continued
+                  </td>
+                </tr>
+
+                <tr data-offset="84" title="double click (on SmartPhone: double tap) this row to toggle showing/hiding the details">
+                  <th scope="row">
+                    12,<br>
+                    02-06&nbsp;Nov
+                  </th>
+                  <td class="d-none d-sm-table-cell notready">
+                    <a href="cs2040/tutorials/tut10.pdf" target="_blank">T10+L10: tut10.pdf</a><br>
+                    <span class="detail">BFS/Dijkstra's review<br>
+                    <!--<b>Only for CS2040S: MST review</b>,<br> only done on Thu for S1 AY26/27 -->
+                    Modeling exercises (continued),<br> <!-- Alan has bridge and wolf, the state search problem -->
+                    VA OQ demo (<a href="https://visualgo.net/training?diff=Medium&amp;n=5&amp;tl=5&amp;module=sssp" target="_blank">sssp</a>),<br>
+                    Simulated coding interview 9,<br>
+                    PS6 Discussion (algorithmic)<br>
+                    <br>
+                    Essential LeetCode exercises (graph 3):<br>
+                    Mon: <a href="https://leetcode.com/problems/word-ladder/description/?envType=study-plan-v2&amp;envId=top-interview-150" target="_blank">word-ladder</a> (similar with minimum-genetic-mutation, discussed in Lab10)<br>
+                    Tue: <a href="https://leetcode.com/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/description/" target="_blank">find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance</a> (<a href="https://www.comp.nus.edu.sg/~stevenha/cs2040/tests/IT5003-2024-25-S2-final.pdf" target="_blank">IT5003 final S2 AY24/25, B.6</a>)<br>
+                    Wed: <a href="https://leetcode.com/problems/minimum-cost-path-with-edge-reversals/description/" target="_blank">minimum-cost-path-with-edge-reversals</a> (<a href="https://www.comp.nus.edu.sg/~stevenha/cs2040/tests/IT5003-2025-26-S2-final-medium.pdf" target="_blank">IT5003 final S2 AY25/26, A.5</a>),<br>
+                    Thu: <a href="https://leetcode.com/problems/min-cost-to-connect-all-points/description/" target="_blank">min-cost-to-connect-all-points</a> (basic MST),<br>
+                    Fri: <a href="https://leetcode.com/problems/minimum-time-to-visit-disappearing-nodes/description/" target="_blank">minimum-time-to-visit-disappearing-nodes</a> (SSSP; weighted graph; with a small twist),<br>
+                    Sat: <a href="https://leetcode.com/problems/find-edges-in-shortest-paths/description/" target="_blank">find-edges-in-shortest-paths</a> (<a href="https://www.comp.nus.edu.sg/~stevenha/cs2040/tests/CS2040C-2025-26-S2-final-medium.pdf" target="_blank">CS2040C final S2 AY25/26, A.6</a>).<br>
+                    <!--Sun: <br>-->
+                    </span>
+                    <br>
+                    Tut+Lab participation marks given <span class="weightage">(5%)</span>
+                  </td>
+                  <td>
+                    <a href="https://visualgo.net/en/mst?slide=1" target="_blank">12a. MST Problem</a> (all slides)<br>
+                    <span class="detail">1. Review of basic MST problem<br>
+                    2. QnA on Kruskal's and Prim's algorithms<br>
+                    Mix and Match of various data structures/algorithms covered so far<br>
+                    3. LeetCode problem(s) discussed today:<br>
+                    <a href="https://leetcode.com/problems/min-cost-to-connect-all-points/description/" target="_blank">min-cost-to-connect-all-points</a><br>
+                    <!-- <a href='https://open.kattis.com/problems/cats' target='_blank'>cats</a> (MST application)<br> -->
+                    Onsite class photo as momento<br>
+                    </span>
+                    <br>
+                    Last 15m of 12a: <a href="https://visualgo.net/tests" target="_blank">VisuAlgo Online Quiz 3</a> <span class="weightage">(4%)</span><br>
+                    <span class="detail">Material: /graphds (4 Qs), /dfsbfs (3 Qs), /sssp (2 Qs),<br>
+                    and 3 'new' questions (inclusive of 2 specifically <b>unweighted</b> SSSP).<br>
+                    </span>
+                    <br>
+                    <span class="notforit5003">
+                    12b. MST+another SSSP Extras<br> <!-- maybe ask top TAs to give a sharing about CS2040C? -->
+                    <span class="detail">1. Other MST Variants<br>
+                    2. LeetCode problem(s) discussed today:<br>
+                    <a href="https://leetcode.com/problems/minimum-time-to-visit-disappearing-nodes/description/" target="_blank">minimum-time-to-visit-disappearing-nodes</a><br>
+                    </span>
+                    </span>
+                  </td>
+                  <td class="d-none d-md-table-cell">
+                    <a href="https://nus.kattis.com/courses/CS2040S/CS2040S_S1_AY2627/assignments/s9xfdh/standings" target="_blank">PS6</a> <span class="weightage">(2%)</span><br>
+                    <span class="detail">Due: Sat, 07 Nov 26, 07.59am<br>
+                    </span>
+                    <br>
+                    <a href="https://nus.kattis.com/courses/CS2040S/CS2040S_S1_AY2627/assignments/zux53m/standings" target="_blank">Optional Final Tracker</a><br>
+                    <span class="detail">Out: Sat, 07 Nov 26, 08.00am<br>
+                    </span>
+                  </td>
+                </tr>
+
+                <tr data-offset="91" title="double click (on SmartPhone: double tap) this row to toggle showing/hiding the details">
+                  <th scope="row">
+                    13,<br>
+                    09-13&nbsp;Nov
+                  </th>
+                  <td class="d-none d-sm-table-cell">
+                    <span class="timehighlight">Deepavali PH on Sun, 08 Nov 2026<br>
+                    The following Mon, 09 Nov 2026 is PH in lieu<br>
+                    We cancel the last lab<br>
+                    </span>
+                    <br>
+                    No session on last week, only online exercises<br>
+                    <br>
+                    <span class="detail">
+                    Essential LeetCode exercises (past finals 1):<br>
+                    Mon: List Review,<br>
+                    Tue: <a href="https://leetcode.com/problems/ugly-number-ii/description/" target="_blank">ugly-number-ii</a> (Min Priority Queue + Hash Table Review),<br>
+                    Wed: <a href="https://leetcode.com/problems/map-sum-pairs/description/" target="_blank">map-sum-pairs</a> (Hash Table Review),<br>
+                    Thu: <a href="https://leetcode.com/problems/flatten-binary-tree-to-linked-list/description/?envType=study-plan-v2&amp;envId=top-interview-150" target="_blank">flatten-binary-tree-to-linked-list</a> (Skewed Right BST (LL) Review),<br>
+                    Fri: 
+                    Sat: <br>
+                    <!--Sun: .<br>-->
+                    </span>
+                    <!--<a href='cs2040/tutorials/tut11.pdf' target='_blank'>T11+L11: tut11.pdf</a><br>
+                    <span class="detail">MST Review<br>
+                    Past final assessment paper(s) discussions<br>
+                    VA OQ demo (<a href='https://visualgo.net/training?diff=Medium&n=6&tl=5&module=mst' target='_blank'>mst</a>),<br>
+                    Class Photo (for momento)<br>
+                    </span>
+                    <br>
+                    Tut+Lab participation marks given <span class="weightage">(3%)</span>-->
+                  </td>
+                  <td>
+                    13a. No lecture, make-up time window<br>
+                    <span class="detail">Details TBC<br>
+                    <!--Make-up for VA OQ 1 (?? pax),<br>
+                    Make-up for VA OQ 2 (?? pax; has ? overlap with VA OQ 1)<br>
+                    Make-up for VA OQ 3 (?? pax; has ? overlap with VA OQ 1+2)<br>
+                    Make-up for Midterm (?? pax; has ? overlap with VA OQ 1+2+3)<br>-->
+                    </span>
+                    <br>
+                    <span class="notforit5003">
+                    13b. The Last Lecture<br>
+                    <span class="detail">1. Course wrap-up and Semester Summary<br>
+                    Review of what can be done better for future iterations,<br>
+                    <!--Undoing all the illegal Java coding techniques,<br>-->
+                    <!--Semester summary via ... <a href='secreturl' target='_blank'>IT5003 past paper discussion</a> -->
+                    2. Advertisement of future (algorithm) courses: CS3230 (S1 or S2)<br> <!--CS3233 (S2) or -->
+                    Advertisement for part-time TA jobs (A-/A/A+ only),<br>
+                    3. Ending: a few Final Assessment Tips.<br>
+                    </span>
+                    </span>
+                  </td>
+                  <td class="d-none d-md-table-cell">
+                    Optional, continued
+                  </td>
+                </tr>
+
+                <tr data-offset="98" title="double click (on SmartPhone: double tap) this row to toggle showing/hiding the details">
+                  <th scope="row">
+                    Reading,<br>
+                    14-20&nbsp;Nov
+                  </th>
+                  <td class="d-none d-sm-table-cell">
+                    <span class="detail">
+                    Essential LeetCode exercises (past finals 2):<br>
+                    Mon: <br>
+                    Tue: <br>
+                    Wed: <br>
+                    Thu: <br>
+                    Fri: <a href="https://leetcode.com/problems/map-of-highest-peak/description/" target="_blank">map-of-highest-peak</a> ((unweighted) SSSP Review)<br>
+                    Sat: <br>
+                    <!--Sun: <br>-->
+                    </span>
+                  </td>
+                  <td colspan="2" class="text-center">
+                    <span class="detail">Final Assessment Past Papers (recent 3 AYs only, note the mix of CS2040S/Java and CS2040C/C++):<br>
+                    <!--AY 2022/23: <a href='cs2040/tests/CS2040C-2022-23-S1-final.pdf' target='_blank'>S1-final.pdf</a>, [I didn't teach CS2040C in S2],<br>-->
+                    AY 2023/24: <a href="cs2040/tests/CS2040S-2023-24-S1-final-no-MCQs.pdf" target="_blank">S1-final.pdf</a>, [I didn't teach CS2040S in S2],<br>
+                    AY 2024/25: <a href="cs2040/tests/CS2040S-2024-25-S1-final-hard.pdf" target="_blank">S1-final.pdf</a>, [I didn't teach CS2040S in S2],<br>
+                    AY 2025/26: <a href="cs2040/tests/CS2040S-2025-26-S1-final-medium.pdf" target="_blank">S1-final.pdf</a>, <a href="cs2040/tests/CS2040C-2025-26-S2-final-medium.pdf" target="_blank">S2-final.pdf</a> (CS2040C),<br>
+                    AY 2026/27: S1-final.pdf (will be our paper), [I don't teach CS2040S in S2].<br>
+                    </span>
+                    <br>
+                    <span class="timehighlight">NUS Online Teaching Feedback System closes on Friday of Reading Week</span>
+                  </td>
+                </tr>
+ 
+                <tr data-offset="105" title="double click (on SmartPhone: double tap) this row to toggle showing/hiding the details">
+                  <td colspan="4" class="text-center">
+                    Final Assessment <span class="weightage">(60% → 50%)</span><br>
+                    Date and Time: Tue, 24 Nov 2026, 9-11am<br>
+                    Venue: TBA<br><!--MPSH5 (invigilators: Prof Halim, 3 TAs: Yuan Bin, Hian Wee, Jin Pei) + COM3-01-23 (a few special needs + TA: Desmond)<br>-->
+                    <span class="detail">Open book<br>
+                    No electronic device except one calculator<br>
+                    Details TBC<br>
+                    <!--6x1 = 6 marks are MCQs (very tricky; do not start from MCQ section; but do not leave any MCQ blank either)<br>
+                    <!-- (the MCQs are there to speed up grading as Prof Halim has two other final assessments<br>
+                    on 13 Nov (33 pax) and 29 Nov (434 pax))<br>
+                    2 questions with shorter answers, the easier ones (20%)<br> -->
+                    <!--Then 6 application questions (essays)<br>
+                    The first essay question will be very trivial, worth "free" 9 marks; do this one first and if scored (expected &le; 5 minutes for A/A+ students), will give most students 9% worth of points, so anyone with CA marks &ge; 31.0/40.0 can pass this course a few minutes after final assessment starts<br>
+                    Then there will be four medium tasks of mostly second half topics, worth 4x10 = 40 marks<br>
+                    The last essay question will be very hard (yes it is a graph problem) and worth the last 5* marks (VERY STRICT marking scheme: free 0.5 mark if left blank, 0 if wrong)<br>-->
+                    </span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div> <!--<div class="offset-lg-2 col-lg-10 offset-md-3 col-md-9 main">-->
+      </div> <!--<div class="row">-->
+    </div> <!--<div class="container-fluid">-->
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.datatables.net/v/bs4/jq-3.2.1/dt-1.10.16/datatables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+
+    <script>
+      var curDay = new Date();
+      var refDate = new Date(2026, 7, 9); // Sun, 09 Aug 2026 is the refDate
+
+      function UpdateLesson(showpast) {
+        $('#lesson tr').each(function(i, row) {
+          $(row).attr("title", "double click (on SmartPhone: double tap) this row to toggle showing/hiding the details");
+          var day_gap = (curDay.getTime()-refDate.getTime())/1000/60/60/24;
+          var diff = day_gap-parseInt($(row).attr("data-offset"));
+          if (diff > 14) { // this row is a past event (more than one week)
+            if (showpast == false) { // hide past
+              $(row).attr("class", "passed"); // give this class "passed" so that it is colored differently :)
+              $(row).hide();
+            }
+            else {
+              $(row).attr("class", "passed"); // give this class "passed" so that it is colored differently :)
+              $(row).fadeIn(1000);
+            }
+          }
+          else if (diff > 0 && diff <= 7) // this is the current week
+            $(row).attr("class", "current");
+          else if (diff > 7 && diff <= 14) // this is last week (some material are relevant), don't hide
+            $(row).attr("class", "passed");
+        });
+      }
+
+      $("#lesson tr").on( "dblclick",
+        function() {
+          if ($(this).find('.detail').is(':visible')) {
+            if (!$("#hidedetailsbutton").is(':visible')) // and not on show all details moded
+              $(this).find('.detail').hide();
+          }
+          else
+            $(this).find('.detail').show();
+        }
+      );
+
+      function get_news(lim) {
+        var news = [
+          "Wed, 03 Jun 26", "Final assessment date and time is announced (Tue, 24 Nov 26, 9-11am).<br>Lecture slots also change from Wed+Thu to Thu+Fri (but at least not early morning for the Fri session, but Fri of Wk08 will be affected by NUS Well-Being Day).<br>Lab slots are now increased from 4x2 = 8 sessions on Mondays to 4x3 = 12 sessions to minimize the maximum number of students per lab group.",
+          "Fri, 15 May 26", "Multiple source of information points towards the further increase of CS2040S S1 size from record 206 pax in S1 AY25/26 to possibly up to 240 pax in S1 AY26/27. Prof Halim has adjusted number of labs from 4 Monday time slots x 2 parallel slots = 8 to 4x3 = 12 sessions to anticipate this. He is now looking for best 12 TA applications to fill in these slots.",
+          "Wed, 06 May 26", "Prof Halim is preparing for a new iteration...",
+          "Thu, 13 Nov 25", "We had completed the finale last lecture of CS2040S. Now is two weeks of 'cool-down' period to absorb all CS2040S material as best as you can for the Thu, 27 Nov 25 1-3pm paper, two weeks from now.",
+          "Wed, 05 Nov 25", "We had completed almost everything in CS2040S. We are only left with: MST+SSSP extras (12b), make-up VA OQ 1+2+3+midterm (13a, only for those who are given make-up tests), and wrap-up (introduction to CS3230, 13b). So, it is now the time for you to complete your official teaching feedback :). Also, as we are nearing the end, the entire <a href='#lessonplan'>Lesson Plan</a> is reopened.",
+          "Mon, 03 Nov 25", "Small setup change for VA OQ 3: /graphds (4 (from 3) Qs), /dfsbfs (3 Qs), /sssp (2 (from 3) Qs), and 3 'new' questions (inclusive of 2 specifically <b>unweighted</b> SSSP).<br>Remember to train using Google Chrome for VA OQ 3 to avoid misinterpreting directed graphs (the arrows are not rendered correctly on Safari).<br>The last <a href='cs2040/tutorials/tut10.pdf' target='_blank'>T10+L10: tut10.pdf</a> is uploaded.",
+          "Wed, 22 Oct 25", "<a href='cs2040/tutorials/tut08.pdf' target='_blank'>T08+L08: tut08.pdf</a> that will review last week's lec09a(+b for CS2040S) and today's lec10a(+b for CS2040S) is out.<br><a href='cs2040/tutorials/tut09.pdf' target='_blank'>T09+L09: tut09.pdf</a> is also out.",
+          "Thu, 16 Oct 25", "Last year around this time, the announcement was about 'use the long weekend to prepare for the very difficult Practical Exam (PE)'.<br>This year, I say 'you (and myself) can rest this weekend'.<br>There will NOT be any Fri night consultation tomorrow night (17 Oct) so that we all can start our long weekend.",
+          "Fri, 10 Oct 25", "Small edit to VA OQ 2 plan for *next* Wed of Wk9:<br>Material: /heap (3 Qs), /hashtable (3 Qs), <b>/ufds (3 Qs)</b>, /bst (3 Qs), <b>but NO new question this time</b>, i.e., if you practice enough, you will get near 12/12...<br>TA Ang Wei Jian will give some tips during his <a href='https://nus-sg.zoom.us/j/81574591621?pwd=iEJkaewvyO7bEqf5F9WfocYWnIrvYD.1' target='_blank'>Fri, 10 Oct 25, 21.00-23.00</a> consultation tonight.",
+          "Wed, 08 Oct 25", "<a href='cs2040/tutorials/tut07.pdf' target='_blank'>T07+L07: tut07.pdf</a> is uploaded.",
+          "Fri, 03 Oct 25", "<a href='cs2040/tutorials/tut06.pdf' target='_blank'>T06+L06: tut06.pdf</a> is uploaded.",
+          "Wed, 01 Oct 25", "<a href='cs2040/tests/CS2040S-2025-26-S1-midterm-medium.pdf' target='_blank'>CS2040S S1 AY25/26 midterm test</a> has been conducted successfully [albeit that accidental seating clash that necessitates +100 cells offset and last minute change of SR@LT19 proctor]. There were 6 absentees (all 6 with MCs). Discuss the solutions at Class Discord (if you do not have other midterm tests coming up today/tomorrow). Past lesson plan (of Week 00-06) is now closed up again to focus on Wk7++.",
+          "Thu, 18 Sep 25", "Midterm test paper has been printed. The <a href='#lessonplan'>Lesson Plan</a> is fully re-opened with details again so that students are aware of the topics (lec01/2/3/4/5ab + tut01/2/3/4/5 + PS0/1/2/3) that are examinable on Wed, 01 Oct 2025.",
+          "Thu, 11 Sep 25", "I think I have now catch up with the backlogs after my week 04 absence. We had completed lec05a+b and completed VA OQ 1. Analysis of the result has been done and students who need a bit more help and students who need make-up VA OQ 1 have been identified.",
+          "Thu, 28 Aug 25", "Prof Halim will be in <a href='https://docs.icpc.global/wf-rcd-schedule/' target='_blank'>Baku, Azerbaijan, for the 2025 ICPC World Finals from this Sat, 30 Aug 25 night until next Sat, 06 Sep 25 evening</a>. Any issue with CS2040S during Week 04, please ask your TA first. Lec 04a and 04b will be executed by Yuan Bin and Choon Hean, respectively.<br><br>Btw, last year (2024) around week 04 (interesting coincidence): <i>Prof Halim was in <a href='https://www.ioi2024.eg/schedule' target='_blank'>Alexandria, Egypt, for IOI 2024 from Sat, 31 Aug 24, until Mon, 09 Sep 24 morning</a>. Lec 04a and 04b were executed by Tzer Bin and Ryan Tan, respectively.</i>",
+          "Tue, 26 Aug 25", "Midterm venue and time is confirmed: MPSH5, Date and Time: Wed, 01 Oct 25 (wk7), 10:15-11:25am (70 mins), Hall entry time earliest by 09:45am, Hall exit time latest by 11:55am",
+          "Mon, 25 Aug 25", "First lab sessions start today. Get to know your TA, as he/she will be the main point of contact who will help you navigate through this course successfully (do not use Prof Halim as first line of contact).<br><br>PS: The latest Discord poll over weekend showed that many want to have the live coding skills. Therefore, Prof Halim has selected almost all the daily LeetCode tasks. Most Mondays, during the lab session (from Week 04 onwards), your TA will discuss the chosen Monday LeetCode task. During most Wednesdays and Thursdays, during lecture, Prof Halim will showcase at least one LeetCode live solve.",
+          "Fri, 22 Aug 25", "(e-)Consultations will start from tonight: Friday, 22 Aug 25, 9-11pm (a few hours before PS1 is due) via this <a href='<a href='https://nus-sg.zoom.us/j/81574591621?pwd=iEJkaewvyO7bEqf5F9WfocYWnIrvYD.1' target='_blank'>Zoom Recurring Link</a>. The focus for tonight is PS1B+C last minute official help.",
+          "Tue, 19 Aug 25", "Setting the default view of Lesson Plan to 'focus on this week' + overview of the rest (thus hiding the details of future classes). You can click 'Show Details' button to see all. Also, as of Tue, 19 Aug 2025, the class size is 206, and all except last 3 have gotten their lab group.",
+          "Mon, 18 Aug 25", "After the second round of tut/lab session bidding, almost all students (198/206, 96%) have gotten their lab group. For the last 8, the filling priority is: auto slotted to B08 if your timetable allows (you will have to be in campus on Mondays anyway), before stretching B01/03/08 to 28 (or max 29).",
+          "Thu, 14 Aug 25", "After the first round of tut/lab session bidding, most students (186/206, 90%) have gotten their preferred lab group. For those without a lab group yet, try to fill in the green slots first by selecting your second choice in round two. As I have said, PL3 venue is max 24 pax (cannot go beyond that hard physical limit) whereas PL2 venue can go to 28, 29, ... but only if need be.",
+          "Mon, 11 Aug 25", "Optional LeetCode exercises for Week 01 is outlined in <a href='#lessonplan'>Lesson Plan</a>.",
+          "Tue, 05 Aug 25", "tut01-02-03-04.pdf (until recess week) are more or less ready. And since tut05 is past midterm discussion, Prof Halim has up to early October to process tut06-07-08-09-10.",
+          "Mon, 28 Jul 25", "2 Lab venues have been adjusted to PL2 (that lab is big) so that we can have up to 4x24 (at PL3, hard physical constraint) + 4x31 (soft constraint) = 220 pax, if need be.",
+          "Thu, 24 Jul 25", "There are 195 students after CourseReg round 1, this is above the predicted range of [150-180] students. First welcome email sent.",
+          "Tue, 22 Jul 25", "For the SECOND time in my academic career, I have finished setting-up (and tested - at least for CS2040S side) CS2040 placement test (for 31 Jul 25), CS2040S/IT5003 midterm (for 01 Oct 25, TWO shorter papers), and CS2040S/IT5003 final (for 26 Nov 2025 and 27 Nov 2025, TWO full papers) long *before* the semester starts... Again, keep a lookout throughout the semester on what I will say in class as I know what will be asked at the end.",
+          "Mon, 14 Jul 25", "The chosen TAs have been taken at the TMTF system. There were actually 52 (FIFTY-TWO) applicants. For the 52-8 = 44 others, try again next semester &mdash; CS2040S in S2 is always much larger; or next year...",
+          "Thu, 10 Jul 25", "TA line-up (8 pax) is confirmed.<br><br>If last year on Wed, 17 Jul 24, I wrote <i>'CS2040S S1 AY24/25 TA lineup is finalized; again I fail to diversify TA line-up (all guys... again...). I encourage more top female ex-CS2040S students (A/A+) to apply again next time.'</i>,<br><br>this time we have 6:2 or 3:1 ratio :).",
+          "Tue, 01 Jul 25", "TA line-up will be announced soon...",
+        ];
+
+        if (lim == -1) lim = news.length;
+        var ret = "";
+        for (var i = 0; i < lim; i += 2) // show only last two news (default) or all, if requested by user
+          ret += "  <tr><td>" + news[i] + (i == 0 ? " <span class='badge badge-secondary'>new</span>" : "") + "</td><td>" + news[i+1] + "</td></tr>\n";
+        $("#n").html(ret);
+      }
+
+      $(function() {
+        $('body').scrollspy({ target: '#navbar-example' }); // turn on scrollspy
+        $('[data-toggle="tooltip"]').tooltip(); // turn on tooltips
+
+        var deadline = new Date(2026, 7, 10);
+        if (curDay > deadline) { // beyond Mon, 10 Aug 2026, just hide this section
+          $('html').animate({
+            scrollTop: $("#news").offset().top
+          }, 25);
+        }
+
+        get_news(4);
+        //$('#showpastrow').hide(); // the help row
+        UpdateLesson(true); // set true to show past, set false to hide past
+        $('#showpastbutton').hide(); // if this is on, the other should be commented
+        //$('#hidepastbutton').hide();
+        $('#showdetailsbutton').hide(); // if this is on, the other should be commented
+        //$('.detail').hide(); $('.passed .detail').show(); $('.current .detail').show(); $('#hidedetailsbutton').hide(); // show details only on the immediate past and the current week
+
+        if (!localStorage.getItem("cs2040sHereBefore")) {
+          $('html').animate({
+            scrollTop: $("#intro").offset().top
+          }, 25);
+          localStorage.setItem("cs2040sHereBefore", "true"); // set it
+        }
+        else { // already second visitor onwards
+          if (curDay < deadline) { // before deadline, but have visited this page before
+            $('html').animate({
+              scrollTop: $("#registration").offset().top
+              // scrollTop: $("#jumphere").offset().top
+            }, 25);
+          }
+        }
+      });
+    </script>
+  
+</body></html>

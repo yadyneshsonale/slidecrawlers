@@ -1,0 +1,52 @@
+[
+{
+"url": "https://cs.stanford.edu/~ermon/cs228/index.html",
+"title": "CS 228 - Probabilistic Graphical Models",
+"description": "> * Important announcements will be posted on Piazza. > * **Contact:** Please use Piazza for all questions related to lectures and coursework. >   + Probabilistic graphical models are a powerful framework for representing complex domains using probability distributions, with numerous applications in machine learning, computer vision, natural language processing and computational biology. Graphical models bring together graph theory and probability theory, and provide a flexible framework for modeling large collections of random variables with complex interactions. The course will cover: (1) Bayesian networks, undirected graphical models and their temporal extensions; (2) exact and approximate inference methods; (3) estimation of the parameters and the structure of graphical models. Homeworks will be posted on Piazza. >   + Piazza: You will be awarded with up to 3% extra credit if you answer other students' questions in a substantial and helpful way, or contribute to the lecture notes with pull requests."
+},
+{
+"url": "https://github.com/ermongroup/cs228-notes",
+"title": "ermongroup/cs228-notes - Probabilistic Graphical Models. - GitHub",
+"description": "These notes form a concise introductory course on probabilistic graphical models. They are based on Stanford CS228, taught by Stefano Ermon."
+},
+{
+"url": "https://ermongroup.github.io/cs228-notes",
+"title": "Contents",
+"description": "These notes form a concise introductory course on probabilistic graphical models. They are based on Stanford CS228, introducing probabilistic graphical models."
+},
+{
+"url": "https://web.stanford.edu/~lindrew/cs228.pdf",
+"title": "[PDF] CS 228: Probabilistic Graphical Models 1 January 9, 2024",
+"description": "(For example, we may consider the set of fully factored probability distributions and make the mean-field approximation.) Then the same machinery goes through \u2013 it\u2019s still true that we have the evidence lower bound (we often call the right hand side an ELBO for short) log p(\u20d7 x; \u03b8) \u2265 X \u20d7 z q(\u20d7 z|\u20d7 x, \u03c6) log p(\u20d7 z,\u20d7 x; \u03b8) + H(q(\u20d7 z|\u20d7 x; \u03c6)), just that we can no longer necessarily reach equality (because there may not be any q that is very similar to the posterior)."
+},
+{
+"url": "https://www.quora.com/What-is-it-like-to-take-CS-228-Probabilistic-Graphical-Model-at-Stanford",
+"title": "What is it like to take CS 228: Probabilistic Graphical Model ... - Quora",
+"description": "The class itself is very lecture based. When I took it, there were rarely any lecture slides posted or used, and only the occasional lecture"
+},
+{
+"url": "https://online.stanford.edu/courses/cs228-probabilistic-graphical-models-principles-and-techniques",
+"title": "Probabilistic Graphical Models: Principles and Techniques | Course",
+"description": "This course will provide a comprehensive survey of the topic, introducing you to the key formalisms and main techniques used to construct them."
+},
+{
+"url": "https://www.facebook.com/groups/DeepNetGroup/posts/423478541378367",
+"title": "Probabilistic graphical models notes for Stanford CS228 - Facebook",
+"description": "Notes for Stanford cs228: Probabilistic Graphical Models, which is the current year Stanford version of Daphne Koller's Coursera class."
+},
+{
+"url": "https://ermongroup.github.io/cs228",
+"title": "CS 228 - Probabilistic Graphical Models",
+"description": "Logistics | Course Info | Syllabus | Other Resources. The aim of this course is to develop the knowledge and skills necessary to design, implement and apply these models to solve real problems. The course will cover: (1) Bayesian networks, undirected graphical models and their temporal extensions; (2) exact and approximate inference methods; (3) estimation of the parameters and the structure of graphical models. **Extra Credit (+3%)**: You will be awarded with up to 3% extra credit if you answer other students\u2019 questions on Ed in a substantial and helpful way, or contribute to the course notes on GitHub with pull requests. The Honor Code is an undertaking of the students, individually and collectively: that they will not give or receive aid in examinations; that they will not give or receive unpermitted aid in class work, in the preparation of reports, or in any other work that is to be used by the instructor as the basis of grading; that they will do their share and take an active part in seeing to it that others as well as themselves uphold the spirit and letter of the Honor Code."
+},
+{
+"url": "https://www.youtube.com/watch?v=IpfVQ223hME",
+"title": "Lecture 1. Introduction to Probabilistic Graphical Models - YouTube",
+"description": "... slides: https://www.dropbox.com/s/z36c0ubb3i1iy4k/Lec1 ... Bayesian Networks 1 - Inference | Stanford CS221: AI (Autumn 2019). Stanford"
+},
+{
+"url": "https://support.access-ci.org/knowledge-base/resources/3851",
+"title": "Introduction to Probabilistic Graphical Models - Support - Access",
+"description": "This website summarizes the notes of Stanford's introductory course on probabilistic graphical models. It starts from the very basics and concludes by"
+}
+]

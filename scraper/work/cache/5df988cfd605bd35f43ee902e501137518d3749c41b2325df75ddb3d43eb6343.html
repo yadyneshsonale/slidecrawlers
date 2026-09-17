@@ -1,0 +1,552 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>RL Theory Seminar</title>
+  <link rel="icon" href="/static/img/mstile-258x205.ico" type="image/x-icon">
+  
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <link href="/css/seminar.css" rel="stylesheet">
+<script type="text/javascript" src="https://mathjax.rstudio.com/latest/config/TeX-MML-AM_CHTML.js?V=2.7.9"></script></head>
+
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">RL Seminar</a>
+    </div>
+    <div id="navbar" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li>
+          <a href="/about.html">About</a>
+        </li>
+        <li class="active">
+          <a href="/index.html">Current schedule</a>
+        </li>
+        <li>
+          <a href="/past.html">Other semesters</a>
+        </li>
+        <li>
+          <a href="/resource.html">Resources</a>
+        </li>
+        <li>
+          <a href="https://github.com/rlseminar/rlseminar.github.io">GitHub</a>
+        </li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</nav>
+
+
+    <div class="container">
+      <div class="page-header">
+<h1>RL Seminar</h1>
+
+<h2>Fall 2022</h2>
+</div>
+
+
+<p>The zoom link will be sent by email. If you are interested, please <a href="about.html">contact</a> us.</p>
+
+
+<br>
+<!-- Layout: http://veerle.duoh.com/blog/comments/a_css_styled_table/ -->
+
+
+
+
+
+
+
+<table class="mytable" summary="Scientific Computing and Numerics Seminar, Fall 2022" cellspacing="0">
+<tbody>
+  <tr>
+    <th scope="col" abbr="Date" class="nobg">Date</th>
+    <th scope="col" abbr="Info">Speaker and Title</th>
+  </tr>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <tr>
+    <th scope="row">Sep 20</th>
+    
+    <td class="alt">
+      
+      Yingru Li
+      
+      (CUHK-SZ)
+      
+      <div style="margin-left: 5%;">
+      <a href="/2022/09/20/yingru.html">From prediction to decision - The importance of Joint prediction</a>
+      </div>
+      
+    </td>
+    
+  </tr>
+  
+  
+  
+  
+  
+  <tr>
+    <th scope="row">Oct 11</th>
+    
+    <td class="alt">
+      
+      Ziniu Li
+      
+      (CUHK-SZ)
+      
+      <div style="margin-left: 5%;">
+      <a href="/2022/10/11/ziniu.html">Action-gap in Reinforcement Learning</a>
+      </div>
+      
+    </td>
+    
+  </tr>
+  
+  
+  
+  
+  
+  <tr>
+    <th scope="row">Oct 25</th>
+    
+    <td class="alt">
+      
+      Hao Liang
+      
+      (CUHK-SZ)
+      
+      <div style="margin-left: 5%;">
+      <a href="/2022/10/25/hao.html">Risk-Sensitive Reinforcement Learning under CVaR Objective</a>
+      </div>
+      
+    </td>
+    
+  </tr>
+  
+  
+  
+  
+  
+  <tr>
+    <th scope="row">Nov 08</th>
+    
+    <td class="alt">
+      
+      Tian Xu
+      
+      (NJU)
+      
+      <div style="margin-left: 5%;">
+      <a href="/2022/11/08/tian.html">Adversarially Trained Actor Critic for Offline Reinforcement Learning</a>
+      </div>
+      
+    </td>
+    
+  </tr>
+  
+  
+  
+  
+  
+  <tr>
+    <th scope="row">Nov 22</th>
+    
+    <td class="alt">
+      
+      Yingru Li
+      
+      (CUHK-SZ)
+      
+      <div style="margin-left: 5%;">
+      <a href="/2022/11/22/yingru.html">An Analysis of Hypermodel</a>
+      </div>
+      
+    </td>
+    
+  </tr>
+  
+  
+  
+  
+  
+  <tr>
+    <th scope="row">Dec 13</th>
+    
+    <td class="alt">
+      
+      Ziniu Li
+      
+      (CUHK-SZ)
+      
+      <div style="margin-left: 5%;">
+      <a href="/2022/12/13/ziniu.html">Training Lager Networks for Deep RL</a>
+      </div>
+      
+    </td>
+    
+  </tr>
+  
+  
+  
+</tbody>
+</table>
+
+
+
+    </div><!-- /.container -->
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <script src="/js/math-code.js"></script>
+    <!-- Just one possible MathJax CDN below. You may use others. -->
+    <script async="" src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+  
+
+</body></html>

@@ -1,0 +1,378 @@
+<!DOCTYPE html><html><head>
+<link rel="icon" href="http://16385.courses.cs.cmu.edu/spring2024/assets/images/favicon/dragon.png" type="image/png">
+<title>Lectures and Readings : Computer Vision : Spring 2024</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&amp;display=swap" rel="stylesheet">
+
+<script src="http://16385.courses.cs.cmu.edu/spring2024/assets/third_party/jquery/1.8.3/jquery.min.js"></script>
+<script src="http://16385.courses.cs.cmu.edu/spring2024/assets/third_party/jquery/timeago/jquery.timeago.js"></script>
+<script src="http://16385.courses.cs.cmu.edu/spring2024/assets/third_party/jquery/cookie/jquery.cookie.js"></script>
+
+<script src="http://16385.courses.cs.cmu.edu/spring2024/assets/third_party/codemirror-3.0/lib/codemirror.js"></script>
+<script src="http://16385.courses.cs.cmu.edu/spring2024/assets/third_party/codemirror-3.0/mode/markdown/markdown.js"></script>
+
+<script type="text/javascript" id="MathJax-script" defer="" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  skipStartupTypeset: true,
+  showProcessingMessages: false,
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    processEscapes: true
+  }
+});
+</script>
+
+
+<link rel="stylesheet" type="text/css" href=" http://16385.courses.cs.cmu.edu/spring2024/assets/third_party/codemirror-3.0/lib/codemirror.css">
+
+<script src="http://16385.courses.cs.cmu.edu/spring2024/assets/third_party/google-code-prettify/prettify.js"></script>
+<link rel="stylesheet" type="text/css" href=" http://16385.courses.cs.cmu.edu/spring2024/assets/third_party/google-code-prettify/prettify.css">
+
+<!-- NOTE(kayvonf): place at end to override 3rd party tools -->
+<link rel="stylesheet" type="text/css" href=" http://16385.courses.cs.cmu.edu/spring2024/assets/css/main.css">
+
+<script type="text/javascript">
+var edit_comment_url = "http://16385.courses.cs.cmu.edu/spring2024/comments/ajax_edit_comment";
+var delete_comment_url = "http://16385.courses.cs.cmu.edu/spring2024/comments/ajax_delete_comment";
+var archive_comment_url = "http://16385.courses.cs.cmu.edu/spring2024/comments/ajax_archive_comment";
+var add_private_comment_url = "http://16385.courses.cs.cmu.edu/spring2024/comments/ajax_add_private_comment";
+var add_instructor_comment_url = "http://16385.courses.cs.cmu.edu/spring2024/comments/ajax_add_instructor_comment";
+var add_comment_url = "http://16385.courses.cs.cmu.edu/spring2024/comments/ajax_add_comment";
+var comment_vote_url = "http://16385.courses.cs.cmu.edu/spring2024/comments/ajax_comment_vote";
+var toggle_subscribe_url = "http://16385.courses.cs.cmu.edu/spring2024/comments/ajax_toggle_subscribe";
+var prompt_students_url = "http://16385.courses.cs.cmu.edu/spring2024/comments/ajax_prompt_students";
+var keep_alive_url = "http://16385.courses.cs.cmu.edu/spring2024/keep_alive";
+</script>
+
+<script type="text/javascript" src="http://16385.courses.cs.cmu.edu/spring2024/assets/js/main.js"></script>
+<script type="text/javascript" src="http://16385.courses.cs.cmu.edu/spring2024/assets/js/comments.js"></script>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mathjax@2/config/TeX-AMS-MML_HTMLorMML.js?V=2.7.9"></script></head>
+<body>
+
+<div id="modal_overlay"></div>
+
+<div class="main_container">
+
+<div class="topbar">
+<div class="topbar_left"><a href="http://16385.courses.cs.cmu.edu/spring2024/home">[Home]</a></div>
+<div class="topbar_left"><a href="http://16385.courses.cs.cmu.edu/spring2024/courseinfo">[Course Info]</a></div>
+<div class="topbar_left"><a href="http://16385.courses.cs.cmu.edu/spring2024/newsfeed">[Feed]</a></div>
+<div class="topbar_left"><a href="http://16385.courses.cs.cmu.edu/spring2024/lectures">[Lectures]</a></div>
+<div class="topbar_left"><a href="http://16385.courses.cs.cmu.edu/spring2024/assignments">[Assignments]</a></div>
+<div class="topbar_left"><a href="http://16385.courses.cs.cmu.edu/spring2024/notebooks">[Notebooks]</a></div>
+
+
+
+<div class="topbar_right">
+
+<a href="http://16385.courses.cs.cmu.edu/spring2024/users/login">[Login]</a>
+
+</div>
+
+</div>
+
+<div class="content_container">
+
+<!-- end of header -->
+
+
+
+
+<div class="home_container">
+
+<div class="home_title">Computer Vision <span style="font-size: 12pt;">(CMU 16-385)</span> </div>
+
+
+<p>This page contains lecture slides and recommended readings for 16-385.</p>
+
+
+<div class="book_lecture">
+     <div class="book_lecture_title">
+     <a href="http://16385.courses.cs.cmu.edu/spring2024/lecture/intro">Lecture 1:
+     Course Introduction</a></div>
+     <div class="colored_text book_lecture_subtitle">(Overview of computer vision)</div>
+</div>
+
+<div class="book_lecture">
+<div class="book_lecture_title">
+<a href="http://16385.courses.cs.cmu.edu/spring2024/lecture/filtering">Lecture 2:
+Image Filtering</a></div>
+<div class="colored_text book_lecture_subtitle">(Image transformations, point image processing, linear shift-invariant image filtering, convolution, image gradients)</div>
+<div>Basic reading:</div>
+<ul>
+<li><a href="http://szeliski.org/Book/">Szeliski textbook</a>, Section 3.2</li>
+</ul>
+</div>
+
+<div class="book_lecture">
+<div class="book_lecture_title">
+<a href="http://16385.courses.cs.cmu.edu/spring2024/lecture/pyramids">Lecture 3:
+Image Pyramids and Frequency Domain</a></div>
+<div class="colored_text book_lecture_subtitle">(Image downsampling, aliasing, Gaussian image pyramid, Laplacian image pyramid, Fourier series, frequency domain, Fourier transform, frequency-domain filtering, sampling)</div>
+<div>Basic reading:</div>
+<ul>
+<li><a href="http://szeliski.org/Book/">Szeliski textbook</a>, Section 3.4, 3.5</li>
+</ul>
+<div>Additional reading:</div>
+<ul>
+<li> Burt and Adelson, <a href="http://persci.mit.edu/pub_pdfs/pyramid83.pdf">"The Laplacian Pyramid as a Compact Image Code"</a>, IEEE ToC 1983.  (The original Laplacian pyramid paper.)
+</li><li> Hubel and Wiesel, <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1359523/">"Receptive fields, binocular interaction and functional architecture in the cat's visual cortex"</a>, The Journal of Physiology 1962.  A foundational paper describing information processing in the visual system, including the different     types of filtering it performs; Hubel and Wiesel won the Nobel Prize in Medicine in 1981 for the discoveries described in this paper.
+</li></ul>
+</div>
+
+<div class="book_lecture">
+<div class="book_lecture_title">
+<a href="http://16385.courses.cs.cmu.edu/spring2024/lecture/hough">Lecture 4:
+Hough Transform</a></div>
+<div class="colored_text book_lecture_subtitle">(Finding boundaries, line fitting, line parameterization, Hough transform, Hough circles)</div>
+<div>Basic reading:</div>
+<ul>
+<li><a href="http://szeliski.org/Book/">Szeliski textbook</a>, Section 7.4, A.2</li>
+</ul>
+</div>
+
+<div class="book_lecture">
+<div class="book_lecture_title">
+<a href="http://16385.courses.cs.cmu.edu/spring2024/lecture/corners">Lecture 5:
+Detecting Corners</a></div>
+<div class="colored_text book_lecture_subtitle">(Visualizing quadratics, Harris corner detector, multi-scale detection)</div>
+<div>Basic reading:</div>
+<ul>
+<li><a href="http://szeliski.org/Book/">Szeliski textbook</a>, Section 7.1</li>
+<li><a href="https://people.maths.ox.ac.uk/trefethen/lec4.ps">The Singular Value Decomposition</a> (from Numerical Linear Algebra by Trefethen and Bau).  <i>Note: The eigenvalues and eigenvectors of the covariance matrix (or any positive semidefinite matrix for that matter) are equivalent to its singular values and singular vectors.</i></li>
+</ul>
+</div>
+
+<div class="book_lecture">
+<div class="book_lecture_title">
+<a href="http://16385.courses.cs.cmu.edu/spring2024/lecture/features">Lecture 6: Feature Detectors and Descriptors</a></div>
+<div class="colored_text book_lecture_subtitle">(Designing feature descriptors, MOPS descriptor, GIST descriptor, Histogram of Textons descriptor, HOG descriptor, SIFT)</div>
+<div>Basic reading:</div>
+<ul>
+<li><a href="http://szeliski.org/Book/">Szeliski textbook</a>, Section 7.1</li>
+</ul>
+</div>
+
+<div class="book_lecture">
+<div class="book_lecture_title">
+<a href="http://16385.courses.cs.cmu.edu/spring2024/lecture/transformations">Lecture 7: 2D Transformations</a></div>
+<div class="colored_text book_lecture_subtitle">(2D transformations, projective geometry, classification of 2D transformations, determining unknown 2D transformations)</div>
+<div>Basic reading:</div>
+<ul>
+<li><a href="http://szeliski.org/Book/">Szeliski textbook</a>, Section 2.1</li>
+</ul>
+<div>Additional reading:</div>
+<ul>
+<li> Hartley and Zisserman, <a href="https://www.robots.ox.ac.uk/~vgg/hzbook/">"Multiple View Geometry in Computer Vision"</a>, Cambridge University Press 2004.
+A comprehensive treatment of all aspects of projective geometry relating to computer vision, and also a very useful reference for the second part of the class.</li>
+<li> Richter-Gebert, <i>"Perspectives on projective geometry"</i>, Springer 2011.  A beautiful, thorough, and very accessible mathematics textbook on projective geometry (available     online for free from CMU's library).</li>
+</ul>
+</div>
+
+<div class="book_lecture">
+<div class="book_lecture_title">
+<a href="http://16385.courses.cs.cmu.edu/spring2024/lecture/homographies">Lecture 8: Image Homographies</a></div>
+<div class="colored_text book_lecture_subtitle">(Panoramas, Image homographies, Computing with homographies, direct linear transform (DLT), random sample consensus (RANSAC))</div>
+<div>Basic reading:</div>
+<ul>
+<li><a href="http://szeliski.org/Book/">Szeliski textbook</a>, Section 2.1</li>
+</ul>
+<div>Additional reading:</div>
+<ul>
+<li> Hartley and Zisserman, <a href="https://www.robots.ox.ac.uk/~vgg/hzbook/">"Multiple View Geometry in Computer Vision"</a>, Cambridge University Press 2004.
+Sections 2 and 4 in particular discuss everything about homography estimation.
+</li></ul>
+</div>
+                                                                                                                                                                           
+<div class="book_lecture">
+<div class="book_lecture_title">
+<a href="http://16385.courses.cs.cmu.edu/spring2024/lecture/cameras">Lecture 9: Geometric Camera Models</a></div>
+<div class="colored_text book_lecture_subtitle">(Pinhole camera, accidental pinholes, camera matrix)</div>
+<div>Basic reading:</div>
+<ul>
+<li><a href="http://szeliski.org/Book/">Szeliski textbook</a>, Section 2.1</li>
+</ul>
+<div>Additional reading:</div>
+<ul>
+<li> Hartley and Zisserman, <a href="https://www.robots.ox.ac.uk/~vgg/hzbook/">"Multiple View Geometry in Computer Vision"</a>, Cambridge University Press 2004.
+Chapter 6 of this book has a very thorough treatment of camera models.
+</li><li> Torralba and Freeman, <a href="http://people.csail.mit.edu/torralba/publications/shadows.pdf">"Accidental Pinhole and Pinspeck Cameras"</a>, CVPR 2012.
+</li></ul>
+</div>
+                                                                                                                                                                           
+<div class="book_lecture">
+<div class="book_lecture_title">
+<a href="http://16385.courses.cs.cmu.edu/spring2024/lecture/cameras2">Lecture 10: Geometric Camera Models (cont.)</a></div>
+<div class="colored_text book_lecture_subtitle">(Review of camera matrix, perspective, other camera models, pose estimation)</div>
+<div>Basic reading:</div>
+<ul>
+<li><a href="http://szeliski.org/Book/">Szeliski textbook</a>, Section 2.1</li>
+<li><a href="https://www.robots.ox.ac.uk/~vgg/hzbook/">Hartley and Zisserman textbook</a>, Chapter 6.</li>
+</ul>
+</div>
+
+<div class="book_lecture">
+<div class="book_lecture_title">
+<a href="http://16385.courses.cs.cmu.edu/spring2024/lecture/stereogeometry">Lecture 11: Two-View Geometry</a></div>
+<div class="colored_text book_lecture_subtitle">(Triangulation, epipolar geometry, essential matrix, fundamental matrix, 8-point algorithm)</div>
+<div>Basic reading:</div>
+<ul>
+<li><a href="http://szeliski.org/Book/">Szeliski textbook</a>, Section 11.2.4, 11.3.1, 11.3.2, 11.3.3</li>
+<li><a href="https://www.robots.ox.ac.uk/~vgg/hzbook/">Hartley and Zisserman textbook</a>, Section 11.12.</li>
+</ul>
+</div>
+
+                                                                                                                                                                           
+<div class="book_lecture">
+<div class="book_lecture_title">
+<a href="http://16385.courses.cs.cmu.edu/spring2024/lecture/stereo">Lecture 12: Stereo</a></div>
+<div class="colored_text book_lecture_subtitle">(Revisiting triangulation, disparity, stereo rectification, stereo matching, improved stereo matching)</div>
+<div>Basic reading:</div>
+<ul>
+<li><a href="http://szeliski.org/Book/">Szeliski textbook</a>, Section 12.1, 12.5</li>
+<li><a href="https://www.robots.ox.ac.uk/~vgg/hzbook/">Hartley and Zisserman textbook</a>, Section 11.12.</li>
+</ul>
+</div>
+
+<div class="book_lecture">
+<div class="book_lecture_title">
+<a href="http://16385.courses.cs.cmu.edu/spring2024/lecture/bow">Lecture 13 &amp; 14: Image Classification</a></div>
+<div class="colored_text book_lecture_subtitle">(Introduction to learning-based vision, image classification, bag-of-words, K-means clustering, classification, K-nearest neighbors, naive Bayes, support vector machines)</div>
+<div>Basic reading:</div>
+<ul>
+<li><a href="http://szeliski.org/Book/">Szeliski textbook</a>, Chapter 6.2</li>
+</ul>
+</div>
+
+<div class="book_lecture">
+<div class="book_lecture_title">
+<a href="http://16385.courses.cs.cmu.edu/spring2024/lecture/nn">Lecture 15 &amp; 16: Neural Networks</a></div>
+<div class="colored_text book_lecture_subtitle">(Perceptron, neural networks, training perceptrons, gradient descent, backpropagation, stochastic gradient descent)</div>
+<div>Basic reading (No standard textbooks yet!):</div>
+<ul>
+<li><a href="https://sites.google.com/site/deeplearningsummerschool/">Lectures: Deep Learning Summer School</a></li>
+<li><a href="http://www.deeplearningbook.org/">Book: Deep Learning, by Goodfellow, Bengio, and Courville</a></li>
+<li><a href="http://www.cs.toronto.edu/~hinton/absps/NatureDeepReview.pdf">Article: Deep Learning, by LeCun, Bengio, and Hinton</a></li>
+</ul>
+</div>
+
+<div class="book_lecture">
+<div class="book_lecture_title">
+<a href="http://16385.courses.cs.cmu.edu/spring2024/lecture/cnn">Lecture 17: Convolutional Neural Networks</a></div>
+<div class="colored_text book_lecture_subtitle">(Some notes on optimization, convolutional neural networks, training ConvNets)</div>
+<div>Basic reading (No standard textbooks yet!):</div>
+<ul>
+<li><a href="https://sites.google.com/site/deeplearningsummerschool/">Lectures: Deep Learning Summer School</a></li>
+<li><a href="http://www.deeplearningbook.org/">Book: Deep Learning, by Goodfellow, Bengio, and Courville</a></li>
+<li><a href="http://www.cs.toronto.edu/~hinton/absps/NatureDeepReview.pdf">Article: Deep Learning, by LeCun, Bengio, and Hinton</a></li>
+</ul>
+</div>
+
+<div class="book_lecture">
+<div class="book_lecture_title">
+<a href="http://16385.courses.cs.cmu.edu/spring2024/lecture/flow">Lecture 18: Optical Flow</a></div>
+<div class="colored_text book_lecture_subtitle">(Intro to vision for video, optical flow, constant flow, Horn-Schunck flow)</div>
+<div>Basic reading:</div>
+<ul>
+<li><a href="http://szeliski.org/Book/">Szeliski textbook</a>, Section 8.4</li>
+</ul>
+</div>
+
+<div class="book_lecture">
+<div class="book_lecture_title">
+<a href="http://16385.courses.cs.cmu.edu/spring2024/lecture/track">Lecture 19 &amp; 20: Alignment and Tracking</a></div>
+<div class="colored_text book_lecture_subtitle">(Motion magnification using optical flow, image alignment, Lucas-Kanade alignment, Baker-Matthews alignment, inverse alignment, KLT tracking, mean-shift tracking, modern trackers)</div>
+<div>Basic reading:</div>
+<ul>
+<li><a href="http://szeliski.org/Book/">Szeliski textbook</a>, Section 4.1.1, 5.3, 8.1</li>
+</ul>
+</div>
+
+
+<div class="book_lecture">
+<div class="book_lecture_title">
+<a href="http://16385.courses.cs.cmu.edu/spring2024/lecture/radiometry">Lecture 21 &amp; 22: Radiometry and Reflectance</a></div>
+<div class="colored_text book_lecture_subtitle">(Appearance phenomena, measuring light and radiometry, reflectance and BRDF)</div>
+<div>Basic reading:</div>
+<ul>
+<li><a href="http://szeliski.org/Book/">Szeliski textbook</a>, Section 2.2</li>
+<li>Steven Gortler, <i>Foundations of Computer Graphics</i>, Chapter 21.  This book has a great introduction to radiometry, reflectance, and their use for image formation.</li>
+</ul>
+</div>
+
+<div class="book_lecture">
+<div class="book_lecture_title">
+<a href="http://16385.courses.cs.cmu.edu/spring2024/lecture/photometricstereo">Lecture 23: Photometric Stereo</a></div>
+<div class="colored_text book_lecture_subtitle">(Notes about radiometry, the n-dot-l model, photometric stereo, uncalibrated photometric stereo, generalized bas-relief ambiguity, shape from shading)</div>
+<div>Basic reading:</div>
+<ul>
+<li><a href="http://szeliski.org/Book/">Szeliski textbook</a>, Section 2.2</li>
+<li>Steven Gortler, <i>Foundations of Computer Graphics</i>, Chapter 21.  This book has a great introduction to radiometry, reflectance, and their use for image formation.</li>
+</ul>
+</div>
+
+<div class="book_lecture">
+<div class="book_lecture_title">
+<a href="http://16385.courses.cs.cmu.edu/spring2024/lecture/photography">Lecture 24 &amp; 25: Digital Photography</a></div>
+<div class="colored_text book_lecture_subtitle">(Imaging sensor primer, color sensing in cameras, in-camera image processing pipeline, radiometric calibration)</div>
+<div>Basic reading:</div>
+<ul>
+<li><a href="http://szeliski.org/Book/">Szeliski textbook</a>, Section 2.3</li>
+<li>Michael Brown, "Understanding the In-Camera Image Processing Pipeline for Computer Vision," CVPR 2016,
+very detailed discussion of issues relating to color photography and management, slides available <a href="https://www.eecs.yorku.ca/~mbrown/CVPR2016_Brown.html">here</a>.</li>
+<li><a href="https://ninedegreesbelow.com/">Nine Degrees Below</a>: amazing resource for color photography, reproduction, and management.</li>
+</ul>
+</div>
+
+<!--
+
+<div class="book_lecture">
+<div class="book_lecture_title">
+<a href="http://16385.courses.cs.cmu.edu/spring2024/lecture/segmentation">Lecture 27: Segmentation and Graph-based Techniques</a></div>
+<div class="colored_text book_lecture_subtitle">(Segmentation, image as a graph, shortest graph paths and intelligent scissors, GrabCut)</div>
+<div>Basic reading:</div>
+<ul>
+<li><a href="http://szeliski.org/Book/">Szeliski textbook</a>, Section 5.1.3, 5.3.1, 9.3.2, 9.3.3, 10.4.3</li>
+</ul>
+</div>
+
+<div class="book_lecture">
+<div class="book_lecture_title">
+<a href="http://16385.courses.cs.cmu.edu/spring2024/lecture/compimaging">Lecture 26: Special Topics: Computational Imaging</a></div>
+<div class="colored_text book_lecture_subtitle">(Computational cameras, computational displays, light transport matrices)</div>
+</div>
+
+-->
+
+<div class="book_lecture">
+<div class="book_lecture_title">
+<a href="http://16385.courses.cs.cmu.edu/spring2024/lecture/wrapup">Lecture 26: Wrap-up</a></div>
+</div>
+
+
+<p>&nbsp;</p>
+
+</div>
+
+
+
+<hr size="1">
+
+<div class="footer">
+     Copyright 2024 Carnegie Mellon University
+</div>
+
+
+</div>  <!-- end of content_container (defined in header.php) -->
+</div>  <!-- end main_container (defined in header.php) -->
+
+
+
+
+
+</body></html>

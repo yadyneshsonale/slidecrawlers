@@ -1,0 +1,1125 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+  <title>CS229: Machine Learning</title>
+
+  <!-- bootstrap -->
+  <!-- <link rel="stylesheet" href="./style/bootstrap.min.css"> -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+  <link rel="stylesheet" href="./style/bootstrap-theme.min.css">
+  <link href="./style/newstyle.css" rel="stylesheet" type="text/css">
+  </head><body>
+  <nav class="navbar navbar-expand-md navbar-dark">
+    <a href="http://cs229.stanford.edu/">
+    <img src="./static/seal-dark-red.png" style="height:40px; float: left; margin-left: 20px; margin-right: 20px;"></a>
+    <a class="navbar-brand" href="http://cs229.stanford.edu/">CS229</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!--<div class="collapse navbar-collapse" id="navbarsExampleDefault">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item"><a class="nav-link" href="./syllabus-spring2021.html">Syllabus</a></li>
+        <li class="nav-item"><a class="nav-link" href="./index.html#info">Course Info</a></li>
+        <li class="nav-item"><a class="nav-link" href="./calendar.html">Calendar</a></li>
+        <li class="nav-item"><a class="nav-link" href="./projects.html">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="./logistics_faq.html">Logistics/FAQ</a></li>
+        <li class="nav-item"><a class="nav-link" href="./staff.html">Staff</a></li>  
+        <li class="nav-item"><a class="nav-link" href="https://edstem.org/us/">Ed</a></li>
+      </ul>
+    </div>-->
+
+  </nav>
+
+
+<div class="sechighlight">
+<div class="container sec" style="margin-top: 1em">
+  <h2>Syllabus and Course Schedule</h2>
+  <!--<p>
+    [Previous offerings: <a href="syllabus-fall2020.html">Fall 2020</a>, <a href="syllabus-spring2020.html">Spring 2020</a>] </p>-->
+<br>
+</div>
+</div>
+
+<div class="container">
+
+This table will be updated regularly through the quarter to reflect what was covered, along with corresponding readings and notes.
+
+<table id="schedule" class="table table-bordered no-more-tables">
+  <thead class="active" style="background-color:#f9f9f9">
+    <tr><th>Date</th><th>Event</th><th>Description</th><th>Materials and Assignments</th>
+  </tr></thead>
+
+  <tbody>
+  <!--<tr>
+    <td colspan="4" style="text-align:center; vertical-align:middle;background-color:#fffde7">
+      <strong>Introduction</strong> (1 class)
+    </td>
+  </tr>-->
+
+  <tr>
+        <td style="text-align:center"> 3/29 </td>
+      <td>
+              Lecture&nbsp;1 
+          </td>
+    <td> <ul> <li> Introduction. </li>
+    </ul></td><td>
+      <strong>Class Notes</strong>
+      <ul>
+       <li>Slides [<a href="http://cs229.stanford.edu/notes2021spring/notes2021spring/lecture1.pdf">pdf</a>] </li>
+      </ul>
+
+    </td>
+
+    
+  </tr>
+
+  <tr>
+        <td style="text-align:center"> 3/31 </td>
+      <td>
+              Lecture&nbsp;2 
+          </td>
+    <td> <ul> <li> Supervised learning setup. LMS. </li>
+    </ul></td>
+    <td>
+      <strong>Class Notes</strong>
+      <ul>
+      <li>Supervised Learning[<a href="http://cs229.stanford.edu/notes2020fall/notes2020fall/cs229-notes1.pdf">pdf</a>](Sections 1-3) </li>
+      <li>Live Lecture Notes (draft)[<a href="http://cs229.stanford.edu/notes2021spring/notes2021spring/lecture2_draft.pdf">pdf</a>] </li>
+      </ul>
+    </td>
+  </tr>
+ 
+  <tr style="vertical-align:middle;background-color:#FFF2F2">
+    <td style="text-align:center">3/31</td>
+    <td>Assignment</td>
+    <td colspan="3" style="text-align:center; vertical-align:middle;">
+      <strong>Problem Set 0</strong> released.
+    </td>
+  </tr>
+
+  <tr>
+        <td style="text-align:center"> 4/2 </td>
+      <td>
+              Section&nbsp;1
+          </td>
+    <td> <ul> <li> <strong>Friday TA Lecture:</strong> Linear Algebra Review. </li>
+    </ul></td>
+    <td>
+        <strong>Notes</strong>
+	<ul>
+	  <li>Linear Algebra Review and Reference [<a href="http://cs229.stanford.edu/summer2020/cs229-linalg.pdf">pdf</a>]</li>
+	  <li>Linear Algebra, Multivariable Calculus, <br> and Modern Applications <br> (Stanford Math 51 course text) [<a href="https://web.stanford.edu/class/math51/stanford/math51book.pdf">pdf</a>]</li>
+	  <li>Friday Section Slides [<a href="http://cs229.stanford.edu/notes2021spring/notes2021spring/friday_lecture1.pdf">pdf</a>]</li>
+	</ul>
+    </td>
+  </tr>
+
+  <tr>
+        <td style="text-align:center"> 4/5 </td>
+      <td>
+              Lecture&nbsp;3 
+          </td>
+    <td> <ul> <li> Weighted Least Squares. Logistic regression. Newton's Method. </li>
+    </ul></td>
+    <td>
+      <strong>Class Notes</strong>
+      <ul>
+      <li>Supervised Learning <!-- [<a href="http://cs229.stanford.edu/notes2019fall/cs229-notes1.ps">ps</a>] --> [<a href="http://cs229.stanford.edu/notes2020fall/notes2020fall/cs229-notes1.pdf">pdf</a>] (Sections 4, 5, and 7) </li>
+      <li>Live Lecture Notes (draft)[<a href="http://cs229.stanford.edu/notes2021spring/notes2021spring/lecture3_draft.pdf">pdf</a>] </li>
+      </ul>
+    </td>
+  </tr>
+
+  <tr>
+        <td style="text-align:center"> 4/7 </td>
+      <td>
+              Lecture&nbsp;4 
+          </td>
+    <td> <ul> <li> Dataset split; Exponential family. Generalized Linear Models. </li>
+    </ul></td>
+    <td>
+      <strong>Class Notes</strong>
+      
+      <ul>
+      <li>Supervised Learning  [<a href="http://cs229.stanford.edu/notes2020fall/notes2020fall/cs229-notes1.pdf">pdf</a>] (Sections 6, 8, and 9) </li>
+      <li>Live Lecture Notes (draft)[<a href="http://cs229.stanford.edu/notes2021spring/notes2021spring/lecture4_draft.pdf">pdf</a>] </li>
+
+      </ul>
+    </td>
+  </tr>
+
+  <tr style="ertical-align:middle;background-color:#FFF2F2">
+    <td style="text-align:center">4/7</td>
+    <td>Assignment</td>
+    <td colspan="3" style="text-align:center; vertical-align:middle;">
+      <strong>Problem Set 1</strong> will be released. Due Wednesday, 4/21 at 11:59pm
+    </td>
+  </tr>
+
+  <tr>
+        <td style="text-align:center"> 4/9 </td>
+      <td>
+              Section&nbsp;2
+          </td>
+    <td> <ul> <li> <strong>Friday TA Lecture:</strong> Probability Theory Review. </li>
+    </ul></td>
+    <td>
+         <strong>Notes</strong>
+         <ul>
+	   <li>Probability Theory Review [<a href="http://cs229.stanford.edu/section/cs229-prob.pdf">pdf</a>]</li>
+	   <li>The Multivariate Gaussian Distribution [<a href="http://cs229.stanford.edu/section/gaussians.pdf">pdf</a>]</li>
+	   <li>More on Gaussian Distributions [<a href="http://cs229.stanford.edu/section/more_on_gaussians.pdf">pdf</a>]</li>
+        <li>Friday Section Slides [<a href="http://cs229.stanford.edu/notes2021spring/notes2021spring/friday_lecture2.pdf">pdf</a>]</li>
+	 </ul>
+    </td>
+  </tr>
+
+    <tr>
+        <td style="text-align:center"> 4/12 </td>
+      <td>
+              Lecture&nbsp;5 
+          </td>
+    <td> <ul> <li> Gaussian discriminant analysis. Naive Bayes.  </li>
+    </ul></td>
+    <td>
+
+            
+            <strong>Class Notes</strong>
+      <ul>
+      <li>Generative Algorithms  [<a href="http://cs229.stanford.edu/notes2020spring/cs229-notes2.pdf">pdf</a>] (Section 1) </li>
+      <li>Live Lecture Notes [<a href="http://cs229.stanford.edu/notes2021spring/notes2021spring/lecture5_live.pdf">pdf</a>] </li>
+      
+      </ul>
+        
+    </td>
+  </tr>
+   
+  <tr>
+        <td style="text-align:center"> 4/14 </td>
+      <td>
+              Lecture&nbsp;6 
+          </td>
+    <td> <ul> <li> Naive Bayes, Laplace Smoothing. </li>
+    </ul></td>
+    <td>
+            
+            <strong>Class Notes</strong>
+      <ul>
+
+      <li>Naive Bayes and Laplace Smoothing [<a href="http://cs229.stanford.edu/notes2020spring/cs229-notes2.pdf">pdf</a>] (Section 2) </li>
+      <li>Live Lecture Notes [<a href="http://cs229.stanford.edu/notes2021spring/notes2021spring/lecture6_live.pdf">pdf</a>] </li>
+
+      </ul>
+
+    </td>
+  </tr>
+
+  <tr style="ertical-align:middle;background-color:#FFF2F2">
+    <td style="text-align:center"> 4/16 </td>
+    <td>Project</td>
+     <td colspan="2" style="text-align:center; vertical-align:middle;"><strong>Project proposal</strong> due 4/16 at 11:59pm.</td>
+  </tr>
+
+
+  <tr>
+        <td style="text-align:center"> 4/16 </td>
+      <td>
+              Section&nbsp;3
+          </td>
+    <td> <ul> <li> <strong>Friday TA Lecture:</strong> Python/Numpy Tutorial. </li>
+    </ul></td>
+    <td>
+               <strong>Notes</strong>
+         <ul>
+     <li>Python Review Code[<a href="http://cs229.stanford.edu/notes2021spring/notes2021spring/python-review-code.pdf">pdf</a>, <a href="http://cs229.stanford.edu/notes2021spring/notes2021spring/cs229-python-review-code.ipynb">source</a>]</li>
+    <li>Friday Section Slides [<a href="http://cs229.stanford.edu/notes2021spring/notes2021spring/friday_lecture3.pdf">pdf</a>]</li>
+   </ul>
+
+    </td>
+  </tr>
+
+
+
+
+  <tr>
+        <td style="text-align:center"> 4/19 </td>
+      <td>
+              Lecture&nbsp;7 
+          </td>
+    <td> <ul> <li> Kernels. SVM.  </li>
+    </ul></td>
+    <td>
+            <strong>Class Notes</strong>
+      <ul>
+
+      <li>Kernel Methods [<a href="http://cs229.stanford.edu/notes2020fall/notes2020fall/cs229-notes3.pdf">pdf</a>] </li>
+      <li>Live Lecture Notes [<a href="http://cs229.stanford.edu/notes2021spring/notes2021spring/lecture7_live.pdf">pdf</a>] </li>
+      </ul>
+
+    </td>
+  </tr>
+
+
+  <tr>
+        <td style="text-align:center"> 4/21 </td>
+      <td>
+              Lecture&nbsp;8 
+          </td>
+    <td> <ul> <li> Neural Networks 1. </li>
+    </ul></td>
+    <td>
+            
+            <strong>Class Notes</strong>
+      <ul>
+
+      <li>Deep Learning [<a href="http://cs229.stanford.edu/notes2020fall/notes2020fall/deep_learning_notes.pdf">pdf</a>] </li>
+      <li>Live Lecture Notes [<a href="http://cs229.stanford.edu/notes2021spring/notes2021spring/lecture8_live.pdf">pdf</a>] </li>
+      
+      </ul>
+
+    </td>
+  </tr>
+
+
+  <tr style="ertical-align:middle;background-color:#FFF2F2">
+    <td style="text-align:center">4/21</td>
+    <td>Assignment</td>
+    <td colspan="3" style="text-align:center; vertical-align:middle;">
+      <strong>Problem Set 2</strong> will be released. Due Wednesday, 5/5 at 11:59pm
+    </td>
+  </tr>
+
+
+  <tr>
+        <td style="text-align:center"> 4/23 </td>
+      <td>
+              Section&nbsp;4
+          </td>
+    <td> <ul> <li> <strong>Friday TA Lecture:</strong> Evaluation Metrics. </li>
+    </ul></td>
+    <td>
+                     <strong>Notes</strong>
+         <ul>
+    <li>Friday Section Slides [<a href="http://cs229.stanford.edu/notes2021spring/notes2021spring/friday_lecture4.pdf">pdf</a>]</li>
+   </ul>
+    </td>
+  </tr>
+
+
+  <tr>
+        <td style="text-align:center"> 4/26 </td>
+      <td>
+              Lecture&nbsp;9 
+          </td>
+    <td> <ul> <li> Neural Networks 2. Backpropagation. </li>
+    </ul></td>
+    <td>
+            
+            <strong>Class Notes</strong>
+      <ul>
+
+      <li>Deep Learning [<a href="http://cs229.stanford.edu/notes2020fall/notes2020fall/deep_learning_notes.pdf">pdf</a>] </li>
+      <li>Live Lecture Notes [<a href="http://cs229.stanford.edu/notes2021spring/notes2021spring/lecture9_live.pdf">pdf</a>] </li>      
+      </ul>
+
+    </td>
+  </tr>
+
+
+  <tr>
+        <td style="text-align:center"> 4/28 </td>
+      <td>
+              Lecture&nbsp;10 
+          </td>
+    <td> <ul> <li> Bias - Variance. Regularization. Feature / Model selection. </li>
+    </ul></td>
+    <td>
+                  
+      <strong>Class Notes</strong>
+      <ul>
+
+      <li>Regularization and Model Selection [<a href="http://cs229.stanford.edu/notes2020fall/notes2020fall/cs229-notes5.pdf">pdf</a>] </li>
+      <li> Some Calculations from Bias Variance (Addendum) [<a href="http://cs229.stanford.edu/notes2020fall/notes2020fall/addendum_bias_variance.pdf">pdf</a>] </li>
+      <li> Bias-Variance and Error Analysis (Addendum) [<a href="http://cs229.stanford.edu/notes2020fall/notes2020fall/error-analysis.pdf">pdf</a>] </li>
+      <li>Live Lecture Notes [<a href="http://cs229.stanford.edu/notes2021spring/notes2021spring/lecture10_live.pdf">pdf</a>] </li>      
+
+      </ul>
+    </td>
+  </tr>
+
+  <tr>
+        <td style="text-align:center"> 4/30 </td>
+      <td>
+              Section&nbsp;5
+          </td>
+    <td> <ul> <li> <strong>Friday TA Lecture:</strong> Deep Learning (ConvNets).
+ </li>
+    </ul></td>
+    <td>
+                     <strong>Notes</strong>
+         <ul>
+    <li>Friday Section Slides [<a href="http://cs229.stanford.edu/notes2021spring/notes2021spring/friday_lecture5.pdf">pdf</a>, <a href="http://cs229.stanford.edu/notes2021spring/notes2021spring/cs229_deep_learning_friday.pptx">ppt</a>] </li>
+   </ul>
+
+    </td>
+  </tr>
+
+  <tr>
+        <td style="text-align:center"> 5/3 </td>
+      <td>
+              Lecture&nbsp;11 
+          </td>
+    <td> <ul> <li> K-Means. GMM (non EM). Expectation Maximization. </li>
+    </ul></td>
+    <td>
+ <strong>Class Notes</strong>
+                            <ul>
+                                <li>Unsupervised Learning, k-means clustering. [<a href="http://cs229.stanford.edu/notes2020spring/cs229-notes7a.pdf">pdf</a>]</li>
+                                <li>Mixture of Gaussians [<a href="http://cs229.stanford.edu/notes2020spring/cs229-notes7b.pdf">pdf</a>] </li>
+                                <li>The EM Algorithm [<a href="http://cs229.stanford.edu/notes2020spring/cs229-notes8.pdf">pdf</a>] </li>
+                                <li>Live Lecture Notes (draft)[<a href="http://cs229.stanford.edu/notes2021spring/notes2021spring/lecture11_draft.pdf">pdf</a>] </li>
+
+                            </ul>
+    </td>
+  </tr>
+
+
+  <tr>
+        <td style="text-align:center"> 5/5 </td>
+      <td>
+              Lecture&nbsp;12 
+          </td>
+    <td> <ul> <li> GMM (EM). Factor Analysis. </li>
+    </ul></td>
+    <td>
+<strong>Class Notes</strong>
+                            <ul>
+<li>Lagrange Multipliers Review [<a href="http://cs229.stanford.edu/notes2020spring/lagrange_multiplier.pdf">pdf</a>]</li>
+                                <li>Factor Analysis [<a href="http://cs229.stanford.edu/notes2020spring/cs229-notes9.pdf">pdf</a>]</li>
+      <li>Live Lecture Notes (draft)[<a href="http://cs229.stanford.edu/notes2021spring/notes2021spring/lecture12_draft.pdf">pdf</a>] </li>
+      <li>Addendum Notes[<a href="http://cs229.stanford.edu/notes2021spring/notes2021spring/5_5_addendum.pdf">pdf</a>] </li>
+                            </ul>
+
+    </td>
+  </tr>
+
+  <tr style="ertical-align:middle;background-color:#FFF2F2">
+    <td style="text-align:center">5/5</td>
+    <td>Assignment</td>
+    <td colspan="3" style="text-align:center; vertical-align:middle;">
+      <strong>Problem Set 3</strong> will be released. Due Wednesday, 5/19 at 11:59pm
+    </td>
+  </tr>
+
+
+  <tr style="ertical-align:middle;background-color:#FFF2F2">
+    <td style="text-align:center"> 5/7 </td>
+    <td>Project</td>
+     <td colspan="2" style="text-align:center; vertical-align:middle;"><strong>Project milestones</strong> due 5/7 at 11:59pm.</td>
+  </tr>
+
+
+  <tr>
+        <td style="text-align:center"> 5/7 </td>
+      <td>
+              Section&nbsp;6
+          </td>
+    <td> <ul> <li> <strong>Friday TA Lecture:</strong> Midterm Review. </li>
+    </ul></td>
+    <td>
+                   
+    </td>
+  </tr>
+
+
+
+  <tr>
+        <td style="text-align:center"> 5/10 </td>
+      <td>
+              Lecture&nbsp;13 
+          </td>
+    <td> <ul> <li> Factor Analysis and PCA. </li>
+    </ul></td>
+    <td>
+ <strong>Class Notes</strong>
+                            <ul>
+                                <li>Principal Components Analysis [<a href="http://cs229.stanford.edu/notes2020spring/cs229-notes10.pdf">pdf</a>] </li>
+                                <li>Independent Component Analysis [<a href="http://cs229.stanford.edu/notes2020spring/cs229-notes11.pdf">pdf</a>] </li>
+                                <li>Live Lecture Notes (draft)[<a href="http://cs229.stanford.edu/notes2021spring/notes2021spring/lecture13_draft.pdf">pdf</a>] </li>
+                            </ul>
+      </td>
+  </tr>
+
+
+  <tr>
+        <td style="text-align:center"> 5/12 </td>
+      <td>
+              Lecture&nbsp;14 
+          </td>
+    <td> <ul> <li> Weak supervised / unsupervised learning. </li>
+    </ul></td>
+    <td>
+       <strong>Class Notes</strong>
+
+      <ul>
+                                <li>Introduction to weak supervision [<a href="http://cs229.stanford.edu/notes2021spring/notes2021spring/WeakSupervise_229.pdf">slides</a>] </li>
+
+                                <li>ICA and weak supervision [<a href="http://cs229.stanford.edu/notes2021spring/notes2021spring/ica_and_weak_supervision.pdf">draft</a>] </li>
+
+
+     </ul>
+    </td>
+  </tr>
+
+
+  <tr style="ertical-align:middle;background-color:#FFF2F2">
+    <td style="text-align:center">5/13</td>
+    <td>Midterm</td>
+    <td colspan="2">
+      <span style="text-align: left;">The midterm details TBD.</span>
+    </td>
+  </tr>
+
+
+  <tr>
+        <td style="text-align:center"> 5/14 </td>
+      <td>
+              Section&nbsp;7
+          </td>
+    <td> <ul> <li> <strong>Friday TA Lecture:</strong> Decision Trees + Boosting. </li>
+    </ul></td>
+    <td>
+                           <strong>Notes</strong>
+        <ul>
+        <li>Decision trees [<a href="http://cs229.stanford.edu/notes2021spring/notes2021spring/Decision_Trees_CS229.pdf">slides</a>] </li>
+        <li>Boosting [<a href="http://cs229.stanford.edu/notes2021spring/notes2021spring/boosting.pdf">pdf</a>] </li>
+      </ul>
+    </td>
+  </tr>
+
+
+  <tr>
+        <td style="text-align:center"> 5/17 </td>
+      <td>
+              Lecture&nbsp;15 
+          </td>
+    <td> <ul> <li> Self-supervised learning (Language Models &amp; Image Models). </li>
+    </ul></td>
+    <td>
+             <strong>Class Notes</strong>
+
+      <ul>
+
+                                <li> Self-Supervised Learning [<a href="http://cs229.stanford.edu/notes2021spring/notes2021spring/cs229_lecture_selfsupervision_final.pdf">slides</a>] </li>
+
+     </ul>
+
+    </td>
+  </tr>
+
+
+  <tr>
+        <td style="text-align:center"> 5/19 </td>
+      <td>
+              Lecture&nbsp;16 
+          </td>
+    <td> <ul> <li> ML Advice. </li>
+    </ul></td>
+    <td>
+             <strong>Class Notes</strong>
+      <ul>
+                                <li> ML advice [<a href="http://cs229.stanford.edu/notes2021spring/notes2021spring/ml_advice.pdf">slides</a>] </li>
+
+     </ul>
+    </td>
+  </tr>
+
+  <tr style="ertical-align:middle;background-color:#FFF2F2">
+    <td style="text-align:center">5/19</td>
+    <td>Assignment</td>
+    <td colspan="3" style="text-align:center; vertical-align:middle;">
+      <strong>Problem Set 4</strong> will be released. Due Friday, 5/28 at 11:59pm
+    </td>
+  </tr>
+
+
+  <tr>
+        <td style="text-align:center"> 5/21 </td>
+      <td>
+              Section&nbsp;8
+          </td>
+    <td> <ul> <li> <strong>Friday TA Lecture:</strong> On Critiques of ML. </li>
+    </ul></td>
+    <td>
+                           <strong>Notes</strong>
+        <ul>
+        <li>  Technical and Societal Critiques of ML [<a href="http://cs229.stanford.edu/notes2021spring/notes2021spring/friday_lecture_ml_critique.pdf">pdf</a>] </li>
+      </ul>
+    </td>
+  </tr>
+
+  <tr>
+        <td style="text-align:center"> 5/24 </td>
+      <td>
+              Lecture&nbsp;17 
+          </td>
+    <td> <ul> <li>  Basic concepts in RL, value iteration, policy iteration. </li>
+    </ul></td>
+    <td>
+
+       <strong>Class Notes</strong>
+                            <ul>
+                                      <li>Basic RL concepts, value iterations, policy iteration [<a href="http://cs229.stanford.edu/notes2020fall/notes2020fall/cs229-notes12.pdf">pdf</a>] (Sections 1 and 2) </li>
+      <li>Live Lecture Notes [<a href="http://cs229.stanford.edu/notes2021spring/notes2021spring/lecture17_live.pdf">pdf</a>] </li>
+
+                            </ul>
+
+    </td>
+  </tr>
+
+
+  <tr>
+        <td style="text-align:center"> 5/26 </td>
+      <td>
+              Lecture&nbsp;18 
+          </td>
+    <td> <ul> <li> Model-based RL, value function approximator. </li>
+    </ul></td>
+    <td>
+       <strong>Class Notes</strong>
+                            <ul>
+                                      <li>Model-based RL and value function approximation [<a href="http://cs229.stanford.edu/notes2020fall/notes2020fall/cs229-notes12.pdf">pdf</a>] (Sections 3 and 4) </li>
+      <li>Live Lecture Notes [<a href="http://cs229.stanford.edu/notes2021spring/notes2021spring/lecture18_live.pdf">pdf</a>] </li>
+                            </ul>
+
+    </td>
+  </tr>
+
+
+  <tr>
+        <td style="text-align:center"> 5/28 </td>
+      <td>
+              Section&nbsp;9
+          </td>
+    <td> <ul> <li> <strong>Friday TA Lecture:</strong> Learning Theory (cancelled). </li>
+    </ul></td>
+    <td>
+       <strong>Class Notes</strong>
+                            <ul>
+                                      <li>Learning theory [<a href="http://cs229.stanford.edu/notes_archive/cs229-notes4.pdf">pdf</a>] </li>
+                            </ul>
+
+                   
+    </td>
+  </tr>
+
+  <tr>
+        <td style="text-align:center"> 6/2 </td>
+      <td>
+              Lecture&nbsp;19 
+          </td>
+    <td> <ul> <li> Societal impact.  </li>
+    </ul></td>
+    <td>
+       
+                            <ul>
+                                      
+                            </ul>
+
+    </td>
+  </tr>
+
+  <tr style="ertical-align:middle;background-color:#FFF2F2">
+    <td style="text-align:center"> 6/2 </td>
+    <td>Project</td>
+     <td colspan="2" style="text-align:center; vertical-align:middle;"><strong>Project final report + poster (optional)</strong> due 6/2 at 11:59pm.</td>
+  </tr>
+
+<!--
+  <tr>
+    <td>
+          <a href="https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=37c5a6a5-6a2a-4035-89bb-abdb013c328e"> 
+              Lecture&nbsp;4 
+          </a>
+
+        </td>
+    <td>6/29</td>
+    <td>
+      <ul> 
+	<li> Linear Regression
+	<li> Gradient Descent (GD), Stochastic Gradient Descent (SGD)
+	<li> Normal Equations
+	<li> Probabilistic Interpretation
+	<li> Maximum Likelihood Estimation (MLE)
+      </ul>
+    </td>
+    <td>
+      
+      <ul> 
+	<li> Supervised Learning (section 1-3) [<a href="summer2020/cs229-notes1.pdf">pdf</a>]
+      </ul>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+        <a href="https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=597049cd-2948-4351-8bb0-abdb013c3f60"> 
+              Lecture&nbsp;5 
+          </a>
+        </td>
+    <td>7/1</td>
+    <td>
+      <ul> 
+	<li> Perceptron
+	<li> Logistic Regression
+	<li> Newton's Method
+      </ul>
+    </td>
+    <td>
+      
+      <ul> 
+	<li> Supervised Learning (section 5-7) [<a href="summer2020/cs229-notes1.pdf">pdf</a>]
+      </ul>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+        <a href="https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=d684be7e-83e4-4043-a93f-abdb013c3e9f"> 
+              Lecture&nbsp;6 
+          </a>
+ 
+    </td>
+    <td>7/3</td>
+    <td>
+      <ul> 
+	<li> Exponential Family
+	<li> Generalized Linear Models (GLM)
+      </ul>
+    </td>
+    <td>
+      
+      <ul> 
+	<li> Supervised Learning (section 8-9) [<a href="summer2020/cs229-notes1.pdf">pdf</a>]
+      </ul>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+        <a href="https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=01e80d22-c5ba-41fc-add4-abdb013c3d74"> 
+              Lecture&nbsp;7 
+          </a>
+</td>
+    <td>7/6</td>
+    <td>
+      <ul> 
+	<li> Gaussian Discriminant Analysis (GDA)
+	<li> Naive Bayes
+	<li> Laplace Smoothing
+      </ul>
+    </td>
+    <td>
+      
+      <ul> 
+	<li> Generative Algorithms [<a href="summer2020/cs229-notes2.pdf">pdf</a>]
+      </ul>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+        <a href="https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=d4274d8e-0f23-4bb1-ba22-abdb013c3cdf"> 
+              Lecture&nbsp;8 
+          </a>
+
+        </td>
+    <td>7/8</td>
+    <td>
+      <ul>
+	<li> Kernel Methods
+	<li> Support Vector Machine
+      </ul>
+    </td>
+    <td>
+      
+      <ul>
+	<li> Kernel Methods and SVM [<a href="summer2020/cs229-notes3.pdf">pdf</a>]
+      </ul>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+        <a href="https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=824b218f-5c1d-47cf-aa09-abdb013c3c20"> 
+              Lecture&nbsp;9 
+          </a>
+
+        </td>
+    <td>7/10</td>
+    <td>
+      <ul> <li> Gaussian Processes </ul>
+    </td>
+    <td>
+      
+      <ul>
+	<li>Gaussian Processes [<a href="summer2020/gaussian_processes.pdf">pdf</a>] </li>
+      </ul>
+      <strong>Optional</strong>
+      <ul>
+	<li>The Multivariate Gaussian Distribution [<a href="summer2020/gaussians.pdf">pdf</a>] </li>
+	<li>More on Gaussian Distribution [<a href="summer2020/more_on_gaussians.pdf">pdf</a>] </li>
+      </ul>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+        <a href="https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=1368e401-33d5-491a-92a6-abdb013c396b"> 
+              Lecture&nbsp;10 
+          </a>
+        </td>
+    <td>7/13</td>
+    <td>
+      <ul> <li> Neural Networks and Deep Learning </ul>
+    </td>
+    <td>
+      
+      <ul>
+	<li> Deep Learning (skip Sec 3.3) [<a href="summer2020/cs229-notes-deep_learning.pdf">pdf</a>]
+      </ul>
+      <strong> Optional </strong>
+      <ul>
+	<li> Backpropagation [<a href="notes-spring2019/backprop.pdf">pdf</a>]
+      </ul>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+        <a href="https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=89e848c5-9f22-4af3-a1e8-abdb013c3b96"> 
+              Lecture&nbsp;11 
+          </a>
+        </td>
+    <td>7/15</td>
+    <td>
+      <ul>
+      <li> Deep Learning (contd)
+      </ul>
+    </td>
+    <td>
+      
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+           <a href="https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=6c640b5c-de92-44d3-a247-abdb013c3a3d"> 
+              Lecture&nbsp;12 
+          </a>
+        </td>
+    <td>7/17</td>
+    <td>
+      <ul>
+	<li> Bias and Variance
+	<li> Regularization, Bayesian Interpretation
+	<li> Model Selection
+      </ul>
+    </td>
+    <td>
+      
+      <ul>
+	<li> Regularization and Model Selection [<a href="summer2020/cs229-notes5.pdf">pdf</a>]
+      </ul>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+         <a href="https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=d422d541-69bc-4f9e-abe8-abdb013c3acd"> 
+              Lecture&nbsp;13 
+          </a>
+        </td>
+    <td>7/20</td>
+    <td>
+      <ul>
+	<li> Bias-Variance tradeoff (wrap-up)
+	<li> Uniform Convergence
+      </ul>
+    </td>
+    <td>
+      
+      <ul>
+	<li> Bias Variance Analysis [<a href="summer2020/BiasVarianceAnalysis.pdf">pdf</a>]
+	<li> Statistical Learning Theory [<a href="summer2020/cs229-notes4.pdf">pdf</a>]
+      </ul>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+         <a href="https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=804e1b72-f68b-4216-a67d-abdb013c3856"> 
+              Lecture&nbsp;14 
+          </a>
+
+        </td>
+    <td>7/22</td>
+    <td>
+      <ul>
+	<li> Reinforcement Learning (RL)
+	<li> Markov Decision Processes (MDP)
+	<li> Value and Policy Iterations
+      </ul>
+    </td>
+    <td>
+      
+      <ul>
+	<li> Reinforcement Learning and Control (Sec 1-2) [<a href="summer2020/cs229-notes12.pdf">pdf</a>]
+      </ul>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+        <a href="https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=273250cd-fdc3-49c4-86a0-abdb013c362f"> 
+              Lecture&nbsp;15 
+          </a>
+        </td>
+    <td>7/24</td>
+    <td>
+      <ul>
+	<li> RL (wrap-up)
+	<li> Learning MDP model
+	<li> Continuous States
+      </ul>
+    </td>
+    <td>
+      
+      <ul>
+	<li> Reinforcement Learning and Control (Sec 3-4) [<a href="summer2020/cs229-notes12.pdf">pdf</a>]
+      </ul>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+        <a href="https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=82f643ee-62d8-4749-9c27-abdb013c378e"> 
+              Lecture&nbsp;16 
+          </a>
+    </td>
+    <td>7/27</td>
+    <td>
+      Unsupervised Learning
+      <ul>
+	<li> K-means clustering
+	<li> Mixture of Gaussians (GMM)
+	<li> Expectation Maximization (EM)
+      </ul>
+    </td>
+    <td>
+      
+      <ul>
+	<li> K-means [<a href="summer2020/cs229-notes7a.pdf">pdf</a>]
+	<li> Mixture of Gaussians [<a href="summer2020/cs229-notes7b.pdf">pdf</a>]
+	<li> Expectation Maximization (Sec 1-2, skip 2.1) [<a href="summer2020/cs229-notes8.pdf">pdf</a>]
+      </ul>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+        <a href="https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=7ce00f62-9075-4cd5-8108-abdb013c35ab"> 
+              Lecture&nbsp;17 
+          </a>
+    </td>
+    <td>7/29</td>
+    <td>
+      <ul>
+	<li> EM (wrap-up)
+	<li> Factor Analysis
+      </ul>
+    </td>
+    <td>
+      
+      <ul>
+	<li> Expectation Maximization (Sec 3) [<a href="summer2020/cs229-notes8.pdf">pdf</a>]
+	<li> Factor Analysis [<a href="summer2020/cs229-notes9.pdf">pdf</a>]
+      </ul>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+        <a href="https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=45b26408-3bb3-4942-ab95-abdb013c3706"> 
+              Lecture&nbsp;18 
+          </a>
+        </td>
+    <td>7/31</td>
+    <td>
+      <ul> 
+	<li> Factor Analysis (wrap-up)
+	<li> Principal Components Analysis (PCA)
+	<li> Independent Components Analysis (ICA)
+      </ul>
+    </td>
+    <td>
+      
+      <ul>
+	<li> Principal Components Analysis [<a href="summer2020/cs229-notes10.pdf">pdf</a>]
+	<li> Independent Components Analysis [<a href="summer2020/cs229-notes11.pdf">pdf</a>]
+      </ul>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+        <a href="https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=f542321e-8084-4e41-8ede-abdb013c3350"> 
+              Lecture&nbsp;19 
+          </a>
+        </td>
+    <td>8/3</td>
+    <td>
+      <ul>
+	<li> Maximum Entropy and Exponential Family
+	<li> KL-Divergence
+	<li> Calibration and Proper Scoring Rules
+      </ul>
+    </td>
+    <td>
+      
+      <ul>
+	<li> Maximum Entropy [<a href="summer2020/MaxEnt.pdf">pdf</a>]
+      </ul>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+        <a href="https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=026c585b-447d-464e-8268-abdb013c3438"> 
+              Lecture&nbsp;20 
+          </a>
+        </td>
+    <td>8/5</td>
+    <td>
+      <ul>
+	<li> Variational Inference
+	<li> EM Variants
+	<li> Variational Autoencoder
+      </ul>
+    </td>
+    <td>
+      
+      <ul>
+	<li> VAE (Sec 4) [<a href="summer2020/cs229-notes8.pdf">pdf</a>]
+      </ul>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+        <a href="https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=dbc574b7-3dcd-4f0f-9a73-abdb013c34e4"> 
+              Lecture&nbsp;21 
+          </a>
+    </td>
+    <td>8/7</td>
+    <td>
+      <ul>
+	<li> Evaluation Metrics </li>
+      </ul>
+    </td>
+    <td>
+      
+      <ul>
+	<li> Evaluation Metrics [<a href="summer2020/EvaluationMetrics.pptx">pptx</a>]
+      </ul>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+        <a href="https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=e2a88e73-e548-434e-a9fc-abde0119e27e"> 
+              Lecture&nbsp;22 
+          </a>
+        </td>
+    <td>8/10</td>
+    <td>
+      <ul>
+	<li> Practical advice and tips
+	<li> Review for Finals
+      </ul>
+    </td>
+    <td>
+      
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+        <a href="https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=ebdaae31-1495-439c-80d9-abde0119e32b"> 
+              Lecture&nbsp;23 
+          </a>
+
+        </td>
+    <td>8/12</td>
+    <td>
+      <ul>
+	<li> Review for Finals
+      </ul>
+    </td>
+    <td>
+      
+    </td>
+  </tr>
+
+
+  <tr style="vertical-align:middle;background-color:#FFF2F2">
+    <td>Final</td>
+    <td> 8/14 </td>
+    <td></td>
+    <td></td>
+  </tr>
+
+-->
+
+<!--   <tr style="ertical-align:middle;background-color:#FFF2F2">
+    <td>A0</td>
+    <td> 4/3 </td>
+    <td colspan="3" style="text-align:center; vertical-align:middle;">
+      <strong>Problem Set 0</strong> <a href="https://piazza.com/class/jtuwk7ilolqub?cid=22">[pdf]</a> <a href="https://piazza.com/class/jtuwk7ilolqub?cid=138">[solution]</a>. Out 4/1. Due 4/10. <a href="gradescope.html">Submission instructions</a>.
+    </td>
+  </tr> -->
+
+
+<!--   <tr>
+    <td>Lecture &nbsp;3</td>
+    <td>6/28</td>
+    <td colspan="2">
+      <strong>Discussion Section</strong>: Linear Algebra [<a href="http://cs229.stanford.edu/section-spring2019/cs229-linalg.pdf">Notes</a>]<br>
+    </td>
+  </tr> -->
+
+
+  <tr>
+    <td colspan="4">
+      <b>Other Resources</b>
+      <ol> 
+        <li> All lecture videos can be accessed through Canvas.
+        </li><li>Advice on applying machine learning: Slides from Andrew's lecture on getting machine learning algorithms to work in practice can be found <a href="http://cs229.stanford.edu/materials/ML-advice.pdf">here</a>.<br></li>
+        <li>Previous projects: A list of last year's final projects can be found <a href="http://cs229.stanford.edu/proj2020spr/">here</a>.<br></li>
+        <li>Data: Here is the <a href="http://www.ics.uci.edu/~mlearn/MLRepository.html">UCI Machine learning repository</a>, which contains a large collection of standard datasets for testing learning algorithms. If you want to see examples of recent work in machine learning, start by taking a look at the conferences <a href="http://www.neurips.cc">NeurIPS</a> (all old NeurIPS papers are online) and ICML. Some other related conferences include UAI, AAAI, IJCAI.<br></li>
+        <li>Viewing PostScript and PDF files: Depending on the computer you are using, you may be able to download a <a href="http://www.cs.wisc.edu/~ghost/">PostScript</a> viewer or <a href="http://www.adobe.com/products/acrobat/readstep2_allversions.html">PDF viewer</a> for it if you don't already have one.<br></li>
+        <li><a href="https://stanford.edu/~shervine/teaching/cs-229/cheatsheet-supervised-learning">Machine learning study guides tailored to CS 229</a> by Afshine Amidi and Shervine Amidi.</li>
+      </ol>
+    </td>
+  </tr>
+
+
+</tbody></table>
+</div>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
+</body></html>

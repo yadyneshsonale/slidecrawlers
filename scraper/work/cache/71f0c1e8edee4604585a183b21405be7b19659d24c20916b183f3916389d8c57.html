@@ -1,0 +1,590 @@
+<!DOCTYPE html><html lang="en-US" class="js"><head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+	<link rel="pingback" href="https://castle.princeton.edu/xmlrpc.php">
+	<script>
+(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);
+//# sourceURL=twentyfifteen_javascript_detection
+</script>
+<title>Courses in reinforcement learning and sequential decision problems – CASTLE</title>
+<meta name="robots" content="max-image-preview:large">
+<link rel="alternate" type="application/rss+xml" title="CASTLE » Feed" href="https://castle.princeton.edu/feed/">
+<link rel="alternate" type="application/rss+xml" title="CASTLE » Comments Feed" href="https://castle.princeton.edu/comments/feed/">
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://castle.princeton.edu/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcastle.princeton.edu%2Frlsocourses%2F">
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://castle.princeton.edu/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcastle.princeton.edu%2Frlsocourses%2F&amp;format=xml">
+<style id="wp-img-auto-sizes-contain-inline-css">
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<style id="wp-emoji-styles-inline-css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<style id="wp-block-library-inline-css">
+:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}:root .has-text-align-center{text-align:center}:root .has-text-align-left{text-align:left}:root .has-text-align-right{text-align:right}.has-fit-text{white-space:nowrap!important}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{word-wrap:normal!important;border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style*=border-color]){border-style:solid}html :where([style*=border-top-color]){border-top-style:solid}html :where([style*=border-right-color]){border-right-style:solid}html :where([style*=border-bottom-color]){border-bottom-style:solid}html :where([style*=border-left-color]){border-left-style:solid}html :where([style*=border-width]){border-style:solid}html :where([style*=border-top-width]){border-top-style:solid}html :where([style*=border-right-width]){border-right-style:solid}html :where([style*=border-bottom-width]){border-bottom-style:solid}html :where([style*=border-left-width]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+
+/*# sourceURL=/wp-includes/css/dist/block-library/common.min.css */
+</style>
+<style id="wp-block-paragraph-inline-css">
+.is-small-text{font-size:.875em}.is-regular-text{font-size:1em}.is-large-text{font-size:2.25em}.is-larger-text{font-size:3em}.has-drop-cap:not(:focus):first-letter{float:left;font-size:8.4em;font-style:normal;font-weight:100;line-height:.68;margin:.05em .1em 0 0;text-transform:uppercase}body.rtl .has-drop-cap:not(:focus):first-letter{float:none;margin-left:.1em}p.has-drop-cap.has-background{overflow:hidden}:root :where(p.has-background){padding:1.25em 2.375em}:where(p.has-text-color:not(.has-link-color)) a{color:inherit}p.has-text-align-left[style*="writing-mode:vertical-lr"],p.has-text-align-right[style*="writing-mode:vertical-rl"]{rotate:180deg}
+/*# sourceURL=https://castle.princeton.edu/wp-includes/blocks/paragraph/style.min.css */
+</style>
+
+<style id="classic-theme-styles-inline-css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+
+<style id="global-styles-inline-css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #fff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--dark-gray: #111;--wp--preset--color--light-gray: #f1f1f1;--wp--preset--color--yellow: #f4ca16;--wp--preset--color--dark-brown: #352712;--wp--preset--color--medium-pink: #e53b51;--wp--preset--color--light-pink: #ffe5d1;--wp--preset--color--dark-purple: #2e2256;--wp--preset--color--purple: #674970;--wp--preset--color--blue-gray: #22313f;--wp--preset--color--bright-blue: #55c3dc;--wp--preset--color--light-blue: #e9f2f9;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--gradient--dark-gray-gradient-gradient: linear-gradient(90deg, rgba(17,17,17,1) 0%, rgba(42,42,42,1) 100%);--wp--preset--gradient--light-gray-gradient: linear-gradient(90deg, rgba(241,241,241,1) 0%, rgba(215,215,215,1) 100%);--wp--preset--gradient--white-gradient: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(230,230,230,1) 100%);--wp--preset--gradient--yellow-gradient: linear-gradient(90deg, rgba(244,202,22,1) 0%, rgba(205,168,10,1) 100%);--wp--preset--gradient--dark-brown-gradient: linear-gradient(90deg, rgba(53,39,18,1) 0%, rgba(91,67,31,1) 100%);--wp--preset--gradient--medium-pink-gradient: linear-gradient(90deg, rgba(229,59,81,1) 0%, rgba(209,28,51,1) 100%);--wp--preset--gradient--light-pink-gradient: linear-gradient(90deg, rgba(255,229,209,1) 0%, rgba(255,200,158,1) 100%);--wp--preset--gradient--dark-purple-gradient: linear-gradient(90deg, rgba(46,34,86,1) 0%, rgba(66,48,123,1) 100%);--wp--preset--gradient--purple-gradient: linear-gradient(90deg, rgba(103,73,112,1) 0%, rgba(131,93,143,1) 100%);--wp--preset--gradient--blue-gray-gradient: linear-gradient(90deg, rgba(34,49,63,1) 0%, rgba(52,75,96,1) 100%);--wp--preset--gradient--bright-blue-gradient: linear-gradient(90deg, rgba(85,195,220,1) 0%, rgba(43,180,211,1) 100%);--wp--preset--gradient--light-blue-gradient: linear-gradient(90deg, rgba(233,242,249,1) 0%, rgba(193,218,238,1) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:where(body) { margin: 0; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-dark-gray-color{color: var(--wp--preset--color--dark-gray) !important;}.has-light-gray-color{color: var(--wp--preset--color--light-gray) !important;}.has-yellow-color{color: var(--wp--preset--color--yellow) !important;}.has-dark-brown-color{color: var(--wp--preset--color--dark-brown) !important;}.has-medium-pink-color{color: var(--wp--preset--color--medium-pink) !important;}.has-light-pink-color{color: var(--wp--preset--color--light-pink) !important;}.has-dark-purple-color{color: var(--wp--preset--color--dark-purple) !important;}.has-purple-color{color: var(--wp--preset--color--purple) !important;}.has-blue-gray-color{color: var(--wp--preset--color--blue-gray) !important;}.has-bright-blue-color{color: var(--wp--preset--color--bright-blue) !important;}.has-light-blue-color{color: var(--wp--preset--color--light-blue) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-dark-gray-background-color{background-color: var(--wp--preset--color--dark-gray) !important;}.has-light-gray-background-color{background-color: var(--wp--preset--color--light-gray) !important;}.has-yellow-background-color{background-color: var(--wp--preset--color--yellow) !important;}.has-dark-brown-background-color{background-color: var(--wp--preset--color--dark-brown) !important;}.has-medium-pink-background-color{background-color: var(--wp--preset--color--medium-pink) !important;}.has-light-pink-background-color{background-color: var(--wp--preset--color--light-pink) !important;}.has-dark-purple-background-color{background-color: var(--wp--preset--color--dark-purple) !important;}.has-purple-background-color{background-color: var(--wp--preset--color--purple) !important;}.has-blue-gray-background-color{background-color: var(--wp--preset--color--blue-gray) !important;}.has-bright-blue-background-color{background-color: var(--wp--preset--color--bright-blue) !important;}.has-light-blue-background-color{background-color: var(--wp--preset--color--light-blue) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-dark-gray-border-color{border-color: var(--wp--preset--color--dark-gray) !important;}.has-light-gray-border-color{border-color: var(--wp--preset--color--light-gray) !important;}.has-yellow-border-color{border-color: var(--wp--preset--color--yellow) !important;}.has-dark-brown-border-color{border-color: var(--wp--preset--color--dark-brown) !important;}.has-medium-pink-border-color{border-color: var(--wp--preset--color--medium-pink) !important;}.has-light-pink-border-color{border-color: var(--wp--preset--color--light-pink) !important;}.has-dark-purple-border-color{border-color: var(--wp--preset--color--dark-purple) !important;}.has-purple-border-color{border-color: var(--wp--preset--color--purple) !important;}.has-blue-gray-border-color{border-color: var(--wp--preset--color--blue-gray) !important;}.has-bright-blue-border-color{border-color: var(--wp--preset--color--bright-blue) !important;}.has-light-blue-border-color{border-color: var(--wp--preset--color--light-blue) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-dark-gray-gradient-gradient-gradient-background{background: var(--wp--preset--gradient--dark-gray-gradient-gradient) !important;}.has-light-gray-gradient-gradient-background{background: var(--wp--preset--gradient--light-gray-gradient) !important;}.has-white-gradient-gradient-background{background: var(--wp--preset--gradient--white-gradient) !important;}.has-yellow-gradient-gradient-background{background: var(--wp--preset--gradient--yellow-gradient) !important;}.has-dark-brown-gradient-gradient-background{background: var(--wp--preset--gradient--dark-brown-gradient) !important;}.has-medium-pink-gradient-gradient-background{background: var(--wp--preset--gradient--medium-pink-gradient) !important;}.has-light-pink-gradient-gradient-background{background: var(--wp--preset--gradient--light-pink-gradient) !important;}.has-dark-purple-gradient-gradient-background{background: var(--wp--preset--gradient--dark-purple-gradient) !important;}.has-purple-gradient-gradient-background{background: var(--wp--preset--gradient--purple-gradient) !important;}.has-blue-gray-gradient-gradient-background{background: var(--wp--preset--gradient--blue-gray-gradient) !important;}.has-bright-blue-gradient-gradient-background{background: var(--wp--preset--gradient--bright-blue-gradient) !important;}.has-light-blue-gradient-gradient-background{background: var(--wp--preset--gradient--light-blue-gradient) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+<link rel="stylesheet" id="twentyfifteen-fonts-css" href="https://castle.princeton.edu/wp-content/themes/twentyfifteen/assets/fonts/noto-sans-plus-noto-serif-plus-inconsolata.css?ver=20230328" media="all">
+<link rel="stylesheet" id="genericons-css" href="https://castle.princeton.edu/wp-content/themes/twentyfifteen/genericons/genericons.css?ver=20251101" media="all">
+<link rel="stylesheet" id="twentyfifteen-style-css" href="https://castle.princeton.edu/wp-content/themes/twentyfifteen/style.css?ver=20260520" media="all">
+<style id="twentyfifteen-style-inline-css">
+
+		/* Custom Header Background Color */
+		body:before,
+		.site-header {
+			background-color: #3d2300;
+		}
+
+		@media screen and (min-width: 59.6875em) {
+			.site-header,
+			.secondary {
+				background-color: transparent;
+			}
+
+			.widget button,
+			.widget input[type="button"],
+			.widget input[type="reset"],
+			.widget input[type="submit"],
+			.widget_calendar tbody a,
+			.widget_calendar tbody a:hover,
+			.widget_calendar tbody a:focus {
+				color: #3d2300;
+			}
+		}
+	
+
+		/* Custom Sidebar Text Color */
+		.site-title a,
+		.site-description,
+		.secondary-toggle:before {
+			color: #d8d8d8;
+		}
+
+		.site-title a:hover,
+		.site-title a:focus {
+			color: rgba( 216, 216, 216, 0.7);
+		}
+
+		.secondary-toggle {
+			border-color: rgba( 216, 216, 216, 0.1);
+		}
+
+		.secondary-toggle:hover,
+		.secondary-toggle:focus {
+			border-color: rgba( 216, 216, 216, 0.3);
+		}
+
+		.site-title a {
+			outline-color: rgba( 216, 216, 216, 0.3);
+		}
+
+		@media screen and (min-width: 59.6875em) {
+			.secondary a,
+			.dropdown-toggle:after,
+			.widget-title,
+			.widget blockquote cite,
+			.widget blockquote small {
+				color: #d8d8d8;
+			}
+
+			.widget button,
+			.widget input[type="button"],
+			.widget input[type="reset"],
+			.widget input[type="submit"],
+			.widget_calendar tbody a {
+				background-color: #d8d8d8;
+			}
+
+			.textwidget a {
+				border-color: #d8d8d8;
+			}
+
+			.secondary a:hover,
+			.secondary a:focus,
+			.main-navigation .menu-item-description,
+			.widget,
+			.widget blockquote,
+			.widget .wp-caption-text,
+			.widget .gallery-caption {
+				color: rgba( 216, 216, 216, 0.7);
+			}
+
+			.widget button:hover,
+			.widget button:focus,
+			.widget input[type="button"]:hover,
+			.widget input[type="button"]:focus,
+			.widget input[type="reset"]:hover,
+			.widget input[type="reset"]:focus,
+			.widget input[type="submit"]:hover,
+			.widget input[type="submit"]:focus,
+			.widget_calendar tbody a:hover,
+			.widget_calendar tbody a:focus {
+				background-color: rgba( 216, 216, 216, 0.7);
+			}
+
+			.widget blockquote {
+				border-color: rgba( 216, 216, 216, 0.7);
+			}
+
+			.main-navigation ul,
+			.main-navigation li,
+			.secondary-toggle,
+			.widget input,
+			.widget textarea,
+			.widget table,
+			.widget th,
+			.widget td,
+			.widget pre,
+			.widget li,
+			.widget_categories .children,
+			.widget_nav_menu .sub-menu,
+			.widget_pages .children,
+			.widget abbr[title] {
+				border-color: rgba( 216, 216, 216, 0.1);
+			}
+
+			.dropdown-toggle:hover,
+			.dropdown-toggle:focus,
+			.widget hr {
+				background-color: rgba( 216, 216, 216, 0.1);
+			}
+
+			.widget input:focus,
+			.widget textarea:focus {
+				border-color: rgba( 216, 216, 216, 0.3);
+			}
+
+			.sidebar a:focus,
+			.dropdown-toggle:focus {
+				outline-color: rgba( 216, 216, 216, 0.3);
+			}
+		}
+	
+/*# sourceURL=twentyfifteen-style-inline-css */
+</style>
+<link rel="stylesheet" id="twentyfifteen-block-style-css" href="https://castle.princeton.edu/wp-content/themes/twentyfifteen/css/blocks.css?ver=20240715" media="all">
+<script id="jquery-core-js" src="https://castle.princeton.edu/wp-includes/js/jquery/jquery.min.js?ver=3.7.1"></script>
+<script id="jquery-migrate-js" src="https://castle.princeton.edu/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1"></script>
+<script id="twentyfifteen-script-js-extra">
+var screenReaderText = {"expand":"\u003Cspan class=\"screen-reader-text\"\u003Eexpand child menu\u003C/span\u003E","collapse":"\u003Cspan class=\"screen-reader-text\"\u003Ecollapse child menu\u003C/span\u003E"};
+//# sourceURL=twentyfifteen-script-js-extra
+</script>
+<script data-wp-strategy="defer" defer="" id="twentyfifteen-script-js" src="https://castle.princeton.edu/wp-content/themes/twentyfifteen/js/functions.js?ver=20250729"></script>
+<link rel="https://api.w.org/" href="https://castle.princeton.edu/wp-json/"><link rel="alternate" title="JSON" type="application/json" href="https://castle.princeton.edu/wp-json/wp/v2/pages/7286"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://castle.princeton.edu/xmlrpc.php?rsd">
+<meta name="generator" content="WordPress 7.0">
+<link rel="canonical" href="https://castle.princeton.edu/rlsocourses/">
+<link rel="shortlink" href="https://castle.princeton.edu/?p=7286">
+<style id="custom-background-css">
+body.custom-background { background-color: #fff6d4; }
+</style>
+<style id="wp-custom-css">
+/*
+You can add your own CSS here.
+
+Click the help icon above to learn more.
+*/
+
+.page {
+margin-right: 0;
+}
+.hentry {
+width: 100%;
+margin-left: 0px;
+background-color: transparent;
+color: #202020;
+padding-top: 20px;
+font-size:75%;
+}
+.hentry p{
+margin-bottom: 15px;
+}
+.hentry ul{
+margin-bottom: 15px;
+}
+.entry-header{
+padding: 0px 50px 0px 50px;
+}
+.entry-content {
+padding: 0px 50px 0px 50px;
+}
+.entry-content h2 {
+	font-size: 1.75em;
+}
+.entry-content h3 {
+	font-size: 1.4em;
+}
+.hentry a{
+color: #202020;
+}
+.site-info {
+background-color: transparent;
+color: #202020;
+}
+.site-footer {
+background-color: transparent;
+color: #202020;
+}
+.entry-footer {
+background-color: transparent;
+color: #202020;
+}
+.site-main {
+padding-top: 0;
+padding-right: 0;
+padding: 0px;
+border-color: rgb(0, 0, 0, 0);
+}
+.entry-title {
+font-size: 2.2em;
+margin-bottom: 10px;
+}
+.site-header {
+margin-top: 0px;
+margin-bottom: 20px;
+padding-left: 30px;
+padding-right: 30px;
+
+}
+.site-title {
+margin-top: 20px
+
+}
+.main-navigation {
+margin-top: 20px;
+margin-bottom: 20px;
+margin-right: 30px;
+margin-left: 30px;
+}
+.widget {
+margin-top: 30px;
+margin-bottom: 30px;
+padding-right: 30px;
+padding-left: 30px;
+}
+.site-content {
+
+}
+
+em {
+color: #000000;
+}
+.large {
+color: #000000;
+}
+
+blockquote {
+color: #000000;
+font-size: 75%;
+
+}
+
+@media screen and (min-width: 59.6875em) {
+	.widget .wp-caption-text {
+		text-align:center;
+	}
+}
+
+.site-info {
+display: none;
+}
+</style>
+</head>
+
+<body class="wp-singular page-template-default page page-id-7286 custom-background wp-embed-responsive wp-theme-twentyfifteen">
+<div id="page" class="hfeed site">
+	<a class="skip-link screen-reader-text" href="#content">
+		Skip to content	</a>
+
+	<div id="sidebar" class="sidebar" style="position: relative;">
+		<header id="masthead" class="site-header">
+			<div class="site-branding">
+									<p class="site-title"><a href="https://castle.princeton.edu/" rel="home">CASTLE</a></p>
+										<p class="site-description">Computational Stochastic Optimization and Learning</p>
+				
+				<button class="secondary-toggle">Menu and widgets</button>
+			</div><!-- .site-branding -->
+		</header><!-- .site-header -->
+
+			<div id="secondary" class="secondary">
+
+		
+		
+					<div id="widget-area" class="widget-area" role="complementary">
+				<aside id="block-4" class="widget widget_block"></aside><aside id="nav_menu-6" class="widget widget_nav_menu"><nav class="menu-menu-container" aria-label="Menu"><ul id="menu-menu" class="menu"><li id="menu-item-6675" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6675"><a href="https://castle.princeton.edu/sda">Sequential Decision Analytics</a></li>
+<li id="menu-item-35" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-35"><a href="https://castle.princeton.edu/people/">People</a></li>
+<li id="menu-item-36" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-36"><a href="https://castle.princeton.edu/courses/">Courses</a></li>
+<li id="menu-item-34" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-34"><a href="https://castle.princeton.edu/timeline-of-developments/">Timeline of Developments</a></li>
+<li id="menu-item-33" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-33"><a href="https://castle.princeton.edu/impact-on-industry/">Impact on Industry</a></li>
+<li id="menu-item-32" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32"><a href="https://castle.princeton.edu/presentations/">Presentations</a></li>
+<li id="menu-item-38" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-38"><a href="https://castle.princeton.edu/software/">Software</a></li>
+<li id="menu-item-39" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-39"><a href="https://castle.princeton.edu/awards/">Awards</a></li>
+<li id="menu-item-40" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-40"><a href="https://castle.princeton.edu/corporate-partners/">Corporate Partners</a></li>
+</ul></nav></aside><aside id="block-8" class="widget widget_block widget_text">
+<p class="wp-block-paragraph"><a href="https://orfe.princeton.edu">Operations Research &amp; Financial Engineering</a><br></p>
+</aside><aside id="text-7" class="widget widget_text">			<div class="textwidget"><p><b>©</b>Warren B. Powell, 1997 – 2026.</p>
+<p><a href="http://princeton.edu">Princeton University</a></p>
+<p><a href="https://inclusive.princeton.edu/about/our-commitment-equal-opportunity-and-non-discrimination">Diversity &amp; Non-Discrimination</a></p>
+<p><a href="https://accessibility.princeton.edu/resources/accessibility-help">Accessibility Help</a></p>
+</div>
+		</aside>			</div><!-- .widget-area -->
+		
+	</div><!-- .secondary -->
+
+	</div><!-- .sidebar -->
+
+	<div id="content" class="site-content">
+
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main">
+
+		
+<article id="post-7286" class="post-7286 page type-page status-publish hentry">
+	
+	<header class="entry-header">
+		<h1 class="entry-title">Courses in reinforcement learning and sequential decision problems</h1>	</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		
+<p>This webpage is designed to help you design teaching material for courses in sequential decision analytics. This material is suitable for a wide range of audiences:</p>
+<ul>
+<li>Masters (MSE and MBA) and undergraduate – I suggest the companion book <a href="https://tinyurl.com/sdamodeling/">Sequential Decision Analytics and Modeling</a> (SDAM) which uses a teach-by-example style.</li>
+<li>Graduate level – For students who want to actually build models and design algorithms for solving the models, I suggest my graduate level book <a href="https://tinyurl.com/RLandSO">Reinforcement Learning and Stochastic Optimization: A unified framework for sequential decisions</a> (RLSO).</li>
+<li>Professional groups in industry – Many companies have analytics (today often grouped under “data analytics”) of people with an interest in mathematical models and algorithms.</li>
+<li>In April, 2025 I gave a talk at Cornell’s ORIE department on a fresh approach to teaching optimization.&nbsp; <a href="https://tinyurl.com/HowtoTeachOptimization/">I have broken this talk into four parts here</a>.&nbsp;</li>
+</ul>
+<p>I can envision several ways to teach this material:&nbsp;</p>
+<p><strong>Weekly seminars</strong> – These are for students or professionals who want to teach this material to themselves.&nbsp; This can easily done with groups of as little as four or five people in the format of a weekly seminar.&nbsp; There are two levels at which this can be done:</p>
+<ul>
+<li><strong>Introductory seminar</strong> – This is for undergraduates and masters as well as Ph.D.s and professionals whose primary focus is in a problem domain (rather than theory).</li>
+<li><strong>Advanced seminar</strong> – This is for students and professionals who want to learn the technical material in RLSO.&nbsp; This is particularly important for people who want to develop the software behind the models and algorithms for describing and solving sequential decision problems.</li>
+</ul>
+<p>I recently developed a new way of teaching introduction to optimization:</p>
+<ul>
+<li><strong>A Modern Approach to Teaching Optimization</strong> – This introductory course (undergraduates and masters) transitions through a sequence of basic machine learning problems, then to a succession of relatively simple sequential decision problems, and closes with linear, integer, and nonlinear programming, which are taught as both static and sequential problems.&nbsp; See <a href="https://tinyurl.com/TeachingOpt/">https://tinyurl.com/TeachingOpt/</a> for an overview and detailed teaching notes.</li>
+</ul>
+<p>Courses I taught at Princeton (full course materials are provided):</p>
+<ul>
+<li>A full course (12-15 weeks) on sequential decision problems at an introductory level (this is a course I taught to undergraduates at Princeton)&nbsp;</li>
+<li>A graduate course (masters to Ph.D.) for a broad audience from engineering and the sciences. My graduate course at Princeton was attended by students from eight different departments.</li>
+</ul>
+<p>Other ideas for teaching this material:</p>
+<ul>
+<li>2-4 lectures within an existing course focusing on a problem domain.</li>
+<li>Teaching sequential decision analytics to MBAs – For the more complex problems that arise in business, it is important to start with problem identification by answering three key questions (about metrics, decisions and uncertainties) that are a prerequisite for forming a model, even if the students are never going to write a line of code.</li>
+</ul>
+<p>If you are interested in joining the community of people interested in teaching this material (in whatever format fits you) <a href="https://tinyurl.com/rlsocoursesignup">please sign up here</a>.</p>
+<h3>Weekly seminar series (introductory)</h3>
+<p>The idea of this weekly seminar series is to focus on developing the process of modeling in the context of actual applications.&nbsp; I recommend following the style of the application chapters (every chapter except chapters 1 and 7) in&nbsp;<em><a href="https://tinyurl.com/sdamodeling/">Sequential Decision Analytics and Modeling</a> (SDAM).&nbsp; </em>You can download the book&nbsp;<a href="https://tinyurl.com/PowellSDAMbook/"><em>here</em></a>.&nbsp;</p>
+<ul>
+<li>Week 1 – I suggest starting by listing as many sequential decision problems as you can that are relevant to the people attending the seminar.&nbsp; One way to get started is to ask everyone attending the seminar to come with several examples of decision problems that they can think of.&nbsp; I then also suggest working through chapter 1 of SDAM to illustrate the notation in the context of the inventory problems in section 1.3.</li>
+<li>Weeks 2-6 – You can either use each week to present chapters 2-6, or use these weeks to follow the format of these chapters to model decision problems from applications familiar to the group attending.&nbsp; I recommend focusing on the simpler decision problems.&nbsp; As I do in the book, make sure that you always start by modeling a relatively simple version of your problem, and then in whatever time is remaining, suggest extensions and model these.</li>
+<li>Week 7 – I recommend using this week to follow the outline of Chapter 7, which reviews materials from the first six weeks.&nbsp; Note that I illustrate the different state variables, and also review each of the policies used to solve the applications in the first six weeks.</li>
+<li>Weeks 8-12 – Again, you can follow the chapters in SDAM, or blend in applications from your own experiences.&nbsp; Use these weeks to focus on more complex applications.</li>
+</ul>
+<h3>Weekly seminar series (advanced)</h3>
+<p>I believe this material is so important that graduate students and analytics professionals who do not have access to a course that teaches this material may want to run a seminar on their own.&nbsp; Typically this would involve a weekly meeting of about 60-90 minutes.&nbsp; I suggest the following topics:</p>
+<ul>
+<li>Week 1 – Discuss different settings in which sequential decisions arise that are familiar to the group.&nbsp; Discuss: decisions, metrics and exogenous information (that you learn/observe after making a decision).&nbsp; Then introduce state variables which is all the information you need to compute your metrics, make your decision (which can reflect constraints as well as any other information needed in a policy that has not yet been designed), and model the evolution of the state variables.&nbsp; Note that the design of state variables is iterative – it evolves as you model the system.&nbsp; You might jump forward to my section 9.9 for an illustration using energy storage.&nbsp; Mention the four classes of policies which you will return to repeatedly.</li>
+<li>Week 2 – Assign as outside reading to skim section 2.1 that covers 15 different classes of problems.&nbsp; Discuss in class any that might be of special interest to the class, but otherwise I would not use class time on this.&nbsp; Use week 2 to cover key elements of Chapter 3 – Online learning.&nbsp; I suggest covering lookup tables (frequentist and Bayesian), correlated beliefs, a brief discussion of hierarchical models, then linear models, and then sampled beliefs for nonlinear models.&nbsp; You will probably also want to touch on neural networks.</li>
+<li>Week 3 – Cover chapter 4, including section 4.2 (so-called stochastic models that only need deterministic methods), section 4.3 (sampled belief models – simple idea, but this is very important), and then adaptive learning in section 4.4, which is the focus of the rest of the book.</li>
+<li>Week 4 – Chapters 5 and 6 – Derivative-based stochastic search.&nbsp; Cover the basic idea of a stochastic gradient algorithm, and illustrate how a stochastic gradient may be computed (e.g. for the simple newsvendor problem).&nbsp; Mention that we can use numerical derivatives (I would introduce SPSA).&nbsp; Then introduce the need for the stepsize, after which I would jump to chapter 6 (on stepsizes).&nbsp; Introduce basic deterministic stepsizes and one or two stochastic stepsize rules.&nbsp; I would not go through the optimal stepsize rules – it is just important to know this material is there.</li>
+<li>Week 5 – Chapter 7 – Derivative-free stochastic search.&nbsp; This is a big chapter.&nbsp; You need to introduce what it means to do derivative-free stochastic search, and touch on the concept of cumulative and final reward objectives.&nbsp; Now introduce the four classes of policies again.&nbsp; You will find it easiest to illustrate the PFA, CFA and possibly some form of DLA such as the knowledge gradient.&nbsp; You should introduce the concept of the multiarmed bandit problem.&nbsp; I would skip section 7.6 on VFA-based policies, but note that this section introduces Gittins indices, which was the inspiration for the UCB policies (section 7.5) which is very popular in the tech sector.&nbsp; The knowledge gradient (section 7.7.2) captures the value of the information from an experiment. This is useful for expensive experiments and small budgets.&nbsp; You may find you need two weeks for chapter 7.</li>
+<li>Week 6 – The class should skim chapter 8 (a series of examples) before class.&nbsp; Then use this class for chapter 9, my big modeling chapter.&nbsp; Review the five elements of a sequential decision problem and its application to a simple inventory in section 9.1.&nbsp; Note that for simple problems, this is all you need.&nbsp; The rest of the chapter provides the foundation for modeling complex problems.&nbsp; How thoroughly you cover this material depends on the interests of the class.&nbsp; Be sure to touch on belief states and how you update belief states (very important for any problems that involve learning).&nbsp; I would definitely try to cover the energy storage extensions in section 9.9, but then stop here.</li>
+<li>Week 7 – Chapter 10 focuses on modeling uncertainty.&nbsp; This is where it would help if the students pick a problem on their own, and then review the 12 classes of uncertainties in section 10.1.&nbsp; Then jump to the COVID example in section 10.2.&nbsp; The rest of the chapter addresses the challenges of modeling uncertainty and the technique of Monte Carlo simulation.&nbsp; This is important, but students may have prior background in this.</li>
+<li>Week 8 – Chapter 11 is a major chapter – this is where I review the four classes of policies in more depth, and then cover how to choose from among the classes.&nbsp; This discussion is important, but is highly problem dependent.&nbsp; Be sure to touch on section 11.7 on hybrid policies, where I review six examples of policies that combine two or more of the four classes into a single policy.&nbsp; It might help to pick a specific problem such as the energy storage problem in section 11.9, where we illustrate all four classes of policies, and then show that any of them (plus a hybrid) can work best depending on the data.</li>
+<li>Week 9 – Chapter 12 – Here we introduce the simplest policies, PFAs, and discuss parameter tuning.&nbsp; Here we are just using the methods of chapters 5 and 7, but the review is useful, since it is done in the context of parameter tuning.&nbsp; Parameter tuning ends up being a recurring problem, since you are almost always introducing some form of approximation in any of the four classes of policies, and approximations tend to lead to tunable parameters.</li>
+<li>Week 10&nbsp; – Chapter 13 – Here we cover the concept of parametric cost function approximations in considerably more detail.&nbsp; This is an important class of policies since it is widely used in practice, but largely ignored by the academic literature.&nbsp; See the energy storage example with time-dependent demands and rolling forecasts.&nbsp; If anyone is looking for a good area of research, there are incredible opportunities, partly because it is such a useful strategy, but also because there are unresolved methodological issues.</li>
+<li>Weeks 11-12 – There are five chapters on value function approximations, often equated (incorrectly) with “reinforcement learning.”&nbsp; You could easily spend half of a real course (meeting twice each week) on this material.&nbsp; I suggest:
+<ul style="list-style-type: circle;">
+<li>Cover equation 14.2 in chapter 14, which is basic backward dynamic programming.&nbsp; Be sure to introduce the one-step transition matrix, and note that it is almost never computable.&nbsp; Note that if we could compute one-step transition matrices, we could solve every sequential decision problem with equation 14.2 (I am not a big fan of dynamic programming for steady state problems – in my entire career, I have never encountered a real application that was properly modeled as a steady state problem).</li>
+<li>Then jump to chapter 15 (backward ADP) and cover section 15.1, which is how to compute equation 14.2 approximately.&nbsp;&nbsp;</li>
+<li>Now jump to section 15.3.1 which introduces the idea of using linear models for value function approximations.&nbsp; Mention that you could use a deep neural network here, but it would require a large sample.&nbsp; Be sure to take a quick look at the experimental work in section 15.4.&nbsp; There is not much theory supporting backward ADP, but so far it has worked in every problem I have tried!</li>
+<li>Next jump to sections 16.1 and 16.2 which describes how to fit a VFA using a fixed policy.</li>
+<li>Then jump to sections 17.1, 17,2 (skim 17.3), 17.4, and 17.5.&nbsp; Section 17.6 provides two examples that students might find&nbsp; useful.</li>
+<li>Chapter 18 is advanced material specifically for more complex resource allocation problems.&nbsp; The interest in this material is very dependent on the makeup of the class.&nbsp; This material could easily require an entire session.</li>
+</ul>
+</li>
+<li>Week 13 – Chapter 19 covers direct lookahead policies.&nbsp; This chapter is divided into three parts.&nbsp; Sections 19.1 through 19.5 provides background material which should be skimmed.&nbsp; Section 19.6 introduces deterministic lookaheads, including parameterized deterministic lookaheads (we first saw this in the energy storage problem in chapter 13).&nbsp; Then, I would cover section 19.7, which introduces stochastic lookahead models, and discusses each of the four classes of policies to be used in the stochastic lookahead.&nbsp; The remainder of the chapter covers Monte Carlo tree search (for problems with discrete decisions) and stochastic programming (for problems with vector-valued decisions).&nbsp; This is specialized material that depends on the background and interests of the class.</li>
+</ul>
+<p>There are entire books written on specific strategies for solving stochastic lookaheads within a DLA policy.&nbsp; We effectively cover these in just a few sections by standing on the shoulders of all the other chapters.</p>
+<ul>
+<li>Week 14 – Chapter 20 on Multiagent systems – While the interest in this material depends on the interests of the students, there is some very important material in this chapter.&nbsp; I recommend covering sections 20.1 and 20.2.&nbsp; Section 20.3 on POMDPs is advanced material, which points out the limitations of the very substantial literature on POMDPs, but again, the interest in this material depends on the makeup of the class.&nbsp; Our position is that the two-agent model (environment plus controller) should be used to model problems where we cannot observe the environment perfectly.&nbsp; Sections 20.4, 20.5 and 20.6 are on more specialized topics that depends on the interests of the class.</li>
+</ul>
+<h3>Undergraduate/masters course in optimization</h3>
+<p>I think the basic courses that are taught in “optimization,” with their traditional emphasis on linear programming and extensions, are misguided.&nbsp; An optimization course should address the science of making the best possible decisions – any decisions.</p>
+<p>I have prepared a detailed design of an introductory course in optimization that blends machine learning, sequential decision problems, and then linear, integer and nonlinear programming where I present both static formulations, which are then extended to sequential problems.</p>
+<p>Go to the webpage</p>
+<p><a href="https://tinyurl.com/TeachingOpt">https://tinyurl.com/TeachingOpt</a></p>
+<p>There is a downloaded document (in both MS Word and pdf formats) that provide all the details.</p>
+<h3>Undergraduate/masters course in sequential decision analytics</h3>
+<p><strong>Description:</strong> This course was taught at Princeton to undergraduates in operations research.&nbsp; It introduces the general field of sequential decision problems, using a teach-by-example style.&nbsp; The course follows a downloadable book (see below) that provides the general framework for sequential decision problems, followed by a series of examples that are all modeled using the same style.&nbsp; The examples were chosen to illustrate the four classes of policies, as well as other issues such as modeling uncertainty.</p>
+<p>This course will not provide the comprehensive overview of methodology provided by the graduate course.&nbsp; It is focused on teaching students how to think clearly about sequential decision problems using a powerful, universal modeling framework.&nbsp; All of this is done through a series of carefully chosen examples designed to illustrate creating and solving models.&nbsp;&nbsp;</p>
+<p><strong>Audience:&nbsp;</strong>The course was originally written for undergraduates in Operations Research and Financial Engineering at Princeton.&nbsp; The only mathematical prerequisite is a course in probability and statistics.&nbsp; One chapter (on blood management) uses linear programming, but the material can be covered without prior knowledge of linear programming.</p>
+<p><strong>Notes:</strong> It is extremely easy to create new lectures built around different applications.&nbsp; On two occasions I invited students doing senior thesis research with me to help me run a lecture, where they would provide the answers to questions needed to fill in the five elements of the modeling framework.&nbsp; Students best understand material that is centered on applications they are familiar with, and this is where the material can be easily customized to new problem settings.</p>
+<p><strong>Readings:</strong></p>
+<p>This course is taught from the downloadable book:&nbsp;<em><a href="https://tinyurl.com/sdamodeling">Sequential Decision Analytics and Modeling</a>.</em></p>
+<p><strong>Syllabus:</strong></p>
+<p><a href="https://castle.princeton.edu/wp-content/uploads/2023/04/ORF-411-2018-syllabus.pdf">Download syllabus here.</a></p>
+<p><strong>Programming:</strong> There are exercises at the end of each chapter.&nbsp; Most chapters are accompanied by a python module that can be found at <a href="https://tinyurl.com/sdagithub">https://tinyurl.com/sdagithub/</a>.&nbsp; Often the exercises can be completed without touching the code, but the software was designed to allow students to modify the logic.&nbsp; I suggest designing questions that fit the programming skills of the audience.</p>
+<p><strong>Lectures:</strong>&nbsp;</p>
+<p>Below are the lectures from the course I taught Fall, 2018.&nbsp; Each lecture is given in pdf and powerpoint formats.</p>
+<p style="text-align: left;"><strong>Lecture slides:</strong></p>
+<p style="text-align: left;">First half of course <a href="https://castle.princeton.edu/wp-content/uploads/2019/03/ORF-411-lecture-notes-Fall-2018-First-half.pdf">(pdf)</a>.&nbsp; Second half of course <a href="https://castle.princeton.edu/wp-content/uploads/2019/03/ORF-411-lecture-notes-Fall-2018-Second-half.pdf">(pdf)</a></p>
+<p style="text-align: left;">Individual lectures (powerpoint format):</p>
+<ul>
+<li style="text-align: left;">Lecture 1 – Introduction, applications, modeling (<a href="https://castle.princeton.edu/wp-content/uploads/2020/03/ORF-411-Lecture-1-Introduction-applications-modeling-frameworks.pptx">powerpoint</a>)</li>
+<li style="text-align: left;">Lecture 2 – Adaptive market planning (<a href="https://castle.princeton.edu/wp-content/uploads/2020/03/ORF-411-Lecture-2-Adaptive-market-planning.pptx">powerpoint</a>)</li>
+<li style="text-align: left;">Lecture 3 – Machine learning (<a href="https://castle.princeton.edu/wp-content/uploads/2020/03/ORF-411-Lecture-3-Machine-learning.pptx">powerpoint</a>)</li>
+<li style="text-align: left;">Lecture 4 – Learning diabetes medications (<a href="https://castle.princeton.edu/wp-content/uploads/2020/03/ORF-411-Lecture-4-Learning-diabetes-medications.pptx">powerpoint</a>)</li>
+<li style="text-align: left;">Lecture 5 – Learning policies (<a href="https://castle.princeton.edu/wp-content/uploads/2020/03/ORF-411-Lecture-5-Learning-policies.pptx">powerpoint</a>)</li>
+<li style="text-align: left;">Lecture 6 – Stochastic shortest paths I (<a href="https://castle.princeton.edu/wp-content/uploads/2020/03/ORF-411-Lecture-6-Stochastic-shortest-paths-I.pptx">powerpoint</a>)</li>
+<li style="text-align: left;">Lecture 7 – Stochastic shortest paths II (<a href="https://castle.princeton.edu/wp-content/uploads/2020/03/ORF-411-Lecture-7-Stochastic-shortest-paths-II.pptx">powerpoint</a>)</li>
+<li style="text-align: left;">Lecture 8 – Designing policies (<a href="https://castle.princeton.edu/wp-content/uploads/2020/03/ORF-411-Lecture-8-Dynamic-shortest-paths.pptx">powerpoint</a>)</li>
+<li style="text-align: left;">Lecture 9 – Energy storage I (<a href="https://castle.princeton.edu/wp-content/uploads/2020/03/ORF-411-Lecture-9-Designing-policies.pptx">powerpoint</a>)</li>
+<li style="text-align: left;">Lecture 10 – Energy storage II (<a href="https://castle.princeton.edu/wp-content/uploads/2020/03/ORF-411-Lecture-10-Energy-storage-I.pptx">powerpoint</a>)</li>
+<li style="text-align: left;">Lecture 11 – Energy storage III (<a href="https://castle.princeton.edu/wp-content/uploads/2020/03/ORF-411-Lecture-11-Energy-storage-II.pptx">powerpoint</a>)</li>
+<li style="text-align: left;">Lecture 12 – Uncertainty modeling (<a href="https://castle.princeton.edu/wp-content/uploads/2020/03/ORF-411-Lecture-12-Energy-storage-III.pptx">powerpoint</a>)</li>
+<li style="text-align: left;">Lecture 13 – Uncertainty modeling (<a href="https://castle.princeton.edu/wp-content/uploads/2020/03/ORF-411-Lecture-13-Uncertainty-modeling.pptx">powerpoint</a>)</li>
+<li style="text-align: left;">Lecture 14 – The beer game I – Introduction (<a href="https://castle.princeton.edu/wp-content/uploads/2020/03/ORF-411-Lecture-14-The-beer-game-I.pptx">powerpoint</a>)</li>
+<li style="text-align: left;">Lecture 15&nbsp; – The beer game II (<a href="https://castle.princeton.edu/wp-content/uploads/2020/03/ORF-411-Lecture-15-The-beer-game-II.pptx">powerpoint</a>, <a href="https://castle.princeton.edu/wp-content/uploads/2020/03/ORF-411-Lecture-15-Princeton-beer-game-spreadsheet.xlsx">spreadsheet</a>)</li>
+<li style="text-align: left;">Lecture 16 – The beer game III – Discussion (<a href="https://castle.princeton.edu/wp-content/uploads/2020/03/ORF-411-Lecture-16-The-beer-game-III-Discussion.pptx">powerpoint</a>)</li>
+<li style="text-align: left;">Lecture 17 – The blood management problem (<a href="https://castle.princeton.edu/wp-content/uploads/2020/03/ORF-411-Lecture-17-The-blood-management-problem.pptx">powerpoint</a>)</li>
+<li style="text-align: left;">Lecture 18 – Hotel revenue management (<a href="https://castle.princeton.edu/wp-content/uploads/2020/03/ORF-411-Lecture-18-Hotel-revenue-management.pptx">powerpoint</a>)</li>
+<li style="text-align: left;">Lecture 19 – Class decision problem – Booking flights (<a href="https://castle.princeton.edu/wp-content/uploads/2020/03/ORF-411-Lecture-19-Student-decision-problem-Booking-a-flight.pptx">powerpoint</a>)</li>
+<li style="text-align: left;">Lecture 20 – Clinical drug trials (<a href="https://castle.princeton.edu/wp-content/uploads/2020/03/ORF-411-Lecture-20-Clinical-trials.pptx">powerpoint</a>)</li>
+<li style="text-align: left;">Lecture 21 – Student decision problems – Rowing strategies, twitter trading (<a href="https://castle.princeton.edu/wp-content/uploads/2020/03/ORF-411-Lecture-21-Student-decision-problems-Rowing-twitter-trading.pptx">powerpoint</a>)</li>
+<li style="text-align: left;">Lecture 22 – Summary lecture (<a href="https://castle.princeton.edu/wp-content/uploads/2020/03/ORF-411-Lecture-22-Summary-lecture.pptx">powerpoint</a>)</li>
+</ul>
+<h3>Graduate course in reinforcement learning and stochastic optimization (alternatively, sequential decision analytics)</h3>
+<p><strong>Description:</strong> This course is designed for students who are interested in developing methods, and implementing these methods in software, for solving sequential decision problems under uncertainty for&nbsp;<em>any</em> sequential decision problem.&nbsp; These problems range from pure learning problems to a broad class of problems including optimal stopping (selling an asset, A/B testing) to complex resource allocation problems which may or may not involve active learning.&nbsp; The course has a methodological bias, supported by an extensive array of applications.&nbsp; There is a strong emphasis on proper modeling as a stepping stone to implementation on the computer.</p>
+<p><strong>Audience:&nbsp;</strong>The course is suitable for courses coming from either a methodological background (computer science, operations research) with a strong interest in computation and applications, as well as students coming from a domain background (any field of engineering, the sciences, economics).&nbsp; Students should have<span style="font-size: revert;"> a good course in probability and statistics, as well as a knowledge of programming.&nbsp; There are some problems that draw on fields of math programming (e.g. linear/nonlinear/integer programming), but these involve algorithms for which packages are available.</span></p>
+<p>The course is geared toward students with an interest in modeling and computation over theory, but there are theoretical exercises at the end of most (but not all) chapters.&nbsp; Some sections are marked with ** that indicates more advanced material.&nbsp; The presentation does not use measure theory, but there is one section that has a “measure theory for beginners” presentation.&nbsp; The book does, however, provide a solid foundation in modeling that will prove useful whether a student wants to focus on computation or theory.</p>
+<p><strong>Syllabus</strong>:</p>
+<p><a href="https://castle.princeton.edu/wp-content/uploads/2023/04/ORF_544_S2019-syllabus_Jan2019.pdf">Download syllabus here</a>.</p>
+<p><strong>Readings:</strong></p>
+<p>This course is designed to be taught from my book: <a href="https://tinyurl.com/RLandSO/"><em>Reinforcement Learning and Stochastic Optimization: A unified framework for sequential decisions</em></a>.&nbsp; It is 1100 pages, and the print version is in black&amp;white.&nbsp; The e-book version is much easier to use.&nbsp; If you prefer a printed version, there are websites that offer printing services as low as $0.05 per page, and can be ordered in 3-hole punch format.</p>
+<p>The book has 370 exercises organized into seven categories: review questions, modeling questions, problem solving questions, computational exercises, exercises from the companion book&nbsp;<em>Sequential Decision Analytics and Modeling&nbsp;</em>(see the undergraduate course below) which builds on a series of python modules, and a “diary problem” which is a problem chosen by the reader at the beginning of the book, with questions that need to be answered in the context of this problem (this is like “keeping a diary” since the questions all relate to the same problem.</p>
+<p><strong>Exams:</strong></p>
+<p><a href="https://castle.princeton.edu/wp-content/uploads/2023/04/ORF-544-midterm-2019.pdf">Midterm exam</a> – I primarily used the “review questions” at the end of chapters 1-7.<br><a href="https://castle.princeton.edu/wp-content/uploads/2023/04/ORF-544-final-exam-2019.pdf">Final exam</a> – I primarily used the “review questions” at the end of chapters 8-19.</p>
+<p><strong>Lectures:</strong>&nbsp;</p>
+<p>Below are the lectures from the course I taught Spring, 2019.&nbsp; Each lecture is given in pdf and powerpoint formats.</p>
+<p>Week 1 – Introduction and overview (<a href="https://castle.princeton.edu/wp-content/uploads/2022/04/ORF-544-Week-1-Introduction-and-overview.pdf">pdf</a>) (<a href="https://castle.princeton.edu/wp-content/uploads/2022/04/ORF-544-Week-1-Introduction-and-overview.pptx">powerpoint</a>)</p>
+<p>Week 2 – Adaptive learning (<a href="https://castle.princeton.edu/wp-content/uploads/2022/04/ORF-544-Week-3-Derivative-based-stochastic-optimization.pdf">pdf</a>) (<a href="https://castle.princeton.edu/wp-content/uploads/2022/04/ORF-544-Week-2-Adaptive-learning.pptx">powerpoint</a>)</p>
+<p>Week 3 – Derivative-based stochastic optimization (pdf) (<a href="https://castle.princeton.edu/wp-content/uploads/2022/04/ORF-544-Week-3-Derivative-based-stochastic-optimization.pptx">powerpoint</a>)</p>
+<p><a href="https://castle.princeton.edu/wp-content/uploads/2019/02/Ghadimi-Stochastic-optimization-for-nonconvex-problems-Feb-25.pdf">Week 3 – (by post-doc Saeed Ghadimi) – Stochastic-based stochastic search for nonconvex problems (pdf)</a></p>
+<p>Week 4 – Derivative-free stochastic optimization Part I: PFAs and CFAs (<a href="https://castle.princeton.edu/wp-content/uploads/2022/04/ORF-544-Week-4-Derivative-free-stochastic-optimization.pdf">pdf</a>) (<a href="https://castle.princeton.edu/wp-content/uploads/2022/04/ORF-544-Week-4-Derivative-free-stochastic-optimization.pptx">powerpoint</a>)</p>
+<p>Week 5 – Derivative-free stochastic optimization Part II: VFAs and DLAs (<a href="https://castle.princeton.edu/wp-content/uploads/2022/04/ORF-544-Week-5-Derivative-free-stochastic-optimization-VFA-and-DLA.pdf">pdf</a>) (<a href="https://castle.princeton.edu/wp-content/uploads/2022/04/ORF-544-Week-5-Derivative-free-stochastic-optimization-VFA-and-DLA.pptx">powerpoint</a>)</p>
+<p>Week 6 – Notation and the unified modeling framework (<a href="https://castle.princeton.edu/wp-content/uploads/2022/04/ORF-544-Week-6-Modeling-The-unified-framework.pdf">pdf</a>) (<a href="https://castle.princeton.edu/wp-content/uploads/2022/04/ORF-544-Week-6-Modeling-The-unified-framework.pptx">powerpoint</a>)</p>
+<p>Week 7 – Uncertainty and designing policies (<a href="https://castle.princeton.edu/wp-content/uploads/2022/04/ORF-544-Week-7-Uncertainty-and-designing-policies.pdf">pdf</a>) <a href="https://castle.princeton.edu/wp-content/uploads/2019/03/ORF-544-Week-7-Uncertainty-and-designing-policies.pptx">(</a><a href="https://castle.princeton.edu/wp-content/uploads/2022/04/ORF-544-Week-7-Uncertainty-and-designing-policies.pptx">powerpoint</a><a href="https://castle.princeton.edu/wp-content/uploads/2019/03/ORF-544-Week-7-Uncertainty-and-designing-policies.pptx">)</a></p>
+<p>Week 8 – Policy function approximations (PFAs) and policy search (<a href="https://castle.princeton.edu/wp-content/uploads/2022/04/ORF-544-Week-8-PFAs-and-policy-search.pdf">pdf</a>) <a href="https://castle.princeton.edu/wp-content/uploads/2019/04/ORF-544-Week-8-PFAs-and-policy-search.pptx">(</a><a href="https://castle.princeton.edu/wp-content/uploads/2022/04/ORF-544-Week-8-PFAs-and-policy-search.pptx">powerpoint</a><a href="https://castle.princeton.edu/wp-content/uploads/2019/04/ORF-544-Week-8-PFAs-and-policy-search.pptx">)</a></p>
+<p>Week 9 – Cost function approximations (CFAs) and introduction to Markov decision processes (<a href="https://castle.princeton.edu/wp-content/uploads/2022/04/ORF-544-Week-9-CFAs-and-intro-to-MDP.pdf">pdf</a>) (<a href="https://castle.princeton.edu/wp-content/uploads/2022/04/ORF-544-Week-9-CFAs-and-intro-to-MDP.pptx">powerpoint</a>)</p>
+<p>Week 10 – Approximate dynamic programming and Q-learning (VFAs) (<a href="https://castle.princeton.edu/wp-content/uploads/2022/04/ORF-544-Week-10-Approximate-dynamic-prograrmming-and-Q-learning.pdf">pdf</a>) (<a href="https://castle.princeton.edu/wp-content/uploads/2022/04/ORF-544-Week-10-Approximate-dynamic-prograrmming-and-Q-learning.pptx">powerpoint</a>)</p>
+<p>Week 11 – Approximate dynamic programming – Monotonicity and convexity (<a href="https://castle.princeton.edu/wp-content/uploads/2022/04/ORF-544-Week-11-Approximate-dynamic-prograrmming-Monotonicity-and-convexity.pdf">pdf</a>) (<a href="https://castle.princeton.edu/wp-content/uploads/2022/04/ORF-544-Week-11-Approximate-dynamic-prograrmming-Monotonicity-and-convexity.pptx">powerpoint</a>)</p>
+<p>Week 12 – Lookahead policies (<a href="https://castle.princeton.edu/wp-content/uploads/2022/04/ORF-544-Week-12-Lookahead-policies.pdf">pdf</a>) (<a href="https://castle.princeton.edu/wp-content/uploads/2022/04/ORF-544-Week-12-Lookahead-policies.pptx">powerpoint</a>)</p>
+<h3>Introducing sequential decision analytics in an existing course</h3>
+<p>Imagine that you are teaching a course in any of the following topics:</p>
+<ul>
+<li>Financial trading – Economists love Bellman’s equation, but Wall St. traders use a variety of strategies, typically in an ad hoc way.</li>
+<li>Energy systems (any of a subset of topics) – Energy systems is such a rich topic, but classical training that engineers are given in controls is heavily biased toward deterministic models. Decision problems span design and control of renewables, storage systems, grids, demand response, R&amp;D for new technology, …</li>
+<li>Supply chain management – Another incredibly rich topic where uncertainty has become especially important.&nbsp; Simply identifying the decisions is a start, but learning how to make decisions in the presence of uncertainty is becoming extremely visible.</li>
+<li>Transportation (traffic, freight transportation, …) – Another tremendously rich topic that has a wide range of decision problems (design and control) along with different forms of uncertainty.</li>
+<li>Health (public health, personal health, medical decision making) – Health stands out given the importance of information collection (testing, monitoring, collecting samples, ….)</li>
+<li>Decision analytics for scientists – Scientists have to make many decisions.&nbsp; There is more to choosing which experiment to run than just pulling experimental choices out of thin air.&nbsp; Scientists tend to have less training in analytics, but they still need to make decisions that depend on belief models.</li>
+</ul>
+<p>For any problem setting, you can present the fundamental approach for sequential decision problems in a few simple steps:</p>
+<ul>
+<li>Pick a decision problem (something on the simple side) and use it to walk through the five elements of any sequential decision problem: state variables, decision variables, exogenous information (what we observe or learn), the transition function (how the state variable is updated given the decision and what we observe), and the objective function.&nbsp;</li>
+<li>I find it best to start by identifying decision variables, performance metrics, and the exogenous information.&nbsp; I introduce the concept of a policy, and then emphasize “we will design this later.”</li>
+<li>Explain that the state variable is all the information needed to compute the performance metrics, the decision (including constraints and any information needed by the policy we have not yet designed), and information needed to model the system as it evolves into the future.&nbsp; Be sure to emphasize that state variables are <em>information</em>, all the information you need (and only the information you need) to model your system as you move forward in time. State variables can include:
+<ul style="list-style-type: circle;">
+<li>Physical state variables (inventories, location of a drone, the state of a patient, investments, …). Decisions tend to act on the physical state variables.</li>
+<li>Other information that may be needed, but which does not belong to the physical state variables (prices, weather, environment, market conditions).</li>
+<li>Belief state variables – These capture probabilistic information about parameters and quantities we do not know perfectly.&nbsp; Belief state variables have to include any information we need to update beliefs given observations.</li>
+</ul>
+</li>
+<li>The exogenous information is whatever we observe or learn after making a decision.</li>
+<li>The transition function gives all the equations describe how the state variables evolve.&nbsp; This might capture the change in inventory or the location of a drone, changes in the temperature of an experiment or market prices, and the updating of beliefs from an observation.</li>
+<li>The objective function captures the performance metric, and how we evaluate our policy (which we still have not designed) over time, averaging over different outcomes.</li>
+</ul>
+<p>Next you typically want to talk about the uncertainties and what you may observe after you make a decision (the exogenous information).</p>
+<p>Then you want to talk about ways of making decisions (the policies).&nbsp; Ideally you have an idea of a simple policy just to illustrate the concept of a policy.&nbsp; Often (not always) there is some tunable parameter that affects the behavior of the policy.&nbsp; If this is the case, use your objective function to evaluate the performance of a particular setting of the tunable parameters, something you typically do in a computer simulator (but not always).</p>
+<p>At this point, it is useful to open up to a discussion of all four classes of policies.&nbsp; Again, it is helpful to illustrate these with an example, but this depends on your ability to identify problems that are well suited to each class of policy.</p>
+<p>You may wish to switch to a simple example such as an inventory problem, which is a kind of universal problem (we all have to solve our own inventory problems).&nbsp; It is easily to illustrate solving inventory problems with all four classes of policies.&nbsp; Which works best is very dependent on the characteristics of the policy.&nbsp;&nbsp;</p>
+<p>It should be possible to cover this material in two 90-minute lectures.&nbsp; I then suggest returning to this framework during the course as the need to make decisions arise.</p>
+<h3>Teaching sequential decision analytics to MBAs</h3>
+<p>MBA students are often working on complex problems such as supply chain management, where simply identifying the core elements of the problem can be a serious challenge.&nbsp; I think the universal modeling framework provides guidance in how to think about complex problems, even if the ultimate goal is not to create a mathematical model that can be implemented.&nbsp; While I still think it can be useful to introduce the basic notation of state variables, decision variables, exogenous information, transition function and objective function, the presentation should transition to the following questions:</p>
+<ul>
+<li>What performance metrics are being evaluated?</li>
+<li>What decisions need to be made (and who is, or should be, making the decisions)?</li>
+<li>What are the different sources of uncertainty, both in terms of knowledge of quantities and parameters, and what information is learned or observed after a decision is made?</li>
+</ul>
+<p>For simple problems, answering these questions is easy.&nbsp; But for a complex problem such as a supply chain, they are not obvious and are worthy of discussion.&nbsp; For example, imagine that you want to build a more robust supply chain.&nbsp; You have to start with: What actions might you take?&nbsp; This is the same as asking: What is the set of decisions?&nbsp; Analytics can help figure out&nbsp;<em>which</em> decision to take, but a computer cannot come up with the set of decisions over which to optimize.</p>
+<p>A very rich topic involves identifying sources of uncertainty.&nbsp; Again – while advanced analytics can help with quantifying uncertainty, we still need people with domain knowledge to come up with the list of different sources of uncertainty.&nbsp;&nbsp;</p>
+<p>Finally, for organizations with multiple decision makers (as occurs in virtually any business), designing metrics for different decision makers is a rich topic of discussion.</p>
+<p>I illustrate this idea of starting with the answers to these three questions and relating it to my framework in a talk I gave to a group of supply chain executives – <a href="https://tinyurl.com/SDAforSCMvideoexecutive">click here for a link to a video of the talk</a>.</p>
+<p>Once these questions are answered, you can start introducing the analytic notation for the five components of a sequential decision problem.&nbsp; Note that there is no real theory here – it is just assigning variable names to the different components.&nbsp; I recommend accompanying the analytical model with a spreadsheet (for simpler problems) to make the point that any spreadsheet can be translated to an analytical model – analytics is just a language.&nbsp; But spreadsheets have limitations, and software of any form can be hard to read if you want to understand relationships.</p>
+<p>You can follow the style I use in the book chapters, but adapt the presentation to your own business problems.</p>
+			</div><!-- .entry-content -->
+
+	
+</article><!-- #post-7286 -->
+
+		</main><!-- .site-main -->
+	</div><!-- .content-area -->
+
+
+	</div><!-- .site-content -->
+
+	<footer id="colophon" class="site-footer">
+		<div class="site-info">
+									<a href="https://wordpress.org/" class="imprint">
+				Proudly powered by WordPress			</a>
+		</div><!-- .site-info -->
+	</footer><!-- .site-footer -->
+
+</div><!-- .site -->
+
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/twentyfifteen/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<script id="wp-emoji-settings" type="application/json">
+{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://castle.princeton.edu/wp-includes/js/wp-emoji-release.min.js?ver=7.0"}}
+</script>
+<script type="module">
+/*! This file is auto-generated */
+const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(window._wpemojiSettings=a,"wpEmojiSettingsSupports"),s=["flag","emoji"];function i(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function c(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0);const a=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);return t.every((e,t)=>e===a[t])}function p(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var n=e.getImageData(16,16,1,1);for(let e=0;e<n.data.length;e++)if(0!==n.data[e])return!1;return!0}function u(e,t,n,a){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!a(e,"\ud83e\u1fac8")}return!1}function f(e,t,n,a){let r;const o=(r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):document.createElement("canvas")).getContext("2d",{willReadFrequently:!0}),s=(o.textBaseline="top",o.font="600 32px Arial",{});return e.forEach(e=>{s[e]=t(o,e,n,a)}),s}function r(e){var t=document.createElement("script");t.src=e,t.defer=!0,document.head.appendChild(t)}a.supports={everything:!0,everythingExceptFlag:!0},new Promise(t=>{let n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),c.toString(),p.toString()].join(",")+"));",a=new Blob([e],{type:"text/javascript"});const r=new Worker(URL.createObjectURL(a),{name:"wpTestEmojiSupports"});return void(r.onmessage=e=>{i(n=e.data),r.terminate(),t(n)})}catch(e){}i(n=f(s,u,c,p))}t(n)}).then(e=>{for(const n in e)a.supports[n]=e[n],a.supports.everything=a.supports.everything&&a.supports[n],"flag"!==n&&(a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&a.supports[n]);var t;a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&!a.supports.flag,a.supports.everything||((t=a.source||{}).concatemoji?r(t.concatemoji):t.wpemoji&&t.twemoji&&(r(t.twemoji),r(t.wpemoji)))});
+//# sourceURL=https://castle.princeton.edu/wp-includes/js/wp-emoji-loader.min.js
+</script>
+
+
+
+</body></html>

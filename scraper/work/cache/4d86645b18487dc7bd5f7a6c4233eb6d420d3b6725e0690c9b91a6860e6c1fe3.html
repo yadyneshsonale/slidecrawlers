@@ -1,0 +1,1123 @@
+<!DOCTYPE html><html lang="en-US" style="--header-main-height: 0px;"><head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<title>Harvard CS 121: Introduction to Theoretical Computer Science (Fall 2020) – Madhu Sudan</title>
+<meta name="robots" content="max-image-preview:large">
+<link rel="alternate" type="application/rss+xml" title="Madhu Sudan » Feed" href="https://madhu.seas.harvard.edu/feed/">
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://madhu.seas.harvard.edu/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fmadhu.seas.harvard.edu%2Fcourses-fall2020%2F">
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://madhu.seas.harvard.edu/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fmadhu.seas.harvard.edu%2Fcourses-fall2020%2F&amp;format=xml">
+<style id="wp-img-auto-sizes-contain-inline-css" type="text/css">
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<style id="wp-emoji-styles-inline-css" type="text/css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<style id="wp-block-library-inline-css" type="text/css">
+:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}.has-text-align-center{text-align:center}.has-text-align-left{text-align:left}.has-text-align-right{text-align:right}.has-fit-text{white-space:nowrap!important}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;word-wrap:normal!important}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style*=border-top-color]){border-top-style:solid}html :where([style*=border-right-color]){border-right-style:solid}html :where([style*=border-bottom-color]){border-bottom-style:solid}html :where([style*=border-left-color]){border-left-style:solid}html :where([style*=border-width]){border-style:solid}html :where([style*=border-top-width]){border-top-style:solid}html :where([style*=border-right-width]){border-right-style:solid}html :where([style*=border-bottom-width]){border-bottom-style:solid}html :where([style*=border-left-width]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+
+/*# sourceURL=wp-block-library-inline-css */
+</style>
+<style id="wp-block-heading-inline-css" type="text/css">
+h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-background,h3:where(.wp-block-heading).has-background,h4:where(.wp-block-heading).has-background,h5:where(.wp-block-heading).has-background,h6:where(.wp-block-heading).has-background{padding:1.25em 2.375em}h1.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h1.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h2.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h2.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h3.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h3.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h4.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h4.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h5.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h5.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h6.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h6.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]){rotate:180deg}
+/*# sourceURL=https://sites.harvard.edu/madhu-sudan/wp-includes/blocks/heading/style.min.css */
+</style>
+<style id="wp-block-list-inline-css" type="text/css">
+ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:1.25em 2.375em}
+/*# sourceURL=https://sites.harvard.edu/madhu-sudan/wp-includes/blocks/list/style.min.css */
+</style>
+<style id="wp-block-paragraph-inline-css" type="text/css">
+.is-small-text{font-size:.875em}.is-regular-text{font-size:1em}.is-large-text{font-size:2.25em}.is-larger-text{font-size:3em}.has-drop-cap:not(:focus):first-letter{float:left;font-size:8.4em;font-style:normal;font-weight:100;line-height:.68;margin:.05em .1em 0 0;text-transform:uppercase}body.rtl .has-drop-cap:not(:focus):first-letter{float:none;margin-left:.1em}p.has-drop-cap.has-background{overflow:hidden}:root :where(p.has-background){padding:1.25em 2.375em}:where(p.has-text-color:not(.has-link-color)) a{color:inherit}p.has-text-align-left[style*="writing-mode:vertical-lr"],p.has-text-align-right[style*="writing-mode:vertical-rl"]{rotate:180deg}
+/*# sourceURL=https://sites.harvard.edu/madhu-sudan/wp-includes/blocks/paragraph/style.min.css */
+</style>
+
+<style id="classic-theme-styles-inline-css" type="text/css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+<link rel="stylesheet" id="coblocks-frontend-css" href="https://madhu.seas.harvard.edu/wp-content/plugins/coblocks/dist/style-coblocks-1.css?ver=3.1.17.1" type="text/css" media="all">
+
+<link rel="stylesheet" id="coblocks-extensions-css" href="https://madhu.seas.harvard.edu/wp-content/plugins/coblocks/dist/style-coblocks-extensions.css?ver=3.1.17.1" type="text/css" media="all">
+<link rel="stylesheet" id="coblocks-animation-css" href="https://madhu.seas.harvard.edu/wp-content/plugins/coblocks/dist/style-coblocks-animation.css?ver=2677611078ee87eb3b1c" type="text/css" media="all">
+<style id="global-styles-inline-css" type="text/css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: white;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--color-bg-alt: #eeeeec;--wp--preset--color--hero-main-bg-color: #24639e;--wp--preset--color--color-bg: #ffffff;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--font-size--larger: 48px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+<link rel="stylesheet" id="cpschool-styles-css" href="https://madhu.seas.harvard.edu/wp-content/themes/cpschool/css/theme.min.css?ver=0.9.0.5.1772529810" type="text/css" media="all">
+<link rel="stylesheet" id="dashicons-css" href="https://madhu.seas.harvard.edu/wp-includes/css/dashicons.min.css?ver=6.9.4" type="text/css" media="all">
+<link rel="stylesheet" id="cpsc-styles-css" href="https://madhu.seas.harvard.edu/wp-content/themes/harvard-flex/css/theme.min.css?ver=0.9.0.5.1754465969" type="text/css" media="all">
+<script type="text/javascript" src="https://madhu.seas.harvard.edu/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script type="text/javascript" src="https://madhu.seas.harvard.edu/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<link rel="https://api.w.org/" href="https://madhu.seas.harvard.edu/wp-json/"><link rel="alternate" title="JSON" type="application/json" href="https://madhu.seas.harvard.edu/wp-json/wp/v2/pages/1697"><meta name="generator" content="Harvard University Sites 6.9.4 - http://sites.harvard.edu/">
+<link rel="canonical" href="https://madhu.seas.harvard.edu/courses-fall2020/">
+<link rel="shortlink" href="https://madhu.seas.harvard.edu/?p=1697">
+	<style>
+		@media screen and (max-width: 782px) {
+			#wpadminbar li#wp-admin-bar-log-in,
+			#wpadminbar li#wp-admin-bar-register {
+				display: block;
+			}
+
+			#wpadminbar li#wp-admin-bar-log-in a,
+			#wpadminbar li#wp-admin-bar-register a {
+				padding: 0 8px;
+			}
+		}
+	</style>
+
+        <script type="text/javascript">
+            var jQueryMigrateHelperHasSentDowngrade = false;
+
+			window.onerror = function( msg, url, line, col, error ) {
+				// Break out early, do not processing if a downgrade reqeust was already sent.
+				if ( jQueryMigrateHelperHasSentDowngrade ) {
+					return true;
+                }
+
+				var xhr = new XMLHttpRequest();
+				var nonce = '8b51947058';
+				var jQueryFunctions = [
+					'andSelf',
+					'browser',
+					'live',
+					'boxModel',
+					'support.boxModel',
+					'size',
+					'swap',
+					'clean',
+					'sub',
+                ];
+				var match_pattern = /\)\.(.+?) is not a function/;
+                var erroredFunction = msg.match( match_pattern );
+
+                // If there was no matching functions, do not try to downgrade.
+                if ( null === erroredFunction || typeof erroredFunction !== 'object' || typeof erroredFunction[1] === "undefined" || -1 === jQueryFunctions.indexOf( erroredFunction[1] ) ) {
+                    return true;
+                }
+
+                // Set that we've now attempted a downgrade request.
+                jQueryMigrateHelperHasSentDowngrade = true;
+
+				xhr.open( 'POST', 'https://madhu.seas.harvard.edu/wp-admin/admin-ajax.php' );
+				xhr.setRequestHeader( 'Content-Type', 'application/x-www-form-urlencoded' );
+				xhr.onload = function () {
+					var response,
+                        reload = false;
+
+					if ( 200 === xhr.status ) {
+                        try {
+                        	response = JSON.parse( xhr.response );
+
+                        	reload = response.data.reload;
+                        } catch ( e ) {
+                        	reload = false;
+                        }
+                    }
+
+					// Automatically reload the page if a deprecation caused an automatic downgrade, ensure visitors get the best possible experience.
+					if ( reload ) {
+						location.reload();
+                    }
+				};
+
+				xhr.send( encodeURI( 'action=jquery-migrate-downgrade-version&_wpnonce=' + nonce ) );
+
+				// Suppress error alerts in older browsers
+				return true;
+			}
+        </script>
+
+		<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Madhu Sudan - Gordon McKay Professor of Computer Science Harvard John A. Paulson School of Engineering and Applied Sciences">
+					<!-- Google Analytics tracking code output by Beehive Analytics Pro -->
+						<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-GMEVN96PYN&amp;l=beehiveDataLayer"></script>
+		<script>
+						window.beehiveDataLayer = window.beehiveDataLayer || [];
+			function gaplusu() {beehiveDataLayer.push(arguments);}
+			gaplusu('js', new Date())
+						gaplusu('config', 'G-GMEVN96PYN', {
+				'anonymize_ip': false,
+				'allow_google_signals': false,
+			})
+					</script>
+		<style type="text/css">
+/* <![CDATA[ */
+img.latex { vertical-align: middle; border: none; }
+/* ]]> */
+</style>
+<style id="kirki-inline-styles">.logo-font{font-family:inter;}.container{max-width:1170px;}:root{--site-width:1170px;--content-width:1170px;--body-font-size:100;--roundness:3px;--shadows:4px;--color-bg:#ffffff;--color-bg-alt:#eeeeec;--color-bg-contrast:#000000;--color-bg-accent:#24639e;--color-bg-accent-a:rgba(36,99,158,0.5);--color-bg-accent-contrast:#ffffff;--color-bg-accent-hl:#24639e;--color-bg-accent-hl-a:rgba(36,99,158,0.5);--color-bg-accent-hl-contrast:#ffffff;--color-bg-alt-contrast:#000000;--color-bg-alt-accent:#205b92;--color-bg-alt-accent-a:rgba(32,91,146,0.5);--color-bg-alt-accent-contrast:#ffffff;--color-bg-alt-accent-hl:#205b92;--color-bg-alt-accent-hl-a:rgba(32,91,146,0.5);--color-bg-alt-accent-hl-contrast:#ffffff;--header-main-height:117.91px;--header-main-gap-height:0px;--header-main-padding-v:100;--header-main-logo-font-size:100;--header-main-font-size:100;--header-secondary-font-size:100;--header-secondary-padding-v:0;--hero-main-bg-color:#24639e;--hero-main-bg-color-contrast:#ffffff;--hero-main-bg-color-accent:#fafcfe;--hero-main-bg-color-accent-a:rgba(250,252,254,0.5);--hero-main-bg-color-accent-contrast:#000000;--hero-main-bg-color-accent-hl:#fafcfe;--hero-main-bg-color-accent-hl-a:rgba(250,252,254,0.5);--hero-main-bg-color-accent-hl-contrast:#000000;--hero-main-img-opacity:0.2;--hero-main-header-main-opacity:1;--headers-font-size:100;}body{font-family:inter;}#navbar-main .nav{font-family:inherit;}.h1,.h2,.h3,.h4,.h5,.h6,h1,h2,h3,h4,h5,h6{font-family:inter;}</style></head>
+
+<body class="wp-singular page-template-default page page-id-1697 wp-embed-responsive wp-theme-cpschool wp-child-theme-harvard-flex h-style-separator-bottom sidebars-check-sticky singular main-wrapper-margin-top-disabled">
+
+<div class="site" id="page">
+	<a class="skip-link sr-only sr-only-focusable" href="#content">Skip to content</a>
+
+		<div id="branding_header">
+	<div class="branding-container clearfix container">
+		<div class="branding-left">
+			<a href="https://www.harvard.edu/">
+				<img src="https://madhu.seas.harvard.edu/wp-content/themes/harvard-flex/img/harvard-logo.svg" alt="Harvard University homepage" width="235" height="32">
+			</a>
+		</div>
+		<div class="branding-right">
+			<a href="https://www.harvard.edu/">HARVARD.EDU</a>
+		</div>
+	</div>
+</div>
+
+	
+	<div id="wrapper-navbar-main-top"></div>
+		<div id="wrapper-navbar-main" class="wrapper-navbar" itemscope="" itemtype="http://schema.org/WebSite">
+		<nav id="navbar-main" class="navbar navbar-expand-md nav-styling-underline has-background has-header-main-bg-color-background-color" aria-label="main">
+			<div class="navbar-container container">
+				
+				<!-- Your site title as branding in the menu -->
+															<div class="navbar-brand-holder">
+												
+							<a class="navbar-brand logo-font custom-bg-disabled" rel="home" href="https://madhu.seas.harvard.edu/" title="Madhu Sudan" itemprop="url">
+								<span class="navbar-brand-text">Madhu Sudan</span>
+
+															</a>
+
+															<a rel="home" href="https://madhu.seas.harvard.edu/" title="Madhu Sudan" class="navbar-brand-subtext">
+									Gordon McKay Professor of Computer Science Harvard John A. Paulson School of Engineering and Applied Sciences								</a>
+							
+																		</div>
+									<!-- end custom logo -->
+
+				
+				<div class="navbar-navs-container">
+					<div id="navbar-main-nav-desktop" class="navbar-nav-container"><ul id="menu-main-desktop" class="nav navbar-nav"><li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-menu-main-desktop-3207" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-3207 nav-item"><a class="nav-link" title="Home" href="https://madhu.seas.harvard.edu/"><span class="menu-item-text">Home</span></a></li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-menu-main-desktop-3204" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3204 nav-item"><a class="nav-link" title="Teaching" href="https://madhu.seas.harvard.edu/teaching/"><span class="menu-item-text">Teaching</span></a></li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-menu-main-desktop-3213" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3213 nav-item"><a class="nav-link" title="Students" href="https://madhu.seas.harvard.edu/students/"><span class="menu-item-text">Students</span></a></li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-menu-main-desktop-3209" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3209 nav-item"><a class="nav-link" title="Papers" href="https://sites.google.com/g.harvard.edu/madhu-sudans-papers"><span class="menu-item-text">Papers</span></a></li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-menu-main-desktop-3203" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3203 nav-item"><a class="nav-link" title="Talks" href="https://madhu.seas.harvard.edu/talks/"><span class="menu-item-text">Talks</span></a></li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-menu-main-desktop-3214" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown menu-item-3214 nav-item animate"><a class="dropdown-toggle nav-link" title="Bio" href="#" id="menu-item-dropdown-menu-main-desktop-3214" data-toggle="dropdown" aria-expanded="false" role="button"><span class="menu-item-text">Bio</span></a>
+<ul id="menu-item-dropdown-menu-main-desktop-3214-dropdown" class="dropdown-menu" aria-labelledby="menu-item-dropdown-menu-main-desktop-3214">
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-menu-main-desktop-3215" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3215 nav-item"><a class="dropdown-item" title="Short CV" href="https://madhu.seas.harvard.edu/short-cv.pdf"><span class="menu-item-text">Short CV</span></a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-menu-main-desktop-3216" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3216 nav-item"><a class="dropdown-item" title="Long CV" href="https://madhu.seas.harvard.edu/long-cv.pdf"><span class="menu-item-text">Long CV</span></a></li>
+</ul>
+</li>
+</ul></div>					
+					<div id="navbar-main-nav-buttons">
+						<ul class="nav navbar-nav navbar-button-nav-right">
+															<li id="navbar-main-btn-search">
+									<button type="button" class="btn btn-secondary nav-link has-styling" data-toggle="modal" data-target="#modal-search">
+										<i aria-hidden="true" class="cps-icon cps-icon-search"></i>
+										<span aria-hidden="true" class="d-none">Search</span>
+										<span class="sr-only">Toggle search interface</span>
+									</button>
+								</li>
+							
+														<li id="navbar-main-btn-slide-in-menu" class="btn-modal-slide-in-menu-holder has-mobile">
+								<button type="button" class="btn btn-secondary nav-link has-styling" data-toggle="modal" data-target="#modal-slide-in-menu">
+									<i aria-hidden="true" class="cps-icon cps-icon-menu"></i>
+									<span aria-hidden="true" class="d-none">Menu</span>
+									<span class="sr-only">Toggle extended navigation</span>
+								</button>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+							</div><!-- #navbar-container -->
+		</nav>
+	</div><!-- #wrapper-navbar end -->
+
+	
+	
+<div class="main-wrapper wrapper" id="page-wrapper">
+	<div class="container" id="content">
+		<div class="row">
+			<!-- Do the left sidebar check -->
+			
+
+<div class="col-md-12 col-xl-12 content-area" id="primary">
+
+			<main class="site-main" id="main">
+									
+<article class="post-1697 page type-page status-publish hentry" id="post-1697">
+	
+	<div class="entry-content">
+		
+		
+<h2 class="wp-block-heading"><a href="https://madhu.seas.harvard.edu/">Madhu Sudan</a>: Harvard CS 121, Fall 2020: Introduction to Theoretical Computer Science</h2>
+
+
+
+<h3 class="wp-block-heading"><strong>General Info</strong></h3>
+
+
+
+<ul class="wp-block-list">
+<li>Lectures: TuTh 10:30am-12pm. Access via canvas&nbsp;→&nbsp;zoom&nbsp;→&nbsp;Lectures. Attending lectures is highly recommended!</li>
+
+
+
+<li><a href="https://madhu.seas.harvard.edu/files/2024/10/fall2020-cs121-staff.pdf">The Teaching Team</a>.</li>
+
+
+
+<li>Discussion Site:&nbsp;<a href="https://piazza.com/harvard/fall2020/cs121/home">CS 121 Piazza</a></li>
+
+
+
+<li>Gradescope: Needed for submitting your problem sets.</li>
+</ul>
+
+
+
+<div class="wp-block-coblocks-accordion">
+<div class="wp-block-coblocks-accordion-item"><details><summary class="wp-block-coblocks-accordion-item__title">Staff</summary><div class="wp-block-coblocks-accordion-item__content">
+<h3 class="wp-block-heading"><strong>Teaching team: Harvard CS 121: Introduction to Theoretical Computer Science (Fall 2020):</strong></h3>
+
+
+
+<ul class="wp-block-list">
+<li>Instructors:
+<ul class="wp-block-list">
+<li><a href="https://madhu.seas.harvard.edu/">Madhu Sudan</a>. madhu@cs.harvard.edu</li>
+
+
+
+<li>Adam Hesterberg. ahesterberg@g.harvard.edu</li>
+</ul>
+</li>
+</ul>
+
+
+
+<p>We’re very excited to have an amazing cohort of TFs and Patel Fellows associated with the course!</p>
+
+
+
+<ul class="wp-block-list">
+<li>Head TF: William Burke. wburke@g.harvard.edu</li>
+
+
+
+<li>Extension school TF: Amy Wang.</li>
+
+
+
+<li>Patel Fellows:
+<ul class="wp-block-list">
+<li>Serena Davis. serenadavis@college.harvard.edu.</li>
+
+
+
+<li>Nari Johnson. njohnson@college.harvard.edu.</li>
+</ul>
+</li>
+
+
+
+<li>TFs:
+<ul class="wp-block-list">
+<li>Joanna Boyland. jboyland@college.harvard.edu.</li>
+
+
+
+<li>Diego Gutierrez. diegogutierrez@college.harvard.edu.</li>
+
+
+
+<li>Ife Omidiran. omidiran@college.harvard.edu.</li>
+
+
+
+<li>Zuzanna Skoczylas.&nbsp;zuzanna_skoczylas@college.harvard.edu.</li>
+
+
+
+<li>Noah Singer. noahsinger@college.harvard.edu</li>
+
+
+
+<li>Sahana Srinivasan. sahanasrinivasan@college.harvard.edu</li>
+
+
+
+<li>Alec Sun. suna@college.harvard.edu</li>
+
+
+
+<li>Richard Xu. raxu@college.harvard.edu.</li>
+</ul>
+</li>
+</ul>
+</div></details></div>
+</div>
+
+
+
+<div class="wp-block-coblocks-accordion">
+<div class="wp-block-coblocks-accordion-item"><details><summary class="wp-block-coblocks-accordion-item__title">Policies and Expectations&nbsp;(aka “syllabus”). Note that&nbsp;Tablets + Styluses&nbsp;are required for active participation in sections and office hours.</summary><div class="wp-block-coblocks-accordion-item__content">
+<h3 class="wp-block-heading" id="h.taktias1m3qv"><strong>Grades</strong>&nbsp;will be based on the following</h3>
+
+
+
+<ol start="1" class="wp-block-list">
+<li>Exams: 65% (Midterm 1 – 15%, Midterm 2 – 20%, Final – 30%).</li>
+
+
+
+<li>6 Problem Sets. (30%)</li>
+
+
+
+<li>Class Participation. (5%)</li>
+</ol>
+
+
+
+<h3 class="wp-block-heading" id="h.kbpua52zp8si"><strong>Expectations</strong></h3>
+
+
+
+<ol start="1" class="wp-block-list">
+<li>Attendance in&nbsp;<strong>lecture&nbsp;</strong>is strongly recommended but not required. Students unable to attend lecture are expected to watch the videos within 24 hours of posting, and follow up on this in sections and office hours.</li>
+
+
+
+<li>Attending one&nbsp;<strong>section&nbsp;</strong>per week is also strongly recommended.</li>
+
+
+
+<li><strong>Office hours</strong>&nbsp;are available for students to engage further in the material and to get help on material. It will also be another avenue for getting more “live” interaction in a remote semester.</li>
+
+
+
+<li>The&nbsp;<strong>class discussion board</strong>&nbsp;is another way to participate. Please use the forum not only to ask questions, but also answer others’ questions! Course announcements will be made on Piazza, which students are expected to check.</li>
+
+
+
+<li>Participation points can be earned through any of the above. What we seek in “participation” is evidence of effort to learn or teach the material, and not evidence of mastery of the material. So do not hesitate to ask what may seem like a dumb question to you in any setting where you are able to participate.</li>
+
+
+
+<li><strong>Problem sets</strong>: There are detailed instructions on problem sets on what collaboration is allowed and what is not. In a nutshell, you are encouraged to collaborate when thinking about solutions. But no collaboration is allowed when writing solutions up!</li>
+</ol>
+
+
+
+<p><strong>Websites and Materials</strong></p>
+
+
+
+<ul class="wp-block-list">
+<li>The&nbsp;<a href="https://www.google.com/url?q=https://madhu.seas.harvard.edu/courses/Fall2020/&amp;sa=D&amp;ust=1598275333309000&amp;usg=AOvVaw2LHWXS-vzWXPkZtegORp7n">course website</a>&nbsp;has information about the course.</li>
+
+
+
+<li>Assignments and exams will be submitted on&nbsp;<a href="https://www.google.com/url?q=https://www.gradescope.com/courses/161828&amp;sa=D&amp;ust=1598275333309000&amp;usg=AOvVaw3XReX7Drpi-owN0t43THCg">Gradescope</a>.</li>
+
+
+
+<li>Some course materials will be on&nbsp;<a href="https://www.google.com/url?q=https://canvas.harvard.edu/courses/74601&amp;sa=D&amp;ust=1598275333310000&amp;usg=AOvVaw3ITbDfnzuNFriIRo-fTInc">Canvas</a>.</li>
+
+
+
+<li>Course discussion and some announcements will be&nbsp;<a href="https://www.google.com/url?q=https://piazza.com/harvard/fall2020/cs121/home&amp;sa=D&amp;ust=1598275333310000&amp;usg=AOvVaw2AOi0z6fvBTtgBhEpWkaZX">on Piazza</a>.</li>
+
+
+
+<li>The course uses&nbsp;<a href="https://www.google.com/url?q=https://introtcs.org/public/index.html&amp;sa=D&amp;ust=1598275333311000&amp;usg=AOvVaw1Gi5Cz3amrXeVjfc5xGkkf">Barak’s free textbook</a>. Some students also use&nbsp;<a href="https://www.google.com/url?q=https://www.google.com/search?gs_ssp%3DeJzj4tLP1TcwSS8pN0s3YPQyKs4sKE4tUi9WyMwrKcpPKU0uyczPUyjJVyjJSAXh_KJKhfw0heT83ILSkkSQJADMMBc5%26q%3Dsipser%2527s%2Bintroduction%2Bto%2Bthe%2Btheory%2Bof%2Bcomputation%26oq%3Dsipser%2527s%26aqs%3Dchrome.1.69i57j46j0l2j46j0l2.3069j0j7%26sourceid%3Dchrome%26ie%3DUTF-8&amp;sa=D&amp;ust=1598275333311000&amp;usg=AOvVaw3G_0BfungFqPwVeu2Nu2vi">Sipser’s book</a>, which isn’t required. We strongly recommend that you read at least one.</li>
+
+
+
+<li>On the&nbsp;<a href="https://www.google.com/url?q=https://docs.google.com/spreadsheets/d/1uEY6pOPfNf2hFV-o3SMlZJTBdkF6tw5sqbbOAuXW4Qk/edit%23gid%3D0&amp;sa=D&amp;ust=1598275333312000&amp;usg=AOvVaw2ZJrxF-yZSe6j-U9XhtWST">course calendar</a>&nbsp;we list the topics of each lecture and sections of the former and, where applicable, the latter book corresponding to each lecture.</li>
+
+
+
+<li>Lectures, Sections, and Office Hours use Zoom, and have components that use shared whiteboards.</li>
+
+
+
+<li>An internet connection good enough to access the above is required. A tablet and stylus is required for maximally effective participation in both sections and office hours.</li>
+</ul>
+
+
+
+<p>We’re committed to supporting&nbsp;<strong>diversity, inclusion and belonging, and&nbsp;</strong><strong>accessibility</strong>. The&nbsp;<a href="https://www.google.com/url?q=https://accessibility.harvard.edu/&amp;sa=D&amp;ust=1598275333313000&amp;usg=AOvVaw2KIgqtsYZZNGlu4oRBp3Ut">University Disability Office</a>&nbsp;and&nbsp;<a href="https://www.google.com/url?q=https://www.extension.harvard.edu/resources-policies/resources/disability-servicesaccessibility&amp;sa=D&amp;ust=1598275333314000&amp;usg=AOvVaw1lvLcdWyeCNYkBFmw2n6Hr">Extension School Accessibility Office</a>&nbsp;offer a variety of accommodations and services to college and extension school students, respectively, with documented disabilities.&nbsp;We seek to create a learning environment that supports a diversity of thoughts, perspectives and experiences: if you feel uncomfortable sharing your thoughts with the class, please tell us. We include and support students and staff of many identities (including race, gender, class, sexuality, socioeconomic status, religion, and ability), and ask that you similarly support your fellow students. If something was said in class (by us or anyone else) that made you feel uncomfortable, please talk to us about it. If you feel like your performance in the class is being impacted by your experiences outside of class, please don’t hesitate to come and talk with us. (Credit: based on the statements of Professor Boaz Barak and Dr. Monica Linden at Brown University.).</p>
+
+
+
+<h3 class="wp-block-heading" id="h.wn8ccf66oryg"><strong>Prerequisites and mathematical background</strong></h3>
+
+
+
+<p>Formally, the prerequisites for this course are “experience in formal mathematics at the level of CS 20”. Read chapter 0 of&nbsp;<a href="https://www.google.com/url?q=https://introtcs.org/public/index.html&amp;sa=D&amp;ust=1598275333315000&amp;usg=AOvVaw19go0PgEsYPKngbwTkutO4">Barak’s textbook</a>&nbsp;and see&nbsp;<a href="https://www.google.com/url?q=https://cs121.boazbarak.org/background/&amp;sa=D&amp;ust=1598275333315000&amp;usg=AOvVaw3KbFErkRs5GzNQ462GE1gj">this page</a>&nbsp;to understand what this means and how to prepare yourself for the course. Homework 0&nbsp;(<a href="https://www.google.com/url?q=https://madhu.seas.harvard.edu/courses/Fall2020/psets/homework0.tex&amp;sa=D&amp;ust=1598275333316000&amp;usg=AOvVaw0hqjcg3_UP9fePabF2erBM">tex</a>,&nbsp;<a href="https://www.google.com/url?q=https://madhu.seas.harvard.edu/courses/Fall2020/psets/homework0.pdf&amp;sa=D&amp;ust=1598275333316000&amp;usg=AOvVaw1fc2dniu5QV8m-eM3J-0l7">pdf</a>), which is due on the first day of class (but not part of your problem set grade) is intended to help you diagnose your mathematical background; we’ll grade it and talk with you about it if appropriate.</p>
+
+
+
+<h3 class="wp-block-heading" id="h.ixau9ikga3xt"><strong>Problem sets</strong></h3>
+
+
+
+<p>Theoretical problem sets require thinking and take substantial and unpredictable amounts of time, so you should make sure to allow for sufficient time to work on them.</p>
+
+
+
+<p>Problem sets are&nbsp;<strong>due&nbsp;</strong>at 11:59pm ET on the due date posted on the&nbsp;<a href="https://www.google.com/url?q=https://docs.google.com/spreadsheets/d/1uEY6pOPfNf2hFV-o3SMlZJTBdkF6tw5sqbbOAuXW4Qk/edit%23gid%3D0&amp;sa=D&amp;ust=1598275333317000&amp;usg=AOvVaw0uD-YhTF5eZy1uERfwMMgA">course calendar</a>. All problem sets must be submitted as PDF files through Gradescope. We recommend that the PDF be produced by LaTeX or Markdown. You may extend your deadline for a problem set by one day up to eight times, at most twice per problem set, by submitting late; problem sets late beyond this will not earn credit. You are responsible for keeping track of your own late days.</p>
+
+
+
+<p>You are allowed to&nbsp;<strong>collaborate</strong>&nbsp;with other students currently taking the course, individually or by the discussion board, in discussing and brainstorming the solutions, but when you are done talking, you must write up your solutions independently and may not check them against each other. There may be no passing of homework papers between collaborators; nor is it permissible for one person simply to tell another the answer. You should list the names of all the students you collaborated with in the first page.</p>
+
+
+
+<p>Each problem set has some&nbsp;<strong>“bonus problems”</strong>&nbsp;which don’t count for your pset grade, although we might use them when recommending departmental honors and writing letters of recommendation.</p>
+
+
+
+<p>All&nbsp;<strong>regrade&nbsp;</strong>requests should be made via Gradescope no later than midnight on Sunday after the pset is returned. Handling regrade requests takes a lot of time from the teaching staff, time that could be spent on answering student questions, preparing course material, etc.. I encourage you to be judicious in such requests, and only reserve it for the case of clear mistakes by the grader (which can happen – we’re not perfect!). Needless to say, a regrade request triggers re-examining the problem set, which may result in a lower grade as well. Also, we will not accept a regrade request of the form “Johnny made a similar mistake and got fewer points deducted” unless Johnny is willing to have us regrade his problem set as well.</p>
+
+
+
+<p><strong>Midterms</strong>: The two midterms will be in two of the normal lecture time slots: you’ll download them at the start of lecture, spend lecture time working on them, and submit your solutions at the end. They’re unproctored; we’ll have you sign an honor statement that you didn’t use unallowed resources (extra time, other humans, computers, or the internet). Even if you don’t regularly attend lecture, you’ll need to attend those to take them. If you cannot attend the midterm for a valid reason, contact us and we will schedule a makeup. The midterms account for 15% and 20%, respectively, of your final grade.</p>
+
+
+
+<p><strong>Final</strong>: You can take the final in any three-hour block from 12-10 1:21pm to 12-12 1:21pm, by downloading it and sending us your answers 3 hours later. In the first four hours of that block we guarantee that we’ll be monitoring Piazza for questions and trying to respond in real time; you’re welcome to take it outside that time, but responses to any questions you have for staff about the exam may be too slow to be useful. The final exam will count for 30% of the grade.</p>
+
+
+
+<p><strong>Participation</strong>: Each student is expected to participate in at least two of lectures, sections, office hours, and the class discussion board; participation is worth 5% of your grade. (Anonymous or private postings don’t count for class discussion board participation credit. We encourage public posting for the benefit of other students who share your questions but posts containing your solutions to assignments should be private. You’re welcome to post anonymously, not for participation credit, if you’d like.)</p>
+
+
+
+<h3 class="wp-block-heading"><strong>CS 121.5</strong></h3>
+
+
+
+<p>While this course has enough content and work to satisfy most students, some students might be interested in deeper explorations of theoretical computer science, and to learn more on advanced topics such as proof systems, derandomization, quantum computing, circuit complexity, communication complexity, error correcting codes, algorithms for learning and online optimization, and more. For these students we will hold an “advanced section” (“CS 121.5”), whose goal would not be to review material taught in class but rather to explore every week an advanced topic related to this week’s lectures.</p>
+
+
+
+<h3 class="wp-block-heading" id="h.gy0y1045ylpd"><strong>Collaboration and academic integrity</strong></h3>
+
+
+
+<p>Collaboration is highly encouraged in this course. We welcome you to form study groups, share relevant resources you found online, and talk about the concepts in this course. Several parts of the course are designed to help you form study groups: the second and fourth fifteen-minute blocks of each lecture, group work in sections, office hours, and the class discussion board.</p>
+
+
+
+<p>However, there is a certain component of learning that is only achieved through the process of thinking deeply on a problem and (figuratively!) “banging your head against the wall”. So, for the problem sets themselves, you should follow the collaboration policy closely and make sure you “own your solutions”. If you get stuck on a problem set question, ask questions on the discussion board or come to office hours, and TFs will help you get “unstuck”. They will&nbsp;<em>not</em>&nbsp;give you hints, but rather review material from lecture and work through more examples until you are in a better place to continue your explorations. However, keep in mind that we do not expect you to solve every single pset question, and as long as you give it a good try, you will learn from the process, which is ultimately the most important thing.</p>
+
+
+
+<p>We expect all students to adhere to the&nbsp;<a href="https://www.google.com/url?q=https://honor.fas.harvard.edu/honor-code&amp;sa=D&amp;ust=1598275333320000&amp;usg=AOvVaw13RjzUXNEptM1-ZtVZtyI7">Harvard honor code</a>. Some examples of activities that violate academic integrity include:</p>
+
+
+
+<ol start="1" class="wp-block-list">
+<li>Copying another student’s answer or sharing your answers for a quiz, problem set, midterm, or final. Brainstorming on problem set questions with other students is OK, sharing written solutions is not.</li>
+
+
+
+<li>Discussing problem sets with anyone except a current student in the course or a member of the teaching team.</li>
+
+
+
+<li>Not citing a person or resource that helped you in the problem set.</li>
+
+
+
+<li>Posting problem set questions or answers online, or sharing them with students that are not currently enrolled in this course.</li>
+
+
+
+<li>Using problem set solutions from previous offerings of this course.</li>
+
+
+
+<li>Searching online for answers for particular problem set questions. It is completely fine to find and use general resources online on the course material. You should however cite any resource you used in your answer.</li>
+
+
+
+<li>Searching online for answers for the online quizzes. You should only attempt the quiz after you have read the text fully, and the text itself contain all information you need to answer it.</li>
+
+
+
+<li>Understating the amount of late days you used in the problem set declaration.</li>
+</ol>
+
+
+
+<p>Note that if we suspect an honor code violation, it could take us time to investigate and verify it, and so you may only find out about the issue very late in the term, or even after it ends. If you are worried that you might have inadvertently violated the honor code, it’s always best to come to us and discuss this.</p>
+
+
+
+<p>If you are not sure if something is an honor code violation or not, please&nbsp;<em>ask us</em>!</p>
+
+
+
+<h3 class="wp-block-heading" id="h.bgstkrdaa6a1"><strong>Falling behind</strong></h3>
+
+
+
+<p>If you are starting to have difficulties in this course we recommend that you come talk to us (the instructor or the TF’s) before you are so far behind that it is impossible to catch up. We want you to succeed in this course and are here to help you do so! We recommend that students also reach out to the Patel Fellows associated with CS 121 for help.</p>
+
+
+
+<h3 class="wp-block-heading"><strong>Patel Fellows</strong></h3>
+
+
+
+<p>Nari Johnson and Serena Davis will be the Patel Fellows for CS121. The aim of the Patel fellowship is to provide extra help for Harvard College students who are having trouble in the class, typically as evidenced by performance below the class average. If you think that you are someone who would benefit from engaging with a Patel fellow (typically in the form of 1-on-1 or small group tutoring), you should reach out to the Patel fellows using&nbsp;<a href="https://forms.gle/zGLh2HMzRecyRg6g9">this</a>&nbsp;form. Please feel free to direct any additional questions to Nari and Serena at cs121.fall2020.patel.fellows@gmail.com. Please be aware that our Patel Fellows have limited capacity and are only able to work 12 hours per week, and so we will determine eligibility by helping students who are struggling the most.&nbsp; We also encourage anyone who would like additional tutoring support to sign up for tutoring at the Academic Resource Center.</p>
+
+
+
+<h3 class="wp-block-heading" id="h.fzeyxnk0phy6"><strong>Student well being</strong></h3>
+
+
+
+<p>Your physical and mental well being is very important to us. If you have any concerns or issues in this course, please reach out to us (Madhu and Adam), the teaching fellows, your resident dean, or Harvard services such as&nbsp;<a href="https://www.google.com/url?q=https://huhs.harvard.edu/services/counseling-and-mental-health&amp;sa=D&amp;ust=1598275333323000&amp;usg=AOvVaw2FQZGTRXEhHYlAXWMBsJzY">Counseling and Mental Health Services</a>&nbsp;(phone: 617-495-2042 (on business hours), 617-495-5711 (all other times), see also&nbsp;<a href="https://www.google.com/url?q=https://huhs.harvard.edu/lets-talk&amp;sa=D&amp;ust=1598275333324000&amp;usg=AOvVaw0iHzViDjpvQtewJgPPpq1k">Let’s Talk</a>), the confidential peer counselling program&nbsp;<a href="https://www.google.com/url?q=http://www.hcs.harvard.edu/room13&amp;sa=D&amp;ust=1598275333324000&amp;usg=AOvVaw2hdD6aeOqiqAEofElu8-fd">Room 13</a>&nbsp;(phone: 617-495-4969), and the&nbsp;<a href="https://www.google.com/url?q=https://bsc.harvard.edu/academic-counseling&amp;sa=D&amp;ust=1598275333325000&amp;usg=AOvVaw2rFzbuPI9eRJ16mha9Jdfz">Beuro of Study Council</a>&nbsp;(phone 617-495-4969).</p>
+
+
+
+<p>If you have a serious medical or other emergency, please have your resident dean contact the course instructor. We will try to accommodate you as much as possible. For extension students, please contact the instructor and/or the extension TFs directly.</p>
+
+
+
+<p>If you have a health condition that affects your learning or classroom experience, please let me know as soon as possible. Please also share with me any letter you have from the AEO so we can provide the appropriate accommodations.</p>
+</div></details></div>
+</div>
+
+
+
+<h3 class="wp-block-heading"><strong>Announcements</strong></h3>
+
+
+
+<ul class="wp-block-list">
+<li>11/19/2020:&nbsp;Homework 6 out. Due 12/03/2020.</li>
+
+
+
+<li>11/18/2020:&nbsp;Advanced section Thursday at 4:30pm:&nbsp;<a href="https://sites.google.com/site/roeitell/">Roei Tell</a>&nbsp;on Randomness, Pseudorandomness and Derandomization. Details&nbsp;<a href="https://docs.google.com/document/d/1J0Mrpn8_27yTfFuhXvuCunYmDy1eb-4b4t-21UhXC2s/edit">here.</a></li>
+
+
+
+<li>11/08/2020:&nbsp;Midterm 2 review material&nbsp;<a href="https://canvas.harvard.edu/courses/74601/files/folder/Midterm%202%20Prep">here</a>.</li>
+
+
+
+<li>10/28/2020:&nbsp;Homework 5 out . Due 11/12/2020.&nbsp;<a href="https://canvas.harvard.edu/courses/74601/files/folder/Homework%20Solutions?preview=11140248">Solutions</a>.</li>
+
+
+
+<li>10/21/2020:&nbsp;Midterm 1 Solutions: (<a href="https://canvas.harvard.edu/courses/74601/files/folder/Midterm1%20Prep?preview=10919039">tex</a>,&nbsp;<a href="https://canvas.harvard.edu/courses/74601/files/folder/Midterm1%20Prep?preview=10919038">pdf</a>).</li>
+
+
+
+<li>10/15/2020:&nbsp;Please take some time to respond to the&nbsp;<a href="https://piazza.com/class/kdux22p1mvg7ph?cid=306">Midterm Feedback Survey</a>. Its mandatory. Its anonymous. Due Sunday (10/19).</li>
+
+
+
+<li>10/15/2020:&nbsp;Homework 4 out. Due 10/29/2020.&nbsp;<a href="https://canvas.harvard.edu/courses/74601/files/folder/Homework%20Solutions?preview=11070288">Solutions.</a></li>
+
+
+
+<li>10/6/2020: (updated 10/8):&nbsp;Midterm 1 in one week (10/13/2020, “in class” = 10:30-12noon as preferred time).</li>
+
+
+
+<li>Logistical announcement&nbsp;to follow&nbsp;<a href="https://piazza.com/class/kdux22p1mvg7ph?cid=215">here</a>.</li>
+
+
+
+<li>Prep Material&nbsp;<a href="https://canvas.harvard.edu/courses/74601/files/folder/Midterm1%20Prep">here</a>.</li>
+
+
+
+<li>Sample midterm&nbsp;<a href="https://canvas.harvard.edu/courses/74601/assignments/412281">here</a>&nbsp;– do look at it to familiarize yourselves with format of exam, and to practice latex’ing your answers.</li>
+
+
+
+<li>Review material (<a href="https://people.seas.harvard.edu/~madhusudan/courses/Fall2020/exams-related/2020-midterm1-prep-questions.pdf">questions</a>,&nbsp;<a href="https://people.seas.harvard.edu/~madhusudan/courses/Fall2020/exams-related/2020-midterm1-prep-solutions.pdf">solutions</a>).</li>
+
+
+
+<li>10/1/2020:&nbsp;Homework 3 available now. Due 10/08/2020.&nbsp;<a href="https://canvas.harvard.edu/courses/74601/files/folder/Homework%20Solutions?preview=10809752">Solutions</a>.</li>
+
+
+
+<li>9/24/2020:&nbsp;Reading for today’s and next two lectures include Sections 6.2, 6.4 and 6.5 from Barak’s IntroTCS. Despite what the book says, they are not optional for us!</li>
+
+
+
+<li>9/17/2020:&nbsp;Homework 2 is available now. Due 10/01/2020 (corrected).&nbsp;<a href="https://canvas.harvard.edu/courses/74601/files/folder/Homework%20Solutions?preview=10809683">Solutions</a>.</li>
+
+
+
+<li>9/10/2020:&nbsp;Advanced sections&nbsp;start today at 4:30pm! Boaz Barak is our speaker today.&nbsp;<a href="https://docs.google.com/document/d/1J0Mrpn8_27yTfFuhXvuCunYmDy1eb-4b4t-21UhXC2s/edit">Here</a>&nbsp;are future plans (more talks will be added).</li>
+
+
+
+<li>9/10/2020:&nbsp;Homework 1 is available now. Due 9/17/2020.&nbsp;<a href="https://canvas.harvard.edu/courses/74601/files/folder/Homework%20Solutions?preview=10658977">Solutions</a>.</li>
+
+
+
+<li>9/2/2020:&nbsp;First lecture is tomorrow (9/3) at 10:30am. All lectures/sections/office hours are accessible from canvas&nbsp;→&nbsp;zoom.&nbsp;<a href="https://calendar.google.com/calendar?cid=cW1xMHZnbjVlNmw1NnB1dGU3bDM1dTExdHNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ">Here</a>&nbsp;is a full calendar with section times and office hours included.</li>
+
+
+
+<li>9/2/2020:&nbsp;Homework0 is due tomorrow by 11:59pm. Please submit via gradescope. You should have received a link by now. If not send a private post on Piazza.</li>
+
+
+
+<li>9/2/2020:&nbsp;Please sign up for active participation. See&nbsp;<a href="https://piazza.com/class/kdux22p1mvg7ph?cid=43">this post</a>&nbsp;for details.</li>
+
+
+
+<li>8/15/2020:&nbsp;<a href="https://youtu.be/rl4IHyHQltk">Here</a>‘s a sample video (with&nbsp;<a href="https://madhu.seas.harvard.edu/files/2024/10/fall2020-cs121-Sample-Lecture-after.pdf">slide deck</a>) based roughly on the contents of lecture 1. It would be a good to quickly watch the video (skipping parts you don’t care about) to get a sense of topics, style etc.&nbsp;<strong>before</strong>&nbsp;coming to the&nbsp;<strong>Q&amp;A</strong>&nbsp;session below. We will *not* watch the video in the session.</li>
+
+
+
+<li>7/20/2020:&nbsp;Homework Zero is available now. You can start working on it right away! Use latex to write up your solutions. Hold on to your solutions for now while we figure out the next steps. It is due by September 3, 2020.&nbsp;<a href="https://canvas.harvard.edu/courses/74601/files/folder/Homework%20Solutions?preview=10550309">Solutions</a>.</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading"><strong>Topics (Tentative), Calendar and Handouts</strong></h3>
+
+
+
+<ul class="wp-block-list">
+<li>Lecture 01 (Th. 09/03): Introduction. (Reading: Chapter 0. (All readings refer to the text by Barak, unless specifically indicated.))&nbsp;<a href="https://madhu.seas.harvard.edu/files/2024/10/fall2020-cs121-Lecture-1-Introduction.pptx">Slides</a>. (<a href="https://madhu.seas.harvard.edu/files/2024/10/fall2020-cs121-L1-after.pdf">Slides</a>&nbsp;after edits in class.)&nbsp;<a href="https://matterhorn.dce.harvard.edu/engage/player/watch.html?id=6f04faf9-7f8f-6a31-f76f-1da11328c3a0">Video</a>.</li>
+
+
+
+<li>09/03: Section 0 week starts. Video&nbsp;<a href="https://canvas.harvard.edu/courses/74601/files/folder/Section%20Videos">here</a>. Boards:&nbsp;<a href="https://madhu.seas.harvard.edu/files/2024/10/fall2020-cs121-Sections/Section0-Board1.svg">1</a>,&nbsp;<a href="https://madhu.seas.harvard.edu/files/2024/10/fall2020-cs121-Sections/Section0-Board2.svg">2</a>,&nbsp;<a href="https://madhu.seas.harvard.edu/files/2024/10/fall2020-cs121-Sections/Section0-Board3.svg">3</a>,&nbsp;<a href="https://madhu.seas.harvard.edu/files/2024/10/fall2020-cs121-Sections/Section0-Board4.svg">4</a>.&nbsp;<a href="https://madhu.seas.harvard.edu/files/2024/10/fall2020-cs121-Sections/Section0Solutions.pdf">Solutions</a>.</li>
+
+
+
+<li>09/03: Problem Set 0 Due.</li>
+
+
+
+<li>Lecture 02 (Tu. 09/08): Math. Background. (Reading: Chapter 1.)&nbsp;<a href="https://madhu.seas.harvard.edu/files/2024/10/fall2020-cs121-Lecture-2-Math.pptx">Slides</a>.&nbsp;<a href="https://madhu.seas.harvard.edu/files/2024/10/fall2020-cs121-L2-after.pdf">Slides</a>&nbsp;after lecture (with solutions to exercises).&nbsp;<a href="https://matterhorn.dce.harvard.edu/engage/player/watch.html?id=b788ce75-1b46-cb2d-556e-9af3613c3f14">Video</a>.</li>
+
+
+
+<li>Lecture 03 (Th. 09/10): Representing Information: Objects as Strings. (Reading: Chapter 2.)&nbsp;<a href="https://madhu.seas.harvard.edu/files/2024/10/fall2020-cs121-Lecture-3-Representation.pptx">Slides</a>.&nbsp;<a href="https://madhu.seas.harvard.edu/files/2024/10/fall2020-cs121-L3-after.pdf">Slides</a>&nbsp;after lecture.&nbsp;<a href="https://matterhorn.dce.harvard.edu/engage/player/watch.html?id=f0a013ee-6778-7550-20cc-86874d11af97">Video</a>.</li>
+
+
+
+<li>09/10: Section 1 week starts.&nbsp;<a href="https://canvas.harvard.edu/courses/74601/files/folder/Section%20Videos?preview=10557854">Video</a>.&nbsp;<a href="https://madhu.seas.harvard.edu/files/2024/10/fall2020-cs121-Section1Slides.pdf">Slides</a>. Boards:&nbsp;<a href="https://madhu.seas.harvard.edu/files/2024/10/fall2020-cs121-section1board1.svg">1</a>,&nbsp;<a href="https://madhu.seas.harvard.edu/files/2024/10/fall2020-cs121-section1board2.svg">2</a>,&nbsp;<a href="https://madhu.seas.harvard.edu/files/2024/10/fall2020-cs121-section1board3.svg">3</a>,&nbsp;<a href="https://madhu.seas.harvard.edu/files/2024/10/fall2020-cs121-section1board4.svg">4</a>,&nbsp;<a href="https://madhu.seas.harvard.edu/files/2024/10/fall2020-cs121-section1board5.svg">5</a>,&nbsp;<a href="https://madhu.seas.harvard.edu/files/2024/10/fall2020-cs121-section1board6.svg">6</a>.&nbsp;<a href="https://madhu.seas.harvard.edu/files/2024/10/fall2020-cs121-Section1Solutions.pdf">Solutions</a>.<a href="file:///C:/Users/Madhu%20Sudan/Desktop/Sections/Section0-Board1.svg"></a></li>
+
+
+
+<li>09/10: Problem Set 1 Out.</li>
+
+
+
+<li>Lecture 04 (Tu. 09/15): Defining Computation: Circuits. (Reading: Chapter 3.) Slides (<a href="https://madhu.seas.harvard.edu/files/2024/10/fall2020-cs121-Lecture-4-Circuits.pptx">pptx</a>,&nbsp;<a href="https://madhu.seas.harvard.edu/files/2024/10/fall2020-cs121-Lecture-4-Circuits.pdf">pdf</a>).&nbsp;<a href="https://madhu.seas.harvard.edu/files/2024/10/fall2020-cs121-L4-after.pdf">Slides</a>&nbsp;after lecture.&nbsp;<a href="https://matterhorn.dce.harvard.edu/engage/player/watch.html?id=7591f237-b1f1-b0bf-1692-2c6f9a3ae017">Video</a>.</li>
+
+
+
+<li>Lecture 05 (Th. 09/17): Completeness: Computing every (finite) function. Size of circuits. Upper and Lower bounds. (Reading: Chapter 4.) Slides (<a href="https://madhu.seas.harvard.edu/files/2024/10/fall2020-cs121-Lecture-5-Completeness.pptx">pptx</a>,&nbsp;<a href="https://madhu.seas.harvard.edu/files/2024/10/fall2020-cs121-Lecture-5-Completeness.pdf">pdf</a>).&nbsp;<a href="https://madhu.seas.harvard.edu/files/2024/10/fall2020-cs121-L5-after.pdf">Slides</a>&nbsp;after lecture.&nbsp;<a href="https://matterhorn.dce.harvard.edu/engage/player/watch.html?id=74212f29-ad41-cdff-5bcb-350d8fd3a4b1">Video</a>.</li>
+
+
+
+<li>09/17: Problem Set 1 Due. Problem Set 2 Out.</li>
+
+
+
+<li>09/17/2020: Section 2 week starts.&nbsp;<a href="https://canvas.harvard.edu/courses/74601/files/folder/Section%20Videos?preview=10615201">Video</a>.&nbsp;<a href="https://madhu.seas.harvard.edu/files/2024/10/fall2020-cs121-Section2Slides.pdf">Slides</a>.&nbsp;<a href="https://madhu.seas.harvard.edu/files/2024/10/fall2020-cs121-Section2Solutions.pdf">Solutions</a>.</li>
+
+
+
+<li>Lecture 06 (Tu. 09/22): Code as data. Circuit lower bounds. Circuit-interpreter. (Reading: Chapter 5.) Slides (<a href="https://madhu.seas.harvard.edu/files/2024/10/fall2020-cs121-Lecture-6-Code-Data.pptx">pptx</a>,&nbsp;<a href="https://madhu.seas.harvard.edu/files/2024/10/fall2020-cs121-Lecture-6-Code-Data.pdf">pdf</a>).&nbsp;<a href="https://madhu.seas.harvard.edu/files/2024/10/fall2020-cs121-L6-after.pdf">Slides</a>&nbsp;after lecture.&nbsp;<a href="https://matterhorn.dce.harvard.edu/engage/player/watch.html?id=2161735e-c247-6610-e9e9-be681d949ecc">Video</a>.</li>
+
+
+
+<li>Lecture 07 (Th. 09/24):&nbsp;Infinite functions and algorithms: Finite automata. (Reading: Chapter 6, especially Section 6.2.) Slides (<a href="https://madhu.seas.harvard.edu/files/2024/10/fall2020-cs121-Lecture-7-Infinite-Functions.pptx">pptx</a>,&nbsp;<a href="https://madhu.seas.harvard.edu/files/2024/10/fall2020-cs121-Lecture-7-Infinite-Functions.pdf">pdf</a>).&nbsp;<a href="https://madhu.seas.harvard.edu/files/2024/10/fall2020-cs121-L7-after.pdf">Slides</a>&nbsp;after lecture.&nbsp;<a href="https://matterhorn.dce.harvard.edu/engage/player/watch.html?id=52bdf9b1-527b-4f5d-bfb3-09c561a42a5f">Video</a>.</li>
+
+
+
+<li>09/24/2020: Section 3 week starts.&nbsp;<a href="https://canvas.harvard.edu/courses/74601/files/folder/Section%20Videos?preview=10669475">Video</a>.&nbsp;<a href="https://madhu.seas.harvard.edu/files/2024/10/fall2020-cs121-Section3Slides.pdf">Slides</a>.&nbsp;<a href="https://madhu.seas.harvard.edu/files/2024/10/fall2020-cs121-Section3Slides_Annotated.pdf">Annotated Slides</a>.&nbsp;<a href="https://madhu.seas.harvard.edu/files/2024/10/fall2020-cs121-Section3Solutions.pdf">Solutions</a>.</li>
+
+
+
+<li>Lecture 08 (Tu. 09/29): Finite automata and Regular Functions: Languages. (Reading: Sipser – Chapters 1.2, 1.3. Also Barak Sections 6.3 and 6.4). Slides (<a href="https://madhu.seas.harvard.edu/files/2024/10/fall2020-cs121-Lecture-8-Regular-Equivalence.pptx">pptx</a>,&nbsp;<a href="https://madhu.seas.harvard.edu/files/2024/10/fall2020-cs121-Lecture-8-Regular-Equivalence.pdf">pdf</a>).&nbsp;<a href="https://madhu.seas.harvard.edu/files/2024/10/fall2020-cs121-L8-after.pdf">Slides</a>&nbsp;after lecture.&nbsp;<a href="https://matterhorn.dce.harvard.edu/engage/player/watch.html?id=1140a483-f682-dcac-36fd-1e68927a2ab3">Video</a>.</li>
+
+
+
+<li>Lecture 09 (Th. 10/01): Limits of Finite Automata: What can they not compute? (Reading: Sipser – Chapter 1.4. Also Barak Section 6.5). Slides (<a href="https://madhu.seas.harvard.edu/files/2024/10/fall2020-cs121-Lecture-9-Regular-Limits.pptx">pptx</a>,&nbsp;<a href="https://madhu.seas.harvard.edu/files/2024/10/fall2020-cs121-Lecture-9-Regular-Limits.pdf">pdf</a>).&nbsp;<a href="https://madhu.seas.harvard.edu/files/2024/10/fall2020-cs121-L9-after.pdf">Slides</a>&nbsp;after lecture.&nbsp;<a href="https://matterhorn.dce.harvard.edu/engage/player/watch.html?id=7dcfb815-b49e-b993-544b-dffbffb26c77">Video</a>.</li>
+
+
+
+<li>10/01/2020: Section 4 week starts.&nbsp;<a href="https://canvas.harvard.edu/courses/74601/files/folder/Section%20Videos?preview=10737063">Video</a>.&nbsp;<a href="https://madhu.seas.harvard.edu/files/2024/10/fall2020-cs121-Section4Slides.pdf">Slides</a>.&nbsp;<a href="https://madhu.seas.harvard.edu/files/2024/10/fall2020-cs121-Section4Solutions.pdf">Solutions</a>.</li>
+
+
+
+<li>10/01: Problem Set 2 Due. Problem Set 3 out.</li>
+
+
+
+<li>Lecture 10 (Tu. 10/06): Turing Machines:Introduction. (Reading: Chapter 7.1.) Slides (<a href="https://madhu.seas.harvard.edu/files/2024/10/fall2020-cs121-Lecture-10-Turing-Machines.pptx">pptx</a>,&nbsp;<a href="https://madhu.seas.harvard.edu/files/2024/10/fall2020-cs121-Lecture-10-Turing-Machines.pdf">pdf</a>).&nbsp;<a href="https://madhu.seas.harvard.edu/files/2024/10/fall2020-cs121-L10-after.pdf">Slides</a>&nbsp;after lecture.&nbsp;<a href="https://matterhorn.dce.harvard.edu/engage/player/watch.html?id=55276dca-f88f-e028-ebb3-039d9e512099">Video</a>.</li>
+
+
+
+<li>Lecture 11 (Th. 10/08): More Turing Machines: Examples. (Reading: Chapter 7.2.). Slides (<a href="https://madhu.seas.harvard.edu/files/2024/10/fall2020-cs121-Lecture-11-More-TM.pptx">pptx</a>,&nbsp;<a href="https://madhu.seas.harvard.edu/files/2024/10/fall2020-cs121-Lecture-11-More-TM.pdf">pdf</a>).&nbsp;<a href="https://madhu.seas.harvard.edu/files/2024/10/fall2020-cs121-L11-after.pdf">Slides</a>&nbsp;after lecture.&nbsp;<a href="https://matterhorn.dce.harvard.edu/engage/player/watch.html?id=18d5d5af-cad4-b135-771d-8fab3a053ae2">Video</a>.</li>
+
+
+
+<li>10/08/2020: Section 5 week (Midterm reviews). No Video. Prep material&nbsp;<a href="https://canvas.harvard.edu/courses/74601/files/folder/Midterm1%20Prep">here</a>.</li>
+
+
+
+<li>10/08: Problem Set 3 Due.</li>
+
+
+
+<li><strong>Lecture 12 (</strong><strong>Tu. 10/13</strong><strong>): Midterm 1.</strong></li>
+
+
+
+<li>Lecture 13 (Th. 10/15): Turing Equivalence + Universality. (Reading: Chapter 8, Chapters 9.1, 9.2.) Slides (<a href="https://madhu.seas.harvard.edu/files/2024/10/fall2020-cs121-Lecture-13-Turing-Eq-and-Univ.pptx">pptx</a>,&nbsp;<a href="https://madhu.seas.harvard.edu/files/2024/10/fall2020-cs121-Lecture-13-Turing-Eq-and-Univ.pdf">pdf</a>).&nbsp;<a href="https://madhu.seas.harvard.edu/files/2024/10/fall2020-cs121-L13-after.pdf">Slides</a>&nbsp;after lecture.&nbsp;<a href="https://matterhorn.dce.harvard.edu/engage/player/watch.html?id=b8f2b3c5-c07e-437d-4cce-6eda70093afb">Video</a>.</li>
+
+
+
+<li>10/15/2020: Section 6 week.&nbsp;<a href="https://canvas.harvard.edu/courses/74601/files/folder/Section%20Videos?preview=10838704">Video</a>.&nbsp;<a href="https://madhu.seas.harvard.edu/files/2024/10/fall2020-cs121-Section6Slides.pdf">Slides</a>.&nbsp;<a href="https://madhu.seas.harvard.edu/files/2024/10/fall2020-cs121-Section6Solutions.pdf">Solutions</a>.</li>
+
+
+
+<li>10/15: Problem Set 4 Out.</li>
+
+
+
+<li>Lecture 14 (Tu. 10/20): Uncountability and Uncomputability (Reading: Chapters 2.3, 2.4, 9.3.) Slides (<a href="https://madhu.seas.harvard.edu/files/2024/10/fall2020-cs121-Lecture-14-Uncomputability.pptx">pptx</a>,&nbsp;<a href="https://madhu.seas.harvard.edu/files/2024/10/fall2020-cs121-Lecture-14-Uncomputability.pdf">pdf</a>).&nbsp;<a href="https://madhu.seas.harvard.edu/files/2024/10/fall2020-cs121-L14-after.pdf">Slides</a>&nbsp;after lecture.&nbsp;<a href="https://matterhorn.dce.harvard.edu/engage/player/watch.html?id=d2f99f90-dc27-d118-4e43-9e2e6d859654">Video</a>.</li>
+
+
+
+<li>Lecture 15 (Th. 10/22): More Uncomputability. Reductions. (Reading: Chapter 9.3.) Slides (<a href="https://madhu.seas.harvard.edu/files/2024/10/fall2020-cs121-Lecture-15-More-Uncomputability.pptx">pptx</a>,&nbsp;<a href="https://madhu.seas.harvard.edu/files/2024/10/fall2020-cs121-Lecture-15-More-Uncomputability.pdf">pdf</a>).&nbsp;<a href="https://madhu.seas.harvard.edu/files/2024/10/fall2020-cs121-L15-after.pdf">Slides</a>&nbsp;after lecture.&nbsp;<a href="https://matterhorn.dce.harvard.edu/engage/player/watch.html?id=c578ec29-4e00-2f9e-e9db-010bb3b3529b">Video</a>.</li>
+
+
+
+<li>10/22/2020: Section 7 week.&nbsp;<a href="https://canvas.harvard.edu/courses/74601/files/folder/Section%20Videos?preview=10924491">Video</a>.&nbsp;<a href="https://madhu.seas.harvard.edu/files/2024/10/fall2020-cs121-Section7Slides.pdf">Slides</a>.&nbsp;<a href="https://madhu.seas.harvard.edu/files/2024/10/fall2020-cs121-Section7Solutions.pdf">Solutions</a>.</li>
+
+
+
+<li>Lecture 16 (Tu. 10/27): Rice’s Theorem. More Reductions. (Reading: Chapter 9.4.) Slides (<a href="https://madhu.seas.harvard.edu/files/2024/10/fall2020-cs121-Lecture-16-Rice.pptx">pptx</a>,&nbsp;<a href="https://madhu.seas.harvard.edu/files/2024/10/fall2020-cs121-Lecture-16-Rice.pdf">pdf</a>).&nbsp;<a href="https://madhu.seas.harvard.edu/files/2024/10/fall2020-cs121-L16-after.pdf">Slides</a>&nbsp;after lecture.&nbsp;<a href="https://matterhorn.dce.harvard.edu/engage/player/watch.html?id=fabcc432-7898-8241-3b65-bff527755d7c">Video</a>.</li>
+
+
+
+<li>Lecture 17 (Th. 10/29): Efficient Computation: The class P. The Strong Turing-Church Thesis. (Reading: Chapters 12, 13.) Slides (<a href="https://madhu.seas.harvard.edu/files/2024/10/fall2020-cs121-Lecture-17-P.pptx">pptx</a>,&nbsp;<a href="https://madhu.seas.harvard.edu/files/2024/10/fall2020-cs121-Lecture-17-P.pdf">pdf</a>).&nbsp;<a href="https://madhu.seas.harvard.edu/files/2024/10/fall2020-cs121-L17-after.pdf">Slides</a>&nbsp;after lecture.&nbsp;<a href="https://matterhorn.dce.harvard.edu/engage/player/watch.html?id=a2eadb46-a21c-e955-d525-c69652fc9d67">Video</a>.</li>
+
+
+
+<li>10/29: Problem Set 4 Due.&nbsp;Problem Set 5 Out</li>
+
+
+
+<li>10/29/2020: Section 8 week.&nbsp;<a href="https://canvas.harvard.edu/courses/74601/files/folder/Section%20Videos?preview=11001603">Video</a>.&nbsp;<a href="https://madhu.seas.harvard.edu/files/2024/10/fall2020-cs121-Section8Slides.pdf">Slides</a>.&nbsp;<a href="https://madhu.seas.harvard.edu/files/2024/10/fall2020-cs121-Section8Solutions.pdf">Solutions</a>.</li>
+
+
+
+<li>*Election Day*&nbsp;Lecture 18 (Tu. 11/03): Polynomial Time Reductions. (Reading: Chapter 14.) Slides (<a href="https://madhu.seas.harvard.edu/files/2024/10/fall2020-cs121-Lecture-18-P-Reductions.pptx">pptx</a>,&nbsp;<a href="https://madhu.seas.harvard.edu/files/2024/10/fall2020-cs121-Lecture-18-P-Reductions.pdf">pdf</a>).&nbsp;<a href="https://madhu.seas.harvard.edu/files/2024/10/fall2020-cs121-L18-after.pdf">Slides</a>&nbsp;after lecture.&nbsp;<a href="https://matterhorn.dce.harvard.edu/engage/player/watch.html?id=79b34d2e-40e0-d467-ac14-173ceba87b39">Video</a>.</li>
+
+
+
+<li>Lecture 19 (Th. 11/05): NP and NP-completeness. (Reading: Chapters 15.1, 15.2.). Slides (<a href="https://madhu.seas.harvard.edu/files/2024/10/fall2020-cs121-Lecture-19-NP.pptx">pptx</a>,&nbsp;<a href="https://madhu.seas.harvard.edu/files/2024/10/fall2020-cs121-Lecture-19-NP.pdf">pdf</a>).&nbsp;<a href="https://madhu.seas.harvard.edu/files/2024/10/fall2020-cs121-L19-after.pdf">Slides</a>&nbsp;after lecture.&nbsp;<a href="https://matterhorn.dce.harvard.edu/engage/player/watch.html?id=26629a43-5bd6-5e30-01ac-622a9ea04e93">Video</a>.</li>
+
+
+
+<li>11/05/2020: No video. Midterm 2 Prep material&nbsp;<a href="https://canvas.harvard.edu/courses/74601/files/folder/Midterm%202%20Prep">here</a>.</li>
+
+
+
+<li>Lecture 20 (Tu. 11/10): Cook Levin Theorem. (Reading: Chapters 15.3-15.5.). Slides (<a href="https://madhu.seas.harvard.edu/files/2024/10/fall2020-cs121-Lecture-20-CookLevin.pptx">pptx</a>,&nbsp;<a href="https://madhu.seas.harvard.edu/files/2024/10/fall2020-cs121-Lecture-20-CookLevin.pdf">pdf</a>).&nbsp;<a href="https://madhu.seas.harvard.edu/files/2024/10/fall2020-cs121-L20-after.pdf">Slides</a>&nbsp;after lecture.&nbsp;<a href="https://matterhorn.dce.harvard.edu/engage/player/watch.html?id=2d62be5b-a955-d3a1-0e2e-9f0b24da1755">Video</a>.</li>
+
+
+
+<li>Lecture 21 (Th. 11/12): More NP-completeness by reductions. (Reading: Review Chapters 14, 15.) Slides (<a href="https://madhu.seas.harvard.edu/files/2024/10/fall2020-cs121-Lecture-21-More-NP.pptx">pptx</a>,&nbsp;<a href="https://madhu.seas.harvard.edu/files/2024/10/fall2020-cs121-Lecture-21-More-NP.pdf">pdf</a>).&nbsp;<a href="https://madhu.seas.harvard.edu/files/2024/10/fall2020-cs121-L21-after.pdf">Slides</a>&nbsp;after lecture.&nbsp;<a href="https://matterhorn.dce.harvard.edu/engage/player/watch.html?id=00697d87-9e33-d26e-2fd9-bf4cf36733f3">Video</a>.</li>
+
+
+
+<li>11/12: Problem Set 5 Due.</li>
+
+
+
+<li>11/12/2020: Section 10 week.&nbsp;<a href="https://canvas.harvard.edu/courses/74601/files/folder/Section%20Videos?preview=11120612">Video</a>.&nbsp;<a href="https://madhu.seas.harvard.edu/files/2024/10/fall2020-cs121-Section10Slides.pdf">Slides</a>.&nbsp;<a href="https://madhu.seas.harvard.edu/files/2024/10/fall2020-cs121-Section10Solutions.pdf">Solutions</a>.</li>
+
+
+
+<li><strong>Lecture 22 (Tu. 11/17): Midterm 2.</strong></li>
+
+
+
+<li>Lecture 23 (Th. 11/19): Randomness and Computation: Probability Review. (Reading: Chapter 18.) Slides (<a href="https://madhu.seas.harvard.edu/files/2024/10/fall2020-cs121-Lecture-23-PR.pptx">pptx</a>,&nbsp;<a href="https://madhu.seas.harvard.edu/files/2024/10/fall2020-cs121-Lecture-23-PR.pdf">pdf</a>).&nbsp;<a href="https://madhu.seas.harvard.edu/files/2024/10/fall2020-cs121-L23-after.pdf">Slides</a>&nbsp;after lecture.&nbsp;<a href="https://matterhorn.dce.harvard.edu/engage/player/watch.html?id=e5ced1da-182b-1ebf-72a1-1d96944e3abb">Video</a>.</li>
+
+
+
+<li>11/19: Problem Set 6 Out.</li>
+
+
+
+<li>11/19/2020: Section 11 week.&nbsp;<a href="https://canvas.harvard.edu/courses/74601/files/folder/Section%20Videos?preview=11183004">Video</a>.&nbsp;<a href="https://madhu.seas.harvard.edu/files/2024/10/fall2020-cs121-Section11Slides.pdf">Slides</a>.</li>
+
+
+
+<li>Lecture 24 (Tu. 11/24): Randomized algorithms: Examples. (Reading: Chapter 19.) Slides (<a href="https://madhu.seas.harvard.edu/files/2024/10/fall2020-cs121-Lecture-24-Intro-Randomized.pptx">pptx</a>,&nbsp;<a href="https://madhu.seas.harvard.edu/files/2024/10/fall2020-cs121-Lecture-24-Intro-Randomized.pdf">pdf</a>).&nbsp;<a href="https://madhu.seas.harvard.edu/files/2024/10/fall2020-cs121-L24-after.pdf">Slides</a>&nbsp;after lecture.&nbsp;<a href="https://matterhorn.dce.harvard.edu/engage/player/watch.html?id=00a86885-a200-05b2-631c-abbaeeae9c8b">Video</a>.</li>
+
+
+
+<li>(11/25-11/29): Thanksgiving break.</li>
+
+
+
+<li>11/30/2020: Section 12 week. Final review – no videos. Prep material&nbsp;<a href="https://canvas.harvard.edu/courses/74601/files/folder/Final%20Prep?preview=11252360">here</a>.</li>
+
+
+
+<li>Lecture 25 (Tu. 12/01): Modelling Randomized Algorithms. The classes RP and BPP. (Reading: Chapter 20.) Slide (<a href="https://madhu.seas.harvard.edu/files/2024/10/fall2020-cs121-Lecture-25-Randomized-2.pptx">pptx</a>,&nbsp;<a href="https://madhu.seas.harvard.edu/files/2024/10/fall2020-cs121-Lecture-25-Randomized-2.pdf">pdf</a>).&nbsp;<a href="https://madhu.seas.harvard.edu/files/2024/10/fall2020-cs121-L25-after.pdf">Slides</a>&nbsp;after lecture.&nbsp;<a href="https://matterhorn.dce.harvard.edu/engage/player/watch.html?id=689149a3-79b4-d84d-6df2-20edcc9c3420">Video</a>.</li>
+
+
+
+<li>Lecture 26 (Th. 12/03): Course wrap-up: Quantum, Crypto. (Reading: Skim chapters 21, 22, 23.). Slides (<a href="https://madhu.seas.harvard.edu/files/2024/10/fall2020-cs121-Lecture-26-Wrapup.pptx">pptx</a>,&nbsp;<a href="https://madhu.seas.harvard.edu/files/2024/10/fall2020-cs121-Lecture-26-Wrapup.pdf">pdf</a>).&nbsp;<a href="https://madhu.seas.harvard.edu/files/2024/10/fall2020-cs121-L26-after.pdf">Slides</a>&nbsp;after lecture.&nbsp;<a href="https://matterhorn.dce.harvard.edu/engage/player/watch.html?id=1c508258-cb5d-db6e-6575-5fed6f29470a">Video</a>.</li>
+
+
+
+<li>12/03: Problem Set 6 Due.</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading"><strong>Reference Materials</strong></h3>
+
+
+
+<ul class="wp-block-list">
+<li>The textbook for the course is&nbsp;<a href="https://introtcs.org/public/index.html">Introduction to Theoretical Computer Science</a>&nbsp;by&nbsp;<a href="https://www.boazbarak.org/">Boaz Barak</a>.&nbsp;<a href="https://madhu.seas.harvard.edu/files/2024/10/fall2020-cs121-book.pdf">Here</a>&nbsp;is the pdf of the book we will be following for the term. (The book sees minor revisions frequently but the pdf version, frozen in August 2020, is our definitive version.)</li>
+
+
+
+<li>The textbook&nbsp;<a href="https://math.mit.edu/%7Esipser/book.html">Introduction to the Theory of Computation</a>&nbsp;by&nbsp;<a href="http://math.mit.edu/%7Esipser/">Michael Sipser</a>&nbsp;will cover roughly the same material though in a different order and with quite different notation.&nbsp; This book is a good source of additional problems and exercises.</li>
+
+
+
+<li>There are many additional resources and texts mentioned by Boaz Barak at his&nbsp;<a href="https://cs121.boazbarak.org/">website</a>&nbsp;for (the Fall 2019 version of) this course. (Scroll down to the bottom on the landing page.) Depending on your time and interest you can sample from these resources. The more perspectives you see, the more you will appreciate the course material!</li>
+</ul>
+
+
+
+<style>
+
+/* Custom CSS "pattern" only for this Teaching page and all other course pages */
+
+/* Main content - top margin */
+div#content {
+    margin-top: 3em;
+}
+
+/* Smaller width of left column */
+.wp-block-columns.is-layout-flex.wp-container-core-columns-is-layout-12.wp-block-columns-is-layout-flex > div:first-child {
+    flex-basis: 22.33% !important;
+}
+
+/* Monday - Smaller width of left column
+.wp-block-columns.is-layout-flex.wp-container-core-columns-is-layout-12.wp-block-columns-is-layout-flex > div:first-child {
+    flex-basis: 15% !important;
+} */
+
+/* Monday - Wider width of right two columns
+.wp-block-column.is-layout-flow.wp-block-column-is-layout-flow {
+    flex-basis: 82% !important;
+} */
+
+/* Monday - Width of right two columns
+.wp-block-column.is-layout-flow.wp-block-column-is-layout-flow:first-child {
+    flex-basis: 20% !important;
+}
+.wp-block-column.is-layout-flow.wp-block-column-is-layout-flow:nth-child(2) {
+    flex-basis: 75% !important;
+} */
+
+/* Hide default header */
+div#wrapper-navbar-main {
+    display: none;
+}
+.page-header {
+    display: none;
+}
+
+/* Smaller h2 font size */
+h2.wp-block-heading {
+    font-size: xx-large;
+}
+
+/* Smaller h3 font size */
+h3.wp-block-heading {
+    font-size: larger;
+}
+
+/* Column width */
+
+</style>
+
+		
+			</div><!-- .entry-content -->
+
+	</article><!-- #post-## -->
+
+												</main><!-- #main -->
+
+			<!-- Do the right sidebar check -->
+			
+</div><!-- #closing the primary container from /templates/global-templates/left-sidebar-check.php -->
+
+		</div><!-- .row -->
+	</div><!-- #content -->
+</div><!-- #page-wrapper -->
+
+
+
+
+<footer class="wrapper has-background has-footer-main-bg-color-background-color" id="wrapper-footer">
+	<div id="footer-content">
+		
+
+					
+		<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/files/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/harvard-flex/*","/wp-content/themes/cpschool/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<script type="text/javascript" id="blog_templates_front-js-extra">
+/* <![CDATA[ */
+var blog_templates_params = {"type":""};
+//# sourceURL=blog_templates_front-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://madhu.seas.harvard.edu/wp-content/plugins/blogtemplates//blogtemplatesfiles/assets/js/front.js?ver=2.6.8.2" id="blog_templates_front-js"></script>
+<script type="text/javascript" src="https://madhu.seas.harvard.edu/wp-content/plugins/coblocks/dist/js/coblocks-animation.js?ver=3.1.17.1" id="coblocks-animation-js"></script>
+<script type="text/javascript" id="cpschool-scripts-js-extra">
+/* <![CDATA[ */
+var cpSchoolData = {"parallaxHeader":"","animations":""};
+//# sourceURL=cpschool-scripts-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://madhu.seas.harvard.edu/wp-content/themes/cpschool/js/theme.min.js?ver=0.9.0.5.1772529810" id="cpschool-scripts-js"></script>
+<script id="wp-emoji-settings" type="application/json">
+{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://sites.harvard.edu/madhu-sudan/wp-includes/js/wp-emoji-release.min.js?ver=6.9.4"}}
+</script>
+<script type="module">
+/* <![CDATA[ */
+/*! This file is auto-generated */
+const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(window._wpemojiSettings=a,"wpEmojiSettingsSupports"),s=["flag","emoji"];function i(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function c(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0);const a=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);return t.every((e,t)=>e===a[t])}function p(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var n=e.getImageData(16,16,1,1);for(let e=0;e<n.data.length;e++)if(0!==n.data[e])return!1;return!0}function u(e,t,n,a){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!a(e,"\ud83e\u1fac8")}return!1}function f(e,t,n,a){let r;const o=(r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):document.createElement("canvas")).getContext("2d",{willReadFrequently:!0}),s=(o.textBaseline="top",o.font="600 32px Arial",{});return e.forEach(e=>{s[e]=t(o,e,n,a)}),s}function r(e){var t=document.createElement("script");t.src=e,t.defer=!0,document.head.appendChild(t)}a.supports={everything:!0,everythingExceptFlag:!0},new Promise(t=>{let n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),c.toString(),p.toString()].join(",")+"));",a=new Blob([e],{type:"text/javascript"});const r=new Worker(URL.createObjectURL(a),{name:"wpTestEmojiSupports"});return void(r.onmessage=e=>{i(n=e.data),r.terminate(),t(n)})}catch(e){}i(n=f(s,u,c,p))}t(n)}).then(e=>{for(const n in e)a.supports[n]=e[n],a.supports.everything=a.supports.everything&&a.supports[n],"flag"!==n&&(a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&a.supports[n]);var t;a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&!a.supports.flag,a.supports.everything||((t=a.source||{}).concatemoji?r(t.concatemoji):t.wpemoji&&t.twemoji&&(r(t.twemoji),r(t.wpemoji)))});
+//# sourceURL=https://sites.harvard.edu/madhu-sudan/wp-includes/js/wp-emoji-loader.min.js
+/* ]]> */
+</script>
+							<div id="custom-footer-html"><p><img class="alignnone wp-image-988 size-medium" src="https://sites.harvard.edu/madhu-sudan/files/2024/09/H_SEAS_logo_RGB-300x86.png" alt="" width="300" height="86"></p>
+<p>Harvard SEC #3.434,<br>150 Western Ave,<br>Boston, MA&nbsp;02134.<br>madhu at cs dot harvard dot edu</p>
+<p>&nbsp;</p></div>
+		
+		<div id="footer-site-info">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="site-footer" id="colophon">
+						<div class="site-info">
+							<div id="branding_footer">
+	<div class="branding-container container">
+		<div class="copyright">
+			<span class="harvard-copyright">Copyright © 2026 The President and Fellows of Harvard College</span> |
+			<a href="https://accessibility.harvard.edu/">Accessibility</a> |
+			<a href="https://accessibility.huit.harvard.edu/digital-accessibility-policy">Digital Accessibility</a>  |
+			<a href="https://www.harvard.edu/copyright-issue/">Report Copyright Infringement</a>
+		</div>
+		<div class="admin-login">
+			<a href="https://sites.harvard.edu/madhu-sudan/wp-login.php?redirect_to=https%3A%2F%2Fmadhu.seas.harvard.edu%2Fcourses-fall2020%2F&amp;action=shibboleth" alt="Login">
+				Log In			</a>
+		</div>
+	</div>
+</div>
+						</div><!-- .site-info -->
+					</div><!-- #colophon -->
+				</div><!--col end -->
+			</div><!-- row end -->
+		</div><!-- container end -->
+	</div>
+
+	</footer><!-- wrapper end -->
+
+</div><!-- #page we need this extra closing tag here -->
+
+<div id="modal-slide-in-menu" class="modal fade modal-slide-in-right modal-full-height nav-styling-underline" tabindex="-1" role="dialog" aria-label="slide-in menu" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content has-background has-header-main-bg-color-background-color">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">
+					<i aria-hidden="true" class="cps-icon cps-icon-close"></i>
+					<span class="sr-only">close menu</span>
+				</button>
+			</div>
+			<div class="modal-body">
+									<nav class="menu-mobile" aria-label="Mobile" role="navigation">
+						<div class="menu-primary-menu-container"><ul id="menu-main-mobile" class="nav flex-column"><li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-3207 nav-item"><a class="nav-link" title="Home" href="https://madhu.seas.harvard.edu/"><span class="menu-item-text">Home</span></a></li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3204 nav-item"><a class="nav-link" title="Teaching" href="https://madhu.seas.harvard.edu/teaching/"><span class="menu-item-text">Teaching</span></a></li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3213 nav-item"><a class="nav-link" title="Students" href="https://madhu.seas.harvard.edu/students/"><span class="menu-item-text">Students</span></a></li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3209 nav-item"><a class="nav-link" title="Papers" href="https://sites.google.com/g.harvard.edu/madhu-sudans-papers"><span class="menu-item-text">Papers</span></a></li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3203 nav-item"><a class="nav-link" title="Talks" href="https://madhu.seas.harvard.edu/talks/"><span class="menu-item-text">Talks</span></a></li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown menu-item-3214 nav-item"><a class="nav-link" title="Bio" href="https://madhu.seas.harvard.edu/short-cv.pdf" id="menu-item-dropdown-menu-main-mobile-3214"><span class="menu-item-text">Bio</span></a><button type="button" data-toggle="collapse" data-target="#menu-item-dropdown-menu-main-mobile-3214-dropdown" class="collapse-toggle collapsed" aria-expanded="false" aria-controls="menu-item-dropdown-menu-main-mobile-3214-dropdown"><span class="sr-only">Toggle "Bio" submenu</span></button>
+<ul id="menu-item-dropdown-menu-main-mobile-3214-dropdown" class="collapse collapse-menu" aria-labelledby="menu-item-dropdown-menu-main-mobile-3214">
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3215 nav-item"><a class="dropdown-item" title="Short CV" href="https://madhu.seas.harvard.edu/short-cv.pdf"><span class="menu-item-text">Short CV</span></a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3216 nav-item"><a class="dropdown-item" title="Long CV" href="https://madhu.seas.harvard.edu/long-cv.pdf"><span class="menu-item-text">Long CV</span></a></li>
+</ul>
+</li>
+</ul></div>
+					</nav>
+								</div>
+		</div>
+	</div>
+</div><!-- #modal-slide-in-menu -->
+<div id="modal-search" class="modal fade modal-slide-in-top modal-close-inline modal-site-width modal-padding-lg" tabindex="-1" role="dialog" aria-label="search" aria-hidden="true">
+	<div class="modal-dialog site-width-max" role="document">
+		<div class="modal-content has-background has-header-main-bg-color-background-color">
+			<div class="modal-header pb-0">
+				<button type="button" class="close" data-dismiss="modal">
+					<i aria-hidden="true" class="cps-icon cps-icon-close"></i>
+					<span class="sr-only">close search</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				
+<form method="get" id="searchform" action="https://madhu.seas.harvard.edu/" role="search">
+	<label class="sr-only" for="searchform-s">Search</label>
+	<div class="input-group">
+		<input class="field form-control form-control-lg" id="searchform-s" name="s" type="text" placeholder="Search..." value="">
+		<span class="input-group-append">
+			<button class="submit btn btn-primary btn-lg" id="searchform-submit" type="submit">
+				<i aria-hidden="true" class="cps-icon cps-icon-search"></i>
+				<span class="sr-only">Search Site</span>
+			</button>
+		</span>
+	</div>
+</form>
+			</div>
+		</div>
+	</div>
+</div><!-- #modal-search -->
+
+
+
+
+
+</body></html>

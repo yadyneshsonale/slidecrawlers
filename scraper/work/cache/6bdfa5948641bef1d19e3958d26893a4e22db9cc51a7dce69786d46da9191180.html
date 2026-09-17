@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"><html lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>Course Homepage of CS101, Computer Programming and Utilization</title>
+
+    <link rel="stylesheet" href="html/coursepage.css">
+    <!--<script src="https://code.jquery.com/jquery-1.10.2.js"></script>-->
+    <script src="html/jquery-local.js"></script>
+    <script>
+        $(function () {
+            $("#header").load("header.html");
+            $("#footer").load("footer.html");
+            $("#menu").load("menu.html");
+            $("#lectures").load("lectureList.html");
+        });
+    </script>
+</head>
+
+<body>
+    <a href="http://www.iitb.ac.in/"><img id="iitblogo1" src="html/iitb_logo.png" border="0"></a>
+    <div id="header"></div>
+    <div>
+        <div id="menu" style="width: 180px;"></div>
+        <div style="margin-left: 220px;">
+            <!-- Main content Starts -->
+
+            <div class="section">
+                <h3 class="section-heading">Lecture Slides and Programs</h3>
+                <div id="lectures" class="section-body">
+                    <!-- loaded using lectureList.html. Add all updates there -->
+                </div>
+            </div>
+
+
+            <!-- Main content Ends-->
+        </div>
+        <div id="footer"></div>
+    </div>
+
+
+
+</body></html>

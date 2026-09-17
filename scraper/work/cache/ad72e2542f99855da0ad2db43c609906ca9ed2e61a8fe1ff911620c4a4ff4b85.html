@@ -1,0 +1,221 @@
+<!DOCTYPE html><html><head><title>COL1000</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<style>
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+
+.w3-margin{margin:14px 14px 20px 32px;}
+
+.w3-main {margin-left: 200px;}
+
+@media screen and (max-width: 500px) {
+  #mySidebar {
+    width: 100% !important;
+    position: relative !important;
+  }
+  .w3-main {
+    margin-left: 0 !important;
+  }
+}
+</style>
+
+</head><body>
+
+<!-- Top bar only for small screens -->
+<div class="w3-bar w3-theme w3-hide-large">
+  <button class="w3-bar-item w3-button w3-xlarge" onclick="w3_open()">☰</button>
+  <span class="w3-bar-item"><h6>COL1000</h6></span>
+</div>
+
+
+<nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5" style="width:200px;margin-top:.5px;" id="mySidebar">
+
+<h4 class="w3-bar-item"><b> </b></h4>
+<br>
+<a class="w3-bar-item w3-button w3-round-medium" href="#Course-Information"><b>Home</b></a>
+<br>
+<a class="w3-bar-item w3-button w3-round-medium" href="#Logistics"><b>Logistics</b></a>
+<br>
+<a class="w3-bar-item w3-button w3-round-medium" href="#Course-material"><b>Course material</b></a>
+<br>
+<a class="w3-bar-item w3-button w3-round-medium" href="#Python"><b>Setting-up Python</b></a>
+<br>
+<a class="w3-bar-item w3-button w3-round-medium" href="https://web.iitd.ac.in/~keerti/Courses/seating-COL1000.pdf"><b>Classroom &amp; Lab assignment</b></a>
+<br>
+<a class="w3-bar-item w3-button w3-round-medium" href="https://web.iitd.ac.in/~keerti/Courses/calendar-COL1000.pdf"><b>Calendar</b></a>
+<br>
+<a class="w3-bar-item w3-button w3-round-medium" href="
+https://docs.google.com/spreadsheets/d/e/2PACX-1vT9EtSQdCYPlRSNyoCrS2PNo9ZVzUyVGPBzDTX1tXqVAU8eBNY7v2fotiPkNgauiDgXb7_Vtda0XHrS/pubhtml
+"><b>Lab attendance</b></a>
+<br>
+
+<!-- Close button visible only on small screens -->
+<button class="w3-bar-item w3-button w3-round-medium w3-hide-large" onclick="w3_close()">
+<b>Close</b>
+</button>
+
+</nav>
+
+<!-- ----------------------------------------------------------------------- -->
+
+<div class="w3-main" style="padding:3px">
+
+<div class="w3-container">
+<h1>COL1000: Introduction to Programming
+</h1>
+<br>
+</div>
+
+
+<!-- ----------------------------------------------------------------------- -->
+
+<div class="w3-card w3-pale-yellow w3-margin">
+<div class="w3-container">
+  <h4 id="Course-Information"> Course Information </h4>
+</div>
+<div class="w3-container">
+<p><b> Instructors: </b>Keerti Choudhary, Naveen Garg, Venkata Koppula, and Kumar Madhukar
+</p>
+<p><b> Lectures: </b> Mon, Thurs 16:00-17:30 &nbsp; (LH 416, LH418, LH111)
+</p>
+<p><b> Labs: </b> Mon, Tues, Wed, Thurs, Fri 9:00-11:00 &nbsp; (LH503, LH504)
+</p>
+<p><b> Reference Book: </b><br>
+  <i>Introduction to Computation and Programming Using Python</i>&nbsp; by John Guttag<br>
+  <i>Think Python</i>&nbsp; by Allen B. Downey<br>
+</p>
+<p><b>Head TAs:</b> Neha, Shashwat Agrawal</p>
+<p><b>Office hours:</b> Mon-Fri, 18:00-19:00, Bharti building, 4th floor</p>
+
+<table border="1" cellpadding="8" cellspacing="0">
+<thead>
+<tr><th>Monday</th><th>Tuesday</th><th>Wednesday</th><th>Thursday</th><th>Friday</th></tr>
+</thead>
+<tbody>
+<tr><td>Manmadha Rao</td><td>Haleel Sada</td><td>Vishakha Agarwal</td><td>Kaustubh Vatsa</td><td>Akshat Singhal</td></tr>
+</tbody>
+</table>
+
+<p><b> TA Lab Duties:</b><br>
+</p><table border="1" cellpadding="8" cellspacing="0">
+<thead>
+<tr><th></th><th>LH503</th><th>LH504</th></tr>
+</thead>
+<tbody>
+<tr><th>Monday</th><td>Vatsal Jain, Kunal Dhyani, Khushi Deshmukh</td><td></td></tr>
+<tr><th>Tuesday</th><td>Aviral Singh, Vedant Sameer, Nitish Kumar</td><td> Asmi Jayee, Kartikay Singh</td></tr>
+<tr><th>Wednesday</th><td>Saarth Singla, Rohit Baraik, Rishabh Shakya</td><td>Priya Jain, Astitva Choubey</td></tr>
+<tr><th>Thursday</th><td>Naman Kale, Akshat Kumar, Dipesh Kant</td><td>Tarang Shah, Ratinder Pal Singh</td></tr>
+<tr><th>Friday</th><td>Aditya Rathi, Saurabh Pandey, Salil Sanjay Gujar</td><td>Arpit Prasad, Adithya R Narayan</td></tr>
+</tbody>
+</table>
+
+<p><b>Lab exam TAs:</b> Aryan Dhaka, Apoorva Dewan, Shankh Gupta</p> 
+<p><b>Grading TAs:</b> Pratik Kumar Bulani, Raj shekhar, Sohail Khan, Karthik M Nambiar, 
+Yash Gupta, Saurabh Barthwal, Shailesh Dagar, Kushagra Karar</p>
+</div>
+</div>
+
+
+
+
+<!-- ----------------------------------------------------------------------- -->
+
+<div class="w3-card w3-pale-yellow w3-margin">
+<div class="w3-container">
+<a id="Logistics">
+<h4> Logistics </h4>
+</a></div><a id="Logistics">
+<div class="w3-container">
+<p><b> Evaluation: </b>
+The course evaluation policy is:
+</p><ul>
+<li> Lab exams:&nbsp;  15% + 15% </li>
+<li> Quiz:&nbsp;  5% &nbsp; (Maximum of the scores obtained in this quiz and the test conducted in July 2025 will be considered.)</li>
+<li> Minor:&nbsp;  25% </li>
+<li> Major:&nbsp;  30%  </li>
+<li> Attendance:&nbsp;  5% (lectures) + 5% (labs)  </li>
+Each lecture has a weightage of 0.25 marks, and each lab has a weightage of 0.6 marks (subject to a maximum of 5 marks for lectures as well as labs).
+</ul>
+<p></p>
+<p>
+<b>Quiz schedule:</b>
+29 January, 6-7 pm
+</p>
+<b>Lab Exam schedule:</b>
+<ul>
+<li>First Lab exam: 14-15 February</li>
+<li>Second Lab exam: 25-26 April</li>
+</ul>
+<p></p>
+<p>
+<b> Passing criteria: </b> 30% in course total
+</p>
+<p><b> Acadmic Honesty: </b> 
+Cheating, including copying or allowing others to copy during lab exams, minor exam, or major exam, will result in an <b>F grade</b> in the course.
+In addition, the student will be referred to the DISCO, which will place additional penalties.
+</p>
+<p><b>Note:</b>
+There will be no Re-minor/Re-quiz/Re-lab-exam in this course. 
+Any missed exam/quiz/lab-exam will be scaled from the remaining grading components, 
+subject to the submission of a valid medical certificate.
+</p>
+</div>
+</a></div><a id="Logistics">
+
+
+
+<!-- ----------------------------------------------------------------------- -->
+
+
+<div class="w3-card w3-pale-yellow w3-margin">
+<div class="w3-container">
+<h4 id="Course-material">Course material</h4>
+</div>
+<div class="w3-container" style="padding-bottom:6px; padding-left:36px; padding-right:36px">
+<br>
+Lecture notes, lab exercises, practice problems, and other course materials will be shared through Piazza.
+</div>
+</div>
+
+
+<!-- ----------------------------------------------------------------------- -->
+
+
+</a><div class="w3-card w3-pale-yellow w3-margin"><a id="Logistics">
+</a><div class="w3-container"><a id="Logistics">
+</a><a id="Python">
+<h4> Setting-up Python</h4>
+</a></div><a id="Python">
+<div class="w3-container w3-margin">
+
+Students are strongly advised to install Python version 3.8.10 on their systems. All programming exercises, lab exams must be written and tested in this version.
+
+<br>
+</div>
+</a></div><a id="Python">
+
+
+<!-- ----------------------------------------------------------------------- -->
+
+
+
+</a></div><a id="Python">
+
+
+<script>
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+}
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+
+
+
+
+
+</a></body></html>

@@ -1,0 +1,1278 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="us-ascii"><!-- Required meta tags --><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><!-- Bootstrap CSS -->
+	<link href="../../Teaching/css/bootstrap.min.css" rel="stylesheet"><!-- Custom styles -->
+	<link href="../../Teaching/css/style.css" rel="stylesheet">
+	<link href="../../images/favicon.png" rel="icon">
+	<title>COL202</title>
+</head>
+<body>
+<main role="main"><!-- Main jumbotron for a primary marketing message or call to action -->
+<section class="jumbotron text-center">
+<div class="container">
+<h4 class="jumbotron-heading">COL202, Spring Semester 2023</h4>
+
+<h1 class="jumbotron-heading">Discrete Mathematical Structures</h1>
+<!-- <p class="lead text-muted"><i>Making friends with proof.</i></p> -->
+
+<p class="lead text-muted"><b>Instructor:</b> <a href="https://rohitvaish.in">Rohit Vaish</a> (<script>
+    (function whatever() {
+		var p0 = '.'
+        , p1 = '@'
+        , p2 = 'in'
+        , p3 = 'rvaish'
+        , p4 = 'iitd'
+        , p5 = 'ac'
+        , e = p3 + p1 + p4 + p0 + p5 + p0 + p2
+        , l = '<a href=mailto:{{hello@noone.com}}>{{hello@noone.com}}</a>'.replace(/{{.+?(}})/g, e);
+		document.write(l);
+		})();
+</script><a href="mailto:rvaish@iitd.ac.in">rvaish@iitd.ac.in</a>)</p>
+
+<p>Teaching Assistants:<br>
+Lakshay Saggi (<script>
+    (function whatever() {
+		var p0 = '.'
+        , p1 = '@'
+        , p2 = 'in'
+        , p3 = 'csz228231'
+        , p4 = 'cse.iitd'
+        , p5 = 'ac'
+        , e = p3 + p1 + p4 + p0 + p5 + p0 + p2
+        , l = '<a href=mailto:{{hello@noone.com}}>{{hello@noone.com}}</a>'.replace(/{{.+?(}})/g, e);
+		document.write(l);
+		})();
+</script><a href="mailto:csz228231@cse.iitd.ac.in">csz228231@cse.iitd.ac.in</a>),<br>
+Kanav Pruthi (<script>
+    (function whatever() {
+		var p0 = '.'
+        , p1 = '@'
+        , p2 = 'in'
+        , p3 = 'ee1190487'
+        , p4 = 'ee.iitd'
+        , p5 = 'ac'
+        , e = p3 + p1 + p4 + p0 + p5 + p0 + p2
+        , l = '<a href=mailto:{{hello@noone.com}}>{{hello@noone.com}}</a>'.replace(/{{.+?(}})/g, e);
+		document.write(l);
+		})();
+</script><a href="mailto:ee1190487@ee.iitd.ac.in">ee1190487@ee.iitd.ac.in</a>)<br>
+Aniket Mishra (<script>
+    (function whatever() {
+		var p0 = '.'
+        , p1 = '@'
+        , p2 = 'in'
+        , p3 = 'cs5190420'
+        , p4 = 'cse.iitd'
+        , p5 = 'ac'
+        , e = p3 + p1 + p4 + p0 + p5 + p0 + p2
+        , l = '<a href=mailto:{{hello@noone.com}}>{{hello@noone.com}}</a>'.replace(/{{.+?(}})/g, e);
+		document.write(l);
+		})();
+</script><a href="mailto:cs5190420@cse.iitd.ac.in">cs5190420@cse.iitd.ac.in</a>),<br>
+Rajdeep Dhingra (<script>
+    (function whatever() {
+		var p0 = '.'
+        , p1 = '@'
+        , p2 = 'in'
+        , p3 = 'cs1190388'
+        , p4 = 'cse.iitd'
+        , p5 = 'ac'
+        , e = p3 + p1 + p4 + p0 + p5 + p0 + p2
+        , l = '<a href=mailto:{{hello@noone.com}}>{{hello@noone.com}}</a>'.replace(/{{.+?(}})/g, e);
+		document.write(l);
+		})();
+</script><a href="mailto:cs1190388@cse.iitd.ac.in">cs1190388@cse.iitd.ac.in</a>)
+</p>
+</div>
+</section>
+
+<div class="album py-3 bg-light">
+<div class="container">
+<div class="row">
+<div class="col-sm">
+<h4 class="maintopic"><br>
+Course Information</h4>
+<b>What this course is about</b>
+
+<p align="justify">This course will introduce its participants to fundamentals of discrete mathematics that they can apply to future courses in computer science and related areas.<br><br>
+
+An important goal of the course will be to develop familiarity with and an appreciation of rigorous mathematical reasoning (or <italic>proofs</italic>).<br>
+
+</p>
+<b>Who is this course aimed at</b>
+
+<p align="justify">The course is designed for second and third year undergraduate students who want to do advanced courses in computer science in the future.<br><br>
+
+This offering of COL202 is for non-CS students; CS students should sign up for the Fall semester offering.</p>
+
+
+<b>Prerequisites</b>
+
+<p align="justify">This is a theoretical course that will require familiarity with high school (Standards 11 and 12) mathematics.</p>
+
+<b>Reference texts</b>
+
+<ul>
+	<li> [LLM-Book] E. Lehman, F. T. Leighton, and A. R. Meyer. Mathematics for Computer Science, June 2018 [<a href="https://courses.csail.mit.edu/6.042/spring18/mcs.pdf" target="_blank">pdf</a>]
+	</li><li> [LLM-Notes] E. Lehman, F. T. Leighton, and A. R. Meyer. Mathematics for Computer Science, Course notes from Fall 2010, MIT OpenCourseWare [<a href="https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-fall-2010/pages/readings/" target="_blank">pdf</a>]
+</li></ul>
+
+</div>
+
+<div class="col-sm">
+<h4 class="maintopic"><br>
+Admin</h4>
+<b>Lecture and tutorial timings</b>
+
+<p align="justify">Lectures: TWF 10-11AM at LH 316.</p>
+<p align="justify">Tutorials: M/T/Th/F 1-2PM at LH 613 (<a href="Tutorials/Tutorial-Groups.pdf" target="_blank">Tutorial Groups</a>).</p>
+Sign up on the Microsoft Teams channel of the course for announcements.<p></p>
+
+<b>Evaluation policy</b><br>
+
+<p align="justify">Tutorials: 16% (best eight x 2%)<br>
+Quizzes: 14% (best two x 7%)<br>
+Minor 1: 20% <br>
+Minor 2: 20% <br>
+Major: 30%</p>
+
+There will be no make-up quizzes or tutorials. For missed minors due to medical reasons, there will be a single reminor held after the major exams for which the syllabus will be the entire course.<br><br>
+
+For audit pass, all three of the following conditions should be met:<br> 
+<ul>
+	<li> At least 75% attendance
+	</li><li> Overall score at least 40/100
+	</li><li> Score in Minors+Major at least 25/70
+</li></ul>
+<!--
+<b>How to register</b>
+
+<p align="justify">Send an email to Rohit with information about your prior coursework and relevant research experience.</p>
+--></div>
+</div>
+</div>
+</div>
+
+<div class="album py-3 bg-light">
+<div class="container">
+<table class="table">
+	<thead class="thead-dark">
+		<tr>
+			<th scope="col" style="text-align: left;">Date</th>
+			<th scope="col">Lectures</th>
+			<th scope="col">Tutorials</th>
+		</tr>
+	</thead>
+	<tbody>
+	
+		<tr class="tablesection">
+			<td colspan="4" style="text-align: center;">Week 1</td>
+		</tr>
+		
+		<tr class="oddrow"><!-- <th scope="row">Lec 1: Date</th> -->
+			<td>Jan 03 (Tue)</td>
+			<td><strong>Lecture 1: What is a Proof?</strong><br>			
+				<li><a href="Slides/Lecture-1.pdf" target="_blank">Slides</a></li>
+				<li>Additional reading: LLM-Book 1.1-1.4</li>
+			
+			</td>
+			<td>
+			<ul>
+				No tutorial
+			</ul>
+			</td>
+		</tr>
+		
+		<tr class="evenrow">
+			<td>Jan 04 (Wed)</td>
+			<td><strong>Lecture 2: Propositional Logic</strong><br>
+				<li><a href="Slides/Lecture-2.pdf" target="_blank">Slides</a></li>
+				<li>Additional reading: LLM-Notes Chapter 1</li>
+				<li>Veritasium: <a href="https://www.youtube.com/watch?v=HeQX2HjkcNo" target="_blank">Math's Fundamental Flaw</a></li>
+			
+			</td>
+			<td>
+			<ul>
+				
+			</ul>
+			</td>
+		</tr>
+		
+		<tr class="oddrow">
+			<td>Jan 05 (Thurs)</td>
+			<td><strong></strong><br>			
+			</td>
+			<td>
+			<ul>
+				No tutorial
+			</ul>
+			</td>
+		</tr>
+		
+		<tr class="evenrow">
+			<td>Jan 06 (Fri)</td>
+			<td><strong>Lecture 3: Patterns of Proof</strong><br>
+				<li><a href="Slides/Lecture-3.pdf" target="_blank">Slides</a></li>
+				<li>Additional reading: LLM-Notes Chapter 2</li>
+				<li>3Blue1Brown: <a href="https://www.youtube.com/watch?v=VYQVlVoWoPY" target="_blank">How to lie using visual proofs</a></li>
+			
+			</td>
+			<td>
+			<ul>
+				No tutorial
+			</ul>
+			</td>
+		</tr>
+		
+		<tr class="tablesection">
+			<td colspan="4" style="text-align: center;">Week 2</td>
+		</tr>
+		
+		<tr class="oddrow">
+			<td>Jan 09 (Mon)</td>
+			<td><strong style="color:blue;">Last date for course add-drop</strong><br>			
+			</td>
+			<td>
+			<ul>
+				Group 1: <a href="Tutorials/Sheet-1.pdf" target="_blank">Tutorial Sheet 1</a>
+			</ul>
+			</td>
+		</tr>
+		
+		<tr class="evenrow">
+			<td>Jan 10 (Tue)</td>
+			<td><strong>Lecture 4: Induction</strong><br>			
+				<li><a href="Slides/Lecture-4.pdf" target="_blank">Slides</a></li>
+				<li>Additional reading: LLM-Notes Ch 3, Sec 3.2</li>
+				<li><a href="https://pi.math.cornell.edu/~mec/2008-2009/ABjorndahl/" target="_blank">Puzzles and Paradoxes in Mathematical Induction</a></li>
+			</td>
+			<td>
+			<ul>
+				Group 2: <a href="Tutorials/Sheet-1.pdf" target="_blank">Tutorial Sheet 1</a>
+			</ul>
+			</td>
+		</tr>
+		
+		<tr class="oddrow">
+			<td>Jan 11 (Wed)</td>
+			<td><strong>Lecture 5: Induction and Invariant</strong><br>
+				<li><a href="Slides/Lecture-5.pdf" target="_blank">Slides</a></li>
+				<li>Additional reading: LLM-Notes Chapter 3, Sec 3.3.4</li><br>
+				
+				<strong style="color:blue;">Finalization of roll lists</strong>
+			
+			</td>
+			<td>
+			<ul>
+			</ul>
+			</td>
+		</tr>
+		
+		<tr class="evenrow">
+			<td>Jan 12 (Thurs)</td>
+			<td><strong></strong><br>			
+			</td>
+			<td>
+			<ul>
+				Group 3: <a href="Tutorials/Sheet-1.pdf" target="_blank">Tutorial Sheet 1</a>
+			</ul>
+			</td>
+		</tr>
+		
+		<tr class="oddrow">
+			<td>Jan 13 (Fri)</td>
+			<td><strong>Lecture 6: Strong Induction</strong><br>
+				<li><a href="Slides/Lecture-6.pdf" target="_blank">Slides</a></li>
+				<li>Additional reading: LLM-Notes Chapter 3, Sec 3.4</li>
+			
+			</td>
+			<td>
+			<ul>
+				Group 4: <a href="Tutorials/Sheet-1.pdf" target="_blank">Tutorial Sheet 1</a>
+			</ul>
+			</td>
+		</tr>
+		
+		<tr class="tablesection">
+			<td colspan="4" style="text-align: center;">Week 3</td>
+		</tr>
+		
+		<tr class="evenrow">
+			<td>Jan 16 (Mon)</td>
+			<td><strong></strong><br>			
+			</td>
+			<td>
+			<ul>
+				Group 1: <a href="Tutorials/Sheet-2.pdf" target="_blank">Tutorial Sheet 2</a>
+			</ul>
+			</td>
+		</tr>
+		
+		<tr class="oddrow">
+			<td>Jan 17 (Tue)</td>
+			<td><strong>Lecture 7: <font color="red">Quiz 1</font></strong><br>
+			<li><a href="Slides/Lecture-7.pdf" target="_blank">Solutions</a></li>
+			</td>
+			<td>
+			<ul>
+				Group 2: <a href="Tutorials/Sheet-2.pdf" target="_blank">Tutorial Sheet 2</a>
+			</ul>
+			</td>
+		</tr>
+		
+		<tr class="evenrow">
+			<td>Jan 18 (Wed)</td>
+			<td><strong>Lecture 8: Well Ordering Principle</strong><br>
+				<li><a href="Slides/Lecture-8.pdf" target="_blank">Slides</a></li>
+				<li>Additional reading: LLM-Book Chapter 2</li>
+			</td>
+			<td>
+			<ul>
+			</ul>
+			</td>
+		</tr>
+		
+		<tr class="oddrow">
+			<td>Jan 19 (Thurs)</td>
+			<td><strong></strong><br>			
+			</td>
+			<td>
+			<ul>
+				Group 3: <a href="Tutorials/Sheet-2.pdf" target="_blank">Tutorial Sheet 2</a>
+			</ul>
+			</td>
+		</tr>
+		
+		<tr class="evenrow">
+			<td>Jan 20 (Fri)</td>
+			<td><strong>Lecture 9: Number Theory I: GCD</strong><br>
+				<li><a href="Slides/Lecture-9.pdf" target="_blank">Slides</a></li>
+				<li>Additional reading: LLM-Book Chapter 9, Sec 9.1-9.2.2</li>
+			
+			</td>
+			<td>
+			<ul>
+				Group 4: <a href="Tutorials/Sheet-2.pdf" target="_blank">Tutorial Sheet 2</a>
+			</ul>
+			</td>
+		</tr>
+				
+		
+		<tr class="tablesection">
+			<td colspan="4" style="text-align: center;">Week 4</td>
+		</tr>
+		
+		<tr class="oddrow">
+			<td>Jan 23 (Mon)</td>
+			<td><strong></strong><br>			
+			</td>
+			<td>
+			<ul>
+				Group 1: <a href="Tutorials/Sheet-3.pdf" target="_blank">Tutorial Sheet 3</a>
+			</ul>
+			</td>
+		</tr>
+		
+		<tr class="evenrow">
+			<td>Jan 24 (Tue)</td>
+			<td><strong>Lecture 10: Number Theory II: GCD Applications</strong><br>			
+				<li><a href="Slides/Lecture-10.pdf" target="_blank">Slides</a></li>
+				<li>Additional reading: LLM-Book Chapter 9, Sec 9.2.3-9.4</li>
+			
+			</td>
+			<td>
+			<ul>
+				Group 2: <a href="Tutorials/Sheet-3.pdf" target="_blank">Tutorial Sheet 3</a>
+			</ul>
+			</td>
+		</tr>
+		
+		<tr class="oddrow">
+			<td>Jan 25 (Wed)</td>
+			<td><strong>Lecture 11: Number Theory III: GCD Applications and Congruence</strong><br>
+				<li><a href="Slides/Lecture-11.pdf" target="_blank">Slides</a></li>
+				<li>Additional reading: LLM-Book Chapter 9, Sec 9.6</li>
+			
+			</td>
+			<td>
+			<ul>
+			</ul>
+			</td>
+		</tr>
+		
+		<tr class="evenrow">
+			<td>Jan 26 (Thurs)<br>
+			<strong style="color:blue;">Republic Day</strong></td>
+			<td><strong></strong><br>			
+			</td>
+			<td>
+			<ul>
+				Group 3 tutorial moved to Jan 28 (Sat)
+			</ul>
+			</td>
+		</tr>
+		
+		<tr class="oddrow">
+			<td>Jan 27 (Fri)</td>
+			<td><strong>Lecture 12: Number Theory IV: Congruence and Euler's Function</strong><br>
+				<li><a href="Slides/Lecture-12.pdf" target="_blank">Slides</a></li>
+				<li>Additional reading: LLM-Book Chapter 9, Sec 9.9 and 9.10.1</li>
+			
+			</td>
+			<td>
+			<ul>
+				Group 4: <a href="Tutorials/Sheet-3.pdf" target="_blank">Tutorial Sheet 3</a>
+			</ul>
+			</td>
+		</tr>
+		
+		<tr class="evenrow">
+			<td>Jan 28 (Sat)<br>
+			<strong style="color:blue;">Thursday timetable</strong></td>
+			<td><strong></strong><br>			
+			</td>
+			<td>
+			<ul>
+				Group 3: <a href="Tutorials/Sheet-3.pdf" target="_blank">Tutorial Sheet 3</a>
+			</ul>
+			</td>
+		</tr>
+		
+		<tr class="tablesection">
+			<td colspan="4" style="text-align: center;">Week 5</td>
+		</tr>
+		
+		<tr class="oddrow">
+			<td>Jan 30 (Mon)</td>
+			<td><strong></strong><br>			
+			</td>
+			<td>
+			<ul>
+				Group 1: <a href="Tutorials/Sheet-4.pdf" target="_blank">Tutorial Sheet 4</a>
+			</ul>
+			</td>
+		</tr>
+		
+		<tr class="evenrow">
+			<td>Jan 31 (Tue)</td>
+			<td><strong>Lecture 13: Number Theory V: Euler's Theorem</strong><br>			
+				<li><a href="Slides/Lecture-13.pdf" target="_blank">Slides</a></li>
+				<li>Additional reading: LLM-Book Chapter 9, Sec 9.10</li>
+			
+			</td>
+			<td>
+			<ul>
+				Group 2: <a href="Tutorials/Sheet-4.pdf" target="_blank">Tutorial Sheet 4</a>
+			</ul>
+			</td>
+		</tr>
+		
+		<tr class="oddrow">
+			<td>Feb 01 (Wed)</td>
+			<td><strong>Lecture 14: Number Theory VI: Secret Sharing and Public Key Cryptography</strong><br>
+				<li><a href="Slides/Lecture-14.pdf" target="_blank">Slides</a></li>
+				<li>Additional reading: LLM-Book Chapter 9, Sec 9.11</li>
+				<li>The 'R' in RSA on <a href="https://www.youtube.com/watch?v=YQw124CtvO0" target="_blank">Numberphile</a></li>
+			</td>
+			<td>
+			<ul>
+			</ul>
+			</td>
+		</tr>
+		
+		<tr class="evenrow">
+			<td>Feb 02 (Thurs)<br>
+			</td><td><strong></strong><br>			
+			</td>
+			<td>
+			<ul>
+				Group 3: <a href="Tutorials/Sheet-4.pdf" target="_blank">Tutorial Sheet 4</a>
+			</ul>
+			</td>
+		</tr>
+		
+		<tr class="oddrow">
+			<td>Feb 03 (Fri)</td>
+			<td><strong>Lecture 15: Office hour (Bharti 425)</strong><br>
+			
+			</td>
+			<td>
+			<ul>
+				Group 4: <a href="Tutorials/Sheet-4.pdf" target="_blank">Tutorial Sheet 4</a>
+			</ul>
+			</td>
+		</tr>
+		
+		<tr class="tablesection">
+			<td colspan="4" style="text-align: center;">Week 6 (Minor Test 1)</td>
+		</tr>
+		
+		<tr class="evenrow">
+			<td>Feb 06 (Mon)</td>
+			<td><strong></strong><br>			
+			</td>
+			<td>
+			<ul>
+				No tutorial
+			</ul>
+			</td>
+		</tr>
+		
+		<tr class="oddrow">
+			<td>Feb 07 (Tue)</td>
+			<td><strong><font color="red">Minor 1</font>: 1-2PM, LH 308 and LH 310</strong><br>
+			</td>
+			<td>
+			<ul>
+				No tutorial
+			</ul>
+			</td>
+		</tr>
+		
+		<tr class="evenrow">
+			<td>Feb 08 (Wed)</td>
+			<td><strong>No Lecture</strong><br>			
+			</td>
+			<td>
+			<ul>
+			</ul>
+			</td>
+		</tr>
+		
+		<tr class="oddrow">
+			<td>Feb 09 (Thurs)</td>
+			<td><strong></strong><br>			
+			</td>
+			<td>
+			<ul>
+				No tutorial
+			</ul>
+			</td>
+		</tr>
+		
+		<tr class="evenrow">
+			<td>Feb 10 (Fri)</td>
+			<td><strong>Lecture 16: Minor-1 Discussion and Graph Theory</strong><br>
+				<li><a href="Slides/Lecture-16.pdf" target="_blank">Slides</a></li>
+				<li>Additional reading: LLM-Book Chapter 12, Sec 12.1, 12.2, and 12.6</li>
+			
+			</td>
+			<td>
+			<ul>
+				No tutorial
+			</ul>
+			</td>
+		</tr>
+		
+		<tr class="tablesection">
+			<td colspan="4" style="text-align: center;">Week 7</td>
+		</tr>
+		
+		<tr class="oddrow">
+			<td>Feb 13 (Mon)</td>
+			<td><strong></strong><br>			
+			</td>
+			<td>
+			<ul>
+				Group 1: <a href="Tutorials/Sheet-5.pdf" target="_blank">Tutorial Sheet 5</a>
+			</ul>
+			</td>
+		</tr>
+		
+		<tr class="evenrow">
+			<td>Feb 14 (Tue)</td>
+			<td><strong>Lecture 17: Graph Coloring and Matching</strong><br>			
+				<li><a href="Slides/Lecture-17.pdf" target="_blank">Slides</a></li>
+				<li>Additional reading: LLM-Book Chapter 12, Sec 12.5 and 12.6</li>
+			
+			</td>
+			<td>
+			<ul>
+				Group 2: <a href="Tutorials/Sheet-5.pdf" target="_blank">Tutorial Sheet 5</a>
+			</ul>
+			</td>
+		</tr>
+		
+		<tr class="oddrow">
+			<td>Feb 15 (Wed)</td>
+			<td><strong>Lecture 18: Matchings: Perfect and Stable</strong><br>
+				<li><a href="Slides/Lecture-18.pdf" target="_blank">Slides</a></li>
+				<li>Additional reading: LLM-Book Chapter 12, Sec 12.5 and Chapter 6, Sec 6.4</li>
+			
+			</td>
+			<td>
+			<ul>
+			</ul>
+			</td>
+		</tr>
+		
+		<tr class="evenrow">
+			<td>Feb 16 (Thurs)<br>
+			</td><td><strong></strong><br>			
+			</td>
+			<td>
+			<ul>
+				Group 3: <a href="Tutorials/Sheet-5.pdf" target="_blank">Tutorial Sheet 5</a>
+			</ul>
+			</td>
+		</tr>
+		
+		<tr class="oddrow">
+			<td>Feb 17 (Fri)</td>
+			<td><strong>Lecture 19: Stable Matchings (Contd.)</strong><br>
+				<li><a href="Slides/Lecture-19.pdf" target="_blank">Slides</a></li>
+				<li>Additional reading: LLM-Book Chapter 6, Sec 6.4</li>
+			
+			</td>
+			<td>
+			<ul>
+				Group 4: <a href="Tutorials/Sheet-5.pdf" target="_blank">Tutorial Sheet 5</a>
+			</ul>
+			</td>
+		</tr>
+		
+		<tr class="tablesection">
+			<td colspan="4" style="text-align: center;">Week 8</td>
+		</tr>
+		
+		<tr class="evenrow">
+			<td>Feb 20 (Mon)</td>
+			<td><strong></strong><br>			
+			</td>
+			<td>
+			<ul>
+				Group 1: <a href="Tutorials/Sheet-6.pdf" target="_blank">Tutorial Sheet 6</a>
+			</ul>
+			</td>
+		</tr>
+		
+		<tr class="oddrow">
+			<td>Feb 21 (Tue)</td>
+			<td><strong>Lecture 20: Stable Matchings (Contd., Again)</strong><br>			
+				<li><a href="Slides/Lecture-20.pdf" target="_blank">Slides</a></li>
+				<li>Additional reading: LLM-Book Chapter 6, Sec 6.4</li>
+			
+			</td>
+			<td>
+			<ul>
+				Group 2: <a href="Tutorials/Sheet-6.pdf" target="_blank">Tutorial Sheet 6</a>
+			</ul>
+			</td>
+		</tr>
+		
+		<tr class="evenrow">
+			<td>Feb 22 (Wed)</td>
+			<td><strong>Lecture 21: Walks, Cycles, and Trees</strong><br>
+				<li><a href="Slides/Lecture-21.pdf" target="_blank">Slides</a></li>
+				<li>Additional reading: LLM-Notes Chapter 5, Sec 5.4-5.7</li>
+			
+			</td>
+			<td>
+			<ul>
+			</ul>
+			</td>
+		</tr>
+		
+		<tr class="oddrow">
+			<td>Feb 23 (Thurs)<br>
+			</td><td><strong></strong><br>			
+			</td>
+			<td>
+			<ul>
+				Group 3: <a href="Tutorials/Sheet-6.pdf" target="_blank">Tutorial Sheet 6</a>
+			</ul>
+			</td>
+		</tr>
+		
+		<tr class="evenrow">
+			<td>Feb 24 (Fri)</td>
+			<td><strong>No Lecture</strong><br>
+			<strong style="color:blue;">Mid-Term Project Evaluation</strong>
+			</td>
+			<td>
+			<ul>
+			Group 4: <a href="Tutorials/Sheet-6.pdf" target="_blank">Tutorial Sheet 6</a><br>
+			</ul>
+			</td>
+		</tr>		
+		
+		<tr class="tablesection">
+			<td colspan="4" style="text-align: center;">Week 9</td>
+		</tr>
+		
+		<tr class="oddrow">
+			<td>Feb 27 (Mon)</td>
+			<td><strong></strong><br>			
+			</td>
+			<td>
+			<ul>
+				Group 1: <a href="Tutorials/Sheet-7.pdf" target="_blank">Tutorial Sheet 7</a>
+			</ul>
+			</td>
+		</tr>
+		
+		<tr class="evenrow">
+			<td>Feb 28 (Tue)</td>
+			<td><strong>Lecture 22: <font color="red">Quiz 2</font></strong><br>
+			</td>
+			<td>
+			<ul>
+				Group 2: <a href="Tutorials/Sheet-7.pdf" target="_blank">Tutorial Sheet 7</a>
+			</ul>
+			</td>
+		</tr>
+		
+		<tr class="oddrow">
+			<td>Mar 01 (Wed)</td>
+			<td><strong>Lecture 23: Quiz 2 Discussion and Minimum Spanning Trees</strong><br>
+				<li><a href="Slides/Lecture-23.pdf" target="_blank">Slides</a></li>
+				<li>Additional reading: LLM-Notes Chapter 5, Sec 5.7.3-5.7.4</li>
+			
+			</td>
+			<td>
+			<ul>
+			</ul>
+			</td>
+		</tr>
+		
+		<tr class="evenrow">
+			<td>Mar 02 (Thurs)<br>
+			</td><td><strong></strong><br>			
+			</td>
+			<td>
+			<ul>
+				Group 3: <a href="Tutorials/Sheet-7.pdf" target="_blank">Tutorial Sheet 7</a>
+			</ul>
+			</td>
+		</tr>
+		
+		<tr class="oddrow">
+			<td>Mar 03 (Fri)</td>
+			<td><strong>Lecture 24: Minimum Spanning Trees (Contd.)</strong><br>
+				<li><a href="Slides/Lecture-24.pdf" target="_blank">Slides</a></li>
+				<li>Additional reading: LLM-Notes Chapter 5, Sec 5.7.4</li>
+			
+			</td>
+			<td>
+			<ul>
+				Group 4: <a href="Tutorials/Sheet-7.pdf" target="_blank">Tutorial Sheet 7</a>
+			</ul>
+			</td>
+		</tr>				
+		
+		
+		<tr class="tablesection">
+			<td colspan="4" style="text-align: center;">Week 10 (Mid-Semester Break)</td>
+		</tr>
+		
+		<tr class="evenrow">
+			<td>Mar 06-10</td>
+			<td><strong>No Lectures</strong><br>			
+			</td>
+			<td>
+			<ul>
+				No tutorials
+			</ul>
+			</td>
+		</tr>	
+		
+				
+		<tr class="tablesection">
+			<td colspan="4" style="text-align: center;">Week 11</td>
+		</tr>
+						
+		<tr class="oddrow">
+			<td>Mar 13 (Mon)</td>
+			<td><strong></strong><br>			
+			</td>
+			<td>
+			<ul>
+				Group 1: <a href="Tutorials/Sheet-8.pdf" target="_blank">Tutorial Sheet 8</a>
+			</ul>
+			</td>
+		</tr>
+		
+		<tr class="evenrow">
+			<td>Mar 14 (Tue)</td>
+			<td><strong>No Lecture</strong><br>
+			
+			</td>
+			<td>
+			<ul>
+				Group 2: <a href="Tutorials/Sheet-8.pdf" target="_blank">Tutorial Sheet 8</a>
+			</ul>
+			</td>
+		</tr>
+		
+		<tr class="oddrow">
+			<td>Mar 15 (Wed)</td>
+			<td><strong>Lecture 25: Euler Tours</strong><br>
+				<li><a href="Slides/Lecture-25.pdf" target="_blank">Slides</a></li>
+				<li>Additional reading: LLM-Notes, Chapter 5, Sec 5.6.3-5.6.5</li>
+			
+			</td>
+			<td>
+			<ul>
+			</ul>
+			</td>
+		</tr>
+		
+		<tr class="evenrow">
+			<td>Mar 16 (Thurs)<br>
+			</td><td><strong></strong><br>			
+			</td>
+			<td>
+			<ul>
+				Group 3: <a href="Tutorials/Sheet-8.pdf" target="_blank">Tutorial Sheet 8</a>
+			</ul>
+			</td>
+		</tr>
+		
+		<tr class="oddrow">
+			<td>Mar 17 (Fri)</td>
+			<td><strong>Lecture 26: Directed Graphs</strong><br>
+				<li><a href="Slides/Lecture-26.pdf" target="_blank">Slides</a></li>
+				<li>Additional reading: LLM-Notes, Chapter 6, Sec 6.1.2 and LLM-Book, Chapter 10, Sec 10.5</li>			
+			</td>
+			<td>
+			<ul>
+				Group 4: <a href="Tutorials/Sheet-8.pdf" target="_blank">Tutorial Sheet 8</a>
+			</ul>
+			</td>
+		</tr>
+				
+		<tr class="tablesection">
+			<td colspan="4" style="text-align: center;">Week 12 (Minor Test 2)</td>
+		</tr>
+						
+		<tr class="evenrow">
+			<td>Mar 20 (Mon)</td>
+			<td><strong></strong><br>			
+			</td>
+			<td>
+			<ul>
+				No tutorial
+			</ul>
+			</td>
+		</tr>
+		
+		<tr class="oddrow">
+			<td>Mar 21 (Tue)</td>
+			<td><strong>Lecture 27: Sums</strong><br>			
+				<li><a href="Slides/Lecture-27.pdf" target="_blank">Slides</a></li>
+				<li>Additional reading: LLM-Book, Chapter 14, Sec 14.1-14.3</li>
+			
+			</td>
+			<td>
+			<ul>
+				No tutorial
+			</ul>
+			</td>
+		</tr>
+		
+		<tr class="evenrow">
+			<td>Mar 22 (Wed)</td>
+			<td><strong>Lecture 28: Sums and Asymptotics</strong><br>
+				<li><a href="Slides/Lecture-28.pdf" target="_blank">Slides</a></li>
+				<li>Additional reading: LLM-Book, Chapter 14.3-14.7</li>
+			
+			</td>
+			<td>
+			<ul>
+			</ul>
+			</td>
+		</tr>
+		
+		<tr class="oddrow">
+			<td>Mar 23 (Thurs)<br>
+			</td><td><strong></strong><br>			
+			</td>
+			<td>
+			<ul>
+				No tutorial
+			</ul>
+			</td>
+		</tr>
+		
+		<tr class="evenrow">
+			<td>Mar 24 (Fri)</td>
+			<td><strong><font color="red">Minor 2</font>: 1-2PM, LH 308 and LH 310</strong><br>
+			</td>
+			<td>
+			<ul>
+				No tutorial
+			</ul>
+			</td>
+		</tr>
+
+				
+		<tr class="tablesection">
+			<td colspan="4" style="text-align: center;">Week 13</td>
+		</tr>
+						
+		<tr class="oddrow">
+			<td>Mar 27 (Mon)</td>
+			<td><strong></strong><br>			
+			</td>
+			<td>
+			<ul>
+				Group 1: <a href="Tutorials/Sheet-9.pdf" target="_blank">Tutorial Sheet 9</a>
+			</ul>
+			</td>
+		</tr>
+		
+		<tr class="evenrow">
+			<td>Mar 28 (Tue)</td>
+			<td><strong>Lecture 29: Minor-II Discussion and Recurrence</strong><br>			
+				<li><a href="Slides/Lecture-29.pdf" target="_blank">Slides</a></li>
+				<li>Additional reading: LLM-Notes, Chapter 10, Sec 10.1-10.2</li>
+			
+			</td>
+			<td>
+			<ul>
+				Group 2: <a href="Tutorials/Sheet-9.pdf" target="_blank">Tutorial Sheet 9</a>
+			</ul>
+			</td>
+		</tr>
+		
+		<tr class="oddrow">
+			<td>Mar 29 (Wed)<br>
+			<strong style="color:blue;">Thursday timetable</strong></td>
+			<td><strong>No Lecture</strong><br></td>
+			
+			<td>
+			<ul>
+				Group 3: <a href="Tutorials/Sheet-9.pdf" target="_blank">Tutorial Sheet 9</a>
+			</ul>
+			</td>
+		</tr>
+		
+		<tr class="evenrow">
+			<td>Mar 30 (Thurs)<br>
+			<strong style="color:blue;">Ram Navami</strong></td>
+			<td><strong>No Lecture</strong><br>			
+			</td>
+			<td>
+			<ul>
+				Group 3 tutorial advanced to Mar 29 (Wed)
+			</ul>
+			</td>
+		</tr>
+		
+		<tr class="oddrow">
+			<td>Mar 31 (Fri)</td>
+			<td><strong>Lecture 30: Recurrence (contd.)</strong><br>
+				<li><a href="Slides/Lecture-30.pdf" target="_blank">Slides</a></li>
+				<li>Additional reading: LLM-Notes, Chapter 10, Sec 10.3-10.5</li>
+				<li><a href="../../data/Papers/[Akra,Bazzi] On the Solution of Linear Recurrence Equations.pdf">Akra and Bazzi (1998)</a></li>
+			
+			</td>
+			<td>
+			<ul>
+				Group 4: <a href="Tutorials/Sheet-9.pdf" target="_blank">Tutorial Sheet 9</a>
+			</ul>
+			</td>
+		</tr>
+		
+		<tr class="evenrow">
+			<td>Apr 01 (Sat)<br>
+			<strong style="color:blue;">Friday timetable</strong></td>
+			<td><strong>Lecture 31: Linear Recurrences and Counting</strong><br>
+				<li><a href="Slides/Lecture-31.pdf" target="_blank">Slides</a></li>
+				<li>Additional reading: LLM-Notes, Chapter 10, Sec 10.3-10.5 and LLM-Book, Chapter 15, Sec 15.8</li>
+				<li>"The Pigeon Hole Principle: 7 gorgeous proofs" by <a href="https://www.youtube.com/watch?v=TCZ3YwbcDaw" target="_blank">Mathologer</a></li>
+			</td>
+			
+			<td>
+			<ul>
+				No tutorial
+			</ul>
+			</td>
+		</tr>
+				
+		<tr class="tablesection">
+			<td colspan="4" style="text-align: center;">Week 14</td>
+		</tr>
+						
+		<tr class="oddrow">
+			<td>Apr 03 (Mon)</td>
+			<td><strong></strong><br>			
+			</td>
+			<td>
+			<ul>
+				No tutorial
+			</ul>
+			</td>
+		</tr>
+		
+		<tr class="evenrow">
+			<td>Apr 04 (Tue)<br>
+			<strong style="color:blue;">Mahavir Jayanti</strong></td>
+			<td><strong>No Lecture</strong><br>
+			</td>
+			<td>
+			<ul>
+				No tutorial
+			</ul>
+			</td>
+		</tr>
+		
+		<tr class="oddrow">
+			<td>Apr 05 (Wed)</td>
+			<td><strong>Lecture 32: Counting (Contd.)</strong><br>			
+				<li><a href="Slides/Lecture-32.pdf" target="_blank">Slides</a></li>
+				<li>Additional reading: LLM-Book, Chapter 15, Sec 15.1-15.9</li>			
+			</td>
+			<td>
+			<ul>
+			</ul>
+			</td>
+		</tr>
+		
+		<tr class="evenrow">
+			<td>Apr 06 (Thurs)<br>
+			</td><td></td>
+			<td>
+			<ul>
+				No tutorial
+			</ul>
+			</td>
+		</tr>
+		
+		<tr class="oddrow">
+			<td>Apr 07 (Fri)<br>
+			<strong style="color:blue;">Good Friday</strong></td>
+			<td><strong>No lecture</strong><br>
+			</td>
+			<td>
+			<ul>
+				No tutorial
+			</ul>
+			</td>
+		</tr>
+				
+		<tr class="tablesection">
+			<td colspan="4" style="text-align: center;">Week 15</td>
+		</tr>
+						
+		<tr class="evenrow">
+			<td>Apr 10 (Mon)</td>
+			<td><strong></strong><br>			
+			</td>
+			<td>
+			<ul>
+				Group 1: <a href="Tutorials/Sheet-10.pdf" target="_blank">Tutorial Sheet 10</a>
+			</ul>
+			</td>
+		</tr>
+		
+		<tr class="oddrow">
+			<td>Apr 11 (Tue)</td>
+			<td><strong>Lecture 33: Combinatorial Proofs (and Probability)</strong><br>			
+				<li><a href="Slides/Lecture-33.pdf" target="_blank">Slides</a></li>
+				<li>Additional reading: LLM-Book, Chapter 15, Sec 15.10 and Chapter 17, Sec 17.1 and 17.2</li>			
+			</td>
+			<td>
+			<ul>
+				Group 2: <a href="Tutorials/Sheet-10.pdf" target="_blank">Tutorial Sheet 10</a>
+			</ul>
+			</td>
+		</tr>
+		
+		<tr class="evenrow">
+			<td>Apr 12 (Wed)</td>
+			<td><strong>Lecture 34: <font color="red">Quiz 3</font></strong><br>		
+			</td>
+			<td>
+			<ul>
+			</ul>
+			</td>
+		</tr>
+		
+		<tr class="oddrow">
+			<td>Apr 13 (Thurs)<br>
+			</td><td></td>
+			<td>
+			<ul>
+				Group 3: <a href="Tutorials/Sheet-10.pdf" target="_blank">Tutorial Sheet 10</a>
+			</ul>
+			</td>
+		</tr>
+		
+		<tr class="evenrow">
+			<td>Apr 14 (Fri)<br>
+			<strong style="color:blue;">Vaisakhi</strong></td>
+			<td><strong>No lecture</strong><br>
+			</td>
+			<td>
+			<ul>
+				Group 4: <a href="Tutorials/Sheet-10.pdf" target="_blank">Tutorial Sheet 10</a>
+			</ul>
+			</td>
+		</tr>
+				
+		<tr class="tablesection">
+			<td colspan="4" style="text-align: center;">Week 16</td>
+		</tr>
+						
+		<tr class="oddrow">
+			<td>Apr 17 (Mon)</td>
+			<td><strong></strong><br>			
+			</td>
+			<td>
+			<ul>
+				Group 1: <a href="Tutorials/Sheet-11.pdf" target="_blank">Tutorial Sheet 11</a>
+			</ul>
+			</td>
+		</tr>
+		
+		<tr class="evenrow">
+			<td>Apr 18 (Tue)</td>
+			<td><strong>Lecture 35: Quiz 3 Discussion and Probability (contd.)</strong><br>			
+				<li><a href="Slides/Lecture-35.pdf" target="_blank">Slides</a></li>
+				<li>Additional reading: LLM-Book, Chapter 17, Sec 17.1 and 17.2 and Chapter 18, Sec 18.1-18.4</li>			
+			</td>
+			<td>
+			<ul>
+				Group 2: <a href="Tutorials/Sheet-11.pdf" target="_blank">Tutorial Sheet 11</a>
+			</ul>
+			</td>
+		</tr>
+		
+		<tr class="oddrow">
+			<td>Apr 19 (Wed)</td>
+			<td><strong>Lecture 36: Conditional Probability and Paradoxes</strong><br>			
+				<li><a href="Slides/Lecture-36.pdf" target="_blank">Slides</a></li>
+				<li>Additional reading: LLM-Book, Chapter 18, Sec 18.4-18.6</li>
+				<li><a href="https://arxiv.org/abs/2005.07180" target="_blank">Simpson's paradox in Covid-19 data</a></li>			
+			</td>
+			<td>
+			<ul>
+			</ul>
+			</td>
+		</tr>
+		
+		<tr class="evenrow">
+			<td>Apr 20 (Thurs)<br>
+			</td><td></td>
+			<td>
+			<ul>
+				Group 3: <a href="Tutorials/Sheet-11.pdf" target="_blank">Tutorial Sheet 11</a>
+			</ul>
+			</td>
+		</tr>
+		
+		<tr class="oddrow">
+			<td>Apr 21 (Fri)</td>
+			<td><strong>Lecture 37: Independence</strong><br>			
+				<li><a href="Slides/Lecture-37.pdf" target="_blank">Slides</a></li>
+				<li>Additional reading: LLM-Book, Chapter 18, Sec 18.7-18.8</li>			
+			</td>
+			<td>
+			<ul>
+				Group 4: <a href="Tutorials/Sheet-11.pdf" target="_blank">Tutorial Sheet 11</a>
+			</ul>
+			</td>
+		</tr>
+				
+		<tr class="tablesection">
+			<td colspan="4" style="text-align: center;">Week 17</td>
+		</tr>
+						
+		<tr class="evenrow">
+			<td>Apr 24 (Mon)</td>
+			<td><strong></strong><br>			
+			</td>
+			<td>
+			<ul>
+				Group 1: <a href="Tutorials/Sheet-12.pdf" target="_blank">Tutorial Sheet 12</a>
+			</ul>
+			</td>
+		</tr>
+		
+		<tr class="oddrow">
+			<td>Apr 25 (Tue)</td>
+			<td><strong>Lecture 38: Birthday Paradox and Random Variables</strong><br>			
+				<li><a href="Slides/Lecture-38.pdf" target="_blank">Slides</a></li>
+				<li>Additional reading: LLM-Book, Chapter 17, Sec 17.4 and Chapter 19, Sec 19.1-19.3</li>			
+			</td>
+			<td>
+			<ul>
+				Group 2: <a href="Tutorials/Sheet-12.pdf" target="_blank">Tutorial Sheet 12</a>
+			</ul>
+			</td>
+		</tr>
+		
+		<tr class="evenrow">
+			<td>Apr 26 (Wed)</td>
+			<td><strong>Lecture 39: Random Variables (contd.) and Probability Distributions</strong><br>			
+				<li><a href="Slides/Lecture-39.pdf" target="_blank">Slides</a></li>
+				<li>Additional reading: LLM-Book, Chapter 19, Sec 19.1-19.3</li>			
+			</td>
+			<td>
+			<ul>
+			</ul>
+			</td>
+		</tr>
+		
+		<tr class="oddrow">
+			<td>Apr 27 (Thurs)<br>
+			</td><td></td>
+			<td>
+			<ul>
+				Group 3: <a href="Tutorials/Sheet-12.pdf" target="_blank">Tutorial Sheet 12</a>
+			</ul>
+			</td>
+		</tr>
+		
+		<tr class="evenrow">
+			<td>Apr 28 (Fri)</td>
+			<td><strong>Lecture 40: Expectation</strong><br>			
+				<li><a href="Slides/Lecture-40.pdf" target="_blank">Slides</a></li>
+				<li>Additional reading: LLM-Book, Chapter 19, Sec 19.4-19.6</li>			
+			</td>
+			<td>
+			<ul>
+				Group 4: <a href="Tutorials/Sheet-12.pdf" target="_blank">Tutorial Sheet 12</a>
+			</ul>
+			</td>
+		</tr>			
+
+		<tr class="oddrow">
+			<td>Apr 29 (Sat)<br>
+			<strong style="color:blue;">Friday timetable</strong></td>
+			<td><strong>Lecture 41: Expectation (contd.) and Wrap-Up</strong><br>			
+				<li><a href="Slides/Lecture-41.pdf" target="_blank">Slides</a></li>
+				<li>Additional reading: LLM-Book, Chapter 19, Sec 19.4-19.6</li><br>
+				<strong style="color:blue;">Last day of classes</strong>				
+			</td>
+			<td>
+			<ul>
+				No tutorial
+			</ul>
+			</td>
+		</tr>				
+		
+
+		<tr class="tablesection">
+			<td colspan="4" style="text-align: center;">Weeks 18 and 19 (Major Test)</td>
+		</tr>
+		
+		<tr class="evenrow">
+			<td><a href="https://en.wikipedia.org/wiki/Star_Wars_Day" target="_blank">May 04 (Thurs)</a></td>
+			<td><strong><font color="red">Major</font>: 11AM-1PM, LH 308 and LH 310</strong><br>
+			<li><a href="Slides/Major-Solutions.pdf" target="_blank">Solutions</a></li><a href="Slides/Major-Solutions.pdf" target="_blank">
+			</a><li><a href="Slides/Major-Solutions.pdf" target="_blank"></a><a href="StarWarsSelfie.png" target="_blank">Star Wars Selfie</a></li><a href="StarWarsSelfie.png" target="_blank">
+</a></td>
+			<td>
+			<ul>
+			</ul>
+			</td>
+		</tr>
+		
+	</tbody>
+</table>
+</div>
+</div>
+
+</main>
+
+</body></html>

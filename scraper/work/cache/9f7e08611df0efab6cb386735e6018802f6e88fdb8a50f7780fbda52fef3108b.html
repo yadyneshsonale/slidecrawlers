@@ -1,0 +1,684 @@
+<!DOCTYPE html><html lang="en"><head>
+        <meta charset="utf-8">
+        <title>CSE - Computer Science &amp; Engineering </title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;family=Roboto:wght@400;500;700;900&amp;display=swap" rel="stylesheet"> 
+
+        <!-- Icon Font Stylesheet -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Libraries Stylesheet -->
+        <link rel="stylesheet" href="lib/animate/animate.min.css">
+        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+		<!--<script type="text/javascript" src="js/jquery-2.2.4.min"></script>-->
+<script>
+$(document).ready(function() {
+    $('#publications').DataTable( {
+        "pagingType": "full_numbers"
+    } );
+} );
+</script>
+<script>
+$(document).ready(function() {
+    $('#projects').DataTable( {
+        "pagingType": "full_numbers",
+        "order": [[ 1, "desc" ]]
+    } );
+} );
+</script>
+
+<script>
+$(document).ready(function() {
+    $('#electives').DataTable( {
+        "pagingType": "full_numbers",
+        "order": [[ 1, "desc" ]]
+    } );
+} );
+</script>
+<script>
+$(document).ready(function() {
+    $('#technology').DataTable( {
+        "pagingType": "full_numbers"
+    } );
+} );
+</script>
+<script>
+$(document).ready(function() {
+    $('#patents').DataTable( {
+        "pagingType": "full_numbers"
+    } );
+} );
+</script>
+
+ 
+</head>    
+    <body>
+
+        <!-- Spinner Start -->
+        <div id="spinner" class="bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+    <!-- Topbar Start -->
+		<!--<div class="container-fluid topbar bg-light px-5 d-none d-lg-block">
+            <div class="row gx-0 align-items-center">
+                <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
+                    <div class="d-flex flex-wrap">
+                        <a href="#" class="text-muted small me-4"><i class="fas fa-map-marker-alt text-primary me-2"></i>Find A Location</a>
+                        <a href="tel:+01234567890" class="text-muted small me-4"><i class="fas fa-phone-alt text-primary me-2"></i>+01234567890</a>
+                        <a href="mailto:example@gmail.com" class="text-muted small me-0"><i class="fas fa-envelope text-primary me-2"></i>Example@gmail.com</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-center text-lg-end">
+                    <div class="d-inline-flex align-items-center" style="height: 45px;">
+                        <a href="#"><small class="me-3 text-dark"><i class="fa fa-user text-primary me-2"></i>Register</small></a>
+                        <a href="#"><small class="me-3 text-dark"><i class="fa fa-sign-in-alt text-primary me-2"></i>Login</small></a>
+                        <div class="dropdown">
+                            <a href="#" class="dropdown-toggle text-dark" data-bs-toggle="dropdown"><small><i class="fa fa-home text-primary me-2"></i> My Dashboard</small></a>
+                            <div class="dropdown-menu rounded">
+                                <a href="#" class="dropdown-item"><i class="fas fa-user-alt me-2"></i> My Profile</a>
+                                <a href="#" class="dropdown-item"><i class="fas fa-comment-alt me-2"></i> Inbox</a>
+                                <a href="#" class="dropdown-item"><i class="fas fa-bell me-2"></i> Notifications</a>
+                                <a href="#" class="dropdown-item"><i class="fas fa-cog me-2"></i> Account Settings</a>
+                                <a href="#" class="dropdown-item"><i class="fas fa-power-off me-2"></i> Log Out</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Topbar End -->
+
+        <!-- Navbar & Hero Start -->
+        <!-- Topbar Start -->
+		<div class="container-fluid topbar bg-light px-5 d-none d-lg-block">
+            <div class="row gx-0 align-items-center">
+                <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
+                    <div class="d-flex flex-wrap">
+                        <a href="https://maps.app.goo.gl/S53RYqigR5SoqXCL8" target="_blank" class="text-muted small me-4"><i class="fas fa-map-marker-alt text-primary me-2"></i>Find A Location</a>
+                        <a href="tel:+03612582400" class="text-muted small me-4"><i class="fas fa-phone-alt text-primary me-2"></i>(0361) 258 2400</a>
+                        <a href="mailto:cseoff@iitg.ac.in" class="text-muted small me-0"><i class="fas fa-envelope text-primary me-2"></i>cseoff @ iitg.ac.in</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-center text-lg-end">
+                    <div class="d-inline-flex align-items-center" style="height: 45px;">
+                        
+                        <a href="https://www.iitg.ac.in/cseweb/automation/" target="_blank"><small class="me-3 text-dark"><i class="fa fa-sign-in-alt text-primary me-2"></i>Dept. Login</small></a>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Topbar End -->
+
+
+
+<div class="container-fluid position-relative p-0">
+            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+                <a href="" class="navbar-brand p-0">
+                    
+                    <table><tbody><tr><td><img src="img/iitglogo.jpg" alt="Logo"></td></tr></tbody></table>
+					
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto py-0">
+                        
+						<a href="home" class="nav-item nav-link">Home</a>
+						
+
+						<div class="nav-item dropdown">
+                            <a href="#" class="nav-link" data-bs-toggle="dropdown">
+                                <span class="dropdown-toggle">Academics</span>
+                            </a>
+                            <div class="dropdown-menu m-0">
+								<a href="btechcsecoursestructure.php#Page" class="dropdown-item">B.Tech.</a>
+								<a href="mtechcsecoursestructure.php#Page" class="dropdown-item">M.Tech.</a>
+                                <a href="mtechphddualcsecoursestructure.php#Page" class="dropdown-item">M.Tech. + Ph.D. (Dual)</a>
+                                <a href="phdcsecoursestructure.php#Page" class="dropdown-item">Ph.D.</a>
+                                <a href="cseelectives.php#Page" class="dropdown-item">Department Electives</a>
+                            </div>
+                       </div>
+
+                       <div class="nav-item dropdown">
+                            <a href="#" class="nav-link" data-bs-toggle="dropdown">
+                                <span class="dropdown-toggle">People</span>
+                            </a>
+                            <div class="dropdown-menu m-0">
+								<a href="faculty.php#Page" class="dropdown-item">Department Faculty</a>
+								<a href="csevisitingfaculty.php#Page" class="dropdown-item">Visiting Faculty</a>
+                                <a href="csehonoraryprofessors.php#Page" class="dropdown-item">Honorary Professors</a>
+                                <a href="cseadjunctprofessors.php#Page" class="dropdown-item">Adjunct Professors</a>
+								<a href="csepracticeprofessors.php#Page" class="dropdown-item">Professor of Practice</a>
+								<a href="csefacultyreleased.php#Page" class="dropdown-item">Retired Faculty</a>
+								<a href="earlierhod.php#Page" class="dropdown-item">Earlier HoD(s)</a>
+								<a href="csetechnicalofficers.php#Page" class="dropdown-item">Technical Officers</a>
+								<a href="csetechnicalsuperintendents.php#Page" class="dropdown-item">Technical Superintendent</a>
+								<a href="cseadministrativestaff.php#Page" class="dropdown-item">Administrative Staff</a>
+                                <a href="researchscholarsongoing.php#Page" class="dropdown-item">Research Scholars</a>
+								<a href="continuing-btech.php#Page" class="dropdown-item">B.Tech. Students</a>
+                                <a href="continuing-mtech.php#Page" class="dropdown-item">M.Tech. Students</a>
+                            </div>
+                        </div>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link" data-bs-toggle="dropdown">
+                                <span class="dropdown-toggle">Research</span>
+                            </a>
+                            <div class="dropdown-menu m-0">
+								<a href="researchpublication.php#Page" class="dropdown-item">Publications</a>
+								<a href="cseconsultancyresearchprojects.php#Page" class="dropdown-item">Consultancy Research Projects</a>
+                                <a href="csesponsoredresearchprojects.php#Page" class="dropdown-item">Sponsored Research Projects</a>
+                                <a href="researchgroups.php#Page" class="dropdown-item">Research Groups</a>
+                                <a href="csetechnologysoftware.php#Page" class="dropdown-item">Technology/Software</a>
+                                <a href="csepatents.php#Page" class="dropdown-item">Patents</a>
+                            </div>
+                        </div>
+						<div class="nav-item dropdown">
+                            <a href="#" class="nav-link" data-bs-toggle="dropdown">
+                                <span class="dropdown-toggle">Recognitions</span>
+                            </a>
+                            <div class="dropdown-menu m-0">
+								<a href="csemedalwinners.php#Page" class="dropdown-item">Medal Winners</a>
+								<a href="achievements.php#Page" class="dropdown-item">Achievements</a>
+							</div>
+                        </div>
+						<a href="facilities.php#Page" class="nav-item nav-link">Facilities</a>
+						<div class="nav-item dropdown">
+                            <a href="#" class="nav-link" data-bs-toggle="dropdown">
+                                <span class="dropdown-toggle">Admissions</span>
+                            </a>
+                            <div class="dropdown-menu m-0">
+								<a href="https://iitg.ac.in/acad/admission/" target="_blank" class="dropdown-item">Admission Highlights</a>
+								<a href="https://www.iitg.ac.in/cse/news-events/Admissions-July-2026/" target="_blank" class="dropdown-item">Admission to Ph.D. in CSE</a>
+								<a href="https://www.iitg.ac.in/cse/news-events/Admissions-July-2026/" target="_blank" class="dropdown-item">Admission to M.Tech. + Ph.D. (Dual) in CSE</a>
+								<a href="https://www.iitg.ac.in/cse/news-events/Admissions-July-2026/" target="_blank" class="dropdown-item">Admission to M.Tech. in CSE</a>
+							</div>
+	                    </div>
+
+						<a href="contact.php#Page" class="nav-item nav-link">Contact Us</a>
+						<a href="./public_html_31012025/index.php" target="_blank" class="nav-item nav-link">Old Website</a>
+                    </div>
+                    
+                </div>
+            </nav>
+
+            <!-- Carousel Start -->
+            <div class="header-carousel owl-carousel owl-loaded owl-drag">
+                
+                
+            <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-2560px, 0px, 0px); transition: all; width: 7680px;"><div class="owl-item cloned" style="width: 1280px;"><div class="header-carousel-item">
+                   
+					<img src="img/carousel-1.jpg" class="img-fluid w-100" alt="Image">--&gt;
+                    <div class="carousel-caption">
+                        <div class="container">
+                            <div class="row gy-0 gx-5">
+                                <div class="col-lg-0 col-xl-5"></div>
+                                <div class="col-xl-7 animated fadeInLeft">
+                                    <div class="text-sm-center text-md-end">
+                                        <h4 class="text-primary text-uppercase fw-bold mb-4">News &amp; Events</h4>
+                                           
+										 <p class="mb-5 fs-5"><font color="red"> New! </font><a href="./news-events/IPDF2026.pdf" target="_blank">List of Selected / WL / Not Selected Candidates (IPDF 2026).
+</a></p><p class="mb-5 fs-5"><a href="./news-events/2026-Jan-MayTimeTable-v1.pdf" target="_blank">Class Time Table for Jan-May 2026 Semester.</a></p><a href="./news-events/2026-Jan-MayTimeTable-v1.pdf" target="_blank">
+</a><p class="mb-5 fs-5"><a href="./news-events/2026-Jan-MayTimeTable-v1.pdf" target="_blank"></a><a href="./news-events/Admissions-July-2026/" target="_blank">CSE Admissions July 2026.</a></p><a href="./news-events/Admissions-July-2026/" target="_blank">
+
+
+
+
+
+
+
+  
+                                        
+										</a><div class="d-flex justify-content-center justify-content-md-end flex-shrink-0 mb-4"><a href="./news-events/Admissions-July-2026/" target="_blank">
+                                            
+                                            </a><a class="btn btn-primary rounded-pill py-3 px-4 px-md-5 ms-2" href="morenews.php#Page">More News..</a>
+                                        </div>
+
+                                         
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div></div><div class="owl-item cloned" style="width: 1280px;"><div class="header-carousel-item">
+                    <img src="img/carousel-2.jpg" class="img-fluid w-100" alt="Image">
+                    <div class="carousel-caption">
+                        <div class="container">
+                            <div class="row g-5">
+                                <div class="col-12 animated fadeInUp">
+                                    <div class="text-center">
+                                        <h4 class="text-primary text-uppercase fw-bold mb-4">News &amp; Events</h4>
+											<p class="mb-5 fs-5"><font color="red"> New! </font><a href="./news-events/IPDF2026.pdf" target="_blank">List of Selected / WL / Not Selected Candidates (IPDF 2026).
+</a></p><p class="mb-5 fs-5"><a href="./news-events/2026-Jan-MayTimeTable-v1.pdf" target="_blank">Class Time Table for Jan-May 2026 Semester.</a></p><a href="./news-events/2026-Jan-MayTimeTable-v1.pdf" target="_blank">
+</a><p class="mb-5 fs-5"><a href="./news-events/2026-Jan-MayTimeTable-v1.pdf" target="_blank"></a><a href="./news-events/Admissions-July-2026/" target="_blank">CSE Admissions July 2026.</a></p><a href="./news-events/Admissions-July-2026/" target="_blank">
+
+
+
+
+
+
+
+  
+                                        
+										</a><div class="d-flex justify-content-center justify-content-md-end flex-shrink-0 mb-4"><a href="./news-events/Admissions-July-2026/" target="_blank">
+                                            
+                                            </a><a class="btn btn-primary rounded-pill py-3 px-4 px-md-5 ms-2" href="morenews.php#Page">More News..</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div></div><div class="owl-item active" style="width: 1280px;"><div class="header-carousel-item">
+                   
+					<img src="img/carousel-1.jpg" class="img-fluid w-100" alt="Image">--&gt;
+                    <div class="carousel-caption">
+                        <div class="container">
+                            <div class="row gy-0 gx-5">
+                                <div class="col-lg-0 col-xl-5"></div>
+                                <div class="col-xl-7 animated fadeInLeft">
+                                    <div class="text-sm-center text-md-end">
+                                        <h4 class="text-primary text-uppercase fw-bold mb-4">News &amp; Events</h4>
+                                           
+										 <p class="mb-5 fs-5"><font color="red"> New! </font><a href="./news-events/IPDF2026.pdf" target="_blank">List of Selected / WL / Not Selected Candidates (IPDF 2026).
+</a></p><p class="mb-5 fs-5"><a href="./news-events/2026-Jan-MayTimeTable-v1.pdf" target="_blank">Class Time Table for Jan-May 2026 Semester.</a></p><a href="./news-events/2026-Jan-MayTimeTable-v1.pdf" target="_blank">
+</a><p class="mb-5 fs-5"><a href="./news-events/2026-Jan-MayTimeTable-v1.pdf" target="_blank"></a><a href="./news-events/Admissions-July-2026/" target="_blank">CSE Admissions July 2026.</a></p><a href="./news-events/Admissions-July-2026/" target="_blank">
+
+
+
+
+
+
+
+  
+                                        
+										</a><div class="d-flex justify-content-center justify-content-md-end flex-shrink-0 mb-4"><a href="./news-events/Admissions-July-2026/" target="_blank">
+                                            
+                                            </a><a class="btn btn-primary rounded-pill py-3 px-4 px-md-5 ms-2" href="morenews.php#Page">More News..</a>
+                                        </div>
+
+                                         
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div></div><div class="owl-item" style="width: 1280px;"><div class="header-carousel-item">
+                    <img src="img/carousel-2.jpg" class="img-fluid w-100" alt="Image">
+                    <div class="carousel-caption">
+                        <div class="container">
+                            <div class="row g-5">
+                                <div class="col-12 animated fadeInUp">
+                                    <div class="text-center">
+                                        <h4 class="text-primary text-uppercase fw-bold mb-4">News &amp; Events</h4>
+											<p class="mb-5 fs-5"><font color="red"> New! </font><a href="./news-events/IPDF2026.pdf" target="_blank">List of Selected / WL / Not Selected Candidates (IPDF 2026).
+</a></p><p class="mb-5 fs-5"><a href="./news-events/2026-Jan-MayTimeTable-v1.pdf" target="_blank">Class Time Table for Jan-May 2026 Semester.</a></p><a href="./news-events/2026-Jan-MayTimeTable-v1.pdf" target="_blank">
+</a><p class="mb-5 fs-5"><a href="./news-events/2026-Jan-MayTimeTable-v1.pdf" target="_blank"></a><a href="./news-events/Admissions-July-2026/" target="_blank">CSE Admissions July 2026.</a></p><a href="./news-events/Admissions-July-2026/" target="_blank">
+
+
+
+
+
+
+
+  
+                                        
+										</a><div class="d-flex justify-content-center justify-content-md-end flex-shrink-0 mb-4"><a href="./news-events/Admissions-July-2026/" target="_blank">
+                                            
+                                            </a><a class="btn btn-primary rounded-pill py-3 px-4 px-md-5 ms-2" href="morenews.php#Page">More News..</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div></div><div class="owl-item cloned" style="width: 1280px;"><div class="header-carousel-item">
+                   
+					<img src="img/carousel-1.jpg" class="img-fluid w-100" alt="Image">--&gt;
+                    <div class="carousel-caption">
+                        <div class="container">
+                            <div class="row gy-0 gx-5">
+                                <div class="col-lg-0 col-xl-5"></div>
+                                <div class="col-xl-7 animated fadeInLeft">
+                                    <div class="text-sm-center text-md-end">
+                                        <h4 class="text-primary text-uppercase fw-bold mb-4">News &amp; Events</h4>
+                                           
+										 <p class="mb-5 fs-5"><font color="red"> New! </font><a href="./news-events/IPDF2026.pdf" target="_blank">List of Selected / WL / Not Selected Candidates (IPDF 2026).
+</a></p><p class="mb-5 fs-5"><a href="./news-events/2026-Jan-MayTimeTable-v1.pdf" target="_blank">Class Time Table for Jan-May 2026 Semester.</a></p><a href="./news-events/2026-Jan-MayTimeTable-v1.pdf" target="_blank">
+</a><p class="mb-5 fs-5"><a href="./news-events/2026-Jan-MayTimeTable-v1.pdf" target="_blank"></a><a href="./news-events/Admissions-July-2026/" target="_blank">CSE Admissions July 2026.</a></p><a href="./news-events/Admissions-July-2026/" target="_blank">
+
+
+
+
+
+
+
+  
+                                        
+										</a><div class="d-flex justify-content-center justify-content-md-end flex-shrink-0 mb-4"><a href="./news-events/Admissions-July-2026/" target="_blank">
+                                            
+                                            </a><a class="btn btn-primary rounded-pill py-3 px-4 px-md-5 ms-2" href="morenews.php#Page">More News..</a>
+                                        </div>
+
+                                         
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div></div><div class="owl-item cloned" style="width: 1280px;"><div class="header-carousel-item">
+                    <img src="img/carousel-2.jpg" class="img-fluid w-100" alt="Image">
+                    <div class="carousel-caption">
+                        <div class="container">
+                            <div class="row g-5">
+                                <div class="col-12 animated fadeInUp">
+                                    <div class="text-center">
+                                        <h4 class="text-primary text-uppercase fw-bold mb-4">News &amp; Events</h4>
+											<p class="mb-5 fs-5"><font color="red"> New! </font><a href="./news-events/IPDF2026.pdf" target="_blank">List of Selected / WL / Not Selected Candidates (IPDF 2026).
+</a></p><p class="mb-5 fs-5"><a href="./news-events/2026-Jan-MayTimeTable-v1.pdf" target="_blank">Class Time Table for Jan-May 2026 Semester.</a></p><a href="./news-events/2026-Jan-MayTimeTable-v1.pdf" target="_blank">
+</a><p class="mb-5 fs-5"><a href="./news-events/2026-Jan-MayTimeTable-v1.pdf" target="_blank"></a><a href="./news-events/Admissions-July-2026/" target="_blank">CSE Admissions July 2026.</a></p><a href="./news-events/Admissions-July-2026/" target="_blank">
+
+
+
+
+
+
+
+  
+                                        
+										</a><div class="d-flex justify-content-center justify-content-md-end flex-shrink-0 mb-4"><a href="./news-events/Admissions-July-2026/" target="_blank">
+                                            
+                                            </a><a class="btn btn-primary rounded-pill py-3 px-4 px-md-5 ms-2" href="morenews.php#Page">More News..</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div></div></div></div><div class="owl-nav"><div class="owl-prev"><i class="bi bi-arrow-left"></i></div><div class="owl-next"><i class="bi bi-arrow-right"></i></div></div><div class="owl-dots"><div class="owl-dot active"><span></span></div><div class="owl-dot"><span></span></div></div></div>
+		</div>        <!-- Navbar & Hero End -->
+<div id="Page"></div>
+        <!-- Navbar & Hero End -->
+<br><br><br><br><br>
+
+ <div class="container-fluid service pb-5">
+            <div class="container pb-5">
+                <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+                    <h4 class="text-primary">(M.Tech. + Ph.D.) Dual </h4>
+					<p align="justify">The Department of Computer Science &amp; Engineering at IIT Guwahati offers a dual (M.Tech. + Ph.D.) degree programme in Computer Science &amp; Engineering.</p>
+					<p align="justify">Admission to the programme will be conducted both for July and December session.</p>
+					<p align="left"><strong>Course Structure for the curriculum is given below</strong></p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-8 col-lg-6 wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="service-item">
+                           <div class="rounded-bottom p-4">
+                                <table border="0" cellspacing="0" frame="VOID" rules="NONE" align="center">
+										<colgroup>
+											<col width="166">
+											<col width="302">
+											<col width="86">
+											
+										</colgroup>
+										<tbody>
+										<tr>
+											<td height="16" align="JUSTIFY" valign="TOP"><strong><span style="font-family: Liberation Serif;"><br>
+											</span></strong></td>
+											<td align="JUSTIFY" valign="TOP"></td>
+											<td align="JUSTIFY" valign="TOP"></td>
+											<td align="JUSTIFY" valign="TOP"></td>
+										</tr>
+										
+										<tr>
+											<td colspan="3" height="17" align="CENTER" valign="TOP"><strong><span style="font-family: Liberation Serif;"><font size="4">Semester – I</font></span></strong></td>
+										</tr>
+										<tr>
+											<td height="17" align="JUSTIFY" valign="TOP" bgcolor="#36373E"><strong><span style="font-family: Liberation Serif;"><font color="white">Course No</font></span></strong></td>
+											<td align="JUSTIFY" valign="TOP" bgcolor="#36373E"><strong><span style="font-family: Liberation Serif;"><font color="white">Course Name</font></span></strong></td>
+											<td align="JUSTIFY" valign="TOP" bgcolor="#36373E"><strong><span style="font-family: Liberation Serif;"><font color="white">L-T-P-C</font></span></strong></td>
+										</tr>
+										<tr>
+											<td width="100"><a href="#" target="CSE Course Details">CS551</a></td>
+											<td width="300">Design and Analysis of Algorithms</td>
+											<td width="100">3-0-0-6</td>
+										</tr>
+										<tr>
+											<td width="100"><a href="#" target="CSE Course Details">CS552</a></td>
+											<td width="300">Data Structure Laboratory</td>
+											<td width="100">0-2-2-6</td>
+										</tr>
+										<tr>
+											<td width="100"><a href="#" target="CSE Course Details">CS553</a></td>
+											<td width="300">Digital Logic and Computer Architecture</td>
+											<td width="100">3-0-0-6</td>
+										</tr>
+										<tr>
+											<td width="100"><a href="#" target="CSE Course Details">CS554</a></td>
+											<td width="300">Mathematics for Computer Science </td>
+											<td width="100">3-0-0-6</td>
+										</tr>
+										<tr>
+											<td width="100"><a href="#" target="CSE Course Details">CS555</a></td>
+											<td width="300">System Software Laboratory</td>
+											<td width="100">0-1-4-6</td>
+										</tr>
+										 
+										<tr>
+											<td width="100"></td>
+											<td width="300" align="right"><strong>Total:-</strong></td>
+											<td width="100"><strong>30</strong></td>
+										</tr>
+									</tbody></table>
+                            </div>
+                        </div>
+                    </div>
+
+
+					<div class="col-md-8 col-lg-6 wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="service-item">
+                           <div class="rounded-bottom p-4">
+								<table border="0" cellspacing="0" frame="VOID" rules="NONE" align="center">
+										<colgroup>
+											<col width="166">
+											<col width="302">
+											<col width="86">
+										</colgroup>
+										<tbody>
+										<tr>
+											<td height="16" align="JUSTIFY" valign="TOP"><strong><span style="font-family: Liberation Serif;"><br>
+											</span></strong></td>
+											<td align="JUSTIFY" valign="TOP"></td>
+											<td align="JUSTIFY" valign="TOP"></td>
+											<td align="JUSTIFY" valign="TOP"></td>
+										</tr>
+										<tr>
+											<td colspan="3" height="17" align="CENTER" valign="TOP"><strong><span style="font-family: Liberation Serif;"><font size="4">Semester – II</font></span></strong></td>
+										</tr>
+										<tr>
+											<td height="17" align="JUSTIFY" valign="TOP" bgcolor="#36373E"><strong><span style="font-family: Liberation Serif;"><font color="white">Course No</font></span></strong></td>
+											<td align="JUSTIFY" valign="TOP" bgcolor="#36373E"><strong><span style="font-family: Liberation Serif;"><font color="white">Course Name</font></span></strong></td>
+											<td align="JUSTIFY" valign="TOP" bgcolor="#36373E"><strong><span style="font-family: Liberation Serif;"><font color="white">L-T-P-C</font></span></strong></td>
+										</tr>
+										<tr>
+											<td width="100"><a href="#" target="CSE Course Details">CS556</a></td>
+											<td width="300">Machine Learning</td>
+											<td width="100">3-0-0-6</td>
+										</tr>
+	
+										<tr>
+											<td width="100"><a href="#" target="CSE Course Details">CS557H</a></td>
+											<td width="300">Operating Systems</td>
+											<td width="100">3-0-0-3</td>
+										</tr>
+										<tr>
+											<td width="100"><a href="#" target="CSE Course Details">CS558H</a></td>
+											<td width="300">Database Systems</td>
+											<td width="100">3-0-0-3</td>
+										</tr>
+										
+										<tr>
+											<td width="100"><a href="cseelectives" target="_blank">CSXXX</a></td>
+											<td width="300">Departmental Elective</td>
+											<td width="100">3-0-0-6</td>
+										</tr>
+										<tr>
+											<td width="100"><a href="cseelectives" target="_blank">CSXXX</a></td>
+											<td width="300">Departmental Elective</td>
+											<td width="100">3-0-0-6</td>
+										</tr>
+										<tr>
+											<td width="100"></td>
+											<td width="300" align="right"><strong>Total:-</strong></td>
+											<td width="100"><strong>24</strong></td>
+										</tr>
+									</tbody></table>
+	                           </div>
+                        </div>
+                    </div>
+
+
+					<div class="col-md-8 col-lg-6 wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="service-item">
+                           <div class="rounded-bottom p-4">
+								<table border="0" cellspacing="0" frame="VOID" rules="NONE" align="center">
+										<colgroup>
+											<col width="166">
+											<col width="302">
+											<col width="86">
+										</colgroup>
+										<tbody>
+										<tr>
+											<td height="16" align="JUSTIFY" valign="TOP"><strong><span style="font-family: Liberation Serif;"><br>
+											</span></strong></td>
+											<td align="JUSTIFY" valign="TOP"></td>
+											<td align="JUSTIFY" valign="TOP"></td>
+											<td align="JUSTIFY" valign="TOP"></td>
+										</tr>
+										<tr>
+											<td colspan="3" height="17" align="CENTER" valign="TOP"><strong><span style="font-family: Liberation Serif;"><font size="4">Semester – III</font></span></strong></td>
+										</tr>
+										<tr>
+											<td height="17" align="JUSTIFY" valign="TOP" bgcolor="#36373E"><strong><span style="font-family: Liberation Serif;"><font color="white">Course No</font></span></strong></td>
+											<td align="JUSTIFY" valign="TOP" bgcolor="#36373E"><strong><span style="font-family: Liberation Serif;"><font color="white">Course Name</font></span></strong></td>
+											<td align="JUSTIFY" valign="TOP" bgcolor="#36373E"><strong><span style="font-family: Liberation Serif;"><font color="white">L-T-P-C</font></span></strong></td>
+										</tr>
+									
+										<tr>
+											<td width="100"><a href="cseelectives" target="_blank">CSXXX</a></td>
+											<td width="300">Departmental Elective</td>
+											<td width="100">3-0-0-6</td>
+										</tr>
+										<tr>
+											<td width="100"><a href="cseelectives" target="_blank">XX XXX</a></td>
+											<td width="300">Elective</td>
+											<td width="100">3-0-0-6</td>
+										</tr>
+										<tr>
+											<td width="100"><a href="#" target="_blank">CSXXX</a></td>
+											<td width="300">Mini Project</td>
+											<td width="100">3-0-0-6</td>
+										</tr>
+										
+										<tr>
+											<td width="100"></td>
+											<td width="300" align="right"><strong>Total:-</strong></td>
+											<td width="100"><strong>18</strong></td>
+										</tr>
+								</tbody></table>
+                            </div>
+                        </div>
+                    </div>
+											
+            </div>
+        </div>
+        
+
+       <!-- Footer Start -->
+        <!-- Footer Start -->
+        <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
+            <div class="container py-5 border-start-0 border-end-0" style="border: 1px solid; border-color: rgb(255, 255, 255, 0.08);">
+                <div class="row g-5">
+                    <div class="col-md-6 col-lg-6 col-xl-4">
+                        <div class="footer-item">
+                           
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-5">
+                        <div class="footer-item">
+                            <h4 class="text-white mb-4">Quick Links</h4>
+                            <a href="http://www.iitg.ac.in/cse/hardware/" target="_blank"><i class="fas fa-angle-right me-2"></i> Hardware, Peripherals and Embedded Systems Lab</a>
+                            <a href="https://www.iitg.ac.in/cseweb/marslab/" target="_blank"><i class="fas fa-angle-right me-2"></i> MARS Lab</a>
+                            <a href="https://www.iitg.ac.in/cseweb/mmlab/" target="_blank"><i class="fas fa-angle-right me-2"></i> Multimedia Lab</a>
+                            <a href="https://www.iitg.ac.in/cseweb/osint/" target="_blank"><i class="fas fa-angle-right me-2"></i> OSINT Lab</a>
+                            <a href="https://www.iitg.ac.in/cse/robotics/" target="_blank"><i class="fas fa-angle-right me-2"></i> Robotics &amp; Speech Lab</a>
+							<a href="https://www.iitg.ac.in/cseweb/ecas/" target="_blank"><i class="fas fa-angle-right me-2"></i> ECAS Lab</a>
+                            <a href="https://www.iitg.ac.in/cseweb/uccn/" target="_blank"><i class="fas fa-angle-right me-2"></i> User Centric Computing &amp; Networking Lab</a>
+							<a href="https://www.iitg.ac.in/cseweb/vlab/" target="_blank"><i class="fas fa-angle-right me-2"></i> Virtual Lab IITG</a>
+							<a href="https://www.iitg.ac.in/phones/" target="_blank"><i class="fas fa-angle-right me-2"></i> Telephone Directory</a>
+							
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="footer-item">
+                            <h4 class="text-white mb-4">Contact Info</h4>
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-map-marker-alt text-primary me-3"></i>
+                                <p class="text-white mb-0">Dept. of CSE, Academic Complex, Block-H</p>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-envelope text-primary me-3"></i>
+                                <p class="text-white mb-0">cseoff @ iitg.ac.in</p>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <i class="fa fa-phone-alt text-primary me-3"></i>
+                                <p class="text-white mb-0">0361 258 2400</p>
+                            </div>
+                            <div class="d-flex align-items-center mb-4">
+                                <i class="fab fa-firefox-browser text-primary me-3"></i>
+                                <p class="text-white mb-0">https://www.iitg.ac.in/cse/</p>
+                            </div>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- Footer End -->
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-primary btn-lg-square rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>   
+		<!-- JavaScript Libraries -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="lib/wow/wow.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/counterup/counterup.min.js"></script>
+        <script src="lib/lightbox/js/lightbox.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
+    
+
+</div><div id="lightboxOverlay" tabindex="-1" class="lightboxOverlay" style="display: none;"></div><div id="lightbox" tabindex="-1" class="lightbox" style="display: none;"><div class="lb-outerContainer"><div class="lb-container"><img class="lb-image" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt=""><div class="lb-nav"><a class="lb-prev" role="button" tabindex="0" aria-label="Previous image" href=""></a><a class="lb-next" role="button" tabindex="0" aria-label="Next image" href=""></a></div><div class="lb-loader"><a class="lb-cancel" role="button" tabindex="0"></a></div></div></div><div class="lb-dataContainer"><div class="lb-data"><div class="lb-details"><span class="lb-caption"></span><span class="lb-number"></span></div><div class="lb-closeContainer"><a class="lb-close" role="button" tabindex="0"></a></div></div></div></div></body></html>

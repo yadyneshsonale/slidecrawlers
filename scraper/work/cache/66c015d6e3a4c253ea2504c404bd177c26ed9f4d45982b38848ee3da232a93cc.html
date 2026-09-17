@@ -1,0 +1,305 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>COL781: Computer Graphics</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="style.css">
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">COL781: Computer Graphics</h1>
+<p class="subtitle">II Semester 2023-24</p>
+</header>
+<section id="general-information" class="level2 sidebar">
+<h2 class="sidebar">General Information</h2>
+<p><strong>Instructor:</strong><br>
+<a href="https://www.cse.iitd.ac.in/~narain/">Rahul Narain</a><br>
+<a href="mailto:narain@cse.iitd.ac.in" class="email">narain@cse.iitd.ac.in</a><br>
+<em>Office hours:</em> by appointment</p>
+<p><strong>Lectures:</strong><br>
+Tue, Thu, Fri 11am–12 (slot F)<br>
+LH 613</p>
+</section>
+<section id="course-description" class="level2">
+<h2>Course Description</h2>
+<p>This course provides a broad introduction to the fundamentals of
+computer graphics. It will start from the key theoretical and
+mathematical foundations and build up to practical implementation of
+complete graphics programs, with a focus on both real-time 3D rendering
+and high-quality offline graphics. A range of topics in the main areas
+of modeling, rendering, and animation will be covered.</p>
+<p><strong>Content:</strong> <em>Foundations:</em> rasterization,
+transformations in 2D and 3D, homogeneous coordinates, perspective
+projection, visibility, texture mapping. <em>Modelling:</em> polygon
+meshes, Bezier curves and surfaces, subdivision surfaces, mesh
+processing, geometric queries. <em>Rendering:</em> radiometry, shading
+models, the rendering equation, path tracing. <em>Animation:</em>
+skeletal animation, skinning, mass-spring systems, time integration,
+physics-based animation.</p>
+<p><strong>Textbooks:</strong> There is no required textbook, but it is
+recommended to refer to one or both of the following as supplementary
+reading:</p>
+<ul>
+<li>Hughes et al., <em>Computer Graphics: Principles and Practice</em>,
+3rd Ed.</li>
+<li>Marschner and Shirley, <em>Fundamentals of Computer Graphics</em>,
+4th or 5th Ed.</li>
+</ul>
+<p><strong>Prerequisites:</strong> COL106 or equivalent. Familiarity
+with C++ programming and basic linear algebra is assumed.</p>
+<p><strong>Announcements:</strong> All announcements will be made on the
+<a href="https://moodle.iitd.ac.in/mod/forum/view.php?id=110364">Announcements
+forum</a> of <a href="https://moodle.iitd.ac.in/course/view.php?id=17370">the course
+Moodle site</a>. It is your responsibility to check it regularly.</p>
+</section>
+<section id="lectures" class="level2">
+<h2>Lectures</h2>
+<p>Slides will be posted here as the semester proceeds.</p>
+<table>
+<colgroup>
+<col style="width: 6%">
+<col style="width: 30%">
+<col style="width: 31%">
+<col style="width: 31%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Monday/Tuesday</th>
+<th>Thursday</th>
+<th>Friday/Saturday</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1-5 Jan</td>
+<td><a href="slides/01-introduction.pdf">1. Introduction</a></td>
+<td><a href="slides/02-rasterization.pdf">2. Rasterization</a></td>
+<td><a href="slides/03-sampling.pdf">3. Sampling and aliasing</a></td>
+</tr>
+<tr class="even">
+<td>8-12 Jan</td>
+<td><a href="slides/04-transformations.pdf">4. Transformations</a></td>
+<td><a href="slides/05-affine.pdf">5. Affine transformations</a></td>
+<td><a href="slides/06-perspective.pdf">6. Perspective
+projection</a></td>
+</tr>
+<tr class="odd">
+<td>15-19 Jan</td>
+<td><a href="slides/07-visibility.pdf">7. Perspective and
+visibility</a></td>
+<td><a href="slides/08-interpolation.pdf">8. Interpolation and
+texturing</a></td>
+<td><a href="slides/09-texture.pdf">9. Texture filtering</a></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td><a href="slides/10-pipeline.pdf">10. The rasterization
+pipeline</a></td>
+</tr>
+<tr class="odd">
+<td>22-26 Jan</td>
+<td><a href="slides/11-shading.pdf">11. Transparency and
+shading</a></td>
+<td><a href="slides/12-colour.pdf">12. Shading and colour</a></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>29 Jan–2 Feb</td>
+<td><a href="slides/13-raytracing.pdf">13. Ray tracing</a></td>
+<td><a href="slides/14-recursive.pdf">14. Recursive ray tracing</a></td>
+<td><a href="slides/15-modeling.pdf">15. Introduction to
+modeling</a></td>
+</tr>
+<tr class="odd">
+<td>5-9 Feb</td>
+<td><a href="slides/16-meshes.pdf">16. Polygon meshes</a></td>
+<td><a href="slides/17-bezier.pdf">17. Bézier curves</a></td>
+<td><a href="slides/18-surfaces.pdf">18. Bézier and subdivision
+surfaces</a></td>
+</tr>
+<tr class="even">
+<td>12-16 Feb</td>
+<td><a href="slides/19-meshediting.pdf">19. Mesh editing and
+querying</a></td>
+<td><a href="slides/20-spatial.pdf">20. Spatial data structures</a></td>
+<td>[No class]</td>
+</tr>
+<tr class="odd">
+<td>4-8 Mar</td>
+<td><a href="slides/21-radiometry.pdf">21. Radiometry</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><a href="slides/22-materials.pdf">22. Material appearance</a></td>
+<td><a href="slides/23-rendering.pdf">23. The rendering
+equation</a></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>11-15 Mar</td>
+<td><a href="slides/24-pathtracing.pdf">24. Path tracing</a></td>
+<td><a href="slides/25-variance.pdf">25. Variance reduction</a></td>
+<td><a href="slides/26-bidirectional.pdf">26. Bidirectional
+methods</a></td>
+</tr>
+<tr class="even">
+<td>18-22 Mar</td>
+<td><a href="slides/27-animation.pdf">27. Introduction to
+animation</a></td>
+<td><a href="slides/28-skeletal.pdf">28. Skeletal animation</a></td>
+<td><a href="slides/29-ik.pdf">29. Inverse kinematics</a></td>
+</tr>
+<tr class="odd">
+<td>2-6 Apr</td>
+<td><a href="slides/30-skinning.pdf">30. Skinning</a></td>
+<td><a href="slides/31-particles.pdf">31. Particle dynamics</a></td>
+<td><a href="slides/32-mss.pdf">32. Mass-spring systems</a></td>
+</tr>
+<tr class="even">
+<td>8-12 Apr</td>
+<td><a href="slides/33-constraints.pdf">33. Constraints</a></td>
+<td></td>
+<td><a href="slides/34-collisions.pdf">34. Rigid bodies and
+collisions</a></td>
+</tr>
+<tr class="odd">
+<td>15-19 Apr</td>
+<td><a href="slides/35-continuum.pdf">35. Continuum models</a></td>
+<td><a href="slides/36-solids-fluids.pdf">36. Solids and fluids</a></td>
+<td><a href="slides/37-realtime.pdf">37. Real-time rendering</a></td>
+</tr>
+<tr class="even">
+<td>22-26 Apr</td>
+<td><a href="slides/38-rtgi.pdf">38. Real-time global
+illumination</a></td>
+<td><a href="slides/39-conclusion.pdf">39. Conclusion</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="assignments" class="level2">
+<h2>Assignments</h2>
+<p>All dates of future assignments are tentative and subject to
+change.</p>
+<ol type="1">
+<li><a href="a1.html">Software rasterization</a> (19 Jan – 6 Feb)</li>
+<li><a href="a2.html">Mesh processing</a> (6 Feb – 5 Mar)</li>
+<li><a href="a3.html">Path tracing</a> (5 Mar – 2 Apr)</li>
+<li><a href="a4.html">Keyframing and simulation</a> (2 Apr – 22
+Apr)</li>
+</ol>
+</section>
+<section id="resources-and-links" class="level2">
+<h2>Resources and Links</h2>
+<ul>
+<li><a href="starter_code.cpp.txt">Rasterization starter code</a>
+(updated 19 Jan)</li>
+</ul>
+<!-- -->
+<ul>
+<li><a href="https://learnopengl.com/">LearnOpenGL.com</a>, a nice
+introduction to graphics programming</li>
+<li>Shirley et al., <em><a href="https://raytracing.github.io/">Ray
+Tracing in One Weekend</a></em>,&nbsp;an excellent series of introductory
+articles on ray tracing</li>
+<li>Pharr et al., <em><a href="https://pbr-book.org/">Physically Based
+Rendering: From Theory To Implementation</a></em>, the definitive
+textbook on photorealistic rendering</li>
+</ul>
+</section>
+<section id="policies" class="level2">
+<h2>Policies</h2>
+<p><strong>Evaluation:</strong></p>
+<ul>
+<li>Homework assignments: 40% (4 × 10%)</li>
+<li>Exams:
+<ul>
+<li>Minor: 20%</li>
+<li>Major: 35%</li>
+</ul></li>
+<li>Participation (in-class quizzes, Moodle Q&amp;A): 5%</li>
+</ul>
+<p>The above grading breakdown is tentative and subject to change.</p>
+<p><strong>Grading:</strong> Following institute policy, a minimum of
+80% marks are required for an A grade, and minimum 30% marks for D.</p>
+<p><strong>Late policy:</strong> Homework assignments are due at 11:59pm
+on the due date. You are allowed a total of 6 late days across all the
+assignments. After the total allowed late days have been used up, a 25%
+penalty will be applied for each extra day a submission is late.</p>
+<p><strong>Audit policy:</strong> To earn an audit pass, you must score
+at least 40% in the course total, and at least 20% in each assignment
+and each exam.</p>
+<p><strong>Attendance policy:</strong> Attendance lower than 75% may
+result in a one-grade penalty (e.g.&nbsp;A to A–, or A– to B).</p>
+<p><strong>Academic dishonesty:</strong> Adapted from <a href="https://www.cse.iitd.ac.in/~sak/">SAK</a>’s <a href="https://www.cse.iitd.ac.in/~sak/courses/general.html">general
+guidelines for students</a>:</p>
+<p>Remember that you have signed an honour code before getting admitted
+to IIT Delhi. Check that out on the inside cover page of your
+prospectus. Here is a non-exhaustive list of dishonest behaviour in
+assignments, based on past experience.</p>
+<ul>
+<li><p><em>Outsourcing of homework, assignments, project report, term
+paper or even exams to another person or “service”</em> is a very
+serious academic offence and could result in disciplinary action. In the
+case of an exam there is the additional offence of impersonation and it
+could result in disciplinary action.</p></li>
+<li><p><em>Copying programming code in whole or in part from another or
+allowing your own code (in whole or in part) to be used by another</em>
+in an assignment meant to be done individually is a serious
+offence.</p></li>
+<li><p><em>Collaboration between different teams</em> on the same
+project or assignment is academic misconduct.</p></li>
+<li><p><em>Sharing of passwords and login IDs</em> is explicitly
+disallowed in this Dept. and in this Institute and any instance of it is
+academic misconduct. Such sharing only compromises your own privacy and
+the security of our Dept./Institute network.</p></li>
+<li><p><em>Sending anonymous mails complaining of various unnamed
+instances of cheating</em> is blatant academic dishonesty. You need to
+remember that instructors are not policemen; they are not employed to
+prevent students from cheating; they are only here to teach, evaluate
+and perform other academic tasks such as research, project guidance and
+consultancy.</p></li>
+</ul>
+<p>Please note the following points in addition.</p>
+<ul>
+<li><p><em>Discussion between different teams</em> cannot be prohibited
+at the level of algorithms and methods adopted. However, there should be
+no obvious indication of these common discussions in programs.</p></li>
+<li><p><em>Please ensure that your assignment directories and files are
+well-protected against copying by others.</em> Deliberate or inadvertent
+copying of code will result in penalty (to be determined based on the
+situation) for <em>all</em> parties who have “highly similar” code. Note
+that all the files of an assignment will be screened manually or by a
+program for similarity before being evaluated. Since similarity is a
+symmetric relation, we cannot and will not distinguish between the
+“copier” and the “copyee”!</p></li>
+</ul>
+</section>
+
+
+</body></html>

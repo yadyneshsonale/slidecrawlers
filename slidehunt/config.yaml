@@ -1,0 +1,40 @@
+# slidehunt configuration
+
+paths:
+  data_dir: data           # downloaded slide decks (data/<host_code>/N.pdf)
+  work_dir: work           # caches + logs
+  db_path: slidehunt.db    # metadata database
+
+# Courses already present in these folders are skipped (never re-downloaded).
+skip_dirs:
+  - /home/b-ysonale/slidefetch/downloads
+  - /home/b-ysonale/slidefetch/new_downloads
+
+http:
+  user_agent: "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36"
+  timeout_s: 30
+  max_retries: 3
+  min_interval_s: 1.0
+  cache_max_age_s: 604800   # 7 days
+  render_fallback: false
+
+search:
+  max_results: 8
+  use_browser: false
+
+slides:
+  max_decks: 40
+  max_index_follow: 3
+  max_hits_per_code: 4
+
+rmp:
+  request_delay_s: 0.4
+
+ccr:
+  base: https://collegeclassreviews.com
+
+verify:
+  min_pages: 3
+  slide_min_aspect_ratio: 1.4
+  notes_max_chars_per_page: 900
+  enforce_slide_likeness: false

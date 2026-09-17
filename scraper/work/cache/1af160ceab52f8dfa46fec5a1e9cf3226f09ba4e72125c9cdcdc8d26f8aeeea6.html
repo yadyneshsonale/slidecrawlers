@@ -1,0 +1,139 @@
+<html><head>
+
+<title> COL100 lecture notes: 20-21 Sem 2 </title>
+</head>
+
+<body>
+
+<h1>
+COL100 lecture notes: 20-21 Sem 2
+</h1>
+
+<b>Instructors</b>: <a href="https://www.cse.iitd.ac.in/~rjaiswal/">Ragesh Jaiswal</a> and <a href="https://www.cse.iitd.ac.in/~aseth/">Aaditeshwar Seth</a><br><br>
+
+<b>Course background</b><br>
+
+You will learn the following aspects in the course:
+<ul>
+<li>What is computing, translation from a problem to an algorithm to a program</li>
+<li>How a computer works, how is a program compiled and executed by a computer, binary numbers, computing using 0s and 1s</li>
+<li>Programming in C. We are choosing C because it is close to the metal and will help you relate basic programming constructs to how they are implemented in a computer</li>
+<li>The importance of good algorithms, how the same problem can be solved in different ways with different degrees of efficiency</li>
+<!--li>Application of computers for simulations, solving of complex mathematical problems, and manipulating large amounts of data</li-->
+<li>Writing moderately complex programs. Planning first on paper how the program should be structured, and then coded in a programming language</li>
+<!--li>The concept of libraries, basics of data abstraction to build generic libraries and reuse them</li-->
+</ul>
+We hope that with these skills and strong concepts, you will be able to learn how to use new tools on your own, write your own programs to solve basic computation requirements in your disciplines, and hopefully learn new programming languages on your own.<br><br>
+
+<b>Key reference book for C programming</b>: Programming in C, by Stephen G. Kochan. Available online <a href="http://index-of.es/C++/Programming%20in%20C%203rd%20edition%20by%20Stephen%20G.%20Kochan.pdf">here</a>.<br><br>
+Thanks to Prof. Partha Pratim Das from IIT Kharagpur for his original powerpoint slides that we have adapted for this course.<br><br>
+
+<b>Lecture hours</b>: Mondays and Thursdays, 9:30-11:00am, delivered on <a href="https://a.impartus.com/ilc/#/course/1142086/456">Impartus</a>.<br><br>
+
+<b>Tutorials</b>: TBD<br><br>
+
+<b>Lab details</b><br>
+
+The lab assignments and lab schedule can be found <a href="https://web.iitd.ac.in/~csz198763/COL100_lab_assignment/">here</a>. Assignments will be given weekly. We will use <a href="https://piazza.com/iitd.ac.in/spring2021/col100/home">Piazza</a> (class code = COL100) for discussions and <a href="https://www.gradescope.com/courses/248504">Gradescope</a> (class code = 86X7JZ) for assignment submissions. <br><br>
+Tentative dates for the 4 lab exams are as follows:
+<ul>
+<li>Lab exam 1: March 27th, 3:30-5:00pm</li>
+<li>Lab exam 2: April 25th, 3:30-5:00pm</li>
+<li>Lab exam 3: May 22nd, 3:30-5:00pm</li>
+<li>Re-minor/re-lab exam: May 29th, 3:30-4:30pm</li>
+</ul>
+
+<b>Course policies:</b> Read <a href="0-course-policies.pdf">here</a>.<br><br>
+
+<hr>
+
+<b>Lecture notes</b><br><br>
+
+<b> <a name="class1">Class 1, 2: Introduction to computing and computers</a></b> [<a href="1-intro.pdf">slides</a>]
+<ul>
+<li>Check out some interesting links on the <a href="http://www.computersciencelab.com/ComputerHistory/HistoryPt2.htm">history of computers</a>, the <a href="http://www.vam.ac.uk/content/videos/j/video-jacquard-weaving/">Jacquard's loom</a>, and <a href="https://www.computerhistory.org/revolution/digital-logic/12/288/2220">integrated circuits</a>.</li>
+<li>The <a href="simple.c">simple.c</a> program we used to understand the storage of variables in memory, and operations on them. You can also take a look at Chapters 2 and 3 from the Kochan book.</li>
+</ul><br>
+
+
+<b> <a name="class1">Class 3, 4: Number systems, data types, and expression evaluation</a> </b> [<a href="2-expressions.pdf">slides</a>]
+<ul>
+<li>The <a href="datatypes.c">datatypes.c</a>, <a href="places.c">places.c</a>, and <a href="round.c">round.c</a> programs we used to understand type casting. You can also take a look at Chapter 4 from the Kochan book. </li>
+<li>The <a href="printmaxvals.c">printmaxvals.c</a> program we discussed in the tutorial to check for overflow when adding or subtracting two integer numbers. </li>
+<li>If you are curious about how mathematical functions are implemented, such as the ones in <a href="sqrt.c">sqrt.c</a>, take a look at the glibc source code such as for the <a href="https://code.woboq.org/userspace/glibc/sysdeps/ieee754/flt-32/e_sqrtf.c.html">sqrt 32-bit floating point implementation on the IEEE-764 architecture</a>. Browse around and read the comments to understand <a href="https://en.wikipedia.org/wiki/Methods_of_computing_square_roots">different implementation methods</a> on different architectures and for different precisions. </li>
+<li>Somebody came up with this interesting example with increment operators, and we understood what was going on by looking at the assembly language code to which the program was compiled by gcc. Details <a href="increment-in-assembly.pdf">here</a>. </li>
+</ul><br>
+
+
+<b> <a name="class1">Class 5, 6: Conditionals</a> </b> [<a href="3-conditionals.pdf">slides</a>]
+<ul>
+<li>The <a href="equality_vs_assignment.c">program</a> we used to understand the difference between assignment and equaliy operators.</li>
+<li>Variants of programs to find the maximum of three numbers: <a href="largest.c">largest.c</a>, <a href="another_largest.c">another_largest.c</a>, and <a href="yet_another_largest.c">yet_another_largest.c</a>. You can also take a look at Chapter 6 from the Kochan book. </li>
+</ul><br>
+
+<b> <a name="class1">Class 7, 8, 9: Loops</a> </b> [<a href="4-loops.pdf">slides</a>]
+<ul>
+<li>The programs we discussed in class: <a href="loop_eseries.c">calculating e</a>, <a href="maximum_of_positive_numbers.c">maximum of a series of positive numbers</a>, and <a href="sum_of_digits.c">sum of the digits of an integer</a>. You can also take a look at Chapter 5 from the Kochan book. </li>
+<li>Some additional programs for greater familiarity with loops: <a href="fib.c">fibonacci series</a>, <a href="palindrome.c">whether a number is a palindrome or not</a> (without using strings), <a href="printcondition.c">printing shapes by evaluating conditions</a>, <a href="printfunction.c">printing a sine wave</a>.</li>
+</ul><br>
+
+<b> <a name="class1">Class 10, 11: Number representation and bit operations</a> </b> [<a href="5-numbersystems.pdf">slides</a>]<br>
+<ul>
+<li>Consult Chapter 12 in the Kochan book for bit operations</li>
+<li>Programs we discussed in class, to print the <a href="printbinary.c">binary representation</a> of a number, and the <a href="printhexa.c">hexa representation</a>, through bit operations. A <a href="twoscomplement.c">twos-complement implementation</a> to understand how negative numbers are stored and re-converted when to be displayed.</li>
+<li>With some pointer type conversations, we can also print the <a href="printfloat.c">floating point representation</a> of a number. Test with loss of precision when you go beyond 2^23. </li>
+<li>Floating point numbers have a representation for infinity. Check out this <a href="testfloat.c">program</a> with a division by zero with floats and integers - when does the program crash?</li>
+</ul><br>
+
+<b> <a name="class1">Class 12, 13: Arrays</a> </b> [<a href="6-arrays.pdf">slides</a>]<br>
+<ul>
+<li>You can also take a look at Chapter 7 in the Kochan book</li>
+<li>Programs we discussed in class, to show the <a href="histogram.c">histogram</a> of a series of numbers, and to create <a href="createarray.c">sample inputs using random number generators</a>. We also looked at redirection of input and output, and some nice tools like cat, head, and tail.</li>
+<li>Updated program <a href="createarray.c">to generate random numbers</a> with a random seed.</li>
+<li>A simulation for <a href="forest.c">forest fires in a 1D forest</a>. Run the program for different values of fire and growth probabilities, and see whether the forest is able to sustain itself. Also try to simulate a circular forest, i.e. the left boundary of the forest connects with the right boundary. Later when we study 2D arrays, you can try changing the program to a 2D forest, and a circular 2D forest which is called a toroid.</li>
+</ul><br>
+
+<b> <a name="class1">Class 14: 2D arrays and strings</a> </b> <br>
+<ul>
+<li>The <a href="matrixmul.c">matrix multiplication</a> program we understood in class.</li>
+<li>The fun <a href="gameoflife2d.c">game of life</a> program, with sample inputs for a <a href="gameoflife2d.glider">glider</a>, <a href="gameoflife2d.gun">gun</a>, and other <a href="gameoflife2d.toad">shapes</a>. If you are interested, you can check out more ANSI control characters <a href="https://www.cs.csub.edu/howto/vt100_escape_codes.html">here</a>, note that you would substitute the escape character ^[ with \033 when using it in a printf in C, e.g. printf("\033[2J") to clear the entire screen (code is ^[[2J). You can also print in colour as described <a href="http://jafrog.com/2013/11/23/colors-in-terminal.html">here</a>, with common codes <a href="https://gist.github.com/RabaDabaDoba/145049536f815903c79944599c6f952a">here</a>.</li>
+<li>Here is also a 1D version of <a href="gameoflife1d.c">game of life</a> and a <a href="gameoflife1d.in">sample input file</a>.</li>
+<li>Strings are nothing but a 1D array of characters, terminated with a null '\0' character (decimal value 0). The <a href="string.c">program</a> we discussed in class. ASCII codes 0..31 are <a href="https://www.windmill.co.uk/ascii-control-codes.html">control codes</a>.</li>
+<li>Also check out the initial portion of Chapter 10 from the Kochan book.</li>
+</ul><br>
+
+<b> <a name="class1">Class 15, 16: Functions</a> </b> [<a href="7-functions.pdf">slides</a>]<br>
+<ul>
+<li>The simple programs we used to demonstrate <a href="functions.c">passing by value</a> in function calls, and <a href="stringfunctions.c">passing by reference</a> for manipulating arrays.</li>
+<li>The <a href="gcd.c">GCD program</a> we did in class, to read arguments from the command line, convert the string arguments to integers, and compute the GCD of a series of integers.</li>
+<li>Also look up Chapter 8 from the Kochan book</li>
+</ul><br>
+
+<b> <a name="class1">Class 17, 18, 19, 20: Recursion, sorting, searching</a> </b> [<a href="8-recursion.pdf">slides</a>]<br>
+<ul>
+<li>Variants of the <a href="fibonacci-recur.c">fibonacci program</a> discussed in class.</li>
+<li>Also look up Chapter 8 from the Kochan book</li>
+</ul><br>
+
+<b> <a name="class1">Class 21, 22: Pointers</a> </b> [<a href="9-pointers.pdf">slides</a>]<br>
+<ul>
+<li>Also look up Chapter 11 from the Kochan book</li>
+<li>Here are the various programs we did in class. <a href="swap.c">Learning to swap</a> numbers, array elements, pointers to arrays. <a href="movingpointers.c">Pointer arithmetic</a>. <a href="arrayofpointers.c">Arrays of pointers</a> and why <a href="arrayargv.c">command line arguments</a> are passed as an array of pointers.</li>
+</ul><br>
+
+<b> <a name="class1">Class 22: Structures</a> </b> [<a href="10-structures.pdf">slides</a>]<br>
+<ul>
+<li>Also look up Chapter 9 from the Kochan book</li>
+<li>The student records <a href="col100records.c">calculation and sorting program</a> we discussed in class. <a href="marks.in">Input file</a> for stdin redirection.</li>
+</ul><br>
+
+<b> <a name="class1">Extra: Dynamic memory allocation</a> </b> [<a href="11-dynamicallocation.pdf">slides</a>]<br>
+<ul>
+<li>Also look up Chapter 17 from the Kochan book</li>
+<li>An implementation of <a href="extractstrings.c">command line parsing</a>: trim spaces, count the number of strings, allocate an array of pointers, allocate space for each string linked from the array of pointers.</li>
+</ul><br>
+
+<hr>
+
+
+</body></html>

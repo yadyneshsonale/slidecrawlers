@@ -1,0 +1,402 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+   <title>CS60050 : Machine Learning</title>
+   <style type="text/css">
+      html, body {margin:0; padding:0; border:none}
+      p {text-align:justify}
+      li {text-align:justify}
+      dd {text-align:justify}
+      a {text-decoration:none; background:#221100}
+      a:hover {text-decoration:none; background:#00ffff; color:#221100}
+      table {border:solid thin}
+      td {border:solid thin}
+      th {border:solid thin}
+      #nobd {border:none}
+   </style>
+</head>
+<body text="#ccaa44" vlink="#00ffff" link="#00ffff" alink="#00ff00" bgcolor="#221100">
+<font face="Helvetica">
+<table width="100%" cellspacing="0" cellpadding="3" border="0" id="nobd">
+<tbody><tr>
+    <td id="nobd" width="50%" align="left" bgcolor="#cc6600"><font size="+2" color="#221100">&nbsp;<b>CS60050 : Machine Learning</b></font></td>
+   <td id="nobd" width="50%" align="right" bgcolor="#ff9900"><font size="+2" color="#221100"><b>Spring 2023, L-T-P: 3-0-0</b></font></td>
+</tr>
+</tbody></table>
+
+<blockquote>
+
+<p><a name="schedule"></a>
+</p><h3 align="left">Schedule</h3>
+<blockquote>
+<table id="nobd" cellspacing="0" cellpadding="2" border="0">
+<tbody><tr><td id="nobd" align="left" valign="top"><b>Instructor</b>
+    </td><td id="nobd" align="left">&nbsp;&nbsp;&nbsp;
+    </td><td id="nobd" align="left"><a href="http://cse.iitkgp.ac.in/~aritrah/" target="_blank">Aritra Hazra</a>
+</td></tr><tr><td id="nobd" valign="top" align="left"><b>Timing (Slot: A3)</b>
+    </td><td id="nobd" valign="top" align="left">&nbsp;&nbsp;&nbsp;
+    </td><td id="nobd" valign="top" align="left"><font color="yellow">Monday  (08:00 – 10:00)</font> &nbsp; and &nbsp; <font color="yellow">Tuesday (12:00 – 13:00)</font>
+</td></tr><tr><td id="nobd" valign="top" align="left"><b>Venue</b>
+    </td><td id="nobd" valign="top" align="left">&nbsp;&nbsp;&nbsp;
+    </td><td id="nobd" valign="top" align="left"><font color="yellow">NC443</font> &nbsp; (Nalanda Complex)
+</td></tr><tr><td id="nobd" valign="top" align="left"><b>Teaching Assistants</b>
+    </td><td id="nobd" valign="top" align="left">&nbsp;&nbsp;&nbsp;
+    </td><td id="nobd" valign="top" align="left">
+       <a href="https://abhinavbohra.technology/" target="_blank">Abhinav Bohra</a> &nbsp; | &nbsp;
+	   <a href="https://in.linkedin.com/in/naincy-vimal-b2186b217" target="_blank">Naincy Vimal</a> &nbsp; | &nbsp;
+	   <a href="https://rijoym.github.io/" target="_blank">Rijoy Mukherjee</a> &nbsp; | &nbsp;
+	   <a href="https://sites.google.com/view/somnath-hazra/home" target="_blank">Somnath Hazra</a> &nbsp; | &nbsp;
+	   <a href="https://in.linkedin.com/in/suryansh-kumar-b30b29135/" target="_blank">Suryansh Kumar</a> &nbsp; | &nbsp;
+	   <a href="https://sites.google.com/view/suvadeeph" target="_blank">Suvadeep Hajra</a><br>
+</td></tr></tbody></table>
+</blockquote>
+
+<hr>
+
+<p><a name="notice"></a>
+</p><h3 align="left">Notices and Announcements</h3>
+<blockquote>
+<dl>
+
+<p></p><dt><i><b>April 20, 2023</b></i></dt>
+<dd>The graded answers scripts for <a href="#test">End-semester</a> examination will be shown on Tuesday (02-May-2023) from 11:00 AM - 11:30 AM in CSE-120 (Ground Floor of CSE Dept.).
+
+<p></p></dd><dt><i><b>March 10, 2023</b></i></dt>
+<dd><a href="#test">End-semester</a> examination is scheduled on 18-Apr-2023 (AN) and will be conducted centrally by the institute. The syllabus is everything that is covered in the course.
+
+<p></p></dd><dt><i><b>March 26, 2023</b></i></dt>
+<dd><a href="#project">Project (Phase-3)</a> has been released and you have
+	already received an email with the necessary details. Please note that the
+	submission deadline is 15-Apr-2023 (STRICT)! The submissions will be
+	accepted (only) via <a href="https://moodlecse.iitkgp.ac.in/moodle/course/view.php?id=508" target="_blank">CSE-Moodle</a>.
+
+<p></p></dd><dt><i><b>February 26, 2023</b></i></dt>
+<dd><a href="#project">Project (Phase-2)</a> has been released and you have
+	already received an email with the necessary details. Please note that the
+	submission deadline is 18-Mar-2023 (STRICT)! The submissions will be
+	accepted (only) via <a href="https://moodlecse.iitkgp.ac.in/moodle/course/view.php?id=508" target="_blank">CSE-Moodle</a>.
+
+<p></p></dd><dt><i><b>February 24, 2023</b></i></dt>
+<dd>The graded answers scripts for <a href="#test">Mid-semester</a> examination will be shown on Tuesday (28-Feb-2023) from 6:00 PM - 6:30 PM in CSE-120 (Ground Floor of CSE Dept.).
+
+<p></p></dd><dt><i><b>February 07, 2023</b></i></dt>
+<dd><a href="#test">Mid-semester</a> examination is scheduled on 15-Feb-2023 (AN) and will be conducted centrally by the institute. The syllabus is whatever covered till today's class (i.e. upto SVM).
+
+<p></p></dd><dt><i><b>January 22, 2023</b></i></dt>
+<dd><a href="#project">Project (Phase-1)</a> has been released and you have
+	already received an email with the necessary details. Please note that the
+	submission deadline is 11-Feb-2023 (STRICT)! The submissions will be
+	accepted (only) via <a href="https://moodlecse.iitkgp.ac.in/moodle/course/view.php?id=508" target="_blank">CSE-Moodle</a>.
+
+<p></p></dd><dt><i><b>January 01, 2023</b></i></dt>
+<dd>Hello everyone! Wish you all a very Happy New Year!<br>
+	It is time for you all to understand and learn about how machines learn,
+	which is the primary subject matter of this course. So, here we go ...
+<ul>
+ <li>The first class for this course will be held on <b>03-Jan-2023 (Tue, 12pm)</b>
+	 at NC443 (Nalanda).</li>
+ <li>You need to enrol into our course from <a href="https://moodlecse.iitkgp.ac.in/moodle/course/view.php?id=508" target="_blank">CSE-Moodle</a> too.
+	 If you are new to CSE-Moodle (this is not the Institute-Moodle!), please
+	 register there first. Then you can login/enrol. An email has been sent
+	 already detailing the same with the enrolment-key.</li>
+ <li>To initiate our proceedings, the registered students are requested to
+     go through the materials/slides posted under <a href="#syllabus">PROLOGUE</a>
+     part, to get an informal overview (metadata) of the course.</li>
+</ul>
+
+<p></p></dd><dt><i><b>December 31, 2022 – 08:00pm</b></i></dt>
+<dd> Shortlisting has been finalized based on all the requests available until
+     now via ERP portal. <b> No further requests / emails will be processed / addressed.</b>
+     Due to operational constraints, we are unable to consider all requests!
+     (Only) the approved / registered students will receive an introductory mail soon
+     (preferably by tomorrow) with all the required details.<br><br>
+</dd><dd> <font color="yellow">Selection Criteria Followed for Shortlisting Students:</font> <!--&nbsp; [ Total Approved = 114 ]-->
+     <ul>
+	  <li><b>Research Scholar</b> Students (MS and PhD) : Everyone</li>
+      <li><b>CS</b> Students (UG and PG) : CGPA &gt;= 7.00 &nbsp; (Exception for UG-20 Batch : CGPA &gt;= 8.25)</li>
+      <li><b>Non-CS</b> Students (UG and PG) : CGPA &gt;= 9.00 &nbsp; (Exception for Dual-18 Batch : CGPA &gt;= 8.00)</li>
+	  <li><b>Declined:</b> <i>All students who do not satisfy the above approval criteria.</i></li>
+	  <!--
+	  0. &nbsp; For UG-18(!CS)-Batch  : CGPA >= 8.00 &nbsp; [ Count = 10 ]<br>
+	  1. &nbsp; For UG-18(CS)-Batch   : CGPA >= 7.00 &nbsp; [ Count = 04 ]<br>
+      2. &nbsp; For UG-19(!CS)-Batch  : CGPA >= 9.00 &nbsp; [ Count = 18+3 ]<br>
+      3. &nbsp; For UG-19(CS)-Batch   : CGPA >= 7.00 &nbsp; [ Count = 07 ]<br>
+      4. &nbsp; For UG-20(!CS)-Batch  : CGPA >= 9.00 &nbsp; [ Count = 11 ]<br>
+      5. &nbsp; For UG-20(CS)-Batch   : CGPA >= 8.25 &nbsp; [ Count = 18 ]<br>
+	  6. &nbsp; For PG-22(!CS)-Batch  : CGPA >= 9.00 &nbsp; [ Count = 08 ]<br>
+	  7. &nbsp; For PG-22(CS)-Batch   : CGPA >= 7.00 &nbsp; [ Count = 35 ]<br>
+      8. &nbsp; For RS-Batch          : Everyone &nbsp; &nbsp; [ Count = 00 ]<br>
+      9. &nbsp; <b>Declined:</b> <i>All students who do not satisfy the approval criteria.</i>
+	  -->
+     </ul>
+
+<p></p></dd><dt><i><b>December 22, 2022</b></i></dt>
+<dd><i>Interested students are requested to apply via the ERP portal. Please keep
+    in mind the following requirements.</i>
+    <ul>
+ <p></p><li>The timings for this course as mentioned above are to be treated as
+        frozen and final. These timings are chosen so as to reduce clashes with
+        other courses. However, it is impossible to find any slot that is free
+        for everybody. So any further change may solve a few cases but will
+        introduce new cases of clash. An applicant must not have any clash with
+        these timings. If so, the students are supposed to make attempts to
+        shift the other courses/labs clashing with these.
+ <p></p></li><li>I shall consider requests via ERP (only) from all students till 8:00pm,
+        31-Dec-2022 and finalize the approvals among those requested students
+        based on their CGPA (only) immediately after 8:00pm (if possible).
+        Considering the first class to be held on 03-Jan-2023, the declined
+        students are requested to switch over to other courses before the
+        subject registration deadline expires. We shall NOT consider any
+        further request for approval beyond that. <b>All approvals by me in ERP
+        will wait until that time.</b> I may not respond to individual e-mails
+        about the application and the application-approval processes. Please
+        note that, I cannot take all requested students due to seat limitations.
+        However, this selection will primarily be based/prioritized on --
+        (i) preferring the final year students and research scholars, and
+        (ii) the CGPA of the students.
+        
+ <p></p></li><li><font color="yellow">Pre-requisites</font> for this course are:
+        &nbsp; Probability and Statistics, Linear Algebra (basics), Algorithms,
+        Programming Knowledge (in C/C++/Java/Python).
+    </li></ul>
+</dd></dl>
+</blockquote>
+
+<hr>
+
+<a name="syllabus"></a><h3 align="left">Coverage</h3>
+<blockquote>
+   <p><table border="0" cellpadding="5" cellspacing="0">
+      <tbody><tr><th align="center"><font color="yellow">Topic</font></th><th align="center"><font color="yellow">Details</font></th><th align="center"><font color="yellow">Duration</font></th><th align="center"><font color="yellow">Schedule</font></th><th align="center"><font color="yellow">References</font></th>
+
+      </tr><tr><td nowrap="" align="left" valign="middle"><b>PROLOGUE (Metadata)</b></td>
+      <td><p align="justify">Course Information and Logistics.<br>
+                             Overview of Machine Learning – <i>The Landscape</i>.
+      </p></td><td nowrap="" align="center" valign="middle">–
+      <p></p></td><td nowrap="" align="center" valign="middle"><a href="http://cse.iitkgp.ac.in/~aritrah/course/theory/ML/Spring2023/Course-Details.pdf" target="_blank">Information</a>
+      <p></p></td><td nowrap="" align="center" valign="middle">–
+      </td>
+      </tr>
+
+      <tr><td nowrap="" align="left" valign="middle"><b>Introduction</b></td>
+      <td><p align="justify">The Learning Problem.<br>
+                             Feasibility of Learning.
+      </p></td><td nowrap="" align="center" valign="middle">2-hours
+      <p></p></td><td nowrap="" align="center" valign="middle">03-Jan-2023<br>
+                                                            09-Jan-2023
+      <p></p></td><td nowrap="" align="justify" valign="middle">Mitchell [1] (Chapter-1)<br>Mostafa-Ismail-Lin [2] (Chapter-1)<br>Alpaydin [3] (Chapter-1+2)<br>Duda-Hart-Stork [7] (Chapter-1)
+      </td>
+      </tr>
+
+      <tr><td nowrap="" align="left" valign="middle"><b>Concept Learning</b></td>
+      <td><p align="justify">General-to-Specific Hypotheses Ordering.<br>
+                             Find-S and Candidate Elimination Algorithm.<br>
+                             Version Space and Inductive Bias.
+      </p></td><td nowrap="" align="center" valign="middle">1.5-hour
+      <p></p></td><td nowrap="" align="center" valign="middle">09-Jan-2023
+      <p></p></td><td nowrap="" align="justify" valign="middle">Mitchell [1] (Chapter-2)
+      </td>
+      </tr>
+
+      <tr><td nowrap="" align="left" valign="middle"><b>Decision Tree Learning</b></td>
+      <td><p align="justify">Decision Tree Representation and Learning Algorithm (ID3).<br>
+                             Attribute Selection using Entropy Measures and Gains.<br>
+                             Hypotheses Space and Inductive bias.<br>
+                             Overfitting, Generalization and Occam's Razor.<br>
+                             Extensions: Continuous-valued Attributes, Alternative Attribute Selection Measures.
+      </p></td><td nowrap="" align="center" valign="middle">1.5-hour
+      <p></p></td><td nowrap="" align="center" valign="middle">10-Jan-2023<br>16-Jan-2023
+      <p></p></td><td nowrap="" align="justify" valign="middle">Mitchell [1] (Chapter-3)<br>Alpaydin [3] (Chapter-9)<br>Tan-Steinbach-Kumar [4] (Chapter-4)
+      </td>
+      </tr>
+
+      <tr><td nowrap="" align="left" valign="middle"><b>Bayesian Learning</b></td>
+      <td><p align="justify">Probability Overview.<br>
+                             MLE and MAP Estimates.<br>
+                             Naive Bayes Classifier.<br>
+                             Gaussian Naive Bayes Classifier.<br>
+                             Bayesian Networks.
+      </p></td><td nowrap="" align="center" valign="middle">4-hours
+      <p></p></td><td nowrap="" align="center" valign="middle">16-Jan-2023<br>17-Jan-2023<br>23-Jan-2023
+      <p></p></td><td nowrap="" align="justify" valign="middle">Mitchell [1] (Chapter-6)<br>Tan-Steinbach-Kumar [4] (Chapter-5)<br>Bishop [5] (Chapter-8)<br>Alpaydin [3] (Chapter-14)
+      </td>
+      </tr>
+
+      <tr><td nowrap="" align="left" valign="middle"><b>Instance-based Learning</b></td>
+      <td><p align="justify">k-Nearest Neighbour (kNN) Classifier.<br>
+                             Voronoi Diagram and Distance-Weighted kNN.<br>
+                             Distance Metrics and Curse of Dimensionality.<br>
+                             Computational Complexity: Condensing and High Dimensional Search (kd-tree).
+      </p></td><td nowrap="" align="center" valign="middle">2-hours
+      <p></p></td><td nowrap="" align="center" valign="middle">23-Jan-2023<br>24-Jan-2023
+      <p></p></td><td nowrap="" align="justify" valign="middle">Mitchell [1] (Chapter-8)<br>Mostafa-Ismail-Lin [2] (Chapter-6)<br>Tan-Steinbach-Kumar [4] (Chapter-5)<br>Duda-Hart-Stork [7] (Chapter-4)
+      </td>
+      </tr>
+
+      <tr><td nowrap="" align="left" valign="middle"><b>Linear Models and Regression</b></td>
+      <td><p align="justify">Linear Classification.<br>
+                             Linear Regression.<br>
+                             Non-linear Transformation.<br>
+                             Logistic Regression.
+      </p></td><td nowrap="" align="center" valign="middle">2-hours
+      <p></p></td><td nowrap="" align="center" valign="middle">30-Jan-2023
+      <p></p></td><td nowrap="" align="justify" valign="middle">Mostafa-Ismail-Lin [2] (Chapter-3)<br>Alpaydin [3] (Chapter-10)<br>Tan-Steinbach-Kumar [4] (Chapter-5)<br>Hastie-Tibshirani-Friedman [6] (Chapter-2+3)
+      </td>
+      </tr>
+
+      <tr><td nowrap="" align="left" valign="middle"><b>Artificial Neural Network</b></td>
+      <td><p align="justify">Perceptron Learning Algorithm: Delta Rule and Gradient Descent.<br>
+                             Multi-layer Perceptron Learning: Backpropagation and Stochastic Gradient Descent.<br>
+                             Hypotheses Space, Inductive Bias and Convergence.<br>
+                             Variants of Neural Network Structures.
+      </p></td><td nowrap="" align="center" valign="middle">2-hours
+      <p></p></td><td nowrap="" align="center" valign="middle">31-Jan-2023<br>06-Feb-2023
+      <p></p></td><td nowrap="" align="justify" valign="middle">Mitchell [1] (Chapter-4)<br>Mostafa-Ismail-Lin [2] (Chapter-7)<br>Alpaydin [3] (Chapter-11)<br>Tan-Steinbach-Kumar [4] (Chapter-5)<br>Hastie-Tibshirani-Friedman [6] (Chapter-11)
+      </td>
+      </tr>
+
+      <tr><td nowrap="" align="left" valign="middle"><b>Support Vector Machines</b></td>
+      <td><p align="justify">Decision Boundary and Support Vector: Optimization and Primal-Dual Problem.<br>
+                             Extension to SVM: Soft Margin and Non-linear Decision Boundary.<br>
+                             Kernel Functions and Radial Basis Functions (detailed later).
+      </p></td><td nowrap="" align="center" valign="middle">2-hours
+      <p></p></td><td nowrap="" align="center" valign="middle">06-Feb-2023<br>07-Feb-2023
+      <p></p></td><td nowrap="" align="justify" valign="middle">Mostafa-Ismail-Lin [2] (Chapter-8)<br>Hastie-Tibshirani-Friedman [6] (Chapter-12)<br>Alpaydin [3] (Chapter-10)<br>Tan-Steinbach-Kumar [4] (Chapter-5)
+      </td>
+      </tr>
+
+      <tr><td nowrap="" align="left" valign="middle"><b>Classifier / Hypothesis Evaluation</b></td>
+      <td><p align="justify">Accuracy, Precision, Recall and F-Measures.<br>
+                             Scores, Sampling, Bootstraping and ROC.<br>
+                             Hypotheses Testing and Cross-validation.
+      </p></td><td nowrap="" align="center" valign="middle">1-hour
+      <p></p></td><td nowrap="" align="center" valign="middle">13-Feb-2023
+      <p></p></td><td nowrap="" align="justify" valign="middle">Mitchell [1] (Chapter-5)<br>Tan-Steinbach-Kumar [4] (Chapter-4+5)
+      </td>
+      </tr>
+
+      <tr><td nowrap="" align="left" valign="middle"><b>Computational Learning Theory</b></td>
+      <td><p align="justify">Error and Noise Formalisms.<br>
+                             Training vs. Testing.<br>
+                             Theory of Generalization.<br>
+                             PAC Learnability and VC Dimensions.<br>
+                             Bias-Variance Tradeoffs.<br>
+                             Overfitting, Regularization and Validation.
+      </p></td><td nowrap="" align="center" valign="middle">6-hours
+      <p></p></td><td nowrap="" align="center" valign="middle">27-Feb-2023<br>28-Feb-2023<br>06-Mar-2023<br>07-Mar-2023
+      <p></p></td><td nowrap="" align="justify" valign="middle">Mostafa-Ismail-Lin [2] (Chapter-2+4)<br>Shwartz-David [9]<br>Mitchell [1] (Chapter-7)
+      </td>
+      </tr>
+
+      <tr><td nowrap="" align="left" valign="middle"><b>Unsupervised Learning: Clustering</b></td>
+      <td><p align="justify">Partitional Clustering and Hierarchical Clustering.<br>
+                             Cluster Types, Attributes and Salient Features.<br>
+                             k-Means, Hierarchical and Density-based Clustering Algorithms.<br>
+                             Inter and Intra Clustering Similarity, Cohesion and Separation.<br>
+                             MST and DBSCAN Clustering Algorithms.
+      </p></td><td nowrap="" align="center" valign="middle">2-hours
+      <p></p></td><td nowrap="" align="center" valign="middle">13-Mar-2023
+      <p></p></td><td nowrap="" align="justify" valign="middle">Tan-Steinbach-Kumar [4] (Chapter-8+9)<br>Hastie-Tibshirani-Friedman [6] (Chapter-14)<br>Duda-Hart-Stork [7] (Chapter-10)
+      </td>
+      </tr>
+
+      <tr><td nowrap="" align="left" valign="middle"><b>Ensemble Learning</b></td>
+      <td><p align="justify">Bagging and Boosting.<br>
+                             Adaboost and Random Forest.
+      </p></td><td nowrap="" align="center" valign="middle">2-hours
+      <p></p></td><td nowrap="" align="center" valign="middle">14-Mar-2023
+      <p></p></td><td nowrap="" align="justify" valign="middle">Tan-Steinbach-Kumar [4] (Chapter-5)<br>Hastie-Tibshirani-Friedman [6] (Chapter-15)
+      </td>
+      </tr>
+
+      <tr><td nowrap="" align="left" valign="middle"><b>Some Leftover Topics<br>(Additional Details)</b></td>
+      <td><p align="justify">Dimensionality Reduction and Principal Component Analysis (PCA).<br>
+                             Kernel Machines and Kernel Trick.<br>
+                             Radial Basis Functions (more details).<br>
+                             Core Learning Principles.<br>
+                             E-M Algorithm and Gaussian Mixture Model.<br>
+                             Hidden Markov Model.
+      </p></td><td nowrap="" align="center" valign="middle">4-hours
+      <p></p></td><td nowrap="" align="center" valign="middle">20-Mar-2023<br>21-Mar-2023<br>27-Mar-2023
+      <p></p></td><td nowrap="" align="justify" valign="middle">Mostafa-Ismail-Lin [2] (Chapter-5+9+C)<br>Alpaydin [3] (Chapter-13+15)<br>Duda-Hart-Stork [7] (Chapter-3)<br>Murphy [8]
+      </td>
+      </tr>
+
+      <tr><td nowrap="" align="left" valign="middle"><b>Other Learning Paradigms</b></td>
+      <td><p align="justify">Reinforcement Learning.<br>
+                             Deep Learning.<br><br>
+                             Transfer Learning.<br>
+                             Semi-supervised Learning.<br>
+                             Active Learning.
+      </p></td><td nowrap="" align="center" valign="middle">5-hours
+      <p></p></td><td nowrap="" align="center" valign="middle">27-Mar-2023<br>28-Mar-2023<br>03-Apr-2023<br>10-Apr-2023
+      <p></p></td><td nowrap="" align="justify" valign="middle">Sutton-Barto [10]<br>Mitchell [1] (Chapter-13)<br>Alpaydin [3] (Chapter-18)<br>Goodfellow-Bengio-Courville [11]<br><br>(+ Research Survey Articles)
+      </td>
+      </tr>
+
+      <tr><td nowrap="" align="left" valign="middle"><b>Conclusion</b></td>
+      <td><p align="justify">Explainability in Learning.<br><br>
+                             ML in Summary and Path Ahead.
+      </p></td><td nowrap="" align="center" valign="middle">1-hour
+      <p></p></td><td nowrap="" align="center" valign="middle">10-Apr-2023
+      <p></p></td><td nowrap="" align="justify" valign="middle">Molnar [12]<br><br>(+ Research Survey Articles)
+      </td>
+      </tr></tbody></table>
+      <br>
+	  <b><font color="yellow">**</font> For Reference Slides/Materials, Visit the following Course Pages:</b>
+	  </p><li><i><a href="https://cse.iitkgp.ac.in/%7Epabitra/course/ml/ml.html" target="_blank">Course by Dr. Pabitra Mitra (CSE, IIT Kharagpur)</a></i><br>
+	  </li><li><i><a href="https://work.caltech.edu/lectures.html" target="_blank">Course by Dr. Yaser S. Abu-Mostafa (CalTech, USA)</a></i><br>
+	  </li><li><i><a href="http://www.cs.cmu.edu/~ninamf/courses/601sp15/lectures.shtml" target="_blank">Course by Dr. Tom Mitchell (CMU, USA)</a></i><br>
+	  </li><li><i><a href="http://introtodeeplearning.com/" target="_blank">Short Term Course by MIT</a></i>
+	  <br><br>
+<p></p></li></blockquote>
+
+<hr>
+
+<p><a name="reference"></a>
+</p><h3 align="left">Books and References</h3>
+<ol>
+   <li>Tom <b>Mitchell</b>; <a href="http://www.cs.cmu.edu/afs/cs.cmu.edu/user/mitchell/ftp/mlbook.html"><i><b>Machine Learning</b></i></a>, First Edition, McGraw Hill, 1997. &nbsp; <font color="yellow">[ TEXTBOOK ]</font>
+   </li><li>Yaser S. <b>Abu-Mostafa</b>, Malik <b>Magdon-Ismail</b>, Hsuan-Tien <b>Lin</b>; <a href="http://www.amlbook.com/"><i><b>Learning From Data</b></i></a>, First Edition, AML Book, 2012. &nbsp; <font color="yellow">[ TEXTBOOK ]</font><br><br>
+   </li><li>Ethem <b>Alpaydin</b>; <a href="https://www.cmpe.boun.edu.tr/~ethem/i2ml3e/"><i><b>Introduction to Machine Learning</b></i></a>, Third Edition, The MIT Press, September 2014.
+   </li><li>Pang-Ning <b>Tan</b>, Michael <b>Steinbach</b>, Vipin <b>Kumar</b>; <a href="https://www-users.cse.umn.edu/~kumar001/dmbook/index.php"><i><b>Introduction to Data Mining</b></i></a>, Second Edition, Pearson Addison-Wesley, 2019.
+   </li><li>Christopher <b>Bishop</b>; <a href="https://www.springer.com/gp/book/9780387310732"><i><b>Pattern Recognition and Machine Learning</b></i></a>, First Edition, Springer-Verlag New York, 2006. &nbsp;&nbsp; [ <a href="https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf">Open-Access</a> ]
+   </li><li>Trevor <b>Hastie</b>, Robert <b>Tibshirani</b>, Jerome <b>Friedman</b>; <a href="https://web.stanford.edu/~hastie/ElemStatLearn/"><i><b>The Elements of Statistical Learning</b></i></a>, Second Edition, Springer, 2009.
+   </li><li>Richard O. <b>Duda</b>, Peter E. <b>Hart</b>, David G. <b>Stork</b>; <a href="https://www.wiley.com/en-gb/Pattern+Classification%2C+2nd+Edition-p-9780471056690"><i><b>Pattern Classification</b></i></a>, Second Edition, John Wiley &amp; Sons, November 2000.<br><br>
+   </li><li>Kevin P. <b>Murphy</b>; <a href="https://probml.github.io/pml-book/"><i><b>Machine Learning: A Probabilistic Perspective</b></i></a>, MIT Press, 2012.
+   </li><li>Shai <b>Shalev-Shwartz</b>, Shai <b>Ben-David</b>; <a href="https://www.cs.huji.ac.il/~shais/UnderstandingMachineLearning/"><i><b>Understanding Machine Learning: From Theory to Algorithms</b></i></a>, First Edition, Cambridge University Press, 2014.
+   </li><li>Richard S. <b>Sutton</b> and Andrew G. <b>Barto</b>; <a href="http://incompleteideas.net/book/the-book-2nd.html"><i><b>Reinforcement Learning: An Introduction</b></i></a>, 2nd Edition, MIT Press, 2020.
+   </li><li>Ian <b>Goodfellow</b>, Yoshua <b>Bengio</b> and Aaron <b>Courville</b>; <a href="https://www.deeplearningbook.org/"><i><b>Deep Learning</b></i></a>, MIT Press, 2016.
+   </li><li>Christoph <b>Molnar</b>; <a href="https://leanpub.com/interpretable-machine-learning"><b><i>Interpretable Machine Learning</i></b></a>, Leanpub Publisher, 2019.
+</li></ol>
+
+<hr>
+
+
+<a name="test"></a><h3>Tests</h3>
+<ul>
+<li><font color="yellow">Mid-Semester</font>&nbsp;&nbsp;[&nbsp;<a href="http://cse.iitkgp.ac.in/~aritrah/course/theory/ML/Spring2023/MS_Q.pdf" target="_blank">Question</a>&nbsp;|&nbsp;<a href="http://cse.iitkgp.ac.in/~aritrah/course/theory/ML/Spring2023/MS.pdf" target="_blank">Solution</a>&nbsp;]&nbsp;&nbsp;(60 Marks, 15-Feb-2023, Wednesday, 2:00pm-4:00pm) &nbsp; [ Syllabus: upto SVM ]
+</li><li><font color="yellow">End-Semester</font>&nbsp;&nbsp;[&nbsp;<a href="http://cse.iitkgp.ac.in/~aritrah/course/theory/ML/Spring2023/ES_Q.pdf" target="_blank">Question</a>&nbsp;|&nbsp;<a href="http://cse.iitkgp.ac.in/~aritrah/course/theory/ML/Spring2023/ES.pdf" target="_blank">Solution</a>&nbsp;]&nbsp;&nbsp;(100 Marks, 18-Apr-2023, Tuesday, 2:00pm-5:00pm) &nbsp; [ Syllabus: FULL ]
+</li></ul>
+
+<hr>
+
+
+<a name="project"></a><h3>Projects</h3>
+<ul>
+<li><a href="https://drive.google.com/file/d/1DHzNoHYUAnVqFbUzA5PRwAGrlAwDNHMC/view?usp=sharing">Project 1</a>&nbsp;&nbsp;(30 Marks, Tentative Duration: 22-Jan-2023 – 11-Feb-2023)<br>
+</li><li><a href="https://drive.google.com/file/d/1Hlzt0QBJymeJCTQga08jpItL1tXrZEK3/view?usp=sharing">Project 2</a>&nbsp;&nbsp;(30 Marks, Tentative Duration: 26-Feb-2023 – 18-Mar-2023)<br>
+</li><li><a href="https://drive.google.com/file/d/1iVGW9nnqEQ2kCgPaW55KvZAJ8oNO_ymL/view?usp=sharing">Project 3</a>&nbsp;&nbsp;(30 Marks, Tentative Duration: 26-Mar-2023 – 15-Apr-2023) &nbsp;
+</li></ul>
+<font color="yellow">Project Submission Page : <b><a href="https://moodlecse.iitkgp.ac.in/moodle/course/view.php?id=508" target="_blank">CSE-Moodle</a></b></font>
+</blockquote>
+
+<table width="100%" cellspacing="0" cellpadding="3" border="0" id="nobd">
+<tbody><tr>
+    <td id="nobd" width="50%" align="left" bgcolor="#cc6600"><font size="+2" color="#221100">&nbsp;<b>CS60050 : Machine Learning</b></font></td>
+   <td id="nobd" width="50%" align="right" bgcolor="#ff9900"><font size="+2" color="#221100"><b>Spring 2023, L-T-P: 3-0-0</b></font></td>
+</tr>
+</tbody></table>
+</font>
+
+
+</body></html>

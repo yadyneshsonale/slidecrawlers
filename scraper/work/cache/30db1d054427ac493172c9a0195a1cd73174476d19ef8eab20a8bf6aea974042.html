@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"><html><head>
+    <title> Compiler Design Course Homepage </title>
+  </head>
+  <body>
+    <h1>E0255 Compiler Design</h1>
+    Jan-Apr 2026, Tue-Thu (Fri backup), 10:00 A.M. --- 11:30 A.M., Room: CSA 112<br>
+    <b>Instructor: </b><a href="https://www.csa.iisc.ac.in/~udayb/">Uday
+        Kumar Reddy B</a><br w="">
+
+    <h3>Grading</h3>
+    <ul id="list1">
+        <li>Mid-term: 20% (17-Feb-2026, 10--11:30am) </li>
+        <li><a href="2026/asst-1.txt">Asst-1</a>: 25% (Due: 25-Feb-2026, 5 pm)</li>
+        <li><a href="2026/asst-2/asst-2a.txt">Asst-2a</a> 13% (13-Apr-2026, 5 pm) </li>
+        <li><a href="2026/asst-2/asst-2b.txt">Asst-2b</a> 12% (20-Apr-2026, 5 pm) </li>
+        <li>End-term: 30% (exam week in Apr)</li>
+    </ul>
+
+    <h3>Topics</h3>
+
+    <ul id="list2">
+        <li>
+				Introduction to Compilers
+				<ul>
+				<li>Compilers: evolution
+				</li>
+				<li>Compilers in the 21st century - Intro</li>
+				<li>Compiler Intermediate Representations (IRs)</li>
+				</ul>
+				</li>
+        <li>
+        Key structures for compiler analysis
+        <ul>
+            <li>Basic blocks</li>
+            <li>Control flow graph</li>
+            <li>Dependence Graph</li>
+            <li>Dominance, Dominators, Dominator tree, Dominance frontier, ...</li>
+        </ul>
+        </li>
+        <li>
+        Dataflow Analysis
+        <ul>
+            <li>Introduction</li>
+            <li>Forward dataflow analysis, Backward dataflow analysis</li>
+            <li>Reaching definitions, Available expressions</li>
+        </ul>
+        </li>
+        <li>
+        SSA (Static Single Assignment)
+        </li>
+        <li>
+        Scalar Optimizations (traditional) using SSA and otherwise
+        </li>
+        <li>
+        Optimization and Parallelization
+        <ul>
+        <li>
+        Characteristics of Modern Hardware/Architectures, Multicore
+        architectures, Accelerators (GPUs, FPGAs), Unconventional
+        parallel architectures
+        </li>
+        <li>
+        Memory Dependence Analysis
+        </li>
+        <li>
+        Loop Optimizations, Loop Transformations
+        </li>
+        <li>
+        Cache Locality Optimization
+        </li>
+        <li>
+        Parallelism, Loop Parallelization
+        </li>
+        <li>
+        Optimizations for caches, reuse, and parallelism
+        </li>
+        <li>
+        Vectorization
+        </li>
+        <li>
+        Other Program Transformations for Performance and Productivity
+        </li>
+        </ul>
+        </li>
+        <li>
+        MLIR
+        <ul>
+            <li>Introduction</li>
+            <li>Basic concepts in MLIR and compiler IR design</li>
+						<li>Core IR structures</li>
+            <li>Affine abstractions in MLIR</li>
+        </ul>
+				</li>
+        <li>
+        Register Allocation
+        <ul>
+            <li>Introduction</li>
+            <li>Graph Coloring and Register Allocation </li>
+            <li>Linear Scan</li>
+        </ul>
+        </li>
+        <li>
+        Modern Programming Languages, Domain-specific Languages
+        </li>
+        <li>
+        Challenges in Compiler Design in the 21st Century 
+        </li>
+    </ul>
+
+    <h3> Course Material and References</h3>
+
+    <ul id="list">
+			<li><a href="course.pdf">All course slides - combined</a></li>
+			<li><a href="intro-chapter.pdf">Course introductory class</a></li>
+			<li><a href="control-flow-analysis.pdf">Control flow analysis</a></li>
+			<li><a href="DFA.pdf">Data flow analysis</a></li>
+			<li><a href="SSA.pdf">Static Single Assignment</a></li>
+			<li>
+			<a href="https://dl.acm.org/doi/10.1145/570886.570887">On loops,
+			dominators, and dominance frontiers
+			</a> (ACM TOPLAS 2002)
+			</li>
+			<li><a href="https://dl.acm.org/doi/10.1145/103135.103136">Conditional
+					Constant Propagation on SSA</a> (ACM TOPLAS 1991)<br></li>
+					<li><a href="opt-chapter.pdf">Mid-level Compiler Optimizations</a></li>
+					<li>Chapter 11 - Compilers (second edition) - Aho, Lam, Sethi, and Ullman</li>
+					<li><a href="mlir-chapter.pdf">MLIR introduction</a></li>
+			</ul>
+
+    <h3> Additional Reading</h3>
+    <ul id="list1">
+					<li><a href="https://dl.acm.org/doi/10.1145/125826.125848">The Omega
+					Test</a></li>
+					<li>
+					Analytical Modeling Is Enough for High-Performance BLIS<br>
+					https://dl.acm.org/citation.cfm?id=2925987 <br>
+						Low et al, ACM TOMS 2016.<br>
+					</li>
+					<li><a href="https://llvm.org/docs/index.html">LLVM
+					documentation</a> <br></li>
+					<li><a href="https://mlir.llvm.org">MLIR 
+					documentation</a> <br></li>
+					<li><a href="https://www.youtube.com/watch?v=1wV1ESbGrVQ">Blazing Fast
+					GenAI Inference with Torch.compile - Richard Zou, Meta</a></li>
+		</ul>
+  
+
+</body></html>

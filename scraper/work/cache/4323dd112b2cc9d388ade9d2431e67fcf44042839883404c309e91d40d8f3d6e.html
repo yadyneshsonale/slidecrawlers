@@ -1,0 +1,780 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"><html><head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <title>COS597G (Fall 2018) Theoretical Foundations of Deep Learning</title>
+    <meta name="author" content="Sanjeev Arora">
+    <meta name="description" content="Graduate Seminar at Princeton
+      University Computer Science">
+  </head>
+  <body>
+    <table width="100%" border="0" cellspacing="0" cellpadding="5">
+      <tbody>
+        <tr>
+          <td valign="top"><img style="width: 80px; height: 90px;" alt="Princeton University logo" src="pulogo.gif">
+            <h5><a href="http://www.princeton.edu/">Princeton University</a><br>
+              <a href="http://www.cs.princeton.edu/">Computer Science
+                Department</a></h5>
+          </td>
+          <td align="center" valign="middle">
+            <h2>Computer Science 597G<br>
+              Theoretical Foundations of Deep Learning<br>
+              &nbsp;&nbsp;</h2>
+            <h2><a href="http://www.cs.princeton.edu/%7Earora/"><span style="font-weight: normal;">Sanjeev Arora </span><br>
+              </a></h2>
+            <h2><br>
+            </h2>
+          </td>
+          <td align="right" valign="middle">
+            <h3>&nbsp; Fall 2018<br>
+            </h3>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <h2>Course Summary</h2>
+    <blockquote>
+      <meta charset="utf-8">
+      <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+      <p>This is a graduate course focused on research in theoretical
+        aspects of deep learning. In recent years, deep learning has
+        become the central paradigm of machine learning and related
+        fields such as computer vision and natural language processing.
+        But mathematical understanding for many aspects of this endeavor
+        are still lacking. When and how fast does training succeed, and
+        using how many examples? What are strengths and limitations of
+        various architectures? <br>
+      </p>
+      <p>The course is geared towards graduate students in computer
+        science and allied fields, but may be OK for undergrads who're
+        suitably prepared. (Knowledge of machine learning as well as
+        algorithm design/analysis. Ideally, they would have taken at
+        least one of COS 521 and COS 511.) <br>
+      </p>
+      <p>Enrolled students as well as auditors are expected to come to
+        class regularly and participate in class discussion. To get a
+        grade in the class, students should also be prepared to present
+        a topic some time in the course, and write a brief paper or
+        lecture notes on somebody else's presentation. There may also be
+        an opportunity to do a course project, depending upon student
+        interest. <br>
+      </p>
+      This course does not satisfy any undergrad&nbsp; requirements in
+      the COS major (BSE or AB). <br>
+      <hr> </blockquote>
+    <h2>Administrative Information</h2>
+    <h4>Lectures: Tues-Thurs 4:30-5:50pm. <b> &nbsp; </b>Room: COS 105<span style="color: rgb(97, 97, 97); font-family: Raleway, sans-serif;
+        font-size: 15px; font-style: normal; font-variant-ligatures:
+        normal; font-variant-caps: normal; font-weight: 400;
+        letter-spacing: normal; orphans: 2; text-align: left;
+        text-indent: 0px; text-transform: none; white-space: nowrap;
+        widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;
+        background-color: rgb(245, 245, 245); text-decoration-style:
+        initial; text-decoration-color: initial; display: inline
+        !important; float: none;"></span>. First meeting: Sept 13.<br>
+    </h4>
+    <p><b>Instructor: </b><a href="http://www.cs.princeton.edu/%7Earora/"><span style="text-decoration: underline;">Sanjeev Arora</span>- </a>407
+CS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      Building - 609-258-3869 arora AT the domain name cs.princeton.edu<br>
+    </p>
+    <p>TA: Yuping Luo&nbsp; yupingl AT the domain name cs.princeton.edu</p>
+    <hr>
+    <h2> Lecture Schedule</h2>
+    <br>
+    <table width="100%" border="1" cellspacing="2" cellpadding="2">
+      <tbody>
+        <tr>
+          <td valign="top">Date/Topic<br>
+          </td>
+          <td valign="top">Required Reading<br>
+          </td>
+          <td valign="top">Additional Reading<br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">Sept 13: Basic setup of deep learning.
+            Gradient descent, back propagation, and training methods.<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><a href="http://neuralnetworksanddeeplearning.com/">Michael
+              Nielsen's book for the basics</a><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">Sept 18: Representing functions using deep
+            nets. Barron's theorem. <br>
+          </td>
+          <td valign="top"><a href="lecnotes/lec2.pdf">Scribe notes</a>
+            by Neelesh Kumar and Yuting Wang.<br>
+          </td>
+          <td valign="top"><a href="http://www.stat.yale.edu/%7Earb4/publications_files/UniversalApproximationBoundsForSuperpositionsOfASigmoidalFunction.pdf">Barron's
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              paper. </a><br>
+            <a href="https://holdenlee.wordpress.com/2015/08/05/barrons-theorem-neural-networks-evade-the-curse-of-dimensionality/">Holden
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              Lee's notes.</a> A bit rough.<br>
+            Matus Telgarsky's <a href="https://cseweb.ucsd.edu/%7Edasgupta/254-deep/matus.pdf">lecture
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              slides.</a><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">Sept 20: Basics of optimization concepts.<br>
+          </td>
+          <td valign="top"><a href="lecnotes/lecture3.pdf">Scribe notes
+            </a>by Abhishek Bhrushundi, Pritish Sahu, Wenjia Zhang<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">Sept 25: Introduction to practical aspects of
+            deep learning.&nbsp; (Lecturer Yuping Luo). <br>
+          </td>
+          <td valign="top"><a href="./pytorch.pdf">Slides</a><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">Sept 27: No class<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">Oct 2: Understanding adaptive regularization/
+            preconditioners/learning rates (and how they are related) <br>
+          </td>
+          <td valign="top"><a href="lecnotes/lecture5.pdf">Scribe notes
+            </a>by Ethan Tseng, DiJia(Andy) Su<br>
+          </td>
+          <td valign="top">Description of Adagrad p 89-94 of <a href="http://ocobook.cs.princeton.edu/">Hazan's OCO book.</a><br>
+            <br>
+            Catalog of adaptive learning algorithms with brief
+            discussion. <a href="http://ruder.io/optimizing-gradient-descent/">(Sebastian
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              Ruder's blog article.)</a><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">Oct 4: Concluding remarks on adaptive
+            regularization. Escaping saddle points via perturbed
+            gradient descent.<br>
+          </td>
+          <td valign="top"><a href="lecnotes/lecture6.pdf">Scribe notes
+            </a>by Pranay Manocha and Mohammed T. Islam.<br>
+          </td>
+          <td valign="top"><a href="http://www.offconvex.org/2017/07/19/saddle-efficiency/">Blog
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              post</a> by Chi Jin and Mike Jordan.<br>
+            <a href="lecnotes/2017lec/saddle.pdf">2017 Lecture notes</a>
+            by Misha Khodak <br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">Oct 9: Generalization: basic concepts. The
+            ubiquitous union bound. Rademacher Complexity.<br>
+          </td>
+          <td valign="top"><a href="lecnotes/Generalization1.pdf">Updated
+
+
+
+
+
+              scribe notes </a>by Charlie Hou.<br>
+          </td>
+          <td valign="top"><a href="http://www.offconvex.org/2017/12/08/generalization1/">Blog
+
+
+
+
+
+
+
+
+
+
+
+
+
+              post.</a><br>
+            <a href="http://www.cs.princeton.edu/courses/archive/fall17/cos597A/lecnotes/generalize.pdf">2017
+
+
+
+
+
+
+
+
+
+
+
+
+
+              scribe notes</a> by Hrishikesh Khanderparker.<br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">Oct 11: PAC-Bayes bounds and some
+            applications. <br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">Oct 16: Generalization: Proving
+            generalization via compression arguments. Linear classifiers
+            with margin. ReLU deep nets.<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><a href="https://arxiv.org/abs/1802.05296">Stronger
+
+
+
+
+
+
+
+
+
+
+
+
+
+              Generalization Bounds via a Compression Approach.</a>
+            (ICML'18) See also <a href="http://www.offconvex.org/2018/02/17/generalization2/">Blog
+
+
+
+
+
+
+
+
+
+
+
+              post.</a><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">Oct 18: Finish generalization via
+            compression. Start unsupervised learning. Various notions of
+            unsupervised learning and how they're connected.<br>
+          </td>
+          <td valign="top"><a href="lecnotes/unsupervised.pdf">Unsupervised
+
+
+
+
+
+              learning and VAEs </a>by Nataly Brukhim, Arushi Gupta,
+            and Edgar Minasyan.<br>
+          </td>
+          <td valign="top"><a href="http://www.offconvex.org/2017/06/26/unsupervised1/">Blog
+
+
+
+
+
+
+
+
+
+
+
+              post.</a><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">Oct 23: Variational Auto-encoders (VAEs).
+            Start GANs.<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">Oct 25: Metrics on distributions and GANs.
+            Limitations of GANs. Training objective cannot prevent
+            mode-collapse <br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><a href="http://www.offconvex.org/2017/03/15/GANs/">Blog post
+              1</a>, <a href="http://www.offconvex.org/2017/03/30/GANs2/">post 2</a>,
+            <a href="http://www.offconvex.org/2017/07/06/GANs3/">post 3</a><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">Nov 6: More on gradient based training and
+            "shaping" the gradient. Proximal gradient descent.
+            Architectures for "shaping" the gradient: ResNets,
+            DenseNets, and BatchNorm. <br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><a href="https://towardsdatascience.com/an-overview-of-resnet-and-its-variants-5281e2f56035">Blogpost
+
+
+
+
+
+
+
+
+            </a>on towarddatascience describing various ResNet models. <br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">Nov 8: Proving gradient descent attains zero
+            training error with overparametrized nets (in simple
+            architectures). <br>
+          </td>
+          <td valign="top"><a href="http://www.cs.cmu.edu/%7Essdu/publications/overparams.pdf">Paper
+
+
+
+
+
+
+
+              by Du, Zhai, Poczos and Singh.</a><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">Nov 13: Language models. Introduction to
+            n-grams, word embeddings, LSTMs. <br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><a href="http://www.cs.columbia.edu/%7Emcollins/lm-spring2013.pdf">Language
+
+
+
+
+
+
+
+              Modeling </a>(book Chapter by Mike Collins)<br>
+            <a href="https://cs224d.stanford.edu/lecture_notes/LectureNotes4.pdf">Lecture
+
+
+
+
+
+
+              notes</a> by Socher et al (from Stanford CS224)<br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">Nov 15 (guest lecture by Sham Kakade): Recent
+            trends in language models:&nbsp; Elmo and his friends from
+            Sesame Street. <br>
+          </td>
+          <td valign="top"><a href="lecnotes/kakadenotes1.pdf">Rough
+              notes by Sham. </a>Scribe notes coming. <br>
+          </td>
+          <td valign="top">Google news releases on <a href="https://ai.googleblog.com/2017/08/transformer-novel-neural-network.html">Transformers
+
+
+
+
+
+            </a>and <a href="https://medium.com/syncedreview/best-nlp-model-ever-google-bert-sets-new-standards-in-11-language-tasks-4a2a189bc155">BERT.
+
+
+
+
+
+            </a><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">Nov 20: Sham Kakade guest lecture.
+            Continuation of language modeling.<br>
+          </td>
+          <td valign="top"><a href="lecnotes/kakadenotes2.pdf">More
+              notes by Sham.</a><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">Nov 27: Understanding word and sentence
+            embeddings. <br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top">Blog <a href="http://www.offconvex.org/2015/12/12/word-embeddings-1/">post
+
+
+
+              1</a>, <a href="http://www.offconvex.org/2016/02/14/word-embeddings-2/">post
+
+
+
+              2</a>, <a href="http://www.offconvex.org/2016/07/10/embeddingspolysemy/">post
+
+
+
+              3</a>, <a href="http://www.offconvex.org/2018/06/17/textembeddings/">post
+
+
+
+              4</a>.<br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">Nov 29: Finish sentence embeddings. Start
+            Adversarial Examples.<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top">Blog <a href="https://www.offconvex.org/2018/06/25/textembeddings/">post
+
+
+
+              1</a>.<br>
+            <a href="https://arxiv.org/abs/1611.02770">Paper 1</a>( Liu
+            et al), <a href="https://arxiv.org/abs/1704.03453">Paper 2
+            </a>(Tramer et al) <a href="https://arxiv.org/abs/1706.06083">Paper 3 (</a>Madry
+            et al)<br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">Dec 4: Certified defense against adversarial
+            examples. <br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><a href="https://arxiv.org/abs/1711.00851">paper1
+
+              (Wong and Kolter'18) </a>and <a href="https://arxiv.org/abs/1805.12514">paper 2(Wong et
+              al, Nov'18)</a><br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">Dec 11: Recent analyses of teacher-student
+            net training where student net is overparametrized.<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><a href="https://arxiv.org/abs/1810.02054">Paper</a>
+            by Simon Du et al.<br>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">Dec 13: Teacher-student nets contd.
+            Generalization in presence of vast overparametrization.<br>
+          </td>
+          <td valign="top"><br>
+          </td>
+          <td valign="top"><br>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <br>
+    <p>Please use <a href="https://www.cs.princeton.edu/courses/archive/fall18/cos597G/lecnotes/samples/scribe_style.sty">this
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        style file</a> to scribe notes. Sample files are <a href="https://www.cs.princeton.edu/courses/archive/fall18/cos597G/lecnotes/samples/saddle.tex">a
+        source file</a> and <a href="https://www.cs.princeton.edu/courses/archive/fall18/cos597G/lecnotes/samples/saddle.pdf">a
+        compiled file</a>. </p>
+    <br>
+    <hr width="100%" size="2">
+    <h2>Reading List&nbsp; (will be continually updated)</h2>
+    Optimization<br>
+    <ol>
+      <li><a href="http://www.cs.princeton.edu/courses/archive/fall16/cos521/Lectures/lec14.pdf">Going
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          with the slope: offline, online, and randomly.</a> (Lecture
+        notes from COS 521: Arora and Kothari)</li>
+      <li><a href="https://simons.berkeley.edu/talks/elad-hazan-01-23-2017-1">Optimization
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          for ML; survey lecture</a> by Elad Hazan (includes video and
+        slides)</li>
+      <li><a href="http://www.deeplearningbook.org/">Deep Learning</a>
+        book by Goodfellow, Courville and Bengio. </li>
+    </ol>
+    <br>
+    <br>
+    <br>
+    <hr width="100%" size="2"><br>
+    <h2>Useful Resources</h2>
+    <ol>
+      <li>Ankur Moitra's notes <a href="http://people.csail.mit.edu/moitra/docs/bookex.pdf">Algorithmic
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          Aspects of Machine Learning.</a></li>
+      <li>Rong Ge's notes on <a href="http://www.cs.duke.edu/courses/fall16/compsci590.2/">Algorithmic
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          Aspects of ML.</a></li>
+      <li>Blog: <a href="http://www.offconvex.org">Off the Convex Path.
+        </a><br>
+      </li>
+      <li><br>
+        <br>
+      </li>
+    </ol>
+    <br>
+  
+
+</body></html>

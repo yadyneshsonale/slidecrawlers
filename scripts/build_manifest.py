@@ -17,6 +17,10 @@ EXCLUDED_OUTPUTS = (
     Path("/home/b-ysonale/slidefetch/rated4rmp.bak_aggregated"),
     Path("/home/b-ysonale/slidefetch/downloads"),
     Path("/home/b-ysonale/rmp_scrape/downloads"),
+    Path("/home/b-ysonale/scraper/dataset"),
+    Path("/home/b-ysonale/slidehunt/data"),
+    Path("/home/b-ysonale/slidehunt/work/http_cache"),
+    Path("/home/b-ysonale/slideratings/data"),
 )
 SKIP_PARTS = {".git", ".venv", "__pycache__", ".pytest_cache"}
 

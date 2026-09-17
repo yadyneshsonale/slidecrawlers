@@ -1,0 +1,254 @@
+<!DOCTYPE html><html><head><meta http-equiv="origin-trial" content="A7vZI3v+Gz7JfuRolKNM4Aff6zaGuT7X0mf3wtoZTnKv6497cVMnhy03KDqX7kBz/q/iidW7srW31oQbBt4VhgoAAACUeyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGUuY29tOjQ0MyIsImZlYXR1cmUiOiJEaXNhYmxlVGhpcmRQYXJ0eVN0b3JhZ2VQYXJ0aXRpb25pbmczIiwiZXhwaXJ5IjoxNzU3OTgwODAwLCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ==">
+		<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/TnA7HacJFoBWt9hnlunBlYfK/recaptcha__en.js" crossorigin="anonymous" integrity="sha384-r0+0DCYB9Tdq4Rpy9IvL6ouvcnluWOWNg9jAIO3yJA2C6v7nklWcHe/NE5zIDHbA"></script><script defer="" src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+		<meta name="viewport" content="width=device-width">
+		<meta name="description" content="Chat with other students in your classes, plan your schedule, and get notified when classes have open seats.">
+		<meta property="og:image" content="/homepage/img/coursiclePhotoForBots.png">
+		<meta name="twitter:card" content="summary_large_image"> <!-- Needed to make image big in some places, like Discord -->
+		<link rel="icon" href="/homepage/img/coursicleCLogoMedium.png"> <!-- For social sharing, like Snapchat, GroupMe -->
+		<title>Coursicle | Plan your schedule and get into classes</title>
+	<script> 
+		window.captchaCaller = "fullPage"; 
+	</script><link href="https://fonts.googleapis.com/css?family=Montserrat&amp;display=swap" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><script>
+	function onSubmitCaptcha(token) {
+		result = {}
+		$("#captchaTitle").text("Verifying humanity...")
+		$.ajax({
+				url: '/shared/captcha/confirmCaptcha.php',
+				method: 'POST',
+				data: {gCapRes : grecaptcha.getResponse()},
+				success: function(msg){
+					setTimeout(function() {
+						$("#captchaTitle").text("Ok, you seem human.")
+						setTimeout(function() {
+								
+							// this case covers both scraping and DDoS protection
+							if(window.captchaCaller == "fullPage"){
+								
+								// generally scraping protection related captchas
+								if(!window.location.search.includes("?r=")){
+									if(!window.location.href.includes("captcha.php")){
+										// then indeed it was scraping protection that rewrote the html
+										// on the page, so the url should already be what they want to access
+										// now that they've passed the captcha, refreshing should get them what they want
+										location.reload(true);
+									}else{
+										// then they're pointing to the captcha page already, and we have no way of determining 
+										// what url they were going for (short of trying to read headers), so let's just take 
+										// them to the homepage so they at least know they made it past the captcha
+										window.location.href = window.location.origin + "?dismissMyself=true";
+									}
+								// DDoS protection related captchas
+								}else{
+									// try to read the url that our DDoS protection url encoded and put in the url and direct them to it
+									try {
+										window.location.href = decodeURIComponent(window.location.search.split("?r=")[1]);
+									}catch(err) {
+										// fallback to redirecting them to the homepage if we fail to decode the redirect
+										// at least this way they'll know they passed the captcha
+										window.location.href = window.location.origin;
+									}
+								}
+
+								return;
+							}
+
+							// this section handles all ajax related calls on the web app where they may encounter the captcha 
+							// because of scraping or DDoS protection. We hide the captcha and then make the request they were 
+							// trying to make to show them that the captcha completion actually got them access to what they wanted
+							// everything else that calls the captcha would have hit 
+							$('#captchaFrame').hide();
+							$("#captchaTitle").text("Prove your humanity.")
+							makeGetClassesRequest(window.getClassesWasScrollingWhenCaptchad);
+
+						}, 250);
+					}, 350);
+				}
+		});
+	}
+
+	function onloadCallback() {
+	    grecaptcha.render('recaptcha', {
+      	'sitekey' : '6LfMZq4UAAAAAFpqPUkr_6vvyJ0nNuZDh-EaRzqK'
+    	});
+  	}
+</script><style>
+	#classSearchResultsContainer #captchaSubFrame #recaptcha{
+		transform: scale(0.75);
+	}
+
+	#captchaSubFrame, #captchaTitle{
+		font-family: 'Montserrat', sans-serif;
+	}
+
+	#captchaTitle {
+		padding-top: 100px;
+	}
+
+	#contactLink {
+	    color: #36ADFE;
+	    text-decoration: none;
+	    white-space: nowrap; /* prevents the words from being broken up */
+	}
+
+	#contactLink:hover {
+	    color: #337ab7;
+	}
+
+	.androids {
+		margin-top: 50px;
+		margin-bottom: 50px;
+	}
+	.first {
+		color: #FF9AA2;
+		-webkit-animation: fa-spin 3s infinite linear;
+			animation: fa-spin 3s infinite linear;
+	}
+	.second {
+		color: #FFB7B2;
+		-webkit-animation: fa-spin 3s infinite linear;
+			animation: fa-spin 3s infinite linear;
+			animation-delay: .5s;
+			animation-direction: reverse;
+	}
+	.third {
+		color: #FFDAC1;
+		-webkit-animation: fa-spin 3s infinite linear;
+			animation: fa-spin 3s infinite linear;
+			animation-delay: 1s;
+	}
+	.fourth {
+		color: #E2F0CB;
+		-webkit-animation: fa-spin 3s infinite linear;
+			animation: fa-spin 3s infinite linear;
+			animation-delay: 1.5s;
+			animation-direction: reverse;
+	}
+	.fifth {
+		color: #B5EAD7;
+		-webkit-animation: fa-spin 3s infinite linear;
+			animation: fa-spin 3s infinite linear;
+			animation-delay: 2s;
+	}
+	.sixth {
+		color: #C7CEEA;
+		-webkit-animation: fa-spin 3s infinite linear;
+			animation: fa-spin 3s infinite linear;
+			animation-delay: 2.5s;
+			animation-direction: reverse;
+	}
+	.fa-android {
+		padding: 30px;
+	} 
+	#recaptcha {
+		margin-top: 80px;
+	}
+	#subtext{
+		margin-top: 50px;
+		font-size: 16px;
+		padding-bottom: 40px;
+	}
+
+	#classSearchResultsContainer #subtext{
+		font-size: 13px;
+	}
+
+	@media(max-width: 767px) {
+		#captchaTitle {
+			padding-top: 30px;
+		}
+
+		.fifth, .sixth {
+			display: none;
+		}
+	}
+	@media(max-width: 510px) {
+		.third, .fourth {
+			display: none;
+		}
+		#subtext{
+			margin-top:30px;
+		}
+	}
+
+	#classSearchResultsContainer #captchaTitle{
+		padding-top: 11px;
+		font-size: 19px;
+	}
+
+	#classSearchResultsContainer .fa-android{
+		padding: 10px;
+	}
+
+	#classSearchResultsContainer .androids{
+		font-size: 10px;
+		margin-top: 0px;
+	}
+
+	#classSearchResultsContainer #recaptcha{
+		margin-top: 30px;
+	}
+
+	#classSearchResultsContainer #subtext{
+		margin-top: 15px;
+	}
+
+	#classSearchResultsContainer #subtext{
+		padding-left: 20px;
+    	padding-right: 20px;
+	}
+
+</style></head>
+
+	
+
+	
+
+
+
+<!-- Custom Functions -->
+
+
+<!-- Custom Styling -->
+
+
+<body style=""><div id="captchaSubFrame">
+	
+	<h1 id="captchaTitle" align="center">You don't smell human...</h1>
+
+	<span id="uniqueTagIndicatingCaptchaReturned"></span>
+	
+	<div class="androids" align="center">
+		<i class="fa fa-android fa-spin fa-5x first"></i>
+		<i class="fa fa-android fa-spin fa-5x second"></i>
+		<i class="fa fa-android fa-spin fa-5x third"></i>
+		<i class="fa fa-android fa-spin fa-5x fourth"></i>
+		<i class="fa fa-android fa-spin fa-5x fifth"></i>
+		<i class="fa fa-android fa-spin fa-5x sixth"></i>
+	</div>
+	
+	<!-- START Google recaptcha v2 test-->
+     <div id="recaptcha" class="g-recaptcha" data-callback="onSubmitCaptcha" align="center"><div style="width: 304px; height: 78px;"><div><iframe title="reCAPTCHA" width="304" height="78" role="presentation" name="a-pqglbl47xnh0" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation" src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LfMZq4UAAAAAFpqPUkr_6vvyJ0nNuZDh-EaRzqK&amp;co=aHR0cHM6Ly93d3cuY291cnNpY2xlLmNvbTo0NDM.&amp;hl=en&amp;v=TnA7HacJFoBWt9hnlunBlYfK&amp;size=normal&amp;anchor-ms=20000&amp;execute-ms=30000&amp;cb=9bw2qqrveab9"></iframe></div><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div><iframe style="display: none;"></iframe></div>
+
+     <p align="center" id="subtext">Want to buy access to all our course data? <a id="contactLink" onclick="contactLinkClicked()" href="mailto:team@coursicle.com?subject=Interest in course data">Click here</a>.</p>
+
+	<script>
+		function contactLinkClicked(){
+			$.ajax({
+				url: '/shared/api/log.php',
+				type: 'POST',
+				dataType: 'json',
+				data: {
+					client: navigator.userAgent,
+					category: "dataSales",
+					action: "contactUsClicked"
+				},
+				success(response) {}
+			});
+		}
+	</script>
+
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&amp;render=explicit" async="" defer=""></script>
+
+</div>
+
+<div style="background-color: rgb(255, 255, 255); border: 1px solid rgb(204, 204, 204); box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 3px; position: absolute; transition: visibility linear 0.3s, opacity 0.3s linear; opacity: 0; visibility: hidden; z-index: 2000000000; left: 0px; top: -10000px;"><div style="width: 100%; height: 100%; position: fixed; top: 0px; left: 0px; z-index: 2000000000; background-color: rgb(255, 255, 255); opacity: 0.05;"></div><div class="g-recaptcha-bubble-arrow" style="border: 11px solid transparent; width: 0px; height: 0px; position: absolute; pointer-events: none; margin-top: -11px; z-index: 2000000000;"></div><div class="g-recaptcha-bubble-arrow" style="border: 10px solid transparent; width: 0px; height: 0px; position: absolute; pointer-events: none; margin-top: -10px; z-index: 2000000000;"></div><div style="z-index: 2000000000; position: relative;"><iframe title="recaptcha challenge expires in two minutes" name="c-pqglbl47xnh0" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation" src="https://www.google.com/recaptcha/api2/bframe?hl=en&amp;v=TnA7HacJFoBWt9hnlunBlYfK&amp;k=6LfMZq4UAAAAAFpqPUkr_6vvyJ0nNuZDh-EaRzqK&amp;bft=0dAFcWeA4GGl-bfGpvqxUK_urVS8OP-Dh49NCdX0HC0z9XchA0D2-GpF4PB8ny37AEEQZqocdk6bmH7QSJeBrFITDsbjkIQiMQTQ" style="width: 100%; height: 100%;"></iframe></div></div></body></html>

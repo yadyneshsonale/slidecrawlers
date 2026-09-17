@@ -1,0 +1,1251 @@
+<!DOCTYPE html><html class="js supports pointerevents no-touchevents cssanimations preserve3d csstransforms csstransforms3d csstransitions" lang="en-US" style=""><!--<![endif]--><head>
+  
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Introduction to Machine Learning (2024) | Learning &amp; Adaptive Systems Group</title>
+<link rel="pingback" href="https://las.inf.ethz.ch/xmlrpc.php"><link rel="shortcut icon" href="/wp-content/uploads/2015/10/favicon.ico"><link rel="apple-touch-icon-precomposed" href="//las.inf.ethz.ch/wp-content/uploads/2015/10/apple-icon-152x152.png"><meta name="msapplication-TileColor" content="#ffffff"><meta name="msapplication-TileImage" content="//las.inf.ethz.ch/wp-content/uploads/2015/10/ms-icon-144x144.png"><meta name="robots" content="max-image-preview:large">
+<link rel="dns-prefetch" href="//code.jquery.com">
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="dns-prefetch" href="//s.w.org">
+<link rel="alternate" type="application/rss+xml" title="Learning &amp; Adaptive Systems Group » Feed" href="https://las.inf.ethz.ch/feed">
+<link rel="alternate" type="application/rss+xml" title="Learning &amp; Adaptive Systems Group » Comments Feed" href="https://las.inf.ethz.ch/comments/feed">
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/las.inf.ethz.ch\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.8.13"}};
+			!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([10084,65039,8205,55357,56613],[10084,65039,8203,55357,56613])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script><script src="https://las.inf.ethz.ch/wp-includes/js/wp-emoji-release.min.js?ver=5.8.13" type="text/javascript" defer=""></script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel="stylesheet" id="mci-footnotes-jquery-tooltips-pagelayout-none-css" href="https://las.inf.ethz.ch/wp-content/plugins/footnotes/css/footnotes-jqttbrpl0.min.css?ver=2.7.3" type="text/css" media="all">
+<link rel="stylesheet" id="wp-block-library-css" href="https://las.inf.ethz.ch/wp-includes/css/dist/block-library/style.min.css?ver=5.8.13" type="text/css" media="all">
+<link rel="stylesheet" id="wordpress-file-upload-style-css" href="https://las.inf.ethz.ch/wp-content/plugins/wordpress-file-upload-pro/css/wordpress_file_upload_style_relaxed.css?ver=1.0" type="text/css" media="all">
+<link rel="stylesheet" id="wordpress-file-upload-style-safe-css" href="https://las.inf.ethz.ch/wp-content/plugins/wordpress-file-upload-pro/css/wordpress_file_upload_style_safe_relaxed.css?ver=1.0" type="text/css" media="all">
+<link rel="stylesheet" id="jquery-ui-css-css" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css?ver=5.8.13" type="text/css" media="all">
+<link rel="stylesheet" id="jquery-ui-timepicker-addon-css-css" href="https://las.inf.ethz.ch/wp-content/plugins/wordpress-file-upload-pro/vendor/datetimepicker/jquery-ui-timepicker-addon.min.css?ver=1.0" type="text/css" media="all">
+<link rel="stylesheet" id="x-stack-css" href="https://las.inf.ethz.ch/wp-content/themes/x/framework/css/site/stacks/integrity-light.css?ver=4.1.1" type="text/css" media="all">
+<link rel="stylesheet" id="x-font-custom-css" href="//fonts.googleapis.com/css?family=Lato%3A300%2C300italic%2C700%2C700italic%7CLato%3A400%7CLato%3A300%7CLato%3A300&amp;subset=latin%2Clatin-ext&amp;ver=4.1.1" type="text/css" media="all">
+<link rel="stylesheet" id="easy_table_style-css" href="https://las.inf.ethz.ch/wp-content/plugins/easy-table/themes/default/style.css?ver=1.8" type="text/css" media="all">
+<link rel="stylesheet" id="katex-css" href="https://las.inf.ethz.ch/wp-content/plugins/katex/assets/katex-0.13.13/katex.min.css?ver=5.8.13" type="text/css" media="all">
+<script type="text/javascript" src="https://las.inf.ethz.ch/wp-includes/js/jquery/jquery.min.js?ver=3.6.0" id="jquery-core-js"></script>
+<script type="text/javascript" src="https://las.inf.ethz.ch/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2" id="jquery-migrate-js"></script>
+<script type="text/javascript" src="https://las.inf.ethz.ch/wp-content/plugins/footnotes/js/jquery.tools.min.js?ver=1.2.7.redacted.2" id="mci-footnotes-jquery-tools-js"></script>
+<script type="text/javascript" src="https://las.inf.ethz.ch/wp-content/plugins/wordpress-file-upload-pro/js/json2.js?ver=5.8.13" id="json_class-js"></script>
+<script type="text/javascript" src="https://las.inf.ethz.ch/wp-content/plugins/wordpress-file-upload-pro/js/wordpress_file_upload_functions.js?ver=5.8.13" id="wordpress_file_upload_script-js"></script>
+<script type="text/javascript" id="wp-statistics-tracker-js-extra">
+/* <![CDATA[ */
+var WP_Statistics_Tracker_Object = {"hitRequestUrl":"https:\/\/las.inf.ethz.ch\/wp-json\/wp-statistics\/v2\/hit?wp_statistics_hit_rest=yes&track_all=1&current_page_type=page&current_page_id=11429&search_query&page_uri=L3RlYWNoaW5nL2ludHJvbWwtczI0","keepOnlineRequestUrl":"https:\/\/las.inf.ethz.ch\/wp-json\/wp-statistics\/v2\/online?wp_statistics_hit_rest=yes&track_all=1&current_page_type=page&current_page_id=11429&search_query&page_uri=L3RlYWNoaW5nL2ludHJvbWwtczI0","option":{"dntEnabled":false,"cacheCompatibility":"1"}};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://las.inf.ethz.ch/wp-content/plugins/wp-statistics/assets/js/tracker.js?ver=5.8.13" id="wp-statistics-tracker-js"></script>
+<script type="text/javascript" src="https://las.inf.ethz.ch/wp-content/themes/x/framework/js/dist/site/x-head.min.js?ver=4.1.1" id="x-site-head-js"></script>
+<script type="text/javascript" src="https://las.inf.ethz.ch/wp-content/plugins/cornerstone/assets/js/dist/site/cs-head.min.js?ver=1.0.6" id="cornerstone-site-head-js"></script>
+<link rel="https://api.w.org/" href="https://las.inf.ethz.ch/wp-json/"><link rel="alternate" type="application/json" href="https://las.inf.ethz.ch/wp-json/wp/v2/pages/11429"><link rel="canonical" href="https://las.inf.ethz.ch/teaching/introml-s24">
+<link rel="shortlink" href="https://las.inf.ethz.ch/?p=11429">
+<link rel="alternate" type="application/json+oembed" href="https://las.inf.ethz.ch/wp-json/oembed/1.0/embed?url=https%3A%2F%2Flas.inf.ethz.ch%2Fteaching%2Fintroml-s24">
+<link rel="alternate" type="text/xml+oembed" href="https://las.inf.ethz.ch/wp-json/oembed/1.0/embed?url=https%3A%2F%2Flas.inf.ethz.ch%2Fteaching%2Fintroml-s24&amp;format=xml">
+<!-- Analytics by WP Statistics v14.3.5 - https://wp-statistics.com/ -->
+<style id="x-customizer-css-output" type="text/css">a,h1 a:hover,h2 a:hover,h3 a:hover,h4 a:hover,h5 a:hover,h6 a:hover,.x-topbar .p-info a:hover,.x-breadcrumb-wrap a:hover,.widget ul li a:hover,.widget ol li a:hover,.widget.widget_text ul li a,.widget.widget_text ol li a,.widget_nav_menu .current-menu-item > a,.x-widgetbar .widget ul li a:hover,.x-accordion-heading .x-accordion-toggle:hover,.x-comment-author a:hover,.x-comment-time:hover,.x-recent-posts a:hover .h-recent-posts{color:#ba720d;}a:hover,.widget.widget_text ul li a:hover,.widget.widget_text ol li a:hover,.x-twitter-widget ul li a:hover{color:#bf0f3e;}.rev_slider_wrapper,a.x-img-thumbnail:hover,.x-slider-container.below,.page-template-template-blank-3-php .x-slider-container.above,.page-template-template-blank-6-php .x-slider-container.above{border-color:#ba720d;}.entry-thumb:before,.pagination span.current,.flex-direction-nav a,.flex-control-nav a:hover,.flex-control-nav a.flex-active,.mejs-time-current,.x-dropcap,.x-skill-bar .bar,.x-pricing-column.featured h2,.h-comments-title small,.x-entry-share .x-share:hover,.x-highlight,.x-recent-posts .x-recent-posts-img:after{background-color:#ba720d;}.x-nav-tabs > .active > a,.x-nav-tabs > .active > a:hover{box-shadow:inset 0 3px 0 0 #ba720d;}.x-main{width:69.536945%;}.x-sidebar{width:25.536945%;}.x-topbar{background-color:transparent;}.x-topbar .p-info,.x-topbar .p-info a,.x-navbar .desktop .x-nav > li > a,.x-navbar .desktop .sub-menu a,.x-navbar .mobile .x-nav li > a,.x-breadcrumb-wrap a,.x-breadcrumbs .delimiter{color:#272727;}.x-navbar .desktop .x-nav > li > a:hover,.x-navbar .desktop .x-nav > .x-active > a,.x-navbar .desktop .x-nav > .current-menu-item > a,.x-navbar .desktop .sub-menu a:hover,.x-navbar .desktop .sub-menu .x-active > a,.x-navbar .desktop .sub-menu .current-menu-item > a,.x-navbar .desktop .x-nav .x-megamenu > .sub-menu > li > a,.x-navbar .mobile .x-nav li > a:hover,.x-navbar .mobile .x-nav .x-active > a,.x-navbar .mobile .x-nav .current-menu-item > a{color:#b7b7b7;}.x-navbar .desktop .x-nav > li > a:hover,.x-navbar .desktop .x-nav > .x-active > a,.x-navbar .desktop .x-nav > .current-menu-item > a{box-shadow:inset 0 4px 0 0 #ba720d;}.x-navbar .desktop .x-nav > li > a{height:50px;padding-top:20px;}.x-navbar-fixed-top-active .x-navbar-wrap{margin-bottom:1px;}.x-navbar .desktop .x-nav > li ul{top:35px;;}.x-comment-author,.x-comment-time,.comment-form-author label,.comment-form-email label,.comment-form-url label,.comment-form-rating label,.comment-form-comment label,.widget_calendar #wp-calendar caption,.widget.widget_rss li .rsswidget{font-family:Lato;font-weight:300;}.p-landmark-sub,.p-meta,input,button,select,textarea{font-family:Lato;}.x-brand,.x-brand:hover{color:#999;}.widget ul li a,.widget ol li a,.x-comment-time{color:#353535;}.widget_text ol li a,.widget_text ul li a{color:#ba720d;}.widget_text ol li a:hover,.widget_text ul li a:hover{color:#bf0f3e;}@media (max-width:979px){.x-navbar-fixed-top-active .x-navbar-wrap{margin-bottom:0;}.x-widgetbar{left:0;right:0;}}body{font-size:15px;font-style:normal;font-weight:300;color:#353535;background:#f3f3f3 url(//las.inf.ethz.ch/wp-content/uploads/2015/10/bg-integrity-1.png) center top repeat;}a:focus,select:focus,input[type="file"]:focus,input[type="radio"]:focus,input[type="submit"]:focus,input[type="checkbox"]:focus{outline:thin dotted #333;outline:5px auto #ba720d;outline-offset:-1px;}h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{font-style:normal;font-weight:300;letter-spacing:-1px;}.w-h{font-weight:300 !important;}.x-container.width{width:80%;}.x-container.max{max-width:1000px;}.x-main.full{float:none;display:block;width:auto;}@media (max-width:979px){.x-main.full,.x-main.left,.x-main.right,.x-sidebar.left,.x-sidebar.right{float:none;display:block;width:auto !important;}}.entry-header,.entry-content{font-size:15px;}.x-brand{font-style:normal;font-weight:300;letter-spacing:-3px;text-transform:uppercase;}.x-brand img{width:200px;}body,input,button,select,textarea{font-family:"Lato","Helvetica Neue",Helvetica,sans-serif;}h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{font-family:"Lato","Helvetica Neue",Helvetica,sans-serif;}.x-brand{font-family:"Lato","Helvetica Neue",Helvetica,sans-serif;}.x-navbar .x-nav > li > a{font-family:"Lato","Helvetica Neue",Helvetica,sans-serif;}.cfc-b-tx{color:#353535 !important;}.cfc-b-bd{border-color:#353535 !important;}.cfc-b-bg{background-color:#353535 !important;}.x-navbar{font-size:11px;}body.x-navbar-fixed-top-active .x-navbar-wrap{height:50px;}.x-navbar-inner{min-height:50px;}.x-logobar-inner{padding-top:0px;padding-bottom:0px;}.x-brand{font-size:38px;font-size:3.8rem;}.x-navbar .x-brand{margin-top:px;}.x-navbar .x-nav-wrap .x-nav > li > a{font-style:normal;font-weight:400;letter-spacing:2px;text-transform:uppercase;}.x-navbar .desktop .x-nav > li > a:not(.x-btn-navbar-woocommerce){padding-left:16px;padding-right:16px;}.x-navbar .desktop .x-nav > li > a > span{margin-right:-2px;}.x-btn-navbar{margin-top:19px;}.x-btn-navbar,.x-btn-navbar.collapsed{font-size:24px;}@media (max-width:979px){body.x-navbar-fixed-top-active .x-navbar-wrap{height:auto;}}.x-btn,.button,[type="submit"]{color:#fff;border-color:#ac1100;background-color:#dd9933;text-shadow:0 0.075em 0.075em rgba(0,0,0,0.5);border-radius:0.25em;padding:0.579em 1.105em 0.842em;font-size:19px;}.x-btn:hover,.button:hover,[type="submit"]:hover{color:#fff;border-color:#600900;background-color:#dd3333;text-shadow:0 0.075em 0.075em rgba(0,0,0,0.5);}.x-btn.x-btn-real,.x-btn.x-btn-real:hover{margin-bottom:0.25em;text-shadow:0 0.075em 0.075em rgba(0,0,0,0.65);}.x-btn.x-btn-real{box-shadow:0 0.25em 0 0 #a71000,0 4px 9px rgba(0,0,0,0.75);}.x-btn.x-btn-real:hover{box-shadow:0 0.25em 0 0 #a71000,0 4px 9px rgba(0,0,0,0.75);}.x-btn.x-btn-flat,.x-btn.x-btn-flat:hover{margin-bottom:0;text-shadow:0 0.075em 0.075em rgba(0,0,0,0.65);box-shadow:none;}.x-btn.x-btn-transparent,.x-btn.x-btn-transparent:hover{margin-bottom:0;border-width:3px;text-shadow:none;text-transform:uppercase;background-color:transparent;box-shadow:none;}.h-widget:before,.x-flickr-widget .h-widget:before,.x-dribbble-widget .h-widget:before{position:relative;font-weight:normal;font-style:normal;line-height:1;text-decoration:inherit;-webkit-font-smoothing:antialiased;speak:none;}.h-widget:before{padding-right:0.4em;font-family:"fontawesome";}.x-flickr-widget .h-widget:before,.x-dribbble-widget .h-widget:before{top:0.025em;padding-right:0.35em;font-family:"foundationsocial";font-size:0.785em;}.widget_archive .h-widget:before{content:"\f040";top:-0.045em;font-size:0.925em;}.widget_calendar .h-widget:before{content:"\f073";top:-0.0825em;font-size:0.85em;}.widget_categories .h-widget:before,.widget_product_categories .h-widget:before{content:"\f02e";font-size:0.95em;}.widget_nav_menu .h-widget:before,.widget_layered_nav .h-widget:before{content:"\f0c9";}.widget_meta .h-widget:before{content:"\f0fe";top:-0.065em;font-size:0.895em;}.widget_pages .h-widget:before{content:"\f0f6";top:-0.065em;font-size:0.85em;}.widget_recent_reviews .h-widget:before,.widget_recent_comments .h-widget:before{content:"\f086";top:-0.065em;font-size:0.895em;}.widget_recent_entries .h-widget:before{content:"\f02d";top:-0.045em;font-size:0.875em;}.widget_rss .h-widget:before{content:"\f09e";padding-right:0.2em;}.widget_search .h-widget:before,.widget_product_search .h-widget:before{content:"\f0a4";top:-0.075em;font-size:0.85em;}.widget_tag_cloud .h-widget:before,.widget_product_tag_cloud .h-widget:before{content:"\f02c";font-size:0.925em;}.widget_text .h-widget:before{content:"\f054";padding-right:0.4em;font-size:0.925em;}.x-dribbble-widget .h-widget:before{content:"\f009";}.x-flickr-widget .h-widget:before{content:"\f010";padding-right:0.35em;}.widget_best_sellers .h-widget:before{content:"\f091";top:-0.0975em;font-size:0.815em;}.widget_shopping_cart .h-widget:before{content:"\f07a";top:-0.05em;font-size:0.945em;}.widget_products .h-widget:before{content:"\f0f2";top:-0.05em;font-size:0.945em;}.widget_featured_products .h-widget:before{content:"\f0a3";}.widget_layered_nav_filters .h-widget:before{content:"\f046";top:1px;}.widget_onsale .h-widget:before{content:"\f02b";font-size:0.925em;}.widget_price_filter .h-widget:before{content:"\f0d6";font-size:1.025em;}.widget_random_products .h-widget:before{content:"\f074";font-size:0.925em;}.widget_recently_viewed_products .h-widget:before{content:"\f06e";}.widget_recent_products .h-widget:before{content:"\f08d";top:-0.035em;font-size:0.9em;}.widget_top_rated_products .h-widget:before{content:"\f075";top:-0.145em;font-size:0.885em;}</style>
+    <style id="x-customizer-css-custom" type="text/css">
+      .file_item_clean .subfolder_dropdown {
+margin-bottom:0 !important;
+}
+
+#wordpress_file_upload_block_1 {
+padding-top:10px;
+border-top:1px #DDD solid;
+margin-top 10px;
+}
+
+#wordpress_file_upload_block_1 .file_td_clean {
+padding:0px;
+margin:0px;
+}
+
+#wordpress_file_upload_block_1 .file_input_textbox {
+margin:0; 
+padding:0;
+}
+
+
+.h-custom-headline {
+line-height: 1.5 !important;
+}
+
+.x-btn-navbar {
+margin-top: 2px;
+}
+
+.entry-content .x-ul-icons {
+margin-bottom: 0;
+}
+
+h6 {
+letter-spacing:0px !important;
+text-transform: none !important;
+}
+
+b {
+font-weight:400;
+
+}
+.entry-content {
+margin-top:0;
+}
+
+.las-table td {
+    border-top:none;
+}
+.las-table > thead > tr {
+font-weight: 400
+}
+
+.result h5 {
+margin-top:0px;
+}
+
+.las-publications .bibtitle {
+    font-weight:400 ! important;
+
+}
+.ethlogo {
+    width:120px !important;
+    margin-left:-575%;
+}
+
+.x-brand {
+    position: relative;
+    left: 110px;
+}
+
+.result td {
+    border:none;
+}
+
+.x-portfolio .entry-info {
+    width:100%;
+}
+
+.bibcomment b {
+    font-weight:400;
+}
+
+.las-news li {
+    padding-bottom:7.5px;
+}
+
+.las-news {
+    margin: 0 0 1.313em 1.655em;
+}
+
+.entry-content {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.two-up {
+    white-space: nowrap;
+}
+
+.news li {
+    padding-bottom:7.5px
+}
+
+.date {
+    background-color: blue;
+
+}
+.btb-header { }
+.sheader {
+    font-size:large;
+}
+
+.rheader {
+    font-size: large;
+}
+
+.bibref {
+    border:none;
+    vertical-align:top;
+}
+
+.bibtitle {
+    font-weight:normal;
+}
+
+.bibbooktitle {
+    font-style:italic;
+}
+
+.bibitem {
+    border:none;
+    padding-top:0px;
+}
+
+.entry-wrap {
+    padding:50px;
+    padding-top:15px;
+    padding-bottom:35px;
+}
+
+.bibauthor {}
+
+h4, h5, h6, .h4, .h5, .h6 {
+    margin-top: 20px;
+}
+.easy-table th, .easy-table td {
+    font-weight:inherit
+}
+
+.purebibtex {
+    font-size: small;
+    font-family: inherit;
+}
+
+.purebibtex,.pureabs {
+font-size: small;
+font-family: inherit;
+}
+
+/* DL (11/2021) Blog customizations (larger font sizes etc.) */
+
+.entry-title {
+padding-bottom: 0.3em;
+}
+
+.entry-header {
+padding-bottom: 1em;
+}
+
+.entry-header, .entry-content {
+    font-size: 1.2em;
+}
+
+.more-link {
+   font-size: 1em;
+}
+
+pre {
+   font-size: 1em;
+}
+
+/* DL (11/2021) Optimizations for mobile devices (increase text width) */
+
+@media (max-width: 800px) {
+   .entry-wrap {
+      padding: 20px;
+   }
+
+   .x-container.width {
+      width: 90%;
+   }
+}
+
+
+/* DL (12/2021) Remove year subheader when displaying publications in blogposts*/
+.post .bibyear {
+   display: none;
+}    </style>
+
+  
+<style type="text/css" media="all">
+.footnotes_reference_container {margin-top: 24px !important; margin-bottom: 0px !important;}
+.footnote_container_prepare > p {border-bottom: 1px solid #aaaaaa !important;}
+.footnote_tooltip { font-size: 13px !important; color: #000000 !important; background-color: #ffffff !important; border-width: 1px !important; border-style: solid !important; border-color: #cccc99 !important; -webkit-box-shadow: 2px 2px 11px #666666; -moz-box-shadow: 2px 2px 11px #666666; box-shadow: 2px 2px 11px #666666; max-width: 450px !important;}
+
+
+</style>
+</head>
+
+<body class="page-template-default page page-id-11429 page-child parent-pageid-11 x-integrity x-integrity-light x-navbar-fixed-top-active x-full-width-layout-active x-full-width-active x-portfolio-meta-disabled x-v4_1_1 cornerstone-v1_0_6">
+
+  
+  <div id="top" class="site">
+
+  
+  
+  <header class="masthead masthead-stacked" role="banner">
+    
+    
+
+  <div class="x-logobar">
+    <div class="x-logobar-inner">
+      <div class="x-container max width">
+        
+
+<a href="https://las.inf.ethz.ch/" class="x-brand img" title="">
+  <img src="//las.inf.ethz.ch/wp-content/uploads/2015/10/logo1.png" alt=""></a>
+
+<a href="http://www.ethz.ch" class="x-brand img" title="ETH Zürich" target="_blank">
+  <img class="ethlogo" src="/wp-content/uploads/2015/10/logo-ethz.png" alt="">
+</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="x-navbar-wrap">
+    <div class="x-navbar">
+      <div class="x-navbar-inner">
+        <div class="x-container max width">
+          
+<a href="#" class="x-btn-navbar collapsed" data-toggle="collapse" data-target=".x-nav-wrap.mobile">
+  <i class="x-icon-bars" data-x-icon=""></i>
+  <span class="visually-hidden">Navigation</span>
+</a>
+
+<nav class="x-nav-wrap desktop" role="navigation">
+  <ul id="menu-main-menu" class="x-nav"><li id="menu-item-1728" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-1728"><a href="https://las.inf.ethz.ch/"><span>About</span></a></li>
+<li id="menu-item-1729" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1729"><a href="https://las.inf.ethz.ch/people"><span>People</span></a></li>
+<li id="menu-item-1730" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1730"><a href="https://las.inf.ethz.ch/publications"><span>Publications</span></a></li>
+<li id="menu-item-6547" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6547"><a href="https://las.inf.ethz.ch/blog"><span>Blog</span></a></li>
+<li id="menu-item-1559" class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor menu-item-1559"><a href="https://las.inf.ethz.ch/teaching"><span>Teaching</span></a></li>
+<li id="menu-item-6844" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6844"><a href="https://las.inf.ethz.ch/teaching/student-projects"><span>Student Projects</span></a></li>
+<li id="menu-item-1733" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1733"><a href="https://las.inf.ethz.ch/openings"><span>Openings</span></a></li>
+<li id="menu-item-1732" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1732"><a href="https://las.inf.ethz.ch/contact"><span>Contact</span></a></li>
+</ul></nav>
+
+<div class="x-nav-wrap mobile collapse">
+  <ul id="menu-main-menu-1" class="x-nav"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-1728"><a href="https://las.inf.ethz.ch/"><span>About</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1729"><a href="https://las.inf.ethz.ch/people"><span>People</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1730"><a href="https://las.inf.ethz.ch/publications"><span>Publications</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6547"><a href="https://las.inf.ethz.ch/blog"><span>Blog</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor menu-item-1559"><a href="https://las.inf.ethz.ch/teaching"><span>Teaching</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6844"><a href="https://las.inf.ethz.ch/teaching/student-projects"><span>Student Projects</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1733"><a href="https://las.inf.ethz.ch/openings"><span>Openings</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1732"><a href="https://las.inf.ethz.ch/contact"><span>Contact</span></a></li>
+</ul></div>        </div>
+      </div>
+    </div>
+  </div>
+
+    
+    </header>
+
+    
+
+  <div class="x-container max width offset">
+    <div class="x-main full" role="main">
+
+              
+<article id="post-11429" class="post-11429 page type-page status-publish hentry no-post-thumbnail">
+  <div class="entry-featured">
+      </div>
+  <div class="entry-wrap">
+                <header class="entry-header">
+        <h1 class="entry-title">Introduction to Machine Learning (2024)</h1>
+      </header>
+              
+
+
+<div class="entry-content content">
+
+
+  <h4 class="h-custom-headline h4 accent"><span>Introduction</span></h4>
+The course will introduce the foundations of learning and making predictions from data. We will study basic concepts such as trading goodness of fit and model complexity. We will discuss important machine learning algorithms used in practice, and provide hands-on experience in a series of course projects. VVZ Information is available <a href="https://www.vorlesungen.ethz.ch/Vorlesungsverzeichnis/lerneinheit.view?lerneinheitId=177270&amp;semkez=2024S&amp;ansicht=LEHRVERANSTALTUNGEN&amp;lang=en">here.</a><hr class="x-clear">
+
+<h5 class="h-custom-headline h5 accent"><span>News</span></h5>
+<ul>
+ 	<li>[01.02.2025] The solutions of the winter exam are now available <a href="/courses/introml-s24/exams/iml2024_winter_solutions.pdf">Solutions</a>.</li>
+ 	<li>[14.08.2024] The solutions of the exam are now available <a href="/courses/introml-s24/exams/iml2024_summer_solutions.pdf">Solutions</a>.</li>
+ 	<li>[18.06.2024] The final version (up to typos) of the lecture notes has been published.</li>
+ 	<li>[18.05.2024] The lecture notes on <em>kernels</em> have been published.</li>
+ 	<li>[24.04.2024] The lecture notes chapters on <em>clustering </em>and <em>PCA</em> have been published! The <em>kernels</em> chapter will appear soon.</li>
+ 	<li>[15.04.2024] The lecture notes chapter on <em>neural networks&nbsp;</em>has been published. The <em>kernels</em> chapter will appear soon.</li>
+ 	<li>[29.03.2024] Link to todays <a href="https://ethz.zoom.us/j/69818628029">tutorial</a></li>
+ 	<li>[26.03.2024] The lecture notes chapter on <em>classification</em> has been published!</li>
+ 	<li>[13.03.2024] Project 1 is online until Wednesday, 27.03.2024, 23:59 CEST. In todays Q&amp;A session the project team will answer any questions about the project. The solutions will be presented in the first Q&amp;A session after the Easter break 10.04.2024.</li>
+ 	<li>[19.02.2024] Welcome to the course Introduction to Machine Learning!</li>
+</ul>
+<hr class="x-clear">
+<div>
+
+<div class="x-column x-sm x-1-1" style="">
+
+<!-- FAQ -->
+
+<h5 class="h-custom-headline h5 accent"><span>FAQ</span></h5>
+
+<details><summary>This course is compulsory for my program, but I cannot register. What should I do?</summary>A: If this course is compulsory for your study program (Kernfach), you are able to register irrespective of the waiting list. Please allow some time for the transfer from the waiting list.
+
+</details><details><summary>Is physical attendance to the didactic activities mandatory?</summary>A: Physical attendance at lectures, tutorials and Q&amp;As is <strong>not mandatory</strong> but strongly encouraged.
+
+</details><details><summary>How can I access the materials on the website?</summary>A: Lecture slides, exercises, lecture notes, and recordings of the Q&amp;A are <strong>password protected</strong>. To obtain the password you need to be inside the ETH network or use the ETH VPN and <a href="/courses/introml-s23/password/introml23-pw.txt">click here</a>. Check <a href="https://unlimited.ethz.ch/display/itkb/VPN#VPN-HowtosetupVPN">here</a> to learn how to establish a VPN connection. This year’s credentials to the recordings are (username: per-24s, password: scR694P).
+
+</details><details><summary>What programming knowledge is required for this course?</summary>A: For the programming background, we recommend knowing <strong>Python</strong>. For those without experience in it, check out this <a href="https://www.learnpython.org/"> Python tutorial</a>.
+
+</details><details><summary>Will the projects contain boilerplate codes?</summary>A: Yes. There will be some code to guide you through the steps.
+
+</details><details><summary>What are the most useful libraries to learn for the projects?</summary>A: numpy, sklearn, pandas, torch.
+
+</details><details><summary>Is there a preferred library for the deep learning section?</summary>A: We will give a tutorial on pytorch and use pytorch in the boilerplate code for the projects. However, the use of other libraries is not disallowed.
+
+</details><details><summary>Am I eligible to take the exam if I fail some of the projects?</summary>A: You must receive an average grade of 4 or above to be eligible to take the exam. Failure in a project (not passing an easy baseline) means a grade of 2. However, as long as the average is above 4 (you can achieve this by getting a 6 in other projects) you can take the exam. If you do not do so we will ask you to deregister from the exam. If you do not de-register we will assign you a no-show grade.
+
+</details><details><summary>I did the projects last year (spring semester) and didn’t take or failed the exam in the spring or following autumn semester (or both). Do they count towards this year’s projects?</summary>A: No, they do not. Projects can be submitted only in the spring semester and they make you eligible to take the exam in the same (spring) semester and the autumn semester following.&nbsp; If you do not take the exam or fail the exam in these two sessions, you have to enroll in the class next year and redo the projects again.
+
+</details><details><summary>I am an attendance-only doctoral student what do I need to do?</summary>A: You need to enroll in the class and complete the projects to get your attendance certified. Your department decides how many credits you get for just attendance. <strong>Most departments require you to take the exam as well to be eligible for credits </strong>. This includes the D-INFK, D-MAVT departments. Please contact your department study administrator for details.
+
+</details><details><summary>I am a Ph.D. student, can I not do the projects or the exam but still get a grade?</summary>A: Most Ph.D. students that would like to get credits for the class need to do the projects and the exam. A minority of departments allow you to get credits without taking an exam. See the question above.
+
+</details><details><summary>Is distance examination allowed?</summary>A: <strong>Distance examination is allowed</strong>, but you need to file an official request via study administration. We do not handle these requests.
+
+</details><hr class="x-clear">
+
+<!-- Lectures -->
+
+<h5 class="h-custom-headline h5 accent"><span> Lectures </span></h5>
+Lectures will be on Tuesdays and Wednesdays, 14:15 to 16:00, in ETA F5 with a simultaneous video screening in ETF E1. You can ask questions in person or via the course channel on <a href="https://eduapp-app1.ethz.ch/" target="_blank" rel="noopener">EduApp</a>.
+<hr class="x-clear">
+All lectures and tutorials will be recorded, and the recording will be made available within a day after the lecture in the <a href="https://video.ethz.ch/lectures/d-infk/2024/spring/252-0220-00L.html" target="_blank" rel="noopener">ETH Video Portal</a> and below.
+<hr class="x-clear">
+The first lecture will take place on Tuesday, 20 February 2024.
+<hr class="x-clear">
+
+<div class="table-responsive"><table style="width:100%; " class="easy-table easy-table-default las-table" border="0">
+<thead>
+<tr><th>Date</th>
+<th> Topic</th>
+<th> Slides</th>
+<th> Recording</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>Tue 20.02.</td>
+<td> Introduction</td>
+<td> <a href="https://las.inf.ethz.ch/courses/introml-s24/slides/introml-01-intro.pdf">Preliminary</a> [<a href="https://las.inf.ethz.ch/courses/introml-s24/slides/introml-01-intro-annotated.pdf">Final</a>]</td>
+<td> <a href="https://video.ethz.ch/lectures/d-infk/2024/spring/252-0220-00L/cc8bb129-c7fe-4616-a592-b154a2d32848.html">Recording</a></td>
+</tr>
+
+<tr><td>Wed 21.02.</td>
+<td> Linear Regression</td>
+<td> <a href="https://las.inf.ethz.ch/courses/introml-s24/slides/introml-02-linreg.pdf">Preliminary</a> [<a href="https://las.inf.ethz.ch/courses/introml-s24/slides/introml-02-linreg-annotated.pdf">Final</a>]</td>
+<td> <a href="https://video.ethz.ch/lectures/d-infk/2024/spring/252-0220-00L/eb3a9c16-f143-4163-8e91-c606b47aa324.html">Recording</a></td>
+</tr>
+
+<tr><td>Tue 27.02.</td>
+<td> Nonlinear regression &amp; Optimization I</td>
+<td> <a href="https://las.inf.ethz.ch/courses/introml-s24/slides/introml-03-optimization.pdf">Preliminary</a> [<a href="https://las.inf.ethz.ch/courses/introml-s24/slides/introml-03-optimization-annotated.pdf">Final</a>]</td>
+<td> <a href="https://video.ethz.ch/lectures/d-infk/2024/spring/252-0220-00L/fdc94140-a155-43d2-9eaf-faed2b37e389.html">Recording</a></td>
+</tr>
+
+<tr><td>Wed 28.02.</td>
+<td> Optimization II &amp; overparameterization</td>
+<td> <a href="https://las.inf.ethz.ch/courses/introml-s24/slides/introml-04-optimization2.pdf">Preliminary</a> [<a href="https://las.inf.ethz.ch/courses/introml-s24/slides/introml-04-optimization2-annotated-updated.pdf">Final</a>]</td>
+<td> <a href="https://video.ethz.ch/lectures/d-infk/2024/spring/252-0220-00L/c7aa545c-eec4-4af5-ab95-471028106c76.html">Recording</a></td>
+</tr>
+
+<tr><td>Tue 05.03.</td>
+<td> Pytorch and Python tutorial</td>
+<td> </td>
+<td> <a href="https://video.ethz.ch/lectures/d-infk/2024/spring/252-0220-00L/e3493795-64bf-4627-b887-dd4e98b34c95.html">Recording</a></td>
+</tr>
+
+<tr><td>Wed 06.03.</td>
+<td> Model evaluation and selection</td>
+<td> <a href="https://las.inf.ethz.ch/courses/introml-s24/slides/introml-05-modelselection.pdf">Preliminary</a> [<a href="https://las.inf.ethz.ch/courses/introml-s24/slides/introml-05-modelselection-annotated.pdf">Final</a>]</td>
+<td> <a href="https://video.ethz.ch/lectures/d-infk/2024/spring/252-0220-00L/ebe4e5aa-44ec-448b-b683-07301c96e184.html">Recording</a></td>
+</tr>
+
+<tr><td>Tue 12.03.</td>
+<td> Bias-variance tradeoff &amp; Regularization</td>
+<td> <a href="https://las.inf.ethz.ch/courses/introml-s24/slides/introml-06-regularization.pdf">Preliminary</a> [<a href="https://las.inf.ethz.ch/courses/introml-s24/slides/introml-06-regularization-annotated-updated.pdf">Final</a>]</td>
+<td> <a href="https://video.ethz.ch/lectures/d-infk/2024/spring/252-0220-00L/ed4b2a78-2ff4-4e93-969d-9ec2b05848e5.html">Recording</a></td>
+</tr>
+
+<tr><td>Wed 13.03.</td>
+<td> Classification I</td>
+<td> <a href="https://las.inf.ethz.ch/courses/introml-s24/slides/introml-07-classification.pdf">Preliminary</a> [<a href="https://las.inf.ethz.ch/courses/introml-s24/slides/introml-07-classification-annotated-13-03.pdf">Final</a>]</td>
+<td> <a href="https://video.ethz.ch/lectures/d-infk/2024/spring/252-0220-00L/e552ddfd-572e-4a96-84fb-d7f741cd37e7.html">Recording</a></td>
+</tr>
+
+<tr><td>Tue 19.03.</td>
+<td> Classification II</td>
+<td> <a href="https://las.inf.ethz.ch/courses/introml-s24/slides/introml-08-classification2.pdf">Preliminary</a> [<a href="https://las.inf.ethz.ch/courses/introml-s24/slides/introml-08-classification2-annotated.pdf">Final</a>]</td>
+<td> <a href="https://video.ethz.ch/lectures/d-infk/2024/spring/252-0220-00L/011ced29-fdb5-4d93-9011-26ea5c2cd877.html">Recording</a></td>
+</tr>
+
+<tr><td>Wed 20.03.</td>
+<td> Classification III &amp; Kernel methods</td>
+<td> <a href="https://las.inf.ethz.ch/courses/introml-s24/slides/introml-09-class3kernels.pdf">Preliminary</a> [<a href="https://las.inf.ethz.ch/courses/introml-s24/slides/introml-09-class3kernels-annotated.pdf">Final</a>]</td>
+<td> <a href="https://video.ethz.ch/lectures/d-infk/2024/spring/252-0220-00L/098f60b7-890f-4027-912d-ac9abc1ab3c2.html">Recording</a></td>
+</tr>
+
+<tr><td>Tue 26.03.</td>
+<td> Kernel and other methods</td>
+<td> <a href="https://las.inf.ethz.ch/courses/introml-s24/slides/introml-10-kernels2.pdf">Preliminary</a> [<a href="https://las.inf.ethz.ch/courses/introml-s24/slides/introml-10-kernels2-annotated.pdf">Final</a>]</td>
+<td> <a href="https://video.ethz.ch/lectures/d-infk/2024/spring/252-0220-00L/119af394-9ec6-4ddc-9736-d9d500345aab.html">Recording</a></td>
+</tr>
+
+<tr><td>Wed 27.03.</td>
+<td> Neural Networks I</td>
+<td> <a href="https://las.inf.ethz.ch/courses/introml-s24/slides/introml-11-nets_2024.pdf">Preliminary</a> [<a href="https://las.inf.ethz.ch/courses/introml-s24/slides/introml-11-nets_2024after.pdf">Final</a>]</td>
+<td> <a href="https://video.ethz.ch/lectures/d-infk/2024/spring/252-0220-00L/d6b93e38-03f4-4c62-8cf1-a7b822c003a0.html">Recording</a></td>
+</tr>
+
+<tr><td>Tue 09.04.</td>
+<td> Neural Networks II (<a href="https://las.inf.ethz.ch/courses/introml-s24/slides/backprop.pdf">Backpropagation</a>/<a href="https://las.inf.ethz.ch/courses/introml-s24/slides/introml-12-nets_2024_blackboard.pdf">Blackboard</a>)</td>
+<td> <a href="https://las.inf.ethz.ch/courses/introml-s24/slides/introml-12-nets_2024.pdf">Preliminary</a> [<a href="https://las.inf.ethz.ch/courses/introml-s24/slides/introml-12-nets_2024after.pdf">Final</a>]</td>
+<td> <a href="https://video.ethz.ch/lectures/d-infk/2024/spring/252-0220-00L/52a932eb-af6b-4af2-ba99-8a23be44379d.html">Recording</a></td>
+</tr>
+
+<tr><td>Wed 10.04.</td>
+<td> Neural Networks III</td>
+<td> <a href="https://las.inf.ethz.ch/courses/introml-s24/slides/introml-13-nets_2024.pdf">Preliminary</a> [<a href="https://las.inf.ethz.ch/courses/introml-s24/slides/introml-13-nets_2024after.pdf">Final</a>]</td>
+<td> <a href="https://video.ethz.ch/lectures/d-infk/2024/spring/252-0220-00L/67963b96-a125-4f33-b9ef-d79e3090607c.html">Recording</a></td>
+</tr>
+
+<tr><td>Tue 16.04.</td>
+<td> Neural Networks IV</td>
+<td> <a href="https://las.inf.ethz.ch/courses/introml-s24/slides/introml-14-convnets_2024.pdf">Preliminary</a> [<a href="https://las.inf.ethz.ch/courses/introml-s24/slides/introml-14-convnets_2024after.pdf">Final</a>]</td>
+<td> <a href="https://video.ethz.ch/lectures/d-infk/2024/spring/252-0220-00L/547e2d77-dfbb-4f5c-962d-5e99b37bb909.html">Recording</a></td>
+</tr>
+
+<tr><td>Wed 17.04.</td>
+<td> Clustering</td>
+<td> <a href="https://las.inf.ethz.ch/courses/introml-s24/slides/introml-15-clustering_2024.pdf">Preliminary</a> [<a href="https://las.inf.ethz.ch/courses/introml-s24/slides/introml-15-clustering_2024after.pdf">Final</a>]</td>
+<td> <a href="https://video.ethz.ch/lectures/d-infk/2024/spring/252-0220-00L/953c2bef-13f6-4110-ae74-96eba2e8839c.html">Recording</a></td>
+</tr>
+
+<tr><td>Tue 23.04.</td>
+<td> Dimension Reduction I</td>
+<td> <a href="https://las.inf.ethz.ch/courses/introml-s24/slides/introml-16-dimred_2024.pdf">Preliminary</a> [<a href="https://las.inf.ethz.ch/courses/introml-s24/slides/introml-16-dimred_2024after.pdf">Final</a>]</td>
+<td> <a href="https://video.ethz.ch/lectures/d-infk/2024/spring/252-0220-00L/82aaf9e2-69ee-4699-b1ed-86893e40236b.html">Recording</a></td>
+</tr>
+
+<tr><td>Wed 24.04.</td>
+<td> Dimension Reduction II</td>
+<td> <a href="https://las.inf.ethz.ch/courses/introml-s24/slides/introml-17-dimred2.pdf">Preliminary</a> [<a href="https://las.inf.ethz.ch/courses/introml-s24/slides/introml-17-dimred-2_annotated.pdf">Final</a>]</td>
+<td> <a href="https://video.ethz.ch/lectures/d-infk/2024/spring/252-0220-00L/25e011e7-1e1a-4abe-b357-45abfded39a6.html">Recording</a></td>
+</tr>
+
+<tr><td>Tue 30.04.</td>
+<td> Probabilistic Modeling I</td>
+<td> <a href="https://las.inf.ethz.ch/courses/introml-s24/slides/introml-18-probmodel.pdf">Preliminary</a> [<a href="https://las.inf.ethz.ch/courses/introml-s24/slides/introml-18-probmodel-annotated.pdf">Final</a>]</td>
+<td> <a href="https://video.ethz.ch/lectures/d-infk/2024/spring/252-0220-00L/30dbda10-d9d6-442e-82b4-1f99f9f9193c.html">Recording</a></td>
+</tr>
+
+<tr><td>Wed 01.05.</td>
+<td> Holiday</td>
+<td></td>
+<td></td>
+</tr>
+
+<tr><td>Tue 07.05.</td>
+<td> Probabilistic Modeling II</td>
+<td> <a href="https://las.inf.ethz.ch/courses/introml-s24/slides/introml-19-probmodel2.pdf">Preliminary</a> [<a href="https://las.inf.ethz.ch/courses/introml-s24/slides/introml-19-probmodel2-annotated.pdf">Final</a>]</td>
+<td> <a href="https://video.ethz.ch/lectures/d-infk/2024/spring/252-0220-00L/3798a0a5-641c-4b9b-a74c-2e02999dbc12.html">Recording</a></td>
+</tr>
+
+<tr><td>Wed 08.05.</td>
+<td> Probabilistic Modeling III</td>
+<td> <a href="https://las.inf.ethz.ch/courses/introml-s24/slides/introml-20-probmodel3.pdf">Preliminary</a></td>
+<td> <a href="https://video.ethz.ch/lectures/d-infk/2024/spring/252-0220-00L/2a7def1b-7390-4d35-886b-594c444ed703.html">Recording</a></td>
+</tr>
+
+<tr><td>Tue 14.05.</td>
+<td> No class</td>
+<td></td>
+<td></td>
+</tr>
+
+<tr><td>Wed 15.05.</td>
+<td> Gaussian Mixture Models I</td>
+<td> <a href="https://las.inf.ethz.ch/courses/introml-s24/slides/introml-21-gmm1_2024.pdf">Preliminary</a> [<a href="https://las.inf.ethz.ch/courses/introml-s24/slides/introml-21-gmm1_2024_final.pdf">Final</a>]</td>
+<td> <a href="https://video.ethz.ch/lectures/d-infk/2024/spring/252-0220-00L/0f6e2410-a6ee-44b3-b930-bc27212f6ed0.html">Recording</a></td>
+</tr>
+
+<tr><td>Tue 21.05.</td>
+<td> Gaussian Mixture Models II</td>
+<td> <a href="https://las.inf.ethz.ch/courses/introml-s24/slides/introml-22-gmm2_2024.pdf">Preliminary</a> [<a href="https://las.inf.ethz.ch/courses/introml-s24/slides/introml-22-gmm2_2024_final.pdf">Final</a>]</td>
+<td> <a href="https://video.ethz.ch/lectures/d-infk/2024/spring/252-0220-00L/186e1216-1434-480a-8a4e-407d1afece4c.html">Recording</a></td>
+</tr>
+
+<tr><td>Wed 22.05.</td>
+<td> Gaussian Mixture Models III</td>
+<td> <a href="https://las.inf.ethz.ch/courses/introml-s24/slides/introml-22-gmm2_2024.pdf">Preliminary</a> [<a href="https://las.inf.ethz.ch/courses/introml-s24/slides/introml-22-gmm2_2024_final.pdf">Final</a>]</td>
+<td> <a href="https://video.ethz.ch/lectures/d-infk/2024/spring/252-0220-00L/32edd3c2-4f87-4d9b-b7e0-53a9e26f8246.html">Recording</a></td>
+</tr>
+
+<tr><td>Tue 28.05.</td>
+<td> No class</td>
+<td> </td>
+<td></td>
+</tr>
+
+<tr><td>Wed 29.05.</td>
+<td> LLMs</td>
+<td> <a href="https://las.inf.ethz.ch/courses/introml-s24/slides/intro2lmms.pdf">Preliminary</a></td>
+<td> <a href="https://video.ethz.ch/lectures/d-infk/2024/spring/252-0220-00L/8b956327-2094-4d94-9551-ddd81116670d.html">Recording</a></td>
+</tr>
+</tbody></table></div>
+</div>
+<hr class="x-clear">
+
+</div>
+<!-- Lecture Notes -->
+
+<h5 class="h-custom-headline h5 accent"><span>Lecture Notes</span></h5>
+We provide a detailed manuscript that contains the most important mathematical background needed for understanding the course. These notes will also serve as a reference for the lectures and set up the notation and needed theorems, definitions, and concepts.
+<hr class="x-clear">
+The manuscript is not final and will be updated and expanded with notes for some of the lectures as the course progresses, so please check back regularly. For typos, errors and suggestions, please go to the corresponding <a href="https://moodle-app2.let.ethz.ch/course/view.php?id=22128" target="_blank" rel="noopener">Moodle</a> section.
+<hr class="x-clear">
+<div class="table-responsive"><table style="width:100%; " class="easy-table easy-table-default las-table" border="0">
+<tbody>
+<tr><td><a href="https://las.inf.ethz.ch/courses/introml-s24/lecturenotes/introduction_to_machine_learning_notes_fixed.pdf">Lecture Notes</a></td>
+<td> Last version: <b>&nbsp;20 June 2024</b></td>
+</tr>
+</tbody></table></div>
+
+<!-- Tutorials -->
+
+<h5 class="h-custom-headline h5 accent"><span>Tutorials</span></h5>
+Tutorials will be held on Fridays, 14:15 to 16:00 ETA F5 with a simultaneous video screening in ETF E1. Similar to the lectures, you will be able to ask questions via the course channel on the EduApp.
+<hr class="x-clear">
+The tutorial will be recorded and the recording will be made available after the tutorial in the <a href="https://video.ethz.ch/lectures/d-infk/2024/spring/252-0220-00L.html" target="_blank" rel="noopener">ETH Video Portal</a> and below.
+<hr class="x-clear">
+The first tutorial will take place on Friday, 23 February 2024.
+<hr class="x-clear">
+<div class="table-responsive"><table style="width:100%; " class="easy-table easy-table-default las-table" border="0">
+<thead>
+<tr><th>Date</th>
+<th>Topic</th>
+<th>Materials</th>
+<th>Recording</th>
+<th>Homework/Solution</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>Fri 23.02.</td>
+<td> Math recap</td>
+<td> </td>
+<td> <a href="https://video.ethz.ch/lectures/d-infk/2024/spring/252-0220-00L/4aa9599e-3d67-4a93-9dc2-e0c664c41274.html">Recording</a></td>
+<td> <a href="https://las.inf.ethz.ch/courses/introml-s24/homeworks/iml_homework_1.pdf"> Homework</a>/<a href="https://las.inf.ethz.ch/courses/introml-s24/homeworks/iml_homework_1_solutions.pdf">Solution</a></td>
+</tr>
+
+<tr><td>Fri 01.03.</td>
+<td> Linear regression and Optimisation</td>
+<td> <a href="https://las.inf.ethz.ch/courses/introml-s24//tutorials/introml-tut-02-updated.pdf">Slides</a> [<a href="https://las.inf.ethz.ch/courses/introml-s24/tutorials/introml-tut-02_annotated.pdf">Final</a>]</td>
+<td> <a href="https://video.ethz.ch/lectures/d-infk/2024/spring/252-0220-00L/70a7d583-45f2-4ded-afec-7e27e6cde258.html">Recording</a></td>
+<td></td>
+</tr>
+
+<tr><td>Fri 08.03.</td>
+<td> Probability recap and model selection</td>
+<td> <a href="https://las.inf.ethz.ch/courses/introml-s24/tutorials/introml24-tutorial3.pdf">Slides</a></td>
+<td> <a href="https://video.ethz.ch/lectures/d-infk/2024/spring/252-0220-00L/2e2f102b-d8bf-42cd-8960-5021d34e3bb9.html">Recording</a></td>
+<td> <a href="https://las.inf.ethz.ch/courses/introml-s24/homeworks/introml_hw_02-1.pdf"> Homework</a>/<a href="https://las.inf.ethz.ch/courses/introml-s24/homeworks/introml_hw_02_solutions.pdf">Solution </a></td>
+</tr>
+
+<tr><td>Fri 15.03.</td>
+<td> Homework 2 discussion</td>
+<td> <a href="https://las.inf.ethz.ch/courses/introml-s24/tutorials/intro-ml_tutorial_02.pdf">Slides</a></td>
+<td> <a href="https://video.ethz.ch/lectures/d-infk/2024/spring/252-0220-00L/4ee102b2-9372-4672-b5f5-7cab85f4a675.html">Recording</a></td>
+<td></td>
+</tr>
+
+<tr><td>Fri 22.03.</td>
+<td> Classification and Kernel Methods</td>
+<td> <a href="https://las.inf.ethz.ch/courses/introml-s24/tutorials/tutorial22.03.24.pdf">Slides</a> [<a href="https://las.inf.ethz.ch/courses/introml-s24/tutorials/tutorial_annotated_22.03.24.pdf">Final</a>]</td>
+<td> <a href="https://video.ethz.ch/lectures/d-infk/2024/spring/252-0220-00L/0bfd2e03-81fb-47aa-a8aa-7ad9b7f35feb.html">Recording</a></td>
+<td> <a href="https://las.inf.ethz.ch/courses/introml-s24/homeworks/homework3.pdf"> Homework</a>/<a href="https://las.inf.ethz.ch/courses/introml-s24/homeworks/homework3_sol.pdf">Solution</a></td>
+</tr>
+
+<tr><td>Fri 29.03.</td>
+<td> Review of Homework 3</td>
+<td> <a href="https://las.inf.ethz.ch/courses/introml-s24/tutorials/tuto_hw3.pdf">Slides</a> [<a href="https://las.inf.ethz.ch/courses/introml-s24/tutorials/tuto_hw3_annotated.pdf">Final</a>]</td>
+<td> <a href="https://ethz.zoom.us/rec/share/NCryJXcw3gzgL7pxJifb9UpZSq9VFSkHwOqQqeACrwVEbhiAdws621s5TGBy7qVE.7wIWlWe3dPk6jGsO">Recording</a></td>
+<td> <a href="https://gitlab.inf.ethz.ch/OU-KRAUSE/iml-demos/-/blob/master/iml2024/tutorials/tutorial_notebook_mamoun+paola.ipynb?ref_type=heads"> Notebook</a></td>
+</tr>
+
+<tr><td>Fri 12.04.</td>
+<td> Homework 4 (Exercises 1-3)</td>
+<td> <a href="https://las.inf.ethz.ch/courses/introml-s24/tutorials/neural_networks.pdf">Slides</a> [<a href="https://las.inf.ethz.ch/courses/introml-s24/tutorials/tutorial_07_annotated.pdf ">Final</a>]</td>
+<td> <a href="https://video.ethz.ch/lectures/d-infk/2024/spring/252-0220-00L/a7210191-9d8a-45d3-8904-87240d03529c.html">Recording</a></td>
+<td> <a href="https://las.inf.ethz.ch/courses/introml-s24/homeworks/homework4.pdf"> Homework</a>/<a href="https://las.inf.ethz.ch/courses/introml-s24/homeworks/hw_nn_solution.pdf">Solution</a></td>
+</tr>
+
+<tr><td>Fri 19.04.</td>
+<td> Homework 4 (Exercise 4)</td>
+<td> <a href="https://las.inf.ethz.ch/courses/introml-s24/tutorials/neural-networks-iml-hw-review.pdf">Slides</a> [<a href="https://las.inf.ethz.ch/courses/introml-s24/tutorials/neural-networks-iml-hw-review-annotated.pdf">Final</a>]</td>
+<td> <a href="https://video.ethz.ch/lectures/d-infk/2024/spring/252-0220-00L/67a46231-3220-4d38-a821-092e5ee2a9f3.html">Recording</a></td>
+<td></td>
+</tr>
+
+<tr><td>Fri 26.04.</td>
+<td> Clustering and Dimensionality Reduction</td>
+<td> <a href="https://las.inf.ethz.ch/courses/introml-s24/tutorials/iml_24_tutorial_01_recap_dr-1.pdf">Slides</a></td>
+<td> <a href="https://video.ethz.ch/lectures/d-infk/2024/spring/252-0220-00L/1aa13d7c-260e-4808-ba0b-f4155bf8d038.html">Recording</a></td>
+<td> <a href="https://las.inf.ethz.ch/courses/introml-s24/homeworks/iml_2024_homework_5.pdf"> Homework</a>/<a href="https://las.inf.ethz.ch/courses/introml-s24/homeworks/hw5_w_solution.pdf">Solution</a></td>
+</tr>
+
+<tr><td>Fri 03.05.</td>
+<td> Clustering and Dimensionality Reduction</td>
+<td> <a href="https://las.inf.ethz.ch/courses/introml-s24/tutorials/iml_24_tutorial_02_hw_solving.pdf">Slides</a></td>
+<td> <a href="https://video.ethz.ch/lectures/d-infk/2024/spring/252-0220-00L/5fbacf37-16b9-43b8-8e9f-9c76a7bcf34b.html">Recording</a></td>
+<td></td>
+</tr>
+
+<tr><td>Fri 10.05.</td>
+<td> Probabilistic modeling</td>
+<td> <a href="https://las.inf.ethz.ch/courses/introml-s24/tutorials/tutorial-pm.pdf">Slides</a></td>
+<td> <a href="https://video.ethz.ch/lectures/d-infk/2024/spring/252-0220-00L/31b7878d-b604-4685-96f8-c9d3c8ace287.html">Recording</a></td>
+<td> <a href="https://las.inf.ethz.ch/courses/introml-s24/homeworks/introml_hw_05.pdf"> Homework</a>/<a href="https://las.inf.ethz.ch/courses/introml-s24/homeworks/introml_hw_05_sol.pdf">Solution</a></td>
+</tr>
+
+<tr><td>Fri 17.05.</td>
+<td> Discussion of Homework 5</td>
+<td> <a href="https://las.inf.ethz.ch/courses/introml-s24/tutorials/homework_5_solution_slides.pdf">Slides</a> [<a href="https://las.inf.ethz.ch/courses/introml-s24/tutorials/introml_hw_05_annotaded_slides.pdf">Final</a>]</td>
+<td> <a href="https://video.ethz.ch/lectures/d-infk/2024/spring/252-0220-00L/c80df691-7aaa-444b-8459-af2be2f39268.html">Recording</a></td>
+<td></td>
+</tr>
+
+<tr><td>Fri 24.05.</td>
+<td> Generative Models and Gaussian Mixture Models</td>
+<td> <a href="https://las.inf.ethz.ch/courses/introml-s24/tutorials/iml_slides_w13.pdf">Slides</a> [<a href="https://las.inf.ethz.ch/courses/introml-s24/tutorials/iml_slides_w13_annotated.pdf">Final</a>]</td>
+<td> <a href="https://video.ethz.ch/lectures/d-infk/2024/spring/252-0220-00L/bdabc3f8-56b5-4b83-928c-0cd26cb9d24b.html">Recording</a></td>
+<td> <a href="https://las.inf.ethz.ch/courses/introml-s24/homeworks/introml_hw_2024_without_solutions.pdf"> Homework</a>/<a href="https://las.inf.ethz.ch/courses/introml-s24/homeworks/introml_hw_06_solutions.pdf">Solutions</a></td>
+</tr>
+
+<tr><td>Fri 31.05.</td>
+<td> LLMs</td>
+<td> <a href="https://las.inf.ethz.ch/courses/introml-s24/tutorials/iml_llm_tutorial_sonali.pdf">Slides</a> [<a href="https://las.inf.ethz.ch/courses/introml-s24/tutorials/iml_llm_tutorial_updated.pdf">Final</a>]</td>
+<td> <a href="https://video.ethz.ch/lectures/d-infk/2024/spring/252-0220-00L/c5468f5a-4958-4766-b3a3-a22f017cfa9c.html">Recording</a></td>
+<td></td>
+</tr>
+</tbody></table></div>
+
+<!-- Q&A Sessions -->
+
+<h5 class="h-custom-headline h5 accent"><span>Q&amp;A Sessions</span></h5>
+Q&amp;A sessions (virtual office hours) will be held on Wednesdays, 17:00 to 18:00 virtually on <a href="https://ethz.zoom.us/j/63986096950">Zoom</a>. The Q&amp;A sessions are an informal opportunity to ask questions about the course. We may use some Q&amp;A sessions for giving more information about the projects. You will be able to ask questions via the native Zoom chat or by speaking out, if requested to do so. It is not mandatory to attend the Q&amp;A sessions. <hr class="x-clear">
+The Q&amp;A session will be recorded and the recording will be made available after the Q&amp;A session. <hr class="x-clear">
+The first Q&amp;A session will take place on Wednesday, 21 February.
+<hr class="x-clear">
+<div class="table-responsive"><table style="width:100%; " class="easy-table easy-table-default las-table" border="0">
+<thead>
+<tr><th>Date</th>
+<th>Topic</th>
+<th>Recording</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>Wed 21.02.</td>
+<td> Administration</td>
+<td> <a href="https://ethz.zoom.us/rec/share/hAMA4KL8r71p2xZluWknYxH0wKMUpqiqOPu1nTc3Fc-UYjbnNgPabI7B24pDTBEW.sIvevayiPdWrZCnN?startTime=1708530907000">Recording</a></td>
+</tr>
+
+<tr><td>Wed 28.02.</td>
+<td> Math recap</td>
+<td> <a href="https://ethz.zoom.us/rec/share/69DGu65H0objuB6tmOgZo2LWIX20f80ew4OVFVbqoJGv1xT7qoSJwKBHFs3mlqp0.XUjNRb1489-k81HM?startTime=1709135858000">Recording</a></td>
+</tr>
+
+<tr><td>Wed 06.03.</td>
+<td> Python environment setup</td>
+<td> <a href="https://ethz.zoom.us/rec/share/Ja9DmWpWkq0i4cdc0tt3wgcrMCTN6IDrO6DgDZHTQaXUwM530LN6rJLl-phUQC6v.iCzS6d63rK5EE89K?startTime=1709740750000">Recording</a></td>
+</tr>
+
+<tr><td>Wed 13.03.</td>
+<td> Project 1</td>
+<td> <a href="https://ethz.zoom.us/rec/share/AhO7LepT0fobOP7E5dGYt3qYpwNk8A0cELI7oPET8erreB_SfYqCo6V2H_5H1z0A.t2XNSN2n09A0Ttpw">Recording</a></td>
+</tr>
+
+<tr><td>Wed 20.03.</td>
+<td> General questions about material</td>
+<td> <a href="https://ethz.zoom.us/rec/share/0eqryzushqf9F9rVHz_EeWQPYsovHw4lMKXhlI_LE_C0zp_MzHN_MCK15yZO7eA-.Pv9gBx_Zuw4OMLQl?startTime=1710950332000">Recording</a></td>
+</tr>
+
+<tr><td>Wed 27.03.</td>
+<td> Project 2</td>
+<td> <a href="https://ethz.zoom.us/rec/share/0nZRWIc8PlvPLExSmDOcEYD5nPCJYX-Mc-H0D--gO9C8Q5TIpFZ5mgK2wyA7Y4Lk.E8f84nYeKHswAD1d">Recording</a></td>
+</tr>
+
+<tr><td>Wed 10.04.</td>
+<td> Solution of Project 1</td>
+<td> <a href="https://ethz.zoom.us/rec/share/vurf2CQTB2nQf_uI7u-nfOrC3x1EF4BxfCYviCIpY6oOhClIEeOPtyxDalEAXd1P.zu9P2azJD159hlRE">Recording</a></td>
+</tr>
+
+<tr><td>Wed 17.04.</td>
+<td> No one attended</td>
+<td> <a href="https://ethz.zoom.us/rec/share/ZHDhGV4qo0mLHMvlWMDNz5ngUm9Zp36icTriFniZ2BH5RMEssumJV63jBxDQxJi5.TXQhEHh83tiXmj8Z">Recording</a></td>
+</tr>
+
+<tr><td>Wed 24.04.</td>
+<td> Project 3</td>
+<td> <a href="https://ethz.zoom.us/rec/share/_Tf-aYARPdtEDGnsLx3fl7BVxfO-CB6l-PdB1wujtZsH88EfTnEitg7dLfsNN04.D42poo0rtGbpp20B">Recording</a></td>
+</tr>
+
+<tr><td>Wed 08.05.</td>
+<td> Solution of Project 2 and Introduction to Project 4</td>
+<td> <a href="https://drive.google.com/file/d/1j-t3GzG3QlGxzgQOHmi8O_5vBFphu6dh/view?usp=sharing">Recording</a></td>
+</tr>
+
+<tr><td>Wed 15.05.</td>
+<td> Solution of Project 3</td>
+<td> <a href="https://ethz.zoom.us/rec/share/ELb6Cs-1kCyHkGUojUgXxjJSW6dvnJYKjX6_nwcA-iLDYvSe7PG9b_INea7s-dOw._-SxOZMf0vKP1jkI">Recording</a></td>
+</tr>
+
+<tr><td>Wed 22.05.</td>
+<td> No one attended</td>
+<td> <a href="https://ethz.zoom.us/rec/share/DBZvIjqxupEHYiXQ_V_MPjA9Ev8KwzMnzMgvCMemM3ofEvXjWqpQlvOaAoD5G0VL.pKpRzpsHpCOZwCGb">Recording</a></td>
+</tr>
+
+<tr><td>Wed 29.05.</td>
+<td> Solution of Project 4</td>
+<td> <a href="https://ethz.zoom.us/rec/share/lGUEyfLO0B8HyeO2dTrZ6GspB9PN_GF6Jxjf-TQj6sZKQTU20yeOjZ6EASSPh98n.uF4lTtSf2Xxw7prH">Recording</a></td>
+</tr>
+
+<tr><td>Tue 06.08.</td>
+<td> Exam Q&amp;A</td>
+<td> <a href="https://ethz.zoom.us/rec/share/ZKVFBYloFFS-LWJUfNdUg1p2BXh28JcA9KWA2bL7BFAQIQwzm6kspu5HBAT_Sd9O.zMKjhEFaoPWJKDlI?startTime=1722946908000">Recording</a>/<a href="https://las.inf.ethz.ch/courses/introml-s24/tutorials/iml-exam-q-a-2024.pdf">Slides</a></td>
+</tr>
+</tbody></table></div>
+
+<!-- Contact -->
+<div><div class="x-column x-sm x-3-5" style=""><h5 class="h-custom-headline h5 accent"><span>Contact</span></h5>
+<div class="table-responsive"><table style="width:100%; " class="easy-table easy-table-default las-table" border="0">
+<tbody>
+<tr><td>Instructors</td>
+<td> <a href="https://www.datascience.ch/people/fernando-perez-cruz">Prof. Fernando Perez Cruz</a> and <a href="https://sml.inf.ethz.ch/group/fannyy/">Prof. Fanny Yang</a></td>
+</tr>
+
+<tr><td>Head TA</td>
+<td> <a href="https://las.inf.ethz.ch/people/lenart-treven">Lenart Treven</a></td>
+</tr>
+
+<tr><td><div>Assistants</div></td>
+<td> Jonas Hübotter, Lars Lorch, Dongho Kang, Jin Cheng, Viacheslav Borovitskiy, Berken Utku Demirel, Alexandru Tifrea, Bhavi Sukhija, Yarden As, Scott Sussex, Miguel Zamora, Kiran Doshi, Marco Baumann, Zijun Hui, Tobias Wegel, Julia Kostin, Cynthia Chen, Maxim Huber, Aidyn Ubingazhibov, Sascha Bongni, Yue Li, Mohammad Reza Karimi, Armin Lederer, Piersilvio DE Bartolomeis, Sergeev Fedor, Javier Abad Martinez, Paola Malsot, Anna Kerekes, Hugo Yéche, Alex Immer, Sonali Andani, Mamoun Chami, Charlton Connor, Rajesh Sharma, Filippo Masotti</td>
+</tr>
+
+<tr><td><div></div></td>
+</tr>
+
+<tr><td>Mailing List</td>
+<td> Please use <a href="https://moodle-app2.let.ethz.ch/course/view.php?id=22128" target="_blank" rel="noopener">Moodle</a> for questions regarding course material, organization and projects. If you need to contact the Head TA or the lecturer directly, please send an email to <a href="mailto:introml24-info@inf.ethz.ch">introml24-info@inf.ethz.ch</a>. Please think twice before you send an email though and make sure you read all information here carefully.</td>
+</tr>
+
+<tr><td><!-- Lectures --></td>
+</tr>
+</tbody></table></div>
+</div><div class="x-column x-sm x-2-5 last" style="">
+<h5 class="h-custom-headline h5 accent"><span>Lectures</span></h5>
+<div class="table-responsive"><table style="width:100%; " class="easy-table easy-table-default las-table" border="0">
+<tbody>
+<tr><td>Tue 14-16</td>
+<td> ETA F5</td>
+<td> ETF E1 (via video)</td>
+</tr>
+
+<tr><td>Wed 14-16</td>
+<td> ETA F5</td>
+<td> ETF E1 (via video)</td>
+</tr>
+</tbody></table></div>
+<h5 class="h-custom-headline h5 accent"><span>Tutorials</span></h5>
+<div class="table-responsive"><table style="width:100%; " class="easy-table easy-table-default las-table" border="0">
+<tbody>
+<tr><td>Fri 14-16</td>
+<td> ETA F5</td>
+<td> ETF E1 (via video)</td>
+</tr>
+</tbody></table></div>
+<h5 class="h-custom-headline h5 accent"><span>Questions &amp; Answers</span></h5>
+<div class="table-responsive"><table style="width:100%; " class="easy-table easy-table-default las-table" border="0">
+<tbody>
+<tr><td>Wed 17-18</td>
+<td> Virtual</td>
+<td> <a href="https://ethz.zoom.us/j/63986096950">Zoom</a></td>
+</tr>
+</tbody></table></div>
+</div>
+<hr class="x-clear">
+
+<!-- Projects -->
+
+</div>
+<h5 class="h-custom-headline h5 accent"><span>Code Projects</span></h5>
+The code projects will require solving machine learning problems with methods taught within the course. Projects will require handing in the solution code as well as a short report. You are allowed to work in groups of 1 – 3 students, but it is your responsibility to find a group. You can search for teammates by posting on Moodle.
+<hr class="x-clear">
+In particular, there will be 5 code projects. The first project is ungraded and will allow you to become familiar with our code submission workflow. The remaining projects are graded (pass/fail) and mandatory for passing the course.
+<hr class="x-clear">
+Following is a timetable of the projects. Details regarding the projects can be found <a href="/courses/introml-s24/projects/introml-projectinfo-27-02.pdf" target="_blank" rel="noopener">here</a>. If you are having technical issues please send an email to <a href="mailto:introml24-projects@inf.ethz.ch">introml24-projects@inf.ethz.ch</a>.
+<hr class="x-clear">
+
+<div class="table-responsive"><table style="width:100%; " class="easy-table easy-table-default las-table" border="0">
+<thead>
+<tr><th>Project</th>
+<th> Release Date</th>
+<th> End Date</th>
+<th> Weight on Project Grade</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>Project 0</td>
+<td> Fri, 01.03.2024 08:00</td>
+<td> -</td>
+<td> 0</td>
+</tr>
+
+<tr><td>Project 1a&amp;b</td>
+<td> Wed, 13.03.2024 08:00</td>
+<td> Wed, 27.03.2024 23:59 CEST</td>
+<td> 0.25 (0.125 each)</td>
+</tr>
+
+<tr><td>Project 2</td>
+<td> Wed, 27.03.2024 08:00</td>
+<td> Tue, 23.04.2024 23:59 CEST</td>
+<td> 0.25</td>
+</tr>
+
+<tr><td>Project 3</td>
+<td> Tue, 23.04.2024 08:00</td>
+<td> Wed, 08.05.2024 23:59 CEST</td>
+<td> 0.25</td>
+</tr>
+
+<tr><td>Project 4</td>
+<td> Wed, 08.05.2024 08:00</td>
+<td> Wed, 22.05.2024 23:59 CEST</td>
+<td> 0.25</td>
+</tr>
+</tbody></table></div>
+<hr class="x-clear">
+
+There will be a presentation introducing the project in the Q&amp;A session on the same Wednesday each project gets released. Also, there will be a project solution session in the Q&amp;A session the week after the deadline of a project. Hence there are 8 sessions for all 4 graded projects in total.
+
+<h6 class="h-custom-headline h6"><span><b>Setting up Anaconda</b></span></h6>
+
+This is a guide that will help you setup the Anaconda environment that you will need for the projects: <a href="https://las.inf.ethz.ch/courses/introml-s24/projects/anaconda_guide_iml-14-03.pdf">Setting up Anaconda</a>.
+
+<!-- Demos -->
+
+<h5 class="h-custom-headline h5 accent"><span>Demos</span></h5>
+
+The demos are hosted at <a href="https://gitlab.inf.ethz.ch/OU-KRAUSE/iml-demos">GitLab</a>. Demos are based on jupyter notebook (with Python 3.9). Please look at <a href="https://jupyter-notebook-beginner-guide.readthedocs.io/en/latest/index.html">this</a> intro for installing and running instructions. We recommend that you create a <a href="https://las.inf.ethz.ch/courses/introml-s24/projects/anaconda_guide_iml-14-03.pdf">conda environment</a> to maintain the code base. <b>You should have been added to the repository automatically. If you cannot access the repository, please send an email to <a href="mailto:sbongni@student.ethz.ch?subject=[IML 2024] GitLab access&amp;body=[your username]">sbongni@student.ethz.ch</a> with the subject “[IML 2024] GitLab access” and include your nethz in the email like this “[sbongni]” surrounded by square brackets.</b> (If you get a 404-error or can’t see the repository this is likely because you don’t have access yet. If you have never logged into gitlab before, I was not able to add you because your account is not displayed.)
+
+<hr class="x-clear">
+
+<!-- Exam -->
+
+<h5 class="h-custom-headline h5 accent"><span>Performance Assessment</span></h5>
+70% session examination, 30% code project; the final grade will be calculated as weighted average of both these elements. As a compulsory continuous performance assessment task, the project must be passed on its own.
+
+The coding projects are an integral part (60 hours of work, 2 credits) of the course. Participation is mandatory. To be eligible for the examination of Introduction to Machine Learning (252-0220-00L), you need to pass the code projects, i.e., attain an overall project grade of 4 or higher.
+Students who do not pass the project are required to de-register from the exam and will otherwise be treated as a “no show”.
+
+<hr class="x-clear">
+For the final exam, you can bring two A4-pages (that is, one A4-sheet of paper), either handwritten or 11 point minimum font size. A simple non-programmable calculator is allowed during the exam.
+
+The exam will be multiple choice. <a href="/courses/introml-s24/exams/dummy_exam.pdf">Here</a> you can find an example of the question types as well as how to fill out the answer sheet to guarantee successful automatic grading.
+
+<hr class="x-clear">
+<a id="previous_exams"></a>
+
+<div class="table-responsive"><table style="width:100%; " class="easy-table easy-table-default las-table" border="0">
+<thead>
+<tr><th><b>Previous Exams</b></th>
+<th> <b>Solutions</b></th>
+</tr>
+</thead>
+<tbody>
+<tr><td><a href="/courses/introml-s23/exams/exam15.pdf">Exam 2015</a></td>
+<td></td>
+</tr>
+
+<tr><td><a href="/courses/introml-s23/exams/exam16.pdf">Exam 2016</a></td>
+<td></td>
+</tr>
+
+<tr><td><a href="/courses/introml-s23/exams/exam17.pdf">Exam 2017</a></td>
+<td></td>
+</tr>
+
+<tr><td><a href="/courses/introml-s23/exams/exam18.pdf">Exam 2018</a></td>
+<td></td>
+</tr>
+
+<tr><td><a href="/courses/introml-s23/exams/exam19.pdf">Exam 2019</a></td>
+<td></td>
+</tr>
+
+<tr><td><a href="/courses/introml-s23/exams/exam20.pdf">Exam 2020</a></td>
+<td> <a href="/courses/introml-s23/exams/solution20.pdf">Sol 2020</a></td>
+</tr>
+
+<tr><td><a href="/courses/introml-s23/exams/exam21-summer.pdf">Exam 2021 Summer</a></td>
+<td> <a href="/courses/introml-s23/exams/solution21-summer.pdf">Sol 2021 Summer</a></td>
+</tr>
+
+<tr><td><a href="/courses/introml-s23/exams/exam21-winter.pdf">Exam 2021 Winter</a></td>
+<td> <a href="/courses/introml-s23/exams/solution21-winter.pdf">Sol 2021 Winter</a></td>
+</tr>
+
+<tr><td><a href="/courses/introml-s23/exams/exam22-summer.pdf">Exam 2022 Summer</a></td>
+<td> <a href="/courses/introml-s23/exams/solution22-summer.pdf">Sol 2022 Summer</a> [<a href="/courses/introml-s23/exams/introml-exam22-summer-catalog.pdf">Final</a>]</td>
+</tr>
+
+<tr><td><a href="/courses/introml-s23/exams/exam22-winter.pdf">Exam 2022 Winter</a></td>
+<td> <a href="/courses/introml-s23/exams/solution22-winter.pdf">Sol 2022 Winter</a> [<a href="/courses/introml-s23/exams/introml-exam22-winter-catalog.pdf">Final</a>]</td>
+</tr>
+
+<tr><td><a href="/courses/introml-s24/exams/summer_2023_exam.pdf">Exam 2023 Summer</a></td>
+<td> <a href="/courses/introml-s24/exams/summer_2023_solutions.pdf">Sol 2023 Summer</a></td>
+</tr>
+
+<tr><td><a href="/courses/introml-s24/exams/winter_2023_exam.pdf">Exam 2023 Winter</a></td>
+<td> <a href="/courses/introml-s24/exams/winter_2023_solutions.pdf">Sol 2023 Winter</a></td>
+</tr>
+
+<tr><td><a href="/courses/introml-s24/exams/iml2024_summer_exam.pdf">Exam 2024 Summer</a></td>
+<td> <a href="/courses/introml-s24/exams/iml2024_summer_solutions.pdf">Sol 2024 Summer</a></td>
+</tr>
+
+<tr><td><a href="https://las.inf.ethz.ch/courses/introml-s24/exams/iml2024_winter.pdf">Exam 2024 Winter</a></td>
+<td> <a href="https://las.inf.ethz.ch/courses/introml-s24/exams/iml2024_winter_solutions.pdf">Sol 2024 Winter</a></td>
+</tr>
+</tbody></table></div>
+<hr class="x-clear">
+
+<!-- Resources -->
+
+<h5 class="h-custom-headline h5 accent"><span>Other Resources</span></h5>
+<ul>
+ 	<li style="list-style-type: none;">
+<ul>
+ 	<li style="list-style-type: none;">
+<ul>
+ 	<li>Marc Peter Deisenroth, A Aldo Faisal, and Cheng Soon Ong <a href="https://mml-book.github.io"><em>Mathematics for Machine Learning</em></a>. Cambridge University Press, 2020.</li>
+ 	<li>K. Murphy. <em>Machine Learning: a Probabilistic Perspective</em>. MIT Press, 2012.</li>
+ 	<li>C. Bishop. <em>Pattern Recognition and Machine Learning</em>. Springer, 2007. (optional)</li>
+ 	<li>T. Hastie, R. Tibshirani, and J. Friedman. <a href="http://www-stat.stanford.edu/%7Etibs/ElemStatLearn/" target="_blank" rel="noopener"><em>The Elements of Statistical Learning: Data Mining, Inference and Prediction</em></a>. Springer, 2001.</li>
+ 	<li>L. Wasserman. <em>All of Statistics: A Concise Course in Statistical Inference.</em> Springer, 2004.</li>
+ 	<li>G. James., D. Witten and et al. <a href="https://www.statlearning.com/" target="_blank" rel="noopener"><em>An Introduction to Statistical Learning</em></a>. Springer, 2021.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr class="x-clear">
+<div></div>  
+
+</div>
+
+  </div>
+</article>        
+      
+    </div>
+
+    
+
+
+  </div>
+
+
+
+  
+    
+
+  <a class="x-scroll-top right fade" href="#top" title="Back to Top">
+    <i class="x-icon-angle-up" data-x-icon=""></i>
+  </a>
+
+  <script>
+
+  jQuery(document).ready(function($) {
+
+    var windowObj            = $(window);
+    var body                 = $('body');
+    var bodyOffsetBottom     = windowObj.scrollBottom();             // 1
+    var bodyHeightAdjustment = body.height() - bodyOffsetBottom;     // 2
+    var bodyHeightAdjusted   = body.height() - bodyHeightAdjustment; // 3
+    var scrollTopAnchor      = $('.x-scroll-top');
+
+    function sizingUpdate(){
+      var bodyOffsetTop = windowObj.scrollTop();
+      if ( bodyOffsetTop > ( bodyHeightAdjusted * 0.25 ) ) {
+        scrollTopAnchor.addClass('in');
+      } else {
+        scrollTopAnchor.removeClass('in');
+      }
+    }
+
+    windowObj.bind('scroll', sizingUpdate).resize(sizingUpdate);
+    sizingUpdate();
+
+    scrollTopAnchor.click(function(){
+      $('html,body').animate({ scrollTop: 0 }, 850, 'easeInOutExpo');
+      return false;
+    });
+
+  });
+
+  </script>
+
+  
+
+  
+    <footer class="x-colophon bottom" role="contentinfo">
+      <div class="x-container max width">
+
+                  
+<ul id="menu-main-menu-2" class="x-nav"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-1728"><a href="https://las.inf.ethz.ch/">About</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1729"><a href="https://las.inf.ethz.ch/people">People</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1730"><a href="https://las.inf.ethz.ch/publications">Publications</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6547"><a href="https://las.inf.ethz.ch/blog">Blog</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor menu-item-1559"><a href="https://las.inf.ethz.ch/teaching">Teaching</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6844"><a href="https://las.inf.ethz.ch/teaching/student-projects">Student Projects</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1733"><a href="https://las.inf.ethz.ch/openings">Openings</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1732"><a href="https://las.inf.ethz.ch/contact">Contact</a></li>
+</ul>        
+        
+                  <div class="x-colophon-content">
+            <p>Learning &amp; Adaptive Systems Group | Institute for Machine Learning | © 2025 ETH Zurich </p>          </div>
+        
+      </div>
+    </footer>
+
+  
+
+  
+  </div> <!-- END #top.site -->
+
+  
+        <script>
+            function _katexRender(rootElement) {
+                const eles = rootElement.querySelectorAll(".katex-eq:not(.katex-rendered)");
+                for(let idx=0; idx < eles.length; idx++) {
+                    const ele = eles[idx];
+                    ele.classList.add("katex-rendered");
+                    try {
+                        katex.render(
+                            ele.textContent,
+                            ele,
+                            {
+                                displayMode: ele.getAttribute("data-katex-display") === 'true',
+                                throwOnError: false
+                            }
+                        );
+                    } catch(n) {
+                        ele.style.color="red";
+                        ele.textContent = n.message;
+                    }
+                }
+            }
+
+            function katexRender() {
+                _katexRender(document);
+            }
+
+            document.addEventListener("DOMContentLoaded", function() {
+                katexRender();
+
+                // Perform a KaTeX rendering step when the DOM is mutated.
+                const katexObserver = new MutationObserver(function(mutations) {
+                    [].forEach.call(mutations, function(mutation) {
+                        if (mutation.target && mutation.target instanceof Element) {
+                            _katexRender(mutation.target);
+                        }
+                    });
+                });
+
+                const katexObservationConfig = {
+                    subtree: true,
+                    childList: true,
+                    attributes: true,
+                    characterData: true
+                };
+
+                katexObserver.observe(document.body, katexObservationConfig);
+            });
+
+        </script>
+        <script type="text/javascript" src="https://las.inf.ethz.ch/wp-includes/js/jquery/ui/core.min.js?ver=1.12.1" id="jquery-ui-core-js"></script>
+<script type="text/javascript" src="https://las.inf.ethz.ch/wp-includes/js/jquery/ui/tooltip.min.js?ver=1.12.1" id="jquery-ui-tooltip-js"></script>
+<script type="text/javascript" src="https://las.inf.ethz.ch/wp-includes/js/jquery/ui/mouse.min.js?ver=1.12.1" id="jquery-ui-mouse-js"></script>
+<script type="text/javascript" src="https://las.inf.ethz.ch/wp-includes/js/jquery/ui/slider.min.js?ver=1.12.1" id="jquery-ui-slider-js"></script>
+<script type="text/javascript" src="https://las.inf.ethz.ch/wp-includes/js/jquery/ui/datepicker.min.js?ver=1.12.1" id="jquery-ui-datepicker-js"></script>
+<script type="text/javascript" id="jquery-ui-datepicker-js-after">
+jQuery(document).ready(function(jQuery){jQuery.datepicker.setDefaults({"closeText":"Close","currentText":"Today","monthNames":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesShort":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"nextText":"Next","prevText":"Previous","dayNames":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"dayNamesShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"dayNamesMin":["S","M","T","W","T","F","S"],"dateFormat":"MM d, yy","firstDay":1,"isRTL":false});});
+</script>
+<script type="text/javascript" src="https://las.inf.ethz.ch/wp-content/plugins/wordpress-file-upload-pro/vendor/datetimepicker/jquery-ui-timepicker-addon.min.js?ver=5.8.13" id="jquery-ui-timepicker-addon-js-js"></script>
+<script type="text/javascript" src="https://las.inf.ethz.ch/wp-content/themes/x/framework/js/dist/site/x-body.min.js?ver=4.1.1" id="x-site-body-js"></script>
+<script type="text/javascript" src="https://las.inf.ethz.ch/wp-includes/js/comment-reply.min.js?ver=5.8.13" id="comment-reply-js"></script>
+<script type="text/javascript" src="https://las.inf.ethz.ch/wp-content/plugins/cornerstone/assets/js/dist/site/cs-body.min.js?ver=1.0.6" id="cornerstone-site-body-js"></script>
+<script type="text/javascript" src="https://las.inf.ethz.ch/wp-content/plugins/katex/assets/katex-0.13.13/katex.min.js?ver=5.8.13" id="katex-js"></script>
+<script type="text/javascript" src="https://las.inf.ethz.ch/wp-includes/js/wp-embed.min.js?ver=5.8.13" id="wp-embed-js"></script>
+
+
+  
+    <script id="x-customizer-js-custom">
+      jQuery(function($){
+
+    $(document).ready(function(){
+	$('.publication-dropdown').change(function() {
+	    window.location = this.value;
+	});
+	$('a.biburl').each(function() { // for each url "[bibtex]"
+	    var biburl = $(this);
+	    if (biburl.attr('bibtexbrowser') === undefined)
+	    {
+		biburl.click(function(ev) { // we change the click semantics
+		    ev.preventDefault(); // no open url
+		    if (biburl.nextAll('.purebibtex').length == 0) { // we don't have yet the bibtex data
+			var bibtexEntryUrl = $(this).attr('href');
+			$.ajax({url: bibtexEntryUrl,  dataType: 'html', success: function (data) { // we download it
+			    // elem is the element containing bibtex entry, creating a new element is required for Chrome and IE
+			    var elem = $('<pre class="purebibtex"/>');
+			    elem.text($('.purebibtex', data).text()); // both text() are required for IE
+			    // we add a link so that users clearly see that even with AJAX
+			    // there is still one URL per paper (which is important for crawlers and metadata)
+			    elem.appendTo(biburl.parent());
+			}, error: function() {window.location.href = biburl.attr('href');}});
+		    } else {biburl.nextAll('.purebibtex').toggle();}  // we toggle the view
+		});
+		biburl.attr('bibtexbrowser','done');
+	    } // end if biburl.bibtexbrowser;
+	});
+
+	$('a.absurl').each(function() { // for each url "[abstract]"
+	    var biburl = $(this);
+	    if (biburl.attr('bibtexbrowser') === undefined)
+	    {
+		biburl.click(function(ev) { // we change the click semantics
+		    ev.preventDefault(); // no open url
+		    if (biburl.nextAll('.pureabs').length == 0) { // we don't have yet the bibtex data
+			var bibtexEntryUrl = $(this).attr('href');
+			$.ajax({url: bibtexEntryUrl,  dataType: 'html', success: function (data) { // we download it
+			    // elem is the element containing bibtex entry, creating a new element is required for Chrome and IE
+			    var elem = $('<pre class="pureabs"/>');
+			    elem.text($('.bibentry-abstract', data).text()); // both text() are required for IE
+			    // we add a link so that users clearly see that even with AJAX
+			    // there is still one URL per paper (which is important for crawlers and metadata)
+			    elem.appendTo(biburl.parent());
+			}, error: function() {window.location.href = biburl.attr('href');}});
+		    } else {biburl.nextAll('.pureabs').toggle();}  // we toggle the view
+		});
+		biburl.attr('bibtexbrowser','done');
+	    } // end if biburl.bibtexbrowser;
+	});
+    });
+});
+    </script>
+
+  
+
+  
+
+
+
+
+
+</body></html>

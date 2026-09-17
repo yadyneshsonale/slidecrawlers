@@ -1,0 +1,479 @@
+<html><head>
+<title>Computer Organization and Assembly Languages</title>
+
+<link rel="StyleSheet" href="https://www.csie.ntu.edu.tw/~cyy/courses/assembly/12fall/assembly.css" type="text/css" media="screen">
+
+<script language="javascript">
+<!-- 
+var page = "lectures";
+-->
+</script>
+
+</head>
+
+<body>
+<div class="container">
+
+<link rel="icon" href="favicon.ico" type="image/ico"> 
+
+<table style="background-color: #88AA00; border-bottom: #fff 1px solid;">
+<tbody><tr>
+<td><div class="header"><span class="border">
+<span class="gp">Asse</span><span class="gpu">mbly</span></span></div></td>
+<td><div class="imgattop"><img src="https://www.csie.ntu.edu.tw/~cyy/courses/assembly/12fall/images/assembly.jpg"></div></td>
+<td width="100%">
+<div class="subheader">
+Computer Organization and Assembly Languages, Fall 2012
+</div>
+</td>
+</tr>
+</tbody></table>
+
+<div class="nav">
+<script type="text/javascript">
+<!-- 
+  if (page == "news")
+  {
+    document.write("<span class=\"navselected\">&nbsp;News&nbsp; </span>");
+  }
+  else
+  {
+    document.write("<a class=\"nav\" onmouseover=\"this.className='navhover'\" onmouseout=\"this.className='nav'\" href=\"https://www.csie.ntu.edu.tw/~cyy/courses/assembly/12fall/news/\">&nbsp;News&nbsp; </a>");
+  }
+  -->
+</script><a class="nav" onmouseover="this.className='navhover'" onmouseout="this.className='nav'" href="https://www.csie.ntu.edu.tw/~cyy/courses/assembly/12fall/news/">&nbsp;News&nbsp; </a>
+
+<script type="text/javascript">
+  <!-- 
+  if (page == "overview")
+  {
+    document.write("<span class=\"navselected\">&nbsp;Overview&nbsp; </span>");
+  }
+  else
+  {
+    document.write("<a class=\"nav\" onmouseover=\"this.className='navhover'\" onmouseout=\"this.className='nav'\" href=\"https://www.csie.ntu.edu.tw/~cyy/courses/assembly/12fall/overview/\">&nbsp;Overview&nbsp; </a>");
+  }
+  -->
+</script><a class="nav" onmouseover="this.className='navhover'" onmouseout="this.className='nav'" href="https://www.csie.ntu.edu.tw/~cyy/courses/assembly/12fall/overview/">&nbsp;Overview&nbsp; </a>
+
+<script type="text/javascript">
+  <!-- 
+  if (page == "lectures")
+  {
+    document.write("<span class=\"navselected\">&nbsp;Lectures&nbsp; </span>");
+  }
+  else
+  {
+    document.write("<a class=\"nav\" onmouseover=\"this.className='navhover'\" onmouseout=\"this.className='nav'\" href=\"https://www.csie.ntu.edu.tw/~cyy/courses/assembly/12fall/lectures/\">&nbsp;Lectures&nbsp; </a>");
+  }
+-->
+</script><span class="navselected">&nbsp;Lectures&nbsp; </span>
+	      
+<script type="text/javascript">
+  <!-- 
+  if (page == "assignments")
+  {
+    document.write("<span class=\"navselected\">&nbsp;Assignments&nbsp; </span>");
+  }
+  else
+  {
+	  document.write("<a class=\"nav\" onmouseover=\"this.className='navhover'\" onmouseout=\"this.className='nav'\" href=\"https://www.csie.ntu.edu.tw/~cyy/courses/assembly/12fall/assignments/\">&nbsp;Assignments&nbsp; </a>");
+  }
+  -->
+</script><a class="nav" onmouseover="this.className='navhover'" onmouseout="this.className='nav'" href="https://www.csie.ntu.edu.tw/~cyy/courses/assembly/12fall/assignments/">&nbsp;Assignments&nbsp; </a>
+
+<script type="text/javascript">
+  <!-- 
+  if (page == "links")
+  {
+    document.write("<span class=\"navselected\">&nbsp;Links&nbsp; </span>");
+  }
+  else
+  {
+    document.write("<a class=\"nav\" onmouseover=\"this.className='navhover'\" onmouseout=\"this.className='nav'\" href=\"https://www.csie.ntu.edu.tw/~cyy/courses/assembly/12fall/links/\">&nbsp;Links&nbsp; </a>");
+  }
+  -->
+</script><a class="nav" onmouseover="this.className='navhover'" onmouseout="this.className='nav'" href="https://www.csie.ntu.edu.tw/~cyy/courses/assembly/12fall/links/">&nbsp;Links&nbsp; </a>
+
+<!--a class="nav" onmouseover="this.className='navhover'" onmouseout="this.className='nav'" href="http://www.cmlab.csie.ntu.edu.tw/~cyy/forum2/viewforum.php?f=21">&nbsp;Forum&nbsp; </a-->
+
+<!--Forum?-->
+<!--a class="nav" onmouseover="this.className='navhover'" onmouseout="this.className='nav'" href="/lectures">&nbsp;Lectures&nbsp; </a-->
+
+</div>
+
+<!-------------------------- body begins------- --------------------->
+<br>
+<table>
+<tbody><tr>
+
+
+<td style="vertical-align: top;" id="leftcontent">
+
+	<h3>Jump to...</h3>
+
+	<p>
+	09/12 <a href="#intro">overview</a><br>
+	09/19 <a href="#toy">Combinational logic</a><br>
+	09/26 <a href="#toy">Sequential logic</a><br>
+	10/03 <a href="#toy">TOY architecture</a><br>
+	10/17 <a href="#toy">TOY programming</a><br>
+	10/24 <a href="#toy">TOY assembly</a><br>
+	10/31 Quiz<br>
+	11/07 <a href="#arch">Advanced Architecture</a><br>
+	11/07 <a href="#arm">ARM Architecture</a><br>
+	11/14 <a href="#arm">ARM Instructions</a><br>
+	11/21 <a href="#arm">ARM Assembly</a><br>
+	12/05 <a href="#arm">ARM Optimization</a><br>
+	<!--12/03 <a href="#GBA">Gameboy Advance</a><br-->
+	<!--12/07 <a href="#ia32">IA32 architecture</a><br>
+	12/07 <a href="#ia32">IA32 assembly</a><br>
+	12/14 <a href="#ia32">IA32 ISA</a><br-->
+	<!--12/24 <a href="#arith">arithmetic</a><br-->
+	<!--12/22 <a href="#ia32">procedures</a><br>
+	12/31 <a href="#ia32">real arithmetic</a><br>
+	01/05 <a href="#ia32">SIMD</a><br-->
+	<!--12/18 <a href="#chap9_12">string, array and HLL interface</a><br>
+	12/25 <a href="#simd">SIMD</a><br>
+	01/08 <a href="#cache">cache</a><br-->
+	</p>
+
+
+	<center>
+		<br \="">
+		<p>
+	</p></center>
+
+</td>
+
+<td id="centercontent" style="vertical-align: top;">
+	
+<h2 style="margin: 0px 0px 14px;">
+Lectures
+</h2>
+
+<a name="" style="color:black;">	
+		</a><a name="intro" style="color:black;">	
+		</a><a name="toy" style="color:black;">	
+		</a><a name="arch" style="color:black;">	
+		</a><a name="ARM" style="color:black;">	
+		</a><a name="ARMarch" style="color:black;">	
+		</a><a name="Intel" style="color:black;">	
+		</a><a name="ia32" style="color:black;">	
+		</a><table>
+	<tbody><tr align="center">
+	<td width="70"><b>Date</b></td>
+		<td width="180"><b>Topic</b></td>
+		<td width="120"><b>slides</b></td>
+		<td><b>readings/related links</b></td>
+	</tr>
+	<tr><td colspan="5"><hr></td></tr>
+	
+	<tr>
+	<td valign="top">2012/09/12</td>
+		<td valign="top">course overview</td>
+		<td valign="top">
+			<a href="https://www.csie.ntu.edu.tw/~cyy/courses/assembly/12fall/lectures/handouts/lec01_intro.ppt">ppt</a>/<a href="https://www.csie.ntu.edu.tw/~cyy/courses/assembly/12fall/lectures/handouts/lec01_intro.pdf">pdf</a>/<a href="https://www.csie.ntu.edu.tw/~cyy/courses/assembly/12fall/lectures/handouts/lec01_intro_4up.pdf">4-up pdf</a>
+		</td>
+		<td>
+		<ul>
+			<li>
+			<a href="http://en.wikipedia.org/wiki/Assembly_language">Assembly Language (wikipedia)</a>
+			</li><li>
+			<a href="http://www.computersciencelab.com/ComputerHistory/History.htm">Illustrated History of Computers</a>
+
+		</li></ul>
+		</td>
+	</tr>
+
+	<tr>
+	<td valign="top"><b>TOY</b><br>
+			2012/09/19<br>
+			2012/09/26<br>
+			2012/10/03<br>
+			2012/10/17<br>
+			2012/10/24<br>
+			</td>
+		<td valign="top">Slides adapted from <a href="http://www.cs.princeton.edu/introcs/lectures/">Princeton</a><br>
+			combinational circuits<br>
+			sequential circuits<br>
+			TOY architecture<br>
+			TOY programming<br>
+			TOY assembly</td>
+		<td valign="top">
+			<br>
+			<a href="https://www.csie.ntu.edu.tw/~cyy/courses/assembly/12fall/lectures/handouts/secret/lec02_TOYcombinational.ppt">ppt</a>/<a href="https://www.csie.ntu.edu.tw/~cyy/courses/assembly/12fall/lectures/handouts/secret/lec02_TOYcombinational.pdf">pdf</a>/<a href="https://www.csie.ntu.edu.tw/~cyy/courses/assembly/12fall/lectures/handouts/secret/lec02_TOYcombinational_4up.pdf">4-up pdf</a>
+			<br>
+			<a href="https://www.csie.ntu.edu.tw/~cyy/courses/assembly/12fall/lectures/handouts/secret/lec03_TOYsequential.ppt">ppt</a>/<a href="https://www.csie.ntu.edu.tw/~cyy/courses/assembly/12fall/lectures/handouts/secret/lec03_TOYsequential.pdf">pdf</a>/<a href="https://www.csie.ntu.edu.tw/~cyy/courses/assembly/12fall/lectures/handouts/secret/lec03_TOYsequential_4up.pdf">4-up pdf</a>
+			<br>
+			<a href="https://www.csie.ntu.edu.tw/~cyy/courses/assembly/12fall/lectures/handouts/secret/lec04_TOYarch.ppt">ppt</a>/<a href="https://www.csie.ntu.edu.tw/~cyy/courses/assembly/12fall/lectures/handouts/secret/lec04_TOYarch.pdf">pdf</a>/<a href="https://www.csie.ntu.edu.tw/~cyy/courses/assembly/12fall/lectures/handouts/secret/lec04_TOYarch_4up.pdf">4-up pdf</a>
+			<br>
+			<a href="https://www.csie.ntu.edu.tw/~cyy/courses/assembly/12fall/lectures/handouts/secret/lec05_TOYprogramming.ppt">ppt</a>/<a href="https://www.csie.ntu.edu.tw/~cyy/courses/assembly/12fall/lectures/handouts/secret/lec05_TOYprogramming.pdf">pdf</a>/<a href="https://www.csie.ntu.edu.tw/~cyy/courses/assembly/12fall/lectures/handouts/secret/lec05_TOYprogramming_4up.pdf">4-up pdf</a>
+			<br>	
+			<a href="https://www.csie.ntu.edu.tw/~cyy/courses/assembly/12fall/lectures/handouts/lec06_TOYassembly.ppt">ppt</a>/<a href="https://www.csie.ntu.edu.tw/~cyy/courses/assembly/12fall/lectures/handouts/lec06_TOYassembly.pdf">pdf</a>/<a href="https://www.csie.ntu.edu.tw/~cyy/courses/assembly/12fall/lectures/handouts/lec06_TOYassembly_4up.pdf">4-up pdf</a>
+			<br>
+
+		</td>
+
+		<td>
+		<ul>
+			<li>
+			<a href="http://www.cs.princeton.edu/introcs/50machine/">Princeton, Introduction to CS, chapter 5</a>
+			</li><li>
+			<a href="http://www.cs.princeton.edu/introcs/60circuits/">Princeton, Introduction to CS, chapter 6</a>
+			
+			</li><li>
+			Princeton lecture: combinational
+			<a href="http://www.cs.princeton.edu/introcs/lectures/61boolean.pdf">[1]</a>
+			<a href="http://www.cs.princeton.edu/introcs/lectures/62combinational.pdf">[2]</a>
+			
+			</li><li>
+			Princeton lecture: sequential
+			<a href="http://www.cs.princeton.edu/introcs/lectures/63sequential.pdf">[1]</a>
+			<a href="http://www.cs.princeton.edu/courses/archive/spring06/cos126/lectures/22.pdf">[2]</a>
+			
+			</li><li>
+			Princeton lecture: architecture 
+			<a href="http://www.cs.princeton.edu/introcs/lectures/65architecture.pdf">[1]</a>
+			<a href="http://www.cs.princeton.edu/courses/archive/spring06/cos126/lectures/23.pdf">[2]</a>
+			
+			</li><li>
+			Princeton lecture: toy 
+			<a href="http://www.cs.princeton.edu/introcs/lectures/5toy.pdf">[1]</a>
+			<a href="http://www.cs.princeton.edu/introcs/lectures/5toy2.pdf">[2]</a>
+			
+						
+			</li><li>
+			<a href="http://www.cs.princeton.edu/introcs/xtoy/">TOY simulator</a> (<a href="../../secure/toy_1.4.jar">a local copy</a>)
+			</li><li>
+			TOY assembler<a href="../assignments/proj2/toyasm.zip">[windows]</a><a href="../assignments/proj2/toyasm.tar.gz">[Linux]</a>
+
+		</li></ul>
+		</td>
+	</tr>
+
+	<tr>
+	<td valign="top">2012/11/07</td>
+		<td valign="top">Advanced Architecture</td>
+		<td valign="top">
+			<a href="https://www.csie.ntu.edu.tw/~cyy/courses/assembly/12fall/lectures/handouts/lec07_architecture.ppt">ppt</a>/<a href="https://www.csie.ntu.edu.tw/~cyy/courses/assembly/12fall/lectures/handouts/lec07_architecture.pdf">pdf</a>/<a href="https://www.csie.ntu.edu.tw/~cyy/courses/assembly/12fall/lectures/handouts/lec07_architecture_4up.pdf">4-up pdf</a><br>
+		</td>
+		<td>
+		<ul>
+		</ul>
+	</td>
+	</tr>
+
+
+	<tr>
+	<td valign="top"><br><b>ARM</b>
+		</td>
+		<td valign="top">
+		</td>	
+		<td valign="top"></td>
+		<td></td>
+	</tr>
+
+	<tr>
+	<td valign="top">
+			2012/11/07<br>
+			2012/11/14<br>
+			2012/11/21<br>
+			2012/12/05<br>
+		</td>
+		<td valign="top">ARM Architecture<br>ARM Instructions<br>ARM assembly<br>ARM optimization</td>
+		<td valign="top">
+			<a href="https://www.csie.ntu.edu.tw/~cyy/courses/assembly/12fall/lectures/handouts/lec08_ARMarch.ppt">ppt</a>/<a href="https://www.csie.ntu.edu.tw/~cyy/courses/assembly/12fall/lectures/handouts/lec08_ARMarch.pdf">pdf</a>/<a href="https://www.csie.ntu.edu.tw/~cyy/courses/assembly/12fall/lectures/handouts/lec08_ARMarch_4up.pdf">4-up pdf</a><br>
+			<a href="https://www.csie.ntu.edu.tw/~cyy/courses/assembly/12fall/lectures/handouts/lec09_ARMisa.ppt">ppt</a>/<a href="https://www.csie.ntu.edu.tw/~cyy/courses/assembly/12fall/lectures/handouts/lec09_ARMisa.pdf">pdf</a>/<a href="https://www.csie.ntu.edu.tw/~cyy/courses/assembly/12fall/lectures/handouts/lec09_ARMisa_4up.pdf">4-up pdf</a><br>
+			<a href="https://www.csie.ntu.edu.tw/~cyy/courses/assembly/12fall/lectures/handouts/lec10_ARMasm.ppt">ppt</a>/<a href="https://www.csie.ntu.edu.tw/~cyy/courses/assembly/12fall/lectures/handouts/lec10_ARMasm.pdf">pdf</a>/<a href="https://www.csie.ntu.edu.tw/~cyy/courses/assembly/12fall/lectures/handouts/lec10_ARMasm_4up.pdf">4-up pdf</a><br>
+			<a href="https://www.csie.ntu.edu.tw/~cyy/courses/assembly/12fall/lectures/handouts/lec11_ARMoptimize.ppt">ppt</a>/<a href="https://www.csie.ntu.edu.tw/~cyy/courses/assembly/12fall/lectures/handouts/lec11_ARMoptimize.pdf">pdf</a>/<a href="https://www.csie.ntu.edu.tw/~cyy/courses/assembly/12fall/lectures/handouts/lec11_ARMoptimize_4up.pdf">4-up pdf</a><br>
+		</td>
+		<td>
+		<ul>
+			<li>
+			<a href="http://www.coranac.com/tonc/text/asm.htm">Tonc's Tour of ARM Assembly</a> 
+			<a href="https://www.csie.ntu.edu.tw/~cyy/courses/assembly/12fall/lectures/handouts/secret/ARMSysDevGuide236.pdf">chap 2,3,6</a> 
+			of <a href="http://www.amazon.com/ARM-System-Developers-Guide-Architecture/dp/1558608745">ARM System Developer's Guide</a>
+
+			</li><li>
+			<a href="https://www.csie.ntu.edu.tw/~cyy/courses/assembly/12fall/lectures/handouts/secret/ARMarch.pdf">Chapter 3</a> of Knaggs and Welsh's <a href="http://www.arm.com/miscPDFs/9658.pdf">ARM Assembly Language Programming book</a> 
+			
+			</li><li>
+			<a href="https://www.csie.ntu.edu.tw/~cyy/courses/assembly/12fall/lectures/handouts/secret/ARMinst.pdf">ARM instruction list</a> 
+		
+			</li><li>
+			<a href="https://www.csie.ntu.edu.tw/~cyy/courses/assembly/12fall/lectures/handouts/secret/gas.pdf">GNU assembler reference</a> 
+		
+			</li><li>
+			<a href="https://www.csie.ntu.edu.tw/~cyy/courses/assembly/12fall/lectures/handouts/secret/timing.pdf">ARM instruction timing</a> 
+		
+			</li><li>
+			<a href="https://www.csie.ntu.edu.tw/~cyy/courses/assembly/12fall/lectures/handouts/secret/armasm.pdf">ARM assembler reference</a> 
+		
+		</li></ul>
+	</td>
+	</tr>
+
+	
+	<tr>
+	<td valign="top"><b>Intel</b></td>
+		<td valign="top"></td>
+		<td valign="top"></td>
+		<td></td>
+	</tr>
+	
+	<tr>
+	<td valign="top">2012/12/12<br>2012/12/12<br>2012/12/19<br>2012/12/26<br>2013/01/02<br>2013/01/02</td>
+		<td valign="top">IA32 architecture<br>IA32 assembly basics<br>IA32 ISA<br>procedure<br>real arithmetic<br>SIMD</td>
+		<td valign="top">
+			<a href="https://www.csie.ntu.edu.tw/~cyy/courses/assembly/12fall/lectures/handouts/lec12_x86arch.ppt">ppt</a>/<a href="https://www.csie.ntu.edu.tw/~cyy/courses/assembly/12fall/lectures/handouts/lec12_x86arch.pdf">pdf</a>/<a href="https://www.csie.ntu.edu.tw/~cyy/courses/assembly/12fall/lectures/handouts/lec12_x86arch_4up.pdf">4-up pdf</a><br>
+			<a href="https://www.csie.ntu.edu.tw/~cyy/courses/assembly/12fall/lectures/handouts/lec13_x86Asm.ppt">ppt</a>/<a href="https://www.csie.ntu.edu.tw/~cyy/courses/assembly/12fall/lectures/handouts/lec13_x86Asm.pdf">pdf</a>/<a href="https://www.csie.ntu.edu.tw/~cyy/courses/assembly/12fall/lectures/handouts/lec13_x86Asm_4up.pdf">4-up pdf</a><br>
+			<a href="https://www.csie.ntu.edu.tw/~cyy/courses/assembly/12fall/lectures/handouts/lec14_x86isa.ppt">ppt</a>/<a href="https://www.csie.ntu.edu.tw/~cyy/courses/assembly/12fall/lectures/handouts/lec14_x86isa.pdf">pdf</a>/<a href="https://www.csie.ntu.edu.tw/~cyy/courses/assembly/12fall/lectures/handouts/lec14_x86isa_4up.pdf">4-up pdf</a><br>
+			<a href="https://www.csie.ntu.edu.tw/~cyy/courses/assembly/12fall/lectures/handouts/lec15_x86procedure.ppt">ppt</a>/<a href="https://www.csie.ntu.edu.tw/~cyy/courses/assembly/12fall/lectures/handouts/lec15_x86procedure.pdf">pdf</a>/<a href="https://www.csie.ntu.edu.tw/~cyy/courses/assembly/12fall/lectures/handouts/lec15_x86procedure_4up.pdf">4-up pdf</a><br>
+			<a href="https://www.csie.ntu.edu.tw/~cyy/courses/assembly/12fall/lectures/handouts/lec16_x86FPU.ppt">ppt</a>/<a href="https://www.csie.ntu.edu.tw/~cyy/courses/assembly/12fall/lectures/handouts/lec16_x86FPU.pdf">pdf</a>/<a href="https://www.csie.ntu.edu.tw/~cyy/courses/assembly/12fall/lectures/handouts/lec16_x86FPU_4up.pdf">4-up pdf</a><br>
+			<a href="https://www.csie.ntu.edu.tw/~cyy/courses/assembly/12fall/lectures/handouts/lec17_x86SIMD.ppt">ppt</a>/<a href="https://www.csie.ntu.edu.tw/~cyy/courses/assembly/12fall/lectures/handouts/lec17_x86SIMD.pdf">pdf</a>/<a href="https://www.csie.ntu.edu.tw/~cyy/courses/assembly/12fall/lectures/handouts/lec17_x86SIMD_4up.pdf">4-up pdf</a><br>
+		</td>
+
+		<td valign="top">
+		<ul>
+			<li>
+			<a href="./handouts/MASM.pdf">Tutorial on writing MASM with MSVC++ 2005 Express</a>
+			
+                      </li><li>
+                      <a href="../../docs/MMX.pdf">
+		       Intel MMX for Multimedia PCs</a>, CACM, Jan, 1997
+		      </li><li>
+		      <a href="../../docs/ch11_MMX.pdf">
+		      chapter 11 of Art of Assembly Windows version</a>
+		      </li><li>
+		      <a href="../../docs/IA32BasicArchitecture.pdf">
+		     chapters 9, 10 and 11 of Intel IA-32 Basic Architecture</a>
+		      </li><li>
+		      <a href="http://www.csie.ntu.edu.tw/~r89004/hive/sse/page_1.html">
+		      Introduction to SSE (Hotball's HIVE)</a>
+		</li></ul>
+		</td>
+	</tr>
+
+
+	<!--tr>
+	<a name="arith" style="color:black;">	
+		<td valign=top>2007/12/24</td>
+		<td valign=top>Arithmetics<br>Procedures</td>
+		<td valign=top>
+			<a href=https://www.csie.ntu.edu.tw/~cyy/courses/assembly/12fall/lectures/handouts/lec13_arithmetic.ppt>ppt</a>/<a href=https://www.csie.ntu.edu.tw/~cyy/courses/assembly/12fall/lectures/handouts/lec13_arithmetic.pdf>pdf</a>/<a href=https://www.csie.ntu.edu.tw/~cyy/courses/assembly/12fall/lectures/handouts/lec13_arithmetic_4up.pdf>4-up pdf</a><br>
+			<a href=https://www.csie.ntu.edu.tw/~cyy/courses/assembly/12fall/lectures/handouts/lec13_procedure.ppt>ppt</a>/<a href=https://www.csie.ntu.edu.tw/~cyy/courses/assembly/12fall/lectures/handouts/lec13_procedure.pdf>pdf</a>/<a href=https://www.csie.ntu.edu.tw/~cyy/courses/assembly/12fall/lectures/handouts/lec13_procedure_4up.pdf>4-up pdf</a>
+		</td>
+		<td>
+		<ul>
+			<li>
+			Chapters 5, 7 and 8 of the textbook
+
+		</ul>
+		</td>
+	</tr-->
+
+	<!--tr>
+	<a name="chap17" style="color:black;">	
+		<td valign=top>2007/12/31</td>
+		<td valign=top>real arithmetics</td>
+		<td valign=top>
+			<a href=https://www.csie.ntu.edu.tw/~cyy/courses/assembly/12fall/lectures/handouts/lec14_real.ppt>ppt</a>/<a href=https://www.csie.ntu.edu.tw/~cyy/courses/assembly/12fall/lectures/handouts/lec14_real.pdf>pdf</a>/<a href=https://www.csie.ntu.edu.tw/~cyy/courses/assembly/12fall/lectures/handouts/lec14_real_4up.pdf>4-up pdf</a><br>
+		</td>
+		<td>
+		<ul>
+			<li>
+			Chapter 17 of the textbook
+                        <li>
+                        <a href="../../docs/pcasm_real.pdf">
+                        Chapter 6 of PC Assembly Language</a>
+                        <li>
+                        <a href="../../docs/ch14_real.pdf">
+                        chapter 14 of Art of Assembly DOS version</a>
+                        <li>
+                        <a href="../../docs/IA32BasicArchitecture.pdf">
+                        chapter 8 of Intel IA-32 Basic Architecture</a>
+
+		</ul>
+		</td>
+	</tr-->
+
+
+	<!--tr>
+	<a name="simd" style="color:black;">	
+		<td valign=top>2008/1/7</td>
+		<td valign=top>SIMD</td>
+		<td valign=top>
+			<a href=https://www.csie.ntu.edu.tw/~cyy/courses/assembly/12fall/lectures/handouts/lec15_simd.ppt>ppt</a>/<a href=https://www.csie.ntu.edu.tw/~cyy/courses/assembly/12fall/lectures/handouts/lec15_simd.pdf>pdf</a>/<a href=https://www.csie.ntu.edu.tw/~cyy/courses/assembly/12fall/lectures/handouts/lec15_simd_4up.pdf>4-up pdf</a><br>
+		</td>
+		<td>
+		<ul>
+                      <li>
+                      <a href="../../docs/MMX.pdf">
+		       Intel MMX for Multimedia PCs</a>, CACM, Jan, 1997
+		      <li>
+		      <a href="../../docs/ch11_MMX.pdf">
+		      chapter 11 of Art of Assembly Windows version</a>
+		      <li>
+		      <a href="../../docs/IA32BasicArchitecture.pdf">
+		     chapters 9, 10 and 11 of Intel IA-32 Basic Architecture</a>
+		      <li>
+		      <a href="http://www.csie.ntu.edu.tw/~r89004/hive/sse/page_1.html">
+		      Introduction to SSE (Hotball's HIVE)</a>
+
+		</ul>
+		</td>
+	</tr-->
+
+
+
+
+
+
+</tbody></table><a name="ia32" style="color:black;">
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+
+<!-------------------------- body ends ------------------------------>
+
+<br>
+
+  </a></td>
+ </tr>
+
+ <tr>
+  <td colspan="9" bgcolor="#CCCCCC" height="1"></td> 
+ </tr>
+
+ <tr> 
+  <td colspan="1" align="left">
+   <a href="http://www.perl.com/" target="_blank"><img src="https://www.csie.ntu.edu.tw/~cyy/courses/assembly/12fall/images/perl.png" border="0"></a>
+  </td>
+  
+  <td colspan="1" align="right">
+   <a href="http://www.gpgpu.org/" target="_blank"><img src="https://www.csie.ntu.edu.tw/~cyy/courses/assembly/12fall/images/gpgpu.jpg" border="0"></a>
+  </td>
+ </tr>
+
+</tbody></table>
+
+
+
+</div></body></html>

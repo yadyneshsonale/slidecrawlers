@@ -1,0 +1,52 @@
+[
+{
+"url": "https://github.com/CMU-HKN/CMU-ECE-CS-Guide/blob/master/electives/11411.md",
+"title": "CMU-ECE-CS-Guide/electives/11411.md at master - GitHub",
+"description": "11-411: Natural Language Processing ... This could also mean that you print out all of the lecture slides and take them into the exam (like many people do)."
+},
+{
+"url": "https://www.andrew.cmu.edu/user/ko/downloads/11-411-Natural-Language-Processing-Slides.pdf",
+"title": "[PDF] 11-411 Natural Language Processing - andrew.cmu.ed",
+"description": "35/60 Neural Networks for Classi\ufb01cation \u25b6Predict Class: one output per class \u25b6Training data output is a \u201cone-hot-vector\u201d, e.g., y = [0, 0, 1]T \u25b6Prediction: \u25b6predicted class is output node i with the highest value yi \u25b6obtain posterior probability distribution by softmax softmax(yi) = eyi P j eyj 36/60 Problems with Gradient Descent Training 37/60 Problems with Gradient Descent Training 38/60 Problems with Gradient Descent Training 39/60 Speed-up: Momentum \u25b6Updates may move a weight slowly in one direction \u25b6We can keep up a memory if prior updates \u2206wkj(n \u22121) \u25b6and add these to any new updates with a decay factor \u03c1 \u2206wkj(n) = \u00b5 \u03b4j hk + \u03c1\u2206wkj(n \u22121) 40/60 Dropout \u25b6A general problem of machine learning: over\ufb01tting to training data (very good on train, bad on unseen test) \u25b6Solution: regularization, e.g., keeping weights from having extreme values \u25b6Dropout: randomly remove some hidden units during training \u25b6mask: set of hidden units dropped \u25b6randomly generate, say, 10 \u2013 20 masks \u25b6alternate between the masks during training 41/60 Mini Batches \u25b6Each training example yields a set of weight updates \u2206wij \u25b6Batch up several training examples \u25b6Accumulate their updates \u25b6Apply sum to the model \u2013 one big step instead of many small steps \u25b6Mostly done for speed reasons 42/60 Matrix Vector Formulation \u25b6Forward computation s = W h \u25b6Activation computation y = sigmoid(s) \u25b6Error Term: \u03b4 = (t \u2212y) \u00b7 sigmoid\u2032(s) \u25b6Propagation of error term: \u03b4i = W\u03b4i+1 \u00b7 sigmoid\u2032(s) \u25b6Weight updates: \u2206W ="
+},
+{
+"url": "https://www.cs.cmu.edu/~ehn/11-611",
+"title": "11-411/611: Natural Language Processing",
+"description": "# 11-411/611: Natural Language Processing (Fall 2026). **Course Description:** This course is designed to be accessible to Masters and advanced undergraduate students who seek the basic skills necessary to implement practical Natural Language Processing (NLP) applications using Language Models (LMs) in specific information domains. Students complete a set of hands-on exercises in Python that develop skills in applying NLP for various practical problems. **Textbook:** Jurafsky and Martin, \"Speech and Language Processing\". **Prerequisite Knowledge:** Strong programming skills (in Python); A course in data structures and algorithms (or equivalent experience); A basic knowledge of probability theory and linear algebra. **Course Goals:** Students acquire basic knowledge of NLP approaches, including language representations, probability theory and language modeling, logistic and softmax regression, word embeddings, neural networks and large language models; and NLP tasks, such as document classification, parsing, knowledge representation and reasoning, translation, and question answering. **Grading (F'25, subject to revision):**. **Syllabus (S'25, subject to revision):**. 3. N-Gram Language Models. 5. Logistic Regression and Text Classification."
+},
+{
+"url": "http://shijt.site/index.php/2022/05/21/lecture-at-natural-language-processing-11-411-611",
+"title": "Lecture at Natural Language Processing (11-411/611) - Jiatong Shi",
+"description": "As a TA of NLP at CMU this year, I'm offering a lecture on speech processing that introduces various speech tasks. Please feel free to check it here."
+},
+{
+"url": "https://reecursion.github.io/11411-11611-nlp-website",
+"title": "Home | NLP",
+"description": "# 11-411/11-611 Natural Language Processing. Language Technologies Institute | School of Computer Science | Carnegie Mellon University. Note: This website reflects the course structure, materials, and schedule for the Spring 2025 offering. ## Welcome to Natural Language Processing. This course is an introduction to natural language processing, one of the most exciting and important fields of artificial intelligence. It is a multidisciplinary field that combines insights and methodologies from machine learning, theoretical computer science, linguistics, and the social sciences. In this course, you will learn the fundamental concepts of NLP that will allow you apply natural language processing not just in the current technological environment (which is heavily focused on self-supervised language models) but in the future, when new technologies have achieved the state of the art. ### First Half Focus. Fundamental methodologies for representing and modeling natural language using statistical methods, including machine learning and neural networks. ### Second Half Focus. Course overview and policies ### Schedule. Helpful materials and links ### Piazza."
+},
+{
+"url": "https://csdiy.wiki/en/%E6%B7%B1%E5%BA%A6%E7%94%9F%E6%88%90%E6%A8%A1%E5%9E%8B/%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B/CMU11-667",
+"title": "CMU 11-667: Large Language Models: Methods and Applications",
+"description": "Course Videos: Selected lecture slides and materials are available on the website; full lecture recordings may require CMU internal access. Course Materials"
+},
+{
+"url": "https://www.reddit.com/r/cmu/comments/160f9zd/11411_nlp_workload_and_difficulty",
+"title": "11-411 (NLP): workload and difficulty? : r/cmu - Reddit",
+"description": "Hello there! I am trying to figure out how hard 11-411 is and whether it's a good choice for my last semester."
+},
+{
+"url": "https://www.youtube.com/watch?v=6NeTO61qc4M",
+"title": "CMU Advanced NLP 2024 (1): Introduction to NLP - YouTube",
+"description": "This lecture (by Graham Neubig) for CMU CS 11-711, Advanced NLP (Spring 2024) covers: * What is natural language processing?"
+},
+{
+"url": "https://www.phontron.com/class/anlp2024",
+"title": "CMU CS 11-711: Advanced NLP - Graham Neubig",
+"description": "In it, we describe fundamental tasks in natural language processing such as syntactic, semantic, and discourse analysis, as well as methods to solve these tasks"
+},
+{
+"url": "https://lileicc.github.io/course/11737mnlp23fa",
+"title": "CMU 11-737: Multilingual Natural Language Processing - Lei LI",
+"description": "CMU 11-737 is an advanced graduate-level course on natural language processing techniques applicable to many languages."
+}
+]

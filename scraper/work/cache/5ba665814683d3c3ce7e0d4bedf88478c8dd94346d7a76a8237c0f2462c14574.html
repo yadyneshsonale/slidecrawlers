@@ -1,0 +1,681 @@
+<html><head>
+<title>CS 101: Computer Programming and Utilization</title>
+</head>
+<body>
+<center>
+
+<font face="arial">
+
+<table cellspacing="2" cellpadding="14" width="1700" border="0">
+  <tbody>
+  <tr bgcolor="#4B0082">
+    <td>
+
+      <center>
+	<font color="white">
+      <h2>CS 101: Computer Programming and Utilization</h2>
+	</font></center><font color="white">
+	</font>
+</td>
+</tr>
+</tbody>
+</table>
+
+</font></center><font face="arial"><br><br>
+
+
+<h3><font color="#666666">Course Information</font></h3>
+<ul>	
+<li><b>Instructor:</b> Ajit Rajwade</li>
+<li><b>Course Managers:</b> Firuza Karmali and Nagesh Karmali</li>
+<br>
+<li><b>Instructor Office:</b> SIA-218, KReSIT Building</li>
+<li><b>Instructor Email:</b> <i>ajitvr AT cse DOT iitb DOT ac DOT in</i> (please send me emails only from your official iitb accounts, and with the subject line containing "CS 101")</li>
+<li><b>Course Manager Email:</b> <i>firuza AT cse DOT iitb DOT ac DOT in</i> and <i>nags AT cse DOT iitb DOT ac DOT in</i> (please send emails only from your official iitb accounts, and with the subject line containing "CS 101")</li>
+<br>
+<li><b>Lecture Venue:</b> LA 202 (in the Lecture Hall Complex)</li>
+<li><b>Lecture Timings:</b> <a href="">Slots 6 and 10</a>, Batch <font color="red">D4</font>: slot 10 (Tue and Fri 2:00 to 3:30 pm), Batch <font color="red">D3</font>: slot 6 (Wed and Fri 11:00 am to 12:30 pm)</li>
+<li><b>Instructor Office Hours:</b> Immediately AFTER class for division D3, immediately BEFORE class for division D4 (Venue: LA 202)</li>
+<br>
+
+<li><b>Teaching Assistants:</b> <a href="https://drive.google.com/file/d/1gsQE76-z3tuJef_ePyDaPkXWgTGHtpFe/view?usp=share_link">List of names and email IDs of all TAs</a> (Accessible only via SSO)</li>
+<li><b>Lab Timings:</b> Wednesday (<font color="red">D3</font>) and Friday (<font color="red">D4</font>) 8:30 pm to 10:30 pm</li>
+<li><b>Lab Venues:</b>
+All labs will be conducted in the CC Building 
+<ol>
+<li>SL1, SL2, SL3
+</li><li>Basement software lab
+</li><li>Bits and Bytes Labs
+</li><li>Classroom CC 105 (for students with their own laptops)
+</li></ol>
+</li></ul>
+
+<hr>
+<h3><font color="#666666">Intended Audience and Pre-requisites</font></h3>
+Intended for first year UG students.
+
+<h3><font color="#666666">Course Textbooks and Study Material</font></h3>
+<ul>
+<li>"Introduction to Programming Through C++" by Prof. Abhiram Ranade, Tata McGraw Hill, 2014 (a limited number of copies available in the institute library)</li>
+<li>"Schaum's Outline Series: Programming with C++", special Indian series; available for purchase online</li>
+<li>Lecture slides</li>
+<li><a href="https://www.cse.iitb.ac.in/~cs101/offerings.html">Previous Offerings of this Course</a>
+</li></ul>
+
+<hr>
+
+<h3><font color="#666666">SSO Accessibility</font></h3>
+For SSO accessible links, you should first go to <a href="https://www.google.com/intl/en-GB/drive/">google drive</a> and use LDAPID@iitb.ac.in as the account to sign in. If you are already signed in through an IITB account, you will be able to access the SSO links right away. Otherwise, you will need to sign OUT of your personal gmail account and then enter your LDAPID@iitb.ac.in account.
+You will be taken to a page where you will need to enter your LDAP ID and password, and then enter an OTP which you will receive on the Google Authenticator app on your mobile phone. 
+Once you enter the OTP, you are signed into SSO. Paste the SSO-accessible link into the same browser window and you will be able to access it.
+
+<h3><font color="#666666">Information for Labs</font></h3>
+<ul>
+<li><a href="https://docs.google.com/spreadsheets/d/1KdB44UEBi5CiZmMXo3-Zorzxa5R1s_E1x3SEEniGeNM/edit#gid=0">Lab Seating Arrangement and TA assignment</a> (for D3 as well as D4). This link is accessible only via SSO.
+</li><li>Mandatory <a href="https://docs.google.com/forms/d/1sh0Ju3nof6WMNqZHxQmkBwGKZ8j8ngQShTri6naNzt8/edit">google form</a> to be filled for various lab-related logistics (available only via SSO). Read <a href="https://www.cc.iitb.ac.in/page/services-sso"> this link</a> to find out about SSO.</li>
+<li><a href="https://docs.google.com/document/d/1kldRjp--mRCu-COi-Rh8M6rvs02Rc1Y4kpz7PkDQ-Cw/edit?usp=sharing">A handout for the first lab</a></li>
+<li>Those who have a laptop, are advised to get it for every lab. As far as possible, your laptop should be fully charged.</li>
+<li>Your lab exams will be on Linux machines in the lab. So you <font color="red"><b>must get used to command line g++, gdb on Linux</b></font>. You can use any editor - nano, gedit, vim, emacs, etc. as long as you know how to use it properly. Those with a windows machine can use cygwin (see instructions below on the webpage). </li> 
+<li><a href="https://drive.google.com/drive/folders/1oSJ1nW2tNlxi18ecq0gqTNwC87xmHwKM?usp=share_link">Video</a> for Installation of Simplecpp
+</li></ul>
+
+<h3><font color="#666666">Installing Cygwin</font></h3>
+<ul>
+<li>Those of you who have a Linux or Mac machine, you can directly compile C++ programs on the command line using the command: g++ -o prog.o prog.cpp where "prog" stands for the name of your program.</li>
+<li>Those of you who have a Windows machine, you should install Cygwin, which is a Linux simulator on Windows. Instructions for installing Cygwin can be found <a href="http://www.mcclean-cooper.com/valentino/cygwin_install/">here</a>. In the list of packages, you need to include g++ (the compiler), gdb (the debugger) and nano (the editor). Cygwin shells appear exactly like Linux shells, so it will be very useful for you. You cannot run graphics programs using this, but that is okay as graphics programs will not be asked in the lab exam.</li>
+</ul>
+
+<h3><font color="#666666">Bodhitree page for CS 101</font></h3>
+<ul>
+<li><a href="https://cs101.bodhi.cse.iitb.ac.in/accounts/landing/">Bodhitree page for CS 101</a></li>
+</ul>
+
+<h3><font color="#666666">Online/Mobile Phone Based Compilation Environments for C++</font></h3>
+<ul>
+<li><a href="https://www.onlinegdb.com/">Online gdb</a>: Please select C++ (without any number) as the language in the combo box on the top right. This has g++ as well as gdb for you!</li>
+<li>Installing g++, gdb, nano on an android mobile phone (the app is called Termux): click <a href="https://f-droid.org/repo/com.termux_118.apk">on this link</a> as obtained from <a href="https://f-droid.org/en/packages/com.termux/">this website (Use at your own risk!)</a>.
+You get an interface which looks exactly like a linux terminal. You may need to run the command: install package clang or install package g++ to install g++, nano, gdb on your mobile phone. The nano version even has syntax highlighting! 
+</li><li>You can even purchase a small foldable bluetooth-enabled keyboard on <a href="https://www.amazon.in/gp/product/B083KJ947V/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&amp;psc=1">Amazon</a> for better typing capability. It costs ~Rs 1200.</li>
+</ul>
+
+<hr>
+
+
+<h3><font color="#666666">Exam Schedule</font></h3>
+<ul>
+<li>Quiz1: 26th Nov (12:30 to 2:30 pm, seating arrangement will be announced soon)</li>
+<li>Lab exam 1: 27th Nov (all through the day in four batches: exact timings and batches to be announced soon)</li>
+<li>Quiz2: 16th December, 9:30 to 11:30 am
+</li><li>Lab exam2: Organized on 21st, 22nd, 23rd December from 8:30 to 10:30 pm and on 24th December from 9:30 am to 11:30 am.
+</li><li>Quiz3: 14th Jan, 11:30 am to 1:30 pm
+</li><li>Lab Exam 3: 15th Jan in four batches throughout the day
+</li><li>Lab Exam 4: 30th Jan (E), 31st Jan (A), 1st Feb (B), 2nd Feb (C)
+</li></ul>
+<hr>
+
+<font size="5">Endsem (quiz 4): 9th Feb from 2 pm to 4 pm. Seating arrangement is <a href="https://drive.google.com/file/d/1ComksCCvTfgBN9k-t31yncJCbsp24qrJ/view?usp=sharing">here</a>. Your exam room will be one of LA 001, LA 002, LA 201, LA 202, LH 101 of the lecture hall complex. Your group numbers can be found <a href="https://docs.google.com/spreadsheets/d/1KdB44UEBi5CiZmMXo3-Zorzxa5R1s_E1x3SEEniGeNM/edit#gid=0">here</a>.</font>
+
+
+<hr>
+<h3><font color="#666666">Lecture Schedule</font></h3>
+<table cellpadding="10" border="1" width="1660">
+<tbody><tr bgcolor="#4B0082">
+<td> <b><h3><font color="white">Date/Lecture No.</font></h3></b></td>
+<td> <b><h3><font color="white">Lecture Content</font></h3></b></td>
+<td> <b><h3><font color="white">Slides/Programs</font></h3></b></td>
+</tr>
+
+<tr>
+<td>1: Week from 31/10 to 4/11 </td>
+<td>
+<ul>
+<li>Course overview</li>
+<li>Simple cpp: basic turtle graphics</li>
+<li>Programs to draw a square, regular decagon, regular n-gon</li>
+</ul>
+</td>
+<td>
+<ul>
+<li><a href="https://docs.google.com/presentation/d/1493rQcRnZVEXPc199D-2aXalMQiHLKI79ifVQ_4vzE4/edit?usp=sharing">Course overview slides</a></li>
+<li><a href="https://docs.google.com/presentation/d/1ZsApTwVG3yWiQx7dwpSeZXpWwsRFMUdl10Wfzu1GhdI/edit?usp=share_link">Slides for basic simplecpp programming</a></li>
+<li><a href="https://drive.google.com/drive/folders/1MpYygneadU5N0xVXcAmauKedXA0x_5dq?usp=share_link">Programs</a></li>
+</ul>
+</td>
+</tr>
+
+
+<tr>
+<td>2: Week from 31/10 to 4/11 </td>
+<td>
+<ul>
+<li>Concept of a variable and memory required for each</li>
+<li>Different datatypes and operations on them, subtleties of division operation</li>
+<li>Assignment operation, expression, overflow, roundoff</li>
+<li>Accumulation and sequence generation: computing average, factorial, drawing a spiral
+</li></ul>
+</td>
+<td>
+<ul>
+<li><a href="https://docs.google.com/presentation/d/1uScgJnOCHqasdklgw24-kl-GN1_qC1tWrX8ZbvBWLmo/edit?usp=share_link">Slides</a></li>
+<li><a href="https://drive.google.com/drive/folders/15HtQwLdKykv9Ge2-auX3Z4YcWMZHvBUe?usp=share_link">Programs</a> (contains programs with and without simplecpp)</li>
+</ul>
+</td>
+</tr>
+
+
+<tr>
+<td>3: Week from 7/11 to 11/11 </td>
+<td>
+<ul>
+<li>Quick overview: how to use nano editor, how to save a file, how to create a dictionary</li>
+<li>Overview: how to compile a program and deal with syntax errors; how to use g++ and how to run an executable; use of Codeblocks</li>
+<li>Program blocks and variable scope</li>
+<li>Pre- and post increment and decrement operators, compound assignments</li>
+<li>Use of a debugger, with gdb as an example</li>
+<li>Numerical integration program</li>
+</ul>
+</td>
+<td>
+<ul>
+<li><a href="https://www.cse.iitb.ac.in/~ajitvr/CS101_Fall2022/linux_commands.html">Instructions to type, compile and execute C++ programs on a Linux machine</a></li>
+<li><a href="https://docs.google.com/presentation/d/1uScgJnOCHqasdklgw24-kl-GN1_qC1tWrX8ZbvBWLmo/edit?usp=share_link">Slides</a></li>
+<li><a href="https://drive.google.com/drive/folders/15HtQwLdKykv9Ge2-auX3Z4YcWMZHvBUe?usp=share_link">Programs</a> (contains programs with and without simplecpp;</li>
+</ul>
+</td>
+</tr>
+
+
+<tr>
+<td>4: Week from 7/11 to 11/11 </td>
+<td>
+<ul>
+<li>If and if else loops in C++</li>
+<li>Switch cases in C++</li>
+<li>Conditional/logical operators</li>
+<li>While loops, differences between while and repeat loops, break and continue statements</li>
+</ul>
+</td>
+<td>
+<ul>
+<li><a href="https://docs.google.com/presentation/d/1PkKtwXksDpVzIYWsfwdSnsT3qRs5u51LqY_x3kwPFqc/edit?usp=share_link">Slides for conditional execution</a></li>
+<li><a href="https://docs.google.com/presentation/d/1y4zoG0WPMgALwVj6XJmj5hA7lgeVXN2EBwVAop_5sJI/edit?usp=share_link">Slides for while/for/do while loops</a></li>
+<li><a href="https://drive.google.com/drive/folders/1r6CCFkh0Ba-zVFGNOa7FmJ9Mk6_yBT1R?usp=share_link">Programs</a></li>
+</ul>
+</td>
+</tr>
+
+
+<tr>
+<td>5: Week from 14/11 to 18/11 </td>
+<td>
+<ul>
+<li>While loops, differences between while and repeat loops, break and continue statements</li>
+<li>For loops and do while loops</li>
+<li>Caution against infinite loops</li>
+</ul>
+<hr>
+<ul>
+<li>Numerical computing: least squares line fitting</li>
+</ul>
+
+</td>
+<td>
+<ul>
+<li><a href="https://docs.google.com/presentation/d/1y4zoG0WPMgALwVj6XJmj5hA7lgeVXN2EBwVAop_5sJI/edit?usp=share_link">Slides for while/for/do while loops</a></li>
+<li><a href="https://drive.google.com/drive/folders/1r6CCFkh0Ba-zVFGNOa7FmJ9Mk6_yBT1R?usp=share_link">Programs</a></li>
+<li><a href="https://docs.google.com/presentation/d/1szWJhriJCwtVnwk_XnQjhx-n_LW801E5DX3r47rfykg/edit?usp=share_link">Slides for Important Numerical Programs</a></li>
+<li><a href="https://drive.google.com/drive/folders/1oWEVbyGnyy3BkVVTDfPVS9Eq6lA5Vi3L?usp=share_link">Numerical programs</a></li>
+</ul>
+</td>
+</tr>
+
+
+<tr>
+<td>6: Week from 14/11 to 18/11 </td>
+<td>
+<ul>
+<li>GCD computation: slow and fast algorithms</li>
+<li>Bisection method for root finding</li>
+<li>Newton Raphson method for root finding</li>
+<li>Gradient descent (not covered: will be covered later)</li>
+</ul>
+
+</td>
+<td>
+<ul>
+<li><a href="https://docs.google.com/presentation/d/1szWJhriJCwtVnwk_XnQjhx-n_LW801E5DX3r47rfykg/edit?usp=share_link">Slides for Important Numerical Programs</a></li>
+<li><a href="https://drive.google.com/drive/folders/1oWEVbyGnyy3BkVVTDfPVS9Eq6lA5Vi3L?usp=share_link">Numerical programs</a></li>
+</ul>
+</td>
+</tr>
+
+
+<tr>
+<td>7: Week from 21/11 to 25/11 </td>
+<td>
+<ul>
+<li>Concept of a function; return of variables in a function, void function</li>
+<li>Call by value, call by reference</li>
+<li>Examples of functions with call by value and call by reference</li>
+</ul>
+
+</td>
+<td>
+<ul>
+<li><a href="https://docs.google.com/presentation/d/1n9mbzytPruN8vmKoSBXduAhMEQkW40w8p_uvvceItP8/edit?usp=share_link">Slides</a></li>
+<li><a href="https://drive.google.com/drive/folders/19eU7ymS4Q1_ddjcvVTmLrLP17f8XaYeC?usp=share_link">Programs</a></li>
+</ul>
+</td>
+</tr>
+
+
+<tr>
+<td>8: Week from 21/11 to 25/11 </td>
+<td>
+<ul>
+<li>Global variables</li>
+<li>Activation frames for a function</li>
+<li>Revision of various concepts, usage of gdb</li>
+</ul>
+
+
+</td>
+<td>
+<ul>
+<li><a href="https://docs.google.com/presentation/d/1n9mbzytPruN8vmKoSBXduAhMEQkW40w8p_uvvceItP8/edit?usp=share_link">Slides for Functions</a></li>
+<li><a href="https://drive.google.com/drive/folders/19eU7ymS4Q1_ddjcvVTmLrLP17f8XaYeC?usp=share_link">Programs for Functions</a></li>
+</ul>
+</td>
+</tr>
+
+
+<tr>
+<td>9: Week from 28/11 to 2/12 </td>
+<td>
+<ul>
+<li>Pointers and references (not for quiz1)</li>
+<li>Concept of a reference variable</li>
+<li>Concept of pointers in C++</li>
+<li>Some issues with pointers syntax </li>
+</ul>
+
+<hr>
+<ul>
+<li>Recursive functions, importance of base case</li>
+<li>Execution and activation frames</li>
+<li>Examples of recursive functions: factorial computation, GCD computation</li>
+</ul>
+
+</td>
+
+<td>
+<ul>
+<li><a href="https://docs.google.com/presentation/d/1IS2cVO6Ts4rn1RQfTflRyOplr5pZpdLT-W1lZINEsBg/edit?usp=share_link">Slides for Pointers</a></li>
+<li><a href="https://drive.google.com/drive/folders/1IKSL2P8LYX-WRkExIwFKeOzsw80Z72XL?usp=share_link">Programs for Pointers</a></li>
+</ul>
+<hr>
+<ul>
+<li><a href="https://docs.google.com/presentation/d/1Zi3XqXkiIYJFDQWZ8BQLNK4MLyEloqXYbpKbLgDlAHw/edit?usp=share_link">Slides for Recursive Functions</a></li>
+<li><a href="https://drive.google.com/drive/folders/1TAz0xVwQUL1s2I0oYBi8f78Ua0kY-c2I?usp=share_link">Progams for Recursive Functions</a></li>
+</ul>
+
+</td>
+</tr>
+
+
+<tr>
+<td>10: Week from 28/11 to 2/12 </td>
+<td>
+<ul>
+<li>Execution and activation frames in case of recursive functions</li>
+<li>Examples of recursive functions: efficient power computation, drawing a tree, drawing a fractal, Virahanka numbers</li>
+</ul>
+
+</td>
+
+<td>
+<ul>
+<li><a href="https://docs.google.com/presentation/d/1Zi3XqXkiIYJFDQWZ8BQLNK4MLyEloqXYbpKbLgDlAHw/edit?usp=share_link">Slides for Recursive Functions</a></li>
+<li><a href="https://drive.google.com/drive/folders/1TAz0xVwQUL1s2I0oYBi8f78Ua0kY-c2I?usp=share_link">Progams</a></li>
+</ul>
+
+</td>
+</tr>
+
+
+<tr>
+<td>11: Week from 5/12 to 9/12 </td>
+<td>
+<ul>
+<li>Concept of arrays in C++, array declarations, accessing array elements, range of array indices</li>
+<li>Array indexing using pointers</li>
+<li>Passing arrays to functions</li>
+<li>Programs involving arrays: signal smoothing, histograms</li>
+</ul>
+
+</td>
+
+<td>
+<ul>
+<li><a href="https://docs.google.com/presentation/d/13YEX4SXILV1K8Cp1KWDpVZVMfOWzG-EqBYWKyxTUwAY/edit?usp=share_link">Slides</a></li>
+<li><a href="https://drive.google.com/drive/folders/1NPzKiOILt9nYp2upE3BmynIi2LPB6X7I?usp=share_link">Programs</a></li>
+</ul>
+
+</td>
+</tr>
+
+<tr>
+<td>12: Week from 5/12 to 9/12 </td>
+<td>
+<ul>
+<li>Array declarations inside functions; Why not to explicitly return an array</li>
+<li>Selection sort: algorithm, example, analysis of number of comparison operations</li>
+<li>Linear search; binary search: recursive and non-recursive; analysis of number of comparison operations in linear and binary search in the worst case</li>
+</ul>
+
+</td>
+
+<td>
+<ul>
+<li><a href="https://docs.google.com/presentation/d/13YEX4SXILV1K8Cp1KWDpVZVMfOWzG-EqBYWKyxTUwAY/edit?usp=share_link">Slides</a></li>
+<li><a href="https://drive.google.com/drive/folders/1NPzKiOILt9nYp2upE3BmynIi2LPB6X7I?usp=share_link">Programs</a></li>
+</ul>
+
+</td>
+</tr>
+
+
+<tr>
+<td>13: Week from 19/12 to 23/12 (ONLY ONE LECTURE)</td>
+<td>
+<ul>
+<li>Bubble sort</li>
+<li>Concept of time complexity and Big-O notation</li>
+<li>Insertion sort</li>
+<li>Character strings</li>
+</ul>
+
+</td>
+
+<td>
+<ul>
+<li><a href="https://docs.google.com/presentation/d/1sMqEkjzi1LPbMAAPaCp_gZZjs-wRYkNGIbat1KX64tk/edit?usp=share_link">Slides</a></li>
+<li><a href="https://drive.google.com/drive/folders/1NPzKiOILt9nYp2upE3BmynIi2LPB6X7I?usp=share_link">Programs</a></li>
+</ul>
+
+</td>
+</tr>
+
+
+<tr>
+<td>14: Week from 26/12 to 30/12</td>
+<td>
+<ul>
+<li>Character strings: NULL character, string length, string copy, string concatenate, string reversal, string tokenizers (strtok function)  with brief mention of applications</li>
+<li>Auxiliary space complexity</li>
+<li>Merge sort</li>
+</ul>
+
+</td>
+
+<td>
+<ul>
+<li><a href="https://docs.google.com/presentation/d/1sMqEkjzi1LPbMAAPaCp_gZZjs-wRYkNGIbat1KX64tk/edit?usp=share_link">Slides</a></li>
+<li><a href="https://drive.google.com/drive/folders/1NPzKiOILt9nYp2upE3BmynIi2LPB6X7I?usp=share_link">Programs</a></li>
+</ul>
+
+</td>
+</tr>
+
+
+<tr>
+<td>15: Week from 26/12 to 30/12</td>
+<td>
+<ul>
+<li>Merge sort: time and space complexity</li>
+<li>2D arrays: declaration, dimensions and indexing: row and column, passing to functions, input and output</li>
+<li>2D arrays: arrays of character strings</li>
+<li>Brief introduction to 3D arrays</li>
+</ul>
+
+</td>
+
+<td>
+<ul>
+<li><a href="https://docs.google.com/presentation/d/1sMqEkjzi1LPbMAAPaCp_gZZjs-wRYkNGIbat1KX64tk/edit?usp=share_link">Slides</a></li>
+<li><a href="https://drive.google.com/drive/folders/1NPzKiOILt9nYp2upE3BmynIi2LPB6X7I?usp=share_link">Programs</a></li>
+</ul>
+
+</td>
+</tr>
+
+
+<tr>
+<td>16: Week from 2/1 to 6/1</td>
+<td>
+<ul>
+<li>Dynamic memory allocation: new and delete operator, difference between static and dynamic allocation, concept of memory leaks, dynamic memory allocation for 1D and 2D arrays, dynamic memory allocation and deallocation inside functions</li>
+</ul>
+
+</td>
+
+<td>
+<ul>
+<li><a href="https://docs.google.com/presentation/d/1sMqEkjzi1LPbMAAPaCp_gZZjs-wRYkNGIbat1KX64tk/edit?usp=share_link">Slides</a></li>
+<li><a href="https://drive.google.com/drive/folders/1NPzKiOILt9nYp2upE3BmynIi2LPB6X7I?usp=share_link">Programs</a></li>
+</ul>
+
+</td>
+</tr>
+
+
+<tr>
+<td>17: Week from 2/1 to 6/1</td>
+<td>
+<ul>
+<li>Quick sort algorithm: Lomuto's partitioning method, recursive algorithm, time and space complexity, example</li>
+</ul>
+<hr>
+<ul>
+<li>Structure: declaration, initialization, accessing structure elements</li>
+<li>Pointer to structure, array of structures, passing structures to functions</li>
+</ul>
+
+</td>
+
+<td>
+<ul>
+<li><a href="https://docs.google.com/presentation/d/1sMqEkjzi1LPbMAAPaCp_gZZjs-wRYkNGIbat1KX64tk/edit?usp=share_link">Slides for Arrays</a></li>
+<li><a href="https://drive.google.com/drive/folders/1NPzKiOILt9nYp2upE3BmynIi2LPB6X7I?usp=share_link">Programs for Arrays</a></li>
+<li><a href="https://docs.google.com/presentation/d/1Q_Gc7msv_1q1IAKs1IkrakbTTG6Ua9zRYA-kiKBt7cI/edit?usp=share_link">Slides for Structures</a></li>
+</ul>
+
+</td>
+</tr>
+
+
+<tr>
+<td>18: Week from 9/1 to 13/1</td>
+<td>
+<ul>
+<li>Example program on polynomial addition using structures, arrays of structures and pointers to structures</li>
+</ul>
+<hr>
+<ul>
+<li>Solutions to linear simultaneous equations: Gaussian elimination, concept of a pivot</li>
+</ul>
+</td>
+
+<td>
+<ul>
+<li><a href="https://docs.google.com/presentation/d/1Q_Gc7msv_1q1IAKs1IkrakbTTG6Ua9zRYA-kiKBt7cI/edit?usp=share_link">Slides for Structures</a></li>
+<li><a href="https://drive.google.com/drive/folders/1nCGH6gWSC0k9WDbR0E_ZFCfPeNq-pne2?usp=share_link">Programs for structures</a></li>
+<li><a href="https://docs.google.com/presentation/d/16JzA4FKyO77X2G_oKVWsv0Oliy3dd7-aa1bqVSbBAl0/edit?usp=share_link">Slides for Important Numerical programs part 2</a></li>
+<li><a href="https://drive.google.com/drive/folders/1CoEQIE6NaRUKYVbxFhlAmUu8v_l_nW2T?usp=share_link">Programs: important numerical programs, part 2</a></li>
+</ul>
+
+</td>
+</tr>
+
+
+<tr>
+<td>19: Week from 9/1 to 13/1</td>
+<td>
+<ul>
+<li>Gradient descent for function minimization with fixed and adaptive step-size</li>
+</ul>
+</td>
+
+<td>
+<ul>
+<li><a href="https://docs.google.com/presentation/d/16JzA4FKyO77X2G_oKVWsv0Oliy3dd7-aa1bqVSbBAl0/edit?usp=share_link">Slides for Important Numerical programs part 2</a></li>
+<li><a href="https://drive.google.com/drive/folders/1CoEQIE6NaRUKYVbxFhlAmUu8v_l_nW2T?usp=share_link">Programs: important numerical programs, part 2</a></li>
+</ul>
+
+</td>
+</tr>
+
+
+<tr>
+<td>20: Week from 16/1 to 20/1</td>
+<td>
+<ul>
+<li>Linked lists: concept, advantages and disadvantages as compared to arrays for data storage, methods to create, display, delete and modify a linked list, linked list reversal</li>
+</ul>
+</td>
+
+<td>
+<ul>
+<li><a href="https://docs.google.com/presentation/d/17jqizoeiBDv0BIg0dy8UOOt1jOesuibWQ8z21vx0lCk/edit?usp=share_link">Slides</a></li>
+<li><a href="https://drive.google.com/drive/folders/10q4xg6-E415joDdr4FxkJ7XVL4bzVij-?usp=share_link">Programs</a></li>
+</ul>
+
+</td>
+</tr>
+
+
+<tr>
+<td>21: Week from 16/1 to 20/1</td>
+<td>
+Miscellaneous topics
+<ul>
+<li>Static variables and their usage</li>
+<li>Measuring execution time</li>
+<li>Random number generation</li>
+<li>Pointers to functions</li>
+<li>Function overloading</li>
+<li>Function templates</li>
+</ul>
+</td>
+
+<td>
+<ul>
+<li><a href="https://docs.google.com/presentation/d/1C49QSJ7DmnUjX5ZuzqnAaKEOL3iCwWIBejlHf0zw7tg/edit?usp=sharing">Slides</a></li>
+<li><a href="https://drive.google.com/drive/folders/1IxdvoeYLWvFE2e9ORnEno7vFn6DnUunI?usp=share_link">Programs</a></li>
+</ul>
+
+</td>
+</tr>
+
+
+<tr>
+<td>22: Week from 23/1 to 27/1</td>
+<td>
+Miscellaneous topics
+<ul>
+<li>Constant Pointers</li>
+<li>Time complexity analysis of Euclid's algorithm for GCD computation</li>
+</ul>
+<hr>
+<ul>
+<li>Classes in C++: data members, member functions</li>
+<li>Public and private: access specifiers</li>
+<li>Constructors</li>
+</ul>
+
+</td>
+
+<td>
+<ul>
+<li><a href="https://docs.google.com/presentation/d/1C49QSJ7DmnUjX5ZuzqnAaKEOL3iCwWIBejlHf0zw7tg/edit?usp=sharing">Slides for Miscellaneous topics</a></li>
+<li><a href="https://drive.google.com/drive/folders/1IxdvoeYLWvFE2e9ORnEno7vFn6DnUunI?usp=share_link">Programs for miscellaneous topics</a></li>
+<li><a href="https://docs.google.com/presentation/d/1W8V3qscPpLYPjXUsstt7ueYa2yJ98_yPwKnUJjNntW0/edit?usp=share_link">Slides for Classes</a></li><a href="https://docs.google.com/presentation/d/1W8V3qscPpLYPjXUsstt7ueYa2yJ98_yPwKnUJjNntW0/edit?usp=share_link">
+</a><li><a href="https://docs.google.com/presentation/d/1W8V3qscPpLYPjXUsstt7ueYa2yJ98_yPwKnUJjNntW0/edit?usp=share_link"></a><a href="https://drive.google.com/drive/folders/1S8y9KtmZYiemVojo1NZxGNd8nOG8DisF?usp=share_link">Programs for Classes</a></li><a href="https://drive.google.com/drive/folders/1S8y9KtmZYiemVojo1NZxGNd8nOG8DisF?usp=share_link">
+</a></ul><a href="https://drive.google.com/drive/folders/1S8y9KtmZYiemVojo1NZxGNd8nOG8DisF?usp=share_link">
+
+</a></td>
+</tr>
+
+
+<tr>
+<td>23: Week from 23/1 to 27/1</td>
+<td>
+<ul>
+<li>Private member functions</li>
+<li>Constructors, copy constructors, destructors</li>
+<li>Static data members and static functions</li>
+<li>String class with dynamic memory allocation</li>
+</ul>
+
+</td>
+
+<td>
+<ul>
+<li><a href="https://docs.google.com/presentation/d/1W8V3qscPpLYPjXUsstt7ueYa2yJ98_yPwKnUJjNntW0/edit?usp=share_link">Slides for Classes</a></li><a href="https://docs.google.com/presentation/d/1W8V3qscPpLYPjXUsstt7ueYa2yJ98_yPwKnUJjNntW0/edit?usp=share_link">
+</a><li><a href="https://docs.google.com/presentation/d/1W8V3qscPpLYPjXUsstt7ueYa2yJ98_yPwKnUJjNntW0/edit?usp=share_link"></a><a href="https://drive.google.com/drive/folders/1S8y9KtmZYiemVojo1NZxGNd8nOG8DisF?usp=share_link">Programs for Classes</a></li><a href="https://drive.google.com/drive/folders/1S8y9KtmZYiemVojo1NZxGNd8nOG8DisF?usp=share_link">
+</a></ul><a href="https://drive.google.com/drive/folders/1S8y9KtmZYiemVojo1NZxGNd8nOG8DisF?usp=share_link">
+
+</a></td>
+</tr>
+
+
+<tr>
+<td>24: Week from 31/1 to 3/2</td>
+<td>
+<ul>
+<li>Operator overloading concept</li>
+<li>Overloading assignment operator, chained assignment operators</li>
+<li>Overloading arithmetic operator, unary operator</li>
+<li>Matrix class with dynamic memory allocation and deallocation in constructor and destructor respectively, copy constructor, operator overloading for matrix addition</li>
+</ul>
+</td>
+
+<td>
+<ul>
+<li><a href="https://docs.google.com/presentation/d/1W8V3qscPpLYPjXUsstt7ueYa2yJ98_yPwKnUJjNntW0/edit?usp=share_link">Slides for Classes</a></li><a href="https://docs.google.com/presentation/d/1W8V3qscPpLYPjXUsstt7ueYa2yJ98_yPwKnUJjNntW0/edit?usp=share_link">
+</a><li><a href="https://docs.google.com/presentation/d/1W8V3qscPpLYPjXUsstt7ueYa2yJ98_yPwKnUJjNntW0/edit?usp=share_link"></a><a href="https://drive.google.com/drive/folders/1S8y9KtmZYiemVojo1NZxGNd8nOG8DisF?usp=share_link">Programs for Classes</a></li><a href="https://drive.google.com/drive/folders/1S8y9KtmZYiemVojo1NZxGNd8nOG8DisF?usp=share_link">
+</a></ul><a href="https://drive.google.com/drive/folders/1S8y9KtmZYiemVojo1NZxGNd8nOG8DisF?usp=share_link">
+
+</a></td>
+</tr>
+
+
+<tr>
+<td>25: Week from 31/1 to 3/2</td>
+<td>
+<ul>
+<li>Classes with templates, basic syntax</li>
+<li>Matrix class with templates</li>
+<li>Concept of a stack data structure, class for Stack, class for Stack with templates</li>
+<li>Importance of overloading the = operator in the context of dynamic memory allocation and deallocation in a class</li>
+</ul>
+</td>
+
+<td>
+<ul>
+<li><a href="https://docs.google.com/presentation/d/1W8V3qscPpLYPjXUsstt7ueYa2yJ98_yPwKnUJjNntW0/edit?usp=share_link">Slides for Classes</a></li><a href="https://docs.google.com/presentation/d/1W8V3qscPpLYPjXUsstt7ueYa2yJ98_yPwKnUJjNntW0/edit?usp=share_link">
+</a><li><a href="https://docs.google.com/presentation/d/1W8V3qscPpLYPjXUsstt7ueYa2yJ98_yPwKnUJjNntW0/edit?usp=share_link"></a><a href="https://drive.google.com/drive/folders/1S8y9KtmZYiemVojo1NZxGNd8nOG8DisF?usp=share_link">Programs for Classes</a></li><a href="https://drive.google.com/drive/folders/1S8y9KtmZYiemVojo1NZxGNd8nOG8DisF?usp=share_link">
+</a></ul><a href="https://drive.google.com/drive/folders/1S8y9KtmZYiemVojo1NZxGNd8nOG8DisF?usp=share_link">
+
+</a></td>
+</tr>
+
+
+
+
+
+
+ 
+
+
+</tbody></table></font></body></html>

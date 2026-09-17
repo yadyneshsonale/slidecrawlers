@@ -1,0 +1,320 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Probabilistic Machine Learning (CS772A) - IIT Kanpur</title>
+<link rel="stylesheet" href="./PML_files/main.css" type="text/css">
+</head>
+<body bgcolor="#B18AD1">
+
+<table width="100%">
+<tbody><tr>
+<td>
+<h1>Probabilistic Machine Learning<br>
+CS772A<br>
+2022-23 (odd semester)</h1></td>
+<td align="right"><a href="http://www.iitk.ac.in/"><img src="./PML_files/iitk_logo.jpg" valign="top" align="right" border="0" height="130" width="150"></a></td>
+</tr>
+</tbody></table>
+<hr>
+Instructor: <a href="http://www.cse.iitk.ac.in/users/piyush">Piyush Rai</a> (Office RM-502, email: piyush AT cse DOT iitk DOT ac DOT in)<br>
+Office Hours: Wed 16:00-17:00 or by appointment (RM-502)<br>
+Class Venue: KD-101<br>
+Class Timings: Mon/Thur 18:00 - 19:30<br>
+Q/A Forum: <a href=" https://piazza.com/iitk.ac.in/firstsemester2022/cs772a/home">Piazza</a> <br>
+TAs and email: Abhinav Joshi (ajoshi AT cse), Abhishek Jaiswal (abhijais AT cse), Avideep Mukherjee (avideep AT cse), Soumya Banerjee (soumyab AT cse)<br>
+TA Office Hours: <br>
+Abhinav: 9:00-10:00 Saturday (RM-511)<br>
+Abhishek: Friday 11:30 - 12:30 (KD-108)<br>
+Avideep: Tuesday 12:00-13:00 (RM-504)<br>
+Soumya: Monday 11:00-12:00 (RM-504)
+
+<h3>Background and Course Description</h3>
+
+Probabilistic models for data are ubiquitous in many areas of science and engineering, and specific domains such as visual and language understanding, finance, healthcare, biology, climate informatics, etc. This course will be an advanced introduction to probabilistic models of data (often through case studies from these domains) and a deep-dive into advanced inference and optimization methods used to learn such probabilistic models. This is an advanced course and ideally suited for student who are doing research in this area or are interested in doing research in this area.
+
+<h3>Pre-requisites</h3>
+
+Instructor's consent. The course expects students to have a strong prior background in machine learning  (ideally through formal coursework, such as CS771), and ideally also some prior exposure/appreciation to basic principles of probabilistic modeling. The students are expected to have strong foundations in probability and statistics, linear algebra, and optimization, and must also be proficient in programming in Python.
+
+<h3>Grading</h3>
+
+(Tentative) There will be 4 homeworks (40%) which will consist of a mix of written and programming questions, 2 quizzes (5% each), a mid-sem exam (20%), and an end-sem exam (30%).
+<h3>Reference materials</h3>
+
+There will not be any dedicated textbook for this course. We will use lecture slides/notes, monographs, tutorials, and papers for the topics that will be covered in this course. Some recommended, although not required, reference books are listed below:
+<ul>
+	<li>Kevin Murphy, <a href="https://probml.github.io/pml-book/book1.html" target="_blank">Probabilistic Machine Learning: An Introduction</a> (PML-1), MIT Press, 2022 (free PDF draft available online)</li>
+	<li>Kevin Murphy, <a href="https://probml.github.io/pml-book/book2.html" target="_blank">Probabilistic Machine Learning: Advanced Topics</a> (PML-2), MIT Press, 2022 (free PDF draft available online)</li>
+	<li>Christopher Bishop, <a href="https://www.microsoft.com/en-us/research/people/cmbishop/prml-book/" target="_blank">Pattern Recognition and Machine Learning</a> (PRML), Springer, 2007 (free PDF draft available online)</li>
+</ul> 
+
+<h3><a name="schedule"></a>Schedule</h3>
+<table width="100%" border="1">
+<tbody><tr>
+<td><strong>Lec. No.</strong></td>
+<td><strong>Date</strong></td>
+<td><strong>Topics</strong></td>
+<td><strong>Readings/References/Comments</strong></td>
+<td><strong>Slides/Notes</strong></td>
+</tr>
+<tr>
+<td>1</td>
+<td>Aug 1</td>
+<td>Course Logistics, Intro to Probabilistic Machine Learning</td>
+<td><a href="https://www.cse.iitk.ac.in/users/piyush/courses/PML_Resources/PML_Ghaharamani2015.pdf" target="_blank">A review article on PML and AI</a>, 
+<a href="https://www.cse.iitk.ac.in/users/piyush/courses/PML_Resources/probstats_refresher.pdf" target="_blank">Probability and statistics refresher slides</a>, PML-2 Sec 3 - 3.1.5.2</td>
+<td><a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_autumn22/slides/CS772-Lec1.pptx" target="_blank">PPTX slides</a>, 
+<a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_autumn22/slides/CS772-Lec1.pdf" target="_blank">PDF slides</a></td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>Aug 4</td>
+<td>Basics of Parameter Estimation in Probabilistic Models</td>
+<td>PML-2 Section 3.2-3.3, Additional slides on parameter estimation (through a simple example): <a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_autumn22/slides/CS772-Lec2-additional.pptx" target="_blank">PPTX</a>, 
+<a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_autumn22/slides/CS772-Lec2-additional.pdf" target="_blank">PDF</a>, PML-2 Sec 3 - 3.1.5.2</td>
+<td><a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_autumn22/slides/CS772-Lec2.pptx" target="_blank">PPTX slides</a>, 
+<a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_autumn22/slides/CS772-Lec2.pdf" target="_blank">PDF slides</a></td>
+</tr>
+
+<tr>
+<td>3</td>
+<td>Aug 11</td>
+<td>Parameter Estimation in Probabilistic Models: Examples (Contd)</td>
+<td>PML-2 Section 3.2-3.3, <a href="https://en.wikipedia.org/wiki/Dirichlet_distribution" target="_blank">Wikipedia entry on Dirichlet distribution</a></td>
+<td><a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_autumn22/slides/CS772-Lec3.pptx" target="_blank">PPTX slides</a>, 
+<a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_autumn22/slides/CS772-Lec3.pdf" target="_blank">PDF slides</a></td>
+</tr>
+
+<tr>
+<td>4</td>
+<td>Aug 13</td>
+<td>Parameter Estimation for Gaussians, Probabilistic Linear Regression</td>
+<td>PML-2 Section 3.2-3.3, <a href="http://www.cse.iitk.ac.in/users/piyush/courses/tpmi_winter21/readings/bayesGauss.pdf">Bayesian Inference for Gaussians</a>, PRML 3.3, Recommended Readings: <a href="http://www.cse.iitk.ac.in/users/piyush/courses/tpmi_winter21/readings/Bayes_Tipping.pdf">Bayesian Inference tutorial</a> 
+(with Bayesian linear regression as case study; as of now, may read up to section 3)</td>
+<td><a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_autumn22/slides/CS772-Lec4.pptx" target="_blank">PPTX slides</a>, 
+<a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_autumn22/slides/CS772-Lec4.pdf" target="_blank">PDF slides</a></td>
+</tr>
+
+<tr>
+<td>5</td>
+<td>Aug 18</td>
+<td>Probabilistic Linear Regression (contd), Exponential Family Distributions</td>
+<td>PRML 3.3, Recommended Readings: <a href="http://www.cse.iitk.ac.in/users/piyush/courses/tpmi_winter21/readings/Bayes_Tipping.pdf">Bayesian Inference tutorial</a> 
+(with Bayesian linear regression as case study; as of now, may read up to section 3), PML-2 Section 2.3 and 3.4</td>
+<td><a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_autumn22/slides/CS772-Lec5.pptx" target="_blank">PPTX slides</a>, 
+<a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_autumn22/slides/CS772-Lec5.pdf" target="_blank">PDF slides</a></td>
+</tr>
+
+<tr>
+<td>6</td>
+<td>Aug 22</td>
+<td>Exp. Family (contd), Logistic/Softmax Regression</td>
+<td>PML-2 Sec 2.3, PML-1 Sec 2.5, PML-2 Chapter 10 (Sec 10.5 for Bayesian Logistic Regression)</td>
+<td><a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_autumn22/slides/CS772-Lec6.pptx" target="_blank">PPTX slides</a>, 
+<a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_autumn22/slides/CS772-Lec6.pdf" target="_blank">PDF slides</a></td>
+</tr>
+
+<tr>
+<td>7</td>
+<td>Aug 29</td>
+<td>Laplace Approximation, Generalized Linear Models</td>
+<td>PML-2 Sec 7.4.3, PML-2 Chapter 12</td>
+<td><a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_autumn22/slides/CS772-Lec7.pptx" target="_blank">PPTX slides</a>, 
+<a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_autumn22/slides/CS772-Lec7.pdf" target="_blank">PDF slides</a></td>
+</tr>
+
+<tr>
+<td>8</td>
+<td>Sept 1</td>
+<td>Generative Models for Supervised Learning</td>
+<td>PML-1 Chapter 9</td>
+<td><a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_autumn22/slides/CS772-Lec8.pptx" target="_blank">PPTX slides</a>, 
+<a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_autumn22/slides/CS772-Lec8.pdf" target="_blank">PDF slides</a></td>
+</tr>
+
+<tr>
+<td>9</td>
+<td>Sept 3</td>
+<td>Gaussian Processes (GP)</td>
+<td>PML-1 Sec 17.2</td>
+<td><a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_autumn22/slides/CS772-Lec9.pptx" target="_blank">PPTX slides</a>, 
+<a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_autumn22/slides/CS772-Lec9.pdf" target="_blank">PDF slides</a></td>
+</tr>
+
+<tr>
+<td>10</td>
+<td>Sept 5</td>
+<td>GP wrap-up, Inference in multi-parameter models, conditional posteriors, local conjugacy</td>
+<td>Readings listed on the slides (especially the paper on Bayesian matrix factorization)</td>
+<td><a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_autumn22/slides/CS772-Lec10.pptx" target="_blank">PPTX slides</a>, 
+<a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_autumn22/slides/CS772-Lec10.pdf" target="_blank">PDF slides</a></td>
+</tr>
+
+<tr>
+<td>11</td>
+<td>Sept 8</td>
+<td>Latent variable models and the Expectation Maximization algorithm</td>
+<td>PRML Sec 9.3 and 9.4</td>
+<td><a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_autumn22/slides/CS772-Lec11.pptx" target="_blank">PPTX slides</a>, 
+<a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_autumn22/slides/CS772-Lec11.pdf" target="_blank">PDF slides</a></td>
+</tr>
+
+<tr>
+<td>12</td>
+<td>Sept 12</td>
+<td>Latent variable models and the Expectation Maximization algorithm (Contd)</td>
+<td>PRML Sec 9.3 and 9.4</td>
+<td><a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_autumn22/slides/CS772-Lec12.pptx" target="_blank">PPTX slides</a>, 
+<a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_autumn22/slides/CS772-Lec12.pdf" target="_blank">PDF slides</a></td>
+</tr>
+
+<tr>
+<td>13</td>
+<td>Sept 15</td>
+<td>Variational Inference</td>
+<td>PRML 10.1,10.2,10.3.10.4, <a href="http://web.cse.iitk.ac.in/users/piyush/courses/pml_autumn22/readings/LifeAfterEM.pdf">Life after EM</a> (shows the connection between EM, variational EM, and variational inference, through several examples), 
+<a href="http://web.cse.iitk.ac.in/users/piyush/courses/pml_autumn22/readings/VI_Review.pdf">VI: A Review for Statisticians</a> </td>
+<td><a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_autumn22/slides/CS772-Lec13.pptx" target="_blank">PPTX slides</a>, 
+<a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_autumn22/slides/CS772-Lec13.pdf" target="_blank">PDF slides</a></td>
+</tr>
+
+<tr>
+<td>14</td>
+<td>Sept 26</td>
+<td>Variational Inference (Contd)</td>
+<td>Same readings as those for Lecture 13 </td>
+<td><a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_autumn22/slides/CS772-Lec14.pptx" target="_blank">PPTX slides</a>, 
+<a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_autumn22/slides/CS772-Lec14.pdf" target="_blank">PDF slides</a></td>
+</tr>
+
+<tr>
+<td>15</td>
+<td>Sept 29</td>
+<td>Variational Inference (Wrap-up)</td>
+<td>PML-2 Section 10.3.2 - 10.3.6 (optional readings: papers referenced on the slides)</td>
+<td><a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_autumn22/slides/CS772-Lec15.pptx" target="_blank">PPTX slides</a>, 
+<a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_autumn22/slides/CS772-Lec15.pdf" target="_blank">PDF slides</a></td>
+</tr>
+
+<tr>
+<td>16</td>
+<td>Oct 10</td>
+<td>Approximate Inference via Sampling</td>
+<td>PRML 11.1-11.3, Recommended:  
+<a href="http://www.cse.iitk.ac.in/users/piyush/courses/tpmi_winter21/readings/mcmc_for_ml.pdf">Intro to MCMC for Machine Learning</a>, 
+<a href="http://www.cse.iitk.ac.in/users/piyush/courses/tpmi_winter21/readings/MonteCarloMethodsForAbsoluteBeginners.pdf">Monte Carlo for Absolute Beginners</a>,
+<a href="http://www.cse.iitk.ac.in/users/piyush/courses/tpmi_winter21/readings/Gibbs_Sampling_for_Uninitiated.pdf">Gibbs Sampling for the Uninitiated</a></td>
+<td><a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_autumn22/slides/CS772-Lec16.pptx" target="_blank">PPTX slides</a>, 
+<a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_autumn22/slides/CS772-Lec16.pdf" target="_blank">PDF slides</a></td>
+</tr>
+
+<tr>
+<td>17</td>
+<td>Oct 13</td>
+<td>Approx. Inference via Sampling (Contd): Metropolis Hastings and Gibbs Sampling </td>
+<td>Same readings as those for Lecture 16</td>
+<td><a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_autumn22/slides/CS772-Lec17.pptx" target="_blank">PPTX slides</a>, 
+<a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_autumn22/slides/CS772-Lec17.pdf" target="_blank">PDF slides</a></td>
+</tr>
+
+<tr>
+<td>18</td>
+<td>Oct 17</td>
+<td>Approx. Inference via Sampling (Contd): MCMC with Gradients, Recent Advances </td>
+<td>Recommended: <a href="http://www.cse.iitk.ac.in/users/piyush/courses/tpmi_winter21/readings/sgld.pdf">SGLD paper</a> and other papers referenced in the slides, 
+<a href="http://www.cse.iitk.ac.in/users/piyush/courses/tpmi_winter21/readings/sgmcmc.pdf">Survey paper on SGMCMC methods</a> like SGLD and improvements,
+<a href="http://www.cse.iitk.ac.in/users/piyush/courses/tpmi_winter21/readings/scalingbayes.pdf">Patterns of Scalable Bayes</a> 
+(See sec 4.2 for parallel MCMC), 
+<a href="http://www.cse.iitk.ac.in/users/piyush/courses/tpmi_winter21/readings/NUTS.pdf">No U-Turn Sampler</a> (section 2 describes the basics of HMC), </td>
+<td><a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_autumn22/slides/CS772-Lec18.pptx" target="_blank">PPTX slides</a>, 
+<a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_autumn22/slides/CS772-Lec18.pdf" target="_blank">PDF slides</a></td>
+</tr>
+
+<tr>
+<td>19</td>
+<td>Oct 20</td>
+<td>Approx. Inference via Sampling (wrap-up), Bayesian Deep Learning </td>
+<td>PML-2 (Sec 17.3) and papers references on the slides</td>
+<td><a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_autumn22/slides/CS772-Lec19.pptx" target="_blank">PPTX slides</a>, 
+<a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_autumn22/slides/CS772-Lec19.pdf" target="_blank">PDF slides</a></td>
+</tr>
+
+<tr>
+<td>20</td>
+<td>Oct 27</td>
+<td>Bayesian Deep Learning (contd), (Shallow and Deep) Generative Models</td>
+<td>Classical generative models (Factor analysis and variants, topic models): PML-2 (Sec 28.3,28.4,28.5)</td>
+<td><a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_autumn22/slides/CS772-Lec20.pptx" target="_blank">PPTX slides</a>, 
+<a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_autumn22/slides/CS772-Lec20.pdf" target="_blank">PDF slides</a></td>
+</tr>
+
+<tr>
+<td>21</td>
+<td>Oct 29</td>
+<td>(Shallow/Classical and Deep) Generative Models</td>
+<td>Same readings as those for Lecture 20; Variational Auto-encoders (VAE): PML-2 Chapter 21</td>
+<td><a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_autumn22/slides/CS772-Lec21.pptx" target="_blank">PPTX slides</a>, 
+<a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_autumn22/slides/CS772-Lec21.pdf" target="_blank">PDF slides</a></td>
+</tr>
+
+<tr>
+<td>22</td>
+<td>Oct 31</td>
+<td>Deep Generative Models</td>
+<td>VAE: PML-2 Chapter 21, GAN: PML-2 Chapter 26, Diffusion Models: PML-2 Chapter 25</td>
+<td><a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_autumn22/slides/CS772-Lec22.pptx" target="_blank">PPTX slides</a>, 
+<a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_autumn22/slides/CS772-Lec22.pdf" target="_blank">PDF slides</a></td>
+</tr>
+
+<tr>
+<td>23</td>
+<td>Nov 4</td>
+<td>Active Learning and Bayesian Optimization</td>
+<td><a href="http://www.cse.iitk.ac.in/users/piyush/courses/tpmi_winter21/readings/BayesianAL.pdf">Bayesian Active Learning</a>, 
+An old but classic paper on probabilistic/Bayesian approaches to active learning: <a href="http://www.cse.iitk.ac.in/users/piyush/courses/tpmi_winter21/readings/MACnc92c.pdf">Information-Based Objective Functions for Active Data Selection</a>, Bayesian Optimization: PML-2 (Section 6.8), <a href="http://krasserm.github.io/2018/03/21/bayesian-optimization/">An introduction to Bayesian Optimization</a> (with some code)
+</td>
+<td><a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_autumn22/slides/CS772-Lec23.pptx" target="_blank">PPTX slides</a>, 
+<a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_autumn22/slides/CS772-Lec23.pdf" target="_blank">PDF slides</a></td>
+</tr>
+
+<tr>
+<td>24</td>
+<td>Nov 7</td>
+<td>Other assorted topics in Probabilistic ML (1): Frequentist vs Bayesian Learning, Model Calibration</td>
+<td>Frequentist Learning: PML-2 Section 4.7; Model Calibration: PML-2 Section 14.2</td>
+<td><a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_autumn22/slides/CS772-Lec24.pptx" target="_blank">PPTX slides</a>, 
+<a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_autumn22/slides/CS772-Lec24.pdf" target="_blank">PDF slides</a></td>
+</tr>
+
+<tr>
+<td>25</td>
+<td>Nov 10</td>
+<td>Other assorted topics in Probabilistic ML (2): Conformal Prediction, Nonparametric Bayesian Methods</td>
+<td>Conformal Prediction: PML-2 Section 14.3; Nonparametric Bayes: PML-2 Chapter 32; For NPBayes modeling general intro - this 
+<a href="http://www.cse.iitk.ac.in/users/piyush/courses/tpmi_winter21/readings/GershmanBlei12.pdf">tutorial survey paper</a></td>
+<td><a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_autumn22/slides/CS772-Lec25.pptx" target="_blank">PPTX slides</a>, 
+<a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_autumn22/slides/CS772-Lec25.pdf" target="_blank">PDF slides</a></td>
+</tr>
+
+<tr>
+<td>26</td>
+<td>Nov 14</td>
+<td>Other assorted topics in Probabilistic ML (3): Nonparametric Bayesian Methods (contd), Probabilistic Models for Sequential Data, Probabilistic Numerics</td>
+<td>Same readings as those for Lecture 25</td>
+<td><a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_autumn22/slides/CS772-Lec26.pptx" target="_blank">PPTX slides</a>, 
+<a href="https://www.cse.iitk.ac.in/users/piyush/courses/pml_autumn22/slides/CS772-Lec26.pdf" target="_blank">PDF slides</a></td>
+</tr>
+
+
+</tbody></table>
+
+<h3>Course Policies</h3>
+
+<a href="http://www.cse.iitk.ac.in/pages/AntiCheatingPolicy.html">Anti-cheating policy</a>
+
+<script type="text/javascript">
+var sc_project=12778575; 
+var sc_invisible=1; 
+var sc_security="ce54b4a1"; 
+</script>
+<script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async=""></script>
+<noscript><div class="statcounter"><a title=</noscript></body></html>

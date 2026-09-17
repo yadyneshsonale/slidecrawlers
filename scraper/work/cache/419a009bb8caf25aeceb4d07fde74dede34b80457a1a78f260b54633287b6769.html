@@ -1,0 +1,227 @@
+<!DOCTYPE html><html style=""><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>COMP3204 Computer Vision</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('ul.tabs li').click(function(){
+          var tab_id = $(this).attr('data-tab');
+          var container = $(this).closest('.container')
+
+          $(container).find('ul.tabs li').removeClass('current');
+          $(container).find('.tab-content').removeClass('current');
+
+          $(this).addClass('current');
+          $("#"+tab_id).addClass('current');
+        });
+      });
+    </script>
+  </head>
+  <body>
+      
+    <div class="wrapper">
+      <section>
+        <div id="title">
+          <div style="background-image: url(images/johnny5.png); height: 329px; position: relative">
+            <div style="position: absolute; bottom: 0; width: 650px; opacity:0.6; filter:alpha(opacity=60); background-color: #000000; padding-top:20px">
+              <h1>COMP3204 Computer Vision</h1>
+              <p>Materials for COMP3204 Part I 2021-22</p>
+            </div>
+          </div>
+          <hr>
+          <span class="credits left">Maintained and taught by <a href="http://www.ecs.soton.ac.uk/people/msn">Dr Xiaohao Cai</a></span>
+        </div>
+        <div style="text-align: justify">
+         <p>Welcome to the homepage for the first half of <a href="https://secure.ecs.soton.ac.uk/module/COMP3204">COMP3204</a>.</p>
+
+<p>Here is a list of materials available to you to complement the lectures in this half of the course. We are now using the 4th Edition of the course textbook which was published by Mark S. Nixon and Alberto S. Aguado late 2019; 3rd Edition is available - <a href="https://ebookcentral.proquest.com/lib/soton-ebooks/detail.action?docID=998617&amp;query=Feature+Extraction+and+Image+Processing+for+Computer+Vision">library link</a>. There have been many changes: the lecture notes are from the new edition. We have highlighted a proof version of the book showing material covered in lectures <a href="/mark/Sections_of_proof_of_textbook_highlighted.pdf">Highlighted proof of book (PDF)</a> (not highlighted = supplementary to the lectures), and the <em>page numbers</em> refer to that. We have highlighted the whole of Chapter 1, as it is background material for the whole course. There is also demonstration material which is largely derived from the book’s website <a href="https://www.southampton.ac.uk/~msn/book/">link</a>. It’s not pretty and is not aimed to be: it’s just working software.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Slides</th>
+      <th>Handouts</th>
+      <th>Recording</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>A Framework for Computer Vision</td>
+      <td><a href="mark/A%20Framework%20for%20Computer%20Vision-i.pdf">PDF</a></td>
+      <td>N/A</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <td>Lecture 1: Eye and Human Vision</td>
+      <td><a href="/mark/Lecture_1_21-22.pdf">PDF</a></td>
+      <td><a href="/mark/Lecture_1_animations_2020.pptx">Animations</a></td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <td>Lecture 2: Image Formation</td>
+      <td><a href="/mark/Lecture_2_21-22.pdf">PDF</a></td>
+      <td><a href="/mark/FourierTransform.pdf">PDF</a></td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <td>Lecture 3: Image Sampling</td>
+      <td><a href="/mark/Lecture_3_21-22.pdf">PDF</a></td>
+      <td><a href="https://en.wikipedia.org/wiki/Nyquist%E2%80%93Shannon_sampling_theorem">link</a>; <a href="https://en.wikipedia.org/wiki/Dirac_comb">link</a></td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <td>Lecture 4: Point Operators</td>
+      <td><a href="/mark/Lecture_4_21-22.pdf">PDF</a></td>
+      <td>N/A</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <td>Lecture 5: Group Operators</td>
+      <td><a href="/mark/Lecture_5_21-22.pdf">PDF</a></td>
+      <td>N/A</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <td>Lecture 6: Edge Detection</td>
+      <td><a href="/mark/Lecture_6_21-22.pdf">PDF</a></td>
+      <td>N/A</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <td>Lecture 7: Further Edge Detection</td>
+      <td><a href="/mark/Lecture_7_21-22.pdf">PDF</a></td>
+      <td><a href="https://homepages.inf.ed.ac.uk/rbf/HIPR2/canny.htm">link</a></td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <td>Lecture 8: Finding Shapes</td>
+      <td><a href="/mark/Lecture_8_21-22.pdf">PDF</a></td>
+      <td>N/A</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <td>Lecture 9: Finding More Shapes</td>
+      <td><a href="/mark/Lecture_9_21-22.pdf">PDF</a></td>
+      <td><a href="https://homepages.inf.ed.ac.uk/rbf/HIPR2/hough.htm">link</a></td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <td>Lecture 10: Data-driven &amp; Model-driven Methods in Computer Vision</td>
+      <td><a href="/mark/Lecture_10_special-topic_21-22.pdf">PDF</a></td>
+      <td>N/A</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <td>Bonus Lecture by Mark (20-21): State of Art/Deep Learning</td>
+      <td><a href="/mark/Lecture_10_2020.pdf">PDF</a></td>
+      <td>N/A</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <td>Bonus Lecture by Mark (20-21): Survey of Gait</td>
+      <td><a href="mark/ACCV%202020%20gait%20nixon%20s.pdf">PDF</a></td>
+      <td>N/A</td>
+      <td><a href="https://southampton.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=196e5e30-adee-48b8-b87b-ac8000f21d63">link</a></td>
+    </tr>
+    <tr>
+      <td>Revision Lecture</td>
+      <td>N/A</td>
+      <td>N/A</td>
+      <td>N/A</td>
+    </tr>
+  </tbody>
+</table>
+
+<blockquote>
+  <p>Demonstration material (download only): <a href="/mark/Marks_matlab.zip">Worksheets (zipped Matlab)</a></p>
+</blockquote>
+
+<p>&nbsp;</p>
+
+<p>PPTX files - your wish is my command! These will be updated as we go along.</p>
+
+<ul>
+  <li><a href="/mark/Lecture_1_21-22.pptx">Lecture 1: Eye and Human Vision (PPT)</a></li>
+  <li><a href="/mark/Lecture_2_21-22.pptx">Lecture 2: Image Formation (PPT)</a></li>
+  <li><a href="/mark/Lecture_3_21-22.pptx">Lecture 3: Image Sampling(PPT)</a></li>
+  <li><a href="/mark/Lecture_4_21-22.pptx">Lecture 4: Point Operators (PPT)</a></li>
+  <li><a href="/mark/Lecture_5_21-22.pptx">Lecture 5: Group Operators (PPT)</a></li>
+  <li><a href="/mark/Lecture_6_21-22.pptx">Lecture 6: Edge Detection (PPT)</a></li>
+  <li><a href="/mark/Lecture_7_21-22.pptx">Lecture 7: Further Edge Detection (PPT)</a></li>
+  <li><a href="/mark/Lecture_8_21-22.pptx">Lecture 8: Finding Shapes (PPT)</a></li>
+  <li><a href="/mark/Lecture_9_21-22.pptx">Lecture 9: Finding More Shapes (PPT)</a></li>
+  <li><a href="/mark/Lecture_10_special-topic_21-22.pptx">Lecture 10: Data-driven &amp; Model-driven Methods in Computer Vision (PPT)</a></li>
+  <li><a href="mark/ACCV%202020%20gait%20nixon%20s.pptx">Bonus Lecture by Mark (20-21): Survey of Gait (PPT)</a></li>
+</ul>
+
+<p>Scanned lecture notes, from 2019-2020. Mark used to write notes in a lecture theatre! If they help, here they are</p>
+
+<ul>
+  <li><a href="mark/L20notes%2019-20.pdf">Lecture 1: Eye and Human Vision (PDF)</a></li>
+  <li><a href="mark/Lect%202%20notes%2019-20.pdf">Lecture 2: Image formation (PDF)</a></li>
+  <li><a href="mark/Lect%203%20notes%2019-20.pdf">Lecture 3: Image sampling (PDF)</a></li>
+  <li><a href="mark/Lect%204%20notes%2019-20.pdf">Lecture 4: Point operators (PDF)</a></li>
+  <li><a href="mark/Lect%205%20notes%2019-20.pdf">Lecture 5: Group operators (PDF)</a></li>
+  <li><a href="mark/Lect%206%20notes%2019-20.pdf">Lecture 6: Edge detection (PDF)</a></li>
+  <li><a href="mark/Lect%207%20notes%2019-20.pdf">Lecture 7: Further edge detection (PDF)</a></li>
+  <li><a href="mark/Lect%208%20notes%2019-20.pdf">Lecture 8: Finding shapes (PDF)</a></li>
+  <li><a href="mark/Lect%209%20notes%2019-20.pdf">Lecture 9: Finding more shapes (PDF)</a></li>
+</ul>
+
+<!---
+* [Lecture 1](/mark/Lecture_1_Human_Vision.pdf)
+* [Lecture 2](/mark/Lecture_2_Image_formation.pdf)
+* [Lecture 3](/mark/Lecture_3_DiscreteFT.pdf)
+* [Lecture 4](/mark/Lecture_4_slides_point_operators.pdf)
+* [Lecture 5](/mark/Lecture_5_slides_group_operators.pdf)
+* [Lecture 6](/mark/Lecture_6_slides_edge_detection1.pdf)
+* [Lecture 7](/mark/Lecture_7_slides_further_edge_det.pdf)
+* [Lecture 8](/mark/Lecture_8_slides_finding_shapes.pdf)
+* [Lecture 9](/mark/Lecture_9_slides_finding_more_shapes.pdf)
+-->
+
+<!---
+Revision Lecture
+* [Jan 2019](/mark/revision_lecture.pdf)
+-->
+<!---
+I used to provide handouts for lectures, and they relate to the book's third edition, but the students suggested I need them no longer given the ppts which support the course. If you want them they are here:
+
+* [Handout #0 (PDF)](/mark/handout%200.pdf)
+* [Handout #1 (PDF)](/mark/handout%201.pdf)
+* [Handout #2 (PDF)](/mark/handout2.pdf)
+* [Handout #3 (PDF)](/mark/handout3.pdf)
+* [Handout #4 (PDF)](/mark/handout4.pdf)
+* [Handout #5 (PDF)](/mark/handout5.pdf)
+* [Handout #6 (PDF)](/mark/handout6.pdf)
+* [Handout #7 (PDF)](/mark/handout7.pdf)
+* [Handout #8 (PDF)](/mark/handout8.pdf)
+* [Handout #9 (PDF)](/mark/handout9.pdf)
+* [Handout #10 (PDF)](/mark/handout10.pdf)
+* [Handout #13 (PDF)](/mark/handout13.pdf)
+* [Handout #14 (PDF)](/mark/handout14.pdf)
+ 
+-->
+
+        </div>
+      </section>
+      <section style="text-align:center">
+        <span style="font-size: 11px; font-family: 'OpenSansRegular', " helvetica="" neue",="" helvetica,="" arial,="" sans-serif;="" font-weight:="" normal;="" color:="" #696969;"="">Copyright ©2021 <a href="http://www.soton.ac.uk">The University of Southampton</a>. All rights reserved.</span>
+      </section>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->    
+  
+
+</body></html>

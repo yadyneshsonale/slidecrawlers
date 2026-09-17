@@ -1,0 +1,52 @@
+[
+{
+"url": "https://davidstarsilver.wordpress.com/teaching",
+"title": "Teaching - David Silver",
+"description": "# Teaching. Advanced Topics\u00a0 2015 (COMPM050/COMPGI13). Lecture 1:\u00a0Introduction to Reinforcement Learning. Lecture 2:\u00a0Markov Decision Processes. Lecture 3:\u00a0Planning by Dynamic Programming. Lecture 4:\u00a0Model-Free Prediction. Lecture 5:\u00a0Model-Free Control. Lecture 6:\u00a0Value Function Approximation. Lecture 7:\u00a0Policy Gradient Methods. Lecture 8:\u00a0Integrating Learning and Planning. Lecture 9:\u00a0Exploration and Exploitation. Lecture 10:\u00a0Case Study: RL in Classic Games. Previous RL exam\u00a0questions\u00a0and\u00a0answers. All of the above material is made available under CC-BY-NC 4.0. Some content comes from third parties and is not included in the license."
+},
+{
+"url": "https://www.cl.cam.ac.uk/teaching/2425/R171",
+"title": "Course pages 2024\u201325: Reinforcement Learning",
+"description": "The aim of this module is to introduce students to the foundations of the field of reinforcement learning (RL), discuss state-of-the-art RL methods."
+},
+{
+"url": "https://web.mit.edu/dimitrib/www/publ.html",
+"title": "Papers, Reports, Slides, and Videolectures by Dimitri Bertsekas",
+"description": "- Video on Model Predictive Control, and Reinforcement Learning: A Unified Framework Based on Dynamic Programming, Plenary talk at IFAC NMPC, August 2024;  Lecture slides. Based on Chapters 1 and 6 of the book Dynamic Programming and Optimal Control, Vol. I, 4th Edition, Athena Scientific. (Complete Set of Lecture Slides.) Based on the book Dynamic Programming and Optimal Control, Vol. II, 4th Edition: Approximate Dynamic Programming, Athena Scientific. - Abstract Dynamic Programming, a lecture slide overview of the book Abstract Dynamic Programming, Athena Scientific, 2013; (Additional related lecture slides on regular policies in Abstract DP); (Related Video Lectures on semicontractive DP, the solutions of Bellman's equation, and applications to stable optimal control); click here for a copy of the book. - Dynamic Programming and Stochastic Control, 2015, Lecture Slides for MIT course. Based on the 2-Vol. book Dynamic Programming and Optimal Control, Athena Scientific. - Video from A 60-Year Journey in Convex Optimization, a lecture on the history and the evolution of the subject at MIT."
+},
+{
+"url": "https://www.reddit.com/r/MachineLearning/comments/lqrek7/n_20_hours_of_new_lectures_on_deep_learning_and",
+"title": "[N] 20 hours of new lectures on Deep Learning and Reinforcement ...",
+"description": "# [N] 20 hours of new lectures on Deep Learning and Reinforcement Learning with lots of examples : r/MachineLearning. Skip to main content[N] 20 hours of new lectures on Deep Learning and Reinforcement Learning with lots of examples : r/MachineLearning. # [N] 20 hours of new lectures on Deep Learning and Reinforcement Learning with lots of examples. If anyone's interested in a Deep Learning and Reinforcement Learning series, I uploaded 20 hours of lectures on YouTube yesterday. Compared to other lectures, I think this gives quite a broad/compact overview of the fields with lots of minimal examples to build on. *   Lecture 10: Meta and manifold learning. What are the prereqs for learning reinforcement learning? 2.   Not for the main theory behind the fundamental RL algorithms, but when you start trying to scale up the methods with function approximators, it's useful to have had some practice in building DL models, especially CNNs & RNNs. Image 8: u/zeec123 avatar."
+},
+{
+"url": "https://www.youtube.com/watch?v=kUiR0RLmGCo",
+"title": "Deep Learning Lecture 15: Deep Reinforcement Learning - Policy search",
+"description": "Deep Learning Lecture 15: Deep Reinforcement Learning - Policy search\nNando de Freitas\n47300 subscribers\n311 likes\n55833 views\n15 Mar 2015\nSlides available at: https://www.cs.ox.ac.uk/people/nando.defreitas/machinelearning/\nCourse taught in 2015 at the University of Oxford by Nando de Freitas with great help from Brendan Shillingford.\n13 comments\n"
+},
+{
+"url": "https://www.youtube.com/watch?v=ISk80iLhdfU",
+"title": "Introduction to Reinforcement Learning - YouTube",
+"description": "RL Course by David Silver - Lecture 1: Introduction to Reinforcement Learning. Google DeepMind\u20221.8M \u00b7 58:54 \u00b7 Go to channel Computer Vision and"
+},
+{
+"url": "https://cs231n.stanford.edu/slides/2020/lecture_17.pdf",
+"title": "[PDF] Lecture 17: Reinforcement Learning - CS231n",
+"description": "NIPS Workshop 2013; Nature 2015] Fei-Fei Li, Ranjay Krishna, Danfei Xu Lecture 14 -June 04, 2020 Training the Q-network: Experience Replay 54 Learning from batches of consecutive samples is problematic: -Samples are correlated => inefficient learning -Current Q-network parameters determines next training samples (e.g. if maximizing action is to move left, training samples will be dominated by samples from left-hand size) => can lead to bad feedback loops Address these problems using experience replay -Continually update a replay memory table of transitions (st, at, rt, st+1) as game (experience) episodes are played -Train Q-network on random minibatches of transitions from the replay memory, instead of consecutive samples Each transition can also contribute to multiple weight updates => greater data efficiency [Mnih et al. NIPS Workshop 2013; Nature 2015] Fei-Fei Li, Ranjay Krishna, Danfei Xu Lecture 14 -June 04, 2020 61 Putting it together: Deep Q-Learning with Experience Replay Take the action (at), and observe the reward rt and next state st+1 [Mnih et al."
+},
+{
+"url": "https://rlseminar.github.io/resource.html",
+"title": "Resources - RL Seminar",
+"description": "* CSE 691 Reinforcement Learning and Optimal Control Winter 2019 at ASU by Dimitri P. > Deep reinforcement learning is the combination of reinforcement learning (RL) and deep learning. Thus, deep RL opens up many new applications in domains such as healthcare, robotics, smart grids, finance, and many more. Bellemare and Joelle Pineau (2018), \u201cAn Introduction to Deep Reinforcement Learning\u201d, in Foundations and Trends in Machine Learning: Vol. 11, No. 3-4. Another recent survey Deep Reinforcement Learning by Yuxi Li Under review for Morgan & Claypool: Synthesis Lectures in Artificial Intelligence and Machine Learning draw a comprehensive blueprint on modern (Deep) Reinforcement Learning. * Reinforcement Learning and Optimal Control by the Awesome Dimitri P. * Advanced Deep Learning and Reinforcement Learning at UCL(2018 Spring) taught by DeepMind\u2019s Research Scientists. * Infer to Control: Workshop on Probabilistic Reinforcement Learning and Structured Control at NeurIPS 2018. * Deep Reinforcement Learning Workshop at NeurIPS 2018. * Workshop on Causal Learning at NeurIPS 2018."
+},
+{
+"url": "https://github.com/mhahsler/Introduction_to_Reinforcement_Learning",
+"title": "GitHub - mhahsler/Introduction_to_Reinforcement_Learning: Material for an introduction course to reinforcement learning for compute scientists \u00b7 GitHub",
+"description": "## Use saved searches to filter your results more quickly. ## Latest commit. ## Repository files navigation. # Reinforcement Learning: Lecture Material, Simple Python Code Examples and Assignments. License: CC BY-NC-SA 4.0. This repository contains lecture material, simple Python code examples, and assignments for the course CS 5/7329 Reinforcement Learning taught by Michael Hahsler at the Department of Computer Science at SMU. An Introduction to Deep Reinforcement Learning,. | 3 | 4: Dynamic Programming | PDF, PowerPoint | Code |. | 4 | 5: Monte Carlo Methods | PDF, PowerPoint | Code |. | 5 | 6: Temporal-Difference Learning | PDF, PowerPoint | Code |. | - | 8: Planning and Learning with Tabular Methods | PDF, PowerPoint | - |. | 6 | 9-10: Prediction and Control using Approximation | PDF, PowerPoint | Code |. | 10 | DRL: Deep Reinforcement Learning | PDF, PowerPoint | Code |. Introduction to Reinforcement Learning \u00a9 2026 Michael Hahsler and others is licensed under."
+},
+{
+"url": "https://rail.eecs.berkeley.edu/deeprlcourse-fa18/static/slides/lec-1.pdf",
+"title": "[PDF] Deep Reinforcement Learning CS 294 - 112",
+"description": "Intelligent machines must be able to adapt Deep learning helps us handle unstructured environments Reinforcement learning provides a formalism for behavior decisions (actions) consequences observations rewards Mnih et al. decisions (actions) consequences observations rewards Actions: muscle contractions Observations: sight, smell Rewards: food Actions: motor current or torque Observations: camera images Rewards: task success measure (e.g., running speed) Actions: what to purchase Observations: inventory levels Rewards: profit Deep models are what allow reinforcement learning algorithms to solve complex problems end to end! \u2022 Learning from demonstrations \u2022 Directly copying observed behavior \u2022 Inferring rewards from observed behavior (inverse reinforcement learning) \u2022 Learning from observing the world \u2022 Learning to predict \u2022 Unsupervised learning \u2022 Learning from other tasks \u2022 Transfer learning \u2022 Meta-learning: learning to learn Imitation learning Bojarski et al."
+}
+]

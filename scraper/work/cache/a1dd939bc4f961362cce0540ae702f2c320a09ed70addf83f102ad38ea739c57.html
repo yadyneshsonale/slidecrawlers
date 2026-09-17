@@ -1,0 +1,328 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-15">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CS213/293 : Data Structure and Algorithms 2023</title>
+<link rel="stylesheet" type="text/css" href="../course.css">
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<!-- <script src="jquery.js"></script>  -->
+<script> 
+$(function(){
+$("#rules").load("../rules.html");
+});
+</script>
+<script type="text/javascript">
+<!--
+    function toggle_visibility(id) {
+       var e = document.getElementById(id);
+       if(e.style.display == 'block')
+          e.style.display = 'none';
+       else
+          e.style.display = 'block';
+    }
+    function select_visibility(id,id_disable) {
+       toggle_visibility(id);
+       var e = document.getElementById(id_disable);
+       e.style.display = 'none';
+    }
+    $(document).ready(function(){
+       var e = document.getElementById('now');
+        e.scrollIntoView();
+    });
+//-->
+</script>
+
+</head>
+
+<body style="">
+<h1>CS213/293 : Data Structure and Algorithms 2023</h1>
+
+<p>
+  <b>Instructors</b> : <a href="../../">Ashutosh Gupta</a> 
+</p>
+
+<p>
+<b>Timings</b> : 8:30 Monday, 9:30 Tuesday, 10:35 Thursday (Slot 1)<br>
+<b>Venue</b> : LH 101 (discussions on Piazza   <a href="https://piazza.com/iit_bombay/summer2023/cs213">Join</a> (Access code was given in class)) <br>
+<!-- <b>TAs</b> : TBA -->
+<!-- <br> -->
+<!-- For non gmail email addresses Append "iitb.ac.in" in the text inside the parenthesis -->
+<!-- <br> -->
+
+
+</p>
+
+<b>Optional tutorials</b> :
+
+<!-- Due to logistical limits, we can not accept non-CSE students in the class. -->
+
+<h2>Source material</h2>
+
+<ul>
+  <li>Text book: Introduction to Algorithms, third edition, Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford Stein </li>
+  <li> Course syllabus: Slides define the syllabus. The content only before the problem section in slides is in the syllabus. In terms of problems, you must solve tutorial problems. All the other problems are optional. Any new concept defined there is not part of the course. If the concept appears in the exam, we will redefine it in the question paper.</li>
+</ul>
+  
+<h2>Some rules</h2>
+<ul>
+  <li> We do not provide solutions of the problems that are not in the tutorials.
+    We can discuss your approach with you. Some TAs may give you answer to some
+    of the problems. It is their choice. However, they are not obligated to provide
+    written detailed answer.</li>
+  <li>We do not discuss format of the question papers. Kindly do not ask.</li>
+  <li>We do not discuss rubrics before the crib session.
+    Do not approach TAs and seek undue influence.</li>  
+</ul>
+
+<h2>Interaction policy</h2>
+<ul>
+  <!-- <li> Every week videos will be released by Sunday night </li> -->
+  <!-- <li> No sessions on Mondays</li> -->
+  <!-- <li> On Thursday 10:30, the instructor will do an interactive session for clearing doubts. If requested, we can also do a meeting on Tuesday.</li> -->
+  <li> TAs will do a tutorial on a given set of problems at their chosen slot. Please discuss with your TA.</li>
+  <!-- <li> On SAFE app students have to do a quiz every week. The quiz will remain available from Friday evening to Sunday night.</li> -->
+</ul>
+
+<h2>Evaluation structure</h2>
+
+CS213
+<ul>
+  <li> Attendance quiz: 5% (half marks for attempt and half marks for 3+ options correct) </li>
+  <li> Quizzes : 25% (2 quizzes) </li>
+  <li> Midterm : 30% (2 hours) </li>
+  <li> Final   : 40% (3 hours)</li>
+</ul>
+
+CS293: three lab exams and a project  
+<ul>
+  <li> Attendance quiz: 5% </li>
+  <li> Lab exams : 60% (3 exams) </li>
+  <li> Project   : 35% (take home) </li>
+</ul>
+
+
+<p>May change later.</p>
+
+<p>
+  <a href="https://www.cse.iitb.ac.in/course_vm/cs433/login/">Attendance Quiz URL</a><br>
+  <!-- <a href="attendance.html">View status of attendance</a> -->
+  <!-- <a href="https://www.cse.iitb.ac.in/~internal/cs228/all/">View status of attendance</a> -->
+</p>
+
+<h2>CS293 Lab exam/project schedule</h2>
+
+<ul>
+  <li> Lab exam 1: 2023-08-25 (week 4)</li>
+  <li> Lab exam 2: 2023-10-06 (Week 9)<font color="red">[moved from week 8 to 9]</font></li>
+  <li> Project description declared:  2023-10-13 (Week 10)</li>
+  <li> Lab exam 3: 2023-10-27 (Week 12) <font color="red">[there was a mistake eariler!]</font></li>
+  <li> Project submission deadline: 2023-11-10 (Week 14)</li>
+</ul>
+
+<h2>Tutorial solutions</h2>
+
+<ul> TBA
+<!--   <\!-- <li> <a href="2022-tut-01.pdf">Tutorial sheet 1</a> </li> -\-> -->
+<!--   <\!-- <li> <a href="2022-tut-02.pdf">Tutorial sheet 2</a> </li> -\-> -->
+<!--   <\!-- <li> <a href="2022-tut-03.pdf">Tutorial sheet 3</a> </li> -\-> -->
+</ul>
+
+
+<h2>Lectures</h2>
+
+<!-- The following lecture schedule is tentative -->
+
+<h4 class="mod1">2023-07-31 : Week 1 - Introduction</h4>
+<ul>
+  <li> Monday lecture is moved to Saturday </li>
+  <li> Introduction, Binary search, Big-O, and containers </li>
+  <li><a href="lec-01-why-ds.pdf">Lecture 1</a>,
+    <a href="lec-02-containers.pdf">Lecture 2</a>,
+  </li>
+  <li>Tutorial problems: 1.11, 1.12, 1.13, 2.5, and 2.6</li>
+</ul>
+
+<h4 class="mod1">2023-08-07 : Week 2 - Stack and queue</h4>
+<ul>
+  <li> Stack:implementation, growth, applications </li>
+  <li> Queue: Array implementation, Linked list implementation </li>
+  <li> Circular linked list, Doubly linked lists</li>
+  <li>
+    <a href="lec-03-stack.pdf">Lecture 3</a>,
+    <a href="lec-04-queue.pdf">Lecture 4</a>
+  </li>
+  <li>Tutorial problems: 3.3, 3.4, 3.5, 4.10, 4.11, and 4.12</li>
+</ul>
+
+<h4 class="mod1">2023-08-14 : Week 3 - Dictionary and hashing</h4>
+<ul>
+  <li> Dictionary and Hashing </li>
+  <li><font color="red">Tuesday Holiday</font></li>
+  <li><a href="lec-05-dictionary.pdf">Lecture 5</a></li>
+  <li>Tutorial problems: 5.9, 5.10, 5.11, and 5.12</li>
+</ul>
+
+<h4 class="mod1">2023-08-21 : Week 4 - Trees</h4>
+<ul>
+  <li> Trees and tree walks, binary search tree(BST) </li>
+  <li> Search, Minimum, successor on BST </li>
+  <li><a href="lec-06-tree.pdf">Lecture 6</a>, and
+    <a href="lec-07-tree-walks.pdf">Lecture 7</a>
+    <!-- , <a href="lec-08-bst.pdf">Lecture 8</a> -->
+  </li>
+  <li>Tutorial problems: 6.11, 6.12, 6.13, 7.4, 7.5, and 7.6</li>
+</ul>
+
+<h4 class="mod2">2023-08-23T08:30 (Wednesday)  : Quiz 1</h4>
+<ul>
+  <!-- <li> <font color="red">Quiz is postponed to 2023-02-02T08:30</font> </li> -->
+  <li>Syllabus: everything that is covered in lectures before the quiz.</li>
+  <li>Venue: SIC201, CC101, CC103 and CC105 </li>
+  <li>You may bring an A4 sized cheat-sheet.</li>
+  <li>Write only on single side. We will collect the sheet at the end.</li>
+  <li>Bring your student id. </li>
+  <!-- <li>Offline for on-campus and not quarantined students.</li> -->
+  <!-- <li>Offline exam will also happen using SAFE. Only change is that you are physically present.</li> -->
+  <!-- <li>Please ensure that your phone is charged during the quiz.</li> -->
+</ul>
+
+
+<h4 class="mod1">2023-08-28 : Week 5 - Binary search tree(remaining) and Red-black tree</h4>
+<ul>
+  <li> Insert and delete in binary search tree</li>
+  <li> Average insertion time in binary search tree</li>
+  <li> Insert and delete in red-black tree </li>
+  <li><a href="lec-08-bst.pdf">Lecture 8</a>, <a href="lec-09-rb.pdf">Lecture 9</a></li>
+  <li>Tutorial problems: 8.10, 8.11, 8.12, and 9.9</li>
+</ul>
+
+<h4 class="mod1">2023-09-04 : Week 6 - Text processing</h4>
+<ul>
+  <li> Pattern matching, KMP algorithm, Trie, and suffix trees </li>
+  <li><a href="lec-10-kmp.pdf">Lecture 10</a>,
+    <a href="lec-11-trie.pdf">Lecture 11</a></li>
+  <li>Tutorial problems: 10.4, 10.5, 10.6, 11.7, and 11.8</li>
+</ul>
+
+<h4 class="mod1">2023-09-11 : Week 7 - Priority queue and Heap </h4>
+<ul>
+  <li> Priority queue, heap, and operations on heap </li>
+  <li><a href="lec-12-heap.pdf">Lecture 12</a> </li>
+  <li>Slides have a section tutorial problems. </li>
+</ul>
+
+
+<h4 class="mod2">2023-09-.. : Midterm week</h4>
+<ul>
+  <li>Syllabus: everything that is covered in lectures before the midsem.</li>
+  <li>You may have an A4 sheet of paper with any text.</li>
+  <li>Write only on single side. We will collect the sheet at the end.</li>
+  <li>Bring your student id. </li>
+</ul>
+
+
+<h4 class="mod1">2023-09-25 : Week 8 - Compression</h4>
+<ul>
+  <li> Huffman coding, optimal compression </li>
+  <li>LZ7, Deflate</li>
+  <li><a href="lec-13-compress.pdf">Lecture 13</a> </li>
+  <li><a href="gzipc.tar">Gzip class demo</a>
+  </li>
+  <li>No Tutorial on Thursday: <font color="red">Holiday</font></li>
+</ul>
+
+<h4 class="mod1">2023-10-02 : Week 9 - Sorting </h4>
+<ul>
+  <li> Merge sort, quick sort, radix sort, and bucket sort </li>
+  <li> A bound on compression sorts </li>
+  <li><font color="red">Monday Holiday</font>,<a href="lec-14-sort.pdf">Lecture 14</a></li>
+  <li>Tutorial problems: look at the tutorial section</li>
+</ul>
+
+<h4 class="mod1">2023-10-09 : Week 10 - Algorithmic trading</h4>
+<ul>
+  <li> Algorithmic trading</li>
+  <li><a href="lec-algo-trade.pdf">Trading</a>,
+    <!-- <a href="lec-02-intro.pdf">Lecture 2</a></li> -->
+  <!-- <li>Tutorial problems: .. and ..</li> -->
+</li></ul>
+
+<h4 class="mod1">2023-10-16 : Week 11 - Graphs: Basics and BFS</h4>
+<ul>
+  <li> basic definitions for graph, connected, tree</li>
+  <li> Breadth-first search </li>  
+  <li><a href="lec-15-graph.pdf">Lecture 15</a>,<a href="lec-16-bfs.pdf">Lecture 16</a></li>
+  <li>Tutorial problems: look at the tutorial section</li>
+</ul>
+
+<h4 class="mod2">2023-10-18T08:30 (Wednesday)  : Quiz 2</h4>
+<ul>
+  <li>Syllabus: everything that is covered in lectures before the quiz.</li>
+  <li>Venue: Rooms: CC 101, CC 103, CC 105, and SIC 201  </li>
+  <li>You may bring an A4 sized cheat-sheet.</li>
+  <li>Write only on single side. We will collect the sheet at the end.</li>
+  <li>Bring your student id. </li>
+</ul>
+
+
+<h4 class="mod1">2023-10-23 : Week 12 - DFS for graphs and applications</h4>
+<ul>
+  <li> Depth-first search, 2-edge connected graphs </li>
+  <li>DFS analysis, Topological sort, and strongly connected graph </li>
+  <li><a href="lec-17-dfs.pdf">Lecture 17</a>,<font color="red">Holiday on tuesday</font>,
+  </li><li>Tutorial problems: look at the tutorial section</li>
+</ul>
+
+<h4 class="mod1">2023-10-30 : Week 13 - Minimum spanning tree</h4>
+<ul>
+  <li>Minimum spanning tree, Kruskal's algorithm, and Prim's algorithm </li>
+  <li><a href="lec-18-mst.pdf">Lecture 18</a></li>
+  <li>Tutorial problems: look at the tutorial section</li>
+</ul>
+
+<h4 class="mod1">2023-11-06 : Week 14 - Shortest path</h4>
+<ul>
+  <li> Shortest path </li>
+  <li><a href="lec-19-sp.pdf">Lecture 19</a></li>
+  <li>Tuesday and Thursday will be discussion lectures.(no attendance,ask questions!)</li>
+</ul>
+
+
+<h4 class="mod2">2023-11-..: End semester exam</h4>
+<ul>
+  <!-- <li>Syllabus: everything that is covered in lectures before the midsem.</li> -->
+  <!-- <li>You may have an A4 sheet of paper with any text.</li> -->
+  <!-- <li>Write only on single side. We will collect the sheet at the end.</li> -->
+  <!-- <li>Bring your student id. </li> -->
+</ul>
+
+<h2>Leave rules for non-medical reasons</h2>
+
+Please follow the rules specified in the section 15 of <a href="https://www.iitb.ac.in/newacadhome/ugrulebook.pdf">the UG rule book</a> for leave. Our interpretation of the section is that you need to get a leave approved by the head of CSE on the recommendation of your faculty advisor. Please submit the approved form/email/AMS on our form for leave, which is shared on Piazza. Once we have the approved leave we will apply the usual rules of compensation.
+
+
+<!-- <h4 class="mod1"> Lectures from 2023-03-03</h4> -->
+<!-- <ul> -->
+<!--     <li>Slides will be availabe at Piazza</li> -->
+<!-- <\!--   <li><a href="https://www.cse.iitb.ac.in/~akshayss/courses/cs310-2018/index.html">here</a></li> -\-> -->
+<!-- </ul> -->
+
+
+<!-- <h4 class="mod1"> Attendance hacking challenge! </h4> -->
+<!-- <ul>   -->
+<!--   <li> <a href="https://github.com/ashutosh0gupta/randomAttendance">Here</a> is the source code of the attendance system </li> -->
+<!--   <li> If you can change your attendance by finding a flaw in the system, you will get the 5% of the attendance irrespective of your attendance.</li> -->
+<!--   <li> Ground rules: DO NOT TRY TO STEAL MY PASSWORD! Once you find a flaw, please report to me and do not share with others.</li> -->
+<!-- </ul> -->
+
+<hr>
+<!-- <address></address> -->
+<!-- <p>Last modified: ()</p> -->
+
+
+ 
+
+
+
+
+
+</body></html>

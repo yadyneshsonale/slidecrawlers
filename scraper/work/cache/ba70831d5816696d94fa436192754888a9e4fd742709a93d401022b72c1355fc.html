@@ -1,0 +1,2405 @@
+<!DOCTYPE html><html lang="en"><!-- Beautiful Jekyll 5.0.0 | Copyright Dean Attali 2020 --><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  
+
+  
+
+  <title>Compiler Design</title>
+
+  
+  <meta name="author" content="webadmin">
+  
+
+
+
+  <meta name="description" content="Curriculum 2022Learning OutcomesAt the end of the course we expect the student toknow enough of the theory (Parsing, Code generation, optimisation) andtools ...">
+
+  
+
+  
+  <meta name="keywords" content="cse,iitpkd,palakkad,iit">
+  
+
+  
+  <link rel="alternate" type="application/rss+xml" title="CSE @ IIT Palakkad" href="https://cse.iitpkd.ac.in/feed.xml">
+  
+
+  
+    
+      
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+    
+      
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+
+
+    
+  
+
+  
+    
+      <link rel="stylesheet" href="/assets/css/bootstrap-social.css">
+    
+      <link rel="stylesheet" href="/assets/css/beautifuljekyll.css">
+    
+  
+
+  
+    
+      <link rel="stylesheet" href="/assets/css/custom-styles.css">
+    
+  
+
+  
+  
+  
+
+  
+  <meta property="og:site_name" content="CSE @ IIT Palakkad">
+  
+<meta name="description" content="Curriculum 2022Learning OutcomesAt the end of the course we expect the student toknow enough of the theory (Parsing, Code generation, optimisation) andtools ...">
+
+  <meta property="og:title" content="Compiler Design">
+<meta property="og:description" content="Curriculum 2022Learning OutcomesAt the end of the course we expect the student toknow enough of the theory (Parsing, Code generation, optimisation) andtools ...">
+
+  
+  <meta property="og:image" content="https://cse.iitpkd.ac.in/assets/img/logo/logo.jpg">
+  
+
+  
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://cse.iitpkd.ac.in/courses/cs3040-Compiler-Design/">
+  <link rel="canonical" href="https://cse.iitpkd.ac.in/courses/cs3040-Compiler-Design/">
+  
+
+  
+  <meta name="twitter:card" content="summary">
+  
+  <meta name="twitter:site" content="@">
+  <meta name="twitter:creator" content="@">
+
+  <meta name="twitter:title" content="Compiler Design">
+  <meta name="twitter:description" content="Curriculum 2022Learning OutcomesAt the end of the course we expect the student toknow enough of the theory (Parsing, Code generation, optimisation) andtools ...">
+
+  
+  <meta name="twitter:image" content="https://cse.iitpkd.ac.in/assets/img/logo/logo.jpg">
+  
+
+
+  
+
+
+
+</head>
+
+
+<body>
+
+  
+  
+    
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js" integrity="sha384-5AkRS45j4ukf+JbWAfHL8P4onPA9p0KwwP7pUdjSQA3ss9edbJUJc/XcYAiheSSz" crossorigin="anonymous"></script>
+
+
+  
+    
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+
+  
+    
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+  
+
+
+
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+      <script src="/assets/js/beautifuljekyll.js"></script>
+    
+  
+
+
+
+
+
+
+
+
+
+  <nav class="navbar navbar-expand-md navbar-light flex-column navbar-custom">
+<div class="w-200 d-flex align-self-center">
+ <a class="navbar-brand mx-md-auto" href="/">
+	<img class="p-4" src="/assets/img/cse-website-header.png" width="800px" alt="Logo"> </a>
+
+  <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+ </div>
+  <div class="collapse navbar-collapse align-self-center" id="main-navbar">
+    <ul class="navbar-nav navbar-center">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Programs</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="/programs-overview">Overview</a>
+                  <a class="dropdown-item" href="/btech">B.Tech CS</a>
+                  <a class="dropdown-item" href="/ms-phd">MS &amp; PhD</a>
+                  <a class="dropdown-item" href="/msocd">MSoCD</a>
+                  <a class="dropdown-item" href="/mcam">MCaM</a>
+            </div>
+          </li>
+        
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Research</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="/areas">Areas</a>
+                  <a class="dropdown-item" href="/labs">Labs</a>
+                  <a class="dropdown-item" href="/projects">Projects</a>
+                  <a class="dropdown-item" href="/positions">Open Positions &amp; Internships</a>
+                  <a class="dropdown-item" href="/publications">Publications</a>
+            </div>
+          </li>
+        
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Academics</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="/all-core">Core Courses</a>
+                  <a class="dropdown-item" href="/all-elective">Elective Courses</a>
+                  <a class="dropdown-item" href="/timetable">Timetable &amp; Slotting</a>
+                  <a class="dropdown-item" href="/past-courses">Past courses</a>
+                  <a class="dropdown-item" href="https://iitpkd.ac.in/academics-downloads">Forms🔗</a>
+            </div>
+          </li>
+        
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Events</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="/research-symposium">Research Symposium</a>
+                  <a class="dropdown-item" href="/department-colloquium">Department Colloquium</a>
+                  <a class="dropdown-item" href="/workshops">Workshops</a>
+                  <a class="dropdown-item" href="/talk-series">Talk Series</a>
+            </div>
+          </li>
+        
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">People</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="/ug">Bachelors</a>
+                  <a class="dropdown-item" href="/mtech">Masters</a>
+                  <a class="dropdown-item" href="/scholars">Scholars</a>
+                  <a class="dropdown-item" href="/faculty">Faculty</a>
+                  <a class="dropdown-item" href="/staff-pdf">Staff &amp; Postdocs</a>
+                  <a class="dropdown-item" href="/alumni">Alumni</a>
+            </div>
+          </li>
+        
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Contact</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="/location">Location</a>
+                  <a class="dropdown-item" href="/outreach">Outreach</a>
+                  <a class="dropdown-item" href="/openings">Openings</a>
+                  <a class="dropdown-item" href="/visitors">Visitors</a>
+                  <a class="dropdown-item" href="/getintouch">Get in touch</a>
+            </div>
+          </li>
+        </ul>
+  </div>
+
+  
+
+</nav>
+
+
+
+  <!-- TODO this file has become a mess, refactor it -->
+
+
+
+
+
+
+
+<header class="header-section ">
+
+<div class="no-img">
+  <div class="container-md">
+    <div class="row">
+      <div class="center">
+        <div class="page-heading">
+          <h1>Compiler Design</h1>
+          
+
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</header>
+
+
+
+
+
+  <div class="wrapper row">
+<div class=" container-md " role="main">
+    <div class=" width: auto;  ">
+      
+
+      <div class="text-center alert alert-info" role="alert">
+<strong>Code:</strong> CS3040 | <strong>Category:</strong> PMC | <strong>Credits:</strong>  3-0-0-3 
+</div>
+
+
+
+
+<strong> This syllabus has been revised in the recent past with the course number being the same. <br> Showing the latest revision in section <a href="#curriculum-2022">Curriculum 2022</a>.  The earlier version is in section <a href="#curriculum-2017">Curriculum 2017</a>.  </strong>
+
+
+
+
+<h1 id="curriculum-2022">Curriculum 2022</h1>
+
+<h1 id="learning-outcomes">Learning Outcomes</h1>
+<p>At the end of the course we expect the student to
+know enough of the theory (Parsing, Code generation, optimisation) and
+tools (parser generators, code generators) so that they can build a
+compiler that converts from a non-trivial high level language to a machine
+code.</p>
+
+<h1 id="syllabus">Syllabus</h1>
+
+<p>Introduction to language translators and overview of the compilation
+process. <em>(5 lectures)</em></p>
+
+<p>Lexical analysis: specification of tokens, token recognition, conflict
+resolution. <em>(5 lectures)</em></p>
+
+<p>Parsing: Overview of Context Free Grammars (CFG), Parse trees and
+derivations, left recursion, left factoring, top-down parsing, shift
+reduce parsing, conflict resolution. <em>(10 lectures)</em></p>
+
+<p>Syntax directed translation. Semantic analysis, Type checking,
+intermediate code generation. <em>(6 lectures)</em></p>
+
+<p>Runtime environments: activation records, and heap management. <em>(6
+lectures)</em></p>
+
+<p>Code optimization: basic blocks, liveness, register allocation. <em>(5
+lectures)</em></p>
+
+<p>Advanced topics: Overview of machine dependent and independent
+optimizations. <em>(4 lectures)</em></p>
+
+<h1 id="textbooks">Textbook(s)</h1>
+
+<ol>
+  <li>Compilers: Principles, Techniques, and Tools, Second Edition, Alfred Aho, Monica
+Lam, Ravi Sethi, Jeffrey D. Ullman, January 2013. ISBN-978-9332518667.</li>
+  <li>Modern Compiler Implementation in Java. Andrew W Appel, Jens Paisberg. Cambridge University Press, January 2002. ISBN-978-0521820608</li>
+  <li>Modern Compiler Implementation in ML, Andrew W Appel, Cambridge University Press, December 1997. ISBN-0 521 58274 1 (hardback) ISBN 0521582741</li>
+  <li>Compiler Construction: Principles and Practice, 1st Edition,
+Kenneth C. Louden, Cengage Learning; 1 edition (January 24, 1997),
+ISBN-13: 978-0534939724</li>
+</ol>
+
+<h1 id="curriculum-2017">Curriculum 2017</h1>
+
+<h1 id="learning-objectives">Learning Objectives</h1>
+<p>A compiler is a program that converts high level
+(human understandable) language to low level (machine understandable)
+code. Compilers are what makes writing modern software possible and
+their study has been one of the classical topics in an Undergraduate
+Computer Science curriculum. The objective of the course is to introduce
+the basic theory underlying the different components and phases of a
+compiler like parsing, code generation etc. Simultaneously, the students
+will be familiarised with the various tools that are used for building
+modern compilers.</p>
+
+<h1 id="learning-outcomes-1">Learning Outcomes</h1>
+<p>At the end of the course we expect the student to
+know enough of the theory (Parsing, Code generation, optimisation) and
+tools (parser generators, code generators) so that they can build a
+compiler that converts from a non-trivial high level language to machine
+code.</p>
+
+<h1 id="syllabus-1">Syllabus</h1>
+
+<p>Introduction to language translators and overview of the compilation
+process.</p>
+
+<p>Lexical analysis: specification of tokens, token recognition, conflict
+resolution.</p>
+
+<p>Parsing: Overview of Context Free Grammars (CFG), Parse trees and
+derivations, left recursion, left factoring, top-down parsing, shift
+reduce parsing, conflict resolution, dangling-else.</p>
+
+<p>Syntax directed translation. Semantic analysis, Type checking,
+intermediate code generation.</p>
+
+<p>Runtime environments: activation records, heap management</p>
+
+<p>Code optimization: basic blocks, liveness, register allocation.</p>
+
+<p>Advanced topics: Overview of machine dependent and independent
+optimizations.</p>
+
+<h1 id="textbooks-1">Textbook(s)</h1>
+
+<ol>
+  <li>Compilers: Principles, Techniques, and Tools, Alfred Aho, Monica
+Lam, Ravi Sethi, Jeffrey D. Ullman, Addison-Wesley, 2007</li>
+  <li>Modern Compiler Implementation in ML, Andrew W Appel, Cambridge
+University Press. ISBN 0 521 58274 1 (hardback) ISBN 0 521 58274 1</li>
+  <li>Compiler Construction: Principles and Practice, 1st Edition,
+Kenneth C. Louden, Cengage Learning; 1 edition (January 24, 1997),
+ISBN-13: 978-0534939724</li>
+</ol>
+
+
+
+ <h1 id="past-offerings"> Past Offerings </h1>
+
+ 
+  <ul> 
+   
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+   
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	 <li> Offered in Jan-May, 2025 by Unnikrishnan Cheramangalath  </li>
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+   
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+   
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	 <li> Offered in Jan-May, 2024 by Unnikrishnan Cheramangalath  </li>
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+   
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+   
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	 <li> Offered in Jan-May, 2023 by Unnikrishnan C  </li>
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+   
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+   
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	 <li> Offered in Jan-May, 2022 by Piyush Kurur  </li>
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+   
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+   
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	 <li> Offered in Jan-May, 2021 by Piyush  </li>
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+   
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+   
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	 <li> Offered in Jan-May, 2020 by Unnikrishnan  </li>
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+   
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+   
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	 <li> Offered in Jan-May, 2019 by Piyush  </li>
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+   
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+   
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+   
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+   
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+   
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+     
+     
+     
+	 
+	
+   
+	
+     
+     
+     
+	 
+	
+  
+  </ul>
+
+
+<h1 id="detailed-course-information"> Course Metadata </h1>
+<table class="table table-bordered">
+   <thead>
+       <tr>
+            <th>Item</th>
+            <th>Details</th>
+        </tr>
+    </thead>
+  <tbody>
+    <tr>
+      <td>Course Title</td>
+      <td>Compiler Design</td>
+    </tr>
+    <tr>
+      <td>Course Code</td>
+      <td>CS3040</td>
+    </tr>
+    <tr>
+      <td>Course Credits</td>
+      <td>3-0-0-3</td>
+    </tr>
+    <tr>
+      <td>Course Category</td>
+      <td>PMC</td>
+    </tr>
+    
+    <tr>
+      <td>Proposing Faculty</td>
+      <td>Piyush P Kurur &amp; Unnikrishnan C</td>
+    </tr>
+    
+    <tr>
+      <td>Approved on</td>
+      <td>Senate 20 of IIT Palakkad</td>
+    </tr>
+    
+    <tr>
+      <td>Course prerequisites</td>
+      <td>Foundations of Computing Systems, Data structures and Algorithms, Data Structures and Algorithms Lab, Theory of Computation, Compiler Design Lab (prerequisite &amp; corequisite)</td>
+    </tr>
+    
+    
+    <tr>
+      <td>Course status</td>
+      <td>revised</td>
+    </tr>
+    
+    
+    <tr>
+      <td>Course revision information</td>
+      <td>CS3040 Compiler Design</td>
+    </tr>
+    
+    
+    
+
+  </tbody>
+</table>
+
+
+      
+
+    </div>
+  </div>
+</div>
+
+
+  <footer>
+  <div class="container-md beautiful-jekyll-footer">
+    <div class="row">
+      <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
+      
+
+
+    <!-- FOOTER -->
+            <div class="row justify-content-center">
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="mb-4">Institute</h6>
+                    <ul class="list-unstyled text-muted">
+                        <li><a href="https://iitpkd.ac.in/">IIT Palakkad</a></li>
+                        <li>
+<a href="https://cdc.iitpkd.ac.in/">CDC </a> </li>
+                        <li>
+<a href="https://cet.iitpkd.ac.in/"> CET</a> </li>
+                        <li>
+<a href="https://techin-iitpkd.org/">TECHIN </a> </li>
+                        <li>
+<a href="https://cci-iitpkd.github.io/">CCI </a> </li>
+                        <li>
+<a href="https://iitpkd.ac.in/TelephoneDirectory">Telephone </a> </li>
+                        <li>
+<a href="https://iitpkd.ac.in/central-labs">Central Labs</a> </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="mb-4">Admissions</h6>
+                    <ul class="list-unstyled text-muted">
+                        <li><a href="https://iitpkd.ac.in/programs">Programs</a></li>
+                        <li><a href="https://resap.iitpkd.ac.in/">Research Portal</a></li>
+                        <li><a href="https://pgadmit.iitpkd.ac.in/">PG admissions Portal</a></li>
+                        <li><a href="https://pgadmit.iitpkd.ac.in/important-dates">Important Dates</a></li>
+                        <li><a href="https://pgadmit.iitpkd.ac.in/how-to-apply">How to apply</a></li>
+                        <li><a href="https://coap2026.iitr.ac.in/coap2026/index.php">COAP</a></li>
+                        <li><a href="https://josaa.nic.in">JOSAA</a></li>
+                    </ul>
+                </div>
+		<div class="col-lg-3 col-md-6">
+                    <h6 class="mb-4">E-resources</h6>
+                    <ul class="list-unstyled text-muted">
+                        <li><a href="https://idp.iitpkd.ac.in/">IDP</a></li>
+                        <li><a href="https://lms.iitpkd.ac.in">LMS/Moodle</a></li>
+                        <li><a href="https://library.iitpkd.ac.in">Library</a></li>
+                        <li><a href="https://support.iitpkd.ac.in/">Help desk</a></li>
+                        <li>
+<a href="https://mrbs.iitpkd.ac.in/">Room Booking </a> </li>
+                        <li>
+<a href="https://hpc.iitpkd.ac.in/">HPC</a> </li>
+                        <li>
+<a href="https://records.iitpkd.ac.in/">Records portal</a> </li>
+                    </ul>
+                </div>
+
+		<div class="col-lg-3 col-md-6">
+                    <h6 class="mb-4">Wellness &amp; Support</h6>
+                    <ul class="list-unstyled text-muted">
+                       <!-- <li><a href="https://iitpkd.ac.in/faqs-b.tech-freshers">Freshers FAQ</a></li> -->
+                        <li><a href="https://iitpkd.ac.in/student-affairs-council">SAC</a></li>
+                        <li><a href="https://iitpkd.ac.in/elss">ELSS</a></li>
+                        <li><a href="https://iitpkd.ac.in/wellness-hub">Wellness hub</a></li>
+                        <li><a href="https://iitpkd.ac.in/student-clubs/">Club Catalogue</a></li>
+                        <li><a href="https://sites.google.com/iitpkd.ac.in/iitpkdcharitable-trust/home">IIT Palakkad Charitable Trust</a></li>
+                        <li><a href="https://iitpkd.ac.in/help-desk-prospective-girl-students">For prospective girl students</a></li>
+                        <li><a href="https://drive.google.com/file/d/1E-pjX2kODoXjySObgCHFzdjCPHoR6abv/view?usp=sharing">Places to visit in Palakkad</a></li>
+
+                    </ul>
+                </div>
+             </div>
+      <p class="theme-by text-muted">
+        Maintained by Department of Computer Science and Engineering. <br>Based on
+        <a href="https://beautifuljekyll.com">Beautiful Jekyll</a>
+      </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+
+
+</body></html>

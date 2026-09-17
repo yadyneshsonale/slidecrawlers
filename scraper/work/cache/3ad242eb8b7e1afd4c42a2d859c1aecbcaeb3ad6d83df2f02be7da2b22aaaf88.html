@@ -1,0 +1,1474 @@
+<!DOCTYPE html><html><head>
+  <title>15-281: AI</title>
+  <meta charset="iso-8859-1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bootstrap.min.css" media="screen">
+  <link rel="shortcut icon" href="https://www.cs.cmu.edu/favicon.ico" type="image/vnd.microsoft.icon">
+  <link rel="stylesheet" href="pacman.css">
+  <script src="pacman.js" async=""></script>
+  <style>
+    body {
+      position: relative;
+      padding-top: 75px;
+    }
+
+    p {
+      font-size: 120%;
+    }
+
+    form .form-group {
+      margin-bottom: 0px;
+      padding: 0px;
+    }
+
+    form .control-label {
+      font-size: 120%;
+      margin: 0px;
+      padding-right: 0px;
+    }
+
+    #overview {
+      padding-top: 50px;
+    }
+
+    #office-hours {
+      padding-top: 50px;
+    }
+
+    #schedule {
+      padding-top: 50px;
+    }
+
+    #recitations {
+      padding-top: 50px;
+    }
+
+    #exams {
+      padding-top: 50px;
+    }
+
+    #assignments {
+      padding-top: 50px;
+    }
+
+    #coursenotes {
+      padding-top: 50px;
+    }
+
+    #policies {
+      padding-top: 50px;
+    }
+  </style>
+</head>
+
+<body data-spy="scroll" data-target=".navbar">
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-20 col-lg-offset-1">
+          <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-11 col-lg-offset-1">
+                  <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="">15-281: Artificial Intelligence</a>
+                  </div>
+                  <div>
+                    <div class="collapse navbar-collapse" id="myNavbar">
+                      <ul class="nav navbar-nav">
+                        <li><a href="#office-hours">OH</a></li>
+                        <li><a href="#schedule">Schedule</a></li>
+                        <li><a href="#recitations">Recitations</a></li>
+                        <li><a href="#exams">Exams</a></li>
+                        <li><a href="#assignments">Assignments</a></li>
+                        <!-- <li><a href="#fullschedule">Full Schedule</a></li> -->
+                        <li><a href="#coursenotes">Course Notes</a></li>
+                        <li><a href="#policies">Policies</a></li>
+                        <li><a href="staff/">Staff page</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 col-lg-offset-1">
+        <img src="learning_in_progress.png" width="300" style="float:left; padding-right:20px;">
+        <h1>15-281, Spring 2026</h1>
+        <p class="lead">Artificial Intelligence: Representation and Problem
+          Solving</p>
+      </div>
+    </div>
+    <div class="row col-lg-10 col-lg-offset-1">
+      <div id="overview">
+        <h1>Overview</h1>
+        <div class="well bs-component">
+          <form class="form-horizontal">
+            <fieldset>
+              <legend>Key Information</legend>
+              <div class="form-group">
+                <label class="col-sm-2 control-label">Lecture</label>
+                <div class="col-sm-10">
+                  <p class="form-control-static">Asynchronous Lectures, see <a href="#schedule">schedule</a> for
+                    lectures
+                    <!-- Monday + Wednesday, 11:00 am - 12:20 pm, <a href="https://cmumaps.com/GHC-5222">GHC 5222</a> --->
+                  </p>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-2 control-label">Recitation</label>
+                <div class="col-sm-10">
+                  <p class="form-control-static">Friday 11:00 - 11:50 am, GHC 5222, see <a href="#recitations">Recitations</a></p>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-2 control-label">Instructors</label>
+                <div class="col-sm-10">
+                  <p class="form-control-static"><a target="_blank" href="https://www.cs.cmu.edu/~sandholm/">Tuomas
+                      Sandholm</a>
+                  </p>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-2 control-label">Teaching
+                  Assistants</label>
+                <div class="col-sm-10">
+                  <p class="form-control-static">
+                    <a target="_blank" href="https://pranavraj575.github.io/">Pranav Rajbhandari</a>, Sunny Kim, see the
+                    <a href="staff/">281 Staff page</a>
+                  </p><br>
+                </div>
+              </div>
+              <!-- <div class="form-group">
+                <label class="col-sm-2 control-label">Course Assistant</label>
+                <div class="col-sm-10">
+                  <p class="form-control-static"><a target="_blank" href=
+                  "https://csd.cmu.edu/people/staff/marcella-baker">Marcie
+                  Baker</a></p>
+                </div>
+              </div> ???-->
+              <div class="form-group">
+                <label class="col-sm-2 control-label">Grading</label>
+                <div class="col-sm-10">
+                  <p class="form-control-static">Grades will be collected in
+                    <a target="_blank" href="https://canvas.cmu.edu/courses/52096/grades">Canvas</a>.<br>
+                    Midterms 15% (each), Final 30%, Programming homework 20%,
+                    Written homework 10%, Online homework 5%, Recitation attendance
+                    5%
+                  </p>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-2 control-label">Textbook</label>
+                <div class="col-sm-10">
+                  <p class="form-control-static"><a target="_blank" href="https://aima.cs.berkeley.edu">
+                      Artificial Intelligence: A Modern Approach, <em>Fourth
+                        Edition</em></a></p>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-2 control-label">Announcements +
+                  Q&amp;A</label>
+                <div class="col-sm-10">
+                  <p class="form-control-static"> We will use
+                    <a target="_blank" href="https://piazza.com/cmu/spring2026/15281">Piazza</a> for questions and any
+                    course announcements.
+                    <!-- ??? Double check this link works once it is  -->
+                </p></div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-2 control-label">Submitting
+                  Assignments</label>
+                <div class="col-sm-10">
+                  <p class="form-control-static">Students will turn in their
+                    homework electronically using <a target="_blank" href="https://www.gradescope.com">Gradescope</a>.
+                  </p>
+                </div>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+        <p>This course is about the theory and practice of Artificial
+          Intelligence. We will study modern techniques for computers to
+          represent task-relevant information and make intelligent (i.e.,
+          satisficing or optimal) decisions towards the achievement of goals. The
+          search and problem-solving methods are applicable throughout a large
+          range of industrial, civil, medical, financial, robotic, and
+          information systems. We will investigate questions about AI systems
+          such as: how to represent knowledge, how to effectively generate
+          appropriate sequences of actions and how to search among alternatives
+          to find optimal or near-optimal solutions. We will also explore how to
+          deal with uncertainty in the world and how to learn from experience. We
+          will cover the aggregation of conflicting preferences and computational
+          game theory. Throughout the course, we will discuss topics such as AI
+          and Ethics and introduce applications related to AI for Social Good. We
+          expect that by the end of the course students will have a thorough
+          understanding of the algorithmic foundations of AI, how probability and
+          AI are closely interrelated, and how automated agents make decisions.
+          We also expect students to acquire a strong appreciation of the
+          big-picture aspects of developing fully autonomous intelligent
+          agents.</p>
+        <p>This iteration of the course will be taught through pre-recorded lectures from last year's version
+          of this class, available on <a href="https://canvas.cmu.edu/courses/52096/external_tools/269">Panopto</a>.
+          Scheduled class times will be used as office hours for students to ask questions
+          (ideally mostly about the corresponding lecture/related assignments).
+          Please watch the assigned lecture before this!
+          Recitations will be hosted on Fridays by your wonderful TAs and will be a review of lecture topics.</p>
+        <h2>Prerequisites + Corequisites</h2>
+        <p>The prequisites for this course are:</p>
+        <ul>
+          <li>15-122 <i>Principles of Imperative Computation</i></li>
+          <li>21-241 <i>Matrices and Linear Transformations</i></li>
+          <li>21-127 <i>Concepts of Mathematics</i> or 15-151 <i>Mathematical
+              Foundations of Computer Science</i>.</li>
+        </ul>
+        <p>The corequisite for this course is:</p>
+        <ul>
+          <li>21-122 <i>Integration and Approximation</i></li>
+        </ul>
+        <p>For this corequisite, you should either have completed it prior to
+          starting 15-281 or have it on your schedule for Spring 2026.</p>
+        <p>Please see the instructors if you are unsure whether your background
+          is suitable for the course.</p>
+      </div>
+      <div id="office-hours">
+        <h1>Office Hours</h1>
+        <p>Office hours will function mostly for students to ask questions related to the lecture assigned that day.
+          You may also ask questions about upcoming assignments or about less related topics, but please allow any
+          questions
+          about the assigned lecture to take priority. We may schedule additional times if needed.</p>
+        <p>If you need to schedule individual office hours outside of the listed times, please email/speak to one of the
+          TAs.
+          Find their andrew ids on the <a href="staff/">281 Staff page</a>.</p>
+        <h3>Professor Office Hours</h3>
+        <p> Mondays 11:00-12:00, GHC 9205 (starting 1/19) </p>
+        <h3>TA Office Hours</h3>
+        <p> Wednesdays 11:00-12:00, GHC 5222 (starting 1/14) </p>
+        <p> Friday 4:00-5:00 pm, GHC 5222 (starting 1/23) </p>
+        <p> We will add more OH times as we see fit throughout the semester.</p>
+      </div>
+      <div id="schedule">
+        <h1>Schedule (subject to change)</h1><i>Updated Jan. 8 2026</i>
+        <table class="table table-striped table-hover">
+          <thead>
+            <tr>
+              <th>Dates</th>
+              <th>Topic / Lecture Video</th>
+              <th>Reading / Demo</th>
+              <th>Slides</th>
+            </tr>
+          </thead>
+          <tbody><tr>
+            <td>1/12 Mon</td>
+            <td><b>Live</b> Meeting with Professor Sandholm and TAs at GHC 5222 <br>
+              <a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=b61cc349-22a8-4220-b616-b3cc00152dd8">Introduction
+                Lecture</a>
+            </td>
+            <td>AIMA Ch. 1</td>
+            <td>
+              <a href="lectures/15281_S26_Lec1_Introduction.pptx">pptx</a>
+              (<a href="lectures/15281_S26_Lec1_Introduction.pdf">pdf</a>)
+            </td>
+          </tr>
+          <tr>
+            <td>1/14 Wed</td>
+            <td><a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=396e7204-5355-4e7a-865b-b3cc00152d78">Agents
+                and Search</a></td>
+            <td>AIMA Ch. 3.1-4</td>
+            <td>
+              <a href="lectures/15281_S25_Lecture_2_Agents_and_Uninformed_Search.pptx">pptx</a>
+              (<a href="lectures/15281_S25_Lecture_2_Agents_and_Uninformed_Search.pptx.pdf">pdf</a>)
+
+              <!-- Handout: <a href=
+              "lectures/15281_F24_Lec2_Agents_and_Uninformed_Search_handout.pptx">
+              pptx</a> <a href=
+              "lectures/15281_F24_Lec2_Agents_and_Uninformed_Search_handout.pdf">
+              pdf</a> -->
+            </td>
+          </tr>
+          <tr>
+            <td>1/19 Mon</td>
+            <td><i>No class: MLK Day</i></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>1/21 Wed</td>
+            <td><a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=33a8773b-c728-4e36-a293-b3cc00152d5a">Informed
+                Search</a></td>
+            <td>AIMA Ch. 3.5-6</td>
+            <td>
+              <a href="lectures/15281_S25_Lecture_3_Informed_Search.pptx">pptx</a>
+              (<a href="lectures/15281_S25_Lecture_3_Informed_Search.pptx.pdf">pdf</a>)
+            </td>
+          </tr>
+          <tr>
+            <td>1/26 Mon</td>
+            <td><a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=d33c22e7-efe1-48e8-b1d5-b3cc0015172e">Adversarial
+                Search</a></td>
+            <td>AIMA Ch. 5</td>
+            <td>
+              <a href="lectures/15281_S25_Lec4_Adversarial_Search.pptx">pptx</a>
+              (<a href="lectures/15281_S25_Lec4_Adversarial_Search.pdf">pdf</a>)
+            </td>
+          </tr>
+          <tr>
+            <td>1/28 Wed</td>
+            <td><a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=7b5bec0a-1fe6-4581-b1fa-b3cc001516e8">Contraint
+                Satisfaction Problems</a></td>
+            <td>
+              AIMA Ch. 6.1-3, 6.5<br>
+              <a href="demos/csp_backtracking">CSP Demo</a>
+            </td>
+            <td>
+              <a href="lectures/15281_S25_Lec5_CSPs.pptx">pptx</a>
+              (<a href="lectures/15281_S25_Lec5_CSPs.pdf">pdf</a>)
+            </td>
+          </tr>
+          <tr>
+            <td>2/2 Mon</td>
+            <td><a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=dbe5d41c-92c4-498b-a780-b3cc001516cc">Local
+                Search and Gradient Descent</a></td>
+            <td>
+              AIMA Ch. 4.1, 6.4<br>
+            </td>
+            <td>
+              <a href="lectures/15281_S25_Lecture_6_Local_Search.pptx">pptx</a>
+              <!-- "lectures/15281_F24_Lec5_CSPs_inked.pptx">inked</a>) <a href= -->
+              (<a href="lectures/15281_S25_Lecture_6_Local_Search.pptx.pdf">pdf</a>)
+            </td>
+          </tr>
+          <tr>
+            <td>2/4 Wed</td>
+            <td><a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=7f9c31b3-f9b4-42e9-b7de-b3cc00151685">
+                Linear Programming</a></td>
+            <td>
+              <a href="https://web.stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf">Boyd and
+                Vandenberghe</a> Ch. 2.2.1, 2.2.4, 4.3-4.3.1<br>
+              Desmos Demos:<br>
+              <ul>
+                <li>
+                  <a target="_blank" href="https://www.desmos.com/calculator/ns7z4a6t7p">Prereq: Dot
+                    Product</a>
+                </li>
+                <li>
+                  <a target="_blank" href="https://www.desmos.com/calculator/k8mplulyxm">LP: Cost at
+                    points</a>
+                </li>
+                <li>
+                  <a target="_blank" href="https://www.desmos.com/calculator/tbzzbwta0g">LP: Zero
+                    cost</a>
+                </li>
+                <li>
+                  <a target="_blank" href="https://www.desmos.com/calculator/8d9kxbdq9u">LP: Cost
+                    contours</a>
+                </li>
+                <li>
+                  <a target="_blank" href="https://www.desmos.com/calculator/hwudcts2yd">LP:
+                    Constraint</a>
+                </li>
+                <li>
+                  <a target="_blank" href="https://www.desmos.com/calculator/ufrnzjgyvb">LP: Cost with
+                    one constraint</a>
+                </li>
+                <li>
+                  <a target="_blank" href="https://www.desmos.com/calculator/plp1thgsbh">LP</a>
+                </li>
+              </ul>
+            </td>
+            <td>
+              <a href="lectures/15281_S25_Lec7_Linear_Programming.pptx">pptx</a>
+              <!-- (<a href=
+              "lectures/15281_F24_Lec7_Linear_Programming_inked.pptx">inked</a>) -->
+              (<a href="lectures/15281_S25_Lec7_Linear_Programming.pdf">pdf</a>)
+              <!-- (<a href=
+              "lectures/15281_F24_Lec7_Linear_Programming_inked.pdf">inked</a>) -->
+            </td>
+          </tr>
+          <tr>
+            <td>2/9 Mon</td>
+            <td><a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=419f1164-f6df-4282-8126-b3cc00151665">Integer
+                Programming</a></td>
+            <td>
+              Desmos Demos: <a target="_blank" href="https://www.desmos.com/calculator/tnlo7p5plp">IP</a>
+            </td>
+            <td>
+              <a href="lectures/15281_S25_Lec8_Integer_Programming.pptx">pptx</a>
+              (<a href="lectures/15281_S25_Lec8_Integer_Programming.pdf">pdf</a>)
+            </td>
+
+          </tr>
+          <tr>
+            <td>2/11 Wed</td>
+            <td><a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=e767e19b-6b23-4319-919f-b3cc0015160d">Propositional
+                Logic and Logical Agents</a></td>
+            <td>AIMA Ch. 7.1-7</td>
+            <td>
+              <a href="lectures/15281_S25_Lec9_Propositional_Logic.pptx">pptx</a>
+              (<a href="lectures/15281_S25_Lec9_Propositional_Logic.pdf">pdf</a>)
+            </td>
+          </tr>
+          <tr>
+            <td>2/13 Fri</td>
+            <td><b>Live</b> MT1 Review session <br> 4:00 - 5:30 pm</td>
+            <td>In class (GHC 5222)</td>
+            <td>
+              <a href="exammaterials/15281_s26_mt1_review.pptx">slides</a>
+              (<a href="exammaterials/15281_s26_mt1_review.pdf">pdf</a>)<br>
+              <a href="recitations/rec5_mt1_review/rec5_midterm_review.pdf">questions</a>
+              (<a href="recitations/rec5_mt1_review/rec5_midterm_review_sol.pdf">sol</a>)
+            </td>
+          </tr>
+          <tr>
+            <td>2/16 Mon</td>
+            <td><a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=433047d8-22a1-44ca-88e4-b3cc001515a9">AI
+                Ethics and Practice Activity</a></td>
+            <td></td>
+            <td>
+              <a href="lectures/15281_S25_Lec10_AI_Ethics.pptx">pptx</a>
+              (<a href="lectures/15281_S25_Lec10_AI_Ethics.pdf">pdf</a>)
+            </td>
+          </tr>
+          <tr class="danger">
+            <td>2/18 Wed</td>
+            <td><b>MIDTERM 1 EXAM</b></td>
+            <td>In class (GHC 5222)</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>2/23 Mon</td>
+            <td><a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=24ef592a-8032-445f-aadf-b3cc0015158b">Planning</a>
+            </td>
+            <td>AIMA Ch. 11.1-3, 26.5</td>
+            <td>
+              <a href="lectures/15281_S25_Lec_11_Classical_Planning.pptx">pptx</a>
+              (<a href="lectures/15281_S25_Lec_11_Classical_Planning.pdf">pdf</a>)
+            </td>
+          </tr>
+          <tr>
+            <td>2/25 Wed</td>
+            <td><a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=69fc7912-a41f-44c2-be3f-b3cc00151553">Machine
+                Learning</a></td>
+            <td> AIMA Ch. 19 </td>
+            <td>
+              <a href="lectures/15281_S25_Lec_12_Intro_Machine_Learning.ppt">pptx</a>
+              (<a href="lectures/15281_S25_Lec_12_Intro_Machine_Learning.pdf">pdf</a>)
+            </td>
+          </tr>
+          <tr>
+            <td>3/2 Mon</td>
+            <td><i>No class: Spring Break</i></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>3/4 Wed</td>
+            <td><i>No class: Spring Break</i></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>3/9 Mon</td>
+            <td><a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=a2f0a3ea-9dac-44ac-885a-b3cc00151527">Markov
+                Decision Process I</a></td>
+            <td>AIMA Ch. 17.1-2</td>
+            <td>
+              <a href="lectures/15281_S25_Lec_13_MDPs_I.pptx">pptx</a> (<a href="lectures/15281_S25_Lec_13_MDPs_I.pdf">pdf</a>)
+            </td>
+          </tr>
+          <tr>
+            <td>3/11 Wed</td>
+            <td><a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=d73645f6-94df-4900-a76a-b3cc001514d5">Markov
+                Decision Process II</a></td>
+            <td>Markov Decision Process II</td>
+            <td>
+              <a href="lectures/15281_S25_Lec14_MDPs_II.pptx">pptx</a> (<a href="lectures/15281_S25_Lec14_MDPs_II.pdf">pdf</a>)
+            </td>
+          </tr>
+          <tr>
+            <td>3/16 Mon</td>
+            <td><a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=98cf9201-1735-42ba-8a02-b3cc001514ab">Reinforcement
+                Learning I</a></td>
+            <td>AIMA Ch. 22.1-3</td>
+            <td>
+              <a href="lectures/15281_S25_Lec15_RL_I.pptx">pptx</a>
+              (<a href="lectures/15281_S25_Lec15_RL_I.pdf">pdf</a>)
+            </td>
+          </tr>
+          <tr>
+            <td>3/18 Wed</td>
+            <td><a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=ff395305-3710-4478-869b-b3cc00151434">Reinforcement
+                Learning II</a></td>
+            <td>AIMA Ch. 22.4-4.3</td>
+            <td>
+              <a href="lectures/15281_S25_Lec16_RL_II.pptx">pptx</a> (<a href="lectures/15281_S25_Lec16_RL_II.pdf">pdf</a>)
+            </td>
+          </tr>
+          <tr>
+            <td>3/19 Thurs</td>
+            <td><b>Live</b> MT2 Review session <br> 5:00 - 6:00 pm</td>
+            <td>GHC 4215</td>
+            <td>
+              <a href="exammaterials/15281_s26_mt2_review.pptx">slides</a>
+              (<a href="exammaterials/15281_s26_mt2_review.pdf">pdf</a>)
+            </td>
+          </tr>
+          <tr>
+            <td>3/23 Mon</td>
+            <td><a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=f70184b3-729d-4985-b73e-b3cc00151333">Bayes
+                Nets: Representation</a></td>
+            <td>
+              AIMA Ch. 12.1-5, 13.1-2<br>
+              <a href="demos/bayesNetDemo">Bayes Net Demo</a> (<a href="demos/bayesNetDemo_highres">highres</a>)
+            </td>
+            <td>
+              <a href="lectures/15281_S25_Lec17_Bayes_I.pptx">pptx</a>
+              (<a href="lectures/15281_S25_Lec17_Bayes_I.pdf">pdf</a>)
+            </td>
+          </tr>
+          <tr class="danger">
+            <td>3/25 Wed</td>
+            <td><b>MIDTERM 2 EXAM</b></td>
+            <td>In class (GHC 5222)</td>
+            <td></td>
+          </tr>
+          <tr>
+          </tr><tr>
+            <td>3/30 Mon</td>
+            <td><a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=6fa1597d-ed47-4da7-88e2-b3cc00151311">Bayes
+                Nets: Independence</a></td>
+            <td>AIMA Ch. 12.4-5, 13.2</td>
+            <td>
+              <a href="lectures/15281_S25_Lec18_Bayes_II_Independence.pptx">pptx</a>
+              (<a href="lectures/15281_S25_Lec18_Bayes_II_Independence.pdf">pdf</a>)
+              (<a href="lectures/15281_S25_Lec18_Bayes_II_Independence_annotated.pdf">annotated</a>)
+            </td>
+          </tr>
+          <tr><td>
+            <a style="float: left; position:relative; top: -75px;"></a>
+            4/1 Wed
+          </td>
+          <td><a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=b2ccf595-349f-4956-a466-b3cc0015129b">Bayes
+              Nets: Inference</a></td>
+          <td>AIMA Ch. 13.3</td>
+          <td>
+            <a href="lectures/15281_S25_Lec19_Bayes_III_Inference.pptx">pptx</a>
+            (<a href="lectures/15281_S25_Lec19_Bayes_III_Inference.pdf">pdf</a>)
+          </td>
+          </tr>
+          <tr>
+            <td>4/6 Mon</td>
+            <td><a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=3d7d5a9d-4afe-4dd3-a2d9-b3cc0015127b">Bayes
+                Nets: Sampling</a></td>
+            <td>
+              AIMA Ch. 13.4<br>
+              <a href="demos/likelihoodSamplingDemo">Likelihood Demo</a>,
+              <a href="demos/gibbsDemo">Gibbs Demo</a>
+            </td>
+            <td>
+              <a href="lectures/15281_S25_Lec20_Bayes_IV_Sampling.pptx">pptx</a>
+              (<a href="lectures/15281_S25_Lec20_Bayes_IV_Sampling.pdf">pdf</a>)
+              (<a href="lectures/15281_S25_Lec20_Bayes_IV_Sampling_annotated.pdf">annotated</a>)
+            </td>
+          </tr>
+          <tr>
+            <td>4/8 Wed</td>
+            <td><a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=6dac7090-4181-421d-a599-b3cc0015122b">Hidden
+                Markov Models</a></td>
+            <td>AIMA Ch. 14.1-3</td>
+            <td>
+              <a href="lectures/15281_S25_Lec21_Bayes_Nets_HMMs.pptx">pptx</a>
+              (<a href="lectures/15281_S25_Lec21_Bayes_Nets_HMMs.pdf">pdf</a>)
+              (<a href="lectures/15281_S25_Lec21_Bayes_Nets_HMMs_annotated.pdf">annotated</a>)
+
+              Video: <a target="_blank" href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=2a2617aa-a932-45dc-9e78-b22f012de3e8">
+                Forward Algorithm Math</a>
+              Video: <a target="_blank" href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=5f91953a-55da-48e8-a916-b226001988db">
+                Math for Variable Elimination</a>
+
+            </td>
+          </tr>
+          <tr>
+            <td>4/13 Mon</td>
+            <td><a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=8bb103c2-f103-42b6-a44f-b3cc0015120a">Particle
+                Filtering</a></td>
+            <td>AIMA Ch. 14.5</td>
+            <td>
+              <a href="lectures/15281_S25_Lec22_Particle_Filtering.pptx">pptx</a>
+              (<a href="lectures/15281_S25_Lec22_Particle_Filtering.pdf">pdf</a>)
+              (<a href="lectures/15281_S25_Lec22_Particle_Filtering_annotated.pdf">annotated</a>)
+            </td>
+          </tr>
+          <tr>
+            <td>4/15 Wed</td>
+            <td><a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=fc3977b0-488f-4be1-90b5-b3cc001511c1">Game
+                Theory: Equilibrium</a></td>
+            <td>AIMA Ch. 18.1-2</td>
+            <td>
+              <a href="lectures/15281_S25_Lec23_Game_Theory.pptx">pptx</a>
+              (<a href="lectures/15281_S25_Lec23_Game_Theory.pdf">pdf</a>)
+            </td>
+          </tr>
+          <tr>
+            <td>4/20 Mon</td>
+            <td><b>Live</b> Q&amp;A to ask Professor Sandolm anything about AI (and the course) </td>
+            <td>In class (GHC 5222)</td>
+            <td>
+              <!--<a href="lectures/15281_F24_Lec24_AI_and_Ethics.pptx">pptx</a>
+              <a href="lectures/15281_F24_Lec24_AI_and_Ethics.pdf">pdf</a> (no ink)-->
+            </td>
+          </tr>
+          <tr>
+            <td>4/22 Wed</td>
+            <td><a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=8c91e08c-a4c1-466a-982d-b3cc0015119f">Game
+                Theory: Social Choice</a></td>
+            <td>AIMA Ch. 17.6</td>
+            <td>
+              <a href="lectures/15281_S25_Lec24_Game_Theory_II.pptx">pptx</a>
+              (<a href="lectures/15281_S25_Lec24_Game_Theory_II.pdf">pdf</a>)
+            </td>
+          </tr>
+          <tr>
+            <td>4/29 Wed</td>
+            <td><b>Live</b> Final Exam Review session <br> 11:00 am - 12:00 pm</td>
+            <td>In class (GHC 5222)</td>
+            <td>
+            </td>
+          </tr>
+          <tr class="danger">
+            <td>5/4 Mon</td>
+            <td><b>FINAL EXAM (08:30am - 11:30am)</b></td>
+            <td>In class (GHC 5222)</td>
+            <td></td>
+          </tr>
+        </tbody></table>
+      </div>
+      <div id="recitations">
+        <h1>Recitations (Policies subject to change)</h1>
+        <p>Recitations start the first week of class, Friday, Jan 16.
+          Recitation attendence is recommended to help solidfy weekly course
+          topics (and also since it is 5% of your grade). Understanding the recitation materials
+          published below is expected, and they are in-scope for midterm and final exams.</p>
+
+        <table class="table table-striped table-hover">
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Location</th>
+              <th>Section</th>
+              <th>TAs</th>
+              <th>Resources</th>
+            </tr>
+          </thead>
+          <tbody><tr>
+            <td>Fri, 11:00- 11:50 am</td>
+            <td><a href="https://cmumaps.com/GHC-5222">GHC 5222</a></td>
+            <td>A</td>
+            <td>Pranav, Sunny</td>
+            <td>
+              <a href="https://drive.google.com/drive/folders/1MlRk8KqIfhk98_XBEsZ4XLDvoOuJJLmh?usp=sharing">
+                Recitation Slides</a>
+            </td>
+          </tr>
+        </tbody></table>
+        <table class="table table-striped table-hover">
+          <thead>
+            <tr>
+              <th>Dates</th>
+              <th>Recitation</th>
+              <th>Handouts</th>
+            </tr>
+          </thead>
+          <tbody><tr>
+            <td>1/16 Fri</td>
+            <td>Recitation 1</td>
+            <td>
+              <a href="recitations/rec1/rec1.pdf">pdf</a>
+              (<a href="recitations/rec1/rec1_sol.pdf">sol</a>)<br>
+              <a href="recitations/rec1/nim.zip">nim.zip</a>
+            </td>
+          </tr>
+          <tr>
+            <td>1/23 Fri</td>
+            <td>Recitation 2</td>
+            <td>
+              <a href="recitations/rec2/rec2.pdf">pdf</a>
+              (<a href="recitations/rec2/rec2_sol.pdf">sol</a>)
+            </td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>1/30 Fri</td>
+            <td>Recitation 3</td>
+            <td>
+              <a href="recitations/rec3/rec3.pdf">pdf</a>
+              (<a href="recitations/rec3/rec3_sol.pdf">sol</a>)
+            </td>
+          </tr>
+          <tr>
+            <td>2/6 Fri</td>
+            <td>Recitation 4</td>
+            <td>
+              <a href="recitations/rec4/rec4.pdf">pdf</a>
+              (<a href="recitations/rec4/rec4_sol.pdf">sol</a>)
+            </td>
+          </tr>
+          <tr>
+            <td>2/13 Fri</td>
+            <td>Recitation 5</td>
+            <td>
+              <a href="recitations/rec5/rec5.pdf">pdf</a>
+              (<a href="recitations/rec5/rec5_sol.pdf">sol</a>)
+            </td>
+          </tr>
+          <tr>
+            <td>2/20 Fri</td>
+            <td>Recitation 6</td>
+            <td>
+              <a href="recitations/rec6/rec6.pdf">pdf</a>
+              (<a href="recitations/rec6/rec6_sol.pdf">sol</a>)
+            </td>
+          </tr>
+          <tr>
+            <td>2/27 Fri</td>
+            <td>Recitation 7</td>
+            <td>
+              <a href="recitations/rec7/rec7.pdf">pdf</a>
+              (<a href="recitations/rec7/rec7_sol.pdf">sol</a>)
+            </td>
+          </tr>
+          <tr>
+            <td>3/6 Fri</td>
+            <td><i>No Recitation: Spring Break</i></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>3/13 Fri</td>
+            <td>Recitation 8</td>
+            <td>
+              <a href="recitations/rec8/rec8.pdf">pdf</a>
+              (<a href="recitations/rec8/rec8_sol.pdf">sol</a>)
+            </td>
+          </tr>
+          <tr>
+            <td>3/20 Fri</td>
+            <td>Recitation 9</td>
+            <td>
+              <a href="recitations/rec9/rec9.pdf">pdf</a>
+              (<a href="recitations/rec9/rec9_sol.pdf">sol</a>)
+            </td>
+          </tr>
+          <tr>
+            <td>3/27 Fri</td>
+            <td>Recitation 10</td>
+            <td>
+              <a href="recitations/rec10/rec10.pdf">pdf</a>
+              (<a href="recitations/rec10/rec10_sol.pdf">sol</a>)
+            </td>
+          </tr>
+          <tr>
+            <td>4/3 Fri</td>
+            <td>Recitation 11</td>
+            <td>
+              <a href="recitations/rec11/rec11.pdf">pdf</a>
+              (<a href="recitations/rec11/rec11_sol.pdf">sol</a>)
+
+          </td></tr>
+          <tr>
+            <td>
+              <a style="float: left; position:relative; top: -75px;"></a>
+              4/10 Fri
+            </td>
+            <td><i>No Recitation: Spring Carnival</i></td>
+            <td>
+
+            </td>
+          </tr>
+          <tr>
+            <td>4/17 Fri</td>
+            <td>Recitation 12</td>
+            <td>
+              <a href="recitations/rec12/rec12.pdf">pdf</a>
+              (<a href="recitations/rec12/rec12_sol.pdf">sol</a>)</td>
+          </tr>
+          <tr>
+            <td>4/24 Fri</td>
+            <td>Recitation 13</td>
+            <td>
+              <a href="recitations/rec13/rec13.pdf">pdf</a>
+              (<a href="recitations/rec13/rec13_sol.pdf">sol</a>)</td>
+            
+          </tr>
+        </tbody></table>
+      </div>
+      <div id="exams">
+        <h1>Exams</h1>
+        <!-- ??? When are exams -->
+        <p>The course includes two midterm exams and a final exam. The midterms
+          will take place the scheduled class time in GHC 5222.
+          The final exam will take place 5/4 Mon at 08:30am - 11:30am, and will be held in GHC 5222.
+          Plan any travel around exams, as exams will not be rescheduled.</p>
+
+        <h4>Midterm 1 (2/18)</h4>
+        <table class="table table-striped table-hover">
+          <thead>
+            <tr>
+              <th>Practice Material</th>
+              <th>Links</th>
+            </tr>
+          </thead>
+          <tbody><tr>
+            <td>Review Session @ GHC 5222 (2/13, 4:00 - 5:30 pm)</td>
+            <td>
+              <a href="exammaterials/15281_s26_mt1_review.pptx">slides</a>
+              (<a href="exammaterials/15281_s26_mt1_review.pdf">pdf</a>)<br>
+              <a href="recitations/rec5_mt1_review/rec5_midterm_review.pdf">questions</a>
+              (<a href="recitations/rec5_mt1_review/rec5_midterm_review_sol.pdf">sol</a>)
+            </td>
+          </tr>
+          <tr>
+            <td><a href="exammaterials/15281_S23_Practice_Midterm1_A.pdf"> Practice Exam A</a></td>
+            <td>
+              <a href="exammaterials/15281_S23_Practice_Midterm1_A.pdf"> Blank Exam</a><br>
+              <a href="exammaterials/15281_S23_Practice_Midterm1_A_sol.pdf"> Practice Exam A Solutions</a><br>
+              <a href="https://www.youtube.com/watch?v=fD_VEw2KAn8"> Practice Exam A Q1 Solutions Video</a><br>
+              <a href="https://www.youtube.com/watch?v=3AQOb3Sn698"> Practice Exam A Q2 Solutions Video</a><br>
+              <a href="https://www.youtube.com/watch?v=KEYdfFYrwO8"> Practice Exam A Q3 Solutions Video</a><br>
+            </td>
+          </tr>
+          <tr>
+            <td><a href="exammaterials/15281_S23_Practice_Midterm1_B.pdf"> Practice Exam B</a></td>
+            <td>
+              <a href="exammaterials/15281_S23_Practice_Midterm1_B.pdf"> Blank Exam</a><br>
+              <a href="exammaterials/15281_S23_Practice_Midterm1_B_sol.pdf"> Practice Exam B Solutions</a>
+            </td>
+          </tr>
+        </tbody></table>
+        <h4>Midterm 2 (3/25)</h4>
+        <table class="table table-striped table-hover">
+          <thead>
+            <tr>
+              <th>Practice Material</th>
+              <th>Links</th>
+            </tr>
+          </thead>
+          <tbody><tr>
+            <td>Review Session @ GHC 4215 (3/19, 5:00 - 6:00 pm)</td>
+            <td>
+              <a href="exammaterials/15281_s26_mt2_review.pptx">slides</a>
+              (<a href="exammaterials/15281_s26_mt2_review.pdf">pdf</a>)
+            </td>
+          </tr>
+          <tr>
+            <td><a href="exammaterials/15281_S23_Practice_Midterm2_A.pdf"> Practice Exam A</a></td>
+            <td>
+              <a href="exammaterials/15281_S23_Practice_Midterm2_A.pdf"> Blank Exam</a><br>
+              <a href="exammaterials/15281_S23_Practice_Midterm2_A_sol.pdf"> Practice Exam A Solutions</a><br>
+              <a href="https://youtu.be/lWbx8zcgXG8">Video Solutions</a><br>
+              <a href="https://docs.google.com/presentation/d/1zMEoCbPAtpDg2__VpFTZusEUXUJsgPOdQDLf01NwPGc/edit?usp=sharing">Q2
+                  Slides</a>
+            </td>
+          </tr>
+          <tr>
+            <td><a href="exammaterials/15281_S23_Practice_Midterm2_B.pdf"> Practice Exam B</a></td>
+            <td>
+              <a href="exammaterials/15281_S23_Practice_Midterm2_B.pdf"> Blank Exam</a><br>
+              <a href="exammaterials/15281_S23_Practice_Midterm2_B_sol.pdf"> Practice Exam B Solutions</a><br>
+              <a href="https://youtu.be/B6DvmmG-yM0">Video Solutions</a><br>
+              <a href="https://docs.google.com/presentation/d/1baQo5Oj7WK4zR_VNGVVazLzkJR0uEwwJQUU6gwCfZD8/edit?usp=sharing">Q3 Slides</a><br>
+              <a href="https://docs.google.com/presentation/d/19gd_W_SfhWvM44heCDwXkzrAEchkhIGjx97zeJioaxg/edit?usp=sharing">Q4+5 Slides</a><br>
+            </td>
+          </tr>
+        </tbody></table>
+        <h4>Final Exam (5/4)</h4>
+
+        <table class="table table-striped table-hover">
+          <thead>
+            <tr>
+              <th>Practice Material</th>
+              <th>Links</th>
+            </tr>
+          </thead>
+          <tbody><tr>
+            <td>Review Session @ GHC 5222 (4/29, 11:00 am - 12:00 pm)</td>
+            <td>
+            </td>
+          </tr>
+          <tr>
+            <td><a href="exammaterials/15281_S23_Practice_Final_Exam1.pdf">Practice Final 1</a></td>
+            <td>
+              <a href="exammaterials/15281_S23_Practice_Final_Exam1.pdf">Blank Exam</a><br>
+              <a href="exammaterials/15281_S23_Practice_Final_Exam1_Solutions.pdf">Practice Final 1 Solutions</a><br>
+                <a href="https://youtu.be/VwP8tksANA8">Video Solutions</a><br>
+                <a href="https://youtu.be/ZjBkjAKuKiA">Q6 with good audio</a><br>
+                <a href="https://youtu.be/eTf9r8G5XLw">Q9 with good audio</a>
+            </td>
+          </tr>
+          <tr>
+            <td><a href="exammaterials/15281_S23_Practice_Final_Exam2.pdf">Practice Final 2</a></td>
+            <td>
+              <a href="exammaterials/15281_S23_Practice_Final_Exam2.pdf">Blank Exam</a><br>
+              <a href="exammaterials/15281_S23_Practice_Final_Exam2_Solutions.pdf">Practice Final 2 Solutions</a><br>
+              <a href="https://youtu.be/fJfsiX4Kcrg">Video Solutions</a>
+            </td>
+          </tr>
+        </tbody></table>
+      </div>
+      <div id="assignments">
+        <h1>Assignments</h1>
+        <p>There will be five programming assignments and eleven written/online
+          assignments (subject to change). Written/online assignments will
+          involve working through algorithms presented in the class, deriving and
+          proving mathematical results, and critically analyzing material
+          presented in class. Programming assignments will involve writing code
+          in Python to implement various algorithms.
+          See <a href="assignments/faq.html">assignment FAQs</a> for help setting up programming/written assignments.
+        </p>
+        <p>For any assignments that aren't released yet, the dates below
+          are tentative and subject to change.</p>
+        <div id="hw-schedule">
+          <h3>Assignment due dates</h3>
+          <p>All assignments are due at 11:59 PM EST on their respective days.</p>
+          <table class="table table-striped table-hover">
+            <thead>
+              <tr>
+                <th>Assignment</th>
+                <th>Link (if released)</th>
+                <th>Due Date</th>
+              </tr>
+            </thead>
+            <tbody><tr>
+              <td>P0</td>
+              <td>
+                <!-- <i>Released 1/12</i> -->
+                <a href="assignments/programming/tutorial/">P0:
+                  Tutorial</a> (required, worth zero points)
+              </td>
+              <td>1/23 Fri</td>
+            </tr>
+            <tr>
+              <td>HW1 (online)</td>
+              <td>
+                <!-- <i>Released 1/12</i> -->
+                <a href="https://www.gradescope.com">Online</a>
+              </td>
+              <td>1/23 Fri</td>
+            </tr>
+            <tr>
+              <td>HW2 (online, written)</td>
+              <td>
+                <!-- <i>Released 1/23</i> -->
+                <a href="https://www.gradescope.com">Online</a><br>
+                <a href="assignments/written/hw2_blank.pdf">hw2_blank.pdf</a>,
+                <a href="assignments/written/hw2.zip">hw2.zip</a> (tex src)
+              </td>
+              <td>1/30 Fri</td>
+            </tr>
+            <tr>
+              <td>P1</td>
+              <td>
+                <!-- <i>Released 1/23</i> -->
+                <a href="assignments/programming/search_and_games/">P1: Search and Games</a>
+              </td>
+              <td>2/6 Fri</td>
+            </tr>
+            <tr>
+              <td>HW3 (online)</td>
+              <td>
+                <!-- <i>Released 1/30</i> -->
+                <a href="https://www.gradescope.com">Online</a>
+              </td>
+              <td>2/6 Fri</td>
+            </tr>
+            <tr>
+              <td>HW4 (online, written)</td>
+              <td>
+                <a href="https://www.gradescope.com">Online</a><br>
+                <a href="assignments/written/hw4_blank.pdf">hw4_blank.pdf</a>,
+                <a href="assignments/written/hw4.zip">hw4.zip</a> (tex src)
+              </td>
+              <td>2/13 Fri</td>
+            </tr>
+            <tr>
+              <td>P2</td>
+              <td>
+                <a href="assignments/programming/optimization/">P2: Optimization</a>
+              </td>
+              <td>2/20 Fri</td>
+            </tr>
+            <tr>
+              <td>HW5 (online)</td>
+              <td>
+                <!-- <i>Released 2/20</i> -->
+                <a href="https://www.gradescope.com">Online</a><br>
+              </td>
+              <td>2/20 Fri</td>
+            </tr>
+            <tr>
+              <td>P3</td>
+              <td>
+                <!-- <i>Released 2/20</i> -->
+                <a href="assignments/programming/logic_plan/">P3: Planning</a>
+              </td>
+              <td>3/13 Fri</td>
+            </tr>
+            <tr>
+              <td>HW6 (online, written)</td>
+              <td>
+                <a href="https://www.gradescope.com">Online</a> <br>
+                <a href="assignments/written/hw6_blank.pdf">hw6_blank.pdf</a>,
+                <a href="assignments/written/hw6.zip">hw6.zip</a> (tex src)
+              </td>
+              <td>3/20 Fri</td>
+            </tr>
+            <tr>
+              <td>HW7 (online)</td>
+              <td>
+                <a href="https://www.gradescope.com">Online</a>
+              </td>
+              <td>3/27 Fri</td>
+            </tr>
+            <tr>
+              <td>P4</td>
+              <td>
+                <a href="assignments/programming/reinforcement/">P4:
+                Reinforcement Learning</a>
+              </td>
+              <td><b>3/30 Mon</b></td>
+            </tr>
+            <tr>
+              <td>HW8 (online)</td>
+              <td>
+                <a href="https://www.gradescope.com">Online</a>
+              </td>
+              <td>4/3 Fri</td>
+            </tr>
+            <tr>
+              <td>HW9 (online, written)</td>
+              <td>
+                <a href="https://www.gradescope.com">Online</a><br>
+                <a href="assignments/written/hw9_blank.pdf">hw9_blank.pdf</a>,
+                <a href="assignments/written/hw9.zip">hw9.zip</a> (tex src)
+              </td>
+              <td><b>4/13 Mon</b></td>
+            </tr>
+            <tr>
+              <td>HW 10 (online, written)</td>
+
+              <td>
+                <a href="https://www.gradescope.com">Online</a><br>
+                <a href="assignments/written/hw10_blank.pdf">hw10_blank.pdf</a>,
+                <a href="assignments/written/hw10.zip">hw10.zip</a> (tex src)
+              </td>
+              <td>4/17 Fri</td>
+            </tr>
+            <tr>
+              <td>P5</td>
+              <td>
+                <a href="assignments/programming/tracking/">P5: Ghostbusters</a>
+              </td>
+              <td>4/24 Fri</td>
+            </tr>
+            <tr>
+              <td>HW11 (online)</td>
+              <td>
+                <a href="https://www.gradescope.com">Online</a></td>
+              <td>4/24 Fri</td>
+            </tr>
+          </tbody></table>
+        </div>
+      </div>
+      <div id="coursenotes">
+        <h1>Course Notes</h1>
+        <p>Below are course notes developed by the course staff over the
+          years.</p>
+        <div id="notes-list">
+          <table class="table table-striped table-hover">
+            <thead>
+              <tr>
+                <th></th>
+                <th>Topic</th>
+                <th>Link (if released)</th>
+              </tr>
+            </thead>
+            <tbody><tr>
+              <td></td>
+              <td>Search</td>
+              <td>
+                <a href="coursenotes/search/">Search Notes</a>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>CSPs</td>
+              <td>
+                <a href="coursenotes/constraints/">CSPs Notes</a>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Local Search</td>
+              <td>
+                <a href="coursenotes/localsearch/">Local Search Notes</a>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Linear and Integer Programming</td>
+              <td>
+                <a href="coursenotes/linearprog/">LP/IP Notes</a>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Propositional Logic and Logical Agents</td>
+              <td>
+                <a href="coursenotes/proplogic/">Logic Notes</a>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Classical Planning</td>
+              <td>
+                <a href="coursenotes/classicalplan/">Classical Planning Notes</a>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Machine Learning (Briefly)</td>
+              <td>
+                See <a href="https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=69fc7912-a41f-44c2-be3f-b3cc00151553">Machine Learning Lecture</a>:
+                <a href="lectures/15281_S25_Lec_12_Intro_Machine_Learning.ppt">pptx</a>
+              (<a href="lectures/15281_S25_Lec_12_Intro_Machine_Learning.pdf">pdf</a>)
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Markov Decision Process</td>
+              <td>
+                <a href="coursenotes/mdps/">MDP Notes</a>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Reinforcement Learning</td>
+              <td>
+                <a href="coursenotes/reinforcement/">RL Notes</a>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Probability</td>
+              <td>
+                <a href="coursenotes/probability/">Probability Notes</a>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Bayes Nets</td>
+              <td>
+                <a href="coursenotes/bayesnets/">Bayes Nets Notes</a>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>HMMs and Particle Filters</td>
+              <td>
+                <a href="coursenotes/hmm_pf/">HMMs and Particle Filters Notes</a>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Game Theory</td>
+              <td>
+                <a href="coursenotes/gametheory/">Game Theory Notes</a>
+              </td>
+            </tr>
+          </tbody></table>
+        </div>
+      </div>
+      <div id="policies">
+        <h1>Policies (All subject to change)</h1>
+        <h2>Grading</h2>
+        <!-- ??? Update canvas link -->
+        <p>Grades will be collected and reported in <a target="_blank" href="https://canvas.cmu.edu/courses/52096/grades">Canvas</a>. Please
+          let us
+          know if you believe there to be an error the grade reported in
+          Canvas.</p>
+        <p>Final scores will be composed of:</p>
+        <ul>
+          <li>15% Midterm exams (each)</li>
+          <li>30% Final exam</li>
+          <li>20% Programming homework</li>
+          <li>10% Written homework</li>
+          <li>5% Online homework</li>
+          <li>5% Recitation attendance</li>
+        </ul>
+        <h3>Final Grade</h3>
+        <p>This class is not curved. However, we convert final course scores to
+          letter grades based on grade boundaries that are determined at the end
+          of the semester. What follows is a <b>rough guide</b> to how course
+          grades will be established, not a precise formula — we will
+          fine-tune cutoffs and other details as we see fit after the end of the
+          course. This is meant to help you set expectations and take action if
+          your trajectory in the class does not take you to the grade you are
+          hoping for. So, here's a <b>rough</b> heuristics about the
+          correlation between final grades and total scores:</p>
+        <ul>
+          <li>A: above 90%</li>
+          <li>B: 80-90%</li>
+          <li>C: 70-80%</li>
+          <li>D: 60-70%</li>
+        </ul>
+        <p>This heuristic assumes that the makeup of a student's grade is
+          not wildly anomalous: exceptionally low overall scores on exams,
+          programming assignments, or written assignments will be treated on a
+          case-by-case basis and, while rare, could potentially drop a students
+          grade.</p>
+        <p>Precise grade cutoffs will not be discussed at any point during or
+          after the semester.</p><a style="float: left; position:relative; top: -60px;" name="attendance" id="attendance"></a>
+        <h3>Recitation attendance</h3>
+        <p>5% of your grade will be based on the number of recitations you attend.</p>
+        <ul>
+          <li>5% for attending at least 10 out of the 13 recitations</li>
+          <li>Linear scale for attending less than 10 recitations (calculated as (5%)*(recitations attended)/10)</li>
+          <li>If you have systemic/repeated technical issues, please let us
+            know as soon as possible, so we can resolve the situation.</li>
+          <li>Missing recitations due to absences (e.g., brief illness)
+            or due to other difficulties is expected occasionally, and this
+            is why you only need to attend ≥75% of the time to get full
+            credit.</li>
+        </ul>
+        <h2>Late Policy</h2>
+        <p>Programming assignments, written homework, and online homework:</p>
+        <ul>
+          <li>6 slip days across all assignment types</li>
+          <li>Use up to two per assignment</li>
+          <li>Slip days are counted in full 24-hour increments from the
+            assignment deadline. No fractions of a slip day are used</li>
+          <li>When multiple assignments are due on the same day, they are
+            treated as a single assignment for slip day purposes
+            <ul>
+              <li>For example, if P0 and HW1 are due on the same day and you
+                turn in P0 one day late and HW1 two days late, you will have used
+                only two slip days (not three)</li>
+            </ul>
+          </li>
+          <li>You may use these at your discretion, but they are intended for
+            minor illness and other disruptive events outside of your control,
+            and not for poor time management</li>
+          <li>No need to inform us that you are using a slip day; just submit
+            it to Gradescope during the slip day</li>
+          <li>You are responsible to keep track of your own slip days.
+            Gradescope will not enforce the total number of slip days</li>
+        </ul>
+        <p>Aside from this, there will be no extensions on assignments in
+          general. If you think you really <i>really</i> need an extension on a
+          particular assignment, contact the instructor as soon as possible and
+          before the deadline. Please be aware that extensions are entirely
+          discretionary and will be granted only in exceptional circumstances
+          outside of your control (e.g., due to severe illness or major
+          personal/family emergencies, but not for competitions, club-related
+          events or interviews). The instructors will require confirmation from
+          your academic advisor, as appropriate.<br>
+          Nearly all situations that make you run late on an assignment homework
+          can be avoided with proper planning, often just starting early. Here
+          are some examples:</p>
+        <ul>
+          <li><i>I have so many deadlines this week</i>: you know your
+            deadlines ahead of time, so plan accordingly.</li>
+          <li><i>It's a minute before the deadline and the network is
+              down</i>: you always have multiple submissions -- it's not a good
+            idea to wait for the deadline for your first submission.</li>
+          <li><i>My computer crashed and I lost everything</i>: Use Dropbox or
+            similar to do real-time backup -- recover your files onto AFS and
+            finish your homework from a cluster machine.</li>
+          <li><i>My fraternity/sorority/club has that big event that is taking
+              all my time</i>: Schedule your extra-curricular activities around
+            your classes, not vice versa.</li>
+        </ul>
+        <p>Again, you should be keeping track of how many slip days you have
+          used, and ensure that you are both using no more than 2 slip days per
+          assignment and using no more than 6 slip days in the semester. If you
+          submit an assignment late but do not have enough slip days to use for
+          either reason, one of two things will happen:</p>
+        <ul>
+          <li>If you submitted a version of the assignment on time or within
+            your available slip days, we will grade the last valid assignment
+            submission</li>
+          <li>If you did not submit a version on time, you will receive a
+            0</li>
+        </ul>
+        <p>You are encouraged to submit a version of your assignment early. It
+          is not a good idea to wait for the deadline for your first
+          submission.</p>
+        <h2>Collaboration Policy</h2>
+        <p>We encourage you to discuss course content and assignments with your
+          classmates. However, these discussion must be kept at a conceptual
+          level only.</p>
+        <ul>
+          <li>You <b>may NOT</b> view, share, or communicate about any artifact
+            that will be submitted as part of an assignment. Example artifacts
+            include, but are not limited to: code, pseudocode, diagrams, and
+            text.</li>
+          <li> If you work on homework problems together, you must erase all artifacts and wait at least 1 hour before
+            writing your responses to ensure that your submission is not too similar from your friends'.
+          </li>
+          <li>You <b>may</b> look at another student's Python error
+            messages and discuss what the error means at a conceptual level.
+            However, you <b>may NOT</b> give specific instructions to fix the
+            error.</li>
+          <li>All work that you present must be your own. Thus, generative AI
+            tools may not be used to generate any part of your assignment
+            submission. (Yes, these tools are awesome, but we've designed
+            this course to minimize the amount of code/material that you need to
+            write, so you should be able to complete the assignments in a timely
+            manner without these aids.)</li>
+          <li>Using any external sources of code or algorithms in any way must
+            have approval from the instructor <i>before</i> submitting the work.
+            For example, you must get instructor approval before using an
+            algorithm you found online for implementing a heuristic function in a
+            programming assignment. The following are pre-approved exceptions:
+            <ul>
+              <li>Code provided by the course staff or materials, including
+                code from the textbook</li>
+              <li>Documentation for permitted Python libraries</li>
+            </ul>
+          </li>
+        </ul>
+        <h3>Programming Assignment Partners</h3>
+        <p>The only exception to the above collaboration policy is when you
+          share programming code directly with your programming assignment
+          partner.</p>
+        <ul>
+          <li>You are allowed to work in groups of at most two on each
+            programming assignment, i.e. you and one partner</li>
+          <li>You must specify your parnter when you submit each
+            assignment</li>
+          <li>Once you start working with a partner on an assignment, you may
+            not switch to another partner for that assignment</li>
+          <li>You may change partners between assignments. In fact, you are
+            strongly encouraged to change partners occasionally</li>
+          <li><b>Important:</b> You are responsible for making sure that both
+            you AND your partner understand the work that you submit. If we
+            discover that one partner cannot answer basic questions about the
+            submitted work, both students in the group will be reported for an
+            academic integrity violation.</li>
+        </ul>
+        <p>Violations of these policies will be reported as an academic
+          integrity violation. Information about academic integrity at CMU may be
+          found at <a href="https://www.cmu.edu/academic-integrity">https://www.cmu.edu/academic-integrity</a>.
+          Please contact the instructor if you ever have any questions regarding
+          academic integrity or these collaboration policies.</p>
+      </div>
+      <div id="additional">
+        <h2>Accommodations for Students with Disabilities</h2>
+        <p>If you have a disability and have an accommodations letter from the
+          Disability Resources office, we encourage you to discuss your
+          accommodations and needs with us as early in the semester as possible.
+          We will work with you to ensure that accommodations are provided as
+          appropriate. If you suspect that you may have a disability and would
+          benefit from accommodations but are not yet registered with the Office
+          of Disability Resources, we encourage you to visit their <a href="https://www.cmu.edu/disability-resources/">website</a>.</p>
+        <h2>Statement of Support for Students Health &amp; Well-being</h2>
+        <p>Take care of yourself. Do your best to maintain a healthy lifestyle
+          this semester by eating well, exercising, getting enough sleep, and
+          taking some time to relax. This will help you achieve your goals and
+          cope with stress.<br>
+          All of us benefit from support during times of struggle. There are many
+          helpful resources available on campus and an important part of the
+          college experience is learning how to ask for help. Asking for support
+          sooner rather than later is almost always helpful.<br>
+          If you or anyone you know experiences any academic stress, difficult
+          life events, or feelings like anxiety or depression, we strongly
+          encourage you to seek support. Counseling and Psychological Services
+          (CaPS) is here to help: call 412-268-2922 and visit their website at
+          <a href="http://www.cmu.edu/counseling/">http://www.cmu.edu/counseling/</a>.
+          Consider reaching out to a friend, faculty or family member you trust
+          for help getting connected to the support that can help.<br>
+          If you have questions about this or your coursework, please let us
+          know. Thank you, and have a great semester.
+        </p>
+        <h2>Statement of Commitment to a Diverse Learning Environment</h2><b>We
+          must treat every individual with respect.</b> We are diverse in many
+        ways, and this diversity is fundamental to building and maintaining an
+        equitable and inclusive campus community. Diversity can refer to
+        multiple ways that we identify ourselves, including but not limited to
+        race, color, national origin, language, sex, disability, age, sexual
+        orientation, gender identity, religion, creed, ancestry, belief,
+        veteran status, or genetic information. Each of these diverse
+        identities, along with many others not mentioned here, shape the
+        perspectives our students, faculty, and staff bring to our campus. We,
+        at CMU, will work to promote diversity, equity and inclusion not only
+        because diversity fuels excellence and innovation, but because we want
+        to pursue justice. We acknowledge our imperfections while we also fully
+        commit to the work, inside and outside of our classrooms, of building
+        and sustaining a campus community that increasingly embraces these core
+        values.<br>
+        <br>
+        Each of us is responsible for creating a safer, more inclusive
+        environment.<br>
+        <br>
+        Unfortunately, incidents of bias or discrimination do occur, whether
+        intentional or unintentional. They contribute to creating an
+        unwelcoming environment for individuals and groups at the university.
+        Therefore, the university encourages anyone who experiences or observes
+        unfair or hostile treatment on the basis of identity to speak out for
+        justice and support, within the moment of the incident or after the
+        incident has passed. Anyone can share these experiences using the
+        following resources:
+        <ul>
+          <li>Center for Student Diversity and Inclusion: csdi@andrew.cmu.edu,
+            (412) 268-2150</li>
+          <li>Report-It online anonymous reporting platform: <a href="http://www.reportit.net">reportit.net</a>
+            username: tartans
+            password: plaid
+          </li>
+        </ul>All reports will be documented and deliberated to determine if
+        there should be any following actions. Regardless of incident type, the
+        university will use all shared experiences to transform our campus
+        climate to be more equitable and just.
+      </div>
+    </div>
+  </div><br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/1.4.3/jquery.scrollTo.min.js"></script>
+
+  <script>
+
+
+
+
+
+    $(function () {
+      $('#myNavbar').bind('click', 'ul li a', function (event) {
+        $.scrollTo(event.target.hash, 250);
+      });
+    });
+  </script>
+  <script>
+
+    $('.navbar-collapse a').click(function () {
+      $(".navbar-collapse").collapse('hide');
+    });
+  </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+
+</body></html>
