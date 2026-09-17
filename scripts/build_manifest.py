@@ -21,6 +21,7 @@ EXCLUDED_OUTPUTS = (
     Path("/home/b-ysonale/slidehunt/data"),
     Path("/home/b-ysonale/slidehunt/work/http_cache"),
     Path("/home/b-ysonale/slideratings/data"),
+    Path("/home/b-ysonale/rated70_slides.tar"),
 )
 SKIP_PARTS = {".git", ".venv", "__pycache__", ".pytest_cache"}
 
@@ -59,14 +60,18 @@ def build_excluded_manifest() -> None:
     with EXCLUDED_MANIFEST.open("w", newline="", encoding="utf-8") as stream:
         writer = csv.writer(stream, delimiter="\t", lineterminator="\n")
         writer.writerow(("source_path", "bytes", "files", "newest_mtime_utc"))
-        for directory in EXCLUDED_OUTPUTS:
-            files = [path for path in directory.rglob("*") if path.is_file()]
+        for source_path in EXCLUDED_OUTPUTS:
+            files = (
+                [source_path]
+                if source_path.is_file()
+                else [path for path in source_path.rglob("*") if path.is_file()]
+            )
             total_bytes = sum(path.stat().st_size for path in files)
             newest = max((path.stat().st_mtime for path in files), default=0)
             newest_utc = (
                 datetime.fromtimestamp(newest, timezone.utc).isoformat() if newest else ""
             )
-            writer.writerow((directory, total_bytes, len(files), newest_utc))
+            writer.writerow((source_path, total_bytes, len(files), newest_utc))
 
 
 if __name__ == "__main__":
